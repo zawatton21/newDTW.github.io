@@ -1,0 +1,64 @@
+{
+  "name": "newdtw",
+  "version": "1.0.0",
+  "description": "Rebuild Diavolo The Wanderer",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Zawa-Ton",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "app-builder-lib": "^22.10.3",
+    "electron": "github:electron/electron"
+  },
+  "build": {
+    "appId": "com.electron.yourapp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "assets",
+      "src",
+      "package.json",
+      "package-lock.json"
+    ],
+    "mac": {
+      "icon": "assets/mac/icon_mac.icns",
+      "target": {
+        "target": "default",
+        "arch": [
+          "universal"
+        ]
+      }
+    },
+    "win": {
+      "icon": "assets/win/icon_win.ico",
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "ia32",
+          "x64",
+          "arm64"
+        ]
+      }
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "minimatch": "^5.1.0"
+  }
+}
