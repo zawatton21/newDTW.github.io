@@ -93,7 +93,7 @@ function reset_input(x, y) {
 
 /* 
 セーブデータ削除機能
-HTHL5から導入されたJavascriptを使ってブラウザにデータを保存できるlocalStorage機能
+HTML5から導入されたJavascriptを使ってブラウザにデータを保存できるlocalStorage機能
 データは永続的に保存される為、Local Storageのデータを削除する処理が必ず必要
 */
 function ResetDataAndReload(e) {
@@ -112,6 +112,7 @@ function InitInput() {
         e.preventDefault();
     };
     /* ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
+    コメントアウトしたが重要機能っぽい。
     var buttons = document.getElementsByTagName("button");
     for (var i = 0; i < buttons.length; ++i) {
         if (buttons[i].id == "reset_data") {
@@ -189,6 +190,8 @@ function InitInput() {
         isClick = false;
     };
 }
+
+// 時間取得？
 var last_wait_time = new Date();
 function await_(time) {
     var wait_time = Math.max(time - Math.max(0, new Date().getMilliseconds() - last_wait_time.getMilliseconds()), 0);
