@@ -16,7 +16,7 @@
     "tutorial",
     "demo"
   ],
-  "author": "Zawa-Ton",
+  "author": "Zawa-Ton  <kurozawawo@gmail.com>",
   "license": "CC0-1.0",
   "devDependencies": {
     "app-builder-lib": "^22.10.3",
@@ -27,6 +27,9 @@
     "directories": {
       "output": "dist"
     },
+    "extraResources": [
+      "data/*/**"
+    ],
     "files": [
       "assets",
       "src",
@@ -53,6 +56,14 @@
         ]
       }
     },
+    "linux": {
+      "icon": "assets/DTW.png",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "deb": {},
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true

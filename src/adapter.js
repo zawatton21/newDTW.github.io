@@ -6,10 +6,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
+// 機能不明
 function dbgprt(num) {
 }
+
+// 機能不明
 function undef_func(str, arg = null) {
 }
+// 機能不明
 function data_update_for_debug(e) {
     var_404 = 1;
     var_704[88] = 1;
@@ -47,6 +52,7 @@ var se = [];
 var isClick = false;
 var canvasSize = 0;
 var pre_pos = [0, 0];
+
 function is_changed(x, y) {
     if (pre_pos[0] == 0 && pre_pos[1] == 0) {
         return true;
@@ -61,6 +67,7 @@ function is_changed(x, y) {
     }
     return false;
 }
+
 function reset_input(x, y) {
     pushing_key_list[37] = pushing_key_list[38] = pushing_key_list[39] = pushing_key_list[40] = 0;
     if (pushing_key_list[88] == 1 && pushing_key_list[90] == 1) {
@@ -200,6 +207,18 @@ function await_(time) {
         setTimeout(() => resolve(), wait_time);
     });
 }
+
+// HSP言語 bgscr命令
+// ウィンドウIDを初期化して枠のないウィンドウを作成する。
+// 参照元: http://lhsp.s206.xrea.com/manual/i_graph.html#bgscr
+// bgscr p1,p2,p3,p4,p5,p6,p7,p8
+/*
+p1=0～(0)  : ウィンドウID
+p2,p3      : 初期化する画面サイズX,Y（1ドット単位）
+p4=0～1(0) : 初期化する画面モード
+p5,p6(0,0) : ウィンドウの配置X,Y（1ドット単位）
+p7,p8      : ウィンドウのサイズX,Y（1ドット単位）
+*/
 function bgscr(data0, data1, data2, data3, data4, data5, data6 = null, data7 = null) { undef_func("bgscr", [data0, data1, data2, data3, data4, data5, data6, data7]); }
 
 /*
@@ -207,12 +226,14 @@ function bgscr(data0, data1, data2, data3, data4, data5, data6 = null, data7 = n
 音源ファイル、セーブデータ等
 */
 function bload(file_name, data_size = null, offset = null) {
+    // 効果音の読み込み
     if (file_name.split(".")[1] == "wav") {
-        var audio = new Audio("se/" + file_name);
+        var audio = new Audio("../data/se/" + file_name);
         audio.autoplay = false;
         audio.loop = false;
         return audio;
     }
+    // BGMの読み込み
     if (file_name.split(".")[1] == "mp3") {
         //var music = new Audio("bgm/" + file_name);
         return file_name;
@@ -220,6 +241,7 @@ function bload(file_name, data_size = null, offset = null) {
         //music.loop = false;
         //return music;
     }
+    // datファイルの読み込み。おそらくオミットされている？
     if (file_name.split(".")[1] != "dat") {
         return [];
     }
@@ -241,7 +263,13 @@ function bload(file_name, data_size = null, offset = null) {
     }
 }
 
-
+/* 
+HSP言語 boxf命令
+画面に四角形を描くための関数。
+参照元: 
+http://lhsp.s206.xrea.com/manual/i_graph.html#boxf 
+https://hsp3.web.fc2.com/lecture7.html
+*/
 function boxf(left = null, top = null, right = null, bottom = null) {
     left = left || 0;
     top = top || 0;
@@ -256,10 +284,26 @@ function boxf(left = null, top = null, right = null, bottom = null) {
     context.globalAlpha = ga;
 }
 
-/* 
-データセーブ機能
-HTHL5から導入されたJavascriptを使ってブラウザにデータを保存できるlocalStorage機能
-データは永続的に保存される為、Local Storageのデータを削除する処理が必ず必要
+/*
+HSP言語 bsave命令
+メモリバッファの内容をファイルに書き出す。
+参照元: 
+
+bsave "filename",p1,p2,p3		[バッファをファイルにセーブ]
+"filename" : セーブするファイル名
+p1=変数    : 変数名
+p2=0～(-1) : セーブするサイズ(Byte単位)
+p3=0～(-1) : ファイルのオフセット
+
+ファイルのオフセット値を指定すると、その値だけファイルの先頭からずらし
+た場所からが操作の対象になります。
+bsave命令でオフセットを指定すると、 ファイルの先頭から任意のサイズを過
+ぎた場所からセーブを行なうことが可能です。
+これにより、大きなファイルの一部だけを更新することや、分割して処理する
+ことなどが可能になります。
+
+テキストファイルを保存する場合には、専用のnotesave命令を使用することを
+推奨します
 */
 function bsave(file_name, data, data_size = null, offset = null) {
     offset = offset == null ? 0 : offset;
@@ -268,10 +312,30 @@ function bsave(file_name, data, data_size = null, offset = null) {
         files[file_name] = {};
     }
     files[file_name][offset] = data;
+
+    /*
+    データセーブ機能
+    HTHL5から導入されたJavascriptを使ってブラウザにデータを保存できるlocalStorage機能
+    データは永続的に保存される為、Local Storageのデータを削除する処理が必ず必要
+    */
     localStorage.setItem(file_name, JSON.stringify(files[file_name]));
 }
 
+/*
+HSP言語 buffer命令
+参照元: 
 
+screen命令と同じく、指定したウィンドウIDを初期化して使用できるようにし
+ます。初期化する画面サイズと、画面モードはscreen命令と変わりませんが、
+buffer命令では、メモリ上に仮想画面が作られるだけで、実際の画面には表示
+されません
+
+buffer p1,p2,p3,p4		[ウィンドウIDを初期化]
+p1=0～ (0) : ウィンドウID
+p2,p3      : 初期化する画面サイズX,Y（1ドット単位）
+p4=0～1(0) : 初期化する画面モード
+
+*/
 function buffer(id, disp_width = null, disp_height = null, mode = null) {
     target_window_id = id;
     var render_canvas;
@@ -290,20 +354,107 @@ function buffer(id, disp_width = null, disp_height = null, mode = null) {
     contexts[id] = render_canvas.getContext('2d');
     gsel(id, target_window_id);
 }
+
+/* HSP言語 button命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+カレントポジションにオブジェクトとして押しボタンを配置します。
+ボタンには、"name"で指定された文字列が書かれ、マウスでボタンをクリック
+すると、*labelで指定した場所にプログラムの制御が移ります。
+
+button goto/gosub "name",*label		[ボタン表示]
+"name" : ボタンの名前
+*label : 押した時にジャンプするラベル名
+*/
 function button(data0, data1) { undef_func("button", [data0, data1]); }
+
+/*
+HSP言語 cls命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+ウィンドウ内の情報をすべてクリアします。
+p1でクリアする５種類の色を指定することができます。
+色の指定値 :
+ ( 0=白 / 1=明るい灰色 / 2=灰色 / 3=暗い灰色 / 4=黒 )
+
+cls p1		[画面クリア]
+p1=0～4(0) : クリアする時の色
+*/
 function cls(id) {
     contexts[id].fillStyle = ["#fff", "#ccc", "888", "444", "#000"][id];
     contexts[id].fillRect(0, 0, 340, 340);
 }
+
+/*
+HSP言語 chdir命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+"dirname"で指定した名前のディレクトリに移動します。
+
+chdir "dirname"		[ディレクトリ移動]
+"dirname" : 移動先ディレクトリ名
+*/
 function chdir(data0) { undef_func("chdir", [data0]); }
+
+
+// 機能不明
 function chgdisp(data0 = null, data1 = null, data2 = null) { undef_func("chgdisp", [data0, data1, data2]); }
+
+/*
+HSP言語 chkbox命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+カレントポジションにオブジェクトとしてチェックボックスを配置します。
+チェックボックスには、"strings"で指定した文字列の左側に、カーソルで
+ON/OFFを切り替えることのできるスイッチがついたオブジェクトです。
+
+chkbox "strings",p1		[チェックボックス表示]
+"strings" : チェックボックスの内容表示文字列
+p1=変数   : チェックボックスの状態を保持する変数
+*/
 function chkbox(data0, data1) { undef_func("chkbox", [data0, data1]); }
+
+/*
+HSP言語 clrobj命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+button命令やmesbox命令などで出したオブジェクトを消去します。
+
+p1,p2を省略して、 clrobjだけを実行させると画面上のオブジェクトがすべて
+消去されます。一部のオブジェクトだけを消去したい場合は、p1に最初のID、
+p2に最後のIDを指定すればp1～p2までのオブジェクトだけが消去されます。
+
+clrobj p1,p2		[オブジェクトをクリア]
+p1=0～(0)  : 消去するオブジェクトID(開始)
+p2=0～(-1) : 消去するオブジェクトID(終了)( -1の場合は、 最終のIDが指定
+されます )
+
+*/
 function clrobj(data0 = null, data1 = null) { undef_func("clrobj", [data0, data1]); }
+
+
 function color(red, green, blue) {
     context.strokeStyle = context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
 }
+
 function combox(data0, data1, data2) { undef_func("combox", [data0, data1, data2]); }
+
 function delete_(data0) { undef_func("delete_", [data0]); }
+
+/*
+HSP言語 dim命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+任意の要素を持つ配列変数を作成します。
+例：
+	dim a,20
+上の例では、変数aの要素を２０個、つまり「a(0)」～「a(19)」までをあらか
+じめ確保します。
+
+dim p1,p2...		[配列変数を作成]
+p1=変数 : 配列を割り当てる変数名
+p2=0～  : 要素の最大
+*/
 function dim(length1, length2 = null, length3 = null, length4 = null) {
     if (length4 != null) {
         throw "4重配列なんてありませんよ";
@@ -330,8 +481,12 @@ function dim(length1, length2 = null, length3 = null, length4 = null) {
     }
     return return_list;
 }
+
+
 function dirinfo(data0) { undef_func("dirinfo", [data0]); }
+
 function dirlist(data0, data1, data2 = null) { undef_func("dirlist", [data0, data1, data2]); }
+
 function end() {
     window.close();
 }
@@ -388,6 +543,8 @@ function ginfo(data_id) {
             throw "未実装だ! - " + data_id;
     }
 }
+
+
 function gmode(mode, data2 = null, data3 = null, alpha = null) {
     alpha_mode = mode;
     switch (mode) {
@@ -402,6 +559,8 @@ function gmode(mode, data2 = null, data3 = null, alpha = null) {
             context.globalAlpha = alpha / 255;
     }
 }
+
+
 function grotate(org_buffer_id, x, y, radian, img_width, img_height) {
     context.save();
     context.translate(x, y);
@@ -410,6 +569,8 @@ function grotate(org_buffer_id, x, y, radian, img_width, img_height) {
     gcopy(org_buffer_id, x, y, img_width, img_height);
     context.restore();
 }
+
+
 function gsel(window_id, window_mode = null) {
     if (window_mode == 1) {
         canvases[window_id].style.display = "block";
@@ -420,6 +581,11 @@ function gsel(window_id, window_mode = null) {
     context = contexts[window_id];
     target_window_id = window_id;
 }
+
+/*
+
+
+*/
 function gzoom(dst_size_x, dst_size_y, org_buffer_id, x, y, img_width, img_height, mode) {
     if (org_buffer_id == 25) {
         var ctx = canvases[org_buffer_id].getContext('2d');
@@ -443,21 +609,29 @@ function gzoom(dst_size_x, dst_size_y, org_buffer_id, x, y, img_width, img_heigh
         context.drawImage(canvases[org_buffer_id], x, y, img_width, img_height, position[0], position[1], dst_size_x, dst_size_y);
     }
 }
+
 function input(data0, data1, data2, data3) { undef_func("input", [data0, data1, data2, data3]); }
+
 function instr(data0, data1, data2) { undef_func("instr", [data0, data1, data2]); return 0; }
+
 function int(data0) {
     return parseInt(data0);
 }
+
+
 function limit(val, min_val, max_val) {
     return Math.max(min_val, Math.min(val, max_val));
 }
+
 function line(start_x, start_y, end_x, end_y) {
     context.beginPath();
     context.moveTo(start_x, start_y);
     context.lineTo(end_x, end_y);
     context.stroke();
 }
+
 function listbox(data0, data1, data2) { undef_func("listbox", [data0, data1, data2]); }
+
 function mes(text) {
     var ga = context.globalAlpha;
     context.globalAlpha = 1;
@@ -465,22 +639,38 @@ function mes(text) {
     context.globalAlpha = ga;
     position[1] += line_size;
 }
+
 function mesbox(data0, data1, data2, data3) { undef_func("mesbox", [data0, data1, data2, data3]); }
+
 function mkdir(data0) { undef_func("mkdir", [data0]); }
+
 var selected_note = 0;
 var note_data = [];
+
+/*
+
+*/
 function noteadd(data, line_num, add_type) {
     if (add_type != 1) {
         throw "ERROR @ noteadd";
     }
     note_data[selected_note][line_num] = data;
 }
+/*
+
+*/
 function notedel(line_num) {
     note_data[selected_note].splice(line_num, 1);
 }
+/*
+
+*/
 function noteget(line_num) {
     return note_data[selected_note][line_num];
 }
+/*
+
+*/
 function noteinfo(info_type) {
     if (info_type == 0) {
         return note_data[selected_note].length;
@@ -493,30 +683,62 @@ function noteinfo(info_type) {
         return sum;
     }
 }
+/*
+
+*/
 function noteload(file_name) {
     note_data[selected_note] = bload(file_name);
 }
+/*
+
+*/
 function notesave(data0) {
     bsave(data0, note_data[selected_note]);
 }
+/*
+
+*/
 function notesel(note_id) {
     if (note_id == 0) {
         throw "ERROR @ notesel";
     }
     selected_note = note_id;
 }
+
 function objinfo(data0, data1, data2 = null) { undef_func("objinfo", [data0, data1, data2]); }
+
 function objmode(data0, data1) { undef_func("objmode", [data0, data1]); }
+
 function objprm(data0, data1) { undef_func("objprm", [data0, data1]); }
+
 function objsel(data0) { undef_func("objsel", [data0]); }
+
 function objsize(data0, data1 = null) { undef_func("objsize", [data0, data1]); }
+
 function oncmd_gosub(func, event_id) { undef_func("oncmd_gosub", [func, event_id]); }
+
 function onexit_goto(func) {
     window.onbeforeunload = func;
 }
+
 function onexit(data0) { undef_func("onexit", [data0]); }
+
 function onkey(data0) { undef_func("onkey", [data0]); }
+
 function palette(data0, data1, data2, data3 = null, data4 = null) { undef_func("palette", [data0, data1, data2, data3, data4]); }
+
+/*
+HSP言語 peek命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+変数に保存されたデータメモリ上の任意の場所にある1バイト(8bit)の内容を
+数値として返します。
+関数の戻り値は、0～255までの整数値になります。
+
+peek (p1,p2)		[バッファから1byte読み出し]
+p1=変数 : 内容を読み出す元の変数名
+p2=0～  : バッファのインデックス(Byte単位)
+*/
 function peek(string_data, index) {
     switch (string_data.split("")[index]) {
         case "1":
@@ -582,14 +804,25 @@ function peek(string_data, index) {
     }
 }
 
+/*
+HSP言語 picload命令
+参照元: http://lhsp.s206.xrea.com/manual/
 
+画像ファイルをロードします。通常は、
+picload "test.bmp"
+とするだけで、"test.bmp"で指定された画像ファイルが現在の画
+
+picload "filename",p1		[画像ファイルをロード]
+"filename" : ロードするファイル名
+p1=0～1(0) : 画像ロードモード
+*/
 function picload(img_name) {
     return __awaiter(this, void 0, void 0, function* () {
         let img = new Image();
         return new Promise((resolve, reject) => {
             img.onload = () => resolve();
             img.onerror = reject;
-            img.src = "img/" + img_name + ".png";
+            img.src = "../data/img/" + img_name + ".png";
         }).then(() => {
             canvases[target_window_id].width = img.width;
             canvases[target_window_id].height = img.height;
@@ -600,17 +833,46 @@ function picload(img_name) {
         });
     });
 }
+
 function poke(data0, data1, data2) { undef_func("poke", [data0, data1, data2]); }
+
 function pos(x, y) {
     position = [x, y];
 }
+
 function pset(pos_x, pos_y) {
     context.beginPath();
     context.arc(pos_x, pos_y, 1, 0, 6.28, false);
     context.fill();
 }
+
 function randomize() { undef_func("randomize"); }
 
+/*
+HSP言語 redraw命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+画面の描画モードを指定します。描画モードとは、
+
+描画モード0:
+
+mes,print,gcopy,gzoom などの画面制御命令が実行されても仮想画面を書き換
+えるだけで、実際の画面には反映されません。
+
+描画モード1:
+
+画面制御命令が実行されると、実際の画面にも反映されます。
+
+となっています。通常は描画モード１です。
+描画モード0で画面内に画像をコピーしたり、メッセージを表示しておいて、
+最後にモード1にすることで画面の書き換えのちらつきをなくしスムーズに見
+せることができます。
+
+redraw p1,p2,p3,p4,p5		[再描画の設定]
+p1=0～3(1) : 描画モードの設定
+p2,p3      : 再描画する左上X,Y座標
+p4,p5      : 再描画する大きさX,Y（ドット単位）
+*/
 function redraw(mode) {
     mode = 1;
     if (mode == 1 && pre_render_canvas) {
@@ -625,9 +887,39 @@ function redraw(mode) {
         context = pre_render_canvas.getContext('2d');
     }
 }
+
 function rnd(num) {
     return Math.floor(Math.random() * num);
 }
+
+/*
+HSP言語 screen命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+指定したウィンドウIDを初期化して使用できるようにします。 
+HSPの初期状態では、ウィンドウID0の画面しか使用されていませんが、
+ウィンドウID1以上を指定することで、新しいウィンドウを作成することができます。
+ID1以上のウィンドウは、標準でサイズを自由に変えることが可能なスタイルを
+持つことになります。
+
+p4の初期化する画面モードは、以下から選ぶことができます。
+
+   1 : パレットモード(1670万色中256色)で作成する
+   2 : 非表示のウィンドウを作成する
+   4 : サイズ固定ウィンドウ
+   8 : ツールウィンドウ
+  16 : 深い縁のあるウィンドウ
+
+screen p1,p2,p3,p4,p5,p6,p7,p8		[ウィンドウIDを初期化]
+p1=0～(0)   : ウィンドウID
+p2,p3       : 初期化する画面サイズX,Y（1ドット単位）
+p4=0～31(0) : 初期化する画面モード
+p5,p6       : ウィンドウの配置X,Y（1ドット単位）
+p7,p8       : クライアントエリアのサイズX,Y（1ドット単位）
+
+p7,p8のパラメータで、ウィンドウのクライアントサイズ(実際に表示される大
+きさ)を指定することができます。
+*/
 function screen_(id, display_width, display_height, init_mode, pos_x = null, pos_y = null) {
     if (id == 0) {
         display_width = 340;
@@ -641,7 +933,25 @@ function screen_(id, display_width, display_height, init_mode, pos_x = null, pos
     document.body.appendChild(canvases[id]);
     canvases[id].style.display = "none";
 }
+
 function sendmsg(data0, data1, data2, data3) { undef_func("sendmsg", [data0, data1, data2, data3]); }
+
+
+/*
+HSP言語 sdim命令
+参照元: http://lhsp.s206.xrea.com/manual/
+
+文字列型の配列変数を作成します。 dim命令との違いは、  p2のパラメータは
+「文字列のデフォルト文字数」、p3のパラメータ以降に実際の配列要素の最大
+数を入れるところです。
+例 ：
+	sdim a,5000 ; 変数aは5000文字ぶんのメモリをあらかじめ確保します
+
+sdim p1,p2,p3...		[文字列型配列変数を作成]
+p1=変数 : 配列を割り当てる変数名
+p2=1～  : デフォルト文字数
+p3=0～  : 要素の最大
+    */
 function sdim(length1, length2 = null, length3 = null) {
     if (length2 == null) {
         return "";
@@ -660,7 +970,9 @@ function sdim(length1, length2 = null, length3 = null) {
     }
     return return_list;
 }
+
 function stick(data0, data1) { undef_func("stick", [data0, data1]); return 0; }
+
 function strmid(data0, data1, data2) { undef_func("strmid", [data0, data1, data2]); }
 
 function title(window_name) {
@@ -668,9 +980,11 @@ function title(window_name) {
         document.title = window_name;
     }
 }
+
 function wait(time) {
     return new Promise((resolve, reject) => { setTimeout(() => resolve(), 10 * time); });
 }
+
 function width(data0, data1) { undef_func("width", [data0, data1]); }
 
 function HMMINIT(data0) {
@@ -691,10 +1005,11 @@ function DSSETVOLUME(se_id, volume) {
 }
 
 function DSGETMASTERVOLUME() { }
+
 function DSSETMASTERVOLUME(data0) { }
 
 
-//13.04で追加
+// Ver 0.1305で追加
 var music_id = "102.mp3";
 var bgm_source1;
 var bgm_source2;
@@ -705,7 +1020,7 @@ var bgm_source2;
 //const music = document.getElementById("media");
 
 function DMLOADMEMORY(music_id, data0, data1) {
-    // 0.13.04で追加
+    // Ver 0.1305で追加
     // bgm音源の更新
     if(bgm_source1 != null){
         //alert("init: " + bgm_source1);
@@ -851,18 +1166,33 @@ function ck_joystick(data0, data1 = null) {
     return 0;
 }
 function netclose(data0, data1 = null, data2 = null, data3 = null) { }
+
 function netfail(data0, data1 = null, data2 = null, data3 = null) { }
+
 function netinit(data0, data1, data2, data3) { }
+
 function tcpopen(data0, data1, data2) { }
+
 function tcpiscon(data0) { }
+
 function tcpcount(data0, data1) { }
+
 function tcpgetl(data0, data1, data2) { }
+
 function tcpput(data0, data1) { }
+
 function GetWindowLongA(data1, data2) { }
+
 function SetWindowLongA(data1, data2, data3) { }
+
 function SetWindowPos(hwnd, data1, data2, data3, data4, data5, data6) { }
+
 function ShowWindow(id, state) { }
+
 function ImmGetContext(arg1) { }
+
 function ImmSetOpenStatus(arg1, arg2) { }
+
 function ImmReleaseContext(arg1, arg2) { }
+
 function ImmGetOpenStatus(arg1) { }
