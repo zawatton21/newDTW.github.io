@@ -24,12 +24,10 @@
   },
   "build": {
     "appId": "com.electron.yourapp",
+    "asar": false,
     "directories": {
       "output": "dist"
     },
-    "extraResources": [
-      "data/*/**"
-    ],
     "files": [
       "assets",
       "src",

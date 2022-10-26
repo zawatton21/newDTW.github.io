@@ -926,7 +926,7 @@ function func009() {
         var_214 = 0;
         var_234 = 0;
         if (var_12 == 1) {
-            var_235 = getkey(122);
+            var_235 = etkey(122); // キー"F11"が入力されいるかどうか
             if (var_235 == 1) {
                 yield func184();
                 return;
@@ -1534,7 +1534,7 @@ function func013() {
             yield func015();
             return;
         }
-        var_235 = getkey(81);
+        var_235 = getkey(81); // キー"Q"が入力されいるかどうか 
         if (var_235 == 1) {
             yield func236();
             return;
@@ -8342,7 +8342,7 @@ function func079() {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(79);
         yield func080();
-        var_235 = getkey(81);
+        var_235 = getkey(81); // キー"Q"が入力されいるかどうか
         if (var_235 == 1 && var_238 == 1) {
             yield func236();
             return;
@@ -9204,7 +9204,7 @@ function func079() {
     });
 }
 
-
+// キーボードの各キー毎の挙動
 function func080(is_key_reset = true) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(80);
@@ -9243,63 +9243,63 @@ function func080(is_key_reset = true) {
             }
             if (ginfo(2) != 30) {
                 onkey(0);
-                var_623 = getkey(48);
+                var_623 = getkey(48); // キー"0"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1) {
                     var_624 = 0;
                     var_625 = 0;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(49);
+                var_623 = getkey(49); // キー"1"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 1) {
                     var_624 = 1;
                     var_625 = 1;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(50);
+                var_623 = getkey(50); // キー"2"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 2) {
                     var_624 = 2;
                     var_625 = 1;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(51);
+                var_623 = getkey(51); // キー"3"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 3) {
                     var_624 = 3;
                     var_625 = 1;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(52);
+                var_623 = getkey(52); // キー"4"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 4) {
                     var_624 = 4;
                     var_625 = 1;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(53);
+                var_623 = getkey(53); // キー"5"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 5) {
                     var_624 = 5;
                     var_625 = 1;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(54);
+                var_623 = getkey(54); // キー"6"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 6) {
                     var_624 = 6;
                     var_625 = 1;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(55);
+                var_623 = getkey(55); // キー"7"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 7) {
                     var_624 = 7;
                     var_625 = 1;
                     yield func934();
                     yield func929();
                 }
-                var_623 = getkey(56);
+                var_623 = getkey(56); // キー"8"(メインキーボード)が入力されいるかどうか
                 if (var_623 == 1 && var_624 != 8) {
                     var_624 = 8;
                     var_625 = 1;
@@ -9314,8 +9314,9 @@ function func080(is_key_reset = true) {
         if (ginfo(2) != 0 && ginfo(2) != 37) {
             return;
         }
+        // ウィンドウサイズ 340
         if (var_626 == 0) {
-            var_235 = getkey(112);
+            var_235 = getkey(112); // キー"F1"が入力されいるかどうか
             if (var_235 == 1 && var_10 == 1) {
                 var_10 = 0;
                 width(340, 340);
@@ -9329,13 +9330,14 @@ function func080(is_key_reset = true) {
                     if (var_628 == 1 || var_629 == 1) {
                         yield wait(2);
                     }
-                    var_235 = getkey(112);
+                    var_235 = getkey(112); // キー"F1"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
                 }
                 return;
             }
+            // ウィンドウサイズ 680
             if (var_235 == 1 && var_10 == 0) {
                 var_10 = 1;
                 width(680, 680);
@@ -9349,43 +9351,43 @@ function func080(is_key_reset = true) {
                     if (var_628 == 1 || var_629 == 1) {
                         yield wait(2);
                     }
-                    var_235 = getkey(112);
+                    var_235 = getkey(112); // キー"F1"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
                 }
                 return;
             }
-            var_235 = getkey(113);
+            var_235 = getkey(113); // キー"F2"が入力されいるかどうか
             if (var_235 == 1) {
                 yield func088();
             }
-            var_235 = getkey(114);
+            var_235 = getkey(114); // キー"F3"が入力されいるかどうか
             if (var_235 == 1) {
                 yield func087();
             }
-            var_235 = getkey(115);
+            var_235 = getkey(115); // キー"F4"が入力されいるかどうか
             if (var_235 == 1) {
                 yield func085();
             }
-            var_235 = getkey(116);
+            var_235 = getkey(116); // キー"F5"が入力されいるかどうか
             if (var_235 == 1) {
                 yield func086();
             }
-            var_235 = getkey(117);
+            var_235 = getkey(117); // キー"F6"が入力されいるかどうか
             if (var_235 == 1 && var_628 == 0 && var_627 == 0 && var_629 == 0) {
                 yield func227();
                 var_630 = 1;
                 for (var cnt3 = 0; true; ++cnt3) {
                     yield func337();
-                    var_235 = getkey(117);
+                    var_235 = getkey(117);  // キー"F6"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
                 }
                 return;
             }
-            var_235 = getkey(118);
+            var_235 = getkey(118); // キー"F7"が入力されいるかどうか
             if (var_235 == 1 && var_631 == 1000) {
                 DMSTOP();
                 var_631 = 0;
@@ -9401,7 +9403,7 @@ function func080(is_key_reset = true) {
                     if (var_628 == 1 || var_629 == 1) {
                         yield wait(2);
                     }
-                    var_235 = getkey(118);
+                    var_235 = getkey(118); // キー"F7"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
@@ -9422,14 +9424,14 @@ function func080(is_key_reset = true) {
                     if (var_628 == 1 || var_629 == 1) {
                         yield wait(2);
                     }
-                    var_235 = getkey(118);
+                    var_235 = getkey(118); // キー"F7"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
                 }
                 return;
             }
-            var_235 = getkey(123);
+            var_235 = getkey(123); // キー"F12"が入力されいるかどうか
             if (var_407 == 0 && var_235 == 1 && var_637 == 0) {
                 chgdisp(1, 640, 480);
                 var_638 = ginfo(20);
@@ -9447,7 +9449,7 @@ function func080(is_key_reset = true) {
                 bgscr(0, 680, 680, 2, var_641, var_642, 340, 340);
                 gsel(0, 2);
                 for (var cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
+                    var_235 = getkey(123); // キー"F12"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
@@ -9475,7 +9477,7 @@ function func080(is_key_reset = true) {
                 bgscr(0, var_643, var_644, 2, var_641, var_642);
                 gsel(0, 2);
                 for (var cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
+                    var_235 = getkey(123); // キー"F12"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
@@ -9507,7 +9509,7 @@ function func080(is_key_reset = true) {
                 bgscr(0, var_643, var_644, 2, var_641, var_642);
                 gsel(0, 2);
                 for (var cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
+                    var_235 = getkey(123); // キー"F12"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
@@ -9537,7 +9539,7 @@ function func080(is_key_reset = true) {
                 gsel(0, 1);
                 chgdisp();
                 for (var cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
+                    var_235 = getkey(123); // キー"F12"が入力されいるかどうか
                     if (var_235 == 0) {
                         break;
                     }
@@ -9571,7 +9573,7 @@ function func080(is_key_reset = true) {
         var_249 = getkey(var_658);
         var_238 = getkey(var_659);
         var_252 = getkey(var_660);
-        var_261 = getkey(32);
+        var_261 = getkey(32);  // キー"Space"が入力されいるかどうか
         var_661 = 15 + var_662;
         ck_joystick(var_663, var_661);
         if (stat != 1 && var_254 == 0 && var_257 == 0 && var_255 == 0 && var_259 == 0 && var_253 == 0 && var_256 == 0 && var_258 == 0 && var_260 == 0 && var_242 == 0 && var_239 == 0 && var_244 == 0 && var_249 == 0 && var_238 == 0 && var_252 == 0 && var_619 == 0 && var_620 == 0 && var_621 == 0 && var_261 == 0) {

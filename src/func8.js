@@ -1338,7 +1338,7 @@ function func851() {
                 }
             }
         }
-        var_235 = getkey(1);
+        var_235 = getkey(1); // マウスの左ボタンが入力されいるかどうか
         if (var_235 == 1) {
             yield func863();
             return;

@@ -67,9 +67,11 @@ function is_changed(x, y) {
     }
     return false;
 }
-
+// 各キーボードキーのリセット 0 = OFF状態
 function reset_input(x, y) {
+    // 37:← (左矢印), 38:↑ (上矢印), 39:→ (右矢印), 40:↓ (下矢印)
     pushing_key_list[37] = pushing_key_list[38] = pushing_key_list[39] = pushing_key_list[40] = 0;
+    // 88:X, 90:Z
     if (pushing_key_list[88] == 1 && pushing_key_list[90] == 1) {
         pushing_key_list[88] = pushing_key_list[90] = 0;
         document.getElementById("XH").style.border = '';
@@ -110,16 +112,18 @@ function ResetDataAndReload(e) {
 
 function InitInput() {
     var canv = document.getElementById("c0");
+    // キーボードを押したときに実行されるイベント
     document.onkeydown = function (e) {
         pushing_key_list[e.keyCode] = 1;
         e.preventDefault();
     };
+    // キーボードを離したときに実行されるイベント
     document.onkeyup = function (e) {
         pushing_key_list[e.keyCode] = 0;
         e.preventDefault();
     };
-    /* ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
-    コメントアウトしたが重要機能っぽい。
+    // ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
+    //コメントアウトしたが重要機能っぽい。
     var buttons = document.getElementsByTagName("button");
     for (var i = 0; i < buttons.length; ++i) {
         if (buttons[i].id == "reset_data") {
@@ -168,8 +172,7 @@ function InitInput() {
         buttons[i].ontouchend = function (e) {
             pushing_key_list[this.id] = 0;
         };
-    }
-    ;*/
+    };
     canv.onmousedown = function (e) {
         reset_input(e.x, e.y);
         isClick = true;
@@ -241,11 +244,12 @@ function bload(file_name, data_size = null, offset = null) {
         //music.loop = false;
         //return music;
     }
-    // datファイルの読み込み。おそらくオミットされている？
+    // datファイルでなければ、配列を返す？
     if (file_name.split(".")[1] != "dat") {
-        return [];
+        return []; //配列を返す？
     }
     // セーブデータ読み込み
+    /*
     if (files[file_name] == undefined) {
         var load_data = window.localStorage.getItem(file_name);
         if (load_data != null) {
@@ -255,6 +259,17 @@ function bload(file_name, data_size = null, offset = null) {
             return;
         }
     }
+    */
+    if (file_name.split(".")[1] = "dat") {
+        var load_data = window.localStorage.getItem(file_name);
+        if (load_data != null) {
+            files[file_name] = JSON.parse(load_data);
+        }
+        else {
+            return;
+        }
+    }
+
     if (offset != null) {
         return files[file_name][offset];
     }
@@ -491,7 +506,8 @@ function end() {
     window.close();
 }
 
-
+// HSP言語 exist命令
+// ファイルが存在するかどうか確認
 function exist(file_name) {
     bload(file_name);
     if (files[file_name]) {

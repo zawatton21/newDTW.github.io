@@ -547,7 +547,7 @@ function func209() {
         if (var_911 >= 1 && var_911 <= 6) {
             var_447 = 48;
             for (var cnt2 = 0; cnt2 < 10; ++cnt2) {
-                var_235 = getkey(var_447);
+                var_235 = getkey(var_447); // キー"0"が入力されいるかどうか
                 if (var_235 == 1) {
                     var_912 = var_447;
                     yield func213();
@@ -560,7 +560,7 @@ function func209() {
             }
             var_447 = 65;
             for (var cnt2 = 0; cnt2 < 26; ++cnt2) {
-                var_235 = getkey(var_447);
+                var_235 = getkey(var_447); // キー"A"が入力されいるかどうか
                 if (var_235 == 1) {
                     var_912 = var_447;
                     yield func213();
@@ -571,7 +571,7 @@ function func209() {
                 }
                 var_447++;
             }
-            var_235 = getkey(16);
+            var_235 = getkey(16); // キー"Shift"が入力されいるかどうか
             if (var_235 == 1) {
                 var_912 = 16;
                 yield func213();
@@ -581,7 +581,7 @@ function func209() {
                 yield func209();
                 return;
             }
-            var_235 = getkey(13);
+            var_235 = getkey(13); // キー"Enter"が入力されいるかどうか
             if (var_235 == 1) {
                 var_912 = 13;
                 yield func213();
@@ -591,7 +591,7 @@ function func209() {
                 yield func209();
                 return;
             }
-            var_235 = getkey(17);
+            var_235 = getkey(17); // キー"Ctrl"が入力されいるかどうか
             if (var_235 == 1) {
                 var_912 = 17;
                 yield func213();
@@ -3331,7 +3331,7 @@ function func238() {
         dbgprt(238);
         yield func337();
         if (var_1061 == 1) {
-            var_235 = getkey(89);
+            var_235 = getkey(89); // キー"Y"が入力されいるかどうか
             if (var_235 == 1) {
                 var_198 = 0;
                 yield func237();
@@ -3339,7 +3339,7 @@ function func238() {
             }
         }
         if (var_1061 == 2) {
-            var_235 = getkey(192);
+            var_235 = getkey(192); // キー"不明 キーボードメーカー毎に違う？"が入力されいるかどうか
             if (var_235 == 1) {
                 var_198 = 0;
                 var_211 = 0;
@@ -3370,6 +3370,8 @@ function func239() {
         return;
     });
 }
+
+
 function func240() {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(240);
@@ -3407,6 +3409,8 @@ function func240() {
         return;
     });
 }
+
+
 function func241() {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(241);
