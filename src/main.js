@@ -15,6 +15,7 @@ const createWindow = () => {
     }
   }
 )
+  // document.addEventListener('keypress', keypress_ivent)
   
   // Aspect ratio works on Windows, Linux, and Mac:
   mainWindow.setAspectRatio(340 / 340)
@@ -27,6 +28,14 @@ const createWindow = () => {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  if (pushing_key_list[112] == 1) {
+    alert(key_id);
+    mainWindow.unmaximize();
+    mainWindow.setSize(1180, 650, false);
+  }
+
+
 }
 
 // This method will be called when Electron has finished

@@ -9204,7 +9204,7 @@ function func079() {
     });
 }
 
-
+// キーボードの各キー毎の挙動
 function func080(is_key_reset = true) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(80);
@@ -9314,6 +9314,7 @@ function func080(is_key_reset = true) {
         if (ginfo(2) != 0 && ginfo(2) != 37) {
             return;
         }
+        // ウィンドウサイズ 340
         if (var_626 == 0) {
             var_235 = getkey(112); // キー"F1"が入力されいるかどうか
             if (var_235 == 1 && var_10 == 1) {
@@ -9336,6 +9337,7 @@ function func080(is_key_reset = true) {
                 }
                 return;
             }
+            // ウィンドウサイズ 680
             if (var_235 == 1 && var_10 == 0) {
                 var_10 = 1;
                 width(680, 680);
@@ -9571,7 +9573,7 @@ function func080(is_key_reset = true) {
         var_249 = getkey(var_658);
         var_238 = getkey(var_659);
         var_252 = getkey(var_660);
-        var_261 = getkey(32);
+        var_261 = getkey(32);  // キー"Space"が入力されいるかどうか
         var_661 = 15 + var_662;
         ck_joystick(var_663, var_661);
         if (stat != 1 && var_254 == 0 && var_257 == 0 && var_255 == 0 && var_259 == 0 && var_253 == 0 && var_256 == 0 && var_258 == 0 && var_260 == 0 && var_242 == 0 && var_239 == 0 && var_244 == 0 && var_249 == 0 && var_238 == 0 && var_252 == 0 && var_619 == 0 && var_620 == 0 && var_621 == 0 && var_261 == 0) {
