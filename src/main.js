@@ -29,6 +29,26 @@ const createWindow = () => {
   // mainWindow.webContents.openDevTools()
 }
 
+
+// https://1-notes.com/javascript-addeventlistener-key-ivent/
+// https://uxmilk.jp/28500#:~:text=%E7%94%BB%E9%9D%A2%E3%82%B5%E3%82%A4%E3%82%BA%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95&text=window.resizeBy(width%2C%20height)%3B,%E8%8B%B1%E6%95%B0%E5%AD%97%E3%81%A7%E5%85%A5%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82
+document.addEventListener('keypress', keypress_ivent);
+
+function keypress_ivent(e) {
+	if(e.code === 'F1'){
+		// F1キーが押された時の処理
+    if(width == 340 ){
+      mainWindow.BrowserWindowresizeTo(680, 680);
+    }
+    else {
+      mainWindow.BrowserWindowresizeTo(340, 340);
+    }
+	}
+	return false; 
+}
+
+
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
