@@ -118,8 +118,8 @@ function InitInput() {
         pushing_key_list[e.keyCode] = 0;
         e.preventDefault();
     };
-    /* ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
-    コメントアウトしたが重要機能っぽい。
+    // ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
+    //コメントアウトしたが重要機能っぽい。
     var buttons = document.getElementsByTagName("button");
     for (var i = 0; i < buttons.length; ++i) {
         if (buttons[i].id == "reset_data") {
@@ -168,8 +168,7 @@ function InitInput() {
         buttons[i].ontouchend = function (e) {
             pushing_key_list[this.id] = 0;
         };
-    }
-    ;*/
+    };
     canv.onmousedown = function (e) {
         reset_input(e.x, e.y);
         isClick = true;

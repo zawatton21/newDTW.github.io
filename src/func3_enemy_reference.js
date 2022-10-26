@@ -70,7 +70,7 @@ function func361() {
         dbgprt(361);
         yield func080();
         if (var_12 == 1) {
-            var_235 = getkey(121);
+            var_235 = getkey(121); // キー"F10"が入力されいるかどうか
             if (var_235 == 1) {
                 var_1038 = 200;
                 for (var cnt3 = 0; cnt3 < 200; ++cnt3) {
@@ -86,7 +86,7 @@ function func361() {
                 yield func361();
                 return;
             }
-            var_235 = getkey(122);
+            var_235 = etkey(122); // キー"F11"が入力されいるかどうか
             if (var_235 == 1) {
                 var_1038 = 1;
                 for (var cnt3 = 0; cnt3 < 200; ++cnt3) {

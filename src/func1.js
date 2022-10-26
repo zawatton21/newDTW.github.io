@@ -1559,12 +1559,12 @@ function func140() {
         yield await_(50);
         yield func141();
         if (var_12 == 1) {
-            var_235 = getkey(112);
+            var_235 = getkey(112); // キー"F1"が入力されいるかどうか
             if (var_235 == 1) {
                 yield func221();
                 return;
             }
-            var_235 = getkey(113);
+            var_235 = getkey(113); // キー"F2"が入力されいるかどうか
             if (var_235 == 1) {
                 yield func224();
                 return;
@@ -1903,7 +1903,7 @@ function func144() {
 function func145() {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(145);
-        var_235 = getkey(89);
+        var_235 = getkey(89); // キー"Y"が入力されいるかどうか
         if (var_235 == 1) {
             var_235 = 0;
             var_736 = 0;
