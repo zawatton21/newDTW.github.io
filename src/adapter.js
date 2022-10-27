@@ -231,7 +231,8 @@ function bgscr(data0, data1, data2, data3, data4, data5, data6 = null, data7 = n
 function bload(file_name, data_size = null, offset = null) {
     // 効果音の読み込み
     if (file_name.split(".")[1] == "wav") {
-        var audio = new Audio("../data/se/" + file_name);
+        var audio = new Audio("./data/se/" + file_name);
+
         audio.autoplay = false;
         audio.loop = false;
         return audio;
@@ -838,7 +839,8 @@ function picload(img_name) {
         return new Promise((resolve, reject) => {
             img.onload = () => resolve();
             img.onerror = reject;
-            img.src = "../data/img/" + img_name + ".png";
+            //img.src = __dirname + "../data/img/" + img_name + ".png";
+            img.src = "./data/img/" + img_name + ".png";
         }).then(() => {
             canvases[target_window_id].width = img.width;
             canvases[target_window_id].height = img.height;
@@ -1047,7 +1049,7 @@ function DMLOADMEMORY(music_id, data0, data1) {
         bgm_source1 = music_id;
     }
     document.getElementById(bgm_source1).load();
-
+    
 
 }
 

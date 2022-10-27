@@ -29,10 +29,18 @@
       "output": "dist"
     },
     "files": [
-      "assets",
       "src",
       "package.json",
       "package-lock.json"
+    ],
+    "extraResources": [
+      {
+        "from": "./data/",
+        "to": "data",
+        "filter": [
+          "**/*"
+        ]
+      }
     ],
     "mac": {
       "icon": "assets/mac/icon_mac.icns",
