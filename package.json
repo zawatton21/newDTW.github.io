@@ -2,48 +2,64 @@
   "name": "newdtw",
   "version": "1.0.0",
   "description": "Rebuild Diavolo The Wanderer",
-  "main": "src/main.js",
+  "main": "build/main.js",
   "scripts": {
-    "start": "electron .",
-    "pack": "electron-builder --dir",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "npm run build && electron build/main.js",
     "dist": "electron-builder"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/zawatton21/newDTW.git",
   "keywords": [
     "Electron",
     "quick",
     "start",
     "tutorial",
-    "demo"
+    "demo",
+    "typescript"
   ],
-  "author": "Zawa-Ton  <kurozawawo@gmail.com>",
+  "type": "commonjs",
+  "author": "Zawa-Ton",
   "license": "CC0-1.0",
   "devDependencies": {
-    "app-builder-lib": "^22.10.3",
-    "electron": "github:electron/electron"
+    "@types/node": "^18.11.8",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "electron": "^22.0.0-alpha.6",
+    "electron-store": "^8.1.0",
+    "eslint": "^7.32.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "yargs": "^7.1.2",
+    "yargs-parser": "^5.0.0"
   },
   "build": {
     "appId": "com.electron.yourapp",
-    "asar": false,
+    "asar":  false,
     "directories": {
       "output": "dist"
     },
     "files": [
-      "src",
+      "build/*",
+      "assets/**/*",
+      "index.html",
       "package.json",
       "package-lock.json"
     ],
     "extraResources": [
       {
-        "from": "./data/",
-        "to": "data",
+        "from": "./assets/",
+        "to": "assets",
         "filter": [
           "**/*"
         ]
       }
     ],
     "mac": {
-      "icon": "assets/mac/icon_mac.icns",
+      "icon": "assets/icon/mac/icon_mac.icns",
       "target": {
         "target": "default",
         "arch": [
@@ -52,7 +68,7 @@
       }
     },
     "win": {
-      "icon": "assets/win/icon_win.ico",
+      "icon": "assets/icon/win/icon_win.ico",
       "target": {
         "target": "nsis",
         "arch": [
@@ -63,7 +79,7 @@
       }
     },
     "linux": {
-      "icon": "assets/DTW.png",
+      "icon": "assets/icon/linux/DTW.png",
       "target": [
         "AppImage",
         "deb"
@@ -74,8 +90,5 @@
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
     }
-  },
-  "dependencies": {
-    "minimatch": "^5.1.0"
   }
 }

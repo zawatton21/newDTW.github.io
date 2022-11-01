@@ -29,13 +29,13 @@
 		</font>
 	</div>
 	<script>
-		var change_scale = {
+		let change_scale = {
 			"container": 320,
 			"percent": 1,
 			"function": function() {
 				"use strict";
 				if (change_scale.percent === window.devicePixelRatio) {
-					var scale = document.documentElement.clientWidth;
+					let scale = document.documentElement.clientWidth;
 					scale = scale / change_scale.container;
 					scale = "scale(" + scale + ")";
 					document.body.style.transform = scale;
@@ -298,19 +298,19 @@
 	<audio id="999.mp3" preload="auto" loop>
 		<source src="../assets/bgm/999.mp3" type="audio/mp3">
 	</audio>
-	<script src="variable.js"></script>
-	<script src="classes.js"></script>
-	<script src="adapter.js"></script>
-	<script src="func0.js"></script>
-	<script src="func1.js"></script>
-	<script src="func2.js"></script>
-	<script src="func3.js"></script>
-	<script src="func4.js"></script>
-	<script src="func5.js"></script>
-	<script src="func6.js"></script>
-	<script src="func7.js"></script>
-	<script src="func8.js"></script>
-	<script src="func9.js"></script>
-	<script src="main_d.js"></script>
+	<script src="./build/variable.js"></script>
+	<script src="./build/classes.js"></script>
+	<script src="./build/adapter.js"></script>
+	<script src="./build/func0.js"></script>
+	<script src="./build/func1.js"></script>
+	<script src="./build/func2.js"></script>
+	<script src="./build/func3.js"></script>
+	<script src="./build/func4.js"></script>
+	<script src="./build/func5.js"></script>
+	<script src="./build/func6.js"></script>
+	<script src="./build/func7.js"></script>
+	<script src="./build/func8.js"></script>
+	<script src="./build/func9.js"></script>
+	<script src="./build/main_d.js"></script>
 </body>
 </html>
