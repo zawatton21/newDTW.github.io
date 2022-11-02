@@ -3791,6 +3791,8 @@ function func239(this: any) {
         return;
     });
 }
+
+// データを初期化する際の機能
 function func240(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(240);
@@ -3812,21 +3814,22 @@ function func240(this: any) {
             var_1064 = "03e.dat";
             var_718 = 0;
         }
+
         exist(var_1062);
-
         if (strsize >= 1) {
-            delete_(var_1062);
+            delete_(var_1062); // .datファイル削除
         }
+
         exist(var_1063);
-
         if (strsize >= 1) {
-            delete_(var_1063);
+            delete_(var_1063); // n.datファイル削除
         }
+        
         exist(var_1064);
-
         if (strsize >= 1) {
-            delete_(var_1064);
+            delete_(var_1064); // e.datファイル削除
         }
+
         yield func242();
         return;
     });

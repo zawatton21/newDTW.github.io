@@ -521,7 +521,7 @@ p2パラメータで選択時のリスト表示のためのYサイズを指定�
 */
 function combox(data0: any, data1: any, data2: any) { undef_func("combox", [data0, data1, data2]); }
 
-/* 現在使用していない HSP言語 delete命令
+/* 現在使用していない HSP言語 delete命令 "filename"で指定したファイルを削除する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 delete "filename"		[ファイル削除]
@@ -533,7 +533,7 @@ delete命令を実行する前に exist命令でファイルの有無を確認�
 */
 function delete_(data0: any) { undef_func("delete_", [data0]); }
 
-/* HSP言語 dim命令
+/* HSP言語 dim命令 任意の要素を持つ配列変数を作成する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 任意の要素を持つ配列変数を作成します。
@@ -547,7 +547,7 @@ p1=変数 : 配列を割り当てる変数名
 p2=0～  : 要素の最大
 */
 // @ts-expect-error TS(7006): Parameter 'length1' implicitly has an 'any' type.
-function dim(length1, length2 = null, length3 = null, length4 = null) {
+function dim(length1: any, length2: any = null, length3: any = null, length4: any = null) {
     if (length4 != null) {
         throw "4重配列なんてありませんよ";
     }
@@ -577,7 +577,7 @@ function dim(length1, length2 = null, length3 = null, length4 = null) {
     return return_list;
 }
 
-/* 現在使用していない HSP言語 dirinfo命令
+/* 現在使用していない HSP言語 dirinfo命令 p1で指定したタイプのディレクトリ名を返す。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 dirinfo (p1)		[ディレクトリ情報の取得]
@@ -593,10 +593,9 @@ p1で指定したタイプのディレクトリ名を返します。
 
 p1を省略することはできません。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function dirinfo(data0) { undef_func("dirinfo", [data0]); }
+function dirinfo(data0: any) { undef_func("dirinfo", [data0]); }
 
-/* 現在使用していない HSP言語 dirlist命令
+/* 現在使用していない HSP言語 dirlist命令 カレントディレクトリのファイル一覧を作成して、変数に代入する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 dirlist p1,"filemask",p2		[ディレクトリ一覧を取得]
@@ -623,8 +622,7 @@ p2=0～(0)  : ディレクトリ取得モード
      6   :  隠し属性・システム属性ファイルのみ
      7   :  ディレクトリと隠し属性・システム属性ファイルのみ
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function dirlist(data0, data1, data2 = null) { undef_func("dirlist", [data0, data1, data2]); }
+function dirlist(data0: any, data1: any, data2: any = null) { undef_func("dirlist", [data0, data1, data2]); }
 
 /*
 HSP命令ない？？
@@ -635,7 +633,7 @@ function end() {
     window.close();
 }
 
-/* HSP言語 exist命令
+/* HSP言語 exist命令 ファイルが存在するかどうか確認
 参照元: http://lhsp.s206.xrea.com/manual/
 
 ファイルが存在するかどうか確認
@@ -648,8 +646,7 @@ exist "filename"		[ファイルのサイズ取得]
 ファイルが存在する場合は、そのファイルサイズがstrsizeに代入されます。
 もしファイルが存在しなかった場合は、-1がstrsizeに代入されます。
 */
-// @ts-expect-error TS(7006): Parameter 'file_name' implicitly has an 'any' type... Remove this comment to see the full error message
-function exist(file_name) {
+function exist(file_name: string) {
     bload(file_name);
     // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     if (files[file_name]) {
@@ -661,7 +658,7 @@ function exist(file_name) {
     }
 }
 
-/* HSP言語 font命令
+/* HSP言語 font命令 mesおよびprint命令などで表示するテキスト書体の設定をする。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 フォント設定
@@ -698,15 +695,14 @@ Windows9X環境はサポートされないのでご注意下さい。
 代用フォントの検索にも失敗した場合には、システム変数statに-1が代入されます。
 フォントが正常に設定された場合には、システム変数statに0が代入されます。
 */
-// @ts-expect-error TS(7006): Parameter 'font_type' implicitly has an 'any' type... Remove this comment to see the full error message
-function font(font_type, font_size, font_style = null) {
+function font(font_type: string, font_size: number, font_style: any = null) {
     font_style = font_style || 0;
     const font_style_list = ["", "bold", "italic"];
     context.font = font_style_list[font_style] + " " + font_size + "px '" + font_type + "'";
     line_size = font_size;
 }
 
-/* 現在使用していない HSP言語 dialog命令
+/* 現在使用していない HSP言語 dialog命令 Windowsの標準的な各種ダイアログボックスを画面に表示する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 dialog "message",p1,"option"		[ダイアログを開く]
@@ -745,10 +741,9 @@ dialog命令で出したダイアログは、 HSPのウィンドウとは別に�
 のようになります。
 
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function dialog(data0, data1, data2 = null) { undef_func("dialog", [data0, data1]); }
+function dialog(data0: any, data1: any, data2: any = null) { undef_func("dialog", [data0, data1]); }
 
-/* HSP言語 gcopy命令
+/* HSP言語 gcopy命令 指定したウィンドウIDの画面の一部を、現在の描画先カレントポジションにコピーする。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 gcopy p1,p2,p3,p4,p5		[画面コピー]
@@ -765,8 +760,7 @@ gcopy命令でコピーする場合は、gmode命令によってコピーする�
 
 gcopy命令でパレットモード画面の画像をコピーする際には注意が必要です。
 */
-// @ts-expect-error TS(7006): Parameter 'org_buffer_id' implicitly has an 'any' ... Remove this comment to see the full error message
-function gcopy(org_buffer_id, x: any, y, img_width, img_height) {
+function gcopy(org_buffer_id: any, x: number, y: number, img_width: number, img_height: number) {
     gzoom(img_width, img_height, org_buffer_id, x, y, img_width, img_height, null);
 }
 
@@ -820,7 +814,7 @@ function ResetKey(key_id: any) {
     pushing_key_list[key_id] = 0;
 }
 
-/* 現在使用していない HSP言語 getstr命令
+/* 現在使用していない HSP言語 getstr命令 メモリ上のバッファの任意の場所にある内容を文字列として変数に読み出す。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 getstr p1,p2,p3,p4		[バッファから文字列読み出し]
@@ -852,7 +846,7 @@ getstr a,b,0,','
 */
 function getstr(data0: any, data1: any, data2: any, data3: any) { undef_func("getstr", [data0, data1, data2, data3]); }
 
-/* HSP言語 gettime命令
+/* HSP言語 gettime命令 時間取得
 参照元: http://lhsp.s206.xrea.com/command/gettime.html
 
 現在時間の取得
@@ -867,12 +861,10 @@ func175 クリア時のスコア機能にて使用。
 6	秒（second）。「0～59」の範囲の数値が返る。
 7	ミリ秒（milli second）。「0～999」の範囲の数値が返る。[ 1000ミリ秒＝1秒 ]
 
+function gettime(data0: any) { undef_func("gettime", [data0]); }
 */
-//function gettime(data0: any) { undef_func("gettime", [data0]); }
 function gettime(data0: any) { 
-    
     const now = new Date(); //JavaScript 時間取得関数
-
     if (data0 == 0) {
         return now.getFullYear(); // 年（year）。｢20**｣という数値が返る。
     }
@@ -1005,7 +997,7 @@ function ginfo(data_id: any) {
     }
 }
 
-/* HSP言語 gmode命令
+/* HSP言語 gmode命令 gcopyで使用されるモードおよび、サイズ、ブレンド率などを設定する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 gmode命令
@@ -1084,8 +1076,7 @@ gmodeで指定されたサイズの画像を、元画像の右側に用意して
 (p2,p3)はコピーサイズのデフォルトを設定します。この値は、gcopy,gzoom命
 令でコピーする大きさの値を省略した場合にデフォルトで使われるサイズです。
 */
-// @ts-expect-error TS(7006): Parameter 'mode' implicitly has an 'any' type.
-function gmode(mode, data2 = null, data3 = null, alpha = null) {
+function gmode(mode: number, data2: any = null, data3: any = null, alpha: any = null) {
     alpha_mode = mode;
     switch (mode) {
         case 2:
@@ -1100,7 +1091,7 @@ function gmode(mode, data2 = null, data3 = null, alpha = null) {
     }
 }
 
-/* HSP言語 grotate命令
+/* HSP言語 grotate命令 gcopy命令に回転を含めた処理を行う。画像を回転してコピー。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 grotate命令
@@ -1136,8 +1127,7 @@ grotate命令は、gmodeで設定されたコピーモードの指定が反映�
 また、異なる画面モード(パレットモードとフルカラーモード)間でのコピーは
 エラーになります。
 */
-// @ts-expect-error TS(7006): Parameter 'org_buffer_id' implicitly has an 'any' ... Remove this comment to see the full error message
-function grotate(org_buffer_id, x: any, y, radian, img_width, img_height) {
+function grotate(org_buffer_id: number, x: number, y: number, radian: number, img_width: number, img_height: number) {
     context.save();
     context.translate(x, y);
     context.rotate(radian);
@@ -1146,7 +1136,7 @@ function grotate(org_buffer_id, x: any, y, radian, img_width, img_height) {
     context.restore();
 }
 
-/* HSP言語 gsel命令
+/* HSP言語 gsel命令 画面制御命令の描画先を指定したウィンドウIDの画面に変更する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 gsel命令
@@ -1171,8 +1161,7 @@ p2の指定を省略した場合は、特に何も影響はありません。
 p2=-1で非表示にした場合は、 指定したウィンドウが消えますが完全に消去さ
 れるわけではありません。再びp2=1か2でアクティブにすると復帰します。
 */
-// @ts-expect-error TS(7006): Parameter 'window_id' implicitly has an 'any' type... Remove this comment to see the full error message
-function gsel(window_id, window_mode = null) {
+function gsel(window_id: number, window_mode: number = null) {
     if (window_mode == 1) {
         canvases[window_id].style.display = "block";
     }
@@ -1183,7 +1172,7 @@ function gsel(window_id, window_mode = null) {
     target_window_id = window_id;
 }
 
-/* HSP言語 gzoom命令
+/* HSP言語 gzoom命令 指定したウィンドウIDの画面の一部を現在の描画先カレントポジションに、任意の大きさに変倍してコピーする。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 gzoom p1,p2,p3,p4,p5,p6,p7,p8		[変倍して画面コピー]
@@ -1204,8 +1193,7 @@ p8に1を指定した場合には、 拡大縮小時にハーフトーンを使�
 p8が0か、または省略されている場合は、ハーフトーンを使用しませんが、 そ
 のぶん高速に画像処理を行なうことができます。
 */
-// @ts-expect-error TS(7006): Parameter 'dst_size_x' implicitly has an 'any' typ... Remove this comment to see the full error message
-function gzoom(dst_size_x, dst_size_y, org_buffer_id, x: any, y, img_width, img_height, mode) {
+function gzoom(dst_size_x: number, dst_size_y: number, org_buffer_id: number, x: number, y: number, img_width: number, img_height: number, mode: number) {
     if (org_buffer_id == 25) {
         const ctx = canvases[org_buffer_id].getContext('2d');
         const imgd = ctx.getImageData(position[0], position[1], img_width, img_height);
@@ -1229,7 +1217,7 @@ function gzoom(dst_size_x, dst_size_y, org_buffer_id, x: any, y, img_width, img_
     }
 }
 
-/* 現在使用していない HSP言語 input命令
+/* 現在使用していない HSP言語 input命令 カレントポジションにオブジェクトとして入力ボックスを配置する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 input p1,p2,p3,p4		[入力ボックス表示]
@@ -1257,10 +1245,9 @@ p4を0に指定した場合は、そのバージョンのWindowsで扱える最�
 
 入力ボックスを配置すると、カレントポジションは次の行に自動的に移動します。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function input(data0, data1, data2, data3) { undef_func("input", [data0, data1, data2, data3]); }
+function input(data0: any, data1: any, data2: any, data3: any) { undef_func("input", [data0, data1, data2, data3]); }
 
-/* 現在使用していない HSP言語 instr命令
+/* 現在使用していない HSP言語 instr命令 p1で指定した文字列型変数の中に、"string"で指定した文字列があるかどうか調べて、インデックスを返す。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 instr (p1,p2,"string")		[文字列の検索をする]
@@ -1277,10 +1264,9 @@ p1で指定した文字列型変数の中に、"string"で指定した文字列�
 (p2を指定した場合、インデックスはp2を起点(0)とするものになります。)
 もし、指定した文字列が見つからなかった場合には-1が返されます。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function instr(data0, data1, data2) { undef_func("instr", [data0, data1, data2]); return 0; }
+function instr(data0: any, data1: any, data2: any) { undef_func("instr", [data0, data1, data2]); return 0; }
 
-/* HSP言語 int命令
+/* HSP言語 int命令 p1で指定された値を整数にしたものを返す。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 int (p1)		[整数値に変換]
@@ -1290,8 +1276,7 @@ p1で指定された値を整数にしたものを返します。
 値が文字列の場合は、数値文字列の場合はその数値に、 それ以外は0になりま
 す。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function int(data0) {
+function int(data0: any) {
     return parseInt(data0);
 }
 
@@ -1309,11 +1294,11 @@ p1の値がp2よりも小さい場合は、p2の値が返され、p1の値がp3�
 実数の範囲を求める場合には、limitf関数を使用してください。
 */
 // @ts-expect-error TS(7006): Parameter 'val' implicitly has an 'any' type.
-function limit(val, min_val, max_val) {
+function limit(val: any, min_val, max_val) {
     return Math.max(min_val, Math.min(val, max_val));
 }
 
-/* HSP言語 line命令
+/* HSP言語 line命令 画面上に、(p1,p2)と(p3,p4)を結ぶ直線を描画する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 line p1,p2,p3,p4		[直線を描画]
@@ -1326,15 +1311,14 @@ p3,p4 : ラインの始点X,Y座標
 line命令実行後は、(p1,p2)の座標がカレントポジションになります。
 これにより、連続した直線を描画していくことが可能です。
 */
-// @ts-expect-error TS(7006): Parameter 'start_x' implicitly has an 'any' type.
-function line(start_x, start_y, end_x, end_y) {
+function line(start_x: any, start_y: any, end_x: any, end_y: any) {
     context.beginPath();
     context.moveTo(start_x, start_y);
     context.lineTo(end_x, end_y);
     context.stroke();
 }
 
-/* 現在使用していない HSP言語 listbox命令
+/* 現在使用していない HSP言語 listbox命令 カレントポジションにオブジェクトとして、リストボックスを配置する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 listbox p1,p2,p3		[リストボックス表示]
@@ -1366,11 +1350,10 @@ p2パラメータで選択時のリスト表示のためのYサイズを指定�
 クスが選ばれた状態になります。 (インデックス番号が-1の時は非選択の状態
 になります)
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function listbox(data0, data1, data2) { undef_func("listbox", [data0, data1, data2]); }
+function listbox(data0: any, data1: any, data2: any) { undef_func("listbox", [data0, data1, data2]); }
 
 
-/* HSP言語 mes命令
+/* HSP言語 mes命令 ウィンドウ内に、指定されたメッセージを表示する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 mes "strings"		[メッセージ表示]
@@ -1383,8 +1366,7 @@ mes "strings"		[メッセージ表示]
 表示するメッセージに改行コードが含まれていた場合には、改行され次の行か
 ら表示を続けます。
 */
-// @ts-expect-error TS(7006): Parameter 'text' implicitly has an 'any' type.
-function mes(text) {
+function mes(text: any) {
     const ga = context.globalAlpha;
     context.globalAlpha = 1;
     context.fillText(text, position[0], position[1] + line_size * 0.9);
@@ -1392,7 +1374,7 @@ function mes(text) {
     position[1] += line_size;
 }
 
-/* 現在使用していない HSP言語 mesbox命令
+/* 現在使用していない HSP言語 mesbox命令 ウィンドウ上にオブジェクトとしてメッセージボックス(メッセージ表示用の窓)を配置する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 mesbox p1,p2,p3,p4,p5		[メッセージボックス表示]
@@ -1420,11 +1402,10 @@ p5が0の場合は、そのバージョンのWindowsで扱える最大文字数�
 p5が省略されるかマイナス値の場合には、p1で指定された変数に格納できる
 最大文字数が自動的に割り当てられます。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function mesbox(data0, data1, data2, data3) { undef_func("mesbox", [data0, data1, data2, data3]); }
+function mesbox(data0: any, data1: any, data2: any, data3: any) { undef_func("mesbox", [data0, data1, data2, data3]); }
 
 
-/* 現在使用していない HSP言語 mkdir命令
+/* 現在使用していない HSP言語 mkdir命令 指定した名前でディレクトリを作成する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 mkdir "dirname"		[ディレクトリ作成]
@@ -1436,13 +1417,12 @@ mkdir "dirname"		[ディレクトリ作成]
 mkdir命令を実行する前に 必ずdirlist命令でフォルダの有無を
 確認するようにしてください。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function mkdir(data0) { undef_func("mkdir", [data0]); }
+function mkdir(data0: any) { undef_func("mkdir", [data0]); }
 
 let selected_note: any = 0;
 const note_data: any = [];
 
-/* HSP言語 noteadd命令
+/* HSP言語 noteadd命令 メモリノートパッドの内容を追加・変更する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 noteadd p1,p2,p3		[指定行の追加・変更]
@@ -1469,15 +1449,14 @@ noteaddは、 変数バッファにsdim命令などであらかじめ確保さ�
 メモリノートパッド命令(noteget,noteadd,notedel,noteinfo)を使用するため
 には、最初にnotesel命令で対象となるバッファを設定しなければなりません。
 */
-// @ts-expect-error TS(7006): Parameter 'data' implicitly has an 'any' type.
-function noteadd(data, line_num, add_type) {
+function noteadd(data: any, line_num: any, add_type: any) {
     if (add_type != 1) {
         throw "ERROR @ noteadd";
     }
     note_data[selected_note][line_num] = data;
 }
 
-/* HSP言語 notedel命令
+/* HSP言語 notedel命令 メモリノートパッドの指定したインデックスを削除する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 notedel p1		[行の削除]
@@ -1489,12 +1468,11 @@ p1で指定したインデックスの内容は削除され、以降のインデ
 メモリノートパッド命令(noteget,noteadd,notedel,noteinfo)を使用するため
 には、最初にnotesel命令で対象となるバッファを設定しなければなりません。
 */
-// @ts-expect-error TS(7006): Parameter 'line_num' implicitly has an 'any' type.
-function notedel(line_num) {
+function notedel(line_num: number) {
     note_data[selected_note].splice(line_num, 1);
 }
 
-/* HSP言語 noteget命令
+/* HSP言語 noteget命令 メモリノートパッド内の任意の行にある内容を読み出す。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 noteget p1,p2		[指定行を読み込み]
@@ -1511,12 +1489,11 @@ p1で指定する変数には、読み出すのに十分なバッファを確保
 メモリノートパッド命令(noteget,noteadd,notedel,noteinfo)を使用するため
 には、最初にnotesel命令で対象となるバッファを設定しなければなりません。
 */
-// @ts-expect-error TS(7006): Parameter 'line_num' implicitly has an 'any' type.
-function noteget(line_num) {
+function noteget(line_num: number) {
     return note_data[selected_note][line_num];
 }
 
-/* HSP言語 noteinfo命令
+/* HSP言語 noteinfo命令 noteinfo関数は、現在対象となっているメモリノートパッドについての情報を取得します。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 noteinfo (p1)		[メモリノートパッド情報取得]
@@ -1540,8 +1517,7 @@ notemaxマクロは、 複数行の文字列ですべての行に対して繰り
 メモリノートパッド命令(noteget,noteadd,notedel,noteinfo)を使用するため
 には、最初にnotesel命令で対象となるバッファを設定しなければなりません
 */
-// @ts-expect-error TS(7006): Parameter 'info_type' implicitly has an 'any' type... Remove this comment to see the full error message
-function noteinfo(info_type) {
+function noteinfo(info_type: number) {
     if (info_type == 0) {
         return note_data[selected_note].length;
     }
@@ -1555,7 +1531,7 @@ function noteinfo(info_type) {
     }
 }
 
-/* HSP言語 noteload命令
+/* HSP言語 noteload命令 指定したファイルをメモリノートパッド命令のバッファに読み込みます。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 noteload "filename",p1		[対象バッファ読み込み]
@@ -1572,12 +1548,11 @@ p1で、読み込むファイルの最大サイズを指定することができ
 必ず最初にnotesel命令で対象となるバッファを設定する必要があるので注意
 してください。
 */
-// @ts-expect-error TS(7006): Parameter 'file_name' implicitly has an 'any' type... Remove this comment to see the full error message
-function noteload(file_name) {
+function noteload(file_name: string) {
     note_data[selected_note] = bload(file_name);
 }
 
-/* HSP言語 notesave命令
+/* HSP言語 notesave命令 メモリノートパッド命令のバッファの内容を指定したファイルにテキストファイルとして保存します。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 notesave "filename"		[対象バッファ保存]
@@ -1588,12 +1563,11 @@ notesave "filename"		[対象バッファ保存]
 してください。
 notesave命令は、指定バッファに含まれる文字列の長さで保存します。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function notesave(data0) {
+function notesave(data0: any) {
     bsave(data0, note_data[selected_note]);
 }
 
-/* HSP言語 notesel命令
+/* HSP言語 notesel命令 指定した変数をメモリノートパッド命令のバッファに設定します。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 notesel p1		[対象バッファ指定]
@@ -1605,8 +1579,7 @@ p1で指定した変数は、強制的に文字列型に変更されます。
 ためには、最初に notesel命令で対象となるバッファを設定しなければなりま
 せん。
 */
-// @ts-expect-error TS(7006): Parameter 'note_id' implicitly has an 'any' type.
-function notesel(note_id) {
+function notesel(note_id: any) {
     if (note_id == 0) {
         throw "ERROR @ notesel";
     }
@@ -1637,8 +1610,7 @@ p1にウィンドウオブジェクトID、p2に取得タイプを指定する�
 外部API(DLL)等にウィンドウオブジェクトのハンドル(HWND)を渡す場合など、
 特殊な用途に利用することができます。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function objinfo(data0, data1, data2 = null) { undef_func("objinfo", [data0, data1, data2]); }
+function objinfo(data0: any, data1: any, data2: any = null) { undef_func("objinfo", [data0, data1, data2]); }
 
 /* 現在使用していない HSP言語 objmode命令
 参照元: http://lhsp.s206.xrea.com/manual/
@@ -1675,8 +1647,7 @@ p2のモード指定を省略した場合は、以前のモードを引き継ぎ
   0  : [TAB]を無効にする
   1  : [TAB]キーによるオブジェクトのフォーカス移動可能(標準)
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function objmode(data0, data1) { undef_func("objmode", [data0, data1]); }
+function objmode(data0: any, data1: any) { undef_func("objmode", [data0, data1]); }
 
 /* 現在使用していない HSP言語 objprm命令
 参照元: http://lhsp.s206.xrea.com/manual/
@@ -1714,10 +1685,9 @@ p2で指定するパラメータはオブジェクトの種類によって異な
 入力ボックスの内容を変更した場合には、自動的に入力ボックスに入力フォー
 カスが設定され、ボックス内にカーソルが表示されます。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function objprm(data0, data1) { undef_func("objprm", [data0, data1]); }
+function objprm(data0: any, data1: any) { undef_func("objprm", [data0, data1]); }
 
-/* 現在使用していない HSP言語 objsel命令
+/* 現在使用していない HSP言語 objsel命令 入力フォーカスを合わせることにより、 mesbox命令やinput命令で配置した入力ボックスの中に入力カーソル(キャレット)を出すことができる。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 objsel p1		[オブジェクトに入力フォーカスを設定]
@@ -1730,10 +1700,9 @@ p1で指定したオブジェクトIDに入力フォーカスを合わせます�
 す。また、p1に-1を指定した場合は、現在、入力フォーカスが合っているオブ
 ジェクトIDをシステム変数statに代入します。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function objsel(data0) { undef_func("objsel", [data0]); }
+function objsel(data0: any) { undef_func("objsel", [data0]); }
 
-/* HSP言語 objsize命令
+/* HSP言語 objsize命令 ボタンや入力ボックスなどを配置する時のオブジェクトの大きさを設定
 参照元: http://lhsp.s206.xrea.com/manual/
 
 objsize p1,p2,p3		[オブジェクトサイズ設定]
@@ -1748,16 +1717,14 @@ p3でボタンやメッセージが置かれた後にカレントポジション
 
 画面がクリアされると、オブジェクトサイズは自動的にデフォルトに戻ります。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function objsize(data0, data1 = null) { undef_func("objsize", [data0, data1]); }
+function objsize(data0: any, data1: any = null) { undef_func("objsize", [data0, data1]); }
 
 /* 現在使用していない HSP言語 oncmd命令
 参照元: http://lhsp.s206.xrea.com/command/oncmd.html
 
 指定したウィンドウメッセージがWindowsから通知された際のラベルジャンプ先を指定しておく命令です。命令名の由来は、「on command」から。
 */
-// @ts-expect-error TS(7006): Parameter 'func' implicitly has an 'any' type.
-function oncmd_gosub(func, event_id) { undef_func("oncmd_gosub", [func, event_id]); }
+function oncmd_gosub(func: any, event_id: any) { undef_func("oncmd_gosub", [func, event_id]); }
 
 /* HSP言語 onexit goto命令
 参照元: https://docs.hsp.moe/3.6/reference/_builtin/onexit/
@@ -1767,8 +1734,7 @@ function oncmd_gosub(func, event_id) { undef_func("oncmd_gosub", [func, event_id
 onexitの後に続けて、 gotoまたはgosubキーワードを指定してからラベルを記述します。
 gotoの場合には、単純なプログラムジャンプ。 gosubの場合はサブルーチンジャンプを行ないます。
 */
-// @ts-expect-error TS(7006): Parameter 'func' implicitly has an 'any' type.
-function onexit_goto(func) {
+function onexit_goto(func: any) {
     window.onbeforeunload = func;
 }
 
@@ -1777,20 +1743,18 @@ function onexit_goto(func) {
 
 クローズボックス(ウィンドウ右上の終了ボタン)を押した時に、自動的にジャンプする場所を指定します。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function onexit(data0) { undef_func("onexit", [data0]); }
+function onexit(data0: any) { undef_func("onexit", [data0]); }
 
-/* 現在使用していない HSP言語 onkey命令
+/* 現在使用していない HSP言語 onkey命令 キーボードのキー押し割り込み動作を設定する。
 参照元: http://lhsp.s206.xrea.com/command/onkey.html
 
 キーボードのキー押し割り込み動作を設定する命令です。
 HSPのウィンドウがアクティブ状態である時、キー押しが行われた場合に指定したラベルへジャンプします。
 マウスクリックの場合はonclick命令が用意されてます。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function onkey(data0) { undef_func("onkey", [data0]); }
+function onkey(data0: any) { undef_func("onkey", [data0]); }
 
-/* 現在使用していない HSP言語 palette命令
+/* 現在使用していない HSP言語 palette命令 現在の画面に設定されているパレットの色データを変更する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 palette p1,p2,p3,p4,p5		[パレット設定]
@@ -1807,10 +1771,9 @@ p5が1の時は、設定したパレット全体が画面上にも反映され�
 画面上に反映されるまでには時間がかかるため、パレットをまとめて更新する
 場合には、一番最後に更新スイッチを1にするようにしてください。
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function palette(data0, data1, data2, data3 = null, data4 = null) { undef_func("palette", [data0, data1, data2, data3, data4]); }
+function palette(data0: any, data1: any, data2: any, data3: any = null, data4: any = null) { undef_func("palette", [data0, data1, data2, data3, data4]); }
 
-/* HSP言語 peek命令
+/* HSP言語 peek命令 変数に保存されたデータメモリ上の任意の場所から1byte (8bit) 読み出し
 参照元: http://lhsp.s206.xrea.com/manual/
 
 変数に保存されたデータメモリ上の任意の場所にある1バイト(8bit)の内容を
@@ -1821,8 +1784,7 @@ peek (p1,p2)		[バッファから1byte読み出し]
 p1=変数 : 内容を読み出す元の変数名
 p2=0～  : バッファのインデックス(Byte単位)
 */
-// @ts-expect-error TS(7006): Parameter 'string_data' implicitly has an 'any' ty... Remove this comment to see the full error message
-function peek(string_data, index) {
+function peek(string_data: any, index: any) {
     switch (string_data.split("")[index]) {
         case "1":
             return 49;
@@ -1887,7 +1849,7 @@ function peek(string_data, index) {
     }
 }
 
-/* HSP言語 picload命令
+/* HSP言語 picload命令 画像ファイルをロードする。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 画像ファイルをロードします。通常は、
@@ -1918,7 +1880,7 @@ function picload(img_name: any) {
     });
 }
 
-/* HSP言語 poke命令
+/* HSP言語 poke命令 バッファに1byte書き込み
 参照元: http://lhsp.s206.xrea.com/manual/
 
 poke p1,p2,p3		[バッファに1byte書き込み]
@@ -1936,7 +1898,7 @@ strsizeに、書き込まれた文字列の長さを返します。
 */
 function poke(data0: any, data1: any, data2: any) { undef_func("poke", [data0, data1, data2]); }
 
-/* HSP言語 pos命令
+/* HSP言語 pos命令 カレントポジション設定
 参照元: http://lhsp.s206.xrea.com/manual/
 
 pos p1,p2		[カレントポジション設定]
@@ -1951,7 +1913,7 @@ function pos(x: any, y: any) {
     position = [x, y];
 }
 
-/* HSP言語 pset命令
+/* HSP言語 pset命令 1dotの点を表示
 参照元: http://lhsp.s206.xrea.com/manual/
 
 pset p1,p2		[1dotの点を表示]
@@ -1964,7 +1926,7 @@ function pset(pos_x: any, pos_y: any) {
     context.fill();
 }
 
-/* 現在使用していない HSP言語 randomize命令
+/* 現在使用していない HSP言語 randomize命令 乱数発生の初期化
 参照元: http://lhsp.s206.xrea.com/manual/
 
 randomize p1		[乱数発生の初期化]
@@ -1978,7 +1940,7 @@ p1に同じ値を指定して初期化された乱数は、常に同じパター
 */
 function randomize() { undef_func("randomize"); }
 
-/* HSP言語 redraw命令
+/* HSP言語 redraw命令 画面の描画モードを指定する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 画面の描画モードを指定します。描画モードとは、
@@ -2017,9 +1979,8 @@ function redraw(mode: any) {
     }
 }
 
-/* HSP言語 rnd命令
+/* HSP言語 rnd命令 乱数を発生させる。
 参照元: http://lhsp.s206.xrea.com/command/rnd.html
-乱数を発生させる。
 rnd(数値)
 
 第１パラメータに乱数発生範囲を指定する。指定できる数値は「1～32768」。
@@ -2029,10 +1990,9 @@ function rnd(num: any) {
     return Math.floor(Math.random() * num);
 }
 
-/* HSP言語 screen命令
+/* HSP言語 screen命令 指定したウィンドウIDを初期化して使用できるようにする。 
 参照元: http://lhsp.s206.xrea.com/manual/
 
-指定したウィンドウIDを初期化して使用できるようにします。 
 HSPの初期状態では、ウィンドウID0の画面しか使用されていませんが、
 ウィンドウID1以上を指定することで、新しいウィンドウを作成することができます。
 ID1以上のウィンドウは、標準でサイズを自由に変えることが可能なスタイルを
@@ -2070,7 +2030,7 @@ function screen_(id: any, display_width: any, display_height: any, init_mode: an
     canvases[id].style.display = "none";
 }
 
-/* 現在使用していない HSP言語 sendmsg命令
+/* 現在使用していない HSP言語 sendmsg命令 ウィンドウメッセージの送信
 参照元: http://lhsp.s206.xrea.com/manual/
 
 sendmsg p1,p2,p3,p4,p5		[ウィンドウメッセージの送信]
@@ -2103,7 +2063,7 @@ p5が0の場合は、変数の情報が格納されているメモリポイン�
 */
 function sendmsg(data0:any, data1:any, data2:any, data3:any) { undef_func("sendmsg", [data0, data1, data2, data3])}
 
-/* HSP言語 sdim命令
+/* HSP言語 sdim命令 文字列型の配列変数を作成する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 文字列型の配列変数を作成します。 dim命令との違いは、  p2のパラメータは
@@ -2138,7 +2098,7 @@ function sdim(length1: any, length2: any = null, length3: any = null) {
     return return_list;
 }
 
-/* HSP言語 stick命令
+/* 現在使用していない HSP言語 stick命令 キー入力情報取得
 参照元: http://lhsp.s206.xrea.com/manual/
 
 stick p1,p2,p3		[キー入力情報取得]
@@ -2206,7 +2166,7 @@ p3が0の場合は、すべての状況下でキー入力を行ないます。
 */
 function stick(data0:any, data1:any) { undef_func("stick", [data0, data1]); return 0; }
 
-/* 現在使用していない HSP言語 strmid命令
+/* 現在使用していない HSP言語 strmid命令 文字列の一部を取り出す
 参照元: http://lhsp.s206.xrea.com/manual/
 
 strmid (p1,p2,p3)		[文字列の一部を取り出す]
@@ -2225,7 +2185,7 @@ p3で取り出す文字数を指定します。実際に格納されている文
 */
 function strmid(data0:any, data1:any, data2:any) { undef_func("strmid", [data0, data1, data2]); }
 
-/* HSP言語 title命令
+/* HSP言語 title命令 タイトルバー設定
 参照元: http://lhsp.s206.xrea.com/manual/
 
 title "strings"		[タイトルバー設定]
@@ -2247,7 +2207,7 @@ function title(window_name: any) {
     }
 }
 
-/* HSP言語 wait命令
+/* HSP言語 wait命令 プログラムの実行を一定時間だけ中断する。
 参照元: https://docs.hsp.moe/3.6/reference/_builtin/wait/
 
 wait p1
@@ -2266,13 +2226,12 @@ await命令を使うとwait命令よりも高精度で細かいウエイトが�
 HSPでは、他のWindowsタスクに処理時間を渡すために長い時間ループが起こる可能性がある場所にはwaitかawait命令を入れることを推奨しています。
 waitや await命令がない命令の中を長い時間ループするようなプログラムを実行すると、ウィンドウをドラッグしにくくなったり、他のタスクに移るのに時間がかかったりします。
 */
-// @ts-expect-error TS(7006): Parameter 'time' implicitly has an 'any' type.
-function wait(time) {
+function wait(time: number) {
     // @ts-expect-error TS(2794): Expected 1 arguments, but got 0. Did you forget to... Remove this comment to see the full error message
     return new Promise((resolve, reject) => { setTimeout(() => resolve(), 10 * time); });
 }
 
-/* HSP言語 width命令
+/* 現在使用していない HSP言語 width命令 ウィンドウサイズ設定
 参照元: http://lhsp.s206.xrea.com/manual/
 
 width p1,p2,p3,p4		[ウィンドウサイズ設定]
@@ -2321,12 +2280,12 @@ let music_id: any = "102.mp3";
 let bgm_source1 :any;
 let bgm_source2 :any;
 
+// Ver 0.1305で追加
+// bgm音源の更新
 function DMLOADMEMORY(music_id: any, data0: any, data1: any) {
-    // Ver 0.1305で追加
-    // bgm音源の更新
     if(bgm_source1 != null){
         //alert("init: " + bgm_source1);
-(document.getElementById(bgm_source1) as any).pause();
+        (document.getElementById(bgm_source1) as any).pause();
         bgm_source1 = music_id;
     }
     else {
