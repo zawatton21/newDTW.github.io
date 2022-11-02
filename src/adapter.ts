@@ -5,6 +5,7 @@ function dbgprt(num: any) {
 // 機能不明
 function undef_func(str: any, arg: any = null) {
 }
+
 // 機能不明
 function data_update_for_debug(e: any) {
     var_404 = 1;
@@ -186,7 +187,7 @@ function await_(time: any) {
 // ↓↓↓ ここからHSPの機能を再現するための関数  ↓↓↓ 
 
 
-/* HSP言語 bgscr命令
+/* HSP言語 bgscr命令 ウィンドウIDを初期化して枠のないウィンドウを作成する。
 参照元: http://lhsp.s206.xrea.com/manual/i_graph.html#bgscr
 
 ウィンドウIDを初期化して枠のないウィンドウを作成する。
@@ -198,14 +199,12 @@ p4=0～1(0) : 初期化する画面モード
 p5,p6(0,0) : ウィンドウの配置X,Y（1ドット単位）
 p7,p8      : ウィンドウのサイズX,Y（1ドット単位）
 */
-// @ts-expect-error TS(2345): Argument of type 'any[]' is not assignable to para... Remove this comment to see the full error message
-function bgscr(data0: any, data1: any, data2: any, data3: any, data4: any, data5: any, data6 = null, data7 = null) { undef_func("bgscr", [data0, data1, data2, data3, data4, data5, data6, data7]); }
+function bgscr(data0: any, data1: any, data2: any, data3: any, data4: any, data5: any, data6: any = null, data7: any = null) { undef_func("bgscr", [data0, data1, data2, data3, data4, data5, data6, data7]); }
 
 //const Store = require('electron-store')
 //const store = new Store()
 
-/* HSP言語 boxf命令
-画面に四角形を描くための関数。
+/* HSP言語 boxf命令 画面に四角形を描くための関数。
 参照元: 
 http://lhsp.s206.xrea.com/manual/i_graph.html#boxf 
 https://hsp3.web.fc2.com/lecture7.html
@@ -224,7 +223,7 @@ function boxf(left:any = null, top1:any = null, right:any = null, bottom:any = n
     context.globalAlpha = ga;
 }
 
-/* HSP言語 bload命令
+/* HSP言語 bload命令 ファイルの内容をメモリバッファに読み込む。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 bload "filename",p1,p2,p3		[バッファにファイルをロード]
@@ -241,7 +240,7 @@ p3=0～(-1) : ファイルのオフセット
 各データファイルの読み込み
 音源ファイル、セーブデータ等
 */
-function bload(file_name: any, data_size:any = null, offset:any = null) {
+function bload(file_name: any, data_size: any = null, offset: any = null) {
     // 効果音の読み込み
     if (file_name.split(".")[1] == "wav") {
         const audio = new Audio("../assets/se/" + file_name);
@@ -310,8 +309,7 @@ function bload(file_name: any, data_size:any = null, offset:any = null) {
     }
 }
 
-/* HSP言語 bsave命令
-メモリバッファの内容をファイルに書き出す。
+/* HSP言語 bsave命令 メモリバッファの内容をファイルに書き出す。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 bsave "filename",p1,p2,p3		[バッファをファイルにセーブ]
@@ -361,7 +359,7 @@ function bsave(file_name: any, data: any, data_size: any = null, offset: any = n
 
 
 
-/* HSP言語 buffer命令
+/* HSP言語 buffer命令 screen命令と同じく、指定したウィンドウIDを初期化して使用できるようにする。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 screen命令と同じく、指定したウィンドウIDを初期化して使用できるようにし
@@ -394,7 +392,7 @@ function buffer(id: any, disp_width: any = null, disp_height: any = null, mode: 
     gsel(id, target_window_id);
 }
 
-/* HSP言語 button命令
+/* HSP言語 button命令 カレントポジションにオブジェクトとして押しボタンを配置する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 カレントポジションにオブジェクトとして押しボタンを配置します。
@@ -407,7 +405,7 @@ button goto/gosub "name",*label		[ボタン表示]
 */
 function button(data0: any, data1: any) { undef_func("button", [data0, data1]); }
 
-/* HSP言語 cls命令
+/* HSP言語 cls命令 ウィンドウ内の情報をすべてクリアします。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 ウィンドウ内の情報をすべてクリアします。
@@ -423,7 +421,7 @@ function cls(id: any) {
     contexts[id].fillRect(0, 0, 340, 340);
 }
 
-/* HSP言語 chdir命令
+/* 現在使用していない HSP言語 chdir命令 "dirname"で指定した名前のディレクトリに移動します。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 "dirname"で指定した名前のディレクトリに移動します。
@@ -433,8 +431,9 @@ chdir "dirname"		[ディレクトリ移動]
 */
 function chdir(data0: any) { undef_func("chdir", [data0]); }
 
-
-/* 現在使用していない HSP言語 chgdisp命令
+// この関数を使えるようにすれば自由に解像度変更可能かも
+// JavaScriptを使っての解像度変更 https://uxmilk.jp/28500
+/* 現在使用していない HSP言語 chgdisp命令 現在の表示解像度を強制的に変更します。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 chgdisp命令
@@ -456,10 +455,9 @@ p3=0～(480) : Y方向の画像解像度の設定
            解像度の変更は正常に行なわれた。
   stat=2 : 解像度の変更ができなかった。
 */ 
-// @ts-expect-error TS(2345): Argument of type 'null[]' is not assignable to par... Remove this comment to see the full error message
-function chgdisp(data0 = null, data1 = null, data2 = null) { undef_func("chgdisp", [data0, data1, data2]); }
+function chgdisp(data0: any = null, data1: any = null, data2: any = null) { undef_func("chgdisp", [data0, data1, data2]); }
 
-/* HSP言語 chkbox命令
+/* HSP言語 chkbox命令 カレントポジションにオブジェクトとしてチェックボックスを配置する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 カレントポジションにオブジェクトとしてチェックボックスを配置します。
@@ -472,7 +470,7 @@ p1=変数   : チェックボックスの状態を保持する変数
 */
 function chkbox(data0: any, data1: any) { undef_func("chkbox", [data0, data1]); }
 
-/* HSP言語 clrobj命令
+/* HSP言語 clrobj命令 button命令やmesbox命令などで出したオブジェクトを消去する。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 button命令やmesbox命令などで出したオブジェクトを消去します。
@@ -486,13 +484,12 @@ p1=0～(0)  : 消去するオブジェクトID(開始)
 p2=0～(-1) : 消去するオブジェクトID(終了)( -1の場合は、 最終のIDが指定
 されます )
 */
-// @ts-expect-error TS(2345): Argument of type 'null[]' is not assignable to par... Remove this comment to see the full error message
-function clrobj(data0 = null, data1 = null) { undef_func("clrobj", [data0, data1]); }
+function clrobj(data0: any = null, data1: any = null) { undef_func("clrobj", [data0, data1]); }
 
-/* HSP言語 color命令
+/* HSP言語 color命令 メッセージ表示、描画などの色を指定した値に設定する。color 0,0,0 は黒、color 255,255,255 は白。
 参照元: http://lhsp.s206.xrea.com/manual/
 
-color p1,p2,p3		[カラー設定]
+color p1,p2,p3		[カラー設定] 
 p1,p2,p3=0～255(0) : 色コード（R,G,Bの輝度）
 メッセージ表示、描画などの色を指定した値に設定します。
 p1,p2,p3がそれぞれ、R,G,Bの輝度になります。
@@ -500,11 +497,11 @@ p1,p2,p3がそれぞれ、R,G,Bの輝度になります。
 0が最も暗く、255が最も明るくなります。
 color 0,0,0 は黒に、color 255,255,255 は白になります。
 */
-function color(red: any, green: any, blue: any) {
+function color(red: number, green: number, blue: number) {
     context.strokeStyle = context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
 }
 
-/* 現在使用していない HSP言語 combox命令
+/* 現在使用していない HSP言語 combox命令 カレントポジションにオブジェクトとして、コンボボックスを配置。コンボボックスは、複数の文字列要素の中から１つを選択させることのできる入力オブジェクト。
 参照元: http://lhsp.s206.xrea.com/manual/
 
 combox p1,p2,p3		[コンボボックス表示]
@@ -807,7 +804,6 @@ p2=1～(1) : キーコード
 function getkey(key_id: any) {
     return pushing_key_list[key_id] || 0;
 }
-
 
 // キー入力の初期化
 function ResetKey(key_id: any) {

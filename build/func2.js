@@ -4554,6 +4554,7 @@ function func239() {
         });
     });
 }
+// データを初期化する際の機能
 function func240() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -4580,15 +4581,15 @@ function func240() {
                     }
                     exist(var_1062);
                     if (strsize >= 1) {
-                        delete_(var_1062);
+                        delete_(var_1062); // .datファイル削除
                     }
                     exist(var_1063);
                     if (strsize >= 1) {
-                        delete_(var_1063);
+                        delete_(var_1063); // n.datファイル削除
                     }
                     exist(var_1064);
                     if (strsize >= 1) {
-                        delete_(var_1064);
+                        delete_(var_1064); // e.datファイル削除
                     }
                     return [4 /*yield*/, func242()];
                 case 1:

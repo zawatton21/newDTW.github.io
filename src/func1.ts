@@ -1412,7 +1412,7 @@ function func139(this: any) {
         var_701 = var_664[10];
         var_64 = 0;
         var_725 = 0;
-        var_726 = 1;
+        var_726 = 1; // 冒険の書No.変数 = 1
         color(0, 0, 0);
         boxf(left = 0, top1 = 0, right = 340, bottom = 340);
         yield wait(1);

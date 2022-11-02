@@ -71,10 +71,14 @@ function func801(this: any) {
         var_783 = 0;
         return;
     });
-}/*
+}
+
+/*
 ヴェネチアホテルに設置してあるPC設定
 口座、アイテム手配等
 */ 
+
+// PC機能で「ペリーコロ」を選択した際のメッセージやりとり
 function func802(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(802);
@@ -656,6 +660,8 @@ function func808(this: any) {
         return;
     });
 }
+
+// PC機能で「ポルポ」を選択した際のメッセージやりとり
 function func809(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(809);
@@ -836,6 +842,8 @@ function func809(this: any) {
         return;
     });
 }
+
+
 function func810(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(810);
@@ -909,6 +917,8 @@ function func810(this: any) {
         yield func811();
     });
 }
+
+
 function func811(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(811);
@@ -939,6 +949,8 @@ function func811(this: any) {
         return;
     });
 }
+
+
 function func812(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(812);
@@ -969,6 +981,9 @@ function func812(this: any) {
         return;
     });
 }
+
+
+// PC機能で「SPW財団」を選択した際のメッセージやりとり
 function func813(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(813);
@@ -1102,6 +1117,7 @@ function func813(this: any) {
         return;
     });
 }
+// 「SPW財団」のやり取りでお金が足らなかった際のメッセージ
 function func814(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(814);
@@ -1157,6 +1173,8 @@ function func814(this: any) {
         yield func815();
     });
 }
+
+
 function func815(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(815);
@@ -1226,6 +1244,8 @@ function func817(this: any) {
         return;
     });
 }
+
+// ホテル内のPCへ話しかけた際のメッセージ
 function func818(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(818);
@@ -1275,6 +1295,7 @@ function func818(this: any) {
         yield func819();
     });
 }
+
 function func819(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(819);
@@ -1756,7 +1777,7 @@ function func822(this: any) {
     });
 }
 
-
+// ホテルにあるPC起動時の選択肢
 function func823(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(823);
@@ -1802,7 +1823,11 @@ function func823(this: any) {
         return;
     });
 }
+
+
 // 各ダンジョンへの入り口設定
+
+// ダンジョン「ホテルの外」へ入る際のメッセージ表示
 function func824(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(824);
@@ -1859,7 +1884,7 @@ function func825(this: any) {
         yield func182();
         // もしアイテムの数が20でなければ
         if (var_224 != 20) {
-            // アイテム追加関数
+            // アイテム欄にネアポリスのピッツァ追加
             yield func062();
         }
         yield func502();
@@ -1902,6 +1927,8 @@ function func825(this: any) {
         return;
     });
 }
+
+// ダンジョン「レクイエムの大迷宮」へ入る際のメッセージ表示
 function func826(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(826);
@@ -1980,7 +2007,7 @@ function func827(this: any) {
         yield func182();
         // アイテム数が20でなければ
         if (var_224 != 20) {
-            // アイテム追加関数
+            // アイテム欄にネアポリスのピッツァ追加
             yield func062();
         }
         yield func502();
@@ -2001,6 +2028,8 @@ function func827(this: any) {
         return;
     });
 }
+
+// ダンジョン「さらなる試練」へ入る際のメッセージ表示
 function func828(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(828);
@@ -2028,6 +2057,7 @@ function func828(this: any) {
         return;
     });
 }
+
 function func829(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(829);
@@ -2077,7 +2107,7 @@ function func829(this: any) {
         var_262 = 0;
         yield func111();
         yield func182();
-        yield func062();
+        yield func062(); // アイテム欄にネアポリスのピッツァ追加
         yield func502();
         yield func504();
         yield func505();
@@ -2110,6 +2140,7 @@ function func829(this: any) {
         return;
     });
 }
+
 function func830(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(830);
@@ -2164,7 +2195,7 @@ function func830(this: any) {
         var_344 = 0;
         // アイテム数20でなければ
         if (var_224 != 20) {
-            // アイテム数追加関数
+            // アイテム欄にネアポリスのピッツァ追加
             yield func062();
         }
         yield func502();
@@ -2179,6 +2210,8 @@ function func830(this: any) {
         return;
     });
 }
+
+// アイテム持ち込み不可のダンジョンへ入る際のメッセージ
 function func831(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(831);
@@ -2204,6 +2237,7 @@ function func831(this: any) {
     });
 }
 
+// ダンジョン「一巡後の世界」へ入る際のメッセージ表示
 // NPC プッチ神父
 function func832(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -2480,7 +2514,7 @@ function func834(this: any) {
         yield func182();
         // アイテム数20でなければ
         if (var_224 != 20) {
-            // アイテム数追加関数
+            // アイテム欄にネアポリスのピッツァ追加
             yield func062();
         }
         yield func504();
@@ -2501,6 +2535,7 @@ function func834(this: any) {
     });
 }
 
+// ダンジョン「牢獄」へ入る際のメッセージ表示
 // NPC ロッコ・バロッコ所長
 function func835(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -2758,7 +2793,7 @@ function func836(this: any) {
         var_262 = 0;
         yield func111();
         yield func182();
-        yield func062();
+        yield func062(); // アイテム欄にネアポリスのピッツァ追加
         yield func502();
         yield func504();
         yield func505();
@@ -2790,6 +2825,7 @@ function func836(this: any) {
         return;
     });
 }
+
 
 // NPC マリリン・マンソン ?
 function func837(this: any) {
@@ -3734,6 +3770,8 @@ function func839(this: any) {
         return;
     });
 }
+
+// 味方NPCと話しかけた際の選択肢
 function func840(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(840);
@@ -3763,10 +3801,12 @@ function func840(this: any) {
             mes("買う");
             mes("やめる");
         }
+        // ペッシと話しかけた際の選択肢？
         if (var_3147 == 1 || var_3136 == 1) {
             mes("ﾌﾞﾝ殴る");
             mes("放っとく");
         }
+        // アバッキオと話しかけた際の選択肢？
         if (var_3163 >= 2) {
             mes("いただく");
             mes("断る");
@@ -3783,6 +3823,8 @@ function func840(this: any) {
         return;
     });
 }
+
+
 function func841(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(841);
