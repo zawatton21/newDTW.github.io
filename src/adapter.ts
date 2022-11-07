@@ -213,8 +213,8 @@ https://hsp3.web.fc2.com/lecture7.html
 function boxf(left:any = null, top1:any = null, right:any = null, bottom:any = null) {
     left = left || 0;
     top1 = top1 || 0;
-    right = right || 340;
-    bottom = bottom || 340;
+    right = right || 680;
+    bottom = bottom || 680;
     if ((target_window_id == 4 || target_window_id == 7 || target_window_id == 10 || target_window_id == 32) && left == 0 && top1 == 0) {
         return context.clearRect(left, top1, right - left, bottom - top1);
     }
@@ -420,7 +420,7 @@ p1=0～4(0) : クリアする時の色
 */
 function cls(id: any) {
     contexts[id].fillStyle = ["#fff", "#ccc", "888", "444", "#000"][id];
-    contexts[id].fillRect(0, 0, 340, 340);
+    contexts[id].fillRect(0, 0, 680, 680);
 }
 
 /* HSP言語 chdir命令
@@ -994,9 +994,9 @@ function ginfo(data_id: any) {
         case 5: // ウィンドウの左上Y座標
             return 0;
         case 20: // デスクトップ全体のXサイズ(画面解像度)
-            return disp_width;//return 340;
+            return disp_width;//return 680;
         case 21: //デスクトップ全体のYサイズ(画面解像度)
-            return disp_height; //return 340;
+            return disp_height; //return 680;
         case 22: // カレントポジションのX座標
             return position[0];
         case 23: // カレントポジションのY座標
@@ -2057,13 +2057,13 @@ p7,p8       : クライアントエリアのサイズX,Y（1ドット単位）
 p7,p8のパラメータで、ウィンドウのクライアントサイズ(実際に表示される大
 きさ)を指定することができます。
 */
-let display_width: number = 340;
-let display_height: number = 340;
+let display_width: number = 680;
+let display_height: number = 680;
 
 function screen_(id: any, display_width: any, display_height: any, init_mode: any, pos_x: any = null, pos_y: any = null) {
     if (id == 0) {
-        display_width = 340;
-        display_height = 340;
+        display_width = 680;
+        display_height = 680;
         canvasSize = display_width;
         document.getElementById("pad").style.top = "720px";
     }

@@ -113,7 +113,7 @@ function func004(this: any) {
 
         gsel(0, 1);
         if (var_10 == 0) {
-            width(340, 340);
+            width(680, 680);
         }
         if (var_10 == 1) {
             width(680, 680);
@@ -199,7 +199,7 @@ function func004(this: any) {
         yield picload("img_mychara.gif");
         var_60++;
         yield func138();
-        buffer(id = 4, disp_width = 340, disp_height = 300, mode = null);
+        buffer(id = 4, disp_width = 680, disp_height = 300, mode = null);
         var_60++;
         yield func138();
         buffer(id = 5, disp_width = null, disp_height = null, mode = null);
@@ -210,7 +210,7 @@ function func004(this: any) {
         yield picload("img_enemy1a.gif");
         var_60++;
         yield func138();
-        buffer(id = 7, disp_width = 340, disp_height = 300, mode = null);
+        buffer(id = 7, disp_width = 680, disp_height = 300, mode = null);
         var_60++;
         yield func138();
         buffer(id = 8, disp_width = null, disp_height = null, mode = null);
@@ -219,16 +219,16 @@ function func004(this: any) {
         yield func138();
         buffer(9);
         yield picload("img_item.gif");
-        buffer(id = 10, disp_width = 340, disp_height = 200, mode = null);
+        buffer(id = 10, disp_width = 680, disp_height = 200, mode = null);
         var_60++;
         yield func138();
         buffer(11);
         yield picload("img_stand0.gif");
         var_60++;
         yield func138();
-        buffer(id = 12, disp_width = 340, disp_height = 340, mode = null);
+        buffer(id = 12, disp_width = 680, disp_height = 680, mode = null);
         color(0, 0, 200);
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         var_60++;
         yield func138();
         buffer(13);
@@ -249,7 +249,7 @@ function func004(this: any) {
         yield func138();
         buffer(1);
         yield picload("img_stand1.gif");
-        buffer(id = 19, disp_width = 340, disp_height = 340, mode = null);
+        buffer(id = 19, disp_width = 680, disp_height = 680, mode = null);
         var_60++;
         yield func138();
         buffer(20);
@@ -268,10 +268,10 @@ function func004(this: any) {
         yield picload("img_comic.gif");
         var_60++;
         yield func138();
-        buffer(id = 24, disp_width = 340, disp_height = 340, mode = 0);
+        buffer(id = 24, disp_width = 680, disp_height = 680, mode = 0);
         var_60++;
         yield func138();
-        buffer(id = 25, disp_width = 340, disp_height = 340, mode = 1);
+        buffer(id = 25, disp_width = 680, disp_height = 680, mode = 1);
         makepal();
         var_60++;
         yield func138();
@@ -295,7 +295,7 @@ function func004(this: any) {
         yield picload("img_effect.gif");
         var_60++;
         yield func138();
-        buffer(id = 36, disp_width = 340, disp_height = 340, mode = null);
+        buffer(id = 36, disp_width = 680, disp_height = 680, mode = null);
 
         buffer(32, 200, 200);
         yield func183();
@@ -2087,7 +2087,7 @@ function func015(this: any) {
                             gsel(19);
                             color(255, 255, 255);
             
-                            boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                             gsel(0);
                             var_311 = 255;
                             DSPLAY(audio_id =206);
@@ -5504,7 +5504,7 @@ function func049(this: any) {
         gsel(10);
         color(0, 0, 0);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 200);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 200);
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         pos(30, 0);
 
@@ -6332,7 +6332,7 @@ function func060(this: any) {
                     gsel(19);
                     color(10, 100, 10);
     
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_529 = 1;
                     for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
@@ -8109,80 +8109,80 @@ function func076(this: any) {
         if (var_94 == 0) {
             if (var_62 == 0) {
                 if (var_595 == 0) {
-                    gcopy(34, 640, 760, 340, 40);
+                    gcopy(34, 640, 760, 680, 40);
                 }
                 if (var_595 == 1) {
-                    gcopy(34, 640, 720, 340, 40);
+                    gcopy(34, 640, 720, 680, 40);
                 }
                 if (var_595 == 3) {
-                    gcopy(34, 640, 1200, 340, 40);
+                    gcopy(34, 640, 1200, 680, 40);
                 }
             }
             if (var_62 == 1) {
                 if (var_91 <= 2) {
-                    gcopy(34, 640, 440, 340, 40);
+                    gcopy(34, 640, 440, 680, 40);
                 }
                 if (var_91 >= 3 && var_91 <= 5) {
-                    gcopy(34, 640, 480, 340, 40);
+                    gcopy(34, 640, 480, 680, 40);
                 }
                 if (var_91 >= 6 && var_91 <= 8) {
-                    gcopy(34, 640, 600, 340, 40);
+                    gcopy(34, 640, 600, 680, 40);
                 }
                 if (var_91 >= 9 && var_91 <= 11) {
-                    gcopy(34, 640, 640, 340, 40);
+                    gcopy(34, 640, 640, 680, 40);
                 }
                 if (var_91 == 12) {
-                    gcopy(34, 640, 400, 340, 40);
+                    gcopy(34, 640, 400, 680, 40);
                 }
             }
             if (var_62 == 2) {
                 if (var_91 != 30) {
-                    gcopy(34, 640, 560, 340, 40);
+                    gcopy(34, 640, 560, 680, 40);
                 }
                 if (var_91 == 30) {
-                    gcopy(34, 640, 880, 340, 40);
+                    gcopy(34, 640, 880, 680, 40);
                 }
             }
             if (var_62 == 3) {
                 if (var_91 != 99) {
-                    gcopy(34, 640, 520, 340, 40);
+                    gcopy(34, 640, 520, 680, 40);
                 }
                 if (var_91 == 99) {
-                    gcopy(34, 640, 1160, 340, 40);
+                    gcopy(34, 640, 1160, 680, 40);
                 }
             }
             if (var_62 == 4) {
-                gcopy(34, 640, 800, 340, 40);
+                gcopy(34, 640, 800, 680, 40);
             }
             if (var_62 == 5) {
                 if (var_91 != var_20) {
-                    gcopy(34, 640, 1040, 340, 40);
+                    gcopy(34, 640, 1040, 680, 40);
                 }
                 if (var_91 == var_20) {
-                    gcopy(34, 1000, 760, 340, 40);
+                    gcopy(34, 1000, 760, 680, 40);
                 }
             }
             if (var_62 == 99) {
-                gcopy(34, 640, 960, 340, 40);
+                gcopy(34, 640, 960, 680, 40);
             }
         }
         if (var_94 == 1) {
-            gcopy(34, 640, 840, 340, 40);
+            gcopy(34, 640, 840, 680, 40);
         }
         if (var_94 == 2) {
-            gcopy(34, 640, 1000, 340, 40);
+            gcopy(34, 640, 1000, 680, 40);
         }
         if (var_94 == 3) {
-            gcopy(34, 640, 680, 340, 40);
+            gcopy(34, 640, 680, 680, 40);
         }
         if (var_94 == 7) {
-            gcopy(34, 640, 1080, 340, 40);
+            gcopy(34, 640, 1080, 680, 40);
         }
         if (var_94 == 8) {
-            gcopy(34, 640, 1120, 340, 40);
+            gcopy(34, 640, 1120, 680, 40);
         }
         if (var_94 == 9) {
-            gcopy(34, 640, 920, 340, 40);
+            gcopy(34, 640, 920, 680, 40);
         }
         if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
             var_596 = Math.floor(var_91 / 100);
@@ -8228,113 +8228,113 @@ function func077(this: any) {
             pos(0, 0);
 
             gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_599 == 1) {
             pos(0, 0);
     
             gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_599 == 2) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_599 == 3) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 80);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_599 == 4) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 40);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_599 == 5) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         pos(0, 100);
         if (var_94 == 0) {
             if (var_62 == 0) {
                 if (var_595 == 0) {
-                    gcopy(34, 640, 760, 340, 40);
+                    gcopy(34, 640, 760, 680, 40);
                 }
                 if (var_595 == 1) {
-                    gcopy(34, 640, 720, 340, 40);
+                    gcopy(34, 640, 720, 680, 40);
                 }
                 if (var_595 == 3) {
-                    gcopy(34, 640, 1200, 340, 40);
+                    gcopy(34, 640, 1200, 680, 40);
                 }
             }
             if (var_62 == 1) {
                 if (var_91 <= 2) {
-                    gcopy(34, 640, 440, 340, 40);
+                    gcopy(34, 640, 440, 680, 40);
                 }
                 if (var_91 >= 3 && var_91 <= 5) {
-                    gcopy(34, 640, 480, 340, 40);
+                    gcopy(34, 640, 480, 680, 40);
                 }
                 if (var_91 >= 6 && var_91 <= 8) {
-                    gcopy(34, 640, 600, 340, 40);
+                    gcopy(34, 640, 600, 680, 40);
                 }
                 if (var_91 >= 9 && var_91 <= 11) {
-                    gcopy(34, 640, 640, 340, 40);
+                    gcopy(34, 640, 640, 680, 40);
                 }
                 if (var_91 == 12) {
-                    gcopy(34, 640, 400, 340, 40);
+                    gcopy(34, 640, 400, 680, 40);
                 }
             }
             if (var_62 == 2) {
                 if (var_91 != 30) {
-                    gcopy(34, 640, 560, 340, 40);
+                    gcopy(34, 640, 560, 680, 40);
                 }
                 if (var_91 == 30) {
-                    gcopy(34, 640, 880, 340, 40);
+                    gcopy(34, 640, 880, 680, 40);
                 }
             }
             if (var_62 == 3) {
                 if (var_91 != 99) {
-                    gcopy(34, 640, 520, 340, 40);
+                    gcopy(34, 640, 520, 680, 40);
                 }
                 if (var_91 == 99) {
-                    gcopy(34, 640, 1160, 340, 40);
+                    gcopy(34, 640, 1160, 680, 40);
                 }
             }
             if (var_62 == 4) {
-                gcopy(34, 640, 800, 340, 40);
+                gcopy(34, 640, 800, 680, 40);
             }
             if (var_62 == 5) {
                 if (var_91 != var_20) {
-                    gcopy(34, 640, 1040, 340, 40);
+                    gcopy(34, 640, 1040, 680, 40);
                 }
                 if (var_91 == var_20) {
-                    gcopy(34, 1000, 760, 340, 40);
+                    gcopy(34, 1000, 760, 680, 40);
                 }
             }
             if (var_62 == 99) {
-                gcopy(34, 640, 960, 340, 40);
+                gcopy(34, 640, 960, 680, 40);
             }
         }
         if (var_94 == 1) {
-            gcopy(34, 640, 840, 340, 40);
+            gcopy(34, 640, 840, 680, 40);
         }
         if (var_94 == 2) {
-            gcopy(34, 640, 1000, 340, 40);
+            gcopy(34, 640, 1000, 680, 40);
         }
         if (var_94 == 3) {
-            gcopy(34, 640, 680, 340, 40);
+            gcopy(34, 640, 680, 680, 40);
         }
         if (var_94 == 7) {
-            gcopy(34, 640, 1080, 340, 40);
+            gcopy(34, 640, 1080, 680, 40);
         }
         if (var_94 == 8) {
-            gcopy(34, 640, 1120, 340, 40);
+            gcopy(34, 640, 1120, 680, 40);
         }
         if (var_94 == 9) {
-            gcopy(34, 640, 920, 340, 40);
+            gcopy(34, 640, 920, 680, 40);
         }
         if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
             var_596 = Math.floor(var_91 / 100);
@@ -8376,33 +8376,33 @@ function func078(this: any) {
             pos(0, 0);
 
             gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_373 == 2) {
             pos(0, 0);
     
             gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_373 == 3) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_373 == 4) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 110);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_373 == 5) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 80);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_373 == 6) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
-            gcopy(8, 400, 350, 340, 340);
+            gcopy(8, 400, 350, 680, 680);
         }
         if (var_600 >= 1) {
             color(255, 255, 255);
@@ -9396,7 +9396,7 @@ function func080(this: any, is_key_reset = true) {
             var_235 = getkey(112);
             if (var_235 == 1 && var_10 == 1) {
                 var_10 = 0;
-                width(340, 340);
+                width(680, 680);
                 if (var_627 == 0) {
     
                     bsave(file_name = "00.dat", data = var_10, data_size = null, offset = 20);
@@ -9523,9 +9523,9 @@ function func080(this: any, is_key_reset = true) {
                     var_10 = 0;
                 }
                 var_637 = 1;
-                var_641 = Math.floor((var_638 - 340) / 2);
-                var_642 = Math.floor((var_639 - 340) / 2);
-                bgscr(0, 680, 680, 2, var_641, var_642, 340, 340);
+                var_641 = Math.floor((var_638 - 680) / 2);
+                var_642 = Math.floor((var_639 - 680) / 2);
+                bgscr(0, 680, 680, 2, var_641, var_642, 680, 680);
                 gsel(0, 2);
                 for (let cnt3 = 0; true; ++cnt3) {
                     var_235 = getkey(123);
@@ -9609,7 +9609,7 @@ function func080(this: any, is_key_reset = true) {
                 SetWindowLongA(hwnd, -8, var_15);
                 if (var_640 == 0) {
                     var_10 = 0;
-                    width(340, 340);
+                    width(680, 680);
                 }
                 if (var_640 == 1) {
                     var_640 = 0;

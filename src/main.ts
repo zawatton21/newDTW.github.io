@@ -21,7 +21,7 @@ const createWindow = () => {
 )
 
   // Aspect ratio works on Windows, Linux, and Mac:
-  mainWindow.setAspectRatio(320 / 330); // macは340/340、windowsは 320/330
+  mainWindow.setAspectRatio(320 / 330); // macは340/680、windowsは 320/330
   
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')

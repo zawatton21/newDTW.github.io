@@ -18924,7 +18924,7 @@ function func498(this: any) {
             var_1245 = 6;
             gsel(19);
             color(254, 254, 254);
-            boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_529 = 2;
             var_403 = "スカッとするぜーッ！！";

@@ -396,7 +396,7 @@ function func206(this: any) {
             yield func051();
             if (var_910 == 0) {
                 var_10 = 0;
-                width(340, 340);
+                width(680, 680);
             }
             if (var_910 == 1) {
                 var_10 = 1;
@@ -476,7 +476,7 @@ function func207(this: any) {
         font("ＭＳ　Ｐゴシック", 16, 1);
         color(255, 255, 255);
         pos(85, 150);
-        mes("340×340");
+        mes("680×680");
         pos(85, 170);
         mes("680×680");
         if (var_910 == 0) {
