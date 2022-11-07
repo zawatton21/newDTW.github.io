@@ -228,7 +228,6 @@ function func004(this: any) {
         yield func138();
         buffer(id = 12, disp_width = 340, disp_height = 340, mode = null);
         color(0, 0, 200);
-
         boxf(left = 0, top1 = 0, right = 340, bottom = 340);
         var_60++;
         yield func138();
@@ -5094,6 +5093,7 @@ function func042(this: any) {
         return;
     });
 }
+// おそらくメイド・イン・ヘブンを装備している際の「アイテムが朽ちていく効果」
 function func043(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(43);
@@ -5103,7 +5103,7 @@ function func043(this: any) {
         }
         var_474 = 0;
         for (let cnt1 = 0; cnt1 < 50; ++cnt1) {
-            var_475 = rnd(var_224);
+            var_475 = rnd(var_224); // 持っているアイテムの中から乱数を使ってランダムで朽ちさせる？
             var_475 = var_475 + 1;
             if (var_476[var_475] == 0 && var_477[var_475] == 0 && var_478[var_475] == 0 && var_479[var_475] == 0) {
                 var_474 = 1;
@@ -5176,6 +5176,7 @@ function func043(this: any) {
         return;
     });
 }
+
 function func044(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(44);
@@ -6793,15 +6794,18 @@ function func061(this: any) {
     });
 }
 
-// アイテム数追加？
+// ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
+// これがアイテム追加の基本プログラムだと思われる。
 function func062(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(62);
         var_224 = var_224 + 1;
-        var_233[var_224].Var0 = 602;
+        var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(var_232 = 602)を追加
         return;
     });
 }
+
+// ダンジョン内の階段機能
 function func063(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(63);
@@ -7754,6 +7758,9 @@ function func071(this: any) {
         return;
     });
 }
+
+
+// ダンジョンに長居し過ぎた際の神砂嵐
 function func072(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(72);

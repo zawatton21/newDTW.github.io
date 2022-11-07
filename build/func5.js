@@ -439,6 +439,7 @@ function func503() {
         });
     });
 }
+// n.datファイルへ書き込む内容
 function func504() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -618,6 +619,7 @@ function func505() {
                 case 0:
                     dbgprt(505);
                     var_1066 = sdim(length1 = 1000, length2 = 1000, length3 = null);
+                    // 現在プレイ中の冒険の書番号確認
                     if (var_726 == 1) {
                         var_735 = "01n.dat";
                     }
@@ -627,6 +629,7 @@ function func505() {
                     if (var_726 == 3) {
                         var_735 = "03n.dat";
                     }
+                    // n.datファイルの存在確認
                     exist(var_735);
                     if (!(strsize == (-1))) return [3 /*break*/, 2];
                     return [4 /*yield*/, func504()];

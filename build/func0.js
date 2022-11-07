@@ -97,7 +97,7 @@ function func004() {
                     return [4 /*yield*/, picload("img3.gif")];
                 case 1:
                     _a.sent();
-                    buffer(26, 680, 680);
+                    buffer(26, 1280, 1280);
                     screen_(2, 1, 1, 2, -100, -100);
                     title(var_14);
                     oncmd_gosub(func897, 161);
@@ -6895,6 +6895,7 @@ function func042() {
         });
     });
 }
+// おそらくメイド・イン・ヘブンを装備している際の「アイテムが朽ちていく効果」
 function func043() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_47, cnt2_16, cnt1_48;
@@ -6908,7 +6909,7 @@ function func043() {
                     }
                     var_474 = 0;
                     for (cnt1_47 = 0; cnt1_47 < 50; ++cnt1_47) {
-                        var_475 = rnd(var_224);
+                        var_475 = rnd(var_224); // 持っているアイテムの中から乱数を使ってランダムで朽ちさせる？
                         var_475 = var_475 + 1;
                         if (var_476[var_475] == 0 && var_477[var_475] == 0 && var_478[var_475] == 0 && var_479[var_475] == 0) {
                             var_474 = 1;
@@ -9456,17 +9457,19 @@ function func061() {
         });
     });
 }
-// アイテム数追加？
+// ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
+// これがアイテム追加の基本プログラムだと思われる。
 function func062() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(62);
             var_224 = var_224 + 1;
-            var_233[var_224].Var0 = 602;
+            var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(var_232 = 602)を追加
             return [2 /*return*/];
         });
     });
 }
+// ダンジョン内の階段機能
 function func063() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -10583,6 +10586,7 @@ function func071() {
         });
     });
 }
+// ダンジョンに長居し過ぎた際の神砂嵐
 function func072() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_20, cnt1_59, cnt1_60, cnt1_61, cnt2_21, cnt2_22, cnt2_23, cnt2_24;

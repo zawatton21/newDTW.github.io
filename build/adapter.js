@@ -1220,9 +1220,9 @@ p8が0か、または省略されている場合は、ハーフトーンを使�
 */
 // @ts-expect-error TS(7006): Parameter 'dst_size_x' implicitly has an 'any' typ... Remove this comment to see the full error message
 function gzoom(dst_size_x, dst_size_y, org_buffer_id, x, y, img_width, img_height, mode) {
-    if (org_buffer_id == 25) {
+    if (org_buffer_id == 25) { // ウィンドウIDが
         var ctx = canvases[org_buffer_id].getContext('2d');
-        var imgd = ctx.getImageData(position[0], position[1], img_width, img_height);
+        var imgd = ctx.getImageData(position[0], position[1], img_width, img_height); // canvasに描かれている画像データ情報を取得
         var pix = imgd.data;
         for (var i = 0, n = pix.length; i < n; i += 4) {
             var grayscale = pix[i] * 0.3 + pix[i + 1] * 0.59 + pix[i + 2] * 0.11;
@@ -1230,7 +1230,7 @@ function gzoom(dst_size_x, dst_size_y, org_buffer_id, x, y, img_width, img_heigh
             pix[i + 1] = grayscale;
             pix[i + 2] = grayscale;
         }
-        context.putImageData(imgd, 0, 0);
+        context.putImageData(imgd, 0, 0); // プレイ画面をCanvasへ直接描画
         return;
     }
     else if (org_buffer_id == 8 && (x == 760 && y == 920 || x > 400 && y < 350)) {
@@ -1906,7 +1906,7 @@ function picload(img_name) {
                     canvases[target_window_id].width = img.width;
                     canvases[target_window_id].height = img.height;
                     contexts[target_window_id] = canvases[target_window_id].getContext('2d');
-                    contexts[target_window_id].drawImage(img, 0, 0);
+                    contexts[target_window_id].drawImage(img, 0, 0); // canvasの一番左上へ描画
                 })["catch"](function () {
                     alert("データの読み込みに失敗しました。");
                 })];
@@ -1997,13 +1997,13 @@ function redraw(mode) {
     mode = 1;
     if (mode == 1 && pre_render_canvas) {
         context = contexts[target_window_id];
-        context.drawImage(pre_render_canvas, 0, 0);
+        context.drawImage(pre_render_canvas, 0, 0, null, null, null, null, 680, 680);
     }
     else {
         pre_render_canvas = document.createElement('canvas');
         pre_render_canvas.id = "pre";
-        pre_render_canvas.width = 340;
-        pre_render_canvas.height = 340;
+        pre_render_canvas.width = 680;
+        pre_render_canvas.height = 680;
         context = pre_render_canvas.getContext('2d');
     }
 }

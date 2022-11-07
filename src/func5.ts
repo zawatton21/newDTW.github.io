@@ -374,6 +374,8 @@ function func503(this: any) {
         return;
     });
 }
+
+// n.datファイルへ書き込む内容
 function func504(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(504);
@@ -543,10 +545,13 @@ function func504(this: any) {
         return;
     });
 }
+
 function func505(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(505);
+        
         var_1066 = sdim(length1 = 1000, length2 = 1000, length3 = null);
+        // 現在プレイ中の冒険の書番号確認
         if (var_726 == 1) {
             var_735 = "01n.dat";
         }
@@ -556,13 +561,16 @@ function func505(this: any) {
         if (var_726 == 3) {
             var_735 = "03n.dat";
         }
-        exist(var_735);
 
+        // n.datファイルの存在確認
+        exist(var_735);
         if (strsize == (-1)) {
             yield func504();
         }
+
         notesel(var_2156);
         noteload(var_735);
+        
         var_2252 = 0;
         for (let cnt1 = 0; cnt1 < 145; ++cnt1) {
             var_2253 = noteget(var_2252);
@@ -572,6 +580,8 @@ function func505(this: any) {
         return;
     });
 }
+
+
 function func506(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(506);
