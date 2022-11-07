@@ -788,7 +788,6 @@ gcopy命令でコピーする場合は、gmode命令によってコピーする�
 
 gcopy命令でパレットモード画面の画像をコピーする際には注意が必要です。
 */
-// @ts-expect-error TS(7006): Parameter 'org_buffer_id' implicitly has an 'any' ... Remove this comment to see the full error message
 function gcopy(org_buffer_id, x, y, img_width, img_height) {
     gzoom(img_width, img_height, org_buffer_id, x, y, img_width, img_height, null);
 }
@@ -1001,19 +1000,19 @@ p1で指定したタイプのウィンドウ関連情報値を返します。
 */
 function ginfo(data_id) {
     switch (data_id) {
-        case 2:
+        case 2: // アクティブなウィンドウID
             return target_window_id;
-        case 4:
+        case 4: // ウィンドウの左上X座標
             return 0;
-        case 5:
+        case 5: // ウィンドウの左上Y座標
             return 0;
-        case 20:
-            return 340;
-        case 21:
-            return 340;
-        case 22:
+        case 20: // デスクトップ全体のXサイズ(画面解像度)
+            return disp_width; //return 340;
+        case 21: //デスクトップ全体のYサイズ(画面解像度)
+            return disp_height; //return 340;
+        case 22: // カレントポジションのX座標
             return position[0];
-        case 23:
+        case 23: // カレントポジションのY座標
             return position[1];
         default:
             throw "未実装だ! - " + data_id;
@@ -2046,6 +2045,8 @@ p7,p8       : クライアントエリアのサイズX,Y（1ドット単位）
 p7,p8のパラメータで、ウィンドウのクライアントサイズ(実際に表示される大
 きさ)を指定することができます。
 */
+var display_width = 340;
+var display_height = 340;
 function screen_(id, display_width, display_height, init_mode, pos_x, pos_y) {
     if (pos_x === void 0) { pos_x = null; }
     if (pos_y === void 0) { pos_y = null; }

@@ -12775,7 +12775,7 @@ function func080(is_key_reset) {
                         width(680, 680);
                     }
                     gsel(0, 1);
-                    chgdisp(); //  Ver0.1306でchgdisp()から変更
+                    chgdisp();
                     cnt3_40 = 0;
                     _a.label = 95;
                 case 95:

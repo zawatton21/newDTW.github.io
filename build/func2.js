@@ -3878,7 +3878,7 @@ function func231() {
                         netclose(var_1050);
                     }
                     if (var_637 >= 1) {
-                        chgdisp(1, 340, 340); //  Ver0.1306でchgdisp()から変更
+                        chgdisp();
                     }
                     end();
                     return [2 /*return*/];
