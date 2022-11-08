@@ -2295,6 +2295,7 @@ p1,p2およびp3,p4パラメータが省略された場合は、現在の設定�
 //function width(data0:any, data1:any) { undef_func("width", [data0, data1]); }
 function width(width: any, height: any) {
     //screen_(null, width, height, null);
+/*
     mainWindow.resizeTo(width, height);
     if (width == 340) {
         context.scale(1, 1);
@@ -2302,6 +2303,8 @@ function width(width: any, height: any) {
     if (width == 680) {
         context.scale(2, 2);
     }
+*/
+
 }
 
 /// ↓↓↓ ここからHSP言語のライブラリ機能 ↓↓↓
@@ -2496,7 +2499,7 @@ function ImmGetContext(arg1:any) { }
 function ImmSetOpenStatus(arg1:any, arg2:any) { }
 function ImmReleaseContext(arg1:any, arg2:any) { }
 function ImmGetOpenStatus(arg1: any) { }
-
+/*
 let change_scale: any;
 
 function ChangeScale() {
@@ -2509,5 +2512,7 @@ function ChangeScale() {
             change_scale.percent = window.devicePixelRatio;
         }
     }
+*/
 // この関数をgetkey(123)のところに設ける？
-window.addEventListener("resize", ChangeScale)
+//window.addEventListener("resize", ChangeScale)
+

@@ -2702,7 +2702,7 @@ function func821() {
                     var_980 = 1;
                     gsel(19);
                     color(1, 1, 1);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 0;
                     var_312 = 1;
@@ -2747,7 +2747,7 @@ function func821() {
                     color(0, 0, 0);
                     gmode(4, null, null, var_311);
                     pos(0, 0);
-                    gcopy(19, 0, 0, 340, 340);
+                    gcopy(19, 0, 0, 680, 680);
                     if (!(var_10 >= 1)) return [3 /*break*/, 12];
                     return [4 /*yield*/, func338()];
                 case 11:
@@ -2780,7 +2780,7 @@ function func822() {
                     dbgprt(822);
                     gsel(19);
                     color(1, 1, 1);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 0;
                     cnt1_53 = 0;
@@ -2794,7 +2794,7 @@ function func822() {
                     color(0, 0, 0);
                     gmode(4, null, null, var_311);
                     pos(0, 0);
-                    gcopy(19, 0, 0, 340, 340);
+                    gcopy(19, 0, 0, 680, 680);
                     if (!(var_10 >= 1)) return [3 /*break*/, 4];
                     return [4 /*yield*/, func338()];
                 case 3:
@@ -6190,7 +6190,7 @@ function func841() {
                         SetWindowLongA(hwnd, -8, var_15);
                         if (var_640 == 0) {
                             var_10 = 0;
-                            width(340, 340);
+                            width(680, 680);
                         }
                         if (var_640 == 1) {
                             var_640 = 0;
@@ -6301,7 +6301,7 @@ function func841() {
                     return [4 /*yield*/, func847()];
                 case 6:
                     _a.sent();
-                    width(680, 340);
+                    width(680, 680);
                     var_92 = 2;
                     var_3263 = var_92;
                     var_3264 = 1;
@@ -6554,7 +6554,7 @@ function func849() {
                 case 2:
                     clrobj();
                     if (var_10 == 0) {
-                        width(340, 340);
+                        width(680, 680);
                     }
                     if (var_10 == 1) {
                         width(680, 680);
@@ -6605,15 +6605,15 @@ function func851() {
                     var_3280 = var_67 + var_3265 + 1;
                     var_3281 = Math.floor((ginfo(10) - ginfo(12)) / 2);
                     var_3282 = var_3281;
-                    var_3283 = ginfo(11) - 340 - var_3282;
+                    var_3283 = ginfo(11) - 680 - var_3282;
                     var_3284 = ginfo(4) + var_3281 + 10;
                     var_3285 = ginfo(5) + var_3283 + 10;
                     var_3286 = var_3284 + 320;
                     var_3287 = var_3285 + 320;
                     var_3288 = ginfo(4) + var_3281;
                     var_3289 = ginfo(5) + var_3283;
-                    var_3290 = var_3288 + 340;
-                    var_3291 = var_3289 + 340;
+                    var_3290 = var_3288 + 680;
+                    var_3291 = var_3289 + 680;
                     return [4 /*yield*/, func080()];
                 case 1:
                     _a.sent();
@@ -6698,7 +6698,7 @@ function func851() {
                     ++cnt3_4;
                     return [3 /*break*/, 18];
                 case 21:
-                    if (!(mousex >= 330 && mousex <= 340 && var_66 < 49)) return [3 /*break*/, 25];
+                    if (!(mousex >= 330 && mousex <= 680 && var_66 < 49)) return [3 /*break*/, 25];
                     var_199 = 6;
                     var_66 = var_66 + 1;
                     var_3279 = var_66 + var_3264 + 1;
@@ -6730,7 +6730,7 @@ function func851() {
                     ++cnt3_6;
                     return [3 /*break*/, 26];
                 case 29:
-                    if (!(mousey >= 330 && mousey <= 340 && var_67 < 30)) return [3 /*break*/, 33];
+                    if (!(mousey >= 330 && mousey <= 680 && var_67 < 30)) return [3 /*break*/, 33];
                     var_199 = 2;
                     var_67 = var_67 + 1;
                     var_3280 = var_67 + var_3265 + 1;
@@ -7006,7 +7006,7 @@ function func853() {
                     gmode(2);
                     font("ＭＳ Ｐゴシック", 12);
                     color(236, 233, 216);
-                    boxf(left = 340, top1 = 0, right = 680, bottom = 340);
+                    boxf(left = 680, top1 = 0, right = 680, bottom = 680);
                     if (!(var_3279 <= var_31 && var_3280 <= var_32)) return [3 /*break*/, 7];
                     var_3295 = var_3279 - 5;
                     var_3296 = var_3280 - 5;
@@ -7226,10 +7226,10 @@ function func853() {
                     line(673, var_3212 - 10, 673, var_3216 + 48);
                     line(673 - 1, var_3212 - 10, 673 - 1, var_3216 + 48);
                     color(0, 0, 0);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 10);
-                    boxf(left = 0, top1 = 330, right = 340, bottom = 340);
-                    boxf(left = 0, top1 = 0, right = 10, bottom = 340);
-                    boxf(left = 330, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 10);
+                    boxf(left = 0, top1 = 330, right = 680, bottom = 680);
+                    boxf(left = 0, top1 = 0, right = 10, bottom = 680);
+                    boxf(left = 330, top1 = 0, right = 680, bottom = 680);
                     return [4 /*yield*/, func854()];
                 case 11:
                     _a.sent();
@@ -7815,7 +7815,7 @@ function func860() {
             dbgprt(860);
             color(155, 155, 155);
             var_3308 = 0;
-            var_3309 = 340;
+            var_3309 = 680;
             var_3310 = 10;
             var_3311 = 10;
             for (cnt1_102 = 0; cnt1_102 < 9; ++cnt1_102) {
@@ -7826,7 +7826,7 @@ function func860() {
             var_3308 = 10;
             var_3309 = 10;
             var_3310 = 0;
-            var_3311 = 340;
+            var_3311 = 680;
             for (cnt1_103 = 0; cnt1_103 < 9; ++cnt1_103) {
                 line(var_3308, var_3310, var_3309, var_3311);
                 var_3308 = var_3308 + 40;
@@ -9463,7 +9463,7 @@ function func871() {
                 case 5:
                     _a.sent();
                     if (var_10 == 0) {
-                        width(340, 340);
+                        width(680, 680);
                     }
                     if (var_10 == 1) {
                         width(680, 680);
@@ -10926,10 +10926,10 @@ function func885() {
                     redraw(0);
                     gmode(2);
                     pos(0, 0);
-                    gcopy(3, 0, 400, 340, 340);
+                    gcopy(3, 0, 400, 680, 680);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(0, 0);
-                    gcopy(12, 0, 0, 340, 340);
+                    gcopy(12, 0, 0, 680, 680);
                     var_1631 = 20;
                     var_1632 = 10;
                     var_1633 = 300;

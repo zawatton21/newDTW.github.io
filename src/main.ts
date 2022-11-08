@@ -4,16 +4,18 @@
 //const path = require('path')
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
+const {ipcMain} = require('electron')
+
 
 
 
 const createWindow = () => {
   // Create the browser window.
   //レンダラー読み出し部分
-  mainWindow = new BrowserWindow({
+  const mainWindow = new BrowserWindow({
     width: 340,
-    height: 350, // macは318/348, windowsは 300/350
-    resizable: false,
+    height: 360, // macは318/348, windowsは 300/350
+    resizable: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),//<--ファイルを指定。ここでは同一階層にあるpreload.js
       contextIsolation: true,//<--requireを渡すために必要な設定
@@ -23,7 +25,8 @@ const createWindow = () => {
 )
 
   // Aspect ratio works on Windows, Linux, and Mac:
-  mainWindow.setAspectRatio(340 / 350); // macは340/340、windowsは 320/330
+
+  //mainWindow.setAspectRatio(365 / 360); // macは340/340、windowsは 320/330
   
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
@@ -31,8 +34,16 @@ const createWindow = () => {
   // メニューバーを非表示
   mainWindow.setMenuBarVisibility(false)
 
+  // ウィンドウの最小サイズ
+  mainWindow.setMinimumSize(345, 360)
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  ipcMain.on('resize-me-please', (event, arg) => {
+    mainWindow.setSize(680, 680)
+  })
+
 }
 
 // This method will be called when Electron has finished

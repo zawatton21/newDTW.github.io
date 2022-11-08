@@ -1318,7 +1318,7 @@ function func608(this: any) {
             gsel(19);
             color(255, 0, 0);
     
-            boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_1165 = 1;
             var_2875 = rnd(2);
@@ -1357,7 +1357,7 @@ function func609(this: any) {
         gsel(19);
         color(255, 0, 255);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_529 = 1;
         var_293 = "";
@@ -1582,7 +1582,7 @@ function func610(this: any) {
         gsel(19);
         color(255, 255, 255);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_529 = 1;
         var_293 = "";
@@ -1940,7 +1940,7 @@ function func613(this: any) {
         gsel(19);
         color(150, 150, 150);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_271 = 1;
         var_1392 = 1;
@@ -9393,7 +9393,7 @@ function func626(this: any) {
             var_1637 = 0;
             var_1654 = 999;
             var_972 = 4;
-            var_1619 = 340;
+            var_1619 = 680;
             var_1655 = "・次の階に出現する敵を教えてくれるぞ。";
             var_1656 = "";
             var_1657 = "";
@@ -17112,7 +17112,7 @@ function func658(this: any) {
             gsel(19);
             color(255, 255, 255);
     
-            boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_311 = 255;
             var_312 = 1;
@@ -18141,7 +18141,7 @@ function func659(this: any) {
             gsel(19);
             color(255, 255, 0);
     
-            boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_311 = 255;
             var_312 = 1;
@@ -18215,7 +18215,7 @@ function func659(this: any) {
             gsel(19);
             color(255, 255, 255);
     
-            boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_311 = 255;
             var_312 = 1;
@@ -20206,7 +20206,7 @@ function func666(this: any) {
         gsel(19);
         color(255, 255, 255);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_311 = 255;
         var_312 = 1;
@@ -20975,7 +20975,7 @@ function func675(this: any) {
         gsel(19);
         color(255, 255, 255);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_211 = var_352;
         var_565 = var_566;
@@ -21719,7 +21719,7 @@ function func685(this: any) {
         gsel(19);
         color(255, 255, 255);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_311 = 255;
 
@@ -21899,7 +21899,7 @@ function func687(this: any) {
         gsel(19);
         color(255, 255, 255);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
 
         DSPLAY(audio_id =192);
@@ -22000,7 +22000,7 @@ function func688(this: any) {
         gsel(19);
         color(255, 255, 255);
 
-        boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
 
         DSPLAY(audio_id =192);

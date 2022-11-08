@@ -8592,7 +8592,7 @@ function func785() {
                     var_27_x = var_27[1];
                     gsel(19);
                     color(255, 255, 255);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 255;
                     var_312 = 1;
@@ -8611,7 +8611,7 @@ function func785() {
                 case 13:
                     gsel(19);
                     color(1, 1, 1);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 0;
                     var_312 = 1;

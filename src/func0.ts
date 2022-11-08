@@ -1,3 +1,6 @@
+const {ipcRenderer} = require('electron')
+const myResizeBtn = document.getElementById('resizeBtn')
+
 function makepal() {
     var_0 = 0;
     var_1 = 0;
@@ -69,8 +72,8 @@ function func004(this: any) {
             var_11 = 0;
         }
         var_12 = 0;
-        var_13 = "0.13.06";
-        var_14 = "newDTW ver0.13.06";
+        var_13 = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
+        var_14 = "newDTW ver0.1306";
 
         
         buffer(17);
@@ -9283,512 +9286,554 @@ function func079(this: any) {
 }
 
 
+let change_scale: any;
+
+function ChangeScale() {
+        if (change_scale.percent === window.devicePixelRatio) {
+            let scale: any = document.documentElement.clientWidth;
+            scale = scale / change_scale.container;
+            scale = "scale(" + scale + ")";
+            document.body.style.transform = scale;
+        } else {
+            change_scale.percent = window.devicePixelRatio;
+        }
+    }
+
+// 各キー操作。joystick関数があるので、動作に関するもの？？
 function func080(this: any, is_key_reset = true) {
-    return __awaiter(this, void 0, void 0, function* () {
-        dbgprt(80);
-        var_235 = 0;
-        var_254 = 0;
-        var_257 = 0;
-        var_255 = 0;
-        var_259 = 0;
-        var_253 = 0;
-        var_256 = 0;
-        var_258 = 0;
-        var_260 = 0;
-        var_239 = 0;
-        var_244 = 0;
-        var_242 = 0;
-        var_252 = 0;
-        var_238 = 0;
-        var_249 = 0;
-        var_619 = 0;
-        var_620 = 0;
-        var_621 = 0;
-        var_261 = 0;
-        if (var_407 >= 1) {
-            if (ginfo(2) == 30) {
-                if (var_622 == 0) {
-                    imeset(1);
+        return __awaiter(this, void 0, void 0, function* () {
+            dbgprt(80);
+            var_235 = 0;
+            var_254 = 0;
+            var_257 = 0;
+            var_255 = 0;
+            var_259 = 0;
+            var_253 = 0;
+            var_256 = 0;
+            var_258 = 0;
+            var_260 = 0;
+            var_239 = 0;
+            var_244 = 0;
+            var_242 = 0;
+            var_252 = 0;
+            var_238 = 0;
+            var_249 = 0;
+            var_619 = 0;
+            var_620 = 0;
+            var_621 = 0;
+            var_261 = 0;
+            if (var_407 >= 1) {
+                if (ginfo(2) == 30) {
+                    if (var_622 == 0) {
+                        imeset(1);
+                    }
+                    var_622 = 30;
+                    onkey(1);
                 }
-                var_622 = 30;
-                onkey(1);
+                if (ginfo(2) == 0) {
+                    if (var_622 == 30) {
+                        imeset(0);
+                    }
+                    var_622 = 0;
+                }
+                if (ginfo(2) != 30) {
+                    onkey(0);
+                    var_623 = getkey(48);
+                    if (var_623 == 1) {
+                        var_624 = 0;
+                        var_625 = 0;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(49);
+                    if (var_623 == 1 && var_624 != 1) {
+                        var_624 = 1;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(50);
+                    if (var_623 == 1 && var_624 != 2) {
+                        var_624 = 2;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(51);
+                    if (var_623 == 1 && var_624 != 3) {
+                        var_624 = 3;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(52);
+                    if (var_623 == 1 && var_624 != 4) {
+                        var_624 = 4;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(53);
+                    if (var_623 == 1 && var_624 != 5) {
+                        var_624 = 5;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(54);
+                    if (var_623 == 1 && var_624 != 6) {
+                        var_624 = 6;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(55);
+                    if (var_623 == 1 && var_624 != 7) {
+                        var_624 = 7;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                    var_623 = getkey(56);
+                    if (var_623 == 1 && var_624 != 8) {
+                        var_624 = 8;
+                        var_625 = 1;
+                        yield func934();
+                        yield func929();
+                    }
+                }
             }
-            if (ginfo(2) == 0) {
-                if (var_622 == 30) {
-                    imeset(0);
-                }
-                var_622 = 0;
+            if (ginfo(2) == (-1)) {
+                return;
             }
-            if (ginfo(2) != 30) {
-                onkey(0);
-                var_623 = getkey(48);
-                if (var_623 == 1) {
-                    var_624 = 0;
-                    var_625 = 0;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(49);
-                if (var_623 == 1 && var_624 != 1) {
-                    var_624 = 1;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(50);
-                if (var_623 == 1 && var_624 != 2) {
-                    var_624 = 2;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(51);
-                if (var_623 == 1 && var_624 != 3) {
-                    var_624 = 3;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(52);
-                if (var_623 == 1 && var_624 != 4) {
-                    var_624 = 4;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(53);
-                if (var_623 == 1 && var_624 != 5) {
-                    var_624 = 5;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(54);
-                if (var_623 == 1 && var_624 != 6) {
-                    var_624 = 6;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(55);
-                if (var_623 == 1 && var_624 != 7) {
-                    var_624 = 7;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
-                var_623 = getkey(56);
-                if (var_623 == 1 && var_624 != 8) {
-                    var_624 = 8;
-                    var_625 = 1;
-                    yield func934();
-                    yield func929();
-                }
+            if (ginfo(2) != 0 && ginfo(2) != 37) {
+                return;
             }
-        }
-        if (ginfo(2) == (-1)) {
-            return;
-        }
-        if (ginfo(2) != 0 && ginfo(2) != 37) {
-            return;
-        }
-        if (var_626 == 0) {
-            var_235 = getkey(112);
-            if (var_235 == 1 && var_10 == 1) {
-                var_10 = 0;
-                width(340, 340);
-                if (var_627 == 0) {
     
-                    bsave(file_name = "00.dat", data = var_10, data_size = null, offset = 20);
-                }
-                for (let cnt3 = 0; true; ++cnt3) {
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
-                    }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
-                    var_235 = getkey(112);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                }
-                return;
-            }
-            if (var_235 == 1 && var_10 == 0) {
-                var_10 = 1;
-                width(680, 680);
-                if (var_627 == 0) {
-    
-                    bsave(file_name = "00.dat", data = var_10, data_size = null, offset = 20);
-                }
-                for (let cnt3 = 0; true; ++cnt3) {
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
-                    }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
-                    var_235 = getkey(112);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                }
-                return;
-            }
-            var_235 = getkey(113);
-            if (var_235 == 1) {
-                yield func088();
-            }
-            var_235 = getkey(114);
-            if (var_235 == 1) {
-                yield func087();
-            }
-            var_235 = getkey(115);
-            if (var_235 == 1) {
-                yield func085();
-            }
-            var_235 = getkey(116);
-            if (var_235 == 1) {
-                yield func086();
-            }
-            var_235 = getkey(117);
-            if (var_235 == 1 && var_628 == 0 && var_627 == 0 && var_629 == 0) {
-                yield func227();
-                var_630 = 1;
-                for (let cnt3 = 0; true; ++cnt3) {
-                    yield func337();
-                    var_235 = getkey(117);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                }
-                return;
-            }
-            var_235 = getkey(118);
-            if (var_235 == 1 && var_631 == 1000) {
-                DMSTOP();
-                var_631 = 0;
-                var_632 = 1;
-                var_633 = 0;
-                var_634 = 0;
-                var_635 = 0;
-                var_636 = 0;
-                for (let cnt3 = 0; true; ++cnt3) {
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
-                    }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
-                    var_235 = getkey(118);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                }
-                return;
-            }
-            if (var_235 == 1 && var_631 == 0) {
-                var_631 = 1000;
-                var_633 = 1;
-                var_632 = 0;
-                var_634 = 0;
-                var_635 = 0;
-                var_636 = 0;
-                for (let cnt3 = 0; true; ++cnt3) {
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
-                    }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
-                    var_235 = getkey(118);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                }
-                return;
-            }
-            var_235 = getkey(123);
-            if (var_407 == 0 && var_235 == 1 && var_637 == 0) {
-        
-                chgdisp(1, 640, 480);
-                var_638 = ginfo(20);
-                var_639 = ginfo(21);
-                bgscr(37, var_638, var_639, 1, 0, 0);
-                title("");
-                cls(4);
-                if (var_10 == 1) {
-                    var_640 = 1;
-                    var_10 = 0;
-                }
-                var_637 = 1;
-                var_641 = Math.floor((var_638 - 340) / 2);
-                var_642 = Math.floor((var_639 - 340) / 2);
-                bgscr(0, 680, 680, 2, var_641, var_642, 340, 340);
-                gsel(0, 2);
-                for (let cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
-                    }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
-                }
-                return;
-            }
-            if (var_407 == 0 && var_235 == 1 && var_637 == 1) {
-                var_637 = 2;
-                var_10 = 1;
-                var_638 = ginfo(20);
-                var_639 = ginfo(21);
-                var_643 = var_639;
-                var_644 = var_639;
-                bgscr(37, var_638, var_639, 1, 0, 0);
-                title("");
-                cls(4);
-                var_641 = Math.floor((var_638 - var_643) / 2);
-                var_642 = Math.floor((var_639 - var_644) / 2);
-                bgscr(0, var_643, var_644, 2, var_641, var_642);
-                gsel(0, 2);
-                for (let cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
-                    }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
-                }
-                return;
-            }
-            if (var_407 == 0 && var_235 == 1 && var_637 == 2) {
-                var_637 = 4;
-                var_10 = 1;
-                var_638 = ginfo(20);
-                var_639 = ginfo(21);
-                var_643 = var_638;
-                var_644 = var_639;
-                var_645 = var_643;
-                var_646 = var_644;
-                var_641 = Math.floor((var_638 - var_643) / 2);
-                var_642 = Math.floor((var_639 - var_644) / 2);
-                bgscr(37, var_638, var_639, 1, 0, 0);
-                title("");
-                cls(4);
-                var_641 = Math.floor((var_638 - var_643) / 2);
-                var_642 = Math.floor((var_639 - var_644) / 2);
-                bgscr(0, var_643, var_644, 2, var_641, var_642);
-                gsel(0, 2);
-                for (let cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        break;
-                    }
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
-                    }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
-                }
-                return;
-            }
-            if (var_407 == 0 && var_235 == 1 && var_637 == 4) {
-                var_637 = 0;
-                gsel(37, -1);
-                screen_(0, 680, 680, 2);
-            
-                SetWindowLongA(hwnd, -8, var_15);
-                if (var_640 == 0) {
+            // F1キーを押した際の動作　画面サイズ変更
+            if (var_626 == 0) {
+                var_235 = getkey(112);
+                if (var_235 == 1 && var_10 == 1) {
                     var_10 = 0;
                     width(340, 340);
+                    if (var_627 == 0) {
+        
+                        bsave(file_name = "00.dat", data = var_10, data_size = null, offset = 20);
+                    }
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                        var_235 = getkey(112);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                    }
+                    return;
                 }
-                if (var_640 == 1) {
-                    var_640 = 0;
+                if (var_235 == 1 && var_10 == 0) {
                     var_10 = 1;
                     width(680, 680);
-                }
+                    if (var_627 == 0) {
         
-                gsel(0, 1);
-                chgdisp();
-                for (let cnt3 = 0; true; ++cnt3) {
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        break;
+                        bsave(file_name = "00.dat", data = var_10, data_size = null, offset = 20);
                     }
-                    if (var_628 == 0 && var_629 == 0) {
-                        yield func337();
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                        var_235 = getkey(112);
+                        if (var_235 == 0) {
+                            break;
+                        }
                     }
-                    if (var_628 == 1 || var_629 == 1) {
-                        yield wait(2);
-                    }
+                    return;
                 }
-                return;
+                // F2キーを押した際の動作
+                var_235 = getkey(113);
+                if (var_235 == 1) {
+                    yield func088(); // 音量を小さくする（ボリュームコントロールのWAVE変更）
+                }
+    
+                // F3キーを押した際の動作
+                var_235 = getkey(114);
+                if (var_235 == 1) {
+                    yield func087(); // 音量を大きくする（ボリュームコントロールのWAVE変更）
+                }
+    
+                // F4キーを押した際の動作
+                var_235 = getkey(115);
+                if (var_235 == 1) {
+                    yield func085(); // 効果音を小さくする
+                }
+    
+                // F5キーを押した際の動作
+                var_235 = getkey(116);
+                if (var_235 == 1) {
+                    yield func086(); // 効果音を大きくする
+                }
+    
+                // F6キーを押した際の動作　装備品の情報を「disc.txt」に出力する
+                var_235 = getkey(117);
+                if (var_235 == 1 && var_628 == 0 && var_627 == 0 && var_629 == 0) {
+                    yield func227(); // F6キーを押しての現在ステータスをテキストファイルへ出力
+                    var_630 = 1;
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        yield func337();
+                        var_235 = getkey(117);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                    }
+                    return;
+                }
+    
+                // F7キーを押した際の動作　BGMのオン・オフ（オンにした場合DISC使用時や階段を降りてから再開）
+                var_235 = getkey(118);
+                if (var_235 == 1 && var_631 == 1000) {
+                    DMSTOP();
+                    var_631 = 0;
+                    var_632 = 1;
+                    var_633 = 0;
+                    var_634 = 0;
+                    var_635 = 0;
+                    var_636 = 0;
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                        var_235 = getkey(118);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                    }
+                    return;
+                }
+                if (var_235 == 1 && var_631 == 0) {
+                    var_631 = 1000;
+                    var_633 = 1;
+                    var_632 = 0;
+                    var_634 = 0;
+                    var_635 = 0;
+                    var_636 = 0;
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                        var_235 = getkey(118);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                    }
+                    return;
+                }
+    
+                // F12キーを押した際の動作　フルスクリーン切り替え
+                
+                var_235 = getkey(123);
+                /*
+                if (var_235 == 1) {
+                    const myResizeBtn = document.getElementById('resizeBtn')
+                    myResizeBtn.addEventListener('click', function () {
+                      ipcRenderer.send('resize-me-please')
+                    })
+                }*/               
+
+                /*
+                if (var_407 == 0 && var_235 == 1 && var_637 == 0) {
+            
+                    chgdisp(1, 640, 480);
+                    var_638 = ginfo(20);
+                    var_639 = ginfo(21);
+                    bgscr(37, var_638, var_639, 1, 0, 0);
+                    title("");
+                    cls(4);
+                    if (var_10 == 1) {
+                        var_640 = 1;
+                        var_10 = 0;
+                    }
+                    var_637 = 1;
+                    var_641 = Math.floor((var_638 - 340) / 2);
+                    var_642 = Math.floor((var_639 - 340) / 2);
+                    bgscr(0, 680, 680, 2, var_641, var_642, 340, 340);
+                    gsel(0, 2);
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        var_235 = getkey(123);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                    }
+                    return;
+                }
+    
+                if (var_407 == 0 && var_235 == 1 && var_637 == 1) {
+                    var_637 = 2;
+                    var_10 = 1;
+                    var_638 = ginfo(20);
+                    var_639 = ginfo(21);
+                    var_643 = var_639;
+                    var_644 = var_639;
+                    bgscr(37, var_638, var_639, 1, 0, 0);
+                    title("");
+                    cls(4);
+                    var_641 = Math.floor((var_638 - var_643) / 2);
+                    var_642 = Math.floor((var_639 - var_644) / 2);
+                    bgscr(0, var_643, var_644, 2, var_641, var_642);
+                    gsel(0, 2);
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        var_235 = getkey(123);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                    }
+                    return;
+                }
+                if (var_407 == 0 && var_235 == 1 && var_637 == 2) {
+                    var_637 = 4;
+                    var_10 = 1;
+                    var_638 = ginfo(20);
+                    var_639 = ginfo(21);
+                    var_643 = var_638;
+                    var_644 = var_639;
+                    var_645 = var_643;
+                    var_646 = var_644;
+                    var_641 = Math.floor((var_638 - var_643) / 2);
+                    var_642 = Math.floor((var_639 - var_644) / 2);
+                    bgscr(37, var_638, var_639, 1, 0, 0);
+                    title("");
+                    cls(4);
+                    var_641 = Math.floor((var_638 - var_643) / 2);
+                    var_642 = Math.floor((var_639 - var_644) / 2);
+                    bgscr(0, var_643, var_644, 2, var_641, var_642);
+                    gsel(0, 2);
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        var_235 = getkey(123);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                    }
+                    return;
+                }
+                if (var_407 == 0 && var_235 == 1 && var_637 == 4) {
+                    var_637 = 0;
+                    gsel(37, -1);
+                    screen_(0, 680, 680, 2);
+                
+                    SetWindowLongA(hwnd, -8, var_15);
+                    if (var_640 == 0) {
+                        var_10 = 0;
+                        width(340, 340);
+                    }
+                    if (var_640 == 1) {
+                        var_640 = 0;
+                        var_10 = 1;
+                        width(680, 680);
+                    }
+            
+                    gsel(0, 1);
+                    chgdisp();
+                    for (let cnt3 = 0; true; ++cnt3) {
+                        var_235 = getkey(123);
+                        if (var_235 == 0) {
+                            break;
+                        }
+                        if (var_628 == 0 && var_629 == 0) {
+                            yield func337();
+                        }
+                        if (var_628 == 1 || var_629 == 1) {
+                            yield wait(2);
+                        }
+                    }
+                    return;
+                }
+                */
             }
-        }
-        var_254 = getkey(var_647);
-        var_257 = getkey(var_648);
-        var_255 = getkey(var_649);
-        var_259 = getkey(var_650);
-        if (is_key_reset) {
-            ResetKey(var_647);
-            ResetKey(var_648);
-            ResetKey(var_649);
-            ResetKey(var_650);
-        }
-        var_253 = getkey(var_651);
-        var_256 = getkey(var_652);
-        var_258 = getkey(var_653);
-        var_260 = getkey(var_654);
-        var_242 = getkey(var_655);
-        var_239 = getkey(var_656);
-        var_244 = getkey(var_657);
-        var_249 = getkey(var_658);
-        var_238 = getkey(var_659);
-        var_252 = getkey(var_660);
-        var_261 = getkey(32);
-        var_661 = 15 + var_662;
-        ck_joystick(var_663, var_661);
-        if (stat != 1 && var_254 == 0 && var_257 == 0 && var_255 == 0 && var_259 == 0 && var_253 == 0 && var_256 == 0 && var_258 == 0 && var_260 == 0 && var_242 == 0 && var_239 == 0 && var_244 == 0 && var_249 == 0 && var_238 == 0 && var_252 == 0 && var_619 == 0 && var_620 == 0 && var_621 == 0 && var_261 == 0) {
-            if (var_663 == 1) {
-                var_254 = 1;
+    
+            var_254 = getkey(var_647); // 入力判定：[←]
+            var_257 = getkey(var_648); // 入力判定：[→]
+            var_255 = getkey(var_649); // 入力判定：[↑]
+            var_259 = getkey(var_650); // 入力判定：[↓]
+            if (is_key_reset) {
+                ResetKey(var_647);
+                ResetKey(var_648);
+                ResetKey(var_649);
+                ResetKey(var_650);
             }
-            if (var_663 == 4) {
-                var_257 = 1;
+            var_253 = getkey(var_651); // 入力判定：? (Home)
+            var_256 = getkey(var_652); // 入力判定：? (PageUp)
+            var_258 = getkey(var_653); // 入力判定：? (End)
+            var_260 = getkey(var_654); // 入力判定：? (PageDown)
+            var_242 = getkey(var_655); // 入力判定：攻撃ボタン(Z)
+            var_239 = getkey(var_656); // 入力判定：ダッシュ・コマンドキャンセル(X)
+            var_244 = getkey(var_657); // 入力判定：コマンドウィンドウ表示(A)
+            var_249 = getkey(var_658); // 入力判定：射撃(S)
+            var_238 = getkey(var_659); // 入力判定：押しながらで斜めのみ移動(Shift)
+            var_252 = getkey(var_660); // 入力判定：その場で向き変更(C)
+            var_261 = getkey(32); // 入力判定：縮小マップのみ表示 (Space)
+            var_661 = 15 + var_662;
+            ck_joystick(var_663, var_661);
+            if (stat != 1 && var_254 == 0 && var_257 == 0 && var_255 == 0 && var_259 == 0 && var_253 == 0 && var_256 == 0 && var_258 == 0 && var_260 == 0 && var_242 == 0 && var_239 == 0 && var_244 == 0 && var_249 == 0 && var_238 == 0 && var_252 == 0 && var_619 == 0 && var_620 == 0 && var_621 == 0 && var_261 == 0) {
+                if (var_663 == 1) {
+                    var_254 = 1;
+                }
+                if (var_663 == 4) {
+                    var_257 = 1;
+                }
+                if (var_663 == 2) {
+                    var_255 = 1;
+                }
+                if (var_663 == 8) {
+                    var_259 = 1;
+                }
+                if (var_663 == 3) {
+                    var_253 = 1;
+                }
+                if (var_663 == 6) {
+                    var_256 = 1;
+                }
+                if (var_663 == 9) {
+                    var_258 = 1;
+                }
+                if (var_663 == 12) {
+                    var_260 = 1;
+                }
+                if (var_663 == var_664[1]) {
+                    var_242 = 1;
+                }
+                if (var_663 == var_664[2]) {
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[3]) {
+                    var_244 = 1;
+                }
+                if (var_663 == var_664[4]) {
+                    var_252 = 1;
+                }
+                if (var_663 == var_664[5]) {
+                    var_238 = 1;
+                }
+                if (var_663 == var_664[6]) {
+                    var_249 = 1;
+                }
+                if (var_663 == var_664[1] + var_664[2]) {
+                    var_242 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[7]) {
+                    var_261 = 1;
+                }
+                if (var_663 == var_664[8]) {
+                    var_619 = 1;
+                }
+                if (var_663 == var_664[9]) {
+                    var_620 = 1;
+                }
+                if (var_663 == var_664[10]) {
+                    var_621 = 1;
+                }
+                if (var_663 == var_664[2] + 1) {
+                    var_254 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[2] + 4) {
+                    var_257 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[2] + 2) {
+                    var_255 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[2] + 8) {
+                    var_259 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[2] + 3) {
+                    var_253 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[2] + 6) {
+                    var_256 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[2] + 9) {
+                    var_258 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[2] + 12) {
+                    var_260 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[5] + 3) {
+                    var_253 = 1;
+                    var_238 = 1;
+                }
+                if (var_663 == var_664[5] + 6) {
+                    var_256 = 1;
+                    var_238 = 1;
+                }
+                if (var_663 == var_664[5] + 9) {
+                    var_258 = 1;
+                    var_238 = 1;
+                }
+                if (var_663 == var_664[5] + 12) {
+                    var_260 = 1;
+                    var_238 = 1;
+                }
+                if (var_663 == var_664[5] + 3 + var_664[2]) {
+                    var_253 = 1;
+                    var_238 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[5] + 6 + var_664[2]) {
+                    var_256 = 1;
+                    var_238 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[5] + 9 + var_664[2]) {
+                    var_258 = 1;
+                    var_238 = 1;
+                    var_239 = 1;
+                }
+                if (var_663 == var_664[5] + 12 + var_664[2]) {
+                    var_260 = 1;
+                    var_238 = 1;
+                    var_239 = 1;
+                }
             }
-            if (var_663 == 2) {
-                var_255 = 1;
-            }
-            if (var_663 == 8) {
-                var_259 = 1;
-            }
-            if (var_663 == 3) {
-                var_253 = 1;
-            }
-            if (var_663 == 6) {
-                var_256 = 1;
-            }
-            if (var_663 == 9) {
-                var_258 = 1;
-            }
-            if (var_663 == 12) {
-                var_260 = 1;
-            }
-            if (var_663 == var_664[1]) {
-                var_242 = 1;
-            }
-            if (var_663 == var_664[2]) {
-                var_239 = 1;
-            }
-            if (var_663 == var_664[3]) {
-                var_244 = 1;
-            }
-            if (var_663 == var_664[4]) {
-                var_252 = 1;
-            }
-            if (var_663 == var_664[5]) {
-                var_238 = 1;
-            }
-            if (var_663 == var_664[6]) {
-                var_249 = 1;
-            }
-            if (var_663 == var_664[1] + var_664[2]) {
-                var_242 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[7]) {
-                var_261 = 1;
-            }
-            if (var_663 == var_664[8]) {
-                var_619 = 1;
-            }
-            if (var_663 == var_664[9]) {
-                var_620 = 1;
-            }
-            if (var_663 == var_664[10]) {
-                var_621 = 1;
-            }
-            if (var_663 == var_664[2] + 1) {
-                var_254 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[2] + 4) {
-                var_257 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[2] + 2) {
-                var_255 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[2] + 8) {
-                var_259 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[2] + 3) {
-                var_253 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[2] + 6) {
-                var_256 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[2] + 9) {
-                var_258 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[2] + 12) {
-                var_260 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[5] + 3) {
-                var_253 = 1;
-                var_238 = 1;
-            }
-            if (var_663 == var_664[5] + 6) {
-                var_256 = 1;
-                var_238 = 1;
-            }
-            if (var_663 == var_664[5] + 9) {
-                var_258 = 1;
-                var_238 = 1;
-            }
-            if (var_663 == var_664[5] + 12) {
-                var_260 = 1;
-                var_238 = 1;
-            }
-            if (var_663 == var_664[5] + 3 + var_664[2]) {
-                var_253 = 1;
-                var_238 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[5] + 6 + var_664[2]) {
-                var_256 = 1;
-                var_238 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[5] + 9 + var_664[2]) {
-                var_258 = 1;
-                var_238 = 1;
-                var_239 = 1;
-            }
-            if (var_663 == var_664[5] + 12 + var_664[2]) {
-                var_260 = 1;
-                var_238 = 1;
-                var_239 = 1;
-            }
-        }
-        var_663 = 0;
-        return;
-    });
-}
+            var_663 = 0;
+            return;
+        });
+    }
 // 効果音設定
 function func081(this: any) {
     return __awaiter(this, void 0, void 0, function* () {

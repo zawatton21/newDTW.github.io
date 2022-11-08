@@ -1,6 +1,6 @@
 {
   "name": "newdtw",
-  "version": "1.0.0",
+  "version": "0.1306",
   "description": "Rebuild Diavolo The Wanderer",
   "main": "build/main.js",
   "scripts": {
