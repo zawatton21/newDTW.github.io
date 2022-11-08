@@ -97,7 +97,7 @@ function func004() {
                     return [4 /*yield*/, picload("img3.gif")];
                 case 1:
                     _a.sent();
-                    buffer(26, 1280, 1280);
+                    buffer(26, 680, 680);
                     screen_(2, 1, 1, 2, -100, -100);
                     title(var_14);
                     oncmd_gosub(func897, 161);
