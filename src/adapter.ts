@@ -213,8 +213,8 @@ https://hsp3.web.fc2.com/lecture7.html
 function boxf(left:any = null, top1:any = null, right:any = null, bottom:any = null) {
     left = left || 0;
     top1 = top1 || 0;
-    right = right || 680;
-    bottom = bottom || 680;
+    right = right || 340;
+    bottom = bottom || 340;
     if ((target_window_id == 4 || target_window_id == 7 || target_window_id == 10 || target_window_id == 32) && left == 0 && top1 == 0) {
         return context.clearRect(left, top1, right - left, bottom - top1);
     }
@@ -420,7 +420,7 @@ p1=0～4(0) : クリアする時の色
 */
 function cls(id: any) {
     contexts[id].fillStyle = ["#fff", "#ccc", "888", "444", "#000"][id];
-    contexts[id].fillRect(0, 0, 680, 680);
+    contexts[id].fillRect(0, 0, 340, 340);
 }
 
 /* HSP言語 chdir命令
@@ -994,9 +994,9 @@ function ginfo(data_id: any) {
         case 5: // ウィンドウの左上Y座標
             return 0;
         case 20: // デスクトップ全体のXサイズ(画面解像度)
-            return disp_width;//return 680;
+            return disp_width;//return 340;
         case 21: //デスクトップ全体のYサイズ(画面解像度)
-            return disp_height; //return 680;
+            return disp_height; //return 340;
         case 22: // カレントポジションのX座標
             return position[0];
         case 23: // カレントポジションのY座標
@@ -1205,10 +1205,13 @@ p8に1を指定した場合には、 拡大縮小時にハーフトーンを使�
 p8が0か、または省略されている場合は、ハーフトーンを使用しませんが、 そ
 のぶん高速に画像処理を行なうことができます。
 */
+//let ctx: any;
+
 // @ts-expect-error TS(7006): Parameter 'dst_size_x' implicitly has an 'any' typ... Remove this comment to see the full error message
 function gzoom(dst_size_x, dst_size_y, org_buffer_id, x: any, y, img_width, img_height, mode) {
-    if (org_buffer_id == 25) { // ウィンドウIDが
+    if (org_buffer_id == 25) { // ウィンドウIDが25の時
         const ctx = canvases[org_buffer_id].getContext('2d');
+        //ctx = canvases[org_buffer_id].getContext('2d');
         const imgd = ctx.getImageData(position[0], position[1], img_width, img_height); // canvasに描かれている画像データ情報を取得
         const pix = imgd.data;
         for (let i = 0, n = pix.length; i < n; i += 4) {
@@ -2012,8 +2015,8 @@ function redraw(mode: any) {
     else {
         pre_render_canvas = document.createElement('canvas');
         pre_render_canvas.id = "pre";
-        pre_render_canvas.width = 680;
-        pre_render_canvas.height = 680;
+        pre_render_canvas.width = 340;
+        pre_render_canvas.height = 340;
         context = pre_render_canvas.getContext('2d');
     }
 }
@@ -2057,13 +2060,13 @@ p7,p8       : クライアントエリアのサイズX,Y（1ドット単位）
 p7,p8のパラメータで、ウィンドウのクライアントサイズ(実際に表示される大
 きさ)を指定することができます。
 */
-let display_width: number = 680;
-let display_height: number = 680;
+//let display_width: number = 340;
+//let display_height: number = 340;
 
 function screen_(id: any, display_width: any, display_height: any, init_mode: any, pos_x: any = null, pos_y: any = null) {
     if (id == 0) {
-        display_width = 680;
-        display_height = 680;
+        display_width = 340;
+        display_height = 340;
         canvasSize = display_width;
         document.getElementById("pad").style.top = "720px";
     }
@@ -2291,13 +2294,18 @@ p1,p2およびp3,p4パラメータが省略された場合は、現在の設定�
 */
 //function width(data0:any, data1:any) { undef_func("width", [data0, data1]); }
 function width(width: any, height: any) {
-    screen_(null, width, height, null);
-    window.resizeTo(width, height);
+    //screen_(null, width, height, null);
+    /*
+    mainWindow.resizeTo(width, height);
+    if (width == 340) {
+        context.scale(1, 1);
+    }
+    if (width == 680) {
+        context.scale(2, 2);
+    }*/
 }
 
-
 /// ↓↓↓ ここからHSP言語のライブラリ機能 ↓↓↓
-
 
 function HMMINIT(data0: any) {
     stat = 1;
@@ -2323,8 +2331,8 @@ function DSGETMASTERVOLUME() { }
 let bgm_volume: number = 0.1;
 
 
-function DSSETMASTERVOLUME(data0: any) {
-    bgm_volume = (document.getElementById(bgm_source1) as any).volume = data0 / 1000;
+function DSSETMASTERVOLUME(volume_size: number) {
+    bgm_volume = (document.getElementById(bgm_source1) as any).volume = volume_size / 1000;
  }
 
 
@@ -2489,3 +2497,7 @@ function ImmGetContext(arg1:any) { }
 function ImmSetOpenStatus(arg1:any, arg2:any) { }
 function ImmReleaseContext(arg1:any, arg2:any) { }
 function ImmGetOpenStatus(arg1: any) { }
+
+
+// この関数をgetkey(123)のところに設ける？
+//window.addEventListener("resize", ChangeScale)

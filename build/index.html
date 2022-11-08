@@ -18,6 +18,27 @@
 		}
 	</style>
 </head>
+<script>
+	var change_scale = {
+		"container": 320,
+		"percent": 1,
+		"function": function() {
+			"use strict";
+			if (change_scale.percent === window.devicePixelRatio) {
+				var scale = document.documentElement.clientWidth;
+				scale = scale / change_scale.container;
+				scale = "scale(" + scale + ")";
+				document.body.style.transform = scale;
+			} else {
+				change_scale.percent = window.devicePixelRatio;
+			}
+		}
+	};
+	window.addEventListener("resize", function(event) {
+		"use strict";
+		change_scale.function();
+	});
+</script>
 <body>
 	<canvas id="c0"></canvas>
 	<div id="pad">
@@ -26,7 +47,6 @@
 			<a id="bgmlink" href="" target="_blank"></a>
 		</font>
 	</div>
-
 	<audio id="0.mp3" preload="auto" loop>
 		<source src="../assets/bgm/0.mp3" type="audio/mp3">
 	</audio>

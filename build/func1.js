@@ -1189,7 +1189,7 @@ function func138() {
                     gsel(0);
                     redraw(0);
                     color(0, 0, 0);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gmode(4, null, null, var_18);
                     if (var_11 == 0) {
                         if (var_60 < 25) {
@@ -1686,7 +1686,7 @@ function func139() {
                     var_725 = 0;
                     var_726 = 1;
                     color(0, 0, 0);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     return [4 /*yield*/, wait(1)];
                 case 3:
                     _a.sent();
@@ -1697,7 +1697,7 @@ function func139() {
                     if (!(cnt1_3 < 25)) return [3 /*break*/, 9];
                     redraw(0);
                     color(0, 0, 0);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gmode(4, null, null, var_18);
                     pos(0, 0);
                     var_727 = 0;
@@ -1732,7 +1732,7 @@ function func139() {
                 case 9:
                     redraw(0);
                     color(0, 0, 0);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gmode(2);
                     var_727 = 0;
                     var_728 = 350;
@@ -1773,7 +1773,7 @@ function func139() {
                     _a.sent();
                     redraw(0);
                     color(0, 0, 0);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gmode(2);
                     var_727 = 0;
                     var_728 = 350;
@@ -3782,7 +3782,7 @@ function func150() {
                     var_300 = 0;
                     gsel(19);
                     color(1, 1, 1);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 0;
                     var_312 = 1;
@@ -6108,7 +6108,7 @@ function func157() {
                     redraw(0);
                     gmode(2);
                     pos(0, 0);
-                    gcopy(17, 0, 0, 340, 340);
+                    gcopy(17, 0, 0, 680, 680);
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 150);
                     var_763 = 0;
@@ -6704,7 +6704,7 @@ function func163() {
             }
             pos(0, 0);
             gmode(2);
-            gcopy(18, var_779, var_780, 340, 340);
+            gcopy(18, var_779, var_780, 680, 680);
             var_781 = 17;
             var_782 = 5;
             if (var_199 == 4) {
@@ -7175,7 +7175,7 @@ function func164() {
             }
             pos(0, 0);
             gmode(2);
-            gcopy(18, var_779, var_780, 340, 340);
+            gcopy(18, var_779, var_780, 680, 680);
             return [2 /*return*/];
         });
     });
@@ -7660,22 +7660,22 @@ function func168() {
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(0, 0);
                     if (var_767 == 0) {
-                        gcopy(17, 360, 0, 340, 340);
+                        gcopy(17, 360, 0, 680, 680);
                     }
                     if (var_767 == 1) {
                         if (var_791 == 0) {
-                            gcopy(17, 360, 0, 340, 340);
+                            gcopy(17, 360, 0, 680, 680);
                         }
                         if (var_791 == 1) {
-                            gcopy(17, 360, 720, 340, 340);
+                            gcopy(17, 360, 720, 680, 680);
                         }
                         if (var_791 == 2) {
-                            gcopy(17, 720, 0, 340, 340);
+                            gcopy(17, 720, 0, 680, 680);
                         }
                     }
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(0, 0);
-                    gcopy(12, 0, 0, 340, 340);
+                    gcopy(12, 0, 0, 680, 680);
                     color(255, 255, 255);
                     if (var_794 != 0) {
                         color(150, 150, 150);
@@ -8163,22 +8163,22 @@ function func170() {
                     gmode(2);
                     pos(0, 0);
                     if (var_767 == 0) {
-                        gcopy(17, 360, 0, 340, 340);
+                        gcopy(17, 360, 0, 680, 680);
                     }
                     if (var_767 == 1) {
                         if (var_791 == 0) {
-                            gcopy(17, 360, 0, 340, 340);
+                            gcopy(17, 360, 0, 680, 680);
                         }
                         if (var_791 == 1) {
-                            gcopy(17, 360, 720, 340, 340);
+                            gcopy(17, 360, 720, 680, 680);
                         }
                         if (var_791 == 2) {
-                            gcopy(17, 720, 0, 340, 340);
+                            gcopy(17, 720, 0, 680, 680);
                         }
                     }
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(0, 0);
-                    gcopy(12, 0, 0, 340, 340);
+                    gcopy(12, 0, 0, 680, 680);
                     color(255, 255, 255);
                     line(9, 37, 330, 37);
                     line(9, var_801, 330, var_801);
@@ -9990,32 +9990,32 @@ function func180() {
             if (var_599 == 0) {
                 pos(0, 0);
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
-                gcopy(8, 400, 350, 340, 340);
+                gcopy(8, 400, 350, 680, 680);
             }
             if (var_599 == 1) {
                 pos(0, 0);
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
-                gcopy(8, 400, 350, 340, 340);
+                gcopy(8, 400, 350, 680, 680);
             }
             if (var_599 == 2) {
                 pos(0, 0);
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
-                gcopy(8, 400, 350, 340, 340);
+                gcopy(8, 400, 350, 680, 680);
             }
             if (var_599 == 3) {
                 pos(0, 0);
                 gmode(4, null, null, 80);
-                gcopy(8, 400, 350, 340, 340);
+                gcopy(8, 400, 350, 680, 680);
             }
             if (var_599 == 4) {
                 pos(0, 0);
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 40);
-                gcopy(8, 400, 350, 340, 340);
+                gcopy(8, 400, 350, 680, 680);
             }
             if (var_599 == 5) {
                 pos(0, 0);
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
-                gcopy(8, 400, 350, 340, 340);
+                gcopy(8, 400, 350, 680, 680);
             }
             return [2 /*return*/];
         });

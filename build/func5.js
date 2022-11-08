@@ -1444,7 +1444,7 @@ function func511() {
                 case 46:
                     gsel(19);
                     color(255, 255, 255);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 0;
                     var_312 = 1;
@@ -2071,7 +2071,7 @@ function func511() {
                     _a.sent();
                     gsel(19);
                     color(255, 255, 255);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 255;
                     var_293 = "";
@@ -2979,7 +2979,7 @@ function func511() {
                     _a.sent();
                     gsel(19);
                     color(255, 0, 0);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_529 = 1;
                     DSPLAY(audio_id = 128);
@@ -5170,7 +5170,7 @@ function func511() {
                 case 674:
                     gsel(19);
                     color(1, 1, 1);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 0;
                     DSPLAY(audio_id = 178);
@@ -5892,7 +5892,7 @@ function func511() {
                 case 828:
                     gsel(19);
                     color(150, 0, 150);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_529 = 1;
                     var_403 = "ウイルスが敵の体を蝕んでいる！";
@@ -6320,7 +6320,7 @@ function func511() {
                 case 934:
                     gsel(19);
                     color(250, 250, 250);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_529 = 1;
                     var_403 = "血液が沸騰している！";
@@ -6748,7 +6748,7 @@ function func511() {
                 case 1040:
                     gsel(19);
                     color(0, 0, 150);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_2307 = 0;
                     var_529 = 1;
@@ -8734,7 +8734,7 @@ function func511() {
                 case 1469:
                     var_1224 = 10;
                     var_1225 = 0;
-                    var_1517 = 340;
+                    var_1517 = 680;
                     var_1518 = 160;
                     cnt2_95 = 0;
                     _a.label = 1470;
@@ -9090,7 +9090,7 @@ function func511() {
                     _a.sent();
                     gsel(19);
                     color(255, 255, 255);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     DSPLAY(audio_id = 126);
                     var_529 = 1;
@@ -12157,7 +12157,7 @@ function func511() {
                     _a.sent();
                     gsel(19);
                     color(10, 10, 10);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 0;
                     var_312 = 1;
@@ -12297,7 +12297,7 @@ function func511() {
                     _a.sent();
                     gsel(19);
                     color(10, 10, 10);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_311 = 255;
                     var_312 = 1;
@@ -12747,7 +12747,7 @@ function func511() {
                     var_501 = 1;
                     gsel(19);
                     color(255, 255, 255);
-                    boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+                    boxf(left = 0, top1 = 0, right = 680, bottom = 680);
                     gsel(0);
                     var_312 = 1;
                     cnt2_159 = 0;

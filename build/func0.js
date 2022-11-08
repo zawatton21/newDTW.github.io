@@ -25,6 +25,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var ipcRenderer = require('electron').ipcRenderer;
+var myResizeBtn = document.getElementById('resizeBtn');
 function makepal() {
     var_0 = 0;
     var_1 = 0;
@@ -91,13 +93,13 @@ function func004() {
                         var_11 = 0;
                     }
                     var_12 = 0;
-                    var_13 = "0.13.06";
-                    var_14 = "newDTW ver0.13.06";
+                    var_13 = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
+                    var_14 = "newDTW ver0.1306";
                     buffer(17);
                     return [4 /*yield*/, picload("img3.gif")];
                 case 1:
                     _a.sent();
-                    buffer(26, 1280, 1280);
+                    buffer(26, 680, 680);
                     screen_(2, 1, 1, 2, -100, -100);
                     title(var_14);
                     oncmd_gosub(func897, 161);
@@ -12301,10 +12303,23 @@ function func079() {
         });
     });
 }
+var change_scale;
+function ChangeScale() {
+    if (change_scale.percent === window.devicePixelRatio) {
+        var scale = document.documentElement.clientWidth;
+        scale = scale / change_scale.container;
+        scale = "scale(" + scale + ")";
+        document.body.style.transform = scale;
+    }
+    else {
+        change_scale.percent = window.devicePixelRatio;
+    }
+}
+// 各キー操作。joystick関数があるので、動作に関するもの？？
 function func080(is_key_reset) {
     if (is_key_reset === void 0) { is_key_reset = true; }
     return __awaiter(this, void 0, void 0, function () {
-        var cnt3_32, cnt3_33, cnt3_34, cnt3_35, cnt3_36, cnt3_37, cnt3_38, cnt3_39, cnt3_40;
+        var cnt3_32, cnt3_33, cnt3_34, cnt3_35, cnt3_36;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -12458,7 +12473,7 @@ function func080(is_key_reset) {
                     if (ginfo(2) != 0 && ginfo(2) != 37) {
                         return [2 /*return*/];
                     }
-                    if (!(var_626 == 0)) return [3 /*break*/, 101];
+                    if (!(var_626 == 0)) return [3 /*break*/, 74];
                     var_235 = getkey(112);
                     if (!(var_235 == 1 && var_10 == 1)) return [3 /*break*/, 35];
                     var_10 = 0;
@@ -12524,39 +12539,44 @@ function func080(is_key_reset) {
                     return [3 /*break*/, 36];
                 case 42: return [2 /*return*/];
                 case 43:
+                    // F2キーを押した際の動作
                     var_235 = getkey(113);
                     if (!(var_235 == 1)) return [3 /*break*/, 45];
                     return [4 /*yield*/, func088()];
                 case 44:
-                    _a.sent();
+                    _a.sent(); // 音量を小さくする（ボリュームコントロールのWAVE変更）
                     _a.label = 45;
                 case 45:
+                    // F3キーを押した際の動作
                     var_235 = getkey(114);
                     if (!(var_235 == 1)) return [3 /*break*/, 47];
                     return [4 /*yield*/, func087()];
                 case 46:
-                    _a.sent();
+                    _a.sent(); // 音量を大きくする（ボリュームコントロールのWAVE変更）
                     _a.label = 47;
                 case 47:
+                    // F4キーを押した際の動作
                     var_235 = getkey(115);
                     if (!(var_235 == 1)) return [3 /*break*/, 49];
                     return [4 /*yield*/, func085()];
                 case 48:
-                    _a.sent();
+                    _a.sent(); // 効果音を小さくする
                     _a.label = 49;
                 case 49:
+                    // F5キーを押した際の動作
                     var_235 = getkey(116);
                     if (!(var_235 == 1)) return [3 /*break*/, 51];
                     return [4 /*yield*/, func086()];
                 case 50:
-                    _a.sent();
+                    _a.sent(); // 効果音を大きくする
                     _a.label = 51;
                 case 51:
+                    // F6キーを押した際の動作　装備品の情報を「disc.txt」に出力する
                     var_235 = getkey(117);
                     if (!(var_235 == 1 && var_628 == 0 && var_627 == 0 && var_629 == 0)) return [3 /*break*/, 57];
                     return [4 /*yield*/, func227()];
                 case 52:
-                    _a.sent();
+                    _a.sent(); // F6キーを押しての現在ステータスをテキストファイルへ出力
                     var_630 = 1;
                     cnt3_34 = 0;
                     _a.label = 53;
@@ -12575,6 +12595,7 @@ function func080(is_key_reset) {
                     return [3 /*break*/, 53];
                 case 56: return [2 /*return*/];
                 case 57:
+                    // F7キーを押した際の動作　BGMのオン・オフ（オンにした場合DISC使用時や階段を降りてから再開）
                     var_235 = getkey(118);
                     if (!(var_235 == 1 && var_631 == 1000)) return [3 /*break*/, 65];
                     DMSTOP();
@@ -12643,188 +12664,31 @@ function func080(is_key_reset) {
                     return [3 /*break*/, 66];
                 case 72: return [2 /*return*/];
                 case 73:
+                    // F12キーを押した際の動作　フルスクリーン切り替え
                     var_235 = getkey(123);
-                    if (!(var_407 == 0 && var_235 == 1 && var_637 == 0)) return [3 /*break*/, 80];
-                    chgdisp(1, 640, 480);
-                    var_638 = ginfo(20);
-                    var_639 = ginfo(21);
-                    bgscr(37, var_638, var_639, 1, 0, 0);
-                    title("");
-                    cls(4);
-                    if (var_10 == 1) {
-                        var_640 = 1;
-                        var_10 = 0;
-                    }
-                    var_637 = 1;
-                    var_641 = Math.floor((var_638 - 340) / 2);
-                    var_642 = Math.floor((var_639 - 340) / 2);
-                    bgscr(0, 680, 680, 2, var_641, var_642, 340, 340);
-                    gsel(0, 2);
-                    cnt3_37 = 0;
                     _a.label = 74;
                 case 74:
-                    if (!true) return [3 /*break*/, 79];
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        return [3 /*break*/, 79];
-                    }
-                    if (!(var_628 == 0 && var_629 == 0)) return [3 /*break*/, 76];
-                    return [4 /*yield*/, func337()];
-                case 75:
-                    _a.sent();
-                    _a.label = 76;
-                case 76:
-                    if (!(var_628 == 1 || var_629 == 1)) return [3 /*break*/, 78];
-                    return [4 /*yield*/, wait(2)];
-                case 77:
-                    _a.sent();
-                    _a.label = 78;
-                case 78:
-                    ++cnt3_37;
-                    return [3 /*break*/, 74];
-                case 79: return [2 /*return*/];
-                case 80:
-                    if (!(var_407 == 0 && var_235 == 1 && var_637 == 1)) return [3 /*break*/, 87];
-                    var_637 = 2;
-                    var_10 = 1;
-                    var_638 = ginfo(20);
-                    var_639 = ginfo(21);
-                    var_643 = var_639;
-                    var_644 = var_639;
-                    bgscr(37, var_638, var_639, 1, 0, 0);
-                    title("");
-                    cls(4);
-                    var_641 = Math.floor((var_638 - var_643) / 2);
-                    var_642 = Math.floor((var_639 - var_644) / 2);
-                    bgscr(0, var_643, var_644, 2, var_641, var_642);
-                    gsel(0, 2);
-                    cnt3_38 = 0;
-                    _a.label = 81;
-                case 81:
-                    if (!true) return [3 /*break*/, 86];
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        return [3 /*break*/, 86];
-                    }
-                    if (!(var_628 == 0 && var_629 == 0)) return [3 /*break*/, 83];
-                    return [4 /*yield*/, func337()];
-                case 82:
-                    _a.sent();
-                    _a.label = 83;
-                case 83:
-                    if (!(var_628 == 1 || var_629 == 1)) return [3 /*break*/, 85];
-                    return [4 /*yield*/, wait(2)];
-                case 84:
-                    _a.sent();
-                    _a.label = 85;
-                case 85:
-                    ++cnt3_38;
-                    return [3 /*break*/, 81];
-                case 86: return [2 /*return*/];
-                case 87:
-                    if (!(var_407 == 0 && var_235 == 1 && var_637 == 2)) return [3 /*break*/, 94];
-                    var_637 = 4;
-                    var_10 = 1;
-                    var_638 = ginfo(20);
-                    var_639 = ginfo(21);
-                    var_643 = var_638;
-                    var_644 = var_639;
-                    var_645 = var_643;
-                    var_646 = var_644;
-                    var_641 = Math.floor((var_638 - var_643) / 2);
-                    var_642 = Math.floor((var_639 - var_644) / 2);
-                    bgscr(37, var_638, var_639, 1, 0, 0);
-                    title("");
-                    cls(4);
-                    var_641 = Math.floor((var_638 - var_643) / 2);
-                    var_642 = Math.floor((var_639 - var_644) / 2);
-                    bgscr(0, var_643, var_644, 2, var_641, var_642);
-                    gsel(0, 2);
-                    cnt3_39 = 0;
-                    _a.label = 88;
-                case 88:
-                    if (!true) return [3 /*break*/, 93];
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        return [3 /*break*/, 93];
-                    }
-                    if (!(var_628 == 0 && var_629 == 0)) return [3 /*break*/, 90];
-                    return [4 /*yield*/, func337()];
-                case 89:
-                    _a.sent();
-                    _a.label = 90;
-                case 90:
-                    if (!(var_628 == 1 || var_629 == 1)) return [3 /*break*/, 92];
-                    return [4 /*yield*/, wait(2)];
-                case 91:
-                    _a.sent();
-                    _a.label = 92;
-                case 92:
-                    ++cnt3_39;
-                    return [3 /*break*/, 88];
-                case 93: return [2 /*return*/];
-                case 94:
-                    if (!(var_407 == 0 && var_235 == 1 && var_637 == 4)) return [3 /*break*/, 101];
-                    var_637 = 0;
-                    gsel(37, -1);
-                    screen_(0, 680, 680, 2);
-                    SetWindowLongA(hwnd, -8, var_15);
-                    if (var_640 == 0) {
-                        var_10 = 0;
-                        width(340, 340);
-                    }
-                    if (var_640 == 1) {
-                        var_640 = 0;
-                        var_10 = 1;
-                        width(680, 680);
-                    }
-                    gsel(0, 1);
-                    chgdisp();
-                    cnt3_40 = 0;
-                    _a.label = 95;
-                case 95:
-                    if (!true) return [3 /*break*/, 100];
-                    var_235 = getkey(123);
-                    if (var_235 == 0) {
-                        return [3 /*break*/, 100];
-                    }
-                    if (!(var_628 == 0 && var_629 == 0)) return [3 /*break*/, 97];
-                    return [4 /*yield*/, func337()];
-                case 96:
-                    _a.sent();
-                    _a.label = 97;
-                case 97:
-                    if (!(var_628 == 1 || var_629 == 1)) return [3 /*break*/, 99];
-                    return [4 /*yield*/, wait(2)];
-                case 98:
-                    _a.sent();
-                    _a.label = 99;
-                case 99:
-                    ++cnt3_40;
-                    return [3 /*break*/, 95];
-                case 100: return [2 /*return*/];
-                case 101:
-                    var_254 = getkey(var_647);
-                    var_257 = getkey(var_648);
-                    var_255 = getkey(var_649);
-                    var_259 = getkey(var_650);
+                    var_254 = getkey(var_647); // 入力判定：[←]
+                    var_257 = getkey(var_648); // 入力判定：[→]
+                    var_255 = getkey(var_649); // 入力判定：[↑]
+                    var_259 = getkey(var_650); // 入力判定：[↓]
                     if (is_key_reset) {
                         ResetKey(var_647);
                         ResetKey(var_648);
                         ResetKey(var_649);
                         ResetKey(var_650);
                     }
-                    var_253 = getkey(var_651);
-                    var_256 = getkey(var_652);
-                    var_258 = getkey(var_653);
-                    var_260 = getkey(var_654);
-                    var_242 = getkey(var_655);
-                    var_239 = getkey(var_656);
-                    var_244 = getkey(var_657);
-                    var_249 = getkey(var_658);
-                    var_238 = getkey(var_659);
-                    var_252 = getkey(var_660);
-                    var_261 = getkey(32);
+                    var_253 = getkey(var_651); // 入力判定：? (Home)
+                    var_256 = getkey(var_652); // 入力判定：? (PageUp)
+                    var_258 = getkey(var_653); // 入力判定：? (End)
+                    var_260 = getkey(var_654); // 入力判定：? (PageDown)
+                    var_242 = getkey(var_655); // 入力判定：攻撃ボタン(Z)
+                    var_239 = getkey(var_656); // 入力判定：ダッシュ・コマンドキャンセル(X)
+                    var_244 = getkey(var_657); // 入力判定：コマンドウィンドウ表示(A)
+                    var_249 = getkey(var_658); // 入力判定：射撃(S)
+                    var_238 = getkey(var_659); // 入力判定：押しながらで斜めのみ移動(Shift)
+                    var_252 = getkey(var_660); // 入力判定：その場で向き変更(C)
+                    var_261 = getkey(32); // 入力判定：縮小マップのみ表示 (Space)
                     var_661 = 15 + var_662;
                     ck_joystick(var_663, var_661);
                     if (stat != 1 && var_254 == 0 && var_257 == 0 && var_255 == 0 && var_259 == 0 && var_253 == 0 && var_256 == 0 && var_258 == 0 && var_260 == 0 && var_242 == 0 && var_239 == 0 && var_244 == 0 && var_249 == 0 && var_238 == 0 && var_252 == 0 && var_619 == 0 && var_620 == 0 && var_621 == 0 && var_261 == 0) {

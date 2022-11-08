@@ -8,6 +8,8 @@ var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _argume
     });
 };
 
+//let mainWindow: any;
+
 let num: any;
 let arg: any;
 let e: any;
