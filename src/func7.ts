@@ -4695,7 +4695,7 @@ function func773(this: any) {
             yield func492();
             comments_row1 = var_296;
             comments_row2 = var_297;
-            var_296 = "" + list_name + "が";
+            var_296 = "" + item_name + "が";
             var_297 = "入っているようだ。";
             var_198 = 1;
             var_300 = 0;
@@ -4823,7 +4823,7 @@ function func776(this: any) {
         item_list = var_233[var_225].Var0;
         var_487 = var_233[var_225].Var13;
         yield func492();
-        var_3153 = list_name;
+        var_3153 = item_name;
         var_866 = var_864;
         var_987[0] = var_233[var_225].Var0;
         var_987[1] = 0;
@@ -4933,7 +4933,7 @@ function func777(this: any) {
         item_list = var_987[0];
         var_487 = var_987[13];
         yield func492();
-        var_3153 = list_name;
+        var_3153 = item_name;
         if (item_list >= 800 && item_list < 900) {
             var_1806 = 1;
             for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {

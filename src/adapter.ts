@@ -92,6 +92,7 @@ function InitInput() {
     };
     // ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
     //コメントアウトしたが重要機能っぽい。
+    /*
     const buttons = document.getElementsByTagName("button");
     for (let i = 0; i < buttons.length; ++i) {
         if (buttons[i].id == "reset_data") {
@@ -169,6 +170,7 @@ function InitInput() {
         reset_input(0, 0);
         isClick = false;
     };
+    */
 }
 
 // 時間取得？

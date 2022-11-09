@@ -1,6 +1,3 @@
-///<reference path="adapter.ts"/>
-///<reference path="variable.ts"/>
-
 for (let i = 0; i < 3600; ++i) {
     eval("var var_" + i + " = 0;");
 }

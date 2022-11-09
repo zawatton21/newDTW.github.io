@@ -2981,6 +2981,7 @@ function func228() {
         });
     });
 }
+// セーブファイルからデータ読み出し関数
 function func229() {
     return __awaiter(this, void 0, void 0, function () {
         var data_1, data_2, data_3;
@@ -4473,7 +4474,7 @@ function func237() {
                     dbgprt(237);
                     comments_row1 = var_296;
                     comments_row2 = var_297;
-                    var_296 = "確認のため「＠」キーを押してください";
+                    var_296 = "確認のため「K」キーを押してください";
                     var_297 = "";
                     var_198 = 1;
                     var_300 = 0;
@@ -4489,6 +4490,7 @@ function func237() {
         });
     });
 }
+// ダンジョン攻略中に冒険を諦める関数
 function func238() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -4499,7 +4501,7 @@ function func238() {
                 case 1:
                     _a.sent();
                     if (!(var_1061 == 1)) return [3 /*break*/, 3];
-                    conf_keyon = getkey(89);
+                    conf_keyon = getkey(89); // Yキー入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 3];
                     var_198 = 0;
                     return [4 /*yield*/, func237()];
@@ -4508,7 +4510,8 @@ function func238() {
                     return [2 /*return*/];
                 case 3:
                     if (!(var_1061 == 2)) return [3 /*break*/, 5];
-                    conf_keyon = getkey(192);
+                    //conf_keyon = getkey(192); 192は各キーボードのメーカーが、キーボードごとに割り当てる。
+                    conf_keyon = getkey(75); // Kキー入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 5];
                     var_198 = 0;
                     var_211 = 0;

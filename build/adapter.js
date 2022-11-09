@@ -116,8 +116,9 @@ function InitInput() {
     };
     // ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
     //コメントアウトしたが重要機能っぽい。
-    var buttons = document.getElementsByTagName("button");
-    for (var i = 0; i < buttons.length; ++i) {
+    /*
+    const buttons = document.getElementsByTagName("button");
+    for (let i = 0; i < buttons.length; ++i) {
         if (buttons[i].id == "reset_data") {
             buttons[i].onmouseup = ResetDataAndReload;
             buttons[i].ontouchend = ResetDataAndReload;
@@ -130,15 +131,15 @@ function InitInput() {
         }
         if (buttons[i].id == "XH") {
             buttons[i].onmousedown = function (e) {
-                if (pushing_key_list[88] > 0) {
-                    pushing_key_list[88] = 0;
-                    this.style.border = 'inset 2px';
-                }
-                else {
-                    pushing_key_list[88] = 1;
-                    this.style.border = '';
-                }
-            };
+    if (pushing_key_list[88] > 0) {
+        pushing_key_list[88] = 0;
+        (this as any).style.border = 'inset 2px';
+    }
+    else {
+        pushing_key_list[88] = 1;
+        (this as any).style.border = '';
+    }
+};
             buttons[i].ontouchstart = function (e) {
                 if (pushing_key_list[88] > 0) {
                     console.log(e);
@@ -155,19 +156,18 @@ function InitInput() {
             continue;
         }
         buttons[i].onmousedown = function (e) {
-            pushing_key_list[this.id] = 1;
-        };
+    pushing_key_list[(this as any).id] = 1;
+};
         buttons[i].onmouseup = function (e) {
-            pushing_key_list[this.id] = 0;
-        };
+    pushing_key_list[(this as any).id] = 0;
+};
         buttons[i].ontouchstart = function (e) {
-            pushing_key_list[this.id] = 1;
-        };
+    pushing_key_list[(this as any).id] = 1;
+};
         buttons[i].ontouchend = function (e) {
-            pushing_key_list[this.id] = 0;
-        };
-    }
-    ;
+    pushing_key_list[(this as any).id] = 0;
+};
+    };
     canv.onmousedown = function (e) {
         reset_input(e.x, e.y);
         isClick = true;
@@ -194,6 +194,7 @@ function InitInput() {
         reset_input(0, 0);
         isClick = false;
     };
+    */
 }
 // 時間取得？
 var last_wait_time = new Date();

@@ -6933,7 +6933,7 @@ function func773() {
                     _a.sent();
                     comments_row1 = var_296;
                     comments_row2 = var_297;
-                    var_296 = "" + list_name + "が";
+                    var_296 = "" + item_name + "が";
                     var_297 = "入っているようだ。";
                     var_198 = 1;
                     var_300 = 0;
@@ -7124,7 +7124,7 @@ function func776() {
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent();
-                    var_3153 = list_name;
+                    var_3153 = item_name;
                     var_866 = var_864;
                     var_987[0] = var_233[var_225].Var0;
                     var_987[1] = 0;
@@ -7271,7 +7271,7 @@ function func777() {
                     return [4 /*yield*/, func492()];
                 case 6:
                     _a.sent();
-                    var_3153 = list_name;
+                    var_3153 = item_name;
                     if (item_list >= 800 && item_list < 900) {
                         var_1806 = 1;
                         for (cnt2_25 = 0; cnt2_25 < var_224; ++cnt2_25) {

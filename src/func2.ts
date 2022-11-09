@@ -2297,18 +2297,15 @@ function func228(this: any) {
         return;
     });
 }
+
+// セーブファイルからデータ読み出し関数
 function func229(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(229);
-
         var_77 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-
         var_79 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-
         var_82 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-
         var_72 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-
         var_80 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
         var_983 = sdim(3000);
         var_792 = dim(length1 = 5, length2 = 25, length3 = 70, length4 = null);
@@ -3743,7 +3740,7 @@ function func237(this: any) {
         dbgprt(237);
         comments_row1 = var_296;
         comments_row2 = var_297;
-        var_296 = "確認のため「＠」キーを押してください";
+        var_296 = "確認のため「K」キーを押してください";
         var_297 = "";
         var_198 = 1;
         var_300 = 0;
@@ -3752,12 +3749,14 @@ function func237(this: any) {
         yield func238();
     });
 }
+
+// ダンジョン攻略中に冒険を諦める関数
 function func238(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(238);
         yield func337();
         if (var_1061 == 1) {
-            conf_keyon = getkey(89);
+            conf_keyon = getkey(89);　// Yキー入力確認
             if (conf_keyon == 1) {
                 var_198 = 0;
                 yield func237();
@@ -3765,7 +3764,8 @@ function func238(this: any) {
             }
         }
         if (var_1061 == 2) {
-            conf_keyon = getkey(192);
+            //conf_keyon = getkey(192); 192は各キーボードのメーカーが、キーボードごとに割り当てる。
+            conf_keyon = getkey(75);　// Kキー入力確認
             if (conf_keyon == 1) {
                 var_198 = 0;
                 var_211 = 0;
@@ -3788,6 +3788,7 @@ function func238(this: any) {
         return;
     });
 }
+
 function func239(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(239);

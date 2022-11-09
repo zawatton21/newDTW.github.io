@@ -6,13 +6,15 @@ exports.__esModule = true;
 //const path = require('path')
 var electron_1 = require("electron");
 var path = require("path");
-var ipcMain = require('electron').ipcMain;
 var createWindow = function () {
     // Create the browser window.
     //レンダラー読み出し部分
     var mainWindow = new electron_1.BrowserWindow({
         width: 340,
-        height: 380,
+        height: 365,
+        // ウィンドウの最小サイズ
+        minWidth: 340,
+        minHeight: 365,
         resizable: true,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
@@ -21,18 +23,18 @@ var createWindow = function () {
         }
     });
     // Aspect ratio works on Windows, Linux, and Mac:
-    mainWindow.setAspectRatio(320 / 380); // macは340/340、windowsは 320/330
+    mainWindow.setAspectRatio(340 / 340); // macは340/340、windowsは 320/330
     // and load the index.html of the app.
-    mainWindow.loadFile('index.html');
+    mainWindow.loadFile('build/index.html');
     // メニューバーを非表示
     mainWindow.setMenuBarVisibility(false);
     // ウィンドウの最小サイズ
-    mainWindow.setMinimumSize(345, 360);
+    //mainWindow.setMinimumSize(345, 360)
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
-    ipcMain.on('resize-me-please', function (event, arg) {
-        mainWindow.setSize(680, 680);
-    });
+    //ipcMain.on('resize-me-please', (event, arg) => {
+    //  mainWindow.setSize(680, 680)
+    //})
 };
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

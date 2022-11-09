@@ -339,7 +339,7 @@ function func503(this: any) {
             var_2249 = 130;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 if (var_862[item_list][1] == var_2248) {
-                    list_name = "" + var_1066[var_2249];
+                    item_name = "" + var_1066[var_2249];
                 }
                 var_2248++;
                 var_2249++;
@@ -367,7 +367,7 @@ function func503(this: any) {
         var_2248 = 0;
         for (let cnt1 = 0; cnt1 < 112; ++cnt1) {
             if (var_862[item_list][1] == var_2248) {
-                list_name = "" + var_1066[var_2248] + "" + var_2250;
+                item_name = "" + var_1066[var_2248] + "" + var_2250;
             }
             var_2248++;
         }
@@ -591,7 +591,7 @@ function func506(this: any) {
                 var_570 = var_233[var_225].Var13;
                 item_list = var_233[var_225].Var0;
                 yield func492();
-                var_2255 = list_name;
+                var_2255 = item_name;
                 if (var_233[var_225].Var4 == 0 || var_233[var_225].Var14 == 0) {
                     if (var_233[var_225].Var11 == 1) {
                         item_list = var_233[var_225].Var0;
@@ -627,7 +627,7 @@ function func506(this: any) {
                 var_570 = var_486[var_682][var_225][13];
                 item_list = var_486[var_682][var_225][0];
                 yield func492();
-                var_2255 = list_name;
+                var_2255 = item_name;
                 if (var_486[var_682][var_225][4] == 0 || var_486[var_682][var_225][14] == 0) {
                     if (var_486[var_682][var_225][11] == 1) {
                         item_list = var_486[var_682][var_225][0];
@@ -655,7 +655,7 @@ function func506(this: any) {
                 var_570 = var_78[var_321].Var13;
                 item_list = var_78[var_321].Var0;
                 yield func492();
-                var_2255 = list_name;
+                var_2255 = item_name;
                 if (var_78[var_321].Var4 == 0 || var_78[var_321].Var14 == 0) {
                     if (var_78[var_321].Var11 == 1) {
                         item_list = var_78[var_321].Var0;
@@ -684,7 +684,7 @@ function func506(this: any) {
                 if (var_233[var_225].Var3 <= 1) {
                     item_list = var_233[var_225].Var0;
                     yield func492();
-                    var_2255 = list_name;
+                    var_2255 = item_name;
                     if (var_233[var_225].Var11 == 1) {
                         var_106 = 1;
                         var_107 = var_107 + var_483;
@@ -707,7 +707,7 @@ function func506(this: any) {
                 if (var_486[var_682][var_225][3] <= 1) {
                     item_list = var_486[var_682][var_225][0];
                     yield func492();
-                    var_2255 = list_name;
+                    var_2255 = item_name;
                     if (var_486[var_682][var_225][11] == 1) {
                         var_106 = 1;
                         var_107 = var_107 + var_483;
@@ -732,7 +732,7 @@ function func506(this: any) {
                 if (var_78[var_321].Var3 <= 1) {
                     item_list = var_78[var_321].Var0;
                     yield func492();
-                    var_2255 = list_name;
+                    var_2255 = item_name;
                     if (var_78[var_321].Var11 == 1) {
                         var_106 = 1;
                         var_107 = var_107 + var_483;
@@ -910,10 +910,10 @@ function func511(this: any) {
         if (var_862[var_2258][0] == 0 && var_2258 >= 100 && var_2258 < 400) {
             item_list = var_2258;
             yield func492();
-            var_2259 = list_name;
+            var_2259 = item_name;
             var_862[var_2258][0] = 1;
             yield func492();
-            var_2260 = list_name;
+            var_2260 = item_name;
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -9278,11 +9278,11 @@ function func523(this: any) {
             var_2365 = 1;
         }
         yield func492();
-        var_2366 = list_name;
+        var_2366 = item_name;
         item_list = var_233[var_2091].Var0;
         var_487 = var_233[var_2091].Var13;
         yield func492();
-        var_2367 = list_name;
+        var_2367 = item_name;
         if (var_2368 == 1) {
             yield func427();
             if (var_554 == var_2091 || var_554 == var_2090) {
@@ -9564,7 +9564,7 @@ function func524(this: any) {
         item_list = var_233[var_225].Var0;
         var_1289 = var_233[var_225].Var0;
         yield func492();
-        var_1982 = list_name;
+        var_1982 = item_name;
         if (var_233[var_225].Var0 == 600) {
             var_2371 = 4;
         }
@@ -9805,7 +9805,7 @@ function func525(this: any) {
         var_1289 = var_233[var_225].Var0;
         var_2373 = var_225;
         yield func492();
-        var_1982 = list_name;
+        var_1982 = item_name;
         yield func051();
         var_1208 = 2;
         item_list = var_1289;
@@ -9973,10 +9973,10 @@ function func528(this: any) {
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         color(0, 255, 0);
         if (var_803 == 0) {
-            mes("" + list_name + " ★" + var_804);
+            mes("" + item_name + " ★" + var_804);
         }
         if (var_803 > 0) {
-            mes("" + list_name + "+" + var_803 + " ★" + var_804);
+            mes("" + item_name + "+" + var_803 + " ★" + var_804);
         }
         pos(30, 90);
 
@@ -10278,7 +10278,7 @@ function func530(this: any) {
             if (var_2394 < 8) {
                 item_list = var_233[var_553].Var0;
                 yield func492();
-                var_2395 = list_name;
+                var_2395 = item_name;
                 var_233[var_553].Var5 = var_233[var_553].Var5 + 1;
                 var_1946 = "装備中のDISCの空き容量が増えた！";
                 var_1947 = "";
@@ -10293,7 +10293,7 @@ function func530(this: any) {
             if (var_2394 < 8) {
                 item_list = var_233[var_554].Var0;
                 yield func492();
-                var_2395 = list_name;
+                var_2395 = item_name;
                 var_233[var_554].Var5 = var_233[var_554].Var5 + 1;
                 var_1946 = "装備中のDISCの空き容量が増えた！";
                 var_1947 = "";
@@ -10308,7 +10308,7 @@ function func530(this: any) {
             if (var_2394 < 8) {
                 item_list = var_233[var_555].Var0;
                 yield func492();
-                var_2395 = list_name;
+                var_2395 = item_name;
                 var_233[var_555].Var5 = var_233[var_555].Var5 + 1;
                 var_1946 = "装備中のDISCの空き容量が増えた！";
                 var_1947 = "";
@@ -10397,7 +10397,7 @@ function func531(this: any) {
             return;
         }
         yield func492();
-        var_418 = list_name;
+        var_418 = item_name;
         var_2398 = rnd(15);
         if (var_2398 == 0) {
             var_2399 = 350;
@@ -13182,7 +13182,7 @@ function func541(this: any) {
                 var_487 = var_233[var_475].Var13;
                 var_488 = item_list;
                 yield func492();
-                var_418 = list_name;
+                var_418 = item_name;
                 if (var_156[119] == 0) {
                     var_225 = var_475;
                     var_2458 = 0;
@@ -14434,7 +14434,7 @@ function func541(this: any) {
             var_487 = var_233[var_1531].Var13;
             var_2459 = var_233[var_1531].Var6;
             yield func492();
-            var_2469 = list_name;
+            var_2469 = item_name;
             var_300 = 0;
             comments_row2 = "" + var_2469 + "を釣られた！";
             if (var_1531 == 0) {
@@ -14821,7 +14821,7 @@ function func541(this: any) {
                 DSPLAY(audio_id =164);
                 comments_row1 = var_296;
                 comments_row2 = var_297;
-                var_296 = "" + list_name + "は";
+                var_296 = "" + item_name + "は";
                 var_297 = "弱くなってしまった…";
                 yield func047();
                 yield func050();
@@ -25656,7 +25656,7 @@ function func573(this: any) {
                     item_list = var_78[var_419].Var0;
                     var_487 = var_78[var_419].Var13;
                     yield func492();
-                    var_418 = list_name;
+                    var_418 = item_name;
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -30043,10 +30043,10 @@ function func585(this: any) {
                 }
                 item_list = var_2460;
                 yield func492();
-                var_2813 = list_name;
+                var_2813 = item_name;
                 item_list = var_2812;
                 yield func492();
-                var_2814 = list_name;
+                var_2814 = item_name;
                 if (var_2460 != 0) {
                     comments_row1 = var_296;
                     comments_row2 = var_297;
@@ -30481,7 +30481,7 @@ function func587(this: any) {
             item_list = var_357;
             var_487 = var_233[var_553].Var13;
             yield func492();
-            var_2822 = list_name;
+            var_2822 = item_name;
         }
         if (var_2474 == 2) {
             yield func427();
@@ -30492,7 +30492,7 @@ function func587(this: any) {
             item_list = var_358;
             var_487 = var_233[var_554].Var13;
             yield func492();
-            var_2822 = list_name;
+            var_2822 = item_name;
         }
         if (var_2474 == 3) {
             yield func426();
@@ -30500,7 +30500,7 @@ function func587(this: any) {
             item_list = var_233[var_553].Var0;
             var_487 = var_233[var_553].Var13;
             yield func492();
-            var_2822 = list_name;
+            var_2822 = item_name;
         }
         if (var_2474 == 4) {
             yield func427();
@@ -30508,7 +30508,7 @@ function func587(this: any) {
             item_list = var_233[var_554].Var0;
             var_487 = var_233[var_554].Var13;
             yield func492();
-            var_2822 = list_name;
+            var_2822 = item_name;
         }
         if (var_2473 == 1) {
             yield func340();
@@ -31695,7 +31695,7 @@ function func596(this: any) {
             var_2303 = var_78[var_2205].Var0;
             item_list = var_2303;
             yield func492();
-            var_2848 = list_name;
+            var_2848 = item_name;
             var_78[var_2205].Var0 = 652;
             var_2849 = rnd(3);
             var_271 = 1;

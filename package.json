@@ -1,6 +1,6 @@
 {
   "name": "newdtw",
-  "version": "0.1306",
+  "version": "1.0.0",
   "description": "Rebuild Diavolo The Wanderer",
   "main": "build/main.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "electron": "^22.0.0-alpha.6",
+    "electron-builder": "^23.6.0",
     "electron-store": "^8.1.0",
     "eslint": "^7.32.0",
     "typescript": "^4.8.3"
@@ -38,21 +39,20 @@
   },
   "build": {
     "appId": "com.electron.yourapp",
-    "asar":  false,
+    "asar": false,
     "directories": {
       "output": "dist"
     },
     "files": [
       "build/*",
       "assets/**/*",
-      "index.html",
       "package.json",
       "package-lock.json"
     ],
     "extraResources": [
       {
         "from": "./assets/",
-        "to": "assets",
+        "to": "app/assets",
         "filter": [
           "**/*"
         ]

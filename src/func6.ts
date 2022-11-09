@@ -2603,7 +2603,7 @@ function func620(this: any) {
             item_list = var_233[var_475].Var0;
             var_487 = var_233[var_475].Var13;
             yield func492();
-            var_2886 = list_name;
+            var_2886 = item_name;
             var_2887 = 0;
             if (var_233[var_475].Var12 != 2) {
                 if (var_410 != 405) {
@@ -3597,7 +3597,7 @@ function func620(this: any) {
             var_1249 = var_233[var_475].Var13;
             var_487 = var_233[var_475].Var13;
             yield func492();
-            var_418 = list_name;
+            var_418 = item_name;
             var_419 = var_412 + 200;
             var_78[var_419].Var0 = var_233[var_475].Var0;
             var_78[var_419].Var1 = var_233[var_475].Var1;
@@ -3961,7 +3961,7 @@ function func620(this: any) {
             item_list = var_233[var_475].Var0;
             var_487 = var_233[var_475].Var13;
             yield func492();
-            var_418 = list_name;
+            var_418 = item_name;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
                 var_233[var_475]["Var" + cnt2] = 0;
             }
@@ -4093,7 +4093,7 @@ function func620(this: any) {
             }
             item_list = var_233[var_475].Var0;
             yield func492();
-            var_418 = list_name;
+            var_418 = item_name;
             var_225 = var_475;
             yield func433();
             comments_row1 = "";
@@ -4244,7 +4244,7 @@ function func620(this: any) {
             item_list = var_233[var_475].Var0;
             var_487 = var_233[var_475].Var13;
             yield func492();
-            var_418 = list_name;
+            var_418 = item_name;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
                 var_233[var_475]["Var" + cnt2] = 0;
             }
@@ -4977,7 +4977,7 @@ function func620(this: any) {
                     yield func340();
                     comments_row1 = var_296;
                     comments_row2 = var_297;
-                    var_296 = "" + list_name + "は";
+                    var_296 = "" + item_name + "は";
                     var_297 = "弱くなってしまった…";
                     yield func047();
                     yield func050();
@@ -5117,7 +5117,7 @@ function func620(this: any) {
                 item_list = var_233[var_475].Var0;
                 var_487 = var_233[var_475].Var13;
                 yield func492();
-                var_418 = list_name;
+                var_418 = item_name;
                 for (let cnt3 = 0; cnt3 < 30; ++cnt3) {
                     var_233[var_475]["Var" + cnt3] = 0;
                 }
@@ -5630,7 +5630,7 @@ function func620(this: any) {
                     item_list = var_233[var_2897].Var0;
                     var_487 = var_233[var_2897].Var13;
                     yield func492();
-                    var_2900 = list_name;
+                    var_2900 = item_name;
                     comments_row1 = var_296;
                     comments_row2 = var_297;
                     var_296 = "" + var_2900 + " の";
@@ -5657,7 +5657,7 @@ function func620(this: any) {
                     item_list = var_233[var_2897].Var0;
                     var_487 = var_233[var_2897].Var13;
                     yield func492();
-                    var_2900 = list_name;
+                    var_2900 = item_name;
                     comments_row1 = var_296;
                     comments_row2 = var_297;
                     var_296 = "" + var_2900 + " の";
@@ -6279,7 +6279,7 @@ function func620(this: any) {
                 item_list = var_233[var_475].Var0;
                 yield func106();
                 yield func492();
-                var_418 = list_name;
+                var_418 = item_name;
                 var_419 = var_412 + 200;
                 var_78[var_419].Var0 = var_233[var_475].Var0;
                 var_78[var_419].Var1 = var_233[var_475].Var1;
@@ -14358,7 +14358,7 @@ function func646(this: any) {
             var_297 = "";
             var_298 = "";
             var_299 = 0;
-            comments_row1 = "" + list_name + "は";
+            comments_row1 = "" + item_name + "は";
             comments_row2 = "使いすぎて壊れてしまった。";
             var_25_x = var_25[1];
             var_26_x = var_26[1];
@@ -19556,7 +19556,7 @@ function func660(this: any) {
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                comments_row1 = "" + list_name + "が命中した！";
+                comments_row1 = "" + item_name + "が命中した！";
                 var_198 = 1;
                 var_300 = 0;
                 var_25_x = var_25[1];
@@ -20037,7 +20037,7 @@ function func663(this: any) {
         var_1288 = 1;
         var_1289 = var_340;
         if (var_1270 == 0) {
-            list_name = "弾丸";
+            item_name = "弾丸";
         }
 
         DSPLAY(audio_id =123);
@@ -20049,11 +20049,11 @@ function func663(this: any) {
         var_298 = "";
         var_299 = 0;
         if (var_83[var_314].Var0 == 9) {
-            comments_row1 = "「" + list_name + "喰って";
+            comments_row1 = "「" + item_name + "喰って";
             comments_row2 = "　パワーアップッ！」";
         }
         if (var_83[var_314].Var0 == 10) {
-            comments_row1 = "" + list_name + "を";
+            comments_row1 = "" + item_name + "を";
             comments_row2 = "吸収している！！";
         }
         var_25_x = var_25[2];
@@ -20844,7 +20844,7 @@ function func675(this: any) {
         yield func428();
         var_487 = var_233[var_555].Var13;
         yield func492();
-        var_3082 = list_name;
+        var_3082 = item_name;
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -22256,7 +22256,7 @@ function func695(this: any) {
         if (var_2855 != 0) {
             item_list = var_2855;
             yield func492();
-            var_3100 = list_name;
+            var_3100 = item_name;
             var_1396 = var_83[var_673].Var1;
             var_1397 = var_83[var_673].Var2;
             var_83[var_673].Var8 = 1;
