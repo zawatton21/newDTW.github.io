@@ -1,4 +1,9 @@
 var CharactorInfo = /** @class */ (function () {
+    /*
+    constructor: クラス内で使える、プロパティの設定・初期化を行うメソッドです。
+    作られたインスタンスオブジェクトは、そのままでは空なので、共通するプロパティを設定し、値を代入する役割を担っています。
+    参照先: https://qiita.com/TakanoriOkawa/items/7c786bcc6f44a71257a9
+    */
     function CharactorInfo(Var0, Var1, Var2, Var3, Var4, Var5, Var6, Var7, Var8, Var9, Var10, Var11, Var12, Var13, Var14, Var15, Var16, Var17, Var18, Var19, Var20, Var21, Var22, Var23, Var24, Var25, Var26, Var27, Var28, Var29, Var30, Var31, Var32, Var33, Var34, Var35, Var36, Var37, Var38, Var39) {
         if (Var0 === void 0) { Var0 = 0; }
         if (Var1 === void 0) { Var1 = 0; }
@@ -169,7 +174,9 @@ var ItemInfo = /** @class */ (function () {
         this.Var29 = Var29;
     }
     ItemInfo.Load = function (data) {
-        return new CharactorInfo(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18], data[19], data[20], data[21], data[22], data[23], data[24], data[25], data[26], data[27], data[28], data[29]);
+        // おそらくここが間違えているが為に保存できない？
+        //return new CharactorInfo(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18], data[19], data[20], data[21], data[22], data[23], data[24], data[25], data[26], data[27], data[28], data[29]);
+        return new ItemInfo(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18], data[19], data[20], data[21], data[22], data[23], data[24], data[25], data[26], data[27], data[28], data[29]);
     };
     ItemInfo.prototype.Save = function () {
         return [

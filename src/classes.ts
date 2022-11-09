@@ -39,6 +39,11 @@ class CharactorInfo {
     Var7: any;
     Var8: any;
     Var9: any;
+    /*
+    constructor: クラス内で使える、プロパティの設定・初期化を行うメソッドです。
+    作られたインスタンスオブジェクトは、そのままでは空なので、共通するプロパティを設定し、値を代入する役割を担っています。
+    参照先: https://qiita.com/TakanoriOkawa/items/7c786bcc6f44a71257a9
+    */
     constructor(Var0 = 0, Var1 = 0, Var2 = 0, Var3 = 0, Var4 = 0, Var5 = 0, Var6 = 0, Var7 = 0, Var8 = 0, Var9 = 0, Var10 = 0, Var11 = 0, Var12 = 0, Var13 = 0, Var14 = 0, Var15 = 0, Var16 = 0, Var17 = 0, Var18 = 0, Var19 = 0, Var20 = 0, Var21 = 0, Var22 = 0, Var23 = 0, Var24 = 0, Var25 = 0, Var26 = 0, Var27 = 0, Var28 = 0, Var29 = 0, Var30 = 0, Var31 = 0, Var32 = 0, Var33 = 0, Var34 = 0, Var35 = 0, Var36 = 0, Var37 = 0, Var38 = 0, Var39 = 0) {
         this.Var0 = Var0;
         this.Var1 = Var1;
@@ -168,7 +173,9 @@ class ItemInfo {
         this.Var29 = Var29;
     }
     static Load(data: any) {
-        return new CharactorInfo(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18], data[19], data[20], data[21], data[22], data[23], data[24], data[25], data[26], data[27], data[28], data[29]);
+        // おそらくここが間違えているが為に保存できない？
+        //return new CharactorInfo(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18], data[19], data[20], data[21], data[22], data[23], data[24], data[25], data[26], data[27], data[28], data[29]);
+        return new ItemInfo(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12], data[13], data[14], data[15], data[16], data[17], data[18], data[19], data[20], data[21], data[22], data[23], data[24], data[25], data[26], data[27], data[28], data[29]);
     }
     Save() {
         return [
