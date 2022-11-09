@@ -702,15 +702,15 @@ function func911() {
                         var_3579 = "" + var_3579 + "," + var_3519[var_3566];
                         var_3566++;
                     }
-                    var_232 = var_233[var_225].Var0;
+                    item_list = var_233[var_225].Var0;
                     var_487 = var_233[var_225].Var13;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent();
-                    var_3580 = var_489;
+                    var_3580 = item_name;
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 3];
                     var_106 = 1;
-                    var_232 = var_233[var_225].Var0;
+                    item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent();
@@ -762,7 +762,7 @@ function func911() {
                         var_1977 = 1;
                     }
                     if (!(var_1977 == 1)) return [3 /*break*/, 11];
-                    var_232 = var_233[var_225].Var0;
+                    item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func106()];
                 case 10:
                     _a.sent();
@@ -773,15 +773,15 @@ function func911() {
                     return [4 /*yield*/, func433()];
                 case 13:
                     _a.sent();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "「" + var_3580 + "」は";
-                    var_294 = "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった";
+                    comments_row1 = "「" + var_3580 + "」は";
+                    comments_row2 = "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった";
                     var_198 = 1;
                     var_300 = 0;
                     tcpput(var_3579, var_1050);
@@ -823,7 +823,7 @@ function func911() {
                     if (var_2301 == 2) {
                         var_234 = 1;
                     }
-                    var_232 = var_2258;
+                    item_list = var_2258;
                     return [4 /*yield*/, func506()];
                 case 19:
                     _a.sent();
@@ -940,15 +940,15 @@ function func915() {
                     return [4 /*yield*/, func094()];
                 case 1:
                     _a.sent();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "ディアボロはここよーッ！";
-                    var_294 = "ここにいるわよォ～～～ッ！";
+                    comments_row1 = "ディアボロはここよーッ！";
+                    comments_row2 = "ここにいるわよォ～～～ッ！";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -1062,8 +1062,8 @@ function func917() {
                     return [4 /*yield*/, func331()];
                 case 9:
                     _a.sent();
-                    var_293 = "敵が集まってしまった！";
-                    var_294 = "";
+                    comments_row1 = "敵が集まってしまった！";
+                    comments_row2 = "";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -1104,15 +1104,15 @@ function func919() {
                     if (var_91 == var_3573) {
                         var_3572 = 0;
                     }
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "遠くから声が聞こえる。";
-                    var_294 = "";
+                    comments_row1 = "遠くから声が聞こえる。";
+                    comments_row2 = "";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -1125,8 +1125,8 @@ function func919() {
                 case 2:
                     _a.sent();
                     if (!(var_3572 >= 4)) return [3 /*break*/, 9];
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "しかしよく聞こえなかった…";
                     var_297 = "";
                     var_25_x = var_25[1];
@@ -1158,8 +1158,8 @@ function func919() {
                 case 9: return [4 /*yield*/, func094()];
                 case 10:
                     _a.sent();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "「ディアボロはここよッ！";
                     var_297 = "　ここにいるわよォ～～ッ！」";
                     var_25_x = var_25[1];
@@ -1307,8 +1307,8 @@ function func919() {
                 case 43:
                     _a.sent();
                     if (!(var_3584 == 1)) return [3 /*break*/, 49];
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "周囲の敵は声に誘われて";
                     var_297 = "去っていった";
                     var_25_x = var_25[1];
@@ -1335,8 +1335,8 @@ function func919() {
                     return [3 /*break*/, 46];
                 case 49:
                     if (!(var_3584 == 0)) return [3 /*break*/, 56];
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "しかし何も起こらなかった";
                     var_297 = "";
                     var_25_x = var_25[1];
@@ -1432,15 +1432,15 @@ function func921() {
                 case 8: return [4 /*yield*/, func094()];
                 case 9:
                     _a.sent();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "「イヒヒヒヒ";
-                    var_294 = "　注文しておいたよッ！」";
+                    comments_row1 = "「イヒヒヒヒ";
+                    comments_row2 = "　注文しておいたよッ！」";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -1455,8 +1455,8 @@ function func921() {
                     return [4 /*yield*/, func094()];
                 case 12:
                     _a.sent();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "「ピッツァ３枚で３００Ｇ」";
                     var_297 = "";
                     var_25_x = var_25[1];
@@ -1476,8 +1476,8 @@ function func921() {
                     return [4 /*yield*/, func094()];
                 case 16:
                     _a.sent();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "「もちろんお釣りはいらないよねッ！」";
                     var_297 = "";
                     var_25_x = var_25[1];
@@ -1549,15 +1549,15 @@ function func923() {
                     return [4 /*yield*/, func094()];
                 case 1:
                     _a.sent();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "「おまたせしましたァ――ッ";
-                    var_294 = "　デリバリーピッザですーっ」";
+                    comments_row1 = "「おまたせしましたァ――ッ";
+                    comments_row2 = "　デリバリーピッザですーっ」";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -1572,8 +1572,8 @@ function func923() {
                     return [4 /*yield*/, func094()];
                 case 4:
                     _a.sent();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "「こんにちは――っ";
                     var_297 = "　どちらですかーっ」";
                     var_25_x = var_25[1];
@@ -1593,8 +1593,8 @@ function func923() {
                     return [4 /*yield*/, func094()];
                 case 8:
                     _a.sent();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "「どちらへ運びましょうか――ッ！？」";
                     var_297 = "";
                     var_25_x = var_25[1];
@@ -1631,8 +1631,8 @@ function func923() {
                     return [4 /*yield*/, func331()];
                 case 16:
                     _a.sent();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "ピザ屋はその辺に置いて帰ったようだ。";
                     var_297 = "";
                     var_25_x = var_25[1];
@@ -1937,15 +1937,15 @@ function func926() {
                     gsel(window_id = 30, window_mode = -1);
                     gsel(window_id = 0, window_mode = 1);
                     onkey(0);
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "接続が切断された。";
-                    var_294 = "";
+                    comments_row1 = "接続が切断された。";
+                    comments_row2 = "";
                     var_198 = 1;
                     var_300 = 0;
                     return [4 /*yield*/, func047()];

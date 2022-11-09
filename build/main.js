@@ -12,7 +12,7 @@ var createWindow = function () {
     //レンダラー読み出し部分
     var mainWindow = new electron_1.BrowserWindow({
         width: 340,
-        height: 360,
+        height: 380,
         resizable: true,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
@@ -21,7 +21,7 @@ var createWindow = function () {
         }
     });
     // Aspect ratio works on Windows, Linux, and Mac:
-    mainWindow.setAspectRatio(360 / 390); // macは340/340、windowsは 320/330
+    mainWindow.setAspectRatio(320 / 380); // macは340/340、windowsは 320/330
     // and load the index.html of the app.
     mainWindow.loadFile('index.html');
     // メニューバーを非表示

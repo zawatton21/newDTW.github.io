@@ -740,8 +740,8 @@ function func209() {
                     _a.label = 14;
                 case 14:
                     if (!(cnt2_1 < 10)) return [3 /*break*/, 21];
-                    var_235 = getkey(var_447);
-                    if (!(var_235 == 1)) return [3 /*break*/, 19];
+                    conf_keyon = getkey(var_447);
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 19];
                     var_912 = var_447;
                     return [4 /*yield*/, func213()];
                 case 15:
@@ -768,8 +768,8 @@ function func209() {
                     _a.label = 22;
                 case 22:
                     if (!(cnt2_2 < 26)) return [3 /*break*/, 29];
-                    var_235 = getkey(var_447);
-                    if (!(var_235 == 1)) return [3 /*break*/, 27];
+                    conf_keyon = getkey(var_447);
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 27];
                     var_912 = var_447;
                     return [4 /*yield*/, func213()];
                 case 23:
@@ -791,8 +791,8 @@ function func209() {
                     ++cnt2_2;
                     return [3 /*break*/, 22];
                 case 29:
-                    var_235 = getkey(16);
-                    if (!(var_235 == 1)) return [3 /*break*/, 35];
+                    conf_keyon = getkey(16);
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 35];
                     var_912 = 16;
                     return [4 /*yield*/, func213()];
                 case 30:
@@ -811,8 +811,8 @@ function func209() {
                     _a.sent();
                     return [2 /*return*/];
                 case 35:
-                    var_235 = getkey(13);
-                    if (!(var_235 == 1)) return [3 /*break*/, 41];
+                    conf_keyon = getkey(13);
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 41];
                     var_912 = 13;
                     return [4 /*yield*/, func213()];
                 case 36:
@@ -831,8 +831,8 @@ function func209() {
                     _a.sent();
                     return [2 /*return*/];
                 case 41:
-                    var_235 = getkey(17);
-                    if (!(var_235 == 1)) return [3 /*break*/, 47];
+                    conf_keyon = getkey(17);
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 47];
                     var_912 = 17;
                     return [4 /*yield*/, func213()];
                 case 42:
@@ -2812,22 +2812,22 @@ function func227() {
                     return [4 /*yield*/, func426()];
                 case 1:
                     _a.sent();
-                    var_232 = var_233[var_553].Var0;
+                    item_list = var_233[var_553].Var0;
                     var_487 = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent();
                     if (var_233[var_553].Var4 == 0 && var_233[var_553].Var19 <= 1) {
-                        var_981 = "" + var_489;
+                        var_981 = "" + item_name;
                     }
                     if (var_233[var_553].Var4 == 0 && var_233[var_553].Var19 > 1) {
-                        var_981 = "" + var_489 + " ★" + var_233[var_553].Var19;
+                        var_981 = "" + item_name + " ★" + var_233[var_553].Var19;
                     }
                     if (var_233[var_553].Var4 > 0 && var_233[var_553].Var19 <= 1) {
-                        var_981 = "" + var_489 + "+" + var_233[var_553].Var4;
+                        var_981 = "" + item_name + "+" + var_233[var_553].Var4;
                     }
                     if (var_233[var_553].Var4 > 0 && var_233[var_553].Var19 > 1) {
-                        var_981 = "" + var_489 + "+" + var_233[var_553].Var4 + " ★" + var_233[var_553].Var19;
+                        var_981 = "" + item_name + "+" + var_233[var_553].Var4 + " ★" + var_233[var_553].Var19;
                     }
                     var_979 = var_979 + "" + var_981 + "\n";
                     var_982 = 20;
@@ -2835,7 +2835,7 @@ function func227() {
                     _a.label = 3;
                 case 3:
                     if (!(cnt2_5 < var_233[var_553].Var19)) return [3 /*break*/, 6];
-                    var_232 = var_233[var_553]["Var" + var_982];
+                    item_list = var_233[var_553]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 4:
                     _a.sent();
@@ -2863,22 +2863,22 @@ function func227() {
                     return [4 /*yield*/, func427()];
                 case 7:
                     _a.sent();
-                    var_232 = var_233[var_554].Var0;
+                    item_list = var_233[var_554].Var0;
                     var_487 = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 8:
                     _a.sent();
                     if (var_233[var_554].Var4 == 0 && var_233[var_554].Var19 <= 1) {
-                        var_981 = "" + var_489;
+                        var_981 = "" + item_name;
                     }
                     if (var_233[var_554].Var4 == 0 && var_233[var_554].Var19 > 1) {
-                        var_981 = "" + var_489 + " ★" + var_233[var_554].Var19;
+                        var_981 = "" + item_name + " ★" + var_233[var_554].Var19;
                     }
                     if (var_233[var_554].Var4 > 0 && var_233[var_554].Var19 <= 1) {
-                        var_981 = "" + var_489 + "+" + var_233[var_554].Var4;
+                        var_981 = "" + item_name + "+" + var_233[var_554].Var4;
                     }
                     if (var_233[var_554].Var4 > 0 && var_233[var_554].Var19 > 1) {
-                        var_981 = "" + var_489 + "+" + var_233[var_554].Var4 + " ★" + var_233[var_554].Var19;
+                        var_981 = "" + item_name + "+" + var_233[var_554].Var4 + " ★" + var_233[var_554].Var19;
                     }
                     var_979 = var_979 + "" + var_981 + "\n";
                     var_982 = 20;
@@ -2886,7 +2886,7 @@ function func227() {
                     _a.label = 9;
                 case 9:
                     if (!(cnt2_6 < var_233[var_554].Var19)) return [3 /*break*/, 12];
-                    var_232 = var_233[var_554]["Var" + var_982];
+                    item_list = var_233[var_554]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 10:
                     _a.sent();
@@ -2914,22 +2914,22 @@ function func227() {
                     return [4 /*yield*/, func428()];
                 case 13:
                     _a.sent();
-                    var_232 = var_233[var_555].Var0;
+                    item_list = var_233[var_555].Var0;
                     var_487 = var_233[var_555].Var13;
                     return [4 /*yield*/, func492()];
                 case 14:
                     _a.sent();
                     if (var_233[var_555].Var4 == 0 && var_233[var_555].Var19 <= 1) {
-                        var_981 = "" + var_489;
+                        var_981 = "" + item_name;
                     }
                     if (var_233[var_555].Var4 == 0 && var_233[var_555].Var19 > 1) {
-                        var_981 = "" + var_489 + " ★" + var_233[var_555].Var19;
+                        var_981 = "" + item_name + " ★" + var_233[var_555].Var19;
                     }
                     if (var_233[var_555].Var4 > 0 && var_233[var_555].Var19 <= 1) {
-                        var_981 = "" + var_489 + "+" + var_233[var_555].Var4;
+                        var_981 = "" + item_name + "+" + var_233[var_555].Var4;
                     }
                     if (var_233[var_555].Var4 > 0 && var_233[var_555].Var19 > 1) {
-                        var_981 = "" + var_489 + "+" + var_233[var_555].Var4 + " ★" + var_233[var_555].Var19;
+                        var_981 = "" + item_name + "+" + var_233[var_555].Var4 + " ★" + var_233[var_555].Var19;
                     }
                     var_979 = var_979 + "" + var_981 + "\n";
                     var_982 = 20;
@@ -2937,7 +2937,7 @@ function func227() {
                     _a.label = 15;
                 case 15:
                     if (!(cnt2_7 < var_233[var_555].Var19)) return [3 /*break*/, 18];
-                    var_232 = var_233[var_555]["Var" + var_982];
+                    item_list = var_233[var_555]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 16:
                     _a.sent();
@@ -3421,8 +3421,8 @@ function func229() {
                 case 3:
                     notesel(var_754);
                     noteload(var_752);
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
@@ -4148,22 +4148,22 @@ function func234() {
                     return [4 /*yield*/, func231()];
                 case 1:
                     _a.sent();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "セーブして終了します。";
-                    var_294 = "";
+                    comments_row1 = "セーブして終了します。";
+                    comments_row2 = "";
                     var_198 = 1;
                     var_300 = 0;
                     return [4 /*yield*/, func340()];
                 case 2:
                     _a.sent();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
@@ -4442,15 +4442,15 @@ function func236() {
             switch (_a.label) {
                 case 0:
                     dbgprt(236);
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "今回の冒険を諦めますか？";
-                    var_294 = "諦めるならば「Y」キーを押してください";
+                    comments_row1 = "今回の冒険を諦めますか？";
+                    comments_row2 = "諦めるならば「Y」キーを押してください";
                     var_198 = 1;
                     var_300 = 0;
                     return [4 /*yield*/, func051()];
@@ -4471,8 +4471,8 @@ function func237() {
             switch (_a.label) {
                 case 0:
                     dbgprt(237);
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "確認のため「＠」キーを押してください";
                     var_297 = "";
                     var_198 = 1;
@@ -4499,8 +4499,8 @@ function func238() {
                 case 1:
                     _a.sent();
                     if (!(var_1061 == 1)) return [3 /*break*/, 3];
-                    var_235 = getkey(89);
-                    if (!(var_235 == 1)) return [3 /*break*/, 3];
+                    conf_keyon = getkey(89);
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 3];
                     var_198 = 0;
                     return [4 /*yield*/, func237()];
                 case 2:
@@ -4508,8 +4508,8 @@ function func238() {
                     return [2 /*return*/];
                 case 3:
                     if (!(var_1061 == 2)) return [3 /*break*/, 5];
-                    var_235 = getkey(192);
-                    if (!(var_235 == 1)) return [3 /*break*/, 5];
+                    conf_keyon = getkey(192);
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 5];
                     var_198 = 0;
                     var_211 = 0;
                     var_356 = 305;

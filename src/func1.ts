@@ -523,7 +523,7 @@ function func104(this: any) {
 function func105(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(105);
-        if (var_677 == var_232) {
+        if (var_677 == item_list) {
             return;
         }
         if (var_62 == 99) {
@@ -532,7 +532,7 @@ function func105(this: any) {
         if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
             return;
         }
-        var_675 = var_232;
+        var_675 = item_list;
         yield func103();
         return;
     });
@@ -547,13 +547,13 @@ function func106(this: any) {
         if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
             return;
         }
-        if (var_677 == var_232) {
+        if (var_677 == item_list) {
             if (var_681 == 989) {
                 var_675 = 989;
                 yield func103();
                 return;
             }
-            var_675 = 0;
+            var_675 = 0; // BGMをダンジョンテーマソングへ戻す
             yield func103();
             return;
         }
@@ -1567,13 +1567,13 @@ function func140(this: any) {
         yield await_(50);
         yield func141();
         if (var_12 == 1) {
-            var_235 = getkey(112);
-            if (var_235 == 1) {
+            conf_keyon = getkey(112);
+            if (conf_keyon == 1) {
                 yield func221();
                 return;
             }
-            var_235 = getkey(113);
-            if (var_235 == 1) {
+            conf_keyon = getkey(113);
+            if (conf_keyon == 1) {
                 yield func224();
                 return;
             }
@@ -1934,9 +1934,9 @@ function func144(this: any) {
 function func145(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(145);
-        var_235 = getkey(89);
-        if (var_235 == 1) {
-            var_235 = 0;
+        conf_keyon = getkey(89);
+        if (conf_keyon == 1) {
+            conf_keyon = 0;
             var_736 = 0;
 
             DSPLAY(audio_id =212);
@@ -2313,15 +2313,15 @@ function func150(this: any) {
         var_594 = 0;
         yield func335();
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「おまえには 死んだことを";
-        var_294 = "　　　後悔する時間をも…";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「おまえには 死んだことを";
+        comments_row2 = "　　　後悔する時間をも…";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -2329,8 +2329,8 @@ function func150(this: any) {
         var_27_x = var_27[1];
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「与えんッ！！」";
         var_297 = "";
         var_198 = 1;
@@ -2412,8 +2412,8 @@ function func150(this: any) {
         var_744 = 1;
         var_745 = 5 * 40 + 20;
         var_746 = 3 * 40 - 10;
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「えっ」";
         var_297 = "";
         var_198 = 1;
@@ -2432,8 +2432,8 @@ function func150(this: any) {
         var_744 = 1;
         var_745 = 4 * 40 + 20;
         var_746 = 3 * 40 - 10;
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「えっ」";
         var_297 = "";
         var_198 = 1;
@@ -2452,8 +2452,8 @@ function func150(this: any) {
         var_744 = 1;
         var_745 = 3 * 40 + 20;
         var_746 = 3 * 40 - 10;
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「えっ」";
         var_297 = "";
         var_198 = 1;
@@ -2485,8 +2485,8 @@ function func150(this: any) {
         var_82[28][10] = 1;
         var_83[1].Var5 = 6;
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「オッ…オレはッ！";
         var_297 = "初めから何も動いていないッ！！」";
         var_198 = 1;
@@ -2534,15 +2534,15 @@ function func150(this: any) {
         var_409 = 0;
         yield func337();
         var_83[2].Var6 = 0;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ｼﾞｮﾙﾉ「無駄アァァァァ！！」";
-        var_294 = "";
+        comments_row1 = "ｼﾞｮﾙﾉ「無駄アァァァァ！！」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -2672,15 +2672,15 @@ function func150(this: any) {
         yield func337();
         var_83[3].Var6 = 0;
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾐｽﾀ「や…　やったぞッ　ついにッ！」";
-        var_294 = "　　　ついにッ！　倒したぞ！」";
+        comments_row1 = "ﾐｽﾀ「や…　やったぞッ　ついにッ！」";
+        comments_row2 = "　　　ついにッ！　倒したぞ！」";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -2748,15 +2748,15 @@ function func150(this: any) {
         yield func337();
         var_83[4].Var6 = 0;
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾄﾘｯｼｭ「でも…　ちょっと待って";
-        var_294 = "　　　　どこかに浮かんできてる！？」";
+        comments_row1 = "ﾄﾘｯｼｭ「でも…　ちょっと待って";
+        comments_row2 = "　　　　どこかに浮かんできてる！？」";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -2764,8 +2764,8 @@ function func150(this: any) {
         var_27_x = var_27[1];
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾄﾘｯｼｭ「どこよッ！";
         var_297 = "　　　　探してジョルノッ！」";
         var_198 = 1;
@@ -2825,15 +2825,15 @@ function func150(this: any) {
         yield func337();
         var_83[2].Var6 = 0;
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ｼﾞｮﾙﾉ「いや…　探す必要はない";
-        var_294 = "　　　　全てはもう終わっている…」";
+        comments_row1 = "ｼﾞｮﾙﾉ「いや…　探す必要はない";
+        comments_row2 = "　　　　全てはもう終わっている…」";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -2841,8 +2841,8 @@ function func150(this: any) {
         var_27_x = var_27[1];
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ｼﾞｮﾙﾉ「ヤツはもう";
         var_297 = "　　　　どこへも向かうことはない」";
         var_198 = 1;
@@ -2850,8 +2850,8 @@ function func150(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ｼﾞｮﾙﾉ「終わりが無いのが【終わり】」";
         var_297 = "　　　　";
         var_198 = 1;
@@ -2859,8 +2859,8 @@ function func150(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ｼﾞｮﾙﾉ「それが";
         var_297 = "　　　【ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ】」　";
         var_198 = 1;
@@ -2885,31 +2885,31 @@ function func150(this: any) {
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337();
         }
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛはＧ･Ｅ･レクイエムの能力により";
-        var_294 = "永遠に死に続けることとなった。";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛはＧ･Ｅ･レクイエムの能力により";
+        comments_row2 = "永遠に死に続けることとなった。";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func340();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "何百回……いや何千回死んだだろうか？";
         var_297 = "";
         var_198 = 1;
         var_300 = 0;
         yield func050();
         yield func340();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "しかしある時、転機が訪れた…";
         var_297 = "";
         var_198 = 1;
@@ -2973,15 +2973,15 @@ function func151(this: any) {
             yield func337();
         }
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「ハッ？！こ…今度は何だ？」";
-        var_294 = "";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「ハッ？！こ…今度は何だ？」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -3021,8 +3021,8 @@ function func151(this: any) {
         }
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「どこから襲ってくるんだ？！」";
         var_297 = "";
         var_198 = 1;
@@ -3061,16 +3061,16 @@ function func151(this: any) {
             yield func337();
         }
         yield func340();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「………」";
         var_297 = "";
         var_198 = 1;
         var_300 = 0;
         yield func050();
         yield func340();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「………」";
         var_297 = "";
         var_198 = 1;
@@ -3078,8 +3078,8 @@ function func151(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「おかしいな…";
         var_297 = "何もおこらないぞ」";
         var_198 = 1;
@@ -3087,8 +3087,8 @@ function func151(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「何か…";
         var_297 = "何かいつもと違うようだぞ？」";
         var_198 = 1;
@@ -3112,15 +3112,15 @@ function func152(this: any) {
         }
         yield func335();
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「いったいここはどこなんだ？！」";
-        var_294 = "";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「いったいここはどこなんだ？！」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -3160,8 +3160,8 @@ function func152(this: any) {
         }
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「もしかするとこれは…」";
         var_297 = "";
         var_198 = 1;
@@ -3169,8 +3169,8 @@ function func152(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「聞いたことがあるぞ";
         var_297 = "『奇妙なダンジョン』の噂」";
         var_198 = 1;
@@ -3178,8 +3178,8 @@ function func152(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「ある者はダンジョンの奥に";
         var_297 = "『黄金郷』を見つけ…」";
         var_198 = 1;
@@ -3187,8 +3187,8 @@ function func152(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「またある者は『幸福』を";
         var_297 = "手に入れたと聞く」";
         var_198 = 1;
@@ -3196,8 +3196,8 @@ function func152(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「ここならば…";
         var_297 = "このおれにも救いがあるに違いない！」";
         var_198 = 1;
@@ -3240,15 +3240,15 @@ function func153(this: any) {
         var_756 = 0;
         var_374 = 0;
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「いたたた…」";
-        var_294 = "";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「いたたた…」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -3266,8 +3266,8 @@ function func153(this: any) {
         }
         var_758 = 0;
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「ここはいつもの…」";
         var_297 = "";
         var_198 = 1;
@@ -3307,8 +3307,8 @@ function func153(this: any) {
         }
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「さっきのホテル、いや墓場にも";
         var_297 = "　手がかりになるものはなかった」";
         var_198 = 1;
@@ -3316,8 +3316,8 @@ function func153(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「そして、結局はこの場所へ";
         var_297 = "　戻ってきてしまう…」";
         var_198 = 1;
@@ -3325,8 +3325,8 @@ function func153(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「あの老婆は別の場所を探せと";
         var_297 = "　言っていたが、他に行ける場所は…」";
         var_198 = 1;
@@ -3334,8 +3334,8 @@ function func153(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「ハッ？！」";
         var_297 = "";
         var_198 = 1;
@@ -3344,8 +3344,8 @@ function func153(this: any) {
         var_199 = 3;
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「そこの階段は…";
         var_297 = "　いつからそこにあった？？」";
         var_198 = 1;
@@ -3353,8 +3353,8 @@ function func153(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「怪しいのは その中か？」";
         var_297 = "";
         var_198 = 1;
@@ -3376,15 +3376,15 @@ function func154(this: any) {
         }
         yield func335();
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「うう…こ、今度はどこだ…？」";
-        var_294 = "";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「うう…こ、今度はどこだ…？」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -3424,8 +3424,8 @@ function func154(this: any) {
         }
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "…またこのホテルか？";
         var_297 = "";
         var_198 = 1;
@@ -3433,8 +3433,8 @@ function func154(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "これもレクイエムの能力なのか、";
         var_297 = "それとも奇妙なダンジョンの力なのか…";
         var_198 = 1;
@@ -3442,8 +3442,8 @@ function func154(this: any) {
         yield func050();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "どちらなのかはわからんが、";
         var_297 = "せいぜい足掻いてみるとしよう…";
         var_198 = 1;
@@ -3705,15 +3705,15 @@ function func155(this: any) {
         var_409 = 0;
         yield func337();
         var_83[var_762].Var6 = 0;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「？」";
-        var_294 = "";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「？」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -3722,15 +3722,15 @@ function func155(this: any) {
         yield func340();
         var_198 = 0;
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "露伴「まて――ッ！」";
-        var_294 = "";
+        comments_row1 = "露伴「まて――ッ！」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -3906,15 +3906,15 @@ function func155(this: any) {
         yield func337();
         var_199 = 8;
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "露伴「くそッ！あと一歩のところで…」";
-        var_294 = "";
+        comments_row1 = "露伴「くそッ！あと一歩のところで…」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -3962,15 +3962,15 @@ function func155(this: any) {
             yield func337();
         }
         var_83[var_761].Var6 = 0;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「？？？」";
-        var_294 = "";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「？？？」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -4009,15 +4009,15 @@ function func156(this: any) {
         var_757 = 0;
         var_374 = 0;
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "ﾃﾞｨｱﾎﾞﾛ「いたたた…」";
-        var_294 = "";
+        comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「いたたた…」";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -4035,8 +4035,8 @@ function func156(this: any) {
         }
         var_758 = 0;
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「ここはいつもの…」";
         var_297 = "";
         var_198 = 1;
@@ -4076,8 +4076,8 @@ function func156(this: any) {
         }
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾃﾞｨｱﾎﾞﾛ「何でまたここに";
         var_297 = "　落ちてくるんだ？？」";
         var_198 = 1;
@@ -4349,14 +4349,14 @@ function func161(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(161);
         var_243 = 0;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "亀の中に入った";
+        comments_row1 = "亀の中に入った";
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
@@ -5417,26 +5417,26 @@ function func168(this: any) {
         if (var_792[var_793][var_786][3] != 0) {
             var_487 = 0;
             pos(30, 225);
-            var_232 = var_792[var_793][var_786][4];
+            item_list = var_792[var_793][var_786][4];
             var_487 = 0;
-            if (var_232 > 1000) {
-                if (var_232 >= 1000 && var_232 < 2000) {
-                    var_232 = var_232 - 1000;
+            if (item_list > 1000) {
+                if (item_list >= 1000 && item_list < 2000) {
+                    item_list = item_list - 1000;
                     var_487 = 1;
                 }
-                if (var_232 >= 2000 && var_232 < 3000) {
-                    var_232 = var_232 - 2000;
+                if (item_list >= 2000 && item_list < 3000) {
+                    item_list = item_list - 2000;
                     var_487 = 2;
                 }
-                if (var_232 >= 3000 && var_232 < 4000) {
-                    var_232 = var_232 - 3000;
+                if (item_list >= 3000 && item_list < 4000) {
+                    item_list = item_list - 3000;
                     var_487 = 3;
                 }
             }
             yield func492();
             color(255, 255, 0);
-            if (var_232 != 0) {
-                var_799 = "攻撃：" + var_489;
+            if (item_list != 0) {
+                var_799 = "攻撃：" + item_name;
                 if (var_792[var_793][var_786][5] != 0) {
                     var_799 = var_799 + "＋" + var_792[var_793][var_786][5];
                 }
@@ -5445,30 +5445,30 @@ function func168(this: any) {
                 }
                 mes(var_799);
             }
-            if (var_232 == 0) {
+            if (item_list == 0) {
                 mes("攻撃：なし");
             }
             pos(30, 242);
-            var_232 = var_792[var_793][var_786][7];
+            item_list = var_792[var_793][var_786][7];
             var_487 = 0;
-            if (var_232 > 1000) {
-                if (var_232 >= 1000 && var_232 < 2000) {
-                    var_232 = var_232 - 1000;
+            if (item_list > 1000) {
+                if (item_list >= 1000 && item_list < 2000) {
+                    item_list = item_list - 1000;
                     var_487 = 1;
                 }
-                if (var_232 >= 2000 && var_232 < 3000) {
-                    var_232 = var_232 - 2000;
+                if (item_list >= 2000 && item_list < 3000) {
+                    item_list = item_list - 2000;
                     var_487 = 2;
                 }
-                if (var_232 >= 3000 && var_232 < 4000) {
-                    var_232 = var_232 - 3000;
+                if (item_list >= 3000 && item_list < 4000) {
+                    item_list = item_list - 3000;
                     var_487 = 3;
                 }
             }
             yield func492();
             color(255, 180, 90);
-            if (var_232 != 0) {
-                var_799 = "防御：" + var_489;
+            if (item_list != 0) {
+                var_799 = "防御：" + item_name;
                 if (var_792[var_793][var_786][8] != 0) {
                     var_799 = var_799 + "＋" + var_792[var_793][var_786][8];
                 }
@@ -5477,30 +5477,30 @@ function func168(this: any) {
                 }
                 mes(var_799);
             }
-            if (var_232 == 0) {
+            if (item_list == 0) {
                 mes("防御：なし");
             }
             pos(30, 259);
-            var_232 = var_792[var_793][var_786][10];
+            item_list = var_792[var_793][var_786][10];
             var_487 = 0;
-            if (var_232 > 1000) {
-                if (var_232 >= 1000 && var_232 < 2000) {
-                    var_232 = var_232 - 1000;
+            if (item_list > 1000) {
+                if (item_list >= 1000 && item_list < 2000) {
+                    item_list = item_list - 1000;
                     var_487 = 1;
                 }
-                if (var_232 >= 2000 && var_232 < 3000) {
-                    var_232 = var_232 - 2000;
+                if (item_list >= 2000 && item_list < 3000) {
+                    item_list = item_list - 2000;
                     var_487 = 2;
                 }
-                if (var_232 >= 3000 && var_232 < 4000) {
-                    var_232 = var_232 - 3000;
+                if (item_list >= 3000 && item_list < 4000) {
+                    item_list = item_list - 3000;
                     var_487 = 3;
                 }
             }
             yield func492();
             color(240, 0, 240);
-            if (var_232 != 0) {
-                var_799 = "能力：" + var_489;
+            if (item_list != 0) {
+                var_799 = "能力：" + item_name;
                 if (var_792[var_793][var_786][11] != 0) {
                     var_799 = var_799 + "＋" + var_792[var_793][var_786][11];
                 }
@@ -5509,7 +5509,7 @@ function func168(this: any) {
                 }
                 mes(var_799);
             }
-            if (var_232 == 0) {
+            if (item_list == 0) {
                 mes("能力：なし");
             }
     
@@ -5544,6 +5544,8 @@ function func168(this: any) {
         return;
     });
 }
+
+
 function func169(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(169);
@@ -5662,7 +5664,7 @@ function func170(this: any) {
             pos(285, 70);
             gcopy(9, 360, 20, 40, 20);
         }
-        var_232 = var_802;
+        item_list = var_802;
         yield func492();
         var_575 = var_802;
         yield func070();
@@ -5685,16 +5687,16 @@ function func170(this: any) {
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         color(0, 255, 0);
         if (var_803 == 0 && var_804 <= 1) {
-            mes(var_489);
+            mes(item_name);
         }
         if (var_803 == 0 && var_804 > 1) {
-            mes("" + var_489 + " ★" + var_804);
+            mes("" + item_name + " ★" + var_804);
         }
         if (var_803 > 0 && var_804 <= 1) {
-            mes("" + var_489 + "+" + var_803);
+            mes("" + item_name + "+" + var_803);
         }
         if (var_803 > 0 && var_804 > 1) {
-            mes("" + var_489 + "+" + var_803 + " ★" + var_804);
+            mes("" + item_name + "+" + var_803 + " ★" + var_804);
         }
         if (var_805 == 1) {
             pos(62, 73);
@@ -5725,7 +5727,7 @@ function func170(this: any) {
         var_809 = 1;
         for (let cnt1 = 0; cnt1 < var_810 + var_807; ++cnt1) {
             pos(80, var_809 * 20 + 120);
-            var_232 = var_811[var_809];
+            item_list = var_811[var_809];
             yield func492();
             color(255, 255, 255);
             if (var_812 == 1) {
@@ -5758,7 +5760,7 @@ function func171(this: any) {
         dbgprt(171);
         if (var_794 == 1) {
             var_802 = var_792[var_793][var_786][4];
-            var_232 = var_792[var_793][var_786][4];
+            item_list = var_792[var_793][var_786][4];
             yield func492();
             var_814 = var_792[var_793][var_786][4];
             var_803 = var_792[var_793][var_786][5];
@@ -5778,7 +5780,7 @@ function func171(this: any) {
         }
         if (var_794 == 2) {
             var_802 = var_792[var_793][var_786][7];
-            var_232 = var_792[var_793][var_786][7];
+            item_list = var_792[var_793][var_786][7];
             yield func492();
             var_814 = var_792[var_793][var_786][7];
             var_803 = var_792[var_793][var_786][8];
@@ -5798,7 +5800,7 @@ function func171(this: any) {
         }
         if (var_794 == 3) {
             var_802 = var_792[var_793][var_786][10];
-            var_232 = var_792[var_793][var_786][10];
+            item_list = var_792[var_793][var_786][10];
             yield func492();
             var_814 = var_792[var_793][var_786][10];
             var_803 = var_792[var_793][var_786][11];
@@ -5818,21 +5820,21 @@ function func171(this: any) {
         }
         var_804 = var_810;
         var_487 = 0;
-        if (var_232 > 1000) {
-            if (var_232 >= 1000 && var_232 < 2000) {
-                var_232 = var_232 - 1000;
+        if (item_list > 1000) {
+            if (item_list >= 1000 && item_list < 2000) {
+                item_list = item_list - 1000;
                 var_802 = var_802 - 1000;
                 var_814 = var_814 - 1000;
                 var_487 = 1;
             }
-            if (var_232 >= 2000 && var_232 < 3000) {
-                var_232 = var_232 - 2000;
+            if (item_list >= 2000 && item_list < 3000) {
+                item_list = item_list - 2000;
                 var_802 = var_802 - 2000;
                 var_814 = var_814 - 2000;
                 var_487 = 2;
             }
-            if (var_232 >= 3000 && var_232 < 4000) {
-                var_232 = var_232 - 3000;
+            if (item_list >= 3000 && item_list < 4000) {
+                item_list = item_list - 3000;
                 var_802 = var_802 - 3000;
                 var_814 = var_814 - 3000;
                 var_487 = 3;
@@ -5852,18 +5854,18 @@ function func171(this: any) {
         var_826 = 1;
         var_827 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            var_232 = var_792[var_793][var_786][var_825];
+            item_list = var_792[var_793][var_786][var_825];
             yield func492();
             if (var_828 == "") {
                 var_826 = var_826 - 1;
                 break;
             }
             var_813[var_826] = var_828;
-            var_811[var_826] = var_232;
+            var_811[var_826] = item_list;
             var_826 = var_826 + 1;
             var_825 = var_825 + 1;
         }
-        if (var_232 == 104) {
+        if (item_list == 104) {
             var_826 = var_826 + 1;
             var_813[var_826] = "こわれるぞ。";
             var_811[var_826] = 199;
@@ -5973,7 +5975,7 @@ function func174(this: any) {
         var_480 = 1;
         for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {
             if (var_233[var_480].Var11 != 1) {
-                var_232 = var_233[var_480].Var0;
+                item_list = var_233[var_480].Var0;
                 yield func492();
                 var_482 = 0;
                 var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
@@ -5987,7 +5989,7 @@ function func174(this: any) {
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] != 1) {
-                        var_232 = var_486[var_485][var_484][0];
+                        item_list = var_486[var_485][var_484][0];
                         yield func492();
                         var_482 = 0;
                         var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -7421,6 +7423,8 @@ function func181(this: any) {
         return;
     });
 }
+
+
 function func182(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(182);
@@ -7476,6 +7480,8 @@ function func182(this: any) {
         return;
     });
 }
+
+
 function func183(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(183);
@@ -7548,10 +7554,12 @@ function func184(this: any) {
         var_869 = 0;
 
         gsel(31, 1);
-        objprm(3, var_876);
+        objprm(3, var_876); // アイテム欄行更新 var_876はアイテム欄の行に格納されているアイテム(表示のみ)
         stop();
     });
 }
+
+
 function func185(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(185);
@@ -7602,9 +7610,9 @@ function func187(this: any) {
         var_876 = "";
         var_883 = 1;
         for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {
-            var_232 = var_233[var_883].Var0;
+            item_list = var_233[var_883].Var0;
             yield func492();
-            var_876 = var_876 + "\n" + var_489;
+            var_876 = var_876 + "\n" + item_name;
             var_883 = var_883 + 1;
         }
         return;
@@ -7619,11 +7627,11 @@ function func188(this: any) {
         var_883 = 1;
         var_885 = 1;
         for (let cnt1 = 0; cnt1 < 1000; ++cnt1) {
-            var_232 = var_883;
+            item_list = var_883;
             yield func492();
             if (var_483 != 0) {
-                var_874 = var_874 + "\n" + "" + var_489;
-                var_884[var_885] = var_232;
+                var_874 = var_874 + "\n" + "" + item_name;
+                var_884[var_885] = item_list;
                 var_885 = var_885 + 1;
             }
             var_883 = var_883 + 1;
@@ -7734,7 +7742,7 @@ function func191(this: any) {
         var_869 = 1;
         yield func187();
         var_869 = 0;
-        objprm(3, var_876);
+        objprm(3, var_876); // アイテム欄行更新 var_876はアイテム欄の行に格納されているアイテム(表示のみ)
         stop();
     });
 }
@@ -7766,13 +7774,13 @@ function func192(this: any) {
         var_897 = 0;
         var_898 = 0;
         var_225 = var_875;
-        var_232 = var_233[var_875].Var0;
+        item_list = var_233[var_875].Var0;
         yield func433();
         yield func494();
         var_869 = 1;
         yield func187();
         var_869 = 0;
-        objprm(3, var_876);
+        objprm(3, var_876); // アイテム欄行更新 var_876はアイテム欄の行に格納されているアイテム(表示のみ)
         stop();
     });
 }

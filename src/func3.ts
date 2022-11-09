@@ -3473,8 +3473,8 @@ function func337(this: any) {
             if (var_300 > 40) {
                 var_300 = 0;
                 var_198 = 0;
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
@@ -4514,7 +4514,7 @@ function func345(this: any) {
             }
         }
         if (var_1246 >= 1) {
-            var_232 = var_1247;
+            item_list = var_1247;
             var_1248 = var_1249;
             if (var_199 == 2) {
                 pos(160, 150);
@@ -4614,7 +4614,7 @@ function func345(this: any) {
         if (var_1252 == 2) {
             gcopy(3, 1240, 160, 40, 40);
             pos(175, 135);
-            var_232 = var_1253;
+            item_list = var_1253;
             yield func397();
             return;
         }
@@ -4625,7 +4625,7 @@ function func345(this: any) {
         if (var_1254 == 1) {
             gcopy(3, 1280, 160, 40, 40);
             pos(175, 135);
-            var_232 = var_1253;
+            item_list = var_1253;
             yield func397();
             return;
         }
@@ -7315,7 +7315,7 @@ function func353(this: any) {
             pos((var_83[var_314].Var1 - var_66 + 4) * 40, (var_83[var_314].Var2 - var_67 + 4) * 40 - 50);
             gcopy(15, 1080, 360, 40, 40);
             pos((var_83[var_314].Var1 - var_66 + 4) * 40, (var_83[var_314].Var2 - var_67 + 4) * 40 - 10);
-            var_232 = var_1289;
+            item_list = var_1289;
             var_1248 = var_1249;
             if (var_1270 == 1) {
                 yield func397();
@@ -9039,7 +9039,7 @@ function func354(this: any) {
             gcopy(6, 40, 1040, 40, 40);
             if (var_1345 >= 1 && var_1345 < 15) {
                 pos((var_83[var_412].Var1 - var_66 + 4) * 40 - 10, (var_83[var_412].Var2 - var_67 + 4) * 40 - 10 - 10);
-                var_232 = var_417;
+                item_list = var_417;
                 var_1248 = var_1249;
                 yield func397();
             }
@@ -9087,7 +9087,7 @@ function func354(this: any) {
             gcopy(6, 40, 1040, 40, 40);
             if (var_1346 >= 1 && var_1346 < 15) {
                 pos((var_1347 - var_66 + 4) * 40 - 10, (var_1348 - var_67 + 4) * 40 - 10 - 10);
-                var_232 = var_417;
+                item_list = var_417;
                 var_1248 = var_1249;
                 yield func397();
             }
@@ -9141,7 +9141,7 @@ function func354(this: any) {
             if (var_1353 == 2) {
                 pos(172, 156);
             }
-            var_232 = var_1354;
+            item_list = var_1354;
             var_1248 = var_1249;
             yield func397();
             pos(160, 150);
@@ -10739,7 +10739,7 @@ function func354(this: any) {
             var_1420 = rnd(40);
             pos((var_83[var_1393].Var1 - var_66 + 3 + var_1417) * 40 + var_1419, (var_83[var_1393].Var2 - var_67 + 3 + var_1418) * 40 - 10 + var_1420);
             if (var_1270 != 0) {
-                var_232 = var_1421;
+                item_list = var_1421;
                 var_1248 = var_1249;
                 yield func397();
             }
@@ -10973,158 +10973,158 @@ function func354(this: any) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             if (var_1443 < 14) {
                 pos(150, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(170, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 14) {
                 pos(150, 172);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(170, 172);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 15) {
                 pos(150, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(170, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 16) {
                 pos(150, 172);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(170, 172);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 > 16 && var_1443 < 25) {
                 pos(150, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(170, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 25 || var_1443 == 26) {
                 pos(152, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(168, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 27 || var_1443 == 28) {
                 pos(154, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(166, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 29 || var_1443 == 30) {
                 pos(156, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(164, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 31 || var_1443 == 32) {
                 pos(158, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(162, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 33 || var_1443 == 34) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 35 || var_1443 == 36) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 37 || var_1443 == 38) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 39 || var_1443 == 40) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 41 || var_1443 == 42) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 150);
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 43 || var_1443 == 44) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 45 || var_1443 == 46) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 == 47 || var_1443 == 48) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
                 color(0, 0, 0);
     
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 30);
                 pos(160, 170);
-                var_232 = var_1445;
+                item_list = var_1445;
                 yield func397();
             }
             if (var_1443 > 48 || var_1443 == 60) {
                 pos(160, 170);
-                var_232 = var_1444;
+                item_list = var_1444;
                 yield func397();
             }
             pos(170, 150);
@@ -11516,7 +11516,7 @@ function func354X(this: any) {
             if (var_1456 == 12) {
                 pos((var_1457 - var_66 + 4) * 40, (var_1458 - var_67 + 4) * 40 - 10 - 240);
             }
-            var_232 = var_1459;
+            item_list = var_1459;
             var_1248 = var_1249;
             yield func397();
             gcopy(21, 0, 960, 40, 40);
@@ -11559,7 +11559,7 @@ function func354X(this: any) {
             if (var_1460 == 12) {
                 pos((var_1457 - var_66 + 4) * 40, (var_1458 - var_67 + 4) * 40 - 10 - 240);
             }
-            var_232 = var_1459;
+            item_list = var_1459;
             var_1248 = var_1249;
             yield func397();
             gcopy(3, 920, 400, 40, 40);
@@ -11714,7 +11714,7 @@ function func354X(this: any) {
             if (var_1470 == 3) {
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                 pos(160, 130);
-                var_232 = var_1471;
+                item_list = var_1471;
                 var_1248 = var_1249;
                 yield func397();
             }
@@ -11723,7 +11723,7 @@ function func354X(this: any) {
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                 pos(160, 120);
-                var_232 = var_1471;
+                item_list = var_1471;
                 var_1248 = var_1249;
                 yield func397();
             }
@@ -12447,7 +12447,7 @@ function func354X(this: any) {
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                 }
                 if (var_1505 == 3) {
-                    var_232 = var_1386;
+                    item_list = var_1386;
                     var_1248 = var_1249;
                     yield func397();
                 }
@@ -12508,7 +12508,7 @@ function func354X(this: any) {
             }
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             pos(var_1503, var_1504);
-            var_232 = var_1386;
+            item_list = var_1386;
             var_1248 = var_1249;
             yield func397();
         }
@@ -12557,7 +12557,7 @@ function func354X(this: any) {
             }
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             pos(var_1503, var_1504);
-            var_232 = var_1386;
+            item_list = var_1386;
             var_1248 = var_1249;
             yield func397();
         }
@@ -13114,7 +13114,7 @@ function func354X(this: any) {
         if (var_1529 == 1 && var_1530 == 0) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             pos(160, 150);
-            var_232 = var_233[var_1531].Var0;
+            item_list = var_233[var_1531].Var0;
             var_1248 = var_233[var_1531].Var13;
             yield func397();
             pos(160, 0);
@@ -13123,7 +13123,7 @@ function func354X(this: any) {
         if (var_1529 >= 2 && var_1530 == 0) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             pos(160, var_774 - 10);
-            var_232 = var_233[var_1531].Var0;
+            item_list = var_233[var_1531].Var0;
             var_1248 = var_233[var_1531].Var13;
             yield func397();
             pos(160, var_774 - 160);
@@ -13903,7 +13903,7 @@ function func354X(this: any) {
         if (var_1570 >= 1) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             pos(160, 120);
-            var_232 = var_1571;
+            item_list = var_1571;
             yield func397();
             pos(160, 130);
             if (var_1570 == 1 || var_1570 == 5 || var_1570 == 9 || var_1570 == 13 || var_1570 == 17) {
@@ -14983,8 +14983,8 @@ function func361(this: any) {
         dbgprt(361);
         yield func080();
         if (var_12 == 1) {
-            var_235 = getkey(121);
-            if (var_235 == 1) {
+            conf_keyon = getkey(121);
+            if (conf_keyon == 1) {
                 var_1038 = 200;
                 for (let cnt3 = 0; cnt3 < 200; ++cnt3) {
                     var_989[cnt3] = cnt3;
@@ -14999,8 +14999,8 @@ function func361(this: any) {
                 yield func361();
                 return;
             }
-            var_235 = getkey(122);
-            if (var_235 == 1) {
+            conf_keyon = getkey(122);
+            if (conf_keyon == 1) {
                 var_1038 = 1;
                 for (let cnt3 = 0; cnt3 < 200; ++cnt3) {
                     var_989[cnt3] = 0;
@@ -15609,7 +15609,7 @@ function func367(this: any) {
             }
         }
         pos(20, 45);
-        var_232 = var_802;
+        item_list = var_802;
         var_487 = var_1660;
         var_1248 = var_1660;
         yield func492();
@@ -15649,57 +15649,57 @@ function func367(this: any) {
         if (var_802 >= 100 && var_802 < 400) {
             if (var_1661 == 0) {
                 color(0, 190, 0);
-                mes(var_489);
+                mes(item_name);
             }
             if (var_1661 == 1) {
                 color(0, 255, 0);
                 if (var_803 == 0 && var_804 <= 1) {
-                    mes(var_489);
+                    mes(item_name);
                 }
                 if (var_803 == 0 && var_804 > 1) {
-                    mes("" + var_489 + " ★" + var_804);
+                    mes("" + item_name + " ★" + var_804);
                 }
                 if (var_803 > 0 && var_804 <= 1) {
-                    mes("" + var_489 + "+" + var_803);
+                    mes("" + item_name + "+" + var_803);
                 }
                 if (var_803 > 0 && var_804 > 1) {
-                    mes("" + var_489 + "+" + var_803 + " ★" + var_804);
+                    mes("" + item_name + "+" + var_803 + " ★" + var_804);
                 }
             }
         }
         if (var_802 >= 400 && var_802 < 500) {
             color(225, 195, 145);
-            mes("" + var_489 + "(" + var_1662 + ")");
+            mes("" + item_name + "(" + var_1662 + ")");
         }
         if (var_802 >= 500 && var_802 < 600) {
             color(255, 255, 255);
             if (var_862[var_802][0] == 0 && var_62 != 0 && var_62 != 1 && var_62 != 99) {
                 color(200, 200, 200);
             }
-            mes(var_489);
+            mes(item_name);
         }
         if (var_802 >= 600 && var_802 < 700) {
             color(255, 255, 255);
-            mes(var_489);
+            mes(item_name);
         }
         if (var_802 >= 700 && var_802 < 750) {
             color(255, 255, 255);
-            mes(var_489);
+            mes(item_name);
         }
         if (var_802 >= 800 && var_802 < 900) {
             color(0, 255, 255);
             if (var_862[var_802][0] == 0 && var_62 != 0 && var_62 != 1 && var_62 != 99) {
                 color(0, 170, 170);
             }
-            mes("" + var_489 + "(" + var_1663 + ")");
+            mes("" + item_name + "(" + var_1663 + ")");
         }
         if (var_802 >= 750 && var_802 < 800) {
             color(255, 255, 255);
-            mes(var_489);
+            mes(item_name);
         }
         if (var_802 >= 900 && var_802 < 1000) {
             color(255, 255, 255);
-            mes(var_489);
+            mes(item_name);
         }
         if (var_805 == 1 && var_1661 == 1) {
             pos(62, 73);
@@ -15754,7 +15754,7 @@ function func367(this: any) {
             var_1665 = 0;
             for (let cnt2 = 0; cnt2 < var_810 + var_807; ++cnt2) {
                 pos(30 + 50, var_809 * 20 + 120);
-                var_232 = var_811[var_809];
+                item_list = var_811[var_809];
                 yield func492();
                 color(255, 255, 255);
                 if (var_812 == 1) {
@@ -15818,10 +15818,10 @@ function func367(this: any) {
 function func368(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(368);
-        var_1667 = var_232;
+        var_1667 = item_list;
         var_1668 = var_220;
         var_1669 = var_231;
-        var_802 = var_232;
+        var_802 = item_list;
         var_1670 = var_225;
         yield func492();
         if (var_220 == 0) {
@@ -15882,7 +15882,7 @@ function func368(this: any) {
         if (var_814 >= 100 && var_814 < 400) {
             yield func370();
         }
-        var_232 = var_802;
+        item_list = var_802;
         yield func492();
         var_801 = 170;
         if (var_814 == 104) {
@@ -15980,12 +15980,12 @@ function func370(this: any) {
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_813[var_826] = "";
             if (var_220 == 0) {
-                var_232 = var_233[var_1670]["Var" + var_825];
+                item_list = var_233[var_1670]["Var" + var_825];
             }
             if (var_220 == 1) {
-                var_232 = var_486[var_682][var_1670][var_825];
+                item_list = var_486[var_682][var_1670][var_825];
             }
-            if (var_232 == 104) {
+            if (item_list == 104) {
                 var_827 = 1;
             }
             if (var_1208 == 2) {
@@ -15997,7 +15997,7 @@ function func370(this: any) {
                 break;
             }
             var_813[var_826] = "" + var_828;
-            var_811[var_826] = var_232;
+            var_811[var_826] = item_list;
             var_826 = var_826 + 1;
             var_825 = var_825 + 1;
         }
@@ -16224,20 +16224,20 @@ function func377(this: any) {
             pset(var_1681 + 1, var_1682 + 1 + var_1684);
             pset(var_1680, var_1683 - 1 + var_1684);
             pset(var_1681 + 1, var_1683 - 1 + var_1684);
-            var_232 = var_1693 * 6 + var_1694;
-            if (var_232 >= 987 && var_232 <= 995) {
-                var_232 = var_232 - 237;
+            item_list = var_1693 * 6 + var_1694;
+            if (item_list >= 987 && item_list <= 995) {
+                item_list = item_list - 237;
             }
-            if (var_232 >= 996) {
-                var_232 = var_232 - 10;
+            if (item_list >= 996) {
+                item_list = item_list - 10;
             }
             yield func492();
-            var_1696 = var_489;
+            var_1696 = item_name;
             pos(var_1680 + 10, var_1682 + var_1684 - 3);
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-            var_1697 = var_232 - 900;
-            if (var_232 >= 750 && var_232 <= 770) {
-                var_1697 = var_232 + 250 - 900;
+            var_1697 = item_list - 900;
+            if (item_list >= 750 && item_list <= 770) {
+                var_1697 = item_list + 250 - 900;
             }
             if (var_988[var_1697] >= 1) {
                 yield func397();
@@ -16255,13 +16255,13 @@ function func377(this: any) {
                 mes(var_1696);
             }
             if (var_988[var_1697] == 0) {
-                if (var_232 >= 750 && var_232 <= 770) {
+                if (item_list >= 750 && item_list <= 770) {
                     mes(var_1696);
                 }
-                if (var_232 >= 900 && var_232 <= 986) {
+                if (item_list >= 900 && item_list <= 986) {
                     mes(var_1696);
                 }
-                if (var_232 >= 987 && var_232 <= 999) {
+                if (item_list >= 987 && item_list <= 999) {
                     mes("？？？？？？");
                 }
             }
@@ -16385,7 +16385,7 @@ function func380(this: any) {
         var_1708 = 100;
         for (let cnt1 = 0; cnt1 < 300; ++cnt1) {
             if (var_156[var_1708] == 1) {
-                var_232 = var_1708;
+                item_list = var_1708;
                 yield func492();
                 if (var_1708 == 204) {
                     var_828 = "最大HPが" + var_1047 + "上がっているぞ";
@@ -19638,7 +19638,7 @@ function func396(this: any) {
         var_1819 = var_78[var_1813].Var2 - var_67 + 4;
         var_1820 = var_78[var_1813].Var1;
         var_1821 = var_78[var_1813].Var2;
-        var_232 = var_78[var_1813].Var0;
+        item_list = var_78[var_1813].Var0;
         var_1248 = var_78[var_1813].Var13;
         if (var_409 == 0) {
             var_1822 = 0;
@@ -19732,86 +19732,86 @@ function func396(this: any) {
 function func397(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(397);
-        if (var_232 == 1) {
+        if (item_list == 1) {
             gcopy(9, 0, 0, 40, 40);
         }
-        if (var_232 >= 100 && var_232 < 400) {
+        if (item_list >= 100 && item_list < 400) {
             gcopy(9, 40, 0, 40, 40);
         }
-        if (var_232 >= 400 && var_232 < 450) {
+        if (item_list >= 400 && item_list < 450) {
             gcopy(9, 240, 0, 40, 40);
         }
-        if (var_232 >= 450 && var_232 < 500) {
+        if (item_list >= 450 && item_list < 500) {
             gcopy(9, 120, 0, 40, 40);
         }
-        if (var_232 >= 500 && var_232 < 600) {
+        if (item_list >= 500 && item_list < 600) {
             gcopy(9, 280, 0, 40, 40);
         }
-        if (var_232 >= 600 && var_232 < 630) {
+        if (item_list >= 600 && item_list < 630) {
             gcopy(9, 0, 40, 40, 40);
         }
-        if (var_232 >= 650 && var_232 < 654 && var_232 != 652) {
+        if (item_list >= 650 && item_list < 654 && item_list != 652) {
             gcopy(9, 120, 40, 40, 40);
         }
-        if (var_232 == 652) {
+        if (item_list == 652) {
             gcopy(9, 80, 40, 40, 40);
         }
-        if (var_232 == 654) {
+        if (item_list == 654) {
             gcopy(14, 160, 0, 40, 40);
         }
-        if (var_232 == 655) {
+        if (item_list == 655) {
             gcopy(9, 320, 200, 40, 40);
         }
-        if (var_232 == 630) {
+        if (item_list == 630) {
             gcopy(9, 0, 200, 40, 40);
         }
-        if (var_232 == 631) {
+        if (item_list == 631) {
             gcopy(9, 40, 200, 40, 40);
         }
-        if (var_232 == 632) {
+        if (item_list == 632) {
             gcopy(9, 160, 200, 40, 40);
         }
-        if (var_232 == 633) {
+        if (item_list == 633) {
             gcopy(9, 80, 200, 40, 40);
         }
-        if (var_232 == 634) {
+        if (item_list == 634) {
             gcopy(9, 120, 200, 40, 40);
         }
-        if (var_232 == 635) {
+        if (item_list == 635) {
             gcopy(9, 200, 240, 40, 40);
         }
-        if (var_232 == 636) {
+        if (item_list == 636) {
             gcopy(9, 240, 240, 40, 40);
         }
-        if (var_232 == 639) {
+        if (item_list == 639) {
             gcopy(9, 0, 240, 40, 40);
         }
-        if (var_232 == 640) {
+        if (item_list == 640) {
             gcopy(9, 200, 240, 40, 40);
         }
-        if (var_232 == 641) {
+        if (item_list == 641) {
             gcopy(9, 120, 120, 40, 40);
         }
-        if (var_232 == 644) {
+        if (item_list == 644) {
             gcopy(9, 240, 160, 40, 40);
         }
-        if (var_232 == 645) {
+        if (item_list == 645) {
             gcopy(9, 280, 160, 40, 40);
         }
-        if (var_232 == 646) {
+        if (item_list == 646) {
             gcopy(9, 320, 160, 40, 40);
         }
-        if (var_232 == 647) {
+        if (item_list == 647) {
             gcopy(9, 360, 240, 40, 40);
         }
-        if (var_232 == 648) {
+        if (item_list == 648) {
             gcopy(9, 80, 240, 40, 40);
         }
-        if (var_232 >= 800 && var_232 < 900) {
-            if (var_862[var_232][0] == 0 && var_62 >= 2) {
+        if (item_list >= 800 && item_list < 900) {
+            if (var_862[item_list][0] == 0 && var_62 >= 2) {
                 var_1825 = 0;
             }
-            if (var_862[var_232][0] == 1 && var_62 >= 2) {
+            if (var_862[item_list][0] == 1 && var_62 >= 2) {
                 var_1825 = 1;
             }
             if (var_62 == 1) {
@@ -19820,7 +19820,7 @@ function func397(this: any) {
             if (var_262 == 1) {
                 var_1825 = 1;
             }
-            if (var_232 >= 801 && var_232 <= 804) {
+            if (item_list >= 801 && item_list <= 804) {
                 var_1825 = 1;
             }
             if (var_626 == 1) {
@@ -19830,69 +19830,69 @@ function func397(this: any) {
                 gcopy(9, 360, 280, 40, 40);
             }
             if (var_1825 == 1) {
-                if (var_232 == 800) {
+                if (item_list == 800) {
                     gcopy(9, 760, 280, 40, 40);
                 }
-                if (var_232 == 801) {
+                if (item_list == 801) {
                     gcopy(9, 520, 280, 40, 40);
                 }
-                if (var_232 == 802) {
+                if (item_list == 802) {
                     gcopy(9, 600, 280, 40, 40);
                 }
-                if (var_232 == 803) {
+                if (item_list == 803) {
                     gcopy(9, 640, 280, 40, 40);
                 }
-                if (var_232 == 804) {
+                if (item_list == 804) {
                     gcopy(9, 560, 280, 40, 40);
                 }
-                if (var_232 == 815) {
+                if (item_list == 815) {
                     gcopy(9, 40, 280, 40, 40);
                 }
-                if (var_232 == 808) {
+                if (item_list == 808) {
                     gcopy(9, 80, 280, 40, 40);
                 }
-                if (var_232 == 805) {
+                if (item_list == 805) {
                     gcopy(9, 120, 280, 40, 40);
                 }
-                if (var_232 == 807) {
+                if (item_list == 807) {
                     gcopy(9, 160, 280, 40, 40);
                 }
-                if (var_232 == 806) {
+                if (item_list == 806) {
                     gcopy(9, 200, 280, 40, 40);
                 }
-                if (var_232 == 809) {
+                if (item_list == 809) {
                     gcopy(9, 0, 280, 40, 40);
                 }
-                if (var_232 == 816) {
+                if (item_list == 816) {
                     gcopy(9, 240, 280, 40, 40);
                 }
-                if (var_232 == 850) {
+                if (item_list == 850) {
                     gcopy(9, 280, 280, 40, 40);
                 }
-                if (var_232 == 851) {
+                if (item_list == 851) {
                     gcopy(9, 320, 280, 40, 40);
                 }
-                if (var_232 == 817) {
+                if (item_list == 817) {
                     gcopy(9, 440, 280, 40, 40);
                 }
-                if (var_232 == 818) {
+                if (item_list == 818) {
                     gcopy(9, 480, 280, 40, 40);
                 }
-                if (var_232 == 852) {
+                if (item_list == 852) {
                     gcopy(9, 400, 280, 40, 40);
                 }
-                if (var_232 == 853) {
+                if (item_list == 853) {
                     gcopy(9, 680, 280, 40, 40);
                 }
-                if (var_232 == 854) {
+                if (item_list == 854) {
                     gcopy(9, 720, 280, 40, 40);
                 }
             }
         }
-        if (var_232 == 700) {
+        if (item_list == 700) {
             gcopy(9, 0, 80, 40, 40);
         }
-        if (var_232 == 701) {
+        if (item_list == 701) {
             if (var_1248 < 50) {
                 var_965 = 6;
                 var_1826 = 15;
@@ -19937,118 +19937,118 @@ function func397(this: any) {
             pos(var_1827, var_1828 + 5);
             gcopy(32, 0, 0, 40, 40);
         }
-        if (var_232 == 711) {
+        if (item_list == 711) {
             gcopy(9, 360, 160, 40, 40);
         }
-        if (var_232 == 712) {
+        if (item_list == 712) {
             gcopy(9, 40, 40, 40, 40);
         }
-        if (var_232 == 713) {
+        if (item_list == 713) {
             gcopy(9, 200, 40, 40, 40);
         }
-        if (var_232 == 714) {
+        if (item_list == 714) {
             gcopy(9, 80, 120, 40, 40);
         }
-        if (var_232 == 715) {
+        if (item_list == 715) {
             gcopy(9, 160, 120, 40, 40);
         }
-        if (var_232 == 716) {
+        if (item_list == 716) {
             gcopy(9, 320, 120, 40, 40);
         }
-        if (var_232 == 717) {
+        if (item_list == 717) {
             gcopy(9, 120, 80, 40, 40);
         }
-        if (var_232 == 718) {
+        if (item_list == 718) {
             gcopy(9, 160, 80, 40, 40);
         }
-        if (var_232 == 719) {
+        if (item_list == 719) {
             gcopy(9, 160, 80, 40, 40);
         }
-        if (var_232 == 720) {
+        if (item_list == 720) {
             gcopy(9, 120, 160, 40, 40);
         }
-        if (var_232 == 721) {
+        if (item_list == 721) {
             gcopy(9, 240, 80, 40, 40);
         }
-        if (var_232 == 722) {
+        if (item_list == 722) {
             gcopy(9, 320, 40, 40, 40);
         }
-        if (var_232 == 723) {
+        if (item_list == 723) {
             gcopy(9, 200, 160, 40, 40);
         }
-        if (var_232 == 724) {
+        if (item_list == 724) {
             gcopy(9, 0, 120, 40, 40);
         }
-        if (var_232 == 725) {
+        if (item_list == 725) {
             gcopy(9, 160, 40, 40, 40);
         }
-        if (var_232 == 726) {
+        if (item_list == 726) {
             gcopy(9, 360, 80, 40, 40);
         }
-        if (var_232 == 727) {
+        if (item_list == 727) {
             gcopy(9, 280, 120, 40, 40);
         }
-        if (var_232 == 728) {
+        if (item_list == 728) {
             gcopy(9, 40, 120, 40, 40);
         }
-        if (var_232 == 729) {
+        if (item_list == 729) {
             gcopy(9, 360, 120, 40, 40);
         }
-        if (var_232 == 730) {
+        if (item_list == 730) {
             gcopy(9, 400, 120, 40, 40);
         }
-        if (var_232 == 731) {
+        if (item_list == 731) {
             gcopy(9, 440, 120, 40, 40);
         }
-        if (var_232 == 900) {
+        if (item_list == 900) {
             gcopy(23, 360, 360, 40, 40);
         }
-        if (var_232 >= 901 && var_232 < 1000) {
-            if (var_232 >= 901 && var_232 <= 910) {
-                var_1829 = (var_232 - 901) * 40;
+        if (item_list >= 901 && item_list < 1000) {
+            if (item_list >= 901 && item_list <= 910) {
+                var_1829 = (item_list - 901) * 40;
                 var_1830 = 0;
             }
-            if (var_232 >= 911 && var_232 <= 920) {
-                var_1829 = (var_232 - 911) * 40;
+            if (item_list >= 911 && item_list <= 920) {
+                var_1829 = (item_list - 911) * 40;
                 var_1830 = 1 * 40;
             }
-            if (var_232 >= 921 && var_232 <= 930) {
-                var_1829 = (var_232 - 921) * 40;
+            if (item_list >= 921 && item_list <= 930) {
+                var_1829 = (item_list - 921) * 40;
                 var_1830 = 2 * 40;
             }
-            if (var_232 >= 931 && var_232 <= 940) {
-                var_1829 = (var_232 - 931) * 40;
+            if (item_list >= 931 && item_list <= 940) {
+                var_1829 = (item_list - 931) * 40;
                 var_1830 = 3 * 40;
             }
-            if (var_232 >= 941 && var_232 <= 950) {
-                var_1829 = (var_232 - 941) * 40;
+            if (item_list >= 941 && item_list <= 950) {
+                var_1829 = (item_list - 941) * 40;
                 var_1830 = 4 * 40;
             }
-            if (var_232 >= 951 && var_232 <= 960) {
-                var_1829 = (var_232 - 951) * 40;
+            if (item_list >= 951 && item_list <= 960) {
+                var_1829 = (item_list - 951) * 40;
                 var_1830 = 5 * 40;
             }
-            if (var_232 >= 961 && var_232 <= 970) {
-                var_1829 = (var_232 - 961) * 40;
+            if (item_list >= 961 && item_list <= 970) {
+                var_1829 = (item_list - 961) * 40;
                 var_1830 = 6 * 40;
             }
-            if (var_232 >= 971 && var_232 <= 980) {
-                var_1829 = (var_232 - 971) * 40;
+            if (item_list >= 971 && item_list <= 980) {
+                var_1829 = (item_list - 971) * 40;
                 var_1830 = 7 * 40;
             }
-            if (var_232 >= 981 && var_232 <= 990) {
-                var_1829 = (var_232 - 981) * 40;
+            if (item_list >= 981 && item_list <= 990) {
+                var_1829 = (item_list - 981) * 40;
                 var_1830 = 8 * 40;
             }
-            if (var_232 >= 991 && var_232 <= 999) {
-                var_1829 = (var_232 - 991) * 40;
+            if (item_list >= 991 && item_list <= 999) {
+                var_1829 = (item_list - 991) * 40;
                 var_1830 = 9 * 40;
             }
             gcopy(23, var_1829, var_1830, 40, 40);
         }
-        if (var_232 >= 750 && var_232 < 800) {
-            if (var_232 >= 750 && var_232 <= 759) {
-                var_1829 = (var_232 - 750) * 40;
+        if (item_list >= 750 && item_list < 800) {
+            if (item_list >= 750 && item_list <= 759) {
+                var_1829 = (item_list - 750) * 40;
                 var_1830 = 10 * 40;
             }
             gcopy(23, var_1829, var_1830, 40, 40);
@@ -20061,40 +20061,41 @@ function func397(this: any) {
 function func398(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(398);
-        var_1831 = "error";
-        if (var_232 == 1) {
-            var_1831 = "" + var_78[var_321].Var13 + " G";
+        disp_item_namet = "error";
+        if (item_list == 1) {
+            disp_item_namet = "" + var_78[var_321].Var13 + " G";
         }
-        if (var_232 >= 100 && var_232 < 400) {
+        // 装備discの表示
+        if (item_list >= 100 && item_list < 400) {
             if (var_78[var_321].Var14 == 0) {
-                var_1831 = var_489;
+                disp_item_namet = item_name;
             }
             if (var_78[var_321].Var14 == 1) {
                 if (var_78[var_321].Var4 == 0 && var_78[var_321].Var19 <= 1) {
-                    var_1831 = var_489;
+                    disp_item_namet = item_name;
                 }
                 if (var_78[var_321].Var4 == 0 && var_78[var_321].Var19 > 1) {
-                    var_1831 = "" + var_489 + " ★" + var_78[var_321].Var19;
+                    disp_item_namet = "" + item_name + " ★" + var_78[var_321].Var19;
                 }
                 if (var_78[var_321].Var4 > 0 && var_78[var_321].Var19 <= 1) {
-                    var_1831 = "" + var_489 + "+" + var_78[var_321].Var4;
+                    disp_item_namet = "" + item_name + "+" + var_78[var_321].Var4;
                 }
                 if (var_78[var_321].Var4 > 0 && var_78[var_321].Var19 > 1) {
-                    var_1831 = "" + var_489 + "+" + var_78[var_321].Var4 + " ★" + var_78[var_321].Var19;
+                    disp_item_namet = "" + item_name + "+" + var_78[var_321].Var4 + " ★" + var_78[var_321].Var19;
                 }
             }
         }
-        if (var_232 >= 400 && var_232 < 500) {
-            var_1831 = "" + var_489 + "(" + var_78[var_321].Var3 + ")";
+        if (item_list >= 400 && item_list < 500) {
+            disp_item_namet = "" + item_name + "(" + var_78[var_321].Var3 + ")";
         }
-        if (var_232 >= 500 && var_232 < 800) {
-            var_1831 = var_489;
+        if (item_list >= 500 && item_list < 800) {
+            disp_item_namet = item_name;
         }
-        if (var_232 >= 800 && var_232 < 900) {
-            var_1831 = "" + var_489 + "(" + var_78[var_321].Var7 + ")";
+        if (item_list >= 800 && item_list < 900) {
+            disp_item_namet = "" + item_name + "(" + var_78[var_321].Var7 + ")";
         }
-        if (var_232 >= 900 && var_232 < 1000) {
-            var_1831 = var_489;
+        if (item_list >= 900 && item_list < 1000) {
+            disp_item_namet = item_name;
         }
         return;
     });
@@ -20105,39 +20106,39 @@ function func399(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(399);
         var_1832 = "error";
-        if (var_232 == 1) {
+        if (item_list == 1) {
             var_1832 = "" + var_1833 + " G";
         }
-        if (var_232 >= 100 && var_232 < 400) {
+        if (item_list >= 100 && item_list < 400) {
             if (var_1834 == 0) {
-                var_1832 = var_489;
+                var_1832 = item_name;
             }
             if (var_1834 == 1) {
                 if (var_1835 == 0 && var_1836 <= 1) {
-                    var_1832 = var_489;
+                    var_1832 = item_name;
                 }
                 if (var_1835 == 0 && var_1836 > 1) {
-                    var_1832 = "" + var_489 + " ★" + var_1836;
+                    var_1832 = "" + item_name + " ★" + var_1836;
                 }
                 if (var_1835 > 0 && var_1836 <= 1) {
-                    var_1832 = "" + var_489 + "+" + var_1835;
+                    var_1832 = "" + item_name + "+" + var_1835;
                 }
                 if (var_1835 > 0 && var_1836 > 1) {
-                    var_1832 = "" + var_489 + "+" + var_1835 + " ★" + var_1836;
+                    var_1832 = "" + item_name + "+" + var_1835 + " ★" + var_1836;
                 }
             }
         }
-        if (var_232 >= 400 && var_232 < 500) {
-            var_1832 = "" + var_489 + "(" + var_1837 + ")";
+        if (item_list >= 400 && item_list < 500) {
+            var_1832 = "" + item_name + "(" + var_1837 + ")";
         }
-        if (var_232 >= 500 && var_232 < 800) {
-            var_1832 = var_489;
+        if (item_list >= 500 && item_list < 800) {
+            var_1832 = item_name;
         }
-        if (var_232 >= 800 && var_232 < 900) {
-            var_1832 = "" + var_489 + "(" + var_1838 + ")";
+        if (item_list >= 800 && item_list < 900) {
+            var_1832 = "" + item_name + "(" + var_1838 + ")";
         }
-        if (var_232 >= 900 && var_232 < 1000) {
-            var_1832 = var_489;
+        if (item_list >= 900 && item_list < 1000) {
+            var_1832 = item_name;
         }
         return;
     });

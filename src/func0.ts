@@ -8,8 +8,8 @@ function makepal() {
         var_2 = cnt1 * 32;
         for (let cnt2 = 0; cnt2 < 120; ++cnt2) {
             var_3 = limit(cnt2 % 5 * 64 + var_2, 0, 255);
-            var_4 = limit(Math.floor(cnt2 / 5) % 5 * 64 + var_2, 0, 255);
-            var_5 = limit(Math.floor(cnt2 / 25) % 5 * 64 + var_2, 0, 255);
+            var_4 = limit(Math.floor(cnt2 / 5) % 5 * 64 + var_2, 0, 255); // Math.floor は対象の値の小数点以下を切り捨て
+            var_5 = limit(Math.floor(cnt2 / 25) % 5 * 64 + var_2, 0, 255); // Math.floor は対象の値の小数点以下を切り捨て
             if (var_3 == var_4 && var_4 == var_5 && var_5 == var_3) {
                 palette(data0 = var_1, data1 = var_3, data2 = var_4, data3 = var_5, data4 = null)
                 var_1++;
@@ -943,7 +943,7 @@ function func009(this: any) {
                 var_231 = 1;
                 var_222 = 10;
             }
-            var_232 = var_233[var_225].Var0;
+            item_list = var_233[var_225].Var0;
             DSPLAY(audio_id =212);
             yield func462();
             return;
@@ -952,8 +952,8 @@ function func009(this: any) {
         var_214 = 0;
         var_234 = 0;
         if (var_12 == 1) {
-            var_235 = getkey(122);
-            if (var_235 == 1) {
+            conf_keyon = getkey(122);
+            if (conf_keyon == 1) {
                 yield func184();
                 return;
             }
@@ -1560,8 +1560,8 @@ function func013(this: any) {
             yield func015();
             return;
         }
-        var_235 = getkey(81);
-        if (var_235 == 1) {
+        conf_keyon = getkey(81);
+        if (conf_keyon == 1) {
             yield func236();
             return;
         }
@@ -2007,15 +2007,15 @@ function func015(this: any) {
                 var_67 = var_148;
                 var_236 = var_66;
                 var_237 = var_67;
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                var_293 = "鉄塔からは出られない！";
-                var_294 = "";
+                comments_row1 = "鉄塔からは出られない！";
+                comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -2097,15 +2097,15 @@ function func015(this: any) {
                             var_312 = 1;
                             yield func337();
                             var_312 = 0;
-                            var_293 = "";
-                            var_294 = "";
+                            comments_row1 = "";
+                            comments_row2 = "";
                             var_295 = "";
                             var_296 = "";
                             var_297 = "";
                             var_298 = "";
                             var_299 = 0;
-                            var_293 = "吉良の親父がいるため";
-                            var_294 = "この部屋から出ることができない！";
+                            comments_row1 = "吉良の親父がいるため";
+                            comments_row2 = "この部屋から出ることができない！";
                             var_198 = 1;
                             var_300 = 0;
                             yield func047();
@@ -2550,7 +2550,7 @@ function func019(this: any) {
         }
         if (var_151 == 0) {
             if (var_350 > 0 && var_211 >= 1 && var_134 == 0 && var_218 < 30) {
-                var_351 = Math.floor(var_352 * 10 / 150);
+                var_351 = Math.floor(var_352 * 10 / 150); // Math.floor は対象の値の小数点以下を切り捨て
                 var_353 = var_351 + var_354;
                 if (var_130 == 1 || var_182 == 1) {
                     var_353 = var_353 * 2;
@@ -3099,14 +3099,14 @@ function func019(this: any) {
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "普通の速さに戻った";
+                    comments_row1 = "普通の速さに戻った";
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -3221,15 +3221,15 @@ function func019(this: any) {
                     if (var_388 == 0) {
                         var_240 = 0;
                         yield func094();
-                        var_293 = "";
-                        var_294 = "";
+                        comments_row1 = "";
+                        comments_row2 = "";
                         var_295 = "";
                         var_296 = "";
                         var_297 = "";
                         var_298 = "";
                         var_299 = 0;
-                        var_293 = "ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！";
-                        var_294 = "　　　ここにいるわよォ―――ッ」";
+                        comments_row1 = "ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！";
+                        comments_row2 = "　　　ここにいるわよォ―――ッ」";
                         var_198 = 1;
                         var_300 = 0;
                         var_25_x = var_25[5];
@@ -3244,8 +3244,8 @@ function func019(this: any) {
                             var_390 = var_390 + 1;
                         }
                         var_389 = 0;
-                        var_293 = var_296;
-                        var_294 = var_297;
+                        comments_row1 = var_296;
+                        comments_row2 = var_297;
                         var_296 = "フロアの敵が全員 目を覚ました！";
                         var_297 = "";
                         yield func047();
@@ -3260,15 +3260,15 @@ function func019(this: any) {
                     var_388 = rnd(300);
                     if (var_388 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0) {
                         var_240 = 0;
-                        var_293 = "";
-                        var_294 = "";
+                        comments_row1 = "";
+                        comments_row2 = "";
                         var_295 = "";
                         var_296 = "";
                         var_297 = "";
                         var_298 = "";
                         var_299 = 0;
-                        var_293 = "「クンクンクン・・・」";
-                        var_294 = "";
+                        comments_row1 = "「クンクンクン・・・」";
+                        comments_row2 = "";
                         var_198 = 1;
                         var_300 = 0;
                         var_25_x = var_25[1];
@@ -3287,8 +3287,8 @@ function func019(this: any) {
             }
         }
         if (var_198 == 0) {
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -3298,15 +3298,15 @@ function func019(this: any) {
         if (var_123 == 0) {
             if (var_163 == 1) {
                 DSPLAY(audio_id =181);
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                var_293 = "「" + var_164 + "秒経過！」";
-                var_294 = "";
+                comments_row1 = "「" + var_164 + "秒経過！」";
+                comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
                 var_25_x = var_25[1];
@@ -3331,8 +3331,8 @@ function func019(this: any) {
                     var_392 = 1;
                 }
                 if (var_392 == 2) {
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "まだまだ止めていられるぞ…";
                     var_297 = "";
                     yield func047();
@@ -3342,8 +3342,8 @@ function func019(this: any) {
                     }
                 }
                 if (var_392 == 1) {
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "そして時は動き出す…";
                     var_297 = "";
                     if (var_153 == 1) {
@@ -3377,15 +3377,15 @@ function func019(this: any) {
             var_393[var_123][2] = var_67;
             var_123++;
             if (var_123 > 6) {
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                var_293 = "時は再び刻み始める…";
-                var_294 = "";
+                comments_row1 = "時は再び刻み始める…";
+                comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
                 var_25_x = var_25[1];
@@ -3451,14 +3451,14 @@ function func019(this: any) {
                 }
                 if (var_398 == 1) {
                     yield func094();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "ﾏﾘﾘﾝﾏﾝｿﾝ「マタ会オウ！」";
+                    comments_row1 = "ﾏﾘﾘﾝﾏﾝｿﾝ「マタ会オウ！」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -3530,15 +3530,15 @@ function func019(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337();
                 }
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                var_293 = "そして時は動き出す…";
-                var_294 = "";
+                comments_row1 = "そして時は動き出す…";
+                comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
                 var_25_x = var_25[2];
@@ -3689,14 +3689,14 @@ function func020(this: any) {
                     }
                 }
                 DSPLAY(audio_id =162);
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                var_293 = "罪悪感で体が重くなった！";
+                comments_row1 = "罪悪感で体が重くなった！";
                 var_25_x = var_25[2];
                 var_26_x = var_26[2];
                 var_27_x = var_27[2];
@@ -3706,8 +3706,8 @@ function func020(this: any) {
                 if (var_156[396] == 1) {
                     yield func340();
                     yield func094();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "しかし装備スタンドの効果で";
                     var_297 = "速度は遅くならない！";
                     var_25_x = var_25[1];
@@ -3728,12 +3728,12 @@ function func020(this: any) {
                     var_416 = var_415;
                 }
                 if (var_415 > 500) {
-                    var_416 = Math.floor(var_415 / 2);
+                    var_416 = Math.floor(var_415 / 2); // Math.floor は対象の値の小数点以下を切り捨て
                 }
                 var_415 = var_415 - var_416;
                 var_83[var_412].Var26 = 1;
-                var_232 = 1;
-                var_417 = var_232;
+                item_list = 1;
+                var_417 = item_list;
                 var_418 = "" + var_416 + "G"; //現在の所持金表示
                 var_419 = var_412 + 200;
                 var_78[var_419].Var0 = 1;
@@ -3749,9 +3749,11 @@ function func020(this: any) {
                 var_78[var_419].Var10 = 0;
                 var_78[var_419].Var11 = 0;
                 var_78[var_419].Var12 = 0;
+                // 0でなければ、もともとの配列に格納されている金額に新たに金額を追加する
                 if (var_78[var_419].Var13 != 0) {
                     var_78[var_419].Var13 = var_78[var_419].Var13 + var_416;
                 }
+                // 0であればそのまま金額を追加する
                 if (var_78[var_419].Var13 == 0) {
                     var_78[var_419].Var13 = var_416;
                 }
@@ -3771,14 +3773,14 @@ function func020(this: any) {
                 var_78[var_419].Var27 = 0;
                 var_78[var_419].Var28 = 0;
                 var_78[var_419].Var29 = 0;
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                var_293 = "罪悪感で" + var_418 + " 奪われた！";
+                comments_row1 = "罪悪感で" + var_418 + " 奪われた！";
                 var_25_x = var_25[2];
                 var_26_x = var_26[2];
                 var_27_x = var_27[2];
@@ -3813,14 +3815,14 @@ function func020(this: any) {
                     }
                 }
                 if (var_398 == 1) {
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "残像ﾁｬﾘｵｯﾂは消えた。";
+                    comments_row1 = "残像ﾁｬﾘｵｯﾂは消えた。";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -4059,14 +4061,14 @@ function func020(this: any) {
                         var_452 = 0;
                         var_453 = 0;
                     }
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "サーフィスは人形に戻った。";
+                    comments_row1 = "サーフィスは人形に戻った。";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -4104,8 +4106,8 @@ function func021(this: any) {
         var_178++;
         if (var_178 == 3) {
             var_217 = 0;
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -4114,7 +4116,7 @@ function func021(this: any) {
             var_25_x = var_25[1];
             var_26_x = var_26[1];
             var_27_x = var_27[1];
-            var_293 = "ﾃﾞｨｱﾎﾞﾛは動けるようになった";
+            comments_row1 = "ﾃﾞｨｱﾎﾞﾛは動けるようになった";
             var_178 = 0;
             var_198 = 1;
             var_300 = 0;
@@ -4125,8 +4127,8 @@ function func021(this: any) {
             yield func009();
             return;
         }
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4135,7 +4137,7 @@ function func021(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "…痺れていて動けない。";
+        comments_row1 = "…痺れていて動けない。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4181,15 +4183,15 @@ function func022(this: any) {
             if (var_457 == 1) {
                 var_83[var_286].Var3 = 1;
                 yield func094();
-                var_293 = "";
-                var_294 = "";
+                comments_row1 = "";
+                comments_row2 = "";
                 var_295 = "";
                 var_296 = "";
                 var_297 = "";
                 var_298 = "";
                 var_299 = 0;
-                var_293 = "極寒地にすむエスキモーはよお！";
-                var_294 = "凍傷にかかった時！";
+                comments_row1 = "極寒地にすむエスキモーはよお！";
+                comments_row2 = "凍傷にかかった時！";
                 var_198 = 1;
                 var_300 = 0;
                 var_25_x = var_25[1];
@@ -4198,8 +4200,8 @@ function func022(this: any) {
                 yield func047();
                 yield func340();
                 yield func094();
-                var_293 = var_296;
-                var_294 = var_297;
+                comments_row1 = var_296;
+                comments_row2 = var_297;
                 var_296 = "アザラシの肉の体内に入って";
                 var_297 = "治していたぜ！";
                 yield func050();
@@ -4208,8 +4210,8 @@ function func022(this: any) {
                 yield func047();
                 yield func340();
                 yield func094();
-                var_293 = var_296;
-                var_294 = var_297;
+                comments_row1 = var_296;
+                comments_row2 = var_297;
                 var_296 = "これならどうだ――っ！！";
                 var_297 = "";
                 yield func050();
@@ -4227,8 +4229,8 @@ function func022(this: any) {
                 var_458 = 0;
                 var_271 = 0;
                 var_128 = 0;
-                var_293 = var_296;
-                var_294 = var_297;
+                comments_row1 = var_296;
+                comments_row2 = var_297;
                 var_296 = "ｽﾋﾟｰﾄﾞﾜｺﾞﾝの治療によって";
                 var_297 = "ﾃﾞｨｱﾎﾞﾛは動けるようになった";
                 yield func050();
@@ -4236,8 +4238,8 @@ function func022(this: any) {
                 var_300 = 0;
                 yield func047();
                 yield func340();
-                var_293 = var_296;
-                var_294 = var_297;
+                comments_row1 = var_296;
+                comments_row2 = var_297;
                 var_296 = "しかしｽﾋﾟｰﾄﾞﾜｺﾞﾝは";
                 var_297 = "ひどく憔悴してしまったようだ…";
                 yield func050();
@@ -4254,8 +4256,8 @@ function func022(this: any) {
         var_128++;
         if (var_128 == 10) {
             var_217 = 0;
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -4264,7 +4266,7 @@ function func022(this: any) {
             var_25_x = var_25[1];
             var_26_x = var_26[1];
             var_27_x = var_27[1];
-            var_293 = "ﾃﾞｨｱﾎﾞﾛは動けるようになった";
+            comments_row1 = "ﾃﾞｨｱﾎﾞﾛは動けるようになった";
             var_128 = 0;
             var_198 = 1;
             var_300 = 0;
@@ -4275,8 +4277,8 @@ function func022(this: any) {
             yield func009();
             return;
         }
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4285,7 +4287,7 @@ function func022(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "…凍っていて動けない。";
+        comments_row1 = "…凍っていて動けない。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4323,8 +4325,8 @@ function func025(this: any) {
         var_219++;
         if (var_219 == 5) {
             var_217 = 0;
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -4333,7 +4335,7 @@ function func025(this: any) {
             var_25_x = var_25[1];
             var_26_x = var_26[1];
             var_27_x = var_27[1];
-            var_293 = "ﾃﾞｨｱﾎﾞﾛは目を覚ました";
+            comments_row1 = "ﾃﾞｨｱﾎﾞﾛは目を覚ました";
             var_219 = 0;
             var_198 = 1;
             var_300 = 0;
@@ -4345,8 +4347,8 @@ function func025(this: any) {
             return;
         }
         DSPLAY(audio_id =132);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4355,7 +4357,7 @@ function func025(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "…眠くて何もできない。";
+        comments_row1 = "…眠くて何もできない。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4498,8 +4500,8 @@ function func026(this: any) {
         }
         var_271 = 1;
         var_469 = 1;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4509,10 +4511,10 @@ function func026(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         if (var_114 == 0) {
-            var_293 = "固定されて動けない！";
+            comments_row1 = "固定されて動けない！";
         }
         if (var_114 >= 1) {
-            var_293 = "つかまれていて動けない！";
+            comments_row1 = "つかまれていて動けない！";
         }
         var_198 = 1;
         var_300 = 0;
@@ -4531,8 +4533,8 @@ function func026(this: any) {
 function func027(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(27);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4541,7 +4543,7 @@ function func027(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "動けるようになった。";
+        comments_row1 = "動けるようになった。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4554,8 +4556,8 @@ function func027(this: any) {
 function func028(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(28);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4564,7 +4566,7 @@ function func028(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "透明状態ではなくなった";
+        comments_row1 = "透明状態ではなくなった";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4577,8 +4579,8 @@ function func028(this: any) {
 function func029(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(29);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4587,7 +4589,7 @@ function func029(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "周囲がドロドロではなくなった";
+        comments_row1 = "周囲がドロドロではなくなった";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4600,8 +4602,8 @@ function func029(this: any) {
 function func030(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(30);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4610,7 +4612,7 @@ function func030(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "鈍足状態が治った";
+        comments_row1 = "鈍足状態が治った";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4665,8 +4667,8 @@ function func031(this: any) {
             yield func337();
         }
         var_470 = 0;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4675,7 +4677,7 @@ function func031(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "変身が解除された";
+        comments_row1 = "変身が解除された";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4695,8 +4697,8 @@ function func032(this: any) {
             return;
         }
         if (var_218 == 51) {
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -4705,7 +4707,7 @@ function func032(this: any) {
             var_25_x = var_25[1];
             var_26_x = var_26[1];
             var_27_x = var_27[1];
-            var_293 = "意識が…　ヤバクなって来た…";
+            comments_row1 = "意識が…　ヤバクなって来た…";
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -4733,8 +4735,8 @@ function func032(this: any) {
             }
         }
         if (var_218 >= 51 && var_410 == 403 && var_211 == 2) {
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -4743,8 +4745,8 @@ function func032(this: any) {
             var_25_x = var_25[1];
             var_26_x = var_26[1];
             var_27_x = var_27[1];
-            var_293 = "ﾋﾟｽﾄﾙｽﾞ「早く【ジッパー】デ";
-            var_294 = "　　　　体ヲ元ニ戻スンダ――――ッ！」";
+            comments_row1 = "ﾋﾟｽﾄﾙｽﾞ「早く【ジッパー】デ";
+            comments_row2 = "　　　　体ヲ元ニ戻スンダ――――ッ！」";
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -4773,8 +4775,8 @@ function func033(this: any) {
             yield func337();
         }
         var_471 = 1;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4783,7 +4785,7 @@ function func033(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "元通りくっついた";
+        comments_row1 = "元通りくっついた";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4800,8 +4802,8 @@ function func034(this: any) {
         if (var_132 != 0) {
             return;
         }
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4810,7 +4812,7 @@ function func034(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "盲目状態が治った";
+        comments_row1 = "盲目状態が治った";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4823,8 +4825,8 @@ function func034(this: any) {
 function func035(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(35);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4833,7 +4835,7 @@ function func035(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "ンドゥールの気分が消えた";
+        comments_row1 = "ンドゥールの気分が消えた";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4846,8 +4848,8 @@ function func035(this: any) {
 function func036(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(36);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4856,7 +4858,7 @@ function func036(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "混乱状態が治った";
+        comments_row1 = "混乱状態が治った";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4869,8 +4871,8 @@ function func036(this: any) {
 function func037(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(37);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4879,7 +4881,7 @@ function func037(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "冷静になった。";
+        comments_row1 = "冷静になった。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4896,8 +4898,8 @@ function func038(this: any) {
             yield func337();
         }
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4906,8 +4908,8 @@ function func038(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "ﾖｰﾖｰﾏｯ「もっとおおおおおお";
-        var_294 = "　私を叱ってええええええ」";
+        comments_row1 = "ﾖｰﾖｰﾏｯ「もっとおおおおおお";
+        comments_row2 = "　私を叱ってええええええ」";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4915,8 +4917,8 @@ function func038(this: any) {
             yield func337();
         }
         yield func340();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾖｰﾖｰﾏｯのあまりの臭さで";
         var_297 = "正気に戻った。";
         yield func050();
@@ -4935,8 +4937,8 @@ function func039(this: any) {
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
             yield func337();
         }
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4945,8 +4947,8 @@ function func039(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "錠前のショックで";
-        var_294 = "正気に戻った。";
+        comments_row1 = "錠前のショックで";
+        comments_row2 = "正気に戻った。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4959,8 +4961,8 @@ function func039(this: any) {
 function func040(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(40);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4969,7 +4971,7 @@ function func040(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "鉄塔が消滅した。";
+        comments_row1 = "鉄塔が消滅した。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -4983,8 +4985,8 @@ function func041(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(41);
         yield func094();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -4993,14 +4995,14 @@ function func041(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "ﾄﾞｯﾋﾟｵ「とぅるるるるるるるるるる」";
+        comments_row1 = "ﾄﾞｯﾋﾟｵ「とぅるるるるるるるるるる」";
         var_198 = 1;
         var_300 = 0;
         yield func047();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾄﾞｯﾋﾟｵ「ボスからの電話だッ！」";
         var_297 = "";
         yield func050();
@@ -5010,8 +5012,8 @@ function func041(this: any) {
         yield func340();
         var_144 = 91;
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾄﾞｯﾋﾟｵ「もしもし」";
         var_297 = "";
         yield func050();
@@ -5020,8 +5022,8 @@ function func041(this: any) {
         yield func047();
         yield func340();
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾄﾞｯﾋﾟｵ「早く来てください！ボス！」";
         var_297 = "";
         yield func050();
@@ -5029,8 +5031,8 @@ function func041(this: any) {
         var_300 = 0;
         yield func047();
         yield func340();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾄﾞｯﾋﾟｵ「・・・・・・・・」";
         var_297 = "";
         yield func050();
@@ -5040,8 +5042,8 @@ function func041(this: any) {
         yield func340();
         var_192 = rnd(4);
         yield func094();
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "ﾄﾞｯﾋﾟｵ「わかりました！";
         if (var_192 == 0) {
             var_297 = "       １０ターン後ですねッ！」";
@@ -5074,8 +5076,8 @@ function func042(this: any) {
             yield func337();
         }
         var_472 = 0;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -5084,7 +5086,7 @@ function func042(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "ﾄﾞｯﾋﾟｵと交代した。";
+        comments_row1 = "ﾄﾞｯﾋﾟｵと交代した。";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -5119,7 +5121,7 @@ function func043(this: any) {
         var_480 = var_475;
         var_481 = 0;
         if (var_233[var_480].Var11 == 1) {
-            var_232 = var_233[var_480].Var0;
+            item_list = var_233[var_480].Var0;
             yield func492();
             var_482 = 0;
             var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
@@ -5137,7 +5139,7 @@ function func043(this: any) {
             var_485 = var_233[var_480].Var6;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                    var_232 = var_486[var_485][var_484][0];
+                    item_list = var_486[var_485][var_484][0];
                     yield func492();
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -5150,16 +5152,16 @@ function func043(this: any) {
                 var_484 = var_484 + 1;
             }
         }
-        var_232 = var_233[var_475].Var0;
+        item_list = var_233[var_475].Var0;
         var_487 = var_233[var_475].Var13;
         var_488 = var_233[var_475].Var0;
         yield func492();
-        var_418 = var_489;
+        var_418 = item_name;
         var_225 = var_475;
         yield func433();
         yield func100();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -5168,8 +5170,8 @@ function func043(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        var_293 = "" + var_418 + "は";
-        var_294 = "朽ち果ててしまった…";
+        comments_row1 = "" + var_418 + "は";
+        comments_row2 = "朽ち果ててしまった…";
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -5385,12 +5387,12 @@ function func047(this: any) {
         var_495 = 1;
         var_494[1] = "";
         var_494[2] = "";
-        if (var_293 != "" && var_296 == "" && var_297 == "") {
-            var_494[var_495] = var_293;
+        if (comments_row1 != "" && var_296 == "" && var_297 == "") {
+            var_494[var_495] = comments_row1;
             var_495++;
         }
-        if (var_294 != "" && var_296 == "" && var_297 == "") {
-            var_494[var_495] = var_294;
+        if (comments_row2 != "" && var_296 == "" && var_297 == "") {
+            var_494[var_495] = comments_row2;
             var_495++;
         }
         if (var_295 != "") {
@@ -5513,8 +5515,8 @@ function func049(this: any) {
 
         color(var_25_x, var_26_x, var_27_x);
         mes("");
-        mes(var_293);
-        mes(var_294);
+        mes(comments_row1);
+        mes(comments_row2);
         mes(var_295);
         mes(var_296);
         mes(var_297);
@@ -6317,15 +6319,15 @@ function func060(this: any) {
                     var_527 = 0;
                 }
                 if (var_527 == 1) {
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "ｸﾞﾘｰﾝ･ﾃﾞｨが同じ部屋にいるぞ";
-                    var_294 = "このままでは降りられないぞ";
+                    comments_row1 = "ｸﾞﾘｰﾝ･ﾃﾞｨが同じ部屋にいるぞ";
+                    comments_row2 = "このままでは降りられないぞ";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -6409,15 +6411,15 @@ function func060(this: any) {
                         yield func337();
                     }
                     yield func094();
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "「ありのまま起こったことを話すぜ！」";
-                    var_294 = "";
+                    comments_row1 = "「ありのまま起こったことを話すぜ！」";
+                    comments_row2 = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -6426,8 +6428,8 @@ function func060(this: any) {
                     yield func047();
                     yield func340();
                     yield func094();
-                    var_293 = var_296;
-                    var_294 = var_297;
+                    comments_row1 = var_296;
+                    comments_row2 = var_297;
                     var_296 = "「おれは階段を降りたと思ったら";
                     var_297 = "　いつの間にか上っていた」";
                     if (var_73[var_66][var_67] == 2) {
@@ -6445,18 +6447,18 @@ function func060(this: any) {
                     return;
                 }
                 if (var_114 >= 1) {
-                    var_293 = "";
-                    var_294 = "";
+                    comments_row1 = "";
+                    comments_row2 = "";
                     var_295 = "";
                     var_296 = "";
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    var_293 = "掴まれていて降りられない！";
+                    comments_row1 = "掴まれていて降りられない！";
                     if (var_73[var_66][var_67] == 2) {
-                        var_293 = "掴まれていて上れない！";
+                        comments_row1 = "掴まれていて上れない！";
                     }
-                    var_294 = "";
+                    comments_row2 = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -6803,7 +6805,7 @@ function func062(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(62);
         var_224 = var_224 + 1;
-        var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(var_232 = 602)を追加
+        var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(item_list = 602)を追加
         return;
     });
 }
@@ -6935,14 +6937,14 @@ function func064(this: any) {
             return;
         }
         if (var_544 == 0) {
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
             var_298 = "";
             var_299 = 0;
-            var_293 = "特に何も無いようだ";
+            comments_row1 = "特に何も無いようだ";
             var_198 = 1;
             var_300 = 0;
             var_25_x = var_25[1];
@@ -6967,14 +6969,14 @@ function func066(this: any) {
         dbgprt(66);
         // 持っているアイテムの数が0の時
         if (var_224 == 0) {
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
             var_298 = "";
             var_299 = 0;
-            var_293 = "足元にジッパーが付いている。";
+            comments_row1 = "足元にジッパーが付いている。";
             var_198 = 1;
             var_300 = 0;
             var_25_x = var_25[1];
@@ -6984,14 +6986,14 @@ function func066(this: any) {
             yield func009();
             return;
         }
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "持ち物全てをジッパーに捨てますか？";
+        comments_row1 = "持ち物全てをジッパーに捨てますか？";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -7023,7 +7025,7 @@ function func067(this: any) {
             yield func428();
             yield func429();
             if (var_233[var_552].Var0 != 0 && var_552 != var_553 && var_552 != var_554 && var_552 != var_555 && var_552 != var_556) {
-                var_232 = var_233[var_552].Var0;
+                item_list = var_233[var_552].Var0;
                 yield func492();
                 var_550 = var_550 + var_483;
                 var_225 = var_552;
@@ -7036,14 +7038,14 @@ function func067(this: any) {
         }
         // アイテムを持っているが、装備している状態で捨てられない場合
         if (var_551 == 0) {
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
             var_298 = "";
             var_299 = 0;
-            var_293 = "捨てられるものがない。";
+            comments_row1 = "捨てられるものがない。";
             var_198 = 1;
             var_300 = 0;
             var_25_x = var_25[1];
@@ -7056,14 +7058,14 @@ function func067(this: any) {
             yield func009();
             return;
         }
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "全て捨てた。";
+        comments_row1 = "全て捨てた。";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -7120,8 +7122,8 @@ function func067(this: any) {
                 yield func292();
             }
             yield func248();
-            var_293 = var_296;
-            var_294 = var_297;
+            comments_row1 = var_296;
+            comments_row2 = var_297;
             var_296 = "亀はアイテムを養分として";
             var_297 = "成長したようだ。";
             if (var_559 == 4) {
@@ -7727,27 +7729,27 @@ function func071(this: any) {
             DSPLAY(audio_id =129);
         }
         var_240 = 0;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
         if (var_361 == 1) {
-            var_293 = "お腹が減ってきた…";
+            comments_row1 = "お腹が減ってきた…";
         }
         if (var_361 == 2) {
-            var_293 = "ハラペコで目が回ってきた…";
+            comments_row1 = "ハラペコで目が回ってきた…";
         }
         if (var_361 == 3) {
-            var_293 = "だめだ！　もう倒れそうだ！";
+            comments_row1 = "だめだ！　もう倒れそうだ！";
         }
         if (var_361 == 4) {
-            var_293 = "早く…　何か食べないと…";
+            comments_row1 = "早く…　何か食べないと…";
         }
         if (var_361 == 5) {
-            var_293 = "飢え死にしてしまう！";
+            comments_row1 = "飢え死にしてしまう！";
         }
         var_198 = 1;
         var_300 = 0;
@@ -7767,14 +7769,14 @@ function func071(this: any) {
 function func072(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(72);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "神砂嵐だ！！";
+        comments_row1 = "神砂嵐だ！！";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -7785,8 +7787,8 @@ function func072(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337();
             }
-            var_293 = var_296;
-            var_294 = var_297;
+            comments_row1 = var_296;
+            comments_row2 = var_297;
             var_296 = "真空状態の圧倒的破壊空間は";
             var_297 = "まさに歯車的砂嵐の小宇宙！";
             yield func050();
@@ -7860,8 +7862,8 @@ function func072(this: any) {
             var_582 = var_582 + 1;
         }
         if (var_112 == 700 || var_112 == 850) {
-            var_293 = var_296;
-            var_294 = var_297;
+            comments_row1 = var_296;
+            comments_row2 = var_297;
             if (var_112 == 700) {
                 var_296 = "…風は収まったようだ";
             }
@@ -7958,47 +7960,47 @@ function func074(this: any) {
             var_390 = var_390 + 1;
         }
         DSPLAY(audio_id =150);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
         if (var_96 == 1) {
-            var_293 = "モンスターハウスだ！";
+            comments_row1 = "モンスターハウスだ！";
             yield func132();
         }
         if (var_96 == 2) {
-            var_293 = "ﾊﾞｯﾄﾞ･ｶﾝﾊﾟﾆｰ･ﾊｳｽ だ！";
+            comments_row1 = "ﾊﾞｯﾄﾞ･ｶﾝﾊﾟﾆｰ･ﾊｳｽ だ！";
             yield func130();
         }
         if (var_96 == 3) {
-            var_293 = "ﾊｲｳｪｲｽﾀｰ･ﾙｰﾑ だ！";
+            comments_row1 = "ﾊｲｳｪｲｽﾀｰ･ﾙｰﾑ だ！";
             yield func131();
         }
         if (var_96 == 4) {
-            var_293 = "吸血鬼ハウスだ！";
+            comments_row1 = "吸血鬼ハウスだ！";
             yield func132();
         }
         if (var_96 == 5) {
-            var_293 = "スタンドハウスだ！";
+            comments_row1 = "スタンドハウスだ！";
             yield func132();
         }
         if (var_96 == 6) {
-            var_293 = "杜王町ハウスだ！";
+            comments_row1 = "杜王町ハウスだ！";
             yield func129();
         }
         if (var_96 == 7) {
-            var_293 = "水族館だ！";
+            comments_row1 = "水族館だ！";
             yield func133();
         }
         if (var_96 == 8) {
-            var_293 = "ファイトクラブだッ！";
+            comments_row1 = "ファイトクラブだッ！";
             yield func134();
         }
         if (var_96 == 9) {
-            var_293 = "西戸ハウスだ！";
+            comments_row1 = "西戸ハウスだ！";
             yield func132();
         }
         var_198 = 1;
@@ -8021,64 +8023,64 @@ function func075(this: any) {
         dbgprt(75);
         var_271 = 1;
         var_594 = 1;
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
         if (var_62 == 1 && var_91 == 12) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「エンヤ婆」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「エンヤ婆」によって守られている！";
         }
         if (var_62 == 2 && var_91 == 30) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「ﾚｸｲｴﾑ･ｼﾞｮﾙﾉ」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「ﾚｸｲｴﾑ･ｼﾞｮﾙﾉ」によって守られている！";
         }
         if (var_62 == 3 && var_91 == 99) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「ウンガロ」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「ウンガロ」によって守られている！";
         }
         if (var_62 == 5 && var_91 == var_20) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「" + var_24 + "」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「" + var_24 + "」によって守られている！";
         }
         if (var_94 == 1) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「虹村形兆」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「虹村形兆」によって守られている！";
         }
         if (var_94 == 2) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「チリペッパー」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「チリペッパー」によって守られている！";
         }
         if (var_94 == 3) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「吉良吉影」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「吉良吉影」によって守られている！";
         }
         if (var_94 == 4) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「承太郎」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「承太郎」によって守られている！";
         }
         if (var_94 == 5) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「毒グモ」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「毒グモ」によって守られている！";
         }
         if (var_94 == 6) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「サンタナ」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「サンタナ」によって守られている！";
         }
         if (var_94 == 7) {
-            var_293 = "広大な砂漠だ！";
-            var_294 = "";
+            comments_row1 = "広大な砂漠だ！";
+            comments_row2 = "";
         }
         if (var_94 == 8) {
-            var_293 = "幻覚の迷宮だ！";
-            var_294 = "";
+            comments_row1 = "幻覚の迷宮だ！";
+            comments_row2 = "";
         }
         if (var_94 == 9) {
-            var_293 = "注意せよ！ この階は";
-            var_294 = "「エンポリオ」によって守られている！";
+            comments_row1 = "注意せよ！ この階は";
+            comments_row2 = "「エンポリオ」によって守られている！";
         }
         var_198 = 1;
         var_300 = 0;
@@ -8188,8 +8190,8 @@ function func076(this: any) {
             gcopy(34, 640, 920, 340, 40);
         }
         if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
-            var_596 = Math.floor(var_91 / 100);
-            var_597 = Math.floor((var_91 - var_596 * 100) / 10);
+            var_596 = Math.floor(var_91 / 100); // Math.floor は対象の値の小数点以下を切り捨て
+            var_597 = Math.floor((var_91 - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
             var_598 = var_91 - var_596 * 100 - var_597 * 10;
             var_596 = var_596 * 20 + 640;
             var_597 = var_597 * 20 + 640;
@@ -8340,8 +8342,8 @@ function func077(this: any) {
             gcopy(34, 640, 920, 340, 40);
         }
         if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
-            var_596 = Math.floor(var_91 / 100);
-            var_597 = Math.floor((var_91 - var_596 * 100) / 10);
+            var_596 = Math.floor(var_91 / 100); // Math.floor は対象の値の小数点以下を切り捨て
+            var_597 = Math.floor((var_91 - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
             var_598 = var_91 - var_596 * 100 - var_597 * 10;
             var_596 = var_596 * 20 + 640;
             var_597 = var_597 * 20 + 640;
@@ -8423,15 +8425,15 @@ function func079(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(79);
         yield func080();
-        var_235 = getkey(81);
-        if (var_235 == 1 && var_238 == 1) {
+        conf_keyon = getkey(81);
+        if (conf_keyon == 1 && var_238 == 1) {
             yield func236();
             return;
         }
         if (var_139 == 10 || var_139 == 20 || var_139 == 30 || var_139 == 40) {
             yield func094();
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -8442,33 +8444,33 @@ function func079(this: any) {
             var_27_x = var_27[1];
             if (var_139 == 10) {
                 if (var_601 == 0) {
-                    var_293 = "「このヘアースタイルが";
-                    var_294 = "　チンケな髪だとォ？」";
+                    comments_row1 = "「このヘアースタイルが";
+                    comments_row2 = "　チンケな髪だとォ？」";
                 }
                 if (var_601 == 1) {
-                    var_293 = "「このヘアースタイルが";
-                    var_294 = "　サザエさんみてェーだとォ？」";
+                    comments_row1 = "「このヘアースタイルが";
+                    comments_row2 = "　サザエさんみてェーだとォ？」";
                 }
                 if (var_601 == 2) {
-                    var_293 = "「このヘアースタイルが";
-                    var_294 = "　くだらねーだとォ？」";
+                    comments_row1 = "「このヘアースタイルが";
+                    comments_row2 = "　くだらねーだとォ？」";
                 }
                 if (var_601 == 3) {
-                    var_293 = "「このヘアースタイルが";
-                    var_294 = "　古くさいセンスだとォ？」";
+                    comments_row1 = "「このヘアースタイルが";
+                    comments_row2 = "　古くさいセンスだとォ？」";
                 }
             }
             if (var_139 == 20) {
-                var_293 = "「たしかに聞いたぞ";
-                var_294 = "　コラ―――――――ッ！」";
+                comments_row1 = "「たしかに聞いたぞ";
+                comments_row2 = "　コラ―――――――ッ！」";
             }
             if (var_139 == 30) {
-                var_293 = "「どこ隠れやがったあ――――";
-                var_294 = "　スッタコがぁ～～～～ッ」";
+                comments_row1 = "「どこ隠れやがったあ――――";
+                comments_row2 = "　スッタコがぁ～～～～ッ」";
             }
             if (var_139 == 40) {
-                var_293 = "「けなすやつあ　ゆるさねえ～～～～";
-                var_294 = "　何者ﾝだろーと黙っちゃあいねえッ！」";
+                comments_row1 = "「けなすやつあ　ゆるさねえ～～～～";
+                comments_row2 = "　何者ﾝだろーと黙っちゃあいねえッ！」";
             }
             var_198 = 1;
             var_300 = 0;
@@ -8476,8 +8478,8 @@ function func079(this: any) {
         }
         if (var_144 == 10 || var_144 == 15 || var_144 == 20 || var_144 == 25 || var_144 == 30 || var_144 == 35 || var_144 == 40 || var_144 == 45) {
             yield func094();
-            var_293 = "";
-            var_294 = "";
+            comments_row1 = "";
+            comments_row2 = "";
             var_295 = "";
             var_296 = "";
             var_297 = "";
@@ -8487,36 +8489,36 @@ function func079(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             if (var_144 == 10) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「今 ボスから電話があったんだ…";
-                var_294 = "　　　　僕の任務は…」";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「今 ボスから電話があったんだ…";
+                comments_row2 = "　　　　僕の任務は…」";
             }
             if (var_144 == 15) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「えーと…　なんだっけ…」";
-                var_294 = "";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「えーと…　なんだっけ…」";
+                comments_row2 = "";
             }
             if (var_144 == 20) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「…やばい…！ このままここに";
-                var_294 = "　　　　ボケッとしてるのはやばいぞッ！」";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「…やばい…！ このままここに";
+                comments_row2 = "　　　　ボケッとしてるのはやばいぞッ！」";
             }
             if (var_144 == 25) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「すぐにも襲われそうだッ！」";
-                var_294 = "";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「すぐにも襲われそうだッ！」";
+                comments_row2 = "";
             }
             if (var_144 == 30) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「ど…どこにいるんですか？";
-                var_294 = "　　　　ボス！！」";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「ど…どこにいるんですか？";
+                comments_row2 = "　　　　ボス！！」";
             }
             if (var_144 == 35) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「オレの近くにいるのですかッ？」";
-                var_294 = "";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「オレの近くにいるのですかッ？」";
+                comments_row2 = "";
             }
             if (var_144 == 40) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「いるならすぐに来て下さい！」";
-                var_294 = "";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「いるならすぐに来て下さい！」";
+                comments_row2 = "";
             }
             if (var_144 == 45) {
-                var_293 = "ﾄﾞｯﾋﾟｵ「足に力が入らないんです…」";
-                var_294 = "";
+                comments_row1 = "ﾄﾞｯﾋﾟｵ「足に力が入らないんです…」";
+                comments_row2 = "";
             }
             var_198 = 1;
             var_300 = 0;
@@ -9303,7 +9305,7 @@ function ChangeScale() {
 function func080(this: any, is_key_reset = true) {
         return __awaiter(this, void 0, void 0, function* () {
             dbgprt(80);
-            var_235 = 0;
+            conf_keyon = 0;
             var_254 = 0;
             var_257 = 0;
             var_255 = 0;
@@ -9411,9 +9413,10 @@ function func080(this: any, is_key_reset = true) {
             }
     
             // F1キーを押した際の動作　画面サイズ変更
+            // var
             if (var_626 == 0) {
-                var_235 = getkey(112);
-                if (var_235 == 1 && var_10 == 1) {
+                conf_keyon = getkey(112);
+                if (conf_keyon == 1 && var_10 == 1) {
                     var_10 = 0;
                     width(340, 340);
                     if (var_627 == 0) {
@@ -9427,14 +9430,14 @@ function func080(this: any, is_key_reset = true) {
                         if (var_628 == 1 || var_629 == 1) {
                             yield wait(2);
                         }
-                        var_235 = getkey(112);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(112);
+                        if (conf_keyon == 0) {
                             break;
                         }
                     }
                     return;
                 }
-                if (var_235 == 1 && var_10 == 0) {
+                if (conf_keyon == 1 && var_10 == 0) {
                     var_10 = 1;
                     width(680, 680);
                     if (var_627 == 0) {
@@ -9448,46 +9451,46 @@ function func080(this: any, is_key_reset = true) {
                         if (var_628 == 1 || var_629 == 1) {
                             yield wait(2);
                         }
-                        var_235 = getkey(112);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(112);
+                        if (conf_keyon == 0) {
                             break;
                         }
                     }
                     return;
                 }
                 // F2キーを押した際の動作
-                var_235 = getkey(113);
-                if (var_235 == 1) {
+                conf_keyon = getkey(113);
+                if (conf_keyon == 1) {
                     yield func088(); // 音量を小さくする（ボリュームコントロールのWAVE変更）
                 }
     
                 // F3キーを押した際の動作
-                var_235 = getkey(114);
-                if (var_235 == 1) {
+                conf_keyon = getkey(114);
+                if (conf_keyon == 1) {
                     yield func087(); // 音量を大きくする（ボリュームコントロールのWAVE変更）
                 }
     
                 // F4キーを押した際の動作
-                var_235 = getkey(115);
-                if (var_235 == 1) {
+                conf_keyon = getkey(115);
+                if (conf_keyon == 1) {
                     yield func085(); // 効果音を小さくする
                 }
     
                 // F5キーを押した際の動作
-                var_235 = getkey(116);
-                if (var_235 == 1) {
+                conf_keyon = getkey(116);
+                if (conf_keyon == 1) {
                     yield func086(); // 効果音を大きくする
                 }
     
                 // F6キーを押した際の動作　装備品の情報を「disc.txt」に出力する
-                var_235 = getkey(117);
-                if (var_235 == 1 && var_628 == 0 && var_627 == 0 && var_629 == 0) {
+                conf_keyon = getkey(117);
+                if (conf_keyon == 1 && var_628 == 0 && var_627 == 0 && var_629 == 0) {
                     yield func227(); // F6キーを押しての現在ステータスをテキストファイルへ出力
                     var_630 = 1;
                     for (let cnt3 = 0; true; ++cnt3) {
                         yield func337();
-                        var_235 = getkey(117);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(117);
+                        if (conf_keyon == 0) {
                             break;
                         }
                     }
@@ -9495,8 +9498,8 @@ function func080(this: any, is_key_reset = true) {
                 }
     
                 // F7キーを押した際の動作　BGMのオン・オフ（オンにした場合DISC使用時や階段を降りてから再開）
-                var_235 = getkey(118);
-                if (var_235 == 1 && var_631 == 1000) {
+                conf_keyon = getkey(118);
+                if (conf_keyon == 1 && var_631 == 1000) {
                     DMSTOP();
                     var_631 = 0;
                     var_632 = 1;
@@ -9511,14 +9514,14 @@ function func080(this: any, is_key_reset = true) {
                         if (var_628 == 1 || var_629 == 1) {
                             yield wait(2);
                         }
-                        var_235 = getkey(118);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(118);
+                        if (conf_keyon == 0) {
                             break;
                         }
                     }
                     return;
                 }
-                if (var_235 == 1 && var_631 == 0) {
+                if (conf_keyon == 1 && var_631 == 0) {
                     var_631 = 1000;
                     var_633 = 1;
                     var_632 = 0;
@@ -9532,8 +9535,8 @@ function func080(this: any, is_key_reset = true) {
                         if (var_628 == 1 || var_629 == 1) {
                             yield wait(2);
                         }
-                        var_235 = getkey(118);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(118);
+                        if (conf_keyon == 0) {
                             break;
                         }
                     }
@@ -9542,9 +9545,9 @@ function func080(this: any, is_key_reset = true) {
     
                 // F12キーを押した際の動作　フルスクリーン切り替え
                 
-                var_235 = getkey(123);
+                conf_keyon = getkey(123);
                 /*
-                if (var_235 == 1) {
+                if (conf_keyon == 1) {
                     const myResizeBtn = document.getElementById('resizeBtn')
                     myResizeBtn.addEventListener('click', function () {
                       ipcRenderer.send('resize-me-please')
@@ -9552,7 +9555,7 @@ function func080(this: any, is_key_reset = true) {
                 }*/               
 
                 /*
-                if (var_407 == 0 && var_235 == 1 && var_637 == 0) {
+                if (var_407 == 0 && conf_keyon == 1 && var_637 == 0) {
             
                     chgdisp(1, 640, 480);
                     var_638 = ginfo(20);
@@ -9570,8 +9573,8 @@ function func080(this: any, is_key_reset = true) {
                     bgscr(0, 680, 680, 2, var_641, var_642, 340, 340);
                     gsel(0, 2);
                     for (let cnt3 = 0; true; ++cnt3) {
-                        var_235 = getkey(123);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(123);
+                        if (conf_keyon == 0) {
                             break;
                         }
                         if (var_628 == 0 && var_629 == 0) {
@@ -9584,7 +9587,7 @@ function func080(this: any, is_key_reset = true) {
                     return;
                 }
     
-                if (var_407 == 0 && var_235 == 1 && var_637 == 1) {
+                if (var_407 == 0 && conf_keyon == 1 && var_637 == 1) {
                     var_637 = 2;
                     var_10 = 1;
                     var_638 = ginfo(20);
@@ -9599,8 +9602,8 @@ function func080(this: any, is_key_reset = true) {
                     bgscr(0, var_643, var_644, 2, var_641, var_642);
                     gsel(0, 2);
                     for (let cnt3 = 0; true; ++cnt3) {
-                        var_235 = getkey(123);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(123);
+                        if (conf_keyon == 0) {
                             break;
                         }
                         if (var_628 == 0 && var_629 == 0) {
@@ -9612,7 +9615,7 @@ function func080(this: any, is_key_reset = true) {
                     }
                     return;
                 }
-                if (var_407 == 0 && var_235 == 1 && var_637 == 2) {
+                if (var_407 == 0 && conf_keyon == 1 && var_637 == 2) {
                     var_637 = 4;
                     var_10 = 1;
                     var_638 = ginfo(20);
@@ -9631,8 +9634,8 @@ function func080(this: any, is_key_reset = true) {
                     bgscr(0, var_643, var_644, 2, var_641, var_642);
                     gsel(0, 2);
                     for (let cnt3 = 0; true; ++cnt3) {
-                        var_235 = getkey(123);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(123);
+                        if (conf_keyon == 0) {
                             break;
                         }
                         if (var_628 == 0 && var_629 == 0) {
@@ -9644,7 +9647,7 @@ function func080(this: any, is_key_reset = true) {
                     }
                     return;
                 }
-                if (var_407 == 0 && var_235 == 1 && var_637 == 4) {
+                if (var_407 == 0 && conf_keyon == 1 && var_637 == 4) {
                     var_637 = 0;
                     gsel(37, -1);
                     screen_(0, 680, 680, 2);
@@ -9663,8 +9666,8 @@ function func080(this: any, is_key_reset = true) {
                     gsel(0, 1);
                     chgdisp();
                     for (let cnt3 = 0; true; ++cnt3) {
-                        var_235 = getkey(123);
-                        if (var_235 == 0) {
+                        conf_keyon = getkey(123);
+                        if (conf_keyon == 0) {
                             break;
                         }
                         if (var_628 == 0 && var_629 == 0) {

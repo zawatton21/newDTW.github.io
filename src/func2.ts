@@ -548,8 +548,8 @@ function func209(this: any) {
         if (var_911 >= 1 && var_911 <= 6) {
             var_447 = 48;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                var_235 = getkey(var_447);
-                if (var_235 == 1) {
+                conf_keyon = getkey(var_447);
+                if (conf_keyon == 1) {
                     var_912 = var_447;
                     yield func213();
                     yield func051();
@@ -561,8 +561,8 @@ function func209(this: any) {
             }
             var_447 = 65;
             for (let cnt2 = 0; cnt2 < 26; ++cnt2) {
-                var_235 = getkey(var_447);
-                if (var_235 == 1) {
+                conf_keyon = getkey(var_447);
+                if (conf_keyon == 1) {
                     var_912 = var_447;
                     yield func213();
                     yield func051();
@@ -572,8 +572,8 @@ function func209(this: any) {
                 }
                 var_447++;
             }
-            var_235 = getkey(16);
-            if (var_235 == 1) {
+            conf_keyon = getkey(16);
+            if (conf_keyon == 1) {
                 var_912 = 16;
                 yield func213();
                 yield func051();
@@ -582,8 +582,8 @@ function func209(this: any) {
                 yield func209();
                 return;
             }
-            var_235 = getkey(13);
-            if (var_235 == 1) {
+            conf_keyon = getkey(13);
+            if (conf_keyon == 1) {
                 var_912 = 13;
                 yield func213();
                 yield func051();
@@ -592,8 +592,8 @@ function func209(this: any) {
                 yield func209();
                 return;
             }
-            var_235 = getkey(17);
-            if (var_235 == 1) {
+            conf_keyon = getkey(17);
+            if (conf_keyon == 1) {
                 var_912 = 17;
                 yield func213();
                 yield func051();
@@ -2166,25 +2166,25 @@ function func227(this: any) {
         var_979 = var_979 + "■■■攻撃ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
         if (var_357 != 0) {
             yield func426();
-            var_232 = var_233[var_553].Var0;
+            item_list = var_233[var_553].Var0;
             var_487 = var_233[var_553].Var13;
             yield func492();
             if (var_233[var_553].Var4 == 0 && var_233[var_553].Var19 <= 1) {
-                var_981 = "" + var_489;
+                var_981 = "" + item_name;
             }
             if (var_233[var_553].Var4 == 0 && var_233[var_553].Var19 > 1) {
-                var_981 = "" + var_489 + " ★" + var_233[var_553].Var19;
+                var_981 = "" + item_name + " ★" + var_233[var_553].Var19;
             }
             if (var_233[var_553].Var4 > 0 && var_233[var_553].Var19 <= 1) {
-                var_981 = "" + var_489 + "+" + var_233[var_553].Var4;
+                var_981 = "" + item_name + "+" + var_233[var_553].Var4;
             }
             if (var_233[var_553].Var4 > 0 && var_233[var_553].Var19 > 1) {
-                var_981 = "" + var_489 + "+" + var_233[var_553].Var4 + " ★" + var_233[var_553].Var19;
+                var_981 = "" + item_name + "+" + var_233[var_553].Var4 + " ★" + var_233[var_553].Var19;
             }
             var_979 = var_979 + "" + var_981 + "\n";
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_553].Var19; ++cnt2) {
-                var_232 = var_233[var_553]["Var" + var_982];
+                item_list = var_233[var_553]["Var" + var_982];
                 yield func492();
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + var_828 + "\n";
@@ -2205,25 +2205,25 @@ function func227(this: any) {
         var_979 = var_979 + "■■■防御ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
         if (var_358 != 0) {
             yield func427();
-            var_232 = var_233[var_554].Var0;
+            item_list = var_233[var_554].Var0;
             var_487 = var_233[var_554].Var13;
             yield func492();
             if (var_233[var_554].Var4 == 0 && var_233[var_554].Var19 <= 1) {
-                var_981 = "" + var_489;
+                var_981 = "" + item_name;
             }
             if (var_233[var_554].Var4 == 0 && var_233[var_554].Var19 > 1) {
-                var_981 = "" + var_489 + " ★" + var_233[var_554].Var19;
+                var_981 = "" + item_name + " ★" + var_233[var_554].Var19;
             }
             if (var_233[var_554].Var4 > 0 && var_233[var_554].Var19 <= 1) {
-                var_981 = "" + var_489 + "+" + var_233[var_554].Var4;
+                var_981 = "" + item_name + "+" + var_233[var_554].Var4;
             }
             if (var_233[var_554].Var4 > 0 && var_233[var_554].Var19 > 1) {
-                var_981 = "" + var_489 + "+" + var_233[var_554].Var4 + " ★" + var_233[var_554].Var19;
+                var_981 = "" + item_name + "+" + var_233[var_554].Var4 + " ★" + var_233[var_554].Var19;
             }
             var_979 = var_979 + "" + var_981 + "\n";
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_554].Var19; ++cnt2) {
-                var_232 = var_233[var_554]["Var" + var_982];
+                item_list = var_233[var_554]["Var" + var_982];
                 yield func492();
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + var_828 + "\n";
@@ -2244,25 +2244,25 @@ function func227(this: any) {
         var_979 = var_979 + "■■■能力ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
         if (var_215 != 0) {
             yield func428();
-            var_232 = var_233[var_555].Var0;
+            item_list = var_233[var_555].Var0;
             var_487 = var_233[var_555].Var13;
             yield func492();
             if (var_233[var_555].Var4 == 0 && var_233[var_555].Var19 <= 1) {
-                var_981 = "" + var_489;
+                var_981 = "" + item_name;
             }
             if (var_233[var_555].Var4 == 0 && var_233[var_555].Var19 > 1) {
-                var_981 = "" + var_489 + " ★" + var_233[var_555].Var19;
+                var_981 = "" + item_name + " ★" + var_233[var_555].Var19;
             }
             if (var_233[var_555].Var4 > 0 && var_233[var_555].Var19 <= 1) {
-                var_981 = "" + var_489 + "+" + var_233[var_555].Var4;
+                var_981 = "" + item_name + "+" + var_233[var_555].Var4;
             }
             if (var_233[var_555].Var4 > 0 && var_233[var_555].Var19 > 1) {
-                var_981 = "" + var_489 + "+" + var_233[var_555].Var4 + " ★" + var_233[var_555].Var19;
+                var_981 = "" + item_name + "+" + var_233[var_555].Var4 + " ★" + var_233[var_555].Var19;
             }
             var_979 = var_979 + "" + var_981 + "\n";
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_555].Var19; ++cnt2) {
-                var_232 = var_233[var_555]["Var" + var_982];
+                item_list = var_233[var_555]["Var" + var_982];
                 yield func492();
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + var_828 + "\n";
@@ -2387,6 +2387,7 @@ function func229(this: any) {
         var_985 = var_985 + 1200;
         {
             var_233 = [];
+            // var_735 = "01.dat", var_985 = 
             const data = bload(var_735, null, var_985);
             data.forEach(function (d: any) {
                 var_233.push(ItemInfo.Load(d));
@@ -2734,8 +2735,8 @@ function func229(this: any) {
         }
         notesel(var_754);
         noteload(var_752);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -3433,20 +3434,20 @@ function func234(this: any) {
         dbgprt(234);
         var_205 = 1;
         yield func231();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "セーブして終了します。";
-        var_294 = "";
+        comments_row1 = "セーブして終了します。";
+        comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
         yield func340();
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
@@ -3720,15 +3721,15 @@ function func235(this: any) {
 function func236(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(236);
-        var_293 = "";
-        var_294 = "";
+        comments_row1 = "";
+        comments_row2 = "";
         var_295 = "";
         var_296 = "";
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        var_293 = "今回の冒険を諦めますか？";
-        var_294 = "諦めるならば「Y」キーを押してください";
+        comments_row1 = "今回の冒険を諦めますか？";
+        comments_row2 = "諦めるならば「Y」キーを押してください";
         var_198 = 1;
         var_300 = 0;
         yield func051();
@@ -3740,8 +3741,8 @@ function func236(this: any) {
 function func237(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(237);
-        var_293 = var_296;
-        var_294 = var_297;
+        comments_row1 = var_296;
+        comments_row2 = var_297;
         var_296 = "確認のため「＠」キーを押してください";
         var_297 = "";
         var_198 = 1;
@@ -3756,16 +3757,16 @@ function func238(this: any) {
         dbgprt(238);
         yield func337();
         if (var_1061 == 1) {
-            var_235 = getkey(89);
-            if (var_235 == 1) {
+            conf_keyon = getkey(89);
+            if (conf_keyon == 1) {
                 var_198 = 0;
                 yield func237();
                 return;
             }
         }
         if (var_1061 == 2) {
-            var_235 = getkey(192);
-            if (var_235 == 1) {
+            conf_keyon = getkey(192);
+            if (conf_keyon == 1) {
                 var_198 = 0;
                 var_211 = 0;
                 var_356 = 305;

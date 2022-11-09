@@ -14,7 +14,7 @@ const createWindow = () => {
   //レンダラー読み出し部分
   const mainWindow = new BrowserWindow({
     width: 340,
-    height: 360, // macは318/348, windowsは 300/350
+    height: 380, // macは318/348, windowsは 300/350
     resizable: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),//<--ファイルを指定。ここでは同一階層にあるpreload.js
@@ -25,8 +25,7 @@ const createWindow = () => {
 )
 
   // Aspect ratio works on Windows, Linux, and Mac:
-
-  mainWindow.setAspectRatio(320 / 330); // macは340/340、windowsは 320/330
+  mainWindow.setAspectRatio(320 / 380); // macは340/340、windowsは 320/330
   
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
