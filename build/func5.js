@@ -12823,10 +12823,10 @@ function func512() {
                     if (!(var_78[var_320].Var15 == 1)) return [3 /*break*/, 10];
                     var_1842 = var_78[var_320].Var1;
                     var_1843 = var_78[var_320].Var2;
-                    if (var_91 < 19) {
+                    if (current_floor < 19) {
                         var_1844 = 1;
                     }
-                    if (var_91 >= 19) {
+                    if (current_floor >= 19) {
                         var_1844 = 2;
                     }
                     var_1845 = 3;
@@ -12847,7 +12847,7 @@ function func512() {
                         var_78[var_320][var_2356] = 0;
                     }
                     var_83[var_673].Var21 = 1;
-                    if (!(var_91 < 19)) return [3 /*break*/, 5];
+                    if (!(current_floor < 19)) return [3 /*break*/, 5];
                     cnt4_13 = 0;
                     _a.label = 2;
                 case 2:
@@ -12878,7 +12878,7 @@ function func512() {
                     ++cnt4_13;
                     return [3 /*break*/, 2];
                 case 5:
-                    if (!(var_91 >= 19)) return [3 /*break*/, 9];
+                    if (!(current_floor >= 19)) return [3 /*break*/, 9];
                     cnt4_14 = 0;
                     _a.label = 6;
                 case 6:
@@ -12922,6 +12922,7 @@ function func512() {
         });
     });
 }
+// 射撃discヘブンズドアーの発動効果
 function func513() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -16538,16 +16539,16 @@ function func535() {
                     if (var_94 == 9) {
                         return [2 /*return*/];
                     }
-                    if (var_91 >= 1 && var_91 <= 5) {
+                    if (current_floor >= 1 && current_floor <= 5) {
                         var_337 = 3;
                     }
-                    if (var_91 >= 6 && var_91 <= 12) {
+                    if (current_floor >= 6 && current_floor <= 12) {
                         var_337 = 4;
                     }
-                    if (var_91 >= 13 && var_91 <= 20) {
+                    if (current_floor >= 13 && current_floor <= 20) {
                         var_337 = 5;
                     }
-                    if (var_91 >= 20) {
+                    if (current_floor >= 20) {
                         var_337 = 6;
                     }
                     return [4 /*yield*/, func536()];
@@ -16883,7 +16884,7 @@ function func536() {
                 if (var_2420 == 26) {
                     var_2421 = 19;
                 }
-                if (var_2421 == 6 && var_91 <= 3) {
+                if (var_2421 == 6 && current_floor <= 3) {
                     var_2421 = 18;
                 }
                 if (var_2421 == 19) {
@@ -16893,10 +16894,10 @@ function func536() {
                     if (var_62 == 2) {
                         var_2421 = 21;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_2421 = 21;
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_2421 = 21;
                     }
                     if (var_94 >= 1) {
@@ -16904,16 +16905,16 @@ function func536() {
                     }
                 }
                 if (var_2421 == 6) {
-                    if (var_62 == 1 && var_91 == 12) {
+                    if (var_62 == 1 && current_floor == 12) {
                         var_2421 = 15;
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_2421 = 15;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_2421 = 15;
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_2421 = 15;
                     }
                     if (var_94 >= 1) {
@@ -16921,16 +16922,16 @@ function func536() {
                     }
                 }
                 if (var_2421 == 12) {
-                    if (var_62 == 1 && var_91 == 12) {
+                    if (var_62 == 1 && current_floor == 12) {
                         var_2421 = 3;
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_2421 = 3;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_2421 = 3;
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_2421 = 3;
                     }
                     if (var_94 >= 1) {
@@ -16938,16 +16939,16 @@ function func536() {
                     }
                 }
                 if (var_2421 == 24) {
-                    if (var_62 == 1 && var_91 == 12) {
+                    if (var_62 == 1 && current_floor == 12) {
                         var_2421 = 16;
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_2421 = 16;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_2421 = 16;
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_2421 = 16;
                     }
                     if (var_94 >= 1) {
@@ -16955,16 +16956,16 @@ function func536() {
                     }
                 }
                 if (var_2421 == 5) {
-                    if (var_62 == 1 && var_91 == 12) {
+                    if (var_62 == 1 && current_floor == 12) {
                         var_2421 = 9;
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_2421 = 9;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_2421 = 9;
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_2421 = 9;
                     }
                     if (var_94 >= 1) {
@@ -24758,16 +24759,16 @@ function func553() {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             if (var_73[var_447][var_449] == 1) {
                 var_2497 = 0;
-                if (var_62 == 1 && var_91 == 12) {
+                if (var_62 == 1 && current_floor == 12) {
                     var_2497 = 1;
                 }
-                if (var_62 == 2 && var_91 == 30) {
+                if (var_62 == 2 && current_floor == 30) {
                     var_2497 = 1;
                 }
-                if (var_62 == 3 && var_91 == 99) {
+                if (var_62 == 3 && current_floor == 99) {
                     var_2497 = 1;
                 }
-                if (var_62 == 5 && var_91 == var_20) {
+                if (var_62 == 5 && current_floor == var_20) {
                     var_2497 = 1;
                 }
                 if (var_2497 == 1) {
@@ -25041,22 +25042,22 @@ function func555() {
                 case 0:
                     dbgprt(555);
                     var_952 = rnd(3);
-                    if (var_91 >= 1 && var_91 < 6) {
+                    if (current_floor >= 1 && current_floor < 6) {
                         var_952 = var_952 + 4;
                     }
-                    if (var_91 >= 6 && var_91 < 13) {
+                    if (current_floor >= 6 && current_floor < 13) {
                         var_952 = var_952 + 5;
                     }
-                    if (var_91 >= 13 && var_91 < 20) {
+                    if (current_floor >= 13 && current_floor < 20) {
                         var_952 = var_952 + 6;
                     }
-                    if (var_91 >= 20 && var_91 < 30) {
+                    if (current_floor >= 20 && current_floor < 30) {
                         var_952 = var_952 + 7;
                     }
-                    if (var_91 >= 30) {
+                    if (current_floor >= 30) {
                         var_952 = var_952 + 7;
                     }
-                    if (var_62 == 1 && var_91 == 12 && var_94 == 0 && var_386 == 0) {
+                    if (var_62 == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
                         return [2 /*return*/];
                     }
                     if (var_94 == 9) {
@@ -25167,7 +25168,7 @@ function func555() {
                     if (var_953 == 104) {
                         var_1053 = 99;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_1053 = 0;
                     }
                     var_82[var_440][var_441] = var_673;
@@ -25319,7 +25320,7 @@ function func555() {
                     var_83[var_673].Var37 = var_83[var_673].Var5;
                     var_83[var_673].Var38 = 0;
                     var_83[var_673].Var39 = 0;
-                    if (!(var_62 == 4 && var_91 >= 10)) return [3 /*break*/, 7];
+                    if (!(var_62 == 4 && current_floor >= 10)) return [3 /*break*/, 7];
                     return [4 /*yield*/, func558()];
                 case 6:
                     _a.sent();
@@ -25385,7 +25386,7 @@ function func556() {
             switch (_a.label) {
                 case 0:
                     dbgprt(556);
-                    if (var_62 == 1 && var_91 == 12 && var_94 == 0 && var_386 == 0) {
+                    if (var_62 == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
                         return [2 /*return*/];
                     }
                     if (var_97 > 150 && var_123 == 0) {
@@ -26688,7 +26689,7 @@ function func556() {
                             var_83[var_673].Var3 = 999;
                         }
                     }
-                    if (!(var_62 == 4 && var_91 >= 10)) return [3 /*break*/, 7];
+                    if (!(var_62 == 4 && current_floor >= 10)) return [3 /*break*/, 7];
                     return [4 /*yield*/, func558()];
                 case 6:
                     _a.sent();
@@ -26874,7 +26875,7 @@ function func557() {
                     var_83[var_673].Var37 = var_83[var_673].Var5;
                     var_83[var_673].Var38 = 0;
                     var_83[var_673].Var39 = 0;
-                    if (!(var_62 == 4 && var_91 >= 10)) return [3 /*break*/, 3];
+                    if (!(var_62 == 4 && current_floor >= 10)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func558()];
                 case 2:
                     _a.sent();
@@ -26935,7 +26936,7 @@ function func558() {
                 if (var_83[var_673].Var0 == 127) {
                     var_2562 = 1;
                 }
-                var_2563 = var_91 - 10;
+                var_2563 = current_floor - 10;
                 var_2564 = rnd(3);
                 var_2562 = var_2562 + var_2564;
                 var_83[var_673].Var39 = var_2563 + var_2562;
@@ -27156,13 +27157,13 @@ function func562() {
                     if (var_62 == 1 || var_62 == 3 || var_62 == 4) {
                         var_2567 = 1;
                     }
-                    if (var_62 == 2 && var_91 >= 26) {
+                    if (var_62 == 2 && current_floor >= 26) {
                         var_2567 = 1;
                     }
                     if (var_94 >= 1) {
                         var_2567 = 1;
                     }
-                    if (var_62 == 2 && var_91 == 1 && var_1040 == 1) {
+                    if (var_62 == 2 && current_floor == 1 && var_1040 == 1) {
                         var_2567 = 0;
                         var_1040 = 2;
                     }
@@ -27233,7 +27234,7 @@ function func563() {
                     dbgprt(563);
                     var_387 = 0;
                     var_386 = 0;
-                    if (!(var_62 == 1 && var_91 == 12 && var_94 == 0)) return [3 /*break*/, 2];
+                    if (!(var_62 == 1 && current_floor == 12 && var_94 == 0)) return [3 /*break*/, 2];
                     var_2543 = 1;
                     var_386 = 1;
                     return [4 /*yield*/, func556()];
@@ -27242,7 +27243,7 @@ function func563() {
                     var_2543 = 0;
                     _a.label = 2;
                 case 2:
-                    if (!(var_62 == 2 && var_91 == 30)) return [3 /*break*/, 4];
+                    if (!(var_62 == 2 && current_floor == 30)) return [3 /*break*/, 4];
                     var_2543 = 6;
                     return [4 /*yield*/, func556()];
                 case 3:
@@ -27250,7 +27251,7 @@ function func563() {
                     var_2543 = 0;
                     _a.label = 4;
                 case 4:
-                    if (!(var_62 == 3 && var_91 == 99)) return [3 /*break*/, 6];
+                    if (!(var_62 == 3 && current_floor == 99)) return [3 /*break*/, 6];
                     var_2543 = 7;
                     return [4 /*yield*/, func556()];
                 case 5:
@@ -27343,7 +27344,7 @@ function func564() {
                     }
                     var_2572 = 5;
                     var_2573 = 0;
-                    if (!(var_91 >= 2 && var_992[1] != 0)) return [3 /*break*/, 2];
+                    if (!(current_floor >= 2 && var_992[1] != 0)) return [3 /*break*/, 2];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 2];
                     var_2544 = var_992[1];
@@ -27354,7 +27355,7 @@ function func564() {
                     var_2573++;
                     _a.label = 2;
                 case 2:
-                    if (!(var_91 >= 3 && var_992[2] != 0)) return [3 /*break*/, 4];
+                    if (!(current_floor >= 3 && var_992[2] != 0)) return [3 /*break*/, 4];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 4];
                     var_2544 = var_992[2];
@@ -27365,7 +27366,7 @@ function func564() {
                     var_2573++;
                     _a.label = 4;
                 case 4:
-                    if (!(var_91 >= 5 && var_992[3] != 0)) return [3 /*break*/, 6];
+                    if (!(current_floor >= 5 && var_992[3] != 0)) return [3 /*break*/, 6];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 6];
                     var_2544 = var_992[3];
@@ -27376,7 +27377,7 @@ function func564() {
                     var_2573++;
                     _a.label = 6;
                 case 6:
-                    if (!(var_91 >= 6 && var_992[4] != 0)) return [3 /*break*/, 8];
+                    if (!(current_floor >= 6 && var_992[4] != 0)) return [3 /*break*/, 8];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 8];
                     var_2544 = var_992[4];
@@ -27387,7 +27388,7 @@ function func564() {
                     var_2573++;
                     _a.label = 8;
                 case 8:
-                    if (!(var_91 >= 9 && var_992[5] != 0)) return [3 /*break*/, 10];
+                    if (!(current_floor >= 9 && var_992[5] != 0)) return [3 /*break*/, 10];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 10];
                     var_2544 = var_992[5];
@@ -27398,7 +27399,7 @@ function func564() {
                     var_2573++;
                     _a.label = 10;
                 case 10:
-                    if (!(var_91 >= 11 && var_992[6] != 0)) return [3 /*break*/, 12];
+                    if (!(current_floor >= 11 && var_992[6] != 0)) return [3 /*break*/, 12];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 12];
                     var_2544 = var_992[6];
@@ -27409,7 +27410,7 @@ function func564() {
                     var_2573++;
                     _a.label = 12;
                 case 12:
-                    if (!(var_91 >= 13 && var_992[7] != 0)) return [3 /*break*/, 14];
+                    if (!(current_floor >= 13 && var_992[7] != 0)) return [3 /*break*/, 14];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 14];
                     var_2544 = var_992[7];
@@ -27420,7 +27421,7 @@ function func564() {
                     var_2573++;
                     _a.label = 14;
                 case 14:
-                    if (!(var_91 >= 16 && var_992[8] != 0)) return [3 /*break*/, 16];
+                    if (!(current_floor >= 16 && var_992[8] != 0)) return [3 /*break*/, 16];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 16];
                     var_2544 = var_992[8];
@@ -27431,7 +27432,7 @@ function func564() {
                     var_2573++;
                     _a.label = 16;
                 case 16:
-                    if (!(var_91 >= 19 && var_992[9] != 0)) return [3 /*break*/, 18];
+                    if (!(current_floor >= 19 && var_992[9] != 0)) return [3 /*break*/, 18];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 18];
                     var_2544 = var_992[9];
@@ -27442,7 +27443,7 @@ function func564() {
                     var_2573++;
                     _a.label = 18;
                 case 18:
-                    if (!(var_91 >= 22 && var_992[10] != 0)) return [3 /*break*/, 20];
+                    if (!(current_floor >= 22 && var_992[10] != 0)) return [3 /*break*/, 20];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 20];
                     var_2544 = var_992[10];
@@ -27453,7 +27454,7 @@ function func564() {
                     var_2573++;
                     _a.label = 20;
                 case 20:
-                    if (!(var_91 >= 25 && var_992[11] != 0)) return [3 /*break*/, 22];
+                    if (!(current_floor >= 25 && var_992[11] != 0)) return [3 /*break*/, 22];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 22];
                     var_2544 = var_992[11];
@@ -27464,7 +27465,7 @@ function func564() {
                     var_2573++;
                     _a.label = 22;
                 case 22:
-                    if (!(var_91 >= 28 && var_992[12] != 0)) return [3 /*break*/, 24];
+                    if (!(current_floor >= 28 && var_992[12] != 0)) return [3 /*break*/, 24];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 24];
                     var_2544 = var_992[12];
@@ -27475,7 +27476,7 @@ function func564() {
                     var_2573++;
                     _a.label = 24;
                 case 24:
-                    if (!(var_91 >= 32 && var_992[13] != 0)) return [3 /*break*/, 26];
+                    if (!(current_floor >= 32 && var_992[13] != 0)) return [3 /*break*/, 26];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 26];
                     var_2544 = var_992[13];
@@ -27486,7 +27487,7 @@ function func564() {
                     var_2573++;
                     _a.label = 26;
                 case 26:
-                    if (!(var_91 >= 35 && var_992[14] != 0)) return [3 /*break*/, 28];
+                    if (!(current_floor >= 35 && var_992[14] != 0)) return [3 /*break*/, 28];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 28];
                     var_2544 = var_992[14];
@@ -27497,7 +27498,7 @@ function func564() {
                     var_2573++;
                     _a.label = 28;
                 case 28:
-                    if (!(var_91 >= 38 && var_992[15] != 0)) return [3 /*break*/, 30];
+                    if (!(current_floor >= 38 && var_992[15] != 0)) return [3 /*break*/, 30];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 30];
                     var_2544 = var_992[15];
@@ -27508,7 +27509,7 @@ function func564() {
                     var_2573++;
                     _a.label = 30;
                 case 30:
-                    if (!(var_91 >= 40 && var_992[16] != 0)) return [3 /*break*/, 32];
+                    if (!(current_floor >= 40 && var_992[16] != 0)) return [3 /*break*/, 32];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 32];
                     var_2544 = var_992[16];
@@ -27519,7 +27520,7 @@ function func564() {
                     var_2573++;
                     _a.label = 32;
                 case 32:
-                    if (!(var_91 >= 41 && var_992[17] != 0)) return [3 /*break*/, 34];
+                    if (!(current_floor >= 41 && var_992[17] != 0)) return [3 /*break*/, 34];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 34];
                     var_2544 = var_992[17];
@@ -27530,7 +27531,7 @@ function func564() {
                     var_2573++;
                     _a.label = 34;
                 case 34:
-                    if (!(var_91 >= 42 && var_992[18] != 0)) return [3 /*break*/, 36];
+                    if (!(current_floor >= 42 && var_992[18] != 0)) return [3 /*break*/, 36];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 36];
                     var_2544 = var_992[18];
@@ -27541,7 +27542,7 @@ function func564() {
                     var_2573++;
                     _a.label = 36;
                 case 36:
-                    if (!(var_91 >= 45 && var_992[19] != 0)) return [3 /*break*/, 38];
+                    if (!(current_floor >= 45 && var_992[19] != 0)) return [3 /*break*/, 38];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 38];
                     var_2544 = var_992[19];
@@ -27552,7 +27553,7 @@ function func564() {
                     var_2573++;
                     _a.label = 38;
                 case 38:
-                    if (!(var_91 >= 45 && var_992[20] != 0)) return [3 /*break*/, 40];
+                    if (!(current_floor >= 45 && var_992[20] != 0)) return [3 /*break*/, 40];
                     var_2574 = rnd(var_2572);
                     if (!(var_2574 == 1)) return [3 /*break*/, 40];
                     var_2544 = var_992[20];
@@ -40687,13 +40688,13 @@ function func594() {
                     ++cnt1_94;
                     return [3 /*break*/, 7];
                 case 10:
-                    var_2839 = var_91;
-                    var_2840 = var_91;
-                    if (var_91 == 0) {
+                    var_2839 = current_floor;
+                    var_2840 = current_floor;
+                    if (current_floor == 0) {
                         var_2840 = 99;
                     }
-                    var_91 = rnd(var_2840);
-                    var_91 = var_91 + 1;
+                    current_floor = rnd(var_2840);
+                    current_floor = current_floor + 1;
                     return [4 /*yield*/, func627()];
                 case 11:
                     _a.sent();
@@ -40701,7 +40702,7 @@ function func594() {
                         var_953 = 37;
                     }
                     var_2537 = var_953;
-                    var_91 = var_2839;
+                    current_floor = var_2839;
                     var_1845 = 1;
                     var_2353 = var_673;
                     return [4 /*yield*/, func556()];

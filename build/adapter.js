@@ -2306,6 +2306,7 @@ function DSSETVOLUME(se_id, volume) {
 }
 function DSGETMASTERVOLUME() { }
 var bgm_volume = 0.1;
+// Ver 0.1307で追加。BGM音量調整関数。
 function DSSETMASTERVOLUME(volume_size) {
     bgm_volume = document.getElementById(bgm_source1).volume = volume_size / 1000;
 }
@@ -2331,10 +2332,13 @@ function DMINIT() {
 }
 //const audioElem;
 function DMPLAY(data0, data1) {
+    // Ver 0.1307で音量調整用に修正。
     document.getElementById(bgm_source1).volume = bgm_volume;
+    // Ver 0.1305で追加
     document.getElementById(bgm_source1).play();
 }
 function DMSTOP() {
+    // Ver 0.1305で追加
     document.getElementById(bgm_source1).pause();
     //audioElem.pause();
 }

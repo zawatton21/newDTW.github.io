@@ -12840,72 +12840,72 @@ function func628() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(628);
-            if (var_91 == 1) {
+            if (current_floor == 1) {
                 var_977 = [1, 5];
                 var_2917 = rnd(2);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 2) {
+            if (current_floor == 2) {
                 var_977 = [147, 1, 5];
                 var_2917 = rnd(3);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 3) {
+            if (current_floor == 3) {
                 var_977 = [93, 2, 147, 5];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 4) {
+            if (current_floor == 4) {
                 var_977 = [93, 3, 2, 147];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 5) {
+            if (current_floor == 5) {
                 var_977 = [51, 94, 93, 3];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 6) {
+            if (current_floor == 6) {
                 var_977 = [51, 94, 93, 3];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 7) {
+            if (current_floor == 7) {
                 var_977 = [7, 9, 51, 6, 94];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 8) {
+            if (current_floor == 8) {
                 var_977 = [52, 7, 9, 6];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 9) {
+            if (current_floor == 9) {
                 var_977 = [134, 52, 7, 9, 6];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 10) {
+            if (current_floor == 10) {
                 var_977 = [99, 13, 134, 141, 101, 52];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 11) {
+            if (current_floor == 11) {
                 var_977 = [99, 13, 134, 141, 101, 52];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 12) {
+            if (current_floor == 12) {
                 var_977 = [8, 24, 25];
                 var_2917 = rnd(3);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 >= 13) {
+            if (current_floor >= 13) {
                 var_977 = [90];
                 var_2917 = rnd(1);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 99) {
+            if (current_floor == 99) {
                 var_977 = [36, 105, 106, 107, 108, 161, 162];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
@@ -12918,157 +12918,157 @@ function func629() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(629);
-            if (var_91 == 1) {
+            if (current_floor == 1) {
                 var_977 = [79, 1, 5];
                 var_2917 = rnd(3);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 2) {
+            if (current_floor == 2) {
                 var_977 = [2, 79, 1, 5];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 3) {
+            if (current_floor == 3) {
                 var_977 = [93, 3, 2, 5];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 4) {
+            if (current_floor == 4) {
                 var_977 = [94, 77, 93, 3, 2];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 5) {
+            if (current_floor == 5) {
                 var_977 = [51, 94, 77, 93, 3];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 6) {
+            if (current_floor == 6) {
                 var_977 = [7, 9, 39, 51, 94, 77, 3];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 7) {
+            if (current_floor == 7) {
                 var_977 = [6, 76, 26, 7, 9, 39, 51, 94];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 8) {
+            if (current_floor == 8) {
                 var_977 = [52, 76, 26, 7, 9, 39, 6];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 9) {
+            if (current_floor == 9) {
                 var_977 = [4, 134, 141, 52, 76, 26, 6];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 10) {
+            if (current_floor == 10) {
                 var_977 = [119, 99, 13, 4, 134, 141, 101, 76, 52];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 11) {
+            if (current_floor == 11) {
                 var_977 = [71, 12, 119, 99, 13, 4, 134, 141, 101];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 12) {
+            if (current_floor == 12) {
                 var_977 = [28, 56, 71, 12, 119, 13, 4, 134, 101];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 13) {
+            if (current_floor == 13) {
                 var_977 = [131, 148, 28, 31, 56, 71, 12, 134];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 14) {
+            if (current_floor == 14) {
                 var_977 = [115, 11, 131, 148, 28, 31, 56];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 15) {
+            if (current_floor == 15) {
                 var_977 = [45, 29, 115, 11, 131, 148, 28, 31];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 16) {
+            if (current_floor == 16) {
                 var_977 = [47, 45, 29, 115, 11, 131, 148];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 17) {
+            if (current_floor == 17) {
                 var_977 = [136, 27, 47, 45, 29, 115, 11];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 18) {
+            if (current_floor == 18) {
                 var_977 = [48, 38, 78, 136, 27, 47, 45, 29];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 19) {
+            if (current_floor == 19) {
                 var_977 = [17, 46, 48, 38, 78, 136, 27];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 20) {
+            if (current_floor == 20) {
                 var_977 = [97, 125, 17, 46, 48, 38, 78];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 21) {
+            if (current_floor == 21) {
                 var_977 = [14, 69, 97, 125, 17, 46, 12];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 22) {
+            if (current_floor == 22) {
                 var_977 = [18, 59, 145, 14, 97, 125, 69, 17, 46];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 23) {
+            if (current_floor == 23) {
                 var_977 = [35, 135, 18, 59, 145, 14, 97, 69];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 24) {
+            if (current_floor == 24) {
                 var_977 = [10, 35, 135, 18, 59, 145, 14];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 25) {
+            if (current_floor == 25) {
                 var_977 = [95, 63, 10, 35, 135, 59, 14];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 26) {
+            if (current_floor == 26) {
                 var_977 = [32, 84, 43, 85, 95, 63, 10, 35];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 27) {
+            if (current_floor == 27) {
                 var_977 = [44, 72, 66, 32, 84, 43, 85, 95, 63];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 28) {
+            if (current_floor == 28) {
                 var_977 = [113, 15, 123, 44, 72, 66, 32, 84, 43];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 29) {
+            if (current_floor == 29) {
                 var_977 = [80, 65, 113, 15, 123, 44, 72, 66, 119];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 30) {
+            if (current_floor == 30) {
                 var_977 = [80, 65, 113, 15, 123, 44, 72, 119];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 >= 31) {
+            if (current_floor >= 31) {
                 var_977 = [90];
                 var_2917 = rnd(1);
                 var_953 = var_977[var_2917];
@@ -13081,502 +13081,502 @@ function func630() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(630);
-            if (var_91 == 1) {
+            if (current_floor == 1) {
                 var_977 = [5, 1, 147, 79, 88];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 2) {
+            if (current_floor == 2) {
                 var_977 = [5, 1, 147, 79, 88, 2];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 3) {
+            if (current_floor == 3) {
                 var_977 = [93, 94, 147, 88, 3, 2];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 4) {
+            if (current_floor == 4) {
                 var_977 = [93, 94, 147, 88, 3, 2];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 5) {
+            if (current_floor == 5) {
                 var_977 = [93, 94, 51, 3, 2, 77];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 6) {
+            if (current_floor == 6) {
                 var_977 = [93, 7, 51, 9, 77];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 7) {
+            if (current_floor == 7) {
                 var_977 = [73, 7, 51, 9, 39, 76, 52, 6];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 8) {
+            if (current_floor == 8) {
                 var_977 = [73, 7, 9, 39, 76, 52, 26, 6];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 9) {
+            if (current_floor == 9) {
                 var_977 = [73, 7, 9, 39, 76, 52, 26, 4, 6];
                 var_2917 = rnd(9);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 10) {
+            if (current_floor == 10) {
                 var_977 = [13, 9, 26, 4, 138, 6];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 11) {
+            if (current_floor == 11) {
                 var_977 = [134, 13, 26, 4, 101, 138];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 12) {
+            if (current_floor == 12) {
                 var_977 = [134, 13, 119, 101, 99, 138];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 13) {
+            if (current_floor == 13) {
                 var_977 = [134, 13, 119, 99, 141, 148, 71, 140];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 14) {
+            if (current_floor == 14) {
                 var_977 = [134, 13, 119, 99, 141, 148, 71, 140];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 15) {
+            if (current_floor == 15) {
                 var_977 = [28, 99, 141, 148, 71, 140, 97];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 16) {
+            if (current_floor == 16) {
                 var_977 = [12, 28, 99, 56, 148, 71, 115];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 17) {
+            if (current_floor == 17) {
                 var_977 = [12, 28, 99, 56, 131, 71, 115];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 18) {
+            if (current_floor == 18) {
                 var_977 = [12, 31, 56, 131, 47, 27, 115];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 19) {
+            if (current_floor == 19) {
                 var_977 = [12, 31, 48, 131, 47, 27, 115];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 20) {
+            if (current_floor == 20) {
                 var_977 = [12, 31, 46, 48, 11, 47, 27];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 21) {
+            if (current_floor == 21) {
                 var_977 = [12, 17, 46, 48, 11, 47, 27, 35];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 22) {
+            if (current_floor == 22) {
                 var_977 = [12, 17, 46, 48, 11, 47, 27, 35];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 23) {
+            if (current_floor == 23) {
                 var_977 = [12, 17, 46, 48, 11, 47, 27, 35];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 24) {
+            if (current_floor == 24) {
                 var_977 = [69, 38, 136, 14, 45, 29, 85];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 25) {
+            if (current_floor == 25) {
                 var_977 = [69, 38, 136, 14, 45, 10, 85];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 26) {
+            if (current_floor == 26) {
                 var_977 = [69, 38, 136, 14, 45, 10, 85];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 27) {
+            if (current_floor == 27) {
                 var_977 = [69, 38, 84, 14, 95, 10, 85];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 28) {
+            if (current_floor == 28) {
                 var_977 = [125, 72, 38, 84, 14, 95, 10, 85];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 29) {
+            if (current_floor == 29) {
                 var_977 = [125, 72, 38, 84, 65, 95, 10, 66];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 30) {
+            if (current_floor == 30) {
                 var_977 = [125, 72, 38, 84, 65, 95, 10, 66];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 31) {
+            if (current_floor == 31) {
                 var_977 = [125, 59, 63, 145, 78, 43, 18, 66];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 32) {
+            if (current_floor == 32) {
                 var_977 = [125, 59, 63, 145, 78, 43, 18, 66];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 33) {
+            if (current_floor == 33) {
                 var_977 = [125, 59, 63, 145, 78, 43, 18, 44];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 34) {
+            if (current_floor == 34) {
                 var_977 = [123, 59, 63, 145, 78, 43, 135, 44];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 35) {
+            if (current_floor == 35) {
                 var_977 = [123, 59, 63, 15, 78, 43, 135, 44];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 36) {
+            if (current_floor == 36) {
                 var_977 = [123, 59, 63, 15, 78, 43, 135, 44];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 37) {
+            if (current_floor == 37) {
                 var_977 = [123, 80, 63, 15, 78, 43, 135, 44];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 38) {
+            if (current_floor == 38) {
                 var_977 = [123, 80, 63, 15, 78, 43, 135, 32];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 39) {
+            if (current_floor == 39) {
                 var_977 = [123, 80, 63, 15, 78, 43, 135, 32];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 40) {
+            if (current_floor == 40) {
                 var_977 = [30, 59, 32, 113, 17, 26, 119];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 41) {
+            if (current_floor == 41) {
                 var_977 = [30, 59, 32, 113, 17, 26, 119];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 42) {
+            if (current_floor == 42) {
                 var_977 = [30, 59, 32, 113, 17, 26, 119];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 43) {
+            if (current_floor == 43) {
                 var_977 = [30, 59, 32, 113, 17, 26, 119];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 44) {
+            if (current_floor == 44) {
                 var_977 = [30, 59, 32, 113, 17, 26, 119];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 45) {
+            if (current_floor == 45) {
                 var_977 = [30, 59, 32, 113, 17, 26, 119];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 46) {
+            if (current_floor == 46) {
                 var_977 = [30, 59, 32, 113, 17, 26, 119];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 47) {
+            if (current_floor == 47) {
                 var_977 = [122, 121, 134, 152, 78, 160];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 48) {
+            if (current_floor == 48) {
                 var_977 = [122, 121, 134, 152, 78, 160];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 49) {
+            if (current_floor == 49) {
                 var_977 = [122, 121, 134, 152, 78, 160];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 50) {
+            if (current_floor == 50) {
                 var_977 = [122, 121, 134, 152, 78, 160];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 51) {
+            if (current_floor == 51) {
                 var_977 = [122, 121, 134, 152, 78, 160];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 52) {
+            if (current_floor == 52) {
                 var_977 = [122, 121, 134, 152, 78, 160];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 53) {
+            if (current_floor == 53) {
                 var_977 = [122, 121, 134, 152, 78, 160];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 54) {
+            if (current_floor == 54) {
                 var_977 = [155, 156, 157, 86, 51, 71, 144];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 55) {
+            if (current_floor == 55) {
                 var_977 = [155, 156, 157, 86, 52, 71, 144];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 56) {
+            if (current_floor == 56) {
                 var_977 = [155, 156, 157, 86, 52, 11, 144];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 57) {
+            if (current_floor == 57) {
                 var_977 = [155, 156, 157, 86, 51, 71, 144];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 58) {
+            if (current_floor == 58) {
                 var_977 = [155, 156, 157, 86, 51, 71, 144];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 59) {
+            if (current_floor == 59) {
                 var_977 = [155, 156, 157, 86, 52, 71, 144];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 60) {
+            if (current_floor == 60) {
                 var_977 = [128, 158, 150, 68, 67, 172];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 61) {
+            if (current_floor == 61) {
                 var_977 = [128, 158, 150, 68, 67, 172];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 62) {
+            if (current_floor == 62) {
                 var_977 = [128, 158, 150, 68, 67, 172];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 63) {
+            if (current_floor == 63) {
                 var_977 = [128, 158, 150, 68, 67, 172];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 64) {
+            if (current_floor == 64) {
                 var_977 = [128, 158, 150, 68, 67, 172];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 65) {
+            if (current_floor == 65) {
                 var_977 = [128, 158, 150, 68, 67, 151];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 66) {
+            if (current_floor == 66) {
                 var_977 = [128, 158, 150, 68, 67, 151];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 67) {
+            if (current_floor == 67) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 68) {
+            if (current_floor == 68) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 69) {
+            if (current_floor == 69) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 70) {
+            if (current_floor == 70) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 71) {
+            if (current_floor == 71) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 72) {
+            if (current_floor == 72) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 73) {
+            if (current_floor == 73) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 74) {
+            if (current_floor == 74) {
                 var_977 = [110, 109, 87, 139, 135, 56, 136];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 75) {
+            if (current_floor == 75) {
                 var_977 = [124, 127, 99, 30, 154, 85];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 76) {
+            if (current_floor == 76) {
                 var_977 = [124, 127, 99, 30, 154, 85];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 77) {
+            if (current_floor == 77) {
                 var_977 = [124, 127, 99, 30, 154, 85];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 78) {
+            if (current_floor == 78) {
                 var_977 = [124, 127, 99, 30, 154, 85];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 79) {
+            if (current_floor == 79) {
                 var_977 = [124, 127, 99, 30, 154, 85];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 80) {
+            if (current_floor == 80) {
                 var_977 = [124, 133, 129, 126, 137, 21, 64];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 81) {
+            if (current_floor == 81) {
                 var_977 = [124, 133, 129, 126, 137, 21, 64];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 82) {
+            if (current_floor == 82) {
                 var_977 = [124, 133, 129, 126, 137, 21, 64];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 83) {
+            if (current_floor == 83) {
                 var_977 = [124, 133, 129, 126, 137, 21, 64];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 84) {
+            if (current_floor == 84) {
                 var_977 = [153, 133, 129, 126, 137, 21, 64];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 85) {
+            if (current_floor == 85) {
                 var_977 = [153, 133, 129, 126, 137, 21, 64];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 86) {
+            if (current_floor == 86) {
                 var_977 = [153, 133, 129, 126, 137, 21, 64];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 87) {
+            if (current_floor == 87) {
                 var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 88) {
+            if (current_floor == 88) {
                 var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 89) {
+            if (current_floor == 89) {
                 var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 90) {
+            if (current_floor == 90) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 91) {
+            if (current_floor == 91) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 92) {
+            if (current_floor == 92) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 93) {
+            if (current_floor == 93) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 94) {
+            if (current_floor == 94) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 95) {
+            if (current_floor == 95) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 96) {
+            if (current_floor == 96) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 97) {
+            if (current_floor == 97) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 98) {
+            if (current_floor == 98) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 99) {
+            if (current_floor == 99) {
                 var_977 = [166, 166, 166, 166, 166, 166, 157];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 >= 100) {
+            if (current_floor >= 100) {
                 var_977 = [90];
                 var_2917 = rnd(1);
                 var_953 = var_977[var_2917];
@@ -13589,270 +13589,270 @@ function func631() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(631);
-            var_2918 = var_91;
+            var_2918 = current_floor;
             if (var_112 > 300) {
                 var_2919 = rnd(10);
                 if (var_2919 >= 5) {
-                    var_91 = var_91 + 1;
+                    current_floor = current_floor + 1;
                 }
                 if (var_2919 >= 6 && var_112 > 500) {
-                    var_91 = var_91 + 1;
+                    current_floor = current_floor + 1;
                 }
                 if (var_2919 >= 7 && var_112 > 700) {
-                    var_91 = var_91 + 1;
+                    current_floor = current_floor + 1;
                 }
             }
-            if (var_91 == 1) {
+            if (current_floor == 1) {
                 var_977 = [5, 1, 147];
                 var_2917 = rnd(3);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 2) {
+            if (current_floor == 2) {
                 var_977 = [5, 1, 88, 2];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 3) {
+            if (current_floor == 3) {
                 var_977 = [93, 88, 3, 2];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 4) {
+            if (current_floor == 4) {
                 var_977 = [93, 94, 3, 2, 77, 101];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 5) {
+            if (current_floor == 5) {
                 var_977 = [94, 51, 3, 77, 7, 101];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 6) {
+            if (current_floor == 6) {
                 var_977 = [7, 51, 9, 77, 39, 119];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 7) {
+            if (current_floor == 7) {
                 var_977 = [7, 9, 39, 76, 52, 119];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 8) {
+            if (current_floor == 8) {
                 var_977 = [73, 7, 39, 76, 52, 6];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 9) {
+            if (current_floor == 9) {
                 var_977 = [73, 52, 4, 6, 141, 31];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 10) {
+            if (current_floor == 10) {
                 var_977 = [4, 138, 99, 134, 141, 148, 31];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 11) {
+            if (current_floor == 11) {
                 var_977 = [134, 13, 4, 138, 148, 12, 28];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 12) {
+            if (current_floor == 12) {
                 var_977 = [13, 138, 71, 12, 56, 140, 131];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 13) {
+            if (current_floor == 13) {
                 var_977 = [71, 12, 56, 140, 131, 115];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 14) {
+            if (current_floor == 14) {
                 var_977 = [11, 56, 131, 115, 12];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 15) {
+            if (current_floor == 15) {
                 var_977 = [11, 56, 115, 45, 29];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 16) {
+            if (current_floor == 16) {
                 var_977 = [11, 56, 115, 45, 29, 31];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 17) {
+            if (current_floor == 17) {
                 var_977 = [11, 56, 27, 45, 29, 31];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 18) {
+            if (current_floor == 18) {
                 var_977 = [12, 31, 48, 47, 27];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 19) {
+            if (current_floor == 19) {
                 var_977 = [31, 48, 47, 27, 11];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 20) {
+            if (current_floor == 20) {
                 var_977 = [17, 46, 48, 47, 27];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 21) {
+            if (current_floor == 21) {
                 var_977 = [17, 46, 47, 27, 35];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 22) {
+            if (current_floor == 22) {
                 var_977 = [69, 136, 14, 45, 85];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 23) {
+            if (current_floor == 23) {
                 var_977 = [69, 136, 14, 45, 85];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 24) {
+            if (current_floor == 24) {
                 var_977 = [125, 38, 14, 95, 10, 85];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 25) {
+            if (current_floor == 25) {
                 var_977 = [72, 38, 84, 65, 66, 65];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 26) {
+            if (current_floor == 26) {
                 var_977 = [125, 145, 78, 66, 65];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 27) {
+            if (current_floor == 27) {
                 var_977 = [59, 63, 43, 135, 44];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 28) {
+            if (current_floor == 28) {
                 var_977 = [123, 80, 15, 59];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 29) {
+            if (current_floor == 29) {
                 var_977 = [30, 32, 113, 152, 80];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 30) {
+            if (current_floor == 30) {
                 var_977 = [30, 32, 113, 152, 121];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 31) {
+            if (current_floor == 31) {
                 var_977 = [122, 160, 155, 150];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 32) {
+            if (current_floor == 32) {
                 var_977 = [122, 160, 155, 150, 144];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 33) {
+            if (current_floor == 33) {
                 var_977 = [156, 157, 86, 144, 150];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 34) {
+            if (current_floor == 34) {
                 var_977 = [156, 157, 86, 144, 150, 158];
                 var_2917 = rnd(6);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 35) {
+            if (current_floor == 35) {
                 var_977 = [128, 68, 67, 172];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 36) {
+            if (current_floor == 36) {
                 var_977 = [128, 68, 67, 172];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 37) {
+            if (current_floor == 37) {
                 var_977 = [128, 68, 67, 172];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 38) {
+            if (current_floor == 38) {
                 var_977 = [110, 109, 87, 139];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 39) {
+            if (current_floor == 39) {
                 var_977 = [110, 109, 87, 139];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 40) {
+            if (current_floor == 40) {
                 var_977 = [110, 109, 87, 139];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 41) {
+            if (current_floor == 41) {
                 var_977 = [124, 129, 126, 154];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 42) {
+            if (current_floor == 42) {
                 var_977 = [124, 129, 126, 154];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 43) {
+            if (current_floor == 43) {
                 var_977 = [124, 129, 126, 154];
                 var_2917 = rnd(4);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 44) {
+            if (current_floor == 44) {
                 var_977 = [153, 133, 137, 21, 64];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 45) {
+            if (current_floor == 45) {
                 var_977 = [153, 133, 137, 21, 64];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 46) {
+            if (current_floor == 46) {
                 var_977 = [153, 133, 137, 21, 64];
                 var_2917 = rnd(5);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 47) {
+            if (current_floor == 47) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 48) {
+            if (current_floor == 48) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 49) {
+            if (current_floor == 49) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 >= 50) {
+            if (current_floor >= 50) {
                 var_977 = [111, 98, 120, 60, 114, 118, 151];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            var_91 = var_2918;
+            current_floor = var_2918;
             return [2 /*return*/];
         });
     });
@@ -14505,52 +14505,52 @@ function func634() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(634);
-            if (var_91 == 1) {
+            if (current_floor == 1) {
                 var_977 = [77, 39, 76, 52, 26, 4, 138, 134, 13, 141, 71, 140];
                 var_2917 = rnd(12);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 2) {
+            if (current_floor == 2) {
                 var_977 = [28, 12, 56, 115, 131, 31, 46, 47, 27, 148, 48];
                 var_2917 = rnd(11);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 3) {
+            if (current_floor == 3) {
                 var_977 = [99, 46, 136, 14, 17, 35, 38, 95];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 4) {
+            if (current_floor == 4) {
                 var_977 = [45, 85, 43, 59, 145, 84, 125, 72, 65, 123];
                 var_2917 = rnd(10);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 5) {
+            if (current_floor == 5) {
                 var_977 = [66, 44, 63, 78, 135, 15, 80, 32, 30, 113];
                 var_2917 = rnd(10);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 6) {
+            if (current_floor == 6) {
                 var_977 = [122, 121, 152, 160, 155, 156, 157, 86];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 7) {
+            if (current_floor == 7) {
                 var_977 = [128, 158, 150, 68, 67, 151, 144];
                 var_2917 = rnd(7);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 8) {
+            if (current_floor == 8) {
                 var_977 = [110, 109, 87, 139, 153, 124, 127, 154];
                 var_2917 = rnd(8);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 == 9) {
+            if (current_floor == 9) {
                 var_977 = [129, 126, 137, 64, 111, 98, 120, 60, 114, 118];
                 var_2917 = rnd(10);
                 var_953 = var_977[var_2917];
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 var_2922 = rnd(10);
                 if (var_2922 <= 5) {
                     var_2917 = rnd(19);
@@ -27125,7 +27125,7 @@ function func672() {
                 case 21:
                     var_1200 = 1;
                     var_2400 = 345;
-                    if (var_62 == 1 && var_91 == 12 && var_386 == 1) {
+                    if (var_62 == 1 && current_floor == 12 && var_386 == 1) {
                         if (var_201 == 4 || var_201 == 5 || var_201 == 6) {
                             var_356 = 200;
                         }

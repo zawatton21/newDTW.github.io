@@ -185,10 +185,10 @@ function func402(this: any) {
             var_217 = 1;
             var_1842 = var_78[var_320].Var1;
             var_1843 = var_78[var_320].Var2;
-            if (var_91 < 19) {
+            if (current_floor < 19) {
                 var_1844 = 1;
             }
-            if (var_91 >= 19) {
+            if (current_floor >= 19) {
                 var_1844 = 2;
             }
             var_1845 = 2;
@@ -227,7 +227,7 @@ function func402(this: any) {
             var_78[var_320].Var28 = 0;
             var_78[var_320].Var29 = 0;
             DSPLAY(audio_id =156);
-            if (var_91 < 19) {
+            if (current_floor < 19) {
                 for (let cnt3 = 0; cnt3 < 6; ++cnt3) {
                     if (cnt3 == 1) {
                         var_411 = 2;
@@ -250,7 +250,7 @@ function func402(this: any) {
                     yield func337();
                 }
             }
-            if (var_91 >= 19) {
+            if (current_floor >= 19) {
                 for (let cnt3 = 0; cnt3 < 8; ++cnt3) {
                     if (cnt3 == 1) {
                         var_411 = 1;
@@ -2869,7 +2869,7 @@ function func436(this: any) {
         var_1961 = rnd(10);
         var_1962 = rnd(10);
         var_1963 = rnd(10);
-        var_1783 = var_1961 * var_91 + var_1962 * 10 + var_1963 + var_1960;
+        var_1783 = var_1961 * current_floor + var_1962 * 10 + var_1963 + var_1960;
         if (var_1783 >= 1000) {
             var_1964 = rnd(100);
             var_1783 = 1000 - var_1964;
@@ -5741,7 +5741,7 @@ function func461(this: any) {
                     var_225 = 1;
                     var_227 = 1;
                     var_228 = 45;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id =　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5752,15 +5752,16 @@ function func461(this: any) {
                     var_227 = 1;
                     var_228 = 45;
                     var_231 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id =　100);
                     yield func337();
                     yield func337();
                     yield func461();
                     return;
                 }
             }
+            // var_238 (Shiftキー)がONの時
             if (var_238 == 1 && var_1866 == 0 && var_234 == 0 && var_220 == 0 && var_231 == 0 && var_1945 == 0 && var_224 > 1 && var_1240 == 0 && var_1999 == 0 && var_2000 == 0 && var_2001 == 0 && var_1950 == 0 && var_2002 == 0 && var_2003 == 0 && var_2004 == 0 && var_2005 == 0 && var_2006 == 0 && var_2007 == 0 && var_227 != 3) {
-                DSPLAY(audio_id =208);
+                DSPLAY(audio_id = 208); //アイテムを整理する時の効果音
                 yield func467();
                 return;
             }
@@ -5770,7 +5771,7 @@ function func461(this: any) {
                 if (var_225 != var_233[var_1876].Var8 && var_225 != var_1884) {
                     var_228 = var_228 + 22;
                     var_225 = var_225 + 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id =　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5779,7 +5780,7 @@ function func461(this: any) {
                 if (var_225 == var_233[var_1876].Var8 || var_225 == var_1884) {
                     var_228 = 45;
                     var_225 = 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id =　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5790,7 +5791,7 @@ function func461(this: any) {
                 if (var_225 != 1) {
                     var_228 = var_228 - 22;
                     var_225 = var_225 - 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id =　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5799,7 +5800,7 @@ function func461(this: any) {
                 if (var_225 == 1) {
                     var_228 = (var_233[var_1876].Var8 - 1) * 22 + 45;
                     var_225 = var_233[var_1876].Var8;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id =　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5809,12 +5810,12 @@ function func461(this: any) {
         }
         if (var_242 == 1 || var_244 == 1) {
             if (var_1866 == 1 && var_227 != 3) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id =　212);
                 yield func469();
                 return;
             }
             if (var_1866 == 1 && var_227 == 3) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id =　212);
                 var_2040 = 1;
                 yield func469();
                 return;
@@ -7358,6 +7359,7 @@ function func466(this: any) {
         return;
     });
 }
+//アイテムを整理する時の関数
 function func467(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(467);
@@ -7779,6 +7781,7 @@ function func468(this: any) {
         return;
     });
 }
+
 function func469(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(469);
@@ -17058,16 +17061,16 @@ function func498(this: any) {
             comments_row2 = var_297;
             var_296 = "「ﾃﾞｨｱﾎﾞﾛはﾀﾞﾝｼﾞｮﾝを歩いていました。";
             var_297 = "すると次の階で…」";
-            if (var_62 == 1 && var_91 == 12) {
+            if (var_62 == 1 && current_floor == 12) {
                 var_297 = "するとこの階で…」";
             }
-            if (var_62 == 2 && var_91 == 30) {
+            if (var_62 == 2 && current_floor == 30) {
                 var_297 = "するとこの階で…」";
             }
-            if (var_62 == 3 && var_91 == 99) {
+            if (var_62 == 3 && current_floor == 99) {
                 var_297 = "するとこの階で…」";
             }
-            if (var_62 == 5 && var_91 == var_20) {
+            if (var_62 == 5 && current_floor == var_20) {
                 var_297 = "するとこの階で…」";
             }
             yield func050();
@@ -17155,57 +17158,57 @@ function func498(this: any) {
                 var_296 = "「俺が最強だぁああああ―――ッ！」";
                 var_297 = "";
             }
-            if (var_62 == 1 && var_91 == 11) {
+            if (var_62 == 1 && current_floor == 11) {
                 var_296 = "「ベンキを舐めさせられて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 2 && var_91 == 29) {
+            if (var_62 == 2 && current_floor == 29) {
                 var_296 = "「わけもわからず殺されて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 3 && var_91 == 98) {
+            if (var_62 == 3 && current_floor == 98) {
                 var_296 = "「わけもわからず殺されて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 5 && var_91 == var_2203) {
+            if (var_62 == 5 && current_floor == var_2203) {
                 var_296 = "「わけもわからず殺されて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 1 && var_91 == 12 && var_203 == 0) {
+            if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
                 var_296 = "「ベンキを舐めさせられて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 1 && var_91 == 12 && var_203 == 1) {
+            if (var_62 == 1 && current_floor == 12 && var_203 == 1) {
                 var_296 = "「体中を蜂の巣にされて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 1 && var_91 == 12 && var_203 == 2) {
+            if (var_62 == 1 && current_floor == 12 && var_203 == 2) {
                 var_296 = "「爆発で粉々にされて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 1 && var_91 == 12 && var_203 == 3) {
+            if (var_62 == 1 && current_floor == 12 && var_203 == 3) {
                 var_296 = "「電気で黒焦げにされて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 2 && var_91 == 30) {
+            if (var_62 == 2 && current_floor == 30) {
                 var_296 = "「わけもわからず殺されて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 3 && var_91 == 99) {
+            if (var_62 == 3 && current_floor == 99) {
                 var_296 = "「わけもわからず殺されて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            if (var_62 == 5 && var_91 == var_20) {
+            if (var_62 == 5 && current_floor == var_20) {
                 var_296 = "「わけもわからず殺されて";
                 var_297 = "リタイアだァーッ！」";
                 var_70 = 0;

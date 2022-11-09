@@ -255,10 +255,10 @@ function func402() {
                     var_217 = 1;
                     var_1842 = var_78[var_320].Var1;
                     var_1843 = var_78[var_320].Var2;
-                    if (var_91 < 19) {
+                    if (current_floor < 19) {
                         var_1844 = 1;
                     }
-                    if (var_91 >= 19) {
+                    if (current_floor >= 19) {
                         var_1844 = 2;
                     }
                     var_1845 = 2;
@@ -299,7 +299,7 @@ function func402() {
                     var_78[var_320].Var28 = 0;
                     var_78[var_320].Var29 = 0;
                     DSPLAY(audio_id = 156);
-                    if (!(var_91 < 19)) return [3 /*break*/, 5];
+                    if (!(current_floor < 19)) return [3 /*break*/, 5];
                     cnt3_1 = 0;
                     _a.label = 2;
                 case 2:
@@ -330,7 +330,7 @@ function func402() {
                     ++cnt3_1;
                     return [3 /*break*/, 2];
                 case 5:
-                    if (!(var_91 >= 19)) return [3 /*break*/, 9];
+                    if (!(current_floor >= 19)) return [3 /*break*/, 9];
                     cnt3_2 = 0;
                     _a.label = 6;
                 case 6:
@@ -3785,7 +3785,7 @@ function func436() {
             var_1961 = rnd(10);
             var_1962 = rnd(10);
             var_1963 = rnd(10);
-            var_1783 = var_1961 * var_91 + var_1962 * 10 + var_1963 + var_1960;
+            var_1783 = var_1961 * current_floor + var_1962 * 10 + var_1963 + var_1960;
             if (var_1783 >= 1000) {
                 var_1964 = rnd(100);
                 var_1783 = 1000 - var_1964;
@@ -21189,16 +21189,16 @@ function func498() {
                     comments_row2 = var_297;
                     var_296 = "「ﾃﾞｨｱﾎﾞﾛはﾀﾞﾝｼﾞｮﾝを歩いていました。";
                     var_297 = "すると次の階で…」";
-                    if (var_62 == 1 && var_91 == 12) {
+                    if (var_62 == 1 && current_floor == 12) {
                         var_297 = "するとこの階で…」";
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_297 = "するとこの階で…」";
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_297 = "するとこの階で…」";
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_297 = "するとこの階で…」";
                     }
                     return [4 /*yield*/, func050()];
@@ -21294,57 +21294,57 @@ function func498() {
                         var_296 = "「俺が最強だぁああああ―――ッ！」";
                         var_297 = "";
                     }
-                    if (var_62 == 1 && var_91 == 11) {
+                    if (var_62 == 1 && current_floor == 11) {
                         var_296 = "「ベンキを舐めさせられて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 2 && var_91 == 29) {
+                    if (var_62 == 2 && current_floor == 29) {
                         var_296 = "「わけもわからず殺されて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 3 && var_91 == 98) {
+                    if (var_62 == 3 && current_floor == 98) {
                         var_296 = "「わけもわからず殺されて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 5 && var_91 == var_2203) {
+                    if (var_62 == 5 && current_floor == var_2203) {
                         var_296 = "「わけもわからず殺されて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 1 && var_91 == 12 && var_203 == 0) {
+                    if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
                         var_296 = "「ベンキを舐めさせられて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 1 && var_91 == 12 && var_203 == 1) {
+                    if (var_62 == 1 && current_floor == 12 && var_203 == 1) {
                         var_296 = "「体中を蜂の巣にされて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 1 && var_91 == 12 && var_203 == 2) {
+                    if (var_62 == 1 && current_floor == 12 && var_203 == 2) {
                         var_296 = "「爆発で粉々にされて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 1 && var_91 == 12 && var_203 == 3) {
+                    if (var_62 == 1 && current_floor == 12 && var_203 == 3) {
                         var_296 = "「電気で黒焦げにされて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_296 = "「わけもわからず殺されて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_296 = "「わけもわからず殺されて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_296 = "「わけもわからず殺されて";
                         var_297 = "リタイアだァーッ！」";
                         var_70 = 0;

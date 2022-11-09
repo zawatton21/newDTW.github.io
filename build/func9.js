@@ -180,9 +180,9 @@ function func904() {
             switch (_a.label) {
                 case 0:
                     dbgprt(904);
-                    var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_91 + "階に降りた";
+                    var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + current_floor + "階に降りた";
                     if (var_73[var_66][var_67] == 2) {
-                        var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_91 + "階に上った";
+                        var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + current_floor + "階に上った";
                     }
                     tcpput(var_3561, var_1050);
                     tcpput("\n", var_1050);
@@ -297,7 +297,7 @@ function func907() {
                     var_3516[5] = var_565;
                     var_3516[6] = var_567;
                     var_3516[7] = var_350;
-                    var_3516[8] = var_91;
+                    var_3516[8] = current_floor;
                     var_3516[9] = var_415;
                     var_3516[10] = var_62;
                     var_3516[11] = var_357;
@@ -358,13 +358,13 @@ function func909() {
                     if (!(var_407 != 2)) return [3 /*break*/, 2];
                     var_3572 = 0;
                     var_3573 = int(var_1068[10]);
-                    if (var_91 < var_3573) {
-                        var_3572 = var_3573 - var_91;
+                    if (current_floor < var_3573) {
+                        var_3572 = var_3573 - current_floor;
                     }
-                    if (var_91 > var_3573) {
-                        var_3572 = var_91 - var_3573;
+                    if (current_floor > var_3573) {
+                        var_3572 = current_floor - var_3573;
                     }
-                    if (var_91 == var_3573) {
+                    if (current_floor == var_3573) {
                         var_3572 = 0;
                     }
                     if (!(var_407 == 0 || var_3572 >= 3 || var_536 == 0 || var_62 == 0 || var_62 != int(var_1068[12]))) return [3 /*break*/, 2];
@@ -401,13 +401,13 @@ function func909() {
                     }
                     var_3572 = 0;
                     var_3573 = var_1069[var_3574][10];
-                    if (var_91 < var_3573) {
-                        var_3572 = var_3573 - var_91;
+                    if (current_floor < var_3573) {
+                        var_3572 = var_3573 - current_floor;
                     }
-                    if (var_91 > var_3573) {
-                        var_3572 = var_91 - var_3573;
+                    if (current_floor > var_3573) {
+                        var_3572 = current_floor - var_3573;
                     }
-                    if (var_91 == var_3573) {
+                    if (current_floor == var_3573) {
                         var_3572 = 0;
                     }
                     if (!(var_407 == 0 || var_3572 >= 5 || var_62 == 0 || var_62 != var_1069[var_3574][12])) return [3 /*break*/, 4];
@@ -635,7 +635,7 @@ function func911() {
                     var_3519 = dim(30);
                     var_3519[0] = var_233[var_225].Var0;
                     if (var_62 == 3 && var_3519[0] == 112) {
-                        if (var_91 >= 60 && var_91 <= 66) {
+                        if (current_floor >= 60 && current_floor <= 66) {
                             var_3519[0] = 394;
                         }
                     }
@@ -1095,13 +1095,13 @@ function func919() {
                     dbgprt(919);
                     var_3572 = 0;
                     var_3573 = int(var_1068[10]);
-                    if (var_91 < var_3573) {
-                        var_3572 = var_3573 - var_91;
+                    if (current_floor < var_3573) {
+                        var_3572 = var_3573 - current_floor;
                     }
-                    if (var_91 > var_3573) {
-                        var_3572 = var_91 - var_3573;
+                    if (current_floor > var_3573) {
+                        var_3572 = current_floor - var_3573;
                     }
-                    if (var_91 == var_3573) {
+                    if (current_floor == var_3573) {
                         var_3572 = 0;
                     }
                     comments_row1 = "";
@@ -2752,7 +2752,7 @@ function func929() {
                     var_3516[5] = var_565;
                     var_3516[6] = var_3079;
                     var_3516[7] = var_534;
-                    var_3516[8] = var_91;
+                    var_3516[8] = current_floor;
                     var_3516[9] = var_415;
                     var_3516[10] = var_62;
                     var_3516[11] = var_357;
@@ -2896,9 +2896,9 @@ function func932() {
             switch (_a.label) {
                 case 0:
                     dbgprt(932);
-                    var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_91 + "階に降りた";
+                    var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + current_floor + "階に降りた";
                     if (var_73[var_66][var_67] == 2) {
-                        var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_91 + "階に上った";
+                        var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + current_floor + "階に上った";
                     }
                     tcpput(var_3561, var_1050);
                     tcpput("\n", var_1050);
@@ -3004,13 +3004,13 @@ function func935() {
                 color(255, 255, 255);
                 var_3572 = 0;
                 var_3573 = var_1069[cnt1_18][10];
-                if (var_91 < var_3573) {
-                    var_3572 = var_3573 - var_91;
+                if (current_floor < var_3573) {
+                    var_3572 = var_3573 - current_floor;
                 }
-                if (var_91 > var_3573) {
-                    var_3572 = var_91 - var_3573;
+                if (current_floor > var_3573) {
+                    var_3572 = current_floor - var_3573;
                 }
-                if (var_91 == var_3573) {
+                if (current_floor == var_3573) {
                     var_3572 = 0;
                 }
                 if (var_62 == 0) {

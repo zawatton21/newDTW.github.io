@@ -3815,8 +3815,8 @@ function func755(this: any) {
         yield func050();
         yield func340();
         var_3142 = sdim(length1 = 50, length2 = 20, length3 = null); 
-        var_3143 = var_91;
-        var_91 = var_91 + 1;
+        var_3143 = current_floor;
+        current_floor = current_floor + 1;
         yield func627();
         var_3144 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
@@ -3828,7 +3828,7 @@ function func755(this: any) {
             var_3142[var_3144] = var_891;
             var_3144 = var_3144 + 1;
         }
-        var_91 = var_3143;
+        current_floor = var_3143;
         var_3145 = 0;
         for (let cnt1 = 0; cnt1 < var_3144; ++cnt1) {
             comments_row1 = var_296;
@@ -3976,12 +3976,12 @@ function func758(this: any) {
         yield func047();
         yield func050();
         yield func340();
-        var_3143 = var_91;
-        var_91 = var_91 + 1;
+        var_3143 = current_floor;
+        current_floor = current_floor + 1;
         yield func627();
         var_356 = var_977[var_2569];
         yield func177();
-        var_91 = var_3143;
+        current_floor = var_3143;
         yield func094();
         comments_row1 = var_296;
         comments_row2 = var_297;
@@ -5940,7 +5940,7 @@ function func788(this: any) {
         var_532 = 1;
         var_1454 = 1;
         var_271 = 1;
-        var_1455 = var_91;
+        var_1455 = current_floor;
         yield func094();
         comments_row1 = "";
         comments_row2 = "";
@@ -5959,7 +5959,7 @@ function func788(this: any) {
         yield func047();
         yield func340();
         var_3164 = 1;
-        for (let cnt1 = 0; cnt1 < var_91 + 60; ++cnt1) {
+        for (let cnt1 = 0; cnt1 < current_floor + 60; ++cnt1) {
             yield func337();
             var_3165 = rnd(2);
             if (var_3165 == 0) {

@@ -2465,22 +2465,22 @@ function func223() {
                     }
                     var_946 = Math.floor(var_949 * 111 / 128);
                     var_947 = Math.floor(var_949 * 143 / 128);
-                    var_91 = var_63;
+                    current_floor = var_63;
                     var_939 = 0;
                     var_952 = 1;
-                    if (var_91 >= 1 && var_91 < 6) {
+                    if (current_floor >= 1 && current_floor < 6) {
                         var_952 = var_952 + 4;
                     }
-                    if (var_91 >= 6 && var_91 < 13) {
+                    if (current_floor >= 6 && current_floor < 13) {
                         var_952 = var_952 + 5;
                     }
-                    if (var_91 >= 13 && var_91 < 20) {
+                    if (current_floor >= 13 && current_floor < 20) {
                         var_952 = var_952 + 6;
                     }
-                    if (var_91 >= 20 && var_91 < 30) {
+                    if (current_floor >= 20 && current_floor < 30) {
                         var_952 = var_952 + 7;
                     }
-                    if (var_91 >= 30) {
+                    if (current_floor >= 30) {
                         var_952 = var_952 + 7;
                     }
                     var_62 = 2;
@@ -2771,7 +2771,7 @@ function func226() {
                 case 2:
                     if (!(cnt2_4 < 9)) return [3 /*break*/, 5];
                     var_975 = var_973 + var_974;
-                    var_91 = var_976;
+                    current_floor = var_976;
                     return [4 /*yield*/, func627()];
                 case 3:
                     _a.sent();
@@ -2998,7 +2998,7 @@ function func229() {
                     var_792 = dim(length1 = 5, length2 = 25, length3 = 70, length4 = null);
                     var_704 = dim(300);
                     var_977 = dim(20);
-                    var_91 = 1;
+                    current_floor = 1;
                     var_376 = 1;
                     var_840 = 1;
                     var_352 = 15;
@@ -3163,7 +3163,7 @@ function func229() {
                     var_985 = var_985 + 7560;
                     var_992 = bload(var_735, null, var_985);
                     var_985 = var_985 + 120;
-                    var_91 = var_704[1];
+                    current_floor = var_704[1];
                     var_376 = var_704[2];
                     var_840 = var_704[3];
                     var_352 = var_704[4];
@@ -3478,7 +3478,7 @@ function func230() {
 // プレイデータを保存するセーブ機能
 function func231() {
     return __awaiter(this, void 0, void 0, function () {
-        var save_83;
+        var save_233, save_78, save_83;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -3521,7 +3521,7 @@ function func231() {
                     if (var_726 == 3) {
                         var_735 = "03.dat";
                     }
-                    var_704[1] = var_91;
+                    var_704[1] = current_floor;
                     var_704[2] = var_376;
                     var_704[3] = var_840;
                     var_704[4] = var_352;
@@ -3793,7 +3793,11 @@ function func231() {
                     var_985 = 0;
                     bsave(file_name = var_735, data = var_704, data_size = null, offset = var_985);
                     var_985 = var_985 + 1200;
-                    bsave(file_name = var_735, data = var_233, data_size = null, offset = var_985);
+                    save_233 = Array();
+                    var_233.forEach(function (save) {
+                        save_233.push(save.Save());
+                    });
+                    bsave(var_735, save_233, null, var_985);
                     var_985 = var_985 + 12000;
                     bsave(file_name = var_735, data = var_476, data_size = null, offset = var_985);
                     var_985 = var_985 + 160;
@@ -3827,7 +3831,11 @@ function func231() {
                     var_985 = var_985 + 19600;
                     bsave(file_name = var_735, data = var_77, data_size = null, offset = var_985);
                     var_985 = var_985 + 19600;
-                    bsave(file_name = var_735, data = var_78, data_size = null, offset = var_985);
+                    save_78 = Array();
+                    var_78.forEach(function (save) {
+                        save_78.push(save.Save());
+                    });
+                    bsave(var_735, save_78, null, var_985);
                     var_985 = var_985 + 36000;
                     bsave(file_name = var_735, data = var_81, data_size = null, offset = var_985);
                     var_985 = var_985 + 8400;
@@ -3940,7 +3948,7 @@ function func233() {
                     var_163 = 0;
                     var_164 = 0;
                     var_159 = 0;
-                    var_91 = 0;
+                    current_floor = 0;
                     var_840 = 1;
                     var_352 = 15;
                     var_211 = 15;
@@ -4193,7 +4201,7 @@ function func235() {
             var_990 = dim(100);
             var_726 = 0;
             var_271 = 0;
-            var_91 = 0;
+            current_floor = 0;
             var_376 = 0;
             var_840 = 0;
             var_352 = 0;
@@ -4775,7 +4783,7 @@ function func243() {
         return __generator(this, function (_a) {
             dbgprt(243);
             var_86 = rnd(12);
-            if (var_91 < 4) {
+            if (current_floor < 4) {
                 var_86 = 1;
             }
             if (var_94 >= 1) {
@@ -4787,16 +4795,16 @@ function func243() {
             if (var_70 != 0) {
                 var_86 = 0;
             }
-            if (var_62 == 1 && var_91 == 12) {
+            if (var_62 == 1 && current_floor == 12) {
                 var_86 = 0;
             }
-            if (var_62 == 2 && var_91 == 30) {
+            if (var_62 == 2 && current_floor == 30) {
                 var_86 = 0;
             }
-            if (var_62 == 3 && var_91 == 99) {
+            if (var_62 == 3 && current_floor == 99) {
                 var_86 = 0;
             }
-            if (var_62 == 5 && var_91 == var_20) {
+            if (var_62 == 5 && current_floor == var_20) {
                 var_86 = 1;
             }
             if (var_94 == 1) {
@@ -4845,13 +4853,13 @@ function func244() {
                     if (var_62 == 3) {
                         var_1072 = rnd(14);
                     }
-                    if (var_62 == 1 && var_91 == 12) {
+                    if (var_62 == 1 && current_floor == 12) {
                         var_1072 = 111;
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_1072 = 121;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_1072 = 120;
                     }
                     if (var_94 == 1) {
@@ -5411,19 +5419,19 @@ function func246() {
                     _a.sent();
                     _a.label = 3;
                 case 3:
-                    if (var_91 < 4) {
+                    if (current_floor < 4) {
                         var_96 = 0;
                     }
                     if (var_62 == 1) {
                         var_96 = 0;
                     }
-                    if (var_62 == 2 && var_91 == 30) {
+                    if (var_62 == 2 && current_floor == 30) {
                         var_96 = 0;
                     }
-                    if (var_62 == 3 && var_91 == 99) {
+                    if (var_62 == 3 && current_floor == 99) {
                         var_96 = 0;
                     }
-                    if (var_62 == 5 && var_91 == var_20) {
+                    if (var_62 == 5 && current_floor == var_20) {
                         var_96 = 0;
                     }
                     if (var_94 >= 1) {

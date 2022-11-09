@@ -4024,10 +4024,10 @@ function func342() {
             if (var_350 <= 0) {
                 color(255, 255, 0);
             }
-            if (var_91 >= 100) {
+            if (current_floor >= 100) {
                 var_44 = 45;
             }
-            if (var_91 < 100) {
+            if (current_floor < 100) {
                 var_44 = 35;
             }
             pos(var_44, var_41 + 2);
@@ -4083,14 +4083,14 @@ function func342() {
             mes("G");
             font("ＭＳ Ｐゴシック", 20, 1);
             color(1, 1, 1);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42 - 1, var_41);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43 - 1, var_41);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4128,14 +4128,14 @@ function func342() {
                 pos(var_58 - 1, var_41);
             }
             mes(var_415);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42 + 2, var_41);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43 + 2, var_41);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4173,14 +4173,14 @@ function func342() {
                 pos(var_58 + 2, var_41);
             }
             mes(var_415);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42, var_41 - 1);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43, var_41 - 1);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4218,14 +4218,14 @@ function func342() {
                 pos(var_58, var_41 - 1);
             }
             mes(var_415);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42, var_41 + 1);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43, var_41 + 1);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4263,14 +4263,14 @@ function func342() {
                 pos(var_58, var_41 + 1);
             }
             mes(var_415);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42 + 1, var_41 + 1);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43 + 1, var_41 + 1);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4308,14 +4308,14 @@ function func342() {
                 pos(var_58 + 1, var_41 + 1);
             }
             mes(var_415);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42 + 1, var_41 - 1);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43 + 1, var_41 - 1);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4354,14 +4354,14 @@ function func342() {
             }
             mes(var_415);
             color(255, 255, 255);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42, var_41);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43, var_41);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4416,14 +4416,14 @@ function func342() {
             color(255, 255, 255);
             mes(var_415);
             color(255, 255, 255);
-            if (var_91 < 10) {
+            if (current_floor < 10) {
                 pos(var_42 + 1, var_41);
             }
-            if (var_91 >= 10) {
+            if (current_floor >= 10) {
                 pos(var_43 + 1, var_41);
             }
             if (var_262 == 0) {
-                mes(var_91);
+                mes(current_floor);
             }
             if (var_262 == 1) {
                 mes("1");
@@ -18726,13 +18726,13 @@ function func384() {
                         var_78[var_866].Var10 = 1;
                     }
                     if (var_62 != 5) {
-                        if (var_452 == 0 && var_91 >= 15 && var_91 <= 18 && var_1734 == 0 && var_94 == 0) {
+                        if (var_452 == 0 && current_floor >= 15 && current_floor <= 18 && var_1734 == 0 && var_94 == 0) {
                             var_1768 = rnd(5);
                             if (var_1768 == 0) {
                                 var_78[var_866].Var15 = 1;
                             }
                         }
-                        if (var_452 == 0 && var_91 >= 25 && var_91 <= 35 && var_1734 == 0 && var_94 == 0) {
+                        if (var_452 == 0 && current_floor >= 25 && current_floor <= 35 && var_1734 == 0 && var_94 == 0) {
                             var_1768 = rnd(8);
                             if (var_1768 == 0) {
                                 var_78[var_866].Var15 = 1;
@@ -18740,7 +18740,7 @@ function func384() {
                         }
                     }
                     if (var_62 == 5) {
-                        if (var_452 == 0 && var_91 >= 6 && var_91 <= 30 && var_1734 == 0 && var_94 == 0) {
+                        if (var_452 == 0 && current_floor >= 6 && current_floor <= 30 && var_1734 == 0 && var_94 == 0) {
                             var_1768 = rnd(20);
                             if (var_1768 == 0) {
                                 var_78[var_866].Var15 = 1;
@@ -18751,7 +18751,7 @@ function func384() {
                         var_78[var_866].Var11 = 1;
                         if (var_62 >= 2 && var_1727 == 0) {
                             var_1768 = rnd(9);
-                            if (var_62 == 2 && var_91 < 10) {
+                            if (var_62 == 2 && current_floor < 10) {
                                 var_1768 = 1;
                             }
                             if (var_1768 == 0) {
@@ -19993,37 +19993,37 @@ function func388() {
                 case 0:
                     dbgprt(388);
                     var_1786 = 1;
-                    if (var_91 >= 1 && var_91 <= 9) {
+                    if (current_floor >= 1 && current_floor <= 9) {
                         var_1786 = rnd(100);
                     }
-                    if (var_91 >= 10 && var_91 <= 19) {
+                    if (current_floor >= 10 && current_floor <= 19) {
                         var_1786 = rnd(90);
                     }
-                    if (var_91 >= 20 && var_91 <= 29) {
+                    if (current_floor >= 20 && current_floor <= 29) {
                         var_1786 = rnd(80);
                     }
-                    if (var_91 >= 30 && var_91 <= 39) {
+                    if (current_floor >= 30 && current_floor <= 39) {
                         var_1786 = rnd(70);
                     }
-                    if (var_91 >= 40 && var_91 <= 49) {
+                    if (current_floor >= 40 && current_floor <= 49) {
                         var_1786 = rnd(60);
                     }
-                    if (var_91 >= 50 && var_91 <= 59) {
+                    if (current_floor >= 50 && current_floor <= 59) {
                         var_1786 = rnd(50);
                     }
-                    if (var_91 >= 60 && var_91 <= 69) {
+                    if (current_floor >= 60 && current_floor <= 69) {
                         var_1786 = rnd(40);
                     }
-                    if (var_91 >= 70 && var_91 <= 79) {
+                    if (current_floor >= 70 && current_floor <= 79) {
                         var_1786 = rnd(30);
                     }
-                    if (var_91 >= 80 && var_91 <= 89) {
+                    if (current_floor >= 80 && current_floor <= 89) {
                         var_1786 = rnd(20);
                     }
-                    if (var_91 >= 90 && var_91 <= 98) {
+                    if (current_floor >= 90 && current_floor <= 98) {
                         var_1786 = rnd(10);
                     }
-                    if (var_91 >= 99) {
+                    if (current_floor >= 99) {
                         var_1786 = rnd(100);
                     }
                     if (!(var_1786 == 0 || var_1766 == 1)) return [3 /*break*/, 4];
@@ -20036,34 +20036,34 @@ function func388() {
                     var_78[var_866].Var4 = rnd(5);
                     var_78[var_866].Var4 = var_78[var_866].Var4 + 1;
                     var_1788 = 0;
-                    if (var_91 >= 1 && var_91 <= 9) {
+                    if (current_floor >= 1 && current_floor <= 9) {
                         var_1789 = 1;
                     }
-                    if (var_91 >= 10 && var_91 <= 19) {
+                    if (current_floor >= 10 && current_floor <= 19) {
                         var_1789 = 1;
                     }
-                    if (var_91 >= 20 && var_91 <= 29) {
+                    if (current_floor >= 20 && current_floor <= 29) {
                         var_1789 = 1;
                     }
-                    if (var_91 >= 30 && var_91 <= 39) {
+                    if (current_floor >= 30 && current_floor <= 39) {
                         var_1789 = 2;
                     }
-                    if (var_91 >= 40 && var_91 <= 49) {
+                    if (current_floor >= 40 && current_floor <= 49) {
                         var_1789 = 2;
                     }
-                    if (var_91 >= 50 && var_91 <= 59) {
+                    if (current_floor >= 50 && current_floor <= 59) {
                         var_1789 = 2;
                     }
-                    if (var_91 >= 60 && var_91 <= 69) {
+                    if (current_floor >= 60 && current_floor <= 69) {
                         var_1789 = 3;
                     }
-                    if (var_91 >= 70 && var_91 <= 79) {
+                    if (current_floor >= 70 && current_floor <= 79) {
                         var_1789 = 3;
                     }
-                    if (var_91 >= 80 && var_91 <= 89) {
+                    if (current_floor >= 80 && current_floor <= 89) {
                         var_1789 = 4;
                     }
-                    if (var_91 >= 90 && var_91 <= 100) {
+                    if (current_floor >= 90 && current_floor <= 100) {
                         var_1789 = 5;
                     }
                     var_1790 = rnd(100);
@@ -20571,7 +20571,7 @@ function func393() {
             switch (_a.label) {
                 case 0:
                     dbgprt(393);
-                    if (!(var_91 == 20 && var_62 != 5)) return [3 /*break*/, 2];
+                    if (!(current_floor == 20 && var_62 != 5)) return [3 /*break*/, 2];
                     var_452 = 1;
                     var_1748 = 1;
                     return [4 /*yield*/, func384()];
@@ -20581,7 +20581,7 @@ function func393() {
                     var_452 = 0;
                     _a.label = 2;
                 case 2:
-                    if (!(var_62 == 2 && var_91 == 1 && var_1037 != 0)) return [3 /*break*/, 7];
+                    if (!(var_62 == 2 && current_floor == 1 && var_1037 != 0)) return [3 /*break*/, 7];
                     var_1732 = 1;
                     var_452 = 1;
                     cnt2_39 = 0;
@@ -20602,7 +20602,7 @@ function func393() {
                     var_1037 = 0;
                     _a.label = 7;
                 case 7:
-                    if (!(var_62 == 3 && var_91 == 99 && var_537 >= 1)) return [3 /*break*/, 9];
+                    if (!(var_62 == 3 && current_floor == 99 && var_537 >= 1)) return [3 /*break*/, 9];
                     var_452 = 1;
                     var_1766 = 1;
                     return [4 /*yield*/, func384()];
@@ -20612,7 +20612,7 @@ function func393() {
                     var_452 = 0;
                     _a.label = 9;
                 case 9:
-                    if (!(var_62 == 4 && var_91 == 99)) return [3 /*break*/, 11];
+                    if (!(var_62 == 4 && current_floor == 99)) return [3 /*break*/, 11];
                     var_452 = 1;
                     var_1751 = 1;
                     return [4 /*yield*/, func384()];

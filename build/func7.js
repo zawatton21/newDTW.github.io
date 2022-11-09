@@ -5609,8 +5609,8 @@ function func755() {
                 case 7:
                     _a.sent();
                     var_3142 = sdim(length1 = 50, length2 = 20, length3 = null);
-                    var_3143 = var_91;
-                    var_91 = var_91 + 1;
+                    var_3143 = current_floor;
+                    current_floor = current_floor + 1;
                     return [4 /*yield*/, func627()];
                 case 8:
                     _a.sent();
@@ -5633,7 +5633,7 @@ function func755() {
                     ++cnt1_55;
                     return [3 /*break*/, 9];
                 case 12:
-                    var_91 = var_3143;
+                    current_floor = var_3143;
                     var_3145 = 0;
                     cnt1_56 = 0;
                     _a.label = 13;
@@ -5889,8 +5889,8 @@ function func758() {
                     return [4 /*yield*/, func340()];
                 case 7:
                     _a.sent();
-                    var_3143 = var_91;
-                    var_91 = var_91 + 1;
+                    var_3143 = current_floor;
+                    current_floor = current_floor + 1;
                     return [4 /*yield*/, func627()];
                 case 8:
                     _a.sent();
@@ -5898,7 +5898,7 @@ function func758() {
                     return [4 /*yield*/, func177()];
                 case 9:
                     _a.sent();
-                    var_91 = var_3143;
+                    current_floor = var_3143;
                     return [4 /*yield*/, func094()];
                 case 10:
                     _a.sent();
@@ -8911,7 +8911,7 @@ function func788() {
                     var_532 = 1;
                     var_1454 = 1;
                     var_271 = 1;
-                    var_1455 = var_91;
+                    var_1455 = current_floor;
                     return [4 /*yield*/, func094()];
                 case 1:
                     _a.sent();
@@ -8939,7 +8939,7 @@ function func788() {
                     cnt1_75 = 0;
                     _a.label = 4;
                 case 4:
-                    if (!(cnt1_75 < var_91 + 60)) return [3 /*break*/, 7];
+                    if (!(cnt1_75 < current_floor + 60)) return [3 /*break*/, 7];
                     return [4 /*yield*/, func337()];
                 case 5:
                     _a.sent();

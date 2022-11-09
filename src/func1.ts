@@ -23,7 +23,7 @@ function func100(this: any) {
         if (var_488 == 850 || var_488 == 851) {
             var_671 = 205;
         }
-        DSPLAY(audio_id =var_671);
+        DSPLAY(audio_id = var_671);
         var_488 = 0;
         return;
     });
@@ -33,395 +33,395 @@ function func100(this: any) {
 function func101(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(101);
-        if (var_675 == 0) {
-            var_665 = "0.mp3"; // ダンジョン基本BGM
-        }
-        if (var_675 == 100) {
-            var_665 = "116.mp3"; //ハーミットパープル
-            var_676 = "The Beatles [Get Back]";
-        }
-        if (var_675 == 101) {
-            var_665 = "101.mp3";
-            var_676 = "Michel Polnareff [Tout tout pour ma cherie]";
-        }
-        if (var_675 == 102) {
-            var_665 = "099.mp3";
-            var_676 = "King Crimson [RED]";
-        }
-        if (var_675 == 103) {
-            var_665 = "103.mp3";
-            var_676 = "Pink Floyd [Echoes]";
-        }
-        if (var_675 == 104) {
-            var_665 = "104.mp3";
-            var_676 = "The Band [The Night They Drove Old Dixie Down]";
-        }
-        if (var_675 == 105) {
-            var_665 = "105.mp3";
-            var_676 = "Red Hot Chili Peppers [Give It Away]";
-        }
-        if (var_675 == 106) {
-            var_665 = "106.mp3";
-            var_676 = "Pink Floyd [Shine on You Crasy Diamond]";
-        }
-        if (var_675 == 107) {
-            var_665 = "107.mp3";
-            var_676 = "The Beatles [Good Night]";
-        }
-        if (var_675 == 108) {
-            var_665 = "108.mp3";
-            var_676 = "The Rolling Stones [Brown Sugar] (album[Sticky Fingers])";
-        }
-        if (var_675 == 109) {
-            var_665 = "109.mp3";
-            var_676 = "Paula Abdul [Forever Your Girl]";
-        }
-        if (var_675 == 111) {
-            var_665 = "111.mp3";
-            var_676 = "DIO [I Speed At Night]";
-        }
-        if (var_675 == 112) {
-            var_665 = "112.mp3";
-            var_676 = "Queen [Killer Queen]";
-        }
-        if (var_675 == 113) {
-            var_665 = "113.mp3";
-            var_676 = "The Clash [Rock The Casbah]";
-        }
-        if (var_675 == 114) {
-            var_665 = "114.mp3";
-            var_676 = "White Snake [Love Aint No Stranger]";
-        }
-        if (var_675 == 115) {
-            var_665 = "115.mp3";
-            var_676 = "Prince [Gold](album[Gold Experience])";
-        }
-        if (var_675 == 116) {
-            var_665 = "116.mp3";
-            var_676 = "The Beatles [Get Back]";
-        }
-        if (var_675 == 117) {
-            var_665 = "117.mp3";
-            var_676 = "Captain & Tennille [Love Will Keep Us Together]";
-        }
-        if (var_675 == 118) {
-            var_665 = "118.mp3";
-            var_676 = "Van Halen [Pretty Woman](album[DIVER DOWN])";
-        }
-        if (var_675 == 119) {
-            var_665 = "119.mp3";
-            var_676 = "Spice Girls [Wannabe]";
-        }
-        if (var_675 == 120) {
-            var_665 = "120.mp3";
-            var_676 = "Dolly Parton [Jolene]";
-        }
-        if (var_675 == 121) {
-            var_665 = "121.mp3";
-            var_676 = "JIMI HENDRIX [Purple Haze]";
-        }
-        if (var_675 == 122) {
-            var_665 = "122.mp3";
-            var_676 = "Chaka Khan [Aint Nobody]";
-        }
-        if (var_675 == 123) {
-            var_665 = "123.mp3";
-            var_676 = "Cream [Crossroads]";
-        }
-        if (var_675 == 124) {
-            var_665 = "124.mp3";
-            var_676 = "Moody Blues [I Know Your Out There Somewhere]";
-        }
-        if (var_675 == 200) {
-            var_665 = "200.mp3";
-            var_676 = "Curtis Mayfield [Superfly]";
-        }
-        if (var_675 == 201) {
-            var_665 = "201.mp3";
-            var_676 = "The Beatles [Girl] (album [RUBBER SOUL])";
-        }
-        if (var_675 == 202) {
-            var_665 = "202.mp3";
-            var_676 = "The Beatles [While My Guiter Gentry Weeps]";
-        }
-        if (var_675 == 203) {
-            var_665 = "203.mp3";
-            var_676 = "Iggy Pop [The Passengers]";
-        }
-        if (var_675 == 204) {
-            var_665 = "204.mp3";
-            var_676 = "Queen [Sheer Heart Attack]";
-        }
-        if (var_675 == 205) {
-            var_665 = "205.mp3";
-            var_676 = "Kraftwerk [The Model]";
-        }
-        if (var_675 == 206) {
-            var_665 = "206.mp3";
-            var_676 = "OASIS [Wonderwall]";
-        }
-        if (var_675 == 207) {
-            var_665 = "207.mp3";
-            var_676 = "The Grateful Dead [Dark Star]";
-        }
-        if (var_675 == 300) {
-            var_665 = "300.mp3";
-            var_676 = "Pearl jam [Alive]";
-        }
-        if (var_675 == 301) {
-            var_665 = "301.mp3";
-            var_676 = "Neil Young [Heart of Gold](albam[HARVEST])";
-        }
-        if (var_675 == 302) {
-            var_665 = "302.mp3";
-            var_676 = "AC/DC [Highway To Hell]";
-        }
-        if (var_675 == 303) {
-            var_665 = "303.mp3";
-            var_676 = "[Enter the Dragon] ";
-        }
-        if (var_675 == 304) {
-            var_665 = "304.mp3";
-            var_676 = "Weather Report [Birdland]";
-        }
-        if (var_675 == 305) {
-            var_665 = "305.mp3";
-            var_676 = "Cinderella [Gypsyroad]";
-        }
-        if (var_675 == 306) {
-            var_665 = "306.mp3";
-            var_676 = "Manhattan Transfer [Boy from NewYork City]";
-        }
-        if (var_675 == 308) {
-            var_665 = "308.mp3";
-            var_676 = "Devo [Beautiful World]";
-        }
-        if (var_675 == 309) {
-            var_665 = "309.mp3";
-            var_676 = "Soft Machine [Facelift]";
-        }
-        if (var_675 == 310) {
-            var_665 = "310.mp3";
-            var_676 = "Nena [99 luftballons]";
-        }
-        if (var_675 == 311) {
-            var_665 = "311.mp3";
-            var_676 = "Cheap Trick [Dream Police]";
-        }
-        if (var_675 == 312) {
-            var_665 = "312.mp3";
-            var_676 = "Aerosmith [Walk This Way]";
-        }
-        if (var_675 == 313) {
-            var_665 = "313.mp3";
-            var_676 = "Deep Purple [Highway Star]";
-        }
-        if (var_675 == 314) {
-            var_665 = "314.mp3";
-            var_676 = "Stray Cats [Stray Cat Strut]";
-        }
-        if (var_675 == 315) {
-            var_665 = "315.mp3";
-            var_676 = "King Crimson [Epitaph]";
-        }
-        if (var_675 == 316) {
-            var_665 = "316.mp3";
-            var_676 = "Survivor [Eye of the Tiger]";
-        }
-        if (var_675 == 317) {
-            var_665 = "317.mp3";
-            var_676 = "Kiss [Detroit Rock City]";
-        }
-        if (var_675 == 318) {
-            var_665 = "318.mp3";
-            var_676 = "The Rolling Stones [Jumpin' Jack Flash ]";
-        }
-        if (var_675 == 319) {
-            var_665 = "319.mp3";
-            var_676 = "Boyz II Men [End of the Road]";
-        }
-        if (var_675 == 320) {
-            var_665 = "320.mp3";
-            var_676 = "Metallica [ATTITUDE]";
-        }
-        if (var_675 == 393) {
-            var_665 = "990.mp3";
-            var_676 = "Queen [Bohemian Rhapsody]";
-        }
-        if (var_675 == 394) {
-            var_665 = "112.mp3";
-            var_676 = "Queen [Killer Queen]";
-        }
-        if (var_675 == 395) {
-            var_665 = "395.mp3";
-            var_676 = "Queen [Another One Bite the Dust]";
-        }
-        if (var_675 == 396) {
-            var_665 = "396.mp3";
-            var_676 = "Led Zeppelin [Stairway To Heaven]";
-        }
-        if (var_675 == 397) {
-            var_665 = "304.mp3";
-            var_676 = "Weather Report [Birdland] (album[HEAVY WEATHER])";
-        }
-        if (var_675 == 398) {
-            var_665 = "116.mp3";
-            var_676 = "The Beatles [Get Back]";
-        }
-        if (var_675 == 399) {
-            var_665 = "115.mp3";
-            var_676 = "Prince [Gold](album[Gold Experience])";
-        }
-        if (var_675 == 400) {
-            var_665 = "400.mp3";
-            var_676 = "Sting [English Man In New York]";
-        }
-        if (var_675 == 401) {
-            var_665 = "401.mp3";
-            var_676 = "Foo Fighters [Everlong]";
-        }
-        if (var_675 == 402) {
-            var_665 = "402.mp3";
-            var_676 = "Hall and Oates [Kiss on my List]";
-        }
-        if (var_675 == 403) {
-            var_665 = "403.mp3";
-            var_676 = "Sex Pistols [Anarchy in the UK]";
-        }
-        if (var_675 == 404) {
-            var_665 = "404.mp3";
-            var_676 = "Petshop Boys [West End Girls]";
-        }
-        if (var_675 == 405) {
-            var_665 = "405.mp3";
-            var_676 = "Police [Roxanne]";
-        }
-        if (var_675 == 406) {
-            var_665 = "405.mp3";
-            var_676 = "Police [Roxanne]";
-        }
-        if (var_675 == 407) {
-            var_665 = "407.mp3";
-            var_676 = "Sting [Shape of My Heart]";
-        }
-        if (var_675 == 408) {
-            var_665 = "408.mp3";
-            var_676 = "Michael Jackson [Man in the Mirror]";
-        }
-        if (var_675 == 409) {
-            var_665 = "409.mp3";
-            var_676 = "Steely Dan [Babylon Sisters]";
-        }
-        if (var_675 == 411) {
-            var_665 = "411.mp3";
-            var_676 = "Eagles [Desperado]";
-        }
-        if (var_675 == 412) {
-            var_665 = "412.mp3";
-            var_676 = "Bob Dylan [Knocking on Heavens Door]";
-        }
-        if (var_675 == 413) {
-            var_665 = "0.mp3";
-            var_676 = "nothing";
-        }
-        if (var_675 == 414) {
-            var_665 = "414.mp3";
-            var_676 = "Chuck Berry [Johnny B. Goode]";
-        }
-        if (var_675 == 977) {
-            var_665 = "105.mp3";
-            var_676 = "Red Hot Chili Peppers [Give It Away]";
-        }
-        if (var_675 == 978) {
-            var_665 = "978.mp3";
-            var_676 = "Pink Floyd [Atom Heart Mother]";
-        }
-        if (var_675 == 979) {
-            var_665 = "315.mp3";
-            var_676 = "King Crimson [Epitaph]";
-        }
-        if (var_675 == 980) {
-            var_665 = "980.mp3";
-            var_676 = "The Pixies [Where Is My Mind]";
-        }
-        if (var_675 == 981) {
-            var_665 = "981.mp3";
-            var_676 = "Madonna [Like a Virgin]";
-        }
-        if (var_675 == 982) {
-            var_665 = "115.mp3";
-            var_676 = "Prince [Gold](album[Gold Experience])";
-        }
-        if (var_675 == 983) {
-            var_665 = "203.mp3";
-            var_676 = "Iggy Pop [The Passengers]";
-        }
-        if (var_675 == 984) {
-            var_665 = "313.mp3";
-            var_676 = "Deep Purple [Highway Star]";
-        }
-        if (var_675 == 985) {
-            var_665 = "985.mp3";
-            var_676 = "Deep Purple [Speed King]";
+        if (bgm_list == 0) {
+            bgm_file_name = "0.mp3"; // ダンジョン基本BGM
+        }
+        if (bgm_list == 100) {
+            bgm_file_name = "116.mp3"; //ハーミットパープル
+            bgm_title = "The Beatles [Get Back]";
+        }
+        if (bgm_list == 101) {
+            bgm_file_name = "101.mp3";
+            bgm_title = "Michel Polnareff [Tout tout pour ma cherie]";
+        }
+        if (bgm_list == 102) {
+            bgm_file_name = "099.mp3";
+            bgm_title = "King Crimson [RED]";
+        }
+        if (bgm_list == 103) {
+            bgm_file_name = "103.mp3";
+            bgm_title = "Pink Floyd [Echoes]";
+        }
+        if (bgm_list == 104) {
+            bgm_file_name = "104.mp3";
+            bgm_title = "The Band [The Night They Drove Old Dixie Down]";
+        }
+        if (bgm_list == 105) {
+            bgm_file_name = "105.mp3";
+            bgm_title = "Red Hot Chili Peppers [Give It Away]";
+        }
+        if (bgm_list == 106) {
+            bgm_file_name = "106.mp3";
+            bgm_title = "Pink Floyd [Shine on You Crasy Diamond]";
+        }
+        if (bgm_list == 107) {
+            bgm_file_name = "107.mp3";
+            bgm_title = "The Beatles [Good Night]";
+        }
+        if (bgm_list == 108) {
+            bgm_file_name = "108.mp3";
+            bgm_title = "The Rolling Stones [Brown Sugar] (album[Sticky Fingers])";
+        }
+        if (bgm_list == 109) {
+            bgm_file_name = "109.mp3";
+            bgm_title = "Paula Abdul [Forever Your Girl]";
+        }
+        if (bgm_list == 111) {
+            bgm_file_name = "111.mp3";
+            bgm_title = "DIO [I Speed At Night]";
+        }
+        if (bgm_list == 112) {
+            bgm_file_name = "112.mp3";
+            bgm_title = "Queen [Killer Queen]";
+        }
+        if (bgm_list == 113) {
+            bgm_file_name = "113.mp3";
+            bgm_title = "The Clash [Rock The Casbah]";
+        }
+        if (bgm_list == 114) {
+            bgm_file_name = "114.mp3";
+            bgm_title = "White Snake [Love Aint No Stranger]";
+        }
+        if (bgm_list == 115) {
+            bgm_file_name = "115.mp3";
+            bgm_title = "Prince [Gold](album[Gold Experience])";
+        }
+        if (bgm_list == 116) {
+            bgm_file_name = "116.mp3";
+            bgm_title = "The Beatles [Get Back]";
+        }
+        if (bgm_list == 117) {
+            bgm_file_name = "117.mp3";
+            bgm_title = "Captain & Tennille [Love Will Keep Us Together]";
+        }
+        if (bgm_list == 118) {
+            bgm_file_name = "118.mp3";
+            bgm_title = "Van Halen [Pretty Woman](album[DIVER DOWN])";
+        }
+        if (bgm_list == 119) {
+            bgm_file_name = "119.mp3";
+            bgm_title = "Spice Girls [Wannabe]";
+        }
+        if (bgm_list == 120) {
+            bgm_file_name = "120.mp3";
+            bgm_title = "Dolly Parton [Jolene]";
+        }
+        if (bgm_list == 121) {
+            bgm_file_name = "121.mp3";
+            bgm_title = "JIMI HENDRIX [Purple Haze]";
+        }
+        if (bgm_list == 122) {
+            bgm_file_name = "122.mp3";
+            bgm_title = "Chaka Khan [Aint Nobody]";
+        }
+        if (bgm_list == 123) {
+            bgm_file_name = "123.mp3";
+            bgm_title = "Cream [Crossroads]";
+        }
+        if (bgm_list == 124) {
+            bgm_file_name = "124.mp3";
+            bgm_title = "Moody Blues [I Know Your Out There Somewhere]";
+        }
+        if (bgm_list == 200) {
+            bgm_file_name = "200.mp3";
+            bgm_title = "Curtis Mayfield [Superfly]";
+        }
+        if (bgm_list == 201) {
+            bgm_file_name = "201.mp3";
+            bgm_title = "The Beatles [Girl] (album [RUBBER SOUL])";
+        }
+        if (bgm_list == 202) {
+            bgm_file_name = "202.mp3";
+            bgm_title = "The Beatles [While My Guiter Gentry Weeps]";
+        }
+        if (bgm_list == 203) {
+            bgm_file_name = "203.mp3";
+            bgm_title = "Iggy Pop [The Passengers]";
+        }
+        if (bgm_list == 204) {
+            bgm_file_name = "204.mp3";
+            bgm_title = "Queen [Sheer Heart Attack]";
+        }
+        if (bgm_list == 205) {
+            bgm_file_name = "205.mp3";
+            bgm_title = "Kraftwerk [The Model]";
+        }
+        if (bgm_list == 206) {
+            bgm_file_name = "206.mp3";
+            bgm_title = "OASIS [Wonderwall]";
+        }
+        if (bgm_list == 207) {
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list == 300) {
+            bgm_file_name = "300.mp3";
+            bgm_title = "Pearl jam [Alive]";
+        }
+        if (bgm_list == 301) {
+            bgm_file_name = "301.mp3";
+            bgm_title = "Neil Young [Heart of Gold](albam[HARVEST])";
+        }
+        if (bgm_list == 302) {
+            bgm_file_name = "302.mp3";
+            bgm_title = "AC/DC [Highway To Hell]";
+        }
+        if (bgm_list == 303) {
+            bgm_file_name = "303.mp3";
+            bgm_title = "[Enter the Dragon] ";
+        }
+        if (bgm_list == 304) {
+            bgm_file_name = "304.mp3";
+            bgm_title = "Weather Report [Birdland]";
+        }
+        if (bgm_list == 305) {
+            bgm_file_name = "305.mp3";
+            bgm_title = "Cinderella [Gypsyroad]";
+        }
+        if (bgm_list == 306) {
+            bgm_file_name = "306.mp3";
+            bgm_title = "Manhattan Transfer [Boy from NewYork City]";
+        }
+        if (bgm_list == 308) {
+            bgm_file_name = "308.mp3";
+            bgm_title = "Devo [Beautiful World]";
+        }
+        if (bgm_list == 309) {
+            bgm_file_name = "309.mp3";
+            bgm_title = "Soft Machine [Facelift]";
+        }
+        if (bgm_list == 310) {
+            bgm_file_name = "310.mp3";
+            bgm_title = "Nena [99 luftballons]";
+        }
+        if (bgm_list == 311) {
+            bgm_file_name = "311.mp3";
+            bgm_title = "Cheap Trick [Dream Police]";
+        }
+        if (bgm_list == 312) {
+            bgm_file_name = "312.mp3";
+            bgm_title = "Aerosmith [Walk This Way]";
+        }
+        if (bgm_list == 313) {
+            bgm_file_name = "313.mp3";
+            bgm_title = "Deep Purple [Highway Star]";
+        }
+        if (bgm_list == 314) {
+            bgm_file_name = "314.mp3";
+            bgm_title = "Stray Cats [Stray Cat Strut]";
+        }
+        if (bgm_list == 315) {
+            bgm_file_name = "315.mp3";
+            bgm_title = "King Crimson [Epitaph]";
+        }
+        if (bgm_list == 316) {
+            bgm_file_name = "316.mp3";
+            bgm_title = "Survivor [Eye of the Tiger]";
+        }
+        if (bgm_list == 317) {
+            bgm_file_name = "317.mp3";
+            bgm_title = "Kiss [Detroit Rock City]";
+        }
+        if (bgm_list == 318) {
+            bgm_file_name = "318.mp3";
+            bgm_title = "The Rolling Stones [Jumpin' Jack Flash ]";
+        }
+        if (bgm_list == 319) {
+            bgm_file_name = "319.mp3";
+            bgm_title = "Boyz II Men [End of the Road]";
+        }
+        if (bgm_list == 320) {
+            bgm_file_name = "320.mp3";
+            bgm_title = "Metallica [ATTITUDE]";
+        }
+        if (bgm_list == 393) {
+            bgm_file_name = "990.mp3";
+            bgm_title = "Queen [Bohemian Rhapsody]";
+        }
+        if (bgm_list == 394) {
+            bgm_file_name = "112.mp3";
+            bgm_title = "Queen [Killer Queen]";
+        }
+        if (bgm_list == 395) {
+            bgm_file_name = "395.mp3";
+            bgm_title = "Queen [Another One Bite the Dust]";
+        }
+        if (bgm_list == 396) {
+            bgm_file_name = "396.mp3";
+            bgm_title = "Led Zeppelin [Stairway To Heaven]";
+        }
+        if (bgm_list == 397) {
+            bgm_file_name = "304.mp3";
+            bgm_title = "Weather Report [Birdland] (album[HEAVY WEATHER])";
+        }
+        if (bgm_list == 398) {
+            bgm_file_name = "116.mp3";
+            bgm_title = "The Beatles [Get Back]";
+        }
+        if (bgm_list == 399) {
+            bgm_file_name = "115.mp3";
+            bgm_title = "Prince [Gold](album[Gold Experience])";
+        }
+        if (bgm_list == 400) {
+            bgm_file_name = "400.mp3";
+            bgm_title = "Sting [English Man In New York]";
+        }
+        if (bgm_list == 401) {
+            bgm_file_name = "401.mp3";
+            bgm_title = "Foo Fighters [Everlong]";
+        }
+        if (bgm_list == 402) {
+            bgm_file_name = "402.mp3";
+            bgm_title = "Hall and Oates [Kiss on my List]";
+        }
+        if (bgm_list == 403) {
+            bgm_file_name = "403.mp3";
+            bgm_title = "Sex Pistols [Anarchy in the UK]";
+        }
+        if (bgm_list == 404) {
+            bgm_file_name = "404.mp3";
+            bgm_title = "Petshop Boys [West End Girls]";
+        }
+        if (bgm_list == 405) {
+            bgm_file_name = "405.mp3";
+            bgm_title = "Police [Roxanne]";
+        }
+        if (bgm_list == 406) {
+            bgm_file_name = "405.mp3";
+            bgm_title = "Police [Roxanne]";
+        }
+        if (bgm_list == 407) {
+            bgm_file_name = "407.mp3";
+            bgm_title = "Sting [Shape of My Heart]";
+        }
+        if (bgm_list == 408) {
+            bgm_file_name = "408.mp3";
+            bgm_title = "Michael Jackson [Man in the Mirror]";
+        }
+        if (bgm_list == 409) {
+            bgm_file_name = "409.mp3";
+            bgm_title = "Steely Dan [Babylon Sisters]";
+        }
+        if (bgm_list == 411) {
+            bgm_file_name = "411.mp3";
+            bgm_title = "Eagles [Desperado]";
+        }
+        if (bgm_list == 412) {
+            bgm_file_name = "412.mp3";
+            bgm_title = "Bob Dylan [Knocking on Heavens Door]";
+        }
+        if (bgm_list == 413) {
+            bgm_file_name = "0.mp3";
+            bgm_title = "nothing";
+        }
+        if (bgm_list == 414) {
+            bgm_file_name = "414.mp3";
+            bgm_title = "Chuck Berry [Johnny B. Goode]";
+        }
+        if (bgm_list == 977) {
+            bgm_file_name = "105.mp3";
+            bgm_title = "Red Hot Chili Peppers [Give It Away]";
+        }
+        if (bgm_list == 978) {
+            bgm_file_name = "978.mp3";
+            bgm_title = "Pink Floyd [Atom Heart Mother]";
+        }
+        if (bgm_list == 979) {
+            bgm_file_name = "315.mp3";
+            bgm_title = "King Crimson [Epitaph]";
+        }
+        if (bgm_list == 980) {
+            bgm_file_name = "980.mp3";
+            bgm_title = "The Pixies [Where Is My Mind]";
+        }
+        if (bgm_list == 981) {
+            bgm_file_name = "981.mp3";
+            bgm_title = "Madonna [Like a Virgin]";
+        }
+        if (bgm_list == 982) {
+            bgm_file_name = "115.mp3";
+            bgm_title = "Prince [Gold](album[Gold Experience])";
+        }
+        if (bgm_list == 983) {
+            bgm_file_name = "203.mp3";
+            bgm_title = "Iggy Pop [The Passengers]";
+        }
+        if (bgm_list == 984) {
+            bgm_file_name = "313.mp3";
+            bgm_title = "Deep Purple [Highway Star]";
+        }
+        if (bgm_list == 985) {
+            bgm_file_name = "985.mp3";
+            bgm_title = "Deep Purple [Speed King]";
         }
         // ダンジョンを制覇した時のBGM
-        if (var_675 == 986) {
-            var_665 = "986.mp3";
-            var_676 = "ENYA [Orinoco Flow]";
+        if (bgm_list == 986) {
+            bgm_file_name = "986.mp3";
+            bgm_title = "ENYA [Orinoco Flow]";
         }
         // トニオさんの店　レストラン・レストラン・トラサルディーのBGM
-        if (var_675 == 987) {
-            var_665 = "987.mp3";
-            var_676 = "Bach italien";
+        if (bgm_list == 987) {
+            bgm_file_name = "987.mp3";
+            bgm_title = "Bach italien";
         }
         // ヴェネチアホテルのBGM
-        if (var_675 == 988) {
-            var_665 = "988.mp3";
-            var_676 = "Eagles [Hotel California]";
+        if (bgm_list == 988) {
+            bgm_file_name = "988.mp3";
+            bgm_title = "Eagles [Hotel California]";
         }
-        if (var_675 == 989) {
-            var_665 = "989.mp3";
-            var_676 = "T.rex [20th Century Boy]";
+        if (bgm_list == 989) {
+            bgm_file_name = "989.mp3";
+            bgm_title = "T.rex [20th Century Boy]";
         }
-        if (var_675 == 990) {
-            var_665 = "990.mp3";
-            var_676 = "Queen [Bohemian Rhapsody]";
+        if (bgm_list == 990) {
+            bgm_file_name = "990.mp3";
+            bgm_title = "Queen [Bohemian Rhapsody]";
         }
-        if (var_675 == 991) {
-            var_665 = "991.mp3";
-            var_676 = "Beach Boys [Surfin' USA]";
+        if (bgm_list == 991) {
+            bgm_file_name = "991.mp3";
+            bgm_title = "Beach Boys [Surfin' USA]";
         }
-        if (var_675 == 992) {
-            var_665 = "992.mp3";
-            var_676 = "Beach Boys [Good Vibrations]";
+        if (bgm_list == 992) {
+            bgm_file_name = "992.mp3";
+            bgm_title = "Beach Boys [Good Vibrations]";
         }
-        if (var_675 == 993) {
-            var_665 = "993.mp3";
-            var_676 = "REO Speedwagon [Keep On Lovin You]";
+        if (bgm_list == 993) {
+            bgm_file_name = "993.mp3";
+            bgm_title = "REO Speedwagon [Keep On Lovin You]";
         }
-        if (var_675 == 994) {
-            var_665 = "994.mp3";
-            var_676 = "Led Zeppelin [Kashmir]";
+        if (bgm_list == 994) {
+            bgm_file_name = "994.mp3";
+            bgm_title = "Led Zeppelin [Kashmir]";
         }
-        if (var_675 == 565) {
-            var_665 = "995.mp3";
-            var_676 = "Handel [Messiah]";
+        if (bgm_list == 565) {
+            bgm_file_name = "995.mp3";
+            bgm_title = "Handel [Messiah]";
         }
-        if (var_675 == 996) {
-            var_665 = "996.mp3";
-            var_676 = "Prince [1999]";
+        if (bgm_list == 996) {
+            bgm_file_name = "996.mp3";
+            bgm_title = "Prince [1999]";
         }
-        if (var_675 == 997) {
-            var_665 = "997.mp3";
-            var_676 = "Ben E King [Stand by Me]";
+        if (bgm_list == 997) {
+            bgm_file_name = "997.mp3";
+            bgm_title = "Ben E King [Stand by Me]";
         }
-        if (var_675 == 998) {
-            var_665 = "998.mp3";
-            var_676 = "Bad Company [Bad Company]";
+        if (bgm_list == 998) {
+            bgm_file_name = "998.mp3";
+            bgm_title = "Bad Company [Bad Company]";
         }
-        if (var_675 == 999) {
-            var_665 = "999.mp3";
-            var_676 = "Louis Armstrong [What a Wonderful World]";
+        if (bgm_list == 999) {
+            bgm_file_name = "999.mp3";
+            bgm_title = "Louis Armstrong [What a Wonderful World]";
         }
         return;
     });
@@ -451,7 +451,7 @@ function func102(this: any) {
             color(255, 255, 255);
             pos(2, 320);
             font("MS UI Gothic", 12);
-            mes("♪" + var_676);
+            mes("♪" + bgm_title);
             return;
         }
         if (var_635 >= 1) {
@@ -481,7 +481,7 @@ function func103(this: any) {
         dbgprt(103);
         //yield func108(); // 曲停止関数
         //DMSTOP(); // 曲停止関数
-        var_665 = "0.mp3";
+        bgm_file_name = "0.mp3";
         yield func101();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             DMINIT();
@@ -490,7 +490,7 @@ function func103(this: any) {
                 break;
             }
         }
-        var_677 = var_675;
+        var_677 = bgm_list;
         if (var_678 == 0) {
             var_634 = 1;
         }
@@ -505,12 +505,12 @@ function func104(this: any) {
         dbgprt(104);
         //yield func108(); //曲停止関数
         //DMSTOP(); // 曲停止関数
-        exist(var_665);
+        exist(bgm_file_name);
         var_679 = strsize;
         var_680 = sdim(var_679);
-        var_680 = bload(var_665);
+        var_680 = bload(bgm_file_name);
         DMLOADMEMORY(var_680, var_679, 1);
-        //var_680 = bload(var_665, var_679);
+        //var_680 = bload(bgm_file_name, var_679);
         //DMLOADMEMORY(var_680, 1);
         if (var_631 != 0) {
             DMPLAY(var_631, 1);
@@ -532,7 +532,7 @@ function func105(this: any) {
         if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
             return;
         }
-        var_675 = item_list;
+        bgm_list = item_list;
         yield func103();
         return;
     });
@@ -549,11 +549,11 @@ function func106(this: any) {
         }
         if (var_677 == item_list) {
             if (var_681 == 989) {
-                var_675 = 989;
+                bgm_list = 989;
                 yield func103();
                 return;
             }
-            var_675 = 0; // BGMをダンジョンテーマソングへ戻す
+            bgm_list = 0; // BGMをダンジョンテーマソングへ戻す
             yield func103();
             return;
         }
@@ -563,7 +563,7 @@ function func106(this: any) {
 function func107(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(107);
-        var_675 = var_677;
+        bgm_list = var_677;
         yield func103();
         return;
     });
@@ -582,13 +582,13 @@ function func109(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(109);
         DMINIT();
-        var_665 = "102.mp3";
-        exist(var_665);
+        bgm_file_name = "102.mp3";
+        exist(bgm_file_name);
         var_679 = strsize;
         var_680 = sdim(var_679);
-        var_680 = bload(var_665);
+        var_680 = bload(bgm_file_name);
         DMLOADMEMORY(var_680, var_679, 1);
-        //var_680 = bload(var_665, var_679);
+        //var_680 = bload(bgm_file_name, var_679);
         //DMLOADMEMORY(var_680, 1);
         if (var_631 != 0) {
             DMPLAY(var_631, 1);
@@ -603,7 +603,7 @@ function func110(this: any) {
             return;
         }
         var_678 = 1;
-        var_675 = 979;
+        bgm_list = 979;
         yield func103();
         var_678 = 0;
         var_634 = 0;
@@ -614,7 +614,7 @@ function func111(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(111);
         var_678 = 1;
-        var_675 = 0;
+        bgm_list = 0;
         yield func103();
         var_678 = 0;
         var_681 = 0;
@@ -634,7 +634,7 @@ function func113(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(113);
         var_678 = 1;
-        var_675 = 988;
+        bgm_list = 988;
         var_681 = 988;
         yield func103();
         var_678 = 0;
@@ -645,7 +645,7 @@ function func114(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(114);
         var_678 = 1;
-        var_675 = 989;
+        bgm_list = 989;
         var_681 = 989;
         yield func103();
         var_678 = 0;
@@ -656,11 +656,11 @@ function func115(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(115);
         var_678 = 0;
-        var_675 = var_486[var_682][var_683][0];
-        if (var_675 < 100) {
+        bgm_list = var_486[var_682][var_683][0];
+        if (bgm_list < 100) {
             return;
         }
-        if (var_675 >= 500 && var_675 != 565) {
+        if (bgm_list >= 500 && bgm_list != 565) {
             return;
         }
         yield func103();
@@ -671,7 +671,7 @@ function func115(this: any) {
 function func116(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(116);
-        var_675 = 990;
+        bgm_list = 990;
         var_681 = 990;
         yield func103();
         return;
@@ -680,7 +680,7 @@ function func116(this: any) {
 function func117(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(117);
-        var_675 = 982;
+        bgm_list = 982;
         var_681 = 982;
         yield func103();
         return;
@@ -689,7 +689,7 @@ function func117(this: any) {
 function func118(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(118);
-        var_675 = 986;
+        bgm_list = 986;
         var_681 = 986;
         yield func103();
         return;
@@ -698,7 +698,7 @@ function func118(this: any) {
 function func119(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(119);
-        var_675 = 998;
+        bgm_list = 998;
         var_681 = 998;
         yield func103();
         return;
@@ -707,7 +707,7 @@ function func119(this: any) {
 function func120(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(120);
-        var_675 = 978;
+        bgm_list = 978;
         var_681 = 978;
         yield func103();
         return;
@@ -716,7 +716,7 @@ function func120(this: any) {
 function func121(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(121);
-        var_675 = 977;
+        bgm_list = 977;
         var_681 = 977;
         yield func103();
         return;
@@ -725,7 +725,7 @@ function func121(this: any) {
 function func122(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(122);
-        var_675 = 999;
+        bgm_list = 999;
         yield func103();
         var_634 = 0;
         return;
@@ -734,7 +734,7 @@ function func122(this: any) {
 function func123(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(123);
-        var_675 = 997;
+        bgm_list = 997;
         yield func103();
         var_634 = 0;
         return;
@@ -749,7 +749,7 @@ function func124(this: any) {
         if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
             return;
         }
-        var_675 = 994;
+        bgm_list = 994;
         yield func103();
         return;
     });
@@ -763,7 +763,7 @@ function func125(this: any) {
         if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
             return;
         }
-        var_675 = 993;
+        bgm_list = 993;
         yield func103();
         return;
     });
@@ -777,7 +777,7 @@ function func126(this: any) {
         if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
             return;
         }
-        var_675 = 991;
+        bgm_list = 991;
         yield func103();
         return;
     });
@@ -791,7 +791,7 @@ function func127(this: any) {
         if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
             return;
         }
-        var_675 = 992;
+        bgm_list = 992;
         yield func103();
         return;
     });
@@ -805,7 +805,7 @@ function func128(this: any) {
         if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
             return;
         }
-        var_675 = 983;
+        bgm_list = 983;
         yield func103();
         return;
     });
@@ -813,7 +813,7 @@ function func128(this: any) {
 function func129(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(129);
-        var_675 = 996;
+        bgm_list = 996;
         var_681 = 996;
         yield func103();
         return;
@@ -822,7 +822,7 @@ function func129(this: any) {
 function func130(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(130);
-        var_675 = 998;
+        bgm_list = 998;
         var_681 = 998;
         yield func103();
         return;
@@ -831,7 +831,7 @@ function func130(this: any) {
 function func131(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(131);
-        var_675 = 985;
+        bgm_list = 985;
         var_681 = 985;
         yield func103();
         return;
@@ -840,7 +840,7 @@ function func131(this: any) {
 function func132(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(132);
-        var_675 = 984;
+        bgm_list = 984;
         var_681 = 984;
         yield func103();
         return;
@@ -849,7 +849,7 @@ function func132(this: any) {
 function func133(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(133);
-        var_675 = 981;
+        bgm_list = 981;
         var_681 = 981;
         yield func103();
         return;
@@ -858,7 +858,7 @@ function func133(this: any) {
 function func134(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(134);
-        var_675 = 980;
+        bgm_list = 980;
         var_681 = 980;
         yield func103();
         return;
@@ -867,7 +867,7 @@ function func134(this: any) {
 function func135(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(135);
-        var_675 = 980;
+        bgm_list = 980;
         yield func103();
         return;
     });
@@ -876,7 +876,7 @@ function func136(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(136);
         var_684 = var_677;
-        var_675 = 987;
+        bgm_list = 987;
         var_681 = 987;
         var_678 = 1;
         yield func103();
@@ -890,7 +890,7 @@ function func137(this: any) {
         if (var_677 != 987) {
             return;
         }
-        var_675 = var_684;
+        bgm_list = var_684;
         var_681 = 0;
         if (var_684 == 996) {
             var_681 = 996;
@@ -4129,7 +4129,7 @@ function func158(this: any) {
         dbgprt(158);
         var_767 = 0;
         var_262 = 1;
-        var_91 = 0;
+        current_floor = 0;
         var_199 = 8;
         var_92 = 18;
         yield func293();
@@ -4191,7 +4191,7 @@ function func159(this: any) {
         dbgprt(159);
         var_767 = 0;
         var_262 = 1;
-        var_91 = 0;
+        current_floor = 0;
         var_199 = 2;
         var_68 = 1;
         var_92 = 1;
@@ -5953,7 +5953,7 @@ function func173(this: any) {
         yield func175();
         yield func176();
         var_836 = var_62;
-        var_837 = var_91;
+        var_837 = current_floor;
         yield func808();
         var_356 = 0;
         yield func233();
@@ -6003,8 +6003,8 @@ function func174(this: any) {
             }
             var_480 = var_480 + 1;
         }
-        if (var_91 >= 2) {
-            var_838 = var_91 * 2000 + var_838;
+        if (current_floor >= 2) {
+            var_838 = current_floor * 2000 + var_838;
         }
         var_838 = var_839 * 50 + var_838;
         var_838 = var_533 + var_838;
@@ -6023,7 +6023,7 @@ function func175(this: any) {
             var_793 = 0;
         }
         var_792[var_793][0][0] = var_338;
-        var_792[var_793][0][1] = var_91;
+        var_792[var_793][0][1] = current_floor;
         var_792[var_793][0][2] = var_356;
         var_792[var_793][0][3] = var_838;
         var_792[var_793][0][4] = 0;
@@ -7563,7 +7563,7 @@ function func184(this: any) {
 function func185(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(185);
-        var_91 = var_871 + 1;
+        current_floor = var_871 + 1;
         var_840 = var_872 + 1;
         if (var_840 > 99) {
             var_840 = 99;
@@ -7571,8 +7571,8 @@ function func185(this: any) {
         if (var_840 <= 1) {
             var_840 = 1;
         }
-        if (var_91 <= 1) {
-            var_91 = 1;
+        if (current_floor <= 1) {
+            current_floor = 1;
         }
         var_352 = var_840 * 4 + 15;
         var_211 = var_352;

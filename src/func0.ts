@@ -73,7 +73,7 @@ function func004(this: any) {
         }
         var_12 = 0;
         var_13 = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        var_14 = "newDTW ver0.1306";
+        var_14 = "newDTW ver0.1307";
 
         
         buffer(17);
@@ -328,7 +328,7 @@ function func005(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(5);
         onexit(1);
-        yield func229();
+        yield func229(); // セーブファイルからデータ読み出し関数
         if (var_62 == 0) {
             yield func159();
             return;
@@ -365,34 +365,25 @@ function func006(this: any) {
         yield func007();
     });
 }
+// 配列宣言？？
 function func007(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(7);
 
         var_71 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
-
         var_72 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
-
         var_65 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
-
         var_73 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
-
         var_74 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
         var_75 = dim(20);
         var_76 = dim(length1= 100, length2 = 5, length3 = 3, length4 = null);
-
         var_77 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
         var_78 = ItemInfo.dim(300);
-
         var_79 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
-
         var_80 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
-
         var_81 = dim(length1= 300, length2 = 7, length3 = null, length4 = null);
-
         var_82 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
         var_83 = CharactorInfo.dim(300);
-
         var_84 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
         var_85 = 0;
         if (var_86 != 0) {
@@ -430,50 +421,50 @@ function func008(this: any) {
         if (var_90 == 6) {
             var_90 = 1;
         }
-        if (var_91 <= 2) {
+        if (current_floor <= 2) {
             var_90 = 0;
         }
         if (var_62 == 1) {
-            if (var_91 <= 2) {
+            if (current_floor <= 2) {
                 var_92 = 15;
             }
-            if (var_91 >= 3 && var_91 <= 5) {
+            if (current_floor >= 3 && current_floor <= 5) {
                 var_92 = 19;
             }
-            if (var_91 >= 6 && var_91 <= 8) {
+            if (current_floor >= 6 && current_floor <= 8) {
                 var_92 = 11;
             }
-            if (var_91 >= 9 && var_91 <= 11) {
+            if (current_floor >= 9 && current_floor <= 11) {
                 var_92 = 4;
             }
-            if (var_91 == 12) {
+            if (current_floor == 12) {
                 var_92 = 7;
                 var_90 = 0;
             }
         }
         if (var_62 == 2) {
-            if (var_91 >= 1 && var_91 <= 5) {
+            if (current_floor >= 1 && current_floor <= 5) {
                 var_92 = 3;
             }
-            if (var_91 >= 5 && var_91 <= 8) {
+            if (current_floor >= 5 && current_floor <= 8) {
                 var_92 = 6;
             }
-            if (var_91 >= 9 && var_91 <= 11) {
+            if (current_floor >= 9 && current_floor <= 11) {
                 var_92 = 2;
             }
-            if (var_91 >= 12 && var_91 <= 14) {
+            if (current_floor >= 12 && current_floor <= 14) {
                 var_92 = 5;
             }
-            if (var_91 >= 15 && var_91 <= 19) {
+            if (current_floor >= 15 && current_floor <= 19) {
                 var_92 = 4;
             }
-            if (var_91 >= 20 && var_91 <= 22) {
+            if (current_floor >= 20 && current_floor <= 22) {
                 var_92 = 24;
             }
-            if (var_91 >= 23 && var_91 <= 25) {
+            if (current_floor >= 23 && current_floor <= 25) {
                 var_92 = 20;
             }
-            if (var_91 >= 26) {
+            if (current_floor >= 26) {
                 var_92 = 12;
             }
         }
@@ -528,10 +519,10 @@ function func008(this: any) {
             if (var_93 == 15) {
                 var_92 = 9;
             }
-            if (var_62 == 3 && var_91 >= 90) {
+            if (var_62 == 3 && current_floor >= 90) {
                 var_92 = 22;
             }
-            if (var_62 == 3 && var_91 == 99) {
+            if (var_62 == 3 && current_floor == 99) {
                 var_92 = 2;
             }
         }
@@ -621,17 +612,17 @@ function func008(this: any) {
             var_90 = 0;
             yield func254();
         }
-        if (var_62 == 1 && var_91 <= 2) {
+        if (var_62 == 1 && current_floor <= 2) {
             var_90 = 99;
             yield func255();
             var_90 = 0;
         }
-        if (var_62 == 2 && var_91 == 28 && var_86 != 0) {
+        if (var_62 == 2 && current_floor == 28 && var_86 != 0) {
             var_90 = 99;
             yield func255();
             var_90 = 0;
         }
-        if (var_62 == 2 && var_91 == 29 && var_86 != 0) {
+        if (var_62 == 2 && current_floor == 29 && var_86 != 0) {
             var_90 = 99;
             yield func255();
             var_90 = 0;
@@ -780,34 +771,34 @@ function func008(this: any) {
         }
         var_68 = 1;
         yield func331();
-        if (var_62 == 1 && var_91 == 12 && var_203 == 0) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
             yield func118();
         }
-        if (var_62 == 1 && var_91 == 12 && var_203 == 1) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 1) {
             yield func119();
         }
-        if (var_62 == 1 && var_91 == 12 && var_203 == 2) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 2) {
             yield func120();
         }
-        if (var_62 == 1 && var_91 == 12 && var_203 == 3) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 3) {
             yield func121();
         }
-        if (var_62 == 2 && var_91 == 30) {
+        if (var_62 == 2 && current_floor == 30) {
             yield func117();
         }
-        if (var_62 == 3 && var_91 == 99) {
+        if (var_62 == 3 && current_floor == 99) {
             yield func116();
         }
         if (var_96 >= 1 && var_201 == var_204) {
             yield func074();
         }
-        if (var_62 == 1 && var_91 == 12 && var_203 == 0) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
             yield func075();
         }
-        if (var_62 == 2 && var_91 == 30) {
+        if (var_62 == 2 && current_floor == 30) {
             yield func075();
         }
-        if (var_62 == 3 && var_91 == 99) {
+        if (var_62 == 3 && current_floor == 99) {
             yield func075();
         }
         if (var_94 >= 1) {
@@ -3032,24 +3023,24 @@ function func019(this: any) {
                     yield func880();
                     return;
                 }
-                var_91 = var_91 + 1;
-                if (var_91 > var_376) {
-                    var_376 = var_91;
+                current_floor = current_floor + 1;
+                if (current_floor > var_376) {
+                    var_376 = current_floor;
                 }
-                if (var_62 == 1 && var_91 > var_377) {
-                    var_377 = var_91;
+                if (var_62 == 1 && current_floor > var_377) {
+                    var_377 = current_floor;
                 }
-                if (var_62 == 2 && var_91 > var_378) {
-                    var_378 = var_91;
+                if (var_62 == 2 && current_floor > var_378) {
+                    var_378 = current_floor;
                 }
-                if (var_62 == 3 && var_91 > var_379) {
-                    var_379 = var_91;
+                if (var_62 == 3 && current_floor > var_379) {
+                    var_379 = current_floor;
                 }
-                if (var_62 == 4 && var_91 > var_380) {
-                    var_380 = var_91;
+                if (var_62 == 4 && current_floor > var_380) {
+                    var_380 = current_floor;
                 }
-                if (var_62 == 5 && var_91 > var_381) {
-                    var_381 = var_91;
+                if (var_62 == 5 && current_floor > var_381) {
+                    var_381 = current_floor;
                 }
                 var_94 = 0;
                 yield func059();
@@ -3161,13 +3152,13 @@ function func019(this: any) {
                 if (var_156[358] == 1) {
                     var_165 = var_165 + 1;
                 }
-                if (var_62 == 1 && var_91 == 12 && var_94 == 0 && var_386 == 0) {
+                if (var_62 == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
                     var_165 = 0;
                 }
                 if (var_190 == 1) {
                     var_165 = 0;
                 }
-                if (var_62 == 3 && var_91 == 99) {
+                if (var_62 == 3 && current_floor == 99) {
                     var_165 = 0;
                 }
                 if (var_94 == 1 && var_387 == 0) {
@@ -5200,16 +5191,16 @@ function func044(this: any) {
 function func045(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(45);
-        if (var_62 == 1 && var_91 == 12 && var_203 == 0) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
             return;
         }
-        if (var_62 == 2 && var_91 == 30) {
+        if (var_62 == 2 && current_floor == 30) {
             return;
         }
-        if (var_62 == 3 && var_91 == 99) {
+        if (var_62 == 3 && current_floor == 99) {
             return;
         }
-        if (var_62 == 5 && var_91 == var_20) {
+        if (var_62 == 5 && current_floor == var_20) {
             return;
         }
         for (let cnt1 = 0; true; ++cnt1) {
@@ -5235,7 +5226,7 @@ function func045(this: any) {
         }
         var_73[var_491][var_492] = 1;
         var_200 = var_71[var_491][var_492];
-        if (var_62 == 5 && var_91 != 1) {
+        if (var_62 == 5 && current_floor != 1) {
             for (let cnt2 = 0; true; ++cnt2) {
                 var_491 = rnd(var_33);
                 var_492 = rnd(var_34);
@@ -6252,13 +6243,13 @@ function func058(this: any) {
 function func059(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(59);
-        if (var_62 == 1 && var_91 == 12 && var_203 == 1) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 1) {
             var_94 = 1;
         }
-        if (var_62 == 1 && var_91 == 12 && var_203 == 2) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 2) {
             var_94 = 3;
         }
-        if (var_62 == 1 && var_91 == 12 && var_203 == 3) {
+        if (var_62 == 1 && current_floor == 12 && var_203 == 3) {
             var_94 = 2;
         }
         return;
@@ -6306,16 +6297,16 @@ function func060(this: any) {
                     }
                     var_528 = var_528 + 1;
                 }
-                if (var_62 == 1 && var_91 == 12) {
+                if (var_62 == 1 && current_floor == 12) {
                     var_527 = 0;
                 }
-                if (var_62 == 2 && var_91 == 30) {
+                if (var_62 == 2 && current_floor == 30) {
                     var_527 = 0;
                 }
-                if (var_62 == 3 && var_91 == 99) {
+                if (var_62 == 3 && current_floor == 99) {
                     var_527 = 0;
                 }
-                if (var_62 == 5 && var_91 == var_20) {
+                if (var_62 == 5 && current_floor == var_20) {
                     var_527 = 0;
                 }
                 if (var_527 == 1) {
@@ -6471,7 +6462,7 @@ function func060(this: any) {
                     yield func009();
                     return;
                 }
-                if (var_62 == 1 && var_91 == 12) {
+                if (var_62 == 1 && current_floor == 12) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6519,7 +6510,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                if (var_62 == 2 && var_91 == 30) {
+                if (var_62 == 2 && current_floor == 30) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6566,7 +6557,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                if (var_62 == 3 && var_91 == 99) {
+                if (var_62 == 3 && current_floor == 99) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6602,7 +6593,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                if (var_62 == 5 && var_91 == var_20 && var_73[var_66][var_67] == 1) {
+                if (var_62 == 5 && current_floor == var_20 && var_73[var_66][var_67] == 1) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6690,28 +6681,28 @@ function func060(this: any) {
                 }
                 var_373 = 0;
                 if (var_73[var_66][var_67] == 1) {
-                    var_91 = var_91 + 1;
-                    if (var_91 > var_376) {
-                        var_376 = var_91;
+                    current_floor = current_floor + 1;
+                    if (current_floor > var_376) {
+                        var_376 = current_floor;
                     }
-                    if (var_62 == 1 && var_91 > var_377) {
-                        var_377 = var_91;
+                    if (var_62 == 1 && current_floor > var_377) {
+                        var_377 = current_floor;
                     }
-                    if (var_62 == 2 && var_91 > var_378) {
-                        var_378 = var_91;
+                    if (var_62 == 2 && current_floor > var_378) {
+                        var_378 = current_floor;
                     }
-                    if (var_62 == 3 && var_91 > var_379) {
-                        var_379 = var_91;
+                    if (var_62 == 3 && current_floor > var_379) {
+                        var_379 = current_floor;
                     }
-                    if (var_62 == 4 && var_91 > var_380) {
-                        var_380 = var_91;
+                    if (var_62 == 4 && current_floor > var_380) {
+                        var_380 = current_floor;
                     }
-                    if (var_62 == 5 && var_91 > var_381) {
-                        var_381 = var_91;
+                    if (var_62 == 5 && current_floor > var_381) {
+                        var_381 = current_floor;
                     }
                 }
                 if (var_73[var_66][var_67] == 2) {
-                    var_91 = var_91 - 1;
+                    current_floor = current_floor - 1;
                 }
                 var_94 = 0;
                 yield func059();
@@ -6853,16 +6844,16 @@ function func063(this: any) {
         if (var_262 == 0) {
             if (var_73[var_66][var_67] == 1) {
                 var_543 = 0;
-                if (var_62 == 1 && var_91 == 12) {
+                if (var_62 == 1 && current_floor == 12) {
                     var_543 = 1;
                 }
-                if (var_62 == 2 && var_91 == 30) {
+                if (var_62 == 2 && current_floor == 30) {
                     var_543 = 1;
                 }
-                if (var_62 == 3 && var_91 == 99) {
+                if (var_62 == 3 && current_floor == 99) {
                     var_543 = 1;
                 }
-                if (var_62 == 5 && var_91 == var_20) {
+                if (var_62 == 5 && current_floor == var_20) {
                     var_543 = 1;
                 }
                 if (var_543 == 0) {
@@ -8030,19 +8021,19 @@ function func075(this: any) {
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        if (var_62 == 1 && var_91 == 12) {
+        if (var_62 == 1 && current_floor == 12) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「エンヤ婆」によって守られている！";
         }
-        if (var_62 == 2 && var_91 == 30) {
+        if (var_62 == 2 && current_floor == 30) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「ﾚｸｲｴﾑ･ｼﾞｮﾙﾉ」によって守られている！";
         }
-        if (var_62 == 3 && var_91 == 99) {
+        if (var_62 == 3 && current_floor == 99) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「ウンガロ」によって守られている！";
         }
-        if (var_62 == 5 && var_91 == var_20) {
+        if (var_62 == 5 && current_floor == var_20) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「" + var_24 + "」によって守られている！";
         }
@@ -8124,35 +8115,35 @@ function func076(this: any) {
                 }
             }
             if (var_62 == 1) {
-                if (var_91 <= 2) {
+                if (current_floor <= 2) {
                     gcopy(34, 640, 440, 340, 40);
                 }
-                if (var_91 >= 3 && var_91 <= 5) {
+                if (current_floor >= 3 && current_floor <= 5) {
                     gcopy(34, 640, 480, 340, 40);
                 }
-                if (var_91 >= 6 && var_91 <= 8) {
+                if (current_floor >= 6 && current_floor <= 8) {
                     gcopy(34, 640, 600, 340, 40);
                 }
-                if (var_91 >= 9 && var_91 <= 11) {
+                if (current_floor >= 9 && current_floor <= 11) {
                     gcopy(34, 640, 640, 340, 40);
                 }
-                if (var_91 == 12) {
+                if (current_floor == 12) {
                     gcopy(34, 640, 400, 340, 40);
                 }
             }
             if (var_62 == 2) {
-                if (var_91 != 30) {
+                if (current_floor != 30) {
                     gcopy(34, 640, 560, 340, 40);
                 }
-                if (var_91 == 30) {
+                if (current_floor == 30) {
                     gcopy(34, 640, 880, 340, 40);
                 }
             }
             if (var_62 == 3) {
-                if (var_91 != 99) {
+                if (current_floor != 99) {
                     gcopy(34, 640, 520, 340, 40);
                 }
-                if (var_91 == 99) {
+                if (current_floor == 99) {
                     gcopy(34, 640, 1160, 340, 40);
                 }
             }
@@ -8160,10 +8151,10 @@ function func076(this: any) {
                 gcopy(34, 640, 800, 340, 40);
             }
             if (var_62 == 5) {
-                if (var_91 != var_20) {
+                if (current_floor != var_20) {
                     gcopy(34, 640, 1040, 340, 40);
                 }
-                if (var_91 == var_20) {
+                if (current_floor == var_20) {
                     gcopy(34, 1000, 760, 340, 40);
                 }
             }
@@ -8190,20 +8181,20 @@ function func076(this: any) {
             gcopy(34, 640, 920, 340, 40);
         }
         if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
-            var_596 = Math.floor(var_91 / 100); // Math.floor は対象の値の小数点以下を切り捨て
-            var_597 = Math.floor((var_91 - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
-            var_598 = var_91 - var_596 * 100 - var_597 * 10;
+            var_596 = Math.floor(current_floor / 100); // Math.floor は対象の値の小数点以下を切り捨て
+            var_597 = Math.floor((current_floor - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
+            var_598 = current_floor - var_596 * 100 - var_597 * 10;
             var_596 = var_596 * 20 + 640;
             var_597 = var_597 * 20 + 640;
             var_598 = var_598 * 20 + 640;
-            if (var_597 == 640 && var_91 < 100) {
+            if (var_597 == 640 && current_floor < 100) {
                 var_597 = 1600;
             }
             if (var_596 == 640) {
                 var_596 = 1600;
             }
             pos(90, 160);
-            if (var_91 >= 100) {
+            if (current_floor >= 100) {
                 pos(70, 160);
             }
             gcopy(34, 880, 80, 80, 40);
@@ -8276,35 +8267,35 @@ function func077(this: any) {
                 }
             }
             if (var_62 == 1) {
-                if (var_91 <= 2) {
+                if (current_floor <= 2) {
                     gcopy(34, 640, 440, 340, 40);
                 }
-                if (var_91 >= 3 && var_91 <= 5) {
+                if (current_floor >= 3 && current_floor <= 5) {
                     gcopy(34, 640, 480, 340, 40);
                 }
-                if (var_91 >= 6 && var_91 <= 8) {
+                if (current_floor >= 6 && current_floor <= 8) {
                     gcopy(34, 640, 600, 340, 40);
                 }
-                if (var_91 >= 9 && var_91 <= 11) {
+                if (current_floor >= 9 && current_floor <= 11) {
                     gcopy(34, 640, 640, 340, 40);
                 }
-                if (var_91 == 12) {
+                if (current_floor == 12) {
                     gcopy(34, 640, 400, 340, 40);
                 }
             }
             if (var_62 == 2) {
-                if (var_91 != 30) {
+                if (current_floor != 30) {
                     gcopy(34, 640, 560, 340, 40);
                 }
-                if (var_91 == 30) {
+                if (current_floor == 30) {
                     gcopy(34, 640, 880, 340, 40);
                 }
             }
             if (var_62 == 3) {
-                if (var_91 != 99) {
+                if (current_floor != 99) {
                     gcopy(34, 640, 520, 340, 40);
                 }
-                if (var_91 == 99) {
+                if (current_floor == 99) {
                     gcopy(34, 640, 1160, 340, 40);
                 }
             }
@@ -8312,10 +8303,10 @@ function func077(this: any) {
                 gcopy(34, 640, 800, 340, 40);
             }
             if (var_62 == 5) {
-                if (var_91 != var_20) {
+                if (current_floor != var_20) {
                     gcopy(34, 640, 1040, 340, 40);
                 }
-                if (var_91 == var_20) {
+                if (current_floor == var_20) {
                     gcopy(34, 1000, 760, 340, 40);
                 }
             }
@@ -8342,20 +8333,20 @@ function func077(this: any) {
             gcopy(34, 640, 920, 340, 40);
         }
         if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
-            var_596 = Math.floor(var_91 / 100); // Math.floor は対象の値の小数点以下を切り捨て
-            var_597 = Math.floor((var_91 - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
-            var_598 = var_91 - var_596 * 100 - var_597 * 10;
+            var_596 = Math.floor(current_floor / 100); // Math.floor は対象の値の小数点以下を切り捨て
+            var_597 = Math.floor((current_floor - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
+            var_598 = current_floor - var_596 * 100 - var_597 * 10;
             var_596 = var_596 * 20 + 640;
             var_597 = var_597 * 20 + 640;
             var_598 = var_598 * 20 + 640;
-            if (var_597 == 640 && var_91 < 100) {
+            if (var_597 == 640 && current_floor < 100) {
                 var_597 = 1600;
             }
             if (var_596 == 640) {
                 var_596 = 1600;
             }
             pos(90, 160);
-            if (var_91 >= 100) {
+            if (current_floor >= 100) {
                 pos(70, 160);
             }
             gcopy(34, 880, 80, 80, 40);
@@ -9846,813 +9837,813 @@ function func081(this: any) {
         設定画面でカーソルを動かした際の音　「チッ」
         使用する際は DSPLAY(audio_id =100) で流せる
         */
-        var_665 = "100.wav";
-        exist(var_665);
+        bgm_file_name = "100.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 100);
 
         // 
-        var_665 = "101.wav";
-        exist(var_665);
+        bgm_file_name = "101.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 101);
         
         // 
-        var_665 = "102.wav";
-        exist(var_665);
+        bgm_file_name = "102.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 102);
         
         // 
-        var_665 = "103.wav";
-        exist(var_665);
+        bgm_file_name = "103.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 103);
         
         //
-        var_665 = "103.wav";
-        exist(var_665);
+        bgm_file_name = "103.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 104);
         
         // 
-        var_665 = "103.wav";
-        exist(var_665);
+        bgm_file_name = "103.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 105);
         
         // 
-        var_665 = "103.wav";
-        exist(var_665);
+        bgm_file_name = "103.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 106);
 
         // 
-        var_665 = "107.wav";
-        exist(var_665);
+        bgm_file_name = "107.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 107);
 
         // 
-        var_665 = "108.wav";
-        exist(var_665);
+        bgm_file_name = "108.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 108);
 
         // 
-        var_665 = "109.wav";
-        exist(var_665);
+        bgm_file_name = "109.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 109);
 
         // 
-        var_665 = "110.wav";
-        exist(var_665);
+        bgm_file_name = "110.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 110);
 
         // 
-        var_665 = "111.wav";
-        exist(var_665);
+        bgm_file_name = "111.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 111);
 
         // 
-        var_665 = "112.wav";
-        exist(var_665);
+        bgm_file_name = "112.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 112);
 
         // 
-        var_665 = "113.wav";
-        exist(var_665);
+        bgm_file_name = "113.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 113);
 
         // 
-        var_665 = "114.wav";
-        exist(var_665);
+        bgm_file_name = "114.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 114);
 
         // 
-        var_665 = "115.wav";
-        exist(var_665);
+        bgm_file_name = "115.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 115);
 
         // 
-        var_665 = "116.wav";
-        exist(var_665);
+        bgm_file_name = "116.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 116);
 
         // 
-        var_665 = "117.wav";
-        exist(var_665);
+        bgm_file_name = "117.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 117);
 
         // 
-        var_665 = "118.wav";
-        exist(var_665);
+        bgm_file_name = "118.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 118);
 
         // 
-        var_665 = "119.wav";
-        exist(var_665);
+        bgm_file_name = "119.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 119);
 
         // 
-        var_665 = "120.wav";
-        exist(var_665);
+        bgm_file_name = "120.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 120);
 
         // 
-        var_665 = "121.wav";
-        exist(var_665);
+        bgm_file_name = "121.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 121);
 
         // 
-        var_665 = "122.wav";
-        exist(var_665);
+        bgm_file_name = "122.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 122);
 
         // 
-        var_665 = "123.wav";
-        exist(var_665);
+        bgm_file_name = "123.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 123);
 
         // 
-        var_665 = "124.wav";
-        exist(var_665);
+        bgm_file_name = "124.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 124);
 
         // 
-        var_665 = "125.wav";
-        exist(var_665);
+        bgm_file_name = "125.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 125);
 
         // 
-        var_665 = "126.wav";
-        exist(var_665);
+        bgm_file_name = "126.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 126);
 
         // 
-        var_665 = "127.wav";
-        exist(var_665);
+        bgm_file_name = "127.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 127);
 
         // 
-        var_665 = "128.wav";
-        exist(var_665);
+        bgm_file_name = "128.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 128);
 
         // 
-        var_665 = "129.wav";
-        exist(var_665);
+        bgm_file_name = "129.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 129);
 
         // 
-        var_665 = "130.wav";
-        exist(var_665);
+        bgm_file_name = "130.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
 
         // 
         DSLOADMEMORY(var_667, 130);
-        var_665 = "131.wav";
-        exist(var_665);
+        bgm_file_name = "131.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 131);
 
         // 
-        var_665 = "132.wav";
-        exist(var_665);
+        bgm_file_name = "132.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 132);
 
         // 
-        var_665 = "133.wav";
-        exist(var_665);
+        bgm_file_name = "133.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 133);
 
         // 
-        var_665 = "134.wav";
-        exist(var_665);
+        bgm_file_name = "134.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 134);
 
         // 
-        var_665 = "135.wav";
-        exist(var_665);
+        bgm_file_name = "135.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 135);
 
         // 
-        var_665 = "136.wav";
-        exist(var_665);
+        bgm_file_name = "136.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 136);
 
         // 
-        var_665 = "137.wav";
-        exist(var_665);
+        bgm_file_name = "137.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 137);
 
         // 
-        var_665 = "138.wav";
-        exist(var_665);
+        bgm_file_name = "138.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 138);
 
         // 
-        var_665 = "139.wav";
-        exist(var_665);
+        bgm_file_name = "139.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 139);
 
         // 
-        var_665 = "140.wav";
-        exist(var_665);
+        bgm_file_name = "140.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 140);
 
         // 
-        var_665 = "141.wav";
-        exist(var_665);
+        bgm_file_name = "141.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 141);
 
         // 
-        var_665 = "142.wav";
-        exist(var_665);
+        bgm_file_name = "142.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 142);
 
         // 
-        var_665 = "143.wav";
-        exist(var_665);
+        bgm_file_name = "143.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 143);
 
         // 
-        var_665 = "144.wav";
-        exist(var_665);
+        bgm_file_name = "144.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 144);
 
         // 
-        var_665 = "145.wav";
-        exist(var_665);
+        bgm_file_name = "145.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 145);
 
         // 
-        var_665 = "146.wav";
-        exist(var_665);
+        bgm_file_name = "146.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 146);
 
         // 
-        var_665 = "147.wav";
-        exist(var_665);
+        bgm_file_name = "147.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 147);
 
         // 
-        var_665 = "148.wav";
-        exist(var_665);
+        bgm_file_name = "148.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 148);
 
         // 
-        var_665 = "149.wav";
-        exist(var_665);
+        bgm_file_name = "149.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 149);
 
         // 
-        var_665 = "150.wav";
-        exist(var_665);
+        bgm_file_name = "150.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 150);
 
         // 
-        var_665 = "151.wav";
-        exist(var_665);
+        bgm_file_name = "151.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 151);
 
         // 
-        var_665 = "152.wav";
-        exist(var_665);
+        bgm_file_name = "152.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 152);
 
         // 
-        var_665 = "153.wav";
-        exist(var_665);
+        bgm_file_name = "153.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 153);
 
         // 
-        var_665 = "154.wav";
-        exist(var_665);
+        bgm_file_name = "154.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 154);
 
         // 
-        var_665 = "155.wav";
-        exist(var_665);
+        bgm_file_name = "155.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 155);
 
         // 
-        var_665 = "156.wav";
-        exist(var_665);
+        bgm_file_name = "156.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 156);
 
         // 
-        var_665 = "157.wav";
-        exist(var_665);
+        bgm_file_name = "157.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 157);
 
         // 
-        var_665 = "158.wav";
-        exist(var_665);
+        bgm_file_name = "158.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 158);
 
         // 
-        var_665 = "159.wav";
-        exist(var_665);
+        bgm_file_name = "159.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 159);
 
         // 
-        var_665 = "160.wav";
-        exist(var_665);
+        bgm_file_name = "160.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 160);
 
         // 
-        var_665 = "161.wav";
-        exist(var_665);
+        bgm_file_name = "161.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 161);
 
         // 
-        var_665 = "162.wav";
-        exist(var_665);
+        bgm_file_name = "162.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 162);
 
         // 
-        var_665 = "143.wav";
-        exist(var_665);
+        bgm_file_name = "143.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 163);
 
         // 
-        var_665 = "164.wav";
-        exist(var_665);
+        bgm_file_name = "164.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 164);
 
         // 
-        var_665 = "165.wav";
-        exist(var_665);
+        bgm_file_name = "165.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 165);
 
         // 
-        var_665 = "166.wav";
-        exist(var_665);
+        bgm_file_name = "166.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 166);
 
         // 
-        var_665 = "167.wav";
-        exist(var_665);
+        bgm_file_name = "167.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 167);
 
         // 
-        var_665 = "168.wav";
-        exist(var_665);
+        bgm_file_name = "168.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 168);
 
         // 
-        var_665 = "169.wav";
-        exist(var_665);
+        bgm_file_name = "169.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 169);
 
         // 
-        var_665 = "170.wav";
-        exist(var_665);
+        bgm_file_name = "170.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 170);
 
         // 
-        var_665 = "171.wav";
-        exist(var_665);
+        bgm_file_name = "171.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 171);
 
         // 
-        var_665 = "172.wav";
-        exist(var_665);
+        bgm_file_name = "172.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 172);
 
         // 
-        var_665 = "173.wav";
-        exist(var_665);
+        bgm_file_name = "173.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 173);
 
         // 
-        var_665 = "174.wav";
-        exist(var_665);
+        bgm_file_name = "174.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 174);
 
         // 
-        var_665 = "175.wav";
-        exist(var_665);
+        bgm_file_name = "175.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 175);
 
         // 
-        var_665 = "176.wav";
-        exist(var_665);
+        bgm_file_name = "176.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 176);
 
         // 
-        var_665 = "121.wav";
-        exist(var_665);
+        bgm_file_name = "121.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 177);
 
         // 
-        var_665 = "178.wav";
-        exist(var_665);
+        bgm_file_name = "178.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 178);
 
         // 
-        var_665 = "179.wav";
-        exist(var_665);
+        bgm_file_name = "179.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 179);
 
         // 
-        var_665 = "180.wav";
-        exist(var_665);
+        bgm_file_name = "180.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 180);
 
         // 
-        var_665 = "181.wav";
-        exist(var_665);
+        bgm_file_name = "181.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 181);
 
         // 
-        var_665 = "182.wav";
-        exist(var_665);
+        bgm_file_name = "182.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 182);
 
         // 
-        var_665 = "183.wav";
-        exist(var_665);
+        bgm_file_name = "183.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 183);
 
         // 
-        var_665 = "184.wav";
-        exist(var_665);
+        bgm_file_name = "184.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 184);
 
         // 
-        var_665 = "153.wav";
-        exist(var_665);
+        bgm_file_name = "153.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 185);
 
         // 
-        var_665 = "186.wav";
-        exist(var_665);
+        bgm_file_name = "186.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 186);
 
         // 
-        var_665 = "187.wav";
-        exist(var_665);
+        bgm_file_name = "187.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 187);
 
         // 
-        var_665 = "188.wav";
-        exist(var_665);
+        bgm_file_name = "188.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 188);
 
         // 
-        var_665 = "121.wav";
-        exist(var_665);
+        bgm_file_name = "121.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 189);
 
         return;
@@ -10664,426 +10655,426 @@ function func082(this: any) {
         dbgprt(82);
 
         // 
-        var_665 = "190.wav";
-        exist(var_665);
+        bgm_file_name = "190.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 190);
 
         // 
-        var_665 = "191.wav";
-        exist(var_665);
+        bgm_file_name = "191.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 191);
 
         // 
-        var_665 = "192.wav";
-        exist(var_665);
+        bgm_file_name = "192.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 192);
 
         // 
-        var_665 = "193.wav";
-        exist(var_665);
+        bgm_file_name = "193.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 193);
 
         // 
-        var_665 = "194.wav";
-        exist(var_665);
+        bgm_file_name = "194.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 194);
 
         // 
-        var_665 = "109.wav";
-        exist(var_665);
+        bgm_file_name = "109.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 195);
 
         // 
-        var_665 = "119.wav";
-        exist(var_665);
+        bgm_file_name = "119.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 196);
 
         // 
-        var_665 = "197.wav";
-        exist(var_665);
+        bgm_file_name = "197.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 197);
 
         // 
-        var_665 = "142.wav";
-        exist(var_665);
+        bgm_file_name = "142.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 198);
 
         // 
-        var_665 = "199.wav";
-        exist(var_665);
+        bgm_file_name = "199.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 199);
 
         // 
-        var_665 = "200.wav";
-        exist(var_665);
+        bgm_file_name = "200.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 200);
 
         // 
-        var_665 = "201.wav";
-        exist(var_665);
+        bgm_file_name = "201.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 201);
 
         // 
-        var_665 = "202.wav";
-        exist(var_665);
+        bgm_file_name = "202.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 202);
 
         // 
-        var_665 = "203.wav";
-        exist(var_665);
+        bgm_file_name = "203.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 203);
 
         // 
-        var_665 = "204.wav";
-        exist(var_665);
+        bgm_file_name = "204.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 204);
 
         // 
-        var_665 = "205.wav";
-        exist(var_665);
+        bgm_file_name = "205.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 205);
 
         // 
-        var_665 = "206.wav";
-        exist(var_665);
+        bgm_file_name = "206.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 206);
 
         // 
-        var_665 = "207.wav";
-        exist(var_665);
+        bgm_file_name = "207.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 207);
 
-        // 
-        var_665 = "208.wav";
-        exist(var_665);
+        // アイテムを整理する時の効果音
+        bgm_file_name = "208.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 208);
 
         // 
-        var_665 = "209.wav";
-        exist(var_665);
+        bgm_file_name = "209.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 209);
 
         // 
-        var_665 = "100.wav";
-        exist(var_665);
+        bgm_file_name = "100.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 210);
 
         // 
-        var_665 = "213.wav";
-        exist(var_665);
+        bgm_file_name = "213.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 211);
 
         // 
-        var_665 = "212.wav";
-        exist(var_665);
+        bgm_file_name = "212.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 212);
 
         // 
-        var_665 = "213.wav";
-        exist(var_665);
+        bgm_file_name = "213.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 213);
 
         // 
-        var_665 = "100.wav";
-        exist(var_665);
+        bgm_file_name = "100.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 214);
 
         // 
-        var_665 = "215.wav";
-        exist(var_665);
+        bgm_file_name = "215.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 215);
 
         // 
-        var_665 = "216.wav";
-        exist(var_665);
+        bgm_file_name = "216.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 216);
 
         // 
-        var_665 = "217.wav";
-        exist(var_665);
+        bgm_file_name = "217.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 217);
 
         // 
-        var_665 = "218.wav";
-        exist(var_665);
+        bgm_file_name = "218.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 218);
 
         // 
-        var_665 = "219.wav";
-        exist(var_665);
+        bgm_file_name = "219.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 219);
 
         // 
-        var_665 = "223.wav";
-        exist(var_665);
+        bgm_file_name = "223.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 220);
 
         // 
-        var_665 = "130.wav";
-        exist(var_665);
+        bgm_file_name = "130.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 221);
 
         // 
-        var_665 = "222.wav";
-        exist(var_665);
+        bgm_file_name = "222.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 222);
 
         // 
-        var_665 = "223.wav";
-        exist(var_665);
+        bgm_file_name = "223.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 223);
 
         // 
-        var_665 = "224.wav";
-        exist(var_665);
+        bgm_file_name = "224.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 224);
 
         // 
-        var_665 = "225.wav";
-        exist(var_665);
+        bgm_file_name = "225.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 225);
 
         // 
-        var_665 = "153.wav";
-        exist(var_665);
+        bgm_file_name = "153.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 226);
 
         // 
-        var_665 = "227.wav";
-        exist(var_665);
+        bgm_file_name = "227.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 227);
 
         // 
-        var_665 = "228.wav";
-        exist(var_665);
+        bgm_file_name = "228.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 228);
 
         // 
-        var_665 = "229.wav";
-        exist(var_665);
+        bgm_file_name = "229.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 229);
 
         // 
-        var_665 = "230.wav";
-        exist(var_665);
+        bgm_file_name = "230.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 230);
 
         // 
-        var_665 = "231.wav";
-        exist(var_665);
+        bgm_file_name = "231.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 231);
 
         // 
-        var_665 = "232.wav";
-        exist(var_665);
+        bgm_file_name = "232.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 232);
 
         // 
-        var_665 = "192.wav";
-        exist(var_665);
+        bgm_file_name = "192.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 233);
 
         // 
-        var_665 = "234.wav";
-        exist(var_665);
+        bgm_file_name = "234.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 234);
 
         // 
-        var_665 = "235.wav";
-        exist(var_665);
+        bgm_file_name = "235.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 235);
 
         // 
-        var_665 = "236.wav";
-        exist(var_665);
+        bgm_file_name = "236.wav";
+        exist(bgm_file_name);
 
         var_666 = strsize;
         var_667 = sdim(var_666);
-        var_667 = bload(var_665, var_666);
+        var_667 = bload(bgm_file_name, var_666);
         DSLOADMEMORY(var_667, 236);
         
         return;

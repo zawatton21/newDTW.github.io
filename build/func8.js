@@ -928,7 +928,7 @@ function func808() {
                 case 0:
                     dbgprt(808);
                     var_836 = var_62;
-                    var_837 = var_91;
+                    var_837 = current_floor;
                     if (var_837 <= 3) {
                         var_1013 = 0;
                     }
@@ -2951,18 +2951,18 @@ function func825() {
                         var_203 = rnd(4);
                     }
                     var_62 = 1;
-                    var_91 = 1;
-                    if (var_91 > var_376) {
-                        var_376 = var_91;
+                    current_floor = 1;
+                    if (current_floor > var_376) {
+                        var_376 = current_floor;
                     }
-                    if (var_62 == 1 && var_91 > var_377) {
-                        var_377 = var_91;
+                    if (var_62 == 1 && current_floor > var_377) {
+                        var_377 = current_floor;
                     }
-                    if (var_62 == 2 && var_91 > var_378) {
-                        var_378 = var_91;
+                    if (var_62 == 2 && current_floor > var_378) {
+                        var_378 = current_floor;
                     }
-                    if (var_62 == 3 && var_91 > var_379) {
-                        var_379 = var_91;
+                    if (var_62 == 3 && current_floor > var_379) {
+                        var_379 = current_floor;
                     }
                     var_405 = 0;
                     var_344 = 0;
@@ -3142,18 +3142,18 @@ function func827() {
                         var_535 = 1;
                     }
                     var_62 = 2;
-                    var_91 = 1;
-                    if (var_91 > var_376) {
-                        var_376 = var_91;
+                    current_floor = 1;
+                    if (current_floor > var_376) {
+                        var_376 = current_floor;
                     }
-                    if (var_62 == 1 && var_91 > var_377) {
-                        var_377 = var_91;
+                    if (var_62 == 1 && current_floor > var_377) {
+                        var_377 = current_floor;
                     }
-                    if (var_62 == 2 && var_91 > var_378) {
-                        var_378 = var_91;
+                    if (var_62 == 2 && current_floor > var_378) {
+                        var_378 = current_floor;
                     }
-                    if (var_62 == 3 && var_91 > var_379) {
-                        var_379 = var_91;
+                    if (var_62 == 3 && current_floor > var_379) {
+                        var_379 = current_floor;
                     }
                     var_405 = 0;
                     var_344 = 0;
@@ -3335,18 +3335,18 @@ function func829() {
                 case 3:
                     var_68 = 0;
                     var_62 = 3;
-                    var_91 = 1;
-                    if (var_91 > var_376) {
-                        var_376 = var_91;
+                    current_floor = 1;
+                    if (current_floor > var_376) {
+                        var_376 = current_floor;
                     }
-                    if (var_62 == 1 && var_91 > var_377) {
-                        var_377 = var_91;
+                    if (var_62 == 1 && current_floor > var_377) {
+                        var_377 = current_floor;
                     }
-                    if (var_62 == 2 && var_91 > var_378) {
-                        var_378 = var_91;
+                    if (var_62 == 2 && current_floor > var_378) {
+                        var_378 = current_floor;
                     }
-                    if (var_62 == 3 && var_91 > var_379) {
-                        var_379 = var_91;
+                    if (var_62 == 3 && current_floor > var_379) {
+                        var_379 = current_floor;
                     }
                     var_405 = 0;
                     var_344 = 0;
@@ -3577,18 +3577,18 @@ function func830() {
                     var_566 = 8;
                     var_68 = 0;
                     var_62 = 3;
-                    var_91 = 1;
-                    if (var_91 > var_376) {
-                        var_376 = var_91;
+                    current_floor = 1;
+                    if (current_floor > var_376) {
+                        var_376 = current_floor;
                     }
-                    if (var_62 == 1 && var_91 > var_377) {
-                        var_377 = var_91;
+                    if (var_62 == 1 && current_floor > var_377) {
+                        var_377 = current_floor;
                     }
-                    if (var_62 == 2 && var_91 > var_378) {
-                        var_378 = var_91;
+                    if (var_62 == 2 && current_floor > var_378) {
+                        var_378 = current_floor;
                     }
-                    if (var_62 == 3 && var_91 > var_379) {
-                        var_379 = var_91;
+                    if (var_62 == 3 && current_floor > var_379) {
+                        var_379 = current_floor;
                     }
                     var_405 = 0;
                     var_344 = 0;
@@ -4041,12 +4041,12 @@ function func834() {
                 case 1:
                     _a.sent();
                     var_62 = 4;
-                    var_91 = 1;
-                    if (var_91 > var_376) {
-                        var_376 = var_91;
+                    current_floor = 1;
+                    if (current_floor > var_376) {
+                        var_376 = current_floor;
                     }
-                    if (var_62 == 4 && var_91 > var_380) {
-                        var_380 = var_91;
+                    if (var_62 == 4 && current_floor > var_380) {
+                        var_380 = current_floor;
                     }
                     var_405 = 0;
                     var_344 = 0;
@@ -4551,12 +4551,12 @@ function func836() {
                 case 3:
                     var_68 = 0;
                     var_62 = 5;
-                    var_91 = 1;
-                    if (var_91 > var_376) {
-                        var_376 = var_91;
+                    current_floor = 1;
+                    if (current_floor > var_376) {
+                        var_376 = current_floor;
                     }
-                    if (var_91 > var_381) {
-                        var_381 = var_91;
+                    if (current_floor > var_381) {
+                        var_381 = current_floor;
                     }
                     var_405 = 0;
                     var_344 = 0;
@@ -13578,7 +13578,7 @@ function func899() {
                     }
                     var_3552 = 0;
                     var_3553 = int(var_1068[10]);
-                    var_3552 = var_91 - var_3553;
+                    var_3552 = current_floor - var_3553;
                     if (var_62 != int(var_1068[12])) {
                         color(150, 150, 150);
                         mes("（別の場所）");

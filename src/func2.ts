@@ -1935,22 +1935,22 @@ function func223(this: any) {
         }
         var_946 = Math.floor(var_949 * 111 / 128);
         var_947 = Math.floor(var_949 * 143 / 128);
-        var_91 = var_63;
+        current_floor = var_63;
         var_939 = 0;
         var_952 = 1;
-        if (var_91 >= 1 && var_91 < 6) {
+        if (current_floor >= 1 && current_floor < 6) {
             var_952 = var_952 + 4;
         }
-        if (var_91 >= 6 && var_91 < 13) {
+        if (current_floor >= 6 && current_floor < 13) {
             var_952 = var_952 + 5;
         }
-        if (var_91 >= 13 && var_91 < 20) {
+        if (current_floor >= 13 && current_floor < 20) {
             var_952 = var_952 + 6;
         }
-        if (var_91 >= 20 && var_91 < 30) {
+        if (current_floor >= 20 && current_floor < 30) {
             var_952 = var_952 + 7;
         }
-        if (var_91 >= 30) {
+        if (current_floor >= 30) {
             var_952 = var_952 + 7;
         }
         var_62 = 2;
@@ -2142,7 +2142,7 @@ function func226(this: any) {
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 var_975 = var_973 + var_974;
-                var_91 = var_976;
+                current_floor = var_976;
                 yield func627();
                 var_958[var_975] = var_977[var_973];
                 var_973 = var_973 + 1;
@@ -2311,7 +2311,7 @@ function func229(this: any) {
         var_792 = dim(length1 = 5, length2 = 25, length3 = 70, length4 = null);
         var_704 = dim(300);
         var_977 = dim(20);
-        var_91 = 1;
+        current_floor = 1;
         var_376 = 1;
         var_840 = 1;
         var_352 = 15;
@@ -2394,8 +2394,10 @@ function func229(this: any) {
         var_476 = bload(var_735, null, var_985);
         var_985 = var_985 + 160;
         var_477 = bload(var_735, null, var_985);
+
         var_985 = var_985 + 160;
         var_479 = bload(var_735, null, var_985);
+        
         var_985 = var_985 + 160;
         var_478 = bload(var_735, null, var_985);
         var_985 = var_985 + 160;
@@ -2475,7 +2477,7 @@ function func229(this: any) {
         var_985 = var_985 + 7560;
         var_992 = bload(var_735, null, var_985);
         var_985 = var_985 + 120;
-        var_91 = var_704[1];
+        current_floor = var_704[1];
         var_376 = var_704[2];
         var_840 = var_704[3];
         var_352 = var_704[4];
@@ -2812,7 +2814,7 @@ function func231(this: any) {
         if (var_726 == 3) {
             var_735 = "03.dat";
         }
-        var_704[1] = var_91;
+        var_704[1] = current_floor;
         var_704[2] = var_376;
         var_704[3] = var_840;
         var_704[4] = var_352;
@@ -3083,8 +3085,16 @@ function func231(this: any) {
         var_704[269] = 0;
         var_985 = 0;
         bsave(file_name = var_735, data = var_704, data_size = null, offset = var_985);
+
         var_985 = var_985 + 1200;
-        bsave(file_name = var_735, data = var_233, data_size = null, offset = var_985);
+        // bsave(file_name = var_735, data = var_233, data_size = null, offset = var_985);
+        // Ver0.1308で追加。アイテムを保存する為に必要
+        const save_233 = Array();
+        var_233.forEach(function (save: any) {
+            save_233.push(save.Save());
+        });
+
+        bsave(var_735, save_233, null, var_985);
         var_985 = var_985 + 12000;
         bsave(file_name = var_735, data = var_476, data_size = null, offset = var_985);
         var_985 = var_985 + 160;
@@ -3117,18 +3127,28 @@ function func231(this: any) {
         bsave(file_name = var_735, data = var_84, data_size = null, offset = var_985);
         var_985 = var_985 + 19600;
         bsave(file_name = var_735, data = var_77, data_size = null, offset = var_985);
+
         var_985 = var_985 + 19600;
-        bsave(file_name = var_735, data = var_78, data_size = null, offset = var_985);
+        // bsave(file_name = var_735, data = var_78, data_size = null, offset = var_985);
+        // Ver0.1308で追加。アイテムを保存する為に必要
+        const save_78 = Array();
+        var_78.forEach(function (save: any) {
+            save_78.push(save.Save());
+        });
+        bsave(var_735, save_78, null, var_985);
+
         var_985 = var_985 + 36000;
         bsave(file_name = var_735, data = var_81, data_size = null, offset = var_985);
         var_985 = var_985 + 8400;
         bsave(file_name = var_735, data = var_82, data_size = null, offset = var_985);
+
         var_985 = var_985 + 19600;
         const save_83 = Array();
         var_83.forEach(function (save: any) {
             save_83.push(save.Save());
         });
         bsave(var_735, save_83, null, var_985);
+
         var_985 = var_985 + 48000;
         bsave(var_735, var_493, null, var_985);
         var_985 = var_985 + 80;
@@ -3175,6 +3195,8 @@ function func231(this: any) {
         end();
     });
 }
+
+
 function func232(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(232);
@@ -3229,7 +3251,7 @@ function func233(this: any) {
         var_163 = 0;
         var_164 = 0;
         var_159 = 0;
-        var_91 = 0;
+        current_floor = 0;
         var_840 = 1;
         var_352 = 15;
         var_211 = 15;
@@ -3472,7 +3494,7 @@ function func235(this: any) {
         var_990 = dim(100);
         var_726 = 0;
         var_271 = 0;
-        var_91 = 0;
+        current_floor = 0;
         var_376 = 0;
         var_840 = 0;
         var_352 = 0;
@@ -4024,7 +4046,7 @@ function func243(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(243);
         var_86 = rnd(12);
-        if (var_91 < 4) {
+        if (current_floor < 4) {
             var_86 = 1;
         }
         if (var_94 >= 1) {
@@ -4036,16 +4058,16 @@ function func243(this: any) {
         if (var_70 != 0) {
             var_86 = 0;
         }
-        if (var_62 == 1 && var_91 == 12) {
+        if (var_62 == 1 && current_floor == 12) {
             var_86 = 0;
         }
-        if (var_62 == 2 && var_91 == 30) {
+        if (var_62 == 2 && current_floor == 30) {
             var_86 = 0;
         }
-        if (var_62 == 3 && var_91 == 99) {
+        if (var_62 == 3 && current_floor == 99) {
             var_86 = 0;
         }
-        if (var_62 == 5 && var_91 == var_20) {
+        if (var_62 == 5 && current_floor == var_20) {
             var_86 = 1;
         }
         if (var_94 == 1) {
@@ -4078,6 +4100,8 @@ function func243(this: any) {
         return;
     });
 }
+
+
 function func244(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(244);
@@ -4089,13 +4113,13 @@ function func244(this: any) {
         if (var_62 == 3) {
             var_1072 = rnd(14);
         }
-        if (var_62 == 1 && var_91 == 12) {
+        if (var_62 == 1 && current_floor == 12) {
             var_1072 = 111;
         }
-        if (var_62 == 2 && var_91 == 30) {
+        if (var_62 == 2 && current_floor == 30) {
             var_1072 = 121;
         }
-        if (var_62 == 3 && var_91 == 99) {
+        if (var_62 == 3 && current_floor == 99) {
             var_1072 = 120;
         }
         if (var_94 == 1) {
@@ -4464,6 +4488,8 @@ function func244(this: any) {
         return;
     });
 }
+
+
 function func245(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(245);
@@ -4551,19 +4577,19 @@ function func246(this: any) {
             var_204 = var_204 + 1;
             yield func245();
         }
-        if (var_91 < 4) {
+        if (current_floor < 4) {
             var_96 = 0;
         }
         if (var_62 == 1) {
             var_96 = 0;
         }
-        if (var_62 == 2 && var_91 == 30) {
+        if (var_62 == 2 && current_floor == 30) {
             var_96 = 0;
         }
-        if (var_62 == 3 && var_91 == 99) {
+        if (var_62 == 3 && current_floor == 99) {
             var_96 = 0;
         }
-        if (var_62 == 5 && var_91 == var_20) {
+        if (var_62 == 5 && current_floor == var_20) {
             var_96 = 0;
         }
         if (var_94 >= 1) {
