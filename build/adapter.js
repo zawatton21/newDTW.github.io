@@ -1712,6 +1712,7 @@ p2で指定するパラメータはオブジェクトの種類によって異な
 入力ボックスの内容を変更した場合には、自動的に入力ボックスに入力フォー
 カスが設定され、ボックス内にカーソルが表示されます。
 */
+// もっぱらアイテム欄行の更新に使用されている。アイテムを使用した時や、捨てた際にアイテム欄の各行に格納されているアイテム表示を更新する 
 // @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
 function objprm(data0, data1) { undef_func("objprm", [data0, data1]); }
 /* 現在使用していない HSP言語 objsel命令
@@ -2019,7 +2020,7 @@ rnd(数値)
 たとえば、１００を指定したならば、「０～９９」の範囲でバラバラな数値が返る。
 */
 function rnd(num) {
-    return Math.floor(Math.random() * num);
+    return Math.floor(Math.random() * num); // Math.floor は対象の値の小数点以下を切り捨て
 }
 /* HSP言語 screen命令
 参照元: http://lhsp.s206.xrea.com/manual/

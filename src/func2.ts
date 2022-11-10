@@ -90,7 +90,7 @@ function func201(this: any) {
         yield func337();
         yield func080();
         if (var_254 == 1) {
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             if (var_690 != 10) {
                 var_690 = var_690 - 10;
             }
@@ -100,7 +100,7 @@ function func201(this: any) {
             return;
         }
         if (var_257 == 1) {
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             if (var_690 != 90) {
                 var_690 = var_690 + 10;
             }
@@ -110,7 +110,7 @@ function func201(this: any) {
             return;
         }
         if (var_242 == 1 || var_239 == 1 || var_244 == 1) {
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             var_909 = 0;
             var_25[14] = var_690;
     
@@ -136,7 +136,7 @@ function func203(this: any) {
         yield func337();
         yield func080();
         if (var_242 == 1 || var_244 == 1) {
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             if (var_702 == 0 || var_702 == 1) {
                 yield func051();
                 if (var_702 == 0) {
@@ -269,14 +269,14 @@ function func203(this: any) {
             }
         }
         if (var_239 == 1) {
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             yield func051();
             var_901 = 0;
             yield func193();
             return;
         }
         if (var_255 == 1) {
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             var_702 = var_702 - 1;
             if (var_702 < 0) {
                 var_702 = 0;
@@ -285,7 +285,7 @@ function func203(this: any) {
             yield func337();
         }
         if (var_259 == 1) {
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             var_702 = var_702 + 1;
             if (var_702 == 9) {
                 var_702 = 8;
@@ -392,7 +392,7 @@ function func206(this: any) {
         yield func337();
         yield func080();
         if (var_242 == 1 || var_244 == 1) {
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             yield func051();
             if (var_910 == 0) {
                 var_10 = 0;
@@ -411,14 +411,14 @@ function func206(this: any) {
             return;
         }
         if (var_239 == 1) {
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             yield func051();
             var_904 = 0;
             yield func193();
             return;
         }
         if (var_255 == 1) {
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             if (var_910 == 0) {
                 var_910 = 1;
                 yield func337();
@@ -435,7 +435,7 @@ function func206(this: any) {
             }
         }
         if (var_259 == 1) {
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             if (var_910 == 1) {
                 var_910 = 0;
                 yield func337();
@@ -510,7 +510,7 @@ function func209(this: any) {
                 var_228 = 55;
                 var_911 = 1;
             }
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
         }
@@ -521,7 +521,7 @@ function func209(this: any) {
                 var_228 = 195;
                 var_911 = 8;
             }
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
         }
@@ -531,7 +531,7 @@ function func209(this: any) {
                 yield func337();
             }
             if (var_911 == 8) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id = 212);
                 var_691[1] = var_655;
                 var_691[2] = var_656;
                 var_691[3] = var_657;
@@ -959,7 +959,7 @@ function func216(this: any) {
                 var_925 = 1;
             }
 
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
         }
@@ -971,7 +971,7 @@ function func216(this: any) {
                 var_925 = 9;
             }
 
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
         }
@@ -1420,7 +1420,7 @@ function func216(this: any) {
         }
         if (var_925 == 8) {
             if (var_242 == 1 || var_244 == 1) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id = 212);
                 var_692 = 8192;
                 var_693 = 2048;
                 var_694 = 4096;
@@ -1439,7 +1439,7 @@ function func216(this: any) {
         }
         if (var_925 == 9) {
             if (var_242 == 1 || var_244 == 1) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id = 212);
                 var_664[1] = var_692;
                 var_664[2] = var_693;
                 var_664[3] = var_694;
@@ -2168,7 +2168,7 @@ function func227(this: any) {
             yield func426();
             item_list = var_233[var_553].Var0;
             var_487 = var_233[var_553].Var13;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             if (var_233[var_553].Var4 == 0 && var_233[var_553].Var19 <= 1) {
                 var_981 = "" + item_name;
             }
@@ -2185,7 +2185,7 @@ function func227(this: any) {
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_553].Var19; ++cnt2) {
                 item_list = var_233[var_553]["Var" + var_982];
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + var_828 + "\n";
                 }
@@ -2207,7 +2207,7 @@ function func227(this: any) {
             yield func427();
             item_list = var_233[var_554].Var0;
             var_487 = var_233[var_554].Var13;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             if (var_233[var_554].Var4 == 0 && var_233[var_554].Var19 <= 1) {
                 var_981 = "" + item_name;
             }
@@ -2224,7 +2224,7 @@ function func227(this: any) {
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_554].Var19; ++cnt2) {
                 item_list = var_233[var_554]["Var" + var_982];
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + var_828 + "\n";
                 }
@@ -2246,7 +2246,7 @@ function func227(this: any) {
             yield func428();
             item_list = var_233[var_555].Var0;
             var_487 = var_233[var_555].Var13;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             if (var_233[var_555].Var4 == 0 && var_233[var_555].Var19 <= 1) {
                 var_981 = "" + item_name;
             }
@@ -2263,7 +2263,7 @@ function func227(this: any) {
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_555].Var19; ++cnt2) {
                 item_list = var_233[var_555]["Var" + var_982];
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + var_828 + "\n";
                 }

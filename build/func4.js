@@ -65,7 +65,7 @@ function func400() {
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + disp_item_namet + "に乗った";
+                    comments_row1 = "" + disp_item_name + "に乗った";
                     comments_row2 = "持ち物が多くて拾えない";
                     var_198 = 1;
                     var_300 = 0;
@@ -96,7 +96,7 @@ function func400() {
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + disp_item_namet + "を拾った";
+                    comments_row1 = "" + disp_item_name + "を拾った";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -742,7 +742,7 @@ function func404() {
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + disp_item_namet + " を置いた";
+                    comments_row1 = "" + disp_item_name + " を置いた";
                     comments_row2 = "";
                     var_198 = 1;
                     var_300 = 0;
@@ -1441,7 +1441,7 @@ function func411() {
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + disp_item_namet + " は落ちた";
+                    comments_row1 = "" + disp_item_name + " は落ちた";
                     comments_row2 = "";
                     var_198 = 1;
                     var_300 = 0;
@@ -1499,7 +1499,7 @@ function func411() {
                     var_297 = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + disp_item_namet + " は";
+                    comments_row1 = "" + disp_item_name + " は";
                     comments_row2 = "地面に落ちて使い物にならなくなった";
                     var_198 = 1;
                     var_300 = 0;
@@ -2142,7 +2142,7 @@ function func419() {
                     var_298 = "";
                     var_299 = 0;
                     if (!(var_78[var_321].Var11 == 0)) return [3 /*break*/, 4];
-                    comments_row1 = "" + disp_item_namet + "に乗った";
+                    comments_row1 = "" + disp_item_name + "に乗った";
                     if (!(item_list == 800)) return [3 /*break*/, 4];
                     var_1922 = var_78[var_321].Var6;
                     if (!(var_862[800][0] == 1 && var_990[var_1922] == 1)) return [3 /*break*/, 4];
@@ -2192,7 +2192,7 @@ function func419() {
                     ++cnt3_9;
                     return [3 /*break*/, 5];
                 case 9:
-                    comments_row1 = "" + disp_item_namet;
+                    comments_row1 = "" + disp_item_name;
                     comments_row2 = "値段 " + var_1925 + " G";
                     _a.label = 10;
                 case 10:
@@ -7754,7 +7754,7 @@ function func461() {
                     return [2 /*return*/];
                 case 91:
                     if (!(var_238 == 1 && var_1866 == 0 && var_234 == 0 && var_220 == 0 && var_231 == 0 && var_1945 == 0 && var_224 > 1 && var_1240 == 0 && var_1999 == 0 && var_2000 == 0 && var_2001 == 0 && var_1950 == 0 && var_2002 == 0 && var_2003 == 0 && var_2004 == 0 && var_2005 == 0 && var_2006 == 0 && var_2007 == 0 && var_227 != 3)) return [3 /*break*/, 93];
-                    DSPLAY(audio_id = 208);
+                    DSPLAY(audio_id = 208); //アイテムを整理する時の効果音
                     return [4 /*yield*/, func467()];
                 case 92:
                     _a.sent();
@@ -9770,6 +9770,7 @@ function func466() {
         });
     });
 }
+//アイテムを整理する時の関数
 function func467() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_54, cnt1_55, cnt1_56, cnt1_57, cnt1_58, cnt1_59, cnt1_60, cnt1_61, cnt1_62, cnt1_63, cnt1_64, cnt1_65;

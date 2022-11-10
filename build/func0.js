@@ -423,7 +423,7 @@ function func004() {
                     buffer(32, 200, 200);
                     return [4 /*yield*/, func183()];
                 case 57:
-                    _a.sent();
+                    _a.sent(); // デバックウィンドウ呼び出し？
                     return [4 /*yield*/, func081()];
                 case 58:
                     _a.sent();
@@ -12835,7 +12835,7 @@ function func081() {
             dbgprt(81);
             /*
             設定画面でカーソルを動かした際の音　「チッ」
-            使用する際は DSPLAY(audio_id =100) で流せる
+            使用する際は DSPLAY(audio_id = 100) で流せる
             */
             bgm_file_name = "100.wav";
             exist(bgm_file_name);
@@ -13600,7 +13600,7 @@ function func082() {
             var_667 = sdim(var_666);
             var_667 = bload(bgm_file_name, var_666);
             DSLOADMEMORY(var_667, 207);
-            // 
+            // アイテムを整理する時の効果音
             bgm_file_name = "208.wav";
             exist(bgm_file_name);
             var_666 = strsize;

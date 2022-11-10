@@ -443,7 +443,7 @@ function func909(this: any) {
                 var_1386 = 641;
             }
     
-            DSPLAY(audio_id =107);
+            DSPLAY(audio_id = 107);
             var_271 = 1;
             var_1511 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -579,12 +579,12 @@ function func911(this: any) {
         }
         item_list = var_233[var_225].Var0;
         var_487 = var_233[var_225].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_3580 = item_name;
         if (var_233[var_225].Var11 == 1) {
             var_106 = 1;
             item_list = var_233[var_225].Var0;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_482 = 0;
             var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
             if (var_233[var_225].Var19 > 1) {
@@ -671,7 +671,7 @@ function func911(this: any) {
         yield func506();
         if (var_2254 == 1) {
             var_2254 = 0;
-            yield func508();
+            yield func508(); // スタンドパワーが力尽きて消滅した時の関数
         }
         var_217 = 1;
         yield func019();
@@ -779,7 +779,7 @@ function func915(this: any) {
         yield func340();
         if (var_2254 == 1) {
             var_2254 = 0;
-            yield func508();
+            yield func508(); // スタンドパワーが力尽きて消滅した時の関数
         }
         var_217 = 1;
         yield func019();
@@ -1078,7 +1078,7 @@ function func920(this: any) {
 function func921(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(921);
-        DSPLAY(audio_id =234);
+        DSPLAY(audio_id = 234);
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337();
         }
@@ -1131,7 +1131,7 @@ function func921(this: any) {
         var_300 = 0;
         yield func047();
         yield func340();
-        DSPLAY(audio_id =139);
+        DSPLAY(audio_id = 139);
         var_415 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337();
@@ -1144,7 +1144,7 @@ function func921(this: any) {
         tcpput("\n", var_1050);
         if (var_2254 == 1) {
             var_2254 = 0;
-            yield func508();
+            yield func508(); // スタンドパワーが力尽きて消滅した時の関数
         }
         var_217 = 1;
         yield func019();
@@ -1204,7 +1204,7 @@ function func923(this: any) {
         var_300 = 0;
         yield func047();
         yield func340();
-        DSPLAY(audio_id =133);
+        DSPLAY(audio_id = 133);
         var_1756 = 1;
         var_452 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {

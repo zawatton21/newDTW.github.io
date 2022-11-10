@@ -10188,6 +10188,8 @@ function func182() {
         });
     });
 }
+// デバッグモード呼び出し関数？
+// スクリーン31番を呼び出せたら表示される？
 function func183() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_124;

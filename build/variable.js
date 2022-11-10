@@ -1910,7 +1910,7 @@ var var_1827;
 var var_1828;
 var var_1829;
 var var_1830;
-var disp_item_namet;
+var disp_item_name;
 var var_1832;
 var var_1833;
 var var_1834;

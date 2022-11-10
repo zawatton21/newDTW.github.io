@@ -831,7 +831,7 @@ function func911() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 20:
-                    _a.sent();
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
                     _a.label = 21;
                 case 21:
                     var_217 = 1;
@@ -967,7 +967,7 @@ function func915() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
                     _a.label = 5;
                 case 5:
                     var_217 = 1;
@@ -1518,7 +1518,7 @@ function func921() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 24:
-                    _a.sent();
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
                     _a.label = 25;
                 case 25:
                     var_217 = 1;

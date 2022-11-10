@@ -21203,41 +21203,41 @@ function func398() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(398);
-            disp_item_namet = "error";
+            disp_item_name = "error";
             if (item_list == 1) {
-                disp_item_namet = "" + var_78[var_321].Var13 + " G";
+                disp_item_name = "" + var_78[var_321].Var13 + " G";
             }
             // 装備discの表示
             if (item_list >= 100 && item_list < 400) {
                 if (var_78[var_321].Var14 == 0) {
-                    disp_item_namet = item_name;
+                    disp_item_name = item_name;
                 }
                 if (var_78[var_321].Var14 == 1) {
                     if (var_78[var_321].Var4 == 0 && var_78[var_321].Var19 <= 1) {
-                        disp_item_namet = item_name;
+                        disp_item_name = item_name;
                     }
                     if (var_78[var_321].Var4 == 0 && var_78[var_321].Var19 > 1) {
-                        disp_item_namet = "" + item_name + " ★" + var_78[var_321].Var19;
+                        disp_item_name = "" + item_name + " ★" + var_78[var_321].Var19;
                     }
                     if (var_78[var_321].Var4 > 0 && var_78[var_321].Var19 <= 1) {
-                        disp_item_namet = "" + item_name + "+" + var_78[var_321].Var4;
+                        disp_item_name = "" + item_name + "+" + var_78[var_321].Var4;
                     }
                     if (var_78[var_321].Var4 > 0 && var_78[var_321].Var19 > 1) {
-                        disp_item_namet = "" + item_name + "+" + var_78[var_321].Var4 + " ★" + var_78[var_321].Var19;
+                        disp_item_name = "" + item_name + "+" + var_78[var_321].Var4 + " ★" + var_78[var_321].Var19;
                     }
                 }
             }
             if (item_list >= 400 && item_list < 500) {
-                disp_item_namet = "" + item_name + "(" + var_78[var_321].Var3 + ")";
+                disp_item_name = "" + item_name + "(" + var_78[var_321].Var3 + ")";
             }
             if (item_list >= 500 && item_list < 800) {
-                disp_item_namet = item_name;
+                disp_item_name = item_name;
             }
             if (item_list >= 800 && item_list < 900) {
-                disp_item_namet = "" + item_name + "(" + var_78[var_321].Var7 + ")";
+                disp_item_name = "" + item_name + "(" + var_78[var_321].Var7 + ")";
             }
             if (item_list >= 900 && item_list < 1000) {
-                disp_item_namet = item_name;
+                disp_item_name = item_name;
             }
             return [2 /*return*/];
         });

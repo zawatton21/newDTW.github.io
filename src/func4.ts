@@ -4,9 +4,9 @@ function func400(this: any) {
         var_321 = var_77[var_66][var_67];
         item_list = var_78[var_321].Var0;
         var_487 = var_78[var_321].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         if (var_78[var_321].Var0 == 1) {
-            DSPLAY(audio_id =207);
+            DSPLAY(audio_id = 207);
             yield func435();
             return;
         }
@@ -17,7 +17,7 @@ function func400(this: any) {
                 return;
             }
         }
-        yield func398();
+        yield func398(); // アイテム欄表示関数 呼び出し
         // var_224 は持っているアイテム数と思われる。アイテムは20個まで持てる。
         // 所持アイテム数が20個以上になる場合
         if (var_224 >= 20) {
@@ -28,7 +28,7 @@ function func400(this: any) {
             var_297 = "";
             var_298 = "";
             var_299 = 0;
-            comments_row1 = "" + disp_item_namet + "に乗った";
+            comments_row1 = "" + disp_item_name + "に乗った";
             comments_row2 = "持ち物が多くて拾えない";
             var_198 = 1;
             var_300 = 0;
@@ -49,7 +49,7 @@ function func400(this: any) {
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        comments_row1 = "" + disp_item_namet + "を拾った";
+        comments_row1 = "" + disp_item_name + "を拾った";
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[1];
@@ -125,7 +125,7 @@ function func400(this: any) {
         var_78[var_321].Var27 = 0;
         var_78[var_321].Var28 = 0;
         var_78[var_321].Var29 = 0;
-        DSPLAY(audio_id =108);
+        DSPLAY(audio_id = 108);
         if (var_362 == 1) {
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 yield func337();
@@ -173,7 +173,7 @@ function func401(this: any) {
             var_78[var_321].Var2 = 0;
         }
         if (var_1839 == 1) {
-            DSPLAY(audio_id =108);
+            DSPLAY(audio_id = 108);
         }
         return;
     });
@@ -226,7 +226,7 @@ function func402(this: any) {
             var_78[var_320].Var27 = 0;
             var_78[var_320].Var28 = 0;
             var_78[var_320].Var29 = 0;
-            DSPLAY(audio_id =156);
+            DSPLAY(audio_id = 156);
             if (current_floor < 19) {
                 for (let cnt3 = 0; cnt3 < 6; ++cnt3) {
                     if (cnt3 == 1) {
@@ -290,7 +290,7 @@ function func403(this: any) {
         dbgprt(403);
         item_list = var_233[var_225].Var0;
         var_487 = var_233[var_225].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1846 = var_233[var_225].Var0;
         var_1837 = var_233[var_225].Var3;
         var_1835 = var_233[var_225].Var4;
@@ -398,7 +398,7 @@ function func404(this: any) {
                 yield func430();
             }
             yield func433();
-            DSPLAY(audio_id =148);
+            DSPLAY(audio_id = 148);
             var_557 = 1;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 yield func337();
@@ -406,12 +406,14 @@ function func404(this: any) {
             }
             var_557 = 0;
             item_list = var_1867;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
+            // var_550は亀へ投資した栄養の合計
             var_550 = var_550 + var_483;
             if (var_550 > 999999) {
                 var_550 = 999999;
             }
             var_558 = 0;
+            // var_559は亀の成長レベル
             if (var_559 == 0 && var_550 >= 5000) {
                 var_559 = 1;
                 var_558 = 1;
@@ -528,7 +530,7 @@ function func404(this: any) {
         item_list = var_1846;
         var_321 = var_854;
         yield func398();
-        DSPLAY(audio_id =133);
+        DSPLAY(audio_id = 133);
         if (var_220 == 0) {
             yield func430();
         }
@@ -540,7 +542,7 @@ function func404(this: any) {
         var_297 = "";
         var_298 = "";
         var_299 = 0;
-        comments_row1 = "" + disp_item_namet + " を置いた";
+        comments_row1 = "" + disp_item_name + " を置いた";
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
@@ -553,6 +555,7 @@ function func404(this: any) {
         return;
     });
 }
+
 function func405(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(405);
@@ -923,7 +926,7 @@ function func411(this: any) {
             var_1246++;
         }
         var_1246 = 0;
-        DSPLAY(audio_id =107);
+        DSPLAY(audio_id = 107);
         var_1190 = 1;
         var_1191 = 1;
         var_455 = var_66;
@@ -1015,7 +1018,7 @@ function func411(this: any) {
                     if (var_83[var_1899].Var0 != 50) {
                         yield func416();
                         if (var_1900 == 0) {
-                            DSPLAY(audio_id =141);
+                            DSPLAY(audio_id = 141);
                         }
                         if (var_1900 == 1) {
                             yield func660();
@@ -1122,7 +1125,7 @@ function func411(this: any) {
             var_297 = "";
             var_298 = "";
             var_299 = 0;
-            comments_row1 = "" + disp_item_namet + " は落ちた";
+            comments_row1 = "" + disp_item_name + " は落ちた";
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
@@ -1175,7 +1178,7 @@ function func411(this: any) {
             var_297 = "";
             var_298 = "";
             var_299 = 0;
-            comments_row1 = "" + disp_item_namet + " は";
+            comments_row1 = "" + disp_item_name + " は";
             comments_row2 = "地面に落ちて使い物にならなくなった";
             var_198 = 1;
             var_300 = 0;
@@ -1289,7 +1292,7 @@ function func414(this: any) {
         dbgprt(414);
         if (var_1850 == 1) {
             item_list = var_1846;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_482 = 0;
             if (var_1846 != 800) {
                 var_482 = var_1838 * 100 + var_482;
@@ -1484,7 +1487,7 @@ function func417(this: any) {
         var_481 = 0;
         if (var_1850 == 1) {
             item_list = var_1846;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_482 = 0;
             var_482 = (var_1837 + var_1835) * 50;
             if (var_1846 != 800) {
@@ -1501,7 +1504,7 @@ function func417(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
                     item_list = var_486[var_485][var_484][0];
-                    yield func492();
+                    yield func492(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                     if (var_486[var_485][var_484][19] > 1) {
@@ -1550,7 +1553,7 @@ function func418(this: any) {
         var_481 = 0;
         if (var_1850 == 1) {
             item_list = var_1846;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_482 = 0;
             var_482 = (var_1837 + var_1835) * 50;
             if (var_1846 != 800) {
@@ -1567,7 +1570,7 @@ function func418(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
                     item_list = var_486[var_485][var_484][0];
-                    yield func492();
+                    yield func492(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                     if (var_486[var_485][var_484][19] > 1) {
@@ -1602,7 +1605,7 @@ function func419(this: any) {
         var_321 = var_77[var_66][var_67];
         item_list = var_78[var_321].Var0;
         var_487 = var_78[var_321].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         yield func398();
         comments_row1 = "";
         comments_row2 = "";
@@ -1612,7 +1615,7 @@ function func419(this: any) {
         var_298 = "";
         var_299 = 0;
         if (var_78[var_321].Var11 == 0) {
-            comments_row1 = "" + disp_item_namet + "に乗った";
+            comments_row1 = "" + disp_item_name + "に乗った";
             if (item_list == 800) {
                 var_1922 = var_78[var_321].Var6;
                 if (var_862[800][0] == 1 && var_990[var_1922] == 1) {
@@ -1641,7 +1644,7 @@ function func419(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
                         item_list = var_486[var_485][var_484][0];
-                        yield func492();
+                        yield func492(); // アイテムリスト呼び出し
                         var_482 = 0;
                         var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                         if (var_486[var_485][var_484][19] > 1) {
@@ -1652,7 +1655,7 @@ function func419(this: any) {
                     var_484 = var_484 + 1;
                 }
             }
-            comments_row1 = "" + disp_item_namet;
+            comments_row1 = "" + disp_item_name;
             comments_row2 = "値段 " + var_1925 + " G";
         }
         var_198 = 1;
@@ -1713,23 +1716,23 @@ function func420(this: any) {
         var_1932 = var_225;
         if (item_list >= 100 && item_list < 600) {
             var_1264 = 1;
-            DSPLAY(audio_id =117);
+            DSPLAY(audio_id = 117);
         }
         if (item_list >= 600 && item_list < 606) {
             var_1214 = 3;
-            DSPLAY(audio_id =119);
+            DSPLAY(audio_id = 119);
         }
         if (item_list >= 606 && item_list < 650) {
             var_1214 = 1;
-            DSPLAY(audio_id =119);
+            DSPLAY(audio_id = 119);
         }
         if (item_list >= 650 && item_list < 660) {
             var_1214 = 2;
-            DSPLAY(audio_id =119);
+            DSPLAY(audio_id = 119);
         }
         if (item_list >= 660 && item_list < 700) {
             var_1214 = 1;
-            DSPLAY(audio_id =119);
+            DSPLAY(audio_id = 119);
         }
         if (item_list >= 750 && item_list < 800 && var_234 == 0) {
             var_1252 = 1;
@@ -1962,7 +1965,7 @@ function func420(this: any) {
                         item_list = var_486[var_682][var_225][0];
                     }
                     var_862[item_list][0] = 1;
-                    yield func492();
+                    yield func492(); // アイテムリスト呼び出し
                     var_297 = "" + item_name + "だった！";
                     if (item_list >= 100 && item_list < 400 && var_233[var_225].Var4 != 0) {
                         var_297 = "" + item_name + "+" + var_233[var_225].Var4 + "だった！";
@@ -2017,7 +2020,7 @@ function func420(this: any) {
             var_1264 = 0;
             var_747 = 1;
             var_1212 = 1;
-            DSPLAY(audio_id =127);
+            DSPLAY(audio_id = 127);
             var_389 = 2;
             var_1498 = 1;
             var_271 = 1;
@@ -2057,13 +2060,13 @@ function func420(this: any) {
         if (var_1941 == 0 && var_220 == 0 && var_233[var_225].Var11 == 1) {
             var_106 = 1;
             item_list = var_233[var_225].Var0;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_107 = var_107 + var_483;
         }
         if (var_1941 == 0 && var_220 == 1 && var_486[var_682][var_225][11] == 1) {
             var_106 = 1;
             item_list = var_486[var_682][var_225][0];
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_107 = var_107 + var_483;
         }
         if (var_220 == 0) {
@@ -2079,7 +2082,7 @@ function func420(this: any) {
             var_1943 = var_486[var_682][var_225][21];
         }
         var_1944 = item_list;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         if (item_list == 700 || item_list == 571 || item_list == 579 || item_list == 729 || item_list == 730 || item_list == 731 || item_list == 701 || item_list == 995) {
             var_1936 = 0;
         }
@@ -2087,7 +2090,7 @@ function func420(this: any) {
             yield func493();
         }
         if (item_list < 100 || item_list >= 500) {
-            yield func498();
+            yield func498(); // 消費アイテムの効果
         }
         item_list = var_1944;
         if (var_234 == 0) {
@@ -2147,7 +2150,7 @@ function func420(this: any) {
         var_217 = 1;
         var_1935 = 0;
         if (var_1949 == 1) {
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             var_502 = 1;
             yield func356();
             return;
@@ -2195,6 +2198,7 @@ function func420(this: any) {
         return;
     });
 }
+
 function func421(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(421);
@@ -2214,7 +2218,7 @@ function func421(this: any) {
             }
             var_1953 = 1;
             item_list = var_233[var_225].Var0;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_299 = 0;
             comments_row1 = "";
             comments_row2 = "";
@@ -2260,7 +2264,7 @@ function func422(this: any) {
             }
             var_1953 = 1;
             item_list = var_78[var_321].Var0;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_299 = 0;
             comments_row1 = "";
             comments_row2 = "";
@@ -2298,7 +2302,7 @@ function func423(this: any) {
                 yield func337();
             }
             item_list = var_486[var_682][var_225][0];
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_299 = 0;
             comments_row1 = "";
             comments_row2 = "";
@@ -2392,7 +2396,7 @@ function func425(this: any) {
         dbgprt(425);
         var_225 = var_1886;
         item_list = var_233[var_225].Var0;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1253 = item_list;
         var_1254 = 1;
         comments_row1 = "";
@@ -2584,6 +2588,8 @@ function func432(this: any) {
         yield func433();
     });
 }
+
+// アイテム配列の "数" 増減？関数
 function func433(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(433);
@@ -2661,7 +2667,7 @@ function func433(this: any) {
                 var_478[var_447] = var_478[var_449];
                 var_479[var_447] = var_479[var_449];
                 var_1957 = 1;
-                var_224 = var_224 - 1;
+                var_224 = var_224 - 1; // アイテムの数を減らしている。
             }
             if (var_1957 == 1) {
                 var_233[var_447].Var0 = var_233[var_449].Var0;
@@ -2712,6 +2718,7 @@ function func433(this: any) {
         return;
     });
 }
+
 function func434(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(434);
@@ -2889,7 +2896,7 @@ function func437(this: any) {
         if (var_234 == 1) {
             if (var_233[0].Var11 == 1) {
                 item_list = var_233[0].Var0;
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 var_106 = 1;
                 var_107 = var_107 + var_483;
             }
@@ -2900,7 +2907,7 @@ function func437(this: any) {
             var_225 = var_1932;
             if (var_486[var_682][var_225][11] == 1) {
                 item_list = var_486[var_682][var_225][0];
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 var_106 = 1;
                 var_107 = var_107 + var_483;
             }
@@ -2913,7 +2920,7 @@ function func437(this: any) {
             }
             if (var_233[var_225].Var11 == 1) {
                 item_list = var_233[var_225].Var0;
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 var_106 = 1;
                 var_107 = var_107 + var_483;
             }
@@ -2985,7 +2992,7 @@ function func439(this: any) {
             var_1968 = var_77[var_66][var_67];
             var_78[var_1968].Var14 = 1;
         }
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1969 = item_name;
         var_1966 = var_225;
         yield func437();
@@ -2999,7 +3006,7 @@ function func439(this: any) {
             var_299 = 0;
             comments_row1 = "なんと" + var_1938 + "は";
             var_862[567][0] = 1;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             comments_row2 = "ｱｳﾞﾄﾞｩﾙのDISCだった！";
             var_198 = 1;
             var_300 = 0;
@@ -3177,7 +3184,7 @@ function func441(this: any) {
             var_299 = 0;
             comments_row1 = "なんと" + var_1938 + "は";
             var_862[590][0] = 1;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             comments_row2 = "ｷﾞｱｯﾁｮのDISCだった！";
             var_198 = 1;
             var_300 = 0;
@@ -3229,7 +3236,7 @@ function func441(this: any) {
         var_1244 = 1;
         var_1975 = 1;
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
-            DSPLAY(audio_id =103);
+            DSPLAY(audio_id = 103);
             var_1353 = 1;
             yield func337();
             var_1353 = 2;
@@ -3270,7 +3277,7 @@ function func441(this: any) {
         var_225 = var_1966;
         item_list = var_233[var_225].Var0;
         var_487 = var_233[var_225].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1976 = item_name;
         if (var_233[var_225].Var11 == 1) {
             var_106 = 1;
@@ -3412,7 +3419,7 @@ function func442(this: any) {
         var_1945 = 0;
         item_list = var_233[var_225].Var0;
         var_487 = var_233[var_225].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1969 = item_name;
         var_1966 = var_225;
         yield func437();
@@ -3426,7 +3433,7 @@ function func442(this: any) {
             var_299 = 0;
             comments_row1 = "なんと" + var_1938 + "は";
             var_862[565][0] = 1;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             comments_row2 = "ﾌﾟｯﾁ神父のDISCだった！";
             var_198 = 1;
             var_300 = 0;
@@ -3508,7 +3515,7 @@ function func442(this: any) {
             var_300 = 0;
             yield func047();
             yield func340();
-            DSPLAY(audio_id =192);
+            DSPLAY(audio_id = 192);
             var_271 = 1;
             var_1355 = 1;
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
@@ -3651,7 +3658,7 @@ function func444(this: any) {
             return;
         }
         item_list = var_233[var_225].Var0;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1982 = item_name;
         var_1983 = 0;
         if (var_1950 == 3) {
@@ -3682,7 +3689,7 @@ function func444(this: any) {
         if (var_1950 == 7) {
             var_1983 = 1;
         }
-        DSPLAY(audio_id =118);
+        DSPLAY(audio_id = 118);
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3727,7 +3734,7 @@ function func444(this: any) {
         }
         var_1985 = 0;
         item_list = var_233[var_225].Var0;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         if (item_list >= 100 && item_list < 400 && var_233[var_225].Var4 >= 99) {
             var_1985 = 1;
         }
@@ -3801,7 +3808,7 @@ function func444(this: any) {
         }
         var_1253 = var_233[var_225].Var0;
         var_1252 = 2;
-        DSPLAY(audio_id =225);
+        DSPLAY(audio_id = 225);
         var_1299 = 2;
         var_271 = 1;
         var_1297 = 1;
@@ -3812,7 +3819,7 @@ function func444(this: any) {
         var_271 = 0;
         var_1297 = 0;
         item_list = var_233[var_225].Var0;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1982 = item_name;
         var_1986 = 1;
         var_1987 = rnd(30);
@@ -3846,7 +3853,7 @@ function func444(this: any) {
                 var_233[var_225].Var3 = 99;
             }
         }
-        DSPLAY(audio_id =112);
+        DSPLAY(audio_id = 112);
         comments_row1 = var_296;
         comments_row2 = var_297;
         if (var_1986 == 1) {
@@ -3878,7 +3885,7 @@ function func444(this: any) {
         yield func050();
         if (var_233[var_225].Var12 == 1) {
             yield func340();
-            DSPLAY(audio_id =192);
+            DSPLAY(audio_id = 192);
             var_233[var_225].Var12 = 0;
             yield func426();
             if (var_225 == var_553) {
@@ -3961,7 +3968,7 @@ function func445(this: any) {
             return;
         }
         item_list = var_233[var_225].Var0;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1982 = item_name;
         var_1983 = 0;
         if (var_1950 == 3) {
@@ -4031,7 +4038,7 @@ function func445(this: any) {
             return;
         }
         item_list = var_233[var_225].Var0;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1982 = item_name;
         var_1988 = var_233[var_225].Var7 + var_233[var_225].Var8;
         if (var_1988 >= 10) {
@@ -4058,7 +4065,7 @@ function func445(this: any) {
         }
         var_1253 = var_233[var_225].Var0;
         var_1252 = 2;
-        DSPLAY(audio_id =128);
+        DSPLAY(audio_id = 128);
         var_1299 = 2;
         var_271 = 1;
         var_1297 = 1;
@@ -4069,7 +4076,7 @@ function func445(this: any) {
         var_271 = 0;
         var_1297 = 0;
         var_233[var_225].Var7 = var_233[var_225].Var7 + 1;
-        DSPLAY(audio_id =112);
+        DSPLAY(audio_id = 112);
         comments_row1 = var_296;
         comments_row2 = var_297;
         var_296 = "" + var_1982 + "の";
@@ -4097,7 +4104,7 @@ function func446(this: any) {
         dbgprt(446);
         var_1253 = var_233[var_225].Var0;
         var_1252 = 2;
-        DSPLAY(audio_id =225);
+        DSPLAY(audio_id = 225);
         var_1299 = 2;
         var_271 = 1;
         var_1297 = 1;
@@ -4108,7 +4115,7 @@ function func446(this: any) {
         var_271 = 0;
         var_1297 = 0;
         item_list = var_233[var_225].Var0;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1982 = "" + item_name;
         var_1989 = 0;
         if (var_1989 == 0 && var_233[var_225].Var13 == 0) {
@@ -4129,7 +4136,7 @@ function func446(this: any) {
             var_233[var_225].Var13 = 1;
             var_1989 = 1;
         }
-        DSPLAY(audio_id =112);
+        DSPLAY(audio_id = 112);
         comments_row1 = var_296;
         comments_row2 = var_297;
         var_296 = "" + var_1982 + "の";
@@ -4165,7 +4172,7 @@ function func447(this: any) {
         var_271 = 1;
         var_1582 = 1;
         var_1586 = 1;
-        DSPLAY(audio_id =168);
+        DSPLAY(audio_id = 168);
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
             yield func337();
             var_1586++;
@@ -4207,7 +4214,7 @@ function func448(this: any) {
             if (var_1991 == 6) {
                 var_246 = 45;
                 var_1991 = 1;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func337();
@@ -4215,7 +4222,7 @@ function func448(this: any) {
             if (var_1991 != 6) {
                 var_246 = var_246 + 18;
                 var_1991++;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func337();
@@ -4225,7 +4232,7 @@ function func448(this: any) {
             if (var_1991 == 1) {
                 var_246 = 135;
                 var_1991 = 6;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func337();
@@ -4233,14 +4240,14 @@ function func448(this: any) {
             if (var_1991 != 1) {
                 var_246 = var_246 - 18;
                 var_1991--;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func337();
             }
         }
         if (var_242 == 1 || var_244 == 1) {
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func450();
             return;
         }
@@ -4321,7 +4328,7 @@ function func450(this: any) {
         var_271 = 1;
         var_1582 = 0;
         var_1586 = 1;
-        DSPLAY(audio_id =168);
+        DSPLAY(audio_id = 168);
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
             yield func337();
             var_1586++;
@@ -4392,7 +4399,7 @@ function func451(this: any) {
             if (cnt1 == 3) {
                 var_389 = 2;
                 var_747 = 1;
-                DSPLAY(audio_id =105);
+                DSPLAY(audio_id = 105);
             }
             var_1582++;
         }
@@ -4427,7 +4434,7 @@ function func451(this: any) {
 function func452(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(452);
-        DSPLAY(audio_id =166);
+        DSPLAY(audio_id = 166);
         comments_row1 = var_296;
         comments_row2 = var_297;
         var_296 = "ザグッ！　ザグッ！　ザグッ！";
@@ -4497,7 +4504,7 @@ function func453(this: any) {
 function func454(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(454);
-        DSPLAY(audio_id =143);
+        DSPLAY(audio_id = 143);
         var_1299 = 5;
         var_271 = 1;
         var_1297 = 1;
@@ -4578,7 +4585,7 @@ function func455(this: any) {
             var_1992 = var_1992 + 1;
         }
         if (var_1997 == 1) {
-            DSPLAY(audio_id =126);
+            DSPLAY(audio_id = 126);
         }
         var_114 = 0;
         var_463 = 0;
@@ -4592,7 +4599,7 @@ function func455(this: any) {
 function func456(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(456);
-        DSPLAY(audio_id =166);
+        DSPLAY(audio_id = 166);
         comments_row1 = var_296;
         comments_row2 = var_297;
         var_296 = "ザグッ！　ザグッ！　ザグッ！";
@@ -4837,7 +4844,7 @@ function func460(this: any) {
             }
             item_list = var_2010;
             var_487 = var_2017;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_2021 = 0;
             if (var_220 == 1 && var_1620 <= var_233[var_1882].Var7 && var_233[var_1882].Var0 >= 850 && var_233[var_1882].Var0 < 860 && var_233[var_1882].Var0 != 851) {
         
@@ -5063,7 +5070,7 @@ function func460(this: any) {
                             for (let cnt6 = 0; cnt6 < 10; ++cnt6) {
                                 if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
                                     item_list = var_486[var_485][var_484][0];
-                                    yield func492();
+                                    yield func492(); // アイテムリスト呼び出し
                                     var_482 = 0;
                                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                                     if (var_486[var_485][var_484][19] > 1) {
@@ -5118,7 +5125,7 @@ function func460(this: any) {
                 item_list = var_233[0].Var0;
                 var_487 = var_233[0].Var13;
             }
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
     
             font(font_type = "ＭＳ Ｐゴシック", font_size = 14, font_style = 1);
             if (item_list >= 100 && item_list < 400 && var_2025 == 1 && var_2027 == 1 && var_862[item_list][0] == 1) {
@@ -5501,7 +5508,7 @@ function func460(this: any) {
             font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
             color(255, 255, 255);
             pos(275 - var_2036, 48 + var_2037);
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             mes("" + var_2039);
             mes("やめる");
             color(255, 255, 255);
@@ -5533,7 +5540,7 @@ function func461(this: any) {
                     if (var_224 <= 10 && var_225 != var_224) {
                         var_228 = var_228 + 22;
                         var_225 = var_225 + 1;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5542,7 +5549,7 @@ function func461(this: any) {
                     if (var_224 >= 11 && var_225 != 10) {
                         var_228 = var_228 + 22;
                         var_225 = var_225 + 1;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5551,7 +5558,7 @@ function func461(this: any) {
                     if (var_225 == var_224 || var_225 == 10) {
                         var_228 = 45;
                         var_225 = 1;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5562,7 +5569,7 @@ function func461(this: any) {
                     if (var_225 != var_224 && var_225 != 20) {
                         var_228 = var_228 + 22;
                         var_225 = var_225 + 1;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5571,7 +5578,7 @@ function func461(this: any) {
                     if (var_225 == var_224 || var_225 == 20) {
                         var_228 = 45;
                         var_225 = 11;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5583,7 +5590,7 @@ function func461(this: any) {
                 if (var_225 != 1 && var_225 != 11) {
                     var_228 = var_228 - 22;
                     var_225 = var_225 - 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5594,7 +5601,7 @@ function func461(this: any) {
                         if (var_224 <= 10) {
                             var_228 = (var_224 - 1) * 22 + 45;
                             var_225 = var_224;
-                            DSPLAY(audio_id =100);
+                            DSPLAY(audio_id = 100);
                             yield func337();
                             yield func337();
                             yield func461();
@@ -5603,7 +5610,7 @@ function func461(this: any) {
                         if (var_224 >= 11) {
                             var_228 = 9 * 22 + 45;
                             var_225 = 10;
-                            DSPLAY(audio_id =100);
+                            DSPLAY(audio_id = 100);
                             yield func337();
                             yield func337();
                             yield func461();
@@ -5613,7 +5620,7 @@ function func461(this: any) {
                     if (var_227 == 2) {
                         var_228 = (var_224 - 11) * 22 + 45;
                         var_225 = var_224;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5627,7 +5634,7 @@ function func461(this: any) {
                         var_227 = 3;
                         var_228 = 45;
                         var_225 = 0;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func478();
                         yield func337();
                         yield func337();
@@ -5638,7 +5645,7 @@ function func461(this: any) {
                         var_225 = 11;
                         var_227 = 2;
                         var_228 = 45;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5649,7 +5656,7 @@ function func461(this: any) {
                     var_225 = 1;
                     var_227 = 1;
                     var_228 = 45;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5661,7 +5668,7 @@ function func461(this: any) {
                         var_227 = 1;
                         var_228 = 45;
                         var_231 = 0;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5672,7 +5679,7 @@ function func461(this: any) {
                         var_227 = 2;
                         var_228 = 45;
                         var_231 = 0;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5685,7 +5692,7 @@ function func461(this: any) {
                     var_225 = 11;
                     var_227 = 2;
                     var_228 = 45;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5696,7 +5703,7 @@ function func461(this: any) {
                         var_227 = 3;
                         var_228 = 45;
                         var_225 = 0;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func478();
                         yield func337();
                         yield func337();
@@ -5707,7 +5714,7 @@ function func461(this: any) {
                         var_227 = 3;
                         var_228 = 45;
                         var_225 = 0;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func478();
                         yield func337();
                         yield func337();
@@ -5720,7 +5727,7 @@ function func461(this: any) {
                         var_225 = 1;
                         var_227 = 1;
                         var_228 = 45;
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func337();
                         yield func337();
                         yield func461();
@@ -5731,7 +5738,7 @@ function func461(this: any) {
                     var_225 = 1;
                     var_227 = 1;
                     var_228 = 45;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5741,7 +5748,7 @@ function func461(this: any) {
                     var_225 = 1;
                     var_227 = 1;
                     var_228 = 45;
-                    DSPLAY(audio_id =　100);
+                    DSPLAY(audio_id = 　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5752,7 +5759,7 @@ function func461(this: any) {
                     var_227 = 1;
                     var_228 = 45;
                     var_231 = 0;
-                    DSPLAY(audio_id =　100);
+                    DSPLAY(audio_id = 　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5771,7 +5778,7 @@ function func461(this: any) {
                 if (var_225 != var_233[var_1876].Var8 && var_225 != var_1884) {
                     var_228 = var_228 + 22;
                     var_225 = var_225 + 1;
-                    DSPLAY(audio_id =　100);
+                    DSPLAY(audio_id = 　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5780,7 +5787,7 @@ function func461(this: any) {
                 if (var_225 == var_233[var_1876].Var8 || var_225 == var_1884) {
                     var_228 = 45;
                     var_225 = 1;
-                    DSPLAY(audio_id =　100);
+                    DSPLAY(audio_id = 　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5791,7 +5798,7 @@ function func461(this: any) {
                 if (var_225 != 1) {
                     var_228 = var_228 - 22;
                     var_225 = var_225 - 1;
-                    DSPLAY(audio_id =　100);
+                    DSPLAY(audio_id = 　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5800,7 +5807,7 @@ function func461(this: any) {
                 if (var_225 == 1) {
                     var_228 = (var_233[var_1876].Var8 - 1) * 22 + 45;
                     var_225 = var_233[var_1876].Var8;
-                    DSPLAY(audio_id =　100);
+                    DSPLAY(audio_id = 　100);
                     yield func337();
                     yield func337();
                     yield func461();
@@ -5810,18 +5817,18 @@ function func461(this: any) {
         }
         if (var_242 == 1 || var_244 == 1) {
             if (var_1866 == 1 && var_227 != 3) {
-                DSPLAY(audio_id =　212);
+                DSPLAY(audio_id = 　212);
                 yield func469();
                 return;
             }
             if (var_1866 == 1 && var_227 == 3) {
-                DSPLAY(audio_id =　212);
+                DSPLAY(audio_id = 　212);
                 var_2040 = 1;
                 yield func469();
                 return;
             }
             if (var_220 == 1 && var_233[var_1876].Var8 != 0 && var_233[var_1876].Var0 < 805) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id = 212);
                 var_221 = 1;
                 var_229 = 44;
                 var_222 = 1;
@@ -5830,62 +5837,62 @@ function func461(this: any) {
             }
             if (var_220 == 0) {
                 if (var_1240 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func522();
                     return;
                 }
                 if (var_1240 == 2) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func523();
                     return;
                 }
                 if (var_2000 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func771();
                     return;
                 }
                 if (var_2001 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func775();
                     return;
                 }
                 if (var_1950 >= 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func444();
                     return;
                 }
                 if (var_1945 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func439();
                     return;
                 }
                 if (var_1945 == 2) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func441();
                     return;
                 }
                 if (var_1945 == 3) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func442();
                     return;
                 }
                 if (var_2005 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func480();
                     return;
                 }
                 if (var_2004 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func524();
                     return;
                 }
                 if (var_2006 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func525();
                     return;
                 }
                 if (var_2007 == 1) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func533();
                     return;
                 }
@@ -5893,7 +5900,7 @@ function func461(this: any) {
                     var_221 = 1;
                     var_229 = 44;
                     var_222 = 1;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func462();
                     return;
                 }
@@ -5902,7 +5909,7 @@ function func461(this: any) {
                     var_229 = 44;
                     var_222 = 10;
                     var_231 = 1;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func462();
                     return;
                 }
@@ -5919,7 +5926,7 @@ function func461(this: any) {
                 var_231 = 0;
                 var_1880 = 0;
                 var_227 = var_1885;
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id = 212);
                 yield func051();
                 yield func461();
                 return;
@@ -5949,7 +5956,7 @@ function func461(this: any) {
                     var_2008 = 0;
                     var_220 = 0;
                     var_1965 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func009();
                     return;
                 }
@@ -5965,7 +5972,7 @@ function func461(this: any) {
                     if (var_231 == 1) {
                         var_222 = 10;
                     }
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func051();
                     yield func462();
                     return;
@@ -6162,7 +6169,7 @@ function func463(this: any) {
         if (var_239 == 1) {
             var_221 = 0;
             var_231 = 0;
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             yield func051();
             yield func461();
             return;
@@ -6197,7 +6204,7 @@ function func463(this: any) {
                 if (var_2031 == 6) {
                     var_222 = 1;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6228,7 +6235,7 @@ function func463(this: any) {
                 if (var_2031 == 6) {
                     var_222 = 5;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6237,7 +6244,7 @@ function func463(this: any) {
             if (var_222 == 2) {
                 var_229 = var_229 + var_2041;
                 var_222 = 3;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6246,7 +6253,7 @@ function func463(this: any) {
             if (var_222 == 3) {
                 var_229 = var_229 + var_2041;
                 var_222 = 5;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6255,7 +6262,7 @@ function func463(this: any) {
             if (var_222 == 4) {
                 var_229 = var_229 + var_2041;
                 var_222 = 5;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6284,7 +6291,7 @@ function func463(this: any) {
                 if (var_220 == 1) {
                     var_222 = 9;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6293,7 +6300,7 @@ function func463(this: any) {
             if (var_222 == 9) {
                 var_229 = var_229 + var_2041;
                 var_222 = 6;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6324,7 +6331,7 @@ function func463(this: any) {
                         }
                     }
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6338,7 +6345,7 @@ function func463(this: any) {
                 if (var_2034 == 1) {
                     var_222 = 11;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6347,7 +6354,7 @@ function func463(this: any) {
             if (var_222 == 11) {
                 var_229 = var_229 + var_2041;
                 var_222 = 8;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6373,7 +6380,7 @@ function func463(this: any) {
                 if (var_220 == 1 && var_2031 == 2) {
                     var_222 = 2;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6454,7 +6461,7 @@ function func463(this: any) {
                         }
                     }
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6597,7 +6604,7 @@ function func463(this: any) {
                         var_229 = var_229 - var_2041;
                     }
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6615,7 +6622,7 @@ function func463(this: any) {
                     var_222 = 8;
                     var_229 = 44 + var_2041 * 5;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6648,7 +6655,7 @@ function func463(this: any) {
                 if (var_2031 == 2) {
                     var_222 = 2;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6657,7 +6664,7 @@ function func463(this: any) {
             if (var_222 == 4) {
                 var_229 = var_229 - var_2041;
                 var_222 = 1;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6702,7 +6709,7 @@ function func463(this: any) {
                 if (var_2031 == 6) {
                     var_222 = 1;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6711,7 +6718,7 @@ function func463(this: any) {
             if (var_222 == 9) {
                 var_229 = var_229 - var_2041;
                 var_222 = 5;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6723,7 +6730,7 @@ function func463(this: any) {
                 if (var_220 == 1) {
                     var_222 = 9;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6735,7 +6742,7 @@ function func463(this: any) {
                 if (var_231 == 1) {
                     var_222 = 5;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6762,7 +6769,7 @@ function func463(this: any) {
                         var_222 = 5;
                     }
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6792,7 +6799,7 @@ function func463(this: any) {
                 if (var_2034 == 1) {
                     var_222 = 11;
                 }
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func463();
@@ -6803,7 +6810,7 @@ function func463(this: any) {
             if (var_220 == 0 && var_231 == 0) {
                 if (var_222 == 1) {
                     if (var_2031 == 1) {
-                        DSPLAY(audio_id =212);
+                        DSPLAY(audio_id = 212);
                         yield func051();
                         var_221 = 2;
                         var_246 = 44;
@@ -6812,7 +6819,7 @@ function func463(this: any) {
                         return;
                     }
                     if (var_2031 == 5) {
-                        DSPLAY(audio_id =212);
+                        DSPLAY(audio_id = 212);
                         var_221 = 0;
                         yield func408();
                         return;
@@ -6848,7 +6855,7 @@ function func463(this: any) {
                     var_221 = 3;
                     var_246 = 44;
                     var_2043 = 1;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func465();
                     return;
                 }
@@ -6857,19 +6864,19 @@ function func463(this: any) {
                     var_221 = 3;
                     var_246 = 44;
                     var_2043 = 1;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func465();
                     return;
                 }
                 if (var_222 == 4) {
                     var_221 = 0;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func407();
                     return;
                 }
                 if (var_222 == 5) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     if (var_2031 != 2) {
                         var_221 = 0;
                         var_197 = 0;
@@ -6887,14 +6894,14 @@ function func463(this: any) {
                 if (var_222 == 6) {
                     var_221 = 0;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func403();
                     return;
                 }
                 if (var_222 == 7) {
                     var_197 = 0;
                     var_2044 = var_77[var_66][var_67];
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func480();
                     return;
                 }
@@ -6902,12 +6909,12 @@ function func463(this: any) {
                     var_221 = 0;
                     var_1209 = 1;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func368();
                     return;
                 }
                 if (var_222 == 11) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func482();
                     return;
                 }
@@ -6915,7 +6922,7 @@ function func463(this: any) {
         }
         if (var_242 == 1 || var_244 == 1) {
             if (var_220 == 0 && var_231 == 1) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id = 212);
                 if (var_222 == 10) {
                     var_231 = 0;
                     var_198 = 0;
@@ -6984,7 +6991,7 @@ function func463(this: any) {
                     var_197 = 0;
                     var_231 = 0;
                     var_234 = 1;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func406();
                     return;
                 }
@@ -6994,7 +7001,7 @@ function func463(this: any) {
                     var_246 = 44;
                     var_2043 = 1;
                     var_234 = 1;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func465();
                     return;
                 }
@@ -7004,7 +7011,7 @@ function func463(this: any) {
                     var_246 = 44;
                     var_2043 = 1;
                     var_234 = 1;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func465();
                     return;
                 }
@@ -7013,12 +7020,12 @@ function func463(this: any) {
                     var_225 = 0;
                     var_234 = 1;
                     var_1876 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func407();
                     return;
                 }
                 if (var_222 == 5) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     var_231 = 0;
                     var_198 = 0;
                     var_197 = 0;
@@ -7044,7 +7051,7 @@ function func463(this: any) {
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func051();
                     var_197 = 1;
                     yield func461();
@@ -7056,7 +7063,7 @@ function func463(this: any) {
                     var_221 = 0;
                     var_2045 = 1;
                     var_2044 = var_77[var_66][var_67];
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     var_1209 = 1;
                     yield func481();
                     var_225 = 0;
@@ -7065,7 +7072,7 @@ function func463(this: any) {
                     return;
                 }
                 if (var_222 == 11) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func482();
                     return;
                 }
@@ -7076,28 +7083,28 @@ function func463(this: any) {
                 if (var_222 == 9) {
                     var_221 = 0;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func474();
                     return;
                 }
                 if (var_222 == 1) {
                     var_221 = 0;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func420();
                     return;
                 }
                 if (var_222 == 2) {
                     var_221 = 0;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func406();
                     return;
                 }
                 if (var_222 == 3 && var_2031 == 1) {
                     yield func051();
                     var_221 = 3;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     var_246 = 44;
                     var_2043 = 1;
                     yield func465();
@@ -7106,7 +7113,7 @@ function func463(this: any) {
                 if (var_222 == 3 && var_2031 == 2) {
                     yield func051();
                     var_221 = 3;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     var_246 = 44;
                     var_2043 = 1;
                     yield func465();
@@ -7116,7 +7123,7 @@ function func463(this: any) {
                     if (var_2031 != 2) {
                         var_221 = 0;
                         var_197 = 0;
-                        DSPLAY(audio_id =212);
+                        DSPLAY(audio_id = 212);
                         yield func411();
                         return;
                     }
@@ -7124,7 +7131,7 @@ function func463(this: any) {
                         var_339 = 1;
                         var_221 = 0;
                         var_197 = 0;
-                        DSPLAY(audio_id =212);
+                        DSPLAY(audio_id = 212);
                         yield func411();
                         return;
                     }
@@ -7132,7 +7139,7 @@ function func463(this: any) {
                 if (var_222 == 6) {
                     var_221 = 0;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func476();
                     return;
                 }
@@ -7140,12 +7147,12 @@ function func463(this: any) {
                     var_221 = 0;
                     var_1209 = 1;
                     var_197 = 0;
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func368();
                     return;
                 }
                 if (var_222 == 11) {
-                    DSPLAY(audio_id =212);
+                    DSPLAY(audio_id = 212);
                     yield func482();
                     return;
                 }
@@ -7162,7 +7169,7 @@ function func464(this: any) {
         yield func080();
         if (var_239 == 1) {
             var_221 = 1;
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             yield func051();
             yield func462();
             return;
@@ -7175,7 +7182,7 @@ function func464(this: any) {
             if (var_2032 != 0) {
                 var_2043 = 3;
             }
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
             yield func464();
@@ -7184,7 +7191,7 @@ function func464(this: any) {
         if (var_259 == 1 && var_2043 == 3) {
             var_246 = 44;
             var_2043 = 1;
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
             yield func464();
@@ -7198,7 +7205,7 @@ function func464(this: any) {
             if (var_2032 != 0) {
                 var_2043 = 1;
             }
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
             yield func464();
@@ -7213,7 +7220,7 @@ function func464(this: any) {
                 var_2043 = 3;
                 var_246 = 61;
             }
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
             yield func464();
@@ -7221,7 +7228,7 @@ function func464(this: any) {
         }
         if (var_242 == 1 || var_244 == 1) {
             if (var_231 == 1) {
-                DSPLAY(audio_id =212);
+                DSPLAY(audio_id = 212);
                 var_231 = 0;
                 if (var_224 >= 20) {
                     yield func477();
@@ -7282,7 +7289,7 @@ function func465(this: any) {
         if (var_239 == 1) {
             var_221 = 1;
             var_234 = 0;
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             yield func051();
             yield func462();
             return;
@@ -7290,19 +7297,19 @@ function func465(this: any) {
         if (var_259 == 1 && var_2043 == 1) {
             var_246 = var_246 + 17;
             var_2043 = 2;
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
         }
         if (var_255 == 1 && var_2043 == 2) {
             var_246 = var_246 - 17;
             var_2043 = 1;
-            DSPLAY(audio_id =100);
+            DSPLAY(audio_id = 100);
             yield func337();
             yield func337();
         }
         if (var_242 == 1 || var_244 == 1) {
-            DSPLAY(audio_id =212);
+            DSPLAY(audio_id = 212);
             if (var_2043 == 1) {
                 var_221 = 0;
                 var_197 = 0;
@@ -8056,11 +8063,11 @@ function func469(this: any) {
             yield func106();
         }
         item_list = var_2085;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         if (var_2040 == 0) {
             yield func433();
         }
-        DSPLAY(audio_id =130);
+        DSPLAY(audio_id = 130);
         var_1866 = 0;
         comments_row1 = "";
         comments_row2 = "";
@@ -8186,7 +8193,7 @@ function func470(this: any) {
         if (var_2083 == 806) {
             if (var_233[var_225].Var11 == 1) {
                 item_list = var_233[var_225].Var0;
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
                 if (var_233[var_225].Var19 > 1) {
@@ -8205,7 +8212,7 @@ function func470(this: any) {
                 yield func912();
                 if (var_233[var_225].Var11 == 1) {
                     item_list = var_233[var_225].Var0;
-                    yield func492();
+                    yield func492(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
                     if (var_233[var_225].Var19 > 1) {
@@ -8249,7 +8256,7 @@ function func470(this: any) {
             var_1444 = var_486[var_682][var_2090][0];
             var_1445 = var_486[var_682][var_2091][0];
             item_list = var_486[var_682][var_2090][0];
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_2092 = var_486[var_682][var_2091][19];
             var_2093 = 20;
             if (var_486[var_682][var_2090][5] != 0) {
@@ -8292,7 +8299,7 @@ function func470(this: any) {
             }
             if (var_486[var_682][var_2091][11] == 1) {
                 item_list = var_486[var_682][var_2091][0];
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 var_106 = 1;
                 var_482 = 0;
                 var_482 = (var_486[var_682][var_2091][3] + var_486[var_682][var_2091][4]) * 50;
@@ -8340,7 +8347,7 @@ function func470(this: any) {
             if (var_486[var_682][var_2091][11] == 1) {
                 var_106 = 1;
                 item_list = var_486[var_682][var_2091][0];
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_486[var_682][var_2091][3] + var_486[var_682][var_2091][4]) * 50;
                 if (var_486[var_682][var_2091][19] > 1) {
@@ -8389,7 +8396,7 @@ function func471(this: any) {
         if (var_2083 == 816) {
             if (var_486[var_682][var_683][11] == 1) {
                 item_list = var_486[var_682][var_683][0];
-                yield func492();
+                yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_486[var_682][var_683][3] + var_486[var_682][var_683][4]) * 50;
                 if (var_486[var_682][var_683][19] > 1) {
@@ -8576,7 +8583,7 @@ function func473(this: any) {
                 var_78[var_2087].Var7 = var_233[0].Var7;
             }
         }
-        DSPLAY(audio_id =221);
+        DSPLAY(audio_id = 221);
         if (var_233[var_225].Var0 == 850) {
             var_1940 = var_199;
             var_199 = 2;
@@ -8599,12 +8606,12 @@ function func473(this: any) {
             }
             var_389 = 2;
             var_747 = 1;
-            DSPLAY(audio_id =103);
+            DSPLAY(audio_id = 103);
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 yield func337();
             }
             var_389 = 0;
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 1;
             var_271 = 1;
             var_1297 = 1;
@@ -8619,7 +8626,7 @@ function func473(this: any) {
                 var_134 = 1;
                 var_211 = 1;
                 var_747 = 1;
-                DSPLAY(audio_id =105);
+                DSPLAY(audio_id = 105);
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337();
                 }
@@ -8650,7 +8657,7 @@ function func473(this: any) {
             }
             if (var_130 == 0) {
                 if (var_211 != var_352) {
-                    DSPLAY(audio_id =143);
+                    DSPLAY(audio_id = 143);
                     var_211 = var_352;
                     comments_row1 = var_296;
                     comments_row2 = var_297;
@@ -8999,7 +9006,7 @@ function func473(this: any) {
                 var_234 = 0;
                 var_2040 = 0;
                 var_2112 = 1;
-                DSPLAY(audio_id =190);
+                DSPLAY(audio_id = 190);
                 yield func499();
             }
             if (var_262 != 0) {
@@ -9080,7 +9087,7 @@ function func474(this: any) {
         var_233[var_224].Var28 = var_486[var_682][var_225][28];
         var_233[var_224].Var29 = var_486[var_682][var_225][29];
         var_487 = var_233[var_224].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         yield func433();
         var_1866 = 0;
         comments_row1 = "";
@@ -9142,7 +9149,7 @@ function func476(this: any) {
         var_683 = var_233[var_1876].Var8;
         item_list = var_486[var_682][var_225][0];
         var_487 = var_486[var_682][var_225][13];
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_1846 = var_486[var_682][var_225][0];
         var_1837 = var_486[var_682][var_225][3];
         var_1835 = var_486[var_682][var_225][4];
@@ -9376,14 +9383,14 @@ function func480(this: any) {
         var_78[var_2044].Var29 = var_824;
         item_list = var_233[var_225].Var0;
         var_487 = var_233[var_225].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_2118 = item_name;
         if (var_233[var_225].Var0 == 1) {
             var_2118 = "" + var_233[var_225].Var13 + "G";
         }
         item_list = var_78[var_2044].Var0;
         var_487 = var_78[var_2044].Var13;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_2119 = item_name;
         if (var_78[var_2044].Var0 == 1) {
             var_2119 = "" + var_78[var_2044].Var13 + "G";
@@ -9429,7 +9436,7 @@ function func482(this: any) {
         dbgprt(482);
         yield func483();
         var_2121 = item_list;
-        yield func492();
+        yield func492(); // アイテムリスト呼び出し
         var_2122 = "" + item_name;
         var_2123 = 0;
         yield func484();
@@ -9468,7 +9475,7 @@ function func484(this: any) {
             if (var_254 == 1) {
                 if (var_2131 == 0) {
                     var_2131 = 4;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9476,7 +9483,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 10) {
                     var_2131 = 19;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9484,7 +9491,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 20) {
                     var_2131 = 29;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9492,7 +9499,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 30) {
                     var_2131 = 39;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9500,7 +9507,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 40) {
                     var_2131 = 49;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9508,7 +9515,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 50) {
                     var_2131 = 59;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9516,7 +9523,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 60) {
                     var_2131 = 69;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9524,7 +9531,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 70) {
                     var_2131 = 79;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9532,14 +9539,14 @@ function func484(this: any) {
                 }
                 if (var_2131 == 80) {
                     var_2131 = 89;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
                     return;
                 }
                 var_2131 = var_2131 - 1;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -9548,7 +9555,7 @@ function func484(this: any) {
             if (var_257 == 1) {
                 if (var_2131 == 4) {
                     var_2131 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9556,7 +9563,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 19) {
                     var_2131 = 10;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9564,7 +9571,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 29) {
                     var_2131 = 20;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9572,7 +9579,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 39) {
                     var_2131 = 30;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9580,7 +9587,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 49) {
                     var_2131 = 40;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9588,7 +9595,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 59) {
                     var_2131 = 50;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9596,7 +9603,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 69) {
                     var_2131 = 60;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9604,7 +9611,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 79) {
                     var_2131 = 70;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9612,14 +9619,14 @@ function func484(this: any) {
                 }
                 if (var_2131 == 89) {
                     var_2131 = 80;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
                     return;
                 }
                 var_2131 = var_2131 + 1;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -9628,7 +9635,7 @@ function func484(this: any) {
             if (var_259 == 1) {
                 if (var_2131 == 0) {
                     var_2131 = 10;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9636,7 +9643,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 1) {
                     var_2131 = 14;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9644,7 +9651,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 2) {
                     var_2131 = 15;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9652,7 +9659,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 3) {
                     var_2131 = 17;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9660,7 +9667,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 4) {
                     var_2131 = 19;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9668,7 +9675,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 80) {
                     var_2131 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9676,7 +9683,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 81) {
                     var_2131 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9684,7 +9691,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 82) {
                     var_2131 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9692,7 +9699,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 83) {
                     var_2131 = 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9700,7 +9707,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 84) {
                     var_2131 = 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9708,7 +9715,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 85) {
                     var_2131 = 2;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9716,7 +9723,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 86) {
                     var_2131 = 3;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9724,7 +9731,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 87) {
                     var_2131 = 3;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9732,7 +9739,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 88) {
                     var_2131 = 4;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9740,14 +9747,14 @@ function func484(this: any) {
                 }
                 if (var_2131 == 89) {
                     var_2131 = 4;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
                     return;
                 }
                 var_2131 = var_2131 + 10;
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -9756,7 +9763,7 @@ function func484(this: any) {
             if (var_255 == 1) {
                 if (var_2131 == 0) {
                     var_2131 = 80;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9764,7 +9771,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 1) {
                     var_2131 = 84;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9772,7 +9779,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 2) {
                     var_2131 = 85;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9780,7 +9787,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 3) {
                     var_2131 = 86;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9788,7 +9795,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 4) {
                     var_2131 = 88;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9796,7 +9803,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 10) {
                     var_2131 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9804,7 +9811,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 11) {
                     var_2131 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9812,7 +9819,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 12) {
                     var_2131 = 0;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9820,7 +9827,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 13) {
                     var_2131 = 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9828,7 +9835,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 14) {
                     var_2131 = 1;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9836,7 +9843,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 15) {
                     var_2131 = 2;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9844,7 +9851,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 16) {
                     var_2131 = 3;
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9853,7 +9860,7 @@ function func484(this: any) {
                 if (var_2131 == 17) {
                     var_2131 = 3;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9862,7 +9869,7 @@ function func484(this: any) {
                 if (var_2131 == 18) {
                     var_2131 = 4;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9871,7 +9878,7 @@ function func484(this: any) {
                 if (var_2131 == 19) {
                     var_2131 = 4;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -9879,7 +9886,7 @@ function func484(this: any) {
                 }
                 var_2131 = var_2131 - 10;
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -9892,7 +9899,7 @@ function func484(this: any) {
                     yield func487();
                     if (var_2138 == 1) {
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         var_2131 = var_2137;
                         yield func337();
                         yield func337();
@@ -9931,7 +9938,7 @@ function func484(this: any) {
                     var_2136 = var_2136 + 1;
                 }
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 var_2131 = var_2137;
                 yield func337();
                 yield func337();
@@ -9945,7 +9952,7 @@ function func484(this: any) {
                     yield func487();
                     if (var_2138 == 1) {
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         var_2131 = var_2137;
                         yield func337();
                         yield func337();
@@ -9984,7 +9991,7 @@ function func484(this: any) {
                     var_2136 = var_2136 + 1;
                 }
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 var_2131 = var_2137;
                 yield func337();
                 yield func337();
@@ -9998,7 +10005,7 @@ function func484(this: any) {
                             yield func487();
                             if (var_2138 == 1) {
             
-                                DSPLAY(audio_id =100);
+                                DSPLAY(audio_id = 100);
                                 yield func337();
                                 yield func337();
                                 yield func484();
@@ -10034,7 +10041,7 @@ function func484(this: any) {
                         var_2136 = var_2136 + 1;
                     }
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -10052,7 +10059,7 @@ function func484(this: any) {
                     }
                     var_2132 = var_2139;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -10069,7 +10076,7 @@ function func484(this: any) {
                     var_2134[var_2135] = 0;
                     var_2133[var_2135] = "";
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -10078,7 +10085,7 @@ function func484(this: any) {
                 if (var_2131 == 2) {
                     if (var_2124 == 0) {
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         var_197 = 1;
                         var_1203 = 0;
                         yield func051();
@@ -10087,7 +10094,7 @@ function func484(this: any) {
                     }
                     if (var_2124 == 1) {
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         var_1203 = 0;
                         var_2124 = 0;
                         yield func051();
@@ -10097,7 +10104,7 @@ function func484(this: any) {
                 }
                 if (var_2131 == 3) {
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func051();
                     notesel(var_754);
                     var_2123 = 1;
@@ -10109,7 +10116,7 @@ function func484(this: any) {
                 if (var_2131 == 4) {
                     if (var_2124 == 0) {
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func051();
                         yield func337();
                         yield func337();
@@ -10123,7 +10130,7 @@ function func484(this: any) {
                     if (var_2124 == 1) {
                         var_2124 = 0;
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         yield func051();
                         yield func337();
                         yield func337();
@@ -10136,7 +10143,7 @@ function func484(this: any) {
                 if (var_2135 <= 1) {
                     if (var_2124 == 0) {
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         var_197 = 1;
                         var_1203 = 0;
                         yield func051();
@@ -10145,7 +10152,7 @@ function func484(this: any) {
                     }
                     if (var_2124 == 1) {
     
-                        DSPLAY(audio_id =100);
+                        DSPLAY(audio_id = 100);
                         var_1203 = 0;
                         var_2124 = 0;
                         yield func051();
@@ -10163,7 +10170,7 @@ function func484(this: any) {
                 var_2134[var_2135] = 0;
                 var_2133[var_2135] = "";
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -10173,7 +10180,7 @@ function func484(this: any) {
         if (var_2123 == 1) {
             if (var_242 == 1) {
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func051();
                 var_2123 = 0;
                 var_2142 = 1;
@@ -10195,7 +10202,7 @@ function func484(this: any) {
             if (var_239 == 1) {
                 var_2123 = 0;
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -10204,7 +10211,7 @@ function func484(this: any) {
             if (var_259 == 1 && var_2140 != 9) {
                 var_2140++;
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -10213,7 +10220,7 @@ function func484(this: any) {
             if (var_259 == 1 && var_2140 == 9) {
                 var_2140 = 0;
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -10222,7 +10229,7 @@ function func484(this: any) {
             if (var_255 == 1 && var_2140 != 0) {
                 var_2140--;
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -10231,7 +10238,7 @@ function func484(this: any) {
             if (var_255 == 1 && var_2140 == 0) {
                 var_2140 = 9;
 
-                DSPLAY(audio_id =100);
+                DSPLAY(audio_id = 100);
                 yield func337();
                 yield func337();
                 yield func484();
@@ -10241,7 +10248,7 @@ function func484(this: any) {
                 if (var_2141 == 1) {
                     var_2141 = 2;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -10250,7 +10257,7 @@ function func484(this: any) {
                 if (var_2141 == 2) {
                     var_2141 = 1;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -10261,7 +10268,7 @@ function func484(this: any) {
                 if (var_2141 == 1) {
                     var_2141 = 2;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -10270,7 +10277,7 @@ function func484(this: any) {
                 if (var_2141 == 2) {
                     var_2141 = 1;
 
-                    DSPLAY(audio_id =100);
+                    DSPLAY(audio_id = 100);
                     yield func337();
                     yield func337();
                     yield func484();
@@ -15167,7 +15174,7 @@ function func494(this: any) {
             var_213 = 0;
             var_214 = 0;
 
-            DSPLAY(audio_id =216);
+            DSPLAY(audio_id = 216);
             yield func499();
         }
         return;
@@ -16318,7 +16325,7 @@ function func498(this: any) {
         dbgprt(498);
         if (var_1930 == 1) {
             var_2187 = item_list;
-            yield func492();
+            yield func492(); // アイテムリスト呼び出し
             var_2188 = item_name;
             if (var_862[item_list][0] == 0) {
                 if (item_list == 567 || item_list == 590 || item_list == 565) {
@@ -16487,7 +16494,7 @@ function func498(this: any) {
                 var_78[var_2189].Var2 = 0;
             }
     
-            DSPLAY(audio_id =180);
+            DSPLAY(audio_id = 180);
             var_199 = 2;
             var_389 = 2;
             var_1263 = 1;
@@ -16657,7 +16664,7 @@ function func498(this: any) {
                 return;
             }
     
-            DSPLAY(audio_id =142);
+            DSPLAY(audio_id = 142);
             var_568 = var_948[var_840];
             yield func681();
             var_2201 = 0;
@@ -16703,7 +16710,7 @@ function func498(this: any) {
             var_1264 = 0;
             var_132 = 1;
     
-            DSPLAY(audio_id =153);
+            DSPLAY(audio_id = 153);
             return;
         }
         if (item_list == 564) {
@@ -16778,7 +16785,7 @@ function func498(this: any) {
                 yield func337();
             }
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 8;
             var_271 = 1;
             var_1297 = 1;
@@ -16846,7 +16853,7 @@ function func498(this: any) {
                 yield func337();
             }
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 8;
             var_271 = 1;
             var_1297 = 1;
@@ -16931,7 +16938,7 @@ function func498(this: any) {
             yield func050();
             yield func340();
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 3;
             var_271 = 1;
             var_1297 = 1;
@@ -16989,7 +16996,7 @@ function func498(this: any) {
             }
             var_125 = 1;
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 1;
             var_271 = 1;
             var_1297 = 1;
@@ -17005,7 +17012,7 @@ function func498(this: any) {
                 var_211 = 1;
                 var_747 = 1;
 
-                DSPLAY(audio_id =105);
+                DSPLAY(audio_id = 105);
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337();
                 }
@@ -17056,7 +17063,7 @@ function func498(this: any) {
             yield func047();
             yield func340();
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             comments_row1 = var_296;
             comments_row2 = var_297;
             var_296 = "「ﾃﾞｨｱﾎﾞﾛはﾀﾞﾝｼﾞｮﾝを歩いていました。";
@@ -17082,7 +17089,7 @@ function func498(this: any) {
             yield func047();
             yield func340();
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             comments_row1 = var_296;
             comments_row2 = var_297;
             var_2202 = rnd(13);
@@ -17266,7 +17273,7 @@ function func498(this: any) {
                 yield func337();
             }
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 3;
             var_271 = 1;
             var_1297 = 1;
@@ -17288,7 +17295,7 @@ function func498(this: any) {
                 var_1946 = "しかし何も起こらなかった…";
                 return;
             }
-            DSPLAY(audio_id =184);
+            DSPLAY(audio_id = 184);
             var_100 = 1;
             yield func331();
             return;
@@ -17304,7 +17311,7 @@ function func498(this: any) {
             }
             var_126 = 1;
     
-            DSPLAY(audio_id =134);
+            DSPLAY(audio_id = 134);
             return;
         }
         if (item_list == 575) {
@@ -17325,7 +17332,7 @@ function func498(this: any) {
             if (var_120 == 0) {
                 var_219 = 1;
         
-                DSPLAY(audio_id =132);
+                DSPLAY(audio_id = 132);
                 return;
             }
         }
@@ -17347,7 +17354,7 @@ function func498(this: any) {
                 yield func337();
             }
     
-            DSPLAY(audio_id =123);
+            DSPLAY(audio_id = 123);
             var_470 = 2;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 yield func337();
@@ -17381,7 +17388,7 @@ function func498(this: any) {
                 yield func337();
             }
     
-            DSPLAY(audio_id =102);
+            DSPLAY(audio_id = 102);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 var_470 = 10;
                 yield func337();
@@ -17420,7 +17427,7 @@ function func498(this: any) {
             for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
                 yield func337();
             }
-            DSPLAY(audio_id =232);
+            DSPLAY(audio_id = 232);
             var_470 = 20;
             for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
                 yield func337();
@@ -17438,7 +17445,7 @@ function func498(this: any) {
                 var_157 = 1;
                 var_158 = 0;
         
-                DSPLAY(audio_id =154);
+                DSPLAY(audio_id = 154);
             }
             if (var_133 != 0) {
                 var_133 = 0;
@@ -17455,7 +17462,7 @@ function func498(this: any) {
                 return;
             }
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                DSPLAY(audio_id =219);
+                DSPLAY(audio_id = 219);
                 var_1243 = 1;
                 yield func337();
                 var_1243 = 2;
@@ -17467,7 +17474,7 @@ function func498(this: any) {
             }
             var_1243 = 0;
 
-            DSPLAY(audio_id =216);
+            DSPLAY(audio_id = 216);
             var_374 = 1;
             var_1264 = 0;
             var_774 = 160;
@@ -17494,7 +17501,7 @@ function func498(this: any) {
             }
             var_144 = 1;
     
-            DSPLAY(audio_id =168);
+            DSPLAY(audio_id = 168);
             var_1584 = 160;
             var_1585 = 160;
             var_271 = 1;
@@ -17543,7 +17550,7 @@ function func498(this: any) {
             }
             if (var_2204 == 1) {
         
-                DSPLAY(audio_id =175);
+                DSPLAY(audio_id = 175);
                 var_1584 = 160;
                 var_1585 = 160;
                 var_271 = 1;
@@ -17657,7 +17664,7 @@ function func498(this: any) {
             yield func050();
             yield func340();
     
-            DSPLAY(audio_id =151);
+            DSPLAY(audio_id = 151);
             var_1299 = 4;
             var_271 = 1;
             var_1297 = 1;
@@ -17673,7 +17680,7 @@ function func498(this: any) {
                 var_109 = 0;
             }
     
-            DSPLAY(audio_id =164);
+            DSPLAY(audio_id = 164);
             return;
         }
         if (item_list == 585) {
@@ -17706,7 +17713,7 @@ function func498(this: any) {
             yield func047();
             yield func340();
     
-            DSPLAY(audio_id =164);
+            DSPLAY(audio_id = 164);
             var_129 = 1;
             var_193 = 0;
             return;
@@ -17742,7 +17749,7 @@ function func498(this: any) {
                     yield func337();
                 }
         
-                DSPLAY(audio_id =151);
+                DSPLAY(audio_id = 151);
                 var_1299 = 4;
                 var_271 = 1;
                 var_1297 = 1;
@@ -17790,7 +17797,7 @@ function func498(this: any) {
                     yield func337();
                 }
         
-                DSPLAY(audio_id =142);
+                DSPLAY(audio_id = 142);
                 var_1299 = 9;
                 var_271 = 1;
                 var_1297 = 1;
@@ -17998,7 +18005,7 @@ function func498(this: any) {
                 yield func337();
             }
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 8;
             var_271 = 1;
             var_1297 = 1;
@@ -18011,6 +18018,7 @@ function func498(this: any) {
             var_172 = 1;
             return;
         }
+        // アイテム「点滴」を使用した時の効果
         if (item_list == 715) {
             var_271 = 1;
             var_1242 = 1;
@@ -18040,6 +18048,7 @@ function func498(this: any) {
             }
             return;
         }
+        // アイテム「ピッツァ」を使用した時の効果
         if (item_list == 600) {
             var_360 = 0;
             var_2211 = 0;
@@ -18062,6 +18071,7 @@ function func498(this: any) {
             }
             return;
         }
+        // アイテム「ネアポリスのピッツァ」を使用した時の効果
         if (item_list == 602) {
             var_360 = 0;
             var_2211 = 0;
@@ -18106,11 +18116,11 @@ function func498(this: any) {
                 var_389 = 2;
                 if (var_2212 != 4) {
             
-                    DSPLAY(audio_id =164);
+                    DSPLAY(audio_id = 164);
                 }
                 if (var_2212 == 4) {
             
-                    DSPLAY(audio_id =151);
+                    DSPLAY(audio_id = 151);
                 }
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337();
@@ -18187,6 +18197,7 @@ function func498(this: any) {
             }
             return;
         }
+        // アイテム「ポルポのピッツァ」を使用した時の効果
         if (item_list == 604) {
             var_360 = 0;
             var_567 = var_567 + 10;
@@ -18206,10 +18217,11 @@ function func498(this: any) {
                 }
                 var_1947 = "お腹がいっぱいで動きが重い…";
         
-                DSPLAY(audio_id =162);
+                DSPLAY(audio_id = 162);
             }
             return;
         }
+        // // アイテム「焦げたピッツァ」を使用した時の効果
         if (item_list == 605) {
             var_360 = 0;
             var_2211 = 0;
@@ -18247,6 +18259,7 @@ function func498(this: any) {
             var_1223 = 1;
             return;
         }
+        // 
         if (item_list == 631) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18308,7 +18321,7 @@ function func498(this: any) {
             }
             var_1214 = 0;
     
-            DSPLAY(audio_id =111);
+            DSPLAY(audio_id = 111);
             var_1255 = 1;
             var_567 = var_567 + 10;
             if (var_567 > 999) {
@@ -18507,7 +18520,7 @@ function func498(this: any) {
             var_1214 = 0;
             var_389 = 2;
     
-            DSPLAY(audio_id =164);
+            DSPLAY(audio_id = 164);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337();
             }
@@ -18837,7 +18850,7 @@ function func498(this: any) {
                 var_271 = 1;
                 var_1583 = 1;
         
-                DSPLAY(audio_id =168);
+                DSPLAY(audio_id = 168);
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337();
                     var_198 = 1;
@@ -18859,7 +18872,7 @@ function func498(this: any) {
             var_211 = var_352;
             var_126 = 1;
     
-            DSPLAY(audio_id =134);
+            DSPLAY(audio_id = 134);
             return;
         }
         if (item_list == 713) {
@@ -18896,7 +18909,7 @@ function func498(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340();
-            DSPLAY(audio_id =174);
+            DSPLAY(audio_id = 174);
             var_1245 = 1;
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337();
@@ -18926,7 +18939,7 @@ function func498(this: any) {
             var_27_x = var_27[1];
             yield func047();
     
-            DSPLAY(audio_id =176);
+            DSPLAY(audio_id = 176);
             var_1245 = 6;
             gsel(19);
             color(254, 254, 254);
@@ -19184,7 +19197,7 @@ function func498(this: any) {
             var_1411 = 1;
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
         
-                DSPLAY(audio_id =111);
+                DSPLAY(audio_id = 111);
                 yield func337();
                 yield func337();
                 var_198 = 1;
@@ -19224,7 +19237,7 @@ function func498(this: any) {
                 var_211 = 1;
                 var_747 = 1;
 
-                DSPLAY(audio_id =105);
+                DSPLAY(audio_id = 105);
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337();
                 }
@@ -19265,7 +19278,7 @@ function func498(this: any) {
             var_1413 = 1;
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
         
-                DSPLAY(audio_id =111);
+                DSPLAY(audio_id = 111);
                 yield func337();
                 yield func337();
                 var_198 = 1;
@@ -19319,7 +19332,7 @@ function func498(this: any) {
         }
         if (item_list == 726) {
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -19334,7 +19347,7 @@ function func498(this: any) {
         }
         if (item_list == 727) {
 
-            DSPLAY(audio_id =143);
+            DSPLAY(audio_id = 143);
             var_1558 = 160;
             var_1559 = 160;
             var_271 = 1;
@@ -19401,7 +19414,7 @@ function func498(this: any) {
         }
         if (item_list == 718) {
     
-            DSPLAY(audio_id =111);
+            DSPLAY(audio_id = 111);
             var_1257 = 1;
             var_1591 = 1;
             var_271 = 1;
@@ -19417,7 +19430,7 @@ function func498(this: any) {
         }
         if (item_list == 719) {
     
-            DSPLAY(audio_id =111);
+            DSPLAY(audio_id = 111);
             var_1257 = 1;
             var_1591 = 1;
             var_271 = 1;
@@ -19450,7 +19463,7 @@ function func498(this: any) {
             var_461 = 0;
             var_462 = 0;
     
-            DSPLAY(audio_id =185);
+            DSPLAY(audio_id = 185);
             var_271 = 1;
             var_1491 = 1;
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
@@ -19496,7 +19509,7 @@ function func498(this: any) {
             yield func047();
             yield func340();
     
-            DSPLAY(audio_id =134);
+            DSPLAY(audio_id = 134);
             var_126 = 1;
             var_166 = 0;
             return;
@@ -19595,7 +19608,7 @@ function func498(this: any) {
             var_27_x = var_27[1];
             yield func047();
     
-            DSPLAY(audio_id =207);
+            DSPLAY(audio_id = 207);
             var_415 = var_415 + var_2229;
             if (var_415 > 999999) {
                 var_415 = 999999;
@@ -19619,7 +19632,7 @@ function func498(this: any) {
             var_27_x = var_27[1];
             yield func047();
     
-            DSPLAY(audio_id =207);
+            DSPLAY(audio_id = 207);
             var_415 = var_415 + var_2229;
             if (var_415 > 999999) {
                 var_415 = 999999;
@@ -19645,7 +19658,7 @@ function func498(this: any) {
             yield func047();
             if (var_2230 != 0) {
         
-                DSPLAY(audio_id =207);
+                DSPLAY(audio_id = 207);
                 var_415 = var_415 + var_2229;
                 if (var_415 > 999999) {
                     var_415 = 999999;
@@ -19682,7 +19695,7 @@ function func498(this: any) {
         }
         if (item_list == 900) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
@@ -19692,7 +19705,7 @@ function func498(this: any) {
         }
         if (item_list >= 901 && item_list <= 905) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
@@ -19717,12 +19730,12 @@ function func498(this: any) {
         }
         if (item_list >= 906 && item_list <= 911) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
-            DSPLAY(audio_id =209);
+            DSPLAY(audio_id = 209);
             var_1299 = 10;
             var_271 = 1;
             var_1297 = 1;
@@ -19767,12 +19780,12 @@ function func498(this: any) {
         }
         if (item_list == 987) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
-            DSPLAY(audio_id =209);
+            DSPLAY(audio_id = 209);
             var_1299 = 10;
             var_271 = 1;
             var_1297 = 1;
@@ -19795,7 +19808,7 @@ function func498(this: any) {
         }
         if (item_list == 988) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
@@ -19822,12 +19835,12 @@ function func498(this: any) {
         }
         if (item_list == 989) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
-            DSPLAY(audio_id =209);
+            DSPLAY(audio_id = 209);
             var_1299 = 10;
             var_271 = 1;
             var_1297 = 1;
@@ -19848,13 +19861,13 @@ function func498(this: any) {
         }
         if (item_list == 990) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
     
-            DSPLAY(audio_id =182);
+            DSPLAY(audio_id = 182);
             var_1299 = 3;
             var_271 = 1;
             var_1297 = 1;
@@ -19871,13 +19884,13 @@ function func498(this: any) {
         }
         if (item_list == 991) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
     
-            DSPLAY(audio_id =142);
+            DSPLAY(audio_id = 142);
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -19902,13 +19915,13 @@ function func498(this: any) {
         }
         if (item_list == 992) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
     
-            DSPLAY(audio_id =142);
+            DSPLAY(audio_id = 142);
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -20019,7 +20032,7 @@ function func498(this: any) {
                 }
                 if (var_2232 == 1) {
             
-                    DSPLAY(audio_id =161);
+                    DSPLAY(audio_id = 161);
                     var_1324 = (var_83[var_2231].Var1 - var_66 + 4) * 40;
                     var_1325 = (var_83[var_2231].Var2 - var_67 + 4) * 40 - 10;
                     var_271 = 1;
@@ -20056,7 +20069,7 @@ function func498(this: any) {
                 }
                 if (var_2232 == 2) {
             
-                    DSPLAY(audio_id =161);
+                    DSPLAY(audio_id = 161);
                     var_1324 = (var_83[var_2231].Var1 - var_66 + 4) * 40;
                     var_1325 = (var_83[var_2231].Var2 - var_67 + 4) * 40 - 10;
                     var_271 = 1;
@@ -20089,13 +20102,13 @@ function func498(this: any) {
         }
         if (item_list == 9999) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
     
-            DSPLAY(audio_id =142);
+            DSPLAY(audio_id = 142);
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -20120,13 +20133,13 @@ function func498(this: any) {
         }
         if (item_list == 996) {
 
-            DSPLAY(audio_id =118);
+            DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337();
             }
             var_1252 = 3;
     
-            DSPLAY(audio_id =142);
+            DSPLAY(audio_id = 142);
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -20276,7 +20289,7 @@ function func499(this: any) {
                 var_774 = var_774 + 20;
             }
 
-            DSPLAY(audio_id =217);
+            DSPLAY(audio_id = 217);
             var_1578 = 0;
             var_271 = 0;
             var_374 = 0;
