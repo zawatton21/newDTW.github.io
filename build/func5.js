@@ -663,14 +663,14 @@ function func506() {
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (!(var_233[var_225].Var4 == 0 || var_233[var_225].Var14 == 0)) return [3 /*break*/, 6];
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 3];
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_106 = 1;
                     var_107 = var_107 + var_483;
                     _a.label = 3;
@@ -710,14 +710,14 @@ function func506() {
                     item_list = var_486[var_682][var_225][0];
                     return [4 /*yield*/, func492()];
                 case 10:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (!(var_486[var_682][var_225][4] == 0 || var_486[var_682][var_225][14] == 0)) return [3 /*break*/, 14];
                     if (!(var_486[var_682][var_225][11] == 1)) return [3 /*break*/, 12];
                     item_list = var_486[var_682][var_225][0];
                     return [4 /*yield*/, func492()];
                 case 11:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_106 = 1;
                     var_107 = var_107 + var_483;
                     _a.label = 12;
@@ -746,14 +746,14 @@ function func506() {
                     item_list = var_78[var_321].Var0;
                     return [4 /*yield*/, func492()];
                 case 16:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (!(var_78[var_321].Var4 == 0 || var_78[var_321].Var14 == 0)) return [3 /*break*/, 20];
                     if (!(var_78[var_321].Var11 == 1)) return [3 /*break*/, 18];
                     item_list = var_78[var_321].Var0;
                     return [4 /*yield*/, func492()];
                 case 17:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_106 = 1;
                     var_107 = var_107 + var_483;
                     _a.label = 18;
@@ -781,7 +781,7 @@ function func506() {
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 22:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (var_233[var_225].Var11 == 1) {
                         var_106 = 1;
@@ -813,7 +813,7 @@ function func506() {
                     item_list = var_486[var_682][var_225][0];
                     return [4 /*yield*/, func492()];
                 case 28:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (var_486[var_682][var_225][11] == 1) {
                         var_106 = 1;
@@ -845,7 +845,7 @@ function func506() {
                     item_list = var_78[var_321].Var0;
                     return [4 /*yield*/, func492()];
                 case 33:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (var_78[var_321].Var11 == 1) {
                         var_106 = 1;
@@ -1128,12 +1128,12 @@ function func511() {
                     item_list = var_2258;
                     return [4 /*yield*/, func492()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2259 = item_name;
                     var_862[var_2258][0] = 1;
                     return [4 /*yield*/, func492()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2260 = item_name;
                     comments_row1 = "";
                     comments_row2 = "";
@@ -10406,7 +10406,7 @@ function func511() {
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 1755:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_1218 = 3;
                     var_1195 = 1;
                     cnt2_121 = 0;
@@ -13763,7 +13763,7 @@ function func523() {
                     item_list = var_233[var_2090].Var0;
                     return [4 /*yield*/, func492()];
                 case 48:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2092 = var_233[var_2091].Var19;
                     var_2093 = 20;
                     if (var_233[var_2090].Var5 != 0) {
@@ -13808,7 +13808,7 @@ function func523() {
                     item_list = var_233[var_2091].Var0;
                     return [4 /*yield*/, func492()];
                 case 49:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_106 = 1;
                     var_482 = 0;
                     var_482 = (var_233[var_2091].Var3 + var_233[var_2091].Var4) * 50;
@@ -13828,13 +13828,13 @@ function func523() {
                     }
                     return [4 /*yield*/, func492()];
                 case 51:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2366 = item_name;
                     item_list = var_233[var_2091].Var0;
                     var_487 = var_233[var_2091].Var13;
                     return [4 /*yield*/, func492()];
                 case 52:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2367 = item_name;
                     if (!(var_2368 == 1)) return [3 /*break*/, 54];
                     return [4 /*yield*/, func427()];
@@ -14116,7 +14116,7 @@ function func523() {
                     item_list = var_233[var_2286].Var0;
                     return [4 /*yield*/, func492()];
                 case 105:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_2286].Var3 + var_233[var_2286].Var4) * 50;
                     if (var_233[var_2286].Var19 > 1) {
@@ -14147,7 +14147,7 @@ function func523() {
                     item_list = var_486[var_682][var_2286][0];
                     return [4 /*yield*/, func492()];
                 case 111:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_486[var_682][var_2286][3] + var_486[var_682][var_2286][4]) * 50;
                     if (var_486[var_682][var_2286][19] > 1) {
@@ -14170,7 +14170,7 @@ function func523() {
                     item_list = var_233[0].Var0;
                     return [4 /*yield*/, func492()];
                 case 115:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[0].Var3 + var_233[0].Var4) * 50;
                     if (var_233[0].Var19 > 1) {
@@ -14257,7 +14257,7 @@ function func524() {
                     var_1289 = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_1982 = item_name;
                     if (var_233[var_225].Var0 == 600) {
                         var_2371 = 4;
@@ -14295,7 +14295,7 @@ function func524() {
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
                     if (var_233[var_225].Var19 > 1) {
@@ -14588,7 +14588,7 @@ function func525() {
                     var_2373 = var_225;
                     return [4 /*yield*/, func492()];
                 case 29:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_1982 = item_name;
                     return [4 /*yield*/, func051()];
                 case 30:
@@ -14818,7 +14818,7 @@ function func528() {
                     item_list = var_1289;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     pos(70, 55);
                     font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
                     color(0, 255, 0);
@@ -14856,7 +14856,7 @@ function func528() {
                     item_list = var_811[var_809];
                     return [4 /*yield*/, func492()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     color(255, 255, 255);
                     if (var_812 == 1) {
                         color(255, 255, 0);
@@ -15185,7 +15185,7 @@ function func530() {
                     item_list = var_233[var_553].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2395 = item_name;
                     var_233[var_553].Var5 = var_233[var_553].Var5 + 1;
                     var_1946 = "装備中のDISCの空き容量が増えた！";
@@ -15204,7 +15204,7 @@ function func530() {
                     item_list = var_233[var_554].Var0;
                     return [4 /*yield*/, func492()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2395 = item_name;
                     var_233[var_554].Var5 = var_233[var_554].Var5 + 1;
                     var_1946 = "装備中のDISCの空き容量が増えた！";
@@ -15223,7 +15223,7 @@ function func530() {
                     item_list = var_233[var_555].Var0;
                     return [4 /*yield*/, func492()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2395 = item_name;
                     var_233[var_555].Var5 = var_233[var_555].Var5 + 1;
                     var_1946 = "装備中のDISCの空き容量が増えた！";
@@ -15329,7 +15329,7 @@ function func531() {
                     }
                     return [4 /*yield*/, func492()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_418 = item_name;
                     var_2398 = rnd(15);
                     if (var_2398 == 0) {
@@ -15903,7 +15903,7 @@ function func533() {
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 27:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
                     if (var_233[var_225].Var19 > 1) {
@@ -18927,7 +18927,7 @@ function func541() {
                     var_488 = item_list;
                     return [4 /*yield*/, func492()];
                 case 199:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_418 = item_name;
                     if (!(var_156[119] == 0)) return [3 /*break*/, 222];
                     var_225 = var_475;
@@ -20985,7 +20985,7 @@ function func541() {
                     var_2459 = var_233[var_1531].Var6;
                     return [4 /*yield*/, func492()];
                 case 620:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2469 = item_name;
                     var_300 = 0;
                     comments_row2 = "" + var_2469 + "を釣られた！";
@@ -21511,7 +21511,7 @@ function func541() {
                     var_487 = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 706:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     _a.label = 707;
                 case 707:
                     if (!(var_2474 == 2)) return [3 /*break*/, 710];
@@ -21526,7 +21526,7 @@ function func541() {
                     var_487 = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 709:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     _a.label = 710;
                 case 710:
                     if (!(var_2473 == 1)) return [3 /*break*/, 717];
@@ -21697,7 +21697,7 @@ function func541() {
                     item_list = var_233[var_480].Var0;
                     return [4 /*yield*/, func492()];
                 case 754:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2476 = Math.floor(var_483 / 2);
                     var_482 = 0;
                     var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
@@ -21716,7 +21716,7 @@ function func541() {
                     item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 756:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2476 = Math.floor(var_483 / 2);
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -34029,7 +34029,7 @@ function func573() {
                     var_487 = var_78[var_419].Var13;
                     return [4 /*yield*/, func492()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_418 = item_name;
                     comments_row1 = "";
                     comments_row2 = "";
@@ -39028,12 +39028,12 @@ function func585() {
                     item_list = var_2460;
                     return [4 /*yield*/, func492()];
                 case 43:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2813 = item_name;
                     item_list = var_2812;
                     return [4 /*yield*/, func492()];
                 case 44:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2814 = item_name;
                     if (!(var_2460 != 0)) return [3 /*break*/, 47];
                     comments_row1 = var_296;
@@ -39554,7 +39554,7 @@ function func587() {
                     var_487 = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2822 = item_name;
                     _a.label = 10;
                 case 10:
@@ -39570,7 +39570,7 @@ function func587() {
                     var_487 = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2822 = item_name;
                     _a.label = 13;
                 case 13:
@@ -39583,7 +39583,7 @@ function func587() {
                     var_487 = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2822 = item_name;
                     _a.label = 16;
                 case 16:
@@ -39596,7 +39596,7 @@ function func587() {
                     var_487 = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2822 = item_name;
                     _a.label = 19;
                 case 19:
@@ -41246,7 +41246,7 @@ function func596() {
                     item_list = var_2303;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2848 = item_name;
                     var_78[var_2205].Var0 = 652;
                     var_2849 = rnd(3);

@@ -1862,7 +1862,7 @@ function func144(this: any) {
                     return;
                 }
                 yield func178();
-                yield func005();
+                yield func005(); // セーブデータを読みこみ関数を読む関数
                 return;
             }
         }

@@ -706,14 +706,14 @@ function func911() {
                     var_487 = var_233[var_225].Var13;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_3580 = item_name;
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 3];
                     var_106 = 1;
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
                     if (var_233[var_225].Var19 > 1) {

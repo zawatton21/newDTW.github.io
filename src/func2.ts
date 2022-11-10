@@ -3786,7 +3786,7 @@ function func238(this: any) {
             }
         }
         if (var_1061 == 2) {
-            //conf_keyon = getkey(192); 192は各キーボードのメーカーが、キーボードごとに割り当てる。
+            //conf_keyon = getkey(192); 192は各キーボードのメーカーが、キーボードごとに割り当てる。@キー
             conf_keyon = getkey(75);　// Kキー入力確認
             if (conf_keyon == 1) {
                 var_198 = 0;

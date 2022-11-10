@@ -1862,7 +1862,7 @@ function func707() {
                     item_list = var_78[var_3115].Var0;
                     return [4 /*yield*/, func492()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2476 = Math.floor(var_483 / 2);
                     var_482 = 0;
                     var_482 = (var_78[var_3115].Var3 + var_78[var_3115].Var4) * 50;
@@ -1886,7 +1886,7 @@ function func707() {
                     item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2476 = Math.floor(var_483 / 2);
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -1924,7 +1924,7 @@ function func707() {
                     item_list = var_233[var_480].Var0;
                     return [4 /*yield*/, func492()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
                     if (var_233[var_480].Var0 != 800) {
@@ -1947,7 +1947,7 @@ function func707() {
                     item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                     if (var_486[var_485][var_484][19] > 1) {
@@ -1984,7 +1984,7 @@ function func707() {
                     item_list = var_78[var_3115].Var0;
                     return [4 /*yield*/, func492()];
                 case 26:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_78[var_3115].Var3 + var_78[var_3115].Var4) * 50;
                     if (var_78[var_3115].Var0 != 800) {
@@ -2007,7 +2007,7 @@ function func707() {
                     item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 29:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                     if (var_486[var_485][var_484][19] > 1) {
@@ -6707,7 +6707,7 @@ function func772() {
                     item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
                     if (var_233[var_225].Var0 != 800) {
@@ -6930,7 +6930,7 @@ function func773() {
                     var_487 = var_987[13];
                     return [4 /*yield*/, func492()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     comments_row1 = var_296;
                     comments_row2 = var_297;
                     var_296 = "" + item_name + "が";
@@ -7123,7 +7123,7 @@ function func776() {
                     var_487 = var_233[var_225].Var13;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_3153 = item_name;
                     var_866 = var_864;
                     var_987[0] = var_233[var_225].Var0;
@@ -7270,7 +7270,7 @@ function func777() {
                     var_487 = var_987[13];
                     return [4 /*yield*/, func492()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_3153 = item_name;
                     if (item_list >= 800 && item_list < 900) {
                         var_1806 = 1;

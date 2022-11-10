@@ -6930,7 +6930,7 @@ function func043() {
                     item_list = var_233[var_480].Var0;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
                     if (var_233[var_480].Var0 != 800) {
@@ -6954,7 +6954,7 @@ function func043() {
                     item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                     if (var_486[var_485][var_484][19] > 1) {
@@ -6975,7 +6975,7 @@ function func043() {
                     var_488 = var_233[var_475].Var0;
                     return [4 /*yield*/, func492()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_418 = item_name;
                     var_225 = var_475;
                     return [4 /*yield*/, func433()];
@@ -9722,7 +9722,7 @@ function func066() {
         });
     });
 }
-// 
+// 亀のジッパーでアイテムを捨てる動作関数
 function func067() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_54, cnt2_18, cnt1_55, cnt2_19;
@@ -9753,7 +9753,7 @@ function func067() {
                     item_list = var_233[var_552].Var0;
                     return [4 /*yield*/, func492()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_550 = var_550 + var_483;
                     var_225 = var_552;
                     return [4 /*yield*/, func433()];
@@ -9839,6 +9839,7 @@ function func067() {
                         var_550 = 999999;
                     }
                     var_558 = 0;
+                    // Var_559は亀の成長レベル(拡張レベル)、var_550は投資した栄養の合計
                     if (var_559 == 0 && var_550 >= 5000) {
                         var_559 = 1;
                         var_558 = 1;

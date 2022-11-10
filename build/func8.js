@@ -614,7 +614,7 @@ function func804() {
                     var_487 = var_2017;
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_2010 > 0) {
                         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
                         color(255, 255, 255);
@@ -668,7 +668,7 @@ function func804() {
                     var_487 = var_2026;
                     return [4 /*yield*/, func492()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     font("ＭＳ Ｐゴシック", 14, 1);
                     pos(15, 283);
                     color(255, 255, 255);
@@ -721,7 +721,7 @@ function func805() {
                     var_487 = var_991[0][var_225][13];
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_3188 = item_name;
                     var_482 = 0;
                     var_482 = (var_991[0][var_225][3] + var_991[0][var_225][4]) * 50;
@@ -850,7 +850,7 @@ function func807() {
                     var_487 = var_991[0][var_225][13];
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_3188 = item_name;
                     var_1037 = var_1037 + 1;
                     for (cnt1_17 = 0; cnt1_17 < 30; ++cnt1_17) {
@@ -4829,7 +4829,7 @@ function func838() {
                     }
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_3207 = item_name;
                     var_225 = var_3205;
                     if (!(var_220 == 0)) return [3 /*break*/, 3];
@@ -7032,7 +7032,7 @@ function func853() {
                     var_2176 = 1;
                     return [4 /*yield*/, func492()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_2176 = 0;
                     var_3299 = item_name;
                     if (var_78[var_2501].Var4 >= 1 && var_78[var_2501].Var4 <= 10) {

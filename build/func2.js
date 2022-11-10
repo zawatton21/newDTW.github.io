@@ -2816,7 +2816,7 @@ function func227() {
                     var_487 = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_233[var_553].Var4 == 0 && var_233[var_553].Var19 <= 1) {
                         var_981 = "" + item_name;
                     }
@@ -2838,7 +2838,7 @@ function func227() {
                     item_list = var_233[var_553]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_812 == 1) {
                         var_979 = var_979 + "　[攻]" + var_828 + "\n";
                     }
@@ -2867,7 +2867,7 @@ function func227() {
                     var_487 = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_233[var_554].Var4 == 0 && var_233[var_554].Var19 <= 1) {
                         var_981 = "" + item_name;
                     }
@@ -2889,7 +2889,7 @@ function func227() {
                     item_list = var_233[var_554]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 10:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_812 == 1) {
                         var_979 = var_979 + "　[攻]" + var_828 + "\n";
                     }
@@ -2918,7 +2918,7 @@ function func227() {
                     var_487 = var_233[var_555].Var13;
                     return [4 /*yield*/, func492()];
                 case 14:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_233[var_555].Var4 == 0 && var_233[var_555].Var19 <= 1) {
                         var_981 = "" + item_name;
                     }
@@ -2940,7 +2940,7 @@ function func227() {
                     item_list = var_233[var_555]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 16:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_812 == 1) {
                         var_979 = var_979 + "　[攻]" + var_828 + "\n";
                     }

@@ -3238,6 +3238,7 @@ function func336() {
         });
     });
 }
+// アイテム関係で呼び出される関数
 function func337() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_17;
@@ -16270,7 +16271,7 @@ function func367() {
                     var_1248 = var_1660;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (!(var_802 < 100 || var_802 >= 400)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func397()];
                 case 2:
@@ -16423,7 +16424,7 @@ function func367() {
                     item_list = var_811[var_809];
                     return [4 /*yield*/, func492()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     color(255, 255, 255);
                     if (var_812 == 1) {
                         color(255, 255, 0);
@@ -16499,7 +16500,7 @@ function func368() {
                     var_1670 = var_225;
                     return [4 /*yield*/, func492()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_220 == 0) {
                         var_814 = var_233[var_225].Var0;
                         var_1662 = var_233[var_225].Var3;
@@ -16564,7 +16565,7 @@ function func368() {
                     item_list = var_802;
                     return [4 /*yield*/, func492()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_801 = 170;
                     if (var_814 == 104) {
                         var_801 = 190;
@@ -16716,7 +16717,7 @@ function func370() {
                     }
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_828 == "") {
                         var_826 = var_826 - 1;
                         return [3 /*break*/, 4];
@@ -17059,7 +17060,7 @@ function func377() {
                     }
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     var_1696 = item_name;
                     pos(var_1680 + 10, var_1682 + var_1684 - 3);
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -17258,7 +17259,7 @@ function func380() {
                     item_list = var_1708;
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // アイテムリスト呼び出し
                     if (var_1708 == 204) {
                         var_828 = "最大HPが" + var_1047 + "上がっているぞ";
                     }
