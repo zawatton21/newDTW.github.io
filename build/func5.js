@@ -112,8 +112,8 @@ function func500() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     var_2245 = rnd(9);
@@ -199,8 +199,8 @@ function func501() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "電気のエネルギーが散っている！";
@@ -672,7 +672,7 @@ function func506() {
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
                     var_106 = 1;
-                    var_107 = var_107 + var_483;
+                    var_107 = var_107 + buying_price;
                     _a.label = 3;
                 case 3: return [4 /*yield*/, func430()];
                 case 4:
@@ -719,7 +719,7 @@ function func506() {
                 case 11:
                     _a.sent(); // アイテムリスト呼び出し
                     var_106 = 1;
-                    var_107 = var_107 + var_483;
+                    var_107 = var_107 + buying_price;
                     _a.label = 12;
                 case 12:
                     var_1876 = var_2256;
@@ -755,7 +755,7 @@ function func506() {
                 case 17:
                     _a.sent(); // アイテムリスト呼び出し
                     var_106 = 1;
-                    var_107 = var_107 + var_483;
+                    var_107 = var_107 + buying_price;
                     _a.label = 18;
                 case 18: return [4 /*yield*/, func479()];
                 case 19:
@@ -785,7 +785,7 @@ function func506() {
                     var_2255 = item_name;
                     if (var_233[var_225].Var11 == 1) {
                         var_106 = 1;
-                        var_107 = var_107 + var_483;
+                        var_107 = var_107 + buying_price;
                     }
                     return [4 /*yield*/, func430()];
                 case 23:
@@ -817,7 +817,7 @@ function func506() {
                     var_2255 = item_name;
                     if (var_486[var_682][var_225][11] == 1) {
                         var_106 = 1;
-                        var_107 = var_107 + var_483;
+                        var_107 = var_107 + buying_price;
                     }
                     var_1876 = var_2256;
                     return [4 /*yield*/, func433()];
@@ -849,7 +849,7 @@ function func506() {
                     var_2255 = item_name;
                     if (var_78[var_321].Var11 == 1) {
                         var_106 = 1;
-                        var_107 = var_107 + var_483;
+                        var_107 = var_107 + buying_price;
                     }
                     return [4 /*yield*/, func479()];
                 case 34:
@@ -899,8 +899,8 @@ function func507() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     comments_row1 = "" + var_2255 + "は";
                     comments_row2 = "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した";
@@ -952,8 +952,8 @@ function func508() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     comments_row1 = "" + var_2255 + "は";
                     comments_row2 = "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した";
@@ -990,8 +990,8 @@ function func509() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "残念ながらここでは発動できない。";
@@ -1023,8 +1023,8 @@ function func510() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "呪われていて発動できない！";
@@ -1138,8 +1138,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "なんと" + var_2259 + "は";
@@ -1172,8 +1172,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "射撃攻撃を防げるようになった！";
@@ -1250,8 +1250,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ACT ３ FREEZE　！！";
@@ -1378,8 +1378,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「一手」 遅カッタ…ナ…！";
@@ -1532,8 +1532,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "お前は敗北を認めた！";
@@ -1631,8 +1631,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -1653,8 +1653,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「グレイトフル・デッド！！」";
@@ -1841,15 +1841,15 @@ function func511() {
                     return [3 /*break*/, 79];
                 case 109:
                     if (!(var_2265 == 1 || var_172 >= 1)) return [3 /*break*/, 115];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_172 == 0) {
-                        var_296 = "近くにいる敵は急激に老化して";
-                        var_297 = "攻撃力が下がった！";
+                        comments_row1a = "近くにいる敵は急激に老化して";
+                        comments_row2a = "攻撃力が下がった！";
                     }
                     if (var_172 >= 1) {
-                        var_296 = "この階にいる全ての敵は";
-                        var_297 = "急激に老化して攻撃力が下がった！";
+                        comments_row1a = "この階にいる全ての敵は";
+                        comments_row2a = "急激に老化して攻撃力が下がった！";
                     }
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -1900,8 +1900,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「どの程度の ふみ込みまで";
@@ -1972,8 +1972,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「クラッシュ！くらいつけッ！」";
@@ -2079,8 +2079,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "限界なく明るくなるッ！！";
@@ -2425,8 +2425,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "この階の地図を念写した！";
@@ -2448,8 +2448,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「きさま、見ているなッ！！」";
@@ -2473,8 +2473,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "この階のｱｸｱ･ﾈｯｸﾚｽを念写した！";
@@ -2541,8 +2541,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -2564,8 +2564,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「ラリホ～～～～～っ！」";
@@ -2779,8 +2779,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "生まれろ…　新しい生命…";
@@ -2904,8 +2904,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -2965,8 +2965,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "クロスファイヤーハリケーンスペシャル！";
@@ -3153,8 +3153,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "アイテムを取って来いッ！";
@@ -3274,8 +3274,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2279 == 0) {
@@ -3350,8 +3350,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ベースとなるアイテムを選んでください";
@@ -3404,8 +3404,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "パールジャムを食べた。";
@@ -3447,17 +3447,17 @@ function func511() {
                     if (var_350 > var_567) {
                         var_350 = var_567;
                     }
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "お腹が少し膨らんだ";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "お腹が少し膨らんだ";
+                    comments_row2a = "";
                     if (var_350 == var_567) {
-                        var_296 = "お腹がいっぱいになった。";
-                        var_297 = "";
+                        comments_row1a = "お腹がいっぱいになった。";
+                        comments_row2a = "";
                     }
                     if (var_2211 == 1) {
-                        var_296 = "最大満腹度が" + var_567 + "になった。";
-                        var_297 = "";
+                        comments_row1a = "最大満腹度が" + var_567 + "になった。";
+                        comments_row2a = "";
                     }
                     return [4 /*yield*/, func047()];
                 case 382:
@@ -3509,8 +3509,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "こいつ自身に見せつけるしかねえッ！";
@@ -3670,8 +3670,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「覚悟」ってのはこういうことだぜ…";
@@ -3727,8 +3727,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "空間をけずりとる！ ";
@@ -3975,8 +3975,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "チャリオッツは分身中だ。";
@@ -4020,8 +4020,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "チャリオッツを出せる場所が無いぞ。";
@@ -4079,8 +4079,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ブラボー！";
@@ -4145,10 +4145,10 @@ function func511() {
                 case 496: return [4 /*yield*/, func094()];
                 case 497:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "フフフ･･･";
-                    var_297 = "感覚の目でよーく見てろ！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "フフフ･･･";
+                    comments_row2a = "感覚の目でよーく見てろ！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -4221,10 +4221,10 @@ function func511() {
                         }
                     }
                     DSPLAY(audio_id = 112);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "これだ！　甲冑を外したスタンド";
-                    var_297 = "「シルバー・チャリオッツ」！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "これだ！　甲冑を外したスタンド";
+                    comments_row2a = "「シルバー・チャリオッツ」！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -4268,8 +4268,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "能力を消すDISCを選んでください";
@@ -4329,8 +4329,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2258 == 111) {
@@ -4401,8 +4401,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "このオレのスタンド「黄の節制」に";
@@ -4444,10 +4444,10 @@ function func511() {
                             var_114 = 0;
                         }
                     }
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "このフロアで熱と冷気に強くなった！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "このフロアで熱と冷気に強くなった！";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 556:
                     _a.sent();
@@ -4513,10 +4513,10 @@ function func511() {
                     ++cnt3_8;
                     return [3 /*break*/, 571];
                 case 574:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "敵が集まってしまった！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "敵が集まってしまった！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -4559,8 +4559,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "どれを食べますか？";
@@ -4607,8 +4607,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "『ストーンフリーーッ！』";
@@ -4654,10 +4654,10 @@ function func511() {
                     var_271 = 0;
                     var_1557 = 0;
                     var_211 = var_352;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "傷口を縫って体力が回復した。";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "傷口を縫って体力が回復した。";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -4687,8 +4687,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ここには鉄塔を建てられない。";
@@ -4722,8 +4722,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「スーパーフライ！」";
@@ -4743,10 +4743,10 @@ function func511() {
                     var_146 = 1;
                     DSPLAY(audio_id = 188);
                     var_114 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "鉄塔を建てた！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "鉄塔を建てた！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -4791,8 +4791,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -4916,8 +4916,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2302 == 1) {
@@ -4974,8 +4974,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "周囲がドロドロになってきた…";
@@ -5151,8 +5151,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -5194,8 +5194,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "雨が降ってきた。";
@@ -5606,8 +5606,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "";
@@ -5640,10 +5640,10 @@ function func511() {
                     return [4 /*yield*/, func340()];
                 case 787:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "地面が洗い流され、";
-                    var_297 = "罠が見えるようになった。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "地面が洗い流され、";
+                    comments_row2a = "罠が見えるようになった。";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -5712,10 +5712,10 @@ function func511() {
                     return [3 /*break*/, 792];
                 case 796:
                     if (!(var_2304 == 1)) return [3 /*break*/, 800];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "フー・ファイターズの威力がアップした！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "フー・ファイターズの威力がアップした！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -5733,10 +5733,10 @@ function func511() {
                     _a.label = 800;
                 case 800:
                     if (!(var_2303 == 1)) return [3 /*break*/, 804];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "地面のカエルが成長したようだ。";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "地面のカエルが成長したようだ。";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -5754,10 +5754,10 @@ function func511() {
                     _a.label = 804;
                 case 804:
                     if (!(var_2305 == 1)) return [3 /*break*/, 808];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "パワーアップした敵がいるようだ…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "パワーアップした敵がいるようだ…";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -5794,8 +5794,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「キング・クリムゾン」！！";
@@ -5873,8 +5873,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -6301,8 +6301,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -6729,8 +6729,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -7176,8 +7176,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "合計 " + var_2307 + " のエネルギーを吸収した。";
@@ -7223,8 +7223,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -7665,8 +7665,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "合計 " + var_2307 + " の養分を吸収した。";
@@ -7753,8 +7753,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "そこには人形を出せないぞ。";
@@ -7825,8 +7825,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "うけけけけけけけけけけッ！！";
@@ -7886,8 +7886,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「アッフォオオ―――――ン！」";
@@ -8153,10 +8153,10 @@ function func511() {
                 case 1357:
                     if (!(var_2265 == 1)) return [3 /*break*/, 1361];
                     DSPLAY(audio_id = 153);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "周りの敵は目に砂が入って";
-                    var_297 = "盲目になってしまった！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "周りの敵は目に砂が入って";
+                    comments_row2a = "盲目になってしまった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -8233,8 +8233,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "そこには出せないぞ。";
@@ -8305,8 +8305,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「シアー・ハート・アタック」！！";
@@ -8364,8 +8364,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "カチリ";
@@ -8394,8 +8394,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
@@ -8683,8 +8683,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -8844,8 +8844,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -8867,8 +8867,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "地面が濡れて伝達力が上がっている！";
@@ -9007,8 +9007,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ファイトクラブだっ！！";
@@ -9054,8 +9054,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -9076,8 +9076,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "低温世界で動ける物質はなにもなくなる";
@@ -9269,8 +9269,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "キラークィーン【第３の爆弾】";
@@ -9427,10 +9427,10 @@ function func511() {
                     return [4 /*yield*/, func094()];
                 case 1541:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "すでに「瞳」の中に入っている！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "すでに「瞳」の中に入っている！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -9458,10 +9458,10 @@ function func511() {
                     return [4 /*yield*/, func340()];
                 case 1548:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし何もおこらなかった…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし何もおこらなかった…";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -9506,8 +9506,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "発動能力がパワーアップしている！";
@@ -9530,8 +9530,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "オレって情けねえよなあ～～～。";
@@ -10002,8 +10002,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "攻撃をかわしやすくなった！";
@@ -10073,8 +10073,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "人形を置く場所が無いぞ。";
@@ -10143,8 +10143,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "砂鉄を吸い寄せて透明になった。";
@@ -10190,8 +10190,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "幸運な顔のメイクをしてみた。";
@@ -10207,10 +10207,10 @@ function func511() {
                     return [4 /*yield*/, func340()];
                 case 1718:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "次のフロアでアイテムがたくさん";
-                    var_297 = "出現する気がする…！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "次のフロアでアイテムがたくさん";
+                    comments_row2a = "出現する気がする…！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -10255,8 +10255,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "自分だけ速く動けるようになった！";
@@ -10309,8 +10309,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "体にゴムのような弾力がついた！";
@@ -10565,8 +10565,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "誰に送りますか？";
@@ -10684,8 +10684,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "どれを送りますか？";
@@ -10739,8 +10739,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "どれを相手に送りますか？";
@@ -10793,8 +10793,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "どれを倉庫に送りますか？";
@@ -10875,8 +10875,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「おんぶして」　「ねっ！」";
@@ -10903,10 +10903,10 @@ function func511() {
                 case 1837: return [4 /*yield*/, func094()];
                 case 1838:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「あなたが今のぼくの本体なんです！」";
-                    var_297 = "　「わかる？」　「ね？」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「あなたが今のぼくの本体なんです！」";
+                    comments_row2a = "　「わかる？」　「ね？」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -10932,10 +10932,10 @@ function func511() {
                 case 1844: return [4 /*yield*/, func094()];
                 case 1845:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「ぼくの能力は人に囁くだけ」";
-                    var_297 = "　　「ね？」「誰か助け呼ぶの？」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「ぼくの能力は人に囁くだけ」";
+                    comments_row2a = "　　「ね？」「誰か助け呼ぶの？」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -10961,10 +10961,10 @@ function func511() {
                 case 1851: return [4 /*yield*/, func094()];
                 case 1852:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「イヒヒ！」　「ねっ！」";
-                    var_297 = "　　　「イヒヒヒヒ」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「イヒヒ！」　「ねっ！」";
+                    comments_row2a = "　　　「イヒヒヒヒ」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -10990,10 +10990,10 @@ function func511() {
                 case 1858: return [4 /*yield*/, func094()];
                 case 1859:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「ポコチンまで干からびさせて";
-                    var_297 = "　　死ぬのはおまえだッ！」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「ポコチンまで干からびさせて";
+                    comments_row2a = "　　死ぬのはおまえだッ！」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -11019,10 +11019,10 @@ function func511() {
                 case 1865: return [4 /*yield*/, func094()];
                 case 1866:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「どこへ行こうとも…";
-                    var_297 = "　　疲れるだけだよ」」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「どこへ行こうとも…";
+                    comments_row2a = "　　疲れるだけだよ」」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -11048,10 +11048,10 @@ function func511() {
                 case 1872: return [4 /*yield*/, func094()];
                 case 1873:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「疲労とダメージで";
-                    var_297 = "　　ぶっ倒れるのが先か」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「疲労とダメージで";
+                    comments_row2a = "　　ぶっ倒れるのが先か」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -11077,10 +11077,10 @@ function func511() {
                 case 1879: return [4 /*yield*/, func094()];
                 case 1880:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「精神がまいっちまって";
-                    var_297 = "　　自滅するのが先か…」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「精神がまいっちまって";
+                    comments_row2a = "　　自滅するのが先か…」";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -11118,10 +11118,10 @@ function func511() {
                     return [3 /*break*/, 1887];
                 case 1890:
                     DSPLAY(audio_id = 164);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "最大精神力が１下がってしまった！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "最大精神力が１下がってしまった！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -11194,8 +11194,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「悪魔の虹」が大量にあらわれた！！";
@@ -11258,8 +11258,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「うにゃあ」";
@@ -11294,8 +11294,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2258 == 409 || var_2258 == 406 || var_2258 == 410 || var_2258 == 309) {
@@ -11403,8 +11403,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2258 == 309) {
@@ -11641,8 +11641,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2258 == 118) {
@@ -11681,8 +11681,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2258 == 118) {
@@ -11743,8 +11743,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "傷口にプランクトンを詰めた。";
@@ -11795,8 +11795,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「エンペラー」！！";
@@ -11957,8 +11957,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「ヘブンズドアーッ」！！";
@@ -12097,10 +12097,10 @@ function func511() {
                 case 2024:
                     var_271 = 0;
                     var_1323 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "見えてなくて効かなかった…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "見えてなくて効かなかった…";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -12144,8 +12144,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「気流……」";
@@ -12178,10 +12178,10 @@ function func511() {
                     ++cnt2_147;
                     return [3 /*break*/, 2037];
                 case 2040:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「このフロアの空気の流れを読む…！」";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「このフロアの空気の流れを読む…！」";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -12230,10 +12230,10 @@ function func511() {
                     return [3 /*break*/, 2049];
                 case 2052:
                     var_312 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "敵の行動がわかるようになった！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "敵の行動がわかるようになった！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -12277,8 +12277,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「エピタフ！」";
@@ -12319,10 +12319,10 @@ function func511() {
                     return [3 /*break*/, 2066];
                 case 2069:
                     var_312 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「迫り来る危険を感知できる…！」";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「迫り来る危険を感知できる…！」";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -12337,10 +12337,10 @@ function func511() {
                     return [4 /*yield*/, func340()];
                 case 2072:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "見えないものが見えるようになった！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "見えないものが見えるようになった！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -12389,8 +12389,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2352 == 0) {
@@ -12488,10 +12488,10 @@ function func511() {
                     var_673 = var_2353;
                     var_1845 = 0;
                     if (!(var_2110 == 0)) return [3 /*break*/, 2108];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし何も起こらなかった…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし何も起こらなかった…";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -12577,10 +12577,10 @@ function func511() {
                     return [4 /*yield*/, func331()];
                 case 2117:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "マンガのキャラクターが現れた！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "マンガのキャラクターが現れた！";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -12663,8 +12663,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！！";
@@ -12723,8 +12723,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "死に続ける能力が解除された！";
@@ -12790,8 +12790,8 @@ function func511() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "しかし何も起こらなかった";
@@ -12952,8 +12952,8 @@ function func513() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     var_2358 = rnd(5);
@@ -13366,8 +13366,8 @@ function func522() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "装備しているDISCは";
@@ -13407,8 +13407,8 @@ function func522() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "そのDISCは合成するために使用中です";
@@ -13448,8 +13448,8 @@ function func522() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "それを合成することはできません。";
@@ -13490,8 +13490,8 @@ function func522() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "合成させるアイテムを選んでください";
@@ -13558,8 +13558,8 @@ function func523() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "装備しているDISCは";
@@ -13599,8 +13599,8 @@ function func523() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "そのDISCは合成するために使用中です";
@@ -13637,8 +13637,8 @@ function func523() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "それはベースに選んだアイテムです。";
@@ -13677,8 +13677,8 @@ function func523() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "それを合成することはできません。";
@@ -13718,8 +13718,8 @@ function func523() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "そのDISCはベースにしかできません";
@@ -13815,8 +13815,8 @@ function func523() {
                     if (var_233[var_2091].Var19 > 1) {
                         var_482 = var_233[var_2091].Var19 * 500 + var_482;
                     }
-                    var_483 = var_483 + var_482;
-                    var_107 = var_107 + var_483;
+                    buying_price = buying_price + var_482;
+                    var_107 = var_107 + buying_price;
                     _a.label = 50;
                 case 50:
                     var_233[var_2090].Var14 = 1;
@@ -13908,8 +13908,8 @@ function func523() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "" + var_2366 + "と";
@@ -13937,13 +13937,13 @@ function func523() {
                 case 66:
                     _a.sent();
                     if (!(var_2097 == 1)) return [3 /*break*/, 74];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "なんと！　ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは";
-                    var_297 = "ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "なんと！　ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは";
+                    comments_row2a = "ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！";
                     if (var_2365 == 1) {
-                        var_296 = "なんと！　☆ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは";
-                        var_297 = "☆ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！";
+                        comments_row1a = "なんと！　☆ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは";
+                        comments_row2a = "☆ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！";
                     }
                     var_198 = 1;
                     var_300 = 0;
@@ -13973,13 +13973,13 @@ function func523() {
                     _a.label = 74;
                 case 74:
                     if (!(var_2097 == 2)) return [3 /*break*/, 82];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "なんと！　ｷﾗｰ･ｸｨｰﾝのDISCは";
-                    var_297 = "ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "なんと！　ｷﾗｰ･ｸｨｰﾝのDISCは";
+                    comments_row2a = "ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！";
                     if (var_2365 == 1) {
-                        var_296 = "なんと！　☆ｷﾗｰ･ｸｨｰﾝのDISCは";
-                        var_297 = "☆ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！";
+                        comments_row1a = "なんと！　☆ｷﾗｰ･ｸｨｰﾝのDISCは";
+                        comments_row2a = "☆ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！";
                     }
                     var_198 = 1;
                     var_300 = 0;
@@ -14009,13 +14009,13 @@ function func523() {
                     _a.label = 82;
                 case 82:
                     if (!(var_2097 == 3)) return [3 /*break*/, 90];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "なんと！　ｷﾗｰ･ｸｨｰﾝのDISCは";
-                    var_297 = "ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "なんと！　ｷﾗｰ･ｸｨｰﾝのDISCは";
+                    comments_row2a = "ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！";
                     if (var_2365 == 1) {
-                        var_296 = "なんと！　☆ｷﾗｰ･ｸｨｰﾝのDISCは";
-                        var_297 = "☆ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！";
+                        comments_row1a = "なんと！　☆ｷﾗｰ･ｸｨｰﾝのDISCは";
+                        comments_row2a = "☆ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！";
                     }
                     var_198 = 1;
                     var_300 = 0;
@@ -14045,13 +14045,13 @@ function func523() {
                     _a.label = 90;
                 case 90:
                     if (!(var_2097 == 4)) return [3 /*break*/, 98];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "なんと！　ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは";
-                    var_297 = "ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "なんと！　ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは";
+                    comments_row2a = "ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！";
                     if (var_2365 == 1) {
-                        var_296 = "なんと！　☆ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは";
-                        var_297 = "☆ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！";
+                        comments_row1a = "なんと！　☆ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは";
+                        comments_row2a = "☆ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！";
                     }
                     var_198 = 1;
                     var_300 = 0;
@@ -14080,10 +14080,10 @@ function func523() {
                     _a.sent();
                     _a.label = 98;
                 case 98:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "ｸﾚｲｼﾞｰ･DのDISCは、合成によって";
-                    var_297 = "スタンドパワーを失い 消滅した。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "ｸﾚｲｼﾞｰ･DのDISCは、合成によって";
+                    comments_row2a = "スタンドパワーを失い 消滅した。";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -14122,8 +14122,8 @@ function func523() {
                     if (var_233[var_2286].Var19 > 1) {
                         var_482 = var_233[var_2286].Var19 * 500 + var_482;
                     }
-                    var_483 = var_483 + var_482;
-                    var_107 = var_107 + var_483;
+                    buying_price = buying_price + var_482;
+                    var_107 = var_107 + buying_price;
                     _a.label = 106;
                 case 106:
                     var_225 = var_2286;
@@ -14153,8 +14153,8 @@ function func523() {
                     if (var_486[var_682][var_2286][19] > 1) {
                         var_482 = var_486[var_682][var_2286][19] * 500 + var_482;
                     }
-                    var_483 = var_483 + var_482;
-                    var_107 = var_107 + var_483;
+                    buying_price = buying_price + var_482;
+                    var_107 = var_107 + buying_price;
                     _a.label = 112;
                 case 112:
                     var_225 = var_2286;
@@ -14176,8 +14176,8 @@ function func523() {
                     if (var_233[0].Var19 > 1) {
                         var_482 = var_233[0].Var19 * 500 + var_482;
                     }
-                    var_483 = var_483 + var_482;
-                    var_107 = var_107 + var_483;
+                    buying_price = buying_price + var_482;
+                    var_107 = var_107 + buying_price;
                     _a.label = 116;
                 case 116:
                     var_2369 = var_78[var_321].Var1;
@@ -14220,8 +14220,8 @@ function func524() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「コンナモン食エネーヨッ！」";
@@ -14258,7 +14258,7 @@ function func524() {
                     return [4 /*yield*/, func492()];
                 case 7:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_1982 = item_name;
+                    strengthen_item_name = item_name;
                     if (var_233[var_225].Var0 == 600) {
                         var_2371 = 4;
                     }
@@ -14301,8 +14301,8 @@ function func524() {
                     if (var_233[var_225].Var19 > 1) {
                         var_482 = var_233[var_225].Var19 * 500 + var_482;
                     }
-                    var_483 = var_483 + var_482;
-                    var_107 = var_107 + var_483;
+                    buying_price = buying_price + var_482;
+                    var_107 = var_107 + buying_price;
                     _a.label = 9;
                 case 9: return [4 /*yield*/, func430()];
                 case 10:
@@ -14316,8 +14316,8 @@ function func524() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "アギャギャ――――！";
@@ -14376,15 +14376,15 @@ function func524() {
                     return [4 /*yield*/, func340()];
                 case 19:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_233[var_2300].Var3 < 99) {
-                        var_296 = "エネルギーが " + var_2371 + "増えた！";
+                        comments_row1a = "エネルギーが " + var_2371 + "増えた！";
                     }
                     if (var_233[var_2300].Var3 >= 99) {
-                        var_296 = "エネルギーが満タンになった！";
+                        comments_row1a = "エネルギーが満タンになった！";
                     }
-                    var_297 = "";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -14428,8 +14428,8 @@ function func525() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "それは装備用DISCではありません";
@@ -14458,8 +14458,8 @@ function func525() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "それに合成された能力はありません。";
@@ -14496,8 +14496,8 @@ function func525() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "装備しているDISCは";
@@ -14526,8 +14526,8 @@ function func525() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "それは現在使用中のDISCです。";
@@ -14556,8 +14556,8 @@ function func525() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "このDISCの能力は、特別なパワーで";
@@ -14589,7 +14589,7 @@ function func525() {
                     return [4 /*yield*/, func492()];
                 case 29:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_1982 = item_name;
+                    strengthen_item_name = item_name;
                     return [4 /*yield*/, func051()];
                 case 30:
                     _a.sent();
@@ -14637,11 +14637,11 @@ function func526() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_1982 + "の";
+                    comments_row1 = "" + strengthen_item_name + "の";
                     comments_row2 = "能力を１つ消去した。";
                     var_198 = 1;
                     var_300 = 0;
@@ -15106,8 +15106,8 @@ function func529() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ﾃﾞｨｱﾎﾞﾛは5のダメージ！";
@@ -15427,8 +15427,8 @@ function func532() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ディアボロは思った…";
@@ -15441,10 +15441,10 @@ function func532() {
                     return [4 /*yield*/, func340()];
                 case 3:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "幸福と言うのはこういうことだ…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "幸福と言うのはこういうことだ…";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -15467,10 +15467,10 @@ function func532() {
                 case 8: return [4 /*yield*/, func340()];
                 case 9:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "そうなるべきだったところに…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "そうなるべきだったところに…";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -15493,10 +15493,10 @@ function func532() {
                 case 14: return [4 /*yield*/, func340()];
                 case 15:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "戻るだけなんだ…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "戻るだけなんだ…";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -15519,10 +15519,10 @@ function func532() {
                 case 20: return [4 /*yield*/, func340()];
                 case 21:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "ただ元に…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "ただ元に…";
+                    comments_row2a = "";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -15580,8 +15580,8 @@ function func532() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ﾃﾞｨｱﾎﾞﾛ　再起不能";
@@ -15628,8 +15628,8 @@ function func533() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "中に何か入っているアイテムは";
@@ -15659,8 +15659,8 @@ function func533() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "それを送ることはできない。";
@@ -15707,8 +15707,8 @@ function func533() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "呪われていて外せない！";
@@ -15762,8 +15762,8 @@ function func533() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "倉庫にはもう置ける場所がないようだ";
@@ -15909,8 +15909,8 @@ function func533() {
                     if (var_233[var_225].Var19 > 1) {
                         var_482 = var_233[var_225].Var19 * 500 + var_482;
                     }
-                    var_483 = var_483 + var_482;
-                    var_107 = var_107 + var_483;
+                    buying_price = buying_price + var_482;
+                    var_107 = var_107 + buying_price;
                     _a.label = 28;
                 case 28:
                     var_1977 = 0;
@@ -15985,8 +15985,8 @@ function func533() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2401 == 1) {
@@ -16073,8 +16073,8 @@ function func534() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "オレって情けねえよなあ～～～。";
@@ -17899,8 +17899,8 @@ function func541() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_888 != 19 && var_888 != 97 && var_81[var_2442][0] != 80 && var_81[var_2442][0] != 82 && var_81[var_2442][0] != 84 && var_81[var_2442][0] != 85 && var_81[var_2442][0] != 86 && var_81[var_2442][0] != 87 && var_81[var_2442][0] != 88 && var_81[var_2442][0] != 89 && var_81[var_2442][0] != 90 && var_81[var_2442][0] != 91 && var_81[var_2442][0] != 92 && var_81[var_2442][0] != 93 && var_81[var_2442][0] != 94 && var_81[var_2442][0] != 79 || var_81[var_2442][0] == 78 || var_81[var_2442][0] == 77) {
@@ -17966,10 +17966,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 11:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "未来という目の前に………";
-                    var_297 = "「" + var_889 + "」を見つけ！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "未来という目の前に………";
+                    comments_row2a = "「" + var_889 + "」を見つけ！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -17984,10 +17984,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 14:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "それに引っかかる事がなければ";
-                    var_297 = "「絶頂」のままでいられる　わたしは！…";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "それに引っかかる事がなければ";
+                    comments_row2a = "「絶頂」のままでいられる　わたしは！…";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -18098,10 +18098,10 @@ function func541() {
                     var_108 = 0;
                     if (!(var_156[207] == 1)) return [3 /*break*/, 39];
                     DSPLAY(audio_id = 163);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "と思ったが、装備中のDISCによって";
-                    var_297 = "若返りを防いだ！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "と思ったが、装備中のDISCによって";
+                    comments_row2a = "若返りを防いだ！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -18381,9 +18381,9 @@ function func541() {
                     return [3 /*break*/, 83];
                 case 86:
                     var_768 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "罠がたくさん現れたようだ…";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "罠がたくさん現れたようだ…";
                     return [4 /*yield*/, func047()];
                 case 87:
                     _a.sent();
@@ -18442,8 +18442,8 @@ function func541() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "しかし何も起こらなかった。";
@@ -18462,8 +18462,8 @@ function func541() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "俺のネコ殺しといて";
@@ -18651,10 +18651,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 142:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし、装備中のDISCのおかげで";
-                    var_297 = "ダメージが少なかった。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし、装備中のDISCのおかげで";
+                    comments_row2a = "ダメージが少なかった。";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -18727,15 +18727,15 @@ function func541() {
                 case 160:
                     _a.sent();
                     var_128 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_215 == 109 || var_215 == 202 || var_410 == 404) {
-                        var_296 = "しかし、装備中のDISCのおかげで";
-                        var_297 = "氷漬けを解除できた。";
+                        comments_row1a = "しかし、装備中のDISCのおかげで";
+                        comments_row2a = "氷漬けを解除できた。";
                     }
                     if (var_173 == 1) {
-                        var_296 = "しかし、冷たいのに強くなっていて";
-                        var_297 = "氷漬けを解除できた。";
+                        comments_row1a = "しかし、冷たいのに強くなっていて";
+                        comments_row2a = "氷漬けを解除できた。";
                     }
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -19090,8 +19090,8 @@ function func541() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "" + var_418 + "が壊された！";
@@ -19116,10 +19116,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 231:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "…と思ったが、ｽﾊﾟｲｽｶﾞｰﾙで";
-                    var_297 = "柔らかくして防いだ！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "…と思ったが、ｽﾊﾟｲｽｶﾞｰﾙで";
+                    comments_row2a = "柔らかくして防いだ！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -19442,10 +19442,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 307:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし、ｽﾀｰﾌﾟﾗﾁﾅのｶﾞｰﾄﾞのおかげで";
-                    var_297 = "ダメージを抑えられた！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし、ｽﾀｰﾌﾟﾗﾁﾅのｶﾞｰﾄﾞのおかげで";
+                    comments_row2a = "ダメージを抑えられた！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -19558,13 +19558,13 @@ function func541() {
                 case 326:
                     var_271 = 0;
                     var_458 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_2460 == 1) {
-                        var_296 = "食べ物がすべて焦げてしまった！";
+                        comments_row1a = "食べ物がすべて焦げてしまった！";
                     }
                     if (var_2460 == 0) {
-                        var_296 = "しかし何も起こらなかった。";
+                        comments_row1a = "しかし何も起こらなかった。";
                     }
                     return [4 /*yield*/, func047()];
                 case 327:
@@ -19617,10 +19617,10 @@ function func541() {
                         var_2462 = 99;
                     }
                     if (!(var_2462 == 99)) return [3 /*break*/, 345];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "見えなくて平気だった";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "見えなくて平気だった";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 338:
                     _a.sent();
@@ -19666,24 +19666,24 @@ function func541() {
                     ++cnt3_57;
                     return [3 /*break*/, 346];
                 case 349:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     var_1073 = rnd(3);
                     if (var_1073 == 0) {
-                        var_296 = "「今すぐ装備DISCを全てはずす！」";
-                        var_297 = "と書き込まれた";
+                        comments_row1a = "「今すぐ装備DISCを全てはずす！」";
+                        comments_row2a = "と書き込まれた";
                     }
                     if (var_1073 == 1) {
-                        var_296 = "「思うように動けなくなる！」";
-                        var_297 = "と書き込まれた";
+                        comments_row1a = "「思うように動けなくなる！」";
+                        comments_row2a = "と書き込まれた";
                     }
                     if (var_1073 == 2) {
-                        var_296 = "「私は焼身自殺します」";
-                        var_297 = "と書き込まれた";
+                        comments_row1a = "「私は焼身自殺します」";
+                        comments_row2a = "と書き込まれた";
                     }
                     if (var_1073 == 3) {
-                        var_296 = "「何も見えなくなってすっ飛ぶ！」";
-                        var_297 = "と書き込まれた";
+                        comments_row1a = "「何も見えなくなってすっ飛ぶ！」";
+                        comments_row2a = "と書き込まれた";
                     }
                     DSPLAY(audio_id = 118);
                     return [4 /*yield*/, func047()];
@@ -19719,16 +19719,16 @@ function func541() {
                     ++cnt3_59;
                     return [3 /*break*/, 356];
                 case 359:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     var_1073 = rnd(2);
                     if (var_1073 == 0) {
-                        var_296 = "しかし無理やり「体力が回復する！」";
-                        var_297 = "と書き換えた！";
+                        comments_row1a = "しかし無理やり「体力が回復する！」";
+                        comments_row2a = "と書き換えた！";
                     }
                     if (var_1073 == 1) {
-                        var_296 = "しかし無理やり「満腹度が回復する！」";
-                        var_297 = "と書き換えた！";
+                        comments_row1a = "しかし無理やり「満腹度が回復する！」";
+                        comments_row2a = "と書き換えた！";
                     }
                     return [4 /*yield*/, func047()];
                 case 360:
@@ -19796,15 +19796,15 @@ function func541() {
                     ++cnt3_61;
                     return [3 /*break*/, 368];
                 case 371:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_2463 == 0) {
-                        var_296 = "「今すぐ装備DISCを全てはずす！」";
-                        var_297 = "と書き込まれた";
+                        comments_row1a = "「今すぐ装備DISCを全てはずす！」";
+                        comments_row2a = "と書き込まれた";
                     }
                     if (var_2463 == 1) {
-                        var_296 = "「思うように動けなくなる！」";
-                        var_297 = "と書き込まれた";
+                        comments_row1a = "「思うように動けなくなる！」";
+                        comments_row2a = "と書き込まれた";
                         var_126 = 1;
                         var_166 = 0;
                     }
@@ -19887,9 +19887,9 @@ function func541() {
                     return [3 /*break*/, 384];
                 case 387:
                     DSPLAY(audio_id = 118);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "恥ずかしい記憶を読まれた…";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "恥ずかしい記憶を読まれた…";
                     return [4 /*yield*/, func047()];
                 case 388:
                     _a.sent();
@@ -19918,10 +19918,10 @@ function func541() {
                 case 394:
                     _a.sent();
                     DSPLAY(audio_id = 164);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "精神力が下がってしまった。";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "精神力が下がってしまった。";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 395:
                     _a.sent();
@@ -19965,10 +19965,10 @@ function func541() {
                     return [3 /*break*/, 402];
                 case 405:
                     DSPLAY(audio_id = 118);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「私は焼身自殺します」";
-                    var_297 = "と書き込まれた";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「私は焼身自殺します」";
+                    comments_row2a = "と書き込まれた";
                     return [4 /*yield*/, func047()];
                 case 406:
                     _a.sent();
@@ -20055,10 +20055,10 @@ function func541() {
                     return [3 /*break*/, 421];
                 case 424:
                     DSPLAY(audio_id = 118);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「何も見えなくなってすっ飛ぶ！」";
-                    var_297 = "と書き込まれた";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「何も見えなくなってすっ飛ぶ！」";
+                    comments_row2a = "と書き込まれた";
                     return [4 /*yield*/, func047()];
                 case 425:
                     _a.sent();
@@ -20176,10 +20176,10 @@ function func541() {
                     _a.sent();
                     _a.label = 451;
                 case 451:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCを外された！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCを外された！";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 452:
                     _a.sent();
@@ -20217,20 +20217,20 @@ function func541() {
                     _a.sent();
                     _a.label = 461;
                 case 461:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_2463 == 0) {
-                        var_296 = "装備が全て外れてしまった！";
+                        comments_row1a = "装備が全て外れてしまった！";
                     }
                     if (var_2463 == 1) {
-                        var_296 = "しかし何も起こらなかった。";
+                        comments_row1a = "しかし何も起こらなかった。";
                     }
                     if (var_2463 == 2) {
-                        var_296 = "しかし装備DISCの効果によって";
-                        var_297 = "DISCを抜き取られなかった。";
+                        comments_row1a = "しかし装備DISCの効果によって";
+                        comments_row2a = "DISCを抜き取られなかった。";
                     }
                     if (var_2463 == 99) {
-                        var_296 = "装備が全て外れてしまった！";
+                        comments_row1a = "装備が全て外れてしまった！";
                     }
                     return [4 /*yield*/, func047()];
                 case 462:
@@ -20334,10 +20334,10 @@ function func541() {
                     return [3 /*break*/, 480];
                 case 483:
                     DSPLAY(audio_id = 163);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "と思ったが、装備中のDISCに反応して";
-                    var_297 = "能力が解除された！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "と思ったが、装備中のDISCに反応して";
+                    comments_row2a = "能力が解除された！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -20400,9 +20400,9 @@ function func541() {
                 case 495:
                     var_108 = 0;
                     if (!(var_156[396] == 0)) return [3 /*break*/, 498];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "足を負傷して 動きが遅くなってしまった！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "足を負傷して 動きが遅くなってしまった！";
                     return [4 /*yield*/, func047()];
                 case 496:
                     _a.sent();
@@ -20422,10 +20422,10 @@ function func541() {
                     _a.label = 498;
                 case 498:
                     if (!(var_156[396] == 1)) return [3 /*break*/, 501];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "足を負傷したが、";
-                    var_297 = "装備ｽﾀﾝﾄﾞの効果で速度は変わらない！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "足を負傷したが、";
+                    comments_row2a = "装備ｽﾀﾝﾄﾞの効果で速度は変わらない！";
                     return [4 /*yield*/, func047()];
                 case 499:
                     _a.sent();
@@ -20494,10 +20494,10 @@ function func541() {
                 case 511:
                     _a.sent();
                     DSPLAY(audio_id = 163);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし、ﾒﾀﾘｶのDISCのおかげで";
-                    var_297 = "磁力を解除できた。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし、ﾒﾀﾘｶのDISCのおかげで";
+                    comments_row2a = "磁力を解除できた。";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -20560,10 +20560,10 @@ function func541() {
                 case 525:
                     _a.sent();
                     DSPLAY(audio_id = 173);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "　　このラクガキを見て　　うしろを";
-                    var_297 = "　　ふり向いた時　　おまえらは";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "　　このラクガキを見て　　うしろを";
+                    comments_row2a = "　　ふり向いた時　　おまえらは";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -20578,10 +20578,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 528:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "";
-                    var_297 = "　　　　　　　　　　　死ぬ";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "";
+                    comments_row2a = "　　　　　　　　　　　死ぬ";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -20687,10 +20687,10 @@ function func541() {
                     return [3 /*break*/, 552];
                 case 555:
                     DSPLAY(audio_id = 173);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！";
-                    var_297 = "　　　ここにいるわよォ―――ッ」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！";
+                    comments_row2a = "　　　ここにいるわよォ―――ッ」";
                     return [4 /*yield*/, func047()];
                 case 556:
                     _a.sent();
@@ -20720,10 +20720,10 @@ function func541() {
                         var_390 = var_390 + 1;
                     }
                     var_81[var_2442][3] = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "フロアの敵が全員 目を覚ました！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "フロアの敵が全員 目を覚ました！";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 563:
                     _a.sent();
@@ -20763,10 +20763,10 @@ function func541() {
                     return [3 /*break*/, 570];
                 case 573:
                     DSPLAY(audio_id = 173);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 574:
                     _a.sent();
@@ -20796,10 +20796,10 @@ function func541() {
                         var_390 = var_390 + 1;
                     }
                     var_81[var_2442][3] = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 581:
                     _a.sent();
@@ -20842,11 +20842,11 @@ function func541() {
                 case 591:
                     var_271 = 0;
                     var_1481 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_156[352] == 0) {
-                        var_296 = "養分を吸い取られて、";
-                        var_297 = "お腹がとても減ってしまった！";
+                        comments_row1a = "養分を吸い取られて、";
+                        comments_row2a = "お腹がとても減ってしまった！";
                         DSPLAY(audio_id = 129);
                         var_350 = var_350 - 20;
                         if (var_350 <= 0) {
@@ -20854,8 +20854,8 @@ function func541() {
                         }
                     }
                     if (var_156[352] == 1) {
-                        var_296 = "しかし装備DISCの効果によって";
-                        var_297 = "腹ヘリを防いだ！";
+                        comments_row1a = "しかし装備DISCの効果によって";
+                        comments_row2a = "腹ヘリを防いだ！";
                     }
                     return [4 /*yield*/, func047()];
                 case 592:
@@ -20906,10 +20906,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 604:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "「ジオシュッターを先に殺してからで";
-                    var_297 = "　いいって事だァァ―――――――ッ」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "「ジオシュッターを先に殺してからで";
+                    comments_row2a = "　いいって事だァァ―――――――ッ」";
                     return [4 /*yield*/, func047()];
                 case 605:
                     _a.sent();
@@ -21070,10 +21070,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 630:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "破壊されそうになったが";
-                    var_297 = "柔らかくしていて平気だった。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "破壊されそうになったが";
+                    comments_row2a = "柔らかくしていて平気だった。";
                     return [4 /*yield*/, func047()];
                 case 631:
                     _a.sent();
@@ -21311,15 +21311,15 @@ function func541() {
                     return [4 /*yield*/, func100()];
                 case 669:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_2467 == 1) {
-                        var_296 = "" + var_2469 + "は破壊され";
-                        var_297 = "中身をバラ撒かれた。";
+                        comments_row1a = "" + var_2469 + "は破壊され";
+                        comments_row2a = "中身をバラ撒かれた。";
                     }
                     if (var_2467 == 0) {
-                        var_296 = "" + var_2469 + "は破壊された";
-                        var_297 = "";
+                        comments_row1a = "" + var_2469 + "は破壊された";
+                        comments_row2a = "";
                     }
                     var_2467 = 0;
                     return [4 /*yield*/, func047()];
@@ -21533,10 +21533,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 711:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "スタンドが溶かされている！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "スタンドが溶かされている！";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 712:
                     _a.sent();
@@ -21547,10 +21547,10 @@ function func541() {
                 case 714:
                     _a.sent();
                     DSPLAY(audio_id = 164);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "" + item_name + "は";
-                    var_297 = "弱くなってしまった…";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "" + item_name + "は";
+                    comments_row2a = "弱くなってしまった…";
                     return [4 /*yield*/, func047()];
                 case 715:
                     _a.sent();
@@ -21563,10 +21563,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 718:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "スタンドが溶かされそうになったが";
-                    var_297 = "装備中のラットの能力で無事だった。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "スタンドが溶かされそうになったが";
+                    comments_row2a = "装備中のラットの能力で無事だった。";
                     return [4 /*yield*/, func047()];
                 case 719:
                     _a.sent();
@@ -21579,10 +21579,10 @@ function func541() {
                     return [4 /*yield*/, func340()];
                 case 722:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "スタンドが溶かされそうになったが";
-                    var_297 = "漆黒のオーラに包まれていて無事だった";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "スタンドが溶かされそうになったが";
+                    comments_row2a = "漆黒のオーラに包まれていて無事だった";
                     return [4 /*yield*/, func047()];
                 case 723:
                     _a.sent();
@@ -21698,7 +21698,7 @@ function func541() {
                     return [4 /*yield*/, func492()];
                 case 754:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_2476 = Math.floor(var_483 / 2);
+                    var_2476 = Math.floor(buying_price / 2);
                     var_482 = 0;
                     var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
                     if (var_233[var_480].Var19 > 1) {
@@ -21717,7 +21717,7 @@ function func541() {
                     return [4 /*yield*/, func492()];
                 case 756:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_2476 = Math.floor(var_483 / 2);
+                    var_2476 = Math.floor(buying_price / 2);
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
                     if (var_486[var_485][var_484][19] > 1) {
@@ -21738,10 +21738,10 @@ function func541() {
                     ++cnt2_248;
                     return [3 /*break*/, 753];
                 case 761:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "オマエがコノダンジョンで";
-                    var_297 = "カッテに拾ッタアイテムの価値ハ！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "オマエがコノダンジョンで";
+                    comments_row2a = "カッテに拾ッタアイテムの価値ハ！";
                     return [4 /*yield*/, func047()];
                 case 762:
                     _a.sent();
@@ -21762,10 +21762,10 @@ function func541() {
                 case 767: return [4 /*yield*/, func340()];
                 case 768:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "合計で";
-                    var_297 = "" + var_481 + " G！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "合計で";
+                    comments_row2a = "" + var_481 + " G！";
                     return [4 /*yield*/, func047()];
                 case 769:
                     _a.sent();
@@ -21786,10 +21786,10 @@ function func541() {
                 case 774: return [4 /*yield*/, func340()];
                 case 775:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "スベテ支払ってモラウ！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "スベテ支払ってモラウ！";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 776:
                     _a.sent();
@@ -22315,10 +22315,10 @@ function func541() {
                 case 921:
                     _a.sent();
                     DSPLAY(audio_id = 173);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "ﾀﾞｲｱｰさん「フフ……は…波紋入りの";
-                    var_297 = "　　　　　薔薇の棘は 痛か…ろう…」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "ﾀﾞｲｱｰさん「フフ……は…波紋入りの";
+                    comments_row2a = "　　　　　薔薇の棘は 痛か…ろう…」";
                     return [4 /*yield*/, func047()];
                 case 922:
                     _a.sent();
@@ -22369,10 +22369,10 @@ function func541() {
                 case 933:
                     _a.sent();
                     var_134 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし気の毒なことに、";
-                    var_297 = "波紋に強くなっていて平気だった。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし気の毒なことに、";
+                    comments_row2a = "波紋に強くなっていて平気だった。";
                     return [4 /*yield*/, func047()];
                 case 934:
                     _a.sent();
@@ -22434,10 +22434,10 @@ function func541() {
                 case 949:
                     _a.sent();
                     var_134 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし、";
-                    var_297 = "波紋に強くなっていて平気だった。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし、";
+                    comments_row2a = "波紋に強くなっていて平気だった。";
                     return [4 /*yield*/, func047()];
                 case 950:
                     _a.sent();
@@ -22583,8 +22583,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力で カナヅチが飛んできた！";
@@ -22634,8 +22634,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力で カンヅメが飛んできた！";
@@ -22685,8 +22685,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力で ラジカセが飛んできた！";
@@ -22736,8 +22736,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力で 刃物が飛んできた！";
@@ -22785,8 +22785,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力で 自転車が飛んできた！";
@@ -22836,8 +22836,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力で アブドゥルが飛んできた！";
@@ -22890,8 +22890,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力で 車が飛んできた！";
@@ -22937,8 +22937,8 @@ function func542() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "はさみうちだァ――――ッ！";
@@ -23003,8 +23003,8 @@ function func543() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "磁力がさらに強くなったようだ…";
@@ -23038,8 +23038,8 @@ function func544() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "自分の撃った弾丸が脳天に命中！";
@@ -23273,8 +23273,8 @@ function func547() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "" + var_891 + "が";
@@ -23418,8 +23418,8 @@ function func547() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "" + var_891 + "を";
@@ -23647,8 +23647,8 @@ function func547() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "肩胛骨をブチ割って！";
@@ -24100,8 +24100,8 @@ function func547() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "" + var_891 + "が";
@@ -24142,8 +24142,8 @@ function func547() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「半分だけ出ることを許可する！」";
@@ -24179,10 +24179,10 @@ function func547() {
                     var_83[var_421].Var8 = 0;
                     var_271 = 0;
                     var_1581 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "" + var_2493 + "は";
-                    var_297 = "体の動きが鈍くなってしまった。";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "" + var_2493 + "は";
+                    comments_row2a = "体の動きが鈍くなってしまった。";
                     return [4 /*yield*/, func047()];
                 case 195:
                     _a.sent();
@@ -24270,10 +24270,10 @@ function func548() {
                 case 0:
                     dbgprt(548);
                     var_370 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "地上に戻りますか？";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "地上に戻りますか？";
+                    comments_row2a = "";
                     var_198 = 1;
                     var_300 = 0;
                     return [4 /*yield*/, func047()];
@@ -24508,10 +24508,10 @@ function func551() {
                 case 0:
                     dbgprt(551);
                     var_371 = 0;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "特別な敵の棲家に入りますか？";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "特別な敵の棲家に入りますか？";
+                    comments_row2a = "";
                     var_198 = 1;
                     var_300 = 0;
                     return [4 /*yield*/, func047()];
@@ -34034,8 +34034,8 @@ function func573() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "" + var_418 + "が";
@@ -37551,8 +37551,8 @@ function func580() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "";
@@ -38533,8 +38533,8 @@ function func584() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "弾丸を止めた！";
@@ -38570,8 +38570,8 @@ function func584() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "弾丸は燃え尽きて届かなかった";
@@ -38614,8 +38614,8 @@ function func584() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "弾丸は燃え尽きて届かなかった";
@@ -38670,8 +38670,8 @@ function func585() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰに唾をかけられた！";
@@ -38707,8 +38707,8 @@ function func585() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "由花子の髪の毛が刺さった！";
@@ -38782,8 +38782,8 @@ function func585() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "空気弾が体にまとわりついた。";
@@ -38831,8 +38831,8 @@ function func585() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "これで安心して熟睡できる…";
@@ -38866,8 +38866,8 @@ function func585() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「ドッグォン」の文字が貼りついた！";
@@ -38952,8 +38952,8 @@ function func585() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「ドジュウ」の文字が貼りついた！";
@@ -39036,10 +39036,10 @@ function func585() {
                     _a.sent(); // アイテムリスト呼び出し
                     var_2814 = item_name;
                     if (!(var_2460 != 0)) return [3 /*break*/, 47];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "" + var_2813 + "は";
-                    var_297 = "" + var_2814 + "になった！";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "" + var_2813 + "は";
+                    comments_row2a = "" + var_2814 + "になった！";
                     return [4 /*yield*/, func047()];
                 case 45:
                     _a.sent();
@@ -39049,10 +39049,10 @@ function func585() {
                     _a.label = 47;
                 case 47:
                     if (!(var_2460 == 0)) return [3 /*break*/, 50];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし何も起こらなかった。";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし何も起こらなかった。";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 48:
                     _a.sent();
@@ -39335,8 +39335,8 @@ function func585() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "" + var_2816 + " を喰らった！";
@@ -39357,10 +39357,10 @@ function func585() {
                     _a.sent();
                     DSPLAY(audio_id = 120);
                     var_178 = 1;
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "ビリっときたあああああ！！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "ビリっときたあああああ！！";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -39604,10 +39604,10 @@ function func587() {
                     return [4 /*yield*/, func340()];
                 case 20:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "スタンドが溶かされている！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "スタンドが溶かされている！";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 21:
                     _a.sent();
@@ -39617,10 +39617,10 @@ function func587() {
                     return [4 /*yield*/, func340()];
                 case 23:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "" + var_2822 + "は";
-                    var_297 = "弱くなってしまった…";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "" + var_2822 + "は";
+                    comments_row2a = "弱くなってしまった…";
                     return [4 /*yield*/, func047()];
                 case 24:
                     _a.sent();
@@ -39633,10 +39633,10 @@ function func587() {
                     return [4 /*yield*/, func340()];
                 case 27:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "スタンドが溶かされている！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "スタンドが溶かされている！";
+                    comments_row2a = "";
                     return [4 /*yield*/, func047()];
                 case 28:
                     _a.sent();
@@ -39646,10 +39646,10 @@ function func587() {
                     return [4 /*yield*/, func340()];
                 case 30:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "" + var_2822 + "を";
-                    var_297 = "守っていたオーラは消えてしまった…";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "" + var_2822 + "を";
+                    comments_row2a = "守っていたオーラは消えてしまった…";
                     return [4 /*yield*/, func047()];
                 case 31:
                     _a.sent();
@@ -39827,10 +39827,10 @@ function func588() {
                     ++cnt1_85;
                     return [3 /*break*/, 5];
                 case 8:
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "億泰に引き寄せられた！";
-                    var_297 = "「【瞬間移動】ってやつさあ～～っ」";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "億泰に引き寄せられた！";
+                    comments_row2a = "「【瞬間移動】ってやつさあ～～っ」";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -39868,8 +39868,8 @@ function func589() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2352 == 0) {
@@ -39915,15 +39915,15 @@ function func589() {
                     var_2525 = 0;
                     var_1845 = 0;
                     if (!(var_2110 == 0)) return [3 /*break*/, 9];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_2352 == 0) {
-                        var_296 = "しかしｾｯｺは来なかった…";
+                        comments_row1a = "しかしｾｯｺは来なかった…";
                     }
                     if (var_2352 == 1) {
-                        var_296 = "しかしｽﾀﾝﾄﾞを出せなかった…";
+                        comments_row1a = "しかしｽﾀﾝﾄﾞを出せなかった…";
                     }
-                    var_297 = "";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -39966,15 +39966,15 @@ function func589() {
                     return [4 /*yield*/, func094()];
                 case 15:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_2352 == 0) {
-                        var_296 = "ヤツが死ぬところを撮影して来いッ！";
+                        comments_row1a = "ヤツが死ぬところを撮影して来いッ！";
                     }
                     if (var_2352 == 1) {
-                        var_296 = "低いところに降りられないぞ…";
+                        comments_row1a = "低いところに降りられないぞ…";
                     }
-                    var_297 = "";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -40031,8 +40031,8 @@ function func589() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ﾁｮｺﾗｰﾀ「甘いの３つ欲しいのかッ！？」";
@@ -40094,8 +40094,8 @@ function func589() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "セッコ「ガリガリガリガリガリガリガリ」";
@@ -40149,10 +40149,10 @@ function func589() {
                         var_2837++;
                     }
                     DSPLAY(audio_id = 182);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "近くのセッコの攻撃力が上がった！";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "近くのセッコの攻撃力が上がった！";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -40196,8 +40196,8 @@ function func590() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「命」を「運」んでくると書いて";
@@ -40264,10 +40264,10 @@ function func590() {
                     return [4 /*yield*/, func094()];
                 case 13:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "……フフ";
-                    var_297 = "よくぞ言ったものだ";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "……フフ";
+                    comments_row2a = "よくぞ言ったものだ";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -40343,8 +40343,8 @@ function func591() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ウェザーは無意識にカタツムリを呼んだ";
@@ -40390,8 +40390,8 @@ function func592() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2352 == 0) {
@@ -40467,10 +40467,10 @@ function func592() {
                     _a.label = 12;
                 case 12:
                     if (!(var_2110 == 0)) return [3 /*break*/, 15];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかしスタンドを出せなかった…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかしスタンドを出せなかった…";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -40518,8 +40518,8 @@ function func593() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "康一「たいへんなんだ…";
@@ -40594,10 +40594,10 @@ function func593() {
                     _a.label = 12;
                 case 12:
                     if (!(var_2110 == 0)) return [3 /*break*/, 15];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし仲間は来なかった…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし仲間は来なかった…";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -40644,8 +40644,8 @@ function func594() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "闇の中から蘇りし者…";
@@ -40664,10 +40664,10 @@ function func594() {
                     return [4 /*yield*/, func094()];
                 case 4:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "我とともに来たれ…";
-                    var_297 = "闇とともに喜びを分かち…ぶつぶつ…";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "我とともに来たれ…";
+                    comments_row2a = "闇とともに喜びを分かち…ぶつぶつ…";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -40717,10 +40717,10 @@ function func594() {
                         DSPLAY(audio_id = 170);
                     }
                     if (!(var_2110 == 0)) return [3 /*break*/, 15];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし何も起こらなかった…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし何も起こらなかった…";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -40779,8 +40779,8 @@ function func595() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2352 == 0) {
@@ -40948,10 +40948,10 @@ function func595() {
                         var_2841++;
                     }
                     if (!(var_2841 == 0)) return [3 /*break*/, 33];
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "しかし何も起こらなかった…";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "しかし何も起こらなかった…";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -41031,25 +41031,25 @@ function func595() {
                     return [4 /*yield*/, func331()];
                 case 43:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     if (var_2841 == 0) {
                         if (var_2352 != 6) {
-                            var_296 = "マンガのキャラクターが現れた！";
+                            comments_row1a = "マンガのキャラクターが現れた！";
                         }
                         if (var_2352 == 6) {
-                            var_296 = "メェ～～";
+                            comments_row1a = "メェ～～";
                         }
                     }
                     if (var_2841 != 0) {
                         if (var_2352 != 6) {
-                            var_296 = "部屋内にマンガのキャラクターが増えた！";
+                            comments_row1a = "部屋内にマンガのキャラクターが増えた！";
                         }
                         if (var_2352 == 6) {
-                            var_296 = "部屋内にヤギが増えた！";
+                            comments_row1a = "部屋内にヤギが増えた！";
                         }
                     }
-                    var_297 = "";
+                    comments_row2a = "";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -41289,8 +41289,8 @@ function func596() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "床の " + var_2848 + "から";
@@ -41343,8 +41343,8 @@ function func596() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_156[320] == 1) {
@@ -41366,8 +41366,8 @@ function func596() {
                     return [4 /*yield*/, func340()];
                 case 13:
                     _a.sent();
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
                     return [4 /*yield*/, func094()];
                 case 14:
                     _a.sent();
@@ -41377,36 +41377,36 @@ function func596() {
                         var_2849 = rnd(5);
                     }
                     if (var_2849 == 0) {
-                        var_296 = "ﾘｿﾞｯﾄ「おまえ『予知のような能力』";
-                        var_297 = "　　　　を持っているな」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「おまえ『予知のような能力』";
+                        comments_row2a = "　　　　を持っているな」";
                     }
                     if (var_2849 == 1) {
-                        var_296 = "ﾘｿﾞｯﾄ「こんな近くまで突っ込んで";
-                        var_297 = "　　　　来たのは　お前が初めてだ…」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「こんな近くまで突っ込んで";
+                        comments_row2a = "　　　　来たのは　お前が初めてだ…」";
                     }
                     if (var_2849 == 2) {
-                        var_296 = "ﾘｿﾞｯﾄ「なぜわかったのか？";
-                        var_297 = "　　　　興味が湧く」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「なぜわかったのか？";
+                        comments_row2a = "　　　　興味が湧く」";
                     }
                     if (var_2849 == 3) {
-                        var_296 = "ﾘｿﾞｯﾄ「『磁力』を使っている…";
-                        var_297 = "　　　　『当たり』だ…」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「『磁力』を使っている…";
+                        comments_row2a = "　　　　『当たり』だ…」";
                     }
                     if (var_2849 == 4) {
-                        var_296 = "ﾘｿﾞｯﾄ「さてと…";
-                        var_297 = "　　　オレはこれからどうすべきかな…」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「さてと…";
+                        comments_row2a = "　　　オレはこれからどうすべきかな…」";
                     }
                     if (var_2849 == 5) {
-                        var_296 = "ﾘｿﾞｯﾄ「勝っていた…";
-                        var_297 = "　　　　オレは勝っていたのに…」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「勝っていた…";
+                        comments_row2a = "　　　　オレは勝っていたのに…」";
                     }
                     if (var_2849 == 6) {
-                        var_296 = "ﾘｿﾞｯﾄ「　ひ　　と　……";
-                        var_297 = "　　　　　はレ…　　なな　」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「　ひ　　と　……";
+                        comments_row2a = "　　　　　はレ…　　なな　」";
                     }
                     if (var_2849 == 7) {
-                        var_296 = "ﾘｿﾞｯﾄ「最後に顔を";
-                        var_297 = "　　　　　見せ　てくれ　　顔を…」";
+                        comments_row1a = "ﾘｿﾞｯﾄ「最後に顔を";
+                        comments_row2a = "　　　　　見せ　てくれ　　顔を…」";
                     }
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
@@ -41486,8 +41486,8 @@ function func596() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     if (var_2849 == 0) {
@@ -41606,8 +41606,8 @@ function func597() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "道連れにされている！";
@@ -41768,8 +41768,8 @@ function func598() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ﾌﾞﾁｬﾗﾃｨの攻撃！";
@@ -41867,8 +41867,8 @@ function func599() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "「ズームパンチ！」";

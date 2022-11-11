@@ -546,9 +546,9 @@ function func209(this: any) {
             }
         }
         if (var_911 >= 1 && var_911 <= 6) {
-            var_447 = 48;
+            var_447 = 48; // キー0
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                conf_keyon = getkey(var_447);
+                conf_keyon = getkey(var_447); // キー0 入力確認
                 if (conf_keyon == 1) {
                     var_912 = var_447;
                     yield func213();
@@ -559,9 +559,9 @@ function func209(this: any) {
                 }
                 var_447++;
             }
-            var_447 = 65;
+            var_447 = 65; // キーA
             for (let cnt2 = 0; cnt2 < 26; ++cnt2) {
-                conf_keyon = getkey(var_447);
+                conf_keyon = getkey(var_447); // キーA 入力確認
                 if (conf_keyon == 1) {
                     var_912 = var_447;
                     yield func213();
@@ -572,7 +572,7 @@ function func209(this: any) {
                 }
                 var_447++;
             }
-            conf_keyon = getkey(16);
+            conf_keyon = getkey(16); // キーShift 入力確認
             if (conf_keyon == 1) {
                 var_912 = 16;
                 yield func213();
@@ -582,7 +582,7 @@ function func209(this: any) {
                 yield func209();
                 return;
             }
-            conf_keyon = getkey(13);
+            conf_keyon = getkey(13); // キーEnter 入力確認
             if (conf_keyon == 1) {
                 var_912 = 13;
                 yield func213();
@@ -592,7 +592,7 @@ function func209(this: any) {
                 yield func209();
                 return;
             }
-            conf_keyon = getkey(17);
+            conf_keyon = getkey(17); // キーCtrl 入力確認
             if (conf_keyon == 1) {
                 var_912 = 17;
                 yield func213();
@@ -2737,8 +2737,8 @@ function func229(this: any) {
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
-        var_296 = "";
-        var_297 = "";
+        comments_row1a = "";
+        comments_row2a = "";
         var_298 = "";
         var_299 = 0;
         var_198 = 0;
@@ -3456,8 +3456,8 @@ function func234(this: any) {
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
-        var_296 = "";
-        var_297 = "";
+        comments_row1a = "";
+        comments_row2a = "";
         var_298 = "";
         var_299 = 0;
         comments_row1 = "セーブして終了します。";
@@ -3468,8 +3468,8 @@ function func234(this: any) {
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
-        var_296 = "";
-        var_297 = "";
+        comments_row1a = "";
+        comments_row2a = "";
         var_298 = "";
         var_198 = 0;
         var_300 = 0;
@@ -3743,8 +3743,8 @@ function func236(this: any) {
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
-        var_296 = "";
-        var_297 = "";
+        comments_row1a = "";
+        comments_row2a = "";
         var_298 = "";
         var_299 = 0;
         comments_row1 = "今回の冒険を諦めますか？";
@@ -3760,10 +3760,10 @@ function func236(this: any) {
 function func237(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(237);
-        comments_row1 = var_296;
-        comments_row2 = var_297;
-        var_296 = "確認のため「K」キーを押してください";
-        var_297 = "";
+        comments_row1 = comments_row1a;
+        comments_row2 = comments_row2a;
+        comments_row1a = "確認のため「K」キーを押してください";
+        comments_row2a = "";
         var_198 = 1;
         var_300 = 0;
         yield func050();

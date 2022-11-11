@@ -735,12 +735,12 @@ function func209() {
                     return [2 /*return*/];
                 case 13:
                     if (!(var_911 >= 1 && var_911 <= 6)) return [3 /*break*/, 47];
-                    var_447 = 48;
+                    var_447 = 48; // キー0
                     cnt2_1 = 0;
                     _a.label = 14;
                 case 14:
                     if (!(cnt2_1 < 10)) return [3 /*break*/, 21];
-                    conf_keyon = getkey(var_447);
+                    conf_keyon = getkey(var_447); // キー0 入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 19];
                     var_912 = var_447;
                     return [4 /*yield*/, func213()];
@@ -763,12 +763,12 @@ function func209() {
                     ++cnt2_1;
                     return [3 /*break*/, 14];
                 case 21:
-                    var_447 = 65;
+                    var_447 = 65; // キーA
                     cnt2_2 = 0;
                     _a.label = 22;
                 case 22:
                     if (!(cnt2_2 < 26)) return [3 /*break*/, 29];
-                    conf_keyon = getkey(var_447);
+                    conf_keyon = getkey(var_447); // キーA 入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 27];
                     var_912 = var_447;
                     return [4 /*yield*/, func213()];
@@ -791,7 +791,7 @@ function func209() {
                     ++cnt2_2;
                     return [3 /*break*/, 22];
                 case 29:
-                    conf_keyon = getkey(16);
+                    conf_keyon = getkey(16); // キーShift 入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 35];
                     var_912 = 16;
                     return [4 /*yield*/, func213()];
@@ -811,7 +811,7 @@ function func209() {
                     _a.sent();
                     return [2 /*return*/];
                 case 35:
-                    conf_keyon = getkey(13);
+                    conf_keyon = getkey(13); // キーEnter 入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 41];
                     var_912 = 13;
                     return [4 /*yield*/, func213()];
@@ -831,7 +831,7 @@ function func209() {
                     _a.sent();
                     return [2 /*return*/];
                 case 41:
-                    conf_keyon = getkey(17);
+                    conf_keyon = getkey(17); // キーCtrl 入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 47];
                     var_912 = 17;
                     return [4 /*yield*/, func213()];
@@ -3425,8 +3425,8 @@ function func229() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     var_198 = 0;
@@ -4160,8 +4160,8 @@ function func234() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "セーブして終了します。";
@@ -4174,8 +4174,8 @@ function func234() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_198 = 0;
                     var_300 = 0;
@@ -4454,8 +4454,8 @@ function func236() {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
-                    var_296 = "";
-                    var_297 = "";
+                    comments_row1a = "";
+                    comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "今回の冒険を諦めますか？";
@@ -4480,10 +4480,10 @@ function func237() {
             switch (_a.label) {
                 case 0:
                     dbgprt(237);
-                    comments_row1 = var_296;
-                    comments_row2 = var_297;
-                    var_296 = "確認のため「K」キーを押してください";
-                    var_297 = "";
+                    comments_row1 = comments_row1a;
+                    comments_row2 = comments_row2a;
+                    comments_row1a = "確認のため「K」キーを押してください";
+                    comments_row2a = "";
                     var_198 = 1;
                     var_300 = 0;
                     return [4 /*yield*/, func050()];
@@ -4518,7 +4518,7 @@ function func238() {
                     return [2 /*return*/];
                 case 3:
                     if (!(var_1061 == 2)) return [3 /*break*/, 5];
-                    //conf_keyon = getkey(192); 192は各キーボードのメーカーが、キーボードごとに割り当てる。
+                    //conf_keyon = getkey(192); 192は各キーボードのメーカーが、キーボードごとに割り当てる。@キー
                     conf_keyon = getkey(75); // Kキー入力確認
                     if (!(conf_keyon == 1)) return [3 /*break*/, 5];
                     var_198 = 0;

@@ -3822,8 +3822,8 @@ function func337() {
                             comments_row1 = "";
                             comments_row2 = "";
                             var_295 = "";
-                            var_296 = "";
-                            var_297 = "";
+                            comments_row1a = "";
+                            comments_row2a = "";
                             var_298 = "";
                         }
                     }
