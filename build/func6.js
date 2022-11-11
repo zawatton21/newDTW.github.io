@@ -131,23 +131,23 @@ function func601() {
             switch (_a.label) {
                 case 0:
                     dbgprt(601);
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     return [4 /*yield*/, func626()];
                 case 1:
                     _a.sent();
                     if (var_83[var_673].Var39 >= 2) {
-                        var_967 = Math.floor(var_967 * (var_83[var_673].Var39 * 2 + 10) / 10);
+                        enemy_power = Math.floor(enemy_power * (var_83[var_673].Var39 * 2 + 10) / 10);
                     }
                     if (var_83[var_673].Var25 >= 1 && var_83[var_673].Var25 <= 50) {
-                        var_967 = var_967 + var_83[var_673].Var25;
+                        enemy_power = enemy_power + var_83[var_673].Var25;
                     }
                     if (var_83[var_673].Var25 >= 51 && var_83[var_673].Var25 < 99) {
-                        var_967 = var_967 - (var_83[var_673].Var25 - 50);
-                        if (var_967 <= 1) {
-                            var_967 = 1;
+                        enemy_power = enemy_power - (var_83[var_673].Var25 - 50);
+                        if (enemy_power <= 1) {
+                            enemy_power = 1;
                         }
                     }
-                    var_949 = Math.floor(var_967 * (var_967 + var_967 - 8) / 16) + var_967;
+                    var_949 = Math.floor(enemy_power * (enemy_power + enemy_power - 8) / 16) + enemy_power;
                     for (cnt1_3 = 0; cnt1_3 < var_581; ++cnt1_3) {
                         var_949 = Math.floor(var_949 * 15 / 16);
                     }
@@ -432,7 +432,7 @@ function func602() {
                     var_743 = 0;
                     _a.label = 38;
                 case 38:
-                    var_437 = var_83[var_2749].Var0;
+                    enemy_list = var_83[var_2749].Var0;
                     return [4 /*yield*/, func626()];
                 case 39:
                     _a.sent();
@@ -442,7 +442,7 @@ function func602() {
                     }
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
-                    comments_row1a = "" + var_891 + "の";
+                    comments_row1a = "" + enemy_name + "の";
                     comments_row2a = "傷がふさがった。";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -634,15 +634,15 @@ function func603() {
                     if (var_2858 == 164) {
                         var_83[var_2749].Var39 = var_83[var_2749].Var39 + 1;
                     }
-                    var_437 = var_83[var_2749].Var0;
+                    enemy_list = var_83[var_2749].Var0;
                     return [4 /*yield*/, func626()];
                 case 14:
                     _a.sent();
-                    var_83[var_2749].Var3 = Math.floor(var_438 * (var_83[var_2749].Var39 + 10) / 10);
+                    var_83[var_2749].Var3 = Math.floor(enemy_hp * (var_83[var_2749].Var39 + 10) / 10);
                     if (var_83[var_2749].Var3 >= 999) {
                         var_83[var_2749].Var3 = 999;
                     }
-                    var_2861 = var_891;
+                    var_2861 = enemy_name;
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -1162,7 +1162,7 @@ function func605() {
                             var_2868 = 1;
                         }
                     }
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         var_2867 = 1;
                     }
                     if (var_2867 == 0) {
@@ -3817,7 +3817,7 @@ function func620() {
                     if (var_83[var_673].Var17 != 0 || var_83[var_673].Var23 != 0) {
                         return [2 /*return*/];
                     }
-                    if (!(var_437 == 4)) return [3 /*break*/, 12];
+                    if (!(enemy_list == 4)) return [3 /*break*/, 12];
                     var_2830 = rnd(5);
                     if (!(var_2830 == 0 && var_219 == 0 && var_128 == 0)) return [3 /*break*/, 11];
                     DSPLAY(audio_id = 131);
@@ -3917,7 +3917,7 @@ function func620() {
                     _a.label = 11;
                 case 11: return [2 /*return*/];
                 case 12:
-                    if (!(var_437 == 158 || var_437 == 45)) return [3 /*break*/, 48];
+                    if (!(enemy_list == 158 || enemy_list == 45)) return [3 /*break*/, 48];
                     var_412 = var_673;
                     if (var_224 == 0) {
                         return [2 /*return*/];
@@ -4160,7 +4160,7 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 48:
-                    if (!(var_437 == 170)) return [3 /*break*/, 66];
+                    if (!(enemy_list == 170)) return [3 /*break*/, 66];
                     if (!(var_133 == 0 && var_127 == 0)) return [3 /*break*/, 65];
                     var_742 = 1;
                     var_83[var_673].Var7 = 1;
@@ -4250,13 +4250,13 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 66:
-                    if (!(var_437 == 12 || var_437 == 145 || var_437 == 150)) return [3 /*break*/, 88];
+                    if (!(enemy_list == 12 || enemy_list == 145 || enemy_list == 150)) return [3 /*break*/, 88];
                     var_2830 = rnd(3);
                     if (!(var_2830 == 0 && var_133 == 0)) return [3 /*break*/, 87];
                     var_742 = 1;
                     var_83[var_673].Var7 = 1;
                     DSPLAY(audio_id = 122);
-                    if (var_437 == 145 || var_437 == 150) {
+                    if (enemy_list == 145 || enemy_list == 150) {
                         var_743 = 1;
                     }
                     comments_row1 = "";
@@ -4365,7 +4365,7 @@ function func620() {
                     _a.label = 87;
                 case 87: return [2 /*return*/];
                 case 88:
-                    if (!(var_437 == 77)) return [3 /*break*/, 105];
+                    if (!(enemy_list == 77)) return [3 /*break*/, 105];
                     var_2830 = rnd(5);
                     if (!(var_2830 == 0 && var_126 == 0)) return [3 /*break*/, 104];
                     var_742 = 1;
@@ -4445,7 +4445,7 @@ function func620() {
                     _a.label = 104;
                 case 104: return [2 /*return*/];
                 case 105:
-                    if (!(var_437 == 132)) return [3 /*break*/, 130];
+                    if (!(enemy_list == 132)) return [3 /*break*/, 130];
                     if (!(var_146 >= 1 && var_147 == var_66 && var_148 == var_67)) return [3 /*break*/, 129];
                     var_742 = 1;
                     var_83[var_673].Var7 = 1;
@@ -4577,7 +4577,7 @@ function func620() {
                     _a.label = 129;
                 case 129: return [2 /*return*/];
                 case 130:
-                    if (!(var_437 == 130)) return [3 /*break*/, 143];
+                    if (!(enemy_list == 130)) return [3 /*break*/, 143];
                     if (var_415 == 0 || var_169 <= 0 || var_169 == 999999) {
                         var_2197 = 1;
                         return [2 /*return*/];
@@ -4661,7 +4661,7 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 143:
-                    if (!(var_437 == 999)) return [3 /*break*/, 167];
+                    if (!(enemy_list == 999)) return [3 /*break*/, 167];
                     var_2830 = rnd(4);
                     if (!(var_2830 == 0 && var_565 >= 1)) return [3 /*break*/, 166];
                     if (!(var_128 >= 1)) return [3 /*break*/, 145];
@@ -4795,7 +4795,7 @@ function func620() {
                     _a.label = 166;
                 case 166: return [2 /*return*/];
                 case 167:
-                    if (!(var_437 == 9999)) return [3 /*break*/, 179];
+                    if (!(enemy_list == 9999)) return [3 /*break*/, 179];
                     var_2830 = rnd(4);
                     if (!(var_2830 == 0 && var_134 == 0)) return [3 /*break*/, 178];
                     var_742 = 1;
@@ -4858,11 +4858,11 @@ function func620() {
                     _a.label = 178;
                 case 178: return [2 /*return*/];
                 case 179:
-                    if (!(var_437 == 15 || var_437 == 64)) return [3 /*break*/, 202];
+                    if (!(enemy_list == 15 || enemy_list == 64)) return [3 /*break*/, 202];
                     var_2830 = rnd(4);
                     if (!(var_2830 == 0 && var_128 == 0 && var_219 == 0)) return [3 /*break*/, 201];
                     var_1359 = 0;
-                    if (var_437 == 15) {
+                    if (enemy_list == 15) {
                         var_1359 = 1;
                     }
                     var_314 = var_673;
@@ -4986,7 +4986,7 @@ function func620() {
                     _a.label = 201;
                 case 201: return [2 /*return*/];
                 case 202:
-                    if (!(var_437 == 17)) return [3 /*break*/, 207];
+                    if (!(enemy_list == 17)) return [3 /*break*/, 207];
                     if (!(var_83[var_673].Var3 == 2)) return [3 /*break*/, 205];
                     return [4 /*yield*/, func094()];
                 case 203:
@@ -5018,7 +5018,7 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 207:
-                    if (!(var_437 == 18)) return [3 /*break*/, 241];
+                    if (!(enemy_list == 18)) return [3 /*break*/, 241];
                     var_2830 = rnd(8);
                     if (!(var_2830 == 0)) return [3 /*break*/, 240];
                     return [4 /*yield*/, func094()];
@@ -5069,7 +5069,7 @@ function func620() {
                 case 217: return [4 /*yield*/, func619()];
                 case 218:
                     _a.sent();
-                    DSPLAY(audio_id = 103);
+                    DSPLAY(audio_id = 103); // 殴った時の効果音
                     var_747 = 1;
                     var_209 = 20;
                     var_389 = 2;
@@ -5185,7 +5185,7 @@ function func620() {
                     _a.label = 240;
                 case 240: return [2 /*return*/];
                 case 241:
-                    if (!(var_437 == 20)) return [3 /*break*/, 257];
+                    if (!(enemy_list == 20)) return [3 /*break*/, 257];
                     var_2830 = rnd(3);
                     if (!(var_2830 == 0)) return [3 /*break*/, 256];
                     DSPLAY(audio_id = 161);
@@ -5257,7 +5257,7 @@ function func620() {
                     _a.label = 256;
                 case 256: return [2 /*return*/];
                 case 257:
-                    if (!(var_437 == 26)) return [3 /*break*/, 312];
+                    if (!(enemy_list == 26)) return [3 /*break*/, 312];
                     var_412 = var_673;
                     if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0 || var_83[var_412].Var26 != 0) {
                         var_2197 = 1;
@@ -5609,7 +5609,7 @@ function func620() {
                     _a.label = 311;
                 case 311: return [2 /*return*/];
                 case 312:
-                    if (!(var_437 == 144)) return [3 /*break*/, 329];
+                    if (!(enemy_list == 144)) return [3 /*break*/, 329];
                     var_412 = var_673;
                     if (var_415 < 10) {
                         return [2 /*return*/];
@@ -5742,7 +5742,7 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 329:
-                    if (!(var_437 == 87)) return [3 /*break*/, 365];
+                    if (!(enemy_list == 87)) return [3 /*break*/, 365];
                     var_412 = var_673;
                     if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0) {
                         return [2 /*return*/];
@@ -5963,7 +5963,7 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 365:
-                    if (!(var_437 == 157)) return [3 /*break*/, 399];
+                    if (!(enemy_list == 157)) return [3 /*break*/, 399];
                     var_412 = var_673;
                     if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0) {
                         return [2 /*return*/];
@@ -6157,7 +6157,7 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 399:
-                    if (!(var_437 == 131)) return [3 /*break*/, 436];
+                    if (!(enemy_list == 131)) return [3 /*break*/, 436];
                     var_412 = var_673;
                     if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0) {
                         return [2 /*return*/];
@@ -6382,12 +6382,12 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 436:
-                    if (!(var_437 == 27)) return [3 /*break*/, 454];
+                    if (!(enemy_list == 27)) return [3 /*break*/, 454];
                     if (var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
                     }
                     var_2893 = rnd(4);
-                    if (var_62 == 99 && var_83[var_673].Var16 == 1) {
+                    if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
                         var_2893 = 2;
                     }
                     if (!(var_2893 == 1 && var_127 == 0)) return [3 /*break*/, 447];
@@ -6497,12 +6497,12 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 454:
-                    if (!(var_437 == 94)) return [3 /*break*/, 461];
+                    if (!(enemy_list == 94)) return [3 /*break*/, 461];
                     if (var_114 >= 1 || var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
                     }
                     var_2893 = rnd(3);
-                    if (var_62 == 99 && var_83[var_673].Var16 == 1) {
+                    if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
                         var_2893 = 1;
                     }
                     if (var_2893 == 0) {
@@ -6551,13 +6551,13 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 461:
-                    if (!(var_437 == 160)) return [3 /*break*/, 497];
+                    if (!(enemy_list == 160)) return [3 /*break*/, 497];
                     if (var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
                     }
                     if (!(var_114 == 0)) return [3 /*break*/, 468];
                     var_2893 = rnd(9);
-                    if (var_62 == 99 && var_83[var_673].Var16 == 1) {
+                    if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
                         var_2893 = 6;
                     }
                     if (var_2893 <= 5) {
@@ -6807,12 +6807,12 @@ function func620() {
                     return [2 /*return*/];
                 case 496: return [2 /*return*/];
                 case 497:
-                    if (!(var_437 == 69)) return [3 /*break*/, 532];
+                    if (!(enemy_list == 69)) return [3 /*break*/, 532];
                     if (var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
                     }
                     var_2893 = rnd(3);
-                    if (var_62 == 99 && var_83[var_673].Var16 == 1) {
+                    if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
                         var_2893 = 1;
                     }
                     if (var_2893 == 0) {
@@ -6994,7 +6994,7 @@ function func620() {
                     return [2 /*return*/];
                 case 531: return [2 /*return*/];
                 case 532:
-                    if (!(var_437 == 1580)) return [3 /*break*/, 543];
+                    if (!(enemy_list == 1580)) return [3 /*break*/, 543];
                     var_2893 = rnd(3);
                     if (var_2893 == 0 || var_114 >= 1 || var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
@@ -7060,12 +7060,12 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 543:
-                    if (!(var_437 == 119)) return [3 /*break*/, 554];
+                    if (!(enemy_list == 119)) return [3 /*break*/, 554];
                     if (var_114 >= 1 || var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
                     }
                     var_2893 = rnd(3);
-                    if (var_62 == 99 && var_83[var_673].Var16 == 1) {
+                    if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
                         var_2893 = 1;
                     }
                     if (var_2893 == 0) {
@@ -7135,12 +7135,12 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 554:
-                    if (!(var_437 == 78)) return [3 /*break*/, 645];
+                    if (!(enemy_list == 78)) return [3 /*break*/, 645];
                     if (var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
                     }
                     var_2893 = rnd(4);
-                    if (var_62 == 99 && var_83[var_673].Var16 == 1) {
+                    if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
                         var_2893 = 0;
                     }
                     if (!(var_2893 == 0 && var_114 == 0)) return [3 /*break*/, 605];
@@ -7636,7 +7636,7 @@ function func620() {
                     return [2 /*return*/];
                 case 644: return [2 /*return*/];
                 case 645:
-                    if (!(var_437 == 137)) return [3 /*break*/, 679];
+                    if (!(enemy_list == 137)) return [3 /*break*/, 679];
                     var_2830 = rnd(6);
                     if (!(var_2830 == 1)) return [3 /*break*/, 655];
                     if (var_224 == 0) {
@@ -7830,7 +7830,7 @@ function func620() {
                     _a.label = 678;
                 case 678: return [2 /*return*/];
                 case 679:
-                    if (!(var_437 == 28)) return [3 /*break*/, 711];
+                    if (!(enemy_list == 28)) return [3 /*break*/, 711];
                     var_2830 = rnd(3);
                     if (!(var_2830 == 0)) return [3 /*break*/, 710];
                     return [4 /*yield*/, func094()];
@@ -7980,7 +7980,7 @@ function func620() {
                     _a.label = 710;
                 case 710: return [2 /*return*/];
                 case 711:
-                    if (!(var_437 == 65)) return [3 /*break*/, 728];
+                    if (!(enemy_list == 65)) return [3 /*break*/, 728];
                     var_2830 = rnd(2);
                     if (!(var_2830 == 0)) return [3 /*break*/, 727];
                     return [4 /*yield*/, func094()];
@@ -8099,7 +8099,7 @@ function func620() {
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 728:
-                    if (!(var_437 == 9999)) return [3 /*break*/, 810];
+                    if (!(enemy_list == 9999)) return [3 /*break*/, 810];
                     if (var_128 != 0 || var_219 != 0) {
                         return [2 /*return*/];
                     }
@@ -8554,7 +8554,7 @@ function func620() {
                     return [2 /*return*/];
                 case 809: return [2 /*return*/];
                 case 810:
-                    if (!(var_437 == 38)) return [3 /*break*/, 836];
+                    if (!(enemy_list == 38)) return [3 /*break*/, 836];
                     var_2830 = rnd(4);
                     if (!(var_2830 == 0)) return [3 /*break*/, 835];
                     DSPLAY(audio_id = 156);
@@ -8703,7 +8703,7 @@ function func620() {
                     _a.label = 835;
                 case 835: return [2 /*return*/];
                 case 836:
-                    if (!(var_437 == 39)) return [3 /*break*/, 850];
+                    if (!(enemy_list == 39)) return [3 /*break*/, 850];
                     var_2830 = rnd(4);
                     if (!(var_2830 == 0 && var_350 >= 11)) return [3 /*break*/, 849];
                     var_83[var_673].Var21 = 1;
@@ -8804,7 +8804,7 @@ function func620() {
                     _a.label = 849;
                 case 849: return [2 /*return*/];
                 case 850:
-                    if (!(var_437 == 32)) return [3 /*break*/, 880];
+                    if (!(enemy_list == 32)) return [3 /*break*/, 880];
                     var_2830 = rnd(6);
                     if (!(var_2830 == 0)) return [3 /*break*/, 860];
                     if (var_224 == 0) {
@@ -8984,7 +8984,7 @@ function func620() {
                     _a.label = 879;
                 case 879: return [2 /*return*/];
                 case 880:
-                    if (!(var_437 == 59)) return [3 /*break*/, 912];
+                    if (!(enemy_list == 59)) return [3 /*break*/, 912];
                     var_412 = var_673;
                     if (var_83[var_412].Var26 == 1) {
                         return [2 /*return*/];
@@ -9315,7 +9315,7 @@ function func620() {
                     _a.label = 911;
                 case 911: return [2 /*return*/];
                 case 912:
-                    if (!(var_437 == 63)) return [3 /*break*/, 935];
+                    if (!(enemy_list == 63)) return [3 /*break*/, 935];
                     var_2830 = rnd(5);
                     if (var_566 <= 0) {
                         return [2 /*return*/];
@@ -9469,7 +9469,7 @@ function func620() {
                     _a.label = 934;
                 case 934: return [2 /*return*/];
                 case 935:
-                    if (!(var_437 == 127)) return [3 /*break*/, 949];
+                    if (!(enemy_list == 127)) return [3 /*break*/, 949];
                     var_2830 = rnd(3);
                     if (!(var_2830 == 0)) return [3 /*break*/, 948];
                     var_742 = 1;
@@ -9551,7 +9551,7 @@ function func620() {
                     _a.label = 948;
                 case 948: return [2 /*return*/];
                 case 949:
-                    if (!(var_437 == 80)) return [3 /*break*/, 966];
+                    if (!(enemy_list == 80)) return [3 /*break*/, 966];
                     var_2830 = rnd(4);
                     if (!(var_2830 == 0 && var_126 == 0)) return [3 /*break*/, 965];
                     var_742 = 1;
@@ -10299,11 +10299,11 @@ function func626() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(626);
-            var_891 = "";
-            var_967 = 0;
-            var_968 = 0;
+            enemy_name = "";
+            enemy_power = 0;
+            enemy_defence = 0;
             var_954 = 0;
-            var_438 = 0;
+            enemy_hp = 0;
             var_1637 = 0;
             var_1654 = 100;
             var_972 = 0;
@@ -10312,12 +10312,12 @@ function func626() {
             var_1657 = "";
             var_1658 = "";
             var_1619 = 0;
-            if (var_437 == 79) {
-                var_891 = "ｴｺｰｽﾞの卵";
-                var_967 = 0;
-                var_968 = 0;
+            if (enemy_list == 79) {
+                enemy_name = "ｴｺｰｽﾞの卵";
+                enemy_power = 0;
+                enemy_defence = 0;
                 var_954 = 2;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 8;
@@ -10327,12 +10327,12 @@ function func626() {
                 var_1657 = "・倒すと成長することがあるぞ。";
                 var_1658 = "・模様の違う卵には要注意だ。";
             }
-            if (var_437 == 1) {
-                var_891 = "ﾔｸ中のｺﾞﾛﾂｷ";
-                var_967 = 3;
-                var_968 = 1;
+            if (enemy_list == 1) {
+                enemy_name = "ﾔｸ中のｺﾞﾛﾂｷ";
+                enemy_power = 3;
+                enemy_defence = 1;
                 var_954 = 3;
-                var_438 = 4;
+                enemy_hp = 4;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 1;
@@ -10342,12 +10342,12 @@ function func626() {
                 var_1657 = "・ｺｰﾄを持っていると向かってくるぞ。";
                 var_1658 = "・ｺｰﾄが落ちているとそこへ向かうぞ。";
             }
-            if (var_437 == 5) {
-                var_891 = "小汚い浮浪者";
-                var_967 = 2;
-                var_968 = 2;
+            if (enemy_list == 5) {
+                enemy_name = "小汚い浮浪者";
+                enemy_power = 2;
+                enemy_defence = 2;
                 var_954 = 3;
-                var_438 = 5;
+                enemy_hp = 5;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10357,12 +10357,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 88) {
-                var_891 = "ﾄﾞﾉｳﾞｧﾝ";
-                var_967 = 3;
-                var_968 = 2;
+            if (enemy_list == 88) {
+                enemy_name = "ﾄﾞﾉｳﾞｧﾝ";
+                enemy_power = 3;
+                enemy_defence = 2;
                 var_954 = 4;
-                var_438 = 6;
+                enemy_hp = 6;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10372,12 +10372,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 147) {
-                var_891 = "ｼﾞｮｾﾌ";
-                var_967 = 1;
-                var_968 = 2;
+            if (enemy_list == 147) {
+                enemy_name = "ｼﾞｮｾﾌ";
+                enemy_power = 1;
+                enemy_defence = 2;
                 var_954 = 3;
-                var_438 = 6;
+                enemy_hp = 6;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 7;
@@ -10387,12 +10387,12 @@ function func626() {
                 var_1657 = "・多分ボケちゃっているぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 2) {
-                var_891 = "ヌケサク";
-                var_967 = 4;
-                var_968 = 3;
+            if (enemy_list == 2) {
+                enemy_name = "ヌケサク";
+                enemy_power = 4;
+                enemy_defence = 3;
                 var_954 = 5;
-                var_438 = 7;
+                enemy_hp = 7;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10402,12 +10402,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 93) {
-                var_891 = "ｴﾝﾎﾟﾘｵ";
-                var_967 = 5;
-                var_968 = 4;
+            if (enemy_list == 93) {
+                enemy_name = "ｴﾝﾎﾟﾘｵ";
+                enemy_power = 5;
+                enemy_defence = 4;
                 var_954 = 7;
-                var_438 = 7;
+                enemy_hp = 7;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10417,12 +10417,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 3) {
-                var_891 = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰ";
-                var_967 = 6;
-                var_968 = 5;
+            if (enemy_list == 3) {
+                enemy_name = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰ";
+                enemy_power = 6;
+                enemy_defence = 5;
                 var_954 = 8;
-                var_438 = 9;
+                enemy_hp = 9;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -10432,12 +10432,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 94) {
-                var_891 = "ブルりん";
-                var_967 = 8;
-                var_968 = 6;
+            if (enemy_list == 94) {
+                enemy_name = "ブルりん";
+                enemy_power = 8;
+                enemy_defence = 6;
                 var_954 = 15;
-                var_438 = 13;
+                enemy_hp = 13;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10447,12 +10447,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 77) {
-                var_891 = "ｴｺｰｽﾞACT1";
-                var_967 = 7;
-                var_968 = 5;
+            if (enemy_list == 77) {
+                enemy_name = "ｴｺｰｽﾞACT1";
+                enemy_power = 7;
+                enemy_defence = 5;
                 var_954 = 13;
-                var_438 = 12;
+                enemy_hp = 12;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 8;
@@ -10462,12 +10462,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 51) {
-                var_891 = "ﾜﾝﾁｪﾝ";
-                var_967 = 8;
-                var_968 = 6;
-                var_954 = 20;
-                var_438 = 14;
+            if (enemy_list == 51) {
+                enemy_name = "ﾜﾝﾁｪﾝ";
+                enemy_power = 8; // 攻撃力
+                enemy_defence = 6; // 防御力
+                var_954 = 20; // 経験値
+                enemy_hp = 14; // 体力
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10477,12 +10477,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 7) {
-                var_891 = "運命の車輪";
-                var_967 = 8;
-                var_968 = 7;
+            if (enemy_list == 7) {
+                enemy_name = "運命の車輪";
+                enemy_power = 8;
+                enemy_defence = 7;
                 var_954 = 36;
-                var_438 = 18;
+                enemy_hp = 18;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -10492,12 +10492,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 9) {
-                var_891 = "ﾗﾊﾞｰｿｳﾙ";
-                var_967 = 8;
-                var_968 = 8;
+            if (enemy_list == 9) {
+                enemy_name = "ﾗﾊﾞｰｿｳﾙ";
+                enemy_power = 8;
+                enemy_defence = 8;
                 var_954 = 40;
-                var_438 = 17;
+                enemy_hp = 17;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10507,12 +10507,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 39) {
-                var_891 = "ﾊｲｳｪｲｽﾀｰ";
-                var_967 = 7;
-                var_968 = 5;
+            if (enemy_list == 39) {
+                enemy_name = "ﾊｲｳｪｲｽﾀｰ";
+                enemy_power = 7;
+                enemy_defence = 5;
                 var_954 = 48;
-                var_438 = 14;
+                enemy_hp = 14;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 8;
@@ -10522,12 +10522,12 @@ function func626() {
                 var_1657 = "・特別なアイテムを持っていることがあるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 26) {
-                var_891 = "ﾊｰｳﾞｪｽﾄ";
-                var_967 = 12;
-                var_968 = 8;
+            if (enemy_list == 26) {
+                enemy_name = "ﾊｰｳﾞｪｽﾄ";
+                enemy_power = 12;
+                enemy_defence = 8;
                 var_954 = 30;
-                var_438 = 12;
+                enemy_hp = 12;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 8;
@@ -10537,12 +10537,12 @@ function func626() {
                 var_1657 = "・盗んだ後は倍の速さで移動するぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 76) {
-                var_891 = "ｴｺｰｽﾞACT2";
-                var_967 = 9;
-                var_968 = 6;
+            if (enemy_list == 76) {
+                enemy_name = "ｴｺｰｽﾞACT2";
+                enemy_power = 9;
+                enemy_defence = 6;
                 var_954 = 46;
-                var_438 = 19;
+                enemy_hp = 19;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 8;
@@ -10552,12 +10552,12 @@ function func626() {
                 var_1657 = "・倒すと成長することがあるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 6) {
-                var_891 = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙの人形";
-                var_967 = 9;
-                var_968 = 7;
+            if (enemy_list == 6) {
+                enemy_name = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙの人形";
+                enemy_power = 9;
+                enemy_defence = 7;
                 var_954 = 45;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 0;
@@ -10567,12 +10567,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 165) {
-                var_891 = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙ";
-                var_967 = 9;
-                var_968 = 40;
+            if (enemy_list == 165) {
+                enemy_name = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙ";
+                enemy_power = 9;
+                enemy_defence = 40;
                 var_954 = 5;
-                var_438 = 5;
+                enemy_hp = 5;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 3;
@@ -10582,12 +10582,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 52) {
-                var_891 = "ｼﾞｬｯｸ･ｻﾞ･ﾘﾊﾟｰ";
-                var_967 = 12;
-                var_968 = 5;
+            if (enemy_list == 52) {
+                enemy_name = "ｼﾞｬｯｸ･ｻﾞ･ﾘﾊﾟｰ";
+                enemy_power = 12;
+                enemy_defence = 5;
                 var_954 = 60;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10597,12 +10597,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 73) {
-                var_891 = "ﾀﾞｲｱｰさん";
-                var_967 = 10;
-                var_968 = 6;
+            if (enemy_list == 73) {
+                enemy_name = "ﾀﾞｲｱｰさん";
+                enemy_power = 10;
+                enemy_defence = 6;
                 var_954 = 52;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10612,12 +10612,12 @@ function func626() {
                 var_1657 = "・凍った状態になると弱いぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 101) {
-                var_891 = "ﾍﾟｲｼﾞ";
-                var_967 = 10;
-                var_968 = 5;
+            if (enemy_list == 101) {
+                enemy_name = "ﾍﾟｲｼﾞ";
+                enemy_power = 10;
+                enemy_defence = 5;
                 var_954 = 50;
-                var_438 = 16;
+                enemy_hp = 16;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10627,12 +10627,12 @@ function func626() {
                 var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
                 var_1658 = "・倍の速さで移動するぞ。";
             }
-            if (var_437 == 102) {
-                var_891 = "ｼﾞｮｰﾝｽﾞ";
-                var_967 = 10;
-                var_968 = 5;
+            if (enemy_list == 102) {
+                enemy_name = "ｼﾞｮｰﾝｽﾞ";
+                enemy_power = 10;
+                enemy_defence = 5;
                 var_954 = 50;
-                var_438 = 16;
+                enemy_hp = 16;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10642,12 +10642,12 @@ function func626() {
                 var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
                 var_1658 = "・倍の速さで移動するぞ。";
             }
-            if (var_437 == 103) {
-                var_891 = "ﾌﾟﾗﾝﾄ";
-                var_967 = 10;
-                var_968 = 5;
+            if (enemy_list == 103) {
+                enemy_name = "ﾌﾟﾗﾝﾄ";
+                enemy_power = 10;
+                enemy_defence = 5;
                 var_954 = 50;
-                var_438 = 16;
+                enemy_hp = 16;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10657,12 +10657,12 @@ function func626() {
                 var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
                 var_1658 = "・倍の速さで移動するぞ。";
             }
-            if (var_437 == 104) {
-                var_891 = "ﾎﾞｰﾝﾅﾑ";
-                var_967 = 10;
-                var_968 = 5;
+            if (enemy_list == 104) {
+                enemy_name = "ﾎﾞｰﾝﾅﾑ";
+                enemy_power = 10;
+                enemy_defence = 5;
                 var_954 = 50;
-                var_438 = 16;
+                enemy_hp = 16;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10672,12 +10672,12 @@ function func626() {
                 var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
                 var_1658 = "・倍の速さで移動するぞ。";
             }
-            if (var_437 == 141) {
-                var_891 = "F・F";
-                var_967 = 11;
-                var_968 = 6;
+            if (enemy_list == 141) {
+                enemy_name = "F・F";
+                enemy_power = 11;
+                enemy_defence = 6;
                 var_954 = 72;
-                var_438 = 18;
+                enemy_hp = 18;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10687,12 +10687,12 @@ function func626() {
                 var_1657 = "・熱湯に弱いぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 134) {
-                var_891 = "ｼﾞｮﾘｰﾝ";
-                var_967 = 13;
-                var_968 = 7;
+            if (enemy_list == 134) {
+                enemy_name = "ｼﾞｮﾘｰﾝ";
+                enemy_power = 13;
+                enemy_defence = 7;
                 var_954 = 88;
-                var_438 = 25;
+                enemy_hp = 25;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10702,12 +10702,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 4) {
-                var_891 = "ﾃﾞｽ･13";
-                var_967 = 11;
-                var_968 = 6;
+            if (enemy_list == 4) {
+                enemy_name = "ﾃﾞｽ･13";
+                enemy_power = 11;
+                enemy_defence = 6;
                 var_954 = 95;
-                var_438 = 21;
+                enemy_hp = 21;
                 var_1637 = 0;
                 var_1654 = 8;
                 var_972 = 3;
@@ -10717,12 +10717,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 13) {
-                var_891 = "ﾗﾊﾞｰｽﾞ";
-                var_967 = 10;
-                var_968 = 8;
+            if (enemy_list == 13) {
+                enemy_name = "ﾗﾊﾞｰｽﾞ";
+                enemy_power = 10;
+                enemy_defence = 8;
                 var_954 = 75;
-                var_438 = 18;
+                enemy_hp = 18;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -10732,12 +10732,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 119) {
-                var_891 = "ｼﾞｮｾﾌ";
-                var_967 = 9;
-                var_968 = 3;
+            if (enemy_list == 119) {
+                enemy_name = "ｼﾞｮｾﾌ";
+                enemy_power = 9;
+                enemy_defence = 3;
                 var_954 = 90;
-                var_438 = 28;
+                enemy_hp = 28;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10747,12 +10747,12 @@ function func626() {
                 var_1657 = "・老化攻撃を受けると弱くなってしまうぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 99) {
-                var_891 = "ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰ";
-                var_967 = 12;
-                var_968 = 6;
+            if (enemy_list == 99) {
+                enemy_name = "ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰ";
+                enemy_power = 12;
+                enemy_defence = 6;
                 var_954 = 85;
-                var_438 = 18;
+                enemy_hp = 18;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -10762,12 +10762,12 @@ function func626() {
                 var_1657 = "・近くにいると弾丸を撃ってくるぞ。";
                 var_1658 = "・この弾丸は防御力の影響を受けないぞ。";
             }
-            if (var_437 == 138) {
-                var_891 = "ﾃﾞｨｵ･ﾌﾞﾗﾝﾄﾞｰ";
-                var_967 = 13;
-                var_968 = 8;
+            if (enemy_list == 138) {
+                enemy_name = "ﾃﾞｨｵ･ﾌﾞﾗﾝﾄﾞｰ";
+                enemy_power = 13;
+                enemy_defence = 8;
                 var_954 = 100;
-                var_438 = 25;
+                enemy_hp = 25;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10777,12 +10777,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 71) {
-                var_891 = "ﾄﾞｩｰﾋﾞｰ";
-                var_967 = 14;
-                var_968 = 9;
+            if (enemy_list == 71) {
+                enemy_name = "ﾄﾞｩｰﾋﾞｰ";
+                enemy_power = 14;
+                enemy_defence = 9;
                 var_954 = 130;
-                var_438 = 34;
+                enemy_hp = 34;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -10792,12 +10792,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 12) {
-                var_891 = "ｴｺｰｽﾞACT3";
-                var_967 = 11;
-                var_968 = 7;
+            if (enemy_list == 12) {
+                enemy_name = "ｴｺｰｽﾞACT3";
+                enemy_power = 11;
+                enemy_defence = 7;
                 var_954 = 100;
-                var_438 = 25;
+                enemy_hp = 25;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 8;
@@ -10807,12 +10807,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 20) {
-                var_891 = "ｴﾝﾔ婆";
-                var_967 = 11;
-                var_968 = 5;
+            if (enemy_list == 20) {
+                enemy_name = "ｴﾝﾔ婆";
+                enemy_power = 11;
+                enemy_defence = 5;
                 var_954 = 200;
-                var_438 = 80;
+                enemy_hp = 80;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 1;
@@ -10822,12 +10822,12 @@ function func626() {
                 var_1657 = "・ダンジョンの主だぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 24) {
-                var_891 = "穴ﾎﾞｺﾁｰｽﾞの死体";
-                var_967 = 8;
-                var_968 = 4;
+            if (enemy_list == 24) {
+                enemy_name = "穴ﾎﾞｺﾁｰｽﾞの死体";
+                enemy_power = 8;
+                enemy_defence = 4;
                 var_954 = 40;
-                var_438 = 13;
+                enemy_hp = 13;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 0;
@@ -10837,12 +10837,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 25) {
-                var_891 = "子連れﾆｷﾋﾞの死体";
-                var_967 = 8;
-                var_968 = 4;
+            if (enemy_list == 25) {
+                enemy_name = "子連れﾆｷﾋﾞの死体";
+                enemy_power = 8;
+                enemy_defence = 4;
                 var_954 = 40;
-                var_438 = 13;
+                enemy_hp = 13;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 0;
@@ -10852,12 +10852,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 8) {
-                var_891 = "無愛想親父の死体";
-                var_967 = 8;
-                var_968 = 4;
+            if (enemy_list == 8) {
+                enemy_name = "無愛想親父の死体";
+                enemy_power = 8;
+                enemy_defence = 4;
                 var_954 = 40;
-                var_438 = 13;
+                enemy_hp = 13;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 0;
@@ -10867,12 +10867,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 56) {
-                var_891 = "ｼｭﾄﾛﾊｲﾑ";
-                var_967 = 13;
-                var_968 = 10;
+            if (enemy_list == 56) {
+                enemy_name = "ｼｭﾄﾛﾊｲﾑ";
+                enemy_power = 13;
+                enemy_defence = 10;
                 var_954 = 110;
-                var_438 = 23;
+                enemy_hp = 23;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10882,12 +10882,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 28) {
-                var_891 = "ｼﾞｬｯｼﾞﾒﾝﾄ";
-                var_967 = 15;
-                var_968 = 12;
+            if (enemy_list == 28) {
+                enemy_name = "ｼﾞｬｯｼﾞﾒﾝﾄ";
+                enemy_power = 15;
+                enemy_defence = 12;
                 var_954 = 150;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -10897,12 +10897,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 22) {
-                var_891 = "ｱｳﾞﾄﾞｩﾙ人形";
-                var_967 = 11;
-                var_968 = 1;
+            if (enemy_list == 22) {
+                enemy_name = "ｱｳﾞﾄﾞｩﾙ人形";
+                enemy_power = 11;
+                enemy_defence = 1;
                 var_954 = 50;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 0;
@@ -10912,12 +10912,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 31) {
-                var_891 = "吉良の親父";
-                var_967 = 13;
-                var_968 = 9;
+            if (enemy_list == 31) {
+                enemy_name = "吉良の親父";
+                enemy_power = 13;
+                enemy_defence = 9;
                 var_954 = 95;
-                var_438 = 22;
+                enemy_hp = 22;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 7;
@@ -10927,12 +10927,12 @@ function func626() {
                 var_1657 = "　倒さないと出られないぞ。";
                 var_1658 = "・弓矢を落とすことがあるぞ。";
             }
-            if (var_437 == 140) {
-                var_891 = "ｼﾞｮﾅｻﾝ";
-                var_967 = 15;
-                var_968 = 11;
+            if (enemy_list == 140) {
+                enemy_name = "ｼﾞｮﾅｻﾝ";
+                enemy_power = 15;
+                enemy_defence = 11;
                 var_954 = 120;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10942,12 +10942,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 148) {
-                var_891 = "ｴﾙﾒｪｽ";
-                var_967 = 12;
-                var_968 = 10;
+            if (enemy_list == 148) {
+                enemy_name = "ｴﾙﾒｪｽ";
+                enemy_power = 12;
+                enemy_defence = 10;
                 var_954 = 110;
-                var_438 = 27;
+                enemy_hp = 27;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -10957,12 +10957,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 131) {
-                var_891 = "ｼﾞｮﾙﾉ";
-                var_967 = 14;
-                var_968 = 14;
+            if (enemy_list == 131) {
+                enemy_name = "ｼﾞｮﾙﾉ";
+                enemy_power = 14;
+                enemy_defence = 14;
                 var_954 = 135;
-                var_438 = 25;
+                enemy_hp = 25;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 9;
@@ -10972,12 +10972,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 115) {
-                var_891 = "ｱｸｱ･ﾈｯｸﾚｽ";
-                var_967 = 14;
-                var_968 = 13;
+            if (enemy_list == 115) {
+                enemy_name = "ｱｸｱ･ﾈｯｸﾚｽ";
+                enemy_power = 14;
+                enemy_defence = 13;
                 var_954 = 120;
-                var_438 = 26;
+                enemy_hp = 26;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 8;
@@ -10987,12 +10987,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 11) {
-                var_891 = "ﾜｲｱｰﾄﾞのﾍﾞｯｸ";
-                var_967 = 16;
-                var_968 = 15;
+            if (enemy_list == 11) {
+                enemy_name = "ﾜｲｱｰﾄﾞのﾍﾞｯｸ";
+                enemy_power = 16;
+                enemy_defence = 15;
                 var_954 = 150;
-                var_438 = 38;
+                enemy_hp = 38;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -11002,12 +11002,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 45) {
-                var_891 = "由花子";
-                var_967 = 12;
-                var_968 = 13;
+            if (enemy_list == 45) {
+                enemy_name = "由花子";
+                enemy_power = 12;
+                enemy_defence = 13;
                 var_954 = 142;
-                var_438 = 32;
+                enemy_hp = 32;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11017,12 +11017,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 29) {
-                var_891 = "ｸﾞﾘｰﾝ･ﾃﾞｨ";
-                var_967 = 15;
-                var_968 = 5;
+            if (enemy_list == 29) {
+                enemy_name = "ｸﾞﾘｰﾝ･ﾃﾞｨ";
+                enemy_power = 15;
+                enemy_defence = 5;
                 var_954 = 165;
-                var_438 = 80;
+                enemy_hp = 80;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -11032,12 +11032,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 47) {
-                var_891 = "億泰";
-                var_967 = 17;
-                var_968 = 14;
+            if (enemy_list == 47) {
+                enemy_name = "億泰";
+                enemy_power = 17;
+                enemy_defence = 14;
                 var_954 = 170;
-                var_438 = 36;
+                enemy_hp = 36;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11047,12 +11047,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 27) {
-                var_891 = "ｹﾞﾌﾞ神";
-                var_967 = 16;
-                var_968 = 13;
+            if (enemy_list == 27) {
+                enemy_name = "ｹﾞﾌﾞ神";
+                enemy_power = 16;
+                enemy_defence = 13;
                 var_954 = 195;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -11062,12 +11062,12 @@ function func626() {
                 var_1657 = "・目を切り裂いて盲目にしてくるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 136) {
-                var_891 = "ｼｰｻﾞｰ";
-                var_967 = 15;
-                var_968 = 12;
+            if (enemy_list == 136) {
+                enemy_name = "ｼｰｻﾞｰ";
+                enemy_power = 15;
+                enemy_defence = 12;
                 var_954 = 180;
-                var_438 = 42;
+                enemy_hp = 42;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11077,12 +11077,12 @@ function func626() {
                 var_1657 = "・攻撃されても波紋で痺れることがあるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 38) {
-                var_891 = "ｱﾚｯｼｰ";
-                var_967 = 18;
-                var_968 = 12;
+            if (enemy_list == 38) {
+                enemy_name = "ｱﾚｯｼｰ";
+                enemy_power = 18;
+                enemy_defence = 12;
                 var_954 = 220;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11092,12 +11092,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 48) {
-                var_891 = "ｴｱﾛｽﾐｽ";
-                var_967 = 15;
-                var_968 = 12;
+            if (enemy_list == 48) {
+                enemy_name = "ｴｱﾛｽﾐｽ";
+                enemy_power = 15;
+                enemy_defence = 12;
                 var_954 = 200;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 10;
@@ -11107,12 +11107,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 78) {
-                var_891 = "ｱｳﾞﾄﾞｩﾙさん";
-                var_967 = 19;
-                var_968 = 13;
+            if (enemy_list == 78) {
+                enemy_name = "ｱｳﾞﾄﾞｩﾙさん";
+                enemy_power = 19;
+                enemy_defence = 13;
                 var_954 = 230;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11122,12 +11122,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 62) {
-                var_891 = "ﾍﾞｲﾋﾞｨﾌｪｲｽ";
-                var_967 = 18;
-                var_968 = 16;
+            if (enemy_list == 62) {
+                enemy_name = "ﾍﾞｲﾋﾞｨﾌｪｲｽ";
+                enemy_power = 18;
+                enemy_defence = 16;
                 var_954 = 245;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 3;
@@ -11137,12 +11137,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 17) {
-                var_891 = "ｼｱｰﾊｰﾄｱﾀｯｸ";
-                var_967 = 14;
-                var_968 = 40;
+            if (enemy_list == 17) {
+                enemy_name = "ｼｱｰﾊｰﾄｱﾀｯｸ";
+                enemy_power = 14;
+                enemy_defence = 40;
                 var_954 = 300;
-                var_438 = 5;
+                enemy_hp = 5;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 8;
@@ -11152,12 +11152,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 46) {
-                var_891 = "ﾎﾙ･ﾎｰｽ";
-                var_967 = 15;
-                var_968 = 16;
+            if (enemy_list == 46) {
+                enemy_name = "ﾎﾙ･ﾎｰｽ";
+                enemy_power = 15;
+                enemy_defence = 16;
                 var_954 = 262;
-                var_438 = 42;
+                enemy_hp = 42;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11167,12 +11167,12 @@ function func626() {
                 var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
                 var_1658 = "・ガラスの破片をバラ撒くこともあるぞ。";
             }
-            if (var_437 == 97) {
-                var_891 = "ｵｲﾝｺﾞ";
-                var_967 = 10;
-                var_968 = 1;
+            if (enemy_list == 97) {
+                enemy_name = "ｵｲﾝｺﾞ";
+                enemy_power = 10;
+                enemy_defence = 1;
                 var_954 = 100;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 1;
@@ -11182,12 +11182,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 125) {
-                var_891 = "ﾌｰｺﾞ";
-                var_967 = 19;
-                var_968 = 15;
+            if (enemy_list == 125) {
+                enemy_name = "ﾌｰｺﾞ";
+                enemy_power = 19;
+                enemy_defence = 15;
                 var_954 = 320;
-                var_438 = 42;
+                enemy_hp = 42;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 9;
@@ -11197,12 +11197,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 14) {
-                var_891 = "床屋のｶｰﾝ";
-                var_967 = 18;
-                var_968 = 17;
+            if (enemy_list == 14) {
+                enemy_name = "床屋のｶｰﾝ";
+                enemy_power = 18;
+                enemy_defence = 17;
                 var_954 = 350;
-                var_438 = 48;
+                enemy_hp = 48;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11212,12 +11212,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 69) {
-                var_891 = "ﾌﾞﾗﾌｫｰﾄﾞ";
-                var_967 = 18;
-                var_968 = 16;
+            if (enemy_list == 69) {
+                enemy_name = "ﾌﾞﾗﾌｫｰﾄﾞ";
+                enemy_power = 18;
+                enemy_defence = 16;
                 var_954 = 290;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -11227,12 +11227,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 59) {
-                var_891 = "ﾌﾟｯﾁ神父";
-                var_967 = 15;
-                var_968 = 18;
+            if (enemy_list == 59) {
+                enemy_name = "ﾌﾟｯﾁ神父";
+                enemy_power = 15;
+                enemy_defence = 18;
                 var_954 = 360;
-                var_438 = 54;
+                enemy_hp = 54;
                 var_1637 = 1;
                 var_1654 = 6;
                 var_972 = 1;
@@ -11242,12 +11242,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 145) {
-                var_891 = "康一";
-                var_967 = 16;
-                var_968 = 16;
+            if (enemy_list == 145) {
+                enemy_name = "康一";
+                enemy_power = 16;
+                enemy_defence = 16;
                 var_954 = 280;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11257,12 +11257,12 @@ function func626() {
                 var_1657 = "・隣接すると重くなる攻撃をしてくるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 18) {
-                var_891 = "ﾌﾞﾗｯｸ･ｻﾊﾞｽ";
-                var_967 = 14;
-                var_968 = 15;
+            if (enemy_list == 18) {
+                enemy_name = "ﾌﾞﾗｯｸ･ｻﾊﾞｽ";
+                enemy_power = 14;
+                enemy_defence = 15;
                 var_954 = 300;
-                var_438 = 42;
+                enemy_hp = 42;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 3;
@@ -11272,12 +11272,12 @@ function func626() {
                 var_1657 = "・選ばれると装備品に新たな能力がつくぞ。";
                 var_1658 = "・矢かライターを落とすぞ。";
             }
-            if (var_437 == 35) {
-                var_891 = "仗助";
-                var_967 = 20;
-                var_968 = 18;
+            if (enemy_list == 35) {
+                enemy_name = "仗助";
+                enemy_power = 20;
+                enemy_defence = 18;
                 var_954 = 380;
-                var_438 = 42;
+                enemy_hp = 42;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11287,12 +11287,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 135) {
-                var_891 = "若ｼﾞｮｾﾌ";
-                var_967 = 19;
-                var_968 = 20;
+            if (enemy_list == 135) {
+                enemy_name = "若ｼﾞｮｾﾌ";
+                enemy_power = 19;
+                enemy_defence = 20;
                 var_954 = 390;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11302,12 +11302,12 @@ function func626() {
                 var_1657 = "・攻撃されると波紋で痺れることがあるぞ。";
                 var_1658 = "・老化攻撃を受けると弱くなってしまうぞ。";
             }
-            if (var_437 == 10) {
-                var_891 = "ﾉﾄｰﾘｱｽBIG";
-                var_967 = 19;
-                var_968 = 1;
+            if (enemy_list == 10) {
+                enemy_name = "ﾉﾄｰﾘｱｽBIG";
+                enemy_power = 19;
+                enemy_defence = 1;
                 var_954 = 320;
-                var_438 = 140;
+                enemy_hp = 140;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -11317,12 +11317,12 @@ function func626() {
                 var_1657 = "・ゆっくり動くと追いかけてこないぞ。";
                 var_1658 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
             }
-            if (var_437 == 95) {
-                var_891 = "ｽﾄﾚｲﾂｫ";
-                var_967 = 19;
-                var_968 = 18;
+            if (enemy_list == 95) {
+                enemy_name = "ｽﾄﾚｲﾂｫ";
+                enemy_power = 19;
+                enemy_defence = 18;
                 var_954 = 445;
-                var_438 = 46;
+                enemy_hp = 46;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -11332,12 +11332,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 63) {
-                var_891 = "ﾌﾟﾛｼｭｰﾄ兄貴";
-                var_967 = 20;
-                var_968 = 17;
+            if (enemy_list == 63) {
+                enemy_name = "ﾌﾟﾛｼｭｰﾄ兄貴";
+                enemy_power = 20;
+                enemy_defence = 17;
                 var_954 = 520;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 9;
@@ -11347,12 +11347,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 84) {
-                var_891 = "ﾁｮｺﾗｰﾀ";
-                var_967 = 10;
-                var_968 = 19;
+            if (enemy_list == 84) {
+                enemy_name = "ﾁｮｺﾗｰﾀ";
+                enemy_power = 10;
+                enemy_defence = 19;
                 var_954 = 360;
-                var_438 = 62;
+                enemy_hp = 62;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11362,12 +11362,12 @@ function func626() {
                 var_1657 = "・近くのセッコの攻撃力を上げるぞ。";
                 var_1658 = "・分離して逃げることがあるぞ。";
             }
-            if (var_437 == 117) {
-                var_891 = "ﾁｮｺﾗｰﾀの上半身";
-                var_967 = 10;
-                var_968 = 10;
+            if (enemy_list == 117) {
+                enemy_name = "ﾁｮｺﾗｰﾀの上半身";
+                enemy_power = 10;
+                enemy_defence = 10;
                 var_954 = 10;
-                var_438 = 10;
+                enemy_hp = 10;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11377,12 +11377,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 43) {
-                var_891 = "ｾｯｺ";
-                var_967 = 21;
-                var_968 = 20;
+            if (enemy_list == 43) {
+                enemy_name = "ｾｯｺ";
+                enemy_power = 21;
+                enemy_defence = 20;
                 var_954 = 580;
-                var_438 = 40;
+                enemy_hp = 40;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11392,12 +11392,12 @@ function func626() {
                 var_1657 = "・壁の中にいる時は普通の攻撃が効かないぞ。";
                 var_1658 = "・タイヤが当たると混乱するぞ。";
             }
-            if (var_437 == 85) {
-                var_891 = "ﾘｿﾞｯﾄ";
-                var_967 = 10;
-                var_968 = 18;
+            if (enemy_list == 85) {
+                enemy_name = "ﾘｿﾞｯﾄ";
+                enemy_power = 10;
+                enemy_defence = 18;
                 var_954 = 600;
-                var_438 = 43;
+                enemy_hp = 43;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 9;
@@ -11407,12 +11407,12 @@ function func626() {
                 var_1657 = "・体内で刃物を作る攻撃をしてくるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 32) {
-                var_891 = "吉良吉影";
-                var_967 = 22;
-                var_968 = 20;
+            if (enemy_list == 32) {
+                enemy_name = "吉良吉影";
+                enemy_power = 22;
+                enemy_defence = 20;
                 var_954 = 750;
-                var_438 = 65;
+                enemy_hp = 65;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 7;
@@ -11422,12 +11422,12 @@ function func626() {
                 var_1657 = "・ｼｱｰﾊｰﾄｱﾀｯｸを繰り出すことがあるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 44) {
-                var_891 = "ﾚｯﾄﾞﾎｯﾄﾁﾘﾍﾟｯﾊﾟｰ";
-                var_967 = 20;
-                var_968 = 16;
+            if (enemy_list == 44) {
+                enemy_name = "ﾚｯﾄﾞﾎｯﾄﾁﾘﾍﾟｯﾊﾟｰ";
+                enemy_power = 20;
+                enemy_defence = 16;
                 var_954 = 630;
-                var_438 = 52;
+                enemy_hp = 52;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 8;
@@ -11437,12 +11437,12 @@ function func626() {
                 var_1657 = "・水に入るとダメージを受けるぞ。";
                 var_1658 = "・タイヤに弱いぞ。";
             }
-            if (var_437 == 72) {
-                var_891 = "ｹﾝｿﾞｰ";
-                var_967 = 18;
-                var_968 = 18;
+            if (enemy_list == 72) {
+                enemy_name = "ｹﾝｿﾞｰ";
+                enemy_power = 18;
+                enemy_defence = 18;
                 var_954 = 710;
-                var_438 = 42;
+                enemy_hp = 42;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11452,12 +11452,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 66) {
-                var_891 = "ﾀﾙｶｽ";
-                var_967 = 23;
-                var_968 = 22;
+            if (enemy_list == 66) {
+                enemy_name = "ﾀﾙｶｽ";
+                enemy_power = 23;
+                enemy_defence = 22;
                 var_954 = 800;
-                var_438 = 65;
+                enemy_hp = 65;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 2;
@@ -11467,12 +11467,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 113) {
-                var_891 = "DIO";
-                var_967 = 23;
-                var_968 = 22;
+            if (enemy_list == 113) {
+                enemy_name = "DIO";
+                enemy_power = 23;
+                enemy_defence = 22;
                 var_954 = 1400;
-                var_438 = 75;
+                enemy_hp = 75;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 2;
@@ -11482,12 +11482,12 @@ function func626() {
                 var_1657 = "・まれに何か投げるぞ。";
                 var_1658 = "・近くにいると階段を降りられないぞ。";
             }
-            if (var_437 == 15) {
-                var_891 = "ﾍﾟｯﾄｼｮｯﾌﾟ";
-                var_967 = 21;
-                var_968 = 19;
+            if (enemy_list == 15) {
+                enemy_name = "ﾍﾟｯﾄｼｮｯﾌﾟ";
+                enemy_power = 21;
+                enemy_defence = 19;
                 var_954 = 850;
-                var_438 = 40;
+                enemy_hp = 40;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 0;
@@ -11497,12 +11497,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 123) {
-                var_891 = "ﾌﾞﾁｬﾗﾃｨ";
-                var_967 = 22;
-                var_968 = 21;
+            if (enemy_list == 123) {
+                enemy_name = "ﾌﾞﾁｬﾗﾃｨ";
+                enemy_power = 22;
+                enemy_defence = 21;
                 var_954 = 900;
-                var_438 = 60;
+                enemy_hp = 60;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 9;
@@ -11512,12 +11512,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 80) {
-                var_891 = "ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰ";
-                var_967 = 18;
-                var_968 = 19;
+            if (enemy_list == 80) {
+                enemy_name = "ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰ";
+                enemy_power = 18;
+                enemy_defence = 19;
                 var_954 = 720;
-                var_438 = 55;
+                enemy_hp = 55;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11527,12 +11527,12 @@ function func626() {
                 var_1657 = "・隣接していても無重力攻撃をしてくるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 65) {
-                var_891 = "虹村形兆";
-                var_967 = 10;
-                var_968 = 18;
+            if (enemy_list == 65) {
+                enemy_name = "虹村形兆";
+                enemy_power = 10;
+                enemy_defence = 18;
                 var_954 = 700;
-                var_438 = 55;
+                enemy_hp = 55;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11542,12 +11542,12 @@ function func626() {
                 var_1657 = "・グリーンベレーを呼び出すぞ。";
                 var_1658 = "・地面に地雷を仕掛けるぞ。";
             }
-            if (var_437 == 40) {
-                var_891 = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ";
-                var_967 = 10;
-                var_968 = 5;
+            if (enemy_list == 40) {
+                enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ";
+                enemy_power = 10;
+                enemy_defence = 5;
                 var_954 = 5;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 8;
@@ -11557,12 +11557,12 @@ function func626() {
                 var_1657 = "・仲間の弾丸には当たらないぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 41) {
-                var_891 = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ戦車";
-                var_967 = 14;
-                var_968 = 13;
+            if (enemy_list == 41) {
+                enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ戦車";
+                enemy_power = 14;
+                enemy_defence = 13;
                 var_954 = 7;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 8;
@@ -11572,12 +11572,12 @@ function func626() {
                 var_1657 = "・仲間の弾丸には当たらないぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 42) {
-                var_891 = "ｱﾊﾟｯﾁ";
-                var_967 = 16;
-                var_968 = 10;
+            if (enemy_list == 42) {
+                enemy_name = "ｱﾊﾟｯﾁ";
+                enemy_power = 16;
+                enemy_defence = 10;
                 var_954 = 8;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 8;
@@ -11587,12 +11587,12 @@ function func626() {
                 var_1657 = "・仲間の弾丸には当たらないぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 54) {
-                var_891 = "ｸﾞﾘｰﾝﾍﾞﾚｰ";
-                var_967 = 20;
-                var_968 = 5;
+            if (enemy_list == 54) {
+                enemy_name = "ｸﾞﾘｰﾝﾍﾞﾚｰ";
+                enemy_power = 20;
+                enemy_defence = 5;
                 var_954 = 10;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 8;
@@ -11602,12 +11602,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 132) {
-                var_891 = "ﾚｸｲｴﾑｼﾞｮﾙﾉ";
-                var_967 = 25;
-                var_968 = 23;
+            if (enemy_list == 132) {
+                enemy_name = "ﾚｸｲｴﾑｼﾞｮﾙﾉ";
+                enemy_power = 25;
+                enemy_defence = 23;
                 var_954 = 1500;
-                var_438 = 300;
+                enemy_hp = 300;
                 var_1637 = 1;
                 var_1654 = 1;
                 var_972 = 9;
@@ -11617,12 +11617,12 @@ function func626() {
                 var_1657 = "・離れているとサソリを飛ばしてくるぞ。";
                 var_1658 = "・ダンジョンの主だぞ。";
             }
-            if (var_437 == 30) {
-                var_891 = "禁煙中ﾎﾙ･ﾎｰｽ";
-                var_967 = 15;
-                var_968 = 16;
+            if (enemy_list == 30) {
+                enemy_name = "禁煙中ﾎﾙ･ﾎｰｽ";
+                enemy_power = 15;
+                enemy_defence = 16;
                 var_954 = 650;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11632,12 +11632,12 @@ function func626() {
                 var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
                 var_1658 = "・予知によって弾丸のダメージが変わるぞ。";
             }
-            if (var_437 == 21) {
-                var_891 = "ｽﾄﾚｲ･ｷｬｯﾄ";
-                var_967 = 15;
-                var_968 = 15;
+            if (enemy_list == 21) {
+                enemy_name = "ｽﾄﾚｲ･ｷｬｯﾄ";
+                enemy_power = 15;
+                enemy_defence = 15;
                 var_954 = 100;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 6;
@@ -11647,12 +11647,12 @@ function func626() {
                 var_1657 = "・既に金縛りだとダメージ弾になるぞ。";
                 var_1658 = "・吉良が近くにいると爆弾空気弾になるぞ。";
             }
-            if (var_437 == 122) {
-                var_891 = "ﾎﾟﾙﾅﾚﾌ";
-                var_967 = 25;
-                var_968 = 22;
+            if (enemy_list == 122) {
+                enemy_name = "ﾎﾟﾙﾅﾚﾌ";
+                enemy_power = 25;
+                enemy_defence = 22;
                 var_954 = 1500;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11662,12 +11662,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 121) {
-                var_891 = "花京院";
-                var_967 = 26;
-                var_968 = 20;
+            if (enemy_list == 121) {
+                enemy_name = "花京院";
+                enemy_power = 26;
+                enemy_defence = 20;
                 var_954 = 1400;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11677,12 +11677,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 152) {
-                var_891 = "ﾄﾘｯｼｭ";
-                var_967 = 24;
-                var_968 = 24;
+            if (enemy_list == 152) {
+                enemy_name = "ﾄﾘｯｼｭ";
+                enemy_power = 24;
+                enemy_defence = 24;
                 var_954 = 1000;
-                var_438 = 40;
+                enemy_hp = 40;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 9;
@@ -11692,12 +11692,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 160) {
-                var_891 = "ｳｴｽﾄｳｯﾄﾞ看守";
-                var_967 = 27;
-                var_968 = 23;
+            if (enemy_list == 160) {
+                enemy_name = "ｳｴｽﾄｳｯﾄﾞ看守";
+                enemy_power = 27;
+                enemy_defence = 23;
                 var_954 = 1000;
-                var_438 = 70;
+                enemy_hp = 70;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11707,12 +11707,12 @@ function func626() {
                 var_1657 = "・この隕石は防御力の影響を受けないぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 86) {
-                var_891 = "ｻﾝﾀﾅ";
-                var_967 = 30;
-                var_968 = 25;
+            if (enemy_list == 86) {
+                enemy_name = "ｻﾝﾀﾅ";
+                enemy_power = 30;
+                enemy_defence = 25;
                 var_954 = 1800;
-                var_438 = 65;
+                enemy_hp = 65;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -11722,12 +11722,12 @@ function func626() {
                 var_1657 = "　やっつけるとレベルが上がるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 155) {
-                var_891 = "ﾏﾗｲｱ";
-                var_967 = 23;
-                var_968 = 21;
+            if (enemy_list == 155) {
+                enemy_name = "ﾏﾗｲｱ";
+                enemy_power = 23;
+                enemy_defence = 21;
                 var_954 = 1400;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11737,12 +11737,12 @@ function func626() {
                 var_1657 = "・ボルトやナットを飛ばしてくるぞ。";
                 var_1658 = "・磁力がアップしているとダメージが増えるぞ。";
             }
-            if (var_437 == 156) {
-                var_891 = "ｳｪｻﾞｰ";
-                var_967 = 28;
-                var_968 = 25;
+            if (enemy_list == 156) {
+                enemy_name = "ｳｪｻﾞｰ";
+                enemy_power = 28;
+                enemy_defence = 25;
                 var_954 = 1600;
-                var_438 = 60;
+                enemy_hp = 60;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11752,12 +11752,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 157) {
-                var_891 = "ｱﾅｽｲ";
-                var_967 = 29;
-                var_968 = 21;
+            if (enemy_list == 157) {
+                enemy_name = "ｱﾅｽｲ";
+                enemy_power = 29;
+                enemy_defence = 21;
                 var_954 = 1500;
-                var_438 = 55;
+                enemy_hp = 55;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11767,12 +11767,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 144) {
-                var_891 = "川尻浩作";
-                var_967 = 32;
-                var_968 = 22;
+            if (enemy_list == 144) {
+                enemy_name = "川尻浩作";
+                enemy_power = 32;
+                enemy_defence = 22;
                 var_954 = 1700;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11782,12 +11782,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 128) {
-                var_891 = "承太郎";
-                var_967 = 33;
-                var_968 = 23;
+            if (enemy_list == 128) {
+                enemy_name = "承太郎";
+                enemy_power = 33;
+                enemy_defence = 23;
                 var_954 = 1800;
-                var_438 = 60;
+                enemy_hp = 60;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 1;
@@ -11797,12 +11797,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 158) {
-                var_891 = "ﾌﾟｯﾂﾝ由花子";
-                var_967 = 26;
-                var_968 = 21;
+            if (enemy_list == 158) {
+                enemy_name = "ﾌﾟｯﾂﾝ由花子";
+                enemy_power = 26;
+                enemy_defence = 21;
                 var_954 = 1700;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11812,12 +11812,12 @@ function func626() {
                 var_1657 = "・ｽﾀﾝﾄﾞDISCに呪縛をかけてくるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 150) {
-                var_891 = "康一act2!!";
-                var_967 = 30;
-                var_968 = 22;
+            if (enemy_list == 150) {
+                enemy_name = "康一act2!!";
+                enemy_power = 30;
+                enemy_defence = 22;
                 var_954 = 1600;
-                var_438 = 40;
+                enemy_hp = 40;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11827,12 +11827,12 @@ function func626() {
                 var_1657 = "・隣接すると重くなる攻撃をしてくるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 68) {
-                var_891 = "ﾌﾞﾁ切れた仗助";
-                var_967 = 32;
-                var_968 = 23;
+            if (enemy_list == 68) {
+                enemy_name = "ﾌﾞﾁ切れた仗助";
+                enemy_power = 32;
+                enemy_defence = 23;
                 var_954 = 1900;
-                var_438 = 60;
+                enemy_hp = 60;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11842,12 +11842,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 67) {
-                var_891 = "ﾌﾞﾁ切れた億泰";
-                var_967 = 38;
-                var_968 = 25;
+            if (enemy_list == 67) {
+                enemy_name = "ﾌﾞﾁ切れた億泰";
+                enemy_power = 38;
+                enemy_defence = 25;
                 var_954 = 2000;
-                var_438 = 70;
+                enemy_hp = 70;
                 var_1637 = 1;
                 var_1654 = 20;
                 var_972 = 7;
@@ -11857,12 +11857,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 151) {
-                var_891 = "虫喰い";
-                var_967 = 34;
-                var_968 = 1;
+            if (enemy_list == 151) {
+                enemy_name = "虫喰い";
+                enemy_power = 34;
+                enemy_defence = 1;
                 var_954 = 1500;
-                var_438 = 10;
+                enemy_hp = 10;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 6;
@@ -11872,12 +11872,12 @@ function func626() {
                 var_1657 = "・オーラで強くなっているとオーラが消えるぞ。";
                 var_1658 = "・すばやく動いているぞ。";
             }
-            if (var_437 == 172) {
-                var_891 = "虫食いでない";
-                var_967 = 34;
-                var_968 = 1;
+            if (enemy_list == 172) {
+                enemy_name = "虫食いでない";
+                enemy_power = 34;
+                enemy_defence = 1;
                 var_954 = 1000;
-                var_438 = 10;
+                enemy_hp = 10;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 6;
@@ -11887,12 +11887,12 @@ function func626() {
                 var_1657 = "・オーラで強くなっているとオーラが消えるぞ。";
                 var_1658 = "・移動しないぞ。";
             }
-            if (var_437 == 87) {
-                var_891 = "ｴｼﾃﾞｨｼ";
-                var_967 = 38;
-                var_968 = 26;
+            if (enemy_list == 87) {
+                enemy_name = "ｴｼﾃﾞｨｼ";
+                enemy_power = 38;
+                enemy_defence = 26;
                 var_954 = 2200;
-                var_438 = 80;
+                enemy_hp = 80;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 2;
@@ -11902,12 +11902,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 164) {
-                var_891 = "ｴｼﾃﾞｨｼの脳";
-                var_967 = 28;
-                var_968 = 80;
+            if (enemy_list == 164) {
+                enemy_name = "ｴｼﾃﾞｨｼの脳";
+                enemy_power = 28;
+                enemy_defence = 80;
                 var_954 = 5;
-                var_438 = 5;
+                enemy_hp = 5;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 2;
@@ -11917,12 +11917,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 109) {
-                var_891 = "ワムウ";
-                var_967 = 42;
-                var_968 = 24;
+            if (enemy_list == 109) {
+                enemy_name = "ワムウ";
+                enemy_power = 42;
+                enemy_defence = 24;
                 var_954 = 2500;
-                var_438 = 80;
+                enemy_hp = 80;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 2;
@@ -11932,12 +11932,12 @@ function func626() {
                 var_1657 = "・透明かそうでないかで動き方が違うぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 110) {
-                var_891 = "カーズ";
-                var_967 = 40;
-                var_968 = 23;
+            if (enemy_list == 110) {
+                enemy_name = "カーズ";
+                enemy_power = 40;
+                enemy_defence = 23;
                 var_954 = 3000;
-                var_438 = 75;
+                enemy_hp = 75;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 2;
@@ -11947,12 +11947,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 139) {
-                var_891 = "ﾘｻﾘｻ";
-                var_967 = 45;
-                var_968 = 24;
+            if (enemy_list == 139) {
+                enemy_name = "ﾘｻﾘｻ";
+                enemy_power = 45;
+                enemy_defence = 24;
                 var_954 = 2800;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -11962,12 +11962,12 @@ function func626() {
                 var_1657 = "・殴られても痺れることがあるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 124) {
-                var_891 = "ﾐｽﾀ";
-                var_967 = 30;
-                var_968 = 28;
+            if (enemy_list == 124) {
+                enemy_name = "ﾐｽﾀ";
+                enemy_power = 30;
+                enemy_defence = 28;
                 var_954 = 2200;
-                var_438 = 55;
+                enemy_hp = 55;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 9;
@@ -11977,12 +11977,12 @@ function func626() {
                 var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 154) {
-                var_891 = "ｽﾎﾟｰﾂﾏｯｸｽ";
-                var_967 = 40;
-                var_968 = 25;
+            if (enemy_list == 154) {
+                enemy_name = "ｽﾎﾟｰﾂﾏｯｸｽ";
+                enemy_power = 40;
+                enemy_defence = 25;
                 var_954 = 2900;
-                var_438 = 60;
+                enemy_hp = 60;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 1;
@@ -11992,12 +11992,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 127) {
-                var_891 = "C-MOON";
-                var_967 = 5;
-                var_968 = 30;
+            if (enemy_list == 127) {
+                enemy_name = "C-MOON";
+                enemy_power = 5;
+                enemy_defence = 30;
                 var_954 = 3000;
-                var_438 = 75;
+                enemy_hp = 75;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -12007,12 +12007,12 @@ function func626() {
                 var_1657 = "・ＨＰが満タンだと１になってしまうぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 126) {
-                var_891 = "退院した花京院";
-                var_967 = 45;
-                var_968 = 32;
+            if (enemy_list == 126) {
+                enemy_name = "退院した花京院";
+                enemy_power = 45;
+                enemy_defence = 32;
                 var_954 = 2900;
-                var_438 = 60;
+                enemy_hp = 60;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 1;
@@ -12022,12 +12022,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 129) {
-                var_891 = "ｱﾇﾋﾞｽﾎﾟﾙﾅﾚﾌ";
-                var_967 = 50;
-                var_968 = 28;
+            if (enemy_list == 129) {
+                enemy_name = "ｱﾇﾋﾞｽﾎﾟﾙﾅﾚﾌ";
+                enemy_power = 50;
+                enemy_defence = 28;
                 var_954 = 3200;
-                var_438 = 65;
+                enemy_hp = 65;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12037,12 +12037,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 133) {
-                var_891 = "ｳﾞｧﾆﾗｱｲｽ";
-                var_967 = 40;
-                var_968 = 30;
+            if (enemy_list == 133) {
+                enemy_name = "ｳﾞｧﾆﾗｱｲｽ";
+                enemy_power = 40;
+                enemy_defence = 30;
                 var_954 = 2000;
-                var_438 = 90;
+                enemy_hp = 90;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 2;
@@ -12052,12 +12052,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 159) {
-                var_891 = "記憶が戻ったｳｪｻﾞｰ";
-                var_967 = 65;
-                var_968 = 30;
+            if (enemy_list == 159) {
+                enemy_name = "記憶が戻ったｳｪｻﾞｰ";
+                enemy_power = 65;
+                enemy_defence = 30;
                 var_954 = 3400;
-                var_438 = 60;
+                enemy_hp = 60;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12067,12 +12067,12 @@ function func626() {
                 var_1657 = "・カタツムリを呼び出すぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 170) {
-                var_891 = "カタツムリ";
-                var_967 = 1;
-                var_968 = 1;
+            if (enemy_list == 170) {
+                enemy_name = "カタツムリ";
+                enemy_power = 1;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 0;
@@ -12082,12 +12082,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 64) {
-                var_891 = "ｷﾞｱｯﾁｮ";
-                var_967 = 50;
-                var_968 = 40;
+            if (enemy_list == 64) {
+                enemy_name = "ｷﾞｱｯﾁｮ";
+                enemy_power = 50;
+                enemy_defence = 40;
                 var_954 = 3600;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 9;
@@ -12097,12 +12097,12 @@ function func626() {
                 var_1657 = "・弾丸やアイテムを凍らせて反射してくるぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 137) {
-                var_891 = "成長した吉良";
-                var_967 = 58;
-                var_968 = 33;
+            if (enemy_list == 137) {
+                enemy_name = "成長した吉良";
+                enemy_power = 58;
+                enemy_defence = 33;
                 var_954 = 3300;
-                var_438 = 65;
+                enemy_hp = 65;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 7;
@@ -12112,12 +12112,12 @@ function func626() {
                 var_1657 = "・仲間を呼び出すぞ。";
                 var_1658 = "・瀕死になると第3の爆弾を使うぞ。";
             }
-            if (var_437 == 153) {
-                var_891 = "ﾏｯｸｲｨｰﾝ";
-                var_967 = 20;
-                var_968 = 15;
+            if (enemy_list == 153) {
+                enemy_name = "ﾏｯｸｲｨｰﾝ";
+                enemy_power = 20;
+                enemy_defence = 15;
                 var_954 = 2000;
-                var_438 = 80;
+                enemy_hp = 80;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12127,12 +12127,12 @@ function func626() {
                 var_1657 = "・ダメージを与えると反射するぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 118) {
-                var_891 = "ｸﾘｰﾑ";
-                var_967 = 70;
-                var_968 = 35;
+            if (enemy_list == 118) {
+                enemy_name = "ｸﾘｰﾑ";
+                enemy_power = 70;
+                enemy_defence = 35;
                 var_954 = 3300;
-                var_438 = 90;
+                enemy_hp = 90;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 3;
@@ -12142,12 +12142,12 @@ function func626() {
                 var_1657 = "・遠くにいてもガオンと近くに来るぞ。";
                 var_1658 = "・時々ｳﾞｧﾆﾗｱｲｽが顔を出して位置を確認するぞ。";
             }
-            if (var_437 == 114) {
-                var_891 = "最高にﾊｲなDIO";
-                var_967 = 60;
-                var_968 = 34;
+            if (enemy_list == 114) {
+                enemy_name = "最高にﾊｲなDIO";
+                enemy_power = 60;
+                enemy_defence = 34;
                 var_954 = 4000;
-                var_438 = 90;
+                enemy_hp = 90;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 2;
@@ -12157,12 +12157,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 111) {
-                var_891 = "究極カーズ";
-                var_967 = 70;
-                var_968 = 35;
+            if (enemy_list == 111) {
+                enemy_name = "究極カーズ";
+                enemy_power = 70;
+                enemy_defence = 35;
                 var_954 = 4400;
-                var_438 = 100;
+                enemy_hp = 100;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 2;
@@ -12172,12 +12172,12 @@ function func626() {
                 var_1657 = "・壁の中にいると普通の攻撃は効かないぞ。";
                 var_1658 = "・攻撃されると波紋で痺れることがあるぞ。";
             }
-            if (var_437 == 120) {
-                var_891 = "承太郎";
-                var_967 = 80;
-                var_968 = 30;
+            if (enemy_list == 120) {
+                enemy_name = "承太郎";
+                enemy_power = 80;
+                enemy_defence = 30;
                 var_954 = 5000;
-                var_438 = 90;
+                enemy_hp = 90;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12187,12 +12187,12 @@ function func626() {
                 var_1657 = "・ﾀﾞﾒｰｼﾞを受けると攻撃力が上がるぞ。";
                 var_1658 = "・特定のアイテムを持っているぞ。";
             }
-            if (var_437 == 60) {
-                var_891 = "ｻﾞ･ﾆｭｰ神父";
-                var_967 = 60;
-                var_968 = 32;
+            if (enemy_list == 60) {
+                enemy_name = "ｻﾞ･ﾆｭｰ神父";
+                enemy_power = 60;
+                enemy_defence = 32;
                 var_954 = 5600;
-                var_438 = 85;
+                enemy_hp = 85;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12202,12 +12202,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 98) {
-                var_891 = "ｴﾝﾎﾟﾘｵ";
-                var_967 = 70;
-                var_968 = 3;
+            if (enemy_list == 98) {
+                enemy_name = "ｴﾝﾎﾟﾘｵ";
+                enemy_power = 70;
+                enemy_defence = 3;
                 var_954 = 7;
-                var_438 = 7;
+                enemy_hp = 7;
                 var_1637 = 1;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12217,12 +12217,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 143) {
-                var_891 = "ウンガロ";
-                var_967 = 5;
-                var_968 = 30;
+            if (enemy_list == 143) {
+                enemy_name = "ウンガロ";
+                enemy_power = 5;
+                enemy_defence = 30;
                 var_954 = 10;
-                var_438 = 500;
+                enemy_hp = 500;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 1;
@@ -12232,12 +12232,12 @@ function func626() {
                 var_1657 = "・自分は攻撃しないぞ。";
                 var_1658 = "・ダンジョンの主だぞ。";
             }
-            if (var_437 == 166) {
-                var_891 = "お母さんヤギ";
-                var_967 = 90;
-                var_968 = 10;
+            if (enemy_list == 166) {
+                enemy_name = "お母さんヤギ";
+                enemy_power = 90;
+                enemy_defence = 10;
                 var_954 = 10;
-                var_438 = 45;
+                enemy_hp = 45;
                 var_1637 = 0;
                 var_1654 = 20;
                 var_972 = 3;
@@ -12247,12 +12247,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 91) {
-                var_891 = "ACT1のさなぎ";
-                var_967 = 0;
-                var_968 = 0;
+            if (enemy_list == 91) {
+                enemy_name = "ACT1のさなぎ";
+                enemy_power = 0;
+                enemy_defence = 0;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 8;
@@ -12262,12 +12262,12 @@ function func626() {
                 var_1657 = "・エコーズACT2に成長するぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 92) {
-                var_891 = "ACT2のさなぎ";
-                var_967 = 0;
-                var_968 = 0;
+            if (enemy_list == 92) {
+                enemy_name = "ACT2のさなぎ";
+                enemy_power = 0;
+                enemy_defence = 0;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 8;
@@ -12277,12 +12277,12 @@ function func626() {
                 var_1657 = "・エコーズACT3に成長するぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 16) {
-                var_891 = "ﾊｲﾌﾟﾘｴｽﾃｽ";
-                var_967 = 11;
-                var_968 = 8;
+            if (enemy_list == 16) {
+                enemy_name = "ﾊｲﾌﾟﾘｴｽﾃｽ";
+                enemy_power = 11;
+                enemy_defence = 8;
                 var_954 = 30;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 3;
@@ -12292,12 +12292,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 130) {
-                var_891 = "ﾏﾘﾘﾝﾏﾝｿﾝ";
-                var_967 = 10;
-                var_968 = 1;
+            if (enemy_list == 130) {
+                enemy_name = "ﾏﾘﾘﾝﾏﾝｿﾝ";
+                enemy_power = 10;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 3;
@@ -12307,12 +12307,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 146) {
-                var_891 = "ﾁｬﾘｵｯﾂ";
-                var_967 = 30;
-                var_968 = 1;
+            if (enemy_list == 146) {
+                enemy_name = "ﾁｬﾘｵｯﾂ";
+                enemy_power = 30;
+                enemy_defence = 1;
                 var_954 = 40;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 3;
@@ -12322,12 +12322,12 @@ function func626() {
                 var_1657 = "・５ターンで消えてしまうぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 37) {
-                var_891 = "猫";
-                var_967 = 1;
-                var_968 = 1;
+            if (enemy_list == 37) {
+                enemy_name = "猫";
+                enemy_power = 1;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 0;
@@ -12337,12 +12337,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 19) {
-                var_891 = "ｱﾗﾋﾞｱﾌｧｯﾂ";
-                var_967 = 0;
-                var_968 = 1;
+            if (enemy_list == 19) {
+                enemy_name = "ｱﾗﾋﾞｱﾌｧｯﾂ";
+                enemy_power = 0;
+                enemy_defence = 1;
                 var_954 = 110;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 1;
@@ -12352,12 +12352,12 @@ function func626() {
                 var_1657 = "・気温を上げてレーザーの威力を上げるぞ。";
                 var_1658 = "・特定のアイテムを落とすぞ。";
             }
-            if (var_437 == 90) {
-                var_891 = "岩";
-                var_967 = 0;
-                var_968 = 1;
+            if (enemy_list == 90) {
+                enemy_name = "岩";
+                enemy_power = 0;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 0;
@@ -12367,12 +12367,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 96) {
-                var_891 = "感電ｴﾝﾎﾟﾘｵ";
-                var_967 = 1;
-                var_968 = 1;
+            if (enemy_list == 96) {
+                enemy_name = "感電ｴﾝﾎﾟﾘｵ";
+                enemy_power = 1;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 1;
@@ -12382,12 +12382,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 161) {
-                var_891 = "橋沢育郎";
-                var_967 = 1;
-                var_968 = 35;
+            if (enemy_list == 161) {
+                enemy_name = "橋沢育郎";
+                enemy_power = 1;
+                enemy_defence = 35;
                 var_954 = 1000;
-                var_438 = 100;
+                enemy_hp = 100;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12397,12 +12397,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 162) {
-                var_891 = "バオー";
-                var_967 = 100;
-                var_968 = 35;
+            if (enemy_list == 162) {
+                enemy_name = "バオー";
+                enemy_power = 100;
+                enemy_defence = 35;
                 var_954 = 6000;
-                var_438 = 100;
+                enemy_hp = 100;
                 var_1637 = 0;
                 var_1654 = 10;
                 var_972 = 1;
@@ -12410,12 +12410,12 @@ function func626() {
                 var_1655 = "・２回連続で攻撃するぞ。";
                 var_1656 = "";
             }
-            if (var_437 == 168) {
-                var_891 = "警備員の西戸";
-                var_967 = 80;
-                var_968 = 40;
+            if (enemy_list == 168) {
+                enemy_name = "警備員の西戸";
+                enemy_power = 80;
+                enemy_defence = 40;
                 var_954 = 100;
-                var_438 = 70;
+                enemy_hp = 70;
                 var_1637 = 0;
                 var_1654 = 3;
                 var_972 = 1;
@@ -12425,12 +12425,12 @@ function func626() {
                 var_1657 = "・ウワハハハハハ！";
                 var_1658 = "・クチャ　クチャ　　ペッ";
             }
-            if (var_437 == 33) {
-                var_891 = "トニオさん";
-                var_967 = 100;
-                var_968 = 40;
+            if (enemy_list == 33) {
+                enemy_name = "トニオさん";
+                enemy_power = 100;
+                enemy_defence = 40;
                 var_954 = 1000;
-                var_438 = 950;
+                enemy_hp = 950;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12440,12 +12440,12 @@ function func626() {
                 var_1657 = "・泥棒すると仲間を呼ぶぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 34) {
-                var_891 = "トニオさん";
-                var_967 = 100;
-                var_968 = 40;
+            if (enemy_list == 34) {
+                enemy_name = "トニオさん";
+                enemy_power = 100;
+                enemy_defence = 40;
                 var_954 = 1000;
-                var_438 = 950;
+                enemy_hp = 950;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 7;
@@ -12455,12 +12455,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 61) {
-                var_891 = "ﾖｰﾖｰﾏｯ";
-                var_967 = 1;
-                var_968 = 10;
+            if (enemy_list == 61) {
+                enemy_name = "ﾖｰﾖｰﾏｯ";
+                enemy_power = 1;
+                enemy_defence = 10;
                 var_954 = 100;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 3;
@@ -12470,12 +12470,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 74) {
-                var_891 = "ｻｳﾞｪｼﾞｶﾞｰﾃﾞﾝ";
-                var_967 = 1;
-                var_968 = 10;
+            if (enemy_list == 74) {
+                enemy_name = "ｻｳﾞｪｼﾞｶﾞｰﾃﾞﾝ";
+                enemy_power = 1;
+                enemy_defence = 10;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12485,12 +12485,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 75) {
-                var_891 = "鮮血のｼｬﾎﾞﾝ";
-                var_967 = 1;
-                var_968 = 10;
+            if (enemy_list == 75) {
+                enemy_name = "鮮血のｼｬﾎﾞﾝ";
+                enemy_power = 1;
+                enemy_defence = 10;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12500,12 +12500,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 57) {
-                var_891 = "SPW財団の男";
-                var_967 = 1;
-                var_968 = 10;
+            if (enemy_list == 57) {
+                enemy_name = "SPW財団の男";
+                enemy_power = 1;
+                enemy_defence = 10;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12515,12 +12515,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 58) {
-                var_891 = "ﾎﾞｲﾝｺﾞ";
-                var_967 = 1;
-                var_968 = 10;
+            if (enemy_list == 58) {
+                enemy_name = "ﾎﾞｲﾝｺﾞ";
+                enemy_power = 1;
+                enemy_defence = 10;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 4;
@@ -12530,12 +12530,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 55) {
-                var_891 = "亀";
-                var_967 = 1;
-                var_968 = 1;
+            if (enemy_list == 55) {
+                enemy_name = "亀";
+                enemy_power = 1;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12545,12 +12545,12 @@ function func626() {
                 var_1657 = "・ジッパーにアイテムを捨てると成長し、";
                 var_1658 = "　部屋がさらに広くなるぞ。";
             }
-            if (var_437 == 53) {
-                var_891 = "ｴｸｽﾍﾟﾘｴﾝｽの花";
-                var_967 = 1;
-                var_968 = 1;
+            if (enemy_list == 53) {
+                enemy_name = "ｴｸｽﾍﾟﾘｴﾝｽの花";
+                enemy_power = 1;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12560,12 +12560,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 23) {
-                var_891 = "ただの死体";
-                var_967 = 1;
-                var_968 = 1;
+            if (enemy_list == 23) {
+                enemy_name = "ただの死体";
+                enemy_power = 1;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 0;
@@ -12575,12 +12575,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 81) {
-                var_891 = "ｱﾊﾞｯｷｫ";
-                var_967 = 1;
-                var_968 = 0;
+            if (enemy_list == 81) {
+                enemy_name = "ｱﾊﾞｯｷｫ";
+                enemy_power = 1;
+                enemy_defence = 0;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12590,12 +12590,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 83) {
-                var_891 = "間田";
-                var_967 = 1;
-                var_968 = 0;
+            if (enemy_list == 83) {
+                enemy_name = "間田";
+                enemy_power = 1;
+                enemy_defence = 0;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 4;
@@ -12605,12 +12605,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 50) {
-                var_891 = "元いた場所";
-                var_967 = 0;
-                var_968 = 0;
+            if (enemy_list == 50) {
+                enemy_name = "元いた場所";
+                enemy_power = 0;
+                enemy_defence = 0;
                 var_954 = 0;
-                var_438 = 9999;
+                enemy_hp = 9999;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12620,12 +12620,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 116) {
-                var_891 = "玉美";
-                var_967 = 0;
-                var_968 = 1;
+            if (enemy_list == 116) {
+                enemy_name = "玉美";
+                enemy_power = 0;
+                enemy_defence = 1;
                 var_954 = 1;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 7;
@@ -12635,12 +12635,12 @@ function func626() {
                 var_1657 = "・お金がないと体が重くなってしまうぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 142) {
-                var_891 = "露伴";
-                var_967 = 10;
-                var_968 = 10;
+            if (enemy_list == 142) {
+                enemy_name = "露伴";
+                enemy_power = 10;
+                enemy_defence = 10;
                 var_954 = 1;
-                var_438 = 20;
+                enemy_hp = 20;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12650,12 +12650,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 49) {
-                var_891 = "ｺﾋﾟｰ人形";
-                var_967 = var_580 + var_565;
-                var_968 = var_581;
+            if (enemy_list == 49) {
+                enemy_name = "ｺﾋﾟｰ人形";
+                enemy_power = var_580 + var_565;
+                enemy_defence = var_581;
                 var_954 = 0;
-                var_438 = var_352;
+                enemy_hp = var_352;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 5;
@@ -12665,12 +12665,12 @@ function func626() {
                 var_1657 = "・10ターンで人形に戻るぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 163) {
-                var_891 = "ﾔｸ中の少年";
-                var_967 = 1;
-                var_968 = 0;
+            if (enemy_list == 163) {
+                enemy_name = "ﾔｸ中の少年";
+                enemy_power = 1;
+                enemy_defence = 0;
                 var_954 = 1;
-                var_438 = 1;
+                enemy_hp = 1;
                 var_1637 = 0;
                 var_1654 = 1;
                 var_972 = 4;
@@ -12680,12 +12680,12 @@ function func626() {
                 var_1657 = "・中にブチャラティが入っているぞ。";
                 var_1658 = "";
             }
-            if (var_437 == 36) {
-                var_891 = "ｽﾋﾟｰﾄﾞﾜｺﾞﾝ";
-                var_967 = 7;
-                var_968 = 7;
+            if (enemy_list == 36) {
+                enemy_name = "ｽﾋﾟｰﾄﾞﾜｺﾞﾝ";
+                enemy_power = 7;
+                enemy_defence = 7;
                 var_954 = 0;
-                var_438 = 50;
+                enemy_hp = 50;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12695,12 +12695,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 105) {
-                var_891 = "ﾂｪﾍﾟﾘさん";
-                var_967 = 9;
-                var_968 = 6;
+            if (enemy_list == 105) {
+                enemy_name = "ﾂｪﾍﾟﾘさん";
+                enemy_power = 9;
+                enemy_defence = 6;
                 var_954 = 0;
-                var_438 = 40;
+                enemy_hp = 40;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12710,12 +12710,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 106) {
-                var_891 = "ﾍﾟｯｼ";
-                var_967 = 4;
-                var_968 = 4;
+            if (enemy_list == 106) {
+                enemy_name = "ﾍﾟｯｼ";
+                enemy_power = 4;
+                enemy_defence = 4;
                 var_954 = 0;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12725,12 +12725,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 107) {
-                var_891 = "成長したﾍﾟｯｼ";
-                var_967 = 12;
-                var_968 = 12;
+            if (enemy_list == 107) {
+                enemy_name = "成長したﾍﾟｯｼ";
+                enemy_power = 12;
+                enemy_defence = 12;
                 var_954 = 0;
-                var_438 = 30;
+                enemy_hp = 30;
                 var_1637 = 0;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12740,12 +12740,12 @@ function func626() {
                 var_1657 = "";
                 var_1658 = "";
             }
-            if (var_437 == 108) {
-                var_891 = "イギー";
-                var_967 = 5;
-                var_968 = 8;
+            if (enemy_list == 108) {
+                enemy_name = "イギー";
+                enemy_power = 5;
+                enemy_defence = 8;
                 var_954 = 0;
-                var_438 = 40;
+                enemy_hp = 40;
                 var_1637 = 1;
                 var_1654 = 999;
                 var_972 = 4;
@@ -12766,31 +12766,31 @@ function func627() {
                 case 0:
                     dbgprt(627);
                     var_977 = dim(20);
-                    if (!(var_62 == 1)) return [3 /*break*/, 2];
+                    if (!(dangeon_number == 1)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func628()];
                 case 1:
                     _a.sent();
                     _a.label = 2;
                 case 2:
-                    if (!(var_62 == 2)) return [3 /*break*/, 4];
+                    if (!(dangeon_number == 2)) return [3 /*break*/, 4];
                     return [4 /*yield*/, func629()];
                 case 3:
                     _a.sent();
                     _a.label = 4;
                 case 4:
-                    if (!(var_62 == 3)) return [3 /*break*/, 6];
+                    if (!(dangeon_number == 3)) return [3 /*break*/, 6];
                     return [4 /*yield*/, func630()];
                 case 5:
                     _a.sent();
                     _a.label = 6;
                 case 6:
-                    if (!(var_62 == 4)) return [3 /*break*/, 8];
+                    if (!(dangeon_number == 4)) return [3 /*break*/, 8];
                     return [4 /*yield*/, func634()];
                 case 7:
                     _a.sent();
                     _a.label = 8;
                 case 8:
-                    if (!(var_62 == 5)) return [3 /*break*/, 10];
+                    if (!(dangeon_number == 5)) return [3 /*break*/, 10];
                     return [4 /*yield*/, func631()];
                 case 9:
                     _a.sent();
@@ -15098,7 +15098,7 @@ function func636() {
                     return [2 /*return*/];
                 case 20:
                     var_314 = var_82[var_347][var_348];
-                    if (!(var_62 == 0)) return [3 /*break*/, 44];
+                    if (!(dangeon_number == 0)) return [3 /*break*/, 44];
                     if (!(var_66 == 16 && var_67 == 21 && var_199 == 8)) return [3 /*break*/, 22];
                     return [4 /*yield*/, func786()];
                 case 21:
@@ -15610,7 +15610,7 @@ function func636() {
                 case 146:
                     if (!(var_143 >= 1)) return [3 /*break*/, 154];
                     var_314 = var_82[var_347][var_348];
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 147:
                     _a.sent();
@@ -15675,7 +15675,7 @@ function func636() {
                         comments_row2 = "負けなあああああああいィィィ";
                     }
                     if (var_143 == 5) {
-                        comments_row1 = "さすが" + var_891 + "…";
+                        comments_row1 = "さすが" + enemy_name + "…";
                         comments_row2 = "しかしその動き… スデに憶えた！";
                     }
                     if (var_143 == 6) {
@@ -15840,7 +15840,7 @@ function func636() {
                     return [2 /*return*/];
                 case 172:
                     var_314 = var_82[var_347][var_348];
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 173:
                     _a.sent();
@@ -16018,17 +16018,17 @@ function func636() {
                     return [3 /*break*/, 188];
                 case 197:
                     var_314 = var_82[var_347][var_348];
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 198:
                     _a.sent();
-                    var_2943 = var_891;
+                    var_2943 = enemy_name;
                     var_1030 = 0;
                     if (var_127 != 0 || var_132 != 0) {
-                        var_891 = "何者か";
+                        enemy_name = "何者か";
                     }
                     comments_row1 = "";
                     comments_row2 = "";
@@ -16037,7 +16037,7 @@ function func636() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "ﾃﾞｨｱﾎﾞﾛは" + var_891 + "に";
+                    comments_row1 = "ﾃﾞｨｱﾎﾞﾛは" + enemy_name + "に";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -16114,7 +16114,7 @@ function func636() {
                     }
                     comments_row1a = "" + var_209 + "の養分を吸収した。";
                     comments_row2a = "";
-                    var_2945 = var_437;
+                    var_2945 = enemy_list;
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -16174,30 +16174,30 @@ function func636() {
                     _a.label = 219;
                 case 219:
                     var_314 = var_82[var_347][var_348];
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 220:
                     _a.sent();
                     if (!(var_83[var_314].Var3 <= 0)) return [3 /*break*/, 264];
-                    if (!(var_62 == 1 && var_83[var_314].Var0 == 20)) return [3 /*break*/, 222];
+                    if (!(dangeon_number == 1 && var_83[var_314].Var0 == 20)) return [3 /*break*/, 222];
                     return [4 /*yield*/, func685()];
                 case 221:
                     _a.sent();
                     _a.label = 222;
                 case 222:
-                    if (!(var_62 == 2 && var_83[var_314].Var0 == 132)) return [3 /*break*/, 224];
+                    if (!(dangeon_number == 2 && var_83[var_314].Var0 == 132)) return [3 /*break*/, 224];
                     return [4 /*yield*/, func686()];
                 case 223:
                     _a.sent();
                     _a.label = 224;
                 case 224:
-                    if (!(var_62 == 3 && var_83[var_314].Var0 == 143)) return [3 /*break*/, 226];
+                    if (!(dangeon_number == 3 && var_83[var_314].Var0 == 143)) return [3 /*break*/, 226];
                     return [4 /*yield*/, func687()];
                 case 225:
                     _a.sent();
                     _a.label = 226;
                 case 226:
-                    if (!(var_62 == 5 && var_83[var_314].Var16 >= 1000)) return [3 /*break*/, 228];
+                    if (!(dangeon_number == 5 && var_83[var_314].Var16 >= 1000)) return [3 /*break*/, 228];
                     var_2921 = var_83[var_314].Var0;
                     return [4 /*yield*/, func633()];
                 case 227:
@@ -16260,7 +16260,7 @@ function func636() {
                 case 237:
                     _a.sent();
                     var_314 = var_82[var_347][var_348];
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 238:
                     _a.sent();
@@ -16272,14 +16272,14 @@ function func636() {
                         var_2956 = Math.floor(var_2956 * 3 / 2);
                     }
                     if (var_127 != 0 || var_132 != 0) {
-                        var_891 = "何者か";
+                        enemy_name = "何者か";
                     }
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
-                    comments_row1a = "" + var_891 + "をやっつけた";
+                    comments_row1a = "" + enemy_name + "をやっつけた";
                     comments_row2a = "" + var_2956 + "の経験値を手に入れた";
-                    var_2945 = var_437;
-                    var_1034 = var_437;
+                    var_2945 = enemy_list;
+                    var_1034 = enemy_list;
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
@@ -16291,19 +16291,19 @@ function func636() {
                     return [4 /*yield*/, func047()];
                 case 240:
                     _a.sent();
-                    if (!(var_62 == 1 && var_83[var_314].Var0 == 20)) return [3 /*break*/, 242];
+                    if (!(dangeon_number == 1 && var_83[var_314].Var0 == 20)) return [3 /*break*/, 242];
                     return [4 /*yield*/, func689()];
                 case 241:
                     _a.sent();
                     _a.label = 242;
                 case 242:
-                    if (!(var_62 == 2 && var_83[var_314].Var0 == 132)) return [3 /*break*/, 244];
+                    if (!(dangeon_number == 2 && var_83[var_314].Var0 == 132)) return [3 /*break*/, 244];
                     return [4 /*yield*/, func689()];
                 case 243:
                     _a.sent();
                     _a.label = 244;
                 case 244:
-                    if (!(var_62 == 3 && var_83[var_314].Var0 == 143)) return [3 /*break*/, 246];
+                    if (!(dangeon_number == 3 && var_83[var_314].Var0 == 143)) return [3 /*break*/, 246];
                     return [4 /*yield*/, func689()];
                 case 245:
                     _a.sent();
@@ -16339,7 +16339,7 @@ function func636() {
                         var_2957 = 5;
                     }
                     if (var_83[var_314].Var0 == 76 || var_83[var_314].Var0 == 77) {
-                        if (var_62 == 99) {
+                        if (dangeon_number == 99) {
                             var_2959 = 0;
                             if (var_83[var_314].Var16 == 1) {
                                 var_2959 = 1;
@@ -16779,13 +16779,13 @@ function func638() {
                     dbgprt(638);
                     if (var_83[var_314].Var39 >= 2) {
                         if (var_83[var_314].Var31 == 4 || var_83[var_314].Var31 == 5) {
-                            var_968 = Math.floor(var_968 * (var_83[var_314].Var39 * 2 + 10) / 10);
+                            enemy_defence = Math.floor(enemy_defence * (var_83[var_314].Var39 * 2 + 10) / 10);
                         }
                     }
                     if (var_156[206] == 1) {
                         var_1073 = rnd(8);
                         if (var_1073 == 0) {
-                            var_968 = Math.floor(var_968 / 2);
+                            enemy_defence = Math.floor(enemy_defence / 2);
                             var_1193 = 1;
                         }
                     }
@@ -16794,7 +16794,7 @@ function func638() {
                     _a.sent();
                     var_949 = Math.floor(var_950 * (var_580 + var_565 - 8) / 16) + var_950;
                     var_951 = var_949;
-                    for (cnt1_71 = 0; cnt1_71 < var_968; ++cnt1_71) {
+                    for (cnt1_71 = 0; cnt1_71 < enemy_defence; ++cnt1_71) {
                         var_949 = Math.floor(var_949 * 15 / 16);
                     }
                     var_2817 = rnd(33);
@@ -17394,7 +17394,7 @@ function func643() {
                     var_2981 = 1;
                     var_402 = var_82[var_2928][var_2931];
                     var_314 = var_82[var_2928][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 15];
                     return [4 /*yield*/, func644()];
                 case 8:
@@ -17425,7 +17425,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2928][var_2975];
                     var_314 = var_82[var_2928][var_2975];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 23];
                     return [4 /*yield*/, func644()];
                 case 16:
@@ -17456,7 +17456,7 @@ function func643() {
                     var_2976 = 1;
                     var_402 = var_82[var_2928][var_2930];
                     var_314 = var_82[var_2928][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 28];
                     return [4 /*yield*/, func644()];
                 case 24:
@@ -17478,7 +17478,7 @@ function func643() {
                     var_2983 = 1;
                     var_402 = var_82[var_2929][var_2931];
                     var_314 = var_82[var_2929][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 36];
                     return [4 /*yield*/, func644()];
                 case 29:
@@ -17509,7 +17509,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2929][var_2975];
                     var_314 = var_82[var_2929][var_2975];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 44];
                     return [4 /*yield*/, func644()];
                 case 37:
@@ -17540,7 +17540,7 @@ function func643() {
                     var_2978 = 1;
                     var_402 = var_82[var_2929][var_2930];
                     var_314 = var_82[var_2929][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 49];
                     return [4 /*yield*/, func644()];
                 case 45:
@@ -17562,7 +17562,7 @@ function func643() {
                     var_2981 = 1;
                     var_402 = var_82[var_2928][var_2931];
                     var_314 = var_82[var_2928][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 57];
                     return [4 /*yield*/, func644()];
                 case 50:
@@ -17593,7 +17593,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2974][var_2931];
                     var_314 = var_82[var_2974][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 65];
                     return [4 /*yield*/, func644()];
                 case 58:
@@ -17624,7 +17624,7 @@ function func643() {
                     var_2983 = 1;
                     var_402 = var_82[var_2929][var_2931];
                     var_314 = var_82[var_2929][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 70];
                     return [4 /*yield*/, func644()];
                 case 66:
@@ -17646,7 +17646,7 @@ function func643() {
                     var_2976 = 1;
                     var_402 = var_82[var_2928][var_2930];
                     var_314 = var_82[var_2928][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 78];
                     return [4 /*yield*/, func644()];
                 case 71:
@@ -17677,7 +17677,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2974][var_2930];
                     var_314 = var_82[var_2974][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 86];
                     return [4 /*yield*/, func644()];
                 case 79:
@@ -17708,7 +17708,7 @@ function func643() {
                     var_2978 = 1;
                     var_402 = var_82[var_2929][var_2930];
                     var_314 = var_82[var_2929][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 91];
                     return [4 /*yield*/, func644()];
                 case 87:
@@ -17730,7 +17730,7 @@ function func643() {
                     var_2979 = 1;
                     var_402 = var_82[var_2928][var_2975];
                     var_314 = var_82[var_2928][var_2975];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 99];
                     return [4 /*yield*/, func644()];
                 case 92:
@@ -17761,7 +17761,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2928][var_2930];
                     var_314 = var_82[var_2928][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 107];
                     return [4 /*yield*/, func644()];
                 case 100:
@@ -17792,7 +17792,7 @@ function func643() {
                     var_2977 = 1;
                     var_402 = var_82[var_2974][var_2930];
                     var_314 = var_82[var_2974][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 112];
                     return [4 /*yield*/, func644()];
                 case 108:
@@ -17814,7 +17814,7 @@ function func643() {
                     var_2980 = 1;
                     var_402 = var_82[var_2929][var_2975];
                     var_314 = var_82[var_2929][var_2975];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 120];
                     return [4 /*yield*/, func644()];
                 case 113:
@@ -17845,7 +17845,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2929][var_2930];
                     var_314 = var_82[var_2929][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 128];
                     return [4 /*yield*/, func644()];
                 case 121:
@@ -17876,7 +17876,7 @@ function func643() {
                     var_2977 = 1;
                     var_402 = var_82[var_2974][var_2930];
                     var_314 = var_82[var_2974][var_2930];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 133];
                     return [4 /*yield*/, func644()];
                 case 129:
@@ -17898,7 +17898,7 @@ function func643() {
                     var_2982 = 1;
                     var_402 = var_82[var_2974][var_2931];
                     var_314 = var_82[var_2974][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 141];
                     return [4 /*yield*/, func644()];
                 case 134:
@@ -17929,7 +17929,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2928][var_2931];
                     var_314 = var_82[var_2928][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 149];
                     return [4 /*yield*/, func644()];
                 case 142:
@@ -17960,7 +17960,7 @@ function func643() {
                     var_2979 = 1;
                     var_402 = var_82[var_2928][var_2975];
                     var_314 = var_82[var_2928][var_2975];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 154];
                     return [4 /*yield*/, func644()];
                 case 150:
@@ -17982,7 +17982,7 @@ function func643() {
                     var_2982 = 1;
                     var_402 = var_82[var_2974][var_2931];
                     var_314 = var_82[var_2974][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 162];
                     return [4 /*yield*/, func644()];
                 case 155:
@@ -18013,7 +18013,7 @@ function func643() {
                     var_2984 = 1;
                     var_402 = var_82[var_2929][var_2931];
                     var_314 = var_82[var_2929][var_2931];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 170];
                     return [4 /*yield*/, func644()];
                 case 163:
@@ -18044,7 +18044,7 @@ function func643() {
                     var_2980 = 1;
                     var_402 = var_82[var_2929][var_2975];
                     var_314 = var_82[var_2929][var_2975];
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (!(var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5)) return [3 /*break*/, 175];
                     return [4 /*yield*/, func644()];
                 case 171:
@@ -20018,7 +20018,7 @@ function func652() {
                     var_1451 = (var_1451 - var_67 + 4) * 40 - 10;
                     var_314 = var_3024;
                     var_402 = var_3024;
-                    var_437 = var_83[var_3024].Var0;
+                    enemy_list = var_83[var_3024].Var0;
                     var_403 = "「クラッシュ！　食い破れ！」";
                     if (var_143 >= 1) {
                         var_2267[8] = var_2267[7];
@@ -20074,7 +20074,7 @@ function func652() {
                         var_2867 = 1;
                     }
                     if (!(var_2867 != 0)) return [3 /*break*/, 8];
-                    var_437 = var_83[var_3024].Var0;
+                    enemy_list = var_83[var_3024].Var0;
                     return [4 /*yield*/, func626()];
                 case 5:
                     _a.sent();
@@ -20273,7 +20273,7 @@ function func653() {
                     var_1451 = (var_1451 - var_67 + 4) * 40 - 10;
                     var_402 = var_3024;
                     var_314 = var_3024;
-                    var_437 = var_83[var_3024].Var0;
+                    enemy_list = var_83[var_3024].Var0;
                     var_403 = "ダイバー・ダウン！";
                     if (var_143 >= 1) {
                         var_2267[8] = var_2267[7];
@@ -20329,7 +20329,7 @@ function func653() {
                         var_2867 = 1;
                     }
                     if (!(var_2867 != 0)) return [3 /*break*/, 16];
-                    var_437 = var_83[var_3024].Var0;
+                    enemy_list = var_83[var_3024].Var0;
                     return [4 /*yield*/, func626()];
                 case 13:
                     _a.sent();
@@ -20390,7 +20390,7 @@ function func654() {
                     _a.sent();
                     return [2 /*return*/];
                 case 2:
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     return [4 /*yield*/, func626()];
                 case 3:
                     _a.sent();
@@ -20409,18 +20409,18 @@ function func654() {
                         return [2 /*return*/];
                     }
                     if (var_83[var_673].Var39 >= 2) {
-                        var_967 = Math.floor(var_967 * (var_83[var_673].Var39 * 2 + 10) / 10);
+                        enemy_power = Math.floor(enemy_power * (var_83[var_673].Var39 * 2 + 10) / 10);
                     }
                     if (var_83[var_673].Var25 >= 1 && var_83[var_673].Var25 <= 50) {
-                        var_967 = var_967 + var_83[var_673].Var25;
+                        enemy_power = enemy_power + var_83[var_673].Var25;
                     }
                     if (var_83[var_673].Var25 >= 51 && var_83[var_673].Var25 <= 99) {
-                        var_967 = var_967 - (var_83[var_673].Var25 - 50);
-                        if (var_967 <= 1) {
-                            var_967 = 1;
+                        enemy_power = enemy_power - (var_83[var_673].Var25 - 50);
+                        if (enemy_power <= 1) {
+                            enemy_power = 1;
                         }
                     }
-                    var_949 = Math.floor(var_967 * (var_967 + var_967 - 8) / 16) + var_967;
+                    var_949 = Math.floor(enemy_power * (enemy_power + enemy_power - 8) / 16) + enemy_power;
                     for (cnt1_78 = 0; cnt1_78 < var_581; ++cnt1_78) {
                         var_949 = Math.floor(var_949 * 15 / 16);
                     }
@@ -20457,25 +20457,25 @@ function func654() {
                         var_3031++;
                     }
                     if (!(var_3030 >= 1)) return [3 /*break*/, 14];
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
-                        var_437 = var_83[var_673].Var31;
+                        enemy_list = var_83[var_673].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 6:
                     _a.sent();
-                    var_3033 = var_891;
+                    var_3033 = enemy_name;
                     if (var_127 != 0 || var_132 != 0) {
                         var_3033 = "何者か";
                     }
                     if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
                         var_3033 = "何者か";
                     }
-                    var_437 = var_3030;
+                    enemy_list = var_3030;
                     return [4 /*yield*/, func626()];
                 case 7:
                     _a.sent();
-                    var_3034 = var_891;
+                    var_3034 = enemy_name;
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -20523,7 +20523,7 @@ function func654() {
                             var_2868 = 1;
                         }
                     }
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         var_2867 = 1;
                         var_2868 = 0;
                     }
@@ -20557,18 +20557,18 @@ function func654() {
                     return [4 /*yield*/, func656()];
                 case 15:
                     _a.sent();
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
-                        var_437 = var_83[var_673].Var31;
+                        enemy_list = var_83[var_673].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 16:
                     _a.sent();
                     if (var_127 != 0 || var_132 != 0) {
-                        var_891 = "何者か";
+                        enemy_name = "何者か";
                     }
                     if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
-                        var_891 = "何者か";
+                        enemy_name = "何者か";
                     }
                     comments_row1 = "";
                     comments_row2 = "";
@@ -20578,10 +20578,10 @@ function func654() {
                     var_298 = "";
                     var_299 = 0;
                     if (var_2868 == 0) {
-                        comments_row1 = "" + var_891 + "の攻撃は外れた";
+                        comments_row1 = "" + enemy_name + "の攻撃は外れた";
                     }
                     if (var_2868 == 1) {
-                        comments_row1 = "" + var_891 + "の攻撃を";
+                        comments_row1 = "" + enemy_name + "の攻撃を";
                         comments_row2 = "ヒラリとかわした";
                     }
                     var_198 = 1;
@@ -20639,7 +20639,7 @@ function func654() {
                     return [4 /*yield*/, func656()];
                 case 23:
                     _a.sent();
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     return [4 /*yield*/, func626()];
                 case 24:
                     _a.sent();
@@ -20679,7 +20679,7 @@ function func654() {
                     return [2 /*return*/];
                 case 30:
                     var_3037 = 0;
-                    if (var_437 == 14 || var_437 == 66 || var_437 == 47 || var_437 == 120 || var_437 == 160 || var_437 == 67 || var_156[367] == 1) {
+                    if (enemy_list == 14 || enemy_list == 66 || enemy_list == 47 || enemy_list == 120 || enemy_list == 160 || enemy_list == 67 || var_156[367] == 1) {
                         if (var_83[var_673].Var20 == 0) {
                             var_3037 = rnd(4);
                             if (var_83[var_673].Var0 == 120) {
@@ -20693,7 +20693,7 @@ function func654() {
                             }
                         }
                     }
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     return [4 /*yield*/, func626()];
                 case 31:
                     _a.sent();
@@ -20798,9 +20798,9 @@ function func654() {
                     _a.sent();
                     var_83[var_673].Var7 = 0;
                     var_742 = 0;
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
-                        var_437 = var_83[var_673].Var31;
+                        enemy_list = var_83[var_673].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 56:
@@ -20851,9 +20851,9 @@ function func654() {
                     return [3 /*break*/, 58];
                 case 61:
                     var_3038 = 0;
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
-                        var_437 = var_83[var_673].Var31;
+                        enemy_list = var_83[var_673].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 62:
@@ -20861,10 +20861,10 @@ function func654() {
                     _a.label = 63;
                 case 63:
                     if (var_127 != 0 || var_132 != 0) {
-                        var_891 = "何者か";
+                        enemy_name = "何者か";
                     }
                     if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
-                        var_891 = "何者か";
+                        enemy_name = "何者か";
                     }
                     comments_row1 = "";
                     comments_row2 = "";
@@ -20873,7 +20873,7 @@ function func654() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "はﾃﾞｨｱﾎﾞﾛに";
+                    comments_row1 = "" + enemy_name + "はﾃﾞｨｱﾎﾞﾛに";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[2];
@@ -21005,15 +21005,15 @@ function func655() {
                         var_83[var_2819].Var27 = 0;
                         return [2 /*return*/];
                     }
-                    var_437 = var_83[var_402].Var0;
+                    enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var0 == 97 && var_83[var_402].Var31 >= 11) {
-                        var_437 = var_83[var_402].Var31;
+                        enemy_list = var_83[var_402].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 3:
                     _a.sent();
-                    var_971 = var_968;
-                    var_2861 = var_891;
+                    var_971 = enemy_defence;
+                    var_2861 = enemy_name;
                     var_3039 = var_83[var_402].Var5;
                     if (var_127 != 0 || var_132 != 0) {
                         var_2861 = "何者か";
@@ -21022,15 +21022,15 @@ function func655() {
                         var_2861 = "何者か";
                     }
                     var_1637 = 0;
-                    var_437 = var_83[var_2819].Var0;
+                    enemy_list = var_83[var_2819].Var0;
                     if (var_83[var_2819].Var0 == 97 && var_83[var_2819].Var31 >= 11) {
-                        var_437 = var_83[var_2819].Var31;
+                        enemy_list = var_83[var_2819].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 4:
                     _a.sent();
-                    var_2820 = var_967;
-                    var_3040 = var_891;
+                    var_2820 = enemy_power;
+                    var_3040 = enemy_name;
                     if (var_127 != 0 || var_132 != 0) {
                         var_3040 = "何者か";
                     }
@@ -21038,7 +21038,7 @@ function func655() {
                         var_3040 = "何者か";
                     }
                     var_3041 = rnd(8);
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         var_3041 = 1;
                     }
                     if (!(var_3041 == 0)) return [3 /*break*/, 11];
@@ -21075,7 +21075,7 @@ function func655() {
                 case 10: return [2 /*return*/];
                 case 11:
                     if (var_83[var_402].Var0 == 53) {
-                        var_971 = var_968;
+                        var_971 = enemy_defence;
                     }
                     var_403 = "" + var_3040 + "は";
                     if (var_83[var_2819].Var39 >= 2) {
@@ -21090,7 +21090,7 @@ function func655() {
                         var_2820 = var_2820 + var_83[var_2819].Var25;
                     }
                     if (var_83[var_2819].Var25 >= 51 && var_83[var_2819].Var25 < 99) {
-                        var_2820 = var_967 - (var_83[var_2819].Var25 - 50);
+                        var_2820 = enemy_power - (var_83[var_2819].Var25 - 50);
                         if (var_2820 <= 1) {
                             var_2820 = 1;
                         }
@@ -21182,7 +21182,7 @@ function func656() {
             switch (_a.label) {
                 case 0:
                     dbgprt(656);
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     return [4 /*yield*/, func626()];
                 case 1:
                     _a.sent();
@@ -21910,11 +21910,11 @@ function func658() {
                     if (var_83[var_3042].Var39 == 1) {
                         var_83[var_3042].Var39 = 2;
                     }
-                    var_437 = 137;
+                    enemy_list = 137;
                     return [4 /*yield*/, func626()];
                 case 68:
                     _a.sent();
-                    var_83[var_3042].Var3 = Math.floor(var_438 * (var_83[var_3042].Var39 + 10) / 10);
+                    var_83[var_3042].Var3 = Math.floor(enemy_hp * (var_83[var_3042].Var39 + 10) / 10);
                     if (var_83[var_3042].Var3 >= 999) {
                         var_83[var_3042].Var3 = 999;
                     }
@@ -22552,11 +22552,11 @@ function func658() {
                     if (var_83[var_314].Var39 == 2) {
                         var_83[var_314].Var39 = 3;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 188:
                     _a.sent();
-                    var_83[var_314].Var3 = Math.floor(var_438 * (var_83[var_314].Var39 + 10) / 10);
+                    var_83[var_314].Var3 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
                     if (var_83[var_314].Var3 >= 999) {
                         var_83[var_314].Var3 = 999;
                     }
@@ -22722,7 +22722,7 @@ function func658() {
                     ++cnt2_107;
                     return [3 /*break*/, 213];
                 case 216:
-                    DSPLAY(audio_id = 112);
+                    DSPLAY(audio_id = 112); // 刀の切れる音 or 強化した時のシャキーン 効果音
                     var_411 = 2;
                     return [4 /*yield*/, func337()];
                 case 217:
@@ -22804,7 +22804,7 @@ function func658() {
                     ++cnt2_109;
                     return [3 /*break*/, 230];
                 case 233:
-                    DSPLAY(audio_id = 112);
+                    DSPLAY(audio_id = 112); // 刀の切れる音 or 強化した時のシャキーン 効果音
                     var_411 = 2;
                     return [4 /*yield*/, func337()];
                 case 234:
@@ -23761,7 +23761,7 @@ function func660() {
                     dbgprt(660);
                     var_3056 = var_340;
                     var_314 = var_82[var_455][var_456];
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 1:
                     _a.sent();
@@ -23866,21 +23866,21 @@ function func660() {
                     return [3 /*break*/, 14];
                 case 17:
                     var_83[var_314].Var8 = 0;
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 18:
                     _a.sent();
-                    var_3057 = var_891;
+                    var_3057 = enemy_name;
                     var_83[var_314].Var3 = var_83[var_314].Var3 + 20;
                     if (var_120 == 1 || var_174 == 1) {
                         var_83[var_314].Var3 = var_83[var_314].Var3 + 20;
                     }
                     var_3058 = 0;
                     if (var_83[var_314].Var39 >= 2) {
-                        var_3059 = Math.floor(var_438 * (var_83[var_314].Var39 + 10) / 10);
+                        var_3059 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
                         if (var_3059 >= 999) {
                             var_3059 = 999;
                         }
@@ -23890,8 +23890,8 @@ function func660() {
                         }
                     }
                     if (var_83[var_314].Var39 <= 1) {
-                        if (var_83[var_314].Var3 >= var_438) {
-                            var_83[var_314].Var3 = var_438;
+                        if (var_83[var_314].Var3 >= enemy_hp) {
+                            var_83[var_314].Var3 = enemy_hp;
                             var_3058 = 1;
                         }
                     }
@@ -23977,7 +23977,7 @@ function func660() {
                     var_1849 = var_1849 + 1;
                     var_486[var_1916][var_3060][15] = var_83[var_314].Var0;
                     var_486[var_1916][var_3060][18] = var_83[var_314].Var39;
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     DSPLAY(audio_id = 130);
                     comments_row1 = "";
                     comments_row2 = "";
@@ -23986,7 +23986,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "を";
+                    comments_row1 = "" + enemy_name + "を";
                     if (var_862[851][0] == 1) {
                         comments_row2 = "ビンの中に閉じ込めた！";
                     }
@@ -24067,17 +24067,17 @@ function func660() {
                     return [3 /*break*/, 36];
                 case 39:
                     var_83[var_314].Var8 = 0;
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 40:
                     _a.sent();
-                    var_3057 = var_891;
-                    var_83[var_314].Var3 = var_438;
+                    var_3057 = enemy_name;
+                    var_83[var_314].Var3 = enemy_hp;
                     if (var_83[var_314].Var39 >= 2) {
-                        var_3059 = Math.floor(var_438 * (var_83[var_314].Var39 + 10) / 10);
+                        var_3059 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
                         if (var_3059 >= 999) {
                             var_3059 = 999;
                         }
@@ -24147,17 +24147,17 @@ function func660() {
                     return [3 /*break*/, 47];
                 case 50:
                     var_83[var_314].Var8 = 0;
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 51:
                     _a.sent();
-                    var_3057 = var_891;
-                    var_83[var_314].Var3 = var_438;
+                    var_3057 = enemy_name;
+                    var_83[var_314].Var3 = enemy_hp;
                     if (var_83[var_314].Var39 >= 2) {
-                        var_3059 = Math.floor(var_438 * (var_83[var_314].Var39 + 10) / 10);
+                        var_3059 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
                         if (var_3059 >= 999) {
                             var_3059 = 999;
                         }
@@ -24528,9 +24528,9 @@ function func660() {
                     if (var_83[var_314].Var25 >= 99) {
                         var_83[var_314].Var25 = 99;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 98:
@@ -24544,7 +24544,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "攻撃力が下がった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -24594,9 +24594,9 @@ function func660() {
                             var_83[var_314].Var25 = 49;
                         }
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 107:
@@ -24610,7 +24610,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "攻撃力が上がった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -24655,9 +24655,9 @@ function func660() {
                         var_83[var_314].Var14 = 0;
                         var_83[var_314].Var15 = 0;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 116:
@@ -24671,7 +24671,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "動きが鈍くなった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -24719,9 +24719,9 @@ function func660() {
                     if (var_114 == var_314) {
                         var_114 = 0;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 127:
@@ -24734,7 +24734,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "眠ってしまった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -24882,9 +24882,9 @@ function func660() {
                     if (var_114 == var_314) {
                         var_114 = 0;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 149:
@@ -24898,7 +24898,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "を";
+                    comments_row1 = "" + enemy_name + "を";
                     comments_row2 = "その場に固定した！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -24934,9 +24934,9 @@ function func660() {
                         var_114 = 0;
                     }
                     DSPLAY(audio_id = 126);
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 156:
@@ -24949,7 +24949,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "氷漬けになった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -24992,9 +24992,9 @@ function func660() {
                         var_83[var_314].Var12 = 0;
                     }
                     var_83[var_314].Var19 = 1;
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 165:
@@ -25007,7 +25007,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "に";
+                    comments_row1 = "" + enemy_name + "に";
                     comments_row2 = "ラバーズが取り付いた！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25042,9 +25042,9 @@ function func660() {
                     if (var_114 == var_314) {
                         var_114 = 0;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 172:
@@ -25058,7 +25058,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "混乱してしまった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25093,9 +25093,9 @@ function func660() {
                     if (var_114 == var_314) {
                         var_114 = 0;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 179:
@@ -25109,7 +25109,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "鼓膜が破れてしまった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25144,9 +25144,9 @@ function func660() {
                     if (var_114 == var_314) {
                         var_114 = 0;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 186:
@@ -25160,7 +25160,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "の";
+                    comments_row1 = "" + enemy_name + "の";
                     comments_row2 = "目は見えなくなった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25198,9 +25198,9 @@ function func660() {
                         var_83[var_314].Var14 = 0;
                         var_83[var_314].Var15 = 0;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 193:
@@ -25214,7 +25214,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "の";
+                    comments_row1 = "" + enemy_name + "の";
                     comments_row2 = "動きが速くなった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25246,9 +25246,9 @@ function func660() {
                         var_83[var_314].Var12 = 0;
                     }
                     var_83[var_314].Var13 = 0;
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 200:
@@ -25261,7 +25261,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "透明状態になった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25371,14 +25371,14 @@ function func660() {
                     if (var_83[var_314].Var39 == 1) {
                         var_83[var_314].Var39 = 2;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 221:
                     _a.sent();
-                    var_83[var_314].Var3 = Math.floor(var_438 * (var_83[var_314].Var39 + 10) / 10);
+                    var_83[var_314].Var3 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
                     if (var_83[var_314].Var3 >= 999) {
                         var_83[var_314].Var3 = 999;
                     }
@@ -25391,7 +25391,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "レベルが上がった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25477,15 +25477,15 @@ function func660() {
                     var_83[var_314].Var16 = var_83[var_314].Var16 - 1;
                     _a.label = 234;
                 case 234:
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
-                        var_437 = var_83[var_314].Var31;
+                        enemy_list = var_83[var_314].Var31;
                     }
                     return [4 /*yield*/, func626()];
                 case 235:
                     _a.sent();
-                    if (var_83[var_314].Var3 >= var_438) {
-                        var_83[var_314].Var3 = var_438;
+                    if (var_83[var_314].Var3 >= enemy_hp) {
+                        var_83[var_314].Var3 = enemy_hp;
                     }
                     var_83[var_314].Var8 = 1;
                     DSPLAY(audio_id = 151);
@@ -25496,7 +25496,7 @@ function func660() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_891 + "は";
+                    comments_row1 = "" + enemy_name + "は";
                     comments_row2 = "レベルが下がった！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -25822,7 +25822,7 @@ function func661() {
                 case 2:
                     if (var_83[var_314].Var39 >= 2) {
                         if (var_83[var_314].Var31 == 4 || var_83[var_314].Var31 == 5) {
-                            var_968 = Math.floor(var_968 * (var_83[var_314].Var39 * 2 + 10) / 10);
+                            enemy_defence = Math.floor(enemy_defence * (var_83[var_314].Var39 * 2 + 10) / 10);
                         }
                     }
                     return [4 /*yield*/, func679()];
@@ -25830,7 +25830,7 @@ function func661() {
                     _a.sent();
                     var_949 = Math.floor(var_950 * (var_3076 + var_565 - 8) / 16) + var_950;
                     var_951 = var_949;
-                    for (cnt2_167 = 0; cnt2_167 < var_968; ++cnt2_167) {
+                    for (cnt2_167 = 0; cnt2_167 < enemy_defence; ++cnt2_167) {
                         var_949 = Math.floor(var_949 * 15 / 16);
                     }
                     if (var_949 == 0) {
@@ -25931,7 +25931,7 @@ function func662() {
                         DSPLAY(audio_id = 218);
                     }
                     if (var_1238 == 23) {
-                        DSPLAY(audio_id = 103);
+                        DSPLAY(audio_id = 103); // 殴った時の効果音
                     }
                     if (var_1238 == 34) {
                         DSPLAY(audio_id = 218);
@@ -26138,11 +26138,11 @@ function func663() {
                     if (var_83[var_314].Var39 == 1) {
                         var_83[var_314].Var39 = 2;
                     }
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 12:
                     _a.sent();
-                    var_83[var_314].Var3 = Math.floor(var_438 * (var_83[var_314].Var39 + 10) / 10);
+                    var_83[var_314].Var3 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
                     if (var_83[var_314].Var3 >= 999) {
                         var_83[var_314].Var3 = 999;
                     }
@@ -26350,23 +26350,23 @@ function func666() {
                 case 14:
                     var_1424 = 0;
                     var_271 = 0;
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 15:
                     _a.sent();
                     if (var_83[var_314].Var39 >= 2) {
-                        var_967 = Math.floor(var_967 * (var_83[var_314].Var39 * 2 + 10) / 10);
+                        enemy_power = Math.floor(enemy_power * (var_83[var_314].Var39 * 2 + 10) / 10);
                     }
                     if (var_83[var_314].Var25 >= 1 && var_83[var_314].Var25 <= 50) {
-                        var_967 = var_967 + var_83[var_314].Var25;
+                        enemy_power = enemy_power + var_83[var_314].Var25;
                     }
                     if (var_83[var_314].Var25 >= 51 && var_83[var_314].Var25 < 99) {
-                        var_967 = var_967 - (var_83[var_314].Var25 - 50);
-                        if (var_967 <= 1) {
-                            var_967 = 1;
+                        enemy_power = enemy_power - (var_83[var_314].Var25 - 50);
+                        if (enemy_power <= 1) {
+                            enemy_power = 1;
                         }
                     }
-                    var_949 = Math.floor(var_967 * (var_967 + var_967 - 8) / 16) + var_967;
+                    var_949 = Math.floor(enemy_power * (enemy_power + enemy_power - 8) / 16) + enemy_power;
                     for (cnt1_103 = 0; cnt1_103 < var_581; ++cnt1_103) {
                         var_949 = Math.floor(var_949 * 15 / 16);
                     }
@@ -27125,7 +27125,7 @@ function func672() {
                 case 21:
                     var_1200 = 1;
                     var_2400 = 345;
-                    if (var_62 == 1 && current_floor == 12 && var_386 == 1) {
+                    if (dangeon_number == 1 && current_floor == 12 && var_386 == 1) {
                         if (var_201 == 4 || var_201 == 5 || var_201 == 6) {
                             var_356 = 200;
                         }
@@ -27181,7 +27181,7 @@ function func673() {
                         var_1041 = 1;
                         var_207 = 5;
                     }
-                    if (!(var_62 == 0)) return [3 /*break*/, 10];
+                    if (!(dangeon_number == 0)) return [3 /*break*/, 10];
                     return [4 /*yield*/, func182()];
                 case 6:
                     _a.sent();
@@ -27588,7 +27588,7 @@ function func676() {
                     var_447 = var_448;
                     var_449 = var_450;
                     var_314 = var_82[var_347][var_348];
-                    var_437 = var_83[var_314].Var0;
+                    enemy_list = var_83[var_314].Var0;
                     return [4 /*yield*/, func626()];
                 case 2:
                     _a.sent();
@@ -27615,7 +27615,7 @@ function func676() {
                             var_1654 = 1;
                         }
                     }
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         var_1654 = 99999;
                     }
                     var_3084 = rnd(var_1654);
@@ -27636,7 +27636,7 @@ function func676() {
                             var_3084 = 0;
                         }
                     }
-                    if (var_62 == 5 && var_83[var_314].Var16 >= 1000) {
+                    if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                         var_1765 = 1;
                     }
                     if (!(var_3084 == 0 || var_2262 == 1 || var_2263 >= 1 || var_1761 >= 1 || var_3085 >= 1 || var_1765 == 1)) return [3 /*break*/, 10];
@@ -27999,7 +27999,7 @@ function func681() {
             dbgprt(681);
             var_840 = var_840 + 1;
             var_3087 = rnd(15);
-            if (var_62 == 99) {
+            if (dangeon_number == 99) {
                 var_3087 = 0;
             }
             if (var_3087 == 0) {
@@ -28175,12 +28175,12 @@ function func683() {
                     if (var_83[var_673].Var39 == 1) {
                         var_83[var_673].Var39 = 2;
                     }
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     return [4 /*yield*/, func626()];
                 case 1:
                     _a.sent();
-                    var_3091 = var_891;
-                    var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+                    var_3091 = enemy_name;
+                    var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
                     if (var_83[var_673].Var3 >= 999) {
                         var_83[var_673].Var3 = 999;
                     }
@@ -28261,11 +28261,11 @@ function func684() {
                         var_83[var_673].Var39 = 10;
                     }
                     if (!(var_83[var_673].Var39 >= 2)) return [3 /*break*/, 2];
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     return [4 /*yield*/, func626()];
                 case 1:
                     _a.sent();
-                    var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 * 2 + 10) / 10);
+                    var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 * 2 + 10) / 10);
                     _a.label = 2;
                 case 2: return [2 /*return*/];
             }
@@ -28818,7 +28818,7 @@ function func689() {
                         if (var_71[var_491][var_492] != 0 && var_71[var_491][var_492] <= 12 && var_72[var_491][var_492] == 0 && var_71[var_491][var_492] != var_201 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0) {
                             break;
                         }
-                        if (var_62 == 3 && var_71[var_491][var_492] != 0 && var_71[var_491][var_492] <= 12 && var_72[var_491][var_492] == 0 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0) {
+                        if (dangeon_number == 3 && var_71[var_491][var_492] != 0 && var_71[var_491][var_492] <= 12 && var_72[var_491][var_492] == 0 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0) {
                             break;
                         }
                     }
@@ -28876,7 +28876,7 @@ function func690() {
                         var_3095 = 1;
                     }
                     var_2959 = 0;
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         if (var_2957 == 4 || var_2957 == 5) {
                             var_3095 = 1;
                         }

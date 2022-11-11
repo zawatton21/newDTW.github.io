@@ -200,19 +200,19 @@ function func905() {
             switch (_a.label) {
                 case 0:
                     dbgprt(905);
-                    if (var_62 == 1) {
+                    if (dangeon_number == 1) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
                     }
-                    if (var_62 == 2) {
+                    if (dangeon_number == 2) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
                     }
-                    if (var_62 == 3) {
+                    if (dangeon_number == 3) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
                     }
-                    if (var_62 == 4) {
+                    if (dangeon_number == 4) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
                     }
-                    if (var_62 == 5) {
+                    if (dangeon_number == 5) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_21 + "に入った";
                     }
                     tcpput(var_3561, var_1050);
@@ -299,7 +299,7 @@ function func907() {
                     var_3516[7] = var_350;
                     var_3516[8] = current_floor;
                     var_3516[9] = var_415;
-                    var_3516[10] = var_62;
+                    var_3516[10] = dangeon_number;
                     var_3516[11] = var_357;
                     var_3516[12] = var_233[var_553].Var4;
                     var_3516[13] = var_580;
@@ -367,7 +367,7 @@ function func909() {
                     if (current_floor == var_3573) {
                         var_3572 = 0;
                     }
-                    if (!(var_407 == 0 || var_3572 >= 3 || var_536 == 0 || var_62 == 0 || var_62 != int(var_1068[12]))) return [3 /*break*/, 2];
+                    if (!(var_407 == 0 || var_3572 >= 3 || var_536 == 0 || dangeon_number == 0 || dangeon_number != int(var_1068[12]))) return [3 /*break*/, 2];
                     return [4 /*yield*/, func910()];
                 case 1:
                     _a.sent();
@@ -410,7 +410,7 @@ function func909() {
                     if (current_floor == var_3573) {
                         var_3572 = 0;
                     }
-                    if (!(var_407 == 0 || var_3572 >= 5 || var_62 == 0 || var_62 != var_1069[var_3574][12])) return [3 /*break*/, 4];
+                    if (!(var_407 == 0 || var_3572 >= 5 || dangeon_number == 0 || dangeon_number != var_1069[var_3574][12])) return [3 /*break*/, 4];
                     return [4 /*yield*/, func910()];
                 case 3:
                     _a.sent();
@@ -634,7 +634,7 @@ function func911() {
                     dbgprt(911);
                     var_3519 = dim(30);
                     var_3519[0] = var_233[var_225].Var0;
-                    if (var_62 == 3 && var_3519[0] == 112) {
+                    if (dangeon_number == 3 && var_3519[0] == 112) {
                         if (current_floor >= 60 && current_floor <= 66) {
                             var_3519[0] = 394;
                         }
@@ -1611,7 +1611,7 @@ function func923() {
                     return [4 /*yield*/, func340()];
                 case 11:
                     _a.sent();
-                    DSPLAY(audio_id = 133);
+                    DSPLAY(audio_id = 133); // アイテムを置いた時の効果音
                     var_1756 = 1;
                     var_452 = 1;
                     cnt1_14 = 0;
@@ -2754,7 +2754,7 @@ function func929() {
                     var_3516[7] = var_534;
                     var_3516[8] = current_floor;
                     var_3516[9] = var_415;
-                    var_3516[10] = var_62;
+                    var_3516[10] = dangeon_number;
                     var_3516[11] = var_357;
                     var_3516[12] = var_233[var_553].Var4;
                     var_3516[13] = var_580;
@@ -2916,19 +2916,19 @@ function func933() {
             switch (_a.label) {
                 case 0:
                     dbgprt(933);
-                    if (var_62 == 1) {
+                    if (dangeon_number == 1) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
                     }
-                    if (var_62 == 2) {
+                    if (dangeon_number == 2) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
                     }
-                    if (var_62 == 3) {
+                    if (dangeon_number == 3) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
                     }
-                    if (var_62 == 4) {
+                    if (dangeon_number == 4) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
                     }
-                    if (var_62 == 5) {
+                    if (dangeon_number == 5) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_21 + "に入った";
                     }
                     tcpput(var_3561, var_1050);
@@ -3013,10 +3013,10 @@ function func935() {
                 if (current_floor == var_3573) {
                     var_3572 = 0;
                 }
-                if (var_62 == 0) {
+                if (dangeon_number == 0) {
                     color(255, 0, 0);
                 }
-                if (var_62 != var_1069[cnt1_18][12]) {
+                if (dangeon_number != var_1069[cnt1_18][12]) {
                     color(255, 0, 0);
                 }
                 if (var_3572 >= 5) {

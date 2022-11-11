@@ -251,7 +251,7 @@ function func803(this: any) {
                 var_228 = var_228 + 22;
                 var_225 = var_225 + 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func803();
@@ -261,7 +261,7 @@ function func803(this: any) {
                 var_228 = 45;
                 var_225 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func803();
@@ -273,7 +273,7 @@ function func803(this: any) {
                 var_228 = var_228 - 22;
                 var_225 = var_225 - 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func803();
@@ -283,7 +283,7 @@ function func803(this: any) {
                 var_228 = 45 + (var_1013 - 1) * 22;
                 var_225 = var_1013;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func803();
@@ -581,7 +581,7 @@ function func807(this: any) {
 function func808(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(808);
-        var_836 = var_62;
+        var_836 = dangeon_number;
         var_837 = current_floor;
         if (var_837 <= 3) {
             var_1013 = 0;
@@ -638,11 +638,11 @@ function func808(this: any) {
                 var_1735 = 9;
             }
             if (var_262 == 1) {
-                var_62 = 2;
+                dangeon_number = 2;
             }
             yield func385();
             if (var_262 == 1) {
-                var_62 = 0;
+                dangeon_number = 0;
             }
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
                 var_991[0][var_683][cnt2] = var_78[var_866]["Var" + cnt2];
@@ -1052,9 +1052,9 @@ function func813(this: any) {
             yield func817();
             return;
         }
-        var_437 = var_830;
+        enemy_list = var_830;
         yield func626();
-        var_3194 = "" + var_891;
+        var_3194 = "" + enemy_name;
         yield func094();
         comments_row1 = "";
         comments_row2 = "";
@@ -1285,7 +1285,7 @@ function func819(this: any) {
                 var_246 = var_246 + 16;
                 var_3196 = var_3196 + 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func819();
@@ -1295,7 +1295,7 @@ function func819(this: any) {
                 var_246 = 45;
                 var_3196 = 0;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func819();
@@ -1305,7 +1305,7 @@ function func819(this: any) {
                 var_246 = var_246 - 16;
                 var_3196 = var_3196 - 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func819();
@@ -1315,7 +1315,7 @@ function func819(this: any) {
                 var_246 = 109;
                 var_3196 = 4;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func819();
@@ -1399,7 +1399,7 @@ function func820(this: any) {
                 var_516 = var_516 + 16;
                 var_513 = var_513 + 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1409,7 +1409,7 @@ function func820(this: any) {
                 var_516 = 88;
                 var_513 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1419,7 +1419,7 @@ function func820(this: any) {
                 var_516 = var_516 + 16;
                 var_513 = var_513 + 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1429,7 +1429,7 @@ function func820(this: any) {
                 var_516 = 88;
                 var_513 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1439,7 +1439,7 @@ function func820(this: any) {
                 var_516 = var_516 + 16;
                 var_513 = var_513 + 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1449,7 +1449,7 @@ function func820(this: any) {
                 var_516 = 88;
                 var_513 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1459,7 +1459,7 @@ function func820(this: any) {
                 var_516 = var_516 + 16;
                 var_513 = var_513 + 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1469,7 +1469,7 @@ function func820(this: any) {
                 var_516 = 88;
                 var_513 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1481,7 +1481,7 @@ function func820(this: any) {
                 var_516 = var_516 - 16;
                 var_513 = var_513 - 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1491,7 +1491,7 @@ function func820(this: any) {
                 var_516 = 152;
                 var_513 = 5;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1501,7 +1501,7 @@ function func820(this: any) {
                 var_516 = var_516 - 16;
                 var_513 = var_513 - 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1511,7 +1511,7 @@ function func820(this: any) {
                 var_516 = 136;
                 var_513 = 4;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1521,7 +1521,7 @@ function func820(this: any) {
                 var_516 = var_516 - 16;
                 var_513 = var_513 - 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1531,7 +1531,7 @@ function func820(this: any) {
                 var_516 = 120;
                 var_513 = 3;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1541,7 +1541,7 @@ function func820(this: any) {
                 var_516 = var_516 - 16;
                 var_513 = var_513 - 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1551,7 +1551,7 @@ function func820(this: any) {
                 var_516 = 104;
                 var_513 = 2;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func820();
@@ -1839,18 +1839,18 @@ function func825(this: any) {
         if (var_3121 >= 1) {
             var_203 = rnd(4);
         }
-        var_62 = 1;
+        dangeon_number = 1;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
-        if (var_62 == 1 && current_floor > var_377) {
+        if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
-        if (var_62 == 2 && current_floor > var_378) {
+        if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
-        if (var_62 == 3 && current_floor > var_379) {
+        if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
         var_405 = 0;
@@ -1897,7 +1897,7 @@ function func825(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         yield func006();
         return;
     });
@@ -1938,18 +1938,18 @@ function func827(this: any) {
         if (var_3121 == 0 && var_1037 == 0 && var_415 == 0 && var_1040 == 0) {
             var_535 = 1;
         }
-        var_62 = 2;
+        dangeon_number = 2;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
-        if (var_62 == 1 && current_floor > var_377) {
+        if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
-        if (var_62 == 2 && current_floor > var_378) {
+        if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
-        if (var_62 == 3 && current_floor > var_379) {
+        if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
         var_405 = 0;
@@ -1996,7 +1996,7 @@ function func827(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         yield func006();
         return;
     });
@@ -2037,18 +2037,18 @@ function func829(this: any) {
             return;
         }
         var_68 = 0;
-        var_62 = 3;
+        dangeon_number = 3;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
-        if (var_62 == 1 && current_floor > var_377) {
+        if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
-        if (var_62 == 2 && current_floor > var_378) {
+        if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
-        if (var_62 == 3 && current_floor > var_379) {
+        if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
         var_405 = 0;
@@ -2105,7 +2105,7 @@ function func829(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         yield func006();
         return;
     });
@@ -2146,18 +2146,18 @@ function func830(this: any) {
         var_565 = 8;
         var_566 = 8;
         var_68 = 0;
-        var_62 = 3;
+        dangeon_number = 3;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
-        if (var_62 == 1 && current_floor > var_377) {
+        if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
-        if (var_62 == 2 && current_floor > var_378) {
+        if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
-        if (var_62 == 3 && current_floor > var_379) {
+        if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
         var_405 = 0;
@@ -2174,7 +2174,7 @@ function func830(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         yield func006();
         return;
     });
@@ -2444,12 +2444,12 @@ function func834(this: any) {
         dbgprt(834);
         var_68 = 0;
         yield func723();
-        var_62 = 4;
+        dangeon_number = 4;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
-        if (var_62 == 4 && current_floor > var_380) {
+        if (dangeon_number == 4 && current_floor > var_380) {
             var_380 = current_floor;
         }
         var_405 = 0;
@@ -2495,7 +2495,7 @@ function func834(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         yield func006();
         return;
     });
@@ -2724,7 +2724,7 @@ function func836(this: any) {
             return;
         }
         var_68 = 0;
-        var_62 = 5;
+        dangeon_number = 5;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
@@ -2785,7 +2785,7 @@ function func836(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         yield func006();
         return;
     });
@@ -2971,14 +2971,14 @@ function func839(this: any) {
             var_246 = var_246 + 19;
             var_546 = 0;
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
         }
         if (var_255 == 1 && var_546 == 0) {
             var_246 = var_246 - 19;
             var_546 = 1;
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
         }
         if (var_242 == 1 || var_244 == 1) {
@@ -4387,9 +4387,9 @@ function func853(this: any) {
             var_3272 = "";
             if (var_82[var_3279][var_3280] >= 1) {
                 var_2501 = var_82[var_3279][var_3280];
-                var_437 = var_83[var_2501].Var0;
+                enemy_list = var_83[var_2501].Var0;
                 yield func626();
-                var_3299 = var_891;
+                var_3299 = enemy_name;
                 var_3272 = var_3272 + "  " + var_3299;
             }
             if (var_65[var_3279][var_3280] == 1) {
@@ -5238,8 +5238,8 @@ function func862(this: any) {
             if (var_82[var_3315][var_3316] != 0) {
                 var_3266 = 7;
                 var_3140 = var_82[var_3315][var_3316];
-                var_437 = var_83[var_3140].Var0;
-                var_3317 = "p" + var_437 + "e";
+                enemy_list = var_83[var_3140].Var0;
+                var_3317 = "p" + enemy_list + "e";
                 var_3318 = instr(var_3319, 0, var_3317);
                 var_3320 = Math.floor(var_3318 / 12);
                 var_3246 = var_3320;
@@ -6784,7 +6784,7 @@ function func876(this: any) {
         yield func233();
 
         var_65 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-        var_62 = 99;
+        dangeon_number = 99;
         var_375 = 1;
         var_336 = 0;
         var_97 = 0;
@@ -7429,7 +7429,7 @@ function func884(this: any) {
                     var_3488 = 1;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7440,7 +7440,7 @@ function func884(this: any) {
                     var_3488++;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7451,7 +7451,7 @@ function func884(this: any) {
                     var_3488 = 1;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7462,7 +7462,7 @@ function func884(this: any) {
                 if (var_3489 >= 1 && var_3488 == 1) {
                     var_3486 = 0;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7473,7 +7473,7 @@ function func884(this: any) {
                     var_3488--;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7484,7 +7484,7 @@ function func884(this: any) {
                     var_3488 = var_3498;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7499,7 +7499,7 @@ function func884(this: any) {
                     var_3497 = var_3487 * 10 - 10;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7512,7 +7512,7 @@ function func884(this: any) {
                     var_3497 = var_3487 * 10 - 10;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7527,7 +7527,7 @@ function func884(this: any) {
                     var_3497 = var_3487 * 10 - 10;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -7540,7 +7540,7 @@ function func884(this: any) {
                     var_3497 = var_3487 * 10 - 10;
                     var_3486 = var_3497 + var_3488;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     yield func885();
                     yield wait(10);
                     yield func884();
@@ -8811,18 +8811,18 @@ function func892(this: any) {
         var_883 = 1;
         for (let cnt1 = 0; cnt1 < 126; ++cnt1) {
             yield func893();
-            var_890 = var_890 + "\n" + var_891;
-            if (var_437 < 10) {
-                var_3319 = var_3319 + "\np" + var_437 + "eeeeeeee";
+            var_890 = var_890 + "\n" + enemy_name;
+            if (enemy_list < 10) {
+                var_3319 = var_3319 + "\np" + enemy_list + "eeeeeeee";
             }
-            if (var_437 >= 10 && var_437 < 100) {
-                var_3319 = var_3319 + "\np" + var_437 + "eeeeeee";
+            if (enemy_list >= 10 && enemy_list < 100) {
+                var_3319 = var_3319 + "\np" + enemy_list + "eeeeeee";
             }
-            if (var_437 >= 100) {
-                var_3319 = var_3319 + "\np" + var_437 + "eeeeee";
+            if (enemy_list >= 100) {
+                var_3319 = var_3319 + "\np" + enemy_list + "eeeeee";
             }
-            var_3292[var_883] = var_437;
-            if (var_437 == 37) {
+            var_3292[var_883] = enemy_list;
+            if (enemy_list == 37) {
                 break;
             }
             var_883++;
@@ -8836,618 +8836,618 @@ function func893(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(893);
         var_3509 = 0;
-        var_891 = "";
+        enemy_name = "";
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 0;
-            var_891 = "------------------";
+            enemy_list = 0;
+            enemy_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 79;
-            var_891 = "ｴｺｰｽﾞの卵";
+            enemy_list = 79;
+            enemy_name = "ｴｺｰｽﾞの卵";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 1;
-            var_891 = "ﾔｸ中のｺﾞﾛﾂｷ";
+            enemy_list = 1;
+            enemy_name = "ﾔｸ中のｺﾞﾛﾂｷ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 5;
-            var_891 = "小汚い浮浪者";
+            enemy_list = 5;
+            enemy_name = "小汚い浮浪者";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 147;
-            var_891 = "ｼﾞｮｾﾌ";
+            enemy_list = 147;
+            enemy_name = "ｼﾞｮｾﾌ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 2;
-            var_891 = "ヌケサク";
+            enemy_list = 2;
+            enemy_name = "ヌケサク";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 93;
-            var_891 = "ｴﾝﾎﾟﾘｵ";
+            enemy_list = 93;
+            enemy_name = "ｴﾝﾎﾟﾘｵ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 3;
-            var_891 = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰ";
+            enemy_list = 3;
+            enemy_name = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 94;
-            var_891 = "ブルりん";
+            enemy_list = 94;
+            enemy_name = "ブルりん";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 77;
-            var_891 = "ｴｺｰｽﾞACT1";
+            enemy_list = 77;
+            enemy_name = "ｴｺｰｽﾞACT1";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 51;
-            var_891 = "ﾜﾝﾁｪﾝ";
+            enemy_list = 51;
+            enemy_name = "ﾜﾝﾁｪﾝ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 7;
-            var_891 = "運命の車輪";
+            enemy_list = 7;
+            enemy_name = "運命の車輪";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 9;
-            var_891 = "ﾗﾊﾞｰｿｳﾙ";
+            enemy_list = 9;
+            enemy_name = "ﾗﾊﾞｰｿｳﾙ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 39;
-            var_891 = "ﾊｲｳｪｲｽﾀｰ";
+            enemy_list = 39;
+            enemy_name = "ﾊｲｳｪｲｽﾀｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 26;
-            var_891 = "ﾊｰｳﾞｪｽﾄ";
+            enemy_list = 26;
+            enemy_name = "ﾊｰｳﾞｪｽﾄ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 76;
-            var_891 = "ｴｺｰｽﾞACT2";
+            enemy_list = 76;
+            enemy_name = "ｴｺｰｽﾞACT2";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 6;
-            var_891 = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙの人形";
+            enemy_list = 6;
+            enemy_name = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙの人形";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 165;
-            var_891 = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙ";
+            enemy_list = 165;
+            enemy_name = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 52;
-            var_891 = "ｼﾞｬｯｸ･ｻﾞ･ﾘﾊﾟｰ";
+            enemy_list = 52;
+            enemy_name = "ｼﾞｬｯｸ･ｻﾞ･ﾘﾊﾟｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 141;
-            var_891 = "F・F";
+            enemy_list = 141;
+            enemy_name = "F・F";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 134;
-            var_891 = "ｼﾞｮﾘｰﾝ";
+            enemy_list = 134;
+            enemy_name = "ｼﾞｮﾘｰﾝ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 4;
-            var_891 = "ﾃﾞｽ･13";
+            enemy_list = 4;
+            enemy_name = "ﾃﾞｽ･13";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 13;
-            var_891 = "ﾗﾊﾞｰｽﾞ";
+            enemy_list = 13;
+            enemy_name = "ﾗﾊﾞｰｽﾞ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 101;
-            var_891 = "ﾍﾟｲｼﾞ";
+            enemy_list = 101;
+            enemy_name = "ﾍﾟｲｼﾞ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 102;
-            var_891 = "ｼﾞｮｰﾝｽﾞ";
+            enemy_list = 102;
+            enemy_name = "ｼﾞｮｰﾝｽﾞ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 103;
-            var_891 = "ﾌﾟﾗﾝﾄ";
+            enemy_list = 103;
+            enemy_name = "ﾌﾟﾗﾝﾄ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 104;
-            var_891 = "ﾎﾞｰﾝﾅﾑ";
+            enemy_list = 104;
+            enemy_name = "ﾎﾞｰﾝﾅﾑ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 119;
-            var_891 = "ｼﾞｮｾﾌ";
+            enemy_list = 119;
+            enemy_name = "ｼﾞｮｾﾌ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 99;
-            var_891 = "ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰ";
+            enemy_list = 99;
+            enemy_name = "ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 71;
-            var_891 = "ﾄﾞｩｰﾋﾞｰ";
+            enemy_list = 71;
+            enemy_name = "ﾄﾞｩｰﾋﾞｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 12;
-            var_891 = "ｴｺｰｽﾞACT3";
+            enemy_list = 12;
+            enemy_name = "ｴｺｰｽﾞACT3";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 56;
-            var_891 = "ｼｭﾄﾛﾊｲﾑ";
+            enemy_list = 56;
+            enemy_name = "ｼｭﾄﾛﾊｲﾑ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 28;
-            var_891 = "ｼﾞｬｯｼﾞﾒﾝﾄ";
+            enemy_list = 28;
+            enemy_name = "ｼﾞｬｯｼﾞﾒﾝﾄ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 22;
-            var_891 = "ｱｳﾞﾄﾞｩﾙ人形";
+            enemy_list = 22;
+            enemy_name = "ｱｳﾞﾄﾞｩﾙ人形";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 31;
-            var_891 = "吉良の親父";
+            enemy_list = 31;
+            enemy_name = "吉良の親父";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 148;
-            var_891 = "ｴﾙﾒｪｽ";
+            enemy_list = 148;
+            enemy_name = "ｴﾙﾒｪｽ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 131;
-            var_891 = "ｼﾞｮﾙﾉ";
+            enemy_list = 131;
+            enemy_name = "ｼﾞｮﾙﾉ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 115;
-            var_891 = "ｱｸｱ･ﾈｯｸﾚｽ";
+            enemy_list = 115;
+            enemy_name = "ｱｸｱ･ﾈｯｸﾚｽ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 11;
-            var_891 = "ﾜｲｱｰﾄﾞのﾍﾞｯｸ";
+            enemy_list = 11;
+            enemy_name = "ﾜｲｱｰﾄﾞのﾍﾞｯｸ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 45;
-            var_891 = "由花子";
+            enemy_list = 45;
+            enemy_name = "由花子";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 29;
-            var_891 = "ｸﾞﾘｰﾝ･ﾃﾞｨ";
+            enemy_list = 29;
+            enemy_name = "ｸﾞﾘｰﾝ･ﾃﾞｨ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 47;
-            var_891 = "億泰";
+            enemy_list = 47;
+            enemy_name = "億泰";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 27;
-            var_891 = "ｹﾞﾌﾞ神";
+            enemy_list = 27;
+            enemy_name = "ｹﾞﾌﾞ神";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 136;
-            var_891 = "ｼｰｻﾞｰ";
+            enemy_list = 136;
+            enemy_name = "ｼｰｻﾞｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 38;
-            var_891 = "ｱﾚｯｼｰ";
+            enemy_list = 38;
+            enemy_name = "ｱﾚｯｼｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 48;
-            var_891 = "ｴｱﾛｽﾐｽ";
+            enemy_list = 48;
+            enemy_name = "ｴｱﾛｽﾐｽ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 78;
-            var_891 = "ｱｳﾞﾄﾞｩﾙさん";
+            enemy_list = 78;
+            enemy_name = "ｱｳﾞﾄﾞｩﾙさん";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 17;
-            var_891 = "ｼｱｰﾊｰﾄｱﾀｯｸ";
+            enemy_list = 17;
+            enemy_name = "ｼｱｰﾊｰﾄｱﾀｯｸ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 46;
-            var_891 = "ﾎﾙ･ﾎｰｽ";
+            enemy_list = 46;
+            enemy_name = "ﾎﾙ･ﾎｰｽ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 125;
-            var_891 = "ﾌｰｺﾞ";
+            enemy_list = 125;
+            enemy_name = "ﾌｰｺﾞ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 14;
-            var_891 = "床屋のｶｰﾝ";
+            enemy_list = 14;
+            enemy_name = "床屋のｶｰﾝ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 69;
-            var_891 = "ﾌﾞﾗﾌｫｰﾄﾞ";
+            enemy_list = 69;
+            enemy_name = "ﾌﾞﾗﾌｫｰﾄﾞ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 59;
-            var_891 = "ﾌﾟｯﾁ神父";
+            enemy_list = 59;
+            enemy_name = "ﾌﾟｯﾁ神父";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 145;
-            var_891 = "康一";
+            enemy_list = 145;
+            enemy_name = "康一";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 18;
-            var_891 = "ﾌﾞﾗｯｸ･ｻﾊﾞｽ";
+            enemy_list = 18;
+            enemy_name = "ﾌﾞﾗｯｸ･ｻﾊﾞｽ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 35;
-            var_891 = "仗助";
+            enemy_list = 35;
+            enemy_name = "仗助";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 135;
-            var_891 = "若ｼﾞｮｾﾌ";
+            enemy_list = 135;
+            enemy_name = "若ｼﾞｮｾﾌ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 10;
-            var_891 = "ﾉﾄｰﾘｱｽBIG";
+            enemy_list = 10;
+            enemy_name = "ﾉﾄｰﾘｱｽBIG";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 95;
-            var_891 = "ｽﾄﾚｲﾂｫ";
+            enemy_list = 95;
+            enemy_name = "ｽﾄﾚｲﾂｫ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 63;
-            var_891 = "ﾌﾟﾛｼｭｰﾄ兄貴";
+            enemy_list = 63;
+            enemy_name = "ﾌﾟﾛｼｭｰﾄ兄貴";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 84;
-            var_891 = "ﾁｮｺﾗｰﾀ";
+            enemy_list = 84;
+            enemy_name = "ﾁｮｺﾗｰﾀ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 117;
-            var_891 = "ﾁｮｺﾗｰﾀの上半身";
+            enemy_list = 117;
+            enemy_name = "ﾁｮｺﾗｰﾀの上半身";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 43;
-            var_891 = "ｾｯｺ";
+            enemy_list = 43;
+            enemy_name = "ｾｯｺ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 85;
-            var_891 = "ﾘｿﾞｯﾄ";
+            enemy_list = 85;
+            enemy_name = "ﾘｿﾞｯﾄ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 32;
-            var_891 = "吉良吉影";
+            enemy_list = 32;
+            enemy_name = "吉良吉影";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 44;
-            var_891 = "ﾚｯﾄﾞﾎｯﾄﾁﾘﾍﾟｯﾊﾟｰ";
+            enemy_list = 44;
+            enemy_name = "ﾚｯﾄﾞﾎｯﾄﾁﾘﾍﾟｯﾊﾟｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 72;
-            var_891 = "ｹﾝｿﾞｰ";
+            enemy_list = 72;
+            enemy_name = "ｹﾝｿﾞｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 66;
-            var_891 = "ﾀﾙｶｽ";
+            enemy_list = 66;
+            enemy_name = "ﾀﾙｶｽ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 113;
-            var_891 = "DIO";
+            enemy_list = 113;
+            enemy_name = "DIO";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 15;
-            var_891 = "ﾍﾟｯﾄｼｮｯﾌﾟ";
+            enemy_list = 15;
+            enemy_name = "ﾍﾟｯﾄｼｮｯﾌﾟ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 123;
-            var_891 = "ﾌﾞﾁｬﾗﾃｨ";
+            enemy_list = 123;
+            enemy_name = "ﾌﾞﾁｬﾗﾃｨ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 80;
-            var_891 = "ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰ";
+            enemy_list = 80;
+            enemy_name = "ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 65;
-            var_891 = "虹村形兆";
+            enemy_list = 65;
+            enemy_name = "虹村形兆";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 40;
-            var_891 = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ";
+            enemy_list = 40;
+            enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 41;
-            var_891 = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ戦車";
+            enemy_list = 41;
+            enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ戦車";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 42;
-            var_891 = "ｱﾊﾟｯﾁ";
+            enemy_list = 42;
+            enemy_name = "ｱﾊﾟｯﾁ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 54;
-            var_891 = "ｸﾞﾘｰﾝﾍﾞﾚｰ";
+            enemy_list = 54;
+            enemy_name = "ｸﾞﾘｰﾝﾍﾞﾚｰ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 61;
-            var_891 = "ﾖｰﾖｰﾏｯ";
+            enemy_list = 61;
+            enemy_name = "ﾖｰﾖｰﾏｯ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 21;
-            var_891 = "ｽﾄﾚｲ･ｷｬｯﾄ";
+            enemy_list = 21;
+            enemy_name = "ｽﾄﾚｲ･ｷｬｯﾄ";
         }
         if (var_3489 == 2) {
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 88;
-                var_891 = "ﾄﾞﾉｳﾞｧﾝ";
+                enemy_list = 88;
+                enemy_name = "ﾄﾞﾉｳﾞｧﾝ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 138;
-                var_891 = "ﾃﾞｨｵ･ﾌﾞﾗﾝﾄﾞｰ";
+                enemy_list = 138;
+                enemy_name = "ﾃﾞｨｵ･ﾌﾞﾗﾝﾄﾞｰ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 140;
-                var_891 = "ｼﾞｮﾅｻﾝ";
+                enemy_list = 140;
+                enemy_name = "ｼﾞｮﾅｻﾝ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 73;
-                var_891 = "ﾀﾞｲｱｰさん";
+                enemy_list = 73;
+                enemy_name = "ﾀﾞｲｱｰさん";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 30;
-                var_891 = "禁煙中ﾎﾙ･ﾎｰｽ";
+                enemy_list = 30;
+                enemy_name = "禁煙中ﾎﾙ･ﾎｰｽ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 122;
-                var_891 = "ﾎﾟﾙﾅﾚﾌ";
+                enemy_list = 122;
+                enemy_name = "ﾎﾟﾙﾅﾚﾌ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 121;
-                var_891 = "花京院";
+                enemy_list = 121;
+                enemy_name = "花京院";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 152;
-                var_891 = "ﾄﾘｯｼｭ";
+                enemy_list = 152;
+                enemy_name = "ﾄﾘｯｼｭ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 160;
-                var_891 = "ｳｴｽﾄｳｯﾄﾞ看守";
+                enemy_list = 160;
+                enemy_name = "ｳｴｽﾄｳｯﾄﾞ看守";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 86;
-                var_891 = "ｻﾝﾀﾅ";
+                enemy_list = 86;
+                enemy_name = "ｻﾝﾀﾅ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 155;
-                var_891 = "ﾏﾗｲｱ";
+                enemy_list = 155;
+                enemy_name = "ﾏﾗｲｱ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 156;
-                var_891 = "ｳｪｻﾞｰ";
+                enemy_list = 156;
+                enemy_name = "ｳｪｻﾞｰ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 157;
-                var_891 = "ｱﾅｽｲ";
+                enemy_list = 157;
+                enemy_name = "ｱﾅｽｲ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 144;
-                var_891 = "川尻浩作";
+                enemy_list = 144;
+                enemy_name = "川尻浩作";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 128;
-                var_891 = "4部承太郎";
+                enemy_list = 128;
+                enemy_name = "4部承太郎";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 158;
-                var_891 = "ﾌﾟｯﾂﾝ由花子";
+                enemy_list = 158;
+                enemy_name = "ﾌﾟｯﾂﾝ由花子";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 150;
-                var_891 = "康一act2!!";
+                enemy_list = 150;
+                enemy_name = "康一act2!!";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 68;
-                var_891 = "ﾌﾞﾁ切れた仗助";
+                enemy_list = 68;
+                enemy_name = "ﾌﾞﾁ切れた仗助";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 67;
-                var_891 = "ﾌﾞﾁ切れた億泰";
+                enemy_list = 67;
+                enemy_name = "ﾌﾞﾁ切れた億泰";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 172;
-                var_891 = "虫喰いでない";
+                enemy_list = 172;
+                enemy_name = "虫喰いでない";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 151;
-                var_891 = "虫喰い";
+                enemy_list = 151;
+                enemy_name = "虫喰い";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 87;
-                var_891 = "ｴｼﾃﾞｨｼ";
+                enemy_list = 87;
+                enemy_name = "ｴｼﾃﾞｨｼ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 164;
-                var_891 = "ｴｼﾃﾞｨｼの脳";
+                enemy_list = 164;
+                enemy_name = "ｴｼﾃﾞｨｼの脳";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 109;
-                var_891 = "ワムウ";
+                enemy_list = 109;
+                enemy_name = "ワムウ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 110;
-                var_891 = "カーズ";
+                enemy_list = 110;
+                enemy_name = "カーズ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 139;
-                var_891 = "ﾘｻﾘｻ";
+                enemy_list = 139;
+                enemy_name = "ﾘｻﾘｻ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 124;
-                var_891 = "ﾐｽﾀ";
+                enemy_list = 124;
+                enemy_name = "ﾐｽﾀ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 127;
-                var_891 = "C-MOON";
+                enemy_list = 127;
+                enemy_name = "C-MOON";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 126;
-                var_891 = "退院した花京院";
+                enemy_list = 126;
+                enemy_name = "退院した花京院";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 129;
-                var_891 = "ｱﾇﾋﾞｽﾎﾟﾙﾅﾚﾌ";
+                enemy_list = 129;
+                enemy_name = "ｱﾇﾋﾞｽﾎﾟﾙﾅﾚﾌ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 133;
-                var_891 = "ｳﾞｧﾆﾗｱｲｽ";
+                enemy_list = 133;
+                enemy_name = "ｳﾞｧﾆﾗｱｲｽ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 64;
-                var_891 = "ｷﾞｱｯﾁｮ";
+                enemy_list = 64;
+                enemy_name = "ｷﾞｱｯﾁｮ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 137;
-                var_891 = "成長した吉良";
+                enemy_list = 137;
+                enemy_name = "成長した吉良";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 153;
-                var_891 = "ﾏｯｸｲｨｰﾝ";
+                enemy_list = 153;
+                enemy_name = "ﾏｯｸｲｨｰﾝ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 118;
-                var_891 = "ｸﾘｰﾑ";
+                enemy_list = 118;
+                enemy_name = "ｸﾘｰﾑ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 114;
-                var_891 = "最高にﾊｲなDIO";
+                enemy_list = 114;
+                enemy_name = "最高にﾊｲなDIO";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 111;
-                var_891 = "究極カーズ";
+                enemy_list = 111;
+                enemy_name = "究極カーズ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 120;
-                var_891 = "承太郎";
+                enemy_list = 120;
+                enemy_name = "承太郎";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 60;
-                var_891 = "ｻﾞ･ﾆｭｰ神父";
+                enemy_list = 60;
+                enemy_name = "ｻﾞ･ﾆｭｰ神父";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 98;
-                var_891 = "ｴﾝﾎﾟﾘｵ(ｳｪｻﾞｰ)";
+                enemy_list = 98;
+                enemy_name = "ｴﾝﾎﾟﾘｵ(ｳｪｻﾞｰ)";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 19;
-                var_891 = "ｱﾗﾋﾞｱﾌｧｯﾂ";
+                enemy_list = 19;
+                enemy_name = "ｱﾗﾋﾞｱﾌｧｯﾂ";
             }
             var_3509++;
             if (var_883 == var_3509) {
-                var_437 = 90;
-                var_891 = "岩";
+                enemy_list = 90;
+                enemy_name = "岩";
             }
         }
         var_3509++;
         if (var_883 == var_3509) {
-            var_437 = 37;
-            var_891 = "猫";
+            enemy_list = 37;
+            enemy_name = "猫";
         }
         return;
     });
@@ -10020,7 +10020,7 @@ function func899(this: any) {
                         }
                         var_449++;
                     }
-                    if (var_62 == int(var_1068[12]) && var_62 != 0) {
+                    if (dangeon_number == int(var_1068[12]) && dangeon_number != 0) {
                         var_536 = 1;
                     }
                     else {
@@ -10096,11 +10096,11 @@ function func899(this: any) {
                     var_3552 = 0;
                     var_3553 = int(var_1068[10]);
                     var_3552 = current_floor - var_3553;
-                    if (var_62 != int(var_1068[12])) {
+                    if (dangeon_number != int(var_1068[12])) {
                         color(150, 150, 150);
                         mes("（別の場所）");
                     }
-                    if (var_62 == int(var_1068[12])) {
+                    if (dangeon_number == int(var_1068[12])) {
                         if (var_3552 < (-2)) {
                             color(255, 0, 0);
                             var_3554 = -var_3552;

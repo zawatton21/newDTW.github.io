@@ -575,7 +575,7 @@ function func105() {
                     if (var_677 == item_list) {
                         return [2 /*return*/];
                     }
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         return [2 /*return*/];
                     }
                     if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
@@ -596,7 +596,7 @@ function func106() {
             switch (_a.label) {
                 case 0:
                     dbgprt(106);
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         return [2 /*return*/];
                     }
                     if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
@@ -672,7 +672,7 @@ function func110() {
             switch (_a.label) {
                 case 0:
                     dbgprt(110);
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         return [2 /*return*/];
                     }
                     var_678 = 1;
@@ -1355,6 +1355,7 @@ function func139() {
                     else {
                         var_703 = 1;
                         var_704 = bload("01.dat");
+                        // var_704[61] == 0 だと拠点    
                         if (var_704[61] == 0) {
                             if (var_704[117] == 0) {
                                 var_705 = "ヴェネチアホテル";
@@ -1366,6 +1367,7 @@ function func139() {
                                 var_705 = "酒場";
                             }
                         }
+                        // var_704[61] == 1 だとホテルの外 
                         if (var_704[61] == 1) {
                             if (var_704[1] <= 2) {
                                 var_705 = "水の都";
@@ -1383,18 +1385,21 @@ function func139() {
                                 var_705 = "エンヤホテル";
                             }
                         }
+                        // var_704[61] == 2 だとレクイエムの第迷宮
                         if (var_704[61] == 2) {
                             var_705 = "レクイエムの大迷宮";
                             if (var_704[1] == 30) {
                                 var_705 = "黄金の風";
                             }
                         }
+                        // var_704[61] == 3 だとディアボロの試練
                         if (var_704[61] == 3) {
                             var_705 = "ディアボロの試練";
                             if (var_704[1] == 99) {
                                 var_705 = "自由人の狂想曲";
                             }
                         }
+                        // var_704[61] == 4 だと一巡後の世界
                         if (var_704[61] == 4) {
                             var_705 = "一巡後の世界";
                         }
@@ -2144,7 +2149,7 @@ function func142() {
                     if (!(var_255 == 1)) return [3 /*break*/, 37];
                     if (!(var_64 == 0)) return [3 /*break*/, 25];
                     var_64 = 4;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 22:
                     _a.sent();
@@ -2158,7 +2163,7 @@ function func142() {
                 case 25:
                     if (!(var_64 == 1)) return [3 /*break*/, 28];
                     var_64 = 0;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 26:
                     _a.sent();
@@ -2169,7 +2174,7 @@ function func142() {
                 case 28:
                     if (!(var_64 == 2)) return [3 /*break*/, 31];
                     var_64 = 1;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 29:
                     _a.sent();
@@ -2180,7 +2185,7 @@ function func142() {
                 case 31:
                     if (!(var_64 == 3)) return [3 /*break*/, 34];
                     var_64 = 2;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 32:
                     _a.sent();
@@ -2191,7 +2196,7 @@ function func142() {
                 case 34:
                     if (!(var_64 == 4)) return [3 /*break*/, 37];
                     var_64 = 3;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 35:
                     _a.sent();
@@ -2203,7 +2208,7 @@ function func142() {
                     if (!(var_259 == 1)) return [3 /*break*/, 53];
                     if (!(var_64 == 4)) return [3 /*break*/, 41];
                     var_64 = 0;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 38:
                     _a.sent();
@@ -2217,7 +2222,7 @@ function func142() {
                 case 41:
                     if (!(var_64 == 3)) return [3 /*break*/, 44];
                     var_64 = 4;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 42:
                     _a.sent();
@@ -2228,7 +2233,7 @@ function func142() {
                 case 44:
                     if (!(var_64 == 2)) return [3 /*break*/, 47];
                     var_64 = 3;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 45:
                     _a.sent();
@@ -2239,7 +2244,7 @@ function func142() {
                 case 47:
                     if (!(var_64 == 1)) return [3 /*break*/, 50];
                     var_64 = 2;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 48:
                     _a.sent();
@@ -2250,7 +2255,7 @@ function func142() {
                 case 50:
                     if (!(var_64 == 0)) return [3 /*break*/, 53];
                     var_64 = 1;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func143()];
                 case 51:
                     _a.sent();
@@ -2367,7 +2372,7 @@ function func144() {
                     }
                     if (!(var_726 == 2)) return [3 /*break*/, 15];
                     var_726 = 1;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, wait(8)];
                 case 14:
                     _a.sent();
@@ -2375,7 +2380,7 @@ function func144() {
                 case 15:
                     if (!(var_726 == 3)) return [3 /*break*/, 17];
                     var_726 = 2;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, wait(8)];
                 case 16:
                     _a.sent();
@@ -2387,7 +2392,7 @@ function func144() {
                     }
                     if (!(var_726 == 2)) return [3 /*break*/, 19];
                     var_726 = 3;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, wait(8)];
                 case 18:
                     _a.sent();
@@ -2395,7 +2400,7 @@ function func144() {
                 case 19:
                     if (!(var_726 == 1)) return [3 /*break*/, 21];
                     var_726 = 2;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, wait(8)];
                 case 20:
                     _a.sent();
@@ -5386,7 +5391,7 @@ function func155() {
                 case 66:
                     _a.sent();
                     var_760 = 3;
-                    DSPLAY(audio_id = 103);
+                    DSPLAY(audio_id = 103); // 殴った時の効果音
                     var_409 = 2;
                     return [4 /*yield*/, func337()];
                 case 67:
@@ -6169,7 +6174,7 @@ function func158() {
                     return [4 /*yield*/, func248()];
                 case 3:
                     _a.sent();
-                    var_62 = 0;
+                    dangeon_number = 0;
                     var_532 = 0;
                     var_77 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
                     var_78 = ItemInfo.dim(300);
@@ -6266,7 +6271,7 @@ function func159() {
                 case 11: return [4 /*yield*/, func248()];
                 case 12:
                     _a.sent();
-                    var_62 = 0;
+                    dangeon_number = 0;
                     var_532 = 0;
                     var_77 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
                     var_78 = ItemInfo.dim(300);
@@ -8558,7 +8563,7 @@ function func173() {
                     return [4 /*yield*/, func176()];
                 case 4:
                     _a.sent();
-                    var_836 = var_62;
+                    var_836 = dangeon_number;
                     var_837 = current_floor;
                     return [4 /*yield*/, func808()];
                 case 5:
@@ -8660,7 +8665,7 @@ function func175() {
             switch (_a.label) {
                 case 0:
                     dbgprt(175);
-                    var_793 = var_62;
+                    var_793 = dangeon_number;
                     if (var_793 == 5) {
                         var_793 = 0;
                     }
@@ -8677,7 +8682,7 @@ function func175() {
                     var_792[var_793][0][10] = 0;
                     var_792[var_793][0][11] = 0;
                     var_792[var_793][0][12] = 0;
-                    var_792[var_793][0][13] = var_62;
+                    var_792[var_793][0][13] = dangeon_number;
                     var_792[var_793][0][14] = var_840;
                     var_792[var_793][0][15] = var_352;
                     var_792[var_793][0][16] = var_566;
@@ -10308,8 +10313,9 @@ function func185() {
                     var_352 = var_840 * 4 + 15;
                     var_211 = var_352;
                     var_94 = var_880;
-                    if (var_62 == 0) {
-                        var_62 = 1;
+                    if (dangeon_number == 0) {
+                        // No = 1 なので、ホテルの外
+                        dangeon_number = 1;
                     }
                     var_262 = 0;
                     var_595 = 0;
@@ -10461,11 +10467,11 @@ function func190() {
                     _a.label = 1;
                 case 1:
                     if (!(cnt1_129 < 100)) return [3 /*break*/, 4];
-                    var_437 = var_887;
+                    enemy_list = var_887;
                     return [4 /*yield*/, func626()];
                 case 2:
                     _a.sent();
-                    var_890 = var_890 + "\n" + var_437 + " " + var_891;
+                    var_890 = var_890 + "\n" + enemy_list + " " + enemy_name;
                     var_887 = var_887 + 1;
                     _a.label = 3;
                 case 3:
@@ -10491,7 +10497,7 @@ function func191() {
                     }
                     var_224 = var_224 + 1;
                     var_233[var_224].Var0 = var_884[var_873];
-                    var_892 = var_233[var_224].Var0;
+                    item_list_array = var_233[var_224].Var0;
                     // [var_224].Var0はアイテム配列。100～400未満は装備discなので、装備discであれば
                     if (var_233[var_224].Var0 >= 100 && var_233[var_224].Var0 < 400) {
                         var_233[var_224].Var16 = 10;
@@ -10501,14 +10507,14 @@ function func191() {
                     }
                     // [var_224].Var0はアイテム配列。400～500未満は射撃discなので、射撃discであれば
                     var_233[var_224].Var20 = var_233[var_224].Var0;
-                    if (var_892 >= 400 && var_892 < 500) {
+                    if (item_list_array >= 400 && item_list_array < 500) {
                         var_233[var_224].Var3 = 10;
                     }
                     if (var_878 == 1) {
-                        var_862[var_892][0] = 0;
+                        var_862[item_list_array][0] = 0;
                     }
                     if (var_878 == 0) {
-                        var_862[var_892][0] = 1;
+                        var_862[item_list_array][0] = 1;
                     }
                     // 122 = ｽﾄｰﾝ･ﾌﾘｰのDISC、200 = ｽｰﾊﾟｰﾌﾗｲのDISC、311 = ﾁｰﾌﾟ･ﾄﾘｯｸのDISC、310 = ｴﾝﾌﾟﾚｽのDISC
                     if (var_233[var_224].Var0 == 122 || var_233[var_224].Var0 == 200 || var_233[var_224].Var0 == 311 || var_233[var_224].Var0 == 310) {
@@ -10692,7 +10698,7 @@ function func193() {
                     _a.sent();
                     return [2 /*return*/];
                 case 20:
-                    if (!(var_899 == 6 && var_62 != 99 && var_637 == 0)) return [3 /*break*/, 23];
+                    if (!(var_899 == 6 && dangeon_number != 99 && var_637 == 0)) return [3 /*break*/, 23];
                     return [4 /*yield*/, func051()];
                 case 21:
                     _a.sent();
@@ -10715,7 +10721,7 @@ function func193() {
                     if (!(var_255 == 1)) return [3 /*break*/, 54];
                     if (!(var_899 == 0)) return [3 /*break*/, 30];
                     var_899 = 6;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 27:
                     _a.sent();
@@ -10729,7 +10735,7 @@ function func193() {
                 case 30:
                     if (!(var_899 == 1)) return [3 /*break*/, 34];
                     var_899 = 0;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 31:
                     _a.sent();
@@ -10743,7 +10749,7 @@ function func193() {
                 case 34:
                     if (!(var_899 == 2)) return [3 /*break*/, 38];
                     var_899 = 1;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 35:
                     _a.sent();
@@ -10757,7 +10763,7 @@ function func193() {
                 case 38:
                     if (!(var_899 == 3)) return [3 /*break*/, 42];
                     var_899 = 2;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 39:
                     _a.sent();
@@ -10771,7 +10777,7 @@ function func193() {
                 case 42:
                     if (!(var_899 == 4)) return [3 /*break*/, 46];
                     var_899 = 3;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 43:
                     _a.sent();
@@ -10785,7 +10791,7 @@ function func193() {
                 case 46:
                     if (!(var_899 == 5)) return [3 /*break*/, 50];
                     var_899 = 4;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 47:
                     _a.sent();
@@ -10799,7 +10805,7 @@ function func193() {
                 case 50:
                     if (!(var_899 == 6)) return [3 /*break*/, 54];
                     var_899 = 5;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 51:
                     _a.sent();
@@ -10814,7 +10820,7 @@ function func193() {
                     if (!(var_259 == 1)) return [3 /*break*/, 82];
                     if (!(var_899 == 6)) return [3 /*break*/, 58];
                     var_899 = 0;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 55:
                     _a.sent();
@@ -10828,7 +10834,7 @@ function func193() {
                 case 58:
                     if (!(var_899 == 5)) return [3 /*break*/, 62];
                     var_899 = 6;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 59:
                     _a.sent();
@@ -10842,7 +10848,7 @@ function func193() {
                 case 62:
                     if (!(var_899 == 4)) return [3 /*break*/, 66];
                     var_899 = 5;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 63:
                     _a.sent();
@@ -10856,7 +10862,7 @@ function func193() {
                 case 66:
                     if (!(var_899 == 3)) return [3 /*break*/, 70];
                     var_899 = 4;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 67:
                     _a.sent();
@@ -10870,7 +10876,7 @@ function func193() {
                 case 70:
                     if (!(var_899 == 2)) return [3 /*break*/, 74];
                     var_899 = 3;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 71:
                     _a.sent();
@@ -10884,7 +10890,7 @@ function func193() {
                 case 74:
                     if (!(var_899 == 1)) return [3 /*break*/, 78];
                     var_899 = 2;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 75:
                     _a.sent();
@@ -10898,7 +10904,7 @@ function func193() {
                 case 78:
                     if (!(var_899 == 0)) return [3 /*break*/, 82];
                     var_899 = 1;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 79:
                     _a.sent();
@@ -10995,7 +11001,7 @@ function func195() {
                     if (!(var_906 == 1)) return [3 /*break*/, 14];
                     var_906 = 0;
                     var_686 = 30;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 12:
                     _a.sent();
@@ -11007,7 +11013,7 @@ function func195() {
                     if (!(var_906 == 2)) return [3 /*break*/, 17];
                     var_906 = 1;
                     var_686 = 40;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 15:
                     _a.sent();
@@ -11019,7 +11025,7 @@ function func195() {
                     if (!(var_906 == 3)) return [3 /*break*/, 20];
                     var_906 = 2;
                     var_686 = 50;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 18:
                     _a.sent();
@@ -11031,7 +11037,7 @@ function func195() {
                     if (!(var_906 == 4)) return [3 /*break*/, 23];
                     var_906 = 3;
                     var_686 = 60;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 21:
                     _a.sent();
@@ -11055,7 +11061,7 @@ function func195() {
                     if (!(var_906 == 3)) return [3 /*break*/, 29];
                     var_906 = 4;
                     var_686 = 70;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 27:
                     _a.sent();
@@ -11067,7 +11073,7 @@ function func195() {
                     if (!(var_906 == 2)) return [3 /*break*/, 32];
                     var_906 = 3;
                     var_686 = 60;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 30:
                     _a.sent();
@@ -11079,7 +11085,7 @@ function func195() {
                     if (!(var_906 == 1)) return [3 /*break*/, 35];
                     var_906 = 2;
                     var_686 = 50;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 33:
                     _a.sent();
@@ -11091,7 +11097,7 @@ function func195() {
                     if (!(var_906 == 0)) return [3 /*break*/, 38];
                     var_906 = 1;
                     var_686 = 40;
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
                 case 36:
                     _a.sent();
@@ -11196,7 +11202,7 @@ function func197() {
             mes("画面サイズ");
             pos(145, 190);
             mes("マップ色変更");
-            if (var_62 == 99 || var_637 != 0) {
+            if (dangeon_number == 99 || var_637 != 0) {
                 color(150, 150, 150); //灰色
             }
             pos(145, 210);
@@ -11222,7 +11228,7 @@ function func197() {
                 mes("超遅");
             }
             color(255, 255, 255);
-            if (var_62 == 99) {
+            if (dangeon_number == 99) {
                 color(150, 150, 150); //灰色
             }
             if (var_900 == 1 || var_901 == 1 || var_902 == 1 || var_903 == 1 || var_904 == 1 || var_905 == 1) {
@@ -11364,7 +11370,7 @@ function func199() {
                     return [2 /*return*/];
                 case 18:
                     if (!(var_255 == 1)) return [3 /*break*/, 26];
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (!(var_908 == 0)) return [3 /*break*/, 22];
                     var_908 = 2;
                     return [4 /*yield*/, func337()];
@@ -11392,7 +11398,7 @@ function func199() {
                     return [2 /*return*/];
                 case 26:
                     if (!(var_259 == 1)) return [3 /*break*/, 34];
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (!(var_908 == 2)) return [3 /*break*/, 30];
                     var_908 = 0;
                     return [4 /*yield*/, func337()];

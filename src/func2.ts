@@ -90,7 +90,7 @@ function func201(this: any) {
         yield func337();
         yield func080();
         if (var_254 == 1) {
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_690 != 10) {
                 var_690 = var_690 - 10;
             }
@@ -100,7 +100,7 @@ function func201(this: any) {
             return;
         }
         if (var_257 == 1) {
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_690 != 90) {
                 var_690 = var_690 + 10;
             }
@@ -276,7 +276,7 @@ function func203(this: any) {
             return;
         }
         if (var_255 == 1) {
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             var_702 = var_702 - 1;
             if (var_702 < 0) {
                 var_702 = 0;
@@ -285,7 +285,7 @@ function func203(this: any) {
             yield func337();
         }
         if (var_259 == 1) {
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             var_702 = var_702 + 1;
             if (var_702 == 9) {
                 var_702 = 8;
@@ -418,7 +418,7 @@ function func206(this: any) {
             return;
         }
         if (var_255 == 1) {
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 0) {
                 var_910 = 1;
                 yield func337();
@@ -435,7 +435,7 @@ function func206(this: any) {
             }
         }
         if (var_259 == 1) {
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 1) {
                 var_910 = 0;
                 yield func337();
@@ -510,7 +510,7 @@ function func209(this: any) {
                 var_228 = 55;
                 var_911 = 1;
             }
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
         }
@@ -521,7 +521,7 @@ function func209(this: any) {
                 var_228 = 195;
                 var_911 = 8;
             }
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
         }
@@ -959,7 +959,7 @@ function func216(this: any) {
                 var_925 = 1;
             }
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
         }
@@ -971,7 +971,7 @@ function func216(this: any) {
                 var_925 = 9;
             }
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
         }
@@ -1953,10 +1953,10 @@ function func223(this: any) {
         if (current_floor >= 30) {
             var_952 = var_952 + 7;
         }
-        var_62 = 2;
+        dangeon_number = 2;
         for (let cnt1 = 0; cnt1 < var_952; ++cnt1) {
             yield func627();
-            var_437 = var_953;
+            enemy_list = var_953;
             yield func626();
             var_939 = var_939 + var_954;
         }
@@ -2036,26 +2036,26 @@ function func225(this: any) {
                     color(0, 100, 0);
                     boxf(var_964, var_963, var_964 + 55, var_963 + 54);
                     gcopy(var_965, 40, var_966 * 40, 40, 40);
-                    var_437 = var_958[var_961];
+                    enemy_list = var_958[var_961];
                     yield func626();
                     font("ＭＳ ゴシック", 12);
                     if (var_957 <= 1) {
                         pos(var_964, var_963 + 42);
                         color(255, 255, 255);
-                        mes("" + var_438);
+                        mes("" + enemy_hp);
                         pos(var_964 + 20, var_963 + 42);
                         color(255, 255, 0);
-                        mes("" + var_967);
+                        mes("" + enemy_power);
                         pos(var_964 + 40, var_963 + 42);
                         color(255, 180, 90);
-                        mes("" + var_968);
+                        mes("" + enemy_defence);
                     }
                     if (var_957 >= 2) {
-                        var_969 = Math.floor(var_438 * (var_957 + 10) / 10);
-                        var_970 = Math.floor(var_967 * (var_957 * 2 + 10) / 10);
-                        var_971 = var_968;
+                        var_969 = Math.floor(enemy_hp * (var_957 + 10) / 10);
+                        var_970 = Math.floor(enemy_power * (var_957 * 2 + 10) / 10);
+                        var_971 = enemy_defence;
                         if (var_972 == 4 || var_972 == 5) {
-                            var_971 = Math.floor(var_968 * (var_957 * 2 + 10) / 10);
+                            var_971 = Math.floor(enemy_defence * (var_957 * 2 + 10) / 10);
                         }
                         pos(var_964, var_963);
                         color(255, 0, 0);
@@ -2134,7 +2134,7 @@ function func225(this: any) {
 function func226(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(226);
-        var_62 = var_956;
+        dangeon_number = var_956;
         var_973 = 0;
         var_974 = 0;
         var_975 = 0;
@@ -2537,7 +2537,7 @@ function func229(this: any) {
         var_262 = var_704[58];
         var_839 = var_704[59];
         var_998 = var_704[60];
-        var_62 = var_704[61];
+        dangeon_number = var_704[61]; // ダンジョン場所配列 // エンヤホテル、レクイエムの第迷宮
         var_98 = var_704[62];
         var_896 = var_704[63];
         var_897 = var_704[64];
@@ -2790,7 +2790,7 @@ function func231(this: any) {
         var_9 = ginfo(5);
         bsave(file_name = "00.dat", data = var_8, data_size = null, offset = 40);
         bsave(file_name = "00.dat", data = var_9, data_size = null, offset = 60);
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             end();
         }
         if (var_262 == 1 && var_1049 == 0) {
@@ -2874,7 +2874,7 @@ function func231(this: any) {
         var_704[58] = var_262;
         var_704[59] = var_839;
         var_704[60] = var_998;
-        var_704[61] = var_62;
+        var_704[61] = dangeon_number;
         var_704[62] = var_98;
         var_704[63] = var_896;
         var_704[64] = var_897;
@@ -3294,7 +3294,7 @@ function func233(this: any) {
         var_898 = 0;
         var_999 = 0;
         var_112 = 0;
-        var_62 = 0;
+        dangeon_number = 0;
         var_386 = 0;
         var_387 = 0;
         var_116 = 0;
@@ -3552,7 +3552,7 @@ function func235(this: any) {
         var_262 = 0;
         var_839 = 0;
         var_998 = 0;
-        var_62 = 0;
+        dangeon_number = 0;
         var_98 = 0;
         var_896 = 0;
         var_897 = 0;
@@ -4052,22 +4052,24 @@ function func243(this: any) {
         if (var_94 >= 1) {
             var_70 = 0;
         }
-        if (var_62 == 1) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1) {
             var_86 = 1;
         }
         if (var_70 != 0) {
             var_86 = 0;
         }
-        if (var_62 == 1 && current_floor == 12) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12) {
             var_86 = 0;
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             var_86 = 0;
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             var_86 = 0;
         }
-        if (var_62 == 5 && current_floor == var_20) {
+        if (dangeon_number == 5 && current_floor == var_20) {
             var_86 = 1;
         }
         if (var_94 == 1) {
@@ -4110,16 +4112,17 @@ function func244(this: any) {
         var_1052 = 0;
         var_96 = 0;
         var_1072 = rnd(11);
-        if (var_62 == 3) {
+        if (dangeon_number == 3) {
             var_1072 = rnd(14);
         }
-        if (var_62 == 1 && current_floor == 12) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12) {
             var_1072 = 111;
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             var_1072 = 121;
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             var_1072 = 120;
         }
         if (var_94 == 1) {
@@ -4218,7 +4221,7 @@ function func244(this: any) {
         if (var_1072 == 10) {
             yield func321();
         }
-        if (var_62 != 5) {
+        if (dangeon_number != 5) {
             if (var_1072 == 11) {
                 yield func311();
                 var_94 = 7;
@@ -4494,10 +4497,10 @@ function func245(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(245);
         var_1080 = rnd(14);
-        if (var_62 <= 2) {
+        if (dangeon_number <= 2) {
             var_1080 = 0;
         }
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             var_1080 = 0;
         }
         if (var_1080 <= 6) {
@@ -4563,10 +4566,10 @@ function func246(this: any) {
         var_1052 = 0;
         var_96 = 0;
         var_1052 = rnd(6);
-        if (var_62 == 3) {
+        if (dangeon_number == 3) {
             var_1052 = rnd(5);
         }
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             var_1052 = rnd(5);
         }
         if (var_156[364] == 1) {
@@ -4580,16 +4583,17 @@ function func246(this: any) {
         if (current_floor < 4) {
             var_96 = 0;
         }
-        if (var_62 == 1) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1) {
             var_96 = 0;
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             var_96 = 0;
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             var_96 = 0;
         }
-        if (var_62 == 5 && current_floor == var_20) {
+        if (dangeon_number == 5 && current_floor == var_20) {
             var_96 = 0;
         }
         if (var_94 >= 1) {
@@ -4745,7 +4749,8 @@ function func247(this: any) {
         if (var_1090 == 3) {
             var_493[var_560] = 1;
             var_1092 = rnd(16);
-            if (var_62 == 1) {
+            // No = 1 なので、ホテルの外
+            if (dangeon_number == 1) {
                 var_1092 = rnd(15);
             }
             if (var_1092 == 0) {

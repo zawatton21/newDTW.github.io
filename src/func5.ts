@@ -121,7 +121,7 @@ function func500(this: any) {
             var_27_x = var_27[5];
             yield func047();
     
-            DSPLAY(audio_id = 103);
+            DSPLAY(audio_id = 103); // 殴られた時の効果音
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 yield func337();
                 var_1321 = var_1321 + 1;
@@ -149,7 +149,7 @@ function func501(this: any) {
         var_389 = 2;
         var_747 = 1;
 
-        DSPLAY(audio_id = 103);
+        DSPLAY(audio_id = 103); // 殴られた時の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2281,7 +2281,7 @@ function func511(this: any) {
                         }
                         var_1549 = 0;
                         var_403 = "クロスファイヤーハリケーンスペシャル！";
-                        var_437 = var_83[var_421].Var0;
+                        enemy_list = var_83[var_421].Var0;
                         yield func626();
                         var_402 = var_421;
                         var_314 = var_421;
@@ -2552,7 +2552,7 @@ function func511(this: any) {
             var_27_x = var_27[1];
             yield func047();
             var_1214 = 1;
-            DSPLAY(audio_id = 119);
+            DSPLAY(audio_id = 119); // 食べた時の効果音
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 yield func337();
             }
@@ -3081,7 +3081,7 @@ function func511(this: any) {
                 }
             }
     
-            DSPLAY(audio_id = 112);
+            DSPLAY(audio_id = 112);　// 刀の切れる音 or 強化した時のシャキーン 効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "これだ！　甲冑を外したスタンド";
@@ -3254,7 +3254,7 @@ function func511(this: any) {
         }
         if (var_2258 == 310) {
             yield func506();
-            if (var_407 == 1 && var_536 == 1 && var_62 == int(var_1068[12])) {
+            if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12])) {
                 yield func915();
                 return;
             }
@@ -4043,9 +4043,9 @@ function func511(this: any) {
                     if (var_83[var_2205].Var39 == 1) {
                         var_83[var_2205].Var39 = 2;
                     }
-                    var_437 = var_83[var_2205].Var0;
+                    enemy_list = var_83[var_2205].Var0;
                     yield func626();
-                    var_83[var_2205].Var3 = Math.floor(var_438 * (var_83[var_2205].Var39 + 10) / 10);
+                    var_83[var_2205].Var3 = Math.floor(enemy_hp * (var_83[var_2205].Var39 + 10) / 10);
                     if (var_83[var_2205].Var3 >= 999) {
                         var_83[var_2205].Var3 = 999;
                     }
@@ -7088,7 +7088,7 @@ function func511(this: any) {
                             var_228 = var_228 + 22;
                             var_2323 = var_2323 + 1;
         
-                            DSPLAY(audio_id = 100);
+                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
                             yield func337();
                             yield func337();
                             continue;
@@ -7097,7 +7097,7 @@ function func511(this: any) {
                             var_228 = 45;
                             var_2323 = 0;
         
-                            DSPLAY(audio_id = 100);
+                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
                             yield func337();
                             yield func337();
                             continue;
@@ -7108,7 +7108,7 @@ function func511(this: any) {
                             var_228 = var_228 - 22;
                             var_2323 = var_2323 - 1;
         
-                            DSPLAY(audio_id = 100);
+                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
                             yield func337();
                             yield func337();
                             continue;
@@ -7117,7 +7117,7 @@ function func511(this: any) {
                             var_228 = 45 + 7 * 22;
                             var_2323 = 7;
         
-                            DSPLAY(audio_id = 100);
+                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
                             yield func337();
                             yield func337();
                             continue;
@@ -7165,7 +7165,7 @@ function func511(this: any) {
                     return;
                 }
             }
-            if (var_407 == 1 && var_536 == 1 && var_62 == int(var_1068[12])) {
+            if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12])) {
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -7245,7 +7245,7 @@ function func511(this: any) {
         }
         if (var_2258 == 311) {
             yield func506();
-            if (var_407 == 1 && var_536 == 1 && var_62 == int(var_1068[12]) && var_415 >= 300) {
+            if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12]) && var_415 >= 300) {
                 yield func921();
                 return;
             }
@@ -8100,7 +8100,7 @@ function func511(this: any) {
                     var_198 = 0;
                     var_1609 = 1;
 
-                    DSPLAY(audio_id = 100);
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     var_502 = 1;
         
                     DSPLAY(audio_id = 118);
@@ -8919,16 +8919,16 @@ function func519(this: any) {
             if (var_114 == var_2194) {
                 var_114 = 0;
             }
-            var_437 = 147;
+            enemy_list = 147;
             yield func626();
-            var_83[var_2194].Var3 = var_438;
+            var_83[var_2194].Var3 = enemy_hp;
             var_2264 = 1;
         }
         if (var_83[var_2194].Var0 == 135) {
             var_83[var_2194].Var0 = 119;
-            var_437 = 119;
+            enemy_list = 119;
             yield func626();
-            var_83[var_2194].Var3 = var_438;
+            var_83[var_2194].Var3 = enemy_hp;
             var_2264 = 1;
         }
         return;
@@ -9250,7 +9250,7 @@ function func523(this: any) {
                 var_2093 = var_2093 + 1;
             }
         }
-        if (var_62 != 5) {
+        if (dangeon_number != 5) {
             var_233[var_2090].Var4 = var_233[var_2090].Var4 + var_233[var_2091].Var4;
             if (var_233[var_2090].Var4 >= 99) {
                 var_233[var_2090].Var4 = 99;
@@ -9899,7 +9899,7 @@ function func527(this: any) {
             var_2375 = var_2375 + 1;
             var_2374 = var_2374 + 20;
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func527();
@@ -9916,7 +9916,7 @@ function func527(this: any) {
             var_2375 = var_2375 - 1;
             var_2374 = var_2374 - 20;
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func527();
@@ -11455,10 +11455,10 @@ function func536(this: any) {
                 var_2407 = var_1075;
             }
             var_2420 = rnd(25);
-            if (var_62 == 3 || var_62 == 4) {
+            if (dangeon_number == 3 || dangeon_number == 4) {
                 var_2420 = rnd(27);
             }
-            if (var_62 == 5) {
+            if (dangeon_number == 5) {
                 var_2420 = rnd(26);
             }
             if (var_2420 == 0) {
@@ -11546,16 +11546,17 @@ function func536(this: any) {
                 var_2421 = 18;
             }
             if (var_2421 == 19) {
-                if (var_62 == 1) {
+                // No = 1 なので、ホテルの外
+                if (dangeon_number == 1) {
                     var_2421 = 21;
                 }
-                if (var_62 == 2) {
+                if (dangeon_number == 2) {
                     var_2421 = 21;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 21;
                 }
-                if (var_62 == 5 && current_floor == var_20) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 21;
                 }
                 if (var_94 >= 1) {
@@ -11563,16 +11564,17 @@ function func536(this: any) {
                 }
             }
             if (var_2421 == 6) {
-                if (var_62 == 1 && current_floor == 12) {
+                // No = 1 なので、ホテルの外
+                if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 15;
                 }
-                if (var_62 == 2 && current_floor == 30) {
+                if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 15;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 15;
                 }
-                if (var_62 == 5 && current_floor == var_20) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 15;
                 }
                 if (var_94 >= 1) {
@@ -11580,16 +11582,16 @@ function func536(this: any) {
                 }
             }
             if (var_2421 == 12) {
-                if (var_62 == 1 && current_floor == 12) {
+                if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 3;
                 }
-                if (var_62 == 2 && current_floor == 30) {
+                if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 3;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 3;
                 }
-                if (var_62 == 5 && current_floor == var_20) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 3;
                 }
                 if (var_94 >= 1) {
@@ -11597,16 +11599,16 @@ function func536(this: any) {
                 }
             }
             if (var_2421 == 24) {
-                if (var_62 == 1 && current_floor == 12) {
+                if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 16;
                 }
-                if (var_62 == 2 && current_floor == 30) {
+                if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 16;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 16;
                 }
-                if (var_62 == 5 && current_floor == var_20) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 16;
                 }
                 if (var_94 >= 1) {
@@ -11614,16 +11616,16 @@ function func536(this: any) {
                 }
             }
             if (var_2421 == 5) {
-                if (var_62 == 1 && current_floor == 12) {
+                if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 9;
                 }
-                if (var_62 == 2 && current_floor == 30) {
+                if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 9;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 9;
                 }
-                if (var_62 == 5 && current_floor == var_20) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 9;
                 }
                 if (var_94 >= 1) {
@@ -12489,7 +12491,7 @@ function func540(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(540);
         var_2441 = rnd(6);
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             var_2441 = 1;
         }
         if (var_81[var_2442][0] == 95) {
@@ -12618,7 +12620,7 @@ function func541(this: any) {
             return;
         }
         var_2447 = rnd(5);
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             var_2447 = 1;
         }
         if (var_545 == 1) {
@@ -12704,7 +12706,7 @@ function func541(this: any) {
             var_108 = 0;
             var_81[var_2442][3] = 0;
             var_179 = rnd(2);
-            if (var_62 != 2 && var_62 != 3 && var_62 != 5) {
+            if (dangeon_number != 2 && dangeon_number != 3 && dangeon_number != 5) {
                 var_179 = 0;
             }
             if (var_179 == 1) {
@@ -13150,7 +13152,7 @@ function func541(this: any) {
             var_108 = 1;
             var_747 = 1;
     
-            DSPLAY(audio_id = 103);
+            DSPLAY(audio_id = 103); // 殴られた時の効果音
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337();
             }
@@ -13638,7 +13640,7 @@ function func541(this: any) {
                 return;
             }
     
-            DSPLAY(audio_id = 103);
+            DSPLAY(audio_id = 103); // 殴られた時の効果音
             if (var_410 == 412) {
                 var_1261 = 1;
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
@@ -13928,7 +13930,7 @@ function func541(this: any) {
                 var_2463 = 2;
             }
     
-            DSPLAY(audio_id = 103);
+            DSPLAY(audio_id = 103); // 殴られた時の効果音
             if (var_2463 == 0) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     var_1262 = 1;
@@ -15355,7 +15357,7 @@ function func542(this: any) {
                 var_1406 = var_1406 + 1;
                 if (var_1406 == 6) {
             
-                    DSPLAY(audio_id = 103);
+                    DSPLAY(audio_id = 103); // 殴られた時の効果音
                 }
             }
             var_211 = var_211 - 5;
@@ -15869,9 +15871,9 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 if (var_83[var_421].Var0 == 97 && var_83[var_421].Var31 >= 11) {
-                    var_437 = var_83[var_421].Var31;
+                    enemy_list = var_83[var_421].Var31;
                 }
                 yield func626();
                 comments_row1 = "";
@@ -15881,7 +15883,7 @@ function func547(this: any) {
                 comments_row2a = "";
                 var_298 = "";
                 var_299 = 0;
-                comments_row1 = "" + var_891 + "が";
+                comments_row1 = "" + enemy_name + "が";
                 comments_row2 = "キッスのシールに触れた！";
                 var_198 = 1;
                 var_300 = 0;
@@ -15950,7 +15952,7 @@ function func547(this: any) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337();
                 }
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 comments_row1 = "";
                 comments_row2 = "";
@@ -15959,7 +15961,7 @@ function func547(this: any) {
                 comments_row2a = "";
                 var_298 = "";
                 var_299 = 0;
-                comments_row1 = "" + var_891 + "を";
+                comments_row1 = "" + enemy_name + "を";
                 comments_row2 = "ペラペラにした！";
                 var_198 = 1;
                 var_300 = 0;
@@ -16038,7 +16040,7 @@ function func547(this: any) {
                     yield func337();
                     var_1533++;
                 }
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 var_402 = var_421;
                 var_314 = var_421;
@@ -16068,7 +16070,7 @@ function func547(this: any) {
                 for (let cnt3 = 0; cnt3 < 4; ++cnt3) {
                     yield func337();
                 }
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 var_402 = var_421;
                 var_314 = var_421;
@@ -16113,7 +16115,7 @@ function func547(this: any) {
                     yield func337();
                     var_1534++;
                 }
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 var_402 = var_421;
                 var_314 = var_421;
@@ -16153,7 +16155,7 @@ function func547(this: any) {
                     yield func337();
                     var_1546++;
                 }
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 var_402 = var_421;
                 var_314 = var_421;
@@ -16274,7 +16276,7 @@ function func547(this: any) {
                 var_81[var_2488][2] = 0;
                 yield func331();
                 var_403 = "法王の結界が発動した！";
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 var_402 = var_421;
                 var_314 = var_421;
@@ -16314,7 +16316,7 @@ function func547(this: any) {
                 var_81[var_2488][2] = 0;
                 yield func331();
                 var_403 = "ﾊｲｳｪｲｽﾀｰが養分を吸い取った！";
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 var_402 = var_421;
                 var_314 = var_421;
@@ -16335,12 +16337,12 @@ function func547(this: any) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337();
                 }
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 if (var_83[var_421].Var0 == 97 && var_83[var_421].Var31 >= 11) {
-                    var_437 = var_83[var_421].Var31;
+                    enemy_list = var_83[var_421].Var31;
                 }
                 yield func626();
-                var_2493 = var_891;
+                var_2493 = enemy_name;
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -16348,7 +16350,7 @@ function func547(this: any) {
                 comments_row2a = "";
                 var_298 = "";
                 var_299 = 0;
-                comments_row1 = "" + var_891 + "が";
+                comments_row1 = "" + enemy_name + "が";
                 comments_row2 = "ﾏﾝ･ｲﾝ･ｻﾞ･ﾐﾗｰの鏡にかかった！";
                 var_198 = 1;
                 var_300 = 0;
@@ -16356,7 +16358,7 @@ function func547(this: any) {
                 var_26_x = var_26[4];
                 var_27_x = var_27[4];
         
-                DSPLAY(audio_id = 103);
+                DSPLAY(audio_id = 103); // 殴られた時の効果音
                 var_747 = 1;
                 var_750 = 1;
                 var_1212 = 1;
@@ -16435,7 +16437,7 @@ function func547(this: any) {
                 var_81[var_2488][2] = 0;
                 yield func331();
                 var_403 = "暗黒風水が発動した！";
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 var_402 = var_421;
                 var_314 = var_421;
@@ -16479,7 +16481,7 @@ function func548(this: any) {
 function func549(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(549);
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             yield func337();
@@ -16513,7 +16515,7 @@ function func550(this: any) {
         dbgprt(550);
         yield func340();
         var_1951 = 0;
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             yield func337();
@@ -16537,22 +16539,22 @@ function func550(this: any) {
         var_373 = 0;
         var_94 = 0;
         var_532 = 1;
-        if (var_62 == 0) {
+        if (dangeon_number == 0) {
             var_356 = 306;
         }
-        if (var_62 == 1) {
+        if (dangeon_number == 1) {
             var_356 = 307;
         }
-        if (var_62 == 2) {
+        if (dangeon_number == 2) {
             var_356 = 308;
         }
-        if (var_62 == 3) {
+        if (dangeon_number == 3) {
             var_356 = 309;
         }
-        if (var_62 == 4) {
+        if (dangeon_number == 4) {
             var_356 = 310;
         }
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             var_356 = 313;
         }
         yield func173();
@@ -16587,7 +16589,7 @@ function func551(this: any) {
 function func552(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(552);
-        DSPLAY(audio_id = 101);
+        DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
         yield func061();
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
@@ -16730,16 +16732,16 @@ function func553(this: any) {
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         if (var_73[var_447][var_449] == 1) {
             var_2497 = 0;
-            if (var_62 == 1 && current_floor == 12) {
+            if (dangeon_number == 1 && current_floor == 12) {
                 var_2497 = 1;
             }
-            if (var_62 == 2 && current_floor == 30) {
+            if (dangeon_number == 2 && current_floor == 30) {
                 var_2497 = 1;
             }
-            if (var_62 == 3 && current_floor == 99) {
+            if (dangeon_number == 3 && current_floor == 99) {
                 var_2497 = 1;
             }
-            if (var_62 == 5 && current_floor == var_20) {
+            if (dangeon_number == 5 && current_floor == var_20) {
                 var_2497 = 1;
             }
             if (var_2497 == 1) {
@@ -16901,9 +16903,9 @@ function func554(this: any) {
             var_2498 = "";
         }
         if (var_888 == 77) {
-            var_437 = var_2446;
+            enemy_list = var_2446;
             yield func626();
-            var_889 = "人質の" + var_891;
+            var_889 = "人質の" + enemy_name;
             var_2498 = "人質だ";
         }
         if (var_888 == 78) {
@@ -17015,7 +17017,7 @@ function func555(this: any) {
         if (current_floor >= 30) {
             var_952 = var_952 + 7;
         }
-        if (var_62 == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
             return;
         }
         if (var_94 == 9) {
@@ -17121,16 +17123,16 @@ function func555(this: any) {
             if (var_953 == 104) {
                 var_1053 = 99;
             }
-            if (var_62 == 3 && current_floor == 99) {
+            if (dangeon_number == 3 && current_floor == 99) {
                 var_1053 = 0;
             }
             var_82[var_440][var_441] = var_673;
             var_83[var_673].Var0 = var_953;
-            var_437 = var_953;
+            enemy_list = var_953;
             yield func626();
             var_83[var_673].Var1 = var_440;
             var_83[var_673].Var2 = var_441;
-            var_83[var_673].Var3 = var_438;
+            var_83[var_673].Var3 = enemy_hp;
             var_83[var_673].Var4 = 3;
             var_2501 = rnd(8);
             if (var_2501 == 0) {
@@ -17268,7 +17270,7 @@ function func555(this: any) {
             var_83[var_673].Var37 = var_83[var_673].Var5;
             var_83[var_673].Var38 = 0;
             var_83[var_673].Var39 = 0;
-            if (var_62 == 4 && current_floor >= 10) {
+            if (dangeon_number == 4 && current_floor >= 10) {
                 yield func558();
             }
             if (var_953 == 101) {
@@ -17317,7 +17319,7 @@ function func555(this: any) {
 function func556(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(556);
-        if (var_62 == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
             return;
         }
         if (var_97 > 150 && var_123 == 0) {
@@ -17707,7 +17709,7 @@ function func556(this: any) {
                 if (var_2520 == 1) {
                     var_953 = 67;
                 }
-                if (var_62 == 4) {
+                if (dangeon_number == 4) {
                     var_953 = 168;
                 }
             }
@@ -18336,11 +18338,11 @@ function func556(this: any) {
         }
         var_82[var_440][var_441] = var_673;
         var_83[var_673].Var0 = var_953;
-        var_437 = var_953;
+        enemy_list = var_953;
         yield func626();
         var_83[var_673].Var1 = var_440;
         var_83[var_673].Var2 = var_441;
-        var_83[var_673].Var3 = var_438;
+        var_83[var_673].Var3 = enemy_hp;
         if (var_953 == 49) {
             var_83[var_673].Var3 = var_211;
         }
@@ -18385,7 +18387,7 @@ function func556(this: any) {
         if (var_2501 == 7) {
             var_83[var_673].Var5 = 9;
         }
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             if (var_953 == 79 && var_2548 == 1) {
                 var_83[var_673].Var5 = 2;
             }
@@ -18502,7 +18504,7 @@ function func556(this: any) {
         if (var_953 == 109) {
             var_2502 = rnd(2);
             var_83[var_673].Var30 = var_2502;
-            if (var_62 == 99) {
+            if (dangeon_number == 99) {
                 if (var_2548 == 1) {
                     var_83[var_673].Var30 = 1;
                 }
@@ -18595,11 +18597,11 @@ function func556(this: any) {
         var_83[var_673].Var37 = var_83[var_673].Var5;
         var_83[var_673].Var38 = 0;
         var_83[var_673].Var39 = 0;
-        if (var_156[359] == 1 && var_83[var_673].Var31 != 5 && var_83[var_673].Var31 != 4 && var_1845 == 0 && var_83[var_673].Var12 == 99 && var_62 != 4 && var_2535 == 0) {
+        if (var_156[359] == 1 && var_83[var_673].Var31 != 5 && var_83[var_673].Var31 != 4 && var_1845 == 0 && var_83[var_673].Var12 == 99 && dangeon_number != 4 && var_2535 == 0) {
             var_1073 = rnd(100);
             if (var_1073 < 20) {
                 var_83[var_673].Var39 = 2;
-                var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+                var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
                 if (var_83[var_673].Var3 >= 999) {
                     var_83[var_673].Var3 = 999;
                 }
@@ -18607,24 +18609,24 @@ function func556(this: any) {
         }
         if (var_2544 >= 1) {
             var_83[var_673].Var39 = 5;
-            var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+            var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
             if (var_83[var_673].Var3 >= 999) {
                 var_83[var_673].Var3 = 999;
             }
         }
-        if (var_62 == 4 && current_floor >= 10) {
+        if (dangeon_number == 4 && current_floor >= 10) {
             yield func558();
         }
         if (var_2214 >= 1 && var_1942 >= 2) {
             var_83[var_673].Var39 = var_1942;
-            var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+            var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
             if (var_83[var_673].Var3 >= 999) {
                 var_83[var_673].Var3 = 999;
             }
         }
         if (var_1918 >= 1) {
             var_83[var_673].Var39 = var_1919;
-            var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+            var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
             if (var_83[var_673].Var3 >= 999) {
                 var_83[var_673].Var3 = 999;
             }
@@ -18634,7 +18636,7 @@ function func556(this: any) {
         }
         if (var_2309 == 1) {
             var_83[var_673].Var39 = Math.floor(var_840 / 3);
-            var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+            var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
             if (var_83[var_673].Var3 >= 999) {
                 var_83[var_673].Var3 = 999;
             }
@@ -18730,11 +18732,11 @@ function func557(this: any) {
         }
         var_82[var_440][var_441] = var_673;
         var_83[var_673].Var0 = var_953;
-        var_437 = var_953;
+        enemy_list = var_953;
         yield func626();
         var_83[var_673].Var1 = var_440;
         var_83[var_673].Var2 = var_441;
-        var_83[var_673].Var3 = var_438;
+        var_83[var_673].Var3 = enemy_hp;
         var_83[var_673].Var4 = 3;
         if (var_2509 == 1) {
             var_83[var_673].Var5 = 1;
@@ -18779,7 +18781,7 @@ function func557(this: any) {
         var_83[var_673].Var37 = var_83[var_673].Var5;
         var_83[var_673].Var38 = 0;
         var_83[var_673].Var39 = 0;
-        if (var_62 == 4 && current_floor >= 10) {
+        if (dangeon_number == 4 && current_floor >= 10) {
             yield func558();
         }
         return;
@@ -18796,31 +18798,31 @@ function func558(this: any) {
             var_2561 = 1;
         }
         if (var_2561 == 1) {
-            if (var_967 >= 0 && var_967 < 10) {
+            if (enemy_power >= 0 && enemy_power < 10) {
                 var_2562 = 50;
             }
-            if (var_967 >= 10 && var_967 < 15) {
+            if (enemy_power >= 10 && enemy_power < 15) {
                 var_2562 = 40;
             }
-            if (var_967 >= 15 && var_967 < 20) {
+            if (enemy_power >= 15 && enemy_power < 20) {
                 var_2562 = 30;
             }
-            if (var_967 >= 20 && var_967 < 25) {
+            if (enemy_power >= 20 && enemy_power < 25) {
                 var_2562 = 20;
             }
-            if (var_967 >= 25 && var_967 < 30) {
+            if (enemy_power >= 25 && enemy_power < 30) {
                 var_2562 = 10;
             }
-            if (var_967 >= 30 && var_967 < 40) {
+            if (enemy_power >= 30 && enemy_power < 40) {
                 var_2562 = 7;
             }
-            if (var_967 >= 40 && var_967 < 50) {
+            if (enemy_power >= 40 && enemy_power < 50) {
                 var_2562 = 5;
             }
-            if (var_967 >= 50 && var_967 < 60) {
+            if (enemy_power >= 50 && enemy_power < 60) {
                 var_2562 = 3;
             }
-            if (var_967 >= 60) {
+            if (enemy_power >= 60) {
                 var_2562 = 1;
             }
             if (var_83[var_673].Var0 == 161) {
@@ -18842,7 +18844,7 @@ function func558(this: any) {
             if (var_83[var_673].Var39 >= 999) {
                 var_83[var_673].Var39 = 999;
             }
-            var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+            var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
             if (var_83[var_673].Var3 >= 999) {
                 var_83[var_673].Var3 = 999;
             }
@@ -18995,20 +18997,20 @@ function func562(this: any) {
             return;
         }
         var_2567 = rnd(6);
-        if (var_62 == 1 || var_62 == 3 || var_62 == 4) {
+        if (dangeon_number == 1 || dangeon_number == 3 || dangeon_number == 4) {
             var_2567 = 1;
         }
-        if (var_62 == 2 && current_floor >= 26) {
+        if (dangeon_number == 2 && current_floor >= 26) {
             var_2567 = 1;
         }
         if (var_94 >= 1) {
             var_2567 = 1;
         }
-        if (var_62 == 2 && current_floor == 1 && var_1040 == 1) {
+        if (dangeon_number == 2 && current_floor == 1 && var_1040 == 1) {
             var_2567 = 0;
             var_1040 = 2;
         }
-        if (var_62 == 2 && var_2567 == 0) {
+        if (dangeon_number == 2 && var_2567 == 0) {
             var_2568 = rnd(12);
             if (var_1033 == 1) {
                 var_2568 = rnd(8);
@@ -19068,18 +19070,18 @@ function func563(this: any) {
         dbgprt(563);
         var_387 = 0;
         var_386 = 0;
-        if (var_62 == 1 && current_floor == 12 && var_94 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_94 == 0) {
             var_2543 = 1;
             var_386 = 1;
             yield func556();
             var_2543 = 0;
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             var_2543 = 6;
             yield func556();
             var_2543 = 0;
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             var_2543 = 7;
             yield func556();
             var_2543 = 0;
@@ -19340,7 +19342,7 @@ function func565(this: any) {
         if (var_82[var_2575][var_2576] == 0) {
             return;
         }
-        var_437 = var_83[var_1641].Var0;
+        enemy_list = var_83[var_1641].Var0;
         yield func626();
         var_1640 = var_83[var_1641].Var5;
         if (var_409 == 0) {
@@ -21973,7 +21975,7 @@ function func568(this: any) {
             var_1274 = ginfo(22);
             var_1275 = ginfo(23);
         }
-        if (var_62 == 5 && var_83[var_1641].Var16 >= 1000 && var_83[var_1641].Var13 == 0) {
+        if (dangeon_number == 5 && var_83[var_1641].Var16 >= 1000 && var_83[var_1641].Var13 == 0) {
             var_1274 = ginfo(22);
             var_1275 = ginfo(23);
             pos(var_1274 - 12, var_1275 - 10 - 12);
@@ -22166,7 +22168,7 @@ function func569(this: any) {
                     if (var_96 >= 1 && var_201 == var_204) {
                         var_2625 = 1;
                     }
-                    if (var_62 == 5 && var_83[var_314].Var16 >= 1000) {
+                    if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                         var_2625 = 1;
                     }
                     if (var_375 == 1) {
@@ -22191,7 +22193,7 @@ function func569(this: any) {
                     if (var_156[107] == 1 && var_156[350] == 1) {
                         var_2625 = rnd(3);
                     }
-                    if (var_62 == 5 && var_83[var_314].Var16 >= 1000) {
+                    if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                         var_2625 = 1;
                     }
                     if (var_2625 == 0) {
@@ -22570,7 +22572,7 @@ function func569(this: any) {
                     }
                 }
             }
-            if (var_83[var_2611].Var0 == 118 && var_62 != 0) {
+            if (var_83[var_2611].Var0 == 118 && dangeon_number != 0) {
                 var_83[var_2611].Var4 = 7;
                 if (var_201 != 14 && var_83[var_2611].Var10 != var_201 && var_83[var_2611].Var20 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
                     var_2639 = rnd(5);
@@ -22620,61 +22622,61 @@ function func569(this: any) {
         }
         if (var_83[var_2611].Var0 == 36) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 58) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 57) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 74) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 81) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 83) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 105) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 106) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 107) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
         if (var_83[var_2611].Var0 == 108) {
             var_83[var_2611].Var4 = 3;
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 var_83[var_2611].Var4 = 0;
             }
         }
@@ -23277,7 +23279,7 @@ function func569(this: any) {
                 }
             }
             if (var_83[var_2611].Var0 == 43 || var_83[var_2611].Var0 == 111) {
-                if (var_83[var_2611].Var20 == 0 && var_62 != 0) {
+                if (var_83[var_2611].Var20 == 0 && dangeon_number != 0) {
                     var_602 = 0;
                     var_603 = 0;
                     var_604 = 0;
@@ -23313,7 +23315,7 @@ function func569(this: any) {
                 }
             }
             if (var_83[var_2611].Var0 == 118) {
-                if (var_83[var_2611].Var20 == 0 && var_62 != 0) {
+                if (var_83[var_2611].Var20 == 0 && dangeon_number != 0) {
                     var_602 = 0;
                     var_603 = 0;
                     var_604 = 0;
@@ -27862,7 +27864,7 @@ function func576(this: any) {
                 return;
             }
             var_2751 = rnd(2);
-            if (var_62 == 99 && var_83[var_673].Var16 == 1) {
+            if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
                 var_2751 = 1;
             }
             if (var_2751 >= 1 && var_201 != 14 && var_201 == var_83[var_673].Var10) {
@@ -28208,7 +28210,7 @@ function func576(this: any) {
         if (var_2761 == var_66 && var_2763 == var_67) {
             var_2781 = 1;
         }
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             if (var_83[var_673].Var0 == 93 && var_83[var_673].Var16 == 1) {
                 var_2781 = 1;
             }
@@ -28272,7 +28274,7 @@ function func576(this: any) {
             yield func577();
             return;
         }
-        if (var_62 == 0) {
+        if (dangeon_number == 0) {
             if (var_83[var_673].Var0 == 76) {
                 var_2708 = 1;
                 yield func577();
@@ -28677,11 +28679,11 @@ function func577(this: any) {
 function func578(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(578);
-        var_437 = var_83[var_2646].Var0;
+        enemy_list = var_83[var_2646].Var0;
         yield func626();
-        var_2792 = var_438;
+        var_2792 = enemy_hp;
         if (var_83[var_2646].Var39 >= 2) {
-            var_2792 = Math.floor(var_438 * (var_83[var_2646].Var39 + 10) / 10);
+            var_2792 = Math.floor(enemy_hp * (var_83[var_2646].Var39 + 10) / 10);
             if (var_2792 >= 999) {
                 var_2792 = 999;
             }
@@ -28805,7 +28807,7 @@ function func580(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(580);
         var_2797 = rnd(5);
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             var_2797 = 1;
         }
         if (var_2797 == 0) {
@@ -30181,21 +30183,21 @@ function func585(this: any) {
         }
         var_674 = var_83[var_673].Var0;
         yield func096();
-        var_437 = var_83[var_673].Var0;
+        enemy_list = var_83[var_673].Var0;
         yield func626();
         if (var_83[var_673].Var39 >= 2) {
-            var_967 = Math.floor(var_967 * (var_83[var_673].Var39 * 2 + 10) / 10);
+            enemy_power = Math.floor(enemy_power * (var_83[var_673].Var39 * 2 + 10) / 10);
         }
         if (var_83[var_673].Var25 >= 1 && var_83[var_673].Var25 <= 50) {
-            var_967 = var_967 + var_83[var_673].Var25;
+            enemy_power = enemy_power + var_83[var_673].Var25;
         }
         if (var_83[var_673].Var25 >= 51 && var_83[var_673].Var25 < 99) {
-            var_967 = var_967 - (var_83[var_673].Var25 - 50);
-            if (var_967 <= 1) {
-                var_967 = 1;
+            enemy_power = enemy_power - (var_83[var_673].Var25 - 50);
+            if (enemy_power <= 1) {
+                enemy_power = 1;
             }
         }
-        var_949 = Math.floor(var_967 * (var_967 + var_967 - 8) / 16) + var_967;
+        var_949 = Math.floor(enemy_power * (enemy_power + enemy_power - 8) / 16) + enemy_power;
         for (let cnt1 = 0; cnt1 < var_581; ++cnt1) {
             var_949 = Math.floor(var_949 * 15 / 16);
         }
@@ -30375,14 +30377,14 @@ function func586(this: any) {
         }
         var_2819 = var_673;
         var_402 = var_82[var_455][var_456];
-        var_437 = var_83[var_402].Var0;
+        enemy_list = var_83[var_402].Var0;
         yield func626();
-        var_971 = var_968;
-        var_437 = var_83[var_2819].Var0;
+        var_971 = enemy_defence;
+        enemy_list = var_83[var_2819].Var0;
         yield func626();
-        var_2820 = var_967;
+        var_2820 = enemy_power;
         if (var_83[var_402].Var0 == 53) {
-            var_971 = var_968;
+            var_971 = enemy_defence;
         }
         if (var_83[var_2819].Var39 >= 2) {
             var_2820 = Math.floor(var_2820 * (var_83[var_2819].Var39 * 2 + 10) / 10);
@@ -30396,7 +30398,7 @@ function func586(this: any) {
             var_2820 = var_2820 + var_83[var_2819].Var25;
         }
         if (var_83[var_2819].Var25 >= 51 && var_83[var_2819].Var25 < 99) {
-            var_2820 = var_967 - (var_83[var_2819].Var25 - 50);
+            var_2820 = enemy_power - (var_83[var_2819].Var25 - 50);
             if (var_2820 <= 1) {
                 var_2820 = 1;
             }
@@ -31276,7 +31278,7 @@ function func594(this: any) {
         current_floor = rnd(var_2840);
         current_floor = current_floor + 1;
         yield func627();
-        if (var_62 == 0 || var_62 == 99) {
+        if (dangeon_number == 0 || dangeon_number == 99) {
             var_953 = 37;
         }
         var_2537 = var_953;
@@ -31947,7 +31949,7 @@ function func597(this: any) {
         var_411 = rnd(8);
         var_411++;
 
-        DSPLAY(audio_id = 103);
+        DSPLAY(audio_id = 103); // 殴られた時の効果音
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_2578 = 1;
             yield func337();

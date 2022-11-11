@@ -556,7 +556,7 @@ function func705(this: any) {
         dbgprt(705);
         var_2942 = var_83[var_402].Var5;
         var_214 = 1;
-        var_437 = var_83[var_402].Var0;
+        enemy_list = var_83[var_402].Var0;
         yield func626();
         if (var_83[var_402].Var0 == 33 && var_2196 != 0) {
             var_209 = 0;
@@ -580,9 +580,9 @@ function func705(this: any) {
         }
         if (var_2821 == 1) {
             var_83[var_402].Var3 = var_83[var_402].Var3 + 20;
-            var_2792 = var_438;
+            var_2792 = enemy_hp;
             if (var_83[var_402].Var39 >= 2) {
-                var_2792 = Math.floor(var_438 * (var_83[var_402].Var39 + 10) / 10);
+                var_2792 = Math.floor(enemy_hp * (var_83[var_402].Var39 + 10) / 10);
                 if (var_83[var_402].Var3 >= 999) {
                     var_83[var_402].Var3 = 999;
                 }
@@ -656,7 +656,7 @@ function func705(this: any) {
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 yield func337();
             }
-            var_437 = var_83[var_402].Var0;
+            enemy_list = var_83[var_402].Var0;
             yield func626();
             comments_row1 = "";
             comments_row2 = "";
@@ -679,25 +679,25 @@ function func705(this: any) {
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 yield func337();
             }
-            var_437 = var_83[var_402].Var0;
+            enemy_list = var_83[var_402].Var0;
             if (var_83[var_402].Var0 == 97 && var_83[var_402].Var31 >= 11) {
-                var_437 = var_83[var_402].Var31;
+                enemy_list = var_83[var_402].Var31;
             }
             yield func626();
             if (var_127 != 0 || var_132 != 0) {
-                var_891 = "何者か";
+                enemy_name = "何者か";
             }
             if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
-                var_891 = "何者か";
+                enemy_name = "何者か";
             }
             if (var_2821 == 0) {
-                comments_row2 = "" + var_891 + "に" + var_209 + "のダメージ！";
+                comments_row2 = "" + enemy_name + "に" + var_209 + "のダメージ！";
             }
             if (var_209 == 999) {
-                comments_row2 = "" + var_891 + "に致命的なダメージ！";
+                comments_row2 = "" + enemy_name + "に致命的なダメージ！";
             }
             if (var_2821 == 1) {
-                comments_row2 = "" + var_891 + "の傷が埋められた";
+                comments_row2 = "" + enemy_name + "の傷が埋められた";
             }
             var_198 = 1;
             var_300 = 0;
@@ -735,16 +735,16 @@ function func705(this: any) {
             yield func337();
         }
         if (var_83[var_402].Var3 <= 0) {
-            if (var_62 == 1 && var_83[var_402].Var0 == 20) {
+            if (dangeon_number == 1 && var_83[var_402].Var0 == 20) {
                 yield func685();
             }
-            if (var_62 == 2 && var_83[var_402].Var0 == 132) {
+            if (dangeon_number == 2 && var_83[var_402].Var0 == 132) {
                 yield func686();
             }
-            if (var_62 == 3 && var_83[var_402].Var0 == 143) {
+            if (dangeon_number == 3 && var_83[var_402].Var0 == 143) {
                 yield func687();
             }
-            if (var_62 == 5 && var_83[var_402].Var16 >= 1000) {
+            if (dangeon_number == 5 && var_83[var_402].Var16 >= 1000) {
                 var_2921 = var_83[var_402].Var0;
                 yield func633();
             }
@@ -803,16 +803,16 @@ function func705(this: any) {
             if (var_114 >= 1 && var_402 == var_114) {
                 var_114 = 0;
             }
-            if (var_62 == 1 && var_83[var_402].Var0 == 20) {
+            if (dangeon_number == 1 && var_83[var_402].Var0 == 20) {
                 yield func689();
             }
             if (var_94 == 1 && var_83[var_402].Var0 == 65) {
                 yield func688();
             }
-            if (var_62 == 3 && var_83[var_402].Var0 == 143) {
+            if (dangeon_number == 3 && var_83[var_402].Var0 == 143) {
                 yield func689();
             }
-            if (var_62 == 2 && var_83[var_402].Var0 == 132) {
+            if (dangeon_number == 2 && var_83[var_402].Var0 == 132) {
                 yield func689();
             }
             if (var_83[var_402].Var0 == 53 && var_2196 != 0) {
@@ -836,7 +836,7 @@ function func705(this: any) {
                     var_2957 = 5;
                 }
                 if (var_83[var_402].Var0 == 76 || var_83[var_402].Var0 == 77) {
-                    if (var_62 == 99) {
+                    if (dangeon_number == 99) {
                         var_2959 = 0;
                         if (var_83[var_402].Var16 == 1) {
                             var_2959 = 1;
@@ -861,7 +861,7 @@ function func705(this: any) {
             yield func676();
             if (var_2196 == 0) {
                 yield func340();
-                var_437 = var_83[var_402].Var0;
+                enemy_list = var_83[var_402].Var0;
                 yield func626();
                 var_2956 = var_954;
                 if (var_83[var_402].Var39 >= 2) {
@@ -873,14 +873,14 @@ function func705(this: any) {
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 if (var_127 != 0 || var_132 != 0) {
-                    var_891 = "何者か";
+                    enemy_name = "何者か";
                 }
                 if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
-                    var_891 = "何者か";
+                    enemy_name = "何者か";
                 }
-                comments_row1a = "" + var_891 + "をやっつけた";
+                comments_row1a = "" + enemy_name + "をやっつけた";
                 comments_row2a = "" + var_2956 + "の経験値を手に入れた";
-                var_2945 = var_437;
+                var_2945 = enemy_list;
                 var_25_x = var_25[1];
                 var_26_x = var_26[1];
                 var_27_x = var_27[1];
@@ -902,10 +902,10 @@ function func705(this: any) {
                 var_83[var_673].Var7 = 0;
                 yield func340();
                 var_2571 = var_83[var_402].Var0;
-                var_437 = var_83[var_673].Var0;
+                enemy_list = var_83[var_673].Var0;
                 yield func626();
-                var_3108 = var_891;
-                var_437 = var_83[var_402].Var0;
+                var_3108 = enemy_name;
+                enemy_list = var_83[var_402].Var0;
                 yield func626();
                 var_2956 = var_954;
                 if (var_83[var_402].Var39 >= 2) {
@@ -921,14 +921,14 @@ function func705(this: any) {
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 if (var_127 != 0 || var_132 != 0) {
-                    var_891 = "何者か";
+                    enemy_name = "何者か";
                 }
                 if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
-                    var_891 = "何者か";
+                    enemy_name = "何者か";
                 }
                 comments_row1a = "" + var_3108 + "は";
-                comments_row2a = "" + var_891 + "をやっつけた";
-                var_2945 = var_437;
+                comments_row2a = "" + enemy_name + "をやっつけた";
+                var_2945 = enemy_list;
                 var_25_x = var_25[1];
                 var_26_x = var_26[1];
                 var_27_x = var_27[1];
@@ -946,7 +946,7 @@ function func705(this: any) {
                     comments_row1a = "ディアボロ達は";
                 }
                 comments_row2a = "" + var_3109 + "の経験値を手に入れた";
-                var_2945 = var_437;
+                var_2945 = enemy_list;
                 var_25_x = var_25[1];
                 var_26_x = var_26[1];
                 var_27_x = var_27[1];
@@ -971,7 +971,7 @@ function func705(this: any) {
             if (var_3110 != 0) {
                 var_83[var_402].Var7 = 0;
                 yield func340();
-                var_437 = var_83[var_402].Var0;
+                enemy_list = var_83[var_402].Var0;
                 yield func626();
                 var_2956 = var_954;
                 if (var_83[var_402].Var39 >= 2) {
@@ -988,7 +988,7 @@ function func705(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "ディアボロは";
                 comments_row2a = "" + var_3109 + "の経験値を手に入れた";
-                var_2945 = var_437;
+                var_2945 = enemy_list;
                 var_25_x = var_25[1];
                 var_26_x = var_26[1];
                 var_27_x = var_27[1];
@@ -1017,9 +1017,9 @@ function func705(this: any) {
                         var_3111 = 1;
                         yield func340();
                         var_83[var_673].Var0 = 114;
-                        var_437 = var_83[var_673].Var0;
+                        enemy_list = var_83[var_673].Var0;
                         yield func626();
-                        var_83[var_673].Var3 = var_438;
+                        var_83[var_673].Var3 = enemy_hp;
                         yield func094();
                         comments_row1 = comments_row1a;
                         comments_row2 = comments_row2a;
@@ -1070,12 +1070,12 @@ function func705(this: any) {
                     if (var_83[var_673].Var39 == 1) {
                         var_83[var_673].Var39 = 2;
                     }
-                    var_437 = var_83[var_673].Var0;
+                    enemy_list = var_83[var_673].Var0;
                     if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
-                        var_437 = var_83[var_673].Var31;
+                        enemy_list = var_83[var_673].Var31;
                     }
                     yield func626();
-                    var_83[var_673].Var3 = Math.floor(var_438 * (var_83[var_673].Var39 + 10) / 10);
+                    var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
                     if (var_83[var_673].Var3 >= 999) {
                         var_83[var_673].Var3 = 999;
                     }
@@ -1084,9 +1084,9 @@ function func705(this: any) {
             
                     DSPLAY(audio_id = 142);
                     if (var_127 != 0 || var_132 != 0) {
-                        var_891 = "何者か";
+                        enemy_name = "何者か";
                     }
-                    comments_row1a = "" + var_891 + "は";
+                    comments_row1a = "" + enemy_name + "は";
                     comments_row2a = "レベルが上がった！";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
@@ -2202,11 +2202,11 @@ function func728(this: any) {
 function func729(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(729);
-        var_437 = var_83[var_3072].Var0;
+        enemy_list = var_83[var_3072].Var0;
         yield func626();
-        var_1331 = var_438;
+        var_1331 = enemy_hp;
         if (var_83[var_3072].Var39 >= 2) {
-            var_1331 = Math.floor(var_438 * (var_83[var_3072].Var39 + 10) / 10);
+            var_1331 = Math.floor(enemy_hp * (var_83[var_3072].Var39 + 10) / 10);
             if (var_1331 >= 999) {
                 var_1331 = 999;
             }
@@ -2381,20 +2381,20 @@ function func733(this: any) {
             yield func125();
         }
         if (var_3125 == 2) {
-            var_437 = var_2571;
+            enemy_list = var_2571;
             yield func626();
             var_3125 = rnd(3);
             if (var_3125 == 0) {
-                comments_row1 = "" + var_891 + "は死んだッ！";
+                comments_row1 = "" + enemy_name + "は死んだッ！";
                 comments_row2 = "大げさかもしれんが世界は救われたッ！";
             }
             if (var_3125 == 1) {
-                comments_row1 = "" + var_891 + "は臭えーッ！";
+                comments_row1 = "" + enemy_name + "は臭えーッ！";
                 comments_row2 = "ゲロ以下のニオイがﾌﾟﾝﾌﾟﾝするぜーッ！";
             }
             if (var_3125 == 2) {
                 comments_row1 = "気をつけな！";
-                comments_row2 = "" + var_891 + "はこすずるいぜ！";
+                comments_row2 = "" + enemy_name + "はこすずるいぜ！";
             }
         }
         if (var_83[var_3072].Var3 == 1) {
@@ -2420,7 +2420,7 @@ function func734(this: any) {
         dbgprt(734);
         var_243 = 0;
         var_3072 = var_314;
-        var_437 = var_83[var_3072].Var0;
+        enemy_list = var_83[var_3072].Var0;
         yield func626();
         comments_row1 = "";
         comments_row2 = "";
@@ -2429,7 +2429,7 @@ function func734(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        comments_row1 = "" + var_891 + "「・・・・」";
+        comments_row1 = "" + enemy_name + "「・・・・」";
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
@@ -2449,7 +2449,7 @@ function func735(this: any) {
         dbgprt(735);
         var_243 = 0;
         var_3072 = var_314;
-        var_437 = var_83[var_3072].Var0;
+        enemy_list = var_83[var_3072].Var0;
         yield func626();
         comments_row1 = "";
         comments_row2 = "";
@@ -2458,7 +2458,7 @@ function func735(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        comments_row1 = "" + var_891 + "は";
+        comments_row1 = "" + enemy_name + "は";
         comments_row2 = "話せる状態ではないようだ…";
         var_198 = 1;
         var_300 = 0;
@@ -2697,19 +2697,19 @@ function func741(this: any) {
             yield func128();
         }
         if (var_3125 == 3) {
-            var_437 = var_2571;
+            enemy_list = var_2571;
             yield func626();
             var_3125 = rnd(3);
             if (var_3125 == 0) {
                 comments_row1 = "や…やった、やっつけたぞ";
-                comments_row2 = "" + var_891 + "め…";
+                comments_row2 = "" + enemy_name + "め…";
             }
             if (var_3125 == 1) {
                 comments_row1 = "かかってきやがれ";
-                comments_row2 = "" + var_891 + "め！";
+                comments_row2 = "" + enemy_name + "め！";
             }
             if (var_3125 == 2) {
-                comments_row1 = "やり～！" + var_891 + "め";
+                comments_row1 = "やり～！" + enemy_name + "め";
                 comments_row2 = "頭悪いぜッ！";
             }
         }
@@ -2952,11 +2952,11 @@ function func746(this: any) {
             yield func124();
         }
         if (var_3125 == 3) {
-            var_437 = var_2571;
+            enemy_list = var_2571;
             yield func626();
             var_3125 = rnd(3);
             if (var_3125 == 0) {
-                comments_row1 = "" + var_891 + "なんぞ";
+                comments_row1 = "" + enemy_name + "なんぞ";
                 comments_row2 = "ノミと同類よォー！";
             }
             if (var_3125 == 1) {
@@ -3290,16 +3290,16 @@ function func752(this: any) {
             yield func126();
         }
         if (var_3125 == 3) {
-            var_437 = var_2571;
+            enemy_list = var_2571;
             yield func626();
             var_3125 = rnd(2);
             if (var_3125 == 0) {
-                comments_row1 = "" + var_891 + "を";
+                comments_row1 = "" + enemy_name + "を";
                 comments_row2 = "｢ブッ殺した｣！";
             }
             if (var_3125 == 1) {
                 comments_row1 = "俺でも何とか";
-                comments_row2 = "" + var_891 + "を倒せたぜ！";
+                comments_row2 = "" + enemy_name + "を倒せたぜ！";
             }
         }
         var_198 = 1;
@@ -3395,11 +3395,11 @@ function func753(this: any) {
             yield func127();
         }
         if (var_3125 == 3) {
-            var_437 = var_2571;
+            enemy_list = var_2571;
             yield func626();
             var_3125 = rnd(3);
             if (var_3125 == 0) {
-                comments_row1 = "" + var_891 + "をやっちまった～♪";
+                comments_row1 = "" + enemy_name + "をやっちまった～♪";
                 comments_row2 = "でも思ったよりたいしたことないな";
             }
             if (var_3125 == 1) {
@@ -3407,7 +3407,7 @@ function func753(this: any) {
                 comments_row2 = "言えるヤツは　誰一人いねー…";
             }
             if (var_3125 == 2) {
-                comments_row1 = "" + var_891 + "の";
+                comments_row1 = "" + enemy_name + "の";
                 comments_row2 = "心臓えぐりとってやったぜ…";
             }
         }
@@ -3823,9 +3823,9 @@ function func755(this: any) {
             if (var_977[var_3144] == 0) {
                 break;
             }
-            var_437 = var_977[var_3144];
+            enemy_list = var_977[var_3144];
             yield func626();
-            var_3142[var_3144] = var_891;
+            var_3142[var_3144] = enemy_name;
             var_3144 = var_3144 + 1;
         }
         current_floor = var_3143;
@@ -5676,7 +5676,7 @@ function func784(this: any) {
         var_198 = 0;
         var_1261 = 1;
 
-        DSPLAY(audio_id = 103);
+        DSPLAY(audio_id = 103); // 殴った時の効果音
         var_271 = 1;
         var_1542 = 21;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
@@ -6075,7 +6075,7 @@ function func791(this: any) {
         }
         var_389 = 2;
 
-        DSPLAY(audio_id = 103);
+        DSPLAY(audio_id = 103); // 殴った時の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛは酷いダメージを受けた！";
@@ -6481,7 +6481,7 @@ function func798(this: any) {
         }
         if (var_254 == 1 && var_3179 != 6) {
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             var_3179 = var_3179 + 1;
             var_3180 = var_3180 - 15;
             yield func337();
@@ -6489,7 +6489,7 @@ function func798(this: any) {
         }
         if (var_257 == 1 && var_3179 != 1) {
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             var_3179 = var_3179 - 1;
             var_3180 = var_3180 + 15;
             yield func337();
@@ -6497,7 +6497,7 @@ function func798(this: any) {
         }
         if (var_255 == 1) {
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_3179 == 1) {
                 var_3170 = var_3170 + 1;
                 if (var_3170 == 10) {
@@ -6587,7 +6587,7 @@ function func798(this: any) {
         }
         if (var_259 == 1) {
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_3179 == 1) {
                 var_3170 = var_3170 - 1;
                 if (var_3170 < 0) {

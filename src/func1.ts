@@ -526,7 +526,7 @@ function func105(this: any) {
         if (var_677 == item_list) {
             return;
         }
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             return;
         }
         if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
@@ -541,7 +541,7 @@ function func105(this: any) {
 function func106(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(106);
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             return;
         }
         if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
@@ -599,7 +599,7 @@ function func109(this: any) {
 function func110(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(110);
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             return;
         }
         var_678 = 1;
@@ -1077,6 +1077,7 @@ function func139(this: any) {
         else {
             var_703 = 1;
             var_704 = bload("01.dat");
+            // var_704[61] == 0 だと拠点    
             if (var_704[61] == 0) {
                 if (var_704[117] == 0) {
                     var_705 = "ヴェネチアホテル";
@@ -1088,6 +1089,7 @@ function func139(this: any) {
                     var_705 = "酒場";
                 }
             }
+            // var_704[61] == 1 だとホテルの外 
             if (var_704[61] == 1) {
                 if (var_704[1] <= 2) {
                     var_705 = "水の都";
@@ -1105,18 +1107,21 @@ function func139(this: any) {
                     var_705 = "エンヤホテル";
                 }
             }
+            // var_704[61] == 2 だとレクイエムの第迷宮
             if (var_704[61] == 2) {
                 var_705 = "レクイエムの大迷宮";
                 if (var_704[1] == 30) {
                     var_705 = "黄金の風";
                 }
             }
+            // var_704[61] == 3 だとディアボロの試練
             if (var_704[61] == 3) {
                 var_705 = "ディアボロの試練";
                 if (var_704[1] == 99) {
                     var_705 = "自由人の狂想曲";
                 }
             }
+            // var_704[61] == 4 だと一巡後の世界
             if (var_704[61] == 4) {
                 var_705 = "一巡後の世界";
             }
@@ -1739,7 +1744,7 @@ function func142(this: any) {
             if (var_64 == 0) {
                 var_64 = 4;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(13);
                 yield func142();
@@ -1748,28 +1753,28 @@ function func142(this: any) {
             if (var_64 == 1) {
                 var_64 = 0;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
             if (var_64 == 2) {
                 var_64 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
             if (var_64 == 3) {
                 var_64 = 2;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
             if (var_64 == 4) {
                 var_64 = 3;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
@@ -1778,7 +1783,7 @@ function func142(this: any) {
             if (var_64 == 4) {
                 var_64 = 0;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(13);
                 yield func142();
@@ -1787,28 +1792,28 @@ function func142(this: any) {
             if (var_64 == 3) {
                 var_64 = 4;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
             if (var_64 == 2) {
                 var_64 = 3;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
             if (var_64 == 1) {
                 var_64 = 2;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
             if (var_64 == 0) {
                 var_64 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func143();
                 yield wait(10);
             }
@@ -1890,13 +1895,13 @@ function func144(this: any) {
             if (var_726 == 2) {
                 var_726 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield wait(8);
             }
             if (var_726 == 3) {
                 var_726 = 2;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield wait(8);
             }
         }
@@ -1907,13 +1912,13 @@ function func144(this: any) {
             if (var_726 == 2) {
                 var_726 = 3;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield wait(8);
             }
             if (var_726 == 1) {
                 var_726 = 2;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield wait(8);
             }
         }
@@ -3681,7 +3686,7 @@ function func155(this: any) {
         yield func337();
         var_760 = 3;
 
-        DSPLAY(audio_id = 103);
+        DSPLAY(audio_id = 103); // 殴った時の効果音
         var_409 = 2;
         yield func337();
         var_760 = 2;
@@ -4138,7 +4143,7 @@ function func158(this: any) {
         var_562 = 5;
         yield func288();
         yield func248();
-        var_62 = 0;
+        dangeon_number = 0;
         var_532 = 0;
 
         var_77 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
@@ -4215,7 +4220,7 @@ function func159(this: any) {
             yield func292();
         }
         yield func248();
-        var_62 = 0;
+        dangeon_number = 0;
         var_532 = 0;
 
         var_77 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
@@ -5952,7 +5957,7 @@ function func173(this: any) {
         yield func174();
         yield func175();
         yield func176();
-        var_836 = var_62;
+        var_836 = dangeon_number;
         var_837 = current_floor;
         yield func808();
         var_356 = 0;
@@ -6018,7 +6023,7 @@ function func174(this: any) {
 function func175(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(175);
-        var_793 = var_62;
+        var_793 = dangeon_number;
         if (var_793 == 5) {
             var_793 = 0;
         }
@@ -6035,7 +6040,7 @@ function func175(this: any) {
         var_792[var_793][0][10] = 0;
         var_792[var_793][0][11] = 0;
         var_792[var_793][0][12] = 0;
-        var_792[var_793][0][13] = var_62;
+        var_792[var_793][0][13] = dangeon_number;
         var_792[var_793][0][14] = var_840;
         var_792[var_793][0][15] = var_352;
         var_792[var_793][0][16] = var_566;
@@ -7578,8 +7583,9 @@ function func185(this: any) {
         var_352 = var_840 * 4 + 15;
         var_211 = var_352;
         var_94 = var_880;
-        if (var_62 == 0) {
-            var_62 = 1;
+        if (dangeon_number == 0) {
+            // No = 1 なので、ホテルの外
+            dangeon_number = 1;
         }
         var_262 = 0;
         var_595 = 0;
@@ -7664,9 +7670,9 @@ function func190(this: any) {
         var_890 = "敵";
         var_887 = 1;
         for (let cnt1 = 0; cnt1 < 100; ++cnt1) {
-            var_437 = var_887;
+            enemy_list = var_887;
             yield func626();
-            var_890 = var_890 + "\n" + var_437 + " " + var_891;
+            var_890 = var_890 + "\n" + enemy_list + " " + enemy_name;
             var_887 = var_887 + 1;
         }
         return;
@@ -7685,7 +7691,9 @@ function func191(this: any) {
         }
         var_224 = var_224 + 1;
         var_233[var_224].Var0 = var_884[var_873];
-        var_892 = var_233[var_224].Var0;
+
+        item_list_array = var_233[var_224].Var0;
+
         // [var_224].Var0はアイテム配列。100～400未満は装備discなので、装備discであれば
         if (var_233[var_224].Var0 >= 100 && var_233[var_224].Var0 < 400) {
             var_233[var_224].Var16 = 10;
@@ -7695,14 +7703,14 @@ function func191(this: any) {
         }
         // [var_224].Var0はアイテム配列。400～500未満は射撃discなので、射撃discであれば
         var_233[var_224].Var20 = var_233[var_224].Var0;
-        if (var_892 >= 400 && var_892 < 500) {
+        if (item_list_array >= 400 && item_list_array < 500) {
             var_233[var_224].Var3 = 10;
         }
         if (var_878 == 1) {
-            var_862[var_892][0] = 0;
+            var_862[item_list_array][0] = 0;
         }
         if (var_878 == 0) {
-            var_862[var_892][0] = 1;
+            var_862[item_list_array][0] = 1;
         }
         // 122 = ｽﾄｰﾝ･ﾌﾘｰのDISC、200 = ｽｰﾊﾟｰﾌﾗｲのDISC、311 = ﾁｰﾌﾟ･ﾄﾘｯｸのDISC、310 = ｴﾝﾌﾟﾚｽのDISC
         if (var_233[var_224].Var0 == 122 || var_233[var_224].Var0 == 200 || var_233[var_224].Var0 == 311 || var_233[var_224].Var0 == 310) {
@@ -7840,7 +7848,7 @@ function func193(this: any) {
                 yield func198();
                 return;
             }
-            if (var_899 == 6 && var_62 != 99 && var_637 == 0) {
+            if (var_899 == 6 && dangeon_number != 99 && var_637 == 0) {
                 yield func051();
                 yield func925();
                 return;
@@ -7858,7 +7866,7 @@ function func193(this: any) {
             if (var_899 == 0) {
                 var_899 = 6;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7867,7 +7875,7 @@ function func193(this: any) {
             if (var_899 == 1) {
                 var_899 = 0;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7876,7 +7884,7 @@ function func193(this: any) {
             if (var_899 == 2) {
                 var_899 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7885,7 +7893,7 @@ function func193(this: any) {
             if (var_899 == 3) {
                 var_899 = 2;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7894,7 +7902,7 @@ function func193(this: any) {
             if (var_899 == 4) {
                 var_899 = 3;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7903,7 +7911,7 @@ function func193(this: any) {
             if (var_899 == 5) {
                 var_899 = 4;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7912,7 +7920,7 @@ function func193(this: any) {
             if (var_899 == 6) {
                 var_899 = 5;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7923,7 +7931,7 @@ function func193(this: any) {
             if (var_899 == 6) {
                 var_899 = 0;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7932,7 +7940,7 @@ function func193(this: any) {
             if (var_899 == 5) {
                 var_899 = 6;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7941,7 +7949,7 @@ function func193(this: any) {
             if (var_899 == 4) {
                 var_899 = 5;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7950,7 +7958,7 @@ function func193(this: any) {
             if (var_899 == 3) {
                 var_899 = 4;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7959,7 +7967,7 @@ function func193(this: any) {
             if (var_899 == 2) {
                 var_899 = 3;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7968,7 +7976,7 @@ function func193(this: any) {
             if (var_899 == 1) {
                 var_899 = 2;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -7977,7 +7985,7 @@ function func193(this: any) {
             if (var_899 == 0) {
                 var_899 = 1;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
                 yield func193();
@@ -8041,7 +8049,7 @@ function func195(this: any) {
                 var_906 = 0;
                 var_686 = 30;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8049,7 +8057,7 @@ function func195(this: any) {
                 var_906 = 1;
                 var_686 = 40;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8057,7 +8065,7 @@ function func195(this: any) {
                 var_906 = 2;
                 var_686 = 50;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8065,7 +8073,7 @@ function func195(this: any) {
                 var_906 = 3;
                 var_686 = 60;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8081,7 +8089,7 @@ function func195(this: any) {
                 var_906 = 4;
                 var_686 = 70;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8089,7 +8097,7 @@ function func195(this: any) {
                 var_906 = 3;
                 var_686 = 60;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8097,7 +8105,7 @@ function func195(this: any) {
                 var_906 = 2;
                 var_686 = 50;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8105,7 +8113,7 @@ function func195(this: any) {
                 var_906 = 1;
                 var_686 = 40;
 
-                DSPLAY(audio_id = 100);
+                DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
             }
@@ -8206,7 +8214,7 @@ function func197(this: any) {
         mes("画面サイズ");
         pos(145, 190);
         mes("マップ色変更");
-        if (var_62 == 99 || var_637 != 0) {
+        if (dangeon_number == 99 || var_637 != 0) {
             color(150, 150, 150); //灰色
         }
         pos(145, 210);
@@ -8232,7 +8240,7 @@ function func197(this: any) {
             mes("超遅");
         }
         color(255, 255, 255);
-        if (var_62 == 99) {
+        if (dangeon_number == 99) {
             color(150, 150, 150); //灰色
         }
         if (var_900 == 1 || var_901 == 1 || var_902 == 1 || var_903 == 1 || var_904 == 1 || var_905 == 1) {
@@ -8341,7 +8349,7 @@ function func199(this: any) {
         }
         if (var_255 == 1) {
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_908 == 0) {
                 var_908 = 2;
                 yield func337();
@@ -8359,7 +8367,7 @@ function func199(this: any) {
         }
         if (var_259 == 1) {
 
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_908 == 2) {
                 var_908 = 0;
                 yield func337();

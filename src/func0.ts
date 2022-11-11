@@ -299,7 +299,7 @@ function func004(this: any) {
         buffer(id = 36, disp_width = 340, disp_height = 340, mode = null);
         buffer(32, 200, 200);
         yield func183(); // デバックウィンドウ呼び出し？
-        yield func081();
+        yield func081(); // 効果音を呼び出す関数
         yield func082();
         yield func083();
         DSGETMASTERVOLUME();
@@ -326,7 +326,8 @@ function func005(this: any) {
         dbgprt(5);
         onexit(1);
         yield func229(); // セーブファイルからデータ読み出し関数
-        if (var_62 == 0) {
+        // No = 0 なので、拠点(ホテル、亀、)
+        if (dangeon_number == 0) {
             yield func159();
             return;
         }
@@ -352,7 +353,8 @@ function func005(this: any) {
 function func006(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(6);
-        if (var_62 == 4) {
+        // No = 4 なので、一巡後の世界
+        if (dangeon_number == 4) {
             yield func458();
             if (var_69 == 1 && var_70 == 0) {
                 var_70 = 7;
@@ -421,7 +423,8 @@ function func008(this: any) {
         if (current_floor <= 2) {
             var_90 = 0;
         }
-        if (var_62 == 1) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1) {
             if (current_floor <= 2) {
                 var_92 = 15;
             }
@@ -439,7 +442,8 @@ function func008(this: any) {
                 var_90 = 0;
             }
         }
-        if (var_62 == 2) {
+        // No = 2 なので、レクイエムの第迷宮
+        if (dangeon_number == 2) {
             if (current_floor >= 1 && current_floor <= 5) {
                 var_92 = 3;
             }
@@ -465,7 +469,8 @@ function func008(this: any) {
                 var_92 = 12;
             }
         }
-        if (var_62 == 3 || var_62 == 4) {
+        // No = 3 なので、ディアボロの試練、No = 4 なので、一巡後の世界
+        if (dangeon_number == 3 || dangeon_number == 4) {
             var_93 = rnd(16);
             if (var_93 == 0) {
                 var_92 = 2;
@@ -516,14 +521,14 @@ function func008(this: any) {
             if (var_93 == 15) {
                 var_92 = 9;
             }
-            if (var_62 == 3 && current_floor >= 90) {
+            if (dangeon_number == 3 && current_floor >= 90) {
                 var_92 = 22;
             }
-            if (var_62 == 3 && current_floor == 99) {
+            if (dangeon_number == 3 && current_floor == 99) {
                 var_92 = 2;
             }
         }
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             var_93 = rnd(14);
             if (var_93 == 0) {
                 var_92 = 2;
@@ -609,17 +614,18 @@ function func008(this: any) {
             var_90 = 0;
             yield func254();
         }
-        if (var_62 == 1 && current_floor <= 2) {
+        // No = 1 なので、ホテルの外       
+        if (dangeon_number == 1 && current_floor <= 2) {
             var_90 = 99;
             yield func255();
             var_90 = 0;
         }
-        if (var_62 == 2 && current_floor == 28 && var_86 != 0) {
+        if (dangeon_number == 2 && current_floor == 28 && var_86 != 0) {
             var_90 = 99;
             yield func255();
             var_90 = 0;
         }
-        if (var_62 == 2 && current_floor == 29 && var_86 != 0) {
+        if (dangeon_number == 2 && current_floor == 29 && var_86 != 0) {
             var_90 = 99;
             yield func255();
             var_90 = 0;
@@ -643,7 +649,7 @@ function func008(this: any) {
         yield func562();
         yield func560();
         yield func563();
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             yield func564();
         }
         yield func555();
@@ -768,34 +774,39 @@ function func008(this: any) {
         }
         var_68 = 1;
         yield func331();
-        if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
             yield func118();
         }
-        if (var_62 == 1 && current_floor == 12 && var_203 == 1) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) {
             yield func119();
         }
-        if (var_62 == 1 && current_floor == 12 && var_203 == 2) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) {
             yield func120();
         }
-        if (var_62 == 1 && current_floor == 12 && var_203 == 3) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
             yield func121();
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             yield func117();
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             yield func116();
         }
         if (var_96 >= 1 && var_201 == var_204) {
             yield func074();
         }
-        if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
             yield func075();
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             yield func075();
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             yield func075();
         }
         if (var_94 >= 1) {
@@ -917,6 +928,7 @@ function func009(this: any) {
                 var_229 = 44;
                 var_230 = 45;
             }
+
             if (var_225 > 10) {
                 var_227 = 2;
                 var_228 = (var_225 - 11) * 22 + 45;
@@ -932,7 +944,7 @@ function func009(this: any) {
                 var_222 = 10;
             }
             item_list = var_233[var_225].Var0;
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); 
             yield func462();
             return;
         }
@@ -1877,13 +1889,13 @@ function func015(this: any) {
                 var_199 = 2;
             }
         }
-        if (var_62 == 0 && var_66 == 14 && var_67 == 22 && var_236 != 15) {
+        if (dangeon_number == 0 && var_66 == 14 && var_67 == 22 && var_236 != 15) {
             var_66 = var_236;
             var_67 = var_237;
             yield func162();
             return;
         }
-        if (var_62 == 0 && var_66 == 12 && var_67 == 22 && var_199 == 8) {
+        if (dangeon_number == 0 && var_66 == 12 && var_67 == 22 && var_199 == 8) {
             var_66 = var_236;
             var_67 = var_237;
             yield func736();
@@ -2399,7 +2411,7 @@ function func018(this: any) {
 function func019(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(19);
-        if (var_62 != 0) {
+        if (dangeon_number != 0) {
             var_338++;
         }
         yield func016();
@@ -2702,7 +2714,7 @@ function func019(this: any) {
                     if (var_156[300] == 1 && var_359 == 1) {
                         var_360 = var_360 + 2;
                     }
-                    if (var_62 == 0) {
+                    if (dangeon_number == 0) {
                         var_360 = 0;
                     }
                     if (var_360 >= 20) {
@@ -3024,19 +3036,20 @@ function func019(this: any) {
                 if (current_floor > var_376) {
                     var_376 = current_floor;
                 }
-                if (var_62 == 1 && current_floor > var_377) {
+                // No = 1 なので、ホテルの外
+                if (dangeon_number == 1 && current_floor > var_377) {
                     var_377 = current_floor;
                 }
-                if (var_62 == 2 && current_floor > var_378) {
+                if (dangeon_number == 2 && current_floor > var_378) {
                     var_378 = current_floor;
                 }
-                if (var_62 == 3 && current_floor > var_379) {
+                if (dangeon_number == 3 && current_floor > var_379) {
                     var_379 = current_floor;
                 }
-                if (var_62 == 4 && current_floor > var_380) {
+                if (dangeon_number == 4 && current_floor > var_380) {
                     var_380 = current_floor;
                 }
-                if (var_62 == 5 && current_floor > var_381) {
+                if (dangeon_number == 5 && current_floor > var_381) {
                     var_381 = current_floor;
                 }
                 var_94 = 0;
@@ -3149,13 +3162,14 @@ function func019(this: any) {
                 if (var_156[358] == 1) {
                     var_165 = var_165 + 1;
                 }
-                if (var_62 == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
+                // No = 1 なので、ホテルの外
+                if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
                     var_165 = 0;
                 }
                 if (var_190 == 1) {
                     var_165 = 0;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_165 = 0;
                 }
                 if (var_94 == 1 && var_387 == 0) {
@@ -3489,13 +3503,13 @@ function func019(this: any) {
                 yield func009();
                 return;
             }
-            if (var_62 == 0 && var_66 == 11 && var_67 == 8) {
+            if (dangeon_number == 0 && var_66 == 11 && var_67 == 8) {
                 if (var_66 != var_236 || var_67 != var_237) {
                     yield func824();
                     return;
                 }
             }
-            if (var_62 == 0 && var_404 >= 1 && var_66 == 17 && var_67 == 9) {
+            if (dangeon_number == 0 && var_404 >= 1 && var_66 == 17 && var_67 == 9) {
                 if (var_66 != var_236 || var_67 != var_237) {
                     yield func826();
                     return;
@@ -3959,15 +3973,15 @@ function func020(this: any) {
                 }
             }
             if (var_83[var_421].Var31 == 5 && var_367 == 1) {
-                var_437 = var_83[var_421].Var0;
+                enemy_list = var_83[var_421].Var0;
                 yield func626();
                 if (var_83[var_421].Var39 >= 2) {
-                    var_438 = Math.floor(var_438 * (var_83[var_421].Var39 + 10) / 10);
-                    if (var_438 >= 999) {
-                        var_438 = 999;
+                    enemy_hp = Math.floor(enemy_hp * (var_83[var_421].Var39 + 10) / 10);
+                    if (enemy_hp >= 999) {
+                        enemy_hp = 999;
                     }
                 }
-                if (var_83[var_421].Var3 < var_438) {
+                if (var_83[var_421].Var3 < enemy_hp) {
                     var_83[var_421].Var3 = var_83[var_421].Var3 + 1;
                 }
             }
@@ -5188,16 +5202,17 @@ function func044(this: any) {
 function func045(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(45);
-        if (var_62 == 1 && current_floor == 12 && var_203 == 0) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
             return;
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             return;
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             return;
         }
-        if (var_62 == 5 && current_floor == var_20) {
+        if (dangeon_number == 5 && current_floor == var_20) {
             return;
         }
         for (let cnt1 = 0; true; ++cnt1) {
@@ -5223,7 +5238,7 @@ function func045(this: any) {
         }
         var_73[var_491][var_492] = 1;
         var_200 = var_71[var_491][var_492];
-        if (var_62 == 5 && current_floor != 1) {
+        if (dangeon_number == 5 && current_floor != 1) {
             for (let cnt2 = 0; true; ++cnt2) {
                 var_491 = rnd(var_33);
                 var_492 = rnd(var_34);
@@ -5571,7 +5586,7 @@ function func053(this: any) {
         if (var_259 == 1 && var_248 == 1) {
             var_246 = 45 + 18;
             var_248 = 2;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func053();
@@ -5588,7 +5603,7 @@ function func053(this: any) {
         if (var_255 == 1 && var_248 == 2) {
             var_246 = 45;
             var_248 = 1;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func053();
@@ -5597,7 +5612,7 @@ function func053(this: any) {
         if (var_254 == 1 && var_247 == 2) {
             var_245 = 19;
             var_247 = 1;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func053();
@@ -5610,7 +5625,7 @@ function func053(this: any) {
         if (var_257 == 1 && var_247 == 1) {
             var_245 = 19 + 48;
             var_247 = 2;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func053();
@@ -5726,7 +5741,7 @@ function func055(this: any) {
         if (var_259 == 1 && var_500 == 4) {
             var_246 = 45;
             var_500 = 0;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5736,7 +5751,7 @@ function func055(this: any) {
         if (var_259 == 1 && var_500 == 3) {
             var_246 = var_246 + 16;
             var_500 = 4;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5746,7 +5761,7 @@ function func055(this: any) {
         if (var_259 == 1 && var_500 == 2) {
             var_246 = var_246 + 16;
             var_500 = 3;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5756,7 +5771,7 @@ function func055(this: any) {
         if (var_259 == 1 && var_500 == 1) {
             var_246 = var_246 + 16;
             var_500 = 2;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5766,7 +5781,7 @@ function func055(this: any) {
         if (var_259 == 1 && var_500 == 0) {
             var_246 = var_246 + 16;
             var_500 = 1;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5776,7 +5791,7 @@ function func055(this: any) {
         if (var_255 == 1 && var_500 == 0) {
             var_246 = 109;
             var_500 = 4;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5786,7 +5801,7 @@ function func055(this: any) {
         if (var_255 == 1 && var_500 == 1) {
             var_246 = var_246 - 16;
             var_500 = 0;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5796,7 +5811,7 @@ function func055(this: any) {
         if (var_255 == 1 && var_500 == 2) {
             var_246 = var_246 - 16;
             var_500 = 1;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5806,7 +5821,7 @@ function func055(this: any) {
         if (var_255 == 1 && var_500 == 3) {
             var_246 = var_246 - 16;
             var_500 = 2;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5816,7 +5831,7 @@ function func055(this: any) {
         if (var_255 == 1 && var_500 == 4) {
             var_246 = var_246 - 16;
             var_500 = 3;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5984,7 +5999,7 @@ function func057(this: any) {
         if (var_259 == 1 && var_505 == 3) {
             var_507 = 45;
             var_505 = 0;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -5994,7 +6009,7 @@ function func057(this: any) {
         if (var_259 == 1 && var_505 == 2) {
             var_507 = var_507 + 16;
             var_505 = 3;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -6004,7 +6019,7 @@ function func057(this: any) {
         if (var_259 == 1 && var_505 == 1) {
             var_507 = var_507 + 16;
             var_505 = 2;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -6014,7 +6029,7 @@ function func057(this: any) {
         if (var_259 == 1 && var_505 == 0) {
             var_507 = var_507 + 16;
             var_505 = 1;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -6024,7 +6039,7 @@ function func057(this: any) {
         if (var_255 == 1 && var_505 == 0) {
             var_507 = 93;
             var_505 = 3;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -6034,7 +6049,7 @@ function func057(this: any) {
         if (var_255 == 1 && var_505 == 1) {
             var_507 = var_507 - 16;
             var_505 = 0;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -6044,7 +6059,7 @@ function func057(this: any) {
         if (var_255 == 1 && var_505 == 2) {
             var_507 = var_507 - 16;
             var_505 = 1;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -6054,7 +6069,7 @@ function func057(this: any) {
         if (var_255 == 1 && var_505 == 3) {
             var_507 = var_507 - 16;
             var_505 = 2;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
             yield func337();
@@ -6240,13 +6255,16 @@ function func058(this: any) {
 function func059(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(59);
-        if (var_62 == 1 && current_floor == 12 && var_203 == 1) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) {
             var_94 = 1;
         }
-        if (var_62 == 1 && current_floor == 12 && var_203 == 2) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) {
             var_94 = 3;
         }
-        if (var_62 == 1 && current_floor == 12 && var_203 == 3) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
             var_94 = 2;
         }
         return;
@@ -6260,14 +6278,14 @@ function func060(this: any) {
         if (var_259 == 1 && var_406 == 1) {
             var_246 = var_246 + 19;
             var_406 = 0;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
         }
         if (var_255 == 1 && var_406 == 0) {
             var_246 = var_246 - 19;
             var_406 = 1;
-            DSPLAY(audio_id = 100);
+            DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337();
             yield func337();
         }
@@ -6294,16 +6312,16 @@ function func060(this: any) {
                     }
                     var_528 = var_528 + 1;
                 }
-                if (var_62 == 1 && current_floor == 12) {
+                if (dangeon_number == 1 && current_floor == 12) {
                     var_527 = 0;
                 }
-                if (var_62 == 2 && current_floor == 30) {
+                if (dangeon_number == 2 && current_floor == 30) {
                     var_527 = 0;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_527 = 0;
                 }
-                if (var_62 == 5 && current_floor == var_20) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_527 = 0;
                 }
                 if (var_527 == 1) {
@@ -6356,7 +6374,7 @@ function func060(this: any) {
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337();
                     }
-                    DSPLAY(audio_id = 101);
+                    DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337();
                     }
@@ -6459,7 +6477,8 @@ function func060(this: any) {
                     yield func009();
                     return;
                 }
-                if (var_62 == 1 && current_floor == 12) {
+                // No = 1 なので、ホテルの外
+                if (dangeon_number == 1 && current_floor == 12) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6507,7 +6526,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                if (var_62 == 2 && current_floor == 30) {
+                if (dangeon_number == 2 && current_floor == 30) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6554,7 +6573,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6590,7 +6609,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                if (var_62 == 5 && current_floor == var_20 && var_73[var_66][var_67] == 1) {
+                if (dangeon_number == 5 && current_floor == var_20 && var_73[var_66][var_67] == 1) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337();
@@ -6626,7 +6645,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                DSPLAY(audio_id = 101);
+                DSPLAY(audio_id = 101); // 階段を昇るor降りる時の効果音
                 if (var_375 == 1) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
@@ -6682,19 +6701,20 @@ function func060(this: any) {
                     if (current_floor > var_376) {
                         var_376 = current_floor;
                     }
-                    if (var_62 == 1 && current_floor > var_377) {
+                    // No = 1 なので、ホテルの外
+                    if (dangeon_number == 1 && current_floor > var_377) {
                         var_377 = current_floor;
                     }
-                    if (var_62 == 2 && current_floor > var_378) {
+                    if (dangeon_number == 2 && current_floor > var_378) {
                         var_378 = current_floor;
                     }
-                    if (var_62 == 3 && current_floor > var_379) {
+                    if (dangeon_number == 3 && current_floor > var_379) {
                         var_379 = current_floor;
                     }
-                    if (var_62 == 4 && current_floor > var_380) {
+                    if (dangeon_number == 4 && current_floor > var_380) {
                         var_380 = current_floor;
                     }
-                    if (var_62 == 5 && current_floor > var_381) {
+                    if (dangeon_number == 5 && current_floor > var_381) {
                         var_381 = current_floor;
                     }
                 }
@@ -6841,16 +6861,17 @@ function func063(this: any) {
         if (var_262 == 0) {
             if (var_73[var_66][var_67] == 1) {
                 var_543 = 0;
-                if (var_62 == 1 && current_floor == 12) {
+                // No = 1 なので、ホテルの外
+                if (dangeon_number == 1 && current_floor == 12) {
                     var_543 = 1;
                 }
-                if (var_62 == 2 && current_floor == 30) {
+                if (dangeon_number == 2 && current_floor == 30) {
                     var_543 = 1;
                 }
-                if (var_62 == 3 && current_floor == 99) {
+                if (dangeon_number == 3 && current_floor == 99) {
                     var_543 = 1;
                 }
-                if (var_62 == 5 && current_floor == var_20) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_543 = 1;
                 }
                 if (var_543 == 0) {
@@ -6883,11 +6904,11 @@ function func064(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(64);
         var_544 = 0;
-        if (var_62 == 0 && var_66 == 15 && var_67 == 21) {
+        if (dangeon_number == 0 && var_66 == 15 && var_67 == 21) {
             yield func065();
             return;
         }
-        if (var_62 == 0 && var_404 >= 1 && var_66 == 17 && var_67 == 9) {
+        if (dangeon_number == 0 && var_404 >= 1 && var_66 == 17 && var_67 == 9) {
             yield func826();
             return;
         }
@@ -7161,22 +7182,23 @@ function func068(this: any) {
         color(255, 255, 255);
         mes("");
         mes("" + var_565 + "/" + var_566);
-        if (var_62 == 1) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1) {
             mes("" + var_377 + "階");
         }
-        if (var_62 == 2) {
+        if (dangeon_number == 2) {
             mes("" + var_378 + "階");
         }
-        if (var_62 == 3) {
+        if (dangeon_number == 3) {
             mes("" + var_379 + "階");
         }
-        if (var_62 == 4) {
+        if (dangeon_number == 4) {
             mes("" + var_380 + "階");
         }
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             mes("" + var_381 + "階");
         }
-        if (var_62 != 1 && var_62 != 2 && var_62 != 3 && var_62 != 4 && var_62 != 5) {
+        if (dangeon_number != 1 && dangeon_number != 2 && dangeon_number != 3 && dangeon_number != 4 && dangeon_number != 5) {
             mes("- 階");
         }
         pos(175, 255);
@@ -8019,19 +8041,20 @@ function func075(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        if (var_62 == 1 && current_floor == 12) {
+        // No = 1 なので、ホテルの外
+        if (dangeon_number == 1 && current_floor == 12) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「エンヤ婆」によって守られている！";
         }
-        if (var_62 == 2 && current_floor == 30) {
+        if (dangeon_number == 2 && current_floor == 30) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「ﾚｸｲｴﾑ･ｼﾞｮﾙﾉ」によって守られている！";
         }
-        if (var_62 == 3 && current_floor == 99) {
+        if (dangeon_number == 3 && current_floor == 99) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「ウンガロ」によって守られている！";
         }
-        if (var_62 == 5 && current_floor == var_20) {
+        if (dangeon_number == 5 && current_floor == var_20) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「" + var_24 + "」によって守られている！";
         }
@@ -8101,7 +8124,7 @@ function func076(this: any) {
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         pos(0, 100);
         if (var_94 == 0) {
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 if (var_595 == 0) {
                     gcopy(34, 640, 760, 340, 40);
                 }
@@ -8112,7 +8135,8 @@ function func076(this: any) {
                     gcopy(34, 640, 1200, 340, 40);
                 }
             }
-            if (var_62 == 1) {
+            // No = 1 なので、ホテルの外
+            if (dangeon_number == 1) {
                 if (current_floor <= 2) {
                     gcopy(34, 640, 440, 340, 40);
                 }
@@ -8129,7 +8153,7 @@ function func076(this: any) {
                     gcopy(34, 640, 400, 340, 40);
                 }
             }
-            if (var_62 == 2) {
+            if (dangeon_number == 2) {
                 if (current_floor != 30) {
                     gcopy(34, 640, 560, 340, 40);
                 }
@@ -8137,7 +8161,7 @@ function func076(this: any) {
                     gcopy(34, 640, 880, 340, 40);
                 }
             }
-            if (var_62 == 3) {
+            if (dangeon_number == 3) {
                 if (current_floor != 99) {
                     gcopy(34, 640, 520, 340, 40);
                 }
@@ -8145,10 +8169,10 @@ function func076(this: any) {
                     gcopy(34, 640, 1160, 340, 40);
                 }
             }
-            if (var_62 == 4) {
+            if (dangeon_number == 4) {
                 gcopy(34, 640, 800, 340, 40);
             }
-            if (var_62 == 5) {
+            if (dangeon_number == 5) {
                 if (current_floor != var_20) {
                     gcopy(34, 640, 1040, 340, 40);
                 }
@@ -8156,7 +8180,7 @@ function func076(this: any) {
                     gcopy(34, 1000, 760, 340, 40);
                 }
             }
-            if (var_62 == 99) {
+            if (dangeon_number == 99) {
                 gcopy(34, 640, 960, 340, 40);
             }
         }
@@ -8178,7 +8202,7 @@ function func076(this: any) {
         if (var_94 == 9) {
             gcopy(34, 640, 920, 340, 40);
         }
-        if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
+        if (dangeon_number != 0 && dangeon_number != 99 && var_94 == 0) {
             var_596 = Math.floor(current_floor / 100); // Math.floor は対象の値の小数点以下を切り捨て
             var_597 = Math.floor((current_floor - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
             var_598 = current_floor - var_596 * 100 - var_597 * 10;
@@ -8253,7 +8277,7 @@ function func077(this: any) {
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         pos(0, 100);
         if (var_94 == 0) {
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 if (var_595 == 0) {
                     gcopy(34, 640, 760, 340, 40);
                 }
@@ -8264,7 +8288,8 @@ function func077(this: any) {
                     gcopy(34, 640, 1200, 340, 40);
                 }
             }
-            if (var_62 == 1) {
+            // No = 1 なので、ホテルの外
+            if (dangeon_number == 1) {
                 if (current_floor <= 2) {
                     gcopy(34, 640, 440, 340, 40);
                 }
@@ -8281,7 +8306,7 @@ function func077(this: any) {
                     gcopy(34, 640, 400, 340, 40);
                 }
             }
-            if (var_62 == 2) {
+            if (dangeon_number == 2) {
                 if (current_floor != 30) {
                     gcopy(34, 640, 560, 340, 40);
                 }
@@ -8289,7 +8314,7 @@ function func077(this: any) {
                     gcopy(34, 640, 880, 340, 40);
                 }
             }
-            if (var_62 == 3) {
+            if (dangeon_number == 3) {
                 if (current_floor != 99) {
                     gcopy(34, 640, 520, 340, 40);
                 }
@@ -8297,10 +8322,10 @@ function func077(this: any) {
                     gcopy(34, 640, 1160, 340, 40);
                 }
             }
-            if (var_62 == 4) {
+            if (dangeon_number == 4) {
                 gcopy(34, 640, 800, 340, 40);
             }
-            if (var_62 == 5) {
+            if (dangeon_number == 5) {
                 if (current_floor != var_20) {
                     gcopy(34, 640, 1040, 340, 40);
                 }
@@ -8308,7 +8333,7 @@ function func077(this: any) {
                     gcopy(34, 1000, 760, 340, 40);
                 }
             }
-            if (var_62 == 99) {
+            if (dangeon_number == 99) {
                 gcopy(34, 640, 960, 340, 40);
             }
         }
@@ -8330,7 +8355,7 @@ function func077(this: any) {
         if (var_94 == 9) {
             gcopy(34, 640, 920, 340, 40);
         }
-        if (var_62 != 0 && var_62 != 99 && var_94 == 0) {
+        if (dangeon_number != 0 && dangeon_number != 99 && var_94 == 0) {
             var_596 = Math.floor(current_floor / 100); // Math.floor は対象の値の小数点以下を切り捨て
             var_597 = Math.floor((current_floor - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
             var_598 = current_floor - var_596 * 100 - var_597 * 10;
@@ -9826,7 +9851,7 @@ function func080(this: any, is_key_reset = true) {
             return;
         });
     }
-// 効果音設定
+// 効果音呼び出し関数
 function func081(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(81);

@@ -141,19 +141,19 @@ function func904(this: any) {
 function func905(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(905);
-        if (var_62 == 1) {
+        if (dangeon_number == 1) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
         }
-        if (var_62 == 2) {
+        if (dangeon_number == 2) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
         }
-        if (var_62 == 3) {
+        if (dangeon_number == 3) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
         }
-        if (var_62 == 4) {
+        if (dangeon_number == 4) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
         }
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_21 + "に入った";
         }
         tcpput(var_3561, var_1050);
@@ -208,7 +208,7 @@ function func907(this: any) {
         var_3516[7] = var_350;
         var_3516[8] = current_floor;
         var_3516[9] = var_415;
-        var_3516[10] = var_62;
+        var_3516[10] = dangeon_number;
         var_3516[11] = var_357;
         var_3516[12] = var_233[var_553].Var4;
         var_3516[13] = var_580;
@@ -268,7 +268,7 @@ function func909(this: any) {
             if (current_floor == var_3573) {
                 var_3572 = 0;
             }
-            if (var_407 == 0 || var_3572 >= 3 || var_536 == 0 || var_62 == 0 || var_62 != int(var_1068[12])) {
+            if (var_407 == 0 || var_3572 >= 3 || var_536 == 0 || dangeon_number == 0 || dangeon_number != int(var_1068[12])) {
                 yield func910();
                 return;
             }
@@ -310,7 +310,7 @@ function func909(this: any) {
             if (current_floor == var_3573) {
                 var_3572 = 0;
             }
-            if (var_407 == 0 || var_3572 >= 5 || var_62 == 0 || var_62 != var_1069[var_3574][12]) {
+            if (var_407 == 0 || var_3572 >= 5 || dangeon_number == 0 || dangeon_number != var_1069[var_3574][12]) {
                 yield func910();
                 return;
             }
@@ -509,7 +509,7 @@ function func911(this: any) {
         dbgprt(911);
         var_3519 = dim(30);
         var_3519[0] = var_233[var_225].Var0;
-        if (var_62 == 3 && var_3519[0] == 112) {
+        if (dangeon_number == 3 && var_3519[0] == 112) {
             if (current_floor >= 60 && current_floor <= 66) {
                 var_3519[0] = 394;
             }
@@ -1204,7 +1204,7 @@ function func923(this: any) {
         var_300 = 0;
         yield func047();
         yield func340();
-        DSPLAY(audio_id = 133);
+        DSPLAY(audio_id = 133); // アイテムを置いた時の効果音
         var_1756 = 1;
         var_452 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
@@ -2216,7 +2216,7 @@ function func929(this: any) {
         var_3516[7] = var_534;
         var_3516[8] = current_floor;
         var_3516[9] = var_415;
-        var_3516[10] = var_62;
+        var_3516[10] = dangeon_number;
         var_3516[11] = var_357;
         var_3516[12] = var_233[var_553].Var4;
         var_3516[13] = var_580;
@@ -2352,19 +2352,19 @@ function func932(this: any) {
 function func933(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(933);
-        if (var_62 == 1) {
+        if (dangeon_number == 1) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
         }
-        if (var_62 == 2) {
+        if (dangeon_number == 2) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
         }
-        if (var_62 == 3) {
+        if (dangeon_number == 3) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
         }
-        if (var_62 == 4) {
+        if (dangeon_number == 4) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
         }
-        if (var_62 == 5) {
+        if (dangeon_number == 5) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_21 + "に入った";
         }
         tcpput(var_3561, var_1050);
@@ -2443,10 +2443,10 @@ function func935(this: any) {
             if (current_floor == var_3573) {
                 var_3572 = 0;
             }
-            if (var_62 == 0) {
+            if (dangeon_number == 0) {
                 color(255, 0, 0);
             }
-            if (var_62 != var_1069[cnt1][12]) {
+            if (dangeon_number != var_1069[cnt1][12]) {
                 color(255, 0, 0);
             }
             if (var_3572 >= 5) {
