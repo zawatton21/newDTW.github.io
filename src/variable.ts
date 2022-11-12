@@ -95,8 +95,8 @@ let var_9 :any;
 let var_10 :any;
 let var_11 :any;
 let var_12 :any; //
-let var_13 :string; //起動画面に表示されるバージョン名
-let var_14 :string; //ウィンドウタイトル
+let version_number :string; // 起動時、画面下に表示されるバージョン名
+let game_title :string; //ウィンドウタイトルに表示される名前
 let var_15 :any;
 let var_16 :any;
 let var_17 :any;
@@ -144,7 +144,7 @@ let var_58 :any;
 let var_59 :any;
 let var_60 :any;
 let var_61 :any;
-let dangeon_number :number;
+let dangeon_number :number; // 各ダンジョンに割り振られた識別用ID
 let var_63 :any;
 let var_64 :any;
 let var_65 :any;
@@ -173,7 +173,7 @@ let var_87 :any;
 let var_88 :any;
 let var_89 :any;
 let var_90 :any;
-let current_floor :number;
+let current_floor :number; // 現在の階層
 let var_92 :any;
 let var_93 :any;
 let var_94 :any;
@@ -297,7 +297,7 @@ let var_211 :any;
 let var_212 :any;
 let var_213 :any;
 let var_214 :any;
-let var_215 :any;
+let var_215 :number; // item_list 多い
 let var_216 :any;
 let var_217 :any;
 let var_218 :any;
@@ -310,14 +310,19 @@ let var_224 :any;
 let var_225 :any;
 let var_226 :any;
 let var_227 :any;
-let var_228 :any;
+let var_228 :number; // アイテムを表示するY座標ポジション 
 let var_229 :any;
 let var_230 :any;
 let var_231 :any;
+// 各アイテムに割り振られた識別用ID。
+// 100 ~ 400未満:装備disc、400 ~ 500未満:射撃disc、500 ~ 600未満:記憶disc
+// 600 ~ 700未満:食料、700 ~ 800未満:その他消費アイテム
+// 800 ~ 900未満:ヤバいもの
+// 900 ~ 1000未満: コミック (空きがもう無い)
 let item_list :number;
 let var_233 :any;
 let var_234 :any;
-let conf_keyon :number;
+let conf_keyon :number; // 各キー入力確認。ON = 1、OFF = 0
 let var_236 :any;
 let var_237 :any;
 let var_238 :any;
@@ -422,7 +427,7 @@ let var_336 :any;
 let var_337 :any;
 let var_338 :any;
 let var_339 :any;
-let var_340 :any;
+let var_340 :number; // item_list
 let var_341 :any;
 let var_342 :any;
 let var_343 :any;
@@ -439,8 +444,8 @@ let var_353 :any;
 let var_354 :any;
 let var_355 :any;
 let var_356 :any;
-let var_357 :any;
-let var_358 :any;
+let var_357 :number; // item_list 多い
+let var_358 :number; // item_list
 let var_359 :any;
 let var_360 :any;
 let var_361 :any;
@@ -492,15 +497,15 @@ let var_406 :any;
 let var_407 :any;
 let var_408 :any;
 let var_409 :any;
-let var_410 :any;
+let var_410 :number; // item_list
 let var_411 :any;
 let var_412 :any;
 let var_413 :any;
 let var_414 :any;
-let var_415 :any;
-let var_416 :any;
-let var_417 :any;
-let var_418 :any; //現在の所持金表示
+let wallet :number; // 現在所持している金額
+let stolen_money :number; // 盗まれる金額
+let var_417 :number; // item_list
+let target_item_name :string; // 盗まれたり、消し炭にされたり、強化したり等、対象となるアイテムの名前
 let var_419 :any;
 let var_420 :any;
 let var_421 :any;
@@ -519,8 +524,8 @@ let var_433 :any;
 let var_434 :any;
 let var_435 :any;
 let var_436 :any;
-let enemy_list :number;
-let enemy_hp :any;
+let enemy_list :number; // 各敵に割り振られた識別用ID
+let enemy_hp :number; // 敵の体力値
 let var_439 :any;
 let var_440 :any;
 let var_441 :any;
@@ -569,7 +574,7 @@ let buying_price :number;
 let var_484 :any;
 let var_485 :any;
 let var_486 :any;
-let var_487 :any;
+let disc_rarity :number; // 0より大きければレアdisc(色違い)
 let var_488 :any;
 let item_name :string;
 let var_490 :any;
@@ -657,7 +662,7 @@ let var_571 :any;
 let var_572 :any;
 let var_573 :any;
 let var_574 :any;
-let var_575 :any;
+let var_575 :number; // item_list
 let var_576 :any;
 let var_577 :any;
 let var_578 :any;
@@ -759,7 +764,7 @@ let var_673 :any;
 let var_674 :any;
 let bgm_list :number;
 let bgm_title :string;
-let var_677 :any;
+let var_677 :number; // item_list
 let var_678 :any;
 let var_679 :any;
 let var_680 :any;
@@ -884,9 +889,9 @@ let var_798 :any;
 let var_799 :any;
 let var_800 :any;
 let var_801 :any;
-let var_802 :any;
-let var_803 :any;
-let var_804 :any;
+let var_802 :number; // item_list
+let var_803 :number; // 装備discの修正値
+let var_804 :number; // 装備discの合成した数
 let var_805 :any;
 let var_806 :any;
 let var_807 :any;
@@ -958,14 +963,14 @@ let var_872 :any;
 let var_873 :any;
 let var_874 :any;
 let var_875 :any;
-let var_876 :any;
+let var_876 :any; // item_name
 let var_877 :any;
 let var_878 :any;
 let var_879 :any;
 let var_880 :any;
 let var_881 :any;
 let var_882 :any;
-let var_883 :any;
+let var_883 :number; // item_list
 let var_884 :any;
 let var_885 :any;
 let var_886 :any;
@@ -1329,13 +1334,13 @@ let var_1243 :any;
 let var_1244 :any;
 let var_1245 :any;
 let var_1246 :any;
-let var_1247 :any;
+let var_1247 :number; // item_list
 let var_1248 :any;
 let var_1249 :any;
 let var_1250 :any;
 let var_1251 :any;
 let var_1252 :any;
-let var_1253 :any;
+let var_1253 :number; // item_list 「ﾋﾟﾝｸﾀﾞｰｸの少年」のID確認用?
 let var_1254 :any;
 let var_1255 :any;
 let var_1256 :any;
@@ -1371,7 +1376,7 @@ let var_1285 :any;
 let var_1286 :any;
 let var_1287 :any;
 let var_1288 :any;
-let var_1289 :any;
+let var_1289 :number; // item_list
 let var_1290 :any;
 let var_1291 :any;
 let var_1292 :any;
@@ -1436,7 +1441,7 @@ let var_1350 :any;
 let var_1351 :any;
 let var_1352 :any;
 let var_1353 :any;
-let var_1354 :any;
+let var_1354 :number; // item_list
 let var_1355 :any;
 let var_1356 :any;
 let var_1357 :any;
@@ -1468,7 +1473,7 @@ let var_1382 :any;
 let var_1383 :any;
 let var_1384 :any;
 let var_1385 :any;
-let var_1386 :any;
+let var_1386 :number; // item_list
 let var_1387 :any;
 let var_1388 :any;
 let var_1389 :any;
@@ -1503,7 +1508,7 @@ let var_1417 :any;
 let var_1418 :any;
 let var_1419 :any;
 let var_1420 :any;
-let var_1421 :any;
+let var_1421 :number; // item_list
 let var_1422 :any;
 let var_1423 :any;
 let var_1424 :any;
@@ -1526,8 +1531,8 @@ let var_1440 :any;
 let var_1441 :any;
 let var_1442 :any;
 let var_1443 :any;
-let var_1444 :any;
-let var_1445 :any;
+let base_disc_list :number; // 合成の基本ベースとなる装備discのID
+let with_disc_list :number; // 合成する装備discのID
 let var_1446 :any;
 let var_1447 :any;
 let var_1448 :any;
@@ -1541,7 +1546,7 @@ let var_1455 :any;
 let var_1456 :any;
 let var_1457 :any;
 let var_1458 :any;
-let var_1459 :any;
+let var_1459 :number; // item_list
 let var_1460 :any;
 let var_1461 :any;
 let var_1462 :any;
@@ -1553,7 +1558,7 @@ let var_1467 :any;
 let var_1468 :any;
 let var_1469 :any;
 let var_1470 :any;
-let var_1471 :any;
+let var_1471 :number; // item_list
 let var_1472 :any;
 let var_1473 :any;
 let var_1474 :any;
@@ -1653,7 +1658,7 @@ let var_1567 :any;
 let var_1568 :any;
 let var_1569 :any;
 let var_1570 :any;
-let var_1571 :any;
+let var_1571 :number; // item_list
 let var_1572 :any;
 let var_1573 :any;
 let var_1574 :any;
@@ -1749,7 +1754,7 @@ let var_1663 :any;
 let var_1664 :any;
 let var_1665 :any;
 let var_1666 :any;
-let var_1667 :any;
+let var_1667 :number; // item_list
 let var_1668 :any;
 let var_1669 :any;
 let var_1670 :any;
@@ -1779,7 +1784,7 @@ let var_1693 :any;
 let var_1694 :any;
 let var_1695 :any;
 let var_1696 :any;
-let var_1697 :any;
+let var_1697 :number; // item_list
 let var_1698 :any;
 let var_1699 :any;
 let var_1700 :any;
@@ -1790,7 +1795,7 @@ let var_1704 :any;
 let var_1705 :any;
 let var_1706 :any;
 let var_1707 :any;
-let var_1708 :any;
+let var_1708 :number; // item_list
 let var_1709 :any;
 let var_1710 :any;
 let var_1711 :any;
@@ -1928,7 +1933,7 @@ let var_1842 :any;
 let var_1843 :any;
 let var_1844 :any;
 let var_1845 :any;
-let var_1846 :any;
+let var_1846 :number; // item_list
 let var_1847 :any;
 let var_1848 :any;
 let var_1849 :any;
@@ -1949,7 +1954,7 @@ let var_1863 :any;
 let var_1864 :any;
 let var_1865 :any;
 let var_1866 :any;
-let var_1867 :any;
+let var_1867 :number; // item_list
 let var_1868 :any;
 let var_1869 :any;
 let var_1870 :any;
@@ -2009,9 +2014,9 @@ let var_1923 :any;
 let var_1924 :any;
 let var_1925 :any;
 let var_1926 :any;
-let var_1927 :any;
-let var_1928 :any;
-let var_1929 :any;
+let var_1927 :number; // item_list
+let var_1928 :number; // item_list
+let var_1929 :number; // item_list
 let var_1930 :any;
 let var_1931 :any;
 let var_1932 :any;
@@ -2092,9 +2097,9 @@ let var_2006 :any;
 let var_2007 :any;
 let var_2008 :any;
 let var_2009 :any;
-let var_2010 :any;
+let var_2010 :number; // item_list
 let var_2011 :any;
-let var_2012 :any;
+let var_2012 :number; // 装備discの修正値
 let var_2013 :any;
 let var_2014 :any;
 let var_2015 :any;
@@ -2102,7 +2107,7 @@ let var_2016 :any;
 let var_2017 :any;
 let var_2018 :any;
 let var_2019 :any;
-let var_2020 :any;
+let var_2020 :number; // 装備discの合成した数
 let var_2021 :any;
 let var_2022 :any;
 let var_2023 :any;
@@ -2167,7 +2172,7 @@ let var_2081 :any;
 let var_2082 :any;
 let var_2083 :any;
 let var_2084 :any;
-let var_2085 :any;
+let var_2085 :number; // item_list
 let var_2086 :any;
 let var_2087 :any;
 let var_2088 :any;
@@ -2203,7 +2208,7 @@ let var_2117 :any;
 let var_2118 :any;
 let var_2119 :any;
 let var_2120 :any;
-let var_2121 :any;
+let var_2121 :number; // item_list ヤバいものに関するID:800 ~ 900未満だけ
 let var_2122 :any;
 let var_2123 :any;
 let var_2124 :any;
@@ -2269,7 +2274,7 @@ let var_2183 :any;
 let var_2184 :any;
 let var_2185 :any;
 let var_2186 :any;
-let var_2187 :any;
+let var_2187 :number; // item_list
 let var_2188 :any;
 let var_2189 :any;
 let var_2190 :any;
@@ -2340,7 +2345,7 @@ let var_2254 :any;
 let var_2255 :any;
 let var_2256 :any;
 let var_2257 :any;
-let var_2258 :any;
+let var_2258 :any; // item_list 多い
 let var_2259 :any;
 let var_2260 :any;
 let var_2261 :any;
@@ -2385,7 +2390,7 @@ let var_2299 :any;
 let var_2300 :any;
 let var_2301 :any;
 let var_2302 :any;
-let var_2303 :any;
+let var_2303 :number; // item_list お金用? ID:0 or 1 しか使用していない
 let var_2304 :any;
 let var_2305 :any;
 let var_2306 :any;
@@ -2542,7 +2547,7 @@ let var_2456 :any;
 let var_2457 :any;
 let var_2458 :any;
 let var_2459 :any;
-let var_2460 :any;
+let var_2460 :number; // item_list お金用? ID:0 or 1 しか使っていない
 let var_2461 :any;
 let var_2462 :any;
 let var_2463 :any;
@@ -2894,7 +2899,7 @@ let var_2808 :any;
 let var_2809 :any;
 let var_2810 :any;
 let var_2811 :any;
-let var_2812 :any;
+let var_2812 :number; // item_list アイテム欄にないIDを指定している
 let var_2813 :any;
 let var_2814 :any;
 let var_2815 :any;
@@ -2937,7 +2942,7 @@ let var_2851 :any;
 let var_2852 :any;
 let var_2853 :any;
 let var_2854 :any;
-let var_2855 :any;
+let var_2855 :number; // item_list
 let var_2856 :any;
 let var_2857 :any;
 let var_2858 :any;
@@ -3163,7 +3168,7 @@ let var_3077 :any;
 let var_3078 :any;
 let var_3079 :any;
 let var_3080 :any;
-let var_3081 :any;
+let var_3081 :number; // item_list var_215 の橋渡し
 let var_3082 :any;
 let var_3083 :any;
 let var_3084 :any;

@@ -2583,10 +2583,10 @@ function func146() {
             font("ＭＳ　Ｐゴシック", 12);
             // ログイン画面下のバージョンNo. 
             if (var_12 == 0) {
-                mes("version " + var_13);
+                mes("version " + version_number);
             }
             if (var_12 == 1) {
-                mes("Version " + var_13);
+                mes("Version " + version_number);
             }
             return [2 /*return*/];
         });
@@ -6174,6 +6174,7 @@ function func158() {
                     return [4 /*yield*/, func248()];
                 case 3:
                     _a.sent();
+                    // No = 0 なので、拠点(ホテル、亀、)
                     dangeon_number = 0;
                     var_532 = 0;
                     var_77 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
@@ -6271,6 +6272,7 @@ function func159() {
                 case 11: return [4 /*yield*/, func248()];
                 case 12:
                     _a.sent();
+                    // No = 0 なので、拠点(ホテル、亀、)
                     dangeon_number = 0;
                     var_532 = 0;
                     var_77 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
@@ -7867,22 +7869,22 @@ function func168() {
                     font(font_type = "ＭＳ Ｐゴシック", font_size = 14, font_style = 1);
                     color(255, 255, 255);
                     if (!(var_792[var_793][var_786][3] != 0)) return [3 /*break*/, 15];
-                    var_487 = 0;
+                    disc_rarity = 0;
                     pos(30, 225);
                     item_list = var_792[var_793][var_786][4];
-                    var_487 = 0;
+                    disc_rarity = 0;
                     if (item_list > 1000) {
                         if (item_list >= 1000 && item_list < 2000) {
                             item_list = item_list - 1000;
-                            var_487 = 1;
+                            disc_rarity = 1;
                         }
                         if (item_list >= 2000 && item_list < 3000) {
                             item_list = item_list - 2000;
-                            var_487 = 2;
+                            disc_rarity = 2;
                         }
                         if (item_list >= 3000 && item_list < 4000) {
                             item_list = item_list - 3000;
-                            var_487 = 3;
+                            disc_rarity = 3;
                         }
                     }
                     return [4 /*yield*/, func492()];
@@ -7904,19 +7906,19 @@ function func168() {
                     }
                     pos(30, 242);
                     item_list = var_792[var_793][var_786][7];
-                    var_487 = 0;
+                    disc_rarity = 0;
                     if (item_list > 1000) {
                         if (item_list >= 1000 && item_list < 2000) {
                             item_list = item_list - 1000;
-                            var_487 = 1;
+                            disc_rarity = 1;
                         }
                         if (item_list >= 2000 && item_list < 3000) {
                             item_list = item_list - 2000;
-                            var_487 = 2;
+                            disc_rarity = 2;
                         }
                         if (item_list >= 3000 && item_list < 4000) {
                             item_list = item_list - 3000;
-                            var_487 = 3;
+                            disc_rarity = 3;
                         }
                     }
                     return [4 /*yield*/, func492()];
@@ -7938,19 +7940,19 @@ function func168() {
                     }
                     pos(30, 259);
                     item_list = var_792[var_793][var_786][10];
-                    var_487 = 0;
+                    disc_rarity = 0;
                     if (item_list > 1000) {
                         if (item_list >= 1000 && item_list < 2000) {
                             item_list = item_list - 1000;
-                            var_487 = 1;
+                            disc_rarity = 1;
                         }
                         if (item_list >= 2000 && item_list < 3000) {
                             item_list = item_list - 2000;
-                            var_487 = 2;
+                            disc_rarity = 2;
                         }
                         if (item_list >= 3000 && item_list < 4000) {
                             item_list = item_list - 3000;
-                            var_487 = 3;
+                            disc_rarity = 3;
                         }
                     }
                     return [4 /*yield*/, func492()];
@@ -8196,6 +8198,7 @@ function func170() {
                     gmode(2);
                     pos(285, 45);
                     gcopy(9, 360, 0, 40, 20);
+                    // 攻撃が特殊disc??
                     if (var_802 == 100 || var_802 == 108 || var_802 == 110 || var_802 == 113 || var_802 == 118 || var_802 == 123 || var_802 == 398) {
                         pos(285, 70);
                         gcopy(9, 360, 20, 40, 20);
@@ -8208,16 +8211,16 @@ function func170() {
                     return [4 /*yield*/, func070()];
                 case 2:
                     _a.sent();
-                    if (var_487 == 0) {
+                    if (disc_rarity == 0) {
                         var_576 = 11;
                     }
-                    if (var_487 == 1) {
+                    if (disc_rarity == 1) {
                         var_576 = 1;
                     }
-                    if (var_487 == 2) {
+                    if (disc_rarity == 2) {
                         var_576 = 16;
                     }
-                    if (var_487 == 3) {
+                    if (disc_rarity == 3) {
                         var_576 = 29;
                     }
                     pos(20, 50);
@@ -8378,25 +8381,25 @@ function func171() {
                     _a.label = 6;
                 case 6:
                     var_804 = var_810;
-                    var_487 = 0;
+                    disc_rarity = 0;
                     if (item_list > 1000) {
                         if (item_list >= 1000 && item_list < 2000) {
                             item_list = item_list - 1000;
                             var_802 = var_802 - 1000;
                             var_814 = var_814 - 1000;
-                            var_487 = 1;
+                            disc_rarity = 1;
                         }
                         if (item_list >= 2000 && item_list < 3000) {
                             item_list = item_list - 2000;
                             var_802 = var_802 - 2000;
                             var_814 = var_814 - 2000;
-                            var_487 = 2;
+                            disc_rarity = 2;
                         }
                         if (item_list >= 3000 && item_list < 4000) {
                             item_list = item_list - 3000;
                             var_802 = var_802 - 3000;
                             var_814 = var_814 - 3000;
-                            var_487 = 3;
+                            disc_rarity = 3;
                         }
                     }
                     var_813 = sdim(length1 = 64, length2 = 20, length3 = null);
@@ -8433,6 +8436,7 @@ function func171() {
                     ++cnt1_116;
                     return [3 /*break*/, 7];
                 case 10:
+                    // item_list == 104 は ｻﾞ･ﾊﾝﾄﾞのDISC
                     if (item_list == 104) {
                         var_826 = var_826 + 1;
                         var_813[var_826] = "こわれるぞ。";
@@ -10608,7 +10612,7 @@ function func192() {
                     item_list = var_233[var_875].Var0;
                     return [4 /*yield*/, func433()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func494()];
                 case 2:
                     _a.sent();
@@ -11373,8 +11377,10 @@ function func199() {
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (!(var_908 == 0)) return [3 /*break*/, 22];
                     var_908 = 2;
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     return [4 /*yield*/, func337()];
                 case 19:
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     _a.sent();
                     return [4 /*yield*/, func337()];
                 case 20:
@@ -11386,8 +11392,10 @@ function func199() {
                 case 22:
                     if (!(var_908 != 0)) return [3 /*break*/, 26];
                     var_908 = var_908 - 1;
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     return [4 /*yield*/, func337()];
                 case 23:
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     _a.sent();
                     return [4 /*yield*/, func337()];
                 case 24:
@@ -11401,8 +11409,10 @@ function func199() {
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (!(var_908 == 2)) return [3 /*break*/, 30];
                     var_908 = 0;
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     return [4 /*yield*/, func337()];
                 case 27:
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     _a.sent();
                     return [4 /*yield*/, func337()];
                 case 28:
@@ -11414,8 +11424,10 @@ function func199() {
                 case 30:
                     if (!(var_908 != 2)) return [3 /*break*/, 34];
                     var_908 = var_908 + 1;
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     return [4 /*yield*/, func337()];
                 case 31:
+                    // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
                     _a.sent();
                     return [4 /*yield*/, func337()];
                 case 32:

@@ -250,7 +250,6 @@ function func803(this: any) {
             if (var_225 != var_1013) {
                 var_228 = var_228 + 22;
                 var_225 = var_225 + 1;
-
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
@@ -260,8 +259,8 @@ function func803(this: any) {
             if (var_225 == var_1013) {
                 var_228 = 45;
                 var_225 = 1;
-
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                // ここも間違っている?
                 yield func337();
                 yield func337();
                 yield func803();
@@ -272,7 +271,6 @@ function func803(this: any) {
             if (var_225 != 1) {
                 var_228 = var_228 - 22;
                 var_225 = var_225 - 1;
-
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
@@ -282,7 +280,6 @@ function func803(this: any) {
             if (var_225 == 1) {
                 var_228 = 45 + (var_1013 - 1) * 22;
                 var_225 = var_1013;
-
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 yield func337();
                 yield func337();
@@ -294,6 +291,8 @@ function func803(this: any) {
         return;
     });
 }
+
+
 function func804(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(804);
@@ -337,7 +336,7 @@ function func804(this: any) {
             var_2019 = var_991[0][var_1620][16];
             var_2020 = var_991[0][var_1620][19];
             item_list = var_2010;
-            var_487 = var_2017;
+            disc_rarity = var_2017;
             yield func492(); // アイテムリスト呼び出し
             if (var_2010 > 0) {
         
@@ -386,7 +385,7 @@ function func804(this: any) {
         var_2028 = var_991[0][var_225][15];
         var_2029 = var_991[0][var_225][16];
         item_list = var_2023;
-        var_487 = var_2026;
+        disc_rarity = var_2026;
         yield func492(); // アイテムリスト呼び出し
 
         font("ＭＳ Ｐゴシック", 14, 1);
@@ -435,7 +434,7 @@ function func805(this: any) {
         dbgprt(805);
         var_1206 = 0;
         item_list = var_991[0][var_225][0];
-        var_487 = var_991[0][var_225][13];
+        disc_rarity = var_991[0][var_225][13];
         yield func492(); // アイテムリスト呼び出し
         var_3188 = item_name;
         var_482 = 0;
@@ -443,7 +442,7 @@ function func805(this: any) {
         var_1925 = buying_price + var_482;
         var_1925 = var_1925 * var_1036;
         var_3189 = var_1925;
-        if (var_415 < var_3189) {
+        if (wallet < var_3189) {
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -459,7 +458,7 @@ function func805(this: any) {
             var_25_x = var_25[1];
             var_26_x = var_26[1];
             var_27_x = var_27[1];
-            var_3190 = var_3189 - var_415;
+            var_3190 = var_3189 - wallet;
             if (var_3190 <= var_1032) {
                 yield func340();
                 yield func094();
@@ -515,7 +514,7 @@ function func805(this: any) {
 function func806(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(806);
-        var_415 = var_415 - var_3189;
+        wallet = wallet - var_3189;
         yield func807();
     });
 }
@@ -524,7 +523,7 @@ function func807(this: any) {
         dbgprt(807);
         var_1206 = 0;
         item_list = var_991[0][var_225][0];
-        var_487 = var_991[0][var_225][13];
+        disc_rarity = var_991[0][var_225][13];
         yield func492(); // アイテムリスト呼び出し
         var_3188 = item_name;
         var_1037 = var_1037 + 1;
@@ -638,10 +637,12 @@ function func808(this: any) {
                 var_1735 = 9;
             }
             if (var_262 == 1) {
+                // No = 2 なので、レクイエムの第迷宮
                 dangeon_number = 2;
             }
             yield func385();
             if (var_262 == 1) {
+                // No = 0 なので、拠点(ホテル、亀、)
                 dangeon_number = 0;
             }
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
@@ -839,10 +840,10 @@ function func809(this: any) {
 function func810(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(810);
-        if (var_415 >= 2000) {
+        if (wallet >= 2000) {
     
             DSPLAY(audio_id = 207);
-            var_415 = var_415 - 2000;
+            wallet = wallet - 2000;
             var_1040 = 1;
             yield func094();
             comments_row1 = "";
@@ -865,7 +866,7 @@ function func810(this: any) {
             yield func812();
             return;
         }
-        if (var_415 < 2000) {
+        if (wallet < 2000) {
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -883,7 +884,7 @@ function func810(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340();
-            var_3190 = 2000 - var_415;
+            var_3190 = 2000 - wallet;
             if (var_3190 <= var_1032) {
                 yield func094();
                 comments_row1 = comments_row1a;
@@ -912,7 +913,7 @@ function func810(this: any) {
 function func811(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(811);
-        var_415 = 0;
+        wallet = 0;
         var_1032 = var_1032 - var_3190;
         var_1040 = 1;
 
@@ -1105,15 +1106,15 @@ function func813(this: any) {
 function func814(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(814);
-        if (var_415 >= 1000) {
+        if (wallet >= 1000) {
     
             DSPLAY(audio_id = 207);
-            var_415 = var_415 - 1000;
+            wallet = wallet - 1000;
             var_198 = 0;
             yield func816();
             return;
         }
-        if (var_415 < 1000) {
+        if (wallet < 1000) {
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -1131,7 +1132,7 @@ function func814(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340();
-            var_3190 = 1000 - var_415;
+            var_3190 = 1000 - wallet;
             if (var_3190 <= var_1032) {
                 yield func094();
                 comments_row1 = comments_row1a;
@@ -1160,7 +1161,7 @@ function func814(this: any) {
 function func815(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(815);
-        var_415 = 0;
+        wallet = 0;
 
         DSPLAY(audio_id = 207);
         var_1032 = var_1032 - var_3190;
@@ -1839,17 +1840,21 @@ function func825(this: any) {
         if (var_3121 >= 1) {
             var_203 = rnd(4);
         }
+        // No = 1 なので、ホテルの外
         dangeon_number = 1;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
+        // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
+        // No = 2 なので、レクイエムの第迷宮
         if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
+        // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
@@ -1935,7 +1940,7 @@ function func827(this: any) {
         var_68 = 0;
         var_535 = 0;
         yield func723();
-        if (var_3121 == 0 && var_1037 == 0 && var_415 == 0 && var_1040 == 0) {
+        if (var_3121 == 0 && var_1037 == 0 && wallet == 0 && var_1040 == 0) {
             var_535 = 1;
         }
         dangeon_number = 2;
@@ -1943,12 +1948,15 @@ function func827(this: any) {
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
+        // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
+        // No = 2 なので、レクイエムの第迷宮
         if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
+        // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
@@ -2042,12 +2050,15 @@ function func829(this: any) {
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
+        // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
+        // No = 2 なので、レクイエムの第迷宮
         if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
+        // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
@@ -2081,7 +2092,7 @@ function func829(this: any) {
         yield func502();
         yield func504();
         yield func505();
-        var_415 = 0;
+        wallet = 0;
         var_350 = 100;
         var_567 = 100;
         var_352 = 15;
@@ -2146,17 +2157,21 @@ function func830(this: any) {
         var_565 = 8;
         var_566 = 8;
         var_68 = 0;
+        // No = 3 なので、ディアボロの試練
         dangeon_number = 3;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
+        // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor > var_377) {
             var_377 = current_floor;
         }
+        // No = 2 なので、レクイエムの第迷宮
         if (dangeon_number == 2 && current_floor > var_378) {
             var_378 = current_floor;
         }
+        // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3 && current_floor > var_379) {
             var_379 = current_floor;
         }
@@ -2444,11 +2459,13 @@ function func834(this: any) {
         dbgprt(834);
         var_68 = 0;
         yield func723();
+        // No = 4 なので、一巡後の世界
         dangeon_number = 4;
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
+        // No = 4 なので、一巡後の世界
         if (dangeon_number == 4 && current_floor > var_380) {
             var_380 = current_floor;
         }
@@ -2763,7 +2780,7 @@ function func836(this: any) {
         yield func504();
         yield func505();
         yield func632();
-        var_415 = 0;
+        wallet = 0;
         var_350 = 100;
         var_567 = 100;
         var_352 = 15;
@@ -2865,13 +2882,13 @@ function func838(this: any) {
         if (var_220 == 0) {
             item_list = var_233[var_1056].Var0;
             var_1471 = var_233[var_1056].Var0;
-            var_487 = var_233[var_1056].Var13;
+            disc_rarity = var_233[var_1056].Var13;
             var_1249 = var_233[var_1056].Var13;
         }
         if (var_220 == 1) {
             item_list = var_486[var_485][var_484][0];
             var_1471 = var_486[var_485][var_484][0];
-            var_487 = var_486[var_485][var_484][13];
+            disc_rarity = var_486[var_485][var_484][13];
             var_1249 = var_486[var_485][var_484][13];
         }
         yield func492(); // アイテムリスト呼び出し
@@ -2880,7 +2897,7 @@ function func838(this: any) {
         if (var_220 == 0) {
             yield func430();
         }
-        yield func433();
+        yield func433(); // アイテム配列の "数" 増減？関数
         if (var_3204 == 0) {
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                 yield func337();
@@ -3153,7 +3170,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_1032 = var_1032 - var_3190;
-                    var_415 = 0;
+                    wallet = 0;
                     yield func807();
                     return;
                 }

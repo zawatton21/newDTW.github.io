@@ -93,15 +93,15 @@ function func004() {
                         var_11 = 0;
                     }
                     var_12 = 0;
-                    var_13 = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-                    var_14 = "newDTW ver0.1307";
+                    version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
+                    game_title = "newDTW ver0.1307";
                     buffer(17);
                     return [4 /*yield*/, picload("img3.gif")];
                 case 1:
                     _a.sent();
                     buffer(26, 680, 680);
                     screen_(2, 1, 1, 2, -100, -100);
-                    title(var_14);
+                    title(game_title);
                     oncmd_gosub(func897, 161);
                     GetWindowLongA(hwnd, -16);
                     SetWindowLongA(hwnd, -16, stat || (-2147483648));
@@ -122,7 +122,7 @@ function func004() {
                         var_9 = 0;
                     }
                     screen_(0, 680, 680, 2, var_8, var_9);
-                    title(var_14);
+                    title(game_title);
                     oncmd_gosub(func897, 161);
                     SetWindowLongA(hwnd, -8, var_15);
                     gsel(2, 1);
@@ -426,10 +426,10 @@ function func004() {
                     _a.sent(); // デバックウィンドウ呼び出し？
                     return [4 /*yield*/, func081()];
                 case 58:
-                    _a.sent(); // 効果音を呼び出す関数
+                    _a.sent(); // 効果音を呼び出す関数(効果音リスト1)
                     return [4 /*yield*/, func082()];
                 case 59:
-                    _a.sent();
+                    _a.sent(); // 効果音を呼び出す関数(効果音リスト2)
                     return [4 /*yield*/, func083()];
                 case 60:
                     _a.sent();
@@ -721,9 +721,11 @@ function func008() {
                         if (var_93 == 15) {
                             var_92 = 9;
                         }
+                        // No = 3 なので、ディアボロの試練
                         if (dangeon_number == 3 && current_floor >= 90) {
                             var_92 = 22;
                         }
+                        // No = 3 なので、ディアボロの試練
                         if (dangeon_number == 3 && current_floor == 99) {
                             var_92 = 2;
                         }
@@ -3365,6 +3367,7 @@ function func019() {
                     if (var_156[300] == 1 && var_359 == 1) {
                         var_360 = var_360 + 2;
                     }
+                    // No = 0 なので、拠点(ホテル、亀、)
                     if (dangeon_number == 0) {
                         var_360 = 0;
                     }
@@ -3816,12 +3819,15 @@ function func019() {
                     if (dangeon_number == 1 && current_floor > var_377) {
                         var_377 = current_floor;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor > var_378) {
                         var_378 = current_floor;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor > var_379) {
                         var_379 = current_floor;
                     }
+                    // No = 4 なので、一巡後の世界
                     if (dangeon_number == 4 && current_floor > var_380) {
                         var_380 = current_floor;
                     }
@@ -3991,6 +3997,7 @@ function func019() {
                     if (var_190 == 1) {
                         var_165 = 0;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_165 = 0;
                     }
@@ -4719,7 +4726,7 @@ function func020() {
                     var_83[var_318].Var21 = 0;
                     var_411 = 0;
                     var_318 = 0;
-                    if (!(var_415 < 1)) return [3 /*break*/, 31];
+                    if (!(wallet < 1)) return [3 /*break*/, 31];
                     if (var_156[396] == 0) {
                         if (var_157 == 0) {
                             var_133 = 1;
@@ -4783,19 +4790,19 @@ function func020() {
                     ++cnt3_19;
                     return [3 /*break*/, 28];
                 case 31:
-                    if (!(var_415 >= 1)) return [3 /*break*/, 37];
+                    if (!(wallet >= 1)) return [3 /*break*/, 37];
                     DSPLAY(audio_id = 207);
-                    if (var_415 <= 500) {
-                        var_416 = var_415;
+                    if (wallet <= 500) {
+                        stolen_money = wallet;
                     }
-                    if (var_415 > 500) {
-                        var_416 = Math.floor(var_415 / 2); // Math.floor は対象の値の小数点以下を切り捨て
+                    if (wallet > 500) {
+                        stolen_money = Math.floor(wallet / 2); // Math.floor は対象の値の小数点以下を切り捨て
                     }
-                    var_415 = var_415 - var_416;
+                    wallet = wallet - stolen_money;
                     var_83[var_412].Var26 = 1;
                     item_list = 1;
                     var_417 = item_list;
-                    var_418 = "" + var_416 + "G"; //現在の所持金表示
+                    target_item_name = "" + stolen_money + "G"; //現在の所持金表示
                     var_419 = var_412 + 200;
                     var_78[var_419].Var0 = 1;
                     var_78[var_419].Var1 = 0;
@@ -4810,13 +4817,13 @@ function func020() {
                     var_78[var_419].Var10 = 0;
                     var_78[var_419].Var11 = 0;
                     var_78[var_419].Var12 = 0;
-                    // 0でなければ、もともとの配列に格納されている金額に新たに金額を追加する
+                    // 0でなければ、もともとの配列に格納されている金額に新たに金額を追加する。var_78[var_419].Var13が金額を格納する配列？
                     if (var_78[var_419].Var13 != 0) {
-                        var_78[var_419].Var13 = var_78[var_419].Var13 + var_416;
+                        var_78[var_419].Var13 = var_78[var_419].Var13 + stolen_money;
                     }
-                    // 0であればそのまま金額を追加する
+                    // 0であればそのまま金額を追加する。var_78[var_419].Var13が金額を格納する配列？
                     if (var_78[var_419].Var13 == 0) {
-                        var_78[var_419].Var13 = var_416;
+                        var_78[var_419].Var13 = stolen_money;
                     }
                     var_78[var_419].Var14 = 0;
                     var_78[var_419].Var15 = 0;
@@ -4841,7 +4848,7 @@ function func020() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "罪悪感で" + var_418 + " 奪われた！";
+                    comments_row1 = "罪悪感で" + target_item_name + " 奪われた！";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -6976,16 +6983,16 @@ function func043() {
                     return [3 /*break*/, 3];
                 case 7:
                     item_list = var_233[var_475].Var0;
-                    var_487 = var_233[var_475].Var13;
+                    disc_rarity = var_233[var_475].Var13;
                     var_488 = var_233[var_475].Var0;
                     return [4 /*yield*/, func492()];
                 case 8:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     var_225 = var_475;
                     return [4 /*yield*/, func433()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func100()];
                 case 10:
                     _a.sent();
@@ -6999,7 +7006,7 @@ function func043() {
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
-                    comments_row1 = "" + var_418 + "は";
+                    comments_row1 = "" + target_item_name + "は";
                     comments_row2 = "朽ち果ててしまった…";
                     var_198 = 1;
                     var_300 = 0;
@@ -7058,9 +7065,11 @@ function func045() {
             if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
                 return [2 /*return*/];
             }
+            // No = 2 なので、レクイエムの第迷宮
             if (dangeon_number == 2 && current_floor == 30) {
                 return [2 /*return*/];
             }
+            // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3 && current_floor == 99) {
                 return [2 /*return*/];
             }
@@ -8539,12 +8548,15 @@ function func060() {
                         }
                         var_528 = var_528 + 1;
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor == 12) {
                         var_527 = 0;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_527 = 0;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_527 = 0;
                     }
@@ -9338,12 +9350,15 @@ function func060() {
                         if (dangeon_number == 1 && current_floor > var_377) {
                             var_377 = current_floor;
                         }
+                        // No = 2 なので、レクイエムの第迷宮
                         if (dangeon_number == 2 && current_floor > var_378) {
                             var_378 = current_floor;
                         }
+                        // No = 3 なので、ディアボロの試練
                         if (dangeon_number == 3 && current_floor > var_379) {
                             var_379 = current_floor;
                         }
+                        // No = 4 なので、一巡後の世界
                         if (dangeon_number == 4 && current_floor > var_380) {
                             var_380 = current_floor;
                         }
@@ -9533,6 +9548,7 @@ function func063() {
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_543 = 1;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_543 = 1;
                     }
@@ -9769,7 +9785,7 @@ function func067() {
                     var_225 = var_552;
                     return [4 /*yield*/, func433()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     var_551 = 1;
                     cnt1_54 = -1;
                     return [3 /*break*/, 9];
@@ -9974,12 +9990,15 @@ function func068() {
             if (dangeon_number == 1) {
                 mes("" + var_377 + "階");
             }
+            // No = 2 なので、レクイエムの第迷宮
             if (dangeon_number == 2) {
                 mes("" + var_378 + "階");
             }
+            // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3) {
                 mes("" + var_379 + "階");
             }
+            // No = 4 なので、一巡後の世界
             if (dangeon_number == 4) {
                 mes("" + var_380 + "階");
             }
@@ -11004,10 +11023,12 @@ function func075() {
                         comments_row1 = "注意せよ！ この階は";
                         comments_row2 = "「エンヤ婆」によって守られている！";
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         comments_row1 = "注意せよ！ この階は";
                         comments_row2 = "「ﾚｸｲｴﾑ･ｼﾞｮﾙﾉ」によって守られている！";
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         comments_row1 = "注意せよ！ この階は";
                         comments_row2 = "「ウンガロ」によって守られている！";
@@ -11106,6 +11127,7 @@ function func076() {
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(0, 100);
                     if (var_94 == 0) {
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             if (var_595 == 0) {
                                 gcopy(34, 640, 760, 340, 40);
@@ -11135,6 +11157,7 @@ function func076() {
                                 gcopy(34, 640, 400, 340, 40);
                             }
                         }
+                        // No = 2 なので、レクイエムの第迷宮
                         if (dangeon_number == 2) {
                             if (current_floor != 30) {
                                 gcopy(34, 640, 560, 340, 40);
@@ -11143,6 +11166,7 @@ function func076() {
                                 gcopy(34, 640, 880, 340, 40);
                             }
                         }
+                        // No = 3 なので、ディアボロの試練
                         if (dangeon_number == 3) {
                             if (current_floor != 99) {
                                 gcopy(34, 640, 520, 340, 40);
@@ -11151,6 +11175,7 @@ function func076() {
                                 gcopy(34, 640, 1160, 340, 40);
                             }
                         }
+                        // No = 4 なので、一巡後の世界
                         if (dangeon_number == 4) {
                             gcopy(34, 640, 800, 340, 40);
                         }
@@ -11263,6 +11288,7 @@ function func077() {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             pos(0, 100);
             if (var_94 == 0) {
+                // No = 0 なので、拠点(ホテル、亀、)
                 if (dangeon_number == 0) {
                     if (var_595 == 0) {
                         gcopy(34, 640, 760, 340, 40);
@@ -11292,6 +11318,7 @@ function func077() {
                         gcopy(34, 640, 400, 340, 40);
                     }
                 }
+                // No = 2 なので、レクイエムの第迷宮
                 if (dangeon_number == 2) {
                     if (current_floor != 30) {
                         gcopy(34, 640, 560, 340, 40);
@@ -11300,6 +11327,7 @@ function func077() {
                         gcopy(34, 640, 880, 340, 40);
                     }
                 }
+                // No = 3 なので、ディアボロの試練
                 if (dangeon_number == 3) {
                     if (current_floor != 99) {
                         gcopy(34, 640, 520, 340, 40);
@@ -11308,6 +11336,7 @@ function func077() {
                         gcopy(34, 640, 1160, 340, 40);
                     }
                 }
+                // No = 4 なので、一巡後の世界
                 if (dangeon_number == 4) {
                     gcopy(34, 640, 800, 340, 40);
                 }

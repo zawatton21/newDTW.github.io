@@ -2483,6 +2483,7 @@ function func223() {
                     if (current_floor >= 30) {
                         var_952 = var_952 + 7;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     dangeon_number = 2;
                     cnt1_4 = 0;
                     _a.label = 2;
@@ -2813,7 +2814,7 @@ function func227() {
                 case 1:
                     _a.sent();
                     item_list = var_233[var_553].Var0;
-                    var_487 = var_233[var_553].Var13;
+                    disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -2864,7 +2865,7 @@ function func227() {
                 case 7:
                     _a.sent();
                     item_list = var_233[var_554].Var0;
-                    var_487 = var_233[var_554].Var13;
+                    disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 8:
                     _a.sent(); // アイテムリスト呼び出し
@@ -2915,7 +2916,7 @@ function func227() {
                 case 13:
                     _a.sent();
                     item_list = var_233[var_555].Var0;
-                    var_487 = var_233[var_555].Var13;
+                    disc_rarity = var_233[var_555].Var13;
                     return [4 /*yield*/, func492()];
                 case 14:
                     _a.sent(); // アイテムリスト呼び出し
@@ -3010,7 +3011,7 @@ function func229() {
                     var_566 = 8;
                     var_580 = 0;
                     var_581 = 0;
-                    var_415 = 0;
+                    wallet = 0;
                     var_212 = 0;
                     var_134 = 0;
                     var_135 = 0;
@@ -3175,7 +3176,7 @@ function func229() {
                     var_566 = var_704[10];
                     var_580 = var_704[11];
                     var_581 = var_704[12];
-                    var_415 = var_704[13];
+                    wallet = var_704[13];
                     var_212 = var_704[14];
                     var_134 = var_704[15];
                     var_135 = var_704[16];
@@ -3533,7 +3534,7 @@ function func231() {
                     var_704[10] = var_566;
                     var_704[11] = var_580;
                     var_704[12] = var_581;
-                    var_704[13] = var_415;
+                    var_704[13] = wallet;
                     var_704[14] = var_212;
                     var_704[15] = var_134;
                     var_704[16] = var_135;
@@ -3991,6 +3992,7 @@ function func233() {
                     var_898 = 0;
                     var_999 = 0;
                     var_112 = 0;
+                    // No = 0 なので、拠点(ホテル、亀、)
                     dangeon_number = 0;
                     var_386 = 0;
                     var_387 = 0;
@@ -4096,7 +4098,7 @@ function func233() {
                     if (var_532 == 0) {
                         var_233 = ItemInfo.dim(100);
                         var_224 = 0;
-                        var_415 = 0;
+                        wallet = 0;
                     }
                     if (var_532 == 1) {
                         var_1056 = 1;
@@ -4213,7 +4215,7 @@ function func235() {
             var_566 = 0;
             var_580 = 0;
             var_581 = 0;
-            var_415 = 0;
+            wallet = 0;
             var_212 = 0;
             var_134 = 0;
             var_135 = 0;
@@ -4259,6 +4261,7 @@ function func235() {
             var_262 = 0;
             var_839 = 0;
             var_998 = 0;
+            // No = 0 なので、拠点(ホテル、亀、)
             dangeon_number = 0;
             var_98 = 0;
             var_896 = 0;
@@ -4800,9 +4803,11 @@ function func243() {
             if (dangeon_number == 1 && current_floor == 12) {
                 var_86 = 0;
             }
+            // No = 2 なので、レクイエムの第迷宮
             if (dangeon_number == 2 && current_floor == 30) {
                 var_86 = 0;
             }
+            // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3 && current_floor == 99) {
                 var_86 = 0;
             }
@@ -4859,9 +4864,11 @@ function func244() {
                     if (dangeon_number == 1 && current_floor == 12) {
                         var_1072 = 111;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_1072 = 121;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_1072 = 120;
                     }
@@ -5405,6 +5412,7 @@ function func246() {
                     var_1052 = 0;
                     var_96 = 0;
                     var_1052 = rnd(6);
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3) {
                         var_1052 = rnd(5);
                     }
@@ -5432,6 +5440,7 @@ function func246() {
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_96 = 0;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_96 = 0;
                     }

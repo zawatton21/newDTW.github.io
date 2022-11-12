@@ -45,7 +45,7 @@ var CharactorInfo = /** @class */ (function () {
         if (Var37 === void 0) { Var37 = 0; }
         if (Var38 === void 0) { Var38 = 0; }
         if (Var39 === void 0) { Var39 = 0; }
-        this.Var0 = Var0;
+        this.Var0 = Var0; // item_list:所持アイテムを格納する配列
         this.Var1 = Var1;
         this.Var2 = Var2;
         this.Var3 = Var3;
@@ -58,7 +58,7 @@ var CharactorInfo = /** @class */ (function () {
         this.Var10 = Var10;
         this.Var11 = Var11;
         this.Var12 = Var12;
-        this.Var13 = Var13;
+        this.Var13 = Var13; // disc_rarity:装備discのレア度を格納する配列
         this.Var14 = Var14;
         this.Var15 = Var15;
         this.Var16 = Var16;
@@ -142,7 +142,7 @@ var ItemInfo = /** @class */ (function () {
         if (Var27 === void 0) { Var27 = 0; }
         if (Var28 === void 0) { Var28 = 0; }
         if (Var29 === void 0) { Var29 = 0; }
-        this.Var0 = Var0;
+        this.Var0 = Var0; // item_list:所持アイテムを格納する配列
         this.Var1 = Var1;
         this.Var2 = Var2;
         this.Var3 = Var3;
@@ -155,7 +155,7 @@ var ItemInfo = /** @class */ (function () {
         this.Var10 = Var10;
         this.Var11 = Var11;
         this.Var12 = Var12;
-        this.Var13 = Var13;
+        this.Var13 = Var13; // disc_rarity:装備discのレア度を格納する配列
         this.Var14 = Var14;
         this.Var15 = Var15;
         this.Var16 = Var16;

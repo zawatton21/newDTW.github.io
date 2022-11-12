@@ -1389,8 +1389,7 @@ mes "strings"		[メッセージ表示]
 表示するメッセージに改行コードが含まれていた場合には、改行され次の行か
 ら表示を続けます。
 */
-// @ts-expect-error TS(7006): Parameter 'text' implicitly has an 'any' type.
-function mes(text) {
+function mes(text: string) {
     const ga = context.globalAlpha;
     context.globalAlpha = 1;
     context.fillText(text, position[0], position[1] + line_size * 0.9);
@@ -1954,7 +1953,7 @@ p1,p2 : カレントポジションのX,Y座標
 Xは一番左が0に、Yは上が0になり、1ドット単位の指定になります。
 パラメータの省略をすると、現在の値が使われます。
 */
-function pos(x: any, y: any) {
+function pos(x: number, y: number) {
     position = [x, y];
 }
 

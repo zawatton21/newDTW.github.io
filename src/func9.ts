@@ -141,15 +141,19 @@ function func904(this: any) {
 function func905(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(905);
+        // No = 1 なので、ホテルの外
         if (dangeon_number == 1) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
         }
+        // No = 2 なので、レクイエムの第迷宮
         if (dangeon_number == 2) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
         }
+        // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
         }
+        // No = 4 なので、一巡後の世界
         if (dangeon_number == 4) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
         }
@@ -207,7 +211,7 @@ function func907(this: any) {
         var_3516[6] = var_567;
         var_3516[7] = var_350;
         var_3516[8] = current_floor;
-        var_3516[9] = var_415;
+        var_3516[9] = wallet;
         var_3516[10] = dangeon_number;
         var_3516[11] = var_357;
         var_3516[12] = var_233[var_553].Var4;
@@ -310,6 +314,7 @@ function func909(this: any) {
             if (current_floor == var_3573) {
                 var_3572 = 0;
             }
+            // No = 0 なので、拠点(ホテル、亀、)
             if (var_407 == 0 || var_3572 >= 5 || dangeon_number == 0 || dangeon_number != var_1069[var_3574][12]) {
                 yield func910();
                 return;
@@ -578,7 +583,7 @@ function func911(this: any) {
             var_3566++;
         }
         item_list = var_233[var_225].Var0;
-        var_487 = var_233[var_225].Var13;
+        disc_rarity = var_233[var_225].Var13;
         yield func492(); // アイテムリスト呼び出し
         var_3580 = item_name;
         if (var_233[var_225].Var11 == 1) {
@@ -627,7 +632,7 @@ function func911(this: any) {
             yield func106();
         }
         yield func430();
-        yield func433();
+        yield func433(); // アイテム配列の "数" 増減？関数
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1132,7 +1137,7 @@ function func921(this: any) {
         yield func047();
         yield func340();
         DSPLAY(audio_id = 139);
-        var_415 = 0;
+        wallet = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337();
             var_1321 = var_1321 + 1;
@@ -2215,7 +2220,7 @@ function func929(this: any) {
         var_3516[6] = var_3079;
         var_3516[7] = var_534;
         var_3516[8] = current_floor;
-        var_3516[9] = var_415;
+        var_3516[9] = wallet;
         var_3516[10] = dangeon_number;
         var_3516[11] = var_357;
         var_3516[12] = var_233[var_553].Var4;
@@ -2352,15 +2357,19 @@ function func932(this: any) {
 function func933(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(933);
+        // No = 1 なので、ホテルの外
         if (dangeon_number == 1) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
         }
+        // No = 2 なので、レクイエムの第迷宮
         if (dangeon_number == 2) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
         }
+        // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
         }
+        // No = 4 なので、一巡後の世界
         if (dangeon_number == 4) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
         }
@@ -2443,6 +2452,7 @@ function func935(this: any) {
             if (current_floor == var_3573) {
                 var_3572 = 0;
             }
+            // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0) {
                 color(255, 0, 0);
             }

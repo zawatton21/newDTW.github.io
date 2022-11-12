@@ -200,15 +200,19 @@ function func905() {
             switch (_a.label) {
                 case 0:
                     dbgprt(905);
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
                     }
+                    // No = 4 なので、一巡後の世界
                     if (dangeon_number == 4) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
                     }
@@ -298,7 +302,7 @@ function func907() {
                     var_3516[6] = var_567;
                     var_3516[7] = var_350;
                     var_3516[8] = current_floor;
-                    var_3516[9] = var_415;
+                    var_3516[9] = wallet;
                     var_3516[10] = dangeon_number;
                     var_3516[11] = var_357;
                     var_3516[12] = var_233[var_553].Var4;
@@ -703,7 +707,7 @@ function func911() {
                         var_3566++;
                     }
                     item_list = var_233[var_225].Var0;
-                    var_487 = var_233[var_225].Var13;
+                    disc_rarity = var_233[var_225].Var13;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -772,7 +776,7 @@ function func911() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -1495,7 +1499,7 @@ function func921() {
                 case 19:
                     _a.sent();
                     DSPLAY(audio_id = 139);
-                    var_415 = 0;
+                    wallet = 0;
                     cnt1_13 = 0;
                     _a.label = 20;
                 case 20:
@@ -2753,7 +2757,7 @@ function func929() {
                     var_3516[6] = var_3079;
                     var_3516[7] = var_534;
                     var_3516[8] = current_floor;
-                    var_3516[9] = var_415;
+                    var_3516[9] = wallet;
                     var_3516[10] = dangeon_number;
                     var_3516[11] = var_357;
                     var_3516[12] = var_233[var_553].Var4;
@@ -2916,15 +2920,19 @@ function func933() {
             switch (_a.label) {
                 case 0:
                     dbgprt(933);
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはさらなる試練に向かった";
                     }
+                    // No = 4 なので、一巡後の世界
                     if (dangeon_number == 4) {
                         var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
                     }
@@ -3013,6 +3021,7 @@ function func935() {
                 if (current_floor == var_3573) {
                     var_3572 = 0;
                 }
+                // No = 0 なので、拠点(ホテル、亀、)
                 if (dangeon_number == 0) {
                     color(255, 0, 0);
                 }

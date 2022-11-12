@@ -2478,9 +2478,9 @@ function func715() {
             switch (_a.label) {
                 case 0:
                     dbgprt(715);
-                    var_415 = var_415 + var_1009;
-                    if (var_415 > 999999) {
-                        var_415 = 999999;
+                    wallet = wallet + var_1009;
+                    if (wallet > 999999) {
+                        wallet = 999999;
                     }
                     var_1009 = 0;
                     var_449 = 0;
@@ -2522,10 +2522,10 @@ function func716() {
             switch (_a.label) {
                 case 0:
                     dbgprt(716);
-                    var_3119 = var_415;
-                    var_415 = var_415 - var_481;
-                    if (!(var_415 < 0)) return [3 /*break*/, 2];
-                    var_415 = var_3119;
+                    var_3119 = wallet;
+                    wallet = wallet - var_481;
+                    if (!(wallet < 0)) return [3 /*break*/, 2];
+                    wallet = var_3119;
                     return [4 /*yield*/, func719()];
                 case 1:
                     _a.sent();
@@ -6771,7 +6771,7 @@ function func772() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [3 /*break*/, 21];
                 case 19:
                     var_447 = var_447 + 1;
@@ -6927,7 +6927,7 @@ function func773() {
                 case 11:
                     if (!(var_987[0] != 0)) return [3 /*break*/, 21];
                     item_list = var_987[0];
-                    var_487 = var_987[13];
+                    disc_rarity = var_987[13];
                     return [4 /*yield*/, func492()];
                 case 12:
                     _a.sent(); // アイテムリスト呼び出し
@@ -7120,7 +7120,7 @@ function func776() {
                 case 0:
                     dbgprt(776);
                     item_list = var_233[var_225].Var0;
-                    var_487 = var_233[var_225].Var13;
+                    disc_rarity = var_233[var_225].Var13;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -7205,7 +7205,7 @@ function func776() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 11:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -7267,7 +7267,7 @@ function func777() {
                     return [2 /*return*/];
                 case 5:
                     item_list = var_987[0];
-                    var_487 = var_987[13];
+                    disc_rarity = var_987[13];
                     return [4 /*yield*/, func492()];
                 case 6:
                     _a.sent(); // アイテムリスト呼び出し
@@ -9800,20 +9800,20 @@ function func798() {
                         }
                     }
                     var_3176 = var_3175 * 100000 + var_3174 * 10000 + var_3173 * 1000 + var_3172 * 100 + var_3171 * 10 + var_3170;
-                    if (var_1205 == 1 && var_3176 > var_415) {
-                        var_3181 = Math.floor(var_415 / 100000);
-                        var_3182 = Math.floor((var_415 - var_3181 * 100000) / 10000);
-                        var_3183 = Math.floor((var_415 - var_3181 * 100000 - var_3182 * 10000) / 1000);
-                        var_3184 = Math.floor((var_415 - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000) / 100);
-                        var_3185 = Math.floor((var_415 - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100) / 10);
-                        var_598 = var_415 - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100 - var_3185 * 10;
+                    if (var_1205 == 1 && var_3176 > wallet) {
+                        var_3181 = Math.floor(wallet / 100000);
+                        var_3182 = Math.floor((wallet - var_3181 * 100000) / 10000);
+                        var_3183 = Math.floor((wallet - var_3181 * 100000 - var_3182 * 10000) / 1000);
+                        var_3184 = Math.floor((wallet - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000) / 100);
+                        var_3185 = Math.floor((wallet - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100) / 10);
+                        var_598 = wallet - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100 - var_3185 * 10;
                         var_3170 = var_598;
                         var_3171 = var_3185;
                         var_3172 = var_3184;
                         var_3173 = var_3183;
                         var_3174 = var_3182;
                         var_3175 = var_3181;
-                        var_3176 = var_415;
+                        var_3176 = wallet;
                     }
                     var_3177 = var_1032 + var_3176;
                     if (var_1205 == 1 && var_3177 >= 999999) {
@@ -9894,20 +9894,20 @@ function func798() {
                         }
                     }
                     var_3176 = var_3175 * 100000 + var_3174 * 10000 + var_3173 * 1000 + var_3172 * 100 + var_3171 * 10 + var_3170;
-                    if (var_1205 == 1 && var_3176 > var_415) {
-                        var_3181 = Math.floor(var_415 / 100000);
-                        var_3182 = Math.floor((var_415 - var_3181 * 100000) / 10000);
-                        var_3183 = Math.floor((var_415 - var_3181 * 100000 - var_3182 * 10000) / 1000);
-                        var_3184 = Math.floor((var_415 - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000) / 100);
-                        var_3185 = Math.floor((var_415 - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100) / 10);
-                        var_598 = var_415 - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100 - var_3185 * 10;
+                    if (var_1205 == 1 && var_3176 > wallet) {
+                        var_3181 = Math.floor(wallet / 100000);
+                        var_3182 = Math.floor((wallet - var_3181 * 100000) / 10000);
+                        var_3183 = Math.floor((wallet - var_3181 * 100000 - var_3182 * 10000) / 1000);
+                        var_3184 = Math.floor((wallet - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000) / 100);
+                        var_3185 = Math.floor((wallet - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100) / 10);
+                        var_598 = wallet - var_3181 * 100000 - var_3182 * 10000 - var_3183 * 1000 - var_3184 * 100 - var_3185 * 10;
                         var_3170 = var_598;
                         var_3171 = var_3185;
                         var_3172 = var_3184;
                         var_3173 = var_3183;
                         var_3174 = var_3182;
                         var_3175 = var_3181;
-                        var_3176 = var_415;
+                        var_3176 = wallet;
                     }
                     var_3177 = var_1032 + var_3176;
                     if (var_1205 == 1 && var_3177 >= 999999) {
@@ -9952,7 +9952,7 @@ function func798() {
                     if (!(var_242 == 1 || var_244 == 1)) return [3 /*break*/, 20];
                     if (!(var_1205 == 1)) return [3 /*break*/, 18];
                     var_1032 = var_1032 + var_3176;
-                    var_415 = var_415 - var_3176;
+                    wallet = wallet - var_3176;
                     return [4 /*yield*/, func799()];
                 case 17:
                     _a.sent();
@@ -9960,9 +9960,9 @@ function func798() {
                 case 18:
                     if (!(var_1205 == 2)) return [3 /*break*/, 20];
                     var_1032 = var_1032 - var_3176;
-                    var_415 = var_415 + var_3176;
-                    if (var_415 > 999999) {
-                        var_415 = 999999;
+                    wallet = wallet + var_3176;
+                    if (wallet > 999999) {
+                        wallet = 999999;
                     }
                     return [4 /*yield*/, func799()];
                 case 19:

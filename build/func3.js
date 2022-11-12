@@ -4091,7 +4091,8 @@ function func342() {
                 pos(var_43 - 1, var_41);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4110,25 +4111,26 @@ function func342() {
             mes(var_211);
             pos(var_52 - 1, var_41);
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53 - 1, var_41);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54 - 1, var_41);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55 - 1, var_41);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56 - 1, var_41);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57 - 1, var_41);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58 - 1, var_41);
             }
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             if (current_floor < 10) {
                 pos(var_42 + 2, var_41);
             }
@@ -4136,7 +4138,8 @@ function func342() {
                 pos(var_43 + 2, var_41);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4155,25 +4158,26 @@ function func342() {
             mes(var_211);
             pos(var_52 + 2, var_41);
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53 + 2, var_41);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54 + 2, var_41);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55 + 2, var_41);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56 + 2, var_41);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57 + 2, var_41);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58 + 2, var_41);
             }
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             if (current_floor < 10) {
                 pos(var_42, var_41 - 1);
             }
@@ -4181,7 +4185,8 @@ function func342() {
                 pos(var_43, var_41 - 1);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4200,25 +4205,26 @@ function func342() {
             mes(var_211);
             pos(var_52, var_41 - 1);
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53, var_41 - 1);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54, var_41 - 1);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55, var_41 - 1);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56, var_41 - 1);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57, var_41 - 1);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58, var_41 - 1);
             }
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             if (current_floor < 10) {
                 pos(var_42, var_41 + 1);
             }
@@ -4226,7 +4232,8 @@ function func342() {
                 pos(var_43, var_41 + 1);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4245,25 +4252,26 @@ function func342() {
             mes(var_211);
             pos(var_52, var_41 + 1);
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53, var_41 + 1);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54, var_41 + 1);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55, var_41 + 1);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56, var_41 + 1);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57, var_41 + 1);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58, var_41 + 1);
             }
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             if (current_floor < 10) {
                 pos(var_42 + 1, var_41 + 1);
             }
@@ -4271,7 +4279,8 @@ function func342() {
                 pos(var_43 + 1, var_41 + 1);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4290,25 +4299,26 @@ function func342() {
             mes(var_211);
             pos(var_52 + 1, var_41 + 1);
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53 + 1, var_41 + 1);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54 + 1, var_41 + 1);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55 + 1, var_41 + 1);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56 + 1, var_41 + 1);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57 + 1, var_41 + 1);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58 + 1, var_41 + 1);
             }
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             if (current_floor < 10) {
                 pos(var_42 + 1, var_41 - 1);
             }
@@ -4316,7 +4326,8 @@ function func342() {
                 pos(var_43 + 1, var_41 - 1);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4335,25 +4346,26 @@ function func342() {
             mes(var_211);
             pos(var_52 + 1, var_41 - 1);
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53 + 1, var_41 - 1);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54 + 1, var_41 - 1);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55 + 1, var_41 - 1);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56 + 1, var_41 - 1);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57 + 1, var_41 - 1);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58 + 1, var_41 - 1);
             }
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             color(255, 255, 255);
             if (current_floor < 10) {
                 pos(var_42, var_41);
@@ -4362,7 +4374,8 @@ function func342() {
                 pos(var_43, var_41);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4396,26 +4409,27 @@ function func342() {
                 color(220, 0, 0);
             }
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53, var_41);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54, var_41);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55, var_41);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56, var_41);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57, var_41);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58, var_41);
             }
             color(255, 255, 255);
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             color(255, 255, 255);
             if (current_floor < 10) {
                 pos(var_42 + 1, var_41);
@@ -4424,7 +4438,8 @@ function func342() {
                 pos(var_43 + 1, var_41);
             }
             if (var_262 == 0) {
-                mes(current_floor);
+                // current_floorは数値なので、toString() を使って文字列へ変換
+                mes(current_floor.toString());
             }
             if (var_262 == 1) {
                 mes("1");
@@ -4458,26 +4473,27 @@ function func342() {
                 color(220, 0, 0);
             }
             mes(var_352);
-            if (var_415 < 10) {
+            if (wallet < 10) {
                 pos(var_53 + 1, var_41);
             }
-            if (var_415 >= 10) {
+            if (wallet >= 10) {
                 pos(var_54 + 1, var_41);
             }
-            if (var_415 >= 100) {
+            if (wallet >= 100) {
                 pos(var_55 + 1, var_41);
             }
-            if (var_415 >= 1000) {
+            if (wallet >= 1000) {
                 pos(var_56 + 1, var_41);
             }
-            if (var_415 >= 10000) {
+            if (wallet >= 10000) {
                 pos(var_57 + 1, var_41);
             }
-            if (var_415 >= 100000) {
+            if (wallet >= 100000) {
                 pos(var_58 + 1, var_41);
             }
             color(255, 255, 255);
-            mes(var_415);
+            // walletは数値なので、toString() を使って文字列へ変換
+            mes(wallet.toString());
             return [2 /*return*/];
         });
     });
@@ -11356,12 +11372,12 @@ function func354() {
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     if (!(var_1443 < 14)) return [3 /*break*/, 17];
                     pos(150, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 15:
                     _a.sent();
                     pos(170, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 16:
                     _a.sent();
@@ -11369,12 +11385,12 @@ function func354() {
                 case 17:
                     if (!(var_1443 == 14)) return [3 /*break*/, 20];
                     pos(150, 172);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 18:
                     _a.sent();
                     pos(170, 172);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 19:
                     _a.sent();
@@ -11382,12 +11398,12 @@ function func354() {
                 case 20:
                     if (!(var_1443 == 15)) return [3 /*break*/, 23];
                     pos(150, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 21:
                     _a.sent();
                     pos(170, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 22:
                     _a.sent();
@@ -11395,12 +11411,12 @@ function func354() {
                 case 23:
                     if (!(var_1443 == 16)) return [3 /*break*/, 26];
                     pos(150, 172);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 24:
                     _a.sent();
                     pos(170, 172);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 25:
                     _a.sent();
@@ -11408,12 +11424,12 @@ function func354() {
                 case 26:
                     if (!(var_1443 > 16 && var_1443 < 25)) return [3 /*break*/, 29];
                     pos(150, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 27:
                     _a.sent();
                     pos(170, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 28:
                     _a.sent();
@@ -11421,12 +11437,12 @@ function func354() {
                 case 29:
                     if (!(var_1443 == 25 || var_1443 == 26)) return [3 /*break*/, 32];
                     pos(152, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 30:
                     _a.sent();
                     pos(168, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 31:
                     _a.sent();
@@ -11434,12 +11450,12 @@ function func354() {
                 case 32:
                     if (!(var_1443 == 27 || var_1443 == 28)) return [3 /*break*/, 35];
                     pos(154, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 33:
                     _a.sent();
                     pos(166, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 34:
                     _a.sent();
@@ -11447,12 +11463,12 @@ function func354() {
                 case 35:
                     if (!(var_1443 == 29 || var_1443 == 30)) return [3 /*break*/, 38];
                     pos(156, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 36:
                     _a.sent();
                     pos(164, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 37:
                     _a.sent();
@@ -11460,12 +11476,12 @@ function func354() {
                 case 38:
                     if (!(var_1443 == 31 || var_1443 == 32)) return [3 /*break*/, 41];
                     pos(158, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 39:
                     _a.sent();
                     pos(162, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 40:
                     _a.sent();
@@ -11473,12 +11489,12 @@ function func354() {
                 case 41:
                     if (!(var_1443 == 33 || var_1443 == 34)) return [3 /*break*/, 44];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 42:
                     _a.sent();
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 43:
                     _a.sent();
@@ -11486,12 +11502,12 @@ function func354() {
                 case 44:
                     if (!(var_1443 == 35 || var_1443 == 36)) return [3 /*break*/, 47];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 45:
                     _a.sent();
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 46:
                     _a.sent();
@@ -11499,12 +11515,12 @@ function func354() {
                 case 47:
                     if (!(var_1443 == 37 || var_1443 == 38)) return [3 /*break*/, 50];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 48:
                     _a.sent();
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 49:
                     _a.sent();
@@ -11512,14 +11528,14 @@ function func354() {
                 case 50:
                     if (!(var_1443 == 39 || var_1443 == 40)) return [3 /*break*/, 53];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 51:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 52:
                     _a.sent();
@@ -11527,14 +11543,14 @@ function func354() {
                 case 53:
                     if (!(var_1443 == 41 || var_1443 == 42)) return [3 /*break*/, 56];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 54:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 150);
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 55:
                     _a.sent();
@@ -11542,14 +11558,14 @@ function func354() {
                 case 56:
                     if (!(var_1443 == 43 || var_1443 == 44)) return [3 /*break*/, 59];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 57:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 58:
                     _a.sent();
@@ -11557,14 +11573,14 @@ function func354() {
                 case 59:
                     if (!(var_1443 == 45 || var_1443 == 46)) return [3 /*break*/, 62];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 60:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 61:
                     _a.sent();
@@ -11572,14 +11588,14 @@ function func354() {
                 case 62:
                     if (!(var_1443 == 47 || var_1443 == 48)) return [3 /*break*/, 65];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 63:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 30);
                     pos(160, 170);
-                    item_list = var_1445;
+                    item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 64:
                     _a.sent();
@@ -11587,7 +11603,7 @@ function func354() {
                 case 65:
                     if (!(var_1443 > 48 || var_1443 == 60)) return [3 /*break*/, 67];
                     pos(160, 170);
-                    item_list = var_1444;
+                    item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 66:
                     _a.sent();
@@ -16268,7 +16284,7 @@ function func367() {
                     }
                     pos(20, 45);
                     item_list = var_802;
-                    var_487 = var_1660;
+                    disc_rarity = var_1660;
                     var_1248 = var_1660;
                     return [4 /*yield*/, func492()];
                 case 1:
@@ -17261,6 +17277,7 @@ function func380() {
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
+                    // No = 204:ｼｱｰﾊｰﾄｱﾀｯｸのDISC
                     if (var_1708 == 204) {
                         var_828 = "最大HPが" + var_1047 + "上がっているぞ";
                     }
@@ -18753,8 +18770,10 @@ function func384() {
                     }
                     if (var_1734 == 1) {
                         var_78[var_866].Var11 = 1;
+                        // No >= 2 なので、レクイエムの第迷宮、ディアボロの試練、一巡後の世界
                         if (dangeon_number >= 2 && var_1727 == 0) {
                             var_1768 = rnd(9);
+                            // No = 2 なので、レクイエムの第迷宮
                             if (dangeon_number == 2 && current_floor < 10) {
                                 var_1768 = 1;
                             }
@@ -19271,7 +19290,7 @@ function func385() {
                         var_862[393][0] = 1;
                         var_1750 = 0;
                     }
-                    // No = 1 なので、ホテルの外        
+                    // No = 1 & 2 & 99 & 4 なので、ホテルの外、レクイエムの大迷宮、？、一巡後の世界        
                     if (dangeon_number == 1 || dangeon_number == 2 || dangeon_number == 99 || dangeon_number == 4) {
                         var_1771 = var_78[var_866].Var0;
                         var_862[var_1771][0] = 1;
@@ -19345,6 +19364,7 @@ function func385() {
                         if (dangeon_number == 1) {
                             var_1773 = rnd(16);
                         }
+                        // No >= 3 なので、ディアボロの試練、一巡後の世界
                         if (dangeon_number >= 3) {
                             var_1773 = rnd(30);
                         }
@@ -19679,6 +19699,7 @@ function func385() {
                             var_78[var_866].Var0 = 728;
                         }
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && var_1773 >= 90) {
                         var_78[var_866].Var0 = 650;
                     }
@@ -19927,7 +19948,7 @@ function func385() {
                         var_1771 = var_78[var_866].Var0;
                         var_862[var_1771][0] = 1;
                     }
-                    // No = 1 なので、ホテルの外
+                    // No = 1 & 99 & 4 なので、ホテルの外、?、一巡後の世界
                     if (dangeon_number == 1 || dangeon_number == 99 || dangeon_number == 4) {
                         var_1771 = var_78[var_866].Var0;
                         var_862[var_1771][0] = 1;

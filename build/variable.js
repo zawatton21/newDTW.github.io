@@ -92,8 +92,8 @@ var var_9;
 var var_10;
 var var_11;
 var var_12; //
-var var_13; //起動画面に表示されるバージョン名
-var var_14; //ウィンドウタイトル
+var version_number; // 起動時、画面下に表示されるバージョン名
+var game_title; //ウィンドウタイトルに表示される名前
 var var_15;
 var var_16;
 var var_17;
@@ -141,7 +141,7 @@ var var_58;
 var var_59;
 var var_60;
 var var_61;
-var dangeon_number;
+var dangeon_number; // 各ダンジョンに割り振られた識別用ID
 var var_63;
 var var_64;
 var var_65;
@@ -170,7 +170,7 @@ var var_87;
 var var_88;
 var var_89;
 var var_90;
-var current_floor;
+var current_floor; // 現在の階層
 var var_92;
 var var_93;
 var var_94;
@@ -294,7 +294,7 @@ var var_211;
 var var_212;
 var var_213;
 var var_214;
-var var_215;
+var var_215; // item_list 多い
 var var_216;
 var var_217;
 var var_218;
@@ -307,14 +307,19 @@ var var_224;
 var var_225;
 var var_226;
 var var_227;
-var var_228;
+var var_228; // アイテムを表示するY座標ポジション 
 var var_229;
 var var_230;
 var var_231;
+// 各アイテムに割り振られた識別用ID。
+// 100 ~ 400未満:装備disc、400 ~ 500未満:射撃disc、500 ~ 600未満:記憶disc
+// 600 ~ 700未満:食料、700 ~ 800未満:その他消費アイテム
+// 800 ~ 900未満:ヤバいもの
+// 900 ~ 1000未満: コミック (空きがもう無い)
 var item_list;
 var var_233;
 var var_234;
-var conf_keyon;
+var conf_keyon; // 各キー入力確認。ON = 1、OFF = 0
 var var_236;
 var var_237;
 var var_238;
@@ -419,7 +424,7 @@ var var_336;
 var var_337;
 var var_338;
 var var_339;
-var var_340;
+var var_340; // item_list
 var var_341;
 var var_342;
 var var_343;
@@ -436,8 +441,8 @@ var var_353;
 var var_354;
 var var_355;
 var var_356;
-var var_357;
-var var_358;
+var var_357; // item_list 多い
+var var_358; // item_list
 var var_359;
 var var_360;
 var var_361;
@@ -489,15 +494,15 @@ var var_406;
 var var_407;
 var var_408;
 var var_409;
-var var_410;
+var var_410; // item_list
 var var_411;
 var var_412;
 var var_413;
 var var_414;
-var var_415;
-var var_416;
-var var_417;
-var var_418; //現在の所持金表示
+var wallet; // 現在所持している金額
+var stolen_money; // 盗まれる金額
+var var_417; // item_list
+var target_item_name; // 盗まれたり、消し炭にされたり、強化したり等、対象となるアイテムの名前
 var var_419;
 var var_420;
 var var_421;
@@ -516,8 +521,8 @@ var var_433;
 var var_434;
 var var_435;
 var var_436;
-var enemy_list;
-var enemy_hp;
+var enemy_list; // 各敵に割り振られた識別用ID
+var enemy_hp; // 敵の体力値
 var var_439;
 var var_440;
 var var_441;
@@ -566,7 +571,7 @@ var buying_price;
 var var_484;
 var var_485;
 var var_486;
-var var_487;
+var disc_rarity; // 0より大きければレアdisc(色違い)
 var var_488;
 var item_name;
 var var_490;
@@ -654,7 +659,7 @@ var var_571;
 var var_572;
 var var_573;
 var var_574;
-var var_575;
+var var_575; // item_list
 var var_576;
 var var_577;
 var var_578;
@@ -756,7 +761,7 @@ var var_673;
 var var_674;
 var bgm_list;
 var bgm_title;
-var var_677;
+var var_677; // item_list
 var var_678;
 var var_679;
 var var_680;
@@ -881,9 +886,9 @@ var var_798;
 var var_799;
 var var_800;
 var var_801;
-var var_802;
-var var_803;
-var var_804;
+var var_802; // item_list
+var var_803; // 装備discの修正値
+var var_804; // 装備discの合成した数
 var var_805;
 var var_806;
 var var_807;
@@ -955,14 +960,14 @@ var var_872;
 var var_873;
 var var_874;
 var var_875;
-var var_876;
+var var_876; // item_name
 var var_877;
 var var_878;
 var var_879;
 var var_880;
 var var_881;
 var var_882;
-var var_883;
+var var_883; // item_list
 var var_884;
 var var_885;
 var var_886;
@@ -1326,13 +1331,13 @@ var var_1243;
 var var_1244;
 var var_1245;
 var var_1246;
-var var_1247;
+var var_1247; // item_list
 var var_1248;
 var var_1249;
 var var_1250;
 var var_1251;
 var var_1252;
-var var_1253;
+var var_1253; // item_list 「ﾋﾟﾝｸﾀﾞｰｸの少年」のID確認用?
 var var_1254;
 var var_1255;
 var var_1256;
@@ -1368,7 +1373,7 @@ var var_1285;
 var var_1286;
 var var_1287;
 var var_1288;
-var var_1289;
+var var_1289; // item_list
 var var_1290;
 var var_1291;
 var var_1292;
@@ -1433,7 +1438,7 @@ var var_1350;
 var var_1351;
 var var_1352;
 var var_1353;
-var var_1354;
+var var_1354; // item_list
 var var_1355;
 var var_1356;
 var var_1357;
@@ -1465,7 +1470,7 @@ var var_1382;
 var var_1383;
 var var_1384;
 var var_1385;
-var var_1386;
+var var_1386; // item_list
 var var_1387;
 var var_1388;
 var var_1389;
@@ -1500,7 +1505,7 @@ var var_1417;
 var var_1418;
 var var_1419;
 var var_1420;
-var var_1421;
+var var_1421; // item_list
 var var_1422;
 var var_1423;
 var var_1424;
@@ -1523,8 +1528,8 @@ var var_1440;
 var var_1441;
 var var_1442;
 var var_1443;
-var var_1444;
-var var_1445;
+var base_disc_list; // 合成の基本ベースとなる装備discのID
+var with_disc_list; // 合成する装備discのID
 var var_1446;
 var var_1447;
 var var_1448;
@@ -1538,7 +1543,7 @@ var var_1455;
 var var_1456;
 var var_1457;
 var var_1458;
-var var_1459;
+var var_1459; // item_list
 var var_1460;
 var var_1461;
 var var_1462;
@@ -1550,7 +1555,7 @@ var var_1467;
 var var_1468;
 var var_1469;
 var var_1470;
-var var_1471;
+var var_1471; // item_list
 var var_1472;
 var var_1473;
 var var_1474;
@@ -1650,7 +1655,7 @@ var var_1567;
 var var_1568;
 var var_1569;
 var var_1570;
-var var_1571;
+var var_1571; // item_list
 var var_1572;
 var var_1573;
 var var_1574;
@@ -1746,7 +1751,7 @@ var var_1663;
 var var_1664;
 var var_1665;
 var var_1666;
-var var_1667;
+var var_1667; // item_list
 var var_1668;
 var var_1669;
 var var_1670;
@@ -1776,7 +1781,7 @@ var var_1693;
 var var_1694;
 var var_1695;
 var var_1696;
-var var_1697;
+var var_1697; // item_list
 var var_1698;
 var var_1699;
 var var_1700;
@@ -1787,7 +1792,7 @@ var var_1704;
 var var_1705;
 var var_1706;
 var var_1707;
-var var_1708;
+var var_1708; // item_list
 var var_1709;
 var var_1710;
 var var_1711;
@@ -1925,7 +1930,7 @@ var var_1842;
 var var_1843;
 var var_1844;
 var var_1845;
-var var_1846;
+var var_1846; // item_list
 var var_1847;
 var var_1848;
 var var_1849;
@@ -1946,7 +1951,7 @@ var var_1863;
 var var_1864;
 var var_1865;
 var var_1866;
-var var_1867;
+var var_1867; // item_list
 var var_1868;
 var var_1869;
 var var_1870;
@@ -2006,9 +2011,9 @@ var var_1923;
 var var_1924;
 var var_1925;
 var var_1926;
-var var_1927;
-var var_1928;
-var var_1929;
+var var_1927; // item_list
+var var_1928; // item_list
+var var_1929; // item_list
 var var_1930;
 var var_1931;
 var var_1932;
@@ -2089,9 +2094,9 @@ var var_2006;
 var var_2007;
 var var_2008;
 var var_2009;
-var var_2010;
+var var_2010; // item_list
 var var_2011;
-var var_2012;
+var var_2012; // 装備discの修正値
 var var_2013;
 var var_2014;
 var var_2015;
@@ -2099,7 +2104,7 @@ var var_2016;
 var var_2017;
 var var_2018;
 var var_2019;
-var var_2020;
+var var_2020; // 装備discの合成した数
 var var_2021;
 var var_2022;
 var var_2023;
@@ -2164,7 +2169,7 @@ var var_2081;
 var var_2082;
 var var_2083;
 var var_2084;
-var var_2085;
+var var_2085; // item_list
 var var_2086;
 var var_2087;
 var var_2088;
@@ -2200,7 +2205,7 @@ var var_2117;
 var var_2118;
 var var_2119;
 var var_2120;
-var var_2121;
+var var_2121; // item_list ヤバいものに関するID:800 ~ 900未満だけ
 var var_2122;
 var var_2123;
 var var_2124;
@@ -2266,7 +2271,7 @@ var var_2183;
 var var_2184;
 var var_2185;
 var var_2186;
-var var_2187;
+var var_2187; // item_list
 var var_2188;
 var var_2189;
 var var_2190;
@@ -2337,7 +2342,7 @@ var var_2254;
 var var_2255;
 var var_2256;
 var var_2257;
-var var_2258;
+var var_2258; // item_list 多い
 var var_2259;
 var var_2260;
 var var_2261;
@@ -2382,7 +2387,7 @@ var var_2299;
 var var_2300;
 var var_2301;
 var var_2302;
-var var_2303;
+var var_2303; // item_list お金用? ID:0 or 1 しか使用していない
 var var_2304;
 var var_2305;
 var var_2306;
@@ -2539,7 +2544,7 @@ var var_2456;
 var var_2457;
 var var_2458;
 var var_2459;
-var var_2460;
+var var_2460; // item_list お金用? ID:0 or 1 しか使っていない
 var var_2461;
 var var_2462;
 var var_2463;
@@ -2891,7 +2896,7 @@ var var_2808;
 var var_2809;
 var var_2810;
 var var_2811;
-var var_2812;
+var var_2812; // item_list アイテム欄にないIDを指定している
 var var_2813;
 var var_2814;
 var var_2815;
@@ -2934,7 +2939,7 @@ var var_2851;
 var var_2852;
 var var_2853;
 var var_2854;
-var var_2855;
+var var_2855; // item_list
 var var_2856;
 var var_2857;
 var var_2858;
@@ -3160,7 +3165,7 @@ var var_3077;
 var var_3078;
 var var_3079;
 var var_3080;
-var var_3081;
+var var_3081; // item_list var_215 の橋渡し
 var var_3082;
 var var_3083;
 var var_3084;

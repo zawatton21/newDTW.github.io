@@ -513,8 +513,10 @@ function func803() {
                     var_228 = 45;
                     var_225 = 1;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    // ここも間違っている?
                     return [4 /*yield*/, func337()];
                 case 14:
+                    // ここも間違っている?
                     _a.sent();
                     return [4 /*yield*/, func337()];
                 case 15:
@@ -611,7 +613,7 @@ function func804() {
                     var_2019 = var_991[0][var_1620][16];
                     var_2020 = var_991[0][var_1620][19];
                     item_list = var_2010;
-                    var_487 = var_2017;
+                    disc_rarity = var_2017;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -665,7 +667,7 @@ function func804() {
                     var_2028 = var_991[0][var_225][15];
                     var_2029 = var_991[0][var_225][16];
                     item_list = var_2023;
-                    var_487 = var_2026;
+                    disc_rarity = var_2026;
                     return [4 /*yield*/, func492()];
                 case 5:
                     _a.sent(); // アイテムリスト呼び出し
@@ -718,7 +720,7 @@ function func805() {
                     dbgprt(805);
                     var_1206 = 0;
                     item_list = var_991[0][var_225][0];
-                    var_487 = var_991[0][var_225][13];
+                    disc_rarity = var_991[0][var_225][13];
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -728,7 +730,7 @@ function func805() {
                     var_1925 = buying_price + var_482;
                     var_1925 = var_1925 * var_1036;
                     var_3189 = var_1925;
-                    if (!(var_415 < var_3189)) return [3 /*break*/, 12];
+                    if (!(wallet < var_3189)) return [3 /*break*/, 12];
                     return [4 /*yield*/, func094()];
                 case 2:
                     _a.sent();
@@ -746,7 +748,7 @@ function func805() {
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
                     var_27_x = var_27[1];
-                    var_3190 = var_3189 - var_415;
+                    var_3190 = var_3189 - wallet;
                     if (!(var_3190 <= var_1032)) return [3 /*break*/, 8];
                     return [4 /*yield*/, func340()];
                 case 3:
@@ -829,7 +831,7 @@ function func806() {
             switch (_a.label) {
                 case 0:
                     dbgprt(806);
-                    var_415 = var_415 - var_3189;
+                    wallet = wallet - var_3189;
                     return [4 /*yield*/, func807()];
                 case 1:
                     _a.sent();
@@ -847,7 +849,7 @@ function func807() {
                     dbgprt(807);
                     var_1206 = 0;
                     item_list = var_991[0][var_225][0];
-                    var_487 = var_991[0][var_225][13];
+                    disc_rarity = var_991[0][var_225][13];
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -987,12 +989,14 @@ function func808() {
                         var_1735 = 9;
                     }
                     if (var_262 == 1) {
+                        // No = 2 なので、レクイエムの第迷宮
                         dangeon_number = 2;
                     }
                     return [4 /*yield*/, func385()];
                 case 2:
                     _a.sent();
                     if (var_262 == 1) {
+                        // No = 0 なので、拠点(ホテル、亀、)
                         dangeon_number = 0;
                     }
                     for (cnt2_3 = 0; cnt2_3 < 30; ++cnt2_3) {
@@ -1365,9 +1369,9 @@ function func810() {
             switch (_a.label) {
                 case 0:
                     dbgprt(810);
-                    if (!(var_415 >= 2000)) return [3 /*break*/, 5];
+                    if (!(wallet >= 2000)) return [3 /*break*/, 5];
                     DSPLAY(audio_id = 207);
-                    var_415 = var_415 - 2000;
+                    wallet = wallet - 2000;
                     var_1040 = 1;
                     return [4 /*yield*/, func094()];
                 case 1:
@@ -1398,7 +1402,7 @@ function func810() {
                     _a.sent();
                     return [2 /*return*/];
                 case 5:
-                    if (!(var_415 < 2000)) return [3 /*break*/, 15];
+                    if (!(wallet < 2000)) return [3 /*break*/, 15];
                     return [4 /*yield*/, func094()];
                 case 6:
                     _a.sent();
@@ -1422,7 +1426,7 @@ function func810() {
                     return [4 /*yield*/, func340()];
                 case 8:
                     _a.sent();
-                    var_3190 = 2000 - var_415;
+                    var_3190 = 2000 - wallet;
                     if (!(var_3190 <= var_1032)) return [3 /*break*/, 13];
                     return [4 /*yield*/, func094()];
                 case 9:
@@ -1468,7 +1472,7 @@ function func811() {
             switch (_a.label) {
                 case 0:
                     dbgprt(811);
-                    var_415 = 0;
+                    wallet = 0;
                     var_1032 = var_1032 - var_3190;
                     var_1040 = 1;
                     DSPLAY(audio_id = 207);
@@ -1865,16 +1869,16 @@ function func814() {
             switch (_a.label) {
                 case 0:
                     dbgprt(814);
-                    if (!(var_415 >= 1000)) return [3 /*break*/, 2];
+                    if (!(wallet >= 1000)) return [3 /*break*/, 2];
                     DSPLAY(audio_id = 207);
-                    var_415 = var_415 - 1000;
+                    wallet = wallet - 1000;
                     var_198 = 0;
                     return [4 /*yield*/, func816()];
                 case 1:
                     _a.sent();
                     return [2 /*return*/];
                 case 2:
-                    if (!(var_415 < 1000)) return [3 /*break*/, 12];
+                    if (!(wallet < 1000)) return [3 /*break*/, 12];
                     return [4 /*yield*/, func094()];
                 case 3:
                     _a.sent();
@@ -1898,7 +1902,7 @@ function func814() {
                     return [4 /*yield*/, func340()];
                 case 5:
                     _a.sent();
-                    var_3190 = 1000 - var_415;
+                    var_3190 = 1000 - wallet;
                     if (!(var_3190 <= var_1032)) return [3 /*break*/, 10];
                     return [4 /*yield*/, func094()];
                 case 6:
@@ -1944,7 +1948,7 @@ function func815() {
             switch (_a.label) {
                 case 0:
                     dbgprt(815);
-                    var_415 = 0;
+                    wallet = 0;
                     DSPLAY(audio_id = 207);
                     var_1032 = var_1032 - var_3190;
                     var_198 = 0;
@@ -2950,17 +2954,21 @@ function func825() {
                     if (var_3121 >= 1) {
                         var_203 = rnd(4);
                     }
+                    // No = 1 なので、ホテルの外
                     dangeon_number = 1;
                     current_floor = 1;
                     if (current_floor > var_376) {
                         var_376 = current_floor;
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor > var_377) {
                         var_377 = current_floor;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor > var_378) {
                         var_378 = current_floor;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor > var_379) {
                         var_379 = current_floor;
                     }
@@ -3138,7 +3146,7 @@ function func827() {
                     return [4 /*yield*/, func723()];
                 case 1:
                     _a.sent();
-                    if (var_3121 == 0 && var_1037 == 0 && var_415 == 0 && var_1040 == 0) {
+                    if (var_3121 == 0 && var_1037 == 0 && wallet == 0 && var_1040 == 0) {
                         var_535 = 1;
                     }
                     dangeon_number = 2;
@@ -3146,12 +3154,15 @@ function func827() {
                     if (current_floor > var_376) {
                         var_376 = current_floor;
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor > var_377) {
                         var_377 = current_floor;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor > var_378) {
                         var_378 = current_floor;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor > var_379) {
                         var_379 = current_floor;
                     }
@@ -3339,12 +3350,15 @@ function func829() {
                     if (current_floor > var_376) {
                         var_376 = current_floor;
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor > var_377) {
                         var_377 = current_floor;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor > var_378) {
                         var_378 = current_floor;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor > var_379) {
                         var_379 = current_floor;
                     }
@@ -3435,7 +3449,7 @@ function func829() {
                     return [4 /*yield*/, func505()];
                 case 29:
                     _a.sent();
-                    var_415 = 0;
+                    wallet = 0;
                     var_350 = 100;
                     var_567 = 100;
                     var_352 = 15;
@@ -3576,17 +3590,21 @@ function func830() {
                     var_565 = 8;
                     var_566 = 8;
                     var_68 = 0;
+                    // No = 3 なので、ディアボロの試練
                     dangeon_number = 3;
                     current_floor = 1;
                     if (current_floor > var_376) {
                         var_376 = current_floor;
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor > var_377) {
                         var_377 = current_floor;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor > var_378) {
                         var_378 = current_floor;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor > var_379) {
                         var_379 = current_floor;
                     }
@@ -4040,11 +4058,13 @@ function func834() {
                     return [4 /*yield*/, func723()];
                 case 1:
                     _a.sent();
+                    // No = 4 なので、一巡後の世界
                     dangeon_number = 4;
                     current_floor = 1;
                     if (current_floor > var_376) {
                         var_376 = current_floor;
                     }
+                    // No = 4 なので、一巡後の世界
                     if (dangeon_number == 4 && current_floor > var_380) {
                         var_380 = current_floor;
                     }
@@ -4648,7 +4668,7 @@ function func836() {
                     return [4 /*yield*/, func632()];
                 case 30:
                     _a.sent();
-                    var_415 = 0;
+                    wallet = 0;
                     var_350 = 100;
                     var_567 = 100;
                     var_352 = 15;
@@ -4818,13 +4838,13 @@ function func838() {
                     if (var_220 == 0) {
                         item_list = var_233[var_1056].Var0;
                         var_1471 = var_233[var_1056].Var0;
-                        var_487 = var_233[var_1056].Var13;
+                        disc_rarity = var_233[var_1056].Var13;
                         var_1249 = var_233[var_1056].Var13;
                     }
                     if (var_220 == 1) {
                         item_list = var_486[var_485][var_484][0];
                         var_1471 = var_486[var_485][var_484][0];
-                        var_487 = var_486[var_485][var_484][13];
+                        disc_rarity = var_486[var_485][var_484][13];
                         var_1249 = var_486[var_485][var_484][13];
                     }
                     return [4 /*yield*/, func492()];
@@ -4839,7 +4859,7 @@ function func838() {
                     _a.label = 3;
                 case 3: return [4 /*yield*/, func433()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     if (!(var_3204 == 0)) return [3 /*break*/, 8];
                     cnt2_6 = 0;
                     _a.label = 5;
@@ -5283,7 +5303,7 @@ function func839() {
                 case 74:
                     _a.sent();
                     var_1032 = var_1032 - var_3190;
-                    var_415 = 0;
+                    wallet = 0;
                     return [4 /*yield*/, func807()];
                 case 75:
                     _a.sent();

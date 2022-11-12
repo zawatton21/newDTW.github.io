@@ -1392,7 +1392,6 @@ mes "strings"		[メッセージ表示]
 表示するメッセージに改行コードが含まれていた場合には、改行され次の行か
 ら表示を続けます。
 */
-// @ts-expect-error TS(7006): Parameter 'text' implicitly has an 'any' type.
 function mes(text) {
     var ga = context.globalAlpha;
     context.globalAlpha = 1;

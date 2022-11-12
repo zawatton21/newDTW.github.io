@@ -3939,7 +3939,7 @@ function func620() {
                         return [2 /*return*/];
                     }
                     item_list = var_233[var_475].Var0;
-                    var_487 = var_233[var_475].Var13;
+                    disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 13:
                     _a.sent(); // アイテムリスト呼び出し
@@ -4578,7 +4578,7 @@ function func620() {
                 case 129: return [2 /*return*/];
                 case 130:
                     if (!(enemy_list == 130)) return [3 /*break*/, 143];
-                    if (var_415 == 0 || var_169 <= 0 || var_169 == 999999) {
+                    if (wallet == 0 || var_169 <= 0 || var_169 == 999999) {
                         var_2197 = 1;
                         return [2 /*return*/];
                     }
@@ -4586,11 +4586,11 @@ function func620() {
                     if (var_169 < 500) {
                         var_2888 = var_169;
                     }
-                    if (var_415 < 500) {
-                        var_2888 = var_415;
+                    if (wallet < 500) {
+                        var_2888 = wallet;
                     }
-                    if (var_2888 > var_415) {
-                        var_2888 = var_415;
+                    if (var_2888 > wallet) {
+                        var_2888 = wallet;
                     }
                     if (var_169 < var_2888) {
                         var_2888 = var_169;
@@ -4625,9 +4625,9 @@ function func620() {
                     return [3 /*break*/, 134];
                 case 137:
                     var_83[var_673].Var7 = 0;
-                    var_415 = var_415 - var_2888;
-                    if (var_415 < 0) {
-                        var_415 = 0;
+                    wallet = wallet - var_2888;
+                    if (wallet < 0) {
+                        wallet = 0;
                     }
                     comments_row1 = "";
                     comments_row2 = "";
@@ -5096,7 +5096,7 @@ function func620() {
                     _a.sent();
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
-                    comments_row1a = "" + var_418 + "に";
+                    comments_row1a = "" + target_item_name + "に";
                     comments_row2a = "新たな装備効果が発現した！";
                     var_25_x = var_25[1];
                     var_26_x = var_26[1];
@@ -5419,11 +5419,11 @@ function func620() {
                     item_list = var_233[var_475].Var0;
                     var_417 = item_list;
                     var_1249 = var_233[var_475].Var13;
-                    var_487 = var_233[var_475].Var13;
+                    disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 285:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     var_419 = var_412 + 200;
                     var_78[var_419].Var0 = var_233[var_475].Var0;
                     var_78[var_419].Var1 = var_233[var_475].Var1;
@@ -5458,7 +5458,7 @@ function func620() {
                     var_225 = var_475;
                     return [4 /*yield*/, func433()];
                 case 286:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -5466,7 +5466,7 @@ function func620() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_418 + "を盗まれた！";
+                    comments_row1 = "" + target_item_name + "を盗まれた！";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[2];
@@ -5527,7 +5527,7 @@ function func620() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "なんと" + var_418 + "は";
+                    comments_row1 = "なんと" + target_item_name + "は";
                     comments_row2 = "爆弾だった！";
                     var_198 = 1;
                     var_300 = 0;
@@ -5611,7 +5611,7 @@ function func620() {
                 case 312:
                     if (!(enemy_list == 144)) return [3 /*break*/, 329];
                     var_412 = var_673;
-                    if (var_415 < 10) {
+                    if (wallet < 10) {
                         return [2 /*return*/];
                     }
                     if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0 || var_83[var_412].Var26 != 0) {
@@ -5664,12 +5664,12 @@ function func620() {
                     var_83[var_412].Var26 = 1;
                     item_list = 1;
                     var_417 = item_list;
-                    var_416 = Math.floor(var_415 / 2);
-                    var_415 = var_415 - var_416;
-                    if (var_415 < 0) {
-                        var_415 = 0;
+                    stolen_money = Math.floor(wallet / 2);
+                    wallet = wallet - stolen_money;
+                    if (wallet < 0) {
+                        wallet = 0;
                     }
-                    var_418 = "" + var_416 + "G";
+                    target_item_name = "" + stolen_money + "G";
                     var_419 = var_412 + 200;
                     var_78[var_419].Var0 = 1;
                     var_78[var_419].Var1 = 0;
@@ -5684,7 +5684,7 @@ function func620() {
                     var_78[var_419].Var10 = 0;
                     var_78[var_419].Var11 = 0;
                     var_78[var_419].Var12 = 0;
-                    var_78[var_419].Var13 = var_416;
+                    var_78[var_419].Var13 = stolen_money;
                     var_78[var_419].Var14 = 0;
                     var_78[var_419].Var15 = 0;
                     var_78[var_419].Var16 = 0;
@@ -5712,7 +5712,7 @@ function func620() {
                     if (var_127 == 1 || var_132 >= 1) {
                         comments_row1 = "何者かに";
                     }
-                    comments_row2 = "" + var_418 + "を盗まれた！";
+                    comments_row2 = "" + target_item_name + "を盗まれた！";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[2];
@@ -5916,11 +5916,11 @@ function func620() {
                     _a.label = 356;
                 case 356:
                     item_list = var_233[var_475].Var0;
-                    var_487 = var_233[var_475].Var13;
+                    disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 357:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     for (cnt2_32 = 0; cnt2_32 < 30; ++cnt2_32) {
                         var_233[var_475]["Var" + cnt2_32] = 0;
                     }
@@ -5932,7 +5932,7 @@ function func620() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_418 + "は";
+                    comments_row1 = "" + target_item_name + "は";
                     comments_row2 = "消し炭になった！";
                     var_198 = 1;
                     var_300 = 0;
@@ -6114,11 +6114,11 @@ function func620() {
                     return [4 /*yield*/, func492()];
                 case 390:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     var_225 = var_475;
                     return [4 /*yield*/, func433()];
                 case 391:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -6126,7 +6126,7 @@ function func620() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_418 + "は";
+                    comments_row1 = "" + target_item_name + "は";
                     comments_row2 = "バラバラにされてしまった！";
                     var_198 = 1;
                     var_300 = 0;
@@ -6332,11 +6332,11 @@ function func620() {
                     _a.label = 427;
                 case 427:
                     item_list = var_233[var_475].Var0;
-                    var_487 = var_233[var_475].Var13;
+                    disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 428:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     for (cnt2_39 = 0; cnt2_39 < 30; ++cnt2_39) {
                         var_233[var_475]["Var" + cnt2_39] = 0;
                     }
@@ -6351,7 +6351,7 @@ function func620() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_418 + "は";
+                    comments_row1 = "" + target_item_name + "は";
                     comments_row2 = "" + var_2892 + "に生まれ変わった！";
                     var_198 = 1;
                     var_300 = 0;
@@ -7314,7 +7314,7 @@ function func620() {
                     var_894 = var_894 - 1;
                     var_2473 = 1;
                     item_list = var_357;
-                    var_487 = var_233[var_553].Var13;
+                    disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 580:
                     _a.sent(); // アイテムリスト呼び出し
@@ -7329,7 +7329,7 @@ function func620() {
                     var_895 = var_895 - 1;
                     var_2473 = 1;
                     item_list = var_358;
-                    var_487 = var_233[var_554].Var13;
+                    disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 583:
                     _a.sent(); // アイテムリスト呼び出し
@@ -7588,11 +7588,11 @@ function func620() {
                     _a.label = 635;
                 case 635:
                     item_list = var_233[var_475].Var0;
-                    var_487 = var_233[var_475].Var13;
+                    disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 636:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     for (cnt3_58 = 0; cnt3_58 < 30; ++cnt3_58) {
                         var_233[var_475]["Var" + cnt3_58] = 0;
                     }
@@ -7604,7 +7604,7 @@ function func620() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_418 + "は";
+                    comments_row1 = "" + target_item_name + "は";
                     comments_row2 = "消し炭になった！";
                     var_198 = 1;
                     var_300 = 0;
@@ -8359,7 +8359,7 @@ function func620() {
                     }
                     var_233[var_2897].Var4 = var_233[var_2897].Var4 - 1;
                     item_list = var_233[var_2897].Var0;
-                    var_487 = var_233[var_2897].Var13;
+                    disc_rarity = var_233[var_2897].Var13;
                     return [4 /*yield*/, func492()];
                 case 771:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8403,7 +8403,7 @@ function func620() {
                     var_2901 = var_2901 + 3;
                     var_233[var_2897].Var3 = var_233[var_2897].Var3 - var_2901;
                     item_list = var_233[var_2897].Var0;
-                    var_487 = var_233[var_2897].Var13;
+                    disc_rarity = var_233[var_2897].Var13;
                     return [4 /*yield*/, func492()];
                 case 780:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8454,7 +8454,7 @@ function func620() {
                     var_225 = var_2897;
                     return [4 /*yield*/, func433()];
                 case 789:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     var_479 = dim(40);
                     var_250 = 0;
                     var_410 = 0;
@@ -9198,7 +9198,7 @@ function func620() {
                 case 894:
                     _a.sent();
                     item_list = var_233[var_553].Var0;
-                    var_487 = var_233[var_553].Var13;
+                    disc_rarity = var_233[var_553].Var13;
                     var_475 = var_553;
                     var_896 = 0;
                     _a.label = 895;
@@ -9215,7 +9215,7 @@ function func620() {
                 case 897:
                     _a.sent();
                     item_list = var_233[var_554].Var0;
-                    var_487 = var_233[var_554].Var13;
+                    disc_rarity = var_233[var_554].Var13;
                     var_475 = var_554;
                     var_897 = 0;
                     _a.label = 898;
@@ -9230,7 +9230,7 @@ function func620() {
                 case 900:
                     _a.sent();
                     item_list = var_233[var_555].Var0;
-                    var_487 = var_233[var_555].Var13;
+                    disc_rarity = var_233[var_555].Var13;
                     var_475 = var_555;
                     var_898 = 0;
                     _a.label = 901;
@@ -9243,7 +9243,7 @@ function func620() {
                     return [4 /*yield*/, func492()];
                 case 903:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     var_419 = var_412 + 200;
                     var_78[var_419].Var0 = var_233[var_475].Var0;
                     var_78[var_419].Var1 = var_233[var_475].Var1;
@@ -9278,7 +9278,7 @@ function func620() {
                     var_225 = var_475;
                     return [4 /*yield*/, func433()];
                 case 904:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -9286,7 +9286,7 @@ function func620() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "装備中の" + var_418 + "を";
+                    comments_row1 = "装備中の" + target_item_name + "を";
                     comments_row2 = "抜き取られてしまった！";
                     var_198 = 1;
                     var_300 = 0;
@@ -18393,7 +18393,7 @@ function func646() {
                     var_225 = var_553;
                     return [4 /*yield*/, func433()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func494()];
                 case 16:
                     _a.sent();
@@ -21377,7 +21377,7 @@ function func657() {
                     var_414 = 0;
                     var_271 = 0;
                     var_83[var_314].Var8 = 0;
-                    if (!(var_415 < 1)) return [3 /*break*/, 29];
+                    if (!(wallet < 1)) return [3 /*break*/, 29];
                     if (var_156[396] == 0) {
                         if (var_157 == 0) {
                             var_133 = 1;
@@ -21444,20 +21444,20 @@ function func657() {
                     var_199 = var_413;
                     _a.label = 29;
                 case 29:
-                    if (!(var_415 >= 1)) return [3 /*break*/, 35];
+                    if (!(wallet >= 1)) return [3 /*break*/, 35];
                     DSPLAY(audio_id = 207);
-                    if (var_415 <= 500) {
-                        var_416 = var_415;
+                    if (wallet <= 500) {
+                        stolen_money = wallet;
                     }
-                    if (var_415 > 500) {
-                        var_416 = Math.floor(var_415 / 2);
+                    if (wallet > 500) {
+                        stolen_money = Math.floor(wallet / 2);
                     }
-                    var_415 = var_415 - var_416;
+                    wallet = wallet - stolen_money;
                     var_83[var_412].Var26 = 1;
                     item_list = 1;
                     var_417 = item_list;
                     var_1249 = var_78[var_419].Var13;
-                    var_418 = "" + var_416 + "G";
+                    target_item_name = "" + stolen_money + "G";
                     var_419 = var_412 + 200;
                     var_78[var_419].Var0 = 1;
                     var_78[var_419].Var1 = 0;
@@ -21473,10 +21473,10 @@ function func657() {
                     var_78[var_419].Var11 = 0;
                     var_78[var_419].Var12 = 0;
                     if (var_78[var_419].Var13 != 0) {
-                        var_78[var_419].Var13 = var_78[var_419].Var13 + var_416;
+                        var_78[var_419].Var13 = var_78[var_419].Var13 + stolen_money;
                     }
                     if (var_78[var_419].Var13 == 0) {
-                        var_78[var_419].Var13 = var_416;
+                        var_78[var_419].Var13 = stolen_money;
                     }
                     var_78[var_419].Var14 = 0;
                     var_78[var_419].Var15 = 0;
@@ -21501,7 +21501,7 @@ function func657() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "罪悪感で" + var_418 + " 奪われた！";
+                    comments_row1 = "罪悪感で" + target_item_name + " 奪われた！";
                     var_25_x = var_25[2];
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
@@ -25424,7 +25424,7 @@ function func660() {
                     var_83[var_314].Var13 = 0;
                     var_83[var_314].Var8 = 1;
                     item_list = var_340;
-                    var_487 = var_1833;
+                    disc_rarity = var_1833;
                     return [4 /*yield*/, func492()];
                 case 228:
                     _a.sent(); // アイテムリスト呼び出し
@@ -26046,7 +26046,7 @@ function func663() {
                     }
                     var_83[var_314].Var13 = 0;
                     item_list = var_340;
-                    var_487 = var_1833;
+                    disc_rarity = var_1833;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -27125,6 +27125,7 @@ function func672() {
                 case 21:
                     var_1200 = 1;
                     var_2400 = 345;
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor == 12 && var_386 == 1) {
                         if (var_201 == 4 || var_201 == 5 || var_201 == 6) {
                             var_356 = 200;
@@ -27251,7 +27252,7 @@ function func675() {
                     return [4 /*yield*/, func428()];
                 case 1:
                     _a.sent();
-                    var_487 = var_233[var_555].Var13;
+                    disc_rarity = var_233[var_555].Var13;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -27505,7 +27506,7 @@ function func675() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 48:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     var_2392 = 1;
                     for (cnt1_122 = 0; cnt1_122 < var_97; ++cnt1_122) {
                         var_83[var_2392].Var6 = 0;

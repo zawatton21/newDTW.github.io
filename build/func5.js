@@ -679,7 +679,7 @@ function func506() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     var_2254 = 1;
                     return [2 /*return*/];
                 case 6:
@@ -725,7 +725,7 @@ function func506() {
                     var_1876 = var_2256;
                     return [4 /*yield*/, func433()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     var_2254 = 1;
                     var_220 = 0;
                     return [2 /*return*/];
@@ -792,7 +792,7 @@ function func506() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 24:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func507()];
                 case 25:
                     _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
@@ -822,7 +822,7 @@ function func506() {
                     var_1876 = var_2256;
                     return [4 /*yield*/, func433()];
                 case 29:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func507()];
                 case 30:
                     _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
@@ -10849,7 +10849,7 @@ function func511() {
                     return [4 /*yield*/, func506()];
                 case 1825:
                     _a.sent();
-                    if (!(var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12]) && var_415 >= 300)) return [3 /*break*/, 1827];
+                    if (!(var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12]) && wallet >= 300)) return [3 /*break*/, 1827];
                     return [4 /*yield*/, func921()];
                 case 1826:
                     _a.sent();
@@ -13536,7 +13536,7 @@ function func522() {
         });
     });
 }
-//disc同士の合成機能
+//disc同士の合成関数(クレイジーDの発動能力)
 function func523() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_164, cnt2_165, cnt2_166, cnt2_167, cnt2_168, cnt2_169, cnt3_43, cnt1_19, cnt1_20, cnt2_170, cnt2_171, cnt2_172, cnt2_173, cnt1_21;
@@ -13758,8 +13758,8 @@ function func523() {
                     var_2091 = var_225;
                     var_197 = 0;
                     var_1240 = 3;
-                    var_1444 = var_233[var_2090].Var0;
-                    var_1445 = var_233[var_2091].Var0;
+                    base_disc_list = var_233[var_2090].Var0;
+                    with_disc_list = var_233[var_2091].Var0;
                     item_list = var_233[var_2090].Var0;
                     return [4 /*yield*/, func492()];
                 case 48:
@@ -13821,9 +13821,9 @@ function func523() {
                 case 50:
                     var_233[var_2090].Var14 = 1;
                     item_list = var_233[var_2090].Var0;
-                    var_487 = var_233[var_2090].Var13;
+                    disc_rarity = var_233[var_2090].Var13;
                     var_2365 = 0;
-                    if (var_487 >= 1) {
+                    if (disc_rarity >= 1) {
                         var_2365 = 1;
                     }
                     return [4 /*yield*/, func492()];
@@ -13831,7 +13831,7 @@ function func523() {
                     _a.sent(); // アイテムリスト呼び出し
                     var_2366 = item_name;
                     item_list = var_233[var_2091].Var0;
-                    var_487 = var_233[var_2091].Var13;
+                    disc_rarity = var_233[var_2091].Var13;
                     return [4 /*yield*/, func492()];
                 case 52:
                     _a.sent(); // アイテムリスト呼び出し
@@ -13849,19 +13849,25 @@ function func523() {
                     _a.label = 54;
                 case 54:
                     var_2097 = 0;
-                    if (var_1444 == 100 && var_1445 == 111) {
+                    // No = 100:ｽﾀｰ･ﾌﾟﾗﾁﾅのDISC、No = 111:ｻﾞ･ﾜｰﾙﾄﾞのDISC
+                    if (base_disc_list == 100 && with_disc_list == 111) {
                         var_2097 = 1;
+                        // No = 398:ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISC
                         var_233[var_2090].Var0 = 398;
                         var_862[398][0] = 1;
                     }
-                    if (var_1444 == 112 && var_1445 == 204) {
+                    // No = 112:ｷﾗｰ･ｸｨｰﾝのDISC、No = 204:ｼｱｰﾊｰﾄｱﾀｯｸのDISC
+                    if (base_disc_list == 112 && with_disc_list == 204) {
                         var_2097 = 2;
+                        // No = 395:ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISC
                         var_233[var_2090].Var0 = 395;
                         var_862[395][0] = 1;
                         var_233[var_2090].Var20 = 395;
                     }
-                    if (var_1444 == 304 && var_1445 == 114) {
+                    // No = 304:ｳｪｻﾞｰﾘﾎﾟｰﾄのDISC、No = 114:ﾎﾜｲﾄｽﾈｲｸのDISC
+                    if (base_disc_list == 304 && with_disc_list == 114) {
                         var_2097 = 4;
+                        // No = 397:ﾍﾋﾞｰ･ｳｪｻﾞｰのDISC
                         var_233[var_2090].Var0 = 397;
                         var_862[397][0] = 1;
                         var_233[var_2090].Var20 = 397;
@@ -13872,7 +13878,7 @@ function func523() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 56:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -14135,7 +14141,7 @@ function func523() {
                     _a.label = 108;
                 case 108: return [4 /*yield*/, func433()];
                 case 109:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     _a.label = 110;
                 case 110:
                     if (!(var_2287 == 1)) return [3 /*break*/, 114];
@@ -14309,7 +14315,7 @@ function func524() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 11:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func094()];
                 case 12:
                     _a.sent();
@@ -14600,7 +14606,7 @@ function func525() {
                     var_2376 = var_233[var_225].Var19;
                     return [4 /*yield*/, func368()];
                 case 31:
-                    _a.sent();
+                    _a.sent(); // アイテム配列変え関数??
                     return [2 /*return*/];
             }
         });
@@ -15330,7 +15336,7 @@ function func531() {
                     return [4 /*yield*/, func492()];
                 case 7:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     var_2398 = rnd(15);
                     if (var_2398 == 0) {
                         var_2399 = 350;
@@ -15964,7 +15970,7 @@ function func533() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 38:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [3 /*break*/, 41];
                 case 39:
                     var_447 = var_447 + 1;
@@ -16799,6 +16805,7 @@ function func536() {
                     var_2407 = var_1075;
                 }
                 var_2420 = rnd(25);
+                // No = 3 & 4 なので、ディアボロの試練、一巡後の世界
                 if (dangeon_number == 3 || dangeon_number == 4) {
                     var_2420 = rnd(27);
                 }
@@ -16894,9 +16901,11 @@ function func536() {
                     if (dangeon_number == 1) {
                         var_2421 = 21;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2) {
                         var_2421 = 21;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_2421 = 21;
                     }
@@ -16912,9 +16921,11 @@ function func536() {
                     if (dangeon_number == 1 && current_floor == 12) {
                         var_2421 = 15;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_2421 = 15;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_2421 = 15;
                     }
@@ -16926,12 +16937,15 @@ function func536() {
                     }
                 }
                 if (var_2421 == 12) {
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor == 12) {
                         var_2421 = 3;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_2421 = 3;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_2421 = 3;
                     }
@@ -16943,12 +16957,15 @@ function func536() {
                     }
                 }
                 if (var_2421 == 24) {
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor == 12) {
                         var_2421 = 16;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_2421 = 16;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_2421 = 16;
                     }
@@ -16960,12 +16977,15 @@ function func536() {
                     }
                 }
                 if (var_2421 == 5) {
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor == 12) {
                         var_2421 = 9;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_2421 = 9;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_2421 = 9;
                     }
@@ -18925,12 +18945,12 @@ function func541() {
                     }
                     if (!(var_474 == 1)) return [3 /*break*/, 238];
                     item_list = var_233[var_475].Var0;
-                    var_487 = var_233[var_475].Var13;
+                    disc_rarity = var_233[var_475].Var13;
                     var_488 = item_list;
                     return [4 /*yield*/, func492()];
                 case 199:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     if (!(var_156[119] == 0)) return [3 /*break*/, 222];
                     var_225 = var_475;
                     var_2458 = 0;
@@ -19078,7 +19098,7 @@ function func541() {
                     var_225 = var_475;
                     return [4 /*yield*/, func433()];
                 case 221:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     _a.label = 222;
                 case 222: return [4 /*yield*/, func331()];
                 case 223:
@@ -19096,7 +19116,7 @@ function func541() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_418 + "が壊された！";
+                    comments_row1 = "" + target_item_name + "が壊された！";
                     var_198 = 1;
                     var_300 = 0;
                     return [4 /*yield*/, func047()];
@@ -20983,7 +21003,7 @@ function func541() {
                         }
                     }
                     item_list = var_233[var_1531].Var0;
-                    var_487 = var_233[var_1531].Var13;
+                    disc_rarity = var_233[var_1531].Var13;
                     var_2459 = var_233[var_1531].Var6;
                     return [4 /*yield*/, func492()];
                 case 620:
@@ -21139,7 +21159,7 @@ function func541() {
                     var_321 = var_854;
                     return [4 /*yield*/, func433()];
                 case 639:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func540()];
                 case 640:
                     _a.sent();
@@ -21300,7 +21320,7 @@ function func541() {
                     var_225 = var_1531;
                     return [4 /*yield*/, func433()];
                 case 665:
-                    _a.sent();
+                    _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func540()];
                 case 666:
                     _a.sent();
@@ -21510,7 +21530,7 @@ function func541() {
                     var_894 = var_894 - 1;
                     var_2473 = 1;
                     item_list = var_357;
-                    var_487 = var_233[var_553].Var13;
+                    disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 706:
                     _a.sent(); // アイテムリスト呼び出し
@@ -21525,7 +21545,7 @@ function func541() {
                     var_895 = var_895 - 1;
                     var_2473 = 1;
                     item_list = var_358;
-                    var_487 = var_233[var_554].Var13;
+                    disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 709:
                     _a.sent(); // アイテムリスト呼び出し
@@ -24476,18 +24496,23 @@ function func550() {
                     var_373 = 0;
                     var_94 = 0;
                     var_532 = 1;
+                    // No = 0 なので、拠点(ホテル、亀、)
                     if (dangeon_number == 0) {
                         var_356 = 306;
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1) {
                         var_356 = 307;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2) {
                         var_356 = 308;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3) {
                         var_356 = 309;
                     }
+                    // No = 4 なので、一巡後の世界
                     if (dangeon_number == 4) {
                         var_356 = 310;
                     }
@@ -24763,12 +24788,15 @@ function func553() {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             if (var_73[var_447][var_449] == 1) {
                 var_2497 = 0;
+                // No = 1 なので、ホテルの外
                 if (dangeon_number == 1 && current_floor == 12) {
                     var_2497 = 1;
                 }
+                // No = 2 なので、レクイエムの第迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_2497 = 1;
                 }
+                // No = 3 なので、ディアボロの試練
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2497 = 1;
                 }
@@ -25061,6 +25089,7 @@ function func555() {
                     if (current_floor >= 30) {
                         var_952 = var_952 + 7;
                     }
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
                         return [2 /*return*/];
                     }
@@ -25172,6 +25201,7 @@ function func555() {
                     if (var_953 == 104) {
                         var_1053 = 99;
                     }
+                    // No = 3 なので、ディアボロの試練
                     if (dangeon_number == 3 && current_floor == 99) {
                         var_1053 = 0;
                     }
@@ -25390,6 +25420,7 @@ function func556() {
             switch (_a.label) {
                 case 0:
                     dbgprt(556);
+                    // No = 1 なので、ホテルの外
                     if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
                         return [2 /*return*/];
                     }
@@ -25782,6 +25813,7 @@ function func556() {
                         if (var_2520 == 1) {
                             var_953 = 67;
                         }
+                        // No = 4 なので、一巡後の世界
                         if (dangeon_number == 4) {
                             var_953 = 168;
                         }
@@ -27158,15 +27190,18 @@ function func562() {
                     return [2 /*return*/];
                 case 9:
                     var_2567 = rnd(6);
+                    // No = 1 & 3 & 4 なので、ホテルの外、ディアボロの試練、一巡後の世界
                     if (dangeon_number == 1 || dangeon_number == 3 || dangeon_number == 4) {
                         var_2567 = 1;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor >= 26) {
                         var_2567 = 1;
                     }
                     if (var_94 >= 1) {
                         var_2567 = 1;
                     }
+                    // No = 2 なので、レクイエムの第迷宮
                     if (dangeon_number == 2 && current_floor == 1 && var_1040 == 1) {
                         var_2567 = 0;
                         var_1040 = 2;
@@ -30890,60 +30925,70 @@ function func569() {
                     }
                     if (var_83[var_2611].Var0 == 36) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 58) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 57) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 74) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 81) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 83) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 105) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 106) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 107) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
                     }
                     if (var_83[var_2611].Var0 == 108) {
                         var_83[var_2611].Var4 = 3;
+                        // No = 0 なので、拠点(ホテル、亀、)
                         if (dangeon_number == 0) {
                             var_83[var_2611].Var4 = 0;
                         }
@@ -34028,11 +34073,11 @@ function func573() {
                     var_1345 = 0;
                     var_83[var_2694].Var11 = 0;
                     item_list = var_78[var_419].Var0;
-                    var_487 = var_78[var_419].Var13;
+                    disc_rarity = var_78[var_419].Var13;
                     return [4 /*yield*/, func492()];
                 case 5:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_418 = item_name;
+                    target_item_name = item_name;
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -34040,7 +34085,7 @@ function func573() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "" + var_418 + "が";
+                    comments_row1 = "" + target_item_name + "が";
                     comments_row2 = "爆発した！";
                     var_198 = 1;
                     var_300 = 0;
@@ -39553,7 +39598,7 @@ function func587() {
                     var_894 = var_894 - 1;
                     var_2473 = 1;
                     item_list = var_357;
-                    var_487 = var_233[var_553].Var13;
+                    disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 9:
                     _a.sent(); // アイテムリスト呼び出し
@@ -39569,7 +39614,7 @@ function func587() {
                     var_895 = var_895 - 1;
                     var_2473 = 1;
                     item_list = var_358;
-                    var_487 = var_233[var_554].Var13;
+                    disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 12:
                     _a.sent(); // アイテムリスト呼び出し
@@ -39582,7 +39627,7 @@ function func587() {
                     _a.sent();
                     var_233[var_553].Var12 = 0;
                     item_list = var_233[var_553].Var0;
-                    var_487 = var_233[var_553].Var13;
+                    disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 15:
                     _a.sent(); // アイテムリスト呼び出し
@@ -39595,7 +39640,7 @@ function func587() {
                     _a.sent();
                     var_233[var_554].Var12 = 0;
                     item_list = var_233[var_554].Var0;
-                    var_487 = var_233[var_554].Var13;
+                    disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 18:
                     _a.sent(); // アイテムリスト呼び出し
@@ -40702,6 +40747,7 @@ function func594() {
                     return [4 /*yield*/, func627()];
                 case 11:
                     _a.sent();
+                    // No = 0 なので、拠点(ホテル、亀、)
                     if (dangeon_number == 0 || dangeon_number == 99) {
                         var_953 = 37;
                     }
