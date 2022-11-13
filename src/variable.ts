@@ -143,7 +143,7 @@ let var_57 :any;
 let var_58 :any;
 let var_59 :any;
 let var_60 :any;
-let var_61 :any;
+let bgm_volume :number; // BGMの現在ボリューム
 let dangeon_number :number; // 各ダンジョンに割り振られた識別用ID
 let var_63 :any;
 let var_64 :any;
@@ -189,7 +189,7 @@ let var_103 :any;
 let var_104 :any;
 let var_105 :any;
 let var_106 :any;
-let var_107 :any;
+let count_buying_price :number; // 購入金額の合計をカウントする為の変数
 let var_108 :any;
 let var_109 :any;
 let var_110 :any;
@@ -278,8 +278,8 @@ let var_192 :any;
 let var_193 :any;
 let var_194 :any;
 let var_195 :any;
-let var_196 :any;
-let var_197 :any;
+let var_196 :number; // Mフラグ:メニュー画面 func054
+let open_item_menue :number; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
 let var_198 :any;
 let var_199 :any;
 let var_200 :any;
@@ -302,7 +302,7 @@ let var_216 :any;
 let var_217 :any;
 let var_218 :any;
 let var_219 :any;
-let var_220 :any;
+let var_220 :number; // 道具画面(メニュー画面/道具)呼び出し確認変数？
 let var_221 :any;
 let var_222 :any;
 let var_223 :any;
@@ -325,21 +325,21 @@ let var_234 :any;
 let conf_keyon :number; // 各キー入力確認。ON = 1、OFF = 0
 let var_236 :any;
 let var_237 :any;
-let var_238 :any;
-let var_239 :any;
+let key_Shift_on :number; // キーShift入力確認
+let key_X_on :number; // キーX入力確認
 let var_240 :any;
 let var_241 :any;
-let var_242 :any;
+let key_Z_on :number; // キーZ入力確認
 let var_243 :any;
-let var_244 :any;
+let key_A_on :number; // キーA入力確認
 let var_245 :any;
 let var_246 :any;
 let var_247 :any;
 let var_248 :any;
-let var_249 :any;
+let key_S_on :number; // キーS入力確認
 let var_250 :any;
 let var_251 :any;
-let var_252 :any;
+let key_C_on :number; // キーC入力確認
 let var_253 :any;
 let var_254 :any;
 let var_255 :number; // 入力判定[↑]
@@ -464,11 +464,11 @@ let var_373 :any;
 let var_374 :any;
 let var_375 :any;
 let var_376 :any;
-let var_377 :any;
-let var_378 :any;
-let var_379 :any;
-let var_380 :any;
-let var_381 :any;
+let dangeon1_floor :number; // current_floor ホテルの外の階層 
+let dangeon2_floor :number; // current_floor レクイエムの大迷宮の階層 
+let dangeon3_floor :number; // current_floor ディアボロの試練の階層 
+let dangeon4_floor :number; // current_floor 一巡後の世界の階層 
+let dangeon5_floor :number; // current_floor 不明ダンジョンの階層
 let var_382 :any;
 let var_383 :any;
 let var_384 :any;
@@ -568,9 +568,9 @@ let var_477 :any;
 let var_478 :any;
 let var_479 :any;
 let var_480 :any;
-let var_481 :any;
+let payment_amount :number; // お店で実際に請求される支払い金額
 let var_482 :any;
-let buying_price :number;
+let buying_price :number; // アイテムごとに設定された購入金額
 let var_484 :any;
 let var_485 :any;
 let var_486 :any;
@@ -586,7 +586,7 @@ let var_495 :any;
 let var_496 :any;
 let var_497 :any;
 let var_498 :any;
-let var_499 :any;
+let var_499 :number; // Mフラグ:設定画面 func056
 let var_500 :any;
 let var_501 :any;
 let var_502 :any;
@@ -595,7 +595,7 @@ let var_504 :any;
 let var_505 :any;
 let var_506 :any;
 let var_507 :any;
-let var_508 :any;
+let var_508 :number; // Mフラグ:資料(設定画面) func058
 let var_509 :any;
 let var_510 :any;
 let var_511 :any;
@@ -756,7 +756,7 @@ let bgm_file_name :string;
 let var_666 :any;
 let var_667 :any;
 let var_668 :any;
-let var_669 :any;
+let se_volume :number; // 効果音の現在ボリューム
 let var_670 :any;
 let var_671 :any;
 let var_672 :any;
@@ -883,20 +883,20 @@ let var_792 :any;
 let var_793 :any;
 let var_794 :any;
 let var_795 :any;
-let var_796 :any;
-let var_797 :any;
+let var_796 :number; // ランキングスコア
+let var_797 :any; 
 let var_798 :any;
 let var_799 :any;
 let var_800 :any;
 let var_801 :any;
 let var_802 :number; // item_list
-let var_803 :number; // 装備discの修正値
-let var_804 :number; // 装備discの合成した数
+let item_modified_value :number; // 装備discの修正値
+let number_of_abilities :number; // 装備discの合成した数
 let var_805 :any;
-let var_806 :any;
-let var_807 :any;
+let item_description1 :string; // アイテムの説明。攻撃:0 防御:0 など
+let free_space_value :number; // 装備discにおいて、合成できる残り容量
 let var_808 :any;
-let var_809 :any;
+let track_number :number; // 装備discにおいて、合成した能力の順番
 let var_810 :any;
 let var_811 :any;
 let var_812 :any;
@@ -915,7 +915,7 @@ let var_824 :any;
 let var_825 :any;
 let var_826 :any;
 let var_827 :any;
-let var_828 :any;
+let item_ability_description :string; // アイテムの能力についての説明。3方向殴れるぞ、投げると敵がスヤスヤ眠るぞなど
 let var_829 :any;
 let var_830 :any;
 let var_831 :any;
@@ -927,7 +927,7 @@ let var_836 :any;
 let var_837 :any;
 let var_838 :any;
 let var_839 :any;
-let var_840 :any;
+let current_level :number; // ディアボロの現在のレベル
 let var_841 :any;
 let var_842 :any;
 let var_843 :any;
@@ -1020,7 +1020,7 @@ let var_929 :any;
 let var_930 :any;
 let var_931 :any;
 let var_932 :any;
-let var_933 :any;
+let var_933 :number; // ディアボロのレベル変数
 let var_934 :any;
 let var_935 :any;
 let var_936 :any;
@@ -1742,7 +1742,7 @@ let var_1651 :any;
 let var_1652 :any;
 let var_1653 :any;
 let var_1654 :any;
-let var_1655 :any;
+let enemy_description :string; // 敵の説明。敵図鑑用コメント
 let var_1656 :any;
 let var_1657 :any;
 let var_1658 :any;
@@ -2170,7 +2170,7 @@ let var_2079 :any;
 let var_2080 :any;
 let var_2081 :any;
 let var_2082 :any;
-let var_2083 :any;
+let yabaimono_id :number; // ヤバいものの動作処理用 item_list
 let var_2084 :any;
 let var_2085 :number; // item_list
 let var_2086 :any;

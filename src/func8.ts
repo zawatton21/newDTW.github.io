@@ -50,23 +50,23 @@ function func801(this: any) {
         DSPLAY(audio_id = 211);
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 4;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 3;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 2;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 1;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 0;
         return;
@@ -82,39 +82,39 @@ function func802(this: any) {
         DSPLAY(audio_id = 210);
         var_783 = 1;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 2;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 3;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 4;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 6;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 7;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 8;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 9;
         if (var_1014 == 0) {
@@ -134,7 +134,7 @@ function func802(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -144,7 +144,7 @@ function func802(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -154,7 +154,7 @@ function func802(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -164,7 +164,7 @@ function func802(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -174,7 +174,7 @@ function func802(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_1014 = 1;
         }
         if (var_991[0][1] == 0) {
@@ -203,17 +203,17 @@ function func802(this: any) {
         var_27_x = var_27[1];
         yield func047();
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_1013 == 0) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func801();
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func051();
         var_198 = 0;
         var_1206 = 1;
@@ -227,21 +227,21 @@ function func802(this: any) {
 function func803(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(803);
-        yield func337();
-        yield func080();
-        if (var_239 == 1) {
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
             var_1206 = 0;
             var_783 = 0;
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func801();
             yield func051();
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             yield func805();
             return;
@@ -251,8 +251,8 @@ function func803(this: any) {
                 var_228 = var_228 + 22;
                 var_225 = var_225 + 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
             }
@@ -261,8 +261,8 @@ function func803(this: any) {
                 var_225 = 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // ここも間違っている?
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
             }
@@ -272,8 +272,8 @@ function func803(this: any) {
                 var_228 = var_228 - 22;
                 var_225 = var_225 - 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
             }
@@ -281,8 +281,8 @@ function func803(this: any) {
                 var_228 = 45 + (var_1013 - 1) * 22;
                 var_225 = var_1013;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
             }
@@ -392,13 +392,13 @@ function func804(this: any) {
         pos(15, 283);
         color(255, 255, 255);
         if (item_list < 100 || item_list >= 400) {
-            mes(var_806);
+            mes(item_description1);
         }
         if (item_list >= 100 && item_list < 400 && var_2027 == 0) {
-            mes("" + var_806);
+            mes("" + item_description1);
         }
         if (item_list >= 100 && item_list < 400 && var_2027 == 1) {
-            mes("" + var_806 + "　空き容量 " + var_2024);
+            mes("" + item_description1 + "　空き容量 " + var_2024);
         }
         color(255, 255, 255);
         mes(var_808);
@@ -415,7 +415,7 @@ function func804(this: any) {
         if (var_812 == 4) {
             color(240, 0, 240);
         }
-        mes(var_828);
+        mes(item_ability_description);
         color(255, 255, 255);
 
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
@@ -460,7 +460,7 @@ function func805(this: any) {
             var_27_x = var_27[1];
             var_3190 = var_3189 - wallet;
             if (var_3190 <= var_1032) {
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 yield func094();
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -478,7 +478,7 @@ function func805(this: any) {
                 yield func839();
                 return;
             }
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func051();
             var_198 = 0;
             var_1206 = 1;
@@ -570,10 +570,10 @@ function func807(this: any) {
         var_27_x = var_27[1];
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         yield func801();
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -663,39 +663,39 @@ function func809(this: any) {
         DSPLAY(audio_id = 210);
         var_783 = 1;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 2;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 3;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 4;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 6;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 7;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 12;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 13;
         if (var_1039 == 0) {
@@ -715,7 +715,7 @@ function func809(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -725,7 +725,7 @@ function func809(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -735,7 +735,7 @@ function func809(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -745,7 +745,7 @@ function func809(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -755,7 +755,7 @@ function func809(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -765,7 +765,7 @@ function func809(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -775,7 +775,7 @@ function func809(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -785,7 +785,7 @@ function func809(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_1039 = 1;
         }
         if (var_1040 == 1) {
@@ -805,7 +805,7 @@ function func809(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_198 = 0;
             yield func812();
             return;
@@ -826,7 +826,7 @@ function func809(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func051();
         var_245 = 19;
         var_246 = 45;
@@ -861,7 +861,7 @@ function func810(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_198 = 0;
             yield func812();
             return;
@@ -883,7 +883,7 @@ function func810(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_3190 = 2000 - wallet;
             if (var_3190 <= var_1032) {
                 yield func094();
@@ -934,7 +934,7 @@ function func811(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         var_198 = 0;
         yield func812();
         return;
@@ -947,26 +947,26 @@ function func812(this: any) {
         DSPLAY(audio_id = 211);
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 4;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 3;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 2;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 1;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 0;
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -976,39 +976,39 @@ function func813(this: any) {
         DSPLAY(audio_id = 210);
         var_783 = 1;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 2;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 3;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 4;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 6;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 7;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 14;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 15;
         if (var_830 == 0) {
@@ -1028,7 +1028,7 @@ function func813(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -1038,7 +1038,7 @@ function func813(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -1048,7 +1048,7 @@ function func813(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_198 = 0;
             yield func817();
             return;
@@ -1072,7 +1072,7 @@ function func813(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -1082,7 +1082,7 @@ function func813(this: any) {
         var_300 = 0;
         yield func047();
         yield func050();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -1092,7 +1092,7 @@ function func813(this: any) {
         var_300 = 0;
         yield func047();
         yield func050();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func051();
         var_245 = 19;
         var_246 = 45;
@@ -1131,7 +1131,7 @@ function func814(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_3190 = 1000 - wallet;
             if (var_3190 <= var_1032) {
                 yield func094();
@@ -1190,7 +1190,7 @@ function func816(this: any) {
         var_830 = 0;
         var_1609 = 1;
         var_2357 = 1;
-        DSPLAY(audio_id = 212);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
         var_502 = 1;
         yield func356();
         return;
@@ -1204,26 +1204,26 @@ function func817(this: any) {
         DSPLAY(audio_id = 211);
         var_783 = 5;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 4;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 3;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 2;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 1;
         for (let cnt1 = 0; cnt1 < 1; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_783 = 0;
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -1231,7 +1231,7 @@ function func818(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(818);
         var_243 = 0;
-        DSPLAY(audio_id = 212);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
         if (var_404 == 0) {
             comments_row1 = "";
             comments_row2 = "";
@@ -1248,10 +1248,10 @@ function func818(this: any) {
             yield func047();
             var_198 = 1;
             var_300 = 0;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func051();
             var_198 = 0;
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         comments_row1 = "";
@@ -1279,16 +1279,16 @@ function func818(this: any) {
 function func819(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(819);
-        yield func337();
-        yield func080();
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
         if (var_404 >= 1) {
             if (var_259 == 1 && var_3196 != 4) {
                 var_246 = var_246 + 16;
                 var_3196 = var_3196 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
             }
@@ -1297,8 +1297,8 @@ function func819(this: any) {
                 var_3196 = 0;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
             }
@@ -1307,8 +1307,8 @@ function func819(this: any) {
                 var_3196 = var_3196 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
             }
@@ -1317,18 +1317,18 @@ function func819(this: any) {
                 var_3196 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
             }
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
             if (var_3196 == 0) {
                 var_1204 = 0;
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 yield func051();
                 yield func796();
                 return;
@@ -1337,7 +1337,7 @@ function func819(this: any) {
                 var_1204 = 0;
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 yield func051();
                 yield func797();
                 return;
@@ -1346,7 +1346,7 @@ function func819(this: any) {
                 var_1204 = 0;
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 yield func051();
                 yield func802();
                 return;
@@ -1355,7 +1355,7 @@ function func819(this: any) {
                 var_1204 = 0;
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 yield func051();
                 yield func809();
                 return;
@@ -1364,19 +1364,19 @@ function func819(this: any) {
                 var_1204 = 0;
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 yield func051();
                 yield func813();
                 return;
             }
         }
-        if (var_239 == 1) {
+        if (key_X_on == 1) {
             var_1204 = 0;
             var_198 = 0;
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         yield func819();
@@ -1393,16 +1393,16 @@ function func820(this: any) {
         if (var_524 >= 1) {
             var_3197++;
         }
-        yield func337();
-        yield func080();
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
         if (var_259 == 1) {
             if (var_3197 == 2 && var_513 != 5) {
                 var_516 = var_516 + 16;
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1411,8 +1411,8 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1421,8 +1421,8 @@ function func820(this: any) {
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1431,8 +1431,8 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1441,8 +1441,8 @@ function func820(this: any) {
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1451,8 +1451,8 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1461,8 +1461,8 @@ function func820(this: any) {
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1471,8 +1471,8 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1483,8 +1483,8 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1493,8 +1493,8 @@ function func820(this: any) {
                 var_513 = 5;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1503,8 +1503,8 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1513,8 +1513,8 @@ function func820(this: any) {
                 var_513 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1523,8 +1523,8 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1533,8 +1533,8 @@ function func820(this: any) {
                 var_513 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1543,8 +1543,8 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
@@ -1553,17 +1553,17 @@ function func820(this: any) {
                 var_513 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
             }
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
             if (var_513 == 1) {
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 var_793 = 1;
                 var_785 = 1;
                 var_786 = 1;
@@ -1576,7 +1576,7 @@ function func820(this: any) {
             if (var_513 == 2) {
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 var_793 = 2;
                 var_785 = 1;
                 var_786 = 1;
@@ -1589,7 +1589,7 @@ function func820(this: any) {
             if (var_513 == 3) {
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 var_793 = 3;
                 var_785 = 1;
                 var_786 = 1;
@@ -1603,7 +1603,7 @@ function func820(this: any) {
                 if (var_524 == 0 && var_523 >= 1) {
                     var_198 = 0;
         
-                    DSPLAY(audio_id = 212);
+                    DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_793 = 4;
                     var_785 = 1;
                     var_786 = 1;
@@ -1616,7 +1616,7 @@ function func820(this: any) {
                 if (var_524 >= 1 && var_523 == 0) {
                     var_198 = 0;
         
-                    DSPLAY(audio_id = 212);
+                    DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_793 = 0;
                     var_785 = 1;
                     var_786 = 1;
@@ -1629,7 +1629,7 @@ function func820(this: any) {
                 if (var_524 >= 1 && var_523 >= 1) {
                     var_198 = 0;
         
-                    DSPLAY(audio_id = 212);
+                    DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_793 = 0;
                     var_785 = 1;
                     var_786 = 1;
@@ -1643,7 +1643,7 @@ function func820(this: any) {
             if (var_513 == 5) {
                 var_198 = 0;
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 var_793 = 4;
                 var_785 = 1;
                 var_786 = 1;
@@ -1654,10 +1654,10 @@ function func820(this: any) {
                 return;
             }
         }
-        if (var_239 == 1) {
+        if (key_X_on == 1) {
             var_198 = 0;
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_512 = 0;
             yield func051();
             yield func057();
@@ -1670,8 +1670,8 @@ function func820(this: any) {
 function func821(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(821);
-        var_508 = 0;
-        var_499 = 0;
+        var_508 = 0; // Mフラグ:資料(設定画面) func058
+        var_499 = 0; // Mフラグ:設定画面 func056
         var_980 = 1;
         gsel(19);
         color(1, 1, 1);
@@ -1680,14 +1680,14 @@ function func821(this: any) {
         var_311 = 0;
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_311 = var_311 + 25;
             if (var_311 >= 255) {
                 var_311 = 255;
             }
         }
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_311 = 255;
         var_312 = 0;
@@ -1739,10 +1739,10 @@ function func822(this: any) {
         var_311 = 255;
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_311 = var_311 - 25;
             if (var_311 <= 0) {
                 var_311 = 0;
@@ -1750,8 +1750,8 @@ function func822(this: any) {
         }
         var_311 = 0;
         var_312 = 0;
-        var_508 = 1;
-        var_499 = 1;
+        var_508 = 1; // Mフラグ:資料(設定画面) func058
+        var_499 = 1; // Mフラグ:設定画面 func056
         var_980 = 0;
         return;
     });
@@ -1807,7 +1807,7 @@ function func823(this: any) {
 function func824(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(824);
-        DSPLAY(audio_id = 212);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1847,16 +1847,16 @@ function func825(this: any) {
             var_376 = current_floor;
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor > var_377) {
-            var_377 = current_floor;
+        if (dangeon_number == 1 && current_floor > dangeon1_floor) {
+            dangeon1_floor = current_floor;
         }
         // No = 2 なので、レクイエムの第迷宮
-        if (dangeon_number == 2 && current_floor > var_378) {
-            var_378 = current_floor;
+        if (dangeon_number == 2 && current_floor > dangeon2_floor) {
+            dangeon2_floor = current_floor;
         }
         // No = 3 なので、ディアボロの試練
-        if (dangeon_number == 3 && current_floor > var_379) {
-            var_379 = current_floor;
+        if (dangeon_number == 3 && current_floor > dangeon3_floor) {
+            dangeon3_floor = current_floor;
         }
         var_405 = 0;
         var_344 = 0;
@@ -1872,23 +1872,23 @@ function func825(this: any) {
         yield func505();
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
         var_262 = 0;
@@ -1910,7 +1910,7 @@ function func825(this: any) {
 function func826(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(826);
-        DSPLAY(audio_id = 212);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1949,38 +1949,38 @@ function func827(this: any) {
             var_376 = current_floor;
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor > var_377) {
-            var_377 = current_floor;
+        if (dangeon_number == 1 && current_floor > dangeon1_floor) {
+            dangeon1_floor = current_floor;
         }
         // No = 2 なので、レクイエムの第迷宮
-        if (dangeon_number == 2 && current_floor > var_378) {
-            var_378 = current_floor;
+        if (dangeon_number == 2 && current_floor > dangeon2_floor) {
+            dangeon2_floor = current_floor;
         }
         // No = 3 なので、ディアボロの試練
-        if (dangeon_number == 3 && current_floor > var_379) {
-            var_379 = current_floor;
+        if (dangeon_number == 3 && current_floor > dangeon3_floor) {
+            dangeon3_floor = current_floor;
         }
         var_405 = 0;
         var_344 = 0;
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
         var_262 = 0;
@@ -2012,7 +2012,7 @@ function func827(this: any) {
 function func828(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(828);
-        DSPLAY(audio_id = 212);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2051,38 +2051,38 @@ function func829(this: any) {
             var_376 = current_floor;
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor > var_377) {
-            var_377 = current_floor;
+        if (dangeon_number == 1 && current_floor > dangeon1_floor) {
+            dangeon1_floor = current_floor;
         }
         // No = 2 なので、レクイエムの第迷宮
-        if (dangeon_number == 2 && current_floor > var_378) {
-            var_378 = current_floor;
+        if (dangeon_number == 2 && current_floor > dangeon2_floor) {
+            dangeon2_floor = current_floor;
         }
         // No = 3 なので、ディアボロの試練
-        if (dangeon_number == 3 && current_floor > var_379) {
-            var_379 = current_floor;
+        if (dangeon_number == 3 && current_floor > dangeon3_floor) {
+            dangeon3_floor = current_floor;
         }
         var_405 = 0;
         var_344 = 0;
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
         var_262 = 0;
@@ -2097,7 +2097,7 @@ function func829(this: any) {
         var_567 = 100;
         var_352 = 15;
         var_211 = 15;
-        var_840 = 1;
+        current_level = 1;
         var_568 = 0;
         var_565 = 8;
         var_566 = 8;
@@ -2126,23 +2126,23 @@ function func830(this: any) {
         dbgprt(830);
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
         var_262 = 0;
@@ -2152,7 +2152,7 @@ function func830(this: any) {
         var_567 = 100;
         var_352 = 15;
         var_211 = 15;
-        var_840 = 1;
+        current_level = 1;
         var_568 = 0;
         var_565 = 8;
         var_566 = 8;
@@ -2164,16 +2164,16 @@ function func830(this: any) {
             var_376 = current_floor;
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor > var_377) {
-            var_377 = current_floor;
+        if (dangeon_number == 1 && current_floor > dangeon1_floor) {
+            dangeon1_floor = current_floor;
         }
         // No = 2 なので、レクイエムの第迷宮
-        if (dangeon_number == 2 && current_floor > var_378) {
-            var_378 = current_floor;
+        if (dangeon_number == 2 && current_floor > dangeon2_floor) {
+            dangeon2_floor = current_floor;
         }
         // No = 3 なので、ディアボロの試練
-        if (dangeon_number == 3 && current_floor > var_379) {
-            var_379 = current_floor;
+        if (dangeon_number == 3 && current_floor > dangeon3_floor) {
+            dangeon3_floor = current_floor;
         }
         var_405 = 0;
         var_344 = 0;
@@ -2212,9 +2212,9 @@ function func831(this: any) {
         var_198 = 1;
         var_300 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -2241,7 +2241,7 @@ function func832(this: any) {
             yield func047();
             var_198 = 1;
             var_300 = 0;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2251,7 +2251,7 @@ function func832(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2261,7 +2261,7 @@ function func832(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2271,10 +2271,10 @@ function func832(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func051();
             var_198 = 0;
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         if (var_523 >= 1) {
@@ -2294,9 +2294,9 @@ function func832(this: any) {
             yield func047();
             var_198 = 1;
             var_300 = 0;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func051();
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_245 = 19;
             var_246 = 45;
             var_546 = 1;
@@ -2351,7 +2351,7 @@ function func833(this: any) {
                 var_198 = 1;
                 var_300 = 0;
                 var_523 = 1;
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 yield func094();
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -2361,7 +2361,7 @@ function func833(this: any) {
                 var_300 = 0;
                 yield func047();
                 yield func050();
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "";
@@ -2370,7 +2370,7 @@ function func833(this: any) {
                 var_300 = 0;
                 yield func047();
                 yield func050();
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 yield func094();
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -2380,7 +2380,7 @@ function func833(this: any) {
                 var_300 = 0;
                 yield func047();
                 yield func050();
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 yield func094();
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -2390,7 +2390,7 @@ function func833(this: any) {
                 var_300 = 0;
                 yield func047();
                 yield func050();
-                yield func340();
+                yield func340(); // キー入力による選択処理
             }
         }
         if (var_523 == 0) {
@@ -2410,10 +2410,10 @@ function func833(this: any) {
             yield func047();
             var_198 = 1;
             var_300 = 0;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func051();
             var_198 = 0;
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         if (var_523 >= 1) {
@@ -2433,7 +2433,7 @@ function func833(this: any) {
             yield func047();
             var_198 = 1;
             var_300 = 0;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2443,10 +2443,10 @@ function func833(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func051();
             var_198 = 0;
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         yield func834();
@@ -2466,30 +2466,30 @@ function func834(this: any) {
             var_376 = current_floor;
         }
         // No = 4 なので、一巡後の世界
-        if (dangeon_number == 4 && current_floor > var_380) {
-            var_380 = current_floor;
+        if (dangeon_number == 4 && current_floor > dangeon4_floor) {
+            dangeon4_floor = current_floor;
         }
         var_405 = 0;
         var_344 = 0;
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
         var_262 = 0;
@@ -2558,7 +2558,7 @@ function func835(this: any) {
             yield func047();
             var_198 = 1;
             var_300 = 0;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2568,7 +2568,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2578,7 +2578,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2588,7 +2588,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2598,7 +2598,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2608,7 +2608,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2618,7 +2618,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2628,7 +2628,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2638,7 +2638,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2648,7 +2648,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2658,7 +2658,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2668,7 +2668,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2678,7 +2678,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2688,7 +2688,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2698,7 +2698,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2708,7 +2708,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -2720,9 +2720,9 @@ function func835(this: any) {
             yield func050();
             var_524 = 1;
         }
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func051();
-        DSPLAY(audio_id = 212);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
         var_245 = 19;
         var_246 = 45;
         var_546 = 1;
@@ -2746,30 +2746,30 @@ function func836(this: any) {
         if (current_floor > var_376) {
             var_376 = current_floor;
         }
-        if (current_floor > var_381) {
-            var_381 = current_floor;
+        if (current_floor > dangeon5_floor) {
+            dangeon5_floor = current_floor;
         }
         var_405 = 0;
         var_344 = 0;
         var_373 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
         var_262 = 0;
@@ -2785,7 +2785,7 @@ function func836(this: any) {
         var_567 = 100;
         var_352 = 15;
         var_211 = 15;
-        var_840 = 1;
+        current_level = 1;
         var_568 = 0;
         var_565 = 8;
         var_566 = 8;
@@ -2821,12 +2821,12 @@ function func837(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     if (var_486[var_485][var_484][11] == 1 && var_486[var_485][var_484][0] != 0) {
                         var_3205 = var_484;
-                        var_220 = 1;
+                        var_220 = 1; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                         var_682 = var_485;
                         var_1876 = var_1056;
                         yield func838();
                         var_3204 = 1;
-                        var_220 = 0;
+                        var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                         var_484 = 1;
                         cnt3 = -1;
                         continue;
@@ -2859,12 +2859,12 @@ function func837(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_1470 = 5;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1470 = 6;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_198 = 0;
         }
@@ -2900,12 +2900,12 @@ function func838(this: any) {
         yield func433(); // アイテム配列の "数" 増減？関数
         if (var_3204 == 0) {
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         if (var_3204 == 1) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         yield func094();
@@ -2930,7 +2930,7 @@ function func838(this: any) {
         var_27_x = var_27[2];
         yield func047();
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         yield func094();
         comments_row1 = comments_row1a;
@@ -2948,17 +2948,17 @@ function func838(this: any) {
         var_199 = 6;
         var_1470 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_747 = 1;
         var_1470 = 3;
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         var_1470 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_1470 = 1;
         comments_row1 = comments_row1a;
@@ -2973,7 +2973,7 @@ function func838(this: any) {
         yield func047();
         yield func050();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -2982,26 +2982,26 @@ function func838(this: any) {
 function func839(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(839);
-        yield func337();
-        yield func080();
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
         if (var_259 == 1 && var_546 == 1) {
             var_246 = var_246 + 19;
             var_546 = 0;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1 && var_546 == 0) {
             var_246 = var_246 - 19;
             var_546 = 1;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
             if (var_546 == 1) {
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 if (var_3208 == 1) {
                     var_3208 = 0;
                     var_548 = 0;
@@ -3237,16 +3237,16 @@ function func839(this: any) {
                 }
             }
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
             if (var_546 == 0) {
     
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 if (var_3208 == 1) {
                     var_3208 = 0;
                     var_548 = 0;
                     var_198 = 0;
                     yield func051();
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3209 == 1) {
@@ -3261,7 +3261,7 @@ function func839(this: any) {
                     var_548 = 0;
                     var_198 = 0;
                     yield func051();
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3151 >= 1) {
@@ -3269,7 +3269,7 @@ function func839(this: any) {
                     var_548 = 0;
                     var_198 = 0;
                     yield func051();
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3152 == 1) {
@@ -3277,7 +3277,7 @@ function func839(this: any) {
                     var_548 = 0;
                     var_198 = 0;
                     yield func051();
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3163 == 1) {
@@ -3299,7 +3299,7 @@ function func839(this: any) {
                     var_548 = 0;
                     var_198 = 0;
                     yield func051();
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3126 == 1) {
@@ -3321,7 +3321,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3127 == 1) {
@@ -3343,7 +3343,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_2494 == 1) {
@@ -3351,7 +3351,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_2495 == 1) {
@@ -3359,7 +3359,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3198 == 1) {
@@ -3367,7 +3367,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3199 == 1) {
@@ -3375,7 +3375,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3200 == 1) {
@@ -3383,7 +3383,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3201 == 1) {
@@ -3391,7 +3391,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3203 == 1) {
@@ -3399,7 +3399,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3192 == 1) {
@@ -3425,7 +3425,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3193 == 1) {
@@ -3457,7 +3457,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3137 == 1) {
@@ -3465,7 +3465,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_3156 == 1) {
@@ -3479,7 +3479,7 @@ function func839(this: any) {
                     var_548 = 0;
                     yield func051();
                     var_198 = 0;
-                    yield func009();
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
                 if (var_563 == 1) {
@@ -3491,15 +3491,15 @@ function func839(this: any) {
                 }
             }
         }
-        if (var_239 == 1) {
+        if (key_X_on == 1) {
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             if (var_3208 == 1) {
                 var_3208 = 0;
                 var_548 = 0;
                 var_198 = 0;
                 yield func051();
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3209 == 1) {
@@ -3514,7 +3514,7 @@ function func839(this: any) {
                 var_548 = 0;
                 var_198 = 0;
                 yield func051();
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3151 >= 1) {
@@ -3522,7 +3522,7 @@ function func839(this: any) {
                 var_548 = 0;
                 var_198 = 0;
                 yield func051();
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3152 == 1) {
@@ -3530,7 +3530,7 @@ function func839(this: any) {
                 var_548 = 0;
                 var_198 = 0;
                 yield func051();
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3163 == 1) {
@@ -3552,7 +3552,7 @@ function func839(this: any) {
                 var_548 = 0;
                 var_198 = 0;
                 yield func051();
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3126 == 1) {
@@ -3581,7 +3581,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3136 == 1) {
@@ -3596,7 +3596,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_2494 == 1) {
@@ -3604,7 +3604,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_2495 == 1) {
@@ -3612,7 +3612,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3198 == 1) {
@@ -3620,7 +3620,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3199 == 1) {
@@ -3628,7 +3628,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3200 == 1) {
@@ -3636,7 +3636,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3201 == 1) {
@@ -3644,7 +3644,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3203 == 1) {
@@ -3652,7 +3652,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3192 == 1) {
@@ -3678,7 +3678,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3193 == 1) {
@@ -3710,7 +3710,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3137 == 1) {
@@ -3718,7 +3718,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_3156 == 1) {
@@ -3732,7 +3732,7 @@ function func839(this: any) {
                 var_548 = 0;
                 yield func051();
                 var_198 = 0;
-                yield func009();
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
             if (var_563 == 1) {
@@ -4182,7 +4182,7 @@ function func851(this: any) {
         var_3289 = ginfo(5) + var_3283;
         var_3290 = var_3288 + 680;
         var_3291 = var_3289 + 680;
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_254 == 1 && var_66 > 3) {
             var_199 = 4;
             var_66 = var_66 - 1;
@@ -4251,7 +4251,7 @@ function func851(this: any) {
                 }
             }
         }
-        conf_keyon = getkey(1);
+        conf_keyon = getkey(1); // マウス左ボタン入力確認
         if (conf_keyon == 1) {
             yield func863();
             return;
@@ -6830,7 +6830,7 @@ function func876(this: any) {
         }
         var_68 = 1;
         yield func331();
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -7438,7 +7438,7 @@ function func884(this: any) {
         if (var_3498 >= 10) {
             var_3498 = 10;
         }
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_3491 > 0) {
             if (var_259 == 1) {
                 if (var_3489 >= 1 && var_3486 == 0) {
@@ -7565,9 +7565,9 @@ function func884(this: any) {
                 }
             }
         }
-        if (var_242 == 1) {
+        if (key_Z_on == 1) {
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             if (var_3486 == 0) {
                 yield func178();
                 yield func233();
@@ -7585,11 +7585,11 @@ function func884(this: any) {
                 return;
             }
         }
-        if (var_239 == 1) {
+        if (key_X_on == 1) {
             var_627 = 0;
             yield func178();
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             chdir(var_30);
             yield func142();
             return;
@@ -9578,9 +9578,9 @@ function func895(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         for (let cnt1 = 0; true; ++cnt1) {
@@ -9607,9 +9607,9 @@ function func895(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         clrobj();
@@ -9660,9 +9660,9 @@ function func895(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         if (var_3531 == 1) {
@@ -9684,7 +9684,7 @@ function func895(this: any) {
             yield func929();
             var_3517 = "＃ログイン＃";
             yield func900();
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         var_407 = 1;
@@ -9695,7 +9695,7 @@ function func895(this: any) {
         gsel(0, 1);
         yield func331();
         yield func907();
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -9704,7 +9704,7 @@ function func896(this: any) {
         dbgprt(896);
         gsel(window_id = 33, window_mode = -1);
         gsel(window_id = 0, window_mode = 1);
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -9785,7 +9785,7 @@ function func899(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }

@@ -87,15 +87,15 @@ function func200(this: any) {
 function func201(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(201);
-        yield func337();
-        yield func080();
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
         if (var_254 == 1) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_690 != 10) {
                 var_690 = var_690 - 10;
             }
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func201();
             return;
         }
@@ -104,18 +104,18 @@ function func201(this: any) {
             if (var_690 != 90) {
                 var_690 = var_690 + 10;
             }
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func201();
             return;
         }
-        if (var_242 == 1 || var_239 == 1 || var_244 == 1) {
-            DSPLAY(audio_id = 212);
+        if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1) {
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_909 = 0;
             var_25[14] = var_690;
     
             bsave("00.dat", var_25, null, 200);
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             yield func051();
             yield func199();
             return;
@@ -133,10 +133,10 @@ function func202(this: any) {
 function func203(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(203);
-        yield func337();
-        yield func080();
-        if (var_242 == 1 || var_244 == 1) {
-            DSPLAY(audio_id = 212);
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
+        if (key_Z_on == 1 || key_A_on == 1) {
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             if (var_702 == 0 || var_702 == 1) {
                 yield func051();
                 if (var_702 == 0) {
@@ -268,8 +268,8 @@ function func203(this: any) {
                 var_27[12] = 0;
             }
         }
-        if (var_239 == 1) {
-            DSPLAY(audio_id = 212);
+        if (key_X_on == 1) {
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             var_901 = 0;
             yield func193();
@@ -281,8 +281,8 @@ function func203(this: any) {
             if (var_702 < 0) {
                 var_702 = 0;
             }
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_259 == 1) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -290,8 +290,8 @@ function func203(this: any) {
             if (var_702 == 9) {
                 var_702 = 8;
             }
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
         yield func203();
         return;
@@ -301,7 +301,6 @@ function func204(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(204);
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(42, 97);
         gcopy(12, 0, 0, 213, 203);
@@ -314,7 +313,6 @@ function func204(this: any) {
         pset(251, 100);
         pset(45, 295);
         pset(251, 295);
-
         font("ＭＳ　Ｐゴシック", 16, 1);
         color(255, 255, 255);
         pos(85, 110);
@@ -389,10 +387,10 @@ function func205(this: any) {
 function func206(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(206);
-        yield func337();
-        yield func080();
-        if (var_242 == 1 || var_244 == 1) {
-            DSPLAY(audio_id = 212);
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
+        if (key_Z_on == 1 || key_A_on == 1) {
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             if (var_910 == 0) {
                 var_10 = 0;
@@ -410,8 +408,8 @@ function func206(this: any) {
             yield func193();
             return;
         }
-        if (var_239 == 1) {
-            DSPLAY(audio_id = 212);
+        if (key_X_on == 1) {
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             var_904 = 0;
             yield func193();
@@ -421,15 +419,15 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 0) {
                 var_910 = 1;
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 1) {
                 var_910 = 0;
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
@@ -438,15 +436,15 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 1) {
                 var_910 = 0;
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 0) {
                 var_910 = 1;
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
@@ -476,7 +474,7 @@ function func207(this: any) {
         font("ＭＳ　Ｐゴシック", 16, 1);
         color(255, 255, 255);
         pos(85, 150);
-        mes("680×680");
+        mes("340×340");
         pos(85, 170);
         mes("680×680");
         if (var_910 == 0) {
@@ -502,7 +500,7 @@ function func208(this: any) {
 function func209(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(209);
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_259 == 1) {
             var_228 = var_228 + 20;
             var_911 = var_911 + 1;
@@ -511,8 +509,8 @@ function func209(this: any) {
                 var_911 = 1;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
             var_228 = var_228 - 20;
@@ -522,16 +520,16 @@ function func209(this: any) {
                 var_911 = 8;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
             if (var_911 == 7) {
                 yield func214();
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             if (var_911 == 8) {
-                DSPLAY(audio_id = 212);
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 var_691[1] = var_655;
                 var_691[2] = var_656;
                 var_691[3] = var_657;
@@ -554,7 +552,7 @@ function func209(this: any) {
                     yield func213();
                     yield func051();
                     yield func212();
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     break;
                 }
                 var_447++;
@@ -567,7 +565,7 @@ function func209(this: any) {
                     yield func213();
                     yield func051();
                     yield func212();
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     break;
                 }
                 var_447++;
@@ -578,7 +576,7 @@ function func209(this: any) {
                 yield func213();
                 yield func051();
                 yield func212();
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 yield func209();
                 return;
             }
@@ -588,7 +586,7 @@ function func209(this: any) {
                 yield func213();
                 yield func051();
                 yield func212();
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 yield func209();
                 return;
             }
@@ -598,12 +596,12 @@ function func209(this: any) {
                 yield func213();
                 yield func051();
                 yield func212();
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 yield func209();
                 return;
             }
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func209();
         return;
     });
@@ -950,7 +948,7 @@ function func215(this: any) {
 function func216(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(216);
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_259 == 1) {
             var_228 = var_228 + 20;
             var_925 = var_925 + 1;
@@ -960,8 +958,8 @@ function func216(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
             var_228 = var_228 - 20;
@@ -972,8 +970,8 @@ function func216(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_925 >= 1 && var_925 <= 7) {
             ck_joystick(var_929, var_662);
@@ -1016,7 +1014,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1060,7 +1058,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1104,7 +1102,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1148,7 +1146,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1192,7 +1190,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1236,7 +1234,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1280,7 +1278,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1324,7 +1322,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1368,7 +1366,7 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
@@ -1412,15 +1410,15 @@ function func216(this: any) {
                 yield func217();
                 yield func218();
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func216();
                 return;
             }
         }
         if (var_925 == 8) {
-            if (var_242 == 1 || var_244 == 1) {
-                DSPLAY(audio_id = 212);
+            if (key_Z_on == 1 || key_A_on == 1) {
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 var_692 = 8192;
                 var_693 = 2048;
                 var_694 = 4096;
@@ -1432,14 +1430,14 @@ function func216(this: any) {
                 var_700 = 524288;
                 var_701 = 1048576;
                 yield func217();
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 yield func216();
                 return;
             }
         }
         if (var_925 == 9) {
-            if (var_242 == 1 || var_244 == 1) {
-                DSPLAY(audio_id = 212);
+            if (key_Z_on == 1 || key_A_on == 1) {
+                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 var_664[1] = var_692;
                 var_664[2] = var_693;
                 var_664[3] = var_694;
@@ -1457,7 +1455,7 @@ function func216(this: any) {
                 return;
             }
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func216();
         return;
     });
@@ -1814,8 +1812,8 @@ function func222(this: any) {
         color(255, 255, 255);
         mes(">");
         redraw(1);
-        yield func080();
-        if (var_239 == 1) {
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
             yield func140();
             return;
         }
@@ -1920,7 +1918,7 @@ function func223(this: any) {
         dbgprt(223);
         var_934 = var_933 - 1;
         var_941 = var_948[var_933] - var_948[var_934];
-        var_840 = var_933;
+        current_level = var_933;
         yield func679();
         var_949 = Math.floor(var_950 * (var_935 + var_937 - 8) / 16) + var_950;
         var_951 = var_949;
@@ -2081,8 +2079,8 @@ function func225(this: any) {
             var_962++;
         }
         redraw(1);
-        yield func080();
-        if (var_239 == 1) {
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
             yield func140();
             return;
         }
@@ -2114,14 +2112,14 @@ function func225(this: any) {
             yield func225();
             return;
         }
-        if (var_249 == 1 && var_957 < 99) {
+        if (key_S_on == 1 && var_957 < 99) {
             var_957 = var_957 + 1;
             yield func226();
             yield wait(15);
             yield func225();
             return;
         }
-        if (var_244 == 1 && var_957 >= 2) {
+        if (key_A_on == 1 && var_957 >= 2) {
             var_957 = var_957 - 1;
             yield func226();
             yield wait(15);
@@ -2188,16 +2186,16 @@ function func227(this: any) {
                 item_list = var_233[var_553]["Var" + var_982];
                 yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
-                    var_979 = var_979 + "　[攻]" + var_828 + "\n";
+                    var_979 = var_979 + "　[攻]" + item_ability_description + "\n";
                 }
                 if (var_812 == 2) {
-                    var_979 = var_979 + "　[防]" + var_828 + "\n";
+                    var_979 = var_979 + "　[防]" + item_ability_description + "\n";
                 }
                 if (var_812 == 3) {
-                    var_979 = var_979 + "　[－]" + var_828 + "\n";
+                    var_979 = var_979 + "　[－]" + item_ability_description + "\n";
                 }
                 if (var_812 == 4) {
-                    var_979 = var_979 + "　[能]" + var_828 + "\n";
+                    var_979 = var_979 + "　[能]" + item_ability_description + "\n";
                 }
                 var_982++;
             }
@@ -2227,16 +2225,16 @@ function func227(this: any) {
                 item_list = var_233[var_554]["Var" + var_982];
                 yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
-                    var_979 = var_979 + "　[攻]" + var_828 + "\n";
+                    var_979 = var_979 + "　[攻]" + item_ability_description + "\n";
                 }
                 if (var_812 == 2) {
-                    var_979 = var_979 + "　[防]" + var_828 + "\n";
+                    var_979 = var_979 + "　[防]" + item_ability_description + "\n";
                 }
                 if (var_812 == 3) {
-                    var_979 = var_979 + "　[－]" + var_828 + "\n";
+                    var_979 = var_979 + "　[－]" + item_ability_description + "\n";
                 }
                 if (var_812 == 4) {
-                    var_979 = var_979 + "　[能]" + var_828 + "\n";
+                    var_979 = var_979 + "　[能]" + item_ability_description + "\n";
                 }
                 var_982++;
             }
@@ -2266,16 +2264,16 @@ function func227(this: any) {
                 item_list = var_233[var_555]["Var" + var_982];
                 yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
-                    var_979 = var_979 + "　[攻]" + var_828 + "\n";
+                    var_979 = var_979 + "　[攻]" + item_ability_description + "\n";
                 }
                 if (var_812 == 2) {
-                    var_979 = var_979 + "　[防]" + var_828 + "\n";
+                    var_979 = var_979 + "　[防]" + item_ability_description + "\n";
                 }
                 if (var_812 == 3) {
-                    var_979 = var_979 + "　[－]" + var_828 + "\n";
+                    var_979 = var_979 + "　[－]" + item_ability_description + "\n";
                 }
                 if (var_812 == 4) {
-                    var_979 = var_979 + "　[能]" + var_828 + "\n";
+                    var_979 = var_979 + "　[能]" + item_ability_description + "\n";
                 }
                 var_982++;
             }
@@ -2314,7 +2312,7 @@ function func229(this: any) {
         var_977 = dim(20);
         current_floor = 1;
         var_376 = 1;
-        var_840 = 1;
+        current_level = 1;
         var_352 = 15;
         var_211 = 15;
         var_568 = 0;
@@ -2480,7 +2478,7 @@ function func229(this: any) {
         var_985 = var_985 + 120;
         current_floor = var_704[1];
         var_376 = var_704[2];
-        var_840 = var_704[3];
+        current_level = var_704[3];
         var_352 = var_704[4];
         var_211 = var_704[5];
         var_568 = var_704[6];
@@ -2558,9 +2556,9 @@ function func229(this: any) {
         var_1006 = var_704[78];
         var_1007 = var_704[79];
         var_1008 = var_704[80];
-        var_481 = var_704[81];
+        payment_amount = var_704[81];
         var_1009 = var_704[82];
-        var_107 = var_704[83];
+        count_buying_price = var_704[83];
         var_1010 = var_704[84];
         var_1011 = var_704[85];
         var_1012 = var_704[86];
@@ -2640,9 +2638,9 @@ function func229(this: any) {
         var_147 = var_704[160];
         var_148 = var_704[161];
         var_149 = var_704[162];
-        var_377 = var_704[163];
-        var_378 = var_704[164];
-        var_379 = var_704[165];
+        dangeon1_floor = var_704[163];
+        dangeon2_floor = var_704[164];
+        dangeon3_floor = var_704[165];
         var_387 = var_704[166];
         var_150 = var_704[167];
         var_270 = var_704[168];
@@ -2656,7 +2654,7 @@ function func229(this: any) {
         var_162 = var_704[176];
         var_130 = var_704[177];
         var_170 = var_704[178];
-        var_380 = var_704[179];
+        dangeon4_floor = var_704[179];
         var_1031 = var_704[180];
         var_165 = var_704[181];
         var_166 = var_704[182];
@@ -2711,7 +2709,7 @@ function func229(this: any) {
         var_831 = var_704[231];
         var_203 = var_704[232];
         var_194 = var_704[233];
-        var_381 = var_704[234];
+        dangeon5_floor = var_704[234];
         var_524 = var_704[235];
         var_538 = var_704[236];
         var_99 = var_704[237];
@@ -2817,7 +2815,7 @@ function func231(this: any) {
         }
         var_704[1] = current_floor;
         var_704[2] = var_376;
-        var_704[3] = var_840;
+        var_704[3] = current_level;
         var_704[4] = var_352;
         var_704[5] = var_211;
         var_704[6] = var_568;
@@ -2895,9 +2893,9 @@ function func231(this: any) {
         var_704[78] = var_1006;
         var_704[79] = var_1007;
         var_704[80] = var_1008;
-        var_704[81] = var_481;
+        var_704[81] = payment_amount;
         var_704[82] = var_1009;
-        var_704[83] = var_107;
+        var_704[83] = count_buying_price;
         var_704[84] = var_1010;
         var_704[85] = var_1011;
         var_704[86] = var_1012;
@@ -2977,9 +2975,9 @@ function func231(this: any) {
         var_704[160] = var_147;
         var_704[161] = var_148;
         var_704[162] = var_149;
-        var_704[163] = var_377;
-        var_704[164] = var_378;
-        var_704[165] = var_379;
+        var_704[163] = dangeon1_floor;
+        var_704[164] = dangeon2_floor;
+        var_704[165] = dangeon3_floor;
         var_704[166] = var_387;
         var_704[167] = var_150;
         var_704[168] = var_270;
@@ -2993,7 +2991,7 @@ function func231(this: any) {
         var_704[176] = var_162;
         var_704[177] = var_130;
         var_704[178] = var_170;
-        var_704[179] = var_380;
+        var_704[179] = dangeon4_floor;
         var_704[180] = var_1031;
         var_704[181] = var_165;
         var_704[182] = var_166;
@@ -3048,7 +3046,7 @@ function func231(this: any) {
         var_704[231] = var_831;
         var_704[232] = var_203;
         var_704[233] = var_194;
-        var_704[234] = var_381;
+        var_704[234] = dangeon5_floor;
         var_704[235] = var_524;
         var_704[236] = var_538;
         var_704[237] = var_99;
@@ -3247,13 +3245,13 @@ function func233(this: any) {
         var_585 = 0;
         var_195 = 0;
         var_196 = 0;
-        var_197 = 0;
+        open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
         var_198 = 0;
         var_163 = 0;
         var_164 = 0;
         var_159 = 0;
         current_floor = 0;
-        var_840 = 1;
+        current_level = 1;
         var_352 = 15;
         var_211 = 15;
         var_568 = 0;
@@ -3466,7 +3464,7 @@ function func234(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        yield func340();
+        yield func340(); // キー入力による選択処理
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3498,7 +3496,7 @@ function func235(this: any) {
         var_271 = 0;
         current_floor = 0;
         var_376 = 0;
-        var_840 = 0;
+        current_level = 0;
         var_352 = 0;
         var_211 = 0;
         var_568 = 0;
@@ -3575,9 +3573,9 @@ function func235(this: any) {
         var_1006 = 0;
         var_1007 = 0;
         var_1008 = 0;
-        var_481 = 0;
+        payment_amount = 0;
         var_1009 = 0;
-        var_107 = 0;
+        count_buying_price = 0;
         var_1010 = 0;
         var_1011 = 0;
         var_1012 = 0;
@@ -3653,9 +3651,9 @@ function func235(this: any) {
         var_147 = 0;
         var_148 = 0;
         var_149 = 0;
-        var_377 = 0;
-        var_378 = 0;
-        var_379 = 0;
+        dangeon1_floor = 0;
+        dangeon2_floor = 0;
+        dangeon3_floor = 0;
         var_387 = 0;
         var_150 = 0;
         var_270 = 0;
@@ -3669,7 +3667,7 @@ function func235(this: any) {
         var_162 = 0;
         var_130 = 0;
         var_170 = 0;
-        var_380 = 0;
+        dangeon4_floor = 0;
         var_1031 = 0;
         var_165 = 0;
         var_166 = 0;
@@ -3779,9 +3777,9 @@ function func237(this: any) {
 function func238(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(238);
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_1061 == 1) {
-            conf_keyon = getkey(89);　// Yキー入力確認
+            conf_keyon = getkey(89); // Yキー入力確認
             if (conf_keyon == 1) {
                 var_198 = 0;
                 yield func237();
@@ -3790,7 +3788,7 @@ function func238(this: any) {
         }
         if (var_1061 == 2) {
             //conf_keyon = getkey(192); 192は各キーボードのメーカーが、キーボードごとに割り当てる。@キー
-            conf_keyon = getkey(75);　// Kキー入力確認
+            conf_keyon = getkey(75); // Kキー入力確認
             if (conf_keyon == 1) {
                 var_198 = 0;
                 var_211 = 0;
@@ -3800,11 +3798,11 @@ function func238(this: any) {
                 return;
             }
         }
-        yield func080();
-        if (var_239 == 1) {
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
             var_198 = 0;
             var_1061 = 0;
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         var_198 = 1;

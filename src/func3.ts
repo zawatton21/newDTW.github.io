@@ -3031,23 +3031,23 @@ function func335(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(335);
         var_755 = 1;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 2;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 3;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 4;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 5;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 6;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 7;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 8;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 9;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 10;
         return;
     });
@@ -3057,30 +3057,30 @@ function func336(this: any) {
         dbgprt(336);
         var_198 = 0;
         var_755 = 9;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 8;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 7;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 6;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 5;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 4;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 3;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 2;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 1;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_755 = 0;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         return;
     });
 }
 
-// アイテム関係で呼び出される関数
+// メッセージ関係呼び出し
 function func337(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(337);
@@ -3185,11 +3185,11 @@ function func337(this: any) {
         if (var_634 >= 10 || var_635 >= 1 || var_636 >= 1 || var_633 >= 1 || var_632 >= 1 || var_1201 >= 1) {
             yield func102();
         }
-        if (var_197 == 1) {
-            yield func460();
+        if (open_item_menue == 1) { // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
+            yield func460(); // 道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具)
         }
         if (var_1202 == 1) {
-            yield func714();
+            yield func714(); // 店での購入時のメッセージ表示
         }
         if (var_1203 == 1) {
             yield func485();
@@ -3198,8 +3198,8 @@ function func337(this: any) {
             yield func068();
             yield func069();
         }
-        if (var_196 == 1) {
-            yield func054();
+        if (var_196 == 1) { // Mフラグ:メニュー画面 func054
+            yield func054(); // メニュー画面を開いた時の表示(道具、足元、状態、設定)
         }
         if (var_405 == 1) {
             yield func063();
@@ -3216,19 +3216,19 @@ function func337(this: any) {
         if (var_1206 == 1) {
             yield func804();
         }
-        if (var_499 == 1) {
-            yield func056();
+        if (var_499 == 1) { // Mフラグ:設定画面 func056
+            yield func056(); // メニュー画面の"設定"の表示 (マップON、履歴、資料、システム、終了)
         }
         if (var_1207 == 1) {
-            yield func449();
+            yield func449(); // 魔法のランプでジャッジメントを召喚した時のメッセージ
         }
         if (var_765 == 1) {
             if (var_766 == 0 || var_766 == 1 || var_766 == 2) {
                 yield func341();
             }
         }
-        if (var_508 == 1) {
-            yield func058();
+        if (var_508 == 1) { // Mフラグ:資料(設定画面) func058
+            yield func058(); // メニュー画面の設定からいける"資料"の表示
         }
         if (var_502 == 1) {
             yield func363();
@@ -3561,11 +3561,11 @@ function func340(this: any) {
         var_765 = 1;
         var_766 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func080();
-            if (var_242 == 0 && var_239 == 0 && var_244 == 0 && var_252 == 0) {
+            yield func080(); // 各キー入力確認
+            if (key_Z_on == 0 && key_X_on == 0 && key_A_on == 0 && key_C_on == 0) {
                 break;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_300 = 1;
             var_198 = 1;
             var_766++;
@@ -3575,26 +3575,26 @@ function func340(this: any) {
         }
         var_766 = 0;
         for (let cnt1 = 0; true; ++cnt1) {
-            yield func080();
-            if (var_242 == 1) {
+            yield func080(); // 各キー入力確認
+            if (key_Z_on == 1) { // キーZ入力確認
                 break;
             }
-            if (var_239 == 1) {
+            if (key_X_on == 1) {
                 break;
             }
-            if (var_244 == 1) {
+            if (key_A_on == 1) { // キーA入力確認
                 break;
             }
-            if (var_249 == 1) {
+            if (key_S_on == 1) { // キーS入力確認
                 break;
             }
-            if (var_238 == 1) {
+            if (key_Shift_on == 1) { // キーShift入力確認
                 break;
             }
-            if (var_252 == 1) {
+            if (key_C_on == 1) { // キーC入力確認
                 break;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_300 = 1;
             var_198 = 1;
             var_766++;
@@ -3704,7 +3704,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46 - 1, var_41);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48 - 1, var_41);
         }
@@ -3751,7 +3751,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46 + 2, var_41);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48 + 2, var_41);
         }
@@ -3798,7 +3798,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46, var_41 - 1);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48, var_41 - 1);
         }
@@ -3845,7 +3845,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46, var_41 + 1);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48, var_41 + 1);
         }
@@ -3892,7 +3892,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46 + 1, var_41 + 1);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48 + 2, var_41 + 1);
         }
@@ -3939,7 +3939,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46 + 1, var_41 - 1);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48 + 2, var_41 - 1);
         }
@@ -3987,7 +3987,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46, var_41);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48, var_41);
         }
@@ -4051,7 +4051,7 @@ function func342(this: any) {
             mes("1");
         }
         pos(var_46 + 1, var_41);
-        mes(var_840);
+        mes(current_level.toString());
         if (var_211 < 10) {
             pos(var_48 + 1, var_41);
         }
@@ -14757,15 +14757,15 @@ function func357(this: any) {
 function func358(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(358);
-        yield func337();
-        yield func080();
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
         if (var_255 == 1 && var_1613 > 1) {
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             var_1613 = var_1613 - 1;
             var_1612 = var_1612 - 16;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func358();
             return;
@@ -14776,7 +14776,7 @@ function func358(this: any) {
             var_1613 = 7;
             var_1612 = 141;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func358();
             return;
@@ -14787,7 +14787,7 @@ function func358(this: any) {
             var_1613 = var_1613 + 1;
             var_1612 = var_1612 + 16;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func358();
             return;
@@ -14798,38 +14798,37 @@ function func358(this: any) {
             var_1613 = 1;
             var_1612 = 45;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func358();
             return;
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func359();
             yield func051();
             if (var_1614 == 0) {
                 var_1615 = 1;
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_1615 = 0;
                 yield func358();
                 return;
             }
-            var_508 = 0;
-            var_499 = 0;
+            var_508 = 0; // Mフラグ:資料(設定画面) func058
+            var_499 = 0; // Mフラグ:設定画面 func056
             var_511 = 0;
             var_502 = 1;
             yield func361();
             return;
         }
-        if (var_239 == 1) {
-
-            DSPLAY(audio_id = 212);
+        if (key_X_on == 1) {
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_502 = 0;
-            var_508 = 1;
-            var_499 = 1;
+            var_508 = 1; // Mフラグ:資料(設定画面) func058
+            var_499 = 1; // Mフラグ:設定画面 func056
             var_511 = 0;
             yield func051();
             yield func057();
@@ -15002,9 +15001,9 @@ function func360(this: any) {
 function func361(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(361);
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_12 == 1) {
-            conf_keyon = getkey(121);
+            conf_keyon = getkey(121); // キーF10入力確認
             if (conf_keyon == 1) {
                 var_1038 = 200;
                 for (let cnt3 = 0; cnt3 < 200; ++cnt3) {
@@ -15015,12 +15014,12 @@ function func361(this: any) {
                 var_1608 = 1;
                 yield func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func361();
                 return;
             }
-            conf_keyon = getkey(122);
+            conf_keyon = getkey(122); // キーF11入力確認
             if (conf_keyon == 1) {
                 var_1038 = 1;
                 for (let cnt3 = 0; cnt3 < 200; ++cnt3) {
@@ -15032,7 +15031,7 @@ function func361(this: any) {
                 var_1608 = 1;
                 yield func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func361();
                 return;
@@ -15046,7 +15045,7 @@ function func361(this: any) {
                 var_1608 = 1;
                 yield func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func361();
                 return;
@@ -15058,7 +15057,7 @@ function func361(this: any) {
                 var_1608 = 1;
                 yield func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func361();
                 return;
@@ -15070,7 +15069,7 @@ function func361(this: any) {
                 var_1608 = 1;
                 yield func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func361();
                 return;
@@ -15082,44 +15081,44 @@ function func361(this: any) {
                 var_1608 = 1;
                 yield func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func361();
                 return;
             }
         }
-        if (var_239 == 1 && var_1609 == 0) {
+        if (key_X_on == 1 && var_1609 == 0) {
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_502 = 0;
-            var_508 = 1;
-            var_499 = 1;
+            var_508 = 1; // Mフラグ:資料(設定画面) func058
+            var_499 = 1; // Mフラグ:設定画面 func056
             var_511 = 1;
             yield func051();
             yield func358();
             return;
         }
-        if (var_239 == 1 && var_1609 == 1) {
+        if (key_X_on == 1 && var_1609 == 1) {
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_502 = 0;
             var_1609 = 0;
             yield func513();
             return;
         }
-        if (var_244 == 1) {
+        if (key_A_on == 1) {
             var_83[299].Var8 = 1;
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[299].Var8 = 0;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func361();
             return;
         }
-        if (var_242 == 1 || var_244 == 1) {
+        if (key_Z_on == 1 || key_A_on == 1) {
             enemy_list = var_83[299].Var0;
             yield func626();
             var_743 = 0;
@@ -15130,12 +15129,12 @@ function func361(this: any) {
                 var_83[299].Var21 = 1;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_411 = 2;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_411 = 3;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_411 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[299].Var21 = 0;
                 var_411 = 0;
             }
@@ -15150,11 +15149,11 @@ function func361(this: any) {
                 var_83[299].Var18 = 1;
             }
             for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             if (var_83[299].Var0 == 22 || var_83[299].Var0 == 17 || var_83[299].Var0 == 71) {
                 for (let cnt3 = 0; cnt3 < 4; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
             }
             var_83[299].Var7 = 0;
@@ -15162,12 +15161,12 @@ function func361(this: any) {
             var_743 = 0;
             var_742 = 0;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func361();
             return;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_83[299].Var32 = var_83[299].Var32 + 1;
         if (var_83[299].Var32 == 12) {
             var_83[299].Var32 = 0;
@@ -15183,18 +15182,18 @@ function func361(this: any) {
 function func362(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(362);
-        yield func080();
-        if (var_239 == 1) {
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_502 = 0;
-            var_508 = 1;
-            var_499 = 1;
+            var_508 = 1; // Mフラグ:資料(設定画面) func058
+            var_499 = 1; // Mフラグ:設定画面 func056
             yield func051();
             yield func057();
             return;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func362();
         return;
     });
@@ -15484,7 +15483,7 @@ function func365(this: any) {
         if (enemy_list == 27 || enemy_list == 97 || enemy_list == 58 || enemy_list == 14 || enemy_list == 15 || enemy_list == 38 || enemy_list == 155 || enemy_list == 129) {
             var_1649 = var_1649 + "・九柱神";
         }
-        var_1650 = var_1655;
+        var_1650 = enemy_description;
         var_1651 = var_1656;
         var_1652 = var_1657;
         var_1653 = var_1658;
@@ -15585,7 +15584,7 @@ function func366(this: any) {
         if (enemy_list == 8 || enemy_list == 24 || enemy_list == 25 || enemy_list == 23) {
             var_1649 = "死体";
         }
-        var_1650 = var_1655;
+        var_1650 = enemy_description;
         var_1651 = var_1656;
         var_1652 = var_1657;
         var_1653 = var_1658;
@@ -15672,17 +15671,17 @@ function func367(this: any) {
             }
             if (var_1661 == 1) {
                 color(0, 255, 0);
-                if (var_803 == 0 && var_804 <= 1) {
+                if (item_modified_value == 0 && number_of_abilities <= 1) {
                     mes(item_name);
                 }
-                if (var_803 == 0 && var_804 > 1) {
-                    mes("" + item_name + " ★" + var_804);
+                if (item_modified_value == 0 && number_of_abilities > 1) {
+                    mes("" + item_name + " ★" + number_of_abilities);
                 }
-                if (var_803 > 0 && var_804 <= 1) {
-                    mes("" + item_name + "+" + var_803);
+                if (item_modified_value > 0 && number_of_abilities <= 1) {
+                    mes("" + item_name + "+" + item_modified_value);
                 }
-                if (var_803 > 0 && var_804 > 1) {
-                    mes("" + item_name + "+" + var_803 + " ★" + var_804);
+                if (item_modified_value > 0 && number_of_abilities > 1) {
+                    mes("" + item_name + "+" + item_modified_value + " ★" + number_of_abilities);
                 }
             }
         }
@@ -15734,45 +15733,45 @@ function func367(this: any) {
         font(font_type = "ＭＳ Ｐゴシック", font_size = 14, font_style = 1);
         pos(30, 100);
         if (var_802 < 100 || var_802 >= 400) {
-            mes(var_806);
+            mes(item_description1);
         }
         if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] == 1) {
             if (var_1661 == 0) {
-                mes("" + var_806);
+                mes("" + item_description1);
             }
             if (var_1661 == 1) {
-                mes("" + var_806 + "　空き容量 " + var_807);
+                mes("" + item_description1 + "　空き容量 " + free_space_value);
             }
         }
         if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] == 0) {
-            mes("" + var_806);
+            mes("" + item_description1);
         }
         pos(30, 120);
         mes(var_808);
         if (var_802 < 100 || var_802 >= 400) {
             pos(30, 140);
             color(255, 255, 255);
-            mes(var_828);
+            mes(item_ability_description);
         }
         if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] != 0) {
             var_1664 = 0;
             if (dangeon_number == 5 && var_1661 == 0 && var_1660 >= 1) {
                 var_1664 = 1;
             }
-            var_809 = 1;
-            for (let cnt2 = 0; cnt2 < var_810 + var_807; ++cnt2) {
-                pos(30, var_809 * 20 + 120);
+            track_number = 1;
+            for (let cnt2 = 0; cnt2 < var_810 + free_space_value; ++cnt2) {
+                pos(30, track_number * 20 + 120);
                 color(255, 255, 255);
         
                 font("MS UI ゴシック", 12, 1);
-                mes("Track" + var_809 + ":");
-                var_809 = var_809 + 1;
+                mes("Track" + track_number + ":");
+                track_number = track_number + 1;
             }
-            var_809 = 1;
+            track_number = 1;
             var_1665 = 0;
-            for (let cnt2 = 0; cnt2 < var_810 + var_807; ++cnt2) {
-                pos(30 + 50, var_809 * 20 + 120);
-                item_list = var_811[var_809];
+            for (let cnt2 = 0; cnt2 < var_810 + free_space_value; ++cnt2) {
+                pos(30 + 50, track_number * 20 + 120);
+                item_list = var_811[track_number];
                 yield func492(); // アイテムリスト呼び出し
                 color(255, 255, 255);
                 if (var_812 == 1) {
@@ -15787,7 +15786,7 @@ function func367(this: any) {
                 if (var_812 == 4) {
                     color(240, 0, 240);
                 }
-                if (var_813[var_809] == "こわれるぞ。") {
+                if (var_813[track_number] == "こわれるぞ。") {
                     color(255, 255, 255);
                     if (var_1666 >= 10 && var_1666 <= 15) {
                         color(255, 150, 150);
@@ -15811,29 +15810,30 @@ function func367(this: any) {
         
                 font("ＭＳ ゴシック", 14, 1);
                 if (var_1664 == 0) {
-                    if (var_813[var_809] != "") {
-                        mes("" + var_813[var_809]);
+                    if (var_813[track_number] != "") {
+                        mes("" + var_813[track_number]);
                     }
-                    if (var_813[var_809] == "") {
+                    if (var_813[track_number] == "") {
                         mes("空き");
                     }
                 }
                 if (var_1664 == 1) {
-                    if (var_809 == 1) {
-                        mes("" + var_813[var_809]);
+                    if (track_number == 1) {
+                        mes("" + var_813[track_number]);
                     }
-                    if (var_809 != 1) {
+                    if (track_number != 1) {
                         color(255, 255, 255);
                         mes("？？？？？？？？？");
                     }
                 }
-                var_809 = var_809 + 1;
+                track_number = track_number + 1;
             }
         }
         return;
     });
 }
 
+// アイテム欄の呼び出し関数
 function func368(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(368);
@@ -15843,11 +15843,13 @@ function func368(this: any) {
         var_802 = item_list;
         var_1670 = var_225;
         yield func492(); // アイテムリスト呼び出し
+
+        // アイテム欄を開いていなければ？
         if (var_220 == 0) {
             var_814 = var_233[var_225].Var0;
             var_1662 = var_233[var_225].Var3;
-            var_803 = var_233[var_225].Var4;
-            var_807 = var_233[var_225].Var5;
+            item_modified_value = var_233[var_225].Var4;
+            free_space_value = var_233[var_225].Var5;
             var_1671 = var_233[var_225].Var6;
             var_1663 = var_233[var_225].Var7;
             var_1672 = var_233[var_225].Var11;
@@ -15870,11 +15872,12 @@ function func368(this: any) {
             var_823 = var_233[var_225].Var28;
             var_824 = var_233[var_225].Var29;
         }
+        // アイテム欄を開いていれば？
         if (var_220 == 1) {
             var_814 = var_486[var_682][var_225][0];
             var_1662 = var_486[var_682][var_225][3];
-            var_803 = var_486[var_682][var_225][4];
-            var_807 = var_486[var_682][var_225][5];
+            item_modified_value = var_486[var_682][var_225][4];
+            free_space_value = var_486[var_682][var_225][5];
             var_1671 = var_486[var_682][var_225][6];
             var_1663 = var_486[var_682][var_225][7];
             var_1672 = var_486[var_682][var_225][11];
@@ -15897,7 +15900,8 @@ function func368(this: any) {
             var_823 = var_486[var_682][var_225][28];
             var_824 = var_486[var_682][var_225][29];
         }
-        var_804 = var_810;
+
+        number_of_abilities = var_810;
         if (var_814 >= 100 && var_814 < 400) {
             yield func370();
         }
@@ -15908,7 +15912,7 @@ function func368(this: any) {
             var_801 = 190;
         }
         if (var_814 >= 100 && var_814 < 400) {
-            var_801 = (var_810 + var_807 - 2) * 19 + 190;
+            var_801 = (var_810 + free_space_value - 2) * 19 + 190;
         }
         if (var_862[var_814][0] == 0) {
             var_801 = 170;
@@ -15926,14 +15930,14 @@ function func368(this: any) {
 function func369(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(369);
-        yield func337();
-        yield func080();
-        if (var_239 == 1) {
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
             var_1209 = 0;
-            var_197 = 1;
+            open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
             var_221 = 1;
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func462();
             return;
         }
@@ -15956,7 +15960,7 @@ function func369(this: any) {
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func369();
                 return;
@@ -15979,7 +15983,7 @@ function func369(this: any) {
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func369();
                 return;
@@ -15989,6 +15993,8 @@ function func369(this: any) {
         return;
     });
 }
+
+
 function func370(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(370);
@@ -16013,11 +16019,11 @@ function func370(this: any) {
                 var_827 = 0;
             }
             yield func492(); // アイテムリスト呼び出し
-            if (var_828 == "") {
+            if (item_ability_description == "") {
                 var_826 = var_826 - 1;
                 break;
             }
-            var_813[var_826] = "" + var_828;
+            var_813[var_826] = "" + item_ability_description;
             var_811[var_826] = item_list;
             var_826 = var_826 + 1;
             var_825 = var_825 + 1;
@@ -16032,6 +16038,9 @@ function func370(this: any) {
         return;
     });
 }
+
+
+
 function func371(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(371);
@@ -16048,13 +16057,13 @@ function func371(this: any) {
 function func372(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(372);
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_254 == 1 && var_1679 >= 2) {
             var_1679 = var_1679 - 1;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func372();
             return;
         }
@@ -16062,22 +16071,22 @@ function func372(this: any) {
             var_1679 = var_1679 + 1;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func372();
             return;
         }
-        if (var_239 == 1) {
+        if (key_X_on == 1) {
             var_502 = 0;
-            var_508 = 1;
-            var_499 = 1;
+            var_508 = 1; // Mフラグ:資料(設定画面) func058
+            var_499 = 1; // Mフラグ:設定画面 func056
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             yield func057();
             return;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func372();
         return;
     });
@@ -16150,18 +16159,17 @@ function func373(this: any) {
 function func374(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(374);
-        yield func080();
-        if (var_239 == 1) {
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
             var_502 = 0;
-            var_508 = 1;
-            var_499 = 1;
-
-            DSPLAY(audio_id = 212);
+            var_508 = 1; // Mフラグ:資料(設定画面) func058
+            var_499 = 1; // Mフラグ:設定画面 func056
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             yield func057();
             return;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func374();
         return;
     });
@@ -16176,7 +16184,7 @@ function func375(this: any) {
 function func376(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(376);
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_254 == 1) {
             var_1693 = var_1693 - 1;
             if (var_1693 < 0) {
@@ -16184,9 +16192,9 @@ function func376(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_257 == 1) {
             var_1693 = var_1693 + 1;
@@ -16195,21 +16203,21 @@ function func376(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
         }
-        if (var_239 == 1) {
+        if (key_X_on == 1) {
             var_502 = 0;
-            var_508 = 1;
-            var_499 = 1;
+            var_508 = 1; // Mフラグ:資料(設定画面) func058
+            var_499 = 1; // Mフラグ:設定画面 func056
 
-            DSPLAY(audio_id = 212);
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             yield func057();
             return;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func376();
         return;
     });
@@ -16299,12 +16307,11 @@ function func377(this: any) {
 function func378(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(378);
-        yield func080();
-        if (var_239 == 1) {
+        yield func080(); // 各キー入力確認
+        if (key_X_on == 1) {
             var_502 = 0;
-            var_499 = 1;
-
-            DSPLAY(audio_id = 212);
+            var_499 = 1; // Mフラグ:設定画面 func056
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
             yield func055();
             return;
@@ -16314,9 +16321,9 @@ function func378(this: any) {
             var_504 = var_504 + 2;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func378();
             return;
         }
@@ -16325,13 +16332,13 @@ function func378(this: any) {
             var_504 = var_504 - 2;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func378();
             return;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func378();
         return;
     });
@@ -16396,6 +16403,7 @@ function func379(this: any) {
         return;
     });
 }
+// 状態異常確認呼び出し
 function func380(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(380);
@@ -16410,9 +16418,9 @@ function func380(this: any) {
                 yield func492(); // アイテムリスト呼び出し
                 // No = 204:ｼｱｰﾊｰﾄｱﾀｯｸのDISC
                 if (var_1708 == 204) {
-                    var_828 = "最大HPが" + var_1047 + "上がっているぞ";
+                    item_ability_description = "最大HPが" + var_1047 + "上がっているぞ";
                 }
-                var_1706[var_1707][1] = "" + var_828;
+                var_1706[var_1707][1] = "" + item_ability_description;
                 if (var_812 == 1) {
                     var_1706[var_1707][2] = "1";
                 }
@@ -17265,15 +17273,16 @@ function func380(this: any) {
         yield func381();
     });
 }
+
 function func381(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(381);
-        yield func080();
+        yield func080(); // 各キー入力確認
         if (var_254 == 1) {
             if (var_1721 == 1) {
                 var_1721 = 1;
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
@@ -17281,8 +17290,8 @@ function func381(this: any) {
                 var_1721 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
@@ -17290,8 +17299,8 @@ function func381(this: any) {
                 var_1721 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
@@ -17299,8 +17308,8 @@ function func381(this: any) {
                 var_1721 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
@@ -17308,20 +17317,20 @@ function func381(this: any) {
                 var_1721 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_257 == 1) {
             if (var_1721 == 4 && var_1707 >= 54) {
                 var_1721 = 5;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
@@ -17329,8 +17338,8 @@ function func381(this: any) {
                 var_1721 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
@@ -17338,8 +17347,8 @@ function func381(this: any) {
                 var_1721 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
@@ -17347,21 +17356,21 @@ function func381(this: any) {
                 var_1721 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337();
-                yield func337();
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
-        if (var_239 == 1) {
+        if (key_X_on == 1) {
             var_498 = 0;
 
-            DSPLAY(audio_id = 212);
-            yield func009();
+            DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         yield func381();
         return;
     });

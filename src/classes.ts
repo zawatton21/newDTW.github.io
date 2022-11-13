@@ -194,4 +194,36 @@ class ItemInfo {
         }
         return data;
     }
+/*
+    static dim1(length1: any, length2: any = null, length3: any = null, length4: any = null) {
+        if (length4 != null) {
+            throw "4重配列なんてありませんよ";
+        }
+        const return_list = [];
+        for (let i = 0; i < length1; i++) {
+            if (length2 != null) {
+                data.push(new ItemInfo());
+                // return_list[i] = [];
+                for (let j = 0; j < length2; j++) {
+                    if (length3 != null) {
+                        // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                        return_list[i][j] = [];
+                        for (let k = 0; k < length3; k++) {
+                            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                            return_list[i][j][k] = 0;
+                        }
+                    }
+                    else {
+                        // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+                        return_list[i][j] = 0;
+                    }
+                }
+            }
+            else {
+                return_list[i] = 0;
+            }
+        }
+        return return_list;
+    }
+*/
 }

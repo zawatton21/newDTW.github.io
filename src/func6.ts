@@ -17,7 +17,7 @@ function func600(this: any) {
 
                 DSPLAY(audio_id = 105);
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1296++;
         }
         var_772 = 0;
@@ -50,7 +50,7 @@ function func600(this: any) {
         var_300 = 0;
         yield func047();
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         if (var_156[115] == 1) {
@@ -211,7 +211,7 @@ function func602(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -268,7 +268,7 @@ function func602(this: any) {
             var_271 = 1;
             var_1557 = 1;
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1557++;
             }
             var_271 = 0;
@@ -281,15 +281,15 @@ function func602(this: any) {
             var_83[var_673].Var7 = 1;
             var_743 = 1;
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
 
             DSPLAY(audio_id = 143);
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 var_83[var_2749].Var8 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2749].Var8 = 0;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_742 = 0;
             var_83[var_673].Var7 = 0;
@@ -313,7 +313,7 @@ function func602(this: any) {
         var_300 = 0;
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -420,9 +420,9 @@ function func603(this: any) {
                 var_83[var_673].Var21 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     var_411 = 1;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_411 = 2;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_411 = 1;
                 var_83[var_673].Var21 = 0;
@@ -435,7 +435,7 @@ function func603(this: any) {
         var_742 = 1;
         var_83[var_673].Var7 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_742 = 0;
         var_83[var_673].Var7 = 0;
@@ -481,7 +481,7 @@ function func603(this: any) {
         var_26_x = var_26[2];
         var_27_x = var_27[2];
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
 
         DSPLAY(audio_id = 198);
         comments_row1 = comments_row1a;
@@ -496,7 +496,7 @@ function func603(this: any) {
         var_300 = 0;
         yield func047();
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -528,9 +528,9 @@ function func604(this: any) {
             var_83[var_673].Var21 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 var_411 = 4;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_411 = 5;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_198 = 1;
                 var_300 = 0;
             }
@@ -547,7 +547,7 @@ function func604(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
 
             DSPLAY(audio_id = 118);
             comments_row1 = comments_row1a;
@@ -561,7 +561,7 @@ function func604(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
 
             DSPLAY(audio_id = 118);
             comments_row1 = comments_row1a;
@@ -589,7 +589,7 @@ function func604(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -613,7 +613,7 @@ function func604(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_673].Var21 = 0;
             var_411 = 0;
@@ -624,19 +624,19 @@ function func604(this: any) {
         DSPLAY(audio_id = 141);
         var_83[var_673].Var21 = 1;
         var_411 = 2;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_411 = 3;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_411 = 3;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_411 = 3;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_411 = 1;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_83[var_673].Var21 = 0;
         var_411 = 0;
 
@@ -648,7 +648,7 @@ function func604(this: any) {
         var_1430 = var_83[var_673].Var1;
         var_1431 = var_83[var_673].Var2;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1435 = var_1435 + 1;
         }
         var_742 = 0;
@@ -676,7 +676,7 @@ function func604(this: any) {
                         var_2412 = 0;
                         var_83[var_2611].Var22 = 1;
                         var_83[var_2611].Var9 = 0;
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                         var_2863 = 1;
                     }
                     var_2865++;
@@ -722,7 +722,7 @@ function func604(this: any) {
             var_1428 = 0;
         }
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_1426 == 0) {
                 var_1427 = var_1427;
                 var_1428 = var_1428 + 40;
@@ -796,7 +796,7 @@ function func604(this: any) {
             yield func023();
         }
         for (let cnt1 = 0; cnt1 < 8; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         var_211 = var_211 - var_2852;
@@ -822,7 +822,7 @@ function func605(this: any) {
 
         DSPLAY(audio_id = 102);
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_742 = 0;
         var_743 = 0;
@@ -888,7 +888,7 @@ function func605(this: any) {
         var_1447 = 1;
         var_271 = 1;
         for (let cnt1 = 0; cnt1 < 8; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_1447 == 4) {
                 if (var_1449 == 4) {
                     var_199 = 4;
@@ -983,7 +983,7 @@ function func605(this: any) {
         var_1447 = 0;
         var_271 = 0;
         for (let cnt1 = 0; cnt1 < 7; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_1448 = 0;
         var_2868 = 0;
@@ -1011,7 +1011,7 @@ function func606(this: any) {
 
         DSPLAY(audio_id = 116);
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1433 = var_1433 + 1;
         }
         var_742 = 0;
@@ -1036,7 +1036,7 @@ function func606(this: any) {
             var_1428 = 0;
         }
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_1426 == 0) {
                 var_1427 = var_1427;
                 var_1428 = var_1428 + 40;
@@ -1093,7 +1093,7 @@ function func606(this: any) {
             yield func023();
         }
         for (let cnt1 = 0; cnt1 < 8; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         var_211 = var_211 - var_2852;
@@ -1131,33 +1131,33 @@ function func607(this: any) {
         if (var_83[var_673].Var1 > var_2621 && var_83[var_673].Var1 < var_2622 && var_83[var_673].Var2 > var_2624 && var_83[var_673].Var2 < var_2623) {
             var_83[var_673].Var21 = 1;
             var_411 = 1;
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
-            yield func337();
-            yield func337();
-            yield func337();
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 6;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 7;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_271 = 1;
         var_1429 = 1;
@@ -1166,7 +1166,7 @@ function func607(this: any) {
 
         DSPLAY(audio_id = 116);
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1429 = var_1429 + 1;
         }
         var_742 = 0;
@@ -1188,7 +1188,7 @@ function func607(this: any) {
             var_1428 = 0;
         }
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_1426 == 0) {
                 var_1427 = var_1427;
                 var_1428 = var_1428 + 40;
@@ -1249,7 +1249,7 @@ function func607(this: any) {
             yield func023();
         }
         for (let cnt1 = 0; cnt1 < 8; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         var_211 = var_211 - var_2852;
@@ -1278,7 +1278,7 @@ function func608(this: any) {
     
             DSPLAY(audio_id = 176);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1490++;
             }
             var_271 = 0;
@@ -1304,7 +1304,7 @@ function func608(this: any) {
                 yield func023();
             }
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_211 = var_211 - var_2852;
             var_208 = var_208 + var_2852;
@@ -1340,7 +1340,7 @@ function func608(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_1165 = 0;
             var_240 = 0;
@@ -1376,7 +1376,7 @@ function func609(this: any) {
         var_27_x = var_27[2];
         yield func047();
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_403 = "ウイルスが敵の体を蝕んでいる！";
         var_2217 = 1;
@@ -1396,7 +1396,7 @@ function func609(this: any) {
                     yield func516();
                     yield func705();
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2220 = 1;
                 }
@@ -1423,7 +1423,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
@@ -1432,7 +1432,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
@@ -1441,7 +1441,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
@@ -1450,7 +1450,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
@@ -1459,7 +1459,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
@@ -1468,7 +1468,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
@@ -1477,7 +1477,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
@@ -1486,7 +1486,7 @@ function func609(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                 }
@@ -1494,7 +1494,7 @@ function func609(this: any) {
             var_2194 = var_2194 + 1;
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_2196 = 0;
         var_2217 = 0;
@@ -1514,7 +1514,7 @@ function func609(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "ウイルスは許可しないィィィィ――ッ";
@@ -1527,7 +1527,7 @@ function func609(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2876 = Math.floor(var_2876 / 2);
             if (var_2876 < 1) {
@@ -1565,7 +1565,7 @@ function func609(this: any) {
             var_356 = 241;
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         var_529 = 0;
@@ -1601,7 +1601,7 @@ function func610(this: any) {
         var_27_x = var_27[2];
         yield func047();
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_403 = "酸素が細胞組織を破壊している！";
         var_2217 = 1;
@@ -1621,7 +1621,7 @@ function func610(this: any) {
                     yield func516();
                     yield func705();
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2220 = 1;
                 }
@@ -1648,7 +1648,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
@@ -1657,7 +1657,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
@@ -1666,7 +1666,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
@@ -1675,7 +1675,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
@@ -1684,7 +1684,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
@@ -1693,7 +1693,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
@@ -1702,7 +1702,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                     if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
@@ -1711,7 +1711,7 @@ function func610(this: any) {
                         yield func516();
                         yield func705();
                         for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                 }
@@ -1719,7 +1719,7 @@ function func610(this: any) {
             var_2194 = var_2194 + 1;
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_529 = 0;
         var_2196 = 0;
@@ -1750,7 +1750,7 @@ function func610(this: any) {
             yield func023();
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_211 = var_211 - var_2852;
         var_208 = var_208 + var_2852;
@@ -1804,7 +1804,7 @@ function func611(this: any) {
         DSPLAY(audio_id = 104);
         var_209 = var_2852;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         comments_row1 = "";
@@ -1826,7 +1826,7 @@ function func611(this: any) {
             yield func023();
         }
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_211 = var_211 - var_2852;
         var_208 = var_208 + var_2852;
@@ -1882,11 +1882,11 @@ function func612(this: any) {
                 var_1403 = 1;
             }
             var_411 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_959++;
         }
         var_83[var_1393].Var21 = 0;
@@ -1906,7 +1906,7 @@ function func612(this: any) {
         var_300 = 0;
         yield func050();
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ぼくをチェーンで殴る気だッ！";
@@ -1924,7 +1924,7 @@ function func612(this: any) {
         var_2708 = 1;
         var_2197 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -1967,12 +1967,12 @@ function func613(this: any) {
         
                 DSPLAY(audio_id = 161);
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1392 = var_1392 + 1;
         }
         var_1392 = 0;
         var_271 = 0;
-        yield func340();
+        yield func340(); // キー入力による選択処理
         var_389 = 0;
         if (var_128 >= 1) {
             yield func023();
@@ -1995,7 +1995,7 @@ function func613(this: any) {
             var_2708 = 1;
             var_2197 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -2017,7 +2017,7 @@ function func613(this: any) {
             var_2708 = 1;
             var_2197 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -2044,7 +2044,7 @@ function func613(this: any) {
         var_2708 = 1;
         var_2197 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -2091,13 +2091,13 @@ function func614(this: any) {
         var_271 = 1;
         var_1491 = 1;
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1491++;
         }
         var_271 = 0;
         var_1491 = 0;
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         comments_row1 = "";
         comments_row2 = "";
@@ -2123,7 +2123,7 @@ function func614(this: any) {
         var_2708 = 1;
         var_2197 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_2392 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
@@ -2134,7 +2134,7 @@ function func614(this: any) {
         }
         if (var_215 == 100 || var_215 == 111 || var_215 == 398) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_114 = 0;
             var_463 = 0;
@@ -2150,7 +2150,7 @@ function func614(this: any) {
             var_271 = 1;
             var_1493 = 1;
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1493++;
             }
             var_271 = 0;
@@ -2171,9 +2171,9 @@ function func614(this: any) {
             var_27_x = var_27[6];
             yield func047();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
-            yield func340();
+            yield func340(); // キー入力による選択処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "どんな気分だ？";
@@ -2186,9 +2186,9 @@ function func614(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_153 = 1;
             return;
         }
@@ -2202,51 +2202,51 @@ function func615(this: any) {
         var_83[var_673].Var21 = 1;
         var_411 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 4;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 5;
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 4;
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 5;
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 4;
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 5;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 3;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_2705 = var_83[var_673].Var1;
         var_2706 = var_83[var_673].Var2;
@@ -2278,7 +2278,7 @@ function func615(this: any) {
         var_83[var_673].Var21 = 0;
         var_83[var_673].Var30 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -2293,7 +2293,7 @@ function func616(this: any) {
         var_83[var_673].Var21 = 1;
         var_411 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 2;
         var_83[var_673].Var7 = 1;
@@ -2302,7 +2302,7 @@ function func616(this: any) {
         var_1430 = var_83[var_673].Var1;
         var_1431 = var_83[var_673].Var2;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1439 = var_1439 + 1;
         }
         var_742 = 0;
@@ -2315,7 +2315,7 @@ function func616(this: any) {
         var_1437 = (var_2789 - var_66 + 4) * 40;
         var_1438 = (var_2790 - var_67 + 4) * 40 - 170;
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1438 = var_1438 + 40;
         }
         var_455 = var_2789;
@@ -2326,7 +2326,7 @@ function func616(this: any) {
         var_83[var_673].Var21 = 0;
         var_411 = 0;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -2338,23 +2338,23 @@ function func617(this: any) {
         var_83[var_673].Var21 = 1;
         var_411 = 1;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 3;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 2;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 1;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 0;
         var_83[var_673].Var21 = 0;
@@ -2388,7 +2388,7 @@ function func617(this: any) {
         var_27_x = var_27[2];
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         yield func331();
         return;
@@ -2422,7 +2422,7 @@ function func618(this: any) {
         var_27_x = var_27[2];
         yield func047();
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_83[var_2881].Var18 = 0;
         var_2883 = var_83[var_2881].Var1;
@@ -2456,7 +2456,7 @@ function func618(this: any) {
         var_27_x = var_27[2];
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -2523,7 +2523,7 @@ function func620(this: any) {
                         var_411 = 4;
                     }
                     var_1309 = var_1309 + 1;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_271 = 0;
                 var_1309 = 0;
@@ -2573,7 +2573,7 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -2669,12 +2669,12 @@ function func620(this: any) {
             DSPLAY(audio_id = 220);
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 var_2578 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_2578 = 0;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 0;
             var_83[var_412].Var21 = 0;
@@ -2695,7 +2695,7 @@ function func620(this: any) {
             var_300 = 0;
             yield func047();
             if (var_2887 == 1) {
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "･･･と思ったが、";
@@ -2709,7 +2709,7 @@ function func620(this: any) {
                 yield func047();
             }
             if (var_2887 == 2) {
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "･･･と思ったが、";
@@ -2721,7 +2721,7 @@ function func620(this: any) {
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 var_1073 = rnd(4);
@@ -2750,7 +2750,7 @@ function func620(this: any) {
                 yield func047();
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2197 = 1;
             return;
@@ -2766,7 +2766,7 @@ function func620(this: any) {
                 }
                 yield func619();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 if (var_156[396] == 0) {
                     if (var_157 == 0) {
@@ -2793,10 +2793,10 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 if (var_156[396] == 1) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     yield func094();
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -2839,9 +2839,9 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 var_743 = 0;
                 if (var_128 >= 1) {
                     yield func023();
@@ -2871,7 +2871,7 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 if (var_156[396] == 1) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     yield func094();
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -2886,7 +2886,7 @@ function func620(this: any) {
                     yield func047();
                 }
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -2915,9 +2915,9 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 if (var_128 >= 1) {
                     yield func023();
                 }
@@ -2938,7 +2938,7 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -2966,9 +2966,9 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 var_743 = 0;
                 var_146 = 0;
                 var_147 = 0;
@@ -2982,7 +2982,7 @@ function func620(this: any) {
                 var_1316 = 1;
                 var_271 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1316++;
                 }
                 var_1316 = 0;
@@ -3023,7 +3023,7 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_389 = 0;
                 var_2197 = 1;
@@ -3062,7 +3062,7 @@ function func620(this: any) {
             }
             yield func619();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_673].Var7 = 0;
             wallet = wallet - var_2888;
@@ -3085,7 +3085,7 @@ function func620(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2197 = 1;
             return;
@@ -3124,7 +3124,7 @@ function func620(this: any) {
                 var_83[var_673].Var5 = var_2889;
                 var_83[var_673].Var7 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_742 = 1;
                 }
                 comments_row1 = "";
@@ -3145,7 +3145,7 @@ function func620(this: any) {
                 var_271 = 1;
                 var_458 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_458++;
                     var_742 = 1;
                 }
@@ -3154,7 +3154,7 @@ function func620(this: any) {
                 var_389 = 0;
                 var_742 = 0;
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_565 = var_565 - 1;
                 if (var_565 <= 0) {
@@ -3172,7 +3172,7 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -3201,10 +3201,10 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 if (var_215 == 116 || var_125 >= 1) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし波紋に強くなっていて平気だった";
@@ -3237,7 +3237,7 @@ function func620(this: any) {
         
                 DSPLAY(audio_id = 215);
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1358 = var_1358 + 1;
                 }
                 var_1358 = 0;
@@ -3259,7 +3259,7 @@ function func620(this: any) {
                     var_27_x = var_27[1];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -3281,7 +3281,7 @@ function func620(this: any) {
                     var_27_x = var_27[1];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -3304,7 +3304,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -3357,12 +3357,12 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_742 = 1;
                 var_83[var_673].Var7 = 1;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func619();
         
@@ -3373,12 +3373,12 @@ function func620(this: any) {
         
                 DSPLAY(audio_id = 111);
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2228 = 1;
                 yield func531();
                 if (var_2228 == 0) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "" + target_item_name + "に";
@@ -3391,7 +3391,7 @@ function func620(this: any) {
                     yield func050();
                 }
                 if (var_2228 == 1) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     yield func094();
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -3403,7 +3403,7 @@ function func620(this: any) {
                     var_198 = 1;
                     var_300 = 0;
                     yield func050();
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     var_2891 = Math.floor(var_211 / 2);
                     var_211 = var_211 - var_2891;
                     if (var_211 <= 1) {
@@ -3421,7 +3421,7 @@ function func620(this: any) {
                     var_198 = 1;
                     var_300 = 0;
                     yield func050();
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "HPが半分になった。";
@@ -3435,7 +3435,7 @@ function func620(this: any) {
                 }
                 var_389 = 0;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -3448,7 +3448,7 @@ function func620(this: any) {
                 DSPLAY(audio_id = 161);
                 var_1163 = 1;
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_1163 = 0;
                 var_2521 = 1;
@@ -3477,7 +3477,7 @@ function func620(this: any) {
                 yield func047();
                 yield func331();
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -3505,7 +3505,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -3539,7 +3539,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -3549,23 +3549,23 @@ function func620(this: any) {
             var_742 = 1;
             var_83[var_412].Var7 = 1;
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_83[var_412].Var7 = 0;
             var_742 = 0;
             if (var_156[362] == 1) {
@@ -3584,7 +3584,7 @@ function func620(this: any) {
                 var_27_x = var_27[1];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -3649,7 +3649,7 @@ function func620(this: any) {
                 yield func023();
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2197 = 1;
             var_2695 = var_83[var_412].Var1;
@@ -3661,7 +3661,7 @@ function func620(this: any) {
                 var_271 = 1;
                 var_1345 = 1;
                 for (let cnt3 = 0; cnt3 < 14; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1345 = var_1345 + 1;
                     var_198 = 1;
                     var_300 = 0;
@@ -3703,7 +3703,7 @@ function func620(this: any) {
                 var_271 = 1;
                 var_1345 = 1;
                 for (let cnt3 = 0; cnt3 < 14; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1345 = var_1345 + 1;
                 }
                 var_271 = 0;
@@ -3716,7 +3716,7 @@ function func620(this: any) {
                 var_271 = 1;
                 var_1345 = 1;
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1345 = var_1345 + 1;
                     if (var_1345 == 16) {
             
@@ -3750,23 +3750,23 @@ function func620(this: any) {
             var_743 = 1;
             var_83[var_412].Var7 = 1;
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_83[var_412].Var7 = 0;
             var_742 = 0;
             var_743 = 0;
@@ -3832,7 +3832,7 @@ function func620(this: any) {
                 yield func023();
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2197 = 1;
             return;
@@ -3878,15 +3878,15 @@ function func620(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_742 = 1;
             var_83[var_412].Var7 = 1;
             var_83[var_412].Var21 = 1;
             var_411 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
     
             DSPLAY(audio_id = 128);
@@ -3894,10 +3894,10 @@ function func620(this: any) {
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
                 var_389 = 1;
                 var_1305++;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_389 = 3;
                 var_1305++;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 0;
             var_83[var_412].Var21 = 0;
@@ -3922,7 +3922,7 @@ function func620(this: any) {
                 var_27_x = var_27[1];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -3943,7 +3943,7 @@ function func620(this: any) {
                 var_27_x = var_27[1];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -3985,7 +3985,7 @@ function func620(this: any) {
                 yield func023();
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2197 = 1;
             return;
@@ -4031,30 +4031,30 @@ function func620(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
     
             DSPLAY(audio_id = 122);
             var_742 = 1;
             var_83[var_412].Var7 = 1;
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_83[var_412].Var7 = 0;
             var_742 = 0;
             if (var_156[119]) {
@@ -4074,7 +4074,7 @@ function func620(this: any) {
                 var_27_x = var_27[1];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -4115,7 +4115,7 @@ function func620(this: any) {
                 yield func023();
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2197 = 1;
             return;
@@ -4160,7 +4160,7 @@ function func620(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
     
             DSPLAY(audio_id = 121);
@@ -4168,23 +4168,23 @@ function func620(this: any) {
             var_83[var_412].Var7 = 1;
             var_743 = 1;
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_83[var_412].Var7 = 0;
             var_742 = 0;
             var_743 = 0;
@@ -4205,7 +4205,7 @@ function func620(this: any) {
                 var_27_x = var_27[1];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -4226,7 +4226,7 @@ function func620(this: any) {
                 var_27_x = var_27[1];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -4272,7 +4272,7 @@ function func620(this: any) {
                 yield func023();
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2197 = 1;
             return;
@@ -4309,14 +4309,14 @@ function func620(this: any) {
                 var_271 = 1;
                 var_1499 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1499++;
                 }
                 var_271 = 0;
                 var_1499 = 0;
                 var_83[var_673].Var7 = 0;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_389 = 0;
                 var_127 = 1;
@@ -4350,7 +4350,7 @@ function func620(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_673].Var7 = 0;
             var_461 = var_66;
@@ -4392,7 +4392,7 @@ function func620(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_673].Var7 = 0;
             var_461 = var_66;
@@ -4435,7 +4435,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_83[var_673].Var7 = 0;
                 var_461 = var_66;
@@ -4447,7 +4447,7 @@ function func620(this: any) {
             if (var_114 != 0 && var_114 == var_673) {
                 var_601 = rnd(5);
                 for (let cnt3 = 0; cnt3 < 12; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func094();
                 comments_row1 = "";
@@ -4483,7 +4483,7 @@ function func620(this: any) {
                 var_26_x = var_26[2];
                 var_27_x = var_27[2];
                 yield func047();
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 var_601 = rnd(20);
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -4502,7 +4502,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 yield func050();
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 var_271 = 1;
                 var_1440 = 1;
                 var_1442 = rnd(2);
@@ -4517,7 +4517,7 @@ function func620(this: any) {
         
                 DSPLAY(audio_id = 201);
                 for (let cnt3 = 0; cnt3 < 7; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     if (var_1442 == 0) {
                         var_1427 = var_1427 + 20;
                         var_1428 = var_1428 + 20;
@@ -4579,12 +4579,12 @@ function func620(this: any) {
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_585 = 3;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_585 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_389 = 0;
                 var_2197 = 1;
@@ -4626,14 +4626,14 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
     
                 DSPLAY(audio_id = 136);
                 var_1382 = 1;
                 var_271 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1382++;
                 }
                 var_1382 = 0;
@@ -4670,15 +4670,15 @@ function func620(this: any) {
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_1273 = 1;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_1273 = 2;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_1273 = 3;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_198 = 1;
                     var_300 = 0;
@@ -4705,7 +4705,7 @@ function func620(this: any) {
                 yield func047();
                 yield func050();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_389 = 0;
                 var_2197 = 1;
@@ -4740,14 +4740,14 @@ function func620(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
 
             DSPLAY(audio_id = 136);
             var_1382 = 1;
             var_271 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1382++;
             }
             var_1382 = 0;
@@ -4794,14 +4794,14 @@ function func620(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
 
             DSPLAY(audio_id = 136);
             var_1381 = 1;
             var_271 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1381++;
             }
             var_1381 = 0;
@@ -4847,14 +4847,14 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
     
                 DSPLAY(audio_id = 136);
                 var_1380 = 1;
                 var_271 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1380++;
                 }
                 var_1380 = 0;
@@ -4862,7 +4862,7 @@ function func620(this: any) {
                 var_83[var_673].Var7 = 0;
                 var_743 = 0;
                 if (var_215 == 109 || var_173 == 1) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     var_114 = 0;
                     comments_row1 = "";
                     comments_row2 = "";
@@ -4879,7 +4879,7 @@ function func620(this: any) {
                     var_27_x = var_27[1];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -4960,41 +4960,41 @@ function func620(this: any) {
                     yield func492(); // アイテムリスト呼び出し
                 }
                 if (var_2473 == 1) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "い・・・息が・・・";
                     comments_row2a = "";
                     yield func047();
                     yield func050();
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "熱で呼吸が苦しくなると";
                     comments_row2a = "スタンドは弱まってしまう！";
                     yield func047();
                     yield func050();
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "" + item_name + "は";
                     comments_row2a = "弱くなってしまった…";
                     yield func047();
                     yield func050();
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                 }
                 if (var_2473 == 3) {
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "スタンドが弱まりそうになったが";
                     comments_row2a = "漆黒のオーラに包まれていて無事だった";
                     yield func047();
                     yield func050();
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                 }
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -5036,14 +5036,14 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func619();
                 var_742 = 1;
                 var_743 = 1;
                 var_83[var_412].Var7 = 1;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
         
                 DSPLAY(audio_id = 128);
@@ -5051,10 +5051,10 @@ function func620(this: any) {
                 for (let cnt3 = 0; cnt3 < 6; ++cnt3) {
                     var_389 = 2;
                     var_1305++;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_389 = 0;
                     var_1305++;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_271 = 0;
                 var_1305 = 0;
@@ -5078,7 +5078,7 @@ function func620(this: any) {
                     var_27_x = var_27[1];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -5099,7 +5099,7 @@ function func620(this: any) {
                     var_27_x = var_27[1];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -5141,7 +5141,7 @@ function func620(this: any) {
                     yield func023();
                 }
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -5172,7 +5172,7 @@ function func620(this: any) {
                     var_83[var_673].Var7 = 1;
                     var_743 = 1;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_743 = 0;
                     var_742 = 0;
@@ -5195,7 +5195,7 @@ function func620(this: any) {
                     var_27_x = var_27[2];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 15; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                 }
@@ -5216,21 +5216,21 @@ function func620(this: any) {
                 var_2273 = var_97;
                 var_83[var_2273].Var7 = 1;
                 var_83[var_2273].Var5 = 3;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var5 = 6;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var5 = 9;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var5 = 8;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var5 = 7;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var5 = 4;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var5 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var5 = 2;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var7 = 0;
                 yield func331();
                 var_1073 = rnd(3);
@@ -5262,7 +5262,7 @@ function func620(this: any) {
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -5271,7 +5271,7 @@ function func620(this: any) {
                 yield func047();
                 yield func050();
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -5297,7 +5297,7 @@ function func620(this: any) {
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2524 = 1;
                 var_1845 = 1;
@@ -5329,22 +5329,22 @@ function func620(this: any) {
                 var_411 = 1;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_411 = 2;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_411 = 3;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_411 = 4;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_411 = 0;
                 var_83[var_2273].Var21 = 0;
@@ -5411,7 +5411,7 @@ function func620(this: any) {
                 var_411 = 1;
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_83[var_673].Var21 = 0;
                 var_411 = 0;
@@ -5530,9 +5530,9 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 var_2899 = rnd(6);
                 if (var_2899 == 0) {
                     var_411 = 2;
@@ -5576,7 +5576,7 @@ function func620(this: any) {
                 yield func047();
                 yield func050();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
             }
             if (var_2894 == 1) {
@@ -5592,27 +5592,27 @@ function func620(this: any) {
                 yield func047();
                 yield func050();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_1258 = 0;
                 var_389 = 2;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_411 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_411 = 6;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_411 = 7;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                 }
                 var_411 = 8;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_83[var_2896].Var21 = 0;
                 var_411 = 0;
@@ -5643,7 +5643,7 @@ function func620(this: any) {
                     yield func047();
                     yield func050();
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -5671,7 +5671,7 @@ function func620(this: any) {
                     yield func050();
                     if (var_233[var_2897].Var3 < 1 && var_233[var_2897].Var0 >= 400 && var_233[var_2897].Var0 < 500) {
                         for (let cnt5 = 0; cnt5 < 20; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                         comments_row1 = comments_row1a;
                         comments_row2 = comments_row2a;
@@ -5692,7 +5692,7 @@ function func620(this: any) {
                         yield func494();
                     }
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -5714,7 +5714,7 @@ function func620(this: any) {
                 yield func047();
                 yield func050();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -5744,7 +5744,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
                 return;
@@ -5762,7 +5762,7 @@ function func620(this: any) {
                 var_271 = 1;
                 var_389 = 2;
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1495++;
                 }
                 var_83[var_673].Var21 = 0;
@@ -5791,16 +5791,16 @@ function func620(this: any) {
                     var_27_x = var_27[2];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
                 }
-                if (var_840 > 1) {
-                    var_840 = var_840 - 1;
+                if (current_level > 1) {
+                    current_level = current_level - 1;
                     var_352 = var_352 - 3;
                     var_211 = var_211 - 3;
-                    var_568 = var_948[var_840] - 1;
+                    var_568 = var_948[current_level] - 1;
                     if (var_352 < 1) {
                         var_352 = 1;
                     }
@@ -5808,7 +5808,7 @@ function func620(this: any) {
                         var_211 = 1;
                     }
                 }
-                if (var_840 == 1) {
+                if (current_level == 1) {
             
                     DSPLAY(audio_id = 151);
                     var_211 = 0;
@@ -5828,7 +5828,7 @@ function func620(this: any) {
                     var_27_x = var_27[2];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -5850,7 +5850,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -5890,7 +5890,7 @@ function func620(this: any) {
         
                 DSPLAY(audio_id = 161);
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1481++;
                 }
                 var_271 = 0;
@@ -5928,7 +5928,7 @@ function func620(this: any) {
                 }
                 yield func619();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_83[var_673].Var21 = 0;
                 var_2197 = 1;
@@ -5959,7 +5959,7 @@ function func620(this: any) {
                     var_83[var_673].Var7 = 1;
                     var_743 = 1;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_743 = 0;
                     var_742 = 0;
@@ -5982,7 +5982,7 @@ function func620(this: any) {
                     var_27_x = var_27[2];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 15; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                 }
@@ -6005,7 +6005,7 @@ function func620(this: any) {
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                     var_300 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2523 = 1;
                 var_1845 = 1;
@@ -6038,7 +6038,7 @@ function func620(this: any) {
         
                 DSPLAY(audio_id = 168);
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_198 = 1;
                     var_300 = 0;
                     var_1583++;
@@ -6160,7 +6160,7 @@ function func620(this: any) {
                             var_411 = 3;
                         }
                     }
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_743 = 0;
                 var_742 = 0;
@@ -6188,7 +6188,7 @@ function func620(this: any) {
                     var_27_x = var_27[1];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
                     var_2197 = 1;
                     return;
@@ -6277,7 +6277,7 @@ function func620(this: any) {
                 }
                 var_83[var_412].Var26 = 1;
                 item_list = var_233[var_475].Var0;
-                yield func106();
+                yield func106(); // BGM選曲呼び出し割り振り
                 yield func492(); // アイテムリスト呼び出し
                 target_item_name = item_name;
                 var_419 = var_412 + 200;
@@ -6330,7 +6330,7 @@ function func620(this: any) {
                 yield func047();
                 yield func619();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -6366,14 +6366,14 @@ function func620(this: any) {
                 yield func047();
                 yield func619();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_83[var_673].Var7 = 0;
                 var_743 = 0;
                 if (var_128 >= 1) {
                     yield func023();
                 }
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 var_389 = 0;
             }
             if (var_2830 == 0 || var_2830 == 1) {
@@ -6483,7 +6483,7 @@ function func620(this: any) {
                 var_27_x = var_27[2];
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func619();
                 if (var_215 != 120) {
@@ -6543,9 +6543,9 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 if (var_128 >= 1) {
                     yield func023();
                 }
@@ -6566,7 +6566,7 @@ function func620(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_2197 = 1;
             }
@@ -6712,7 +6712,7 @@ function func623(this: any) {
     
             DSPLAY(audio_id = 156);
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1364++;
             }
             var_271 = 0;
@@ -6775,7 +6775,7 @@ function func623(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         var_673 = var_1912;
@@ -6872,7 +6872,7 @@ function func624(this: any) {
     
             DSPLAY(audio_id = 156);
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_271 = 0;
             var_1373 = 0;
@@ -6883,7 +6883,7 @@ function func624(this: any) {
             var_1371 = 0;
             var_1374 = 0;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         var_1371 = 0;
@@ -7191,7 +7191,7 @@ function func626(this: any) {
         var_1637 = 0;
         var_1654 = 100;
         var_972 = 0;
-        var_1655 = "";
+        enemy_description = "";
         var_1656 = "";
         var_1657 = "";
         var_1658 = "";
@@ -7206,7 +7206,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 8;
             var_1619 = 414;
-            var_1655 = "・動かないぞ。";
+            enemy_description = "・動かないぞ。";
             var_1656 = "・攻撃してこないぞ。";
             var_1657 = "・倒すと成長することがあるぞ。";
             var_1658 = "・模様の違う卵には要注意だ。";
@@ -7221,7 +7221,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 528;
-            var_1655 = "・フラフラと歩くぞ。";
+            enemy_description = "・フラフラと歩くぞ。";
             var_1656 = "・必ず「ｵﾚｯちのｺｰﾄ」を落とすぞ。";
             var_1657 = "・ｺｰﾄを持っていると向かってくるぞ。";
             var_1658 = "・ｺｰﾄが落ちているとそこへ向かうぞ。";
@@ -7236,7 +7236,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 105;
-            var_1655 = "・とくに何もないぞ。";
+            enemy_description = "・とくに何もないぞ。";
             var_1656 = "・衛生観念のない虫けら同然の浮浪者だ。";
             var_1657 = "";
             var_1658 = "";
@@ -7251,7 +7251,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 206;
-            var_1655 = "・ヒラヒラと舞って攻撃が当たりにくいぞ。";
+            enemy_description = "・ヒラヒラと舞って攻撃が当たりにくいぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7266,7 +7266,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 438;
-            var_1655 = "・フラフラと歩くぞ。";
+            enemy_description = "・フラフラと歩くぞ。";
             var_1656 = "・攻撃してこないぞ。";
             var_1657 = "・多分ボケちゃっているぞ。";
             var_1658 = "";
@@ -7281,7 +7281,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 363;
-            var_1655 = "・とくに何もないぞ。";
+            enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7296,7 +7296,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 604;
-            var_1655 = "・幽霊の弾丸を撃ってくるぞ。";
+            enemy_description = "・幽霊の弾丸を撃ってくるぞ。";
             var_1656 = "・特別なスタンドを扱えそうだ…";
             var_1657 = "";
             var_1658 = "";
@@ -7311,7 +7311,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 311;
-            var_1655 = "・近い場所に瞬間移動することがあるぞ。";
+            enemy_description = "・近い場所に瞬間移動することがあるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7326,7 +7326,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 203;
-            var_1655 = "・掴まえて動けなくしてくるぞ。";
+            enemy_description = "・掴まえて動けなくしてくるぞ。";
             var_1656 = "・「たのもしいわ！あたしのブルりん！」";
             var_1657 = "";
             var_1658 = "";
@@ -7341,7 +7341,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 8;
             var_1619 = 415;
-            var_1655 = "・音を貼り付けて混乱させてくるぞ。";
+            enemy_description = "・音を貼り付けて混乱させてくるぞ。";
             var_1656 = "・倒すと成長することがあるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7356,7 +7356,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 107;
-            var_1655 = "・とくに何もないぞ。";
+            enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7371,7 +7371,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 316;
-            var_1655 = "・ガソリンの弾丸を撃ってくるぞ。";
+            enemy_description = "・ガソリンの弾丸を撃ってくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7386,7 +7386,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 314;
-            var_1655 = "・殴ると肉片が貼り付いてしまうことがあるぞ。";
+            enemy_description = "・殴ると肉片が貼り付いてしまうことがあるぞ。";
             var_1656 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7401,7 +7401,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 8;
             var_1619 = 445;
-            var_1655 = "・倍の速さで移動するぞ。";
+            enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・養分を吸い取って満腹度を下げてくるぞ。";
             var_1657 = "・特別なアイテムを持っていることがあるぞ。";
             var_1658 = "";
@@ -7416,7 +7416,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 8;
             var_1619 = 441;
-            var_1655 = "・アイテムを盗んで逃げるぞ。";
+            enemy_description = "・アイテムを盗んで逃げるぞ。";
             var_1656 = "・落ちているアイテムも拾って逃げるぞ。";
             var_1657 = "・盗んだ後は倍の速さで移動するぞ。";
             var_1658 = "";
@@ -7431,7 +7431,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 8;
             var_1619 = 417;
-            var_1655 = "・文字を投げつけて攻撃してくるぞ。";
+            enemy_description = "・文字を投げつけて攻撃してくるぞ。";
             var_1656 = "・地面に文字の罠を貼り付けるぞ。";
             var_1657 = "・倒すと成長することがあるぞ。";
             var_1658 = "";
@@ -7446,7 +7446,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 0;
             var_1619 = 312;
-            var_1655 = "・攻撃を受けると恨みで攻撃力が上がるぞ。";
+            enemy_description = "・攻撃を受けると恨みで攻撃力が上がるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7461,7 +7461,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 3;
             var_1619 = 313;
-            var_1655 = "・他の敵に乗り移ってレベルを上げるぞ。";
+            enemy_description = "・他の敵に乗り移ってレベルを上げるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7476,7 +7476,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 108;
-            var_1655 = "・とくに何もないぞ。";
+            enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7491,7 +7491,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 111;
-            var_1655 = "・倒すと首だけになって残るぞ。";
+            enemy_description = "・倒すと首だけになって残るぞ。";
             var_1656 = "・首に触れると波紋のバラを飛ばしてくるぞ。";
             var_1657 = "・凍った状態になると弱いぞ。";
             var_1658 = "";
@@ -7506,7 +7506,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 113;
-            var_1655 = "・常に４人組で行動するぞ。";
+            enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
             var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
             var_1658 = "・倍の速さで移動するぞ。";
@@ -7521,7 +7521,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 114;
-            var_1655 = "・常に４人組で行動するぞ。";
+            enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
             var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
             var_1658 = "・倍の速さで移動するぞ。";
@@ -7536,7 +7536,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 115;
-            var_1655 = "・常に４人組で行動するぞ。";
+            enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
             var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
             var_1658 = "・倍の速さで移動するぞ。";
@@ -7551,7 +7551,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 116;
-            var_1655 = "・常に４人組で行動するぞ。";
+            enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
             var_1657 = "・一人に攻撃すると、皆で襲ってくるぞ。";
             var_1658 = "・倍の速さで移動するぞ。";
@@ -7566,7 +7566,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 603;
-            var_1655 = "・ＦＦの弾丸を撃ってくるぞ。";
+            enemy_description = "・ＦＦの弾丸を撃ってくるぞ。";
             var_1656 = "・弾丸が他の敵に当たると体力が回復するぞ。";
             var_1657 = "・熱湯に弱いぞ。";
             var_1658 = "";
@@ -7581,7 +7581,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 601;
-            var_1655 = "・近くに怪我をした敵がいると治しに行くぞ。";
+            enemy_description = "・近くに怪我をした敵がいると治しに行くぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7596,7 +7596,7 @@ function func626(this: any) {
             var_1654 = 8;
             var_972 = 3;
             var_1619 = 325;
-            var_1655 = "・時々眠らせてくるぞ。";
+            enemy_description = "・時々眠らせてくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7611,7 +7611,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 322;
-            var_1655 = "・攻撃すると分裂して増えることがあるぞ。";
+            enemy_description = "・攻撃すると分裂して増えることがあるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7626,7 +7626,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 302;
-            var_1655 = "・スタンドで縛り付けて動けなくさせるぞ。";
+            enemy_description = "・スタンドで縛り付けて動けなくさせるぞ。";
             var_1656 = "・攻撃されると波紋で痺れることがあるぞ。";
             var_1657 = "・老化攻撃を受けると弱くなってしまうぞ。";
             var_1658 = "";
@@ -7641,7 +7641,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 607;
-            var_1655 = "・フワフワと動いているぞ。";
+            enemy_description = "・フワフワと動いているぞ。";
             var_1656 = "・気流に舞って攻撃が当たりにくいぞ。";
             var_1657 = "・近くにいると弾丸を撃ってくるぞ。";
             var_1658 = "・この弾丸は防御力の影響を受けないぞ。";
@@ -7656,7 +7656,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 102;
-            var_1655 = "・殴ると凍ってしまうことがあるぞ。";
+            enemy_description = "・殴ると凍ってしまうことがあるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7671,7 +7671,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 112;
-            var_1655 = "・とくに何もないぞ。";
+            enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7686,7 +7686,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 8;
             var_1619 = 419;
-            var_1655 = "・体を重くして鈍足にしてくるぞ。";
+            enemy_description = "・体を重くして鈍足にしてくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7701,7 +7701,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 1;
             var_1619 = 317;
-            var_1655 = "・倍の速さで動いているぞ。";
+            enemy_description = "・倍の速さで動いているぞ。";
             var_1656 = "・動く死体を呼び出すことがあるぞ。";
             var_1657 = "・ダンジョンの主だぞ。";
             var_1658 = "";
@@ -7716,7 +7716,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 0;
             var_1619 = 319;
-            var_1655 = "・エンヤ婆に操られている死体だ。";
+            enemy_description = "・エンヤ婆に操られている死体だ。";
             var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7731,7 +7731,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 0;
             var_1619 = 320;
-            var_1655 = "・エンヤ婆に操られている死体だ。";
+            enemy_description = "・エンヤ婆に操られている死体だ。";
             var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7746,7 +7746,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 0;
             var_1619 = 318;
-            var_1655 = "・エンヤ婆に操られている死体だ。";
+            enemy_description = "・エンヤ婆に操られている死体だ。";
             var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7761,7 +7761,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 204;
-            var_1655 = "・マシンガンを撃ってくるぞ。";
+            enemy_description = "・マシンガンを撃ってくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7776,7 +7776,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 326;
-            var_1655 = "・土人形を作り出すことがあるぞ。";
+            enemy_description = "・土人形を作り出すことがあるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7791,7 +7791,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 0;
             var_1619 = 327;
-            var_1655 = "・ジャッジメントに作られた土人形だ。";
+            enemy_description = "・ジャッジメントに作られた土人形だ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7806,7 +7806,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 444;
-            var_1655 = "・フワフワと動いているぞ。";
+            enemy_description = "・フワフワと動いているぞ。";
             var_1656 = "・親父がいる部屋は写真の中だ。";
             var_1657 = "　倒さないと出られないぞ。";
             var_1658 = "・弓矢を落とすことがあるぞ。";
@@ -7821,7 +7821,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 101;
-            var_1655 = "・攻撃時に波紋で痺れさせることがあるぞ。";
+            enemy_description = "・攻撃時に波紋で痺れさせることがあるぞ。";
             var_1656 = "・ズームパンチで２マス先まで攻撃するぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7836,7 +7836,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 602;
-            var_1655 = "・地面にキッスのシールを貼るぞ。";
+            enemy_description = "・地面にキッスのシールを貼るぞ。";
             var_1656 = "・他の敵がシールに触れると分裂するぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7851,7 +7851,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 9;
             var_1619 = 501;
-            var_1655 = "・アイテムをカエルに変化させるぞ。";
+            enemy_description = "・アイテムをカエルに変化させるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7866,7 +7866,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 8;
             var_1619 = 404;
-            var_1655 = "・霧になって他の場所へ瞬間移動するぞ。";
+            enemy_description = "・霧になって他の場所へ瞬間移動するぞ。";
             var_1656 = "・念写に写りこんでしまう事があるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7881,7 +7881,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 212;
-            var_1655 = "・とくに何もないぞ。";
+            enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7896,7 +7896,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 433;
-            var_1655 = "・ｽﾀﾝﾄﾞDISCに呪縛をかけてくるぞ。";
+            enemy_description = "・ｽﾀﾝﾄﾞDISCに呪縛をかけてくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7911,7 +7911,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 525;
-            var_1655 = "・同じ部屋にいると階段を降りられないぞ";
+            enemy_description = "・同じ部屋にいると階段を降りられないぞ";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7926,7 +7926,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 405;
-            var_1655 = "・ガオンと近くに引き寄せてくるぞ。";
+            enemy_description = "・ガオンと近くに引き寄せてくるぞ。";
             var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -7941,7 +7941,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 342;
-            var_1655 = "・地面に潜って他の場所に移動するぞ。";
+            enemy_description = "・地面に潜って他の場所に移動するぞ。";
             var_1656 = "・足を掴んで移動できなくさせるぞ。";
             var_1657 = "・目を切り裂いて盲目にしてくるぞ。";
             var_1658 = "";
@@ -7956,7 +7956,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 207;
-            var_1655 = "・波紋を帯びたシャボンを発射してくるぞ。";
+            enemy_description = "・波紋を帯びたシャボンを発射してくるぞ。";
             var_1656 = "・あたると痺れることがあるぞ。";
             var_1657 = "・攻撃されても波紋で痺れることがあるぞ。";
             var_1658 = "";
@@ -7971,7 +7971,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 348;
-            var_1655 = "・若返り攻撃でレベルを下げてくるぞ。";
+            enemy_description = "・若返り攻撃でレベルを下げてくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -7986,7 +7986,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 10;
             var_1619 = 507;
-            var_1655 = "・弾丸を発射してくるぞ。";
+            enemy_description = "・弾丸を発射してくるぞ。";
             var_1656 = "・どこからでも位置を察して飛んでくるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8001,7 +8001,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 303;
-            var_1655 = "・レッドバインドで縛り付けてくるぞ。";
+            enemy_description = "・レッドバインドで縛り付けてくるぞ。";
             var_1656 = "・喰らうとスタンドが弱くなってしまうぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8016,7 +8016,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 3;
             var_1619 = 516;
-            var_1655 = "・アイテムに化けているぞ。";
+            enemy_description = "・アイテムに化けているぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8031,7 +8031,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 8;
             var_1619 = 443;
-            var_1655 = "・体力が少なくなると爆発するぞ。";
+            enemy_description = "・体力が少なくなると爆発するぞ。";
             var_1656 = "・自分が爆発に巻き込まれると誘爆するぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8046,7 +8046,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 315;
-            var_1655 = "・付かず離れず距離をとってくるぞ。";
+            enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
             var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
             var_1658 = "・ガラスの破片をバラ撒くこともあるぞ。";
@@ -8061,7 +8061,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 343;
-            var_1655 = "・誰か他の敵に化けていることがあるぞ。";
+            enemy_description = "・誰か他の敵に化けていることがあるぞ。";
             var_1656 = "・爆弾仕掛けのオレンジを落とすぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8076,7 +8076,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 9;
             var_1619 = 506;
-            var_1655 = "・ｳｨﾙｽで部屋の全員にﾀﾞﾒｰｼﾞを与えるぞ。";
+            enemy_description = "・ｳｨﾙｽで部屋の全員にﾀﾞﾒｰｼﾞを与えるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8091,7 +8091,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 345;
-            var_1655 = "・ダメージを受けると攻撃力がアップするぞ。";
+            enemy_description = "・ダメージを受けると攻撃力がアップするぞ。";
             var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8106,7 +8106,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 109;
-            var_1655 = "・髪の毛で縛り付けてくるぞ。";
+            enemy_description = "・髪の毛で縛り付けてくるぞ。";
             var_1656 = "・縛られた髪の毛で満腹度を吸い取るぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8121,7 +8121,7 @@ function func626(this: any) {
             var_1654 = 6;
             var_972 = 1;
             var_1619 = 618;
-            var_1655 = "・装備しているDISCを抜き取ってしまうぞ。";
+            enemy_description = "・装備しているDISCを抜き取ってしまうぞ。";
             var_1656 = "・やっつければ取り戻せるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8136,7 +8136,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 412;
-            var_1655 = "・付かず離れず距離をとってくるぞ。";
+            enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・３種類のエコーズを呼び出すぞ。";
             var_1657 = "・隣接すると重くなる攻撃をしてくるぞ。";
             var_1658 = "";
@@ -8151,7 +8151,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 3;
             var_1619 = 511;
-            var_1655 = "・影から影へ、瞬間的に移動するぞ。";
+            enemy_description = "・影から影へ、瞬間的に移動するぞ。";
             var_1656 = "・矢を刺して選別してくるぞ。";
             var_1657 = "・選ばれると装備品に新たな能力がつくぞ。";
             var_1658 = "・矢かライターを落とすぞ。";
@@ -8166,7 +8166,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 401;
-            var_1655 = "・近くに怪我をした敵がいると治しに行くぞ。";
+            enemy_description = "・近くに怪我をした敵がいると治しに行くぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8181,7 +8181,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 201;
-            var_1655 = "・付かず離れず距離をとってくるぞ。";
+            enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・地面に罠を仕掛けるぞ。";
             var_1657 = "・攻撃されると波紋で痺れることがあるぞ。";
             var_1658 = "・老化攻撃を受けると弱くなってしまうぞ。";
@@ -8196,7 +8196,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 521;
-            var_1655 = "・攻撃すると肉片を貼り付けることがあるぞ。";
+            enemy_description = "・攻撃すると肉片を貼り付けることがあるぞ。";
             var_1656 = "・速く動いても同じ速度で追ってくるぞ。";
             var_1657 = "・ゆっくり動くと追いかけてこないぞ。";
             var_1658 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
@@ -8211,7 +8211,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 202;
-            var_1655 = "・目から体液を発射してくるぞ。";
+            enemy_description = "・目から体液を発射してくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8226,7 +8226,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 9;
             var_1619 = 513;
-            var_1655 = "・接触老化で最大精神力や最大ＨＰが下がるぞ。";
+            enemy_description = "・接触老化で最大精神力や最大ＨＰが下がるぞ。";
             var_1656 = "・同じ部屋にいると精神力を下げてくるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8241,7 +8241,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 523;
-            var_1655 = "・付かず離れず距離をとってくるぞ。";
+            enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・グリーンディやセッコを呼び出すぞ。";
             var_1657 = "・近くのセッコの攻撃力を上げるぞ。";
             var_1658 = "・分離して逃げることがあるぞ。";
@@ -8256,7 +8256,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 524;
-            var_1655 = "・すばやい動きで逃げるぞ。";
+            enemy_description = "・すばやい動きで逃げるぞ。";
             var_1656 = "・倒すと「やばいクスリ」を落とす事があるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8271,7 +8271,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 526;
-            var_1655 = "・ウロウロしながら近づいてくるぞ。";
+            enemy_description = "・ウロウロしながら近づいてくるぞ。";
             var_1656 = "・壁の中でも自由に移動できるぞ。";
             var_1657 = "・壁の中にいる時は普通の攻撃が効かないぞ。";
             var_1658 = "・タイヤが当たると混乱するぞ。";
@@ -8286,7 +8286,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 9;
             var_1619 = 522;
-            var_1655 = "・磁力によって普段は姿が見えないぞ。";
+            enemy_description = "・磁力によって普段は姿が見えないぞ。";
             var_1656 = "・ランダムに移動しているぞ。";
             var_1657 = "・体内で刃物を作る攻撃をしてくるぞ。";
             var_1658 = "";
@@ -8301,7 +8301,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 7;
             var_1619 = 442;
-            var_1655 = "・アイテムを爆弾に変えてくるぞ。";
+            enemy_description = "・アイテムを爆弾に変えてくるぞ。";
             var_1656 = "・床のアイテムも爆弾に変えることがあるぞ。";
             var_1657 = "・ｼｱｰﾊｰﾄｱﾀｯｸを繰り出すことがあるぞ。";
             var_1658 = "";
@@ -8316,7 +8316,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 8;
             var_1619 = 437;
-            var_1655 = "・地下の電線を使って近くに瞬間移動するぞ。";
+            enemy_description = "・地下の電線を使って近くに瞬間移動するぞ。";
             var_1656 = "・２回連続で攻撃してくるぞ。";
             var_1657 = "・水に入るとダメージを受けるぞ。";
             var_1658 = "・タイヤに弱いぞ。";
@@ -8331,7 +8331,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 616;
-            var_1655 = "・こちらの攻撃をヒラリとかわしやすいぞ。";
+            enemy_description = "・こちらの攻撃をヒラリとかわしやすいぞ。";
             var_1656 = "・風水の力で罠をたくさん呼び寄せるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8346,7 +8346,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 110;
-            var_1655 = "・強烈な一撃を繰り出すことがあるぞ。";
+            enemy_description = "・強烈な一撃を繰り出すことがあるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8361,7 +8361,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 2;
             var_1619 = 364;
-            var_1655 = "・時間を止めて自分だけ動くぞ。";
+            enemy_description = "・時間を止めて自分だけ動くぞ。";
             var_1656 = "・ジョセフを倒すとパワーアップするぞ。";
             var_1657 = "・まれに何か投げるぞ。";
             var_1658 = "・近くにいると階段を降りられないぞ。";
@@ -8376,7 +8376,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 0;
             var_1619 = 360;
-            var_1655 = "・氷のミサイルを発射してくるぞ。";
+            enemy_description = "・氷のミサイルを発射してくるぞ。";
             var_1656 = "・隣接時に氷漬けにしてくるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8391,7 +8391,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 9;
             var_1619 = 503;
-            var_1655 = "・２マス先まで攻撃が届くぞ。";
+            enemy_description = "・２マス先まで攻撃が届くぞ。";
             var_1656 = "・あいだに他の敵がいても攻撃が届くぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8406,7 +8406,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 611;
-            var_1655 = "・唾を吐いてくるぞ。";
+            enemy_description = "・唾を吐いてくるぞ。";
             var_1656 = "・当たると無重力で思うように動けなくなるぞ。";
             var_1657 = "・隣接していても無重力攻撃をしてくるぞ。";
             var_1658 = "";
@@ -8421,7 +8421,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 407;
-            var_1655 = "・付かず離れず距離をとるぞ。";
+            enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・バッドカンパニー部隊を呼び出すぞ。";
             var_1657 = "・グリーンベレーを呼び出すぞ。";
             var_1658 = "・地面に地雷を仕掛けるぞ。";
@@ -8436,7 +8436,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 8;
             var_1619 = 408;
-            var_1655 = "・形兆が呼び出したスタンドだ。";
+            enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・弾丸を発射してくるぞ。";
             var_1657 = "・仲間の弾丸には当たらないぞ。";
             var_1658 = "";
@@ -8451,7 +8451,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 8;
             var_1619 = 410;
-            var_1655 = "・形兆が呼び出したスタンドだ。";
+            enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・砲弾を発射してくるぞ。";
             var_1657 = "・仲間の弾丸には当たらないぞ。";
             var_1658 = "";
@@ -8466,7 +8466,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 8;
             var_1619 = 411;
-            var_1655 = "・形兆が呼び出したスタンドだ。";
+            enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・ミサイルを発射してくるぞ。";
             var_1657 = "・仲間の弾丸には当たらないぞ。";
             var_1658 = "";
@@ -8481,7 +8481,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 8;
             var_1619 = 409;
-            var_1655 = "・形兆が呼び出したスタンドだ。";
+            enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・仲間の弾丸には当たらないぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8496,7 +8496,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 9;
             var_1619 = 527;
-            var_1655 = "・攻撃を受けると状態異常がすべて元に戻るぞ。";
+            enemy_description = "・攻撃を受けると状態異常がすべて元に戻るぞ。";
             var_1656 = "・状態異常の他にもいろいろ元に戻すぞ。";
             var_1657 = "・離れているとサソリを飛ばしてくるぞ。";
             var_1658 = "・ダンジョンの主だぞ。";
@@ -8511,7 +8511,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 349;
-            var_1655 = "・付かず離れず距離をとるぞ。";
+            enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
             var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
             var_1658 = "・予知によって弾丸のダメージが変わるぞ。";
@@ -8526,7 +8526,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 6;
             var_1619 = 446;
-            var_1655 = "・金縛りにする空気弾を撃ってくるぞ。";
+            enemy_description = "・金縛りにする空気弾を撃ってくるぞ。";
             var_1656 = "・撃った後は寝てしまうぞ。";
             var_1657 = "・既に金縛りだとダメージ弾になるぞ。";
             var_1658 = "・吉良が近くにいると爆弾空気弾になるぞ。";
@@ -8541,7 +8541,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 305;
-            var_1655 = "・２回連続で攻撃してくるぞ。";
+            enemy_description = "・２回連続で攻撃してくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8556,7 +8556,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 304;
-            var_1655 = "・エメラルドスプラッシュを撃ってくるぞ。";
+            enemy_description = "・エメラルドスプラッシュを撃ってくるぞ。";
             var_1656 = "・時々ニセモノが化けているぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8571,7 +8571,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 9;
             var_1619 = 508;
-            var_1655 = "・柔らかくなってﾀﾞﾒｰｼﾞを受けない事があるぞ。";
+            enemy_description = "・柔らかくなってﾀﾞﾒｰｼﾞを受けない事があるぞ。";
             var_1656 = "・柔らかいと後ろに弾んでしまうぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8586,7 +8586,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 615;
-            var_1655 = "・掴んで動けなくさせるぞ。";
+            enemy_description = "・掴んで動けなくさせるぞ。";
             var_1656 = "・掴んでいると隕石を落とすことがあるぞ。";
             var_1657 = "・この隕石は防御力の影響を受けないぞ。";
             var_1658 = "";
@@ -8601,7 +8601,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 205;
-            var_1655 = "・空気供給管を通って瞬時に移動するぞ。";
+            enemy_description = "・空気供給管を通って瞬時に移動するぞ。";
             var_1656 = "・同じ部屋に吸血鬼やゾンビがいると攻撃し、";
             var_1657 = "　やっつけるとレベルが上がるぞ。";
             var_1658 = "";
@@ -8616,7 +8616,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 347;
-            var_1655 = "・付かず離れず距離をとるぞ。";
+            enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・バステト女神の罠を設置するぞ。";
             var_1657 = "・ボルトやナットを飛ばしてくるぞ。";
             var_1658 = "・磁力がアップしているとダメージが増えるぞ。";
@@ -8631,7 +8631,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 610;
-            var_1655 = "・弾丸が燃え尽きて届かないぞ。";
+            enemy_description = "・弾丸が燃え尽きて届かないぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8646,7 +8646,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 614;
-            var_1655 = "・同じ部屋にいると壁を通して攻撃するぞ。";
+            enemy_description = "・同じ部屋にいると壁を通して攻撃するぞ。";
             var_1656 = "・収納アイテムやヤバイものを壊してくるぞ";
             var_1657 = "";
             var_1658 = "";
@@ -8661,7 +8661,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 444;
-            var_1655 = "・他人のお金を盗むぞ。";
+            enemy_description = "・他人のお金を盗むぞ。";
             var_1656 = "・なんてロマンチックなの……";
             var_1657 = "";
             var_1658 = "";
@@ -8676,7 +8676,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 403;
-            var_1655 = "・ちょっとだけ時間を止めるぞ。";
+            enemy_description = "・ちょっとだけ時間を止めるぞ。";
             var_1656 = "・特定のアイテムを落とすぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8691,7 +8691,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 434;
-            var_1655 = "・髪の毛を飛ばしてくるぞ。";
+            enemy_description = "・髪の毛を飛ばしてくるぞ。";
             var_1656 = "・刺さると思うように動けなくなるぞ。";
             var_1657 = "・ｽﾀﾝﾄﾞDISCに呪縛をかけてくるぞ。";
             var_1658 = "";
@@ -8706,7 +8706,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 413;
-            var_1655 = "・３種類のエコーズを呼び出すぞ。";
+            enemy_description = "・３種類のエコーズを呼び出すぞ。";
             var_1656 = "・杜王町の仲間を呼び出すぞ。";
             var_1657 = "・隣接すると重くなる攻撃をしてくるぞ。";
             var_1658 = "";
@@ -8721,7 +8721,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 402;
-            var_1655 = "・倍の速さで移動するぞ。";
+            enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・２回連続で攻撃するぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8736,7 +8736,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 7;
             var_1619 = 406;
-            var_1655 = "・ガオンと近くに引き寄せてくるぞ。";
+            enemy_description = "・ガオンと近くに引き寄せてくるぞ。";
             var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8751,7 +8751,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 6;
             var_1619 = 440;
-            var_1655 = "・毒針を発射してくるぞ。";
+            enemy_description = "・毒針を発射してくるぞ。";
             var_1656 = "・刺さるとスタンドが溶けて弱まるぞ。";
             var_1657 = "・オーラで強くなっているとオーラが消えるぞ。";
             var_1658 = "・すばやく動いているぞ。";
@@ -8766,7 +8766,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 6;
             var_1619 = 439;
-            var_1655 = "・近づくと毒針を発射してくるぞ。";
+            enemy_description = "・近づくと毒針を発射してくるぞ。";
             var_1656 = "・刺さるとスタンドが溶けて弱まるぞ。";
             var_1657 = "・オーラで強くなっているとオーラが消えるぞ。";
             var_1658 = "・移動しないぞ。";
@@ -8781,7 +8781,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 2;
             var_1619 = 208;
-            var_1655 = "・アイテムを消し炭にしてしまうぞ。";
+            enemy_description = "・アイテムを消し炭にしてしまうぞ。";
             var_1656 = "・床のアイテムも消し炭にしてしまうぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8796,7 +8796,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 2;
             var_1619 = 209;
-            var_1655 = "・他の敵に取り付いてレベルを上げるぞ。";
+            enemy_description = "・他の敵に取り付いてレベルを上げるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8811,7 +8811,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 2;
             var_1619 = 210;
-            var_1655 = "・透明で姿が見えないことがあるぞ。";
+            enemy_description = "・透明で姿が見えないことがあるぞ。";
             var_1656 = "・瀕死になるとパワーアップするぞ。";
             var_1657 = "・透明かそうでないかで動き方が違うぞ。";
             var_1658 = "";
@@ -8826,7 +8826,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 2;
             var_1619 = 214;
-            var_1655 = "・２回連続で攻撃してくるぞ。";
+            enemy_description = "・２回連続で攻撃してくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8841,7 +8841,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 211;
-            var_1655 = "・ヒラリと攻撃をかわしやすいぞ。";
+            enemy_description = "・ヒラリと攻撃をかわしやすいぞ。";
             var_1656 = "・殴ると波紋で痺れることがあるぞ。";
             var_1657 = "・殴られても痺れることがあるぞ。";
             var_1658 = "";
@@ -8856,7 +8856,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 9;
             var_1619 = 505;
-            var_1655 = "・付かず離れず距離をとるぞ。";
+            enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・フロア内のどこからでも弾丸を撃ってくるぞ。";
             var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
             var_1658 = "";
@@ -8871,7 +8871,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 613;
-            var_1655 = "・透明で姿が見えないぞ。";
+            enemy_description = "・透明で姿が見えないぞ。";
             var_1656 = "・今まで出現した敵を透明にして呼び出すぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8886,7 +8886,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 623;
-            var_1655 = "・隣接時に裏返り攻撃をしてくるぞ。";
+            enemy_description = "・隣接時に裏返り攻撃をしてくるぞ。";
             var_1656 = "・ＨＰの減っている数値が残り数値になるぞ。";
             var_1657 = "・ＨＰが満タンだと１になってしまうぞ。";
             var_1658 = "";
@@ -8901,7 +8901,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 1;
             var_1619 = 350;
-            var_1655 = "・エメラルドスプラッシュを撃ってくるぞ。";
+            enemy_description = "・エメラルドスプラッシュを撃ってくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8916,7 +8916,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 346;
-            var_1655 = "・２回連続で攻撃してくるぞ。";
+            enemy_description = "・２回連続で攻撃してくるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8931,7 +8931,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 2;
             var_1619 = 361;
-            var_1655 = "・攻撃を受けるとｸﾘｰﾑの中に入ってしまうぞ。";
+            enemy_description = "・攻撃を受けるとｸﾘｰﾑの中に入ってしまうぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -8946,7 +8946,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 621;
-            var_1655 = "・弾丸が燃え尽きて届かないぞ。";
+            enemy_description = "・弾丸が燃え尽きて届かないぞ。";
             var_1656 = "・攻撃を喰らうと周囲に血の槍を作るぞ。";
             var_1657 = "・カタツムリを呼び出すぞ。";
             var_1658 = "";
@@ -8961,7 +8961,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 0;
             var_1619 = 622;
-            var_1655 = "・触られると鈍足になってしまうぞ。";
+            enemy_description = "・触られると鈍足になってしまうぞ。";
             var_1656 = "・見えなければ大丈夫だぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -8976,7 +8976,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 9;
             var_1619 = 517;
-            var_1655 = "・倍の速さで移動してくるぞ。";
+            enemy_description = "・倍の速さで移動してくるぞ。";
             var_1656 = "・隣接すると凍らせてくるぞ。";
             var_1657 = "・弾丸やアイテムを凍らせて反射してくるぞ。";
             var_1658 = "";
@@ -8991,7 +8991,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 7;
             var_1619 = 447;
-            var_1655 = "・アイテムを爆弾にしてくるぞ。";
+            enemy_description = "・アイテムを爆弾にしてくるぞ。";
             var_1656 = "・落ちているアイテムも爆弾に変えるぞ。";
             var_1657 = "・仲間を呼び出すぞ。";
             var_1658 = "・瀕死になると第3の爆弾を使うぞ。";
@@ -9006,7 +9006,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 608;
-            var_1655 = "・付かず離れず距離をとるぞ。";
+            enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・道連れ攻撃で、離れていても攻撃してくるぞ。";
             var_1657 = "・ダメージを与えると反射するぞ。";
             var_1658 = "";
@@ -9021,7 +9021,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 3;
             var_1619 = 362;
-            var_1655 = "・盲目状態で直線的に進むぞ。";
+            enemy_description = "・盲目状態で直線的に進むぞ。";
             var_1656 = "・壁を飲み込みながら進むぞ。";
             var_1657 = "・遠くにいてもガオンと近くに来るぞ。";
             var_1658 = "・時々ｳﾞｧﾆﾗｱｲｽが顔を出して位置を確認するぞ。";
@@ -9036,7 +9036,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 2;
             var_1619 = 365;
-            var_1655 = "・さらに長く時間を止めるぞ。";
+            enemy_description = "・さらに長く時間を止めるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9051,7 +9051,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 2;
             var_1619 = 215;
-            var_1655 = "・倍の速さで移動するぞ。";
+            enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・壁があっても自由に動けるぞ。";
             var_1657 = "・壁の中にいると普通の攻撃は効かないぞ。";
             var_1658 = "・攻撃されると波紋で痺れることがあるぞ。";
@@ -9066,7 +9066,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 301;
-            var_1655 = "・頻繁に強烈な一撃を繰り出すぞ。";
+            enemy_description = "・頻繁に強烈な一撃を繰り出すぞ。";
             var_1656 = "・強烈な一撃を喰らうと吹っ飛ぶぞ。";
             var_1657 = "・ﾀﾞﾒｰｼﾞを受けると攻撃力が上がるぞ。";
             var_1658 = "・特定のアイテムを持っているぞ。";
@@ -9081,7 +9081,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 624;
-            var_1655 = "・倍の速さで移動するぞ。";
+            enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・２回連続で攻撃するぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9096,7 +9096,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 625;
-            var_1655 = "・純粋酸素で全員にﾀﾞﾒｰｼﾞを与えるぞ。";
+            enemy_description = "・純粋酸素で全員にﾀﾞﾒｰｼﾞを与えるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9111,7 +9111,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 1;
             var_1619 = 619;
-            var_1655 = "・付かず離れず距離をとるぞ。";
+            enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・マンガのキャラクターを呼び出すぞ。";
             var_1657 = "・自分は攻撃しないぞ。";
             var_1658 = "・ダンジョンの主だぞ。";
@@ -9126,7 +9126,7 @@ function func626(this: any) {
             var_1654 = 20;
             var_972 = 3;
             var_1619 = 620;
-            var_1655 = "・物語の中から現れたヤギだ。";
+            enemy_description = "・物語の中から現れたヤギだ。";
             var_1656 = "・付かず離れず距離をとるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9141,7 +9141,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 8;
             var_1619 = 416;
-            var_1655 = "・動かないぞ。";
+            enemy_description = "・動かないぞ。";
             var_1656 = "・攻撃もしないぞ。";
             var_1657 = "・エコーズACT2に成長するぞ。";
             var_1658 = "";
@@ -9156,7 +9156,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 8;
             var_1619 = 418;
-            var_1655 = "・動かないぞ。";
+            enemy_description = "・動かないぞ。";
             var_1656 = "・攻撃もしないぞ。";
             var_1657 = "・エコーズACT3に成長するぞ。";
             var_1658 = "";
@@ -9171,7 +9171,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 3;
             var_1619 = 328;
-            var_1655 = "・アイテムに化けているぞ。";
+            enemy_description = "・アイテムに化けているぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9186,7 +9186,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 3;
             var_1619 = 0;
-            var_1655 = "";
+            enemy_description = "";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9201,7 +9201,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 3;
             var_1619 = 306;
-            var_1655 = "・分身したチャリオッツだ。";
+            enemy_description = "・分身したチャリオッツだ。";
             var_1656 = "・一撃喰らうと消えてしまうぞ。";
             var_1657 = "・５ターンで消えてしまうぞ。";
             var_1658 = "";
@@ -9216,7 +9216,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 0;
             var_1619 = 803;
-            var_1655 = "・にゃー";
+            enemy_description = "・にゃー";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9231,7 +9231,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 1;
             var_1619 = 323;
-            var_1655 = "・岩に化けて動かないぞ。";
+            enemy_description = "・岩に化けて動かないぞ。";
             var_1656 = "・太陽のレーザーを発射するぞ。";
             var_1657 = "・気温を上げてレーザーの威力を上げるぞ。";
             var_1658 = "・特定のアイテムを落とすぞ。";
@@ -9246,7 +9246,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 0;
             var_1619 = 324;
-            var_1655 = "・岩だ。";
+            enemy_description = "・岩だ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9261,7 +9261,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 1;
             var_1619 = 605;
-            var_1655 = "・感電して動けない。";
+            enemy_description = "・感電して動けない。";
             var_1656 = "・特定のアイテムを持っているぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9276,7 +9276,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 801;
-            var_1655 = "・攻撃を受けるとバオーに変身するぞ。";
+            enemy_description = "・攻撃を受けるとバオーに変身するぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9291,7 +9291,7 @@ function func626(this: any) {
             var_1654 = 10;
             var_972 = 1;
             var_1619 = 802;
-            var_1655 = "・２回連続で攻撃するぞ。";
+            enemy_description = "・２回連続で攻撃するぞ。";
             var_1656 = "";
         }
         if (enemy_list == 168) {
@@ -9304,7 +9304,7 @@ function func626(this: any) {
             var_1654 = 3;
             var_972 = 1;
             var_1619 = 804;
-            var_1655 = "・オレはこのデパートの影の支配者だ！";
+            enemy_description = "・オレはこのデパートの影の支配者だ！";
             var_1656 = "　悪さをするヤツはゆるさねえ！";
             var_1657 = "・ウワハハハハハ！";
             var_1658 = "・クチャ　クチャ　　ペッ";
@@ -9319,7 +9319,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 435;
-            var_1655 = "・お店を守っているぞ。";
+            enemy_description = "・お店を守っているぞ。";
             var_1656 = "・攻撃を受けると怒るぞ。";
             var_1657 = "・泥棒すると仲間を呼ぶぞ。";
             var_1658 = "";
@@ -9334,7 +9334,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 7;
             var_1619 = 436;
-            var_1655 = "・「タダじゃあおきマセンッ！」";
+            enemy_description = "・「タダじゃあおきマセンッ！」";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9349,7 +9349,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 3;
             var_1619 = 617;
-            var_1655 = "・部屋に二人だけになると謎の攻撃をするぞ。";
+            enemy_description = "・部屋に二人だけになると謎の攻撃をするぞ。";
             var_1656 = "・攻撃すると臭いでﾀﾞﾒｰｼﾞを食らうぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9364,7 +9364,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 612;
-            var_1655 = "・アイテムを一つ倉庫に運んでくれるぞ。";
+            enemy_description = "・アイテムを一つ倉庫に運んでくれるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9379,7 +9379,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 213;
-            var_1655 = "・アイテムを一つ入れておけるぞ。";
+            enemy_description = "・アイテムを一つ入れておけるぞ。";
             var_1656 = "・あとで発見した時に取り出せるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9394,7 +9394,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 680;
-            var_1655 = "・次の階に出現する敵を教えてくれるぞ。";
+            enemy_description = "・次の階に出現する敵を教えてくれるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9409,7 +9409,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 4;
             var_1619 = 344;
-            var_1655 = "・次の階での死に方を教えてくれるぞ。";
+            enemy_description = "・次の階での死に方を教えてくれるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9424,7 +9424,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 512;
-            var_1655 = "・中に部屋があるぞ。";
+            enemy_description = "・中に部屋があるぞ。";
             var_1656 = "・アイテムを保管しておけるぞ。";
             var_1657 = "・ジッパーにアイテムを捨てると成長し、";
             var_1658 = "　部屋がさらに広くなるぞ。";
@@ -9439,7 +9439,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 502;
-            var_1655 = "・攻撃を受けるとﾀﾞﾒｰｼﾞを反射するぞ。";
+            enemy_description = "・攻撃を受けるとﾀﾞﾒｰｼﾞを反射するぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9454,7 +9454,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 0;
             var_1619 = 321;
-            var_1655 = "・とくに何もないぞ。";
+            enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9469,7 +9469,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 504;
-            var_1655 = "・ダンジョンから帰還させてくれるぞ。";
+            enemy_description = "・ダンジョンから帰還させてくれるぞ。";
             var_1656 = "・お茶を勧めてくれるぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9484,7 +9484,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 4;
             var_1619 = 431;
-            var_1655 = "・必ずマンガを持ち歩いているぞ。";
+            enemy_description = "・必ずマンガを持ち歩いているぞ。";
             var_1656 = "・特に「GP BOY」は学校で読むほど大好きだ。";
             var_1657 = "";
             var_1658 = "";
@@ -9499,7 +9499,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 0;
-            var_1655 = "";
+            enemy_description = "";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9514,7 +9514,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 7;
             var_1619 = 430;
-            var_1655 = "・攻撃すると罪悪感でお金を奪われるぞ。";
+            enemy_description = "・攻撃すると罪悪感でお金を奪われるぞ。";
             var_1656 = "・すれ違っただけでもお金を奪われるぞ。";
             var_1657 = "・お金がないと体が重くなってしまうぞ。";
             var_1658 = "";
@@ -9529,7 +9529,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 439;
-            var_1655 = "・「ﾎﾞﾍﾐｱﾝﾗﾌﾟｿﾃﾞｨのDISC」を探しているぞ。";
+            enemy_description = "・「ﾎﾞﾍﾐｱﾝﾗﾌﾟｿﾃﾞｨのDISC」を探しているぞ。";
             var_1656 = "・岸辺露伴は動かないぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9544,7 +9544,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 5;
             var_1619 = 432;
-            var_1655 = "・ウロウロと歩くぞ。";
+            enemy_description = "・ウロウロと歩くぞ。";
             var_1656 = "・敵はコピー人形を優先して攻撃するぞ。";
             var_1657 = "・10ターンで人形に戻るぞ。";
             var_1658 = "";
@@ -9559,7 +9559,7 @@ function func626(this: any) {
             var_1654 = 1;
             var_972 = 4;
             var_1619 = 509;
-            var_1655 = "・フラフラと歩いているぞ。";
+            enemy_description = "・フラフラと歩いているぞ。";
             var_1656 = "・ぶん殴ると「やばいクスリ」を落とすぞ。";
             var_1657 = "・中にブチャラティが入っているぞ。";
             var_1658 = "";
@@ -9574,7 +9574,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 104;
-            var_1655 = "・氷漬けになると助けてくれるぞ。";
+            enemy_description = "・氷漬けになると助けてくれるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9589,7 +9589,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 106;
-            var_1655 = "・波紋が使える状態にしてくれるぞ。";
+            enemy_description = "・波紋が使える状態にしてくれるぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9604,7 +9604,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 514;
-            var_1655 = "・ﾋﾞｰﾁﾎﾞｰｲで釣りができるぞ";
+            enemy_description = "・ﾋﾞｰﾁﾎﾞｰｲで釣りができるぞ";
             var_1656 = "・兄貴のDISCでパワーアップするぞ。";
             var_1657 = "";
             var_1658 = "";
@@ -9619,7 +9619,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 515;
-            var_1655 = "・ﾋﾞｰﾁﾎﾞｰｲで釣りができるぞ";
+            enemy_description = "・ﾋﾞｰﾁﾎﾞｰｲで釣りができるぞ";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -9634,7 +9634,7 @@ function func626(this: any) {
             var_1654 = 999;
             var_972 = 4;
             var_1619 = 341;
-            var_1655 = "・地面に砂DIOを作ってくれるぞ";
+            enemy_description = "・地面に砂DIOを作ってくれるぞ";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -12231,7 +12231,7 @@ function func636(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_83[var_314].Var17 = 1;
                 var_2937 = 1;
@@ -12268,7 +12268,7 @@ function func636(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_243 = 1;
         }
@@ -12363,7 +12363,7 @@ function func636(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_243 = 1;
             }
@@ -12400,7 +12400,7 @@ function func636(this: any) {
                 var_243 = 1;
                 yield func089();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 if (var_83[var_314].Var0 != 79 && var_83[var_314].Var23 == 0) {
                     if (var_83[var_314].Var1 == var_66 && var_83[var_314].Var2 > var_67) {
@@ -12447,7 +12447,7 @@ function func636(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_243 = 0;
                 yield func529();
@@ -12530,7 +12530,7 @@ function func636(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_243 = 1;
         }
@@ -12538,7 +12538,7 @@ function func636(this: any) {
         var_243 = 1;
         yield func089();
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_83[var_314].Var0 != 79 && var_83[var_314].Var23 == 0) {
             var_2942 = var_83[var_314].Var5;
@@ -12573,11 +12573,11 @@ function func636(this: any) {
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             var_83[var_314].Var8 = 0;
             for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 1;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         var_314 = var_82[var_347][var_348];
@@ -12610,7 +12610,7 @@ function func636(this: any) {
             var_27_x = var_27[6];
         }
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         comments_row2 = "" + var_209 + "のダメージ！";
         if (var_209 == 999) {
@@ -12619,7 +12619,7 @@ function func636(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_83[var_314].Var0 == 159 && var_83[var_314].Var20 == 0) {
             var_1550 = var_83[var_314].Var1;
             var_230 = var_83[var_314].Var2;
@@ -12640,7 +12640,7 @@ function func636(this: any) {
                 var_271 = 1;
                 var_1297 = 1;
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1297++;
                 }
                 var_271 = 0;
@@ -12721,10 +12721,10 @@ function func636(this: any) {
             }
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 var_83[var_314].Var11 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_83[var_314].Var11 = 0;
                 var_83[var_314].Var8 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             if (var_114 >= 1 && var_314 == var_114) {
                 var_114 = 0;
@@ -12756,7 +12756,7 @@ function func636(this: any) {
                 }
             }
             yield func676();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_314 = var_82[var_347][var_348];
             enemy_list = var_83[var_314].Var0;
             yield func626();
@@ -12845,7 +12845,7 @@ function func636(this: any) {
             var_83[var_314].Var0 = 0;
             yield func331();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_568 = var_568 + var_2956;
             yield func680();
@@ -12922,7 +12922,7 @@ function func636(this: any) {
             }
             if (var_2960 == 1 || var_2961 == 1 || var_2962 == 1) {
                 for (let cnt3 = 0; cnt3 < 8; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -13089,7 +13089,7 @@ function func636(this: any) {
                 }
             }
         }
-        yield func019();
+        yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
@@ -13148,9 +13148,9 @@ function func637(this: any) {
             }
         }
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
-        yield func019();
+        yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
@@ -13727,16 +13727,16 @@ function func643(this: any) {
         var_27_x = var_27[1];
 
         DSPLAY(audio_id = 121);
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
 
         DSPLAY(audio_id = 121);
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
 
         DSPLAY(audio_id = 121);
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             if (var_199 == 4) {
                 if (var_82[var_2928][var_2931] > 0 && var_71[var_2928][var_2931] != 0 && var_2981 == 0) {
@@ -13751,7 +13751,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13768,7 +13768,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13801,7 +13801,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13818,7 +13818,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13851,7 +13851,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13868,7 +13868,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13901,7 +13901,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13918,7 +13918,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13951,7 +13951,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -13968,7 +13968,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -14001,7 +14001,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -14018,7 +14018,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -14051,7 +14051,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -14068,7 +14068,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -14101,7 +14101,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -14118,7 +14118,7 @@ function func643(this: any) {
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                     }
@@ -14221,48 +14221,48 @@ function func644(this: any) {
             var_83[var_314].Var5 = 1;
             var_83[var_314].Var7 = 1;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = 2;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = 3;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = 6;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = 9;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = 8;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = 7;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = 4;
         }
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         if (var_2938 == 1) {
             var_83[var_314].Var5 = var_2657;
             var_83[var_314].Var7 = 0;
         }
-        yield func337();
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         var_198 = 0;
         var_300 = 0;
-        yield func337();
-        yield func337();
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         var_2939 = 0;
         var_2932 = 0;
         var_2938 = 0;
@@ -14357,7 +14357,7 @@ function func646(this: any) {
             item_list = var_357;
             yield func492(); // アイテムリスト呼び出し
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
     
             DSPLAY(audio_id = 172);
@@ -14377,10 +14377,10 @@ function func646(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             item_list = var_357;
-            yield func106();
+            yield func106(); // BGM選曲呼び出し割り振り
             yield func426();
             var_476 = dim(40);
             var_580 = var_580 - var_894;
@@ -14396,6 +14396,7 @@ function func646(this: any) {
         return;
     });
 }
+// 射撃攻撃動作処理
 function func647(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(647);
@@ -14415,10 +14416,10 @@ function func647(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_251 = 0;
-            yield func009();
+            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
         if (var_171 == 1) {
@@ -14468,13 +14469,13 @@ function func647(this: any) {
         var_455 = var_66;
         var_456 = var_67;
         var_1266 = 2;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_1266 = 4;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_1266 = 6;
-        yield func337();
-        yield func337();
-        yield func337();
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         var_1197 = 1;
         var_1266 = 0;
         if (var_1267 == 0 && var_340 != 403) {
@@ -14661,11 +14662,11 @@ function func647(this: any) {
                         var_1195 = 0;
                         var_1279 = 1;
                         for (let cnt5 = 0; cnt5 < 8; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                         if (var_340 == 698) {
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                yield func337();
+                                yield func337(); // メッセージ関係呼び出し
                             }
                         }
                         var_1279 = 0;
@@ -14703,7 +14704,7 @@ function func647(this: any) {
                     }
                 }
                 if (var_340 == 490) {
-                    yield func080();
+                    yield func080(); // 各キー入力確認
                     if (var_254 == 1) {
                         var_2989 = 4;
                         var_1416 = 40;
@@ -14753,27 +14754,27 @@ function func647(this: any) {
                         var_1416 = 240;
                     }
                     var_2988 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_2988 = 1;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_2988 = 2;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_2988 = 3;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_2988 = 4;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_2988 = 5;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_2988 = 6;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_2988 = 7;
                 }
                 if (var_340 != 490) {
                     var_1896 = 1;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1896 = 0;
                 }
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             if (var_340 == 413 && var_1195 != 0) {
                 yield func667();
@@ -14789,13 +14790,13 @@ function func647(this: any) {
             var_1195 = 0;
             var_1279 = 1;
             for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_1279 = 0;
             var_750 = 0;
         }
         if (var_340 == 403) {
-            yield func650();
+            yield func650(); // 射撃セックスピストルズでの攻撃動作処理
             if (var_2994 == 1) {
                 var_2994 = 0;
                 var_1899 = var_82[var_455][var_456];
@@ -14805,7 +14806,7 @@ function func647(this: any) {
             }
         }
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_234 == 0 && var_1223 == 0 && var_1267 == 0 && var_340 != 487 && var_340 != 488 && var_340 != 489 && var_340 != 490) {
             yield func421();
@@ -14819,10 +14820,11 @@ function func647(this: any) {
         var_1267 = 0;
         var_1223 = 0;
         var_1250 = 0;
-        yield func019();
+        yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
+
 function func648(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(648);
@@ -15030,6 +15032,7 @@ function func649(this: any) {
         return;
     });
 }
+// 射撃セックスピストルズの攻撃動作処理
 function func650(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(650);
@@ -15175,7 +15178,7 @@ function func650(this: any) {
         var_1195 = 1;
         var_2999 = 1;
         for (let cnt1 = 0; cnt1 < 24; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_2999++;
         }
         var_2999 = 0;
@@ -15198,7 +15201,7 @@ function func650(this: any) {
             var_27_x = var_27[1];
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         return;
@@ -15361,7 +15364,7 @@ function func651(this: any) {
             }
             if (var_3018 == 1) {
                 var_1267 = 1;
-                yield func647();
+                yield func647(); // 射撃攻撃動作処理
                 return;
             }
         }
@@ -15373,60 +15376,60 @@ function func651(this: any) {
                 var_83[var_314].Var5 = 1;
                 var_83[var_314].Var7 = 1;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = 2;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = 3;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2985 == 0) {
                 yield func089();
             }
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = 6;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = 9;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = 8;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2939 == 1) {
                 yield func090();
             }
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = 7;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = 4;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_2938 == 1) {
                 var_83[var_314].Var5 = var_2657;
                 var_83[var_314].Var7 = 0;
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_156[105] == 1 && var_1030 >= 2 && var_2939 == 1) {
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
     
             DSPLAY(audio_id = 227);
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_271 = 1;
             var_1265 = 1;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1265++;
             }
             var_271 = 0;
@@ -15448,7 +15451,7 @@ function func651(this: any) {
             var_27_x = var_27[1];
             yield func047();
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         var_3022 = 0;
@@ -15527,7 +15530,7 @@ function func651(this: any) {
                 }
             }
         }
-        yield func019();
+        yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
@@ -15801,7 +15804,7 @@ function func652(this: any) {
                     var_1452 = 1;
                     var_271 = 1;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                         var_1452++;
                         if (var_1452 == 4) {
                             var_2867 = rnd(12);
@@ -15820,7 +15823,7 @@ function func652(this: any) {
                             if (var_2867 == 0) {
                                 yield func090();
                                 for (let cnt7 = 0; cnt7 < 3; ++cnt7) {
-                                    yield func337();
+                                    yield func337(); // メッセージ関係呼び出し
                                 }
                             }
                         }
@@ -15950,11 +15953,11 @@ function func653(this: any) {
             }
             var_2985 = 1;
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func089();
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_1450 = (var_1450 - var_66 + 4) * 40;
             var_1451 = (var_1451 - var_67 + 4) * 40 - 10;
@@ -16003,7 +16006,7 @@ function func653(this: any) {
             var_1447 = 1;
             var_271 = 1;
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1447 = var_1447 + 1;
                 if (var_1447 == 4) {
                     var_2867 = rnd(12);
@@ -16023,7 +16026,7 @@ function func653(this: any) {
                     if (var_2867 == 0) {
                         yield func090();
                         for (let cnt5 = 0; cnt5 < 3; ++cnt5) {
-                            yield func337();
+                            yield func337(); // メッセージ関係呼び出し
                         }
                     }
                 }
@@ -16141,10 +16144,10 @@ function func654(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 var_3035 = 1;
                 var_83[var_673].Var32 = 99;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_3035 = 0;
                 var_83[var_673].Var32 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -16222,7 +16225,7 @@ function func654(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_2868 = 0;
             return;
@@ -16276,7 +16279,7 @@ function func654(this: any) {
                 var_271 = 1;
                 var_1383 = 1;
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_1383++;
                 }
                 var_271 = 0;
@@ -16311,12 +16314,12 @@ function func654(this: any) {
         var_742 = 1;
         var_83[var_673].Var7 = 1;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_672 = var_83[var_673].Var0;
         yield func093();
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_747 = 1;
         if (var_128 >= 1) {
@@ -16326,30 +16329,30 @@ function func654(this: any) {
         yield func092();
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_3037 == 1) {
                 var_585 = 3;
             }
             var_389 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_585 = 0;
         }
         if (var_83[var_673].Var0 == 22 || var_83[var_673].Var0 == 17 || var_83[var_673].Var0 == 71) {
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 var_389 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 if (var_3037 == 1) {
                     var_585 = 3;
                 }
                 var_389 = 3;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_585 = 0;
             }
         }
         var_389 = 1;
         var_585 = 0;
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         var_83[var_673].Var7 = 0;
         var_742 = 0;
         enemy_list = var_83[var_673].Var0;
@@ -16389,7 +16392,7 @@ function func654(this: any) {
             var_27_x = var_27[3];
             yield func047();
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_3038 = 0;
             enemy_list = var_83[var_673].Var0;
@@ -16418,7 +16421,7 @@ function func654(this: any) {
         var_26_x = var_26[2];
         var_27_x = var_27[2];
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         comments_row2 = "" + var_209 + "のダメージ！";
         var_198 = 1;
@@ -16431,7 +16434,7 @@ function func654(this: any) {
         if (var_83[var_673].Var0 == 140 || var_83[var_673].Var0 == 136 || var_83[var_673].Var0 == 73 || var_83[var_673].Var0 == 135 || var_83[var_673].Var0 == 139 || var_83[var_673].Var0 == 119 || var_83[var_673].Var0 == 111) {
             var_1073 = rnd(5);
             if (var_1073 == 0 && var_178 == 0 && var_83[var_673].Var20 == 0 && var_215 != 116 && var_125 == 0) {
-                yield func340();
+                yield func340(); // キー入力による選択処理
         
                 DSPLAY(audio_id = 120);
                 var_178 = 1;
@@ -16465,7 +16468,7 @@ function func654(this: any) {
         }
         if (var_83[var_673].Var0 == 120 && var_3037 == 1 && var_211 >= 1) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func529();
             return;
@@ -16477,7 +16480,7 @@ function func654(this: any) {
             return;
         }
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -16544,7 +16547,7 @@ function func655(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -16608,13 +16611,13 @@ function func655(this: any) {
         }
         var_742 = 1;
         var_83[var_2819].Var7 = 1;
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         var_672 = var_83[var_673].Var0;
         yield func093();
-        yield func337();
-        yield func337();
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         var_25_x = var_25[2];
         var_26_x = var_26[2];
         var_27_x = var_27[2];
@@ -16648,7 +16651,7 @@ function func656(this: any) {
             var_2869 = var_199;
         }
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_672 = var_83[var_673].Var0;
         yield func093();
@@ -16683,7 +16686,7 @@ function func656(this: any) {
                     var_199 = var_2869;
                 }
             }
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_83[var_673].Var7 = 0;
         var_389 = 0;
@@ -16701,7 +16704,7 @@ function func657(this: any) {
         var_412 = var_314;
         var_83[var_314].Var8 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         yield func094();
         comments_row1 = comments_row1a;
@@ -16715,7 +16718,7 @@ function func657(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         if (var_410 == 406) {
             comments_row1 = "";
             comments_row2 = "";
@@ -16748,7 +16751,7 @@ function func657(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             return;
@@ -16761,7 +16764,7 @@ function func657(this: any) {
         var_414 = 1;
         var_271 = 1;
         for (let cnt1 = 0; cnt1 < 25; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_414++;
         }
         var_389 = 0;
@@ -16796,7 +16799,7 @@ function func657(this: any) {
             var_300 = 0;
             yield func047();
             if (var_156[396] == 1) {
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 yield func094();
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -16811,7 +16814,7 @@ function func657(this: any) {
                 yield func047();
             }
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_199 = var_413;
         }
@@ -16881,7 +16884,7 @@ function func657(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_199 = var_413;
         }
@@ -16896,7 +16899,7 @@ function func658(this: any) {
         }
         if (var_83[var_314].Var0 != 133 && var_83[var_314].Var0 != 118 && var_83[var_314].Var0 != 9 && var_83[var_314].Var0 != 10 && var_83[var_314].Var0 != 139 && var_83[var_314].Var0 != 153 && var_83[var_314].Var0 != 61) {
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         if (var_83[var_314].Var0 == 137) {
@@ -16904,7 +16907,7 @@ function func658(this: any) {
             if (var_83[var_314].Var3 > 10) {
                 return;
             }
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -16917,7 +16920,7 @@ function func658(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -16933,15 +16936,15 @@ function func658(this: any) {
             if (var_83[var_3042].Var14 != 0) {
                 var_83[var_3042].Var8 = 1;
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
         
                 DSPLAY(audio_id = 162);
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_585 = 3;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_585 = 0;
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 yield func094();
                 comments_row1 = "";
@@ -16959,7 +16962,7 @@ function func658(this: any) {
                 yield func047();
                 var_198 = 1;
                 var_300 = 0;
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "吉良のバイツァダストを防いだ！";
@@ -16971,7 +16974,7 @@ function func658(this: any) {
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 yield func094();
                 comments_row1 = "";
                 comments_row2 = "";
@@ -16988,7 +16991,7 @@ function func658(this: any) {
                 yield func047();
                 var_198 = 1;
                 var_300 = 0;
-                yield func340();
+                yield func340(); // キー入力による選択処理
                 if (var_215 == 111 || var_215 == 398) {
                     var_114 = 0;
                     var_463 = 0;
@@ -17004,7 +17007,7 @@ function func658(this: any) {
                     var_271 = 1;
                     var_1493 = 1;
                     for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                         var_1493++;
                     }
                     var_271 = 0;
@@ -17031,9 +17034,9 @@ function func658(this: any) {
                     var_27_x = var_27[6];
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「そしてやれやれ";
@@ -17046,9 +17049,9 @@ function func658(this: any) {
                     var_300 = 0;
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337();
+                        yield func337(); // メッセージ関係呼び出し
                     }
-                    yield func340();
+                    yield func340(); // キー入力による選択処理
                     var_153 = 2;
                 }
                 var_83[var_3042].Var8 = 0;
@@ -17057,7 +17060,7 @@ function func658(this: any) {
     
             DSPLAY(audio_id = 165);
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_3043 = 0;
             if (var_201 == var_83[var_3042].Var10 && var_201 != 14) {
@@ -17095,19 +17098,19 @@ function func658(this: any) {
             }
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 var_585 = 3;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_585 = 0;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1388++;
             }
             for (let cnt2 = 0; cnt2 < 7; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_198 = 1;
                 var_300 = 0;
                 var_1388++;
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_198 = 1;
                 var_300 = 0;
                 var_1388++;
@@ -17140,7 +17143,7 @@ function func658(this: any) {
                 var_83[var_3042].Var3 = 999;
             }
             for (let cnt2 = 0; cnt2 < 51; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_311 = var_311 - 5;
             }
             var_312 = 0;
@@ -17159,7 +17162,7 @@ function func658(this: any) {
             yield func047();
             var_198 = 1;
             var_300 = 0;
-            yield func340();
+            yield func340(); // キー入力による選択処理
         }
         if (var_83[var_314].Var0 == 143) {
             var_3042 = var_314;
@@ -17173,7 +17176,7 @@ function func658(this: any) {
         if (var_83[var_314].Var0 == 153) {
             var_3042 = var_314;
             var_83[var_3042].Var8 = 1;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -17191,7 +17194,7 @@ function func658(this: any) {
             var_271 = 1;
             var_1551 = 1;
             for (let cnt2 = 0; cnt2 < 16; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1551++;
             }
             var_1551 = 0;
@@ -17220,14 +17223,14 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_389 = 0;
             var_83[var_3042].Var8 = 0;
             return;
         }
         if (var_83[var_314].Var0 == 61) {
-            yield func340();
+            yield func340(); // キー入力による選択処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "うぉうッ！　臭いがッ！";
@@ -17240,7 +17243,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_389 = 2;
     
@@ -17266,7 +17269,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_389 = 0;
             var_83[var_314].Var8 = 0;
@@ -17283,7 +17286,7 @@ function func658(this: any) {
     
             DSPLAY(audio_id = 168);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1583++;
             }
             var_271 = 0;
@@ -17301,7 +17304,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17321,7 +17324,7 @@ function func658(this: any) {
                 DSPLAY(audio_id = 123);
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -17341,7 +17344,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17356,7 +17359,7 @@ function func658(this: any) {
                 DSPLAY(audio_id = 123);
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -17376,7 +17379,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17391,7 +17394,7 @@ function func658(this: any) {
                 DSPLAY(audio_id = 120);
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -17411,7 +17414,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17424,7 +17427,7 @@ function func658(this: any) {
     
             DSPLAY(audio_id = 126);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -17461,7 +17464,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17483,7 +17486,7 @@ function func658(this: any) {
             yield func047();
             var_83[var_314].Var30 = 0;
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17509,9 +17512,9 @@ function func658(this: any) {
             var_83[var_314].Var21 = 1;
             var_83[var_314].Var8 = 0;
             var_411 = 1;
-            yield func340();
+            yield func340(); // キー入力による選択処理
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_198 = 1;
                 var_300 = 0;
             }
@@ -17519,13 +17522,13 @@ function func658(this: any) {
             DSPLAY(audio_id = 235);
             var_411 = 2;
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_198 = 1;
                 var_300 = 0;
             }
             var_411 = 3;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_198 = 1;
                 var_300 = 0;
             }
@@ -17544,7 +17547,7 @@ function func658(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
     
             DSPLAY(audio_id = 142);
             var_83[var_314].Var39 = var_83[var_314].Var39 + 2;
@@ -17569,7 +17572,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17602,13 +17605,13 @@ function func658(this: any) {
             var_83[var_314].Var21 = 1;
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
                 var_411 = 1;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_411 = 2;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_411 = 3;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_411 = 4;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 0;
             var_83[var_314].Var21 = 0;
@@ -17643,7 +17646,7 @@ function func658(this: any) {
     
             DSPLAY(audio_id = 120);
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1387 = var_1387 + 1;
             }
             var_271 = 0;
@@ -17666,20 +17669,20 @@ function func658(this: any) {
                 }
             }
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
     
             DSPLAY(audio_id = 112);　// 刀の切れる音 or 強化した時のシャキーン 効果音
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 1;
             yield func094();
             comments_row1 = comments_row1a;
@@ -17694,7 +17697,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var21 = 0;
         }
@@ -17714,20 +17717,20 @@ function func658(this: any) {
                 }
             }
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
     
             DSPLAY(audio_id = 112);　// 刀の切れる音 or 強化した時のシャキーン 効果音
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 1;
             yield func094();
             comments_row1 = comments_row1a;
@@ -17742,7 +17745,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var21 = 0;
         }
@@ -17772,7 +17775,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
     
             DSPLAY(audio_id = 182);
@@ -17788,7 +17791,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17807,9 +17810,9 @@ function func658(this: any) {
             var_26_x = var_26[2];
             var_27_x = var_27[2];
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_83[var_314].Var8 = 0;
             comments_row1 = "";
             comments_row2 = "";
@@ -17828,15 +17831,15 @@ function func658(this: any) {
             var_83[var_314].Var21 = 1;
             var_411 = 1;
             for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             for (let cnt2 = 0; cnt2 < 7; ++cnt2) {
                 var_411 = 2;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_411 = 3;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             comments_row1 = "「これがッ！」　　「これがッ！」";
             var_25_x = var_25[2];
@@ -17846,40 +17849,40 @@ function func658(this: any) {
             var_300 = 0;
             var_411 = 4;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 5;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 6;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 7;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var0 = 162;
             var_411 = 1;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 2;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 3;
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 4;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 5;
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             comments_row1 = "「これがッ！」　　「これがッ！」";
             comments_row2 = "「これが【バオー】だッ！」";
@@ -17892,11 +17895,11 @@ function func658(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 var_411 = 7;
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_411 = 6;
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
             }
             var_411 = 0;
@@ -17913,7 +17916,7 @@ function func658(this: any) {
             yield func050();
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17928,7 +17931,7 @@ function func658(this: any) {
                 return;
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             yield func094();
@@ -17946,32 +17949,32 @@ function func658(this: any) {
             var_83[var_314].Var30 = 0;
             var_83[var_314].Var21 = 1;
             var_411 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_83[var_314].Var0 = 133;
             var_83[var_314].Var31 = 2;
             var_83[var_314].Var23 = 0;
             var_411 = 8;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 7;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 6;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 5;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 0;
             var_83[var_314].Var21 = 0;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -17981,7 +17984,7 @@ function func658(this: any) {
                 return;
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_83[var_314].Var21 = 1;
@@ -17999,22 +18002,22 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 5;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 6;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 7;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 8;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 0;
             var_83[var_314].Var21 = 0;
             var_83[var_314].Var0 = 118;
@@ -18022,9 +18025,9 @@ function func658(this: any) {
             var_83[var_314].Var23 = 1;
             var_83[var_314].Var21 = 1;
             var_411 = 2;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_411 = 0;
             var_83[var_314].Var21 = 0;
             var_83[var_314].Var30 = 1;
@@ -18032,7 +18035,7 @@ function func658(this: any) {
         }
         if (var_83[var_314].Var0 == 121) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_3054 = var_83[var_314].Var5;
@@ -18055,13 +18058,13 @@ function func658(this: any) {
             var_271 = 1;
             var_1377 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1377++;
             }
             var_271 = 0;
             var_1377 = 0;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var5 = var_3054;
             return;
@@ -18087,7 +18090,7 @@ function func659(this: any) {
             return;
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_3055 = 0;
         if (var_83[var_314].Var20 != 0 || var_83[var_314].Var12 != 0 || var_83[var_314].Var13 != 0 || var_83[var_314].Var14 != 0 || var_83[var_314].Var17 != 0 || var_83[var_314].Var23 != 0 || var_83[var_314].Var19 != 0 || var_83[var_314].Var25 != 0) {
@@ -18110,7 +18113,7 @@ function func659(this: any) {
             var_26_x = var_26[2];
             var_27_x = var_27[2];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             if (var_2712 == 1) {
                 var_421 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
@@ -18158,7 +18161,7 @@ function func659(this: any) {
     
             DSPLAY(audio_id = 161);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_311 = var_311 - 25;
                 if (var_311 <= 0) {
                     var_311 = 0;
@@ -18200,7 +18203,7 @@ function func659(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -18221,7 +18224,7 @@ function func659(this: any) {
             var_26_x = var_26[2];
             var_27_x = var_27[2];
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             gsel(19);
             color(255, 255, 255);
     
@@ -18232,7 +18235,7 @@ function func659(this: any) {
     
             DSPLAY(audio_id = 161);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_311 = var_311 - 25;
                 if (var_311 <= 0) {
                     var_311 = 0;
@@ -18265,7 +18268,7 @@ function func659(this: any) {
             var_27_x = var_27[2];
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -18359,7 +18362,7 @@ function func660(this: any) {
             var_83[var_314].Var13 = 0;
             var_83[var_314].Var8 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             enemy_list = var_83[var_314].Var0;
@@ -18404,7 +18407,7 @@ function func660(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
 
             DSPLAY(audio_id = 143);
             comments_row1 = comments_row1a;
@@ -18428,7 +18431,7 @@ function func660(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_340 = var_3056;
             return;
         }
@@ -18491,7 +18494,7 @@ function func660(this: any) {
             var_83[var_314].Var2 = 0;
             if (var_156[122] == 1) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_198 = 1;
                     var_300 = 0;
                 }
@@ -18502,7 +18505,7 @@ function func660(this: any) {
                 var_271 = 1;
                 var_1339 = 1;
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                     var_198 = 1;
                     var_300 = 0;
                     var_1339++;
@@ -18521,7 +18524,7 @@ function func660(this: any) {
             var_83[var_314].Var13 = 0;
             var_83[var_314].Var8 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             enemy_list = var_83[var_314].Var0;
@@ -18553,7 +18556,7 @@ function func660(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "" + var_3057 + "の";
@@ -18565,7 +18568,7 @@ function func660(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_340 = var_3056;
             return;
         }
@@ -18581,7 +18584,7 @@ function func660(this: any) {
 
             DSPLAY(audio_id = 143);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             enemy_list = var_83[var_314].Var0;
@@ -18613,7 +18616,7 @@ function func660(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_83[var_314].Var17 = 1;
     
             DSPLAY(audio_id = 134);
@@ -18628,7 +18631,7 @@ function func660(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_340 = var_3056;
             return;
         }
@@ -18656,7 +18659,7 @@ function func660(this: any) {
                 var_82[var_455][var_456] = var_1385;
                 var_83[var_1385].Var1 = var_455;
                 var_83[var_1385].Var2 = var_456;
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1894 = var_455;
                 var_1895 = var_456;
                 if (var_199 == 4) {
@@ -18720,7 +18723,7 @@ function func660(this: any) {
                 }
             }
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_1894 = var_3064;
             var_1895 = var_3065;
@@ -18832,7 +18835,7 @@ function func660(this: any) {
             var_83[var_3068].Var8 = 0;
             yield func331();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_340 = var_3056;
             return;
@@ -18862,7 +18865,7 @@ function func660(this: any) {
     
             DSPLAY(audio_id = 122);
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_340 = var_3056;
             return;
@@ -18913,7 +18916,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -18964,7 +18967,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19010,7 +19013,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19020,7 +19023,7 @@ function func660(this: any) {
             var_1196 = 1;
             var_83[var_314].Var8 = 1;
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_314 = var_82[var_455][var_456];
@@ -19052,7 +19055,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_340 = var_3056;
             return;
@@ -19087,7 +19090,7 @@ function func660(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_1195 = 0;
                 if (var_83[var_2964].Var20 == 1) {
@@ -19128,7 +19131,7 @@ function func660(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_1195 = 0;
                 comments_row1 = comments_row1a;
@@ -19180,7 +19183,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19219,7 +19222,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19261,7 +19264,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19300,7 +19303,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19339,7 +19342,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19378,7 +19381,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19420,7 +19423,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19454,7 +19457,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19467,7 +19470,7 @@ function func660(this: any) {
             }
             var_83[var_314].Var13 = 0;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var30 = 1;
             var_1584 = (var_83[var_314].Var1 - var_66 + 4) * 40;
@@ -19480,7 +19483,7 @@ function func660(this: any) {
                 if (cnt2 == 4) {
                     var_83[var_314].Var8 = 0;
                 }
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1583++;
             }
             var_271 = 0;
@@ -19501,7 +19504,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_340 = var_3056;
             return;
@@ -19544,7 +19547,7 @@ function func660(this: any) {
                 var_300 = 0;
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_83[var_314].Var8 = 0;
                 var_340 = var_3056;
@@ -19627,7 +19630,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19654,7 +19657,7 @@ function func660(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -19668,7 +19671,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_83[var_314].Var0 = 107;
@@ -19696,7 +19699,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             var_340 = var_3056;
@@ -19711,7 +19714,7 @@ function func660(this: any) {
     
             DSPLAY(audio_id = 117);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             yield func669();
             var_340 = var_3056;
@@ -19745,7 +19748,7 @@ function func660(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_314].Var8 = 0;
             if (var_83[var_314].Var0 == 93) {
@@ -19943,10 +19946,10 @@ function func662(this: any) {
         var_1238 = 1;
         var_1971 = var_199;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         for (let cnt1 = 0; cnt1 < 60; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1238 = var_1238 + 1;
             if (var_1238 == 10) {
         
@@ -19994,11 +19997,11 @@ function func662(this: any) {
             var_114 = 0;
         }
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_83[var_314].Var11 = 0;
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1238 = var_1238 + 1;
             if (var_1238 == 65) {
         
@@ -20075,7 +20078,7 @@ function func663(this: any) {
         var_411 = 1;
         for (let cnt1 = 0; cnt1 < 16; ++cnt1) {
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_411 = var_411 + 1;
             if (var_411 == 4) {
@@ -20117,7 +20120,7 @@ function func663(this: any) {
             var_83[var_314].Var3 = 999;
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -20150,7 +20153,7 @@ function func664(this: any) {
         var_271 = 1;
         var_1356 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1356++;
         }
         var_271 = 0;
@@ -20186,7 +20189,7 @@ function func665(this: any) {
         var_1583 = 1;
         var_271 = 1;
         for (let cnt1 = 0; cnt1 < 16; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1583++;
         }
         var_1583 = 0;
@@ -20220,12 +20223,12 @@ function func666(this: any) {
         gsel(0);
         var_311 = 255;
         var_312 = 1;
-        yield func337();
+        yield func337(); // メッセージ関係呼び出し
         var_312 = 0;
         var_1415 = 1;
         var_271 = 1;
         for (let cnt1 = 0; cnt1 < 30; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1415 = var_1415 + 1;
         }
         var_1415 = 0;
@@ -20233,7 +20236,7 @@ function func666(this: any) {
 
         DSPLAY(audio_id = 215);
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1423 = var_1423 + 1;
         }
         var_1423 = 0;
@@ -20241,7 +20244,7 @@ function func666(this: any) {
         var_340 = 0;
         var_1424 = 0;
         for (let cnt1 = 0; cnt1 < 8; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1424 = var_1424 + 20;
         }
         var_1424 = 0;
@@ -20300,7 +20303,7 @@ function func666(this: any) {
         var_27_x = var_27[2];
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
         var_747 = 0;
@@ -20311,7 +20314,7 @@ function func667(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(667);
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_1195 = 0;
         var_1914 = var_1894;
@@ -20330,7 +20333,7 @@ function func667(this: any) {
             var_271 = 1;
             var_444 = 1;
             for (let cnt2 = 0; cnt2 < 25; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_444 = var_444 + 1;
             }
             var_271 = 0;
@@ -20338,7 +20341,7 @@ function func667(this: any) {
             var_83[var_439].Var11 = 0;
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -20472,13 +20475,13 @@ function func668(this: any) {
         var_1388 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             var_585 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_585 = 0;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1388++;
         }
         for (let cnt1 = 0; cnt1 < 14; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1388++;
         }
         var_271 = 0;
@@ -20526,7 +20529,7 @@ function func668(this: any) {
                 var_211 = 0;
                 var_356 = 248;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_389 = 0;
                 return;
@@ -20543,7 +20546,7 @@ function func668(this: any) {
                 var_208 = var_2198 + var_208;
             }
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_389 = 0;
         }
@@ -20581,7 +20584,7 @@ function func669(this: any) {
         var_271 = 1;
         var_1350 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_1350 == 2) {
     
                 DSPLAY(audio_id = 216);
@@ -20614,7 +20617,7 @@ function func669(this: any) {
         }
         var_83[var_314].Var11 = 0;
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -20629,7 +20632,7 @@ function func670(this: any) {
         var_271 = 1;
         var_1387 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1387 = var_1387 + 1;
         }
         var_271 = 0;
@@ -20659,7 +20662,7 @@ function func670(this: any) {
         yield func047();
         var_3071 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -20712,24 +20715,24 @@ function func672(this: any) {
             yield func929();
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         if (var_1061 == 0) {
             var_374 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_374 = 0;
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_374 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_374 = 0;
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_374 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_374 = 0;
             var_389 = 1;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_374 = 1;
         }
         comments_row1 = "";
@@ -20764,7 +20767,7 @@ function func672(this: any) {
         var_300 = 0;
         yield func047();
         for (let cnt1 = 0; cnt1 < 40; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_1200 = 1;
         var_2400 = 345;
@@ -20791,9 +20794,9 @@ function func672(this: any) {
 function func673(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(673);
-        yield func337();
-        yield func080();
-        if (var_242 == 1 || var_244 == 1) {
+        yield func337(); // メッセージ関係呼び出し
+        yield func080(); // 各キー入力確認
+        if (key_Z_on == 1 || key_A_on == 1) {
             var_1200 = 0;
             yield func051();
             var_1061 = 0;
@@ -20876,13 +20879,13 @@ function func675(this: any) {
         var_1388 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             var_585 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_585 = 0;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1388++;
         }
         for (let cnt1 = 0; cnt1 < 24; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_198 = 1;
             var_300 = 0;
             var_1388++;
@@ -21018,7 +21021,7 @@ function func675(this: any) {
         DSPLAY(audio_id = 161);
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_311 = var_311 - 5;
         }
         var_312 = 0;
@@ -21051,7 +21054,7 @@ function func675(this: any) {
         yield func047();
         var_198 = 1;
         var_300 = 0;
-        yield func340();
+        yield func340(); // キー入力による選択処理
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "" + var_3082 + "は";
@@ -21064,10 +21067,10 @@ function func675(this: any) {
         var_300 = 0;
         yield func047();
         for (let cnt1 = 0; cnt1 < 30; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_217 = 0;
-        yield func009();
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
@@ -21370,7 +21373,7 @@ function func678(this: any) {
 function func679(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(679);
-        var_950 = var_840 * 2 + 3;
+        var_950 = current_level * 2 + 3;
         return;
     });
 }
@@ -21398,23 +21401,23 @@ function func680(this: any) {
         if (var_568 >= 9999999) {
             var_568 = 9999999;
         }
-        if (var_840 == 99) {
+        if (current_level == 99) {
             return;
         }
         for (let cnt1 = 0; cnt1 < 99; ++cnt1) {
-            if (var_840 == 99) {
+            if (current_level == 99) {
                 break;
             }
-            if (var_568 >= var_948[var_840]) {
+            if (var_568 >= var_948[current_level]) {
                 yield func681();
             }
         }
         if (var_2201 == 1) {
             yield func099();
-            yield func340();
+            yield func340(); // キー入力による選択処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            comments_row1a = "ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + var_840 + "に上がった！";
+            comments_row1a = "ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + current_level + "に上がった！";
             comments_row2a = "";
             var_25_x = var_25[1];
             var_26_x = var_26[1];
@@ -21424,7 +21427,7 @@ function func680(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         var_2201 = 0;
@@ -21434,7 +21437,7 @@ function func680(this: any) {
 function func681(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(681);
-        var_840 = var_840 + 1;
+        current_level = current_level + 1;
         var_3087 = rnd(15);
         if (dangeon_number == 99) {
             var_3087 = 0;
@@ -21616,7 +21619,7 @@ function func683(this: any) {
             var_2201 = 1;
         }
         if (var_2201 == 1) {
-            yield func340();
+            yield func340(); // キー入力による選択処理
     
             DSPLAY(audio_id = 142);
             comments_row1 = comments_row1a;
@@ -21688,7 +21691,7 @@ function func684(this: any) {
 function func685(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(685);
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21737,7 +21740,7 @@ function func685(this: any) {
         DSPLAY(audio_id = 192);
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_311 = var_311 - 5;
             var_198 = 1;
             var_300 = 0;
@@ -21746,7 +21749,7 @@ function func685(this: any) {
         if (var_404 >= 1) {
             return;
         }
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21759,7 +21762,7 @@ function func685(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21772,7 +21775,7 @@ function func685(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21791,7 +21794,7 @@ function func685(this: any) {
 function func686(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(686);
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21804,7 +21807,7 @@ function func686(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21817,7 +21820,7 @@ function func686(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21830,7 +21833,7 @@ function func686(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21843,7 +21846,7 @@ function func686(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21856,7 +21859,7 @@ function func686(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21876,7 +21879,7 @@ function func686(this: any) {
 function func687(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(687);
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21918,13 +21921,13 @@ function func687(this: any) {
         yield func331();
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_311 = var_311 - 5;
             var_198 = 1;
             var_300 = 0;
         }
         var_312 = 0;
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21937,7 +21940,7 @@ function func687(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21950,7 +21953,7 @@ function func687(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -21963,7 +21966,7 @@ function func687(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -22019,7 +22022,7 @@ function func688(this: any) {
         yield func331();
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_311 = var_311 - 5;
             var_198 = 1;
             var_300 = 0;
@@ -22031,7 +22034,7 @@ function func688(this: any) {
 function func689(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(689);
-        yield func340();
+        yield func340(); // キー入力による選択処理
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -22061,7 +22064,7 @@ function func689(this: any) {
         }
         var_73[var_491][var_492] = 1;
         var_200 = var_71[var_491][var_492];
-        yield func340();
+        yield func340(); // キー入力による選択処理
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "どこかに階段が現れたようだ…";
@@ -22122,7 +22125,7 @@ function func690(this: any) {
             if (var_2957 == 5) {
                 var_2531 = 3;
             }
-            yield func340();
+            yield func340(); // キー入力による選択処理
             var_3096 = var_673;
             var_1845 = 4;
             var_2102 = var_347;
@@ -22161,7 +22164,7 @@ function func690(this: any) {
             yield func047();
             yield func050();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         var_2957 = 0;
@@ -22171,7 +22174,7 @@ function func690(this: any) {
 function func691(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(691);
-        yield func340();
+        yield func340(); // キー入力による選択処理
         var_3096 = var_673;
         var_1845 = 4;
         var_2102 = var_347;
@@ -22193,7 +22196,7 @@ function func691(this: any) {
         yield func050();
         var_2538 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -22235,7 +22238,7 @@ function func694(this: any) {
         if (var_211 == 0) {
             return;
         }
-        yield func340();
+        yield func340(); // キー入力による選択処理
         var_403 = "ｽｰﾊﾟｰﾌﾗｲが攻撃を跳ね返した！";
         var_402 = var_673;
         var_3097 = 1;
@@ -22244,7 +22247,7 @@ function func694(this: any) {
         var_27_x = var_27[1];
         yield func705();
         var_3097 = 0;
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func051();
         return;
     });
@@ -22274,7 +22277,7 @@ function func695(this: any) {
             var_271 = 1;
             var_1552 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1552++;
             }
             var_271 = 0;
@@ -22292,7 +22295,7 @@ function func695(this: any) {
             yield func705();
             var_3098 = 0;
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         return;
@@ -22314,7 +22317,7 @@ function func696(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func705();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func051();
         return;
     });
@@ -22352,7 +22355,7 @@ function func697(this: any) {
             }
         }
         for (let cnt1 = 0; cnt1 < 7; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             if (var_1442 == 0) {
                 var_1427 = var_1427 + 20;
                 var_1428 = var_1428 + 20;
@@ -22392,7 +22395,7 @@ function func698(this: any) {
         var_1342 = 1;
         var_271 = 1;
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_1342 = 0;
         var_271 = 0;
@@ -22507,13 +22510,13 @@ function func698(this: any) {
         var_1388 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             var_585 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_585 = 0;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1388++;
         }
         for (let cnt1 = 0; cnt1 < 14; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1388++;
         }
         var_271 = 0;
@@ -22526,7 +22529,7 @@ function func698(this: any) {
                 var_211 = 0;
                 var_356 = 209;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_389 = 0;
                 var_2197 = 1;
@@ -22544,7 +22547,7 @@ function func698(this: any) {
                 var_208 = var_2198 + var_208;
             }
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_389 = 0;
         }
@@ -22621,7 +22624,7 @@ function func699(this: any) {
         var_1342 = 1;
         var_271 = 1;
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_1342 = 0;
         var_271 = 0;
@@ -22736,13 +22739,13 @@ function func699(this: any) {
         var_1388 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             var_585 = 3;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_585 = 0;
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1388++;
         }
         for (let cnt1 = 0; cnt1 < 14; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1388++;
         }
         var_271 = 0;
@@ -22755,7 +22758,7 @@ function func699(this: any) {
                 var_211 = 0;
                 var_356 = 209;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337();
+                    yield func337(); // メッセージ関係呼び出し
                 }
                 var_389 = 0;
                 var_2197 = 1;
@@ -22773,7 +22776,7 @@ function func699(this: any) {
                 var_208 = var_2198 + var_208;
             }
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_389 = 0;
         }

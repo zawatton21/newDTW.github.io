@@ -203,7 +203,7 @@ function func907(this: any) {
         }
         var_3516 = dim(30);
         var_3516[0] = var_410;
-        var_3516[1] = var_840;
+        var_3516[1] = current_level;
         var_3516[2] = var_352;
         var_3516[3] = var_211;
         var_3516[4] = var_566;
@@ -452,7 +452,7 @@ function func909(this: any) {
             var_271 = 1;
             var_1511 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
                 var_1511++;
             }
             var_1511 = 0;
@@ -596,7 +596,7 @@ function func911(this: any) {
                 var_482 = var_233[var_225].Var19 * 500 + var_482;
             }
             buying_price = buying_price + var_482;
-            var_107 = var_107 + buying_price;
+            count_buying_price = count_buying_price + buying_price;
         }
         var_1977 = 0;
         if (var_553 == var_225) {
@@ -629,7 +629,7 @@ function func911(this: any) {
         }
         if (var_1977 == 1) {
             item_list = var_233[var_225].Var0;
-            yield func106();
+            yield func106(); // BGM選曲呼び出し割り振り
         }
         yield func430();
         yield func433(); // アイテム配列の "数" 増減？関数
@@ -654,7 +654,7 @@ function func911(this: any) {
         var_271 = 1;
         var_1460 = 1;
         for (let cnt1 = 0; cnt1 < 12; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1460++;
         }
         var_271 = 0;
@@ -667,7 +667,7 @@ function func911(this: any) {
         }
         var_225 = var_2300;
         if (var_2301 == 1) {
-            var_220 = 1;
+            var_220 = 1; // 道具画面(メニュー画面/道具)呼び出し確認変数？
         }
         if (var_2301 == 2) {
             var_234 = 1;
@@ -679,7 +679,7 @@ function func911(this: any) {
             yield func508(); // スタンドパワーが力尽きて消滅した時の関数
         }
         var_217 = 1;
-        yield func019();
+        yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
@@ -781,13 +781,13 @@ function func915(this: any) {
         var_3561 = "女帝";
         tcpput(var_3561, var_1050);
         tcpput("\n", var_1050);
-        yield func340();
+        yield func340(); // キー入力による選択処理
         if (var_2254 == 1) {
             var_2254 = 0;
             yield func508(); // スタンドパワーが力尽きて消滅した時の関数
         }
         var_217 = 1;
-        yield func019();
+        yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
@@ -899,7 +899,7 @@ function func919(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         if (var_3572 >= 4) {
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -913,7 +913,7 @@ function func919(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_1046 = 0;
     
@@ -932,7 +932,7 @@ function func919(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         var_3584 = 0;
         var_2194 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
@@ -1032,7 +1032,7 @@ function func919(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
         }
         if (var_3584 == 0) {
@@ -1048,7 +1048,7 @@ function func919(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             var_1046 = 0;
     
@@ -1085,12 +1085,12 @@ function func921(this: any) {
         dbgprt(921);
         DSPLAY(audio_id = 234);
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         var_271 = 1;
         var_1321 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1321 = var_1321 + 1;
         }
         yield func094();
@@ -1109,7 +1109,7 @@ function func921(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -1122,7 +1122,7 @@ function func921(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -1135,11 +1135,11 @@ function func921(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         DSPLAY(audio_id = 139);
         wallet = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
             var_1321 = var_1321 + 1;
         }
         var_271 = 0;
@@ -1152,7 +1152,7 @@ function func921(this: any) {
             yield func508(); // スタンドパワーが力尽きて消滅した時の関数
         }
         var_217 = 1;
-        yield func019();
+        yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
@@ -1182,7 +1182,7 @@ function func923(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -1195,7 +1195,7 @@ function func923(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -1208,7 +1208,7 @@ function func923(this: any) {
         var_198 = 1;
         var_300 = 0;
         yield func047();
-        yield func340();
+        yield func340(); // キー入力による選択処理
         DSPLAY(audio_id = 133); // アイテムを置いた時の効果音
         var_1756 = 1;
         var_452 = 1;
@@ -1230,7 +1230,7 @@ function func923(this: any) {
         var_300 = 0;
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            yield func337();
+            yield func337(); // メッセージ関係呼び出し
         }
         return;
     });
@@ -1476,7 +1476,7 @@ function func925(this: any) {
         }
         if (var_407 == 0) {
             var_509 = 0;
-            var_499 = 0;
+            var_499 = 0; // Mフラグ:設定画面 func056
             yield func894();
             return;
         }
@@ -1507,7 +1507,7 @@ function func926(this: any) {
             var_300 = 0;
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337();
+                yield func337(); // メッセージ関係呼び出し
             }
             return;
         }
@@ -2212,7 +2212,7 @@ function func929(this: any) {
             }
         }
         var_3516 = dim(30);
-        var_3516[1] = var_840;
+        var_3516[1] = current_level;
         var_3516[2] = var_352;
         var_3516[3] = var_211;
         var_3516[4] = var_566;

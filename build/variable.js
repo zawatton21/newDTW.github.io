@@ -140,7 +140,7 @@ var var_57;
 var var_58;
 var var_59;
 var var_60;
-var var_61;
+var bgm_volume; // BGMの現在ボリューム
 var dangeon_number; // 各ダンジョンに割り振られた識別用ID
 var var_63;
 var var_64;
@@ -186,7 +186,7 @@ var var_103;
 var var_104;
 var var_105;
 var var_106;
-var var_107;
+var count_buying_price; // 購入金額の合計をカウントする為の変数
 var var_108;
 var var_109;
 var var_110;
@@ -275,8 +275,8 @@ var var_192;
 var var_193;
 var var_194;
 var var_195;
-var var_196;
-var var_197;
+var var_196; // Mフラグ:メニュー画面 func054
+var open_item_menue; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
 var var_198;
 var var_199;
 var var_200;
@@ -299,7 +299,7 @@ var var_216;
 var var_217;
 var var_218;
 var var_219;
-var var_220;
+var var_220; // 道具画面(メニュー画面/道具)呼び出し確認変数？
 var var_221;
 var var_222;
 var var_223;
@@ -322,21 +322,21 @@ var var_234;
 var conf_keyon; // 各キー入力確認。ON = 1、OFF = 0
 var var_236;
 var var_237;
-var var_238;
-var var_239;
+var key_Shift_on; // キーShift入力確認
+var key_X_on; // キーX入力確認
 var var_240;
 var var_241;
-var var_242;
+var key_Z_on; // キーZ入力確認
 var var_243;
-var var_244;
+var key_A_on; // キーA入力確認
 var var_245;
 var var_246;
 var var_247;
 var var_248;
-var var_249;
+var key_S_on; // キーS入力確認
 var var_250;
 var var_251;
-var var_252;
+var key_C_on; // キーC入力確認
 var var_253;
 var var_254;
 var var_255; // 入力判定[↑]
@@ -461,11 +461,11 @@ var var_373;
 var var_374;
 var var_375;
 var var_376;
-var var_377;
-var var_378;
-var var_379;
-var var_380;
-var var_381;
+var dangeon1_floor; // current_floor ホテルの外の階層 
+var dangeon2_floor; // current_floor レクイエムの大迷宮の階層 
+var dangeon3_floor; // current_floor ディアボロの試練の階層 
+var dangeon4_floor; // current_floor 一巡後の世界の階層 
+var dangeon5_floor; // current_floor 不明ダンジョンの階層
 var var_382;
 var var_383;
 var var_384;
@@ -565,9 +565,9 @@ var var_477;
 var var_478;
 var var_479;
 var var_480;
-var var_481;
+var payment_amount; // お店で実際に請求される支払い金額
 var var_482;
-var buying_price;
+var buying_price; // アイテムごとに設定された購入金額
 var var_484;
 var var_485;
 var var_486;
@@ -583,7 +583,7 @@ var var_495;
 var var_496;
 var var_497;
 var var_498;
-var var_499;
+var var_499; // Mフラグ:設定画面 func056
 var var_500;
 var var_501;
 var var_502;
@@ -592,7 +592,7 @@ var var_504;
 var var_505;
 var var_506;
 var var_507;
-var var_508;
+var var_508; // Mフラグ:資料(設定画面) func058
 var var_509;
 var var_510;
 var var_511;
@@ -753,7 +753,7 @@ var bgm_file_name;
 var var_666;
 var var_667;
 var var_668;
-var var_669;
+var se_volume; // 効果音の現在ボリューム
 var var_670;
 var var_671;
 var var_672;
@@ -880,20 +880,20 @@ var var_792;
 var var_793;
 var var_794;
 var var_795;
-var var_796;
+var var_796; // ランキングスコア
 var var_797;
 var var_798;
 var var_799;
 var var_800;
 var var_801;
 var var_802; // item_list
-var var_803; // 装備discの修正値
-var var_804; // 装備discの合成した数
+var item_modified_value; // 装備discの修正値
+var number_of_abilities; // 装備discの合成した数
 var var_805;
-var var_806;
-var var_807;
+var item_description1; // アイテムの説明。攻撃:0 防御:0 など
+var free_space_value; // 装備discにおいて、合成できる残り容量
 var var_808;
-var var_809;
+var track_number; // 装備discにおいて、合成した能力の順番
 var var_810;
 var var_811;
 var var_812;
@@ -912,7 +912,7 @@ var var_824;
 var var_825;
 var var_826;
 var var_827;
-var var_828;
+var item_ability_description; // アイテムの能力についての説明。3方向殴れるぞ、投げると敵がスヤスヤ眠るぞなど
 var var_829;
 var var_830;
 var var_831;
@@ -924,7 +924,7 @@ var var_836;
 var var_837;
 var var_838;
 var var_839;
-var var_840;
+var current_level; // ディアボロの現在のレベル
 var var_841;
 var var_842;
 var var_843;
@@ -1017,7 +1017,7 @@ var var_929;
 var var_930;
 var var_931;
 var var_932;
-var var_933;
+var var_933; // ディアボロのレベル変数
 var var_934;
 var var_935;
 var var_936;
@@ -1739,7 +1739,7 @@ var var_1651;
 var var_1652;
 var var_1653;
 var var_1654;
-var var_1655;
+var enemy_description; // 敵の説明。敵図鑑用コメント
 var var_1656;
 var var_1657;
 var var_1658;
@@ -2167,7 +2167,7 @@ var var_2079;
 var var_2080;
 var var_2081;
 var var_2082;
-var var_2083;
+var yabaimono_id; // ヤバいものの動作処理用 item_list
 var var_2084;
 var var_2085; // item_list
 var var_2086;

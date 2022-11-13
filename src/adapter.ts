@@ -1953,6 +1953,7 @@ p1,p2 : カレントポジションのX,Y座標
 Xは一番左が0に、Yは上が0になり、1ドット単位の指定になります。
 パラメータの省略をすると、現在の値が使われます。
 */
+// pos で一度指定したあとに mesを連続させると、同じX座標で縦に並ぶ！！
 function pos(x: number, y: number) {
     position = [x, y];
 }
@@ -2332,11 +2333,11 @@ function DSSETVOLUME(se_id: any, volume: any) {
 
 function DSGETMASTERVOLUME() { }
 
-let bgm_volume: number = 0.1;
+let bgm_volume1: number = 0.1;
 
 // Ver 0.1307で追加。BGM音量調整関数。
 function DSSETMASTERVOLUME(volume_size: number) {
-    bgm_volume = (document.getElementById(bgm_source1) as any).volume = volume_size / 1000;
+    bgm_volume1 = (document.getElementById(bgm_source1) as any).volume = volume_size / 1000;
  }
 
 
@@ -2368,7 +2369,7 @@ function DMINIT() {
 
 function DMPLAY(data0: any, data1: any) { 
     // Ver 0.1307で音量調整用に修正。
-    (document.getElementById(bgm_source1) as any).volume = bgm_volume;
+    (document.getElementById(bgm_source1) as any).volume = bgm_volume1;
     // Ver 0.1305で追加
     (document.getElementById(bgm_source1) as any).play()
 }
