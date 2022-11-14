@@ -910,11 +910,11 @@ function func410(this: any) {
             yield func479();
             var_234 = 0;
         }
-        yield func411();
+        yield func411(); // アイテムを投げた時の動作処理
     });
 }
 
-
+// アイテムを投げた時の動作処理
 function func411(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(411);
@@ -1101,6 +1101,7 @@ function func411(this: any) {
         var_1898 = 0;
         var_1191 = 0;
         var_1270 = 0;
+
         if (var_1893 == 0 && var_1897 == 1 && var_1901 == 0) {
             var_1897 = 0;
             var_1901 = 0;
@@ -1110,7 +1111,7 @@ function func411(this: any) {
         if (var_1893 == 1) {
             var_1897 = 0;
             var_1901 = 0;
-            yield func418(); // アイテムを投げた時の動作処理
+            yield func418(); // 遠投状態(アヌビス神装備)でアイテムを投げた時の動作処理
             return;
         }
         var_1901 = 0;
@@ -1239,6 +1240,7 @@ function func411(this: any) {
         return;
     });
 }
+
 function func412(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(412);
@@ -1512,7 +1514,7 @@ function func416(this: any) {
         if (var_111 == 1 || var_138 == 1) {
             var_1900 = 1;
         }
-        if (var_270 == 136) {
+        if (sympathy_id == 136) {
             var_1900 = 1;
         }
         if (dangeon_number == 99) {
@@ -1521,6 +1523,7 @@ function func416(this: any) {
         return;
     });
 }
+
 function func417(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(417);
@@ -1538,6 +1541,7 @@ function func417(this: any) {
             }
             payment_amount = payment_amount + buying_price + var_482;
         }
+
         if (var_1846 >= 800 && var_1846 < 900) {
             var_484 = 1;
             var_485 = var_1848;
@@ -1569,7 +1573,8 @@ function func417(this: any) {
         return;
     });
 }
-// アイテムを投げた時の動作処理
+
+// 遠投状態(アヌビス神装備)でアイテムを投げた時の動作処理
 function func418(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(418);
@@ -1669,7 +1674,8 @@ function func419(this: any) {
                 }
             }
         }
-        if (var_78[var_321].Var11 == 1) {
+
+        if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
             var_1925 = 0;
             var_482 = 0;
             var_482 = (var_78[var_321].Var3 + var_78[var_321].Var4) * 50;
@@ -1797,13 +1803,13 @@ function func420(this: any) {
         }
         if (item_list >= 100 && item_list < 400) {
             var_1934 = 0;
-            if (var_896 == 1 && var_1935 == 1) {
+            if (var_896 == 1 && disc_class == 1) {
                 var_1934 = 1;
             }
-            if (var_897 == 1 && var_1935 == 2) {
+            if (var_897 == 1 && disc_class == 2) {
                 var_1934 = 1;
             }
-            if (var_898 == 1 && var_1935 == 3) {
+            if (var_898 == 1 && disc_class == 3) {
                 var_1934 = 1;
             }
             if (var_896 == 1 && var_476[var_225] == 1) {
@@ -1836,7 +1842,7 @@ function func420(this: any) {
                 yield func340(); // キー入力による選択処理
                 var_1264 = 0;
                 var_217 = 1;
-                var_1935 = 0;
+                disc_class = 0;
                 var_1933 = 0;
                 yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                 return;
@@ -1862,33 +1868,33 @@ function func420(this: any) {
                 comments_row1 = "" + item_name + "を";
                 var_1936 = 0;
             }
-            if (var_1935 == 1 && var_476[var_225] == 0) {
+            if (disc_class == 1 && var_476[var_225] == 0) {
                 comments_row2 = "攻撃用に装備した";
                 var_1927 = item_list;
                 var_1926 = 1;
-                yield func105();
+                yield func105(); // discを装備した際のBGM選曲
             }
-            if (var_1935 == 2 && var_477[var_225] == 0) {
+            if (disc_class == 2 && var_477[var_225] == 0) {
                 comments_row2 = "防御用に装備した";
                 var_1928 = item_list;
                 var_1926 = 1;
-                yield func105();
+                yield func105(); // discを装備した際のBGM選曲
             }
-            if (var_1935 == 3 && var_478[var_225] == 0) {
+            if (disc_class == 3 && var_478[var_225] == 0) {
                 comments_row2 = "能力用に装備した";
                 var_1929 = item_list;
                 var_1926 = 1;
-                yield func105();
+                yield func105(); // discを装備した際のBGM選曲
             }
-            if (var_1935 == 1 && var_476[var_225] == 1) {
+            if (disc_class == 1 && var_476[var_225] == 1) {
                 comments_row1 = comments_row1 + "はずした";
                 yield func106(); // BGM選曲呼び出し割り振り
             }
-            if (var_1935 == 2 && var_477[var_225] == 1) {
+            if (disc_class == 2 && var_477[var_225] == 1) {
                 comments_row1 = comments_row1 + "はずした";
                 yield func106(); // BGM選曲呼び出し割り振り
             }
-            if (var_1935 == 3 && var_478[var_225] == 1) {
+            if (disc_class == 3 && var_478[var_225] == 1) {
                 comments_row1 = comments_row1 + "はずした";
                 yield func106(); // BGM選曲呼び出し割り振り
             }
@@ -1896,7 +1902,7 @@ function func420(this: any) {
         if (item_list >= 400 && item_list < 450 && var_479[var_225] == 0) {
             comments_row1 = "" + item_name + "(" + var_233[var_225].Var3 + ")を装備した";
             var_1936 = 0;
-            yield func105();
+            yield func105(); // discを装備した際のBGM選曲
         }
         if (item_list >= 400 && item_list < 450 && var_479[var_225] == 1) {
             comments_row1 = "" + item_name + "(" + var_233[var_225].Var3 + ")をはずした";
@@ -2041,13 +2047,13 @@ function func420(this: any) {
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            if (var_1935 == 1) {
+            if (disc_class == 1) {
                 var_896 = 1;
             }
-            if (var_1935 == 2) {
+            if (disc_class == 2) {
                 var_897 = 1;
             }
-            if (var_1935 == 3) {
+            if (disc_class == 3) {
                 var_898 = 1;
             }
             comments_row1 = comments_row1a;
@@ -2177,8 +2183,8 @@ function func420(this: any) {
         if (var_1936 == 1) {
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            comments_row1a = var_1946;
-            comments_row2a = var_1947;
+            comments_row1a = item_message1;
+            comments_row2a = item_message2;
             var_198 = 1;
             var_300 = 0;
             var_25_x = var_25[1];
@@ -2194,7 +2200,7 @@ function func420(this: any) {
         var_1264 = 0;
         var_1214 = 0;
         var_217 = 1;
-        var_1935 = 0;
+        disc_class = 0;
         if (var_1949 == 1) {
             DSPLAY(audio_id = 118);
             var_502 = 1;
@@ -2224,7 +2230,7 @@ function func420(this: any) {
         var_1252 = 0;
         if (var_1933 == 1) {
             yield func494();
-            yield func497();
+            yield func497(); // スタンドの共鳴発動時のメッセージ表示
             var_1933 = 0;
             var_1926 = 0;
             var_1927 = 0;
@@ -2299,7 +2305,8 @@ function func422(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(422);
         var_78[var_321].Var3 = var_78[var_321].Var3 - 1;
-        if (var_78[var_321].Var11 == 1) {
+
+        if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
             var_106 = 1;
             count_buying_price = count_buying_price + 50;
         }
@@ -2326,7 +2333,8 @@ function func422(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            if (var_78[var_321].Var11 == 1) {
+
+            if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                 var_106 = 1;
                 count_buying_price = count_buying_price + buying_price;
             }
@@ -2364,6 +2372,7 @@ function func423(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
+
             if (var_486[var_682][var_225][11] == 1) {
                 var_106 = 1;
                 count_buying_price = count_buying_price + buying_price;
@@ -2498,6 +2507,7 @@ function func426(this: any) {
         return;
     });
 }
+
 function func427(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(427);
@@ -2512,6 +2522,7 @@ function func427(this: any) {
         return;
     });
 }
+
 function func428(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(428);
@@ -2540,6 +2551,8 @@ function func429(this: any) {
         return;
     });
 }
+
+// 配列宣言処理
 function func430(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(430);
@@ -2548,7 +2561,7 @@ function func430(this: any) {
             var_580 = var_580 - var_894;
             var_894 = 0;
             var_357 = 0;
-            yield func431();
+            yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
         if (var_477[var_225] == 1) {
@@ -2556,25 +2569,26 @@ function func430(this: any) {
             var_581 = var_581 - var_895;
             var_895 = 0;
             var_358 = 0;
-            yield func431();
+            yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
         if (var_479[var_225] == 1) {
             var_479 = dim(40);
             var_250 = 0;
             var_410 = 0;
-            yield func431();
+            yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
         if (var_478[var_225] == 1) {
             var_478 = dim(40);
             var_215 = 0;
-            yield func431();
+            yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
         return;
     });
 }
+// BGM選曲関数呼び出し
 function func431(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(431);
@@ -2582,20 +2596,21 @@ function func431(this: any) {
         return;
     });
 }
+
 function func432(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(432);
         if (var_220 == 0) {
             if (item_list >= 100 && item_list < 400) {
-                if (var_1935 == 1 && var_476[var_225] == 1) {
+                if (disc_class == 1 && var_476[var_225] == 1) {
                     var_476 = dim(40);
                     return;
                 }
-                if (var_1935 == 2 && var_477[var_225] == 1) {
+                if (disc_class == 2 && var_477[var_225] == 1) {
                     var_477 = dim(40);
                     return;
                 }
-                if (var_1935 == 3 && var_478[var_225] == 1) {
+                if (disc_class == 3 && var_478[var_225] == 1) {
                     var_478 = dim(40);
                     return;
                 }
@@ -2607,17 +2622,17 @@ function func432(this: any) {
                 return;
             }
             if (item_list >= 100 && item_list < 400) {
-                if (var_1935 == 1) {
+                if (disc_class == 1) {
                     var_476 = dim(40);
                     var_476[var_225] = 1;
                     return;
                 }
-                if (var_1935 == 2) {
+                if (disc_class == 2) {
                     var_477 = dim(40);
                     var_477[var_225] = 1;
                     return;
                 }
-                if (var_1935 == 3) {
+                if (disc_class == 3) {
                     var_478 = dim(40);
                     var_478[var_225] = 1;
                     return;
@@ -3004,7 +3019,7 @@ function func436(this: any) {
             var_1964 = rnd(100);
             var_1783 = 1000 - var_1964;
         }
-        if (var_270 == 119 || var_270 == 123) {
+        if (sympathy_id == 119 || sympathy_id == 123) {
             var_1783 = Math.floor(var_1783 * 3 / 2);
         }
         if (var_156[356] == 1) {
@@ -3716,12 +3731,12 @@ function func443(this: any) {
         return;
     });
 }
-
+// discに対してコミックを読んだ時の強化処理
 function func444(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(444);
         if (var_233[var_225].Var0 >= 800 && var_233[var_225].Var0 < 900 && var_1950 != 20) {
-            yield func445();
+            yield func445(); // ヤバいものに対してコミックを読んだ時の強化処理
             return;
         }
         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
@@ -4068,7 +4083,7 @@ function func444(this: any) {
     });
 }
 
-// コミックを読んだ時の関数
+// ヤバいものに対してコミックを読んだ時の強化処理
 function func445(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(445);
@@ -4926,6 +4941,7 @@ function func460(this: any) {
         pset(9, 331);
         pset(331, 331);
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+
         if (var_227 == 1) {
             var_1620 = 1;
         }
@@ -4982,8 +4998,12 @@ function func460(this: any) {
             item_list = var_2010;
             disc_rarity = var_2017;
             yield func492(); // アイテムリスト呼び出し
+            
             var_2021 = 0;
+
+
             // ヤバいもののなかでも "押す" 機能があるものだけ
+            // var_220 はヤバいものの中を見た時に1になる
             if (var_220 == 1 && var_1620 <= var_233[var_1882].Var7 && var_233[var_1882].Var0 >= 850 && var_233[var_1882].Var0 < 860 && var_233[var_1882].Var0 != 851) {
         
                 font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
@@ -5429,25 +5449,25 @@ function func460(this: any) {
         // アイテムを選択した時
         if (var_221 >= 1) {
             var_1822 = 114;
-            if (var_2030 == 3) {
+            if (item_class2 == 3) {
                 var_1822 = 97;
             }
-            if (var_2030 == 4) {
+            if (item_class2 == 4) {
                 var_1822 = 114;
             }
-            if (var_2030 == 5) {
+            if (item_class2 == 5) {
                 var_1822 = 131;
             }
-            if (var_2030 == 6) {
+            if (item_class2 == 6) {
                 var_1822 = 148;
             }
-            if (var_2030 == 7) {
+            if (item_class2 == 7) {
                 var_1822 = 165;
             }
-            if (var_2030 == 8) {
+            if (item_class2 == 8) {
                 var_1822 = 182;
             }
-            if (var_2030 == 9) {
+            if (item_class2 == 9) {
                 var_1822 = 199;
             }
             gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
@@ -5475,55 +5495,55 @@ function func460(this: any) {
                 }
                 mes("拾う");
             }
-            if (var_2031 != 0) {
+            if (item_class1 != 0) {
                 color(255, 255, 255);
                 if (var_221 >= 2) {
                     color(150, 150, 150);
                 }
-                if (var_2031 == 1 && var_220 == 0 && var_231 == 0) {
+                if (item_class1 == 1 && var_220 == 0 && var_231 == 0) {
                     mes("装備");
                 }
-                if (var_2031 == 2 && var_479[var_225] == 0 && var_220 == 0 && var_231 == 0) {
+                if (item_class1 == 2 && var_479[var_225] == 0 && var_220 == 0 && var_231 == 0) {
                     mes("装備");
                 }
-                if (var_2031 == 2 && var_479[var_225] == 1 && var_220 == 0 && var_231 == 0) {
+                if (item_class1 == 2 && var_479[var_225] == 1 && var_220 == 0 && var_231 == 0) {
                     mes("はずす");
                 }
-                if (var_2031 == 3) {
+                if (item_class1 == 3) {
                     mes("使う");
                 }
-                if (var_2031 == 4) {
+                if (item_class1 == 4) {
                     mes("食べる");
                 }
-                if (var_2031 == 5) {
+                if (item_class1 == 5) {
                     mes("見る");
                 }
-                if (var_2031 == 6) {
+                if (item_class1 == 6) {
                     mes("読む");
                 }
             }
-            if (var_2031 == 2) {
+            if (item_class1 == 2) {
                 color(255, 255, 255);
                 if (var_221 >= 2) {
                     color(150, 150, 150);
                 }
                 mes("撃つ");
             }
-            if (var_2031 == 1 && var_2032 != 0) {
+            if (item_class1 == 1 && var_2032 != 0) {
                 color(255, 255, 255);
                 if (var_221 >= 2) {
                     color(150, 150, 150);
                 }
                 mes("はずす");
             }
-            if (var_2031 == 1 || var_2031 == 2) {
+            if (item_class1 == 1 || item_class1 == 2) {
                 color(255, 255, 255);
                 if (var_221 >= 2) {
                     color(150, 150, 150);
                 }
                 mes("発動");
             }
-            if (var_2031 == 5) {
+            if (item_class1 == 5) {
                 color(255, 255, 255);
                 if (var_221 >= 2) {
                     color(150, 150, 150);
@@ -5987,11 +6007,11 @@ function func461(this: any) {
                 var_221 = 1;
                 var_229 = 44;
                 var_222 = 1;
-                yield func462();
+                yield func462(); // アイテムidごとに区分分け関数
                 return;
             }
             if (var_220 == 0) {
-                if (var_1240 == 1) {
+                if (var_1240 == 1) { // クレイジーD発動フラグ。道具画面処理を読み込む度にフラグが上がり、次へ進んでいく
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     yield func522(); //disc同士の合成関数(クレイジーDの発動能力)1 何故か関数が二つある
                     return;
@@ -6013,7 +6033,7 @@ function func461(this: any) {
                 }
                 if (var_1950 >= 1) {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func444();
+                    yield func444(); // discに対してコミックを読んだ時の強化処理
                     return;
                 }
                 if (var_1945 == 1) {
@@ -6048,7 +6068,7 @@ function func461(this: any) {
                 }
                 if (var_2007 == 1) {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func533(); 
+                    yield func533(); // ムーディーブルースの発動によってアイテムを倉庫に送る動作処理
                     return;
                 }
                 if (var_227 != 3) {
@@ -6056,7 +6076,7 @@ function func461(this: any) {
                     var_229 = 44;
                     var_222 = 1;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func462();
+                    yield func462(); // アイテムidごとに区分分け関数
                     return;
                 }
                 if (var_227 == 3) {
@@ -6065,7 +6085,7 @@ function func461(this: any) {
                     var_222 = 10;
                     var_231 = 1;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func462();
+                    yield func462(); // アイテムidごとに区分分け関数
                     return;
                 }
             }
@@ -6129,7 +6149,7 @@ function func461(this: any) {
                     }
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     yield func051();
-                    yield func462();
+                    yield func462(); // アイテムidごとに区分分け関数
                     return;
                 }
             }
@@ -6138,7 +6158,7 @@ function func461(this: any) {
         return;
     });
 }
-
+// アイテムidごとに区分分け関数
 function func462(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(462);
@@ -6147,164 +6167,165 @@ function func462(this: any) {
             var_220 = var_1668;
             var_231 = var_1669;
         }
-        var_2031 = 0;
+        item_class1 = 0;
         var_2041 = 16;
         var_2032 = 0;
         if (var_220 == 0 && var_231 == 0) {
             if (item_list < 100) {
-                var_2031 = 0;
-                var_2030 = 3;
+                item_class1 = 0;
+                item_class2 = 3;
                 var_222 = 5;
             }
             if (item_list >= 100 && item_list < 400) {
                 yield func426();
                 yield func427();
                 yield func428();
-                var_2030 = 5;
+                item_class2 = 5;
                 if (var_225 == var_553) {
                     var_2032 = 1;
-                    var_2030 = 6;
+                    item_class2 = 6;
                 }
                 if (var_225 == var_554) {
                     var_2032 = 2;
-                    var_2030 = 6;
+                    item_class2 = 6;
                 }
                 if (var_225 == var_555) {
                     var_2032 = 3;
-                    var_2030 = 6;
+                    item_class2 = 6;
                 }
-                var_2031 = 1;
+                item_class1 = 1;
             }
             if (item_list >= 400 && item_list < 500) {
-                var_2031 = 2;
-                var_2030 = 6;
+                item_class1 = 2;
+                item_class2 = 6;
             }
             if (item_list >= 500 && item_list < 600) {
-                var_2031 = 3;
-                var_2030 = 4;
+                item_class1 = 3;
+                item_class2 = 4;
             }
             if (item_list >= 600 && item_list < 700) {
-                var_2031 = 4;
-                var_2030 = 4;
+                item_class1 = 4;
+                item_class2 = 4;
             }
             if (item_list >= 700 && item_list < 750) {
-                var_2031 = 3;
-                var_2030 = 4;
+                item_class1 = 3;
+                item_class2 = 4;
             }
             if (item_list >= 800 && item_list < 900) {
-                var_2031 = 5;
-                var_2030 = 5;
+                item_class1 = 5;
+                item_class2 = 5;
             }
             if (item_list >= 750 && item_list < 800) {
-                var_2031 = 6;
-                var_2030 = 4;
+                item_class1 = 6;
+                item_class2 = 4;
             }
             if (item_list >= 900 && item_list < 1000) {
-                var_2031 = 6;
-                var_2030 = 4;
+                item_class1 = 6;
+                item_class2 = 4;
             }
             if (var_77[var_66][var_67] != 0) {
                 var_2033 = var_77[var_66][var_67];
                 if (var_78[var_2033].Var0 != 1) {
-                    var_2030 = var_2030 + 1;
+                    item_class2 = item_class2 + 1;
                 }
             }
         }
         if (var_220 == 0 && var_231 == 1) {
             if (item_list < 100) {
-                var_2031 = 0;
-                var_2030 = 3;
+                item_class1 = 0;
+                item_class2 = 3;
             }
             if (item_list >= 100 && item_list < 400) {
-                var_2031 = 1;
-                var_2030 = 5;
+                item_class1 = 1;
+                item_class2 = 5;
             }
             if (item_list >= 400 && item_list < 500) {
-                var_2031 = 2;
-                var_2030 = 6;
+                item_class1 = 2;
+                item_class2 = 6;
             }
             if (item_list >= 500 && item_list < 600) {
-                var_2031 = 3;
-                var_2030 = 5;
+                item_class1 = 3;
+                item_class2 = 5;
             }
             if (item_list >= 600 && item_list < 700) {
-                var_2031 = 4;
-                var_2030 = 5;
+                item_class1 = 4;
+                item_class2 = 5;
             }
             if (item_list >= 700 && item_list < 750) {
-                var_2031 = 3;
-                var_2030 = 5;
+                item_class1 = 3;
+                item_class2 = 5;
             }
             if (item_list >= 800 && item_list < 900) {
-                var_2031 = 5;
-                var_2030 = 6;
+                item_class1 = 5;
+                item_class2 = 6;
             }
             if (item_list >= 750 && item_list < 800) {
-                var_2031 = 6;
-                var_2030 = 5;
+                item_class1 = 6;
+                item_class2 = 5;
             }
             if (item_list >= 900 && item_list < 1000) {
-                var_2031 = 6;
-                var_2030 = 5;
+                item_class1 = 6;
+                item_class2 = 5;
             }
         }
         if (var_220 == 1) {
             if (item_list < 100) {
-                var_2031 = 0;
-                var_2030 = 4;
+                item_class1 = 0;
+                item_class2 = 4;
                 var_222 = 5;
             }
             if (item_list >= 100 && item_list < 400) {
-                var_2031 = 1;
-                var_2030 = 5;
+                item_class1 = 1;
+                item_class2 = 5;
                 var_222 = 3;
             }
             if (item_list >= 400 && item_list < 500) {
-                var_2031 = 2;
-                var_2030 = 6;
+                item_class1 = 2;
+                item_class2 = 6;
                 var_222 = 2;
             }
             if (item_list >= 500 && item_list < 600) {
-                var_2031 = 3;
-                var_2030 = 5;
+                item_class1 = 3;
+                item_class2 = 5;
             }
             if (item_list >= 600 && item_list < 700) {
-                var_2031 = 4;
-                var_2030 = 5;
+                item_class1 = 4;
+                item_class2 = 5;
             }
             if (item_list >= 700 && item_list < 750) {
-                var_2031 = 3;
-                var_2030 = 5;
+                item_class1 = 3;
+                item_class2 = 5;
             }
             if (item_list >= 800 && item_list < 900) {
-                var_2031 = 5;
-                var_2030 = 5;
+                item_class1 = 5;
+                item_class2 = 5;
             }
             if (item_list >= 750 && item_list < 800) {
-                var_2031 = 6;
-                var_2030 = 5;
+                item_class1 = 6;
+                item_class2 = 5;
             }
             if (item_list >= 900 && item_list < 1000) {
-                var_2031 = 6;
-                var_2030 = 5;
+                item_class1 = 6;
+                item_class2 = 5;
             }
         }
         var_2034 = 0;
         if (var_862[item_list][0] == 0 && item_list >= 100 && item_list < 400) {
             var_2034 = 1;
-            var_2030++;
+            item_class2++;
         }
         if (var_862[item_list][0] == 0 && item_list >= 500 && item_list < 600) {
             var_2034 = 1;
-            var_2030++;
+            item_class2++;
         }
         if (var_862[item_list][0] == 0 && item_list >= 801 && item_list < 900) {
             var_2034 = 1;
-            var_2030++;
+            item_class2++;
         }
+        // No = 800 エニグマの紙 かつ 99階でなければ
         if (item_list == 800 && dangeon_number != 99) {
             var_2034 = 1;
-            var_2030++;
+            item_class2++;
             var_2042 = var_225;
         }
         yield func051();
@@ -6335,31 +6356,31 @@ function func463(this: any) {
         if (var_259 == 1) {
             if (var_222 == 10) {
                 var_229 = var_229 + var_2041;
-                if (var_2031 == 0) {
+                if (item_class1 == 0) {
                     var_222 = 5;
                 }
-                if (var_2031 == 1) {
+                if (item_class1 == 1) {
                     var_222 = 1;
                     if (var_231 == 1) {
                         var_222 = 3;
                     }
                 }
-                if (var_2031 == 2) {
+                if (item_class1 == 2) {
                     var_222 = 1;
                     if (var_231 == 1) {
                         var_222 = 2;
                     }
                 }
-                if (var_2031 == 3) {
+                if (item_class1 == 3) {
                     var_222 = 1;
                 }
-                if (var_2031 == 4) {
+                if (item_class1 == 4) {
                     var_222 = 1;
                 }
-                if (var_2031 == 5) {
+                if (item_class1 == 5) {
                     var_222 = 1;
                 }
-                if (var_2031 == 6) {
+                if (item_class1 == 6) {
                     var_222 = 1;
                 }
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -6370,7 +6391,7 @@ function func463(this: any) {
             }
             if (var_222 == 1) {
                 var_229 = var_229 + var_2041;
-                if (var_2031 == 1) {
+                if (item_class1 == 1) {
                     if (var_2032 == 0) {
                         var_222 = 3;
                     }
@@ -6378,19 +6399,19 @@ function func463(this: any) {
                         var_222 = 2;
                     }
                 }
-                if (var_2031 == 2) {
+                if (item_class1 == 2) {
                     var_222 = 2;
                 }
-                if (var_2031 == 3) {
+                if (item_class1 == 3) {
                     var_222 = 5;
                 }
-                if (var_2031 == 4) {
+                if (item_class1 == 4) {
                     var_222 = 5;
                 }
-                if (var_2031 == 5) {
+                if (item_class1 == 5) {
                     var_222 = 4;
                 }
-                if (var_2031 == 6) {
+                if (item_class1 == 6) {
                     var_222 = 5;
                 }
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -6426,6 +6447,7 @@ function func463(this: any) {
                 yield func463();
                 return;
             }
+            // 消費形アイテム (var_225 = 5) であれば
             if (var_222 == 5) {
                 var_229 = var_229 + var_2041;
                 var_222 = 6;
@@ -6522,20 +6544,20 @@ function func463(this: any) {
                 var_229 = 44;
                 var_222 = 1;
                 if (var_231 == 0) {
-                    if (var_2031 == 0) {
+                    if (item_class1 == 0) {
                         var_222 = 5;
                     }
-                    if (var_2031 != 0) {
+                    if (item_class1 != 0) {
                         var_222 = 1;
                     }
                 }
                 if (var_231 == 1) {
                     var_222 = 10;
                 }
-                if (var_220 == 1 && var_2031 == 1) {
+                if (var_220 == 1 && item_class1 == 1) {
                     var_222 = 3;
                 }
-                if (var_220 == 1 && var_2031 == 2) {
+                if (var_220 == 1 && item_class1 == 2) {
                     var_222 = 2;
                 }
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -6548,31 +6570,31 @@ function func463(this: any) {
         if (var_255 == 1) {
             if (var_222 == 10) {
                 if (var_2034 == 0) {
-                    if (var_2031 == 0) {
+                    if (item_class1 == 0) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 3;
                     }
-                    if (var_2031 == 1) {
+                    if (item_class1 == 1) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 4;
                     }
-                    if (var_2031 == 2) {
+                    if (item_class1 == 2) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 5;
                     }
-                    if (var_2031 == 3) {
+                    if (item_class1 == 3) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 4;
                     }
-                    if (var_2031 == 4) {
+                    if (item_class1 == 4) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 4;
                     }
-                    if (var_2031 == 5) {
+                    if (item_class1 == 5) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 5;
                     }
-                    if (var_2031 == 6) {
+                    if (item_class1 == 6) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 4;
                     }
@@ -6584,31 +6606,31 @@ function func463(this: any) {
                     }
                 }
                 if (var_2034 == 1) {
-                    if (var_2031 == 0) {
+                    if (item_class1 == 0) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 4;
                     }
-                    if (var_2031 == 1) {
+                    if (item_class1 == 1) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 5;
                     }
-                    if (var_2031 == 2) {
+                    if (item_class1 == 2) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 6;
                     }
-                    if (var_2031 == 3) {
+                    if (item_class1 == 3) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 5;
                     }
-                    if (var_2031 == 4) {
+                    if (item_class1 == 4) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 5;
                     }
-                    if (var_2031 == 5) {
+                    if (item_class1 == 5) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 6;
                     }
-                    if (var_2031 == 6) {
+                    if (item_class1 == 6) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 5;
                     }
@@ -6628,7 +6650,7 @@ function func463(this: any) {
             if (var_222 == 1) {
                 if (var_2034 == 0) {
                     if (var_231 == 0) {
-                        if (var_2031 == 1) {
+                        if (item_class1 == 1) {
                             if (var_2032 == 0) {
                                 var_222 = 8;
                                 var_229 = 44 + var_2041 * 4;
@@ -6644,35 +6666,35 @@ function func463(this: any) {
                                 }
                             }
                         }
-                        if (var_2031 == 2) {
+                        if (item_class1 == 2) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 5;
                             if (var_77[var_66][var_67] != 0 || var_220 == 1) {
                                 var_229 = 44 + var_2041 * 6;
                             }
                         }
-                        if (var_2031 == 3) {
+                        if (item_class1 == 3) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 3;
                             if (var_77[var_66][var_67] != 0 || var_220 == 1) {
                                 var_229 = 44 + var_2041 * 4;
                             }
                         }
-                        if (var_2031 == 4) {
+                        if (item_class1 == 4) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 3;
                             if (var_77[var_66][var_67] != 0 || var_220 == 1) {
                                 var_229 = 44 + var_2041 * 4;
                             }
                         }
-                        if (var_2031 == 5) {
+                        if (item_class1 == 5) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 4;
                             if (var_77[var_66][var_67] != 0 || var_220 == 1) {
                                 var_229 = 44 + var_2041 * 5;
                             }
                         }
-                        if (var_2031 == 6) {
+                        if (item_class1 == 6) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 3;
                             if (var_77[var_66][var_67] != 0 || var_220 == 1) {
@@ -6693,7 +6715,7 @@ function func463(this: any) {
                 }
                 if (var_2034 == 1) {
                     if (var_231 == 0) {
-                        if (var_2031 == 1) {
+                        if (item_class1 == 1) {
                             if (var_2032 == 0) {
                                 var_222 = 8;
                                 var_229 = 44 + var_2041 * 5;
@@ -6709,14 +6731,14 @@ function func463(this: any) {
                                 }
                             }
                         }
-                        if (var_2031 == 2) {
+                        if (item_class1 == 2) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 6;
                             if (var_77[var_66][var_67] != 0 && var_220 == 0) {
                                 var_229 = 44 + var_2041 * 7;
                             }
                         }
-                        if (var_2031 == 3) {
+                        if (item_class1 == 3) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 4;
                             if (var_77[var_66][var_67] != 0 && var_220 == 0) {
@@ -6729,21 +6751,21 @@ function func463(this: any) {
                                 var_229 = 44 + var_2041 * 5;
                             }
                         }
-                        if (var_2031 == 4) {
+                        if (item_class1 == 4) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 4;
                             if (var_77[var_66][var_67] != 0 && var_220 == 0) {
                                 var_229 = 44 + var_2041 * 5;
                             }
                         }
-                        if (var_2031 == 5) {
+                        if (item_class1 == 5) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 5;
                             if (var_77[var_66][var_67] != 0 && var_220 == 0) {
                                 var_229 = 44 + var_2041 * 6;
                             }
                         }
-                        if (var_2031 == 6) {
+                        if (item_class1 == 6) {
                             var_222 = 8;
                             var_229 = 44 + var_2041 * 4;
                             if (var_77[var_66][var_67] != 0 && var_220 == 0) {
@@ -6788,7 +6810,7 @@ function func463(this: any) {
             }
             if (var_222 == 3) {
                 var_229 = var_229 - var_2041;
-                if (var_2031 == 1) {
+                if (item_class1 == 1) {
                     if (var_220 == 0 && var_231 == 0) {
                         if (var_2032 == 0) {
                             var_222 = 1;
@@ -6810,7 +6832,7 @@ function func463(this: any) {
                         var_222 = 10;
                     }
                 }
-                if (var_2031 == 2) {
+                if (item_class1 == 2) {
                     var_222 = 2;
                 }
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -6830,7 +6852,7 @@ function func463(this: any) {
             }
             if (var_222 == 5) {
                 var_229 = var_229 - var_2041;
-                if (var_2031 == 0) {
+                if (item_class1 == 0) {
                     if (var_220 == 0 && var_231 == 0) {
                         var_222 = 8;
                         var_229 = 44 + var_2041 * 2;
@@ -6849,22 +6871,22 @@ function func463(this: any) {
                         var_229 = 44 + var_2041 * 3;
                     }
                 }
-                if (var_2031 == 1) {
+                if (item_class1 == 1) {
                     var_222 = 3;
                 }
-                if (var_2031 == 2) {
+                if (item_class1 == 2) {
                     var_222 = 3;
                 }
-                if (var_2031 == 3) {
+                if (item_class1 == 3) {
                     var_222 = 1;
                 }
-                if (var_2031 == 4) {
+                if (item_class1 == 4) {
                     var_222 = 1;
                 }
-                if (var_2031 == 5) {
+                if (item_class1 == 5) {
                     var_222 = 4;
                 }
-                if (var_2031 == 6) {
+                if (item_class1 == 6) {
                     var_222 = 1;
                 }
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -6964,10 +6986,11 @@ function func463(this: any) {
                 return;
             }
         }
+
         if (key_Z_on == 1 || key_A_on == 1) {
             if (var_220 == 0 && var_231 == 0) {
                 if (var_222 == 1) {
-                    if (var_2031 == 1) {
+                    if (item_class1 == 1) {
                         DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                         yield func051();
                         var_221 = 2;
@@ -6976,7 +6999,7 @@ function func463(this: any) {
                         yield func464();
                         return;
                     }
-                    if (var_2031 == 5) {
+                    if (item_class1 == 5) {
                         DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                         var_221 = 0;
                         yield func408();
@@ -6987,43 +7010,43 @@ function func463(this: any) {
                     yield func420(); // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
                     return;
                 }
-                if (var_222 == 2 && var_2031 == 2) {
+                if (var_222 == 2 && item_class1 == 2) {
                     var_221 = 0;
                     open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     yield func406(); // アイテムメニューからの "打つ" 選択時、射撃攻撃動作呼び出し処理
                     return;
                 }
-                if (var_222 == 2 && var_2031 == 1) {
+                if (var_222 == 2 && item_class1 == 1) {
                     var_221 = 0;
                     open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     if (var_2032 == 1) {
-                        var_1935 = 1;
+                        disc_class = 1;
                     }
                     if (var_2032 == 2) {
-                        var_1935 = 2;
+                        disc_class = 2;
                     }
                     if (var_2032 == 3) {
-                        var_1935 = 3;
+                        disc_class = 3;
                     }
                     yield func420(); // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
                     return;
                 }
-                if (var_222 == 3 && var_2031 == 1) {
+                if (var_222 == 3 && item_class1 == 1) {
                     yield func051();
                     var_221 = 3;
                     var_246 = 44;
                     var_2043 = 1;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func465();
+                    yield func465(); // アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
                     return;
                 }
-                if (var_222 == 3 && var_2031 == 2) {
+                if (var_222 == 3 && item_class1 == 2) {
                     yield func051();
                     var_221 = 3;
                     var_246 = 44;
                     var_2043 = 1;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func465();
+                    yield func465(); // アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
                     return;
                 }
                 if (var_222 == 4) {
@@ -7035,13 +7058,13 @@ function func463(this: any) {
                 }
                 if (var_222 == 5) {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    if (var_2031 != 2) {
+                    if (item_class1 != 2) {
                         var_221 = 0;
                         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                         yield func409();
                         return;
                     }
-                    if (var_2031 == 2) {
+                    if (item_class1 == 2) {
                         var_339 = 1;
                         var_221 = 0;
                         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
@@ -7106,7 +7129,7 @@ function func463(this: any) {
                     return;
                 }
                 if (var_222 == 1) {
-                    if (var_2031 == 1) {
+                    if (item_class1 == 1) {
                         var_221 = 2;
                         var_246 = 44;
                         var_2043 = 1;
@@ -7114,7 +7137,7 @@ function func463(this: any) {
                         yield func464();
                         return;
                     }
-                    if (var_2031 == 2) {
+                    if (item_class1 == 2) {
                         var_231 = 0;
                         var_198 = 0;
                         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
@@ -7130,7 +7153,7 @@ function func463(this: any) {
                         yield func420(); // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
                         return;
                     }
-                    if (var_2031 == 5) {
+                    if (item_class1 == 5) {
                         var_221 = 0;
                         var_225 = 0;
                         var_231 = 0;
@@ -7156,24 +7179,24 @@ function func463(this: any) {
                     yield func406(); // アイテムメニューからの "打つ" 選択時、射撃攻撃動作呼び出し処理
                     return;
                 }
-                if (var_222 == 3 && var_2031 == 1) {
+                if (var_222 == 3 && item_class1 == 1) {
                     yield func051();
                     var_221 = 3;
                     var_246 = 44;
                     var_2043 = 1;
                     var_234 = 1;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func465();
+                    yield func465(); // アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
                     return;
                 }
-                if (var_222 == 3 && var_2031 == 2) {
+                if (var_222 == 3 && item_class1 == 2) {
                     yield func051();
                     var_221 = 3;
                     var_246 = 44;
                     var_2043 = 1;
                     var_234 = 1;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func465();
+                    yield func465(); // アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
                     return;
                 }
                 if (var_222 == 4) {
@@ -7193,7 +7216,7 @@ function func463(this: any) {
                     var_221 = 0;
                     var_234 = 1;
                     var_225 = 0;
-                    if (var_2031 == 2) {
+                    if (item_class1 == 2) {
                         var_339 = 1;
                     }
                     item_list = var_233[var_225].Var0;
@@ -7262,38 +7285,38 @@ function func463(this: any) {
                     yield func406(); // アイテムメニューからの "打つ" 選択時、射撃攻撃動作呼び出し処理
                     return;
                 }
-                if (var_222 == 3 && var_2031 == 1) {
+                if (var_222 == 3 && item_class1 == 1) {
                     yield func051();
                     var_221 = 3;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_246 = 44;
                     var_2043 = 1;
-                    yield func465();
+                    yield func465(); // アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
                     return;
                 }
-                if (var_222 == 3 && var_2031 == 2) {
+                if (var_222 == 3 && item_class1 == 2) {
                     yield func051();
                     var_221 = 3;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_246 = 44;
                     var_2043 = 1;
-                    yield func465();
+                    yield func465(); // アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
                     return;
                 }
                 if (var_222 == 5) {
-                    if (var_2031 != 2) {
+                    if (item_class1 != 2) {
                         var_221 = 0;
                         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                         DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                        yield func411();
+                        yield func411(); // アイテムを投げた時の動作処理
                         return;
                     }
-                    if (var_2031 == 2) {
+                    if (item_class1 == 2) {
                         var_339 = 1;
                         var_221 = 0;
                         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                         DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                        yield func411();
+                        yield func411(); // アイテムを投げた時の動作処理
                         return;
                     }
                 }
@@ -7332,7 +7355,7 @@ function func464(this: any) {
             var_221 = 1;
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
-            yield func462();
+            yield func462(); // アイテムidごとに区分分け関数
             return;
         }
         if (var_259 == 1 && var_2043 != 3) {
@@ -7403,37 +7426,37 @@ function func464(this: any) {
             open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
             if (var_2032 == 0) {
                 if (var_2043 == 1) {
-                    var_1935 = 1;
+                    disc_class = 1;
                 }
                 if (var_2043 == 2) {
-                    var_1935 = 2;
+                    disc_class = 2;
                 }
                 if (var_2043 == 3) {
-                    var_1935 = 3;
+                    disc_class = 3;
                 }
             }
             if (var_2032 == 1) {
                 if (var_2043 == 1) {
-                    var_1935 = 2;
+                    disc_class = 2;
                 }
                 if (var_2043 == 3) {
-                    var_1935 = 3;
+                    disc_class = 3;
                 }
             }
             if (var_2032 == 2) {
                 if (var_2043 == 1) {
-                    var_1935 = 1;
+                    disc_class = 1;
                 }
                 if (var_2043 == 3) {
-                    var_1935 = 3;
+                    disc_class = 3;
                 }
             }
             if (var_2032 == 3) {
                 if (var_2043 == 1) {
-                    var_1935 = 1;
+                    disc_class = 1;
                 }
                 if (var_2043 == 3) {
-                    var_1935 = 2;
+                    disc_class = 2;
                 }
             }
             yield func420(); // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
@@ -7443,6 +7466,8 @@ function func464(this: any) {
         return;
     });
 }
+
+// アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
 function func465(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(465);
@@ -7453,7 +7478,7 @@ function func465(this: any) {
             var_234 = 0;
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func051();
-            yield func462();
+            yield func462(); // アイテムidごとに区分分け関数
             return;
         }
         if (var_259 == 1 && var_2043 == 1) {
@@ -7476,21 +7501,22 @@ function func465(this: any) {
                 var_221 = 0;
                 open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                 var_231 = 0;
-                yield func511();
+                yield func511(); // 各discごとの発動動作処理 (スタンド能力)
                 return;
             }
             if (var_2043 == 2) {
                 var_221 = 1;
                 var_234 = 0;
                 yield func051();
-                yield func462();
+                yield func462(); // アイテムidごとに区分分け関数
                 return;
             }
         }
-        yield func465();
+        yield func465(); // アイテムを使用する時の動作処理 (特定アイテムにカーソルを合わせ キー "Z" を押した時の処理)
         return;
     });
 }
+
 function func466(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(466);
@@ -8319,7 +8345,7 @@ function func469(this: any) {
         if (yabaimono_id == 805 && var_2085 == 631 && var_683 >= 2) {
             var_2086 = var_683 - 1;
             if (var_486[var_682][var_2086][0] >= 600 && var_486[var_682][var_2086][0] <= 605) {
-                yield func472();
+                yield func472(); // グッチョの死体にピッツァ&トマトチーズのサラダを入れた時の動作処理
             }
         }
         yield func471();
@@ -8621,7 +8647,7 @@ function func471(this: any) {
                 // No = 1 なので、ホテルの外
                 dangeon_number = 1;
             }
-            yield func385();
+            yield func385(); // 各ダンジョンごとの出現アイテム管理
             if (var_262 == 1) {
                 // No = 0 なので、拠点(ホテル、亀、)
                 dangeon_number = 0;
@@ -8638,6 +8664,7 @@ function func471(this: any) {
         return;
     });
 }
+// グッチョの死体にピッツァ&トマトチーズのサラダを入れた時の動作処理
 function func472(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(472);
@@ -12225,8 +12252,8 @@ function func492(this: any) {
         item_description1 = "";
         var_808 = "";
         item_ability_description = "";
-        var_1946 = "";
-        var_1947 = "";
+        item_message1 = "";
+        item_message2 = "";
         var_2173 = "";
         buying_price = 0;
         var_1984 = 0;
@@ -13368,7 +13395,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "髪型をけなされた気分になるぞ";
             item_ability_description = "投げると敵が混乱するぞ";
-            var_1946 = "プッツ―――――ン！";
+            item_message1 = "プッツ―――――ン！";
         }
         if (item_list == 562) {
             buying_price = 1500;
@@ -13376,7 +13403,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "康一のように急成長するぞ";
             item_ability_description = "レベルが１上がるぞ";
-            var_1946 = "ﾃﾞｨｱﾎﾞﾛはレベルが上がった！";
+            item_message1 = "ﾃﾞｨｱﾎﾞﾛはレベルが上がった！";
         }
         if (item_list == 563) {
             buying_price = 400;
@@ -13384,7 +13411,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "盲目になるが敵の位置を感知できるぞ";
             item_ability_description = "投げると一定時間盲目にするぞ";
-            var_1946 = "目が見えなくなってしまった！";
+            item_message1 = "目が見えなくなってしまった！";
         }
         if (item_list == 564) {
             buying_price = 500;
@@ -13392,7 +13419,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "匂いに敏感になるぞ";
             item_ability_description = "このフロアの罠の位置を感知するぞ";
-            var_1946 = "この階の罠の位置がわかった！";
+            item_message1 = "この階の罠の位置がわかった！";
         }
         if (item_list == 565) {
             buying_price = 400;
@@ -13400,7 +13427,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "装備ｽﾀﾝﾄﾞにかかった呪いが解けるぞ";
             item_ability_description = "";
-            var_1946 = "どのアイテムに使いますか？";
+            item_message1 = "どのアイテムに使いますか？";
         }
         if (item_list == 566) {
             buying_price = 500;
@@ -13408,7 +13435,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "身のかわしが上がるぞ";
             item_ability_description = "";
-            var_1946 = "攻撃をかわしやすくなった気がする！";
+            item_message1 = "攻撃をかわしやすくなった気がする！";
         }
         if (item_list == 567) {
             buying_price = 400;
@@ -13416,7 +13443,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "アイテムを鑑定できるぞ";
             item_ability_description = "";
-            var_1946 = "どのアイテムに使いますか？";
+            item_message1 = "どのアイテムに使いますか？";
         }
         if (item_list == 568) {
             buying_price = 500;
@@ -13424,7 +13451,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "この階で射撃ダメージがアップし、";
             item_ability_description = "投げたアイテムが必ず当たるようになるぞ";
-            var_1946 = "射撃能力がアップした！";
+            item_message1 = "射撃能力がアップした！";
         }
         if (item_list == 569) {
             buying_price = 500;
@@ -13432,7 +13459,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "この階で攻撃力が上がるぞ";
             item_ability_description = "";
-            var_1946 = "この階での攻撃力があがった！";
+            item_message1 = "この階での攻撃力があがった！";
         }
         if (item_list == 570) {
             buying_price = 500;
@@ -13440,8 +13467,8 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "この階で波紋が使えるようになり、";
             item_ability_description = "吸血鬼に与えるダメージが大きくなるぞ";
-            var_1946 = "吸血鬼に与えるダメージが大きくなった！";
-            var_1947 = "";
+            item_message1 = "吸血鬼に与えるダメージが大きくなった！";
+            item_message2 = "";
         }
         if (item_list == 571) {
             buying_price = 500;
@@ -13449,7 +13476,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "次の階の予知ができるぞ";
             item_ability_description = "";
-            var_1946 = "「あ…新しいﾍﾟｰｼﾞが…現れたぞ…」";
+            item_message1 = "「あ…新しいﾍﾟｰｼﾞが…現れたぞ…」";
         }
         if (item_list == 572) {
             buying_price = 500;
@@ -13457,7 +13484,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "この階で命中率が上がるぞ";
             item_ability_description = "";
-            var_1946 = "この階での命中率が上がった！";
+            item_message1 = "この階での命中率が上がった！";
         }
         if (item_list == 573) {
             buying_price = 400;
@@ -13465,7 +13492,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "この階のｱｲﾃﾑの場所がわかるぞ";
             item_ability_description = "";
-            var_1946 = "ｱｲﾃﾑの場所がわかった！";
+            item_message1 = "ｱｲﾃﾑの場所がわかった！";
         }
         if (item_list == 574) {
             buying_price = 500;
@@ -13473,7 +13500,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "わけがわからず混乱してしまうぞ";
             item_ability_description = "";
-            var_1946 = "「うわあああああああ！」";
+            item_message1 = "「うわあああああああ！」";
         }
         if (item_list == 575) {
             buying_price = 500;
@@ -13481,7 +13508,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "すやすやと眠ってしまうぞ";
             item_ability_description = "投げると敵が眠るぞ";
-            var_1946 = "急に眠気が襲ってきた…";
+            item_message1 = "急に眠気が襲ってきた…";
         }
         if (item_list == 576) {
             buying_price = 400;
@@ -13489,7 +13516,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "「10ターン後に破裂する！」と命令が書かれている";
             item_ability_description = "";
-            var_1946 = "【10ターン後に破裂する！】";
+            item_message1 = "【10ターン後に破裂する！】";
         }
         if (item_list == 577) {
             buying_price = 900;
@@ -13497,7 +13524,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "サイコロに変身できるぞ";
             item_ability_description = "変身中は敵に気づかれないぞ";
-            var_1946 = "サイコロに変身した。";
+            item_message1 = "サイコロに変身した。";
         }
         if (item_list == 578) {
             buying_price = 1500;
@@ -13505,7 +13532,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "スピードがアップするぞ";
             item_ability_description = "";
-            var_1946 = "体の動きが早くなった！";
+            item_message1 = "体の動きが早くなった！";
         }
         if (item_list == 579) {
             buying_price = 1500;
@@ -13513,7 +13540,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "別の場所へ飛んでいくぞ";
             item_ability_description = "";
-            var_1946 = "別の場所へ飛んだ！";
+            item_message1 = "別の場所へ飛んだ！";
         }
         if (item_list == 580) {
             buying_price = 1500;
@@ -13521,7 +13548,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "ﾄﾞｯﾋﾟｵと交代するぞ";
             item_ability_description = "交代中は敵に気づかれないぞ";
-            var_1946 = "「まかせたぞ… 私のドッピオ…」";
+            item_message1 = "「まかせたぞ… 私のドッピオ…」";
         }
         if (item_list == 582) {
             buying_price = 300;
@@ -13529,7 +13556,7 @@ function func492(this: any) {
             item_description1 = "[消耗DISC]";
             var_808 = "水が熱湯になるぞ";
             item_ability_description = "";
-            var_1946 = "しかし何も起こらなかった…";
+            item_message1 = "しかし何も起こらなかった…";
         }
         if (item_list == 583) {
             buying_price = 900;
@@ -13537,7 +13564,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "地上に逃げ帰ることができるぞ";
             item_ability_description = "一時退くのは敗北ではないぞ！";
-            var_1946 = "";
+            item_message1 = "";
         }
         if (item_list == 584) {
             buying_price = 500;
@@ -13545,7 +13572,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "この階で攻撃力が下がってしまうぞ";
             item_ability_description = "";
-            var_1946 = "この階での攻撃力が下がってしまった！";
+            item_message1 = "この階での攻撃力が下がってしまった！";
         }
         if (item_list == 585) {
             buying_price = 500;
@@ -13553,7 +13580,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "ｻﾞ･ﾊﾝﾄﾞが使いこなせるようになるぞ";
             item_ability_description = "この階でお腹が減りやすくなってしまうぞ";
-            var_1946 = "お腹が減りやすくなってしまった！";
+            item_message1 = "お腹が減りやすくなってしまった！";
         }
         if (item_list == 586) {
             buying_price = 900;
@@ -13561,7 +13588,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "レベルが下がってしまうぞ";
             item_ability_description = "";
-            var_1946 = "レベルが下がってしまった！";
+            item_message1 = "レベルが下がってしまった！";
         }
         if (item_list == 587) {
             buying_price = 500;
@@ -13569,7 +13596,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "ｱｲﾃﾑのどれかひとつが爆弾になるぞ";
             item_ability_description = "爆弾ｱｲﾃﾑがある時は解除できるぞ";
-            var_1946 = "爆弾が解除された。";
+            item_message1 = "爆弾が解除された。";
         }
         if (item_list == 588) {
             buying_price = 400;
@@ -13577,7 +13604,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "非道なことを叫んで敵を怒らせるぞ";
             item_ability_description = "フロアにいる敵全ての攻撃力が上がるぞ";
-            var_1946 = "全ての敵の攻撃力が上がった！";
+            item_message1 = "全ての敵の攻撃力が上がった！";
         }
         if (item_list == 589) {
             buying_price = 500;
@@ -13585,7 +13612,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "この階で発動能力の効果が上がるぞ";
             item_ability_description = "効果が上がっている発動は★がつくぞ";
-            var_1946 = "発動能力の効果が上がった！";
+            item_message1 = "発動能力の効果が上がった！";
         }
         if (item_list == 590) {
             buying_price = 400;
@@ -13593,7 +13620,7 @@ function func492(this: any) {
             item_description1 = "[記憶DISC]";
             var_808 = "無性に腹が立ってｱｲﾃﾑを壊すぞ";
             item_ability_description = "";
-            var_1946 = "どのアイテムに使いますか？";
+            item_message1 = "どのアイテムに使いますか？";
         }
         if (item_list == 600) {
             buying_price = 100;
@@ -13601,7 +13628,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "ﾌﾞﾁｬﾗﾃｨが食べてたｸｫｰﾀｰｻｲｽﾞのﾋﾟｯﾂｧだ";
             item_ability_description = "満腹度が50回復するぞ";
-            var_1946 = "お腹が少し膨らんだ";
+            item_message1 = "お腹が少し膨らんだ";
         }
         if (item_list == 602) {
             buying_price = 400;
@@ -13609,7 +13636,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "ﾈｱﾎﾟﾘｽの美味しいﾋﾟｯﾂｧだ";
             item_ability_description = "満腹度が100回復するぞ";
-            var_1946 = "お腹が膨らんだ";
+            item_message1 = "お腹が膨らんだ";
         }
         if (item_list == 603) {
             buying_price = 50;
@@ -13617,7 +13644,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "変な臭いがする";
             item_ability_description = "まずそうだぞ";
-            var_1946 = "グェッ！精神力が下がってしまった！";
+            item_message1 = "グェッ！精神力が下がってしまった！";
         }
         if (item_list == 604) {
             buying_price = 800;
@@ -13625,7 +13652,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "壁のような巨大なﾋﾟｯﾂｧだ";
             item_ability_description = "満腹度が全回復し、最大満腹度が増えるぞ";
-            var_1946 = "お腹いっぱいで動きが重い…";
+            item_message1 = "お腹いっぱいで動きが重い…";
         }
         if (item_list == 605) {
             buying_price = 50;
@@ -13633,7 +13660,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "焼きすぎて焦げたﾋﾟｯﾂｧだ";
             item_ability_description = "満腹度が10回復するぞ";
-            var_1946 = "焦げてて食べられる部分が無い…";
+            item_message1 = "焦げてて食べられる部分が無い…";
         }
         if (item_list == 630) {
             buying_price = 600;
@@ -13641,7 +13668,7 @@ function func492(this: any) {
             item_description1 = "[ﾄﾆｵ製料理]";
             var_808 = "満腹度が20回復するぞ";
             item_ability_description = "虫歯がすごい勢いで飛び出るぞ";
-            var_1946 = "虫歯が飛び出した！";
+            item_message1 = "虫歯が飛び出した！";
         }
         if (item_list == 631) {
             buying_price = 600;
@@ -13649,7 +13676,7 @@ function func492(this: any) {
             item_description1 = "[ﾄﾆｵ製料理]";
             var_808 = "満腹度が10回復するぞ";
             item_ability_description = "精神力が回復するぞ";
-            var_1946 = "元通り強くなった気がする。";
+            item_message1 = "元通り強くなった気がする。";
         }
         if (item_list == 632) {
             buying_price = 600;
@@ -13657,7 +13684,7 @@ function func492(this: any) {
             item_description1 = "[ﾄﾆｵ製料理]";
             var_808 = "満腹度が10回復するぞ";
             item_ability_description = "盲目状態が治るぞ。普通見えない物も見えるぞ。";
-            var_1946 = "目がすっきりした！";
+            item_message1 = "目がすっきりした！";
         }
         if (item_list == 633) {
             buying_price = 600;
@@ -13665,7 +13692,7 @@ function func492(this: any) {
             item_description1 = "[ﾄﾆｵ製料理]";
             var_808 = "満腹度が20回復するぞ";
             item_ability_description = "最大満腹度が上がるぞ";
-            var_1946 = "最大満腹度が上がった！";
+            item_message1 = "最大満腹度が上がった！";
         }
         if (item_list == 634) {
             buying_price = 600;
@@ -13673,7 +13700,7 @@ function func492(this: any) {
             item_description1 = "[ﾄﾆｵ製料理]";
             var_808 = "満腹度が10回復するぞ";
             item_ability_description = "鈍足・混乱や腹ヘリ状態が治るぞ。";
-            var_1946 = "思うように動けるようになった。";
+            item_message1 = "思うように動けるようになった。";
         }
         if (item_list == 635) {
             buying_price = 100;
@@ -13681,7 +13708,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "満腹度が10回復するぞ";
             item_ability_description = "";
-            var_1946 = "焦げてて食べられる部分が無い…";
+            item_message1 = "焦げてて食べられる部分が無い…";
         }
         if (item_list == 636) {
             buying_price = 300;
@@ -13689,7 +13716,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "平穏な気持ちになって精神力が１上がるぞ";
             item_ability_description = "お腹も満腹になるぞ";
-            var_1946 = "精神力が１上がった！";
+            item_message1 = "精神力が１上がった！";
         }
         if (item_list == 639) {
             buying_price = 100;
@@ -13697,7 +13724,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "「ﾃｲｴﾝﾁｰ」と呼ばれる料理だ。";
             item_ability_description = "満腹度が20回復するぞ";
-            var_1946 = "お腹が少し膨らんだ";
+            item_message1 = "お腹が少し膨らんだ";
         }
         if (item_list == 640) {
             buying_price = 50;
@@ -13705,7 +13732,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "焦げた食べ物だ。";
             item_ability_description = "満腹度が10回復するぞ";
-            var_1946 = "焦げてて食べられる部分が無い…";
+            item_message1 = "焦げてて食べられる部分が無い…";
         }
         if (item_list == 641) {
             buying_price = 10;
@@ -13713,7 +13740,7 @@ function func492(this: any) {
             item_description1 = "[食べ物？]";
             var_808 = "真っ黒に焦げた何かだ。";
             item_ability_description = "食べると最大満腹度が下がってしまうぞ。";
-            var_1946 = "お腹が痛い…";
+            item_message1 = "お腹が痛い…";
         }
         if (item_list == 644) {
             buying_price = 400;
@@ -13721,7 +13748,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "猫バーガーだ";
             item_ability_description = "まずそうだぞ";
-            var_1946 = "グェッ！";
+            item_message1 = "グェッ！";
         }
         if (item_list == 645) {
             buying_price = 400;
@@ -13729,7 +13756,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "猫ステーキだ";
             item_ability_description = "まずそうだぞ";
-            var_1946 = "グェッ！";
+            item_message1 = "グェッ！";
         }
         if (item_list == 646) {
             buying_price = 400;
@@ -13737,7 +13764,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "猫ジュースだ";
             item_ability_description = "まずそうだぞ";
-            var_1946 = "グェッ！";
+            item_message1 = "グェッ！";
         }
         if (item_list == 647) {
             buying_price = 400;
@@ -13745,7 +13772,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "美味しそうなオレンジだ";
             item_ability_description = "";
-            var_1946 = "お腹が少し膨らんだ";
+            item_message1 = "お腹が少し膨らんだ";
         }
         if (item_list == 648) {
             buying_price = 200;
@@ -13753,7 +13780,7 @@ function func492(this: any) {
             item_description1 = "[食べ物]";
             var_808 = "食べかけだ。";
             item_ability_description = "満腹度が7回復するぞ";
-            var_1946 = "お腹が少し膨らんだ";
+            item_message1 = "お腹が少し膨らんだ";
         }
         if (item_list == 650) {
             buying_price = 200;
@@ -13761,7 +13788,7 @@ function func492(this: any) {
             item_description1 = "[ｶｴﾙ]";
             var_808 = "小さなｶｴﾙだ";
             item_ability_description = "食べると体力が５０回復するぞ";
-            var_1946 = "体力が回復した";
+            item_message1 = "体力が回復した";
         }
         if (item_list == 651) {
             buying_price = 500;
@@ -13769,7 +13796,7 @@ function func492(this: any) {
             item_description1 = "[ｶｴﾙ]";
             var_808 = "大きなｶｴﾙだ";
             item_ability_description = "食べると体力が１００回復するぞ";
-            var_1946 = "体力が回復した";
+            item_message1 = "体力が回復した";
         }
         if (item_list == 652) {
             buying_price = 100;
@@ -13777,7 +13804,7 @@ function func492(this: any) {
             item_description1 = "[ｶｴﾙ]";
             var_808 = "ｶｴﾙの死体だ";
             item_ability_description = "食べると体力が２０回復するぞ";
-            var_1946 = "体力が回復した";
+            item_message1 = "体力が回復した";
         }
         if (item_list == 653) {
             buying_price = 1000;
@@ -13785,7 +13812,7 @@ function func492(this: any) {
             item_description1 = "[ｶｴﾙ]";
             var_808 = "超巨大なｶｴﾙだ";
             item_ability_description = "食べると体力が完全回復するぞ";
-            var_1946 = "体力が回復した";
+            item_message1 = "体力が回復した";
         }
         if (item_list == 654) {
             buying_price = 100;
@@ -13793,7 +13820,7 @@ function func492(this: any) {
             item_description1 = "[ｶｴﾙ]";
             var_808 = "ﾔﾄﾞｸｶﾞｴﾙだ";
             item_ability_description = "投げると８０のダメージを与えるぞ";
-            var_1946 = "８０のダメージを受けた！";
+            item_message1 = "８０のダメージを受けた！";
         }
         if (item_list == 655) {
             buying_price = 100;
@@ -13801,7 +13828,7 @@ function func492(this: any) {
             item_description1 = "[ｻﾞﾘｶﾞﾆ]";
             var_808 = "ｻﾞﾘｶﾞﾆだ";
             item_ability_description = "食べると体力が１０回復するぞ";
-            var_1946 = "体力が回復した";
+            item_message1 = "体力が回復した";
         }
         if (item_list == 712) {
             buying_price = 10000;
@@ -13809,8 +13836,8 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "高値で取引されているブツだ";
             item_ability_description = "体力が全回復するが混乱するぞ";
-            var_1946 = "　あっあっあっ　　　　　うﾋﾋ";
-            var_1947 = "　　ウケケ　　　　うおっうぉっ";
+            item_message1 = "　あっあっあっ　　　　　うﾋﾋ";
+            item_message2 = "　　ウケケ　　　　うおっうぉっ";
         }
         if (item_list == 713) {
             buying_price = 100;
@@ -13818,7 +13845,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "入団テストに使うﾎﾟﾙﾎﾟのﾗｲﾀｰだ";
             item_ability_description = "信頼を試すぞ";
-            var_1946 = "『再点火』したな！";
+            item_message1 = "『再点火』したな！";
         }
         if (item_list == 714) {
             buying_price = 2000;
@@ -13826,7 +13853,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "部屋全体に紫外線を照射するぞ";
             item_ability_description = "吸血鬼やゾンビを消滅させるぞ";
-            var_1946 = "エネルギーが尽きた。";
+            item_message1 = "エネルギーが尽きた。";
         }
         if (item_list == 715) {
             buying_price = 500;
@@ -13834,7 +13861,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "ブドウ糖とビタミン栄養剤の点滴だ";
             item_ability_description = "満腹度が30回復するぞ";
-            var_1946 = "「栄養補給させてもらったぜ！」";
+            item_message1 = "「栄養補給させてもらったぜ！」";
         }
         if (item_list == 716) {
             buying_price = 2000;
@@ -13842,14 +13869,14 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "ｽﾋﾟﾉｻｳﾙｽの化石だ。使うと危険だぞ。";
             item_ability_description = "持っていると一巡後の世界に変化があるぞ";
-            var_1946 = "声の主は去っていったようだ…";
+            item_message1 = "声の主は去っていったようだ…";
         }
         if (item_list == 717) {
             buying_price = 100;
             item_name = "ｺﾋﾟｰ人形の破片";
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "コピー人形の破片だ";
-            var_1946 = "しかし何も起こらなかった…";
+            item_message1 = "しかし何も起こらなかった…";
         }
         if (item_list == 718) {
             buying_price = 1000;
@@ -13857,7 +13884,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "装備中のDISCの合成容量が１増えるぞ";
             item_ability_description = "";
-            var_1946 = "";
+            item_message1 = "";
         }
         if (item_list == 719) {
             buying_price = 1000;
@@ -13865,7 +13892,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "装備中のDISCに新たな能力が増えるぞ";
             item_ability_description = "";
-            var_1946 = "";
+            item_message1 = "";
         }
         if (item_list == 720) {
             buying_price = 1000;
@@ -13873,14 +13900,14 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "５ターン 時を止められるぞ";
             item_ability_description = "";
-            var_1946 = "時は止まった…";
+            item_message1 = "時は止まった…";
         }
         if (item_list == 721) {
             buying_price = 100;
             item_name = "彼女の手首";
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "手首だ";
-            var_1946 = "しかし何も起こらなかった…";
+            item_message1 = "しかし何も起こらなかった…";
         }
         if (item_list == 722) {
             buying_price = 100;
@@ -13888,7 +13915,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "ｼｰｻﾞｰの残したﾊﾞﾝﾀﾞﾅだ";
             item_ability_description = "";
-            var_1946 = "「おめえどこだ！」";
+            item_message1 = "「おめえどこだ！」";
         }
         if (item_list == 723) {
             buying_price = 1500;
@@ -13896,7 +13923,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "願いを叶えてくれるランプだ";
             item_ability_description = "";
-            var_1946 = "カリカリカリカリ・・・";
+            item_message1 = "カリカリカリカリ・・・";
         }
         if (item_list == 724) {
             buying_price = 1500;
@@ -13904,7 +13931,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "吸血鬼体質になる仮面だ";
             item_ability_description = "体力が急速に回復するようになるぞ";
-            var_1946 = "「俺は人間をやめるぞォ――！」";
+            item_message1 = "「俺は人間をやめるぞォ――！」";
         }
         if (item_list == 725) {
             buying_price = 100;
@@ -13912,7 +13939,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "ﾔｸ中のｺﾞﾛﾂｷが大事にしているｺｰﾄだ";
             item_ability_description = "持っていると危険だぞ";
-            var_1946 = "特に何も起こらなかった…";
+            item_message1 = "特に何も起こらなかった…";
         }
         if (item_list == 726) {
             buying_price = 1000;
@@ -13920,8 +13947,8 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "このフロアで射撃ダメージを少なくするぞ";
             item_ability_description = "投げると８０のダメージを与えるぞ";
-            var_1946 = "「鉄球の回転」";
-            var_1947 = "皮膚が硬くなった！";
+            item_message1 = "「鉄球の回転」";
+            item_message2 = "皮膚が硬くなった！";
         }
         if (item_list == 727) {
             buying_price = 1000;
@@ -13929,8 +13956,8 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "体力が完全回復するぞ";
             item_ability_description = "";
-            var_1946 = "体力が完全に回復した！";
-            var_1947 = "";
+            item_message1 = "体力が完全に回復した！";
+            item_message2 = "";
         }
         if (item_list == 728) {
             buying_price = 2000;
@@ -13938,8 +13965,8 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "究極生物体質になる仮面だ。ﾚｸｲｴﾑの大迷宮を";
             item_ability_description = "特定条件でｸﾘｱすると出現しはじめるぞ。";
-            var_1946 = "「フン！」";
-            var_1947 = "";
+            item_message1 = "「フン！」";
+            item_message2 = "";
         }
         if (item_list == 729) {
             buying_price = 2000;
@@ -13947,8 +13974,8 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "こいつはプレゼントか～～？";
             item_ability_description = "もらっておいてやるぜ……オジサン";
-            var_1946 = "";
-            var_1947 = "";
+            item_message1 = "";
+            item_message2 = "";
         }
         if (item_list == 730) {
             buying_price = 3000;
@@ -13956,8 +13983,8 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "大金が入ってそうなカバンだ。";
             item_ability_description = "";
-            var_1946 = "";
-            var_1947 = "";
+            item_message1 = "";
+            item_message2 = "";
         }
         if (item_list == 731) {
             buying_price = 500;
@@ -13965,8 +13992,8 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "玉美がカツアゲした財布だ。";
             item_ability_description = "お金が入っているように見えるぞ。";
-            var_1946 = "";
-            var_1947 = "";
+            item_message1 = "";
+            item_message2 = "";
         }
         if (item_list == 750) {
             buying_price = 390;
@@ -13974,7 +14001,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 751) {
             buying_price = 390;
@@ -13982,7 +14009,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 752) {
             buying_price = 390;
@@ -13990,7 +14017,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 753) {
             buying_price = 390;
@@ -13998,7 +14025,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 754) {
             buying_price = 390;
@@ -14006,7 +14033,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 755) {
             buying_price = 390;
@@ -14014,7 +14041,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 756) {
             buying_price = 390;
@@ -14022,7 +14049,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 757) {
             buying_price = 390;
@@ -14030,7 +14057,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 758) {
             buying_price = 390;
@@ -14038,7 +14065,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 799) {
             buying_price = 20;
@@ -14046,7 +14073,7 @@ function func492(this: any) {
             item_description1 = "[消費ｱｲﾃﾑ]";
             var_808 = "テスト用のアイテムだ";
             item_ability_description = "装備品の修正値が９９になるぞ";
-            var_1946 = "装備品が強くなった！";
+            item_message1 = "装備品が強くなった！";
         }
         if (item_list == 800) {
             buying_price = 2400;
@@ -14198,7 +14225,7 @@ function func492(this: any) {
             item_description1 = "グランプリボーイのコミックスだ";
             var_808 = "";
             item_ability_description = "特に何も起こらないぞ";
-            var_1946 = "しかし何も起こらなかった";
+            item_message1 = "しかし何も起こらなかった";
         }
         if (item_list == 901) {
             buying_price = 360;
@@ -14206,7 +14233,7 @@ function func492(this: any) {
             item_description1 = "1部のコミックスだ";
             var_808 = "生命賛歌の素晴らしさを知ろう";
             item_ability_description = "精神力の最大値が上がるぞ";
-            var_1946 = "精神力の最大値が１上がった！";
+            item_message1 = "精神力の最大値が１上がった！";
         }
         if (item_list == 902) {
             buying_price = 370;
@@ -14214,7 +14241,7 @@ function func492(this: any) {
             item_description1 = "1部のコミックスだ";
             var_808 = "生命賛歌の素晴らしさを知ろう";
             item_ability_description = "精神力の最大値が上がるぞ";
-            var_1946 = "精神力の最大値が１上がった！";
+            item_message1 = "精神力の最大値が１上がった！";
         }
         if (item_list == 903) {
             buying_price = 360;
@@ -14222,7 +14249,7 @@ function func492(this: any) {
             item_description1 = "1部のコミックスだ";
             var_808 = "生命賛歌の素晴らしさを知ろう";
             item_ability_description = "精神力の最大値が上がるぞ";
-            var_1946 = "精神力の最大値が１上がった！";
+            item_message1 = "精神力の最大値が１上がった！";
         }
         if (item_list == 904) {
             buying_price = 360;
@@ -14230,7 +14257,7 @@ function func492(this: any) {
             item_description1 = "1部のコミックスだ";
             var_808 = "生命賛歌の素晴らしさを知ろう";
             item_ability_description = "精神力の最大値が上がるぞ";
-            var_1946 = "精神力の最大値が１上がった！";
+            item_message1 = "精神力の最大値が１上がった！";
         }
         if (item_list == 905) {
             buying_price = 360;
@@ -14238,7 +14265,7 @@ function func492(this: any) {
             item_description1 = "1部のコミックスだ";
             var_808 = "生命賛歌の素晴らしさを知ろう";
             item_ability_description = "精神力の最大値が上がるぞ";
-            var_1946 = "精神力の最大値が１上がった！";
+            item_message1 = "精神力の最大値が１上がった！";
         }
         if (item_list == 906) {
             buying_price = 360;
@@ -14246,7 +14273,7 @@ function func492(this: any) {
             item_description1 = "2部のコミックスだ";
             var_808 = "肉体の限界を極める方法を知ろう";
             item_ability_description = "最大ＨＰが５上がるぞ";
-            var_1946 = "最大ＨＰが５上がった！";
+            item_message1 = "最大ＨＰが５上がった！";
         }
         if (item_list == 907) {
             buying_price = 360;
@@ -14254,7 +14281,7 @@ function func492(this: any) {
             item_description1 = "2部のコミックスだ";
             var_808 = "肉体の限界を極める方法を知ろう";
             item_ability_description = "最大ＨＰが５上がるぞ";
-            var_1946 = "最大ＨＰが５上がった！";
+            item_message1 = "最大ＨＰが５上がった！";
         }
         if (item_list == 908) {
             buying_price = 360;
@@ -14262,7 +14289,7 @@ function func492(this: any) {
             item_description1 = "2部のコミックスだ";
             var_808 = "肉体の限界を極める方法を知ろう";
             item_ability_description = "最大ＨＰが５上がるぞ";
-            var_1946 = "最大ＨＰが５上がった！";
+            item_message1 = "最大ＨＰが５上がった！";
         }
         if (item_list == 909) {
             buying_price = 370;
@@ -14270,7 +14297,7 @@ function func492(this: any) {
             item_description1 = "2部のコミックスだ";
             var_808 = "肉体の限界を極める方法を知ろう";
             item_ability_description = "最大ＨＰが５上がるぞ";
-            var_1946 = "最大ＨＰが５上がった！";
+            item_message1 = "最大ＨＰが５上がった！";
         }
         if (item_list == 910) {
             buying_price = 370;
@@ -14278,7 +14305,7 @@ function func492(this: any) {
             item_description1 = "2部のコミックスだ";
             var_808 = "肉体の限界を極める方法を知ろう";
             item_ability_description = "最大ＨＰが５上がるぞ";
-            var_1946 = "最大ＨＰが５上がった！";
+            item_message1 = "最大ＨＰが５上がった！";
         }
         if (item_list == 911) {
             buying_price = 370;
@@ -14286,7 +14313,7 @@ function func492(this: any) {
             item_description1 = "2部のコミックスだ";
             var_808 = "肉体の限界を極める方法を知ろう";
             item_ability_description = "最大ＨＰが５上がるぞ";
-            var_1946 = "最大ＨＰが５上がった！";
+            item_message1 = "最大ＨＰが５上がった！";
         }
         if (item_list == 912) {
             buying_price = 370;
@@ -14294,7 +14321,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 913) {
             buying_price = 370;
@@ -14302,7 +14329,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 914) {
             buying_price = 370;
@@ -14310,7 +14337,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 915) {
             buying_price = 370;
@@ -14318,7 +14345,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 916) {
             buying_price = 370;
@@ -14326,7 +14353,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 917) {
             buying_price = 390;
@@ -14334,7 +14361,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 918) {
             buying_price = 390;
@@ -14342,7 +14369,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 919) {
             buying_price = 390;
@@ -14350,7 +14377,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 920) {
             buying_price = 390;
@@ -14358,7 +14385,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 921) {
             buying_price = 390;
@@ -14366,7 +14393,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 922) {
             buying_price = 390;
@@ -14374,7 +14401,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 923) {
             buying_price = 390;
@@ -14382,7 +14409,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 924) {
             buying_price = 390;
@@ -14390,7 +14417,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 925) {
             buying_price = 390;
@@ -14398,7 +14425,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 926) {
             buying_price = 390;
@@ -14406,7 +14433,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 927) {
             buying_price = 400;
@@ -14414,7 +14441,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 928) {
             buying_price = 390;
@@ -14422,7 +14449,7 @@ function func492(this: any) {
             item_description1 = "3部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "3部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 929) {
             buying_price = 390;
@@ -14430,7 +14457,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 930) {
             buying_price = 390;
@@ -14438,7 +14465,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 931) {
             buying_price = 390;
@@ -14446,7 +14473,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 932) {
             buying_price = 390;
@@ -14454,7 +14481,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 933) {
             buying_price = 390;
@@ -14462,7 +14489,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 934) {
             buying_price = 390;
@@ -14470,7 +14497,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 935) {
             buying_price = 390;
@@ -14478,7 +14505,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 936) {
             buying_price = 390;
@@ -14486,7 +14513,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 937) {
             buying_price = 390;
@@ -14494,7 +14521,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 938) {
             buying_price = 390;
@@ -14502,7 +14529,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 939) {
             buying_price = 390;
@@ -14510,7 +14537,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 940) {
             buying_price = 400;
@@ -14518,7 +14545,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 941) {
             buying_price = 390;
@@ -14526,7 +14553,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 942) {
             buying_price = 390;
@@ -14534,7 +14561,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 943) {
             buying_price = 390;
@@ -14542,7 +14569,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 944) {
             buying_price = 390;
@@ -14550,7 +14577,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 945) {
             buying_price = 390;
@@ -14558,7 +14585,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 946) {
             buying_price = 400;
@@ -14566,7 +14593,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 947) {
             buying_price = 400;
@@ -14574,7 +14601,7 @@ function func492(this: any) {
             item_description1 = "4部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "4部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 948) {
             buying_price = 400;
@@ -14582,7 +14609,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 949) {
             buying_price = 400;
@@ -14590,7 +14617,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 950) {
             buying_price = 400;
@@ -14598,7 +14625,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 951) {
             buying_price = 388;
@@ -14606,7 +14633,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 952) {
             buying_price = 390;
@@ -14614,7 +14641,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 953) {
             buying_price = 390;
@@ -14622,7 +14649,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 954) {
             buying_price = 390;
@@ -14630,7 +14657,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 955) {
             buying_price = 390;
@@ -14638,7 +14665,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 956) {
             buying_price = 390;
@@ -14646,7 +14673,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 957) {
             buying_price = 390;
@@ -14654,7 +14681,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 958) {
             buying_price = 390;
@@ -14662,7 +14689,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 959) {
             buying_price = 390;
@@ -14670,7 +14697,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 960) {
             buying_price = 390;
@@ -14678,7 +14705,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 961) {
             buying_price = 390;
@@ -14686,7 +14713,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 962) {
             buying_price = 390;
@@ -14694,7 +14721,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 963) {
             buying_price = 390;
@@ -14702,7 +14729,7 @@ function func492(this: any) {
             item_description1 = "5部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "5部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 964) {
             buying_price = 390;
@@ -14710,7 +14737,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 965) {
             buying_price = 390;
@@ -14718,7 +14745,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 966) {
             buying_price = 390;
@@ -14726,7 +14753,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 967) {
             buying_price = 390;
@@ -14734,7 +14761,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 968) {
             buying_price = 390;
@@ -14742,7 +14769,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 969) {
             buying_price = 390;
@@ -14750,7 +14777,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 970) {
             buying_price = 390;
@@ -14758,7 +14785,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 971) {
             buying_price = 390;
@@ -14766,7 +14793,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 972) {
             buying_price = 390;
@@ -14774,7 +14801,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 973) {
             buying_price = 390;
@@ -14782,7 +14809,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 974) {
             buying_price = 390;
@@ -14790,7 +14817,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 975) {
             buying_price = 390;
@@ -14798,7 +14825,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 976) {
             buying_price = 390;
@@ -14806,7 +14833,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 977) {
             buying_price = 390;
@@ -14814,7 +14841,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 978) {
             buying_price = 390;
@@ -14822,7 +14849,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 979) {
             buying_price = 390;
@@ -14830,7 +14857,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 980) {
             buying_price = 390;
@@ -14838,7 +14865,7 @@ function func492(this: any) {
             item_description1 = "6部のコミックスだ";
             var_808 = "ｽﾀﾝﾄﾞの使い方を勉強しよう";
             item_ability_description = "6部の装備ｽﾀﾝﾄﾞが強くなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 981) {
             buying_price = 390;
@@ -14846,7 +14873,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 982) {
             buying_price = 390;
@@ -14854,7 +14881,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 983) {
             buying_price = 390;
@@ -14862,7 +14889,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 984) {
             buying_price = 390;
@@ -14870,7 +14897,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 985) {
             buying_price = 390;
@@ -14878,7 +14905,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 986) {
             buying_price = 390;
@@ -14886,7 +14913,7 @@ function func492(this: any) {
             item_description1 = "7部のコミックスだ";
             var_808 = "どの部の装備ｽﾀﾝﾄﾞでも強くできるぞ";
             item_ability_description = "ｽﾀﾝﾄﾞが劣化しなくなるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 987) {
             buying_price = 370;
@@ -14894,7 +14921,7 @@ function func492(this: any) {
             item_description1 = "バオー来訪者のコミックスだ";
             var_808 = "";
             item_ability_description = "最大ＨＰが１０上がるぞ";
-            var_1946 = "最大ＨＰが１０上がった！";
+            item_message1 = "最大ＨＰが１０上がった！";
         }
         if (item_list == 988) {
             buying_price = 370;
@@ -14902,7 +14929,7 @@ function func492(this: any) {
             item_description1 = "バオー来訪者のコミックスだ";
             var_808 = "";
             item_ability_description = "最大ＨＰが１０上がるぞ";
-            var_1946 = "最大ＨＰが１０上がった！";
+            item_message1 = "最大ＨＰが１０上がった！";
         }
         if (item_list == 989) {
             buying_price = 370;
@@ -14910,7 +14937,7 @@ function func492(this: any) {
             item_description1 = "魔少年ビーティーのコミックスだ";
             var_808 = "";
             item_ability_description = "精神力の最大値が５上がるぞ";
-            var_1946 = "精神力の最大値が５上がった！";
+            item_message1 = "精神力の最大値が５上がった！";
         }
         if (item_list == 990) {
             buying_price = 370;
@@ -14918,7 +14945,7 @@ function func492(this: any) {
             item_description1 = "ゴージャス☆アイリンのコミックスだ";
             var_808 = "";
             item_ability_description = "攻撃力・命中率・回避率がアップするぞ";
-            var_1946 = "わたし、残酷ですわよ";
+            item_message1 = "わたし、残酷ですわよ";
         }
         if (item_list == 991) {
             buying_price = 1200;
@@ -14926,7 +14953,7 @@ function func492(this: any) {
             item_description1 = "短編集だ";
             var_808 = "";
             item_ability_description = "レベルが一気に２上がるぞ";
-            var_1946 = "ディアボロはレベルが上がった！";
+            item_message1 = "ディアボロはレベルが上がった！";
         }
         if (item_list == 992) {
             buying_price = 1800;
@@ -14934,7 +14961,7 @@ function func492(this: any) {
             item_description1 = "短編集だ";
             var_808 = "";
             item_ability_description = "レベルが一気に２上がるぞ";
-            var_1946 = "ディアボロはレベルが上がった！";
+            item_message1 = "ディアボロはレベルが上がった！";
         }
         if (item_list == 993) {
             buying_price = 2000;
@@ -14942,7 +14969,7 @@ function func492(this: any) {
             item_description1 = "画集だ";
             var_808 = "ｷｬﾗｸﾀｰの色使いを勉強しよう";
             item_ability_description = "ｽﾀﾝﾄﾞの色を変更できるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 994) {
             buying_price = 6800;
@@ -14950,7 +14977,7 @@ function func492(this: any) {
             item_description1 = "凶器になりえる画集だ";
             var_808 = "ｷｬﾗｸﾀｰの色使いを勉強しよう";
             item_ability_description = "ｽﾀﾝﾄﾞの色を変更できるぞ";
-            var_1946 = "どのｽﾀﾝﾄﾞを研究しますか？";
+            item_message1 = "どのｽﾀﾝﾄﾞを研究しますか？";
         }
         if (item_list == 995) {
             buying_price = 390;
@@ -14958,7 +14985,7 @@ function func492(this: any) {
             item_description1 = "岸部露伴の単行本だ";
             var_808 = "彼の原稿を見たものは本になってしまうぞ。";
             item_ability_description = "目の前の相手に使うと情報がわかるぞ。";
-            var_1946 = "";
+            item_message1 = "";
         }
         if (item_list == 996) {
             buying_price = 20000;
@@ -14966,7 +14993,7 @@ function func492(this: any) {
             item_description1 = "超レアアイテムだぞ";
             var_808 = "";
             item_ability_description = "レベルが一気に１０上がるぞ";
-            var_1946 = "ディアボロはレベルが上がった！";
+            item_message1 = "ディアボロはレベルが上がった！";
         }
         if (var_869 == 1 || var_262 == 1) {
             return;
@@ -15019,65 +15046,65 @@ function func492(this: any) {
 function func493(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(493);
-        if (var_1935 == 1 && var_476[var_225] == 1) {
+        if (disc_class == 1 && var_476[var_225] == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
             var_357 = 0;
             return;
         }
-        if (var_1935 == 2 && var_477[var_225] == 1) {
+        if (disc_class == 2 && var_477[var_225] == 1) {
             var_581 = var_581 - var_895;
             var_895 = 0;
             var_358 = 0;
             return;
         }
-        if (var_1935 == 3 && var_478[var_225] == 1) {
+        if (disc_class == 3 && var_478[var_225] == 1) {
             var_215 = 0;
             return;
         }
-        if (var_1935 == 1 && var_477[var_225] == 1) {
+        if (disc_class == 1 && var_477[var_225] == 1) {
             var_581 = var_581 - var_895;
             var_895 = 0;
             var_358 = 0;
             var_477 = dim(40);
         }
-        if (var_1935 == 1 && var_478[var_225] == 1) {
+        if (disc_class == 1 && var_478[var_225] == 1) {
             var_215 = 0;
             var_478 = dim(40);
         }
-        if (var_1935 == 2 && var_476[var_225] == 1) {
+        if (disc_class == 2 && var_476[var_225] == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
             var_357 = 0;
             var_476 = dim(40);
         }
-        if (var_1935 == 2 && var_478[var_225] == 1) {
+        if (disc_class == 2 && var_478[var_225] == 1) {
             var_215 = 0;
             var_478 = dim(40);
         }
-        if (var_1935 == 3 && var_476[var_225] == 1) {
+        if (disc_class == 3 && var_476[var_225] == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
             var_357 = 0;
             var_476 = dim(40);
         }
-        if (var_1935 == 3 && var_477[var_225] == 1) {
+        if (disc_class == 3 && var_477[var_225] == 1) {
             var_581 = var_581 - var_895;
             var_895 = 0;
             var_358 = 0;
             var_477 = dim(40);
         }
-        if (var_1935 == 1) {
+        if (disc_class == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
             var_357 = 0;
         }
-        if (var_1935 == 2) {
+        if (disc_class == 2) {
             var_581 = var_581 - var_895;
             var_895 = 0;
             var_358 = 0;
         }
-        if (var_1935 == 3) {
+        if (disc_class == 3) {
             var_215 = 0;
         }
         if (item_list == 100) {
@@ -15328,17 +15355,17 @@ function func493(this: any) {
             var_2177 = 12;
             var_2178 = 12;
         }
-        if (var_1935 == 1) {
+        if (disc_class == 1) {
             var_894 = var_2177 + var_233[var_225].Var4;
             var_580 = var_580 + var_894;
             var_357 = item_list;
         }
-        if (var_1935 == 2) {
+        if (disc_class == 2) {
             var_895 = var_2178 + var_233[var_225].Var4;
             var_581 = var_581 + var_895;
             var_358 = item_list;
         }
-        if (var_1935 == 3) {
+        if (disc_class == 3) {
             var_215 = item_list;
         }
         return;
@@ -15397,7 +15424,7 @@ function func494(this: any) {
         if (var_211 >= var_352) {
             var_211 = var_352;
         }
-        yield func496();
+        yield func496(); // 装備discの共鳴組み合わせ関数
         if (var_71[var_66][var_67] == 13 && var_215 != 202 && var_215 != 117 && var_125 == 0 && var_1059 == 0) {
             var_216 = 1;
             var_213 = 0;
@@ -15680,11 +15707,11 @@ function func495(this: any) {
 }
 
 
-
+// 装備discの共鳴組み合わせ関数
 function func496(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(496);
-        var_1173 = var_270;
+        var_1173 = sympathy_id;
         if (var_1173 == 1 || var_1173 == 102 || var_1173 == 103 || var_1173 == 107 || var_1173 == 110 || var_1173 == 111 || var_1173 == 115 || var_1173 == 117 || var_1173 == 118 || var_1173 == 122 || var_1173 == 125 || var_1173 == 126 || var_1173 == 127 || var_1173 == 129 || var_1173 == 130 || var_1173 == 131 || var_1173 == 132 || var_1173 == 133 || var_1173 == 137 || var_1173 == 149 || var_1173 == 150 || var_1173 == 151 || var_1173 == 152 || var_1173 == 153 || var_1173 == 158 || var_1173 == 167 || var_1173 == 168) {
             var_566 = var_566 - 1;
             var_565 = var_565 - 1;
@@ -15739,458 +15766,458 @@ function func496(this: any) {
         if (var_1173 == 104) {
             var_352 = var_352 - var_1048;
         }
-        var_270 = 0;
-        var_2185 = var_357;
-        var_2186 = var_358;
+        sympathy_id = 0;
+        sympathy_base_disc_id = var_357;
+        sympathy_with_disc_id = var_358;
         var_1173 = var_215;
-        if (var_2185 != 0 && var_2185 == var_2186) {
-            var_270 = 1;
+        if (sympathy_base_disc_id != 0 && sympathy_base_disc_id == sympathy_with_disc_id) {
+            sympathy_id = 1;
         }
-        if (var_2185 == 100 && var_2186 == 106) {
-            var_270 = 101;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 106) {
+            sympathy_id = 101;
         }
-        if (var_2186 == 100 && var_2185 == 106) {
-            var_270 = 101;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 106) {
+            sympathy_id = 101;
         }
-        if (var_2185 == 100 && var_2186 == 116) {
-            var_270 = 102;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 116) {
+            sympathy_id = 102;
         }
-        if (var_2186 == 100 && var_2185 == 116) {
-            var_270 = 102;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 116) {
+            sympathy_id = 102;
         }
-        if (var_2185 == 100 && var_2186 == 120) {
-            var_270 = 103;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 120) {
+            sympathy_id = 103;
         }
-        if (var_2186 == 100 && var_2185 == 120) {
-            var_270 = 103;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 120) {
+            sympathy_id = 103;
         }
-        if (var_2185 == 100 && var_2186 == 111) {
-            var_270 = 104;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 111) {
+            sympathy_id = 104;
         }
-        if (var_2186 == 100 && var_2185 == 111) {
-            var_270 = 104;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 111) {
+            sympathy_id = 104;
         }
-        if (var_2185 == 100 && var_2186 == 103) {
-            var_270 = 105;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 103) {
+            sympathy_id = 105;
         }
-        if (var_2186 == 100 && var_2185 == 103) {
-            var_270 = 105;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 103) {
+            sympathy_id = 105;
         }
-        if (var_2185 == 100 && var_2186 == 203) {
-            var_270 = 106;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 203) {
+            sympathy_id = 106;
         }
-        if (var_2186 == 100 && var_2185 == 203) {
-            var_270 = 106;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 203) {
+            sympathy_id = 106;
         }
-        if (var_2185 == 100 && var_2186 == 317) {
-            var_270 = 107;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 317) {
+            sympathy_id = 107;
         }
-        if (var_2186 == 100 && var_2185 == 317) {
-            var_270 = 107;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 317) {
+            sympathy_id = 107;
         }
-        if (var_2185 == 100 && var_2186 == 398) {
-            var_270 = 108;
+        if (sympathy_base_disc_id == 100 && sympathy_with_disc_id == 398) {
+            sympathy_id = 108;
         }
-        if (var_2186 == 100 && var_2185 == 398) {
-            var_270 = 108;
+        if (sympathy_with_disc_id == 100 && sympathy_base_disc_id == 398) {
+            sympathy_id = 108;
         }
-        if (var_2185 == 398 && var_2186 == 106) {
-            var_270 = 109;
+        if (sympathy_base_disc_id == 398 && sympathy_with_disc_id == 106) {
+            sympathy_id = 109;
         }
-        if (var_2186 == 398 && var_2185 == 106) {
-            var_270 = 109;
+        if (sympathy_with_disc_id == 398 && sympathy_base_disc_id == 106) {
+            sympathy_id = 109;
         }
-        if (var_2185 == 398 && var_2186 == 116) {
-            var_270 = 110;
+        if (sympathy_base_disc_id == 398 && sympathy_with_disc_id == 116) {
+            sympathy_id = 110;
         }
-        if (var_2186 == 398 && var_2185 == 116) {
-            var_270 = 110;
+        if (sympathy_with_disc_id == 398 && sympathy_base_disc_id == 116) {
+            sympathy_id = 110;
         }
-        if (var_2185 == 398 && var_2186 == 120) {
-            var_270 = 111;
+        if (sympathy_base_disc_id == 398 && sympathy_with_disc_id == 120) {
+            sympathy_id = 111;
         }
-        if (var_2186 == 398 && var_2185 == 120) {
-            var_270 = 111;
+        if (sympathy_with_disc_id == 398 && sympathy_base_disc_id == 120) {
+            sympathy_id = 111;
         }
-        if (var_2185 == 398 && var_2186 == 111) {
-            var_270 = 112;
+        if (sympathy_base_disc_id == 398 && sympathy_with_disc_id == 111) {
+            sympathy_id = 112;
         }
-        if (var_2186 == 398 && var_2185 == 111) {
-            var_270 = 112;
+        if (sympathy_with_disc_id == 398 && sympathy_base_disc_id == 111) {
+            sympathy_id = 112;
         }
-        if (var_2185 == 398 && var_2186 == 103) {
-            var_270 = 113;
+        if (sympathy_base_disc_id == 398 && sympathy_with_disc_id == 103) {
+            sympathy_id = 113;
         }
-        if (var_2186 == 398 && var_2185 == 103) {
-            var_270 = 113;
+        if (sympathy_with_disc_id == 398 && sympathy_base_disc_id == 103) {
+            sympathy_id = 113;
         }
-        if (var_2185 == 398 && var_2186 == 203) {
-            var_270 = 114;
+        if (sympathy_base_disc_id == 398 && sympathy_with_disc_id == 203) {
+            sympathy_id = 114;
         }
-        if (var_2186 == 398 && var_2185 == 203) {
-            var_270 = 114;
+        if (sympathy_with_disc_id == 398 && sympathy_base_disc_id == 203) {
+            sympathy_id = 114;
         }
-        if (var_2185 == 398 && var_2186 == 317) {
-            var_270 = 115;
+        if (sympathy_base_disc_id == 398 && sympathy_with_disc_id == 317) {
+            sympathy_id = 115;
         }
-        if (var_2186 == 398 && var_2185 == 317) {
-            var_270 = 115;
+        if (sympathy_with_disc_id == 398 && sympathy_base_disc_id == 317) {
+            sympathy_id = 115;
         }
-        if (var_2185 == 106 && var_2186 == 104) {
-            var_270 = 116;
+        if (sympathy_base_disc_id == 106 && sympathy_with_disc_id == 104) {
+            sympathy_id = 116;
         }
-        if (var_2186 == 106 && var_2185 == 104) {
-            var_270 = 116;
+        if (sympathy_with_disc_id == 106 && sympathy_base_disc_id == 104) {
+            sympathy_id = 116;
         }
-        if (var_2185 == 106 && var_2186 == 103) {
-            var_270 = 117;
+        if (sympathy_base_disc_id == 106 && sympathy_with_disc_id == 103) {
+            sympathy_id = 117;
         }
-        if (var_2186 == 106 && var_2185 == 103) {
-            var_270 = 117;
+        if (sympathy_with_disc_id == 106 && sympathy_base_disc_id == 103) {
+            sympathy_id = 117;
         }
-        if (var_2185 == 106 && var_2186 == 116) {
-            var_270 = 118;
+        if (sympathy_base_disc_id == 106 && sympathy_with_disc_id == 116) {
+            sympathy_id = 118;
         }
-        if (var_2186 == 106 && var_2185 == 116) {
-            var_270 = 118;
+        if (sympathy_with_disc_id == 106 && sympathy_base_disc_id == 116) {
+            sympathy_id = 118;
         }
-        if (var_2185 == 106 && var_2186 == 301) {
-            var_270 = 119;
+        if (sympathy_base_disc_id == 106 && sympathy_with_disc_id == 301) {
+            sympathy_id = 119;
         }
-        if (var_2186 == 106 && var_2185 == 301) {
-            var_270 = 119;
+        if (sympathy_with_disc_id == 106 && sympathy_base_disc_id == 301) {
+            sympathy_id = 119;
         }
-        if (var_2185 == 106 && var_2186 == 300) {
-            var_270 = 120;
+        if (sympathy_base_disc_id == 106 && sympathy_with_disc_id == 300) {
+            sympathy_id = 120;
         }
-        if (var_2186 == 106 && var_2185 == 300) {
-            var_270 = 120;
+        if (sympathy_with_disc_id == 106 && sympathy_base_disc_id == 300) {
+            sympathy_id = 120;
         }
-        if (var_2185 == 106 && var_2186 == 313) {
-            var_270 = 121;
+        if (sympathy_base_disc_id == 106 && sympathy_with_disc_id == 313) {
+            sympathy_id = 121;
         }
-        if (var_2186 == 106 && var_2185 == 313) {
-            var_270 = 121;
+        if (sympathy_with_disc_id == 106 && sympathy_base_disc_id == 313) {
+            sympathy_id = 121;
         }
-        if (var_2185 == 104 && var_2186 == 103) {
-            var_270 = 122;
+        if (sympathy_base_disc_id == 104 && sympathy_with_disc_id == 103) {
+            sympathy_id = 122;
         }
-        if (var_2186 == 104 && var_2185 == 103) {
-            var_270 = 122;
+        if (sympathy_with_disc_id == 104 && sympathy_base_disc_id == 103) {
+            sympathy_id = 122;
         }
-        if (var_2185 == 104 && var_2186 == 301) {
-            var_270 = 123;
+        if (sympathy_base_disc_id == 104 && sympathy_with_disc_id == 301) {
+            sympathy_id = 123;
         }
-        if (var_2186 == 104 && var_2185 == 301) {
-            var_270 = 123;
+        if (sympathy_with_disc_id == 104 && sympathy_base_disc_id == 301) {
+            sympathy_id = 123;
         }
-        if (var_2185 == 104 && var_2186 == 300) {
-            var_270 = 124;
+        if (sympathy_base_disc_id == 104 && sympathy_with_disc_id == 300) {
+            sympathy_id = 124;
         }
-        if (var_2186 == 104 && var_2185 == 300) {
-            var_270 = 124;
+        if (sympathy_with_disc_id == 104 && sympathy_base_disc_id == 300) {
+            sympathy_id = 124;
         }
-        if (var_2185 == 115 && var_2186 == 312) {
-            var_270 = 125;
+        if (sympathy_base_disc_id == 115 && sympathy_with_disc_id == 312) {
+            sympathy_id = 125;
         }
-        if (var_2186 == 115 && var_2185 == 312) {
-            var_270 = 125;
+        if (sympathy_with_disc_id == 115 && sympathy_base_disc_id == 312) {
+            sympathy_id = 125;
         }
-        if (var_2185 == 115 && var_2186 == 124) {
-            var_270 = 126;
+        if (sympathy_base_disc_id == 115 && sympathy_with_disc_id == 124) {
+            sympathy_id = 126;
         }
-        if (var_2186 == 115 && var_2185 == 124) {
-            var_270 = 126;
+        if (sympathy_with_disc_id == 115 && sympathy_base_disc_id == 124) {
+            sympathy_id = 126;
         }
-        if (var_2185 == 115 && var_2186 == 121) {
-            var_270 = 127;
+        if (sympathy_base_disc_id == 115 && sympathy_with_disc_id == 121) {
+            sympathy_id = 127;
         }
-        if (var_2186 == 115 && var_2185 == 121) {
-            var_270 = 127;
+        if (sympathy_with_disc_id == 115 && sympathy_base_disc_id == 121) {
+            sympathy_id = 127;
         }
-        if (var_2185 == 115 && var_2186 == 108) {
-            var_270 = 128;
+        if (sympathy_base_disc_id == 115 && sympathy_with_disc_id == 108) {
+            sympathy_id = 128;
         }
-        if (var_2186 == 115 && var_2185 == 108) {
-            var_270 = 128;
+        if (sympathy_with_disc_id == 115 && sympathy_base_disc_id == 108) {
+            sympathy_id = 128;
         }
-        if (var_2185 == 108 && var_2186 == 312) {
-            var_270 = 129;
+        if (sympathy_base_disc_id == 108 && sympathy_with_disc_id == 312) {
+            sympathy_id = 129;
         }
-        if (var_2186 == 108 && var_2185 == 312) {
-            var_270 = 129;
+        if (sympathy_with_disc_id == 108 && sympathy_base_disc_id == 312) {
+            sympathy_id = 129;
         }
-        if (var_2185 == 108 && var_2186 == 124) {
-            var_270 = 130;
+        if (sympathy_base_disc_id == 108 && sympathy_with_disc_id == 124) {
+            sympathy_id = 130;
         }
-        if (var_2186 == 108 && var_2185 == 124) {
-            var_270 = 130;
+        if (sympathy_with_disc_id == 108 && sympathy_base_disc_id == 124) {
+            sympathy_id = 130;
         }
-        if (var_2185 == 108 && var_2186 == 121) {
-            var_270 = 131;
+        if (sympathy_base_disc_id == 108 && sympathy_with_disc_id == 121) {
+            sympathy_id = 131;
         }
-        if (var_2186 == 108 && var_2185 == 121) {
-            var_270 = 131;
+        if (sympathy_with_disc_id == 108 && sympathy_base_disc_id == 121) {
+            sympathy_id = 131;
         }
-        if (var_2185 == 124 && var_2186 == 312) {
-            var_270 = 132;
+        if (sympathy_base_disc_id == 124 && sympathy_with_disc_id == 312) {
+            sympathy_id = 132;
         }
-        if (var_2186 == 124 && var_2185 == 312) {
-            var_270 = 132;
+        if (sympathy_with_disc_id == 124 && sympathy_base_disc_id == 312) {
+            sympathy_id = 132;
         }
-        if (var_2185 == 124 && var_2186 == 121) {
-            var_270 = 133;
+        if (sympathy_base_disc_id == 124 && sympathy_with_disc_id == 121) {
+            sympathy_id = 133;
         }
-        if (var_2186 == 124 && var_2185 == 121) {
-            var_270 = 133;
+        if (sympathy_with_disc_id == 124 && sympathy_base_disc_id == 121) {
+            sympathy_id = 133;
         }
-        if (var_2185 == 312 && var_2186 == 121) {
-            var_270 = 134;
+        if (sympathy_base_disc_id == 312 && sympathy_with_disc_id == 121) {
+            sympathy_id = 134;
         }
-        if (var_2186 == 312 && var_2185 == 121) {
-            var_270 = 134;
+        if (sympathy_with_disc_id == 312 && sympathy_base_disc_id == 121) {
+            sympathy_id = 134;
         }
-        if (var_2185 == 101 && var_2186 == 122) {
-            var_270 = 135;
+        if (sympathy_base_disc_id == 101 && sympathy_with_disc_id == 122) {
+            sympathy_id = 135;
         }
-        if (var_2186 == 101 && var_2185 == 122) {
-            var_270 = 135;
+        if (sympathy_with_disc_id == 101 && sympathy_base_disc_id == 122) {
+            sympathy_id = 135;
         }
-        if (var_2185 == 101 && var_2186 == 109) {
-            var_270 = 136;
+        if (sympathy_base_disc_id == 101 && sympathy_with_disc_id == 109) {
+            sympathy_id = 136;
         }
-        if (var_2186 == 101 && var_2185 == 109) {
-            var_270 = 136;
+        if (sympathy_with_disc_id == 101 && sympathy_base_disc_id == 109) {
+            sympathy_id = 136;
         }
-        if (var_2185 == 109 && var_2186 == 116) {
-            var_270 = 137;
+        if (sympathy_base_disc_id == 109 && sympathy_with_disc_id == 116) {
+            sympathy_id = 137;
         }
-        if (var_2186 == 109 && var_2185 == 116) {
-            var_270 = 137;
+        if (sympathy_with_disc_id == 109 && sympathy_base_disc_id == 116) {
+            sympathy_id = 137;
         }
-        if (var_2185 == 102 && var_2186 == 119) {
-            var_270 = 138;
+        if (sympathy_base_disc_id == 102 && sympathy_with_disc_id == 119) {
+            sympathy_id = 138;
         }
-        if (var_2186 == 102 && var_2185 == 119) {
-            var_270 = 138;
+        if (sympathy_with_disc_id == 102 && sympathy_base_disc_id == 119) {
+            sympathy_id = 138;
         }
-        if (var_2185 == 102 && var_2186 == 315) {
-            var_270 = 139;
+        if (sympathy_base_disc_id == 102 && sympathy_with_disc_id == 315) {
+            sympathy_id = 139;
         }
-        if (var_2186 == 102 && var_2185 == 315) {
-            var_270 = 139;
+        if (sympathy_with_disc_id == 102 && sympathy_base_disc_id == 315) {
+            sympathy_id = 139;
         }
-        if (var_2185 == 111 && var_2186 == 115) {
-            var_270 = 140;
+        if (sympathy_base_disc_id == 111 && sympathy_with_disc_id == 115) {
+            sympathy_id = 140;
         }
-        if (var_2186 == 111 && var_2185 == 115) {
-            var_270 = 140;
+        if (sympathy_with_disc_id == 111 && sympathy_base_disc_id == 115) {
+            sympathy_id = 140;
         }
-        if (var_2185 == 111 && var_2186 == 114) {
-            var_270 = 141;
+        if (sympathy_base_disc_id == 111 && sympathy_with_disc_id == 114) {
+            sympathy_id = 141;
         }
-        if (var_2186 == 111 && var_2185 == 114) {
-            var_270 = 141;
+        if (sympathy_with_disc_id == 111 && sympathy_base_disc_id == 114) {
+            sympathy_id = 141;
         }
-        if (var_2185 == 111 && var_2186 == 123) {
-            var_270 = 142;
+        if (sympathy_base_disc_id == 111 && sympathy_with_disc_id == 123) {
+            sympathy_id = 142;
         }
-        if (var_2186 == 111 && var_2185 == 123) {
-            var_270 = 142;
+        if (sympathy_with_disc_id == 111 && sympathy_base_disc_id == 123) {
+            sympathy_id = 142;
         }
-        if (var_2185 == 112 && var_2186 == 314) {
-            var_270 = 143;
+        if (sympathy_base_disc_id == 112 && sympathy_with_disc_id == 314) {
+            sympathy_id = 143;
         }
-        if (var_2186 == 112 && var_2185 == 314) {
-            var_270 = 143;
+        if (sympathy_with_disc_id == 112 && sympathy_base_disc_id == 314) {
+            sympathy_id = 143;
         }
-        if (var_2185 == 112 && var_2186 == 204) {
-            var_270 = 144;
+        if (sympathy_base_disc_id == 112 && sympathy_with_disc_id == 204) {
+            sympathy_id = 144;
         }
-        if (var_2186 == 112 && var_2185 == 204) {
-            var_270 = 144;
+        if (sympathy_with_disc_id == 112 && sympathy_base_disc_id == 204) {
+            sympathy_id = 144;
         }
-        if (var_2185 == 112 && var_2186 == 395) {
-            var_270 = 145;
+        if (sympathy_base_disc_id == 112 && sympathy_with_disc_id == 395) {
+            sympathy_id = 145;
         }
-        if (var_2186 == 112 && var_2185 == 395) {
-            var_270 = 145;
+        if (sympathy_with_disc_id == 112 && sympathy_base_disc_id == 395) {
+            sympathy_id = 145;
         }
-        if (var_2185 == 204 && var_2186 == 395) {
-            var_270 = 146;
+        if (sympathy_base_disc_id == 204 && sympathy_with_disc_id == 395) {
+            sympathy_id = 146;
         }
-        if (var_2186 == 204 && var_2185 == 395) {
-            var_270 = 146;
+        if (sympathy_with_disc_id == 204 && sympathy_base_disc_id == 395) {
+            sympathy_id = 146;
         }
-        if (var_2185 == 114 && var_2186 == 304) {
-            var_270 = 147;
+        if (sympathy_base_disc_id == 114 && sympathy_with_disc_id == 304) {
+            sympathy_id = 147;
         }
-        if (var_2186 == 114 && var_2185 == 304) {
-            var_270 = 147;
+        if (sympathy_with_disc_id == 114 && sympathy_base_disc_id == 304) {
+            sympathy_id = 147;
         }
-        if (var_2185 == 114 && var_2186 == 397) {
-            var_270 = 148;
+        if (sympathy_base_disc_id == 114 && sympathy_with_disc_id == 397) {
+            sympathy_id = 148;
         }
-        if (var_2186 == 114 && var_2185 == 397) {
-            var_270 = 148;
+        if (sympathy_with_disc_id == 114 && sympathy_base_disc_id == 397) {
+            sympathy_id = 148;
         }
-        if (var_2185 == 120 && var_2186 == 118) {
-            var_270 = 149;
+        if (sympathy_base_disc_id == 120 && sympathy_with_disc_id == 118) {
+            sympathy_id = 149;
         }
-        if (var_2186 == 120 && var_2185 == 118) {
-            var_270 = 149;
+        if (sympathy_with_disc_id == 120 && sympathy_base_disc_id == 118) {
+            sympathy_id = 149;
         }
-        if (var_2185 == 120 && var_2186 == 304) {
-            var_270 = 150;
+        if (sympathy_base_disc_id == 120 && sympathy_with_disc_id == 304) {
+            sympathy_id = 150;
         }
-        if (var_2186 == 120 && var_2185 == 304) {
-            var_270 = 150;
+        if (sympathy_with_disc_id == 120 && sympathy_base_disc_id == 304) {
+            sympathy_id = 150;
         }
-        if (var_2185 == 120 && var_2186 == 317) {
-            var_270 = 151;
+        if (sympathy_base_disc_id == 120 && sympathy_with_disc_id == 317) {
+            sympathy_id = 151;
         }
-        if (var_2186 == 120 && var_2185 == 317) {
-            var_270 = 151;
+        if (sympathy_with_disc_id == 120 && sympathy_base_disc_id == 317) {
+            sympathy_id = 151;
         }
-        if (var_2185 == 304 && var_2186 == 118) {
-            var_270 = 152;
+        if (sympathy_base_disc_id == 304 && sympathy_with_disc_id == 118) {
+            sympathy_id = 152;
         }
-        if (var_2186 == 304 && var_2185 == 118) {
-            var_270 = 152;
+        if (sympathy_with_disc_id == 304 && sympathy_base_disc_id == 118) {
+            sympathy_id = 152;
         }
-        if (var_2185 == 397 && var_2186 == 118) {
-            var_270 = 153;
+        if (sympathy_base_disc_id == 397 && sympathy_with_disc_id == 118) {
+            sympathy_id = 153;
         }
-        if (var_2186 == 397 && var_2185 == 118) {
-            var_270 = 153;
+        if (sympathy_with_disc_id == 397 && sympathy_base_disc_id == 118) {
+            sympathy_id = 153;
         }
-        if (var_2185 == 202 && var_2186 == 320) {
-            var_270 = 154;
+        if (sympathy_base_disc_id == 202 && sympathy_with_disc_id == 320) {
+            sympathy_id = 154;
         }
-        if (var_2186 == 202 && var_2185 == 320) {
-            var_270 = 154;
+        if (sympathy_with_disc_id == 202 && sympathy_base_disc_id == 320) {
+            sympathy_id = 154;
         }
-        if (var_2185 == 202 && var_2186 == 207) {
-            var_270 = 155;
+        if (sympathy_base_disc_id == 202 && sympathy_with_disc_id == 207) {
+            sympathy_id = 155;
         }
-        if (var_2186 == 202 && var_2185 == 207) {
-            var_270 = 155;
+        if (sympathy_with_disc_id == 202 && sympathy_base_disc_id == 207) {
+            sympathy_id = 155;
         }
-        if (var_2185 == 320 && var_2186 == 207) {
-            var_270 = 156;
+        if (sympathy_base_disc_id == 320 && sympathy_with_disc_id == 207) {
+            sympathy_id = 156;
         }
-        if (var_2186 == 320 && var_2185 == 207) {
-            var_270 = 156;
+        if (sympathy_with_disc_id == 320 && sympathy_base_disc_id == 207) {
+            sympathy_id = 156;
         }
-        if (var_2185 == 114 && var_2186 == 302) {
-            var_270 = 157;
+        if (sympathy_base_disc_id == 114 && sympathy_with_disc_id == 302) {
+            sympathy_id = 157;
         }
-        if (var_2186 == 114 && var_2185 == 302) {
-            var_270 = 157;
+        if (sympathy_with_disc_id == 114 && sympathy_base_disc_id == 302) {
+            sympathy_id = 157;
         }
-        if (var_2185 == 317 && var_2186 == 302) {
-            var_270 = 158;
+        if (sympathy_base_disc_id == 317 && sympathy_with_disc_id == 302) {
+            sympathy_id = 158;
         }
-        if (var_2186 == 317 && var_2185 == 302) {
-            var_270 = 158;
+        if (sympathy_with_disc_id == 317 && sympathy_base_disc_id == 302) {
+            sympathy_id = 158;
         }
-        if (var_2185 == 112 && var_2186 == 305) {
-            var_270 = 159;
+        if (sympathy_base_disc_id == 112 && sympathy_with_disc_id == 305) {
+            sympathy_id = 159;
         }
-        if (var_2186 == 112 && var_2185 == 305) {
-            var_270 = 159;
+        if (sympathy_with_disc_id == 112 && sympathy_base_disc_id == 305) {
+            sympathy_id = 159;
         }
-        if (var_2185 == 117 && var_2186 == 113) {
-            var_270 = 160;
+        if (sympathy_base_disc_id == 117 && sympathy_with_disc_id == 113) {
+            sympathy_id = 160;
         }
-        if (var_2186 == 117 && var_2185 == 113) {
-            var_270 = 160;
+        if (sympathy_with_disc_id == 117 && sympathy_base_disc_id == 113) {
+            sympathy_id = 160;
         }
-        if (var_2185 == 105 && var_2186 == 304) {
-            var_270 = 161;
+        if (sympathy_base_disc_id == 105 && sympathy_with_disc_id == 304) {
+            sympathy_id = 161;
         }
-        if (var_2186 == 105 && var_2185 == 304) {
-            var_270 = 161;
+        if (sympathy_with_disc_id == 105 && sympathy_base_disc_id == 304) {
+            sympathy_id = 161;
         }
-        if (var_2185 == 105 && var_2186 == 397) {
-            var_270 = 162;
+        if (sympathy_base_disc_id == 105 && sympathy_with_disc_id == 397) {
+            sympathy_id = 162;
         }
-        if (var_2186 == 105 && var_2185 == 397) {
-            var_270 = 162;
+        if (sympathy_with_disc_id == 105 && sympathy_base_disc_id == 397) {
+            sympathy_id = 162;
         }
-        if (var_2185 == 105 && var_2186 == 303) {
-            var_270 = 163;
+        if (sympathy_base_disc_id == 105 && sympathy_with_disc_id == 303) {
+            sympathy_id = 163;
         }
-        if (var_2186 == 105 && var_2185 == 303) {
-            var_270 = 163;
+        if (sympathy_with_disc_id == 105 && sympathy_base_disc_id == 303) {
+            sympathy_id = 163;
         }
-        if (var_2185 == 111 && var_2186 == 102) {
-            var_270 = 164;
+        if (sympathy_base_disc_id == 111 && sympathy_with_disc_id == 102) {
+            sympathy_id = 164;
         }
-        if (var_2186 == 111 && var_2185 == 102) {
-            var_270 = 164;
+        if (sympathy_with_disc_id == 111 && sympathy_base_disc_id == 102) {
+            sympathy_id = 164;
         }
-        if (var_2185 == 111 && var_2186 == 112) {
-            var_270 = 165;
+        if (sympathy_base_disc_id == 111 && sympathy_with_disc_id == 112) {
+            sympathy_id = 165;
         }
-        if (var_2186 == 111 && var_2185 == 112) {
-            var_270 = 165;
+        if (sympathy_with_disc_id == 111 && sympathy_base_disc_id == 112) {
+            sympathy_id = 165;
         }
-        if (var_2185 == 101 && var_2186 == 203) {
-            var_270 = 166;
+        if (sympathy_base_disc_id == 101 && sympathy_with_disc_id == 203) {
+            sympathy_id = 166;
         }
-        if (var_2186 == 101 && var_2185 == 203) {
-            var_270 = 166;
+        if (sympathy_with_disc_id == 101 && sympathy_base_disc_id == 203) {
+            sympathy_id = 166;
         }
-        if (var_2185 == 118 && var_2186 == 100) {
-            var_270 = 167;
+        if (sympathy_base_disc_id == 118 && sympathy_with_disc_id == 100) {
+            sympathy_id = 167;
         }
-        if (var_2186 == 118 && var_2185 == 100) {
-            var_270 = 167;
+        if (sympathy_with_disc_id == 118 && sympathy_base_disc_id == 100) {
+            sympathy_id = 167;
         }
-        if (var_2185 == 118 && var_2186 == 398) {
-            var_270 = 168;
+        if (sympathy_base_disc_id == 118 && sympathy_with_disc_id == 398) {
+            sympathy_id = 168;
         }
-        if (var_2186 == 118 && var_2185 == 398) {
-            var_270 = 168;
+        if (sympathy_with_disc_id == 118 && sympathy_base_disc_id == 398) {
+            sympathy_id = 168;
         }
-        if (var_2185 == 205 && var_2186 == 309) {
-            var_270 = 169;
+        if (sympathy_base_disc_id == 205 && sympathy_with_disc_id == 309) {
+            sympathy_id = 169;
         }
-        if (var_2186 == 205 && var_2185 == 309) {
-            var_270 = 169;
+        if (sympathy_with_disc_id == 205 && sympathy_base_disc_id == 309) {
+            sympathy_id = 169;
         }
-        if (var_2185 == 394 && var_2186 == 314) {
-            var_270 = 143;
+        if (sympathy_base_disc_id == 394 && sympathy_with_disc_id == 314) {
+            sympathy_id = 143;
         }
-        if (var_2186 == 394 && var_2185 == 314) {
-            var_270 = 143;
+        if (sympathy_with_disc_id == 394 && sympathy_base_disc_id == 314) {
+            sympathy_id = 143;
         }
-        if (var_2185 == 394 && var_2186 == 204) {
-            var_270 = 144;
+        if (sympathy_base_disc_id == 394 && sympathy_with_disc_id == 204) {
+            sympathy_id = 144;
         }
-        if (var_2186 == 394 && var_2185 == 204) {
-            var_270 = 144;
+        if (sympathy_with_disc_id == 394 && sympathy_base_disc_id == 204) {
+            sympathy_id = 144;
         }
-        if (var_2185 == 394 && var_2186 == 395) {
-            var_270 = 145;
+        if (sympathy_base_disc_id == 394 && sympathy_with_disc_id == 395) {
+            sympathy_id = 145;
         }
-        if (var_2186 == 394 && var_2185 == 395) {
-            var_270 = 145;
+        if (sympathy_with_disc_id == 394 && sympathy_base_disc_id == 395) {
+            sympathy_id = 145;
         }
-        if (var_2185 == 394 && var_2186 == 305) {
-            var_270 = 159;
+        if (sympathy_base_disc_id == 394 && sympathy_with_disc_id == 305) {
+            sympathy_id = 159;
         }
-        if (var_2186 == 394 && var_2185 == 305) {
-            var_270 = 159;
+        if (sympathy_with_disc_id == 394 && sympathy_base_disc_id == 305) {
+            sympathy_id = 159;
         }
-        if (var_2185 == 111 && var_2186 == 394) {
-            var_270 = 165;
+        if (sympathy_base_disc_id == 111 && sympathy_with_disc_id == 394) {
+            sympathy_id = 165;
         }
-        if (var_2186 == 111 && var_2185 == 394) {
-            var_270 = 165;
+        if (sympathy_with_disc_id == 111 && sympathy_base_disc_id == 394) {
+            sympathy_id = 165;
         }
-        var_1173 = var_270;
+        var_1173 = sympathy_id;
         if (var_1173 == 1 || var_1173 == 102 || var_1173 == 103 || var_1173 == 107 || var_1173 == 110 || var_1173 == 111 || var_1173 == 115 || var_1173 == 117 || var_1173 == 118 || var_1173 == 122 || var_1173 == 125 || var_1173 == 126 || var_1173 == 127 || var_1173 == 129 || var_1173 == 130 || var_1173 == 131 || var_1173 == 132 || var_1173 == 133 || var_1173 == 137 || var_1173 == 149 || var_1173 == 150 || var_1173 == 151 || var_1173 == 152 || var_1173 == 153 || var_1173 == 158 || var_1173 == 167 || var_1173 == 168) {
             var_566 = var_566 + 1;
             var_565 = var_565 + 1;
@@ -16281,17 +16308,18 @@ function func496(this: any) {
         return;
     });
 }
-// スタンドの共鳴効果
+
+// スタンドの共鳴発動時のメッセージ表示
 function func497(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(497);
-        if (var_270 == 0) {
+        if (sympathy_id == 0) {
             return;
         }
         if (var_1926 == 0) {
             return;
         }
-        var_1173 = var_270;
+        var_1173 = sympathy_id;
         if (var_1929 != 0) {
             return;
         }
@@ -16323,214 +16351,214 @@ function func497(this: any) {
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row2a = "";
-        if (var_270 == 1) {
+        if (sympathy_id == 1) {
             comments_row1a = "「同じタイプのスタンド！」";
         }
-        if (var_270 == 101) {
+        if (sympathy_id == 101) {
             comments_row1a = "「狩り(ハンティング)に行こう！」";
         }
-        if (var_270 == 102) {
+        if (sympathy_id == 102) {
             comments_row1a = "「ジョースターの血統」";
         }
-        if (var_270 == 103) {
+        if (sympathy_id == 103) {
             comments_row1a = "「愛＝理解」";
         }
-        if (var_270 == 104) {
+        if (sympathy_id == 104) {
             comments_row1a = "「オラオラ無駄無駄」";
         }
-        if (var_270 == 105) {
+        if (sympathy_id == 105) {
             comments_row1a = "「本当に頼りになるやつだ」";
         }
-        if (var_270 == 106) {
+        if (sympathy_id == 106) {
             comments_row1a = "「協力してもらうぜ」";
         }
-        if (var_270 == 107) {
+        if (sympathy_id == 107) {
             comments_row1a = "「一緒に登ってきた」";
         }
-        if (var_270 == 108) {
+        if (sympathy_id == 108) {
             comments_row1a = "「お前は俺を怒らせた」";
         }
-        if (var_270 == 109) {
+        if (sympathy_id == 109) {
             comments_row1a = "「狩り(ハンティング)に行こう！」";
         }
-        if (var_270 == 110) {
+        if (sympathy_id == 110) {
             comments_row1a = "「ジョースターの血統」";
         }
-        if (var_270 == 111) {
+        if (sympathy_id == 111) {
             comments_row1a = "「愛＝理解」";
         }
-        if (var_270 == 112) {
+        if (sympathy_id == 112) {
             comments_row1a = "「オラオラ無駄無駄」";
         }
-        if (var_270 == 113) {
+        if (sympathy_id == 113) {
             comments_row1a = "「本当に頼りになるやつだ」";
         }
-        if (var_270 == 114) {
+        if (sympathy_id == 114) {
             comments_row1a = "「協力してもらうぜ」";
         }
-        if (var_270 == 115) {
+        if (sympathy_id == 115) {
             comments_row1a = "「一緒に登ってきた」";
         }
-        if (var_270 == 116) {
+        if (sympathy_id == 116) {
             comments_row1a = "「気が合う二人」";
         }
-        if (var_270 == 117) {
+        if (sympathy_id == 117) {
             comments_row1a = "「僕らの街　杜王町」";
         }
-        if (var_270 == 118) {
+        if (sympathy_id == 118) {
             comments_row1a = "「直さないからいい！」";
         }
-        if (var_270 == 119) {
+        if (sympathy_id == 119) {
             comments_row1a = "「友情のしるし！」";
         }
-        if (var_270 == 120) {
+        if (sympathy_id == 120) {
             comments_row1a = "「注文の不思議な料理店！」";
         }
-        if (var_270 == 121) {
+        if (sympathy_id == 121) {
             comments_row1a = "「追跡しろ！」";
         }
-        if (var_270 == 122) {
+        if (sympathy_id == 122) {
             comments_row1a = "「僕らの街　杜王町」";
         }
-        if (var_270 == 123) {
+        if (sympathy_id == 123) {
             comments_row1a = "「ハッピー＆メルヘン」";
         }
-        if (var_270 == 124) {
+        if (sympathy_id == 124) {
             comments_row1a = "「うンまぁ～い！」";
         }
-        if (var_270 == 125) {
+        if (sympathy_id == 125) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 126) {
+        if (sympathy_id == 126) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 127) {
+        if (sympathy_id == 127) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 128) {
+        if (sympathy_id == 128) {
             comments_row1a = "「夢のために！」";
         }
-        if (var_270 == 129) {
+        if (sympathy_id == 129) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 130) {
+        if (sympathy_id == 130) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 131) {
+        if (sympathy_id == 131) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 132) {
+        if (sympathy_id == 132) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 133) {
+        if (sympathy_id == 133) {
             comments_row1a = "「チーム・ブチャラティ」";
         }
-        if (var_270 == 134) {
+        if (sympathy_id == 134) {
             comments_row1a = "「こいつにスパゲティを」";
         }
-        if (var_270 == 135) {
+        if (sympathy_id == 135) {
             comments_row1a = "「達人二刀流」";
         }
-        if (var_270 == 136) {
+        if (sympathy_id == 136) {
             comments_row1a = "「はっはっは　狙え狙え」";
         }
-        if (var_270 == 137) {
+        if (sympathy_id == 137) {
             comments_row1a = "「挟み撃ちの形」";
         }
-        if (var_270 == 138) {
+        if (sympathy_id == 138) {
             comments_row1a = "「過去を乗り越える！」";
         }
-        if (var_270 == 139) {
+        if (sympathy_id == 139) {
             comments_row1a = "「絶頂の能力」";
         }
-        if (var_270 == 140) {
+        if (sympathy_id == 140) {
             comments_row1a = "「ＤＩＯの血統」";
         }
-        if (var_270 == 141) {
+        if (sympathy_id == 141) {
             comments_row1a = "「信頼できる友」";
         }
-        if (var_270 == 142) {
+        if (sympathy_id == 142) {
             comments_row1a = "「血をささげます」";
         }
-        if (var_270 == 143) {
+        if (sympathy_id == 143) {
             comments_row1a = "「空気が火を吹いた！」";
         }
-        if (var_270 == 144) {
+        if (sympathy_id == 144) {
             comments_row1a = "「第２の爆弾」";
         }
-        if (var_270 == 145) {
+        if (sympathy_id == 145) {
             comments_row1a = "「第３の爆弾」";
         }
-        if (var_270 == 146) {
+        if (sympathy_id == 146) {
             comments_row1a = "「キラークィーン」";
         }
-        if (var_270 == 147) {
+        if (sympathy_id == 147) {
             comments_row1a = "「純潔の日々、戻らず！！」";
         }
-        if (var_270 == 148) {
+        if (sympathy_id == 148) {
             comments_row1a = "「ヤバイ「ＤＩＳＣ」がＩＮ！！」";
         }
-        if (var_270 == 149) {
+        if (sympathy_id == 149) {
             comments_row1a = "「祝福しろ！」";
         }
-        if (var_270 == 150) {
+        if (sympathy_id == 150) {
             comments_row1a = "「無重力の二人」";
         }
-        if (var_270 == 151) {
+        if (sympathy_id == 151) {
             comments_row1a = "「愛と復讐のキッス」";
         }
-        if (var_270 == 152) {
+        if (sympathy_id == 152) {
             comments_row1a = "「幽霊部屋の仲間」";
         }
-        if (var_270 == 153) {
+        if (sympathy_id == 153) {
             comments_row1a = "「一人でリラックス」";
         }
-        if (var_270 == 154) {
+        if (sympathy_id == 154) {
             comments_row1a = "「暗殺チーム」";
         }
-        if (var_270 == 155) {
+        if (sympathy_id == 155) {
             comments_row1a = "「暗殺チーム」";
         }
-        if (var_270 == 156) {
+        if (sympathy_id == 156) {
             comments_row1a = "「暗殺チーム」";
         }
-        if (var_270 == 157) {
+        if (sympathy_id == 157) {
             comments_row1a = "「真の邪悪」";
         }
-        if (var_270 == 158) {
+        if (sympathy_id == 158) {
             comments_row1a = "「パンティーあげちゃうッ！」";
         }
-        if (var_270 == 159) {
+        if (sympathy_id == 159) {
             comments_row1a = "「整形手術」";
         }
-        if (var_270 == 160) {
+        if (sympathy_id == 160) {
             comments_row1a = "「水中へよ～こそ」";
         }
-        if (var_270 == 161) {
+        if (sympathy_id == 161) {
             comments_row1a = "「雷で最大発電！」";
         }
-        if (var_270 == 162) {
+        if (sympathy_id == 162) {
             comments_row1a = "「雷で最大発電！」";
         }
-        if (var_270 == 163) {
+        if (sympathy_id == 163) {
             comments_row1a = "「電気イスの刑」";
         }
-        if (var_270 == 164) {
+        if (sympathy_id == 164) {
             comments_row1a = "「邪悪の化身」";
         }
-        if (var_270 == 165) {
+        if (sympathy_id == 165) {
             comments_row1a = "「邪悪の化身」";
         }
-        if (var_270 == 166) {
+        if (sympathy_id == 166) {
             comments_row1a = "「暗黒空間の軌跡」";
         }
-        if (var_270 == 167) {
+        if (sympathy_id == 167) {
             comments_row1a = "「気まずい二人」";
         }
-        if (var_270 == 168) {
+        if (sympathy_id == 168) {
             comments_row1a = "「気まずい二人」";
         }
-        if (var_270 == 169) {
+        if (sympathy_id == 169) {
             comments_row1a = "「マジに信じたのか！」";
         }
         var_198 = 1;
@@ -16547,6 +16575,7 @@ function func497(this: any) {
         return;
     });
 }
+
 // 消費アイテム効果
 function func498(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -16868,7 +16897,7 @@ function func498(this: any) {
         }
         if (item_list == 561) {
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             var_2200 = 1;
@@ -16877,7 +16906,7 @@ function func498(this: any) {
             var_2200 = 0;
             var_1845 = 0;
             if (var_2110 == 0) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
             }
             yield func331();
             return;
@@ -16888,7 +16917,7 @@ function func498(this: any) {
             }
             var_1264 = 0;
             if (current_level >= 99) {
-                var_1946 = "これ以上成長できなかった…";
+                item_message1 = "これ以上成長できなかった…";
                 return;
             }
     
@@ -16966,7 +16995,7 @@ function func498(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             var_170 = 1;
@@ -17254,7 +17283,7 @@ function func498(this: any) {
                 var_25_x = var_25[1];
                 var_26_x = var_26[1];
                 var_27_x = var_27[1];
-                var_1946 = "酷いダメージを受けて回復しない！";
+                item_message1 = "酷いダメージを受けて回復しない！";
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -17270,7 +17299,7 @@ function func498(this: any) {
             var_1264 = 0;
             var_70 = 0;
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             var_1252 = 1;
@@ -17533,7 +17562,7 @@ function func498(this: any) {
             }
             var_1264 = 0;
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             DSPLAY(audio_id = 184);
@@ -17547,7 +17576,7 @@ function func498(this: any) {
             }
             var_1264 = 0;
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             var_126 = 1;
@@ -17561,13 +17590,13 @@ function func498(this: any) {
             }
             var_1264 = 0;
             if (var_156[351] == 1) {
-                var_1946 = "装備DISCの効果によって";
-                var_1947 = "眠くならなかった！";
+                item_message1 = "装備DISCの効果によって";
+                item_message2 = "眠くならなかった！";
                 return;
             }
             if (var_120 == 1) {
-                var_1946 = "10時間熟睡した気分になっていて";
-                var_1947 = "眠くならなかった！";
+                item_message1 = "10時間熟睡した気分になっていて";
+                item_message2 = "眠くならなかった！";
                 return;
             }
             if (var_120 == 0) {
@@ -17699,7 +17728,7 @@ function func498(this: any) {
             }
             var_1264 = 0;
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
@@ -17737,7 +17766,7 @@ function func498(this: any) {
             }
             var_1264 = 0;
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             var_144 = 1;
@@ -17802,8 +17831,8 @@ function func498(this: any) {
                 }
                 var_271 = 0;
                 var_1583 = 0;
-                var_1946 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCの回数が";
-                var_1947 = "残り １ になってしまった！！";
+                item_message1 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCの回数が";
+                item_message2 = "残り １ になってしまった！！";
             }
             return;
         }
@@ -17813,7 +17842,7 @@ function func498(this: any) {
             }
             var_1264 = 0;
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             yield func094();
@@ -17846,8 +17875,8 @@ function func498(this: any) {
             yield func047();
             yield func050();
             yield func340(); // キー入力による選択処理
-            var_1946 = "オレは頂点に返り咲ける能力があるッ！";
-            var_1947 = "";
+            item_message1 = "オレは頂点に返り咲ける能力があるッ！";
+            item_message2 = "";
             var_1951 = 1;
             return;
         }
@@ -18051,8 +18080,8 @@ function func498(this: any) {
                 var_568 = var_948[current_level];
                 yield func681();
                 var_2201 = 0;
-                var_1946 = "ディアボロはレベルが上がった！";
-                var_1947 = "";
+                item_message1 = "ディアボロはレベルが上がった！";
+                item_message2 = "";
                 return;
             }
         }
@@ -18101,8 +18130,8 @@ function func498(this: any) {
                 yield func047();
                 yield func050();
                 yield func340(); // キー入力による選択処理
-                var_1946 = "う～む　どうだったかな……？";
-                var_1947 = "自信がない…";
+                item_message1 = "う～む　どうだったかな……？";
+                item_message2 = "自信がない…";
             }
             return;
         }
@@ -18282,10 +18311,10 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "「栄養補給させてもらったぜ！」";
+                item_message1 = "「栄養補給させてもらったぜ！」";
             }
             if (var_2211 == 1) {
-                var_1946 = "最大満腹度が" + var_567 + "になった。";
+                item_message1 = "最大満腹度が" + var_567 + "になった。";
             }
             return;
         }
@@ -18305,10 +18334,10 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             if (var_2211 == 1) {
-                var_1946 = "最大満腹度が" + var_567 + "になった。";
+                item_message1 = "最大満腹度が" + var_567 + "になった。";
             }
             return;
         }
@@ -18328,10 +18357,10 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             if (var_2211 == 1) {
-                var_1946 = "最大満腹度が" + var_567 + "になった。";
+                item_message1 = "最大満腹度が" + var_567 + "になった。";
             }
             return;
         }
@@ -18339,7 +18368,7 @@ function func498(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            if (var_270 != 120 && var_270 != 124) {
+            if (sympathy_id != 120 && sympathy_id != 124) {
                 var_2212 = rnd(5);
                 if (current_level == 1 && var_2212 == 4) {
                     var_2212 = 3;
@@ -18374,16 +18403,16 @@ function func498(this: any) {
                 }
                 if (var_2212 == 0) {
                     var_211 = 1;
-                    var_1946 = "グエッ！";
-                    var_1947 = "ひどいダメージを受けた！";
+                    item_message1 = "グエッ！";
+                    item_message2 = "ひどいダメージを受けた！";
                 }
                 if (var_2212 == 1) {
                     var_565 = var_565 - 3;
                     if (var_565 < 0) {
                         var_565 = 0;
                     }
-                    var_1946 = "グエッ！";
-                    var_1947 = "精神力が下がってしまった！";
+                    item_message1 = "グエッ！";
+                    item_message2 = "精神力が下がってしまった！";
                 }
                 if (var_2212 == 2) {
                     var_566 = var_566 - 1;
@@ -18393,8 +18422,8 @@ function func498(this: any) {
                     if (var_565 > var_566) {
                         var_565 = var_566;
                     }
-                    var_1946 = "グエエエエッ！";
-                    var_1947 = "最大精神力が下がってしまった！";
+                    item_message1 = "グエエエエッ！";
+                    item_message2 = "最大精神力が下がってしまった！";
                 }
                 if (var_2212 == 3) {
                     var_352 = var_352 - 5;
@@ -18405,8 +18434,8 @@ function func498(this: any) {
                     if (var_211 <= 0) {
                         var_211 = 1;
                     }
-                    var_1946 = "グエエエエッ！";
-                    var_1947 = "最大HPが下がってしまった！";
+                    item_message1 = "グエエエエッ！";
+                    item_message2 = "最大HPが下がってしまった！";
                 }
                 if (var_2212 == 4) {
                     current_level = current_level - 1;
@@ -18422,14 +18451,14 @@ function func498(this: any) {
                         var_211 = 1;
                     }
                     var_568 = var_948[current_level] - 1;
-                    var_1946 = "グエエエエｴｴｴッ！";
-                    var_1947 = "レベルが下がってしまった！";
+                    item_message1 = "グエエエエｴｴｴッ！";
+                    item_message2 = "レベルが下がってしまった！";
                 }
             }
-            if (var_270 == 120 || var_270 == 124) {
+            if (sympathy_id == 120 || sympathy_id == 124) {
                 var_1214 = 0;
-                var_1946 = "「ンまァア～～い！」";
-                var_1947 = "";
+                item_message1 = "「ンまァア～～い！」";
+                item_message2 = "";
                 var_360 = 0;
                 var_350 = var_350 + 20;
                 if (var_350 > var_567) {
@@ -18446,7 +18475,7 @@ function func498(this: any) {
                 var_567 = 999;
             }
             var_350 = var_567;
-            var_1946 = "最大満腹度が" + var_567 + "になった。";
+            item_message1 = "最大満腹度が" + var_567 + "になった。";
             if (var_156[396] == 0) {
                 if (var_157 == 0) {
                     var_133 = 1;
@@ -18456,7 +18485,7 @@ function func498(this: any) {
                     var_157 = 0;
                     var_158 = 0;
                 }
-                var_1947 = "お腹がいっぱいで動きが重い…";
+                item_message2 = "お腹がいっぱいで動きが重い…";
         
                 DSPLAY(audio_id = 162);
             }
@@ -18478,10 +18507,10 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             if (var_2211 == 1) {
-                var_1946 = "最大満腹度が" + var_567 + "になった。";
+                item_message1 = "最大満腹度が" + var_567 + "になった。";
             }
             return;
         }
@@ -18510,7 +18539,7 @@ function func498(this: any) {
                 }
             }
             if (var_565 == var_566) {
-                var_1946 = "お腹が膨れた";
+                item_message1 = "お腹が膨れた";
             }
             var_565 = var_566;
             var_350 = var_350 + 10;
@@ -18543,14 +18572,14 @@ function func498(this: any) {
             if (var_410 == 401) {
                 yield func429();
                 if (var_233[var_556].Var3 == 99) {
-                    var_1947 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのパワーは全開だ！";
+                    item_message2 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのパワーは全開だ！";
                 }
                 if (var_233[var_556].Var3 <= 98) {
                     var_233[var_556].Var3 = var_233[var_556].Var3 + 5;
                     if (var_233[var_556].Var3 >= 99) {
                         var_233[var_556].Var3 = 99;
                     }
-                    var_1947 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのｴﾈﾙｷﾞｰが増加した！";
+                    item_message2 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのｴﾈﾙｷﾞｰが増加した！";
                 }
             }
             return;
@@ -18596,7 +18625,7 @@ function func498(this: any) {
                     }
                 }
                 if (var_133 == 0 && var_126 == 0) {
-                    var_1946 = "お腹がちょっと膨れた";
+                    item_message1 = "お腹がちょっと膨れた";
                 }
                 var_133 = 0;
                 var_126 = 0;
@@ -18665,7 +18694,7 @@ function func498(this: any) {
                     yield func337(); // メッセージ関係呼び出し
                 }
                 var_1256 = 0;
-                var_1946 = "このフロアでお腹が減らなくなった！";
+                item_message1 = "このフロアでお腹が減らなくなった！";
                 var_193 = 1;
                 return;
             }
@@ -18684,7 +18713,7 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             return;
         }
@@ -18733,7 +18762,7 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             return;
         }
@@ -18750,7 +18779,7 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             return;
         }
@@ -18790,7 +18819,7 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             return;
         }
@@ -18807,7 +18836,7 @@ function func498(this: any) {
                 var_350 = var_567;
             }
             if (var_350 == var_567) {
-                var_1946 = "お腹がいっぱいになった。";
+                item_message1 = "お腹がいっぱいになった。";
             }
             return;
         }
@@ -18815,10 +18844,10 @@ function func498(this: any) {
             var_360 = 0;
             if (var_211 == var_352) {
                 var_352 = var_352 + 1;
-                var_1946 = "最大HPが１あがった！";
+                item_message1 = "最大HPが１あがった！";
                 if (var_352 > 999) {
                     var_352 = 999;
-                    var_1946 = "最大HPは限界まで達した！";
+                    item_message1 = "最大HPは限界まで達した！";
                 }
             }
             var_211 = var_211 + 50;
@@ -18835,10 +18864,10 @@ function func498(this: any) {
             var_360 = 0;
             if (var_211 == var_352) {
                 var_352 = var_352 + 2;
-                var_1946 = "最大HPが２あがった！";
+                item_message1 = "最大HPが２あがった！";
                 if (var_352 > 999) {
                     var_352 = 999;
-                    var_1946 = "最大HPは限界まで達した！";
+                    item_message1 = "最大HPは限界まで達した！";
                 }
             }
             var_211 = var_211 + 100;
@@ -18855,10 +18884,10 @@ function func498(this: any) {
             var_360 = 0;
             if (var_211 == var_352) {
                 var_352 = var_352 + 1;
-                var_1946 = "最大HPが１あがった！";
+                item_message1 = "最大HPが１あがった！";
                 if (var_352 > 999) {
                     var_352 = 999;
-                    var_1946 = "最大HPは限界まで達した！";
+                    item_message1 = "最大HPは限界まで達した！";
                 }
             }
             var_211 = var_211 + 20;
@@ -18875,10 +18904,10 @@ function func498(this: any) {
             var_360 = 0;
             if (var_211 == var_352) {
                 var_352 = var_352 + 5;
-                var_1946 = "最大HPが５あがった！";
+                item_message1 = "最大HPが５あがった！";
                 if (var_352 > 999) {
                     var_352 = 999;
-                    var_1946 = "最大HPは限界まで達した！";
+                    item_message1 = "最大HPは限界まで達した！";
                 }
             }
             var_211 = var_352;
@@ -18923,10 +18952,10 @@ function func498(this: any) {
             var_360 = 0;
             if (var_211 == var_352) {
                 var_352 = var_352 + 1;
-                var_1946 = "最大HPが１あがった！";
+                item_message1 = "最大HPが１あがった！";
                 if (var_352 > 999) {
                     var_352 = 999;
-                    var_1946 = "最大HPは限界まで達した！";
+                    item_message1 = "最大HPは限界まで達した！";
                 }
             }
             var_211 = var_211 + 10;
@@ -19405,7 +19434,7 @@ function func498(this: any) {
             }
             var_199 = var_2216;
             if (var_2220 == 1) {
-                var_1946 = "スカッとするぜーッ！！";
+                item_message1 = "スカッとするぜーッ！！";
             }
             return;
         }
@@ -19470,7 +19499,7 @@ function func498(this: any) {
             var_198 = 1;
             var_300 = 0;
             var_130 = 1;
-            var_1946 = "吸血鬼体質になった！";
+            item_message1 = "吸血鬼体質になった！";
             var_1251 = 0;
             if (var_125 != 0) {
                 var_389 = 2;
@@ -19492,7 +19521,7 @@ function func498(this: any) {
                 var_25_x = var_25[1];
                 var_26_x = var_26[1];
                 var_27_x = var_27[1];
-                var_1946 = "酷いダメージを受けて回復しない！";
+                item_message1 = "酷いダメージを受けて回復しない！";
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -19685,12 +19714,12 @@ function func498(this: any) {
             var_2228 = 1;
             yield func531();
             if (var_2228 == 0) {
-                var_1946 = "" + target_item_name + "に";
-                var_1947 = "新たな装備効果が発現した！";
+                item_message1 = "" + target_item_name + "に";
+                item_message2 = "新たな装備効果が発現した！";
             }
             if (var_2228 == 1) {
-                var_1946 = "しかしﾃﾞｨｱﾎﾞﾛは";
-                var_1947 = "矢に選ばれなかった…";
+                item_message1 = "しかしﾃﾞｨｱﾎﾞﾛは";
+                item_message2 = "矢に選ばれなかった…";
             }
             return;
         }
@@ -19824,7 +19853,7 @@ function func498(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_262 == 1) {
-                var_1946 = "しかし何も起こらなかった…";
+                item_message1 = "しかし何も起こらなかった…";
                 return;
             }
             var_1055 = 1;
@@ -19940,8 +19969,8 @@ function func498(this: any) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            var_1946 = "チェッ！";
-            var_1947 = "やっぱりセナは速ェや…";
+            item_message1 = "チェッ！";
+            item_message2 = "やっぱりセナは速ェや…";
             return;
         }
         if (item_list >= 901 && item_list <= 905) {
@@ -19965,7 +19994,7 @@ function func498(this: any) {
             if (var_566 > 99) {
                 var_566 = 99;
                 var_565 = 99;
-                var_1946 = "精神力は限界まで達した！";
+                item_message1 = "精神力は限界まで達した！";
             }
             return;
         }
@@ -19991,7 +20020,7 @@ function func498(this: any) {
             if (var_352 >= 999) {
                 var_352 = 999;
                 var_211 = 999;
-                var_1946 = "最大HPは限界まで達した！";
+                item_message1 = "最大HPは限界まで達した！";
             }
             return;
         }
@@ -20040,7 +20069,7 @@ function func498(this: any) {
             var_211 = var_211 + 10;
             if (var_352 > 999) {
                 var_352 = 999;
-                var_1946 = "最大HPは限界まで達した！";
+                item_message1 = "最大HPは限界まで達した！";
             }
             if (var_211 > var_352) {
                 var_211 = var_352;
@@ -20067,7 +20096,7 @@ function func498(this: any) {
             var_211 = var_211 + 10;
             if (var_352 > 999) {
                 var_352 = 999;
-                var_1946 = "最大HPは限界まで達した！";
+                item_message1 = "最大HPは限界まで達した！";
             }
             if (var_211 > var_352) {
                 var_211 = var_352;
@@ -20096,7 +20125,7 @@ function func498(this: any) {
             if (var_566 > 99) {
                 var_566 = 99;
                 var_565 = 99;
-                var_1946 = "精神力は限界まで達した！";
+                item_message1 = "精神力は限界まで達した！";
             }
             return;
         }
@@ -20142,7 +20171,7 @@ function func498(this: any) {
             var_271 = 0;
             var_1297 = 0;
             if (current_level >= 99) {
-                var_1946 = "これ以上成長できなかった…";
+                item_message1 = "これ以上成長できなかった…";
                 return;
             }
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
@@ -20173,7 +20202,7 @@ function func498(this: any) {
             var_271 = 0;
             var_1297 = 0;
             if (current_level >= 99) {
-                var_1946 = "これ以上成長できなかった…";
+                item_message1 = "これ以上成長できなかった…";
                 return;
             }
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
@@ -20360,7 +20389,7 @@ function func498(this: any) {
             var_271 = 0;
             var_1297 = 0;
             if (current_level >= 99) {
-                var_1946 = "これ以上成長できなかった…";
+                item_message1 = "これ以上成長できなかった…";
                 return;
             }
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
@@ -20391,7 +20420,7 @@ function func498(this: any) {
             var_271 = 0;
             var_1297 = 0;
             if (current_level >= 99) {
-                var_1946 = "これ以上成長できなかった…";
+                item_message1 = "これ以上成長できなかった…";
                 return;
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {

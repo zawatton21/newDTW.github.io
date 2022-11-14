@@ -357,7 +357,7 @@ let var_266 :any;
 let var_267 :any;
 let var_268 :any;
 let var_269 :any;
-let var_270 :any;
+let sympathy_id :number; // 装備discの組み合わせにより発動する共鳴効果。そのID list
 let var_271 :any;
 let var_272 :any;
 let var_273 :any;
@@ -2022,7 +2022,7 @@ let var_1931 :any;
 let var_1932 :any;
 let var_1933 :any;
 let var_1934 :any;
-let var_1935 :any;
+let disc_class :number; // 装備discをどの区分で装備するか。1 = 攻撃、2 = 防御、3 = 能力
 let var_1936 :any;
 let var_1937 :any;
 let var_1938 :any;
@@ -2033,8 +2033,8 @@ let var_1942 :any;
 let var_1943 :any;
 let var_1944 :any;
 let var_1945 :any;
-let var_1946 :any;
-let var_1947 :any;
+let item_message1 :string; // 消費アイテムを使用した際に表示させるコメント1
+let item_message2 :string; // 消費アイテムを使用した際に表示させるコメント2
 let var_1948 :any;
 let var_1949 :any;
 let var_1950 :any;
@@ -2117,8 +2117,29 @@ let var_2026 :any;
 let var_2027 :any;
 let var_2028 :any;
 let var_2029 :any;
-let var_2030 :any;
-let var_2031 :any;
+
+// アイテムの種類判別id クラス2
+// 3:お金 = 100未満
+// 5:装備disc = 100 ~ 400未満
+// 6:射撃disc = 400 ~ 500未満
+// 4:記憶disc = 500 ~ 600未満
+// 4:食料&回復 = 600 ~ 700未満
+// 4:その他消費アイテム = 700 ~ 750未満
+// 5:ヤバいもの = 800 ~ 900未満
+// 6:コミック = 900 ~ 1000未満
+let item_class2 :number;
+
+// アイテムの種類判別id クラス1
+// 0:お金 = 100未満
+// 1:装備disc = 100 ~ 400未満
+// 2:射撃disc = 400 ~ 500未満
+// 3:記憶disc = 500 ~ 600未満
+// 4:食料&回復 = 600 ~ 700未満
+// 3:その他消費アイテム = 700 ~ 750未満
+// 5:ヤバいもの = 800 ~ 900未満
+// 6:コミック = 900 ~ 1000未満
+let item_class1 :number;
+
 let var_2032 :any;
 let var_2033 :any;
 let var_2034 :any;
@@ -2272,8 +2293,8 @@ let var_2181 :any;
 let var_2182 :any;
 let var_2183 :any;
 let var_2184 :any;
-let var_2185 :any;
-let var_2186 :any;
+let sympathy_base_disc_id :number; // 共鳴効果組み合わせ判別用 装備disc(ベース) item_list
+let sympathy_with_disc_id :number; // 共鳴効果組み合わせ判別用 装備disc(ベースと対になるもの) item_list  
 let var_2187 :number; // item_list
 let var_2188 :any;
 let var_2189 :any;
@@ -2345,9 +2366,9 @@ let var_2254 :any;
 let var_2255 :any;
 let var_2256 :any;
 let var_2257 :any;
-let var_2258 :any; // item_list 多い
-let var_2259 :any;
-let var_2260 :any;
+let activated_disc_id :number; // disc能力発動の動作処理用 item_list
+let unidentified_disc_name :string; // disc能力発動の動作処理用 未識別状態のdisc名称
+let identified_disc_name :string; // disc能力発動の動作処理用 識別後のdisc名称
 let var_2261 :any;
 let var_2262 :any;
 let var_2263 :any;

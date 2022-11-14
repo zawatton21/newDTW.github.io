@@ -519,7 +519,7 @@ function func104(this: any) {
     });
 }
 
-
+// discを装備した際のBGM選曲
 function func105(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(105);
@@ -533,10 +533,11 @@ function func105(this: any) {
             return;
         }
         bgm_list = item_list;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
+
 // BGM選曲呼び出し割り振り
 function func106(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -552,12 +553,12 @@ function func106(this: any) {
             // var_681 = 989 が設定させていたら、その値を返す
             if (var_681 == 989) {
                 bgm_list = 989; // 亀の中のBGM
-                yield func103(); // ダンジョン内のテーマソング　"0.mp3" 設定
+                yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                 return;
             }
             // bgm_list = 0　なら ダンジョンテーマソングを流す処理を呼び出し
             bgm_list = 0; // BGMをダンジョンテーマソングへ戻す
-            yield func103();　// ダンジョン内のテーマソング　"0.mp3" 設定
+            yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
             return;
         }
         return;
@@ -568,7 +569,7 @@ function func107(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(107);
         bgm_list = var_677;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -600,6 +601,7 @@ function func109(this: any) {
         return;
     });
 }
+
 function func110(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(110);
@@ -608,7 +610,7 @@ function func110(this: any) {
         }
         var_678 = 1;
         bgm_list = 979;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         var_634 = 0;
         return;
@@ -619,7 +621,7 @@ function func111(this: any) {
         dbgprt(111);
         var_678 = 1;
         bgm_list = 0;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         var_681 = 0;
         return;
@@ -629,7 +631,7 @@ function func112(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(112);
         var_678 = 1;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         return;
     });
@@ -640,7 +642,7 @@ function func113(this: any) {
         var_678 = 1;
         bgm_list = 988;
         var_681 = 988;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         return;
     });
@@ -651,7 +653,7 @@ function func114(this: any) {
         var_678 = 1;
         bgm_list = 989;
         var_681 = 989;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         return;
     });
@@ -667,7 +669,7 @@ function func115(this: any) {
         if (bgm_list >= 500 && bgm_list != 565) {
             return;
         }
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         return;
     });
@@ -677,7 +679,7 @@ function func116(this: any) {
         dbgprt(116);
         bgm_list = 990;
         var_681 = 990;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -686,7 +688,7 @@ function func117(this: any) {
         dbgprt(117);
         bgm_list = 982;
         var_681 = 982;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -695,7 +697,7 @@ function func118(this: any) {
         dbgprt(118);
         bgm_list = 986;
         var_681 = 986;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -704,7 +706,7 @@ function func119(this: any) {
         dbgprt(119);
         bgm_list = 998;
         var_681 = 998;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -713,7 +715,7 @@ function func120(this: any) {
         dbgprt(120);
         bgm_list = 978;
         var_681 = 978;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -722,7 +724,7 @@ function func121(this: any) {
         dbgprt(121);
         bgm_list = 977;
         var_681 = 977;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -730,7 +732,7 @@ function func122(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(122);
         bgm_list = 999;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_634 = 0;
         return;
     });
@@ -739,7 +741,7 @@ function func123(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(123);
         bgm_list = 997;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_634 = 0;
         return;
     });
@@ -754,7 +756,7 @@ function func124(this: any) {
             return;
         }
         bgm_list = 994;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -768,7 +770,7 @@ function func125(this: any) {
             return;
         }
         bgm_list = 993;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -782,7 +784,7 @@ function func126(this: any) {
             return;
         }
         bgm_list = 991;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -796,7 +798,7 @@ function func127(this: any) {
             return;
         }
         bgm_list = 992;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -810,7 +812,7 @@ function func128(this: any) {
             return;
         }
         bgm_list = 983;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -819,7 +821,7 @@ function func129(this: any) {
         dbgprt(129);
         bgm_list = 996;
         var_681 = 996;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -828,7 +830,7 @@ function func130(this: any) {
         dbgprt(130);
         bgm_list = 998;
         var_681 = 998;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -837,7 +839,7 @@ function func131(this: any) {
         dbgprt(131);
         bgm_list = 985;
         var_681 = 985;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -846,7 +848,7 @@ function func132(this: any) {
         dbgprt(132);
         bgm_list = 984;
         var_681 = 984;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -855,7 +857,7 @@ function func133(this: any) {
         dbgprt(133);
         bgm_list = 981;
         var_681 = 981;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -864,7 +866,7 @@ function func134(this: any) {
         dbgprt(134);
         bgm_list = 980;
         var_681 = 980;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -872,7 +874,7 @@ function func135(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(135);
         bgm_list = 980;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
 }
@@ -883,7 +885,7 @@ function func136(this: any) {
         bgm_list = 987;
         var_681 = 987;
         var_678 = 1;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         return;
     });
@@ -912,7 +914,7 @@ function func137(this: any) {
             var_681 = 981;
         }
         var_678 = 1;
-        yield func103();
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         var_678 = 0;
         return;
     });

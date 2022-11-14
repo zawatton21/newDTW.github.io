@@ -193,7 +193,7 @@ function func907(this: any) {
         yield func427();
         yield func428();
         yield func429();
-        if (var_270 == 135) {
+        if (sympathy_id == 135) {
             if (var_358 == 122) {
                 var_357 = 101;
             }
@@ -672,11 +672,11 @@ function func911(this: any) {
         if (var_2301 == 2) {
             var_234 = 1;
         }
-        item_list = var_2258;
-        yield func506();
+        item_list = activated_disc_id;
+        yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (var_2254 == 1) {
             var_2254 = 0;
-            yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+            yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         var_217 = 1;
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -784,7 +784,7 @@ function func915(this: any) {
         yield func340(); // キー入力による選択処理
         if (var_2254 == 1) {
             var_2254 = 0;
-            yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+            yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         var_217 = 1;
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -1149,7 +1149,7 @@ function func921(this: any) {
         tcpput("\n", var_1050);
         if (var_2254 == 1) {
             var_2254 = 0;
-            yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+            yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         var_217 = 1;
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -2203,7 +2203,7 @@ function func929(this: any) {
         yield func427();
         yield func428();
         yield func429();
-        if (var_270 == 135) {
+        if (sympathy_id == 135) {
             if (var_358 == 122) {
                 var_357 = 101;
             }

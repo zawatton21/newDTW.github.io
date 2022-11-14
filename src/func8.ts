@@ -640,7 +640,7 @@ function func808(this: any) {
                 // No = 2 なので、レクイエムの第迷宮
                 dangeon_number = 2;
             }
-            yield func385();
+            yield func385(); // 各ダンジョンごとの出現アイテム管理
             if (var_262 == 1) {
                 // No = 0 なので、拠点(ホテル、亀、)
                 dangeon_number = 0;
@@ -1831,6 +1831,7 @@ function func824(this: any) {
         return;
     });
 }
+// ダンジョン内での動作処理
 function func825(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(825);
@@ -1865,7 +1866,7 @@ function func825(this: any) {
         // もしアイテムの数が20でなければ
         if (var_224 != 20) {
             // アイテム追加関数
-            yield func062();
+            yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
         }
         yield func502();
         yield func504();
@@ -1989,7 +1990,7 @@ function func827(this: any) {
         // アイテム数が20でなければ
         if (var_224 != 20) {
             // アイテム追加関数
-            yield func062();
+            yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
         }
         yield func502();
         yield func504();
@@ -2088,7 +2089,7 @@ function func829(this: any) {
         var_262 = 0;
         yield func111();
         yield func182();
-        yield func062();
+        yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
         yield func502();
         yield func504();
         yield func505();
@@ -2180,7 +2181,7 @@ function func830(this: any) {
         // アイテム数20でなければ
         if (var_224 != 20) {
             // アイテム数追加関数
-            yield func062();
+            yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
         }
         yield func502();
         yield func504();
@@ -2498,7 +2499,7 @@ function func834(this: any) {
         // アイテム数20でなければ
         if (var_224 != 20) {
             // アイテム数追加関数
-            yield func062();
+            yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
         }
         yield func504();
         yield func505();
@@ -2775,7 +2776,7 @@ function func836(this: any) {
         var_262 = 0;
         yield func111();
         yield func182();
-        yield func062();
+        yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
         yield func502();
         yield func504();
         yield func505();
@@ -2978,7 +2979,7 @@ function func838(this: any) {
         return;
     });
 }
-
+// ダンジョン内でメニュー画面を開く処理？？
 function func839(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(839);
@@ -3131,7 +3132,7 @@ function func839(this: any) {
                 if (var_3198 == 1) {
                     var_3198 = 0;
                     var_548 = 0;
-                    yield func825();
+                    yield func825(); // ダンジョン内での動作処理
                     return;
                 }
                 if (var_3199 == 1) {
@@ -3751,6 +3752,8 @@ function func839(this: any) {
         return;
     });
 }
+
+
 function func840(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(840);

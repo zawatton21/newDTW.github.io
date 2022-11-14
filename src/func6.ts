@@ -11757,7 +11757,7 @@ function func635(this: any) {
         }
         var_2926 = 1;
         var_2927 = 0;
-        if (var_270 == 135) {
+        if (sympathy_id == 135) {
             var_341 = 1;
         }
         if (var_156[105] == 0) {
@@ -13036,7 +13036,7 @@ function func636(this: any) {
                 return;
             }
         }
-        if (var_270 == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0) {
+        if (sympathy_id == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0 && var_128 == 0 && var_178 == 0) {
@@ -13108,7 +13108,7 @@ function func637(this: any) {
                 return;
             }
         }
-        if (var_270 == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
+        if (sympathy_id == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
@@ -15485,7 +15485,7 @@ function func651(this: any) {
                 return;
             }
         }
-        if (var_270 == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
+        if (sympathy_id == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
@@ -16120,7 +16120,7 @@ function func654(this: any) {
             if (var_127 != 0 || var_132 != 0) {
                 var_3033 = "何者か";
             }
-            if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
+            if (var_119 == 0 && sympathy_id != 166 && var_83[var_673].Var30 != 0) {
                 var_3033 = "何者か";
             }
             enemy_list = var_3030;
@@ -16201,7 +16201,7 @@ function func654(this: any) {
             if (var_127 != 0 || var_132 != 0) {
                 enemy_name = "何者か";
             }
-            if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
+            if (var_119 == 0 && sympathy_id != 166 && var_83[var_673].Var30 != 0) {
                 enemy_name = "何者か";
             }
             comments_row1 = "";
@@ -16404,7 +16404,7 @@ function func654(this: any) {
         if (var_127 != 0 || var_132 != 0) {
             enemy_name = "何者か";
         }
-        if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
+        if (var_119 == 0 && sympathy_id != 166 && var_83[var_673].Var30 != 0) {
             enemy_name = "何者か";
         }
         comments_row1 = "";
@@ -16509,7 +16509,7 @@ function func655(this: any) {
         if (var_127 != 0 || var_132 != 0) {
             var_2861 = "何者か";
         }
-        if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+        if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
             var_2861 = "何者か";
         }
         var_1637 = 0;
@@ -16523,7 +16523,7 @@ function func655(this: any) {
         if (var_127 != 0 || var_132 != 0) {
             var_3040 = "何者か";
         }
-        if (var_119 == 0 && var_270 != 166 && var_83[var_2819].Var30 != 0) {
+        if (var_119 == 0 && sympathy_id != 166 && var_83[var_2819].Var30 != 0) {
             var_3040 = "何者か";
         }
         var_3041 = rnd(8);
@@ -19911,7 +19911,7 @@ function func661(this: any) {
         if (var_138 == 1) {
             var_209 = Math.floor((var_209 + var_209 + var_209) / 2);
         }
-        if (var_270 == 101 || var_270 == 109) {
+        if (sympathy_id == 101 || sympathy_id == 109) {
             var_209 = Math.floor((var_209 + var_209 + var_209) / 2);
         }
         if (var_83[var_314].Var13 >= 1 && var_83[var_314].Var13 != 99) {
@@ -20791,6 +20791,7 @@ function func672(this: any) {
         yield func673();
     });
 }
+
 function func673(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(673);
@@ -20841,6 +20842,7 @@ function func673(this: any) {
         return;
     });
 }
+
 function func674(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(674);

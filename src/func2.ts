@@ -2643,7 +2643,7 @@ function func229(this: any) {
         dangeon3_floor = var_704[165];
         var_387 = var_704[166];
         var_150 = var_704[167];
-        var_270 = var_704[168];
+        sympathy_id = var_704[168];
         var_151 = var_704[169];
         var_152 = var_704[170];
         var_154 = var_704[171];
@@ -2980,7 +2980,7 @@ function func231(this: any) {
         var_704[165] = dangeon3_floor;
         var_704[166] = var_387;
         var_704[167] = var_150;
-        var_704[168] = var_270;
+        var_704[168] = sympathy_id;
         var_704[169] = var_151;
         var_704[170] = var_152;
         var_704[171] = var_154;
@@ -3326,7 +3326,7 @@ function func233(this: any) {
         var_148 = 0;
         var_149 = 0;
         var_150 = 0;
-        var_270 = 0;
+        sympathy_id = 0;
         var_151 = 0;
         var_152 = 0;
         var_154 = 0;
@@ -3656,7 +3656,7 @@ function func235(this: any) {
         dangeon3_floor = 0;
         var_387 = 0;
         var_150 = 0;
-        var_270 = 0;
+        sympathy_id = 0;
         var_151 = 0;
         var_152 = 0;
         var_154 = 0;

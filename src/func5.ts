@@ -582,19 +582,23 @@ function func505(this: any) {
     });
 }
 
-
+// discの発動をした際に、修正値の減少させる(0の時はdisc消滅させる)関数
 function func506(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(506);
         var_2254 = 0;
+        // 装備discの場合
         if (item_list >= 100 && item_list < 400) {
+            
             if (var_220 == 0 && var_234 == 0) {
                 var_570 = var_233[var_225].Var13;
                 item_list = var_233[var_225].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_2255 = item_name;
+                // 修正値が無い場合は、発動をした時に発動したdiscを消去
                 if (var_233[var_225].Var4 == 0 || var_233[var_225].Var14 == 0) {
-                    if (var_233[var_225].Var11 == 1) {
+                    
+                    if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         item_list = var_233[var_225].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_106 = 1;
@@ -605,9 +609,11 @@ function func506(this: any) {
                     var_2254 = 1;
                     return;
                 }
+                // 修正値が1以上の際は、発動をした時に1引く
                 if (var_233[var_225].Var4 >= 1) {
                     var_233[var_225].Var4 = var_233[var_225].Var4 - 1;
-                    if (var_233[var_225].Var11 == 1) {
+                    
+                    if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
                     }
@@ -626,16 +632,22 @@ function func506(this: any) {
             }
             if (var_220 == 1) {
                 var_570 = var_486[var_682][var_225][13];
+                
                 item_list = var_486[var_682][var_225][0];
+                
                 yield func492(); // アイテムリスト呼び出し
+                
                 var_2255 = item_name;
+
                 if (var_486[var_682][var_225][4] == 0 || var_486[var_682][var_225][14] == 0) {
-                    if (var_486[var_682][var_225][11] == 1) {
+                    
+                    if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                         item_list = var_486[var_682][var_225][0];
                         yield func492(); // アイテムリスト呼び出し
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
+
                     var_1876 = var_2256;
                     yield func433(); // アイテム配列の "数" 増減？関数
                     var_2254 = 1;
@@ -644,10 +656,12 @@ function func506(this: any) {
                 }
                 if (var_486[var_682][var_225][4] >= 1) {
                     var_486[var_682][var_225][4] = var_486[var_682][var_225][4] - 1;
-                    if (var_486[var_682][var_225][11] == 1) {
+
+                    if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
                     }
+                    
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     return;
                 }
@@ -658,7 +672,8 @@ function func506(this: any) {
                 yield func492(); // アイテムリスト呼び出し
                 var_2255 = item_name;
                 if (var_78[var_321].Var4 == 0 || var_78[var_321].Var14 == 0) {
-                    if (var_78[var_321].Var11 == 1) {
+
+                    if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                         item_list = var_78[var_321].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_106 = 1;
@@ -671,7 +686,8 @@ function func506(this: any) {
                 }
                 if (var_78[var_321].Var4 >= 1) {
                     var_78[var_321].Var4 = var_78[var_321].Var4 - 1;
-                    if (var_78[var_321].Var11 == 1) {
+
+                    if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
                     }
@@ -680,24 +696,27 @@ function func506(this: any) {
                 }
             }
         }
+        // 射撃discの場合
         if (item_list >= 400 && item_list < 500) {
             if (var_220 == 0 && var_234 == 0) {
                 if (var_233[var_225].Var3 <= 1) {
                     item_list = var_233[var_225].Var0;
                     yield func492(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (var_233[var_225].Var11 == 1) {
+
+                    if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
                     yield func430();
                     yield func433(); // アイテム配列の "数" 増減？関数
-                    yield func507(); // スタンドパワーが力尽きて消滅した時の関数
+                    yield func507(); // スタンドパワーが力尽きて消滅した時の表示
                     return;
                 }
                 if (var_233[var_225].Var3 >= 2) {
                     var_233[var_225].Var3 = var_233[var_225].Var3 - 1;
-                    if (var_233[var_225].Var11 == 1) {
+
+                    if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
                     }
@@ -709,19 +728,21 @@ function func506(this: any) {
                     item_list = var_486[var_682][var_225][0];
                     yield func492(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (var_486[var_682][var_225][11] == 1) {
+
+                    if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
                     var_1876 = var_2256;
                     yield func433(); // アイテム配列の "数" 増減？関数
-                    yield func507(); // スタンドパワーが力尽きて消滅した時の関数
+                    yield func507(); // スタンドパワーが力尽きて消滅した時の表示
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     return;
                 }
                 if (var_486[var_682][var_225][3] >= 2) {
                     var_486[var_682][var_225][3] = var_486[var_682][var_225][3] - 1;
-                    if (var_486[var_682][var_225][11] == 1) {
+
+                    if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
                     }
@@ -734,18 +755,20 @@ function func506(this: any) {
                     item_list = var_78[var_321].Var0;
                     yield func492(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (var_78[var_321].Var11 == 1) {
+
+                    if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
                     yield func479();
-                    yield func507(); // スタンドパワーが力尽きて消滅した時の関数
+                    yield func507(); // スタンドパワーが力尽きて消滅した時の表示
                     var_234 = 0;
                     return;
                 }
                 if (var_78[var_321].Var3 >= 2) {
                     var_78[var_321].Var3 = var_78[var_321].Var3 - 1;
-                    if (var_78[var_321].Var11 == 1) {
+
+                    if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
                     }
@@ -758,7 +781,8 @@ function func506(this: any) {
     });
 }
 
-// スタンドパワーが力尽きて消滅した時の関数
+
+// スタンドパワーが力尽きて消滅した時の表示
 function func507(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(507);
@@ -786,7 +810,9 @@ function func507(this: any) {
         return;
     });
 }
-// スタンドパワーが力尽きて消滅した時の関数
+
+
+// スタンドパワーが力尽きて消滅した時の表示2
 function func508(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(508);
@@ -814,6 +840,8 @@ function func508(this: any) {
         return;
     });
 }
+
+// discの発動をしようとして、発動できない場所の時の動作処理
 function func509(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(509);
@@ -837,6 +865,8 @@ function func509(this: any) {
         return;
     });
 }
+
+// 発動しようとした際、discが呪われていた時の動作処理
 function func510(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(510);
@@ -857,7 +887,6 @@ function func510(this: any) {
         yield func047();
         var_747 = 1;
         var_1212 = 1;
-
         DSPLAY(audio_id = 127);
         var_389 = 2;
         var_1498 = 1;
@@ -879,45 +908,52 @@ function func510(this: any) {
         return;
     });
 }
-// discの発動効果 (スタンド能力)
+
+// 各discごとの発動動作処理 (スタンド能力)
 function func511(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(511);
         var_2257 = 0;
         if (var_220 == 0 && var_234 == 0) {
-            var_2258 = var_233[var_225].Var0;
-            if (var_862[var_2258][0] == 1 && var_233[var_225].Var12 == 1 && var_233[var_225].Var14 == 1) {
+            activated_disc_id = var_233[var_225].Var0;
+            if (var_862[activated_disc_id][0] == 1 && var_233[var_225].Var12 == 1 && var_233[var_225].Var14 == 1) {
                 var_2257 = 1;
             }
         }
         if (var_220 == 1) {
             var_2256 = var_1876;
-            var_2258 = var_486[var_682][var_225][0];
-            if (var_862[var_2258][0] == 1 && var_486[var_682][var_225][12] == 1 && var_486[var_682][var_225][14] == 1) {
+            activated_disc_id = var_486[var_682][var_225][0];
+            if (var_862[activated_disc_id][0] == 1 && var_486[var_682][var_225][12] == 1 && var_486[var_682][var_225][14] == 1) {
                 var_2257 = 1;
             }
         }
         if (var_234 == 1) {
-            var_2258 = var_78[var_321].Var0;
-            if (var_862[var_2258][0] == 1 && var_78[var_321].Var12 == 1 && var_78[var_321].Var14 == 1) {
+            activated_disc_id = var_78[var_321].Var0;
+            if (var_862[activated_disc_id][0] == 1 && var_78[var_321].Var12 == 1 && var_78[var_321].Var14 == 1) {
                 var_2257 = 1;
             }
         }
         if (var_262 == 1) {
-            yield func509();
+            yield func509(); // discの発動をしようとして、発動できない場所の時の動作処理
             return;
         }
         if (var_2257 == 1) {
-            yield func510();
+            yield func510(); // 発動しようとした際、discが呪われていた時の動作処理
             return;
         }
-        if (var_862[var_2258][0] == 0 && var_2258 >= 100 && var_2258 < 400) {
-            item_list = var_2258;
+        if (var_862[activated_disc_id][0] == 0 && activated_disc_id >= 100 && activated_disc_id < 400) {
+            
+            item_list = activated_disc_id;
+            
             yield func492(); // アイテムリスト呼び出し
-            var_2259 = item_name;
-            var_862[var_2258][0] = 1;
+            
+            unidentified_disc_name = item_name;
+
+            var_862[activated_disc_id][0] = 1;
+
             yield func492(); // アイテムリスト呼び出し
-            var_2260 = item_name;
+            identified_disc_name = item_name;
+
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -925,8 +961,8 @@ function func511(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            comments_row1 = "なんと" + var_2259 + "は";
-            comments_row2 = "" + var_2260 + "だった！";
+            comments_row1 = "なんと" + unidentified_disc_name + "は";
+            comments_row2 = "" + identified_disc_name + "だった！";
             var_198 = 1;
             var_300 = 0;
             var_25_x = var_25[1];
@@ -937,8 +973,9 @@ function func511(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
         }
-        if (var_2258 == 100) {
-            yield func506();
+        // No = 100 スタープラチナの発動処理
+        if (activated_disc_id == 100) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_155 = 1;
             comments_row1 = "";
             comments_row2 = "";
@@ -955,7 +992,6 @@ function func511(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-    
             DSPLAY(audio_id = 182);
             var_1299 = 8;
             var_271 = 1;
@@ -971,14 +1007,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 103) {
-            yield func506();
+        // No = 103 エコーズAct3の発動処理
+        if (activated_disc_id == 103) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -1071,14 +1108,15 @@ function func511(this: any) {
             var_357 = var_2261;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 114) {
-            yield func506();
+         // No = 114 ホワイトスネイクの発動処理
+        if (activated_disc_id == 114) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -1186,14 +1224,15 @@ function func511(this: any) {
             var_357 = var_2261;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 307) {
-            yield func506();
+        // No = 307 不明disc の発動処理 
+        if (activated_disc_id == 307) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -1276,14 +1315,15 @@ function func511(this: any) {
             var_357 = var_2261;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 207) {
-            yield func506();
+        // No = 207 グレイトフル・デッドの発動処理 
+        if (activated_disc_id == 207) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -1472,14 +1512,15 @@ function func511(this: any) {
             var_199 = var_1940;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 122) {
-            yield func506();
+        // No = 122 アヌビス神の発動処理 
+        if (activated_disc_id == 122) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_2267 = dim(10);
             var_143 = 1;
             yield func094();
@@ -1508,14 +1549,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 113) {
-            yield func506();
+        // No = 113 クラッシュの発動処理
+        if (activated_disc_id == 113) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -1596,14 +1638,15 @@ function func511(this: any) {
             var_357 = var_2261;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 105) {
-            yield func506();
+        // No = 105 チリペッパーの発動処理
+        if (activated_disc_id == 105) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             gsel(19);
             color(255, 255, 255);
 
@@ -1838,19 +1881,18 @@ function func511(this: any) {
             var_114 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        // ハーミットパープルの発動能力
-        if (var_2258 == 116) {
-            yield func506();
+        // No = 116 ハーミットパープルの発動能力
+        if (activated_disc_id == 116) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_1940 = var_199;
             var_199 = 2;
             var_1258 = 3;
-    
             DSPLAY(audio_id = 127);
             var_271 = 1;
             var_1480 = 1;
@@ -1949,15 +1991,15 @@ function func511(this: any) {
             var_199 = var_1940;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        // デス13の発動能力
-        if (var_2258 == 107) {
-            yield func506();
+        // No = 107 デス13の発動能力
+        if (activated_disc_id == 107) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -2125,14 +2167,15 @@ function func511(this: any) {
             var_199 = var_1940;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 115) {
-            yield func506();
+        // No = 115 Gエクスペリエンスの発動処理
+        if (activated_disc_id == 115) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -2188,15 +2231,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        // 
-        if (var_2258 == 109) {
-            yield func506();
+        // No = 109 マジシャンズレッドの発動処理
+        if (activated_disc_id == 109) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -2335,14 +2378,15 @@ function func511(this: any) {
             var_529 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 301) {
-            yield func506();
+        // No = 301 ハーヴェストの発動処理
+        if (activated_disc_id == 301) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -2486,13 +2530,14 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 106) {
+        // No = 106 クレイジーDの発動処理
+        if (activated_disc_id == 106) {
             if (var_220 == 0 && var_234 == 0) {
                 var_570 = var_233[var_225].Var13;
             }
@@ -2536,8 +2581,9 @@ function func511(this: any) {
             yield func461(); // 道具画面(メニュー画面/道具)呼び出し
             return;
         }
-        if (var_2258 == 300) {
-            yield func506();
+        // No = 300 パール・ジャムの発動処理
+        if (activated_disc_id == 300) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -2591,14 +2637,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 108) {
-            yield func506();
+        // No = 108 スティッキー・フィンガーズの発動処理
+        if (activated_disc_id == 108) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -2645,7 +2692,7 @@ function func511(this: any) {
             var_471 = 2;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -2705,8 +2752,9 @@ function func511(this: any) {
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 104) {
-            yield func506();
+        // No = 104 ザ・ハンドの発動処理
+        if (activated_disc_id == 104) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -2933,7 +2981,7 @@ function func511(this: any) {
             var_357 = var_2261;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             if (var_72[var_66][var_67] == 0 && var_85 == 0 && var_163 == 0) {
                 yield func722();
@@ -2942,7 +2990,8 @@ function func511(this: any) {
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 101) {
+        // No = 101 シルバーチャリオッツの発動処理
+        if (activated_disc_id == 101) {
             if (var_420 != 0) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -2997,7 +3046,7 @@ function func511(this: any) {
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
-            yield func506();
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             for (let cnt2 = 0; cnt2 < 7; ++cnt2) {
                 var_2299 = 1;
                 var_1845 = 1;
@@ -3100,13 +3149,14 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 319) {
+        // No = 319 ボーイⅡマンの発動処理
+        if (activated_disc_id == 319) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3146,8 +3196,8 @@ function func511(this: any) {
             return;
         }
         // 時止め能力 (ザ・ワールド & スタプラ・ザワールドの発動能力)
-        if (var_2258 == 111 || var_2258 == 398) {
-            yield func506();
+        if (activated_disc_id == 111 || activated_disc_id == 398) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_163 = 1;
             var_164 = 1;
             var_153 = 0;
@@ -3158,10 +3208,10 @@ function func511(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            if (var_2258 == 111) {
+            if (activated_disc_id == 111) {
                 comments_row1 = "「ザ・ワールド」！！";
             }
-            if (var_2258 == 398) {
+            if (activated_disc_id == 398) {
                 comments_row1 = "「スタープラチナ・ザ・ワールド」！！";
             }
             comments_row2 = "時よ止まれ！";
@@ -3191,13 +3241,14 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        if (var_2258 == 201) {
-            yield func506();
+        // No = 300 イエローテンパランスの発動処理
+        if (activated_disc_id == 201) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3247,14 +3298,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 310) {
-            yield func506();
+        // No = 310 エンプレスの発動処理
+        if (activated_disc_id == 310) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12])) {
                 yield func915();
                 return;
@@ -3285,13 +3337,14 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 403) {
+        // No = 403 セックス・ピストルズの発動処理
+        if (activated_disc_id == 403) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3328,8 +3381,9 @@ function func511(this: any) {
             yield func461(); // 道具画面(メニュー画面/道具)呼び出し
             return;
         }
-        if (var_2258 == 120) {
-            yield func506();
+        // No = 120 ストーンフリーの発動処理
+        if (activated_disc_id == 120) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3373,13 +3427,14 @@ function func511(this: any) {
             yield func047();
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 200) {
+        // No = 200 スーパーフライの発動処理
+        if (activated_disc_id == 200) {
             if (var_73[var_66][var_67] != 0) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -3402,7 +3457,7 @@ function func511(this: any) {
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
-            yield func506();
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3437,14 +3492,15 @@ function func511(this: any) {
             yield func047();
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 205) {
-            yield func506();
+        // No = 205 クラフトワークの発動処理
+        if (activated_disc_id == 205) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -3602,14 +3658,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 206) {
-            yield func506();
+        // No = 206 オアシスの発動処理
+        if (activated_disc_id == 206) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3731,14 +3788,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 304) {
-            yield func506();
+        // No = 304 ウェザーリポートの発動処理
+        if (activated_disc_id == 304) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -4097,14 +4155,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 102) {
-            yield func506();
+        // No = 102 キングクリムゾンの発動処理
+        if (activated_disc_id == 102) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -4155,14 +4214,15 @@ function func511(this: any) {
             var_124 = var_97;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 121) {
-            yield func506();
+        // No = 121 パープルヘイズの発動処理
+        if (activated_disc_id == 121) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -4377,14 +4437,15 @@ function func511(this: any) {
             var_2217 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 318) {
-            yield func506();
+        // No = 318 ジャンピングJフラッシュの発動処理
+        if (activated_disc_id == 318) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -4599,14 +4660,15 @@ function func511(this: any) {
             var_2217 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 117) {
-            yield func506();
+        // No = 117 ダークブルームーンの発動処理
+        if (activated_disc_id == 117) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -4869,14 +4931,15 @@ function func511(this: any) {
             var_2217 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 313) {
-            yield func506();
+        // No = 313 ハイウェイスターの発動処理
+        if (activated_disc_id == 313) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -5139,13 +5202,14 @@ function func511(this: any) {
             var_2217 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 308) {
+        // No = 308 エボニーデビルの発動処理
+        if (activated_disc_id == 308) {
             if (var_199 == 2) {
                 var_2102 = var_66;
                 var_2103 = var_67 + 1;
@@ -5228,7 +5292,7 @@ function func511(this: any) {
             var_271 = 0;
             var_1583 = 0;
             item_list = 308;
-            yield func506();
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -5250,14 +5314,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 203) {
-            yield func506();
+        // No = 203 ザ・フールの発動処理
+        if (activated_disc_id == 203) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -5425,13 +5490,14 @@ function func511(this: any) {
             yield func499();
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 112 || var_2258 == 394) {
+        // No = 112 キラークイーン、No = 394 キラータイガークイーンの発動処理
+        if (activated_disc_id == 112 || activated_disc_id == 394) {
             if (var_199 == 2) {
                 var_2102 = var_66;
                 var_2103 = var_67 + 1;
@@ -5513,8 +5579,8 @@ function func511(this: any) {
             }
             var_271 = 0;
             var_1583 = 0;
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -5536,14 +5602,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 204) {
-            yield func506();
+        // No = 204 シアハートアタックの発動処理
+        if (activated_disc_id == 204) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -5748,14 +5815,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 312) {
-            yield func506();
+        // No = 312 エアロスミスの発動処理
+        if (activated_disc_id == 312) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -5830,14 +5898,15 @@ function func511(this: any) {
             var_2217 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 316) {
-            yield func506();
+        // No = 316 サバイバーの発動処理
+        if (activated_disc_id == 316) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -6005,14 +6074,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 202) {
-            yield func506();
+        // No = 202 ホワイトアルバムの発動処理
+        if (activated_disc_id == 202) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -6188,14 +6258,15 @@ function func511(this: any) {
             var_529 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 395) {
-            yield func506();
+        // No = 395 バイツァ・ダストの発動処理
+        if (activated_disc_id == 395) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -6377,14 +6448,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 302) {
-            yield func506();
+        // No = 302 ハイウェイ・トゥ・ヘルの発動処理
+        if (activated_disc_id == 302) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_172 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -6643,14 +6715,15 @@ function func511(this: any) {
             var_2217 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 303) {
-            yield func506();
+        // No = 303 ドラゴンズ・ドリームの発動処理
+        if (activated_disc_id == 303) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6683,13 +6756,14 @@ function func511(this: any) {
             var_105 = 1;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 413) {
+        // No = 413 不明disc の発動処理
+        if (activated_disc_id == 413) {
             var_2109 = 1;
             var_1845 = 1;
             yield func556();
@@ -6719,7 +6793,7 @@ function func511(this: any) {
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
-            yield func506();
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_439 = var_673;
             var_83[var_439].Var11 = 1;
             var_83[var_439].Var5 = 2;
@@ -6736,8 +6810,9 @@ function func511(this: any) {
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 320) {
-            yield func506();
+        // No = 320 メタリカの発動処理
+        if (activated_disc_id == 320) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_131 = 1;
             comments_row1 = "";
             comments_row2 = "";
@@ -6759,14 +6834,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 305) {
-            yield func506();
+        // No = 305 シンデレラの発動処理
+        if (activated_disc_id == 305) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_1024 = 1;
             comments_row1 = "";
             comments_row2 = "";
@@ -6800,14 +6876,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 396) {
-            yield func506();
+        // No = 396 メイド・イン・ヘブンの発動処理
+        if (activated_disc_id == 396) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
     
             DSPLAY(audio_id = 154);
             comments_row1 = "";
@@ -6837,14 +6914,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 119) {
-            yield func506();
+        // No = 119 スパイス・ガールの発動処理
+        if (activated_disc_id == 119) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
     
             DSPLAY(audio_id = 152);
             comments_row1 = "";
@@ -6868,14 +6946,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 123) {
-            yield func506();
+        // No = 123 クリームの発動処理
+        if (activated_disc_id == 123) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_340 = 123;
             var_1264 = 0;
             var_1218 = 1;
@@ -7019,13 +7098,14 @@ function func511(this: any) {
             var_1218 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 124) {
+        // No = 124 ムーディー・ブルースの発動処理
+        if (activated_disc_id == 124) {
             if (var_407 == 2) {
                 var_2320 = 0;
     
@@ -7244,8 +7324,9 @@ function func511(this: any) {
             yield func461(); // 道具画面(メニュー画面/道具)呼び出し
             return;
         }
-        if (var_2258 == 311) {
-            yield func506();
+        // No = 311 チープトリックの発動処理
+        if (activated_disc_id == 311) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12]) && wallet >= 300) {
                 yield func921();
                 return;
@@ -7412,14 +7493,15 @@ function func511(this: any) {
             var_1321 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 397) {
-            yield func506();
+        // No = 397 ヘビー・ウェザーの発動処理
+        if (activated_disc_id == 397) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_2327 = 1;
             var_768 = 1;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
@@ -7449,17 +7531,18 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 314) {
-            yield func506();
+        // No = 314 ストレイキャットの発動処理
+        if (activated_disc_id == 314) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
@@ -7487,7 +7570,8 @@ function func511(this: any) {
             yield func647(); // 射撃攻撃動作処理
             return;
         }
-        if (var_2258 == 405 || var_2258 == 406 || var_2258 == 408 || var_2258 == 409 || var_2258 == 410 || var_2258 == 404 || var_2258 == 400 || var_2258 == 317 || var_2258 == 414 || var_2258 == 309) {
+        // No = 405 エコーズAct2、No = 406 エコーズAct1、No = 408 マン・イン・ザ・ミラー、No = 409 ラバーズ、No = 410 タワーオブグレー、No = 404 ホルス神、No = 400 ハイエロファントグリーン、No = 317 キッス、No = 414 不明disc、No = 309 不明disc の発動処理
+        if (activated_disc_id == 405 || activated_disc_id == 406 || activated_disc_id == 408 || activated_disc_id == 409 || activated_disc_id == 410 || activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 317 || activated_disc_id == 414 || activated_disc_id == 309) {
             if (var_73[var_66][var_67] != 0 || var_80[var_66][var_67] != 0 || var_77[var_66][var_67] != 0) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -7496,19 +7580,19 @@ function func511(this: any) {
                 comments_row2a = "";
                 var_298 = "";
                 var_299 = 0;
-                if (var_2258 == 409 || var_2258 == 406 || var_2258 == 410 || var_2258 == 309) {
+                if (activated_disc_id == 409 || activated_disc_id == 406 || activated_disc_id == 410 || activated_disc_id == 309) {
                     comments_row1 = "ここには潜ませられない。";
                     comments_row2 = "";
                 }
-                if (var_2258 == 404 || var_2258 == 400 || var_2258 == 405 || var_2258 == 408) {
+                if (activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 405 || activated_disc_id == 408) {
                     comments_row1 = "ここには仕掛けられない。";
                     comments_row2 = "";
                 }
-                if (var_2258 == 317) {
+                if (activated_disc_id == 317) {
                     comments_row1 = "ここには貼れない。";
                     comments_row2 = "";
                 }
-                if (var_2258 == 414) {
+                if (activated_disc_id == 414) {
                     comments_row1 = "ここには撃てない。";
                     comments_row2 = "";
                 }
@@ -7524,7 +7608,7 @@ function func511(this: any) {
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
-            if (var_2258 == 414) {
+            if (activated_disc_id == 414) {
                 var_271 = 1;
                 var_1496 = 1;
                 for (let cnt3 = 0; cnt3 < 25; ++cnt3) {
@@ -7542,34 +7626,34 @@ function func511(this: any) {
             var_337 = var_337 + 1;
             var_2330 = var_337;
             var_80[var_66][var_67] = var_2330;
-            if (var_2258 == 309) {
+            if (activated_disc_id == 309) {
                 var_81[var_2330][0] = 78;
             }
-            if (var_2258 == 410) {
+            if (activated_disc_id == 410) {
                 var_81[var_2330][0] = 89;
             }
-            if (var_2258 == 406) {
+            if (activated_disc_id == 406) {
                 var_81[var_2330][0] = 87;
             }
-            if (var_2258 == 408) {
+            if (activated_disc_id == 408) {
                 var_81[var_2330][0] = 88;
             }
-            if (var_2258 == 405) {
+            if (activated_disc_id == 405) {
                 var_81[var_2330][0] = 90;
             }
-            if (var_2258 == 409) {
+            if (activated_disc_id == 409) {
                 var_81[var_2330][0] = 91;
             }
-            if (var_2258 == 404) {
+            if (activated_disc_id == 404) {
                 var_81[var_2330][0] = 93;
             }
-            if (var_2258 == 400) {
+            if (activated_disc_id == 400) {
                 var_81[var_2330][0] = 92;
             }
-            if (var_2258 == 317) {
+            if (activated_disc_id == 317) {
                 var_81[var_2330][0] = 81;
             }
-            if (var_2258 == 414) {
+            if (activated_disc_id == 414) {
                 var_81[var_2330][0] = 79;
             }
             var_81[var_2330][1] = var_66;
@@ -7583,47 +7667,47 @@ function func511(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            if (var_2258 == 309) {
+            if (activated_disc_id == 309) {
                 comments_row1 = "地面にｿﾌﾄ･ﾏｼｰﾝを潜ませた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 406) {
+            if (activated_disc_id == 406) {
                 comments_row1 = "地面に文字を貼り付けた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 408) {
+            if (activated_disc_id == 408) {
                 comments_row1 = "足元に鏡を仕掛けた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 405) {
+            if (activated_disc_id == 405) {
                 comments_row1 = "地面に文字を貼り付けた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 409) {
+            if (activated_disc_id == 409) {
                 comments_row1 = "こっそりラバーズを潜ませた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 404) {
+            if (activated_disc_id == 404) {
                 comments_row1 = "足元に氷の罠を仕掛けた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 410) {
+            if (activated_disc_id == 410) {
                 comments_row1 = "ﾊｲｳｪｲ･ｽﾀｰを潜ませた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 400 || var_2258 == 407) {
+            if (activated_disc_id == 400 || activated_disc_id == 407) {
                 comments_row1 = "法王の結界を仕掛けた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 317) {
+            if (activated_disc_id == 317) {
                 comments_row1 = "シールを貼った。";
                 comments_row2 = "";
             }
-            if (var_2258 == 414) {
+            if (activated_disc_id == 414) {
                 comments_row1 = "地面に穴を開けた。";
                 comments_row2 = "";
             }
-            if (var_2258 != 414) {
+            if (activated_disc_id != 414) {
         
                 DSPLAY(audio_id = 165);
             }
@@ -7636,7 +7720,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            if (var_2258 == 414) {
+            if (activated_disc_id == 414) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
@@ -7644,17 +7728,18 @@ function func511(this: any) {
                 var_1220 = 0;
                 var_1197 = 0;
             }
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 118 || var_2258 == 407) {
+        // No = 118 ダイバーダウン、No = 407 ハイエロファントエメラルドの発動処理
+        if (activated_disc_id == 118 || activated_disc_id == 407) {
             var_2331 = 0;
             var_2332 = var_66;
             var_2333 = var_67;
@@ -7674,10 +7759,10 @@ function func511(this: any) {
             if (var_2337 >= var_34) {
                 var_2337 = var_34;
             }
-            if (var_2258 == 118) {
+            if (activated_disc_id == 118) {
                 var_2338 = 94;
             }
-            if (var_2258 == 407) {
+            if (activated_disc_id == 407) {
                 var_2338 = 92;
             }
             if (var_71[var_2332][var_2333] != 0 && var_71[var_2332][var_2333] != 13 && var_73[var_2332][var_2333] == 0 && var_77[var_2332][var_2333] == 0 && var_80[var_2332][var_2333] == 0) {
@@ -7794,11 +7879,11 @@ function func511(this: any) {
                 comments_row2a = "";
                 var_298 = "";
                 var_299 = 0;
-                if (var_2258 == 118) {
+                if (activated_disc_id == 118) {
                     comments_row1 = "この辺りには潜ませられない。";
                     comments_row2 = "";
                 }
-                if (var_2258 == 407) {
+                if (activated_disc_id == 407) {
                     comments_row1 = "この辺りには仕掛けられない。";
                     comments_row2 = "";
                 }
@@ -7823,11 +7908,11 @@ function func511(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            if (var_2258 == 118) {
+            if (activated_disc_id == 118) {
                 comments_row1 = "地面にダイバーダウンを潜ませた。";
                 comments_row2 = "";
             }
-            if (var_2258 == 407) {
+            if (activated_disc_id == 407) {
                 comments_row1 = "法王の結界を仕掛けた。";
                 comments_row2 = "";
             }
@@ -7840,17 +7925,18 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 401) {
+        // No = 401 フー・ファイターズの発動処理
+        if (activated_disc_id == 401) {
             var_2341 = 0;
             var_211 = var_211 + 20;
             if (var_120 == 1 || var_174 == 1) {
@@ -7891,13 +7977,14 @@ function func511(this: any) {
             }
             var_271 = 0;
             var_1297 = 0;
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 402) {
+        // No = 402 エンペラーの発動処理
+        if (activated_disc_id == 402) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -7915,13 +8002,14 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_2342 = 1;
             yield func647(); // 射撃攻撃動作処理
             return;
         }
-        if (var_2258 == 411) {
+        // No = 411 ヘブンズドアーの発動処理
+        if (activated_disc_id == 411) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -7995,13 +8083,14 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 412) {
+        // No = 412 タスクの発動処理
+        if (activated_disc_id == 412) {
             yield func094();
             comments_row1 = "";
             comments_row2 = "";
@@ -8135,14 +8224,15 @@ function func511(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_357 = var_2261;
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 306) {
-            yield func506();
+        // No = 306 マンハッタン・トランスファーの発動処理
+        if (activated_disc_id == 306) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -8212,14 +8302,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 315) {
-            yield func506();
+        // No = 315 エピタフの発動処理
+        if (activated_disc_id == 315) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -8281,14 +8372,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 393) {
-            yield func506();
+        // No = 393 ボヘミアンラプソディの発動処理
+        if (activated_disc_id == 393) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_2352 = rnd(6);
             if (var_97 >= 50) {
                 var_2352 = 10;
@@ -8346,7 +8438,7 @@ function func511(this: any) {
                 }
                 if (var_2254 == 1) {
                     var_2254 = 0;
-                    yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                    yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
                 }
                 var_217 = 1;
                 yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -8386,7 +8478,7 @@ function func511(this: any) {
                 var_2355 = 0;
                 if (var_2254 == 1) {
                     var_2254 = 0;
-                    yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                    yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
                 }
                 var_217 = 1;
                 yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -8443,14 +8535,15 @@ function func511(this: any) {
             }
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        if (var_2258 == 399) {
-            yield func506();
+        // No = 399 Gエクスペリエンスレクイエムの発動処理
+        if (activated_disc_id == 399) {
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
                 var_1284 = 11;
             }
@@ -8500,7 +8593,7 @@ function func511(this: any) {
             var_271 = 0;
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
@@ -8569,6 +8662,7 @@ function func511(this: any) {
         return;
     });
 }
+
 function func512(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(512);
@@ -8656,7 +8750,8 @@ function func512(this: any) {
         return;
     });
 }
-// 射撃discヘブンズドアーの発動効果
+
+// 射撃discヘブンズドアーの発動時メッセージ
 function func513(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(513);
@@ -8665,8 +8760,8 @@ function func513(this: any) {
             return;
         }
         if (var_1949 == 0) {
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_357 = var_2261;
         }
         var_1254 = 0;
@@ -9073,7 +9168,7 @@ function func522(this: any) {
         }
         yield func340(); // キー入力による選択処理
         var_198 = 0;
-        var_1240 = 2;
+        var_1240 = 2; 
         var_227 = 1;
         var_228 = 45;
         var_225 = 1;
@@ -9830,6 +9925,8 @@ function func525(this: any) {
         return;
     });
 }
+
+// ボーイⅡマンの発動能力
 function func526(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(526);
@@ -9880,10 +9977,10 @@ function func526(this: any) {
             var_234 = 1;
         }
         item_list = 310;
-        yield func506();
+        yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (var_2254 == 1) {
             var_2254 = 0;
-            yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+            yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         var_217 = 1;
         var_1667 = 0;
@@ -9893,6 +9990,8 @@ function func526(this: any) {
         return;
     });
 }
+
+
 function func527(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(527);
@@ -10280,7 +10379,7 @@ function func530(this: any) {
         dbgprt(530);
         var_2393 = 0;
         if (var_357 == 0 && var_358 == 0 && var_215 == 0) {
-            var_1946 = "スタンドを身につけていなかった…";
+            item_message1 = "スタンドを身につけていなかった…";
             return;
         }
         if (var_357 != 0) {
@@ -10294,8 +10393,8 @@ function func530(this: any) {
                 yield func492(); // アイテムリスト呼び出し
                 var_2395 = item_name;
                 var_233[var_553].Var5 = var_233[var_553].Var5 + 1;
-                var_1946 = "装備中のDISCの空き容量が増えた！";
-                var_1947 = "";
+                item_message1 = "装備中のDISCの空き容量が増えた！";
+                item_message2 = "";
             }
         }
         if (var_358 != 0) {
@@ -10309,8 +10408,8 @@ function func530(this: any) {
                 yield func492(); // アイテムリスト呼び出し
                 var_2395 = item_name;
                 var_233[var_554].Var5 = var_233[var_554].Var5 + 1;
-                var_1946 = "装備中のDISCの空き容量が増えた！";
-                var_1947 = "";
+                item_message1 = "装備中のDISCの空き容量が増えた！";
+                item_message2 = "";
             }
         }
         if (var_215 != 0) {
@@ -10324,13 +10423,13 @@ function func530(this: any) {
                 yield func492(); // アイテムリスト呼び出し
                 var_2395 = item_name;
                 var_233[var_555].Var5 = var_233[var_555].Var5 + 1;
-                var_1946 = "装備中のDISCの空き容量が増えた！";
-                var_1947 = "";
+                item_message1 = "装備中のDISCの空き容量が増えた！";
+                item_message2 = "";
             }
         }
         if (var_2393 == 3) {
-            var_1946 = "これ以上空き容量を増やせなかった";
-            var_1947 = "";
+            item_message1 = "これ以上空き容量を増やせなかった";
+            item_message2 = "";
         }
         return;
     });
@@ -10610,7 +10709,7 @@ function func532(this: any) {
         return;
     });
 }
-// ムーディーブルースの発動能力?
+// ムーディーブルースの発動によってアイテムを倉庫に送る動作処理
 function func533(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(533);
@@ -10926,6 +11025,7 @@ function func533(this: any) {
         yield func340(); // キー入力による選択処理
         var_198 = 0;
         var_300 = 0;
+
         if (var_2401 == 1) {
             var_1457 = var_66;
             var_1458 = var_67;
@@ -10950,11 +11050,11 @@ function func533(this: any) {
             if (var_2301 == 2) {
                 var_234 = 1;
             }
-            item_list = var_2258;
-            yield func506();
+            item_list = activated_disc_id;
+            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_2254 == 1) {
                 var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の関数
+                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
         }
         var_217 = 1;
@@ -10962,6 +11062,7 @@ function func533(this: any) {
         return;
     });
 }
+
 function func534(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(534);
@@ -12599,7 +12700,7 @@ function func541(this: any) {
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
-        if (var_270 == 139 && var_545 == 0 && var_163 == 0) {
+        if (sympathy_id == 139 && var_545 == 0 && var_163 == 0) {
             comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「キング・クリムゾン！」";
             comments_row2 = "";
             yield func047();
@@ -20768,10 +20869,10 @@ function func567(this: any) {
                 return;
             }
             if (var_83[var_1641].Var30 >= 1 && var_83[var_1641].Var8 == 0) {
-                if (var_83[var_1641].Var0 != 85 && var_119 == 0 && var_270 != 166) {
+                if (var_83[var_1641].Var0 != 85 && var_119 == 0 && sympathy_id != 166) {
                     return;
                 }
-                if (var_83[var_1641].Var0 == 85 && var_140 == 0 && var_119 == 0 && var_156[320] == 0 && var_270 != 166) {
+                if (var_83[var_1641].Var0 == 85 && var_140 == 0 && var_119 == 0 && var_156[320] == 0 && sympathy_id != 166) {
                     return;
                 }
             }

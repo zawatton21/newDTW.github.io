@@ -687,7 +687,7 @@ function func705(this: any) {
             if (var_127 != 0 || var_132 != 0) {
                 enemy_name = "何者か";
             }
-            if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+            if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
                 enemy_name = "何者か";
             }
             if (var_2821 == 0) {
@@ -881,7 +881,7 @@ function func705(this: any) {
                 if (var_127 != 0 || var_132 != 0) {
                     enemy_name = "何者か";
                 }
-                if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+                if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
                     enemy_name = "何者か";
                 }
                 comments_row1a = "" + enemy_name + "をやっつけた";
@@ -929,7 +929,7 @@ function func705(this: any) {
                 if (var_127 != 0 || var_132 != 0) {
                     enemy_name = "何者か";
                 }
-                if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+                if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
                     enemy_name = "何者か";
                 }
                 comments_row1a = "" + var_3108 + "は";
@@ -4826,7 +4826,7 @@ function func775(this: any) {
         yield func776();
     });
 }
-
+// ヤバいものへアイテムを入れた時の動作処理
 function func776(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(776);
@@ -4918,6 +4918,7 @@ function func776(this: any) {
         return;
     });
 }
+// ヤバいものからアイテムを取り出す時の動作処理
 function func777(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(777);
