@@ -983,7 +983,7 @@ function func705() {
                     if (var_127 != 0 || var_132 != 0) {
                         enemy_name = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
                         enemy_name = "何者か";
                     }
                     if (var_2821 == 0) {
@@ -1244,7 +1244,7 @@ function func705() {
                     if (var_127 != 0 || var_132 != 0) {
                         enemy_name = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
                         enemy_name = "何者か";
                     }
                     comments_row1a = "" + enemy_name + "をやっつけた";
@@ -1315,7 +1315,7 @@ function func705() {
                     if (var_127 != 0 || var_132 != 0) {
                         enemy_name = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
                         enemy_name = "何者か";
                     }
                     comments_row1a = "" + var_3108 + "は";
@@ -1859,7 +1859,7 @@ function func707() {
                     if (!(var_72[var_447][var_449] == 1 && var_77[var_447][var_449] > 0)) return [3 /*break*/, 9];
                     var_3115 = var_77[var_447][var_449];
                     if (!(var_78[var_3115].Var11 == 0)) return [3 /*break*/, 4];
-                    item_list = var_78[var_3115].Var0;
+                    belongings_item_list = var_78[var_3115].Var0;
                     return [4 /*yield*/, func492()];
                 case 3:
                     _a.sent(); // アイテムリスト呼び出し
@@ -1883,7 +1883,7 @@ function func707() {
                 case 5:
                     if (!(cnt5_3 < 10)) return [3 /*break*/, 9];
                     if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 0)) return [3 /*break*/, 7];
-                    item_list = var_486[var_485][var_484][0];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 6:
                     _a.sent(); // アイテムリスト呼び出し
@@ -1921,7 +1921,7 @@ function func707() {
                 case 14:
                     if (!(cnt1_8 < var_224)) return [3 /*break*/, 23];
                     if (!(var_233[var_480].Var11 == 1)) return [3 /*break*/, 16];
-                    item_list = var_233[var_480].Var0;
+                    belongings_item_list = var_233[var_480].Var0;
                     return [4 /*yield*/, func492()];
                 case 15:
                     _a.sent(); // アイテムリスト呼び出し
@@ -1944,7 +1944,7 @@ function func707() {
                 case 17:
                     if (!(cnt3_9 < 10)) return [3 /*break*/, 21];
                     if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1)) return [3 /*break*/, 19];
-                    item_list = var_486[var_485][var_484][0];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 18:
                     _a.sent(); // アイテムリスト呼び出し
@@ -1981,7 +1981,7 @@ function func707() {
                     if (!(var_77[var_447][var_449] > 0 && var_72[var_447][var_449] == 0)) return [3 /*break*/, 32];
                     var_3115 = var_77[var_447][var_449];
                     if (!(var_78[var_3115].Var11 == 1)) return [3 /*break*/, 27];
-                    item_list = var_78[var_3115].Var0;
+                    belongings_item_list = var_78[var_3115].Var0;
                     return [4 /*yield*/, func492()];
                 case 26:
                     _a.sent(); // アイテムリスト呼び出し
@@ -2004,7 +2004,7 @@ function func707() {
                 case 28:
                     if (!(cnt5_4 < 10)) return [3 /*break*/, 32];
                     if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1)) return [3 /*break*/, 30];
-                    item_list = var_486[var_485][var_484][0];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 29:
                     _a.sent(); // アイテムリスト呼び出し
@@ -6404,7 +6404,7 @@ function func770() {
                     dbgprt(770);
                     var_2000 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -6706,7 +6706,7 @@ function func772() {
                     var_853[var_866][29] = var_233[var_225].Var29;
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 8];
                     var_106 = 1;
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 7:
                     _a.sent(); // アイテムリスト呼び出し
@@ -6761,7 +6761,7 @@ function func772() {
                         var_1977 = 1;
                     }
                     if (!(var_1977 == 1)) return [3 /*break*/, 16];
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func106()];
                 case 15:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -6928,7 +6928,7 @@ function func773() {
                     return [2 /*return*/];
                 case 11:
                     if (!(var_987[0] != 0)) return [3 /*break*/, 21];
-                    item_list = var_987[0];
+                    belongings_item_list = var_987[0];
                     disc_rarity = var_987[13];
                     return [4 /*yield*/, func492()];
                 case 12:
@@ -6991,7 +6991,7 @@ function func774() {
                     dbgprt(774);
                     var_2001 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -7042,7 +7042,7 @@ function func775() {
                     _a.sent();
                     var_2001 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -7099,7 +7099,7 @@ function func775() {
                     _a.sent();
                     var_2001 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -7116,13 +7116,14 @@ function func775() {
         });
     });
 }
+// ヤバいものへアイテムを入れた時の動作処理
 function func776() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     dbgprt(776);
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     disc_rarity = var_233[var_225].Var13;
                     return [4 /*yield*/, func492()];
                 case 1:
@@ -7198,7 +7199,7 @@ function func776() {
                         var_1977 = 1;
                     }
                     if (!(var_1977 == 1)) return [3 /*break*/, 9];
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func106()];
                 case 8:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -7235,6 +7236,7 @@ function func776() {
         });
     });
 }
+// ヤバいものからアイテムを取り出す時の動作処理
 function func777() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_25, cnt2_26, cnt2_27, cnt4_2, cnt5_8;
@@ -7269,13 +7271,13 @@ function func777() {
                     _a.sent(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return [2 /*return*/];
                 case 5:
-                    item_list = var_987[0];
+                    belongings_item_list = var_987[0];
                     disc_rarity = var_987[13];
                     return [4 /*yield*/, func492()];
                 case 6:
                     _a.sent(); // アイテムリスト呼び出し
                     var_3153 = item_name;
-                    if (item_list >= 800 && item_list < 900) {
+                    if (belongings_item_list >= 800 && belongings_item_list < 900) {
                         var_1806 = 1;
                         for (cnt2_25 = 0; cnt2_25 < var_224; ++cnt2_25) {
                             if (var_233[var_1806].Var0 >= 800 && var_233[var_1806].Var0 < 900) {
@@ -7316,7 +7318,7 @@ function func777() {
                     var_233[var_224].Var4 = var_987[4];
                     var_233[var_224].Var5 = var_987[5];
                     var_233[var_224].Var6 = 0;
-                    if (item_list >= 800 && item_list < 900) {
+                    if (belongings_item_list >= 800 && belongings_item_list < 900) {
                         var_233[var_224].Var6 = var_858;
                     }
                     var_233[var_224].Var7 = var_987[7];

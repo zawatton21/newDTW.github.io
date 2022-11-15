@@ -297,7 +297,7 @@ let var_211 :any;
 let var_212 :any;
 let var_213 :any;
 let var_214 :any;
-let var_215 :number; // item_list 多い
+let var_215 :number; // belongings_item_list 多い
 let var_216 :any;
 let var_217 :any;
 let var_218 :any;
@@ -310,7 +310,7 @@ let var_224 :any;
 let var_225 :any;
 let var_226 :any;
 let var_227 :any;
-let var_228 :number; // アイテムを表示するY座標ポジション 
+let Y_axis_item_position :number; // アイテムを道具一覧で表示する際のY座標ポジション 
 let var_229 :any;
 let var_230 :any;
 let var_231 :any;
@@ -319,7 +319,7 @@ let var_231 :any;
 // 600 ~ 700未満:食料、700 ~ 800未満:その他消費アイテム
 // 800 ~ 900未満:ヤバいもの
 // 900 ~ 1000未満: コミック (空きがもう無い)
-let item_list :number;
+let belongings_item_list :number;
 let var_233 :any;
 let var_234 :any;
 let conf_keyon :number; // 各キー入力確認。ON = 1、OFF = 0
@@ -427,7 +427,7 @@ let var_336 :any;
 let var_337 :any;
 let var_338 :any;
 let var_339 :any;
-let var_340 :number; // item_list
+let var_340 :number; // belongings_item_list
 let var_341 :any;
 let var_342 :any;
 let var_343 :any;
@@ -444,8 +444,8 @@ let var_353 :any;
 let var_354 :any;
 let var_355 :any;
 let var_356 :any;
-let var_357 :number; // item_list 多い
-let var_358 :number; // item_list
+let var_357 :number; // belongings_item_list 多い
+let var_358 :number; // belongings_item_list
 let var_359 :any;
 let var_360 :any;
 let var_361 :any;
@@ -497,14 +497,14 @@ let var_406 :any;
 let var_407 :any;
 let var_408 :any;
 let var_409 :any;
-let var_410 :number; // item_list
+let var_410 :number; // belongings_item_list
 let var_411 :any;
 let var_412 :any;
 let var_413 :any;
 let var_414 :any;
 let wallet :number; // 現在所持している金額
 let stolen_money :number; // 盗まれる金額
-let var_417 :number; // item_list
+let var_417 :number; // belongings_item_list
 let target_item_name :string; // 盗まれたり、消し炭にされたり、強化したり等、対象となるアイテムの名前
 let var_419 :any;
 let var_420 :any;
@@ -533,7 +533,7 @@ let var_442 :any;
 let var_443 :any;
 let var_444 :any;
 let var_445 :any;
-let var_446 :any;
+let var_446 :number; // 投げて落ちた先が地面、水面かどうかの判別？ 1 = 地面、0 = 水面
 let var_447 :any;
 let var_448 :any;
 let var_449 :any;
@@ -662,7 +662,7 @@ let var_571 :any;
 let var_572 :any;
 let var_573 :any;
 let var_574 :any;
-let var_575 :number; // item_list
+let var_575 :number; // belongings_item_list
 let var_576 :any;
 let var_577 :any;
 let var_578 :any;
@@ -764,7 +764,7 @@ let var_673 :any;
 let var_674 :any;
 let bgm_list :number;
 let bgm_title :string;
-let var_677 :number; // item_list
+let var_677 :number; // belongings_item_list
 let var_678 :any;
 let var_679 :any;
 let var_680 :any;
@@ -889,7 +889,7 @@ let var_798 :any;
 let var_799 :any;
 let var_800 :any;
 let var_801 :any;
-let var_802 :number; // item_list
+let var_802 :number; // belongings_item_list
 let item_modified_value :number; // 装備discの修正値
 let number_of_abilities :number; // 装備discの合成した数
 let var_805 :any;
@@ -970,7 +970,7 @@ let var_879 :any;
 let var_880 :any;
 let var_881 :any;
 let var_882 :any;
-let var_883 :number; // item_list
+let var_883 :number; // belongings_item_list
 let var_884 :any;
 let var_885 :any;
 let var_886 :any;
@@ -1334,13 +1334,13 @@ let var_1243 :any;
 let var_1244 :any;
 let var_1245 :any;
 let var_1246 :any;
-let var_1247 :number; // item_list
+let var_1247 :number; // belongings_item_list
 let var_1248 :any;
 let var_1249 :any;
 let var_1250 :any;
 let var_1251 :any;
 let var_1252 :any;
-let var_1253 :number; // item_list 「ﾋﾟﾝｸﾀﾞｰｸの少年」のID確認用?
+let var_1253 :number; // belongings_item_list 「ﾋﾟﾝｸﾀﾞｰｸの少年」のID確認用?
 let var_1254 :any;
 let var_1255 :any;
 let var_1256 :any;
@@ -1376,7 +1376,7 @@ let var_1285 :any;
 let var_1286 :any;
 let var_1287 :any;
 let var_1288 :any;
-let var_1289 :number; // item_list
+let var_1289 :number; // belongings_item_list
 let var_1290 :any;
 let var_1291 :any;
 let var_1292 :any;
@@ -1441,7 +1441,7 @@ let var_1350 :any;
 let var_1351 :any;
 let var_1352 :any;
 let var_1353 :any;
-let var_1354 :number; // item_list
+let var_1354 :number; // belongings_item_list
 let var_1355 :any;
 let var_1356 :any;
 let var_1357 :any;
@@ -1473,7 +1473,7 @@ let var_1382 :any;
 let var_1383 :any;
 let var_1384 :any;
 let var_1385 :any;
-let var_1386 :number; // item_list
+let var_1386 :number; // belongings_item_list
 let var_1387 :any;
 let var_1388 :any;
 let var_1389 :any;
@@ -1508,7 +1508,7 @@ let var_1417 :any;
 let var_1418 :any;
 let var_1419 :any;
 let var_1420 :any;
-let var_1421 :number; // item_list
+let var_1421 :number; // belongings_item_list
 let var_1422 :any;
 let var_1423 :any;
 let var_1424 :any;
@@ -1546,7 +1546,7 @@ let var_1455 :any;
 let var_1456 :any;
 let var_1457 :any;
 let var_1458 :any;
-let var_1459 :number; // item_list
+let var_1459 :number; // belongings_item_list
 let var_1460 :any;
 let var_1461 :any;
 let var_1462 :any;
@@ -1558,7 +1558,7 @@ let var_1467 :any;
 let var_1468 :any;
 let var_1469 :any;
 let var_1470 :any;
-let var_1471 :number; // item_list
+let var_1471 :number; // belongings_item_list
 let var_1472 :any;
 let var_1473 :any;
 let var_1474 :any;
@@ -1658,7 +1658,7 @@ let var_1567 :any;
 let var_1568 :any;
 let var_1569 :any;
 let var_1570 :any;
-let var_1571 :number; // item_list
+let var_1571 :number; // belongings_item_list
 let var_1572 :any;
 let var_1573 :any;
 let var_1574 :any;
@@ -1754,7 +1754,7 @@ let var_1663 :any;
 let var_1664 :any;
 let var_1665 :any;
 let var_1666 :any;
-let var_1667 :number; // item_list
+let var_1667 :number; // belongings_item_list
 let var_1668 :any;
 let var_1669 :any;
 let var_1670 :any;
@@ -1784,7 +1784,7 @@ let var_1693 :any;
 let var_1694 :any;
 let var_1695 :any;
 let var_1696 :any;
-let var_1697 :number; // item_list
+let var_1697 :number; // belongings_item_list
 let var_1698 :any;
 let var_1699 :any;
 let var_1700 :any;
@@ -1795,7 +1795,7 @@ let var_1704 :any;
 let var_1705 :any;
 let var_1706 :any;
 let var_1707 :any;
-let var_1708 :number; // item_list
+let var_1708 :number; // belongings_item_list
 let var_1709 :any;
 let var_1710 :any;
 let var_1711 :any;
@@ -1933,7 +1933,7 @@ let var_1842 :any;
 let var_1843 :any;
 let var_1844 :any;
 let var_1845 :any;
-let var_1846 :number; // item_list
+let var_1846 :number; // belongings_item_list
 let var_1847 :any;
 let var_1848 :any;
 let var_1849 :any;
@@ -1954,7 +1954,7 @@ let var_1863 :any;
 let var_1864 :any;
 let var_1865 :any;
 let var_1866 :any;
-let var_1867 :number; // item_list
+let var_1867 :number; // belongings_item_list
 let var_1868 :any;
 let var_1869 :any;
 let var_1870 :any;
@@ -2014,14 +2014,14 @@ let var_1923 :any;
 let var_1924 :any;
 let var_1925 :any;
 let var_1926 :any;
-let var_1927 :number; // item_list
-let var_1928 :number; // item_list
-let var_1929 :number; // item_list
+let var_1927 :number; // belongings_item_list
+let var_1928 :number; // belongings_item_list
+let var_1929 :number; // belongings_item_list
 let var_1930 :any;
 let var_1931 :any;
 let var_1932 :any;
 let var_1933 :any;
-let var_1934 :any;
+let var_1934 :number; // 装備discが呪われているかどうか 0 = 呪われていない、1 = 呪われている
 let disc_class :number; // 装備discをどの区分で装備するか。1 = 攻撃、2 = 防御、3 = 能力
 let var_1936 :any;
 let var_1937 :any;
@@ -2097,7 +2097,7 @@ let var_2006 :any;
 let var_2007 :any;
 let var_2008 :any;
 let var_2009 :any;
-let var_2010 :number; // item_list
+let var_2010 :number; // belongings_item_list
 let var_2011 :any;
 let var_2012 :number; // 装備discの修正値
 let var_2013 :any;
@@ -2191,9 +2191,9 @@ let var_2079 :any;
 let var_2080 :any;
 let var_2081 :any;
 let var_2082 :any;
-let yabaimono_id :number; // ヤバいものの動作処理用 item_list
+let yabaimono_id :number; // ヤバいものの動作処理用 belongings_item_list
 let var_2084 :any;
-let var_2085 :number; // item_list
+let var_2085 :number; // belongings_item_list
 let var_2086 :any;
 let var_2087 :any;
 let var_2088 :any;
@@ -2229,7 +2229,7 @@ let var_2117 :any;
 let var_2118 :any;
 let var_2119 :any;
 let var_2120 :any;
-let var_2121 :number; // item_list ヤバいものに関するID:800 ~ 900未満だけ
+let var_2121 :number; // belongings_item_list ヤバいものに関するID:800 ~ 900未満だけ
 let var_2122 :any;
 let var_2123 :any;
 let var_2124 :any;
@@ -2293,9 +2293,9 @@ let var_2181 :any;
 let var_2182 :any;
 let var_2183 :any;
 let var_2184 :any;
-let sympathy_base_disc_id :number; // 共鳴効果組み合わせ判別用 装備disc(ベース) item_list
-let sympathy_with_disc_id :number; // 共鳴効果組み合わせ判別用 装備disc(ベースと対になるもの) item_list  
-let var_2187 :number; // item_list
+let sympathy_base_disc_id :number; // 共鳴効果組み合わせ判別用 装備disc(ベース) belongings_item_list
+let sympathy_with_disc_id :number; // 共鳴効果組み合わせ判別用 装備disc(ベースと対になるもの) belongings_item_list  
+let var_2187 :number; // belongings_item_list
 let var_2188 :any;
 let var_2189 :any;
 let var_2190 :any;
@@ -2366,7 +2366,7 @@ let var_2254 :any;
 let var_2255 :any;
 let var_2256 :any;
 let var_2257 :any;
-let activated_disc_id :number; // disc能力発動の動作処理用 item_list
+let activated_disc_id :any; // numberにするとコンパイル時にエラー。disc能力発動の動作処理用 belongings_item_list
 let unidentified_disc_name :string; // disc能力発動の動作処理用 未識別状態のdisc名称
 let identified_disc_name :string; // disc能力発動の動作処理用 識別後のdisc名称
 let var_2261 :any;
@@ -2411,7 +2411,7 @@ let var_2299 :any;
 let var_2300 :any;
 let var_2301 :any;
 let var_2302 :any;
-let var_2303 :number; // item_list お金用? ID:0 or 1 しか使用していない
+let var_2303 :number; // belongings_item_list お金用? ID:0 or 1 しか使用していない
 let var_2304 :any;
 let var_2305 :any;
 let var_2306 :any;
@@ -2568,7 +2568,7 @@ let var_2456 :any;
 let var_2457 :any;
 let var_2458 :any;
 let var_2459 :any;
-let var_2460 :number; // item_list お金用? ID:0 or 1 しか使っていない
+let var_2460 :number; // belongings_item_list お金用? ID:0 or 1 しか使っていない
 let var_2461 :any;
 let var_2462 :any;
 let var_2463 :any;
@@ -2920,7 +2920,7 @@ let var_2808 :any;
 let var_2809 :any;
 let var_2810 :any;
 let var_2811 :any;
-let var_2812 :number; // item_list アイテム欄にないIDを指定している
+let var_2812 :number; // belongings_item_list アイテム欄にないIDを指定している
 let var_2813 :any;
 let var_2814 :any;
 let var_2815 :any;
@@ -2963,7 +2963,7 @@ let var_2851 :any;
 let var_2852 :any;
 let var_2853 :any;
 let var_2854 :any;
-let var_2855 :number; // item_list
+let var_2855 :number; // belongings_item_list
 let var_2856 :any;
 let var_2857 :any;
 let var_2858 :any;
@@ -3189,7 +3189,7 @@ let var_3077 :any;
 let var_3078 :any;
 let var_3079 :any;
 let var_3080 :any;
-let var_3081 :number; // item_list var_215 の橋渡し
+let var_3081 :number; // belongings_item_list var_215 の橋渡し
 let var_3082 :any;
 let var_3083 :any;
 let var_3084 :any;

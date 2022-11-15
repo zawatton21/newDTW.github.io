@@ -284,7 +284,7 @@ function func907() {
                     return [4 /*yield*/, func429()];
                 case 4:
                     _a.sent();
-                    if (var_270 == 135) {
+                    if (sympathy_id == 135) {
                         if (var_358 == 122) {
                             var_357 = 101;
                         }
@@ -706,7 +706,7 @@ function func911() {
                         var_3579 = "" + var_3579 + "," + var_3519[var_3566];
                         var_3566++;
                     }
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     disc_rarity = var_233[var_225].Var13;
                     return [4 /*yield*/, func492()];
                 case 1:
@@ -714,7 +714,7 @@ function func911() {
                     var_3580 = item_name;
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 3];
                     var_106 = 1;
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -766,7 +766,7 @@ function func911() {
                         var_1977 = 1;
                     }
                     if (!(var_1977 == 1)) return [3 /*break*/, 11];
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func106()];
                 case 10:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -827,15 +827,15 @@ function func911() {
                     if (var_2301 == 2) {
                         var_234 = 1;
                     }
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 19:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_2254 == 1)) return [3 /*break*/, 21];
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 20:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 21;
                 case 21:
                     var_217 = 1;
@@ -971,7 +971,7 @@ function func915() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 4:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 5;
                 case 5:
                     var_217 = 1;
@@ -1522,7 +1522,7 @@ function func921() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 24:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 25;
                 case 25:
                     var_217 = 1;
@@ -2740,7 +2740,7 @@ function func929() {
                     return [4 /*yield*/, func429()];
                 case 4:
                     _a.sent();
-                    if (var_270 == 135) {
+                    if (sympathy_id == 135) {
                         if (var_358 == 122) {
                             var_357 = 101;
                         }
@@ -3051,11 +3051,11 @@ function func935() {
             }
             color(255, 255, 255);
             font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
-            pos(15, var_228);
+            pos(15, Y_axis_item_position);
             mes(">");
-            pos(16, var_228);
+            pos(16, Y_axis_item_position);
             mes(">");
-            pos(17, var_228);
+            pos(17, Y_axis_item_position);
             mes(">");
             return [2 /*return*/];
         });

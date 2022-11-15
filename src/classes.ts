@@ -1,5 +1,5 @@
 class CharactorInfo {
-    Var0: any;  // item_list:所持アイテムを格納する配列
+    Var0: any;  // belongings_item_list:所持アイテムを格納する配列
     Var1: any;
     Var10: any;
     Var11: any;
@@ -45,7 +45,7 @@ class CharactorInfo {
     参照先: https://qiita.com/TakanoriOkawa/items/7c786bcc6f44a71257a9
     */
     constructor(Var0 = 0, Var1 = 0, Var2 = 0, Var3 = 0, Var4 = 0, Var5 = 0, Var6 = 0, Var7 = 0, Var8 = 0, Var9 = 0, Var10 = 0, Var11 = 0, Var12 = 0, Var13 = 0, Var14 = 0, Var15 = 0, Var16 = 0, Var17 = 0, Var18 = 0, Var19 = 0, Var20 = 0, Var21 = 0, Var22 = 0, Var23 = 0, Var24 = 0, Var25 = 0, Var26 = 0, Var27 = 0, Var28 = 0, Var29 = 0, Var30 = 0, Var31 = 0, Var32 = 0, Var33 = 0, Var34 = 0, Var35 = 0, Var36 = 0, Var37 = 0, Var38 = 0, Var39 = 0) {
-        this.Var0 = Var0; // item_list:所持アイテムを格納する配列
+        this.Var0 = Var0; // belongings_item_list:所持アイテムを格納する配列
         this.Var1 = Var1;
         this.Var2 = Var2;
         this.Var3 = Var3;
@@ -110,7 +110,7 @@ class CharactorInfo {
     }
 }
 class ItemInfo {
-    Var0: any;  // item_list:所持アイテムを格納する配列
+    Var0: any;  // belongings_item_list:所持アイテムを格納する配列
     Var1: any;
     Var10: any;
     Var11: any;
@@ -141,7 +141,7 @@ class ItemInfo {
     Var8: any;
     Var9: any;
     constructor(Var0 = 0, Var1 = 0, Var2 = 0, Var3 = 0, Var4 = 0, Var5 = 0, Var6 = 0, Var7 = 0, Var8 = 0, Var9 = 0, Var10 = 0, Var11 = 0, Var12 = 0, Var13 = 0, Var14 = 0, Var15 = 0, Var16 = 0, Var17 = 0, Var18 = 0, Var19 = 0, Var20 = 0, Var21 = 0, Var22 = 0, Var23 = 0, Var24 = 0, Var25 = 0, Var26 = 0, Var27 = 0, Var28 = 0, Var29 = 0) {
-        this.Var0 = Var0;  // item_list:所持アイテムを格納する配列
+        this.Var0 = Var0;  // belongings_item_list:所持アイテムを格納する配列
         this.Var1 = Var1;
         this.Var2 = Var2;
         this.Var3 = Var3;

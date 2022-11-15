@@ -523,7 +523,7 @@ function func104(this: any) {
 function func105(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(105);
-        if (var_677 == item_list) {
+        if (var_677 == belongings_item_list) {
             return;
         }
         if (dangeon_number == 99) {
@@ -532,7 +532,7 @@ function func105(this: any) {
         if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
             return;
         }
-        bgm_list = item_list;
+        bgm_list = belongings_item_list;
         yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
         return;
     });
@@ -549,7 +549,7 @@ function func106(this: any) {
             return;
         }
         // var_677にitem_listのIDが割り当てられていたら、そのIDを返す
-        if (var_677 == item_list) {
+        if (var_677 == belongings_item_list) {
             // var_681 = 989 が設定させていたら、その値を返す
             if (var_681 == 989) {
                 bgm_list = 989; // 亀の中のBGM
@@ -5430,25 +5430,25 @@ function func168(this: any) {
         if (var_792[var_793][var_786][3] != 0) {
             disc_rarity = 0;
             pos(30, 225);
-            item_list = var_792[var_793][var_786][4];
+            belongings_item_list = var_792[var_793][var_786][4];
             disc_rarity = 0;
-            if (item_list > 1000) {
-                if (item_list >= 1000 && item_list < 2000) {
-                    item_list = item_list - 1000;
+            if (belongings_item_list > 1000) {
+                if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                    belongings_item_list = belongings_item_list - 1000;
                     disc_rarity = 1;
                 }
-                if (item_list >= 2000 && item_list < 3000) {
-                    item_list = item_list - 2000;
+                if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                    belongings_item_list = belongings_item_list - 2000;
                     disc_rarity = 2;
                 }
-                if (item_list >= 3000 && item_list < 4000) {
-                    item_list = item_list - 3000;
+                if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                    belongings_item_list = belongings_item_list - 3000;
                     disc_rarity = 3;
                 }
             }
             yield func492(); // アイテムリスト呼び出し
             color(255, 255, 0);
-            if (item_list != 0) {
+            if (belongings_item_list != 0) {
                 var_799 = "攻撃：" + item_name;
                 if (var_792[var_793][var_786][5] != 0) {
                     var_799 = var_799 + "＋" + var_792[var_793][var_786][5];
@@ -5458,29 +5458,29 @@ function func168(this: any) {
                 }
                 mes(var_799);
             }
-            if (item_list == 0) {
+            if (belongings_item_list == 0) {
                 mes("攻撃：なし");
             }
             pos(30, 242);
-            item_list = var_792[var_793][var_786][7];
+            belongings_item_list = var_792[var_793][var_786][7];
             disc_rarity = 0;
-            if (item_list > 1000) {
-                if (item_list >= 1000 && item_list < 2000) {
-                    item_list = item_list - 1000;
+            if (belongings_item_list > 1000) {
+                if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                    belongings_item_list = belongings_item_list - 1000;
                     disc_rarity = 1;
                 }
-                if (item_list >= 2000 && item_list < 3000) {
-                    item_list = item_list - 2000;
+                if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                    belongings_item_list = belongings_item_list - 2000;
                     disc_rarity = 2;
                 }
-                if (item_list >= 3000 && item_list < 4000) {
-                    item_list = item_list - 3000;
+                if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                    belongings_item_list = belongings_item_list - 3000;
                     disc_rarity = 3;
                 }
             }
             yield func492(); // アイテムリスト呼び出し
             color(255, 180, 90);
-            if (item_list != 0) {
+            if (belongings_item_list != 0) {
                 var_799 = "防御：" + item_name;
                 if (var_792[var_793][var_786][8] != 0) {
                     var_799 = var_799 + "＋" + var_792[var_793][var_786][8];
@@ -5490,29 +5490,29 @@ function func168(this: any) {
                 }
                 mes(var_799);
             }
-            if (item_list == 0) {
+            if (belongings_item_list == 0) {
                 mes("防御：なし");
             }
             pos(30, 259);
-            item_list = var_792[var_793][var_786][10];
+            belongings_item_list = var_792[var_793][var_786][10];
             disc_rarity = 0;
-            if (item_list > 1000) {
-                if (item_list >= 1000 && item_list < 2000) {
-                    item_list = item_list - 1000;
+            if (belongings_item_list > 1000) {
+                if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                    belongings_item_list = belongings_item_list - 1000;
                     disc_rarity = 1;
                 }
-                if (item_list >= 2000 && item_list < 3000) {
-                    item_list = item_list - 2000;
+                if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                    belongings_item_list = belongings_item_list - 2000;
                     disc_rarity = 2;
                 }
-                if (item_list >= 3000 && item_list < 4000) {
-                    item_list = item_list - 3000;
+                if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                    belongings_item_list = belongings_item_list - 3000;
                     disc_rarity = 3;
                 }
             }
             yield func492(); // アイテムリスト呼び出し
             color(240, 0, 240);
-            if (item_list != 0) {
+            if (belongings_item_list != 0) {
                 var_799 = "能力：" + item_name;
                 if (var_792[var_793][var_786][11] != 0) {
                     var_799 = var_799 + "＋" + var_792[var_793][var_786][11];
@@ -5522,7 +5522,7 @@ function func168(this: any) {
                 }
                 mes(var_799);
             }
-            if (item_list == 0) {
+            if (belongings_item_list == 0) {
                 mes("能力：なし");
             }
     
@@ -5679,7 +5679,7 @@ function func170(this: any) {
             pos(285, 70);
             gcopy(9, 360, 20, 40, 20);
         }
-        item_list = var_802;
+        belongings_item_list = var_802;
         yield func492(); // アイテムリスト呼び出し
         var_575 = var_802;
         yield func070();
@@ -5741,7 +5741,7 @@ function func170(this: any) {
             
             pos(80, track_number * 20 + 120);
             
-            item_list = var_811[track_number];
+            belongings_item_list = var_811[track_number];
             
             yield func492(); // アイテムリスト呼び出し
             color(255, 255, 255);
@@ -5777,7 +5777,7 @@ function func171(this: any) {
         dbgprt(171);
         if (var_794 == 1) {
             var_802 = var_792[var_793][var_786][4];
-            item_list = var_792[var_793][var_786][4];
+            belongings_item_list = var_792[var_793][var_786][4];
             yield func492(); // アイテムリスト呼び出し
             var_814 = var_792[var_793][var_786][4];
             item_modified_value = var_792[var_793][var_786][5];
@@ -5797,7 +5797,7 @@ function func171(this: any) {
         }
         if (var_794 == 2) {
             var_802 = var_792[var_793][var_786][7];
-            item_list = var_792[var_793][var_786][7];
+            belongings_item_list = var_792[var_793][var_786][7];
             yield func492(); // アイテムリスト呼び出し
             var_814 = var_792[var_793][var_786][7];
             item_modified_value = var_792[var_793][var_786][8];
@@ -5817,7 +5817,7 @@ function func171(this: any) {
         }
         if (var_794 == 3) {
             var_802 = var_792[var_793][var_786][10];
-            item_list = var_792[var_793][var_786][10];
+            belongings_item_list = var_792[var_793][var_786][10];
             yield func492(); // アイテムリスト呼び出し
             var_814 = var_792[var_793][var_786][10];
             item_modified_value = var_792[var_793][var_786][11];
@@ -5837,21 +5837,21 @@ function func171(this: any) {
         }
         number_of_abilities = var_810;
         disc_rarity = 0;
-        if (item_list > 1000) {
-            if (item_list >= 1000 && item_list < 2000) {
-                item_list = item_list - 1000;
+        if (belongings_item_list > 1000) {
+            if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                belongings_item_list = belongings_item_list - 1000;
                 var_802 = var_802 - 1000;
                 var_814 = var_814 - 1000;
                 disc_rarity = 1;
             }
-            if (item_list >= 2000 && item_list < 3000) {
-                item_list = item_list - 2000;
+            if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                belongings_item_list = belongings_item_list - 2000;
                 var_802 = var_802 - 2000;
                 var_814 = var_814 - 2000;
                 disc_rarity = 2;
             }
-            if (item_list >= 3000 && item_list < 4000) {
-                item_list = item_list - 3000;
+            if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                belongings_item_list = belongings_item_list - 3000;
                 var_802 = var_802 - 3000;
                 var_814 = var_814 - 3000;
                 disc_rarity = 3;
@@ -5871,19 +5871,19 @@ function func171(this: any) {
         var_826 = 1;
         var_827 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            item_list = var_792[var_793][var_786][var_825];
+            belongings_item_list = var_792[var_793][var_786][var_825];
             yield func492(); // アイテムリスト呼び出し
             if (item_ability_description == "") {
                 var_826 = var_826 - 1;
                 break;
             }
             var_813[var_826] = item_ability_description;
-            var_811[var_826] = item_list;
+            var_811[var_826] = belongings_item_list;
             var_826 = var_826 + 1;
             var_825 = var_825 + 1;
         }
-        // item_list == 104 は ｻﾞ･ﾊﾝﾄﾞのDISC
-        if (item_list == 104) {
+        // belongings_item_list == 104 は ｻﾞ･ﾊﾝﾄﾞのDISC
+        if (belongings_item_list == 104) {
             var_826 = var_826 + 1;
             var_813[var_826] = "こわれるぞ。";
             var_811[var_826] = 199;
@@ -5997,7 +5997,7 @@ function func174(this: any) {
         var_480 = 1;
         for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {
             if (var_233[var_480].Var11 != 1) {
-                item_list = var_233[var_480].Var0;
+                belongings_item_list = var_233[var_480].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
@@ -6011,7 +6011,7 @@ function func174(this: any) {
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] != 1) {
-                        item_list = var_486[var_485][var_484][0];
+                        belongings_item_list = var_486[var_485][var_484][0];
                         yield func492(); // アイテムリスト呼び出し
                         var_482 = 0;
                         var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -7634,7 +7634,7 @@ function func187(this: any) {
         var_876 = "";
         var_883 = 1;
         for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {
-            item_list = var_233[var_883].Var0;
+            belongings_item_list = var_233[var_883].Var0;
             yield func492(); // アイテムリスト呼び出し
             var_876 = var_876 + "\n" + item_name;
             var_883 = var_883 + 1;
@@ -7652,11 +7652,11 @@ function func188(this: any) {
         var_883 = 1;
         var_885 = 1;
         for (let cnt1 = 0; cnt1 < 1000; ++cnt1) {
-            item_list = var_883;
+            belongings_item_list = var_883;
             yield func492(); // アイテムリスト呼び出し
             if (buying_price != 0) {
                 var_874 = var_874 + "\n" + "" + item_name;
-                var_884[var_885] = item_list;
+                var_884[var_885] = belongings_item_list;
                 var_885 = var_885 + 1;
             }
             var_883 = var_883 + 1;
@@ -7811,7 +7811,7 @@ function func192(this: any) {
         var_897 = 0;
         var_898 = 0;
         var_225 = var_875;
-        item_list = var_233[var_875].Var0;
+        belongings_item_list = var_233[var_875].Var0;
         yield func433(); // アイテム配列の "数" 増減？関数
         yield func494();
         var_869 = 1;

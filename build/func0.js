@@ -1255,31 +1255,34 @@ function func009() {
                     var_222 = 1;
                     var_223 = var_224 + 10;
                     var_225 = var_226;
+                    // アイテム個数 var_225 が10以下であれば
                     if (var_225 <= 10) {
                         var_227 = 1;
-                        var_228 = (var_225 - 1) * 22 + 45;
+                        Y_axis_item_position = (var_225 - 1) * 22 + 45;
                         var_229 = 44;
                         var_230 = 45;
                     }
+                    // アイテム個数 var_225 が10より多ければ
                     if (var_225 > 10) {
                         var_227 = 2;
-                        var_228 = (var_225 - 11) * 22 + 45;
+                        Y_axis_item_position = (var_225 - 11) * 22 + 45;
                         var_229 = 44;
                         var_230 = 45;
                     }
+                    // アイテム個数 var_225 が0であれば
                     if (var_225 == 0) {
                         var_227 = 3;
-                        var_228 = 45;
+                        Y_axis_item_position = 45;
                         var_229 = 44;
                         var_230 = 45;
                         var_231 = 1;
                         var_222 = 10;
                     }
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音 
                     return [4 /*yield*/, func462()];
                 case 33:
-                    _a.sent();
+                    _a.sent(); // アイテムidごとに区分分け関数
                     return [2 /*return*/];
                 case 34:
                     var_213 = 0;
@@ -1525,7 +1528,7 @@ function func011() {
                     if (!(var_127 == 0 && var_132 == 0)) return [3 /*break*/, 2];
                     if (var_263[0] == 0 && var_263[1] == 0 && var_82[var_264][var_267] > 0) {
                         var_269 = var_82[var_264][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 1;
                                 var_263[1] = 1;
@@ -1536,7 +1539,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[2] == 0 && var_82[var_66][var_267] > 0) {
                         var_269 = var_82[var_66][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 2;
                                 var_263[2] = 1;
@@ -1547,7 +1550,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[3] == 0 && var_82[var_265][var_267] > 0) {
                         var_269 = var_82[var_265][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 3;
                                 var_263[3] = 1;
@@ -1558,7 +1561,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[4] == 0 && var_82[var_264][var_67] > 0) {
                         var_269 = var_82[var_264][var_67];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 4;
                                 var_263[4] = 1;
@@ -1569,7 +1572,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[6] == 0 && var_82[var_265][var_67] > 0) {
                         var_269 = var_82[var_265][var_67];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 6;
                                 var_263[6] = 1;
@@ -1580,7 +1583,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[7] == 0 && var_82[var_264][var_266] > 0) {
                         var_269 = var_82[var_264][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 7;
                                 var_263[7] = 1;
@@ -1591,7 +1594,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[8] == 0 && var_82[var_66][var_266] > 0) {
                         var_269 = var_82[var_66][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 8;
                                 var_263[8] = 1;
@@ -1602,7 +1605,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[9] == 0 && var_82[var_265][var_266] > 0) {
                         var_269 = var_82[var_265][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var31 != 5 && var_83[var_269].Var0 != 50) {
                                 var_199 = 9;
                                 var_263[9] = 1;
@@ -1624,7 +1627,7 @@ function func011() {
                     if (!(var_127 == 0 && var_132 == 0)) return [3 /*break*/, 4];
                     if (var_263[0] == 0 && var_263[1] == 0 && var_82[var_264][var_267] > 0) {
                         var_269 = var_82[var_264][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 1;
                                 var_263[1] = 1;
@@ -1635,7 +1638,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[2] == 0 && var_82[var_66][var_267] > 0) {
                         var_269 = var_82[var_66][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 2;
                                 var_263[2] = 1;
@@ -1646,7 +1649,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[3] == 0 && var_82[var_265][var_267] > 0) {
                         var_269 = var_82[var_265][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 3;
                                 var_263[3] = 1;
@@ -1657,7 +1660,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[4] == 0 && var_82[var_264][var_67] > 0) {
                         var_269 = var_82[var_264][var_67];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 4;
                                 var_263[4] = 1;
@@ -1668,7 +1671,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[6] == 0 && var_82[var_265][var_67] > 0) {
                         var_269 = var_82[var_265][var_67];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 6;
                                 var_263[6] = 1;
@@ -1679,7 +1682,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[7] == 0 && var_82[var_264][var_266] > 0) {
                         var_269 = var_82[var_264][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 7;
                                 var_263[7] = 1;
@@ -1690,7 +1693,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[8] == 0 && var_82[var_66][var_266] > 0) {
                         var_269 = var_82[var_66][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 8;
                                 var_263[8] = 1;
@@ -1701,7 +1704,7 @@ function func011() {
                     }
                     if (var_263[0] == 0 && var_263[9] == 0 && var_82[var_265][var_266] > 0) {
                         var_269 = var_82[var_265][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var0 != 50) {
                                 var_199 = 9;
                                 var_263[9] = 1;
@@ -1793,7 +1796,7 @@ function func012() {
                     var_268 = 0;
                     if (var_199 == 1 && var_82[var_264][var_267] > 0) {
                         var_269 = var_82[var_264][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -1801,7 +1804,7 @@ function func012() {
                     }
                     if (var_199 == 2 && var_82[var_66][var_267] > 0) {
                         var_269 = var_82[var_66][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -1809,7 +1812,7 @@ function func012() {
                     }
                     if (var_199 == 3 && var_82[var_265][var_267] > 0) {
                         var_269 = var_82[var_265][var_267];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -1817,7 +1820,7 @@ function func012() {
                     }
                     if (var_199 == 4 && var_82[var_264][var_67] > 0) {
                         var_269 = var_82[var_264][var_67];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -1825,7 +1828,7 @@ function func012() {
                     }
                     if (var_199 == 6 && var_82[var_265][var_67] > 0) {
                         var_269 = var_82[var_265][var_67];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -1833,7 +1836,7 @@ function func012() {
                     }
                     if (var_199 == 7 && var_82[var_264][var_266] > 0) {
                         var_269 = var_82[var_264][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -1841,7 +1844,7 @@ function func012() {
                     }
                     if (var_199 == 8 && var_82[var_66][var_266] > 0) {
                         var_269 = var_82[var_66][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -1849,7 +1852,7 @@ function func012() {
                     }
                     if (var_199 == 9 && var_82[var_265][var_266] > 0) {
                         var_269 = var_82[var_265][var_266];
-                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || var_270 == 166) {
+                        if (var_83[var_269].Var30 == 0 || var_119 == 1 || sympathy_id == 166) {
                             if (var_83[var_269].Var29 == 0 && var_83[var_269].Var0 != 50) {
                                 var_268 = var_269;
                             }
@@ -4114,7 +4117,7 @@ function func019() {
                     ++cnt5_4;
                     return [3 /*break*/, 187];
                 case 190:
-                    if (!(var_270 == 106 || var_270 == 114 || var_270 == 121)) return [3 /*break*/, 196];
+                    if (!(sympathy_id == 106 || sympathy_id == 114 || sympathy_id == 121)) return [3 /*break*/, 196];
                     var_388 = rnd(300);
                     if (!(var_388 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0)) return [3 /*break*/, 196];
                     var_240 = 0;
@@ -4801,8 +4804,8 @@ function func020() {
                     }
                     wallet = wallet - stolen_money;
                     var_83[var_412].Var26 = 1;
-                    item_list = 1;
-                    var_417 = item_list;
+                    belongings_item_list = 1;
+                    var_417 = belongings_item_list;
                     target_item_name = "" + stolen_money + "G"; //現在の所持金表示
                     var_419 = var_412 + 200;
                     var_78[var_419].Var0 = 1;
@@ -6940,7 +6943,7 @@ function func043() {
                     var_480 = var_475;
                     payment_amount = 0;
                     if (!(var_233[var_480].Var11 == 1)) return [3 /*break*/, 2];
-                    item_list = var_233[var_480].Var0;
+                    belongings_item_list = var_233[var_480].Var0;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -6964,7 +6967,7 @@ function func043() {
                 case 3:
                     if (!(cnt2_16 < 10)) return [3 /*break*/, 7];
                     if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1)) return [3 /*break*/, 5];
-                    item_list = var_486[var_485][var_484][0];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 4:
                     _a.sent(); // アイテムリスト呼び出し
@@ -6983,7 +6986,7 @@ function func043() {
                     ++cnt2_16;
                     return [3 /*break*/, 3];
                 case 7:
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     disc_rarity = var_233[var_475].Var13;
                     var_488 = var_233[var_475].Var0;
                     return [4 /*yield*/, func492()];
@@ -7627,7 +7630,7 @@ function func053() {
                     var_195 = 0;
                     var_196 = 0;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -9482,7 +9485,7 @@ function func062() {
         return __generator(this, function (_a) {
             dbgprt(62);
             var_224 = var_224 + 1;
-            var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(item_list = 602)を追加
+            var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(belongings_item_list = 602)を追加
             return [2 /*return*/];
         });
     });
@@ -9591,7 +9594,7 @@ function func064() {
                 case 4:
                     if (!(var_77[var_66][var_67] > 0)) return [3 /*break*/, 7];
                     var_227 = 3;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 0;
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     return [4 /*yield*/, func478()];
@@ -9766,7 +9769,7 @@ function func067() {
                 case 5:
                     _a.sent();
                     if (!(var_233[var_552].Var0 != 0 && var_552 != var_553 && var_552 != var_554 && var_552 != var_555 && var_552 != var_556)) return [3 /*break*/, 8];
-                    item_list = var_233[var_552].Var0;
+                    belongings_item_list = var_233[var_552].Var0;
                     return [4 /*yield*/, func492()];
                 case 6:
                     _a.sent(); // アイテムリスト呼び出し

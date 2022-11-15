@@ -639,7 +639,7 @@ function func008(this: any) {
         }
         yield func720();
         yield func045();
-        yield func383();
+        yield func383(); // アイテムの出現数を増やす動作処理
         yield func393();
         yield func391();
         yield func535();
@@ -932,28 +932,28 @@ function func009(this: any) {
             // アイテム個数 var_225 が10以下であれば
             if (var_225 <= 10) {
                 var_227 = 1;
-                var_228 = (var_225 - 1) * 22 + 45;
+                Y_axis_item_position = (var_225 - 1) * 22 + 45;
                 var_229 = 44;
                 var_230 = 45;
             }
             // アイテム個数 var_225 が10より多ければ
             if (var_225 > 10) {
                 var_227 = 2;
-                var_228 = (var_225 - 11) * 22 + 45;
+                Y_axis_item_position = (var_225 - 11) * 22 + 45;
                 var_229 = 44;
                 var_230 = 45;
             }
             // アイテム個数 var_225 が0であれば
             if (var_225 == 0) {
                 var_227 = 3;
-                var_228 = 45;
+                Y_axis_item_position = 45;
                 var_229 = 44;
                 var_230 = 45;
                 var_231 = 1;
                 var_222 = 10;
             }
 
-            item_list = var_233[var_225].Var0;
+            belongings_item_list = var_233[var_225].Var0;
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音 
             yield func462(); // アイテムidごとに区分分け関数
             return;
@@ -3756,8 +3756,8 @@ function func020(this: any) {
                 }
                 wallet = wallet - stolen_money;
                 var_83[var_412].Var26 = 1;
-                item_list = 1;
-                var_417 = item_list;
+                belongings_item_list = 1;
+                var_417 = belongings_item_list;
                 target_item_name = "" + stolen_money + "G"; //現在の所持金表示
                 var_419 = var_412 + 200;
                 var_78[var_419].Var0 = 1;
@@ -5145,7 +5145,7 @@ function func043(this: any) {
         var_480 = var_475;
         payment_amount = 0;
         if (var_233[var_480].Var11 == 1) {
-            item_list = var_233[var_480].Var0;
+            belongings_item_list = var_233[var_480].Var0;
             yield func492(); // アイテムリスト呼び出し
             var_482 = 0;
             var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
@@ -5163,7 +5163,7 @@ function func043(this: any) {
             var_485 = var_233[var_480].Var6;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                    item_list = var_486[var_485][var_484][0];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     yield func492(); // アイテムリスト呼び出し
                     var_482 = 0;
                     var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -5176,7 +5176,7 @@ function func043(this: any) {
                 var_484 = var_484 + 1;
             }
         }
-        item_list = var_233[var_475].Var0;
+        belongings_item_list = var_233[var_475].Var0;
         disc_rarity = var_233[var_475].Var13;
         var_488 = var_233[var_475].Var0;
         yield func492(); // アイテムリスト呼び出し
@@ -5681,7 +5681,7 @@ function func053(this: any) {
                 var_195 = 0;
                 var_196 = 0;
                 var_227 = 1;
-                var_228 = 45;
+                Y_axis_item_position = 45;
                 var_225 = 1;
                 var_223 = var_224 + 10;
                 var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -5709,7 +5709,7 @@ function func053(this: any) {
                 yield func380(); // 状態異常確認呼び出し
                 return;
             }
-            if (var_497 == 4) { // var_497 = 1 は設定
+            if (var_497 == 4) { // var_497 = 4 は設定
                 var_195 = 0;
                 var_196 = 0;
                 var_499 = 1; // Mフラグ:設定画面 func056
@@ -6864,7 +6864,7 @@ function func062(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(62);
         var_224 = var_224 + 1;
-        var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(item_list = 602)を追加
+        var_233[var_224].Var0 = 602; // アイテム「ネアポリスのピッツァ」(belongings_item_list = 602)を追加
         return;
     });
 }
@@ -6969,7 +6969,7 @@ function func064(this: any) {
         }
         if (var_77[var_66][var_67] > 0) {
             var_227 = 3;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 0;
             open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
             yield func478();
@@ -7089,7 +7089,7 @@ function func067(this: any) {
             yield func428();
             yield func429();
             if (var_233[var_552].Var0 != 0 && var_552 != var_553 && var_552 != var_554 && var_552 != var_555 && var_552 != var_556) {
-                item_list = var_233[var_552].Var0;
+                belongings_item_list = var_233[var_552].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_550 = var_550 + buying_price;
                 var_225 = var_552;

@@ -566,13 +566,14 @@ function func104() {
         });
     });
 }
+// discを装備した際のBGM選曲
 function func105() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     dbgprt(105);
-                    if (var_677 == item_list) {
+                    if (var_677 == belongings_item_list) {
                         return [2 /*return*/];
                     }
                     if (dangeon_number == 99) {
@@ -581,10 +582,10 @@ function func105() {
                     if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
                         return [2 /*return*/];
                     }
-                    bgm_list = item_list;
+                    bgm_list = belongings_item_list;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -603,19 +604,19 @@ function func106() {
                     if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
                         return [2 /*return*/];
                     }
-                    if (!(var_677 == item_list)) return [3 /*break*/, 4];
+                    if (!(var_677 == belongings_item_list)) return [3 /*break*/, 4];
                     if (!(var_681 == 989)) return [3 /*break*/, 2];
                     bgm_list = 989; // 亀の中のBGM
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent(); // ダンジョン内のテーマソング　"0.mp3" 設定
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
                 case 2:
                     // bgm_list = 0　なら ダンジョンテーマソングを流す処理を呼び出し
                     bgm_list = 0; // BGMをダンジョンテーマソングへ戻す
                     return [4 /*yield*/, func103()];
                 case 3:
-                    _a.sent(); // ダンジョン内のテーマソング　"0.mp3" 設定
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
                 case 4: return [2 /*return*/];
             }
@@ -631,7 +632,7 @@ function func107() {
                     bgm_list = var_677;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -681,7 +682,7 @@ function func110() {
                     bgm_list = 979;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     var_634 = 0;
                     return [2 /*return*/];
@@ -699,7 +700,7 @@ function func111() {
                     bgm_list = 0;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     var_681 = 0;
                     return [2 /*return*/];
@@ -716,7 +717,7 @@ function func112() {
                     var_678 = 1;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     return [2 /*return*/];
             }
@@ -734,7 +735,7 @@ function func113() {
                     var_681 = 988;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     return [2 /*return*/];
             }
@@ -752,7 +753,7 @@ function func114() {
                     var_681 = 989;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     return [2 /*return*/];
             }
@@ -775,7 +776,7 @@ function func115() {
                     }
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     return [2 /*return*/];
             }
@@ -792,7 +793,7 @@ function func116() {
                     var_681 = 990;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -808,7 +809,7 @@ function func117() {
                     var_681 = 982;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -824,7 +825,7 @@ function func118() {
                     var_681 = 986;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -840,7 +841,7 @@ function func119() {
                     var_681 = 998;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -856,7 +857,7 @@ function func120() {
                     var_681 = 978;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -872,7 +873,7 @@ function func121() {
                     var_681 = 977;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -887,7 +888,7 @@ function func122() {
                     bgm_list = 999;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_634 = 0;
                     return [2 /*return*/];
             }
@@ -903,7 +904,7 @@ function func123() {
                     bgm_list = 997;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_634 = 0;
                     return [2 /*return*/];
             }
@@ -925,7 +926,7 @@ function func124() {
                     bgm_list = 994;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -946,7 +947,7 @@ function func125() {
                     bgm_list = 993;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -967,7 +968,7 @@ function func126() {
                     bgm_list = 991;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -988,7 +989,7 @@ function func127() {
                     bgm_list = 992;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1009,7 +1010,7 @@ function func128() {
                     bgm_list = 983;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1025,7 +1026,7 @@ function func129() {
                     var_681 = 996;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1041,7 +1042,7 @@ function func130() {
                     var_681 = 998;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1057,7 +1058,7 @@ function func131() {
                     var_681 = 985;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1073,7 +1074,7 @@ function func132() {
                     var_681 = 984;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1089,7 +1090,7 @@ function func133() {
                     var_681 = 981;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1105,7 +1106,7 @@ function func134() {
                     var_681 = 980;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1120,7 +1121,7 @@ function func135() {
                     bgm_list = 980;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
             }
         });
@@ -1138,7 +1139,7 @@ function func136() {
                     var_678 = 1;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     return [2 /*return*/];
             }
@@ -1174,7 +1175,7 @@ function func137() {
                     var_678 = 1;
                     return [4 /*yield*/, func103()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     var_678 = 0;
                     return [2 /*return*/];
             }
@@ -7863,19 +7864,19 @@ function func168() {
                     if (!(var_792[var_793][var_786][3] != 0)) return [3 /*break*/, 15];
                     disc_rarity = 0;
                     pos(30, 225);
-                    item_list = var_792[var_793][var_786][4];
+                    belongings_item_list = var_792[var_793][var_786][4];
                     disc_rarity = 0;
-                    if (item_list > 1000) {
-                        if (item_list >= 1000 && item_list < 2000) {
-                            item_list = item_list - 1000;
+                    if (belongings_item_list > 1000) {
+                        if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                            belongings_item_list = belongings_item_list - 1000;
                             disc_rarity = 1;
                         }
-                        if (item_list >= 2000 && item_list < 3000) {
-                            item_list = item_list - 2000;
+                        if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                            belongings_item_list = belongings_item_list - 2000;
                             disc_rarity = 2;
                         }
-                        if (item_list >= 3000 && item_list < 4000) {
-                            item_list = item_list - 3000;
+                        if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                            belongings_item_list = belongings_item_list - 3000;
                             disc_rarity = 3;
                         }
                     }
@@ -7883,7 +7884,7 @@ function func168() {
                 case 12:
                     _a.sent(); // アイテムリスト呼び出し
                     color(255, 255, 0);
-                    if (item_list != 0) {
+                    if (belongings_item_list != 0) {
                         var_799 = "攻撃：" + item_name;
                         if (var_792[var_793][var_786][5] != 0) {
                             var_799 = var_799 + "＋" + var_792[var_793][var_786][5];
@@ -7893,23 +7894,23 @@ function func168() {
                         }
                         mes(var_799);
                     }
-                    if (item_list == 0) {
+                    if (belongings_item_list == 0) {
                         mes("攻撃：なし");
                     }
                     pos(30, 242);
-                    item_list = var_792[var_793][var_786][7];
+                    belongings_item_list = var_792[var_793][var_786][7];
                     disc_rarity = 0;
-                    if (item_list > 1000) {
-                        if (item_list >= 1000 && item_list < 2000) {
-                            item_list = item_list - 1000;
+                    if (belongings_item_list > 1000) {
+                        if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                            belongings_item_list = belongings_item_list - 1000;
                             disc_rarity = 1;
                         }
-                        if (item_list >= 2000 && item_list < 3000) {
-                            item_list = item_list - 2000;
+                        if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                            belongings_item_list = belongings_item_list - 2000;
                             disc_rarity = 2;
                         }
-                        if (item_list >= 3000 && item_list < 4000) {
-                            item_list = item_list - 3000;
+                        if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                            belongings_item_list = belongings_item_list - 3000;
                             disc_rarity = 3;
                         }
                     }
@@ -7917,7 +7918,7 @@ function func168() {
                 case 13:
                     _a.sent(); // アイテムリスト呼び出し
                     color(255, 180, 90);
-                    if (item_list != 0) {
+                    if (belongings_item_list != 0) {
                         var_799 = "防御：" + item_name;
                         if (var_792[var_793][var_786][8] != 0) {
                             var_799 = var_799 + "＋" + var_792[var_793][var_786][8];
@@ -7927,23 +7928,23 @@ function func168() {
                         }
                         mes(var_799);
                     }
-                    if (item_list == 0) {
+                    if (belongings_item_list == 0) {
                         mes("防御：なし");
                     }
                     pos(30, 259);
-                    item_list = var_792[var_793][var_786][10];
+                    belongings_item_list = var_792[var_793][var_786][10];
                     disc_rarity = 0;
-                    if (item_list > 1000) {
-                        if (item_list >= 1000 && item_list < 2000) {
-                            item_list = item_list - 1000;
+                    if (belongings_item_list > 1000) {
+                        if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                            belongings_item_list = belongings_item_list - 1000;
                             disc_rarity = 1;
                         }
-                        if (item_list >= 2000 && item_list < 3000) {
-                            item_list = item_list - 2000;
+                        if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                            belongings_item_list = belongings_item_list - 2000;
                             disc_rarity = 2;
                         }
-                        if (item_list >= 3000 && item_list < 4000) {
-                            item_list = item_list - 3000;
+                        if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                            belongings_item_list = belongings_item_list - 3000;
                             disc_rarity = 3;
                         }
                     }
@@ -7951,7 +7952,7 @@ function func168() {
                 case 14:
                     _a.sent(); // アイテムリスト呼び出し
                     color(240, 0, 240);
-                    if (item_list != 0) {
+                    if (belongings_item_list != 0) {
                         var_799 = "能力：" + item_name;
                         if (var_792[var_793][var_786][11] != 0) {
                             var_799 = var_799 + "＋" + var_792[var_793][var_786][11];
@@ -7961,7 +7962,7 @@ function func168() {
                         }
                         mes(var_799);
                     }
-                    if (item_list == 0) {
+                    if (belongings_item_list == 0) {
                         mes("能力：なし");
                     }
                     font(font_type = "ＭＳ Ｐゴシック", font_size = 14, font_style = 1);
@@ -8196,7 +8197,7 @@ function func170() {
                         pos(285, 70);
                         gcopy(9, 360, 20, 40, 20);
                     }
-                    item_list = var_802;
+                    belongings_item_list = var_802;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8263,7 +8264,7 @@ function func170() {
                 case 3:
                     if (!(cnt1_115 < var_810 + free_space_value)) return [3 /*break*/, 6];
                     pos(80, track_number * 20 + 120);
-                    item_list = var_811[track_number];
+                    belongings_item_list = var_811[track_number];
                     return [4 /*yield*/, func492()];
                 case 4:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8307,7 +8308,7 @@ function func171() {
                     dbgprt(171);
                     if (!(var_794 == 1)) return [3 /*break*/, 2];
                     var_802 = var_792[var_793][var_786][4];
-                    item_list = var_792[var_793][var_786][4];
+                    belongings_item_list = var_792[var_793][var_786][4];
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8330,7 +8331,7 @@ function func171() {
                 case 2:
                     if (!(var_794 == 2)) return [3 /*break*/, 4];
                     var_802 = var_792[var_793][var_786][7];
-                    item_list = var_792[var_793][var_786][7];
+                    belongings_item_list = var_792[var_793][var_786][7];
                     return [4 /*yield*/, func492()];
                 case 3:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8353,7 +8354,7 @@ function func171() {
                 case 4:
                     if (!(var_794 == 3)) return [3 /*break*/, 6];
                     var_802 = var_792[var_793][var_786][10];
-                    item_list = var_792[var_793][var_786][10];
+                    belongings_item_list = var_792[var_793][var_786][10];
                     return [4 /*yield*/, func492()];
                 case 5:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8376,21 +8377,21 @@ function func171() {
                 case 6:
                     number_of_abilities = var_810;
                     disc_rarity = 0;
-                    if (item_list > 1000) {
-                        if (item_list >= 1000 && item_list < 2000) {
-                            item_list = item_list - 1000;
+                    if (belongings_item_list > 1000) {
+                        if (belongings_item_list >= 1000 && belongings_item_list < 2000) {
+                            belongings_item_list = belongings_item_list - 1000;
                             var_802 = var_802 - 1000;
                             var_814 = var_814 - 1000;
                             disc_rarity = 1;
                         }
-                        if (item_list >= 2000 && item_list < 3000) {
-                            item_list = item_list - 2000;
+                        if (belongings_item_list >= 2000 && belongings_item_list < 3000) {
+                            belongings_item_list = belongings_item_list - 2000;
                             var_802 = var_802 - 2000;
                             var_814 = var_814 - 2000;
                             disc_rarity = 2;
                         }
-                        if (item_list >= 3000 && item_list < 4000) {
-                            item_list = item_list - 3000;
+                        if (belongings_item_list >= 3000 && belongings_item_list < 4000) {
+                            belongings_item_list = belongings_item_list - 3000;
                             var_802 = var_802 - 3000;
                             var_814 = var_814 - 3000;
                             disc_rarity = 3;
@@ -8413,7 +8414,7 @@ function func171() {
                     _a.label = 7;
                 case 7:
                     if (!(cnt1_116 < 10)) return [3 /*break*/, 10];
-                    item_list = var_792[var_793][var_786][var_825];
+                    belongings_item_list = var_792[var_793][var_786][var_825];
                     return [4 /*yield*/, func492()];
                 case 8:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8422,7 +8423,7 @@ function func171() {
                         return [3 /*break*/, 10];
                     }
                     var_813[var_826] = item_ability_description;
-                    var_811[var_826] = item_list;
+                    var_811[var_826] = belongings_item_list;
                     var_826 = var_826 + 1;
                     var_825 = var_825 + 1;
                     _a.label = 9;
@@ -8430,8 +8431,8 @@ function func171() {
                     ++cnt1_116;
                     return [3 /*break*/, 7];
                 case 10:
-                    // item_list == 104 は ｻﾞ･ﾊﾝﾄﾞのDISC
-                    if (item_list == 104) {
+                    // belongings_item_list == 104 は ｻﾞ･ﾊﾝﾄﾞのDISC
+                    if (belongings_item_list == 104) {
                         var_826 = var_826 + 1;
                         var_813[var_826] = "こわれるぞ。";
                         var_811[var_826] = 199;
@@ -8600,7 +8601,7 @@ function func174() {
                 case 1:
                     if (!(cnt1_118 < var_224)) return [3 /*break*/, 10];
                     if (!(var_233[var_480].Var11 != 1)) return [3 /*break*/, 3];
-                    item_list = var_233[var_480].Var0;
+                    belongings_item_list = var_233[var_480].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -8620,7 +8621,7 @@ function func174() {
                 case 4:
                     if (!(cnt3_17 < 10)) return [3 /*break*/, 8];
                     if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] != 1)) return [3 /*break*/, 6];
-                    item_list = var_486[var_485][var_484][0];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 5:
                     _a.sent(); // アイテムリスト呼び出し
@@ -10372,7 +10373,7 @@ function func187() {
                     _a.label = 1;
                 case 1:
                     if (!(cnt1_126 < var_224)) return [3 /*break*/, 4];
-                    item_list = var_233[var_883].Var0;
+                    belongings_item_list = var_233[var_883].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -10403,13 +10404,13 @@ function func188() {
                     _a.label = 1;
                 case 1:
                     if (!(cnt1_127 < 1000)) return [3 /*break*/, 4];
-                    item_list = var_883;
+                    belongings_item_list = var_883;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
                     if (buying_price != 0) {
                         var_874 = var_874 + "\n" + "" + item_name;
-                        var_884[var_885] = item_list;
+                        var_884[var_885] = belongings_item_list;
                         var_885 = var_885 + 1;
                     }
                     var_883 = var_883 + 1;
@@ -10605,7 +10606,7 @@ function func192() {
                     var_897 = 0;
                     var_898 = 0;
                     var_225 = var_875;
-                    item_list = var_233[var_875].Var0;
+                    belongings_item_list = var_233[var_875].Var0;
                     return [4 /*yield*/, func433()];
                 case 1:
                     _a.sent(); // アイテム配列の "数" 増減？関数

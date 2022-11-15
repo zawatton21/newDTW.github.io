@@ -491,7 +491,7 @@ function func207(this: any) {
 function func208(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(208);
-        var_228 = 55;
+        Y_axis_item_position = 55;
         var_911 = 1;
         yield func212();
         yield func209();
@@ -502,10 +502,10 @@ function func209(this: any) {
         dbgprt(209);
         yield func080(); // 各キー入力確認
         if (var_259 == 1) {
-            var_228 = var_228 + 20;
+            Y_axis_item_position = Y_axis_item_position + 20;
             var_911 = var_911 + 1;
             if (var_911 == 9) {
-                var_228 = 55;
+                Y_axis_item_position = 55;
                 var_911 = 1;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -513,10 +513,10 @@ function func209(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
-            var_228 = var_228 - 20;
+            Y_axis_item_position = Y_axis_item_position - 20;
             var_911 = var_911 - 1;
             if (var_911 == 0) {
-                var_228 = 195;
+                Y_axis_item_position = 195;
                 var_911 = 8;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -707,11 +707,11 @@ function func210(this: any) {
         color(255, 255, 255);
 
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
-        pos(15, var_228);
+        pos(15, Y_axis_item_position);
         mes(">");
-        pos(16, var_228);
+        pos(16, Y_axis_item_position);
         mes(">");
-        pos(17, var_228);
+        pos(17, Y_axis_item_position);
         mes(">");
         return;
     });
@@ -937,7 +937,7 @@ function func214(this: any) {
 function func215(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(215);
-        var_228 = 140;
+        Y_axis_item_position = 140;
         var_925 = 1;
         var_926 = 0;
         var_927 = 0;
@@ -950,10 +950,10 @@ function func216(this: any) {
         dbgprt(216);
         yield func080(); // 各キー入力確認
         if (var_259 == 1) {
-            var_228 = var_228 + 20;
+            Y_axis_item_position = Y_axis_item_position + 20;
             var_925 = var_925 + 1;
             if (var_925 == 10) {
-                var_228 = 140;
+                Y_axis_item_position = 140;
                 var_925 = 1;
             }
 
@@ -962,10 +962,10 @@ function func216(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
-            var_228 = var_228 - 20;
+            Y_axis_item_position = Y_axis_item_position - 20;
             var_925 = var_925 - 1;
             if (var_925 == 0) {
-                var_228 = 300;
+                Y_axis_item_position = 300;
                 var_925 = 9;
             }
 
@@ -1638,11 +1638,11 @@ function func219(this: any) {
         color(255, 255, 255);
 
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
-        pos(25, var_228);
+        pos(25, Y_axis_item_position);
         mes(">");
-        pos(26, var_228);
+        pos(26, Y_axis_item_position);
         mes(">");
-        pos(27, var_228);
+        pos(27, Y_axis_item_position);
         mes(">");
         return;
     });
@@ -2165,7 +2165,7 @@ function func227(this: any) {
         var_979 = var_979 + "■■■攻撃ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
         if (var_357 != 0) {
             yield func426();
-            item_list = var_233[var_553].Var0;
+            belongings_item_list = var_233[var_553].Var0;
             disc_rarity = var_233[var_553].Var13;
             yield func492(); // アイテムリスト呼び出し
             if (var_233[var_553].Var4 == 0 && var_233[var_553].Var19 <= 1) {
@@ -2183,7 +2183,7 @@ function func227(this: any) {
             var_979 = var_979 + "" + var_981 + "\n";
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_553].Var19; ++cnt2) {
-                item_list = var_233[var_553]["Var" + var_982];
+                belongings_item_list = var_233[var_553]["Var" + var_982];
                 yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + item_ability_description + "\n";
@@ -2204,7 +2204,7 @@ function func227(this: any) {
         var_979 = var_979 + "■■■防御ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
         if (var_358 != 0) {
             yield func427();
-            item_list = var_233[var_554].Var0;
+            belongings_item_list = var_233[var_554].Var0;
             disc_rarity = var_233[var_554].Var13;
             yield func492(); // アイテムリスト呼び出し
             if (var_233[var_554].Var4 == 0 && var_233[var_554].Var19 <= 1) {
@@ -2222,7 +2222,7 @@ function func227(this: any) {
             var_979 = var_979 + "" + var_981 + "\n";
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_554].Var19; ++cnt2) {
-                item_list = var_233[var_554]["Var" + var_982];
+                belongings_item_list = var_233[var_554]["Var" + var_982];
                 yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + item_ability_description + "\n";
@@ -2243,7 +2243,7 @@ function func227(this: any) {
         var_979 = var_979 + "■■■能力ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
         if (var_215 != 0) {
             yield func428();
-            item_list = var_233[var_555].Var0;
+            belongings_item_list = var_233[var_555].Var0;
             disc_rarity = var_233[var_555].Var13;
             yield func492(); // アイテムリスト呼び出し
             if (var_233[var_555].Var4 == 0 && var_233[var_555].Var19 <= 1) {
@@ -2261,7 +2261,7 @@ function func227(this: any) {
             var_979 = var_979 + "" + var_981 + "\n";
             var_982 = 20;
             for (let cnt2 = 0; cnt2 < var_233[var_555].Var19; ++cnt2) {
-                item_list = var_233[var_555]["Var" + var_982];
+                belongings_item_list = var_233[var_555]["Var" + var_982];
                 yield func492(); // アイテムリスト呼び出し
                 if (var_812 == 1) {
                     var_979 = var_979 + "　[攻]" + item_ability_description + "\n";

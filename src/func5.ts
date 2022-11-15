@@ -332,14 +332,14 @@ function func502(this: any) {
 function func503(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(503);
-        if (item_list >= 800 && item_list < 900) {
+        if (belongings_item_list >= 800 && belongings_item_list < 900) {
             var_808 = "なにかヤバイものだ";
             item_ability_description = "";
             item_description1 = "[ヤバイもの]";
             var_2248 = 0;
             var_2249 = 130;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                if (var_862[item_list][1] == var_2248) {
+                if (var_862[belongings_item_list][1] == var_2248) {
                     item_name = "" + var_1066[var_2249];
                 }
                 var_2248++;
@@ -347,27 +347,27 @@ function func503(this: any) {
             }
             return;
         }
-        if (item_list >= 500 && item_list < 600) {
+        if (belongings_item_list >= 500 && belongings_item_list < 600) {
             var_808 = "未識別のDISCだ";
             item_ability_description = "";
             item_description1 = "[消耗DISC]";
             var_2250 = "のDISC";
-            if (var_862[item_list][2] >= 1) {
+            if (var_862[belongings_item_list][2] >= 1) {
                 var_2250 = "";
             }
         }
-        if (item_list < 400) {
+        if (belongings_item_list < 400) {
             var_808 = "未識別のDISCだ";
             item_ability_description = "";
             item_description1 = "[装備DISC]";
             var_2250 = "の装備DISC";
-            if (var_862[item_list][2] >= 1) {
+            if (var_862[belongings_item_list][2] >= 1) {
                 var_2250 = "";
             }
         }
         var_2248 = 0;
         for (let cnt1 = 0; cnt1 < 112; ++cnt1) {
-            if (var_862[item_list][1] == var_2248) {
+            if (var_862[belongings_item_list][1] == var_2248) {
                 item_name = "" + var_1066[var_2248] + "" + var_2250;
             }
             var_2248++;
@@ -588,18 +588,18 @@ function func506(this: any) {
         dbgprt(506);
         var_2254 = 0;
         // 装備discの場合
-        if (item_list >= 100 && item_list < 400) {
+        if (belongings_item_list >= 100 && belongings_item_list < 400) {
             
             if (var_220 == 0 && var_234 == 0) {
                 var_570 = var_233[var_225].Var13;
-                item_list = var_233[var_225].Var0;
+                belongings_item_list = var_233[var_225].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_2255 = item_name;
                 // 修正値が無い場合は、発動をした時に発動したdiscを消去
                 if (var_233[var_225].Var4 == 0 || var_233[var_225].Var14 == 0) {
                     
                     if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
-                        item_list = var_233[var_225].Var0;
+                        belongings_item_list = var_233[var_225].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
@@ -633,7 +633,7 @@ function func506(this: any) {
             if (var_220 == 1) {
                 var_570 = var_486[var_682][var_225][13];
                 
-                item_list = var_486[var_682][var_225][0];
+                belongings_item_list = var_486[var_682][var_225][0];
                 
                 yield func492(); // アイテムリスト呼び出し
                 
@@ -642,7 +642,7 @@ function func506(this: any) {
                 if (var_486[var_682][var_225][4] == 0 || var_486[var_682][var_225][14] == 0) {
                     
                     if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
-                        item_list = var_486[var_682][var_225][0];
+                        belongings_item_list = var_486[var_682][var_225][0];
                         yield func492(); // アイテムリスト呼び出し
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
@@ -668,13 +668,13 @@ function func506(this: any) {
             }
             if (var_234 == 1) {
                 var_570 = var_78[var_321].Var13;
-                item_list = var_78[var_321].Var0;
+                belongings_item_list = var_78[var_321].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_2255 = item_name;
                 if (var_78[var_321].Var4 == 0 || var_78[var_321].Var14 == 0) {
 
                     if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
-                        item_list = var_78[var_321].Var0;
+                        belongings_item_list = var_78[var_321].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
@@ -697,10 +697,10 @@ function func506(this: any) {
             }
         }
         // 射撃discの場合
-        if (item_list >= 400 && item_list < 500) {
+        if (belongings_item_list >= 400 && belongings_item_list < 500) {
             if (var_220 == 0 && var_234 == 0) {
                 if (var_233[var_225].Var3 <= 1) {
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     yield func492(); // アイテムリスト呼び出し
                     var_2255 = item_name;
 
@@ -725,7 +725,7 @@ function func506(this: any) {
             }
             if (var_220 == 1) {
                 if (var_486[var_682][var_225][3] <= 1) {
-                    item_list = var_486[var_682][var_225][0];
+                    belongings_item_list = var_486[var_682][var_225][0];
                     yield func492(); // アイテムリスト呼び出し
                     var_2255 = item_name;
 
@@ -752,7 +752,7 @@ function func506(this: any) {
             }
             if (var_234 == 1) {
                 if (var_78[var_321].Var3 <= 1) {
-                    item_list = var_78[var_321].Var0;
+                    belongings_item_list = var_78[var_321].Var0;
                     yield func492(); // アイテムリスト呼び出し
                     var_2255 = item_name;
 
@@ -943,7 +943,7 @@ function func511(this: any) {
         }
         if (var_862[activated_disc_id][0] == 0 && activated_disc_id >= 100 && activated_disc_id < 400) {
             
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             
             yield func492(); // アイテムリスト呼び出し
             
@@ -2572,7 +2572,7 @@ function func511(this: any) {
                 var_2287 = 1;
             }
             var_227 = 1;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -3186,7 +3186,7 @@ function func511(this: any) {
             var_198 = 0;
             var_2006 = 1;
             var_227 = 1;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -3372,7 +3372,7 @@ function func511(this: any) {
             var_198 = 0;
             var_2004 = 1;
             var_227 = 1;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -5291,7 +5291,7 @@ function func511(this: any) {
             }
             var_271 = 0;
             var_1583 = 0;
-            item_list = 308;
+            belongings_item_list = 308;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             yield func094();
             comments_row1 = "";
@@ -5579,7 +5579,7 @@ function func511(this: any) {
             }
             var_271 = 0;
             var_1583 = 0;
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             yield func094();
             comments_row1 = "";
@@ -6994,7 +6994,7 @@ function func511(this: any) {
                 var_1416 = 280;
             }
             var_2315 = 10;
-            item_list = var_233[var_225].Var0;
+            belongings_item_list = var_233[var_225].Var0;
             yield func492(); // アイテムリスト呼び出し
             var_1218 = 3;
             var_1195 = 1;
@@ -7145,7 +7145,7 @@ function func511(this: any) {
                 var_2324 = 8;
                 var_2325 = var_2324 - 1;
                 var_2326 = var_2324 * 20 + 37 + 30;
-                var_228 = 45;
+                Y_axis_item_position = 45;
                 for (let cnt3 = 0; true; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                     yield func080(); // 各キー入力確認
@@ -7166,7 +7166,7 @@ function func511(this: any) {
                     }
                     if (var_259 == 1) {
                         if (var_2323 != 7) {
-                            var_228 = var_228 + 22;
+                            Y_axis_item_position = Y_axis_item_position + 22;
                             var_2323 = var_2323 + 1;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7175,7 +7175,7 @@ function func511(this: any) {
                             continue;
                         }
                         if (var_2323 == 7) {
-                            var_228 = 45;
+                            Y_axis_item_position = 45;
                             var_2323 = 0;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7186,7 +7186,7 @@ function func511(this: any) {
                     }
                     if (var_255 == 1) {
                         if (var_2323 != 0) {
-                            var_228 = var_228 - 22;
+                            Y_axis_item_position = Y_axis_item_position - 22;
                             var_2323 = var_2323 - 1;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7195,7 +7195,7 @@ function func511(this: any) {
                             continue;
                         }
                         if (var_2323 == 0) {
-                            var_228 = 45 + 7 * 22;
+                            Y_axis_item_position = 45 + 7 * 22;
                             var_2323 = 7;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7236,7 +7236,7 @@ function func511(this: any) {
                     }
                     var_2007 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -7276,7 +7276,7 @@ function func511(this: any) {
                 }
                 var_2007 = 1;
                 var_227 = 1;
-                var_228 = 45;
+                Y_axis_item_position = 45;
                 var_225 = 1;
                 var_223 = var_224 + 10;
                 var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -7315,7 +7315,7 @@ function func511(this: any) {
             }
             var_2007 = 1;
             var_227 = 1;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -7698,6 +7698,7 @@ function func511(this: any) {
             if (activated_disc_id == 400 || activated_disc_id == 407) {
                 comments_row1 = "法王の結界を仕掛けた。";
                 comments_row2 = "";
+                return;
             }
             if (activated_disc_id == 317) {
                 comments_row1 = "シールを貼った。";
@@ -7728,7 +7729,7 @@ function func511(this: any) {
                 var_1220 = 0;
                 var_1197 = 0;
             }
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_2254 == 1) {
                 var_2254 = 0;
@@ -7925,7 +7926,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_2254 == 1) {
                 var_2254 = 0;
@@ -7977,7 +7978,7 @@ function func511(this: any) {
             }
             var_271 = 0;
             var_1297 = 0;
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -8002,7 +8003,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_2342 = 1;
             yield func647(); // 射撃攻撃動作処理
@@ -8083,7 +8084,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -8224,7 +8225,7 @@ function func511(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_357 = var_2261;
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -8760,7 +8761,7 @@ function func513(this: any) {
             return;
         }
         if (var_1949 == 0) {
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_357 = var_2261;
         }
@@ -9170,7 +9171,7 @@ function func522(this: any) {
         var_198 = 0;
         var_1240 = 2; 
         var_227 = 1;
-        var_228 = 45;
+        Y_axis_item_position = 45;
         var_225 = 1;
         var_223 = var_224 + 10;
         var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -9317,7 +9318,7 @@ function func523(this: any) {
         var_1240 = 3;
         base_disc_list = var_233[var_2090].Var0;
         with_disc_list = var_233[var_2091].Var0;
-        item_list = var_233[var_2090].Var0;
+        belongings_item_list = var_233[var_2090].Var0;
         yield func492(); // アイテムリスト呼び出し
         var_2092 = var_233[var_2091].Var19;
         var_2093 = 20;
@@ -9360,7 +9361,7 @@ function func523(this: any) {
             var_233[var_2090].Var12 = 2;
         }
         if (var_233[var_2091].Var11 == 1) {
-            item_list = var_233[var_2091].Var0;
+            belongings_item_list = var_233[var_2091].Var0;
             yield func492(); // アイテムリスト呼び出し
             var_106 = 1;
             var_482 = 0;
@@ -9372,7 +9373,7 @@ function func523(this: any) {
             count_buying_price = count_buying_price + buying_price;
         }
         var_233[var_2090].Var14 = 1;
-        item_list = var_233[var_2090].Var0;
+        belongings_item_list = var_233[var_2090].Var0;
         disc_rarity = var_233[var_2090].Var13;
         var_2365 = 0;
         if (disc_rarity >= 1) {
@@ -9380,7 +9381,7 @@ function func523(this: any) {
         }
         yield func492(); // アイテムリスト呼び出し
         var_2366 = item_name;
-        item_list = var_233[var_2091].Var0;
+        belongings_item_list = var_233[var_2091].Var0;
         disc_rarity = var_233[var_2091].Var13;
         yield func492(); // アイテムリスト呼び出し
         var_2367 = item_name;
@@ -9567,7 +9568,7 @@ function func523(this: any) {
             }
             if (var_233[var_2286].Var11 == 1) {
                 var_106 = 1;
-                item_list = var_233[var_2286].Var0;
+                belongings_item_list = var_233[var_2286].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_233[var_2286].Var3 + var_233[var_2286].Var4) * 50;
@@ -9590,7 +9591,7 @@ function func523(this: any) {
             }
             if (var_486[var_682][var_2286][11] == 1) {
                 var_106 = 1;
-                item_list = var_486[var_682][var_2286][0];
+                belongings_item_list = var_486[var_682][var_2286][0];
                 yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_486[var_682][var_2286][3] + var_486[var_682][var_2286][4]) * 50;
@@ -9607,7 +9608,7 @@ function func523(this: any) {
         if (var_234 == 1) {
             if (var_233[0].Var11 == 1) {
                 var_106 = 1;
-                item_list = var_233[0].Var0;
+                belongings_item_list = var_233[0].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_233[0].Var3 + var_233[0].Var4) * 50;
@@ -9669,7 +9670,7 @@ function func524(this: any) {
         if (var_225 < var_2256 && var_2301 == 1) {
             var_2256 = var_2256 - 1;
         }
-        item_list = var_233[var_225].Var0;
+        belongings_item_list = var_233[var_225].Var0;
         var_1289 = var_233[var_225].Var0;
         yield func492(); // アイテムリスト呼び出し
         strengthen_item_name = item_name;
@@ -9706,7 +9707,7 @@ function func524(this: any) {
         var_1571 = var_233[var_225].Var0;
         if (var_233[var_225].Var11 == 1) {
             var_106 = 1;
-            item_list = var_233[var_225].Var0;
+            belongings_item_list = var_233[var_225].Var0;
             yield func492(); // アイテムリスト呼び出し
             var_482 = 0;
             var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
@@ -9910,14 +9911,14 @@ function func525(this: any) {
             return;
         }
         var_2006 = 0;
-        item_list = var_233[var_225].Var0;
+        belongings_item_list = var_233[var_225].Var0;
         var_1289 = var_233[var_225].Var0;
         var_2373 = var_225;
         yield func492(); // アイテムリスト呼び出し
         strengthen_item_name = item_name;
         yield func051();
         var_1208 = 2;
-        item_list = var_1289;
+        belongings_item_list = var_1289;
         var_2374 = 157;
         var_2375 = 2;
         var_2376 = var_233[var_225].Var19;
@@ -9976,7 +9977,7 @@ function func526(this: any) {
         if (var_2301 == 2) {
             var_234 = 1;
         }
-        item_list = 310;
+        belongings_item_list = 310;
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (var_2254 == 1) {
             var_2254 = 0;
@@ -10045,7 +10046,7 @@ function func527(this: any) {
             var_198 = 0;
             var_2006 = 1;
             var_227 = 1;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -10079,7 +10080,7 @@ function func528(this: any) {
         pos(285, 45);
         gcopy(9, 360, 0, 40, 20);
         pos(20, 45);
-        item_list = var_1289;
+        belongings_item_list = var_1289;
         yield func492(); // アイテムリスト呼び出し
         pos(70, 55);
 
@@ -10116,7 +10117,7 @@ function func528(this: any) {
         track_number = 1;
         for (let cnt1 = 0; cnt1 < var_810 + free_space_value; ++cnt1) {
             pos(53, track_number * 20 + 120);
-            item_list = var_811[track_number];
+            belongings_item_list = var_811[track_number];
             yield func492(); // アイテムリスト呼び出し
             color(255, 255, 255);
             if (var_812 == 1) {
@@ -10389,7 +10390,7 @@ function func530(this: any) {
                 var_2393++;
             }
             if (var_2394 < 8) {
-                item_list = var_233[var_553].Var0;
+                belongings_item_list = var_233[var_553].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_2395 = item_name;
                 var_233[var_553].Var5 = var_233[var_553].Var5 + 1;
@@ -10404,7 +10405,7 @@ function func530(this: any) {
                 var_2393++;
             }
             if (var_2394 < 8) {
-                item_list = var_233[var_554].Var0;
+                belongings_item_list = var_233[var_554].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_2395 = item_name;
                 var_233[var_554].Var5 = var_233[var_554].Var5 + 1;
@@ -10419,7 +10420,7 @@ function func530(this: any) {
                 var_2393++;
             }
             if (var_2394 < 8) {
-                item_list = var_233[var_555].Var0;
+                belongings_item_list = var_233[var_555].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_2395 = item_name;
                 var_233[var_555].Var5 = var_233[var_555].Var5 + 1;
@@ -10492,17 +10493,17 @@ function func531(this: any) {
         }
         if (var_2397 == 0) {
             yield func426();
-            item_list = var_233[var_553].Var0;
+            belongings_item_list = var_233[var_553].Var0;
             var_475 = var_553;
         }
         if (var_2397 == 1) {
             yield func427();
-            item_list = var_233[var_554].Var0;
+            belongings_item_list = var_233[var_554].Var0;
             var_475 = var_554;
         }
         if (var_2397 == 2) {
             yield func428();
-            item_list = var_233[var_555].Var0;
+            belongings_item_list = var_233[var_555].Var0;
             var_475 = var_555;
         }
         if (var_233[var_475].Var5 == 0) {
@@ -10948,7 +10949,7 @@ function func533(this: any) {
                         var_853[var_866][29] = var_233[var_225].Var29;
                         if (var_233[var_225].Var11 == 1) {
                             var_106 = 1;
-                            item_list = var_233[var_225].Var0;
+                            belongings_item_list = var_233[var_225].Var0;
                             yield func492(); // アイテムリスト呼び出し
                             var_482 = 0;
                             var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
@@ -10988,7 +10989,7 @@ function func533(this: any) {
                             var_1977 = 1;
                         }
                         if (var_1977 == 1) {
-                            item_list = var_233[var_225].Var0;
+                            belongings_item_list = var_233[var_225].Var0;
                             yield func106(); // BGM選曲呼び出し割り振り
                         }
                         var_2401 = 1;
@@ -11050,7 +11051,7 @@ function func533(this: any) {
             if (var_2301 == 2) {
                 var_234 = 1;
             }
-            item_list = activated_disc_id;
+            belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_2254 == 1) {
                 var_2254 = 0;
@@ -13310,9 +13311,9 @@ function func541(this: any) {
                 }
             }
             if (var_474 == 1) {
-                item_list = var_233[var_475].Var0;
+                belongings_item_list = var_233[var_475].Var0;
                 disc_rarity = var_233[var_475].Var13;
-                var_488 = item_list;
+                var_488 = belongings_item_list;
                 yield func492(); // アイテムリスト呼び出し
                 target_item_name = item_name;
                 if (var_156[119] == 0) {
@@ -13874,7 +13875,7 @@ function func541(this: any) {
     
                 DSPLAY(audio_id = 118);
                 if (var_2463 == 0) {
-                    item_list = var_677;
+                    belongings_item_list = var_677;
                     yield func106(); // BGM選曲呼び出し割り振り
                 }
                 yield func047();
@@ -14082,7 +14083,7 @@ function func541(this: any) {
             var_108 = 0;
             if (var_410 == 401 && var_2463 == 99) {
                 if (var_677 == 401) {
-                    item_list = 401;
+                    belongings_item_list = 401;
                     yield func106(); // BGM選曲呼び出し割り振り
                 }
                 comments_row1 = comments_row1a;
@@ -14105,7 +14106,7 @@ function func541(this: any) {
                 return;
             }
             if (var_2463 == 0 || var_2463 == 99) {
-                item_list = var_677;
+                belongings_item_list = var_677;
                 yield func106(); // BGM選曲呼び出し割り振り
             }
             comments_row1 = comments_row1a;
@@ -14562,7 +14563,7 @@ function func541(this: any) {
                     }
                 }
             }
-            item_list = var_233[var_1531].Var0;
+            belongings_item_list = var_233[var_1531].Var0;
             disc_rarity = var_233[var_1531].Var13;
             var_2459 = var_233[var_1531].Var6;
             yield func492(); // アイテムリスト呼び出し
@@ -14676,7 +14677,7 @@ function func541(this: any) {
                 var_78[var_854].Var27 = var_233[var_225].Var27;
                 var_78[var_854].Var28 = var_233[var_225].Var28;
                 var_78[var_854].Var29 = var_233[var_225].Var29;
-                item_list = var_1846;
+                belongings_item_list = var_1846;
                 var_321 = var_854;
                 yield func433(); // アイテム配列の "数" 増減？関数
                 yield func540();
@@ -14926,7 +14927,7 @@ function func541(this: any) {
                 var_580 = var_580 - 1;
                 var_894 = var_894 - 1;
                 var_2473 = 1;
-                item_list = var_357;
+                belongings_item_list = var_357;
                 disc_rarity = var_233[var_553].Var13;
                 yield func492(); // アイテムリスト呼び出し
             }
@@ -14936,7 +14937,7 @@ function func541(this: any) {
                 var_581 = var_581 - 1;
                 var_895 = var_895 - 1;
                 var_2473 = 1;
-                item_list = var_358;
+                belongings_item_list = var_358;
                 disc_rarity = var_233[var_554].Var13;
                 yield func492(); // アイテムリスト呼び出し
             }
@@ -15023,7 +15024,7 @@ function func541(this: any) {
             var_480 = 1;
             payment_amount = 0;
             for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {
-                item_list = var_233[var_480].Var0;
+                belongings_item_list = var_233[var_480].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_2476 = Math.floor(buying_price / 2);
                 var_482 = 0;
@@ -15037,7 +15038,7 @@ function func541(this: any) {
                     var_485 = var_233[var_480].Var6;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         if (var_486[var_485][var_484][0] > 0) {
-                            item_list = var_486[var_485][var_484][0];
+                            belongings_item_list = var_486[var_485][var_484][0];
                             yield func492(); // アイテムリスト呼び出し
                             var_2476 = Math.floor(buying_price / 2);
                             var_482 = 0;
@@ -25818,7 +25819,7 @@ function func573(this: any) {
                     var_271 = 0;
                     var_1345 = 0;
                     var_83[var_2694].Var11 = 0;
-                    item_list = var_78[var_419].Var0;
+                    belongings_item_list = var_78[var_419].Var0;
                     disc_rarity = var_78[var_419].Var13;
                     yield func492(); // アイテムリスト呼び出し
                     target_item_name = item_name;
@@ -30207,10 +30208,10 @@ function func585(this: any) {
                     }
                     var_2461 = var_2461 + 1;
                 }
-                item_list = var_2460;
+                belongings_item_list = var_2460;
                 yield func492(); // アイテムリスト呼び出し
                 var_2813 = item_name;
-                item_list = var_2812;
+                belongings_item_list = var_2812;
                 yield func492(); // アイテムリスト呼び出し
                 var_2814 = item_name;
                 if (var_2460 != 0) {
@@ -30644,7 +30645,7 @@ function func587(this: any) {
             var_580 = var_580 - 1;
             var_894 = var_894 - 1;
             var_2473 = 1;
-            item_list = var_357;
+            belongings_item_list = var_357;
             disc_rarity = var_233[var_553].Var13;
             yield func492(); // アイテムリスト呼び出し
             var_2822 = item_name;
@@ -30655,7 +30656,7 @@ function func587(this: any) {
             var_581 = var_581 - 1;
             var_895 = var_895 - 1;
             var_2473 = 1;
-            item_list = var_358;
+            belongings_item_list = var_358;
             disc_rarity = var_233[var_554].Var13;
             yield func492(); // アイテムリスト呼び出し
             var_2822 = item_name;
@@ -30663,7 +30664,7 @@ function func587(this: any) {
         if (var_2474 == 3) {
             yield func426();
             var_233[var_553].Var12 = 0;
-            item_list = var_233[var_553].Var0;
+            belongings_item_list = var_233[var_553].Var0;
             disc_rarity = var_233[var_553].Var13;
             yield func492(); // アイテムリスト呼び出し
             var_2822 = item_name;
@@ -30671,7 +30672,7 @@ function func587(this: any) {
         if (var_2474 == 4) {
             yield func427();
             var_233[var_554].Var12 = 0;
-            item_list = var_233[var_554].Var0;
+            belongings_item_list = var_233[var_554].Var0;
             disc_rarity = var_233[var_554].Var13;
             yield func492(); // アイテムリスト呼び出し
             var_2822 = item_name;
@@ -31860,7 +31861,7 @@ function func596(this: any) {
             var_1476 = (var_78[var_2205].Var1 - var_66 + 4) * 40;
             var_1477 = (var_78[var_2205].Var2 - var_67 + 4) * 40;
             var_2303 = var_78[var_2205].Var0;
-            item_list = var_2303;
+            belongings_item_list = var_2303;
             yield func492(); // アイテムリスト呼び出し
             var_2848 = item_name;
             var_78[var_2205].Var0 = 652;

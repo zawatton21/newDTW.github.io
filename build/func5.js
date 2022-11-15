@@ -395,14 +395,14 @@ function func503() {
         var cnt2_2, cnt1_5;
         return __generator(this, function (_a) {
             dbgprt(503);
-            if (item_list >= 800 && item_list < 900) {
+            if (belongings_item_list >= 800 && belongings_item_list < 900) {
                 var_808 = "なにかヤバイものだ";
                 item_ability_description = "";
                 item_description1 = "[ヤバイもの]";
                 var_2248 = 0;
                 var_2249 = 130;
                 for (cnt2_2 = 0; cnt2_2 < 15; ++cnt2_2) {
-                    if (var_862[item_list][1] == var_2248) {
+                    if (var_862[belongings_item_list][1] == var_2248) {
                         item_name = "" + var_1066[var_2249];
                     }
                     var_2248++;
@@ -410,27 +410,27 @@ function func503() {
                 }
                 return [2 /*return*/];
             }
-            if (item_list >= 500 && item_list < 600) {
+            if (belongings_item_list >= 500 && belongings_item_list < 600) {
                 var_808 = "未識別のDISCだ";
                 item_ability_description = "";
                 item_description1 = "[消耗DISC]";
                 var_2250 = "のDISC";
-                if (var_862[item_list][2] >= 1) {
+                if (var_862[belongings_item_list][2] >= 1) {
                     var_2250 = "";
                 }
             }
-            if (item_list < 400) {
+            if (belongings_item_list < 400) {
                 var_808 = "未識別のDISCだ";
                 item_ability_description = "";
                 item_description1 = "[装備DISC]";
                 var_2250 = "の装備DISC";
-                if (var_862[item_list][2] >= 1) {
+                if (var_862[belongings_item_list][2] >= 1) {
                     var_2250 = "";
                 }
             }
             var_2248 = 0;
             for (cnt1_5 = 0; cnt1_5 < 112; ++cnt1_5) {
-                if (var_862[item_list][1] == var_2248) {
+                if (var_862[belongings_item_list][1] == var_2248) {
                     item_name = "" + var_1066[var_2248] + "" + var_2250;
                 }
                 var_2248++;
@@ -650,6 +650,7 @@ function func505() {
         });
     });
 }
+// discの発動をした際に、修正値の減少させる(0の時はdisc消滅させる)関数
 function func506() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -657,17 +658,17 @@ function func506() {
                 case 0:
                     dbgprt(506);
                     var_2254 = 0;
-                    if (!(item_list >= 100 && item_list < 400)) return [3 /*break*/, 21];
+                    if (!(belongings_item_list >= 100 && belongings_item_list < 400)) return [3 /*break*/, 21];
                     if (!(var_220 == 0 && var_234 == 0)) return [3 /*break*/, 9];
                     var_570 = var_233[var_225].Var13;
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (!(var_233[var_225].Var4 == 0 || var_233[var_225].Var14 == 0)) return [3 /*break*/, 6];
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 3];
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -685,7 +686,7 @@ function func506() {
                 case 6:
                     if (!(var_233[var_225].Var4 >= 1)) return [3 /*break*/, 9];
                     var_233[var_225].Var4 = var_233[var_225].Var4 - 1;
-                    if (var_233[var_225].Var11 == 1) {
+                    if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
                     }
@@ -707,14 +708,14 @@ function func506() {
                 case 9:
                     if (!(var_220 == 1)) return [3 /*break*/, 15];
                     var_570 = var_486[var_682][var_225][13];
-                    item_list = var_486[var_682][var_225][0];
+                    belongings_item_list = var_486[var_682][var_225][0];
                     return [4 /*yield*/, func492()];
                 case 10:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (!(var_486[var_682][var_225][4] == 0 || var_486[var_682][var_225][14] == 0)) return [3 /*break*/, 14];
                     if (!(var_486[var_682][var_225][11] == 1)) return [3 /*break*/, 12];
-                    item_list = var_486[var_682][var_225][0];
+                    belongings_item_list = var_486[var_682][var_225][0];
                     return [4 /*yield*/, func492()];
                 case 11:
                     _a.sent(); // アイテムリスト呼び出し
@@ -732,7 +733,7 @@ function func506() {
                 case 14:
                     if (var_486[var_682][var_225][4] >= 1) {
                         var_486[var_682][var_225][4] = var_486[var_682][var_225][4] - 1;
-                        if (var_486[var_682][var_225][11] == 1) {
+                        if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
                         }
@@ -743,14 +744,14 @@ function func506() {
                 case 15:
                     if (!(var_234 == 1)) return [3 /*break*/, 21];
                     var_570 = var_78[var_321].Var13;
-                    item_list = var_78[var_321].Var0;
+                    belongings_item_list = var_78[var_321].Var0;
                     return [4 /*yield*/, func492()];
                 case 16:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
                     if (!(var_78[var_321].Var4 == 0 || var_78[var_321].Var14 == 0)) return [3 /*break*/, 20];
                     if (!(var_78[var_321].Var11 == 1)) return [3 /*break*/, 18];
-                    item_list = var_78[var_321].Var0;
+                    belongings_item_list = var_78[var_321].Var0;
                     return [4 /*yield*/, func492()];
                 case 17:
                     _a.sent(); // アイテムリスト呼び出し
@@ -766,7 +767,7 @@ function func506() {
                 case 20:
                     if (var_78[var_321].Var4 >= 1) {
                         var_78[var_321].Var4 = var_78[var_321].Var4 - 1;
-                        if (var_78[var_321].Var11 == 1) {
+                        if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
                         }
@@ -775,15 +776,15 @@ function func506() {
                     }
                     _a.label = 21;
                 case 21:
-                    if (!(item_list >= 400 && item_list < 500)) return [3 /*break*/, 37];
+                    if (!(belongings_item_list >= 400 && belongings_item_list < 500)) return [3 /*break*/, 37];
                     if (!(var_220 == 0 && var_234 == 0)) return [3 /*break*/, 27];
                     if (!(var_233[var_225].Var3 <= 1)) return [3 /*break*/, 26];
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 22:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (var_233[var_225].Var11 == 1) {
+                    if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
@@ -795,12 +796,12 @@ function func506() {
                     _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func507()];
                 case 25:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示
                     return [2 /*return*/];
                 case 26:
                     if (var_233[var_225].Var3 >= 2) {
                         var_233[var_225].Var3 = var_233[var_225].Var3 - 1;
-                        if (var_233[var_225].Var11 == 1) {
+                        if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
                         }
@@ -810,12 +811,12 @@ function func506() {
                 case 27:
                     if (!(var_220 == 1)) return [3 /*break*/, 32];
                     if (!(var_486[var_682][var_225][3] <= 1)) return [3 /*break*/, 31];
-                    item_list = var_486[var_682][var_225][0];
+                    belongings_item_list = var_486[var_682][var_225][0];
                     return [4 /*yield*/, func492()];
                 case 28:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (var_486[var_682][var_225][11] == 1) {
+                    if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
@@ -825,13 +826,13 @@ function func506() {
                     _a.sent(); // アイテム配列の "数" 増減？関数
                     return [4 /*yield*/, func507()];
                 case 30:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     return [2 /*return*/];
                 case 31:
                     if (var_486[var_682][var_225][3] >= 2) {
                         var_486[var_682][var_225][3] = var_486[var_682][var_225][3] - 1;
-                        if (var_486[var_682][var_225][11] == 1) {
+                        if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
                         }
@@ -842,12 +843,12 @@ function func506() {
                 case 32:
                     if (!(var_234 == 1)) return [3 /*break*/, 37];
                     if (!(var_78[var_321].Var3 <= 1)) return [3 /*break*/, 36];
-                    item_list = var_78[var_321].Var0;
+                    belongings_item_list = var_78[var_321].Var0;
                     return [4 /*yield*/, func492()];
                 case 33:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (var_78[var_321].Var11 == 1) {
+                    if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
@@ -856,13 +857,13 @@ function func506() {
                     _a.sent();
                     return [4 /*yield*/, func507()];
                 case 35:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示
                     var_234 = 0;
                     return [2 /*return*/];
                 case 36:
                     if (var_78[var_321].Var3 >= 2) {
                         var_78[var_321].Var3 = var_78[var_321].Var3 - 1;
-                        if (var_78[var_321].Var11 == 1) {
+                        if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
                         }
@@ -875,7 +876,7 @@ function func506() {
         });
     });
 }
-// スタンドパワーが力尽きて消滅した時の関数
+// スタンドパワーが力尽きて消滅した時の表示
 function func507() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_7, cnt1_8;
@@ -928,7 +929,7 @@ function func507() {
         });
     });
 }
-// スタンドパワーが力尽きて消滅した時の関数
+// スタンドパワーが力尽きて消滅した時の表示2
 function func508() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_9, cnt1_10;
@@ -981,6 +982,7 @@ function func508() {
         });
     });
 }
+// discの発動をしようとして、発動できない場所の時の動作処理
 function func509() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -1013,6 +1015,7 @@ function func509() {
         });
     });
 }
+// 発動しようとした際、discが呪われていた時の動作処理
 function func510() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_11, cnt1_12;
@@ -1084,7 +1087,7 @@ function func510() {
         });
     });
 }
-// discの発動効果 (スタンド能力)
+// 各discごとの発動動作処理 (スタンド能力)
 function func511() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_3, cnt2_4, cnt2_5, cnt2_6, cnt2_7, cnt2_8, cnt2_9, cnt2_10, cnt2_11, cnt2_12, cnt3_1, cnt2_13, cnt2_14, cnt4_1, cnt2_15, cnt2_16, cnt2_17, cnt2_18, cnt2_19, cnt2_20, cnt2_21, cnt2_22, cnt2_23, cnt3_2, cnt2_24, cnt2_25, cnt4_2, cnt4_3, cnt4_4, cnt4_5, cnt2_26, cnt2_27, cnt2_28, cnt2_29, cnt3_3, cnt5_1, cnt5_2, cnt5_3, cnt2_30, cnt2_31, cnt3_4, cnt3_5, cnt2_32, cnt2_33, cnt2_34, cnt2_35, cnt2_36, cnt2_37, cnt2_38, cnt2_39, cnt2_40, cnt2_41, cnt2_42, cnt2_43, cnt2_44, cnt2_45, cnt2_46, cnt4_6, cnt3_6, cnt3_7, cnt2_47, cnt2_48, cnt2_49, cnt2_50, cnt2_51, cnt2_52, cnt2_53, cnt2_54, cnt2_55, cnt2_56, cnt3_8, cnt2_57, cnt2_58, cnt2_59, cnt3_9, cnt2_60, cnt2_61, cnt2_62, cnt3_10, cnt2_63, cnt2_64, cnt2_65, cnt5_4, cnt6_1, cnt6_2, cnt6_3, cnt6_4, cnt6_5, cnt6_6, cnt6_7, cnt6_8, cnt6_9, cnt6_10, cnt6_11, cnt6_12, cnt2_66, cnt2_67, cnt2_68, cnt2_69, cnt2_70, cnt2_71, cnt2_72, cnt5_5, cnt6_13, cnt6_14, cnt6_15, cnt6_16, cnt6_17, cnt6_18, cnt6_19, cnt6_20, cnt6_21, cnt6_22, cnt6_23, cnt6_24, cnt2_73, cnt2_74, cnt5_6, cnt6_25, cnt6_26, cnt6_27, cnt6_28, cnt6_29, cnt6_30, cnt6_31, cnt6_32, cnt6_33, cnt6_34, cnt6_35, cnt6_36, cnt2_75, cnt2_76, cnt5_7, cnt6_37, cnt6_38, cnt6_39, cnt6_40, cnt6_41, cnt6_42, cnt6_43, cnt6_44, cnt6_45, cnt6_46, cnt6_47, cnt6_48, cnt2_77, cnt3_11, cnt3_12, cnt2_78, cnt5_8, cnt6_49, cnt6_50, cnt6_51, cnt6_52, cnt6_53, cnt6_54, cnt6_55, cnt6_56, cnt6_57, cnt6_58, cnt6_59, cnt6_60, cnt2_79, cnt3_13, cnt3_14, cnt3_15, cnt2_80, cnt2_81, cnt2_82, cnt3_16, cnt3_17, cnt3_18, cnt3_19, cnt3_20, cnt3_21, cnt3_22, cnt3_23, cnt2_83, cnt2_84, cnt3_24, cnt2_85, cnt2_86, cnt2_87, cnt2_88, cnt2_89, cnt2_90, cnt2_91, cnt3_25, cnt2_92, cnt2_93, cnt2_94, cnt2_95, cnt2_96, cnt4_7, cnt2_97, cnt2_98, cnt2_99, cnt2_100, cnt2_101, cnt2_102, cnt2_103, cnt2_104, cnt2_105, cnt2_106, cnt3_26, cnt3_27, cnt2_107, cnt2_108, cnt2_109, cnt3_28, cnt2_110, cnt2_111, cnt5_9, cnt6_61, cnt6_62, cnt6_63, cnt6_64, cnt6_65, cnt6_66, cnt6_67, cnt6_68, cnt6_69, cnt6_70, cnt6_71, cnt6_72, cnt2_112, cnt2_113, cnt2_114, cnt3_29, cnt2_115, cnt2_116, cnt2_117, cnt2_118, cnt2_119, cnt2_120, cnt2_121, cnt2_122, cnt3_30, cnt3_31, cnt3_32, cnt4_8, cnt3_33, cnt2_123, cnt2_124, cnt2_125, cnt2_126, cnt2_127, cnt2_128, cnt2_129, cnt2_130, cnt2_131, cnt2_132, cnt2_133, cnt2_134, cnt2_135, cnt2_136, cnt3_34, cnt2_137, cnt3_35, cnt3_36, cnt2_138, cnt3_37, cnt3_38, cnt2_139, cnt2_140, cnt2_141, cnt2_142, cnt2_143, cnt2_144, cnt2_145, cnt4_9, cnt4_10, cnt4_11, cnt4_12, cnt2_146, cnt2_147, cnt2_148, cnt2_149, cnt2_150, cnt2_151, cnt2_152, cnt2_153, cnt3_39, cnt3_40, cnt2_154, cnt2_155, cnt2_156, cnt2_157, cnt2_158, cnt3_41, cnt2_159, cnt2_160;
@@ -1094,47 +1097,47 @@ function func511() {
                     dbgprt(511);
                     var_2257 = 0;
                     if (var_220 == 0 && var_234 == 0) {
-                        var_2258 = var_233[var_225].Var0;
-                        if (var_862[var_2258][0] == 1 && var_233[var_225].Var12 == 1 && var_233[var_225].Var14 == 1) {
+                        activated_disc_id = var_233[var_225].Var0;
+                        if (var_862[activated_disc_id][0] == 1 && var_233[var_225].Var12 == 1 && var_233[var_225].Var14 == 1) {
                             var_2257 = 1;
                         }
                     }
                     if (var_220 == 1) {
                         var_2256 = var_1876;
-                        var_2258 = var_486[var_682][var_225][0];
-                        if (var_862[var_2258][0] == 1 && var_486[var_682][var_225][12] == 1 && var_486[var_682][var_225][14] == 1) {
+                        activated_disc_id = var_486[var_682][var_225][0];
+                        if (var_862[activated_disc_id][0] == 1 && var_486[var_682][var_225][12] == 1 && var_486[var_682][var_225][14] == 1) {
                             var_2257 = 1;
                         }
                     }
                     if (var_234 == 1) {
-                        var_2258 = var_78[var_321].Var0;
-                        if (var_862[var_2258][0] == 1 && var_78[var_321].Var12 == 1 && var_78[var_321].Var14 == 1) {
+                        activated_disc_id = var_78[var_321].Var0;
+                        if (var_862[activated_disc_id][0] == 1 && var_78[var_321].Var12 == 1 && var_78[var_321].Var14 == 1) {
                             var_2257 = 1;
                         }
                     }
                     if (!(var_262 == 1)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func509()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // discの発動をしようとして、発動できない場所の時の動作処理
                     return [2 /*return*/];
                 case 2:
                     if (!(var_2257 == 1)) return [3 /*break*/, 4];
                     return [4 /*yield*/, func510()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // 発動しようとした際、discが呪われていた時の動作処理
                     return [2 /*return*/];
                 case 4:
-                    if (!(var_862[var_2258][0] == 0 && var_2258 >= 100 && var_2258 < 400)) return [3 /*break*/, 11];
-                    item_list = var_2258;
+                    if (!(var_862[activated_disc_id][0] == 0 && activated_disc_id >= 100 && activated_disc_id < 400)) return [3 /*break*/, 11];
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func492()];
                 case 5:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_2259 = item_name;
-                    var_862[var_2258][0] = 1;
+                    unidentified_disc_name = item_name;
+                    var_862[activated_disc_id][0] = 1;
                     return [4 /*yield*/, func492()];
                 case 6:
                     _a.sent(); // アイテムリスト呼び出し
-                    var_2260 = item_name;
+                    identified_disc_name = item_name;
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -1142,8 +1145,8 @@ function func511() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    comments_row1 = "なんと" + var_2259 + "は";
-                    comments_row2 = "" + var_2260 + "だった！";
+                    comments_row1 = "なんと" + unidentified_disc_name + "は";
+                    comments_row2 = "" + identified_disc_name + "だった！";
                     var_198 = 1;
                     var_300 = 0;
                     var_25_x = var_25[1];
@@ -1164,10 +1167,10 @@ function func511() {
                     ++cnt2_3;
                     return [3 /*break*/, 8];
                 case 11:
-                    if (!(var_2258 == 100)) return [3 /*break*/, 25];
+                    if (!(activated_disc_id == 100)) return [3 /*break*/, 25];
                     return [4 /*yield*/, func506()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_155 = 1;
                     comments_row1 = "";
                     comments_row2 = "";
@@ -1221,7 +1224,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 22:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 23;
                 case 23:
                     var_217 = 1;
@@ -1230,10 +1233,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 25:
-                    if (!(var_2258 == 103)) return [3 /*break*/, 39];
+                    if (!(activated_disc_id == 103)) return [3 /*break*/, 39];
                     return [4 /*yield*/, func506()];
                 case 26:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -1346,7 +1349,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 36:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 37;
                 case 37:
                     var_217 = 1;
@@ -1355,10 +1358,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 39:
-                    if (!(var_2258 == 114)) return [3 /*break*/, 60];
+                    if (!(activated_disc_id == 114)) return [3 /*break*/, 60];
                     return [4 /*yield*/, func506()];
                 case 40:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -1500,7 +1503,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 57:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 58;
                 case 58:
                     var_217 = 1;
@@ -1509,10 +1512,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 60:
-                    if (!(var_2258 == 307)) return [3 /*break*/, 69];
+                    if (!(activated_disc_id == 307)) return [3 /*break*/, 69];
                     return [4 /*yield*/, func506()];
                 case 61:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -1602,7 +1605,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 66:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 67;
                 case 67:
                     var_217 = 1;
@@ -1611,10 +1614,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 69:
-                    if (!(var_2258 == 207)) return [3 /*break*/, 119];
+                    if (!(activated_disc_id == 207)) return [3 /*break*/, 119];
                     return [4 /*yield*/, func506()];
                 case 70:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -1879,7 +1882,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 116:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 117;
                 case 117:
                     var_217 = 1;
@@ -1888,10 +1891,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 119:
-                    if (!(var_2258 == 122)) return [3 /*break*/, 134];
+                    if (!(activated_disc_id == 122)) return [3 /*break*/, 134];
                     return [4 /*yield*/, func506()];
                 case 120:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_2267 = dim(10);
                     var_143 = 1;
                     return [4 /*yield*/, func094()];
@@ -1943,7 +1946,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 131:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 132;
                 case 132:
                     var_217 = 1;
@@ -1952,10 +1955,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 134:
-                    if (!(var_2258 == 113)) return [3 /*break*/, 150];
+                    if (!(activated_disc_id == 113)) return [3 /*break*/, 150];
                     return [4 /*yield*/, func506()];
                 case 135:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -2058,7 +2061,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 147:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 148;
                 case 148:
                     var_217 = 1;
@@ -2067,10 +2070,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 150:
-                    if (!(var_2258 == 105)) return [3 /*break*/, 189];
+                    if (!(activated_disc_id == 105)) return [3 /*break*/, 189];
                     return [4 /*yield*/, func506()];
                 case 151:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     gsel(19);
                     color(255, 255, 255);
                     boxf(left = 0, top1 = 0, right = 680, bottom = 680);
@@ -2360,7 +2363,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 186:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 187;
                 case 187:
                     var_217 = 1;
@@ -2369,10 +2372,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 189:
-                    if (!(var_2258 == 116)) return [3 /*break*/, 212];
+                    if (!(activated_disc_id == 116)) return [3 /*break*/, 212];
                     return [4 /*yield*/, func506()];
                 case 190:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_1940 = var_199;
                     var_199 = 2;
                     var_1258 = 3;
@@ -2511,7 +2514,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 209:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 210;
                 case 210:
                     var_217 = 1;
@@ -2520,10 +2523,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 212:
-                    if (!(var_2258 == 107)) return [3 /*break*/, 258];
+                    if (!(activated_disc_id == 107)) return [3 /*break*/, 258];
                     return [4 /*yield*/, func506()];
                 case 213:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -2759,7 +2762,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 255:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 256;
                 case 256:
                     var_217 = 1;
@@ -2768,10 +2771,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 258:
-                    if (!(var_2258 == 115)) return [3 /*break*/, 289];
+                    if (!(activated_disc_id == 115)) return [3 /*break*/, 289];
                     return [4 /*yield*/, func506()];
                 case 259:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     return [4 /*yield*/, func094()];
                 case 260:
                     _a.sent();
@@ -2886,7 +2889,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 286:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 287;
                 case 287:
                     var_217 = 1;
@@ -2895,10 +2898,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 289:
-                    if (!(var_2258 == 109)) return [3 /*break*/, 341];
+                    if (!(activated_disc_id == 109)) return [3 /*break*/, 341];
                     return [4 /*yield*/, func506()];
                 case 290:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 293];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -3134,7 +3137,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 338:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 339;
                 case 339:
                     var_217 = 1;
@@ -3143,10 +3146,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 341:
-                    if (!(var_2258 == 301)) return [3 /*break*/, 362];
+                    if (!(activated_disc_id == 301)) return [3 /*break*/, 362];
                     return [4 /*yield*/, func506()];
                 case 342:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -3325,7 +3328,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 359:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 360;
                 case 360:
                     var_217 = 1;
@@ -3334,7 +3337,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 362:
-                    if (!(var_2258 == 106)) return [3 /*break*/, 371];
+                    if (!(activated_disc_id == 106)) return [3 /*break*/, 371];
                     if (var_220 == 0 && var_234 == 0) {
                         var_570 = var_233[var_225].Var13;
                     }
@@ -3381,7 +3384,7 @@ function func511() {
                         var_2287 = 1;
                     }
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -3394,10 +3397,10 @@ function func511() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 371:
-                    if (!(var_2258 == 300)) return [3 /*break*/, 388];
+                    if (!(activated_disc_id == 300)) return [3 /*break*/, 388];
                     return [4 /*yield*/, func506()];
                 case 372:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -3478,7 +3481,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 385:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 386;
                 case 386:
                     var_217 = 1;
@@ -3487,10 +3490,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 388:
-                    if (!(var_2258 == 108)) return [3 /*break*/, 432];
+                    if (!(activated_disc_id == 108)) return [3 /*break*/, 432];
                     return [4 /*yield*/, func506()];
                 case 389:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -3549,7 +3552,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 395:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 396;
                 case 396:
                     cnt2_36 = 0;
@@ -3687,10 +3690,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 432:
-                    if (!(var_2258 == 104)) return [3 /*break*/, 456];
+                    if (!(activated_disc_id == 104)) return [3 /*break*/, 456];
                     return [4 /*yield*/, func506()];
                 case 433:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -3952,7 +3955,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 451:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 452;
                 case 452:
                     if (!(var_72[var_66][var_67] == 0 && var_85 == 0 && var_163 == 0)) return [3 /*break*/, 454];
@@ -3967,7 +3970,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 456:
-                    if (!(var_2258 == 101)) return [3 /*break*/, 511];
+                    if (!(activated_disc_id == 101)) return [3 /*break*/, 511];
                     if (!(var_420 != 0)) return [3 /*break*/, 463];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -4051,7 +4054,7 @@ function func511() {
                     return [2 /*return*/];
                 case 471: return [4 /*yield*/, func506()];
                 case 472:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     cnt2_47 = 0;
                     _a.label = 473;
                 case 473:
@@ -4240,7 +4243,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 508:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 509;
                 case 509:
                     var_217 = 1;
@@ -4249,7 +4252,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 511:
-                    if (!(var_2258 == 319)) return [3 /*break*/, 520];
+                    if (!(activated_disc_id == 319)) return [3 /*break*/, 520];
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -4291,7 +4294,7 @@ function func511() {
                     var_198 = 0;
                     var_2006 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -4304,10 +4307,10 @@ function func511() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 520:
-                    if (!(var_2258 == 111 || var_2258 == 398)) return [3 /*break*/, 534];
+                    if (!(activated_disc_id == 111 || activated_disc_id == 398)) return [3 /*break*/, 534];
                     return [4 /*yield*/, func506()];
                 case 521:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_163 = 1;
                     var_164 = 1;
                     var_153 = 0;
@@ -4318,10 +4321,10 @@ function func511() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    if (var_2258 == 111) {
+                    if (activated_disc_id == 111) {
                         comments_row1 = "「ザ・ワールド」！！";
                     }
-                    if (var_2258 == 398) {
+                    if (activated_disc_id == 398) {
                         comments_row1 = "「スタープラチナ・ザ・ワールド」！！";
                     }
                     comments_row2 = "時よ止まれ！";
@@ -4372,17 +4375,17 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 531:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 532;
                 case 532: return [4 /*yield*/, func009()];
                 case 533:
                     _a.sent(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return [2 /*return*/];
                 case 534:
-                    if (!(var_2258 == 201)) return [3 /*break*/, 551];
+                    if (!(activated_disc_id == 201)) return [3 /*break*/, 551];
                     return [4 /*yield*/, func506()];
                 case 535:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -4459,7 +4462,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 548:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 549;
                 case 549:
                     var_217 = 1;
@@ -4468,10 +4471,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 551:
-                    if (!(var_2258 == 310)) return [3 /*break*/, 570];
+                    if (!(activated_disc_id == 310)) return [3 /*break*/, 570];
                     return [4 /*yield*/, func506()];
                 case 552:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12]))) return [3 /*break*/, 554];
                     return [4 /*yield*/, func915()];
                 case 553:
@@ -4531,7 +4534,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 567:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 568;
                 case 568:
                     var_217 = 1;
@@ -4540,7 +4543,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 570:
-                    if (!(var_2258 == 403)) return [3 /*break*/, 575];
+                    if (!(activated_disc_id == 403)) return [3 /*break*/, 575];
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -4572,7 +4575,7 @@ function func511() {
                     var_198 = 0;
                     var_2004 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -4585,10 +4588,10 @@ function func511() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 575:
-                    if (!(var_2258 == 120)) return [3 /*break*/, 591];
+                    if (!(activated_disc_id == 120)) return [3 /*break*/, 591];
                     return [4 /*yield*/, func506()];
                 case 576:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -4658,7 +4661,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 588:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 589;
                 case 589:
                     var_217 = 1;
@@ -4667,7 +4670,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 591:
-                    if (!(var_2258 == 200)) return [3 /*break*/, 607];
+                    if (!(activated_disc_id == 200)) return [3 /*break*/, 607];
                     if (!(var_73[var_66][var_67] != 0)) return [3 /*break*/, 598];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -4703,7 +4706,7 @@ function func511() {
                     return [2 /*return*/];
                 case 598: return [4 /*yield*/, func506()];
                 case 599:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -4747,7 +4750,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 604:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 605;
                 case 605:
                     var_217 = 1;
@@ -4756,10 +4759,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 607:
-                    if (!(var_2258 == 205)) return [3 /*break*/, 624];
+                    if (!(activated_disc_id == 205)) return [3 /*break*/, 624];
                     return [4 /*yield*/, func506()];
                 case 608:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -4943,7 +4946,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 621:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 622;
                 case 622:
                     var_217 = 1;
@@ -4952,10 +4955,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 624:
-                    if (!(var_2258 == 206)) return [3 /*break*/, 655];
+                    if (!(activated_disc_id == 206)) return [3 /*break*/, 655];
                     return [4 /*yield*/, func506()];
                 case 625:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -5119,7 +5122,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 652:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 653;
                 case 653:
                     var_217 = 1;
@@ -5128,10 +5131,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 655:
-                    if (!(var_2258 == 304)) return [3 /*break*/, 797];
+                    if (!(activated_disc_id == 304)) return [3 /*break*/, 797];
                     return [4 /*yield*/, func506()];
                 case 656:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 659];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -5763,7 +5766,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 794:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 795;
                 case 795:
                     var_217 = 1;
@@ -5772,10 +5775,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 797:
-                    if (!(var_2258 == 102)) return [3 /*break*/, 809];
+                    if (!(activated_disc_id == 102)) return [3 /*break*/, 809];
                     return [4 /*yield*/, func506()];
                 case 798:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -5841,7 +5844,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 806:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 807;
                 case 807:
                     var_217 = 1;
@@ -5850,10 +5853,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 809:
-                    if (!(var_2258 == 121)) return [3 /*break*/, 915];
+                    if (!(activated_disc_id == 121)) return [3 /*break*/, 915];
                     return [4 /*yield*/, func506()];
                 case 810:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 813];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -6269,7 +6272,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 912:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 913;
                 case 913:
                     var_217 = 1;
@@ -6278,10 +6281,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 915:
-                    if (!(var_2258 == 318)) return [3 /*break*/, 1021];
+                    if (!(activated_disc_id == 318)) return [3 /*break*/, 1021];
                     return [4 /*yield*/, func506()];
                 case 916:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 919];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -6697,7 +6700,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1018:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1019;
                 case 1019:
                     var_217 = 1;
@@ -6706,10 +6709,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1021:
-                    if (!(var_2258 == 117)) return [3 /*break*/, 1136];
+                    if (!(activated_disc_id == 117)) return [3 /*break*/, 1136];
                     return [4 /*yield*/, func506()];
                 case 1022:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 1025];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -7191,7 +7194,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1133:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1134;
                 case 1134:
                     var_217 = 1;
@@ -7200,10 +7203,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1136:
-                    if (!(var_2258 == 313)) return [3 /*break*/, 1251];
+                    if (!(activated_disc_id == 313)) return [3 /*break*/, 1251];
                     return [4 /*yield*/, func506()];
                 case 1137:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 1140];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -7686,7 +7689,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1248:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1249;
                 case 1249:
                     var_217 = 1;
@@ -7695,7 +7698,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1251:
-                    if (!(var_2258 == 308)) return [3 /*break*/, 1274];
+                    if (!(activated_disc_id == 308)) return [3 /*break*/, 1274];
                     if (var_199 == 2) {
                         var_2102 = var_66;
                         var_2103 = var_67 + 1;
@@ -7800,10 +7803,10 @@ function func511() {
                 case 1263:
                     var_271 = 0;
                     var_1583 = 0;
-                    item_list = 308;
+                    belongings_item_list = 308;
                     return [4 /*yield*/, func506()];
                 case 1264:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     return [4 /*yield*/, func094()];
                 case 1265:
                     _a.sent();
@@ -7840,7 +7843,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1271:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1272;
                 case 1272:
                     var_217 = 1;
@@ -7849,10 +7852,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1274:
-                    if (!(var_2258 == 203)) return [3 /*break*/, 1351];
+                    if (!(activated_disc_id == 203)) return [3 /*break*/, 1351];
                     return [4 /*yield*/, func506()];
                 case 1275:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -8166,7 +8169,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1348:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1349;
                 case 1349:
                     var_217 = 1;
@@ -8175,7 +8178,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1351:
-                    if (!(var_2258 == 112 || var_2258 == 394)) return [3 /*break*/, 1374];
+                    if (!(activated_disc_id == 112 || activated_disc_id == 394)) return [3 /*break*/, 1374];
                     if (var_199 == 2) {
                         var_2102 = var_66;
                         var_2103 = var_67 + 1;
@@ -8280,10 +8283,10 @@ function func511() {
                 case 1363:
                     var_271 = 0;
                     var_1583 = 0;
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 1364:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     return [4 /*yield*/, func094()];
                 case 1365:
                     _a.sent();
@@ -8320,7 +8323,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1371:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1372;
                 case 1372:
                     var_217 = 1;
@@ -8329,10 +8332,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1374:
-                    if (!(var_2258 == 204)) return [3 /*break*/, 1442];
+                    if (!(activated_disc_id == 204)) return [3 /*break*/, 1442];
                     return [4 /*yield*/, func506()];
                 case 1375:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     cnt2_87 = 0;
                     _a.label = 1376;
                 case 1376:
@@ -8651,7 +8654,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1439:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1440;
                 case 1440:
                     var_217 = 1;
@@ -8660,10 +8663,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1442:
-                    if (!(var_2258 == 312)) return [3 /*break*/, 1475];
+                    if (!(activated_disc_id == 312)) return [3 /*break*/, 1475];
                     return [4 /*yield*/, func506()];
                 case 1443:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 1446];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -8800,7 +8803,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1472:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1473;
                 case 1473:
                     var_217 = 1;
@@ -8809,10 +8812,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1475:
-                    if (!(var_2258 == 316)) return [3 /*break*/, 1500];
+                    if (!(activated_disc_id == 316)) return [3 /*break*/, 1500];
                     return [4 /*yield*/, func506()];
                 case 1476:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -9022,7 +9025,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1497:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1498;
                 case 1498:
                     var_217 = 1;
@@ -9031,10 +9034,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1500:
-                    if (!(var_2258 == 202)) return [3 /*break*/, 1517];
+                    if (!(activated_disc_id == 202)) return [3 /*break*/, 1517];
                     return [4 /*yield*/, func506()];
                 case 1501:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 1504];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -9235,7 +9238,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1514:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1515;
                 case 1515:
                     var_217 = 1;
@@ -9244,10 +9247,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1517:
-                    if (!(var_2258 == 395)) return [3 /*break*/, 1543];
+                    if (!(activated_disc_id == 395)) return [3 /*break*/, 1543];
                     return [4 /*yield*/, func506()];
                 case 1518:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     return [4 /*yield*/, func094()];
                 case 1519:
                     _a.sent();
@@ -9474,7 +9477,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1540:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1541;
                 case 1541:
                     var_217 = 1;
@@ -9483,10 +9486,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1543:
-                    if (!(var_2258 == 302)) return [3 /*break*/, 1661];
+                    if (!(activated_disc_id == 302)) return [3 /*break*/, 1661];
                     return [4 /*yield*/, func506()];
                 case 1544:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_172 == 1)) return [3 /*break*/, 1547];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -9971,7 +9974,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1658:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1659;
                 case 1659:
                     var_217 = 1;
@@ -9980,10 +9983,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1661:
-                    if (!(var_2258 == 303)) return [3 /*break*/, 1675];
+                    if (!(activated_disc_id == 303)) return [3 /*break*/, 1675];
                     return [4 /*yield*/, func506()];
                 case 1662:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -10037,7 +10040,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1672:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1673;
                 case 1673:
                     var_217 = 1;
@@ -10046,7 +10049,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1675:
-                    if (!(var_2258 == 413)) return [3 /*break*/, 1690];
+                    if (!(activated_disc_id == 413)) return [3 /*break*/, 1690];
                     var_2109 = 1;
                     var_1845 = 1;
                     return [4 /*yield*/, func556()];
@@ -10092,7 +10095,7 @@ function func511() {
                     return [2 /*return*/];
                 case 1683: return [4 /*yield*/, func506()];
                 case 1684:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_439 = var_673;
                     var_83[var_439].Var11 = 1;
                     var_83[var_439].Var5 = 2;
@@ -10120,10 +10123,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1690:
-                    if (!(var_2258 == 320)) return [3 /*break*/, 1700];
+                    if (!(activated_disc_id == 320)) return [3 /*break*/, 1700];
                     return [4 /*yield*/, func506()];
                 case 1691:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_131 = 1;
                     comments_row1 = "";
                     comments_row2 = "";
@@ -10158,7 +10161,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1697:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1698;
                 case 1698:
                     var_217 = 1;
@@ -10167,10 +10170,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1700:
-                    if (!(var_2258 == 305)) return [3 /*break*/, 1713];
+                    if (!(activated_disc_id == 305)) return [3 /*break*/, 1713];
                     return [4 /*yield*/, func506()];
                 case 1701:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_1024 = 1;
                     comments_row1 = "";
                     comments_row2 = "";
@@ -10223,7 +10226,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1710:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1711;
                 case 1711:
                     var_217 = 1;
@@ -10232,10 +10235,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1713:
-                    if (!(var_2258 == 396)) return [3 /*break*/, 1723];
+                    if (!(activated_disc_id == 396)) return [3 /*break*/, 1723];
                     return [4 /*yield*/, func506()];
                 case 1714:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     DSPLAY(audio_id = 154);
                     comments_row1 = "";
                     comments_row2 = "";
@@ -10277,7 +10280,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1720:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1721;
                 case 1721:
                     var_217 = 1;
@@ -10286,10 +10289,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1723:
-                    if (!(var_2258 == 119)) return [3 /*break*/, 1733];
+                    if (!(activated_disc_id == 119)) return [3 /*break*/, 1733];
                     return [4 /*yield*/, func506()];
                 case 1724:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     DSPLAY(audio_id = 152);
                     comments_row1 = "";
                     comments_row2 = "";
@@ -10325,7 +10328,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1730:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1731;
                 case 1731:
                     var_217 = 1;
@@ -10334,10 +10337,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1733:
-                    if (!(var_2258 == 123)) return [3 /*break*/, 1759];
+                    if (!(activated_disc_id == 123)) return [3 /*break*/, 1759];
                     return [4 /*yield*/, func506()];
                 case 1734:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_340 = 123;
                     var_1264 = 0;
                     var_1218 = 1;
@@ -10388,7 +10391,7 @@ function func511() {
                         var_1416 = 280;
                     }
                     var_2315 = 10;
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 1740:
                     _a.sent(); // アイテムリスト呼び出し
@@ -10525,7 +10528,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1756:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1757;
                 case 1757:
                     var_217 = 1;
@@ -10534,7 +10537,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1759:
-                    if (!(var_2258 == 124)) return [3 /*break*/, 1809];
+                    if (!(activated_disc_id == 124)) return [3 /*break*/, 1809];
                     if (!(var_407 == 2)) return [3 /*break*/, 1791];
                     var_2320 = 0;
                     var_2321 = sdim(100, 10);
@@ -10587,7 +10590,7 @@ function func511() {
                     var_2324 = 8;
                     var_2325 = var_2324 - 1;
                     var_2326 = var_2324 * 20 + 37 + 30;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     cnt3_32 = 0;
                     _a.label = 1767;
                 case 1767:
@@ -10613,7 +10616,7 @@ function func511() {
                     }
                     if (!(var_259 == 1)) return [3 /*break*/, 1775];
                     if (!(var_2323 != 7)) return [3 /*break*/, 1772];
-                    var_228 = var_228 + 22;
+                    Y_axis_item_position = Y_axis_item_position + 22;
                     var_2323 = var_2323 + 1;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
@@ -10625,7 +10628,7 @@ function func511() {
                     return [3 /*break*/, 1781];
                 case 1772:
                     if (!(var_2323 == 7)) return [3 /*break*/, 1775];
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_2323 = 0;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
@@ -10638,7 +10641,7 @@ function func511() {
                 case 1775:
                     if (!(var_255 == 1)) return [3 /*break*/, 1781];
                     if (!(var_2323 != 0)) return [3 /*break*/, 1778];
-                    var_228 = var_228 - 22;
+                    Y_axis_item_position = Y_axis_item_position - 22;
                     var_2323 = var_2323 - 1;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
@@ -10650,7 +10653,7 @@ function func511() {
                     return [3 /*break*/, 1781];
                 case 1778:
                     if (!(var_2323 == 0)) return [3 /*break*/, 1781];
-                    var_228 = 45 + 7 * 22;
+                    Y_axis_item_position = 45 + 7 * 22;
                     var_2323 = 7;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func337()];
@@ -10707,7 +10710,7 @@ function func511() {
                     }
                     var_2007 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -10762,7 +10765,7 @@ function func511() {
                     }
                     var_2007 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -10817,7 +10820,7 @@ function func511() {
                     }
                     var_2007 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -10830,10 +10833,10 @@ function func511() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 1809:
-                    if (!(var_2258 == 311)) return [3 /*break*/, 1885];
+                    if (!(activated_disc_id == 311)) return [3 /*break*/, 1885];
                     return [4 /*yield*/, func506()];
                 case 1810:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12]) && wallet >= 300)) return [3 /*break*/, 1812];
                     return [4 /*yield*/, func921()];
                 case 1811:
@@ -11144,7 +11147,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1882:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1883;
                 case 1883:
                     var_217 = 1;
@@ -11153,10 +11156,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1885:
-                    if (!(var_2258 == 397)) return [3 /*break*/, 1899];
+                    if (!(activated_disc_id == 397)) return [3 /*break*/, 1899];
                     return [4 /*yield*/, func506()];
                 case 1886:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_2327 = 1;
                     var_768 = 1;
                     cnt2_135 = 0;
@@ -11208,7 +11211,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1896:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1897;
                 case 1897:
                     var_217 = 1;
@@ -11217,15 +11220,15 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1899:
-                    if (!(var_2258 == 314)) return [3 /*break*/, 1912];
+                    if (!(activated_disc_id == 314)) return [3 /*break*/, 1912];
                     return [4 /*yield*/, func506()];
                 case 1900:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_2254 == 1)) return [3 /*break*/, 1905];
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1901:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     cnt3_34 = 0;
                     _a.label = 1902;
                 case 1902:
@@ -11274,7 +11277,7 @@ function func511() {
                     _a.sent(); // 射撃攻撃動作処理
                     return [2 /*return*/];
                 case 1912:
-                    if (!(var_2258 == 405 || var_2258 == 406 || var_2258 == 408 || var_2258 == 409 || var_2258 == 410 || var_2258 == 404 || var_2258 == 400 || var_2258 == 317 || var_2258 == 414 || var_2258 == 309)) return [3 /*break*/, 1939];
+                    if (!(activated_disc_id == 405 || activated_disc_id == 406 || activated_disc_id == 408 || activated_disc_id == 409 || activated_disc_id == 410 || activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 317 || activated_disc_id == 414 || activated_disc_id == 309)) return [3 /*break*/, 1939];
                     if (!(var_73[var_66][var_67] != 0 || var_80[var_66][var_67] != 0 || var_77[var_66][var_67] != 0)) return [3 /*break*/, 1919];
                     comments_row1 = "";
                     comments_row2 = "";
@@ -11283,19 +11286,19 @@ function func511() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    if (var_2258 == 409 || var_2258 == 406 || var_2258 == 410 || var_2258 == 309) {
+                    if (activated_disc_id == 409 || activated_disc_id == 406 || activated_disc_id == 410 || activated_disc_id == 309) {
                         comments_row1 = "ここには潜ませられない。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 404 || var_2258 == 400 || var_2258 == 405 || var_2258 == 408) {
+                    if (activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 405 || activated_disc_id == 408) {
                         comments_row1 = "ここには仕掛けられない。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 317) {
+                    if (activated_disc_id == 317) {
                         comments_row1 = "ここには貼れない。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 414) {
+                    if (activated_disc_id == 414) {
                         comments_row1 = "ここには撃てない。";
                         comments_row2 = "";
                     }
@@ -11323,7 +11326,7 @@ function func511() {
                     _a.sent(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return [2 /*return*/];
                 case 1919:
-                    if (!(var_2258 == 414)) return [3 /*break*/, 1924];
+                    if (!(activated_disc_id == 414)) return [3 /*break*/, 1924];
                     var_271 = 1;
                     var_1496 = 1;
                     cnt3_36 = 0;
@@ -11351,34 +11354,34 @@ function func511() {
                     var_337 = var_337 + 1;
                     var_2330 = var_337;
                     var_80[var_66][var_67] = var_2330;
-                    if (var_2258 == 309) {
+                    if (activated_disc_id == 309) {
                         var_81[var_2330][0] = 78;
                     }
-                    if (var_2258 == 410) {
+                    if (activated_disc_id == 410) {
                         var_81[var_2330][0] = 89;
                     }
-                    if (var_2258 == 406) {
+                    if (activated_disc_id == 406) {
                         var_81[var_2330][0] = 87;
                     }
-                    if (var_2258 == 408) {
+                    if (activated_disc_id == 408) {
                         var_81[var_2330][0] = 88;
                     }
-                    if (var_2258 == 405) {
+                    if (activated_disc_id == 405) {
                         var_81[var_2330][0] = 90;
                     }
-                    if (var_2258 == 409) {
+                    if (activated_disc_id == 409) {
                         var_81[var_2330][0] = 91;
                     }
-                    if (var_2258 == 404) {
+                    if (activated_disc_id == 404) {
                         var_81[var_2330][0] = 93;
                     }
-                    if (var_2258 == 400) {
+                    if (activated_disc_id == 400) {
                         var_81[var_2330][0] = 92;
                     }
-                    if (var_2258 == 317) {
+                    if (activated_disc_id == 317) {
                         var_81[var_2330][0] = 81;
                     }
-                    if (var_2258 == 414) {
+                    if (activated_disc_id == 414) {
                         var_81[var_2330][0] = 79;
                     }
                     var_81[var_2330][1] = var_66;
@@ -11392,47 +11395,48 @@ function func511() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    if (var_2258 == 309) {
+                    if (activated_disc_id == 309) {
                         comments_row1 = "地面にｿﾌﾄ･ﾏｼｰﾝを潜ませた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 406) {
+                    if (activated_disc_id == 406) {
                         comments_row1 = "地面に文字を貼り付けた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 408) {
+                    if (activated_disc_id == 408) {
                         comments_row1 = "足元に鏡を仕掛けた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 405) {
+                    if (activated_disc_id == 405) {
                         comments_row1 = "地面に文字を貼り付けた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 409) {
+                    if (activated_disc_id == 409) {
                         comments_row1 = "こっそりラバーズを潜ませた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 404) {
+                    if (activated_disc_id == 404) {
                         comments_row1 = "足元に氷の罠を仕掛けた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 410) {
+                    if (activated_disc_id == 410) {
                         comments_row1 = "ﾊｲｳｪｲ･ｽﾀｰを潜ませた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 400 || var_2258 == 407) {
+                    if (activated_disc_id == 400 || activated_disc_id == 407) {
                         comments_row1 = "法王の結界を仕掛けた。";
                         comments_row2 = "";
+                        return [2 /*return*/];
                     }
-                    if (var_2258 == 317) {
+                    if (activated_disc_id == 317) {
                         comments_row1 = "シールを貼った。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 414) {
+                    if (activated_disc_id == 414) {
                         comments_row1 = "地面に穴を開けた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 != 414) {
+                    if (activated_disc_id != 414) {
                         DSPLAY(audio_id = 165);
                     }
                     var_198 = 1;
@@ -11455,7 +11459,7 @@ function func511() {
                     ++cnt2_138;
                     return [3 /*break*/, 1926];
                 case 1929:
-                    if (!(var_2258 == 414)) return [3 /*break*/, 1934];
+                    if (!(activated_disc_id == 414)) return [3 /*break*/, 1934];
                     cnt3_37 = 0;
                     _a.label = 1930;
                 case 1930:
@@ -11473,15 +11477,15 @@ function func511() {
                     var_1197 = 0;
                     _a.label = 1934;
                 case 1934:
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 1935:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_2254 == 1)) return [3 /*break*/, 1937];
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1936:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1937;
                 case 1937:
                     var_217 = 1;
@@ -11490,7 +11494,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1939:
-                    if (!(var_2258 == 118 || var_2258 == 407)) return [3 /*break*/, 1956];
+                    if (!(activated_disc_id == 118 || activated_disc_id == 407)) return [3 /*break*/, 1956];
                     var_2331 = 0;
                     var_2332 = var_66;
                     var_2333 = var_67;
@@ -11510,10 +11514,10 @@ function func511() {
                     if (var_2337 >= var_34) {
                         var_2337 = var_34;
                     }
-                    if (var_2258 == 118) {
+                    if (activated_disc_id == 118) {
                         var_2338 = 94;
                     }
-                    if (var_2258 == 407) {
+                    if (activated_disc_id == 407) {
                         var_2338 = 92;
                     }
                     if (var_71[var_2332][var_2333] != 0 && var_71[var_2332][var_2333] != 13 && var_73[var_2332][var_2333] == 0 && var_77[var_2332][var_2333] == 0 && var_80[var_2332][var_2333] == 0) {
@@ -11630,11 +11634,11 @@ function func511() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    if (var_2258 == 118) {
+                    if (activated_disc_id == 118) {
                         comments_row1 = "この辺りには潜ませられない。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 407) {
+                    if (activated_disc_id == 407) {
                         comments_row1 = "この辺りには仕掛けられない。";
                         comments_row2 = "";
                     }
@@ -11670,11 +11674,11 @@ function func511() {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    if (var_2258 == 118) {
+                    if (activated_disc_id == 118) {
                         comments_row1 = "地面にダイバーダウンを潜ませた。";
                         comments_row2 = "";
                     }
-                    if (var_2258 == 407) {
+                    if (activated_disc_id == 407) {
                         comments_row1 = "法王の結界を仕掛けた。";
                         comments_row2 = "";
                     }
@@ -11698,15 +11702,15 @@ function func511() {
                     ++cnt2_139;
                     return [3 /*break*/, 1948];
                 case 1951:
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 1952:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_2254 == 1)) return [3 /*break*/, 1954];
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 1953:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 1954;
                 case 1954:
                     var_217 = 1;
@@ -11715,7 +11719,7 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1956:
-                    if (!(var_2258 == 401)) return [3 /*break*/, 1964];
+                    if (!(activated_disc_id == 401)) return [3 /*break*/, 1964];
                     var_2341 = 0;
                     var_211 = var_211 + 20;
                     if (var_120 == 1 || var_174 == 1) {
@@ -11766,17 +11770,17 @@ function func511() {
                 case 1961:
                     var_271 = 0;
                     var_1297 = 0;
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 1962:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_217 = 1;
                     return [4 /*yield*/, func019()];
                 case 1963:
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1964:
-                    if (!(var_2258 == 402)) return [3 /*break*/, 1972];
+                    if (!(activated_disc_id == 402)) return [3 /*break*/, 1972];
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -11805,17 +11809,17 @@ function func511() {
                     ++cnt2_141;
                     return [3 /*break*/, 1966];
                 case 1969:
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 1970:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_2342 = 1;
                     return [4 /*yield*/, func647()];
                 case 1971:
                     _a.sent(); // 射撃攻撃動作処理
                     return [2 /*return*/];
                 case 1972:
-                    if (!(var_2258 == 411)) return [3 /*break*/, 1993];
+                    if (!(activated_disc_id == 411)) return [3 /*break*/, 1993];
                     cnt2_142 = 0;
                     _a.label = 1973;
                 case 1973:
@@ -11925,17 +11929,17 @@ function func511() {
                     ++cnt2_145;
                     return [3 /*break*/, 1987];
                 case 1990:
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 1991:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_217 = 1;
                     return [4 /*yield*/, func019()];
                 case 1992:
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 1993:
-                    if (!(var_2258 == 412)) return [3 /*break*/, 2019];
+                    if (!(activated_disc_id == 412)) return [3 /*break*/, 2019];
                     return [4 /*yield*/, func094()];
                 case 1994:
                     _a.sent();
@@ -12112,20 +12116,20 @@ function func511() {
                     return [3 /*break*/, 2013];
                 case 2016:
                     var_357 = var_2261;
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 2017:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_217 = 1;
                     return [4 /*yield*/, func019()];
                 case 2018:
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 2019:
-                    if (!(var_2258 == 306)) return [3 /*break*/, 2047];
+                    if (!(activated_disc_id == 306)) return [3 /*break*/, 2047];
                     return [4 /*yield*/, func506()];
                 case 2020:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -12246,7 +12250,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 2044:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 2045;
                 case 2045:
                     var_217 = 1;
@@ -12255,10 +12259,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 2047:
-                    if (!(var_2258 == 315)) return [3 /*break*/, 2067];
+                    if (!(activated_disc_id == 315)) return [3 /*break*/, 2067];
                     return [4 /*yield*/, func506()];
                 case 2048:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -12353,7 +12357,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 2064:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 2065;
                 case 2065:
                     var_217 = 1;
@@ -12362,10 +12366,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 2067:
-                    if (!(var_2258 == 393)) return [3 /*break*/, 2116];
+                    if (!(activated_disc_id == 393)) return [3 /*break*/, 2116];
                     return [4 /*yield*/, func506()];
                 case 2068:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_2352 = rnd(6);
                     if (var_97 >= 50) {
                         var_2352 = 10;
@@ -12444,7 +12448,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 2078:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 2079;
                 case 2079:
                     var_217 = 1;
@@ -12506,7 +12510,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 2090:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 2091;
                 case 2091:
                     var_217 = 1;
@@ -12607,7 +12611,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 2113:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 2114;
                 case 2114:
                     var_217 = 1;
@@ -12616,10 +12620,10 @@ function func511() {
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return [2 /*return*/];
                 case 2116:
-                    if (!(var_2258 == 399)) return [3 /*break*/, 2145];
+                    if (!(activated_disc_id == 399)) return [3 /*break*/, 2145];
                     return [4 /*yield*/, func506()];
                 case 2117:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (var_570 == 0) {
                         var_1284 = 11;
                     }
@@ -12692,7 +12696,7 @@ function func511() {
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 2128:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     cnt3_41 = 0;
                     _a.label = 2129;
                 case 2129:
@@ -12909,7 +12913,7 @@ function func512() {
         });
     });
 }
-// 射撃discヘブンズドアーの発動効果
+// 射撃discヘブンズドアーの発動時メッセージ
 function func513() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -12923,10 +12927,10 @@ function func513() {
                     return [2 /*return*/];
                 case 2:
                     if (!(var_1949 == 0)) return [3 /*break*/, 4];
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     var_357 = var_2261;
                     _a.label = 4;
                 case 4:
@@ -13505,7 +13509,7 @@ function func522() {
                     var_198 = 0;
                     var_1240 = 2;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -13745,7 +13749,7 @@ function func523() {
                     var_1240 = 3;
                     base_disc_list = var_233[var_2090].Var0;
                     with_disc_list = var_233[var_2091].Var0;
-                    item_list = var_233[var_2090].Var0;
+                    belongings_item_list = var_233[var_2090].Var0;
                     return [4 /*yield*/, func492()];
                 case 48:
                     _a.sent(); // アイテムリスト呼び出し
@@ -13790,7 +13794,7 @@ function func523() {
                         var_233[var_2090].Var12 = 2;
                     }
                     if (!(var_233[var_2091].Var11 == 1)) return [3 /*break*/, 50];
-                    item_list = var_233[var_2091].Var0;
+                    belongings_item_list = var_233[var_2091].Var0;
                     return [4 /*yield*/, func492()];
                 case 49:
                     _a.sent(); // アイテムリスト呼び出し
@@ -13805,7 +13809,7 @@ function func523() {
                     _a.label = 50;
                 case 50:
                     var_233[var_2090].Var14 = 1;
-                    item_list = var_233[var_2090].Var0;
+                    belongings_item_list = var_233[var_2090].Var0;
                     disc_rarity = var_233[var_2090].Var13;
                     var_2365 = 0;
                     if (disc_rarity >= 1) {
@@ -13815,7 +13819,7 @@ function func523() {
                 case 51:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2366 = item_name;
-                    item_list = var_233[var_2091].Var0;
+                    belongings_item_list = var_233[var_2091].Var0;
                     disc_rarity = var_233[var_2091].Var13;
                     return [4 /*yield*/, func492()];
                 case 52:
@@ -14104,7 +14108,7 @@ function func523() {
                     }
                     if (!(var_233[var_2286].Var11 == 1)) return [3 /*break*/, 106];
                     var_106 = 1;
-                    item_list = var_233[var_2286].Var0;
+                    belongings_item_list = var_233[var_2286].Var0;
                     return [4 /*yield*/, func492()];
                 case 105:
                     _a.sent(); // アイテムリスト呼び出し
@@ -14135,7 +14139,7 @@ function func523() {
                     }
                     if (!(var_486[var_682][var_2286][11] == 1)) return [3 /*break*/, 112];
                     var_106 = 1;
-                    item_list = var_486[var_682][var_2286][0];
+                    belongings_item_list = var_486[var_682][var_2286][0];
                     return [4 /*yield*/, func492()];
                 case 111:
                     _a.sent(); // アイテムリスト呼び出し
@@ -14158,7 +14162,7 @@ function func523() {
                     if (!(var_234 == 1)) return [3 /*break*/, 117];
                     if (!(var_233[0].Var11 == 1)) return [3 /*break*/, 116];
                     var_106 = 1;
-                    item_list = var_233[0].Var0;
+                    belongings_item_list = var_233[0].Var0;
                     return [4 /*yield*/, func492()];
                 case 115:
                     _a.sent(); // アイテムリスト呼び出し
@@ -14245,7 +14249,7 @@ function func524() {
                     if (var_225 < var_2256 && var_2301 == 1) {
                         var_2256 = var_2256 - 1;
                     }
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     var_1289 = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 7:
@@ -14284,7 +14288,7 @@ function func524() {
                     var_1571 = var_233[var_225].Var0;
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 9];
                     var_106 = 1;
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 8:
                     _a.sent(); // アイテムリスト呼び出し
@@ -14575,7 +14579,7 @@ function func525() {
                     return [2 /*return*/];
                 case 28:
                     var_2006 = 0;
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     var_1289 = var_233[var_225].Var0;
                     var_2373 = var_225;
                     return [4 /*yield*/, func492()];
@@ -14586,7 +14590,7 @@ function func525() {
                 case 30:
                     _a.sent();
                     var_1208 = 2;
-                    item_list = var_1289;
+                    belongings_item_list = var_1289;
                     var_2374 = 157;
                     var_2375 = 2;
                     var_2376 = var_233[var_225].Var19;
@@ -14598,6 +14602,7 @@ function func525() {
         });
     });
 }
+// ボーイⅡマンの発動能力
 function func526() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_24, cnt1_25;
@@ -14662,15 +14667,15 @@ function func526() {
                     if (var_2301 == 2) {
                         var_234 = 1;
                     }
-                    item_list = 310;
+                    belongings_item_list = 310;
                     return [4 /*yield*/, func506()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_2254 == 1)) return [3 /*break*/, 8];
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 7:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 8;
                 case 8:
                     var_217 = 1;
@@ -14761,7 +14766,7 @@ function func527() {
                     var_198 = 0;
                     var_2006 = 1;
                     var_227 = 1;
-                    var_228 = 45;
+                    Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -14805,7 +14810,7 @@ function func528() {
                     pos(285, 45);
                     gcopy(9, 360, 0, 40, 20);
                     pos(20, 45);
-                    item_list = var_1289;
+                    belongings_item_list = var_1289;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
@@ -14843,7 +14848,7 @@ function func528() {
                 case 2:
                     if (!(cnt1_27 < var_810 + free_space_value)) return [3 /*break*/, 5];
                     pos(53, track_number * 20 + 120);
-                    item_list = var_811[track_number];
+                    belongings_item_list = var_811[track_number];
                     return [4 /*yield*/, func492()];
                 case 3:
                     _a.sent(); // アイテムリスト呼び出し
@@ -15160,7 +15165,7 @@ function func530() {
                     dbgprt(530);
                     var_2393 = 0;
                     if (var_357 == 0 && var_358 == 0 && var_215 == 0) {
-                        var_1946 = "スタンドを身につけていなかった…";
+                        item_message1 = "スタンドを身につけていなかった…";
                         return [2 /*return*/];
                     }
                     if (!(var_357 != 0)) return [3 /*break*/, 3];
@@ -15172,14 +15177,14 @@ function func530() {
                         var_2393++;
                     }
                     if (!(var_2394 < 8)) return [3 /*break*/, 3];
-                    item_list = var_233[var_553].Var0;
+                    belongings_item_list = var_233[var_553].Var0;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2395 = item_name;
                     var_233[var_553].Var5 = var_233[var_553].Var5 + 1;
-                    var_1946 = "装備中のDISCの空き容量が増えた！";
-                    var_1947 = "";
+                    item_message1 = "装備中のDISCの空き容量が増えた！";
+                    item_message2 = "";
                     _a.label = 3;
                 case 3:
                     if (!(var_358 != 0)) return [3 /*break*/, 6];
@@ -15191,14 +15196,14 @@ function func530() {
                         var_2393++;
                     }
                     if (!(var_2394 < 8)) return [3 /*break*/, 6];
-                    item_list = var_233[var_554].Var0;
+                    belongings_item_list = var_233[var_554].Var0;
                     return [4 /*yield*/, func492()];
                 case 5:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2395 = item_name;
                     var_233[var_554].Var5 = var_233[var_554].Var5 + 1;
-                    var_1946 = "装備中のDISCの空き容量が増えた！";
-                    var_1947 = "";
+                    item_message1 = "装備中のDISCの空き容量が増えた！";
+                    item_message2 = "";
                     _a.label = 6;
                 case 6:
                     if (!(var_215 != 0)) return [3 /*break*/, 9];
@@ -15210,19 +15215,19 @@ function func530() {
                         var_2393++;
                     }
                     if (!(var_2394 < 8)) return [3 /*break*/, 9];
-                    item_list = var_233[var_555].Var0;
+                    belongings_item_list = var_233[var_555].Var0;
                     return [4 /*yield*/, func492()];
                 case 8:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2395 = item_name;
                     var_233[var_555].Var5 = var_233[var_555].Var5 + 1;
-                    var_1946 = "装備中のDISCの空き容量が増えた！";
-                    var_1947 = "";
+                    item_message1 = "装備中のDISCの空き容量が増えた！";
+                    item_message2 = "";
                     _a.label = 9;
                 case 9:
                     if (var_2393 == 3) {
-                        var_1946 = "これ以上空き容量を増やせなかった";
-                        var_1947 = "";
+                        item_message1 = "これ以上空き容量を増やせなかった";
+                        item_message2 = "";
                     }
                     return [2 /*return*/];
             }
@@ -15293,7 +15298,7 @@ function func531() {
                     return [4 /*yield*/, func426()];
                 case 1:
                     _a.sent();
-                    item_list = var_233[var_553].Var0;
+                    belongings_item_list = var_233[var_553].Var0;
                     var_475 = var_553;
                     _a.label = 2;
                 case 2:
@@ -15301,7 +15306,7 @@ function func531() {
                     return [4 /*yield*/, func427()];
                 case 3:
                     _a.sent();
-                    item_list = var_233[var_554].Var0;
+                    belongings_item_list = var_233[var_554].Var0;
                     var_475 = var_554;
                     _a.label = 4;
                 case 4:
@@ -15309,7 +15314,7 @@ function func531() {
                     return [4 /*yield*/, func428()];
                 case 5:
                     _a.sent();
-                    item_list = var_233[var_555].Var0;
+                    belongings_item_list = var_233[var_555].Var0;
                     var_475 = var_555;
                     _a.label = 6;
                 case 6:
@@ -15606,7 +15611,7 @@ function func532() {
         });
     });
 }
-// ムーディーブルースの発動能力?
+// ムーディーブルースの発動によってアイテムを倉庫に送る動作処理
 function func533() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_38, cnt2_175, cnt2_176;
@@ -15891,7 +15896,7 @@ function func533() {
                     var_853[var_866][29] = var_233[var_225].Var29;
                     if (!(var_233[var_225].Var11 == 1)) return [3 /*break*/, 28];
                     var_106 = 1;
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 27:
                     _a.sent(); // アイテムリスト呼び出し
@@ -15943,7 +15948,7 @@ function func533() {
                         var_1977 = 1;
                     }
                     if (!(var_1977 == 1)) return [3 /*break*/, 36];
-                    item_list = var_233[var_225].Var0;
+                    belongings_item_list = var_233[var_225].Var0;
                     return [4 /*yield*/, func106()];
                 case 35:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -16031,15 +16036,15 @@ function func533() {
                     if (var_2301 == 2) {
                         var_234 = 1;
                     }
-                    item_list = var_2258;
+                    belongings_item_list = activated_disc_id;
                     return [4 /*yield*/, func506()];
                 case 50:
-                    _a.sent();
+                    _a.sent(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
                     if (!(var_2254 == 1)) return [3 /*break*/, 52];
                     var_2254 = 0;
                     return [4 /*yield*/, func508()];
                 case 51:
-                    _a.sent(); // スタンドパワーが力尽きて消滅した時の関数
+                    _a.sent(); // スタンドパワーが力尽きて消滅した時の表示2
                     _a.label = 52;
                 case 52:
                     var_217 = 1;
@@ -17945,7 +17950,7 @@ function func541() {
                     ++cnt1_47;
                     return [3 /*break*/, 2];
                 case 5:
-                    if (!(var_270 == 139 && var_545 == 0 && var_163 == 0)) return [3 /*break*/, 21];
+                    if (!(sympathy_id == 139 && var_545 == 0 && var_163 == 0)) return [3 /*break*/, 21];
                     comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「キング・クリムゾン！」";
                     comments_row2 = "";
                     return [4 /*yield*/, func047()];
@@ -18929,9 +18934,9 @@ function func541() {
                         }
                     }
                     if (!(var_474 == 1)) return [3 /*break*/, 238];
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     disc_rarity = var_233[var_475].Var13;
-                    var_488 = item_list;
+                    var_488 = belongings_item_list;
                     return [4 /*yield*/, func492()];
                 case 199:
                     _a.sent(); // アイテムリスト呼び出し
@@ -19817,7 +19822,7 @@ function func541() {
                     }
                     DSPLAY(audio_id = 118);
                     if (!(var_2463 == 0)) return [3 /*break*/, 373];
-                    item_list = var_677;
+                    belongings_item_list = var_677;
                     return [4 /*yield*/, func106()];
                 case 372:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -20177,7 +20182,7 @@ function func541() {
                     var_108 = 0;
                     if (!(var_410 == 401 && var_2463 == 99)) return [3 /*break*/, 459];
                     if (!(var_677 == 401)) return [3 /*break*/, 451];
-                    item_list = 401;
+                    belongings_item_list = 401;
                     return [4 /*yield*/, func106()];
                 case 450:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -20218,7 +20223,7 @@ function func541() {
                     return [2 /*return*/];
                 case 459:
                     if (!(var_2463 == 0 || var_2463 == 99)) return [3 /*break*/, 461];
-                    item_list = var_677;
+                    belongings_item_list = var_677;
                     return [4 /*yield*/, func106()];
                 case 460:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -20987,7 +20992,7 @@ function func541() {
                             }
                         }
                     }
-                    item_list = var_233[var_1531].Var0;
+                    belongings_item_list = var_233[var_1531].Var0;
                     disc_rarity = var_233[var_1531].Var13;
                     var_2459 = var_233[var_1531].Var6;
                     return [4 /*yield*/, func492()];
@@ -21140,7 +21145,7 @@ function func541() {
                     var_78[var_854].Var27 = var_233[var_225].Var27;
                     var_78[var_854].Var28 = var_233[var_225].Var28;
                     var_78[var_854].Var29 = var_233[var_225].Var29;
-                    item_list = var_1846;
+                    belongings_item_list = var_1846;
                     var_321 = var_854;
                     return [4 /*yield*/, func433()];
                 case 639:
@@ -21514,7 +21519,7 @@ function func541() {
                     var_580 = var_580 - 1;
                     var_894 = var_894 - 1;
                     var_2473 = 1;
-                    item_list = var_357;
+                    belongings_item_list = var_357;
                     disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 706:
@@ -21529,7 +21534,7 @@ function func541() {
                     var_581 = var_581 - 1;
                     var_895 = var_895 - 1;
                     var_2473 = 1;
-                    item_list = var_358;
+                    belongings_item_list = var_358;
                     disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 709:
@@ -21701,7 +21706,7 @@ function func541() {
                     _a.label = 753;
                 case 753:
                     if (!(cnt2_248 < var_224)) return [3 /*break*/, 761];
-                    item_list = var_233[var_480].Var0;
+                    belongings_item_list = var_233[var_480].Var0;
                     return [4 /*yield*/, func492()];
                 case 754:
                     _a.sent(); // アイテムリスト呼び出し
@@ -21720,7 +21725,7 @@ function func541() {
                 case 755:
                     if (!(cnt4_21 < 10)) return [3 /*break*/, 759];
                     if (!(var_486[var_485][var_484][0] > 0)) return [3 /*break*/, 757];
-                    item_list = var_486[var_485][var_484][0];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 756:
                     _a.sent(); // アイテムリスト呼び出し
@@ -29003,10 +29008,10 @@ function func567() {
                         return [2 /*return*/];
                     }
                     if (var_83[var_1641].Var30 >= 1 && var_83[var_1641].Var8 == 0) {
-                        if (var_83[var_1641].Var0 != 85 && var_119 == 0 && var_270 != 166) {
+                        if (var_83[var_1641].Var0 != 85 && var_119 == 0 && sympathy_id != 166) {
                             return [2 /*return*/];
                         }
-                        if (var_83[var_1641].Var0 == 85 && var_140 == 0 && var_119 == 0 && var_156[320] == 0 && var_270 != 166) {
+                        if (var_83[var_1641].Var0 == 85 && var_140 == 0 && var_119 == 0 && var_156[320] == 0 && sympathy_id != 166) {
                             return [2 /*return*/];
                         }
                     }
@@ -34057,7 +34062,7 @@ function func573() {
                     var_271 = 0;
                     var_1345 = 0;
                     var_83[var_2694].Var11 = 0;
-                    item_list = var_78[var_419].Var0;
+                    belongings_item_list = var_78[var_419].Var0;
                     disc_rarity = var_78[var_419].Var13;
                     return [4 /*yield*/, func492()];
                 case 5:
@@ -39055,12 +39060,12 @@ function func585() {
                         }
                         var_2461 = var_2461 + 1;
                     }
-                    item_list = var_2460;
+                    belongings_item_list = var_2460;
                     return [4 /*yield*/, func492()];
                 case 43:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2813 = item_name;
-                    item_list = var_2812;
+                    belongings_item_list = var_2812;
                     return [4 /*yield*/, func492()];
                 case 44:
                     _a.sent(); // アイテムリスト呼び出し
@@ -39580,7 +39585,7 @@ function func587() {
                     var_580 = var_580 - 1;
                     var_894 = var_894 - 1;
                     var_2473 = 1;
-                    item_list = var_357;
+                    belongings_item_list = var_357;
                     disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 9:
@@ -39596,7 +39601,7 @@ function func587() {
                     var_581 = var_581 - 1;
                     var_895 = var_895 - 1;
                     var_2473 = 1;
-                    item_list = var_358;
+                    belongings_item_list = var_358;
                     disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 12:
@@ -39609,7 +39614,7 @@ function func587() {
                 case 14:
                     _a.sent();
                     var_233[var_553].Var12 = 0;
-                    item_list = var_233[var_553].Var0;
+                    belongings_item_list = var_233[var_553].Var0;
                     disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 15:
@@ -39622,7 +39627,7 @@ function func587() {
                 case 17:
                     _a.sent();
                     var_233[var_554].Var12 = 0;
-                    item_list = var_233[var_554].Var0;
+                    belongings_item_list = var_233[var_554].Var0;
                     disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 18:
@@ -41274,7 +41279,7 @@ function func596() {
                     var_1476 = (var_78[var_2205].Var1 - var_66 + 4) * 40;
                     var_1477 = (var_78[var_2205].Var2 - var_67 + 4) * 40;
                     var_2303 = var_78[var_2205].Var0;
-                    item_list = var_2303;
+                    belongings_item_list = var_2303;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し

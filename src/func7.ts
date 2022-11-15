@@ -1293,7 +1293,7 @@ function func707(this: any) {
                 if (var_72[var_447][var_449] == 1 && var_77[var_447][var_449] > 0) {
                     var_3115 = var_77[var_447][var_449];
                     if (var_78[var_3115].Var11 == 0) {
-                        item_list = var_78[var_3115].Var0;
+                        belongings_item_list = var_78[var_3115].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_2476 = Math.floor(buying_price / 2);
                         var_482 = 0;
@@ -1311,7 +1311,7 @@ function func707(this: any) {
                         var_485 = var_78[var_3115].Var6;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
                             if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 0) {
-                                item_list = var_486[var_485][var_484][0];
+                                belongings_item_list = var_486[var_485][var_484][0];
                                 yield func492(); // アイテムリスト呼び出し
                                 var_2476 = Math.floor(buying_price / 2);
                                 var_482 = 0;
@@ -1333,7 +1333,7 @@ function func707(this: any) {
         payment_amount = 0;
         for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {
             if (var_233[var_480].Var11 == 1) {
-                item_list = var_233[var_480].Var0;
+                belongings_item_list = var_233[var_480].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
                 var_482 = (var_233[var_480].Var3 + var_233[var_480].Var4) * 50;
@@ -1350,7 +1350,7 @@ function func707(this: any) {
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                        item_list = var_486[var_485][var_484][0];
+                        belongings_item_list = var_486[var_485][var_484][0];
                         yield func492(); // アイテムリスト呼び出し
                         var_482 = 0;
                         var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -1371,7 +1371,7 @@ function func707(this: any) {
                 if (var_77[var_447][var_449] > 0 && var_72[var_447][var_449] == 0) {
                     var_3115 = var_77[var_447][var_449];
                     if (var_78[var_3115].Var11 == 1) {
-                        item_list = var_78[var_3115].Var0;
+                        belongings_item_list = var_78[var_3115].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_482 = 0;
                         var_482 = (var_78[var_3115].Var3 + var_78[var_3115].Var4) * 50;
@@ -1388,7 +1388,7 @@ function func707(this: any) {
                         var_485 = var_78[var_3115].Var6;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
                             if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                                item_list = var_486[var_485][var_484][0];
+                                belongings_item_list = var_486[var_485][var_484][0];
                                 yield func492(); // アイテムリスト呼び出し
                                 var_482 = 0;
                                 var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
@@ -4310,7 +4310,7 @@ function func770(this: any) {
         dbgprt(770);
         var_2000 = 1;
         var_227 = 1;
-        var_228 = 45;
+        Y_axis_item_position = 45;
         var_225 = 1;
         var_223 = var_224 + 10;
         var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -4544,7 +4544,7 @@ function func772(this: any) {
                         var_853[var_866][29] = var_233[var_225].Var29;
                         if (var_233[var_225].Var11 == 1) {
                             var_106 = 1;
-                            item_list = var_233[var_225].Var0;
+                            belongings_item_list = var_233[var_225].Var0;
                             yield func492(); // アイテムリスト呼び出し
                             var_482 = 0;
                             var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
@@ -4587,7 +4587,7 @@ function func772(this: any) {
                             var_1977 = 1;
                         }
                         if (var_1977 == 1) {
-                            item_list = var_233[var_225].Var0;
+                            belongings_item_list = var_233[var_225].Var0;
                             yield func106(); // BGM選曲呼び出し割り振り
                         }
                         var_2401 = 1;
@@ -4698,7 +4698,7 @@ function func773(this: any) {
             return;
         }
         if (var_987[0] != 0) {
-            item_list = var_987[0];
+            belongings_item_list = var_987[0];
             disc_rarity = var_987[13];
             yield func492(); // アイテムリスト呼び出し
             comments_row1 = comments_row1a;
@@ -4737,7 +4737,7 @@ function func774(this: any) {
         dbgprt(774);
         var_2001 = 1;
         var_227 = 1;
-        var_228 = 45;
+        Y_axis_item_position = 45;
         var_225 = 1;
         var_223 = var_224 + 10;
         var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -4773,7 +4773,7 @@ function func775(this: any) {
             yield func051();
             var_2001 = 1;
             var_227 = 1;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -4815,7 +4815,7 @@ function func775(this: any) {
             yield func051();
             var_2001 = 1;
             var_227 = 1;
-            var_228 = 45;
+            Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
@@ -4830,7 +4830,7 @@ function func775(this: any) {
 function func776(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(776);
-        item_list = var_233[var_225].Var0;
+        belongings_item_list = var_233[var_225].Var0;
         disc_rarity = var_233[var_225].Var13;
         yield func492(); // アイテムリスト呼び出し
         var_3153 = item_name;
@@ -4895,7 +4895,7 @@ function func776(this: any) {
             var_1977 = 1;
         }
         if (var_1977 == 1) {
-            item_list = var_233[var_225].Var0;
+            belongings_item_list = var_233[var_225].Var0;
             yield func106(); // BGM選曲呼び出し割り振り
         }
         yield func430();
@@ -4942,11 +4942,11 @@ function func777(this: any) {
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        item_list = var_987[0];
+        belongings_item_list = var_987[0];
         disc_rarity = var_987[13];
         yield func492(); // アイテムリスト呼び出し
         var_3153 = item_name;
-        if (item_list >= 800 && item_list < 900) {
+        if (belongings_item_list >= 800 && belongings_item_list < 900) {
             var_1806 = 1;
             for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {
                 if (var_233[var_1806].Var0 >= 800 && var_233[var_1806].Var0 < 900) {
@@ -4987,7 +4987,7 @@ function func777(this: any) {
         var_233[var_224].Var4 = var_987[4];
         var_233[var_224].Var5 = var_987[5];
         var_233[var_224].Var6 = 0;
-        if (item_list >= 800 && item_list < 900) {
+        if (belongings_item_list >= 800 && belongings_item_list < 900) {
             var_233[var_224].Var6 = var_858;
         }
         var_233[var_224].Var7 = var_987[7];

@@ -3932,7 +3932,7 @@ function func620() {
                     if (var_474 == 0) {
                         return [2 /*return*/];
                     }
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 13:
@@ -5410,8 +5410,8 @@ function func620() {
                     var_83[var_412].Var15 = 1;
                     var_83[var_412].Var14 = 0;
                     var_83[var_412].Var26 = 1;
-                    item_list = var_233[var_475].Var0;
-                    var_417 = item_list;
+                    belongings_item_list = var_233[var_475].Var0;
+                    var_417 = belongings_item_list;
                     var_1249 = var_233[var_475].Var13;
                     disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
@@ -5656,8 +5656,8 @@ function func620() {
                     var_742 = 0;
                     var_743 = 0;
                     var_83[var_412].Var26 = 1;
-                    item_list = 1;
-                    var_417 = item_list;
+                    belongings_item_list = 1;
+                    var_417 = belongings_item_list;
                     stolen_money = Math.floor(wallet / 2);
                     wallet = wallet - stolen_money;
                     if (wallet < 0) {
@@ -5909,7 +5909,7 @@ function func620() {
                     var_1903 = 0;
                     _a.label = 356;
                 case 356:
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 357:
@@ -6104,7 +6104,7 @@ function func620() {
                     var_1903 = 0;
                     _a.label = 389;
                 case 389:
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     return [4 /*yield*/, func492()];
                 case 390:
                     _a.sent(); // アイテムリスト呼び出し
@@ -6325,7 +6325,7 @@ function func620() {
                     var_1903 = 0;
                     _a.label = 427;
                 case 427:
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 428:
@@ -7307,7 +7307,7 @@ function func620() {
                     var_580 = var_580 - 1;
                     var_894 = var_894 - 1;
                     var_2473 = 1;
-                    item_list = var_357;
+                    belongings_item_list = var_357;
                     disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 580:
@@ -7322,7 +7322,7 @@ function func620() {
                     var_581 = var_581 - 1;
                     var_895 = var_895 - 1;
                     var_2473 = 1;
-                    item_list = var_358;
+                    belongings_item_list = var_358;
                     disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 583:
@@ -7581,7 +7581,7 @@ function func620() {
                     var_1903 = 0;
                     _a.label = 635;
                 case 635:
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     disc_rarity = var_233[var_475].Var13;
                     return [4 /*yield*/, func492()];
                 case 636:
@@ -8352,7 +8352,7 @@ function func620() {
                         var_895 = var_895 - 1;
                     }
                     var_233[var_2897].Var4 = var_233[var_2897].Var4 - 1;
-                    item_list = var_233[var_2897].Var0;
+                    belongings_item_list = var_233[var_2897].Var0;
                     disc_rarity = var_233[var_2897].Var13;
                     return [4 /*yield*/, func492()];
                 case 771:
@@ -8396,7 +8396,7 @@ function func620() {
                     var_2901 = rnd(5);
                     var_2901 = var_2901 + 3;
                     var_233[var_2897].Var3 = var_233[var_2897].Var3 - var_2901;
-                    item_list = var_233[var_2897].Var0;
+                    belongings_item_list = var_233[var_2897].Var0;
                     disc_rarity = var_233[var_2897].Var13;
                     return [4 /*yield*/, func492()];
                 case 780:
@@ -9191,7 +9191,7 @@ function func620() {
                     return [4 /*yield*/, func494()];
                 case 894:
                     _a.sent();
-                    item_list = var_233[var_553].Var0;
+                    belongings_item_list = var_233[var_553].Var0;
                     disc_rarity = var_233[var_553].Var13;
                     var_475 = var_553;
                     var_896 = 0;
@@ -9208,7 +9208,7 @@ function func620() {
                     return [4 /*yield*/, func494()];
                 case 897:
                     _a.sent();
-                    item_list = var_233[var_554].Var0;
+                    belongings_item_list = var_233[var_554].Var0;
                     disc_rarity = var_233[var_554].Var13;
                     var_475 = var_554;
                     var_897 = 0;
@@ -9223,14 +9223,14 @@ function func620() {
                     return [4 /*yield*/, func494()];
                 case 900:
                     _a.sent();
-                    item_list = var_233[var_555].Var0;
+                    belongings_item_list = var_233[var_555].Var0;
                     disc_rarity = var_233[var_555].Var13;
                     var_475 = var_555;
                     var_898 = 0;
                     _a.label = 901;
                 case 901:
                     var_83[var_412].Var26 = 1;
-                    item_list = var_233[var_475].Var0;
+                    belongings_item_list = var_233[var_475].Var0;
                     return [4 /*yield*/, func106()];
                 case 902:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -14902,7 +14902,7 @@ function func635() {
                     }
                     var_2926 = 1;
                     var_2927 = 0;
-                    if (var_270 == 135) {
+                    if (sympathy_id == 135) {
                         var_341 = 1;
                     }
                     if (var_156[105] == 0) {
@@ -16614,7 +16614,7 @@ function func636() {
                     _a.sent();
                     return [2 /*return*/];
                 case 295:
-                    if (!(var_270 == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0)) return [3 /*break*/, 299];
+                    if (!(sympathy_id == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0)) return [3 /*break*/, 299];
                     var_2966 = var_83[var_314].Var1;
                     var_2967 = var_83[var_314].Var2;
                     if (!(var_82[var_2966][var_2967] != 0 && var_128 == 0 && var_178 == 0)) return [3 /*break*/, 299];
@@ -16701,7 +16701,7 @@ function func637() {
                     _a.sent();
                     return [2 /*return*/];
                 case 2:
-                    if (!(var_270 == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0)) return [3 /*break*/, 6];
+                    if (!(sympathy_id == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0)) return [3 /*break*/, 6];
                     var_2966 = var_83[var_314].Var1;
                     var_2967 = var_83[var_314].Var2;
                     if (!(var_82[var_2966][var_2967] != 0)) return [3 /*break*/, 6];
@@ -18324,7 +18324,7 @@ function func646() {
                     }
                     if (!(var_2987 == 0)) return [3 /*break*/, 17];
                     var_2985 = 1;
-                    item_list = var_357;
+                    belongings_item_list = var_357;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -18370,7 +18370,7 @@ function func646() {
                     ++cnt2_58;
                     return [3 /*break*/, 8];
                 case 11:
-                    item_list = var_357;
+                    belongings_item_list = var_357;
                     return [4 /*yield*/, func106()];
                 case 12:
                     _a.sent(); // BGM選曲呼び出し割り振り
@@ -19717,7 +19717,7 @@ function func651() {
                     _a.sent();
                     return [2 /*return*/];
                 case 46:
-                    if (!(var_270 == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0)) return [3 /*break*/, 50];
+                    if (!(sympathy_id == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0)) return [3 /*break*/, 50];
                     var_2966 = var_83[var_314].Var1;
                     var_2967 = var_83[var_314].Var2;
                     if (!(var_82[var_2966][var_2967] != 0)) return [3 /*break*/, 50];
@@ -20462,7 +20462,7 @@ function func654() {
                     if (var_127 != 0 || var_132 != 0) {
                         var_3033 = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_673].Var30 != 0) {
                         var_3033 = "何者か";
                     }
                     enemy_list = var_3030;
@@ -20561,7 +20561,7 @@ function func654() {
                     if (var_127 != 0 || var_132 != 0) {
                         enemy_name = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_673].Var30 != 0) {
                         enemy_name = "何者か";
                     }
                     comments_row1 = "";
@@ -20857,7 +20857,7 @@ function func654() {
                     if (var_127 != 0 || var_132 != 0) {
                         enemy_name = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_673].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_673].Var30 != 0) {
                         enemy_name = "何者か";
                     }
                     comments_row1 = "";
@@ -21012,7 +21012,7 @@ function func655() {
                     if (var_127 != 0 || var_132 != 0) {
                         var_2861 = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_402].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_402].Var30 != 0) {
                         var_2861 = "何者か";
                     }
                     var_1637 = 0;
@@ -21028,7 +21028,7 @@ function func655() {
                     if (var_127 != 0 || var_132 != 0) {
                         var_3040 = "何者か";
                     }
-                    if (var_119 == 0 && var_270 != 166 && var_83[var_2819].Var30 != 0) {
+                    if (var_119 == 0 && sympathy_id != 166 && var_83[var_2819].Var30 != 0) {
                         var_3040 = "何者か";
                     }
                     var_3041 = rnd(8);
@@ -21448,8 +21448,8 @@ function func657() {
                     }
                     wallet = wallet - stolen_money;
                     var_83[var_412].Var26 = 1;
-                    item_list = 1;
-                    var_417 = item_list;
+                    belongings_item_list = 1;
+                    var_417 = belongings_item_list;
                     var_1249 = var_78[var_419].Var13;
                     target_item_name = "" + stolen_money + "G";
                     var_419 = var_412 + 200;
@@ -25417,7 +25417,7 @@ function func660() {
                     }
                     var_83[var_314].Var13 = 0;
                     var_83[var_314].Var8 = 1;
-                    item_list = var_340;
+                    belongings_item_list = var_340;
                     disc_rarity = var_1833;
                     return [4 /*yield*/, func492()];
                 case 228:
@@ -25861,7 +25861,7 @@ function func661() {
                     if (var_138 == 1) {
                         var_209 = Math.floor((var_209 + var_209 + var_209) / 2);
                     }
-                    if (var_270 == 101 || var_270 == 109) {
+                    if (sympathy_id == 101 || sympathy_id == 109) {
                         var_209 = Math.floor((var_209 + var_209 + var_209) / 2);
                     }
                     if (var_83[var_314].Var13 >= 1 && var_83[var_314].Var13 != 99) {
@@ -26039,7 +26039,7 @@ function func663() {
                         var_83[var_314].Var12 = 0;
                     }
                     var_83[var_314].Var13 = 0;
-                    item_list = var_340;
+                    belongings_item_list = var_340;
                     disc_rarity = var_1833;
                     return [4 /*yield*/, func492()];
                 case 1:
@@ -27241,7 +27241,7 @@ function func675() {
             switch (_a.label) {
                 case 0:
                     dbgprt(675);
-                    item_list = var_215;
+                    belongings_item_list = var_215;
                     var_3081 = var_215;
                     return [4 /*yield*/, func428()];
                 case 1:
@@ -27494,7 +27494,7 @@ function func675() {
                     _a.sent();
                     var_225 = var_555;
                     var_898 = 0;
-                    item_list = var_3081;
+                    belongings_item_list = var_3081;
                     return [4 /*yield*/, func430()];
                 case 47:
                     _a.sent();
@@ -29101,7 +29101,7 @@ function func695() {
                         var_3099++;
                     }
                     if (!(var_2855 != 0)) return [3 /*break*/, 10];
-                    item_list = var_2855;
+                    belongings_item_list = var_2855;
                     return [4 /*yield*/, func492()];
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し

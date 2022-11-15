@@ -2600,7 +2600,7 @@ function func620(this: any) {
             if (var_474 == 0) {
                 return;
             }
-            item_list = var_233[var_475].Var0;
+            belongings_item_list = var_233[var_475].Var0;
             disc_rarity = var_233[var_475].Var13;
             yield func492(); // アイテムリスト呼び出し
             var_2886 = item_name;
@@ -3592,8 +3592,8 @@ function func620(this: any) {
             var_83[var_412].Var15 = 1;
             var_83[var_412].Var14 = 0;
             var_83[var_412].Var26 = 1;
-            item_list = var_233[var_475].Var0;
-            var_417 = item_list;
+            belongings_item_list = var_233[var_475].Var0;
+            var_417 = belongings_item_list;
             var_1249 = var_233[var_475].Var13;
             disc_rarity = var_233[var_475].Var13;
             yield func492(); // アイテムリスト呼び出し
@@ -3771,8 +3771,8 @@ function func620(this: any) {
             var_742 = 0;
             var_743 = 0;
             var_83[var_412].Var26 = 1;
-            item_list = 1;
-            var_417 = item_list;
+            belongings_item_list = 1;
+            var_417 = belongings_item_list;
             stolen_money = Math.floor(wallet / 2);
             wallet = wallet - stolen_money;
             if (wallet < 0) {
@@ -3955,10 +3955,10 @@ function func620(this: any) {
                 var_448 = var_66;
                 var_450 = var_67;
                 var_1903 = 1;
-                yield func414();
+                yield func414(); // ヤバいもの関係の容量設定？？
                 var_1903 = 0;
             }
-            item_list = var_233[var_475].Var0;
+            belongings_item_list = var_233[var_475].Var0;
             disc_rarity = var_233[var_475].Var13;
             yield func492(); // アイテムリスト呼び出し
             target_item_name = item_name;
@@ -4088,10 +4088,10 @@ function func620(this: any) {
                 var_448 = var_66;
                 var_450 = var_67;
                 var_1903 = 1;
-                yield func414();
+                yield func414(); // ヤバいもの関係の容量設定？？
                 var_1903 = 0;
             }
-            item_list = var_233[var_475].Var0;
+            belongings_item_list = var_233[var_475].Var0;
             yield func492(); // アイテムリスト呼び出し
             target_item_name = item_name;
             var_225 = var_475;
@@ -4238,10 +4238,10 @@ function func620(this: any) {
                 var_448 = var_66;
                 var_450 = var_67;
                 var_1903 = 1;
-                yield func414();
+                yield func414(); // ヤバいもの関係の容量設定？？
                 var_1903 = 0;
             }
-            item_list = var_233[var_475].Var0;
+            belongings_item_list = var_233[var_475].Var0;
             disc_rarity = var_233[var_475].Var13;
             yield func492(); // アイテムリスト呼び出し
             target_item_name = item_name;
@@ -4945,7 +4945,7 @@ function func620(this: any) {
                     var_580 = var_580 - 1;
                     var_894 = var_894 - 1;
                     var_2473 = 1;
-                    item_list = var_357;
+                    belongings_item_list = var_357;
                     disc_rarity = var_233[var_553].Var13;
                     yield func492(); // アイテムリスト呼び出し
                 }
@@ -4955,7 +4955,7 @@ function func620(this: any) {
                     var_581 = var_581 - 1;
                     var_895 = var_895 - 1;
                     var_2473 = 1;
-                    item_list = var_358;
+                    belongings_item_list = var_358;
                     disc_rarity = var_233[var_554].Var13;
                     yield func492(); // アイテムリスト呼び出し
                 }
@@ -5111,10 +5111,10 @@ function func620(this: any) {
                     var_448 = var_66;
                     var_450 = var_67;
                     var_1903 = 1;
-                    yield func414();
+                    yield func414(); // ヤバいもの関係の容量設定？？
                     var_1903 = 0;
                 }
-                item_list = var_233[var_475].Var0;
+                belongings_item_list = var_233[var_475].Var0;
                 disc_rarity = var_233[var_475].Var13;
                 yield func492(); // アイテムリスト呼び出し
                 target_item_name = item_name;
@@ -5627,7 +5627,7 @@ function func620(this: any) {
                         var_895 = var_895 - 1;
                     }
                     var_233[var_2897].Var4 = var_233[var_2897].Var4 - 1;
-                    item_list = var_233[var_2897].Var0;
+                    belongings_item_list = var_233[var_2897].Var0;
                     disc_rarity = var_233[var_2897].Var13;
                     yield func492(); // アイテムリスト呼び出し
                     var_2900 = item_name;
@@ -5654,7 +5654,7 @@ function func620(this: any) {
                     var_2901 = rnd(5);
                     var_2901 = var_2901 + 3;
                     var_233[var_2897].Var3 = var_233[var_2897].Var3 - var_2901;
-                    item_list = var_233[var_2897].Var0;
+                    belongings_item_list = var_233[var_2897].Var0;
                     disc_rarity = var_233[var_2897].Var13;
                     yield func492(); // アイテムリスト呼び出し
                     var_2900 = item_name;
@@ -6248,7 +6248,7 @@ function func620(this: any) {
                     var_894 = 0;
                     var_357 = 0;
                     yield func494();
-                    item_list = var_233[var_553].Var0;
+                    belongings_item_list = var_233[var_553].Var0;
                     disc_rarity = var_233[var_553].Var13;
                     var_475 = var_553;
                     var_896 = 0;
@@ -6260,7 +6260,7 @@ function func620(this: any) {
                     var_895 = 0;
                     var_358 = 0;
                     yield func494();
-                    item_list = var_233[var_554].Var0;
+                    belongings_item_list = var_233[var_554].Var0;
                     disc_rarity = var_233[var_554].Var13;
                     var_475 = var_554;
                     var_897 = 0;
@@ -6270,13 +6270,13 @@ function func620(this: any) {
                     var_478 = dim(40);
                     var_215 = 0;
                     yield func494();
-                    item_list = var_233[var_555].Var0;
+                    belongings_item_list = var_233[var_555].Var0;
                     disc_rarity = var_233[var_555].Var13;
                     var_475 = var_555;
                     var_898 = 0;
                 }
                 var_83[var_412].Var26 = 1;
-                item_list = var_233[var_475].Var0;
+                belongings_item_list = var_233[var_475].Var0;
                 yield func106(); // BGM選曲呼び出し割り振り
                 yield func492(); // アイテムリスト呼び出し
                 target_item_name = item_name;
@@ -14354,7 +14354,7 @@ function func646(this: any) {
         }
         if (var_2987 == 0) {
             var_2985 = 1;
-            item_list = var_357;
+            belongings_item_list = var_357;
             yield func492(); // アイテムリスト呼び出し
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -14379,7 +14379,7 @@ function func646(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            item_list = var_357;
+            belongings_item_list = var_357;
             yield func106(); // BGM選曲呼び出し割り振り
             yield func426();
             var_476 = dim(40);
@@ -16829,8 +16829,8 @@ function func657(this: any) {
             }
             wallet = wallet - stolen_money;
             var_83[var_412].Var26 = 1;
-            item_list = 1;
-            var_417 = item_list;
+            belongings_item_list = 1;
+            var_417 = belongings_item_list;
             var_1249 = var_78[var_419].Var13;
             target_item_name = "" + stolen_money + "G";
             var_419 = var_412 + 200;
@@ -19559,7 +19559,7 @@ function func660(this: any) {
                 }
                 var_83[var_314].Var13 = 0;
                 var_83[var_314].Var8 = 1;
-                item_list = var_340;
+                belongings_item_list = var_340;
                 disc_rarity = var_1833;
                 yield func492(); // アイテムリスト呼び出し
                 comments_row1 = "";
@@ -20042,7 +20042,7 @@ function func663(this: any) {
             var_83[var_314].Var12 = 0;
         }
         var_83[var_314].Var13 = 0;
-        item_list = var_340;
+        belongings_item_list = var_340;
         disc_rarity = var_1833;
         yield func492(); // アイテムリスト呼び出し
         var_83[var_314].Var21 = 1;
@@ -20855,7 +20855,7 @@ function func674(this: any) {
 function func675(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(675);
-        item_list = var_215;
+        belongings_item_list = var_215;
         var_3081 = var_215;
         yield func428();
         disc_rarity = var_233[var_555].Var13;
@@ -21031,7 +21031,7 @@ function func675(this: any) {
         yield func428();
         var_225 = var_555;
         var_898 = 0;
-        item_list = var_3081;
+        belongings_item_list = var_3081;
         yield func430();
         yield func433(); // アイテム配列の "数" 増減？関数
         var_2392 = 1;
@@ -22270,7 +22270,7 @@ function func695(this: any) {
             var_3099++;
         }
         if (var_2855 != 0) {
-            item_list = var_2855;
+            belongings_item_list = var_2855;
             yield func492(); // アイテムリスト呼び出し
             var_3100 = item_name;
             var_1396 = var_83[var_673].Var1;

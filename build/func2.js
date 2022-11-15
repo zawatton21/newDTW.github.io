@@ -643,7 +643,7 @@ function func208() {
             switch (_a.label) {
                 case 0:
                     dbgprt(208);
-                    var_228 = 55;
+                    Y_axis_item_position = 55;
                     var_911 = 1;
                     return [4 /*yield*/, func212()];
                 case 1:
@@ -667,10 +667,10 @@ function func209() {
                 case 1:
                     _a.sent(); // 各キー入力確認
                     if (!(var_259 == 1)) return [3 /*break*/, 3];
-                    var_228 = var_228 + 20;
+                    Y_axis_item_position = Y_axis_item_position + 20;
                     var_911 = var_911 + 1;
                     if (var_911 == 9) {
-                        var_228 = 55;
+                        Y_axis_item_position = 55;
                         var_911 = 1;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -682,10 +682,10 @@ function func209() {
                     _a.label = 3;
                 case 3:
                     if (!(var_255 == 1)) return [3 /*break*/, 5];
-                    var_228 = var_228 - 20;
+                    Y_axis_item_position = Y_axis_item_position - 20;
                     var_911 = var_911 - 1;
                     if (var_911 == 0) {
-                        var_228 = 195;
+                        Y_axis_item_position = 195;
                         var_911 = 8;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -949,11 +949,11 @@ function func210() {
             mes("　SHIFTキーのままをお勧めします。");
             color(255, 255, 255);
             font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
-            pos(15, var_228);
+            pos(15, Y_axis_item_position);
             mes(">");
-            pos(16, var_228);
+            pos(16, Y_axis_item_position);
             mes(">");
-            pos(17, var_228);
+            pos(17, Y_axis_item_position);
             mes(">");
             return [2 /*return*/];
         });
@@ -1212,7 +1212,7 @@ function func215() {
             switch (_a.label) {
                 case 0:
                     dbgprt(215);
-                    var_228 = 140;
+                    Y_axis_item_position = 140;
                     var_925 = 1;
                     var_926 = 0;
                     var_927 = 0;
@@ -1236,10 +1236,10 @@ function func216() {
                 case 1:
                     _a.sent(); // 各キー入力確認
                     if (!(var_259 == 1)) return [3 /*break*/, 3];
-                    var_228 = var_228 + 20;
+                    Y_axis_item_position = Y_axis_item_position + 20;
                     var_925 = var_925 + 1;
                     if (var_925 == 10) {
-                        var_228 = 140;
+                        Y_axis_item_position = 140;
                         var_925 = 1;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -1251,10 +1251,10 @@ function func216() {
                     _a.label = 3;
                 case 3:
                     if (!(var_255 == 1)) return [3 /*break*/, 5];
-                    var_228 = var_228 - 20;
+                    Y_axis_item_position = Y_axis_item_position - 20;
                     var_925 = var_925 - 1;
                     if (var_925 == 0) {
-                        var_228 = 300;
+                        Y_axis_item_position = 300;
                         var_925 = 9;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -2100,11 +2100,11 @@ function func219() {
                     mes("ゲームに戻る");
                     color(255, 255, 255);
                     font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
-                    pos(25, var_228);
+                    pos(25, Y_axis_item_position);
                     mes(">");
-                    pos(26, var_228);
+                    pos(26, Y_axis_item_position);
                     mes(">");
-                    pos(27, var_228);
+                    pos(27, Y_axis_item_position);
                     mes(">");
                     return [2 /*return*/];
             }
@@ -2801,7 +2801,7 @@ function func227() {
                     return [4 /*yield*/, func426()];
                 case 1:
                     _a.sent();
-                    item_list = var_233[var_553].Var0;
+                    belongings_item_list = var_233[var_553].Var0;
                     disc_rarity = var_233[var_553].Var13;
                     return [4 /*yield*/, func492()];
                 case 2:
@@ -2824,7 +2824,7 @@ function func227() {
                     _a.label = 3;
                 case 3:
                     if (!(cnt2_5 < var_233[var_553].Var19)) return [3 /*break*/, 6];
-                    item_list = var_233[var_553]["Var" + var_982];
+                    belongings_item_list = var_233[var_553]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 4:
                     _a.sent(); // アイテムリスト呼び出し
@@ -2852,7 +2852,7 @@ function func227() {
                     return [4 /*yield*/, func427()];
                 case 7:
                     _a.sent();
-                    item_list = var_233[var_554].Var0;
+                    belongings_item_list = var_233[var_554].Var0;
                     disc_rarity = var_233[var_554].Var13;
                     return [4 /*yield*/, func492()];
                 case 8:
@@ -2875,7 +2875,7 @@ function func227() {
                     _a.label = 9;
                 case 9:
                     if (!(cnt2_6 < var_233[var_554].Var19)) return [3 /*break*/, 12];
-                    item_list = var_233[var_554]["Var" + var_982];
+                    belongings_item_list = var_233[var_554]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 10:
                     _a.sent(); // アイテムリスト呼び出し
@@ -2903,7 +2903,7 @@ function func227() {
                     return [4 /*yield*/, func428()];
                 case 13:
                     _a.sent();
-                    item_list = var_233[var_555].Var0;
+                    belongings_item_list = var_233[var_555].Var0;
                     disc_rarity = var_233[var_555].Var13;
                     return [4 /*yield*/, func492()];
                 case 14:
@@ -2926,7 +2926,7 @@ function func227() {
                     _a.label = 15;
                 case 15:
                     if (!(cnt2_7 < var_233[var_555].Var19)) return [3 /*break*/, 18];
-                    item_list = var_233[var_555]["Var" + var_982];
+                    belongings_item_list = var_233[var_555]["Var" + var_982];
                     return [4 /*yield*/, func492()];
                 case 16:
                     _a.sent(); // アイテムリスト呼び出し
@@ -3319,7 +3319,7 @@ function func229() {
                     dangeon3_floor = var_704[165];
                     var_387 = var_704[166];
                     var_150 = var_704[167];
-                    var_270 = var_704[168];
+                    sympathy_id = var_704[168];
                     var_151 = var_704[169];
                     var_152 = var_704[170];
                     var_154 = var_704[171];
@@ -3677,7 +3677,7 @@ function func231() {
                     var_704[165] = dangeon3_floor;
                     var_704[166] = var_387;
                     var_704[167] = var_150;
-                    var_704[168] = var_270;
+                    var_704[168] = sympathy_id;
                     var_704[169] = var_151;
                     var_704[170] = var_152;
                     var_704[171] = var_154;
@@ -4013,7 +4013,7 @@ function func233() {
                     var_148 = 0;
                     var_149 = 0;
                     var_150 = 0;
-                    var_270 = 0;
+                    sympathy_id = 0;
                     var_151 = 0;
                     var_152 = 0;
                     var_154 = 0;
@@ -4353,7 +4353,7 @@ function func235() {
             dangeon3_floor = 0;
             var_387 = 0;
             var_150 = 0;
-            var_270 = 0;
+            sympathy_id = 0;
             var_151 = 0;
             var_152 = 0;
             var_154 = 0;

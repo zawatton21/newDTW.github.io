@@ -2945,7 +2945,7 @@ function func331() {
                                         var_1183 = 1;
                                     }
                                 }
-                                if (var_270 == 166) {
+                                if (sympathy_id == 166) {
                                     var_1183 = 1;
                                 }
                                 if (var_127 != 0 && var_119 == 0) {
@@ -4932,7 +4932,7 @@ function func345() {
                         }
                     }
                     if (!(var_1246 >= 1)) return [3 /*break*/, 17];
-                    item_list = var_1247;
+                    belongings_item_list = var_1247;
                     var_1248 = var_1249;
                     if (!(var_199 == 2)) return [3 /*break*/, 2];
                     pos(160, 150);
@@ -5055,7 +5055,7 @@ function func345() {
                     if (!(var_1252 == 2)) return [3 /*break*/, 19];
                     gcopy(3, 1240, 160, 40, 40);
                     pos(175, 135);
-                    item_list = var_1253;
+                    belongings_item_list = var_1253;
                     return [4 /*yield*/, func397()];
                 case 18:
                     _a.sent();
@@ -5068,7 +5068,7 @@ function func345() {
                     if (!(var_1254 == 1)) return [3 /*break*/, 21];
                     gcopy(3, 1280, 160, 40, 40);
                     pos(175, 135);
-                    item_list = var_1253;
+                    belongings_item_list = var_1253;
                     return [4 /*yield*/, func397()];
                 case 20:
                     _a.sent();
@@ -7815,7 +7815,7 @@ function func353() {
                     pos((var_83[var_314].Var1 - var_66 + 4) * 40, (var_83[var_314].Var2 - var_67 + 4) * 40 - 50);
                     gcopy(15, 1080, 360, 40, 40);
                     pos((var_83[var_314].Var1 - var_66 + 4) * 40, (var_83[var_314].Var2 - var_67 + 4) * 40 - 10);
-                    item_list = var_1289;
+                    belongings_item_list = var_1289;
                     var_1248 = var_1249;
                     if (!(var_1270 == 1)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func397()];
@@ -9523,7 +9523,7 @@ function func354() {
                     gcopy(6, 40, 1040, 40, 40);
                     if (!(var_1345 >= 1 && var_1345 < 15)) return [3 /*break*/, 7];
                     pos((var_83[var_412].Var1 - var_66 + 4) * 40 - 10, (var_83[var_412].Var2 - var_67 + 4) * 40 - 10 - 10);
-                    item_list = var_417;
+                    belongings_item_list = var_417;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 6:
@@ -9572,7 +9572,7 @@ function func354() {
                     gcopy(6, 40, 1040, 40, 40);
                     if (!(var_1346 >= 1 && var_1346 < 15)) return [3 /*break*/, 9];
                     pos((var_1347 - var_66 + 4) * 40 - 10, (var_1348 - var_67 + 4) * 40 - 10 - 10);
-                    item_list = var_417;
+                    belongings_item_list = var_417;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 8:
@@ -9628,7 +9628,7 @@ function func354() {
                     if (var_1353 == 2) {
                         pos(172, 156);
                     }
-                    item_list = var_1354;
+                    belongings_item_list = var_1354;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 10:
@@ -11146,7 +11146,7 @@ function func354() {
                     var_1420 = rnd(40);
                     pos((var_83[var_1393].Var1 - var_66 + 3 + var_1417) * 40 + var_1419, (var_83[var_1393].Var2 - var_67 + 3 + var_1418) * 40 - 10 + var_1420);
                     if (!(var_1270 != 0)) return [3 /*break*/, 13];
-                    item_list = var_1421;
+                    belongings_item_list = var_1421;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 12:
@@ -11372,12 +11372,12 @@ function func354() {
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     if (!(var_1443 < 14)) return [3 /*break*/, 17];
                     pos(150, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 15:
                     _a.sent();
                     pos(170, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 16:
                     _a.sent();
@@ -11385,12 +11385,12 @@ function func354() {
                 case 17:
                     if (!(var_1443 == 14)) return [3 /*break*/, 20];
                     pos(150, 172);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 18:
                     _a.sent();
                     pos(170, 172);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 19:
                     _a.sent();
@@ -11398,12 +11398,12 @@ function func354() {
                 case 20:
                     if (!(var_1443 == 15)) return [3 /*break*/, 23];
                     pos(150, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 21:
                     _a.sent();
                     pos(170, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 22:
                     _a.sent();
@@ -11411,12 +11411,12 @@ function func354() {
                 case 23:
                     if (!(var_1443 == 16)) return [3 /*break*/, 26];
                     pos(150, 172);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 24:
                     _a.sent();
                     pos(170, 172);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 25:
                     _a.sent();
@@ -11424,12 +11424,12 @@ function func354() {
                 case 26:
                     if (!(var_1443 > 16 && var_1443 < 25)) return [3 /*break*/, 29];
                     pos(150, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 27:
                     _a.sent();
                     pos(170, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 28:
                     _a.sent();
@@ -11437,12 +11437,12 @@ function func354() {
                 case 29:
                     if (!(var_1443 == 25 || var_1443 == 26)) return [3 /*break*/, 32];
                     pos(152, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 30:
                     _a.sent();
                     pos(168, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 31:
                     _a.sent();
@@ -11450,12 +11450,12 @@ function func354() {
                 case 32:
                     if (!(var_1443 == 27 || var_1443 == 28)) return [3 /*break*/, 35];
                     pos(154, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 33:
                     _a.sent();
                     pos(166, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 34:
                     _a.sent();
@@ -11463,12 +11463,12 @@ function func354() {
                 case 35:
                     if (!(var_1443 == 29 || var_1443 == 30)) return [3 /*break*/, 38];
                     pos(156, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 36:
                     _a.sent();
                     pos(164, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 37:
                     _a.sent();
@@ -11476,12 +11476,12 @@ function func354() {
                 case 38:
                     if (!(var_1443 == 31 || var_1443 == 32)) return [3 /*break*/, 41];
                     pos(158, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 39:
                     _a.sent();
                     pos(162, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 40:
                     _a.sent();
@@ -11489,12 +11489,12 @@ function func354() {
                 case 41:
                     if (!(var_1443 == 33 || var_1443 == 34)) return [3 /*break*/, 44];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 42:
                     _a.sent();
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 43:
                     _a.sent();
@@ -11502,12 +11502,12 @@ function func354() {
                 case 44:
                     if (!(var_1443 == 35 || var_1443 == 36)) return [3 /*break*/, 47];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 45:
                     _a.sent();
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 46:
                     _a.sent();
@@ -11515,12 +11515,12 @@ function func354() {
                 case 47:
                     if (!(var_1443 == 37 || var_1443 == 38)) return [3 /*break*/, 50];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 48:
                     _a.sent();
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 49:
                     _a.sent();
@@ -11528,14 +11528,14 @@ function func354() {
                 case 50:
                     if (!(var_1443 == 39 || var_1443 == 40)) return [3 /*break*/, 53];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 51:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 52:
                     _a.sent();
@@ -11543,14 +11543,14 @@ function func354() {
                 case 53:
                     if (!(var_1443 == 41 || var_1443 == 42)) return [3 /*break*/, 56];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 54:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 150);
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 55:
                     _a.sent();
@@ -11558,14 +11558,14 @@ function func354() {
                 case 56:
                     if (!(var_1443 == 43 || var_1443 == 44)) return [3 /*break*/, 59];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 57:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 58:
                     _a.sent();
@@ -11573,14 +11573,14 @@ function func354() {
                 case 59:
                     if (!(var_1443 == 45 || var_1443 == 46)) return [3 /*break*/, 62];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 60:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 61:
                     _a.sent();
@@ -11588,14 +11588,14 @@ function func354() {
                 case 62:
                     if (!(var_1443 == 47 || var_1443 == 48)) return [3 /*break*/, 65];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 63:
                     _a.sent();
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 30);
                     pos(160, 170);
-                    item_list = with_disc_list;
+                    belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 64:
                     _a.sent();
@@ -11603,7 +11603,7 @@ function func354() {
                 case 65:
                     if (!(var_1443 > 48 || var_1443 == 60)) return [3 /*break*/, 67];
                     pos(160, 170);
-                    item_list = base_disc_list;
+                    belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 66:
                     _a.sent();
@@ -12001,7 +12001,7 @@ function func354X() {
                     if (var_1456 == 12) {
                         pos((var_1457 - var_66 + 4) * 40, (var_1458 - var_67 + 4) * 40 - 10 - 240);
                     }
-                    item_list = var_1459;
+                    belongings_item_list = var_1459;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 1:
@@ -12047,7 +12047,7 @@ function func354X() {
                     if (var_1460 == 12) {
                         pos((var_1457 - var_66 + 4) * 40, (var_1458 - var_67 + 4) * 40 - 10 - 240);
                     }
-                    item_list = var_1459;
+                    belongings_item_list = var_1459;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 3:
@@ -12194,7 +12194,7 @@ function func354X() {
                     if (!(var_1470 == 3)) return [3 /*break*/, 6];
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(160, 130);
-                    item_list = var_1471;
+                    belongings_item_list = var_1471;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 5:
@@ -12205,7 +12205,7 @@ function func354X() {
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(160, 120);
-                    item_list = var_1471;
+                    belongings_item_list = var_1471;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 7:
@@ -12901,7 +12901,7 @@ function func354X() {
                         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     }
                     if (!(var_1505 == 3)) return [3 /*break*/, 10];
-                    item_list = var_1386;
+                    belongings_item_list = var_1386;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 9:
@@ -12965,7 +12965,7 @@ function func354X() {
                     }
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(var_1503, var_1504);
-                    item_list = var_1386;
+                    belongings_item_list = var_1386;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 12:
@@ -13017,7 +13017,7 @@ function func354X() {
                     }
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(var_1503, var_1504);
-                    item_list = var_1386;
+                    belongings_item_list = var_1386;
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 14:
@@ -13562,7 +13562,7 @@ function func354X() {
                     if (!(var_1529 == 1 && var_1530 == 0)) return [3 /*break*/, 17];
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(160, 150);
-                    item_list = var_233[var_1531].Var0;
+                    belongings_item_list = var_233[var_1531].Var0;
                     var_1248 = var_233[var_1531].Var13;
                     return [4 /*yield*/, func397()];
                 case 16:
@@ -13574,7 +13574,7 @@ function func354X() {
                     if (!(var_1529 >= 2 && var_1530 == 0)) return [3 /*break*/, 19];
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(160, var_774 - 10);
-                    item_list = var_233[var_1531].Var0;
+                    belongings_item_list = var_233[var_1531].Var0;
                     var_1248 = var_233[var_1531].Var13;
                     return [4 /*yield*/, func397()];
                 case 18:
@@ -14324,7 +14324,7 @@ function func354X() {
                     if (!(var_1570 >= 1)) return [3 /*break*/, 21];
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     pos(160, 120);
-                    item_list = var_1571;
+                    belongings_item_list = var_1571;
                     return [4 /*yield*/, func397()];
                 case 20:
                     _a.sent();
@@ -15657,7 +15657,7 @@ function func361() {
                     var_1609 = 0;
                     return [4 /*yield*/, func513()];
                 case 47:
-                    _a.sent();
+                    _a.sent(); // 射撃discヘブンズドアーの発動時メッセージ
                     return [2 /*return*/];
                 case 48:
                     if (!(key_A_on == 1)) return [3 /*break*/, 58];
@@ -16283,7 +16283,7 @@ function func367() {
                         }
                     }
                     pos(20, 45);
-                    item_list = var_802;
+                    belongings_item_list = var_802;
                     disc_rarity = var_1660;
                     var_1248 = var_1660;
                     return [4 /*yield*/, func492()];
@@ -16438,7 +16438,7 @@ function func367() {
                 case 8:
                     if (!(cnt2_34 < var_810 + free_space_value)) return [3 /*break*/, 11];
                     pos(30 + 50, track_number * 20 + 120);
-                    item_list = var_811[track_number];
+                    belongings_item_list = var_811[track_number];
                     return [4 /*yield*/, func492()];
                 case 9:
                     _a.sent(); // アイテムリスト呼び出し
@@ -16511,10 +16511,10 @@ function func368() {
             switch (_a.label) {
                 case 0:
                     dbgprt(368);
-                    var_1667 = item_list;
+                    var_1667 = belongings_item_list;
                     var_1668 = var_220;
                     var_1669 = var_231;
-                    var_802 = item_list;
+                    var_802 = belongings_item_list;
                     var_1670 = var_225;
                     return [4 /*yield*/, func492()];
                 case 1:
@@ -16582,7 +16582,7 @@ function func368() {
                     _a.sent();
                     _a.label = 3;
                 case 3:
-                    item_list = var_802;
+                    belongings_item_list = var_802;
                     return [4 /*yield*/, func492()];
                 case 4:
                     _a.sent(); // アイテムリスト呼び出し
@@ -16630,7 +16630,7 @@ function func369() {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func462()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // アイテムidごとに区分分け関数
                     return [2 /*return*/];
                 case 4:
                     if (!(var_802 == 9999 && var_802 >= 100 && var_802 < 400 && var_1661 == 1)) return [3 /*break*/, 16];
@@ -16724,12 +16724,12 @@ function func370() {
                     if (!(cnt1_11 < 10)) return [3 /*break*/, 4];
                     var_813[var_826] = "";
                     if (var_220 == 0) {
-                        item_list = var_233[var_1670]["Var" + var_825];
+                        belongings_item_list = var_233[var_1670]["Var" + var_825];
                     }
                     if (var_220 == 1) {
-                        item_list = var_486[var_682][var_1670][var_825];
+                        belongings_item_list = var_486[var_682][var_1670][var_825];
                     }
-                    if (item_list == 104) {
+                    if (belongings_item_list == 104) {
                         var_827 = 1;
                     }
                     if (var_1208 == 2) {
@@ -16743,7 +16743,7 @@ function func370() {
                         return [3 /*break*/, 4];
                     }
                     var_813[var_826] = "" + item_ability_description;
-                    var_811[var_826] = item_list;
+                    var_811[var_826] = belongings_item_list;
                     var_826 = var_826 + 1;
                     var_825 = var_825 + 1;
                     _a.label = 3;
@@ -17067,12 +17067,12 @@ function func377() {
                     pset(var_1681 + 1, var_1682 + 1 + var_1684);
                     pset(var_1680, var_1683 - 1 + var_1684);
                     pset(var_1681 + 1, var_1683 - 1 + var_1684);
-                    item_list = var_1693 * 6 + var_1694;
-                    if (item_list >= 987 && item_list <= 995) {
-                        item_list = item_list - 237;
+                    belongings_item_list = var_1693 * 6 + var_1694;
+                    if (belongings_item_list >= 987 && belongings_item_list <= 995) {
+                        belongings_item_list = belongings_item_list - 237;
                     }
-                    if (item_list >= 996) {
-                        item_list = item_list - 10;
+                    if (belongings_item_list >= 996) {
+                        belongings_item_list = belongings_item_list - 10;
                     }
                     return [4 /*yield*/, func492()];
                 case 2:
@@ -17080,9 +17080,9 @@ function func377() {
                     var_1696 = item_name;
                     pos(var_1680 + 10, var_1682 + var_1684 - 3);
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                    var_1697 = item_list - 900;
-                    if (item_list >= 750 && item_list <= 770) {
-                        var_1697 = item_list + 250 - 900;
+                    var_1697 = belongings_item_list - 900;
+                    if (belongings_item_list >= 750 && belongings_item_list <= 770) {
+                        var_1697 = belongings_item_list + 250 - 900;
                     }
                     if (!(var_988[var_1697] >= 1)) return [3 /*break*/, 4];
                     return [4 /*yield*/, func397()];
@@ -17102,13 +17102,13 @@ function func377() {
                         mes(var_1696);
                     }
                     if (var_988[var_1697] == 0) {
-                        if (item_list >= 750 && item_list <= 770) {
+                        if (belongings_item_list >= 750 && belongings_item_list <= 770) {
                             mes(var_1696);
                         }
-                        if (item_list >= 900 && item_list <= 986) {
+                        if (belongings_item_list >= 900 && belongings_item_list <= 986) {
                             mes(var_1696);
                         }
-                        if (item_list >= 987 && item_list <= 999) {
+                        if (belongings_item_list >= 987 && belongings_item_list <= 999) {
                             mes("？？？？？？");
                         }
                     }
@@ -17271,7 +17271,7 @@ function func380() {
                 case 1:
                     if (!(cnt1_15 < 300)) return [3 /*break*/, 5];
                     if (!(var_156[var_1708] == 1)) return [3 /*break*/, 3];
-                    item_list = var_1708;
+                    belongings_item_list = var_1708;
                     return [4 /*yield*/, func492()];
                 case 2:
                     _a.sent(); // アイテムリスト呼び出し
@@ -17616,352 +17616,352 @@ function func380() {
                             var_1707++;
                         }
                     }
-                    if (var_270 == 1) {
+                    if (sympathy_id == 1) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 101) {
+                    if (sympathy_id == 101) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で射撃攻撃力が上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 102) {
+                    if (sympathy_id == 102) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 103) {
+                    if (sympathy_id == 103) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 104) {
+                    if (sympathy_id == 104) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で最大HPが" + var_1048 + "上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 105) {
+                    if (sympathy_id == 105) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で防御力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 106) {
+                    if (sympathy_id == 106) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で時々敵を感知するぞ";
                         var_1707++;
                     }
-                    if (var_270 == 107) {
+                    if (sympathy_id == 107) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 108) {
+                    if (sympathy_id == 108) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が３上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 109) {
+                    if (sympathy_id == 109) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で射撃攻撃力が上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 110) {
+                    if (sympathy_id == 110) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 111) {
+                    if (sympathy_id == 111) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 112) {
+                    if (sympathy_id == 112) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が３上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 113) {
+                    if (sympathy_id == 113) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で防御力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 114) {
+                    if (sympathy_id == 114) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で時々敵を感知するぞ";
                         var_1707++;
                     }
-                    if (var_270 == 115) {
+                    if (sympathy_id == 115) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 116) {
+                    if (sympathy_id == 116) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 117) {
+                    if (sympathy_id == 117) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 118) {
+                    if (sympathy_id == 118) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 119) {
+                    if (sympathy_id == 119) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で落ちてるお金の金額が増えるぞ";
                         var_1707++;
                     }
-                    if (var_270 == 120) {
+                    if (sympathy_id == 120) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で腐った物でもおいしく食べるぞ";
                         var_1707++;
                     }
-                    if (var_270 == 121) {
+                    if (sympathy_id == 121) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で時々敵を感知するぞ";
                         var_1707++;
                     }
-                    if (var_270 == 122) {
+                    if (sympathy_id == 122) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 123) {
+                    if (sympathy_id == 123) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で落ちてるお金の金額が増えるぞ";
                         var_1707++;
                     }
-                    if (var_270 == 124) {
+                    if (sympathy_id == 124) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で腐った物でもおいしく食べるぞ";
                         var_1707++;
                     }
-                    if (var_270 == 125) {
+                    if (sympathy_id == 125) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 126) {
+                    if (sympathy_id == 126) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 127) {
+                    if (sympathy_id == 127) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 128) {
+                    if (sympathy_id == 128) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 129) {
+                    if (sympathy_id == 129) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 130) {
+                    if (sympathy_id == 130) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 131) {
+                    if (sympathy_id == 131) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 132) {
+                    if (sympathy_id == 132) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 133) {
+                    if (sympathy_id == 133) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 134) {
+                    if (sympathy_id == 134) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 135) {
+                    if (sympathy_id == 135) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が３上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 135) {
+                    if (sympathy_id == 135) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "二刀流で連続攻撃ができるぞ";
                         var_1707++;
                     }
-                    if (var_270 == 136) {
+                    if (sympathy_id == 136) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で射撃命中率が上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 137) {
+                    if (sympathy_id == 137) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 138) {
+                    if (sympathy_id == 138) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 139) {
+                    if (sympathy_id == 139) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で罠にかからないぞ";
                         var_1707++;
                     }
-                    if (var_270 == 140) {
+                    if (sympathy_id == 140) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 141) {
+                    if (sympathy_id == 141) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が３上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 142) {
+                    if (sympathy_id == 142) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 143) {
+                    if (sympathy_id == 143) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 144) {
+                    if (sympathy_id == 144) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で防御力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 145) {
+                    if (sympathy_id == 145) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で最大HPが" + var_1048 + "上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 146) {
+                    if (sympathy_id == 146) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で最大HPが" + var_1048 + "上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 147) {
+                    if (sympathy_id == 147) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 148) {
+                    if (sympathy_id == 148) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 149) {
+                    if (sympathy_id == 149) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 150) {
+                    if (sympathy_id == 150) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 151) {
+                    if (sympathy_id == 151) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 152) {
+                    if (sympathy_id == 152) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 153) {
+                    if (sympathy_id == 153) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 154) {
+                    if (sympathy_id == 154) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 155) {
+                    if (sympathy_id == 155) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 156) {
+                    if (sympathy_id == 156) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 157) {
+                    if (sympathy_id == 157) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 158) {
+                    if (sympathy_id == 158) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 159) {
+                    if (sympathy_id == 159) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で最大HPが" + var_1048 + "上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 160) {
+                    if (sympathy_id == 160) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 161) {
+                    if (sympathy_id == 161) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で最大HPが" + var_1048 + "上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 162) {
+                    if (sympathy_id == 162) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で最大HPが" + var_1048 + "上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 163) {
+                    if (sympathy_id == 163) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が２上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 164) {
+                    if (sympathy_id == 164) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が３上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 165) {
+                    if (sympathy_id == 165) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で攻撃力が３上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 166) {
+                    if (sympathy_id == 166) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で透明なものが見えるぞ";
                         var_1707++;
                     }
-                    if (var_270 == 167) {
+                    if (sympathy_id == 167) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
                     }
-                    if (var_270 == 168) {
+                    if (sympathy_id == 168) {
                         var_1706[var_1707][2] = "6";
                         var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
                         var_1707++;
@@ -18726,7 +18726,7 @@ function func384() {
                     if (!(var_1767 == 0)) return [3 /*break*/, 10];
                     return [4 /*yield*/, func385()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 各ダンジョンごとの出現アイテム管理
                     _a.label = 10;
                 case 10:
                     var_78[var_866].Var1 = var_1550;
@@ -18853,6 +18853,7 @@ function func384() {
         });
     });
 }
+// 各ダンジョンごとの出現アイテム管理
 function func385() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_18;
@@ -18978,6 +18979,7 @@ function func385() {
                             var_78[var_866].Var5 = 3;
                         }
                     }
+                    // No = 1 なので、ホテルの外以外
                     if (dangeon_number != 1) {
                         var_1773 = rnd(100);
                         if (var_1773 >= 0 && var_1773 < 50) {
@@ -20478,7 +20480,7 @@ function func390() {
                     }
                     return [4 /*yield*/, func385()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // 各ダンジョンごとの出現アイテム管理
                     for (cnt2_37 = 0; cnt2_37 < 30; ++cnt2_37) {
                         var_486[var_1800][var_1803][cnt2_37] = var_78[var_866]["Var" + cnt2_37];
                     }
@@ -20795,7 +20797,7 @@ function func396() {
                     var_1819 = var_78[var_1813].Var2 - var_67 + 4;
                     var_1820 = var_78[var_1813].Var1;
                     var_1821 = var_78[var_1813].Var2;
-                    item_list = var_78[var_1813].Var0;
+                    belongings_item_list = var_78[var_1813].Var0;
                     var_1248 = var_78[var_1813].Var13;
                     if (var_409 == 0) {
                         var_1822 = 0;
@@ -20895,86 +20897,86 @@ function func397() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(397);
-            if (item_list == 1) {
+            if (belongings_item_list == 1) {
                 gcopy(9, 0, 0, 40, 40);
             }
-            if (item_list >= 100 && item_list < 400) {
+            if (belongings_item_list >= 100 && belongings_item_list < 400) {
                 gcopy(9, 40, 0, 40, 40);
             }
-            if (item_list >= 400 && item_list < 450) {
+            if (belongings_item_list >= 400 && belongings_item_list < 450) {
                 gcopy(9, 240, 0, 40, 40);
             }
-            if (item_list >= 450 && item_list < 500) {
+            if (belongings_item_list >= 450 && belongings_item_list < 500) {
                 gcopy(9, 120, 0, 40, 40);
             }
-            if (item_list >= 500 && item_list < 600) {
+            if (belongings_item_list >= 500 && belongings_item_list < 600) {
                 gcopy(9, 280, 0, 40, 40);
             }
-            if (item_list >= 600 && item_list < 630) {
+            if (belongings_item_list >= 600 && belongings_item_list < 630) {
                 gcopy(9, 0, 40, 40, 40);
             }
-            if (item_list >= 650 && item_list < 654 && item_list != 652) {
+            if (belongings_item_list >= 650 && belongings_item_list < 654 && belongings_item_list != 652) {
                 gcopy(9, 120, 40, 40, 40);
             }
-            if (item_list == 652) {
+            if (belongings_item_list == 652) {
                 gcopy(9, 80, 40, 40, 40);
             }
-            if (item_list == 654) {
+            if (belongings_item_list == 654) {
                 gcopy(14, 160, 0, 40, 40);
             }
-            if (item_list == 655) {
+            if (belongings_item_list == 655) {
                 gcopy(9, 320, 200, 40, 40);
             }
-            if (item_list == 630) {
+            if (belongings_item_list == 630) {
                 gcopy(9, 0, 200, 40, 40);
             }
-            if (item_list == 631) {
+            if (belongings_item_list == 631) {
                 gcopy(9, 40, 200, 40, 40);
             }
-            if (item_list == 632) {
+            if (belongings_item_list == 632) {
                 gcopy(9, 160, 200, 40, 40);
             }
-            if (item_list == 633) {
+            if (belongings_item_list == 633) {
                 gcopy(9, 80, 200, 40, 40);
             }
-            if (item_list == 634) {
+            if (belongings_item_list == 634) {
                 gcopy(9, 120, 200, 40, 40);
             }
-            if (item_list == 635) {
+            if (belongings_item_list == 635) {
                 gcopy(9, 200, 240, 40, 40);
             }
-            if (item_list == 636) {
+            if (belongings_item_list == 636) {
                 gcopy(9, 240, 240, 40, 40);
             }
-            if (item_list == 639) {
+            if (belongings_item_list == 639) {
                 gcopy(9, 0, 240, 40, 40);
             }
-            if (item_list == 640) {
+            if (belongings_item_list == 640) {
                 gcopy(9, 200, 240, 40, 40);
             }
-            if (item_list == 641) {
+            if (belongings_item_list == 641) {
                 gcopy(9, 120, 120, 40, 40);
             }
-            if (item_list == 644) {
+            if (belongings_item_list == 644) {
                 gcopy(9, 240, 160, 40, 40);
             }
-            if (item_list == 645) {
+            if (belongings_item_list == 645) {
                 gcopy(9, 280, 160, 40, 40);
             }
-            if (item_list == 646) {
+            if (belongings_item_list == 646) {
                 gcopy(9, 320, 160, 40, 40);
             }
-            if (item_list == 647) {
+            if (belongings_item_list == 647) {
                 gcopy(9, 360, 240, 40, 40);
             }
-            if (item_list == 648) {
+            if (belongings_item_list == 648) {
                 gcopy(9, 80, 240, 40, 40);
             }
-            if (item_list >= 800 && item_list < 900) {
-                if (var_862[item_list][0] == 0 && dangeon_number >= 2) {
+            if (belongings_item_list >= 800 && belongings_item_list < 900) {
+                if (var_862[belongings_item_list][0] == 0 && dangeon_number >= 2) {
                     var_1825 = 0;
                 }
-                if (var_862[item_list][0] == 1 && dangeon_number >= 2) {
+                if (var_862[belongings_item_list][0] == 1 && dangeon_number >= 2) {
                     var_1825 = 1;
                 }
                 // No = 1 なので、ホテルの外
@@ -20984,7 +20986,7 @@ function func397() {
                 if (var_262 == 1) {
                     var_1825 = 1;
                 }
-                if (item_list >= 801 && item_list <= 804) {
+                if (belongings_item_list >= 801 && belongings_item_list <= 804) {
                     var_1825 = 1;
                 }
                 if (var_626 == 1) {
@@ -20994,69 +20996,69 @@ function func397() {
                     gcopy(9, 360, 280, 40, 40);
                 }
                 if (var_1825 == 1) {
-                    if (item_list == 800) {
+                    if (belongings_item_list == 800) {
                         gcopy(9, 760, 280, 40, 40);
                     }
-                    if (item_list == 801) {
+                    if (belongings_item_list == 801) {
                         gcopy(9, 520, 280, 40, 40);
                     }
-                    if (item_list == 802) {
+                    if (belongings_item_list == 802) {
                         gcopy(9, 600, 280, 40, 40);
                     }
-                    if (item_list == 803) {
+                    if (belongings_item_list == 803) {
                         gcopy(9, 640, 280, 40, 40);
                     }
-                    if (item_list == 804) {
+                    if (belongings_item_list == 804) {
                         gcopy(9, 560, 280, 40, 40);
                     }
-                    if (item_list == 815) {
+                    if (belongings_item_list == 815) {
                         gcopy(9, 40, 280, 40, 40);
                     }
-                    if (item_list == 808) {
+                    if (belongings_item_list == 808) {
                         gcopy(9, 80, 280, 40, 40);
                     }
-                    if (item_list == 805) {
+                    if (belongings_item_list == 805) {
                         gcopy(9, 120, 280, 40, 40);
                     }
-                    if (item_list == 807) {
+                    if (belongings_item_list == 807) {
                         gcopy(9, 160, 280, 40, 40);
                     }
-                    if (item_list == 806) {
+                    if (belongings_item_list == 806) {
                         gcopy(9, 200, 280, 40, 40);
                     }
-                    if (item_list == 809) {
+                    if (belongings_item_list == 809) {
                         gcopy(9, 0, 280, 40, 40);
                     }
-                    if (item_list == 816) {
+                    if (belongings_item_list == 816) {
                         gcopy(9, 240, 280, 40, 40);
                     }
-                    if (item_list == 850) {
+                    if (belongings_item_list == 850) {
                         gcopy(9, 280, 280, 40, 40);
                     }
-                    if (item_list == 851) {
+                    if (belongings_item_list == 851) {
                         gcopy(9, 320, 280, 40, 40);
                     }
-                    if (item_list == 817) {
+                    if (belongings_item_list == 817) {
                         gcopy(9, 440, 280, 40, 40);
                     }
-                    if (item_list == 818) {
+                    if (belongings_item_list == 818) {
                         gcopy(9, 480, 280, 40, 40);
                     }
-                    if (item_list == 852) {
+                    if (belongings_item_list == 852) {
                         gcopy(9, 400, 280, 40, 40);
                     }
-                    if (item_list == 853) {
+                    if (belongings_item_list == 853) {
                         gcopy(9, 680, 280, 40, 40);
                     }
-                    if (item_list == 854) {
+                    if (belongings_item_list == 854) {
                         gcopy(9, 720, 280, 40, 40);
                     }
                 }
             }
-            if (item_list == 700) {
+            if (belongings_item_list == 700) {
                 gcopy(9, 0, 80, 40, 40);
             }
-            if (item_list == 701) {
+            if (belongings_item_list == 701) {
                 if (var_1248 < 50) {
                     var_965 = 6;
                     var_1826 = 15;
@@ -21100,118 +21102,118 @@ function func397() {
                 pos(var_1827, var_1828 + 5);
                 gcopy(32, 0, 0, 40, 40);
             }
-            if (item_list == 711) {
+            if (belongings_item_list == 711) {
                 gcopy(9, 360, 160, 40, 40);
             }
-            if (item_list == 712) {
+            if (belongings_item_list == 712) {
                 gcopy(9, 40, 40, 40, 40);
             }
-            if (item_list == 713) {
+            if (belongings_item_list == 713) {
                 gcopy(9, 200, 40, 40, 40);
             }
-            if (item_list == 714) {
+            if (belongings_item_list == 714) {
                 gcopy(9, 80, 120, 40, 40);
             }
-            if (item_list == 715) {
+            if (belongings_item_list == 715) {
                 gcopy(9, 160, 120, 40, 40);
             }
-            if (item_list == 716) {
+            if (belongings_item_list == 716) {
                 gcopy(9, 320, 120, 40, 40);
             }
-            if (item_list == 717) {
+            if (belongings_item_list == 717) {
                 gcopy(9, 120, 80, 40, 40);
             }
-            if (item_list == 718) {
+            if (belongings_item_list == 718) {
                 gcopy(9, 160, 80, 40, 40);
             }
-            if (item_list == 719) {
+            if (belongings_item_list == 719) {
                 gcopy(9, 160, 80, 40, 40);
             }
-            if (item_list == 720) {
+            if (belongings_item_list == 720) {
                 gcopy(9, 120, 160, 40, 40);
             }
-            if (item_list == 721) {
+            if (belongings_item_list == 721) {
                 gcopy(9, 240, 80, 40, 40);
             }
-            if (item_list == 722) {
+            if (belongings_item_list == 722) {
                 gcopy(9, 320, 40, 40, 40);
             }
-            if (item_list == 723) {
+            if (belongings_item_list == 723) {
                 gcopy(9, 200, 160, 40, 40);
             }
-            if (item_list == 724) {
+            if (belongings_item_list == 724) {
                 gcopy(9, 0, 120, 40, 40);
             }
-            if (item_list == 725) {
+            if (belongings_item_list == 725) {
                 gcopy(9, 160, 40, 40, 40);
             }
-            if (item_list == 726) {
+            if (belongings_item_list == 726) {
                 gcopy(9, 360, 80, 40, 40);
             }
-            if (item_list == 727) {
+            if (belongings_item_list == 727) {
                 gcopy(9, 280, 120, 40, 40);
             }
-            if (item_list == 728) {
+            if (belongings_item_list == 728) {
                 gcopy(9, 40, 120, 40, 40);
             }
-            if (item_list == 729) {
+            if (belongings_item_list == 729) {
                 gcopy(9, 360, 120, 40, 40);
             }
-            if (item_list == 730) {
+            if (belongings_item_list == 730) {
                 gcopy(9, 400, 120, 40, 40);
             }
-            if (item_list == 731) {
+            if (belongings_item_list == 731) {
                 gcopy(9, 440, 120, 40, 40);
             }
-            if (item_list == 900) {
+            if (belongings_item_list == 900) {
                 gcopy(23, 360, 360, 40, 40);
             }
-            if (item_list >= 901 && item_list < 1000) {
-                if (item_list >= 901 && item_list <= 910) {
-                    var_1829 = (item_list - 901) * 40;
+            if (belongings_item_list >= 901 && belongings_item_list < 1000) {
+                if (belongings_item_list >= 901 && belongings_item_list <= 910) {
+                    var_1829 = (belongings_item_list - 901) * 40;
                     var_1830 = 0;
                 }
-                if (item_list >= 911 && item_list <= 920) {
-                    var_1829 = (item_list - 911) * 40;
+                if (belongings_item_list >= 911 && belongings_item_list <= 920) {
+                    var_1829 = (belongings_item_list - 911) * 40;
                     var_1830 = 1 * 40;
                 }
-                if (item_list >= 921 && item_list <= 930) {
-                    var_1829 = (item_list - 921) * 40;
+                if (belongings_item_list >= 921 && belongings_item_list <= 930) {
+                    var_1829 = (belongings_item_list - 921) * 40;
                     var_1830 = 2 * 40;
                 }
-                if (item_list >= 931 && item_list <= 940) {
-                    var_1829 = (item_list - 931) * 40;
+                if (belongings_item_list >= 931 && belongings_item_list <= 940) {
+                    var_1829 = (belongings_item_list - 931) * 40;
                     var_1830 = 3 * 40;
                 }
-                if (item_list >= 941 && item_list <= 950) {
-                    var_1829 = (item_list - 941) * 40;
+                if (belongings_item_list >= 941 && belongings_item_list <= 950) {
+                    var_1829 = (belongings_item_list - 941) * 40;
                     var_1830 = 4 * 40;
                 }
-                if (item_list >= 951 && item_list <= 960) {
-                    var_1829 = (item_list - 951) * 40;
+                if (belongings_item_list >= 951 && belongings_item_list <= 960) {
+                    var_1829 = (belongings_item_list - 951) * 40;
                     var_1830 = 5 * 40;
                 }
-                if (item_list >= 961 && item_list <= 970) {
-                    var_1829 = (item_list - 961) * 40;
+                if (belongings_item_list >= 961 && belongings_item_list <= 970) {
+                    var_1829 = (belongings_item_list - 961) * 40;
                     var_1830 = 6 * 40;
                 }
-                if (item_list >= 971 && item_list <= 980) {
-                    var_1829 = (item_list - 971) * 40;
+                if (belongings_item_list >= 971 && belongings_item_list <= 980) {
+                    var_1829 = (belongings_item_list - 971) * 40;
                     var_1830 = 7 * 40;
                 }
-                if (item_list >= 981 && item_list <= 990) {
-                    var_1829 = (item_list - 981) * 40;
+                if (belongings_item_list >= 981 && belongings_item_list <= 990) {
+                    var_1829 = (belongings_item_list - 981) * 40;
                     var_1830 = 8 * 40;
                 }
-                if (item_list >= 991 && item_list <= 999) {
-                    var_1829 = (item_list - 991) * 40;
+                if (belongings_item_list >= 991 && belongings_item_list <= 999) {
+                    var_1829 = (belongings_item_list - 991) * 40;
                     var_1830 = 9 * 40;
                 }
                 gcopy(23, var_1829, var_1830, 40, 40);
             }
-            if (item_list >= 750 && item_list < 800) {
-                if (item_list >= 750 && item_list <= 759) {
-                    var_1829 = (item_list - 750) * 40;
+            if (belongings_item_list >= 750 && belongings_item_list < 800) {
+                if (belongings_item_list >= 750 && belongings_item_list <= 759) {
+                    var_1829 = (belongings_item_list - 750) * 40;
                     var_1830 = 10 * 40;
                 }
                 gcopy(23, var_1829, var_1830, 40, 40);
@@ -21225,11 +21227,11 @@ function func398() {
         return __generator(this, function (_a) {
             dbgprt(398);
             disp_item_name = "error";
-            if (item_list == 1) {
+            if (belongings_item_list == 1) {
                 disp_item_name = "" + var_78[var_321].Var13 + " G";
             }
             // 装備discの表示
-            if (item_list >= 100 && item_list < 400) {
+            if (belongings_item_list >= 100 && belongings_item_list < 400) {
                 if (var_78[var_321].Var14 == 0) {
                     disp_item_name = item_name;
                 }
@@ -21248,16 +21250,16 @@ function func398() {
                     }
                 }
             }
-            if (item_list >= 400 && item_list < 500) {
+            if (belongings_item_list >= 400 && belongings_item_list < 500) {
                 disp_item_name = "" + item_name + "(" + var_78[var_321].Var3 + ")";
             }
-            if (item_list >= 500 && item_list < 800) {
+            if (belongings_item_list >= 500 && belongings_item_list < 800) {
                 disp_item_name = item_name;
             }
-            if (item_list >= 800 && item_list < 900) {
+            if (belongings_item_list >= 800 && belongings_item_list < 900) {
                 disp_item_name = "" + item_name + "(" + var_78[var_321].Var7 + ")";
             }
-            if (item_list >= 900 && item_list < 1000) {
+            if (belongings_item_list >= 900 && belongings_item_list < 1000) {
                 disp_item_name = item_name;
             }
             return [2 /*return*/];
@@ -21269,10 +21271,10 @@ function func399() {
         return __generator(this, function (_a) {
             dbgprt(399);
             var_1832 = "error";
-            if (item_list == 1) {
+            if (belongings_item_list == 1) {
                 var_1832 = "" + var_1833 + " G";
             }
-            if (item_list >= 100 && item_list < 400) {
+            if (belongings_item_list >= 100 && belongings_item_list < 400) {
                 if (var_1834 == 0) {
                     var_1832 = item_name;
                 }
@@ -21291,16 +21293,16 @@ function func399() {
                     }
                 }
             }
-            if (item_list >= 400 && item_list < 500) {
+            if (belongings_item_list >= 400 && belongings_item_list < 500) {
                 var_1832 = "" + item_name + "(" + var_1837 + ")";
             }
-            if (item_list >= 500 && item_list < 800) {
+            if (belongings_item_list >= 500 && belongings_item_list < 800) {
                 var_1832 = item_name;
             }
-            if (item_list >= 800 && item_list < 900) {
+            if (belongings_item_list >= 800 && belongings_item_list < 900) {
                 var_1832 = "" + item_name + "(" + var_1838 + ")";
             }
-            if (item_list >= 900 && item_list < 1000) {
+            if (belongings_item_list >= 900 && belongings_item_list < 1000) {
                 var_1832 = item_name;
             }
             return [2 /*return*/];

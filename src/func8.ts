@@ -218,7 +218,7 @@ function func802(this: any) {
         var_198 = 0;
         var_1206 = 1;
         var_1881 = var_1013 * 20 + 37 + 30;
-        var_228 = 45;
+        Y_axis_item_position = 45;
         var_225 = 1;
         yield func803();
         return;
@@ -248,7 +248,7 @@ function func803(this: any) {
         }
         if (var_259 == 1) {
             if (var_225 != var_1013) {
-                var_228 = var_228 + 22;
+                Y_axis_item_position = Y_axis_item_position + 22;
                 var_225 = var_225 + 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
@@ -257,7 +257,7 @@ function func803(this: any) {
                 return;
             }
             if (var_225 == var_1013) {
-                var_228 = 45;
+                Y_axis_item_position = 45;
                 var_225 = 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // ここも間違っている?
@@ -269,7 +269,7 @@ function func803(this: any) {
         }
         if (var_255 == 1) {
             if (var_225 != 1) {
-                var_228 = var_228 - 22;
+                Y_axis_item_position = Y_axis_item_position - 22;
                 var_225 = var_225 - 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
@@ -278,7 +278,7 @@ function func803(this: any) {
                 return;
             }
             if (var_225 == 1) {
-                var_228 = 45 + (var_1013 - 1) * 22;
+                Y_axis_item_position = 45 + (var_1013 - 1) * 22;
                 var_225 = var_1013;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
@@ -335,7 +335,7 @@ function func804(this: any) {
             var_2018 = var_991[0][var_1620][14];
             var_2019 = var_991[0][var_1620][16];
             var_2020 = var_991[0][var_1620][19];
-            item_list = var_2010;
+            belongings_item_list = var_2010;
             disc_rarity = var_2017;
             yield func492(); // アイテムリスト呼び出し
             if (var_2010 > 0) {
@@ -343,23 +343,23 @@ function func804(this: any) {
                 font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
                 color(255, 255, 255);
                 pos(40, var_230);
-                if (item_list >= 100 && item_list < 400) {
+                if (belongings_item_list >= 100 && belongings_item_list < 400) {
                     color(0, 255, 0);
                     mes(item_name);
                 }
-                if (item_list >= 400 && item_list < 500) {
+                if (belongings_item_list >= 400 && belongings_item_list < 500) {
                     color(225, 195, 145);
                     mes("" + item_name + "(" + var_2011 + ")");
                 }
-                if (item_list >= 500 && item_list < 800) {
+                if (belongings_item_list >= 500 && belongings_item_list < 800) {
                     color(255, 255, 255);
                     mes(item_name);
                 }
-                if (item_list >= 800 && item_list < 900) {
+                if (belongings_item_list >= 800 && belongings_item_list < 900) {
                     color(0, 255, 255);
                     mes("" + item_name + "(" + var_2014 + ")");
                 }
-                if (item_list >= 900 && item_list < 1000) {
+                if (belongings_item_list >= 900 && belongings_item_list < 1000) {
                     color(255, 255, 255);
                     mes(item_name);
                 }
@@ -384,20 +384,20 @@ function func804(this: any) {
         var_2027 = var_991[0][var_225][14];
         var_2028 = var_991[0][var_225][15];
         var_2029 = var_991[0][var_225][16];
-        item_list = var_2023;
+        belongings_item_list = var_2023;
         disc_rarity = var_2026;
         yield func492(); // アイテムリスト呼び出し
 
         font("ＭＳ Ｐゴシック", 14, 1);
         pos(15, 283);
         color(255, 255, 255);
-        if (item_list < 100 || item_list >= 400) {
+        if (belongings_item_list < 100 || belongings_item_list >= 400) {
             mes(item_description1);
         }
-        if (item_list >= 100 && item_list < 400 && var_2027 == 0) {
+        if (belongings_item_list >= 100 && belongings_item_list < 400 && var_2027 == 0) {
             mes("" + item_description1);
         }
-        if (item_list >= 100 && item_list < 400 && var_2027 == 1) {
+        if (belongings_item_list >= 100 && belongings_item_list < 400 && var_2027 == 1) {
             mes("" + item_description1 + "　空き容量 " + var_2024);
         }
         color(255, 255, 255);
@@ -419,11 +419,11 @@ function func804(this: any) {
         color(255, 255, 255);
 
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
-        pos(15, var_228);
+        pos(15, Y_axis_item_position);
         mes(">");
-        pos(16, var_228);
+        pos(16, Y_axis_item_position);
         mes(">");
-        pos(17, var_228);
+        pos(17, Y_axis_item_position);
         mes(">");
         return;
     });
@@ -433,7 +433,7 @@ function func805(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(805);
         var_1206 = 0;
-        item_list = var_991[0][var_225][0];
+        belongings_item_list = var_991[0][var_225][0];
         disc_rarity = var_991[0][var_225][13];
         yield func492(); // アイテムリスト呼び出し
         var_3188 = item_name;
@@ -522,7 +522,7 @@ function func807(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(807);
         var_1206 = 0;
-        item_list = var_991[0][var_225][0];
+        belongings_item_list = var_991[0][var_225][0];
         disc_rarity = var_991[0][var_225][13];
         yield func492(); // アイテムリスト呼び出し
         var_3188 = item_name;
@@ -2881,13 +2881,13 @@ function func838(this: any) {
         var_271 = 1;
         var_1470 = 1;
         if (var_220 == 0) {
-            item_list = var_233[var_1056].Var0;
+            belongings_item_list = var_233[var_1056].Var0;
             var_1471 = var_233[var_1056].Var0;
             disc_rarity = var_233[var_1056].Var13;
             var_1249 = var_233[var_1056].Var13;
         }
         if (var_220 == 1) {
-            item_list = var_486[var_485][var_484][0];
+            belongings_item_list = var_486[var_485][var_484][0];
             var_1471 = var_486[var_485][var_484][0];
             disc_rarity = var_486[var_485][var_484][13];
             var_1249 = var_486[var_485][var_484][13];
@@ -4417,7 +4417,7 @@ function func853(this: any) {
             }
             if (var_77[var_3279][var_3280] >= 1) {
                 var_2501 = var_77[var_3279][var_3280];
-                item_list = var_78[var_2501].Var0;
+                belongings_item_list = var_78[var_2501].Var0;
                 var_2176 = 1;
                 yield func492(); // アイテムリスト呼び出し
                 var_2176 = 0;
@@ -4498,7 +4498,7 @@ function func853(this: any) {
         gmode(2);
         pos(var_3225, var_3226);
         var_78[0].Var0 = var_884[var_873];
-        item_list = var_78[0].Var0;
+        belongings_item_list = var_78[0].Var0;
         yield func397();
         gmode(2);
         pos(var_3227, var_3228);
@@ -5100,7 +5100,7 @@ function func859(this: any) {
                 }
                 if (var_77[var_447][var_449] != 0) {
                     var_3305 = var_77[var_447][var_449];
-                    item_list = var_78[var_3305].Var0;
+                    belongings_item_list = var_78[var_3305].Var0;
                     yield func397();
                 }
                 if (var_80[var_447][var_449] != 0) {
@@ -5194,8 +5194,8 @@ function func861(this: any) {
         }
         if (var_3266 == 8) {
             var_78[0].Var0 = var_884[var_873];
-            item_list = var_78[0].Var0;
-            var_3313 = item_list;
+            belongings_item_list = var_78[0].Var0;
+            var_3313 = belongings_item_list;
             yield func397();
         }
         if (var_3266 == 9) {
@@ -7813,17 +7813,17 @@ function func888(this: any) {
         for (let cnt1 = 0; cnt1 < 150; ++cnt1) {
             yield func889();
             var_874 = var_874 + "\n" + item_name;
-            if (item_list < 10) {
-                var_3322 = var_3322 + "\np" + item_list + "eeeeeeee";
+            if (belongings_item_list < 10) {
+                var_3322 = var_3322 + "\np" + belongings_item_list + "eeeeeeee";
             }
-            if (item_list >= 10 && item_list < 100) {
-                var_3322 = var_3322 + "\np" + item_list + "eeeeeee";
+            if (belongings_item_list >= 10 && belongings_item_list < 100) {
+                var_3322 = var_3322 + "\np" + belongings_item_list + "eeeeeee";
             }
-            if (item_list >= 100) {
-                var_3322 = var_3322 + "\np" + item_list + "eeeeee";
+            if (belongings_item_list >= 100) {
+                var_3322 = var_3322 + "\np" + belongings_item_list + "eeeeee";
             }
-            var_884[var_883] = item_list;
-            if (item_list == 1) {
+            var_884[var_883] = belongings_item_list;
+            if (belongings_item_list == 1) {
                 break;
             }
             var_883++;
@@ -7841,805 +7841,805 @@ function func889(this: any) {
         var_3509 = 0;
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 122;
+            belongings_item_list = 122;
             buying_price = 1000;
             item_name = "ｱﾇﾋﾞｽ神のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 201;
+            belongings_item_list = 201;
             buying_price = 900;
             item_name = "ｲｴﾛｰﾃﾝﾊﾟﾗﾝｽのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 304;
+            belongings_item_list = 304;
             buying_price = 1900;
             item_name = "ｳｪｻﾞｰﾘﾎﾟｰﾄのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 312;
+            belongings_item_list = 312;
             buying_price = 8200;
             item_name = "ｴｱﾛｽﾐｽのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 103;
+            belongings_item_list = 103;
             buying_price = 650;
             item_name = "ｴｺｰｽﾞACT3のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 315;
+            belongings_item_list = 315;
             buying_price = 2500;
             item_name = "ｴﾋﾟﾀﾌのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 308;
+            belongings_item_list = 308;
             buying_price = 2200;
             item_name = "ｴﾎﾞﾆｰ･ﾃﾞﾋﾞﾙのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 310;
+            belongings_item_list = 310;
             buying_price = 1000;
             item_name = "ｴﾝﾌﾟﾚｽのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 206;
+            belongings_item_list = 206;
             buying_price = 2200;
             item_name = "ｵｱｼｽのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 317;
+            belongings_item_list = 317;
             buying_price = 2300;
             item_name = "ｷｯｽのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 112;
+            belongings_item_list = 112;
             buying_price = 11700;
             item_name = "ｷﾗｰ･ｸｨｰﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 102;
+            belongings_item_list = 102;
             buying_price = 19000;
             item_name = "ｷﾝｸﾞ･ｸﾘﾑｿﾞﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 113;
+            belongings_item_list = 113;
             buying_price = 2100;
             item_name = "ｸﾗｯｼｭのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 205;
+            belongings_item_list = 205;
             buying_price = 2500;
             item_name = "ｸﾗﾌﾄﾜｰｸのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 123;
+            belongings_item_list = 123;
             buying_price = 11000;
             item_name = "ｸﾘｰﾑのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 207;
+            belongings_item_list = 207;
             buying_price = 850;
             item_name = "ｸﾞﾚｲﾄﾌﾙ･ﾃﾞｯﾄﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 106;
+            belongings_item_list = 106;
             buying_price = 4600;
             item_name = "ｸﾚｲｼﾞｰ･DのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 115;
+            belongings_item_list = 115;
             buying_price = 5200;
             item_name = "G･ｴｸｽﾍﾟﾘｴﾝｽのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 104;
+            belongings_item_list = 104;
             buying_price = 650;
             item_name = "ｻﾞ･ﾊﾝﾄﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 203;
+            belongings_item_list = 203;
             buying_price = 1400;
             item_name = "ｻﾞ･ﾌｰﾙのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 111;
+            belongings_item_list = 111;
             buying_price = 15600;
             item_name = "ｻﾞ･ﾜｰﾙﾄﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 316;
+            belongings_item_list = 316;
             buying_price = 1000;
             item_name = "ｻﾊﾞｲﾊﾞｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 204;
+            belongings_item_list = 204;
             buying_price = 5300;
             item_name = "ｼｱｰﾊｰﾄｱﾀｯｸのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 318;
+            belongings_item_list = 318;
             buying_price = 1000;
             item_name = "ｼﾞｬﾝﾋﾟﾝJﾌﾗｯｼｭのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 101;
+            belongings_item_list = 101;
             buying_price = 14000;
             item_name = "ｼﾙﾊﾞｰﾁｬﾘｵｯﾂのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 200;
+            belongings_item_list = 200;
             buying_price = 1800;
             item_name = "ｽｰﾊﾟｰﾌﾗｲのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 100;
+            belongings_item_list = 100;
             buying_price = 17000;
             item_name = "ｽﾀｰ･ﾌﾟﾗﾁﾅのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 108;
+            belongings_item_list = 108;
             buying_price = 16000;
             item_name = "ｽﾃｨｯｷｰﾌｨﾝｶﾞｰｽﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 120;
+            belongings_item_list = 120;
             buying_price = 1700;
             item_name = "ｽﾄｰﾝ･ﾌﾘｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 314;
+            belongings_item_list = 314;
             buying_price = 1200;
             item_name = "ｽﾄﾚｲ･ｷｬｯﾄのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 119;
+            belongings_item_list = 119;
             buying_price = 1350;
             item_name = "ｽﾊﾟｲｽ･ｶﾞｰﾙのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 117;
+            belongings_item_list = 117;
             buying_price = 1800;
             item_name = "ﾀﾞｰｸﾌﾞﾙｰﾑｰﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 118;
+            belongings_item_list = 118;
             buying_price = 1300;
             item_name = "ﾀﾞｲﾊﾞｰﾀﾞｳﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 311;
+            belongings_item_list = 311;
             buying_price = 1000;
             item_name = "ﾁｰﾌﾟ･ﾄﾘｯｸのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 105;
+            belongings_item_list = 105;
             buying_price = 950;
             item_name = "ﾁﾘﾍﾟｯﾊﾟｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 107;
+            belongings_item_list = 107;
             buying_price = 750;
             item_name = "ﾃﾞｽ･13のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 303;
+            belongings_item_list = 303;
             buying_price = 7400;
             item_name = "ﾄﾞﾗｺﾞﾝｽﾞﾄﾞﾘｰﾑのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 116;
+            belongings_item_list = 116;
             buying_price = 700;
             item_name = "ﾊｰﾐｯﾄﾊﾟｰﾌﾟﾙのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 301;
+            belongings_item_list = 301;
             buying_price = 8800;
             item_name = "ﾊｰｳﾞｪｽﾄのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 121;
+            belongings_item_list = 121;
             buying_price = 1000;
             item_name = "ﾊﾟｰﾌﾟﾙ･ﾍｲｽﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 300;
+            belongings_item_list = 300;
             buying_price = 1300;
             item_name = "ﾊﾟｰﾙ･ｼﾞｬﾑのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 313;
+            belongings_item_list = 313;
             buying_price = 5200;
             item_name = "ﾊｲｳｪｲ･ｽﾀｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 302;
+            belongings_item_list = 302;
             buying_price = 800;
             item_name = "ﾊｲｳｪｲ･ﾄｩ･ﾍﾙのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 395;
+            belongings_item_list = 395;
             buying_price = 4700;
             item_name = "ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 319;
+            belongings_item_list = 319;
             buying_price = 3400;
             item_name = "ﾎﾞｰｲIIﾏﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 202;
+            belongings_item_list = 202;
             buying_price = 3900;
             item_name = "ﾎﾜｲﾄｱﾙﾊﾞﾑのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 109;
+            belongings_item_list = 109;
             buying_price = 13200;
             item_name = "ﾏｼﾞｼｬﾝｽﾞﾚｯﾄﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 306;
+            belongings_item_list = 306;
             buying_price = 4400;
             item_name = "ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 320;
+            belongings_item_list = 320;
             buying_price = 2000;
             item_name = "ﾒﾀﾘｶのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 406;
+            belongings_item_list = 406;
             buying_price = 550;
             item_name = "ｴｺｰｽﾞACT1のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 405;
+            belongings_item_list = 405;
             buying_price = 450;
             item_name = "ｴｺｰｽﾞACT2のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 402;
+            belongings_item_list = 402;
             buying_price = 800;
             item_name = "ｴﾝﾍﾟﾗｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 403;
+            belongings_item_list = 403;
             buying_price = 700;
             item_name = "ｾｯｸｽﾋﾟｽﾄﾙｽﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 411;
+            belongings_item_list = 411;
             buying_price = 1300;
             item_name = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 400;
+            belongings_item_list = 400;
             buying_price = 900;
             item_name = "ﾊｲｴﾛﾌｧﾝﾄｸﾞﾘｰﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 401;
+            belongings_item_list = 401;
             buying_price = 500;
             item_name = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 412;
+            belongings_item_list = 412;
             buying_price = 1600;
             item_name = "ﾍﾌﾞﾝｽﾞﾄﾞｱｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 404;
+            belongings_item_list = 404;
             buying_price = 1100;
             item_name = "ﾎﾙｽ神のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 408;
+            belongings_item_list = 408;
             buying_price = 750;
             item_name = "ﾏﾝ･ｲﾝ･ｻﾞ･ﾐﾗｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 409;
+            belongings_item_list = 409;
             buying_price = 550;
             item_name = "ﾗﾊﾞｰｽﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 570;
+            belongings_item_list = 570;
             buying_price = 500;
             item_name = "ｼﾞｮﾅｻﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 572;
+            belongings_item_list = 572;
             buying_price = 500;
             item_name = "承太郎のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 569;
+            belongings_item_list = 569;
             buying_price = 500;
             item_name = "ﾎﾟﾙﾅﾚﾌのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 588;
+            belongings_item_list = 588;
             buying_price = 400;
             item_name = "J･ｶﾞｲﾙのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 575;
+            belongings_item_list = 575;
             buying_price = 500;
             item_name = "ﾏﾆｯｼｭﾎﾞｰｲのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 563;
+            belongings_item_list = 563;
             buying_price = 400;
             item_name = "ﾝﾄﾞｩｰﾙのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 571;
+            belongings_item_list = 571;
             buying_price = 500;
             item_name = "ﾎﾞｲﾝｺﾞのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 579;
+            belongings_item_list = 579;
             buying_price = 1500;
             item_name = "ﾍﾟｯﾄｼｮｯﾌﾟのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 584;
+            belongings_item_list = 584;
             buying_price = 500;
             item_name = "ﾇｹｻｸのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 560;
+            belongings_item_list = 560;
             buying_price = 400;
             item_name = "仗助のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 562;
+            belongings_item_list = 562;
             buying_price = 1500;
             item_name = "康一のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 585;
+            belongings_item_list = 585;
             buying_price = 500;
             item_name = "億泰のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 573;
+            belongings_item_list = 573;
             buying_price = 400;
             item_name = "重ちーのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 564;
+            belongings_item_list = 564;
             buying_price = 500;
             item_name = "噴上裕也のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 577;
+            belongings_item_list = 577;
             buying_price = 900;
             item_name = "ﾐｷﾀｶのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 587;
+            belongings_item_list = 587;
             buying_price = 500;
             item_name = "吉良吉影のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 589;
+            belongings_item_list = 589;
             buying_price = 500;
             item_name = "ﾌﾟﾛｼｭｰﾄ兄貴のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 586;
+            belongings_item_list = 586;
             buying_price = 900;
             item_name = "ペッシのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 590;
+            belongings_item_list = 590;
             buying_price = 400;
             item_name = "ｷﾞｱｯﾁｮのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 580;
+            belongings_item_list = 580;
             buying_price = 1500;
             item_name = "ﾄﾞｯﾋﾟｵのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 565;
+            belongings_item_list = 565;
             buying_price = 400;
             item_name = "ﾌﾟｯﾁ神父のDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 574;
+            belongings_item_list = 574;
             buying_price = 500;
             item_name = "ｴﾝﾎﾟﾘｵのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 568;
+            belongings_item_list = 568;
             buying_price = 500;
             item_name = "ｼﾞｮﾝｶﾞﾘ･AのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 566;
+            belongings_item_list = 566;
             buying_price = 500;
             item_name = "ｹﾝｿﾞｰのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 576;
+            belongings_item_list = 576;
             buying_price = 400;
             item_name = "破裂するDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 582;
+            belongings_item_list = 582;
             buying_price = 300;
             item_name = "水が熱湯になるDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 578;
+            belongings_item_list = 578;
             buying_price = 1500;
             item_name = "ｻﾝﾄﾞﾏﾝのDISC";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 600;
+            belongings_item_list = 600;
             buying_price = 100;
             item_name = "ﾋﾟｯﾂｧ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 602;
+            belongings_item_list = 602;
             buying_price = 400;
             item_name = "ﾈｱﾎﾟﾘｽのﾋﾟｯﾂｧ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 604;
+            belongings_item_list = 604;
             buying_price = 800;
             item_name = "ﾎﾟﾙﾎﾟのﾋﾟｯﾂｧ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 630;
+            belongings_item_list = 630;
             buying_price = 600;
             item_name = "娼婦風ｽﾊﾟｹﾞｯﾃｨ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 631;
+            belongings_item_list = 631;
             buying_price = 600;
             item_name = "ﾓｯﾂｧﾚﾗﾁｰｽﾞとﾄﾏﾄのｻﾗﾀﾞ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 632;
+            belongings_item_list = 632;
             buying_price = 600;
             item_name = "ｷﾘﾏﾝｼﾞｬﾛの雪解け水";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 633;
+            belongings_item_list = 633;
             buying_price = 600;
             item_name = "子羊背肉のﾘﾝｺﾞｿｰｽかけ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 634;
+            belongings_item_list = 634;
             buying_price = 600;
             item_name = "ﾌﾟﾘﾝ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 650;
+            belongings_item_list = 650;
             buying_price = 200;
             item_name = "ｶｴﾙ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 651;
+            belongings_item_list = 651;
             buying_price = 500;
             item_name = "大きいｶｴﾙ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 653;
+            belongings_item_list = 653;
             buying_price = 1000;
             item_name = "超巨大なｶｴﾙ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 654;
+            belongings_item_list = 654;
             buying_price = 100;
             item_name = "ﾔﾄﾞｸｶﾞｴﾙ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 655;
+            belongings_item_list = 655;
             buying_price = 100;
             item_name = "ｻﾞﾘｶﾞﾆ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 800;
+            belongings_item_list = 800;
             buying_price = 2400;
             item_name = "ｴﾆｸﾞﾏの紙";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 806;
+            belongings_item_list = 806;
             buying_price = 4600;
             item_name = "ｶﾙﾈの死体";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 807;
+            belongings_item_list = 807;
             buying_price = 4600;
             item_name = "DIOの骨";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 817;
+            belongings_item_list = 817;
             buying_price = 4600;
             item_name = "乳母車";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 850;
+            belongings_item_list = 850;
             buying_price = 2700;
             item_name = "波紋のツボ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 851;
+            belongings_item_list = 851;
             buying_price = 2500;
             item_name = "ﾎﾙﾏｼﾞｵのﾋﾞﾝ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 852;
+            belongings_item_list = 852;
             buying_price = 2600;
             item_name = "ランドセル";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 853;
+            belongings_item_list = 853;
             buying_price = 2800;
             item_name = "ｻｰﾌｨｽ人形";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 854;
+            belongings_item_list = 854;
             buying_price = 2900;
             item_name = "聖人の脊椎";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 801;
+            belongings_item_list = 801;
             buying_price = 400;
             item_name = "形兆のDISCｹｰｽ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 802;
+            belongings_item_list = 802;
             buying_price = 400;
             item_name = "ﾄﾗｸﾀｰのﾀｲﾔ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 803;
+            belongings_item_list = 803;
             buying_price = 400;
             item_name = "ｻﾝｼﾞｪﾙﾏﾝの紙袋";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 804;
+            belongings_item_list = 804;
             buying_price = 400;
             item_name = "露伴のカバン";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 724;
+            belongings_item_list = 724;
             buying_price = 1500;
             item_name = "石仮面";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 714;
+            belongings_item_list = 714;
             buying_price = 2000;
             item_name = "紫外線照射装置";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 723;
+            belongings_item_list = 723;
             buying_price = 1500;
             item_name = "魔法のランプ";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 726;
+            belongings_item_list = 726;
             buying_price = 1000;
             item_name = "鉄球";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 727;
+            belongings_item_list = 727;
             buying_price = 1000;
             item_name = "ｿﾞﾝﾋﾞ馬";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 901;
+            belongings_item_list = 901;
             buying_price = 360;
             item_name = "一部のコミックス";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 906;
+            belongings_item_list = 906;
             buying_price = 360;
             item_name = "二部のコミックス";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 913;
+            belongings_item_list = 913;
             buying_price = 390;
             item_name = "三部のコミックス";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 929;
+            belongings_item_list = 929;
             buying_price = 390;
             item_name = "四部のコミックス";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 948;
+            belongings_item_list = 948;
             buying_price = 388;
             item_name = "五部のコミックス";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 964;
+            belongings_item_list = 964;
             buying_price = 390;
             item_name = "ストーンオーシャン";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 981;
+            belongings_item_list = 981;
             buying_price = 390;
             item_name = "STEEL BALL RUN";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 0;
+            belongings_item_list = 0;
             buying_price = 1;
             item_name = "------------------";
         }
         var_3509++;
         if (var_883 == var_3509) {
-            item_list = 1;
+            belongings_item_list = 1;
             buying_price = 1;
             item_name = "お金";
         }

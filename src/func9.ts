@@ -582,13 +582,13 @@ function func911(this: any) {
             var_3579 = "" + var_3579 + "," + var_3519[var_3566];
             var_3566++;
         }
-        item_list = var_233[var_225].Var0;
+        belongings_item_list = var_233[var_225].Var0;
         disc_rarity = var_233[var_225].Var13;
         yield func492(); // アイテムリスト呼び出し
         var_3580 = item_name;
         if (var_233[var_225].Var11 == 1) {
             var_106 = 1;
-            item_list = var_233[var_225].Var0;
+            belongings_item_list = var_233[var_225].Var0;
             yield func492(); // アイテムリスト呼び出し
             var_482 = 0;
             var_482 = (var_233[var_225].Var3 + var_233[var_225].Var4) * 50;
@@ -628,7 +628,7 @@ function func911(this: any) {
             var_1977 = 1;
         }
         if (var_1977 == 1) {
-            item_list = var_233[var_225].Var0;
+            belongings_item_list = var_233[var_225].Var0;
             yield func106(); // BGM選曲呼び出し割り振り
         }
         yield func430();
@@ -672,7 +672,7 @@ function func911(this: any) {
         if (var_2301 == 2) {
             var_234 = 1;
         }
-        item_list = activated_disc_id;
+        belongings_item_list = activated_disc_id;
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (var_2254 == 1) {
             var_2254 = 0;
@@ -2483,11 +2483,11 @@ function func935(this: any) {
         color(255, 255, 255);
 
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
-        pos(15, var_228);
+        pos(15, Y_axis_item_position);
         mes(">");
-        pos(16, var_228);
+        pos(16, Y_axis_item_position);
         mes(">");
-        pos(17, var_228);
+        pos(17, Y_axis_item_position);
         mes(">");
         return;
     });
