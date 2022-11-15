@@ -3383,7 +3383,7 @@ function func511() {
                     if (var_220 == 1) {
                         var_2287 = 1;
                     }
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -4293,7 +4293,7 @@ function func511() {
                     }
                     var_198 = 0;
                     var_2006 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -4574,7 +4574,7 @@ function func511() {
                     }
                     var_198 = 0;
                     var_2004 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -10709,7 +10709,7 @@ function func511() {
                         var_2301 = 2;
                     }
                     var_2007 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -10764,7 +10764,7 @@ function func511() {
                         var_2301 = 2;
                     }
                     var_2007 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -10819,7 +10819,7 @@ function func511() {
                         var_2301 = 2;
                     }
                     var_2007 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -13508,7 +13508,7 @@ function func522() {
                     _a.sent(); // キー入力による選択処理
                     var_198 = 0;
                     var_1240 = 2;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -14765,7 +14765,7 @@ function func527() {
                     var_1208 = 0;
                     var_198 = 0;
                     var_2006 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;

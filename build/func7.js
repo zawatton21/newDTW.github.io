@@ -6403,7 +6403,7 @@ function func770() {
                 case 0:
                     dbgprt(770);
                     var_2000 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -6990,7 +6990,7 @@ function func774() {
                 case 0:
                     dbgprt(774);
                     var_2001 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -7041,7 +7041,7 @@ function func775() {
                 case 3:
                     _a.sent();
                     var_2001 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -7098,7 +7098,7 @@ function func775() {
                 case 12:
                     _a.sent();
                     var_2001 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;

@@ -873,7 +873,7 @@ function func009(this: any) {
             var_116 = 0;
             var_213 = 0;
             var_214 = 0;
-            yield func027();
+            yield func027(); // 動けるようになった時の表示
         }
         yield func337(); // メッセージ関係呼び出し
         if (var_218 >= 1 && var_218 < 30) {
@@ -900,19 +900,19 @@ function func009(this: any) {
         if (var_128 >= 1) {
             var_213 = 0;
             var_214 = 0;
-            yield func022();
+            yield func022(); // 氷状態の動作処理
             return;
         }
         if (var_219 >= 1) {
             var_213 = 0;
             var_214 = 0;
-            yield func025();
+            yield func025(); // 寝ている時の動作処理
             return;
         }
         if (var_178 >= 1) {
             var_213 = 0;
             var_214 = 0;
-            yield func021();
+            yield func021(); // 波紋攻撃を喰らって麻痺している状態の動作処理
             return;
         }
         if (var_213 == 1 && var_214 == 0) {
@@ -1855,7 +1855,7 @@ function func015(this: any) {
         if (var_116 >= 1 || var_114 >= 1) {
             var_66 = var_236;
             var_67 = var_237;
-            yield func026();
+            yield func026(); // その場へ固定された時の動作処理
             return;
         }
         if (var_126 == 1) {
@@ -2870,7 +2870,7 @@ function func019(this: any) {
                     var_127 = 0;
                     var_240 = 0;
                     yield func331();
-                    yield func034();
+                    yield func034(); // 盲目状態から復帰した時の表示
                 }
             }
             if (var_132 >= 1) {
@@ -2887,7 +2887,7 @@ function func019(this: any) {
                 if (var_159 >= 22) {
                     var_159 = 0;
                     var_240 = 0;
-                    yield func029();
+                    yield func029(); // オアシスの壁を溶かす効果が切れた時の表示
                 }
             }
             if (var_140 >= 1) {
@@ -2905,7 +2905,7 @@ function func019(this: any) {
                 if (var_131 == 12) {
                     var_131 = 0;
                     var_240 = 0;
-                    yield func028();
+                    yield func028(); // メタリカの透明化が切れた時の表示
                 }
             }
             if (var_218 >= 1 && var_218 < 30) {
@@ -2921,7 +2921,7 @@ function func019(this: any) {
                 if (var_218 == 2000) {
                     var_218 = 0;
                     var_240 = 0;
-                    yield func033();
+                    yield func033(); // スティッキーフィンガーズの発動効果が切れた時の表示
                 }
             }
             if (var_139 >= 1) {
@@ -3453,7 +3453,7 @@ function func019(this: any) {
                     var_397 = 0;
                     var_133 = 0;
                     var_240 = 0;
-                    yield func030();
+                    yield func030();// 鈍足状態から復帰した時の表示
                 }
                 yield func331();
             }
@@ -4124,6 +4124,7 @@ function func020(this: any) {
         return;
     });
 }
+// 波紋攻撃を喰らって麻痺している状態の動作処理
 function func021(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(21);
@@ -4173,6 +4174,8 @@ function func021(this: any) {
         return;
     });
 }
+
+// 氷状態の動作処理
 function func022(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(22);
@@ -4323,6 +4326,8 @@ function func022(this: any) {
         return;
     });
 }
+
+
 function func023(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(23);
@@ -4343,6 +4348,8 @@ function func024(this: any) {
         return;
     });
 }
+
+// 寝ている時の動作処理
 function func025(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(25);
@@ -4393,6 +4400,8 @@ function func025(this: any) {
         return;
     });
 }
+
+// その場へ固定された時の動作処理
 function func026(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(26);
@@ -4554,6 +4563,8 @@ function func026(this: any) {
         return;
     });
 }
+
+// 動けるようになった時の表示
 function func027(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(27);
@@ -4577,6 +4588,7 @@ function func027(this: any) {
         return;
     });
 }
+// メタリカの透明化が切れた時の表示
 function func028(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(28);
@@ -4600,6 +4612,8 @@ function func028(this: any) {
         return;
     });
 }
+
+// オアシスの壁を溶かす効果が切れた時の表示
 function func029(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(29);
@@ -4623,6 +4637,8 @@ function func029(this: any) {
         return;
     });
 }
+
+// 鈍足状態から復帰した時の表示
 function func030(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(30);
@@ -4646,6 +4662,7 @@ function func030(this: any) {
         return;
     });
 }
+// ドッピオの変身が解除された時の表示
 function func031(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(31);
@@ -4711,13 +4728,14 @@ function func031(this: any) {
         return;
     });
 }
+// スティッキーフィンガーズの発動効果持続中の動作処理
 function func032(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(32);
         yield func080(); // 各キー入力確認
         if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1) {
             var_218 = 0;
-            yield func033();
+            yield func033(); // スティッキーフィンガーズの発動効果が切れた時の表示
             return;
         }
         if (var_218 == 51) {
@@ -4753,7 +4771,7 @@ function func032(this: any) {
                 yield func080(); // 各キー入力確認
                 if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1) {
                     var_218 = 0;
-                    yield func033();
+                    yield func033(); // スティッキーフィンガーズの発動効果が切れた時の表示
                     break;
                 }
             }
@@ -4783,6 +4801,7 @@ function func032(this: any) {
         return;
     });
 }
+// スティッキーフィンガーズの発動効果が切れた時の表示
 function func033(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(33);
@@ -4820,6 +4839,7 @@ function func033(this: any) {
         return;
     });
 }
+// 盲目状態から復帰した時の表示
 function func034(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(34);

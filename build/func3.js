@@ -1486,7 +1486,7 @@ function func323() {
                     if (!(var_1142 == 1)) return [3 /*break*/, 4];
                     return [4 /*yield*/, func383()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // アイテムの出現数を増やす動作処理
                     _a.label = 4;
                 case 4:
                     if (!(var_1143 == 1)) return [3 /*break*/, 6];
@@ -18384,6 +18384,7 @@ function func382() {
         });
     });
 }
+// アイテムの出現数を増やす動作処理
 function func383() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -18392,6 +18393,7 @@ function func383() {
                     dbgprt(383);
                     var_336 = rnd(3);
                     var_336 = var_336 + 4;
+                    // シンデレラの効果が発動していたら、+6個
                     if (var_1024 == 1) {
                         var_1024 = 0;
                         var_336 = var_336 + 6;

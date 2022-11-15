@@ -5905,7 +5905,7 @@ function func620() {
                     var_1903 = 1;
                     return [4 /*yield*/, func414()];
                 case 355:
-                    _a.sent();
+                    _a.sent(); // ヤバいもの関係の容量設定？？
                     var_1903 = 0;
                     _a.label = 356;
                 case 356:
@@ -6100,7 +6100,7 @@ function func620() {
                     var_1903 = 1;
                     return [4 /*yield*/, func414()];
                 case 388:
-                    _a.sent();
+                    _a.sent(); // ヤバいもの関係の容量設定？？
                     var_1903 = 0;
                     _a.label = 389;
                 case 389:
@@ -6321,7 +6321,7 @@ function func620() {
                     var_1903 = 1;
                     return [4 /*yield*/, func414()];
                 case 426:
-                    _a.sent();
+                    _a.sent(); // ヤバいもの関係の容量設定？？
                     var_1903 = 0;
                     _a.label = 427;
                 case 427:
@@ -7577,7 +7577,7 @@ function func620() {
                     var_1903 = 1;
                     return [4 /*yield*/, func414()];
                 case 634:
-                    _a.sent();
+                    _a.sent(); // ヤバいもの関係の容量設定？？
                     var_1903 = 0;
                     _a.label = 635;
                 case 635:

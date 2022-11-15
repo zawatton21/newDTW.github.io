@@ -1004,11 +1004,11 @@ function func407() {
                     var_682 = var_233[var_225].Var6;
                     var_1876 = var_225;
                     var_1877 = var_225;
-                    var_1878 = var_227;
+                    var_1878 = item_page_number;
                     var_1879 = Y_axis_item_position;
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     var_221 = 0;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -1048,8 +1048,8 @@ function func408() {
                     var_1884 = var_233[var_1876].Var8 + 10;
                     var_225 = 1;
                     Y_axis_item_position = 45;
-                    var_1885 = var_227;
-                    var_227 = 1;
+                    var_1885 = item_page_number;
+                    item_page_number = 1;
                     return [4 /*yield*/, func051()];
                 case 1:
                     _a.sent();
@@ -1397,7 +1397,7 @@ function func411() {
                     var_1897 = 1;
                     return [4 /*yield*/, func414()];
                 case 23:
-                    _a.sent();
+                    _a.sent(); // ヤバいもの関係の容量設定？？
                     return [2 /*return*/];
                 case 24:
                     var_1898 = 0;
@@ -1670,6 +1670,7 @@ function func413() {
         });
     });
 }
+// ヤバいもの関係の容量設定？？
 function func414() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_5, cnt2_7, cnt3_6, cnt3_7, cnt3_8, cnt1_6;
@@ -1956,6 +1957,7 @@ function func416() {
             if (var_111 == 1 || var_138 == 1) {
                 var_1900 = 1;
             }
+            // 共鳴ID = 136 「はっはっは　狙え狙え」(投影命中率上昇)
             if (sympathy_id == 136) {
                 var_1900 = 1;
             }
@@ -2792,13 +2794,14 @@ function func420() {
                     return [4 /*yield*/, func492()];
                 case 67:
                     _a.sent(); // アイテムリスト呼び出し
+                    // 
                     if (belongings_item_list == 700 || belongings_item_list == 571 || belongings_item_list == 579 || belongings_item_list == 729 || belongings_item_list == 730 || belongings_item_list == 731 || belongings_item_list == 701 || belongings_item_list == 995) {
                         var_1936 = 0;
                     }
                     if (!(belongings_item_list >= 100 && belongings_item_list < 400)) return [3 /*break*/, 69];
                     return [4 /*yield*/, func493()];
                 case 68:
-                    _a.sent();
+                    _a.sent(); // 装備disc能力値の設定
                     _a.label = 69;
                 case 69:
                     if (!(belongings_item_list < 100 || belongings_item_list >= 500)) return [3 /*break*/, 71];
@@ -3459,6 +3462,8 @@ function func431() {
         });
     });
 }
+// 配列宣言処理
+// 装備disc、射撃discの合成数や修正値、数などの為の配列か?
 function func432() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -3570,7 +3575,6 @@ function func433() {
                     var_449 = 2;
                     for (cnt1_20 = 0; cnt1_20 < var_224; ++cnt1_20) {
                         if (var_233[var_447].Var0 == 0) {
-                            /*
                             var_233[var_447].Var0 = var_233[var_449].Var0;
                             var_233[var_447].Var1 = var_233[var_449].Var1;
                             var_233[var_447].Var2 = var_233[var_449].Var2;
@@ -3605,7 +3609,7 @@ function func433() {
                             var_477[var_447] = var_477[var_449];
                             var_478[var_447] = var_478[var_449];
                             var_479[var_447] = var_479[var_449];
-                            */
+                            /*
                             var_233[var_447].Var0 = JSON.parse(JSON.stringify(var_233[var_449].Var0));
                             var_233[var_447].Var1 = JSON.parse(JSON.stringify(var_233[var_449].Var1));
                             var_233[var_447].Var2 = JSON.parse(JSON.stringify(var_233[var_449].Var2));
@@ -3640,11 +3644,11 @@ function func433() {
                             var_477[var_447] = JSON.parse(JSON.stringify(var_477[var_449]));
                             var_478[var_447] = JSON.parse(JSON.stringify(var_478[var_449]));
                             var_479[var_447] = JSON.parse(JSON.stringify(var_479[var_449]));
+                            */
                             var_1957 = 1;
                             var_224 = var_224 - 1; // アイテムの数を減らしている。唯一ここだけ
                         }
                         if (var_1957 == 1) {
-                            /*
                             var_233[var_447].Var0 = var_233[var_449].Var0;
                             var_233[var_447].Var1 = var_233[var_449].Var1;
                             var_233[var_447].Var2 = var_233[var_449].Var2;
@@ -3679,7 +3683,7 @@ function func433() {
                             var_477[var_447] = var_477[var_449];
                             var_478[var_447] = var_478[var_449];
                             var_479[var_447] = var_479[var_449];
-                            */
+                            /*
                             var_233[var_447].Var0 = JSON.parse(JSON.stringify(var_233[var_449].Var0));
                             var_233[var_447].Var1 = JSON.parse(JSON.stringify(var_233[var_449].Var1));
                             var_233[var_447].Var2 = JSON.parse(JSON.stringify(var_233[var_449].Var2));
@@ -3714,6 +3718,7 @@ function func433() {
                             var_477[var_447] = JSON.parse(JSON.stringify(var_477[var_449]));
                             var_478[var_447] = JSON.parse(JSON.stringify(var_478[var_449]));
                             var_479[var_447] = JSON.parse(JSON.stringify(var_479[var_449]));
+                            */
                         }
                         var_447 = var_447 + 1;
                         var_449 = var_449 + 1;
@@ -4009,7 +4014,7 @@ function func438() {
                     if (var_220 == 1) {
                         var_1965 = 1;
                     }
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -4121,7 +4126,7 @@ function func439() {
                     if (!(var_1970 == 0)) return [3 /*break*/, 17];
                     return [4 /*yield*/, func440()];
                 case 16:
-                    _a.sent();
+                    _a.sent(); // アヴドゥルのdisc効果(全て識別できた場合(ランダム))
                     return [2 /*return*/];
                 case 17: return [4 /*yield*/, func094()];
                 case 18:
@@ -4210,6 +4215,7 @@ function func439() {
         });
     });
 }
+// アヴドゥルのdisc効果(全て識別できた場合(ランダム))
 function func440() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_25, cnt1_26;
@@ -4526,7 +4532,7 @@ function func441() {
                     var_1903 = 1;
                     return [4 /*yield*/, func414()];
                 case 31:
-                    _a.sent();
+                    _a.sent(); // ヤバいもの関係の容量設定？？
                     var_1903 = 0;
                     _a.label = 32;
                 case 32: return [4 /*yield*/, func426()];
@@ -4605,7 +4611,7 @@ function func441() {
                     var_1903 = 1;
                     return [4 /*yield*/, func414()];
                 case 46:
-                    _a.sent();
+                    _a.sent(); // ヤバいもの関係の容量設定？？
                     var_1903 = 0;
                     _a.label = 47;
                 case 47:
@@ -4952,7 +4958,7 @@ function func443() {
                     if (var_220 == 1) {
                         var_1965 = 1;
                     }
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -6705,23 +6711,23 @@ function func460() {
                         color(0, 0, 0);
                         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                         pos(5, 35);
-                        if (var_227 != 3) {
+                        if (item_page_number != 3) {
                             gcopy(12, 0, 0, 332, 235);
                         }
-                        if (var_227 == 3) {
+                        if (item_page_number == 3) {
                             gcopy(12, 0, 0, 332, 45);
                         }
                         pos(5, 273);
                         gcopy(12, 0, 0, 332, 62);
                         color(255, 255, 255);
                         line(9, 37, 330, 37);
-                        if (var_227 != 3) {
+                        if (item_page_number != 3) {
                             line(9, 267, 166, 267);
                             line(190, 267, 330, 267);
                             line(8, 38, 8, 265);
                             line(332, 38, 332, 265);
                         }
-                        if (var_227 == 3) {
+                        if (item_page_number == 3) {
                             line(9, 77, 156, 77);
                             line(200, 77, 330, 77);
                             line(8, 38, 8, 75);
@@ -6729,16 +6735,16 @@ function func460() {
                         }
                         pset(9, 38);
                         pset(331, 38);
-                        if (var_227 != 3) {
+                        if (item_page_number != 3) {
                             pset(9, 266);
                         }
-                        if (var_227 != 3) {
+                        if (item_page_number != 3) {
                             pset(331, 266);
                         }
-                        if (var_227 == 3) {
+                        if (item_page_number == 3) {
                             pset(9, 76);
                         }
-                        if (var_227 == 3) {
+                        if (item_page_number == 3) {
                             pset(331, 76);
                         }
                     }
@@ -6768,13 +6774,13 @@ function func460() {
                     pset(9, 331);
                     pset(331, 331);
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                    if (var_227 == 1) {
+                    if (item_page_number == 1) {
                         var_1620 = 1;
                     }
-                    if (var_227 == 2) {
+                    if (item_page_number == 2) {
                         var_1620 = 11;
                     }
-                    if (var_227 == 3) {
+                    if (item_page_number == 3) {
                         var_1620 = 0;
                     }
                     if (var_220 == 1) {
@@ -6782,13 +6788,14 @@ function func460() {
                     }
                     var_230 = 45;
                     loopCount = 1;
-                    if (var_227 != 3) {
+                    if (item_page_number != 3) {
                         loopCount = 10;
                     }
                     cnt1_52 = 0;
                     _a.label = 1;
                 case 1:
                     if (!(cnt1_52 < loopCount)) return [3 /*break*/, 15];
+                    // 乳母車での見えなくなったアイテムの配列処理
                     if (var_220 == 1 && var_233[var_1882].Var0 == 817 && var_119 == 0) {
                         return [3 /*break*/, 15];
                     }
@@ -6826,7 +6833,7 @@ function func460() {
                     disc_rarity = var_2017;
                     return [4 /*yield*/, func492()];
                 case 2:
-                    _a.sent(); // アイテムリスト呼び出し
+                    _a.sent(); // アイテムリスト呼び出し          
                     var_2021 = 0;
                     // ヤバいもののなかでも "押す" 機能があるものだけ
                     // var_220 はヤバいものの中を見た時に1になる
@@ -7117,11 +7124,11 @@ function func460() {
                         var_2028 = var_486[var_682][var_225][15];
                         var_2029 = var_486[var_682][var_225][16];
                     }
-                    if (var_227 != 3) {
+                    if (item_page_number != 3) {
                         belongings_item_list = var_2023;
                         disc_rarity = var_2026;
                     }
-                    if (var_227 == 3) {
+                    if (item_page_number == 3) {
                         belongings_item_list = var_233[0].Var0;
                         disc_rarity = var_233[0].Var13;
                     }
@@ -7217,7 +7224,7 @@ function func460() {
                     pos(160, 269);
                     color(255, 255, 255);
                     if (var_220 == 0) {
-                        if (var_227 == 1) {
+                        if (item_page_number == 1) {
                             if (var_224 < 11 && var_77[var_66][var_67] == 0) {
                                 line(155, 267, 201, 267);
                             }
@@ -7239,7 +7246,7 @@ function func460() {
                                 mes(">");
                             }
                         }
-                        if (var_227 == 2) {
+                        if (item_page_number == 2) {
                             if (var_77[var_66][var_67] == 0) {
                                 pos(175, 259);
                                 mes("<");
@@ -7257,7 +7264,7 @@ function func460() {
                                 mes("< >");
                             }
                         }
-                        if (var_227 == 3) {
+                        if (item_page_number == 3) {
                             pos(168, 71);
                             font("ＭＳ Ｐゴシック", 12, 1);
                             mes("足元");
@@ -7525,7 +7532,7 @@ function func461() {
             switch (_a.label) {
                 case 0:
                     dbgprt(461);
-                    if (!(var_220 == 0 && var_224 == 0 && var_227 != 3)) return [3 /*break*/, 2];
+                    if (!(var_220 == 0 && var_224 == 0 && item_page_number != 3)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func459()];
                 case 1:
                     _a.sent(); // 道具画面(所持数0)の表示(メニュー画面/道具)
@@ -7539,8 +7546,8 @@ function func461() {
                 case 4:
                     _a.sent(); // 各キー入力確認
                     if (!(var_220 == 0)) return [3 /*break*/, 72];
-                    if (!(var_259 == 1 && var_227 != 3)) return [3 /*break*/, 19];
-                    if (!(var_227 == 1)) return [3 /*break*/, 13];
+                    if (!(var_259 == 1 && item_page_number != 3)) return [3 /*break*/, 19];
+                    if (!(item_page_number == 1)) return [3 /*break*/, 13];
                     if (!(var_224 <= 10 && var_225 != var_224)) return [3 /*break*/, 7];
                     Y_axis_item_position = Y_axis_item_position + 22;
                     var_225 = var_225 + 1;
@@ -7583,7 +7590,7 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 13:
-                    if (!(var_227 == 2)) return [3 /*break*/, 19];
+                    if (!(item_page_number == 2)) return [3 /*break*/, 19];
                     if (!(var_225 != var_224 && var_225 != 20)) return [3 /*break*/, 16];
                     Y_axis_item_position = Y_axis_item_position + 22;
                     var_225 = var_225 + 1;
@@ -7612,7 +7619,7 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 19:
-                    if (!(var_255 == 1 && var_227 != 3)) return [3 /*break*/, 31];
+                    if (!(var_255 == 1 && item_page_number != 3)) return [3 /*break*/, 31];
                     if (!(var_225 != 1 && var_225 != 11)) return [3 /*break*/, 22];
                     Y_axis_item_position = Y_axis_item_position - 22;
                     var_225 = var_225 - 1;
@@ -7628,7 +7635,7 @@ function func461() {
                     return [2 /*return*/];
                 case 22:
                     if (!(var_225 == 1 || var_225 == 11)) return [3 /*break*/, 31];
-                    if (!(var_227 == 1)) return [3 /*break*/, 28];
+                    if (!(item_page_number == 1)) return [3 /*break*/, 28];
                     if (!(var_224 <= 10)) return [3 /*break*/, 25];
                     Y_axis_item_position = (var_224 - 1) * 22 + 45;
                     var_225 = var_224;
@@ -7657,7 +7664,7 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 28:
-                    if (!(var_227 == 2)) return [3 /*break*/, 31];
+                    if (!(item_page_number == 2)) return [3 /*break*/, 31];
                     Y_axis_item_position = (var_224 - 11) * 22 + 45;
                     var_225 = var_224;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7672,9 +7679,9 @@ function func461() {
                     return [2 /*return*/];
                 case 31:
                     if (!(var_254 == 1)) return [3 /*break*/, 47];
-                    if (!(var_227 == 1)) return [3 /*break*/, 38];
+                    if (!(item_page_number == 1)) return [3 /*break*/, 38];
                     if (!(var_77[var_66][var_67] != 0 && var_1240 == 0 && var_1999 == 0 && var_2000 == 0 && var_2001 == 0 && var_1950 == 0 && var_2002 == 0 && var_2005 == 0 && var_2003 == 0 && var_2004 == 0 && var_2006 == 0 && var_2007 == 0)) return [3 /*break*/, 35];
-                    var_227 = 3;
+                    item_page_number = 3;
                     Y_axis_item_position = 45;
                     var_225 = 0;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7693,7 +7700,7 @@ function func461() {
                 case 35:
                     if (!(var_224 > 10)) return [3 /*break*/, 38];
                     var_225 = 11;
-                    var_227 = 2;
+                    item_page_number = 2;
                     Y_axis_item_position = 45;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音 
                     //yield func337(); // メッセージ関係呼び出し
@@ -7706,9 +7713,9 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 38:
-                    if (!(var_227 == 2)) return [3 /*break*/, 41];
+                    if (!(item_page_number == 2)) return [3 /*break*/, 41];
                     var_225 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
@@ -7721,10 +7728,10 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 41:
-                    if (!(var_227 == 3 && var_224 != 0)) return [3 /*break*/, 47];
+                    if (!(item_page_number == 3 && var_224 != 0)) return [3 /*break*/, 47];
                     if (!(var_224 <= 10)) return [3 /*break*/, 44];
                     var_225 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_231 = 0;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7740,7 +7747,7 @@ function func461() {
                 case 44:
                     if (!(var_224 > 10)) return [3 /*break*/, 47];
                     var_225 = 11;
-                    var_227 = 2;
+                    item_page_number = 2;
                     Y_axis_item_position = 45;
                     var_231 = 0;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7755,9 +7762,9 @@ function func461() {
                     return [2 /*return*/];
                 case 47:
                     if (!(var_257 == 1)) return [3 /*break*/, 70];
-                    if (!(var_227 == 1 && var_224 > 10)) return [3 /*break*/, 50];
+                    if (!(item_page_number == 1 && var_224 > 10)) return [3 /*break*/, 50];
                     var_225 = 11;
-                    var_227 = 2;
+                    item_page_number = 2;
                     Y_axis_item_position = 45;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
@@ -7771,8 +7778,8 @@ function func461() {
                     return [2 /*return*/];
                 case 50:
                     if (!(var_1240 == 0 && var_1999 == 0 && var_2000 == 0 && var_2001 == 0 && var_1950 == 0 && var_2002 == 0 && var_2003 == 0 && var_2004 == 0 && var_2005 == 0 && var_2006 == 0 && var_2007 == 0)) return [3 /*break*/, 58];
-                    if (!(var_227 == 1 && var_224 <= 10 && var_77[var_66][var_67] != 0)) return [3 /*break*/, 54];
-                    var_227 = 3;
+                    if (!(item_page_number == 1 && var_224 <= 10 && var_77[var_66][var_67] != 0)) return [3 /*break*/, 54];
+                    item_page_number = 3;
                     Y_axis_item_position = 45;
                     var_225 = 0;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7789,8 +7796,8 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 54:
-                    if (!(var_227 == 2 && var_77[var_66][var_67] != 0)) return [3 /*break*/, 58];
-                    var_227 = 3;
+                    if (!(item_page_number == 2 && var_77[var_66][var_67] != 0)) return [3 /*break*/, 58];
+                    item_page_number = 3;
                     Y_axis_item_position = 45;
                     var_225 = 0;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -7807,10 +7814,10 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 58:
-                    if (!(var_227 == 2)) return [3 /*break*/, 61];
+                    if (!(item_page_number == 2)) return [3 /*break*/, 61];
                     if (!(var_1240 != 0 || var_1999 != 0 || var_2000 != 0 || var_2001 != 0 || var_1950 != 0 || var_2002 != 0 || var_2003 != 0 || var_2004 != 0 || var_2005 != 0 || var_2006 != 0 || var_2007 != 0)) return [3 /*break*/, 61];
                     var_225 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
@@ -7823,9 +7830,9 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 61:
-                    if (!(var_227 == 2 && var_77[var_66][var_67] == 0)) return [3 /*break*/, 64];
+                    if (!(item_page_number == 2 && var_77[var_66][var_67] == 0)) return [3 /*break*/, 64];
                     var_225 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
@@ -7838,9 +7845,9 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 64:
-                    if (!(var_227 == 2 && var_2005 == 1)) return [3 /*break*/, 67];
+                    if (!(item_page_number == 2 && var_2005 == 1)) return [3 /*break*/, 67];
                     var_225 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
@@ -7853,9 +7860,9 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 67:
-                    if (!(var_227 == 3 && var_224 != 0)) return [3 /*break*/, 70];
+                    if (!(item_page_number == 3 && var_224 != 0)) return [3 /*break*/, 70];
                     var_225 = 1;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_231 = 0;
                     DSPLAY(audio_id = 100);
@@ -7869,7 +7876,7 @@ function func461() {
                     _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
                     return [2 /*return*/];
                 case 70:
-                    if (!(key_Shift_on == 1 && var_1866 == 0 && var_234 == 0 && var_220 == 0 && var_231 == 0 && var_1945 == 0 && var_224 > 1 && var_1240 == 0 && var_1999 == 0 && var_2000 == 0 && var_2001 == 0 && var_1950 == 0 && var_2002 == 0 && var_2003 == 0 && var_2004 == 0 && var_2005 == 0 && var_2006 == 0 && var_2007 == 0 && var_227 != 3)) return [3 /*break*/, 72];
+                    if (!(key_Shift_on == 1 && var_1866 == 0 && var_234 == 0 && var_220 == 0 && var_231 == 0 && var_1945 == 0 && var_224 > 1 && var_1240 == 0 && var_1999 == 0 && var_2000 == 0 && var_2001 == 0 && var_1950 == 0 && var_2002 == 0 && var_2003 == 0 && var_2004 == 0 && var_2005 == 0 && var_2006 == 0 && var_2007 == 0 && item_page_number != 3)) return [3 /*break*/, 72];
                     DSPLAY(audio_id = 208); //アイテムを整理する時の効果音
                     return [4 /*yield*/, func467()];
                 case 71:
@@ -7922,11 +7929,8 @@ function func461() {
                     return [2 /*return*/];
                 case 81:
                     if (!(var_225 == 1)) return [3 /*break*/, 84];
-                    // Y_axis_item_position = (var_233[var_1876].Var8 - 1) * 22 + 45;
-                    // var_225 = var_233[var_1876].Var8;
-                    Y_axis_item_position = (var_225 - 1) * 22 + 45;
-                    // Y_axis_item_position = (var_224 - 1) * 22 + 45;
-                    var_225 = var_225;
+                    Y_axis_item_position = (var_233[var_1876].Var8 - 1) * 22 + 45;
+                    var_225 = var_233[var_1876].Var8;
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
@@ -7939,14 +7943,14 @@ function func461() {
                     return [2 /*return*/];
                 case 84:
                     if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 118];
-                    if (!(var_1866 == 1 && var_227 != 3)) return [3 /*break*/, 86];
+                    if (!(var_1866 == 1 && item_page_number != 3)) return [3 /*break*/, 86];
                     DSPLAY(audio_id = 212);
                     return [4 /*yield*/, func469()];
                 case 85:
                     _a.sent(); // ヤバいものへの "入れる" 選択
                     return [2 /*return*/];
                 case 86:
-                    if (!(var_1866 == 1 && var_227 == 3)) return [3 /*break*/, 88];
+                    if (!(var_1866 == 1 && item_page_number == 3)) return [3 /*break*/, 88];
                     DSPLAY(audio_id = 212);
                     var_2040 = 1;
                     return [4 /*yield*/, func469()];
@@ -8049,7 +8053,7 @@ function func461() {
                     _a.sent(); // ムーディーブルースの発動によってアイテムを倉庫に送る動作処理
                     return [2 /*return*/];
                 case 114:
-                    if (!(var_227 != 3)) return [3 /*break*/, 116];
+                    if (!(item_page_number != 3)) return [3 /*break*/, 116];
                     var_221 = 1;
                     var_229 = 44;
                     var_222 = 1;
@@ -8059,7 +8063,7 @@ function func461() {
                     _a.sent(); // アイテムidごとに区分分け関数
                     return [2 /*return*/];
                 case 116:
-                    if (!(var_227 == 3)) return [3 /*break*/, 118];
+                    if (!(item_page_number == 3)) return [3 /*break*/, 118];
                     var_221 = 1;
                     var_229 = 44;
                     var_222 = 10;
@@ -8080,7 +8084,7 @@ function func461() {
                     var_1965 = 0;
                     var_231 = 0;
                     var_1880 = 0;
-                    var_227 = var_1885;
+                    item_page_number = var_1885;
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func051()];
                 case 119:
@@ -8126,7 +8130,7 @@ function func461() {
                     var_221 = 1;
                     var_229 = 44;
                     var_225 = var_1877;
-                    var_227 = var_1878;
+                    item_page_number = var_1878;
                     Y_axis_item_position = var_1879;
                     var_234 = 0;
                     var_222 = 1;
@@ -9417,7 +9421,7 @@ function func463() {
                     var_221 = 0;
                     var_2005 = 1;
                     var_2044 = var_77[var_66][var_67];
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -10339,7 +10343,7 @@ function func467() {
                         }
                         var_1956 = var_1956 + 1;
                     }
-                    var_227 = 1;
+                    item_page_number = 1;
                     return [4 /*yield*/, func052()];
                 case 101:
                     _a.sent();
@@ -12223,7 +12227,6 @@ function func474() {
                     var_1866 = 0;
                     var_224 = var_224 + 1;
                     var_683 = var_233[var_1876].Var8;
-                    /*
                     var_233[var_224].Var0 = var_486[var_682][var_225][0];
                     var_233[var_224].Var3 = var_486[var_682][var_225][3];
                     var_233[var_224].Var4 = var_486[var_682][var_225][4];
@@ -12248,31 +12251,32 @@ function func474() {
                     var_233[var_224].Var27 = var_486[var_682][var_225][27];
                     var_233[var_224].Var28 = var_486[var_682][var_225][28];
                     var_233[var_224].Var29 = var_486[var_682][var_225][29];
-            */
-                    var_233[var_224].Var0 = JSON.parse(JSON.stringify(var_486[var_682][var_225][0]));
-                    var_233[var_224].Var3 = JSON.parse(JSON.stringify(var_486[var_682][var_225][3]));
-                    var_233[var_224].Var4 = JSON.parse(JSON.stringify(var_486[var_682][var_225][4]));
-                    var_233[var_224].Var5 = JSON.parse(JSON.stringify(var_486[var_682][var_225][5]));
-                    var_233[var_224].Var6 = JSON.parse(JSON.stringify(var_486[var_682][var_225][6]));
-                    var_233[var_224].Var11 = JSON.parse(JSON.stringify(var_486[var_682][var_225][11]));
-                    var_233[var_224].Var12 = JSON.parse(JSON.stringify(var_486[var_682][var_225][12]));
-                    var_233[var_224].Var13 = JSON.parse(JSON.stringify(var_486[var_682][var_225][13]));
-                    var_233[var_224].Var14 = JSON.parse(JSON.stringify(var_486[var_682][var_225][14]));
-                    var_233[var_224].Var15 = JSON.parse(JSON.stringify(var_486[var_682][var_225][15]));
-                    var_233[var_224].Var16 = JSON.parse(JSON.stringify(var_486[var_682][var_225][16]));
-                    var_233[var_224].Var17 = JSON.parse(JSON.stringify(var_486[var_682][var_225][17]));
-                    var_233[var_224].Var18 = JSON.parse(JSON.stringify(var_486[var_682][var_225][18]));
-                    var_233[var_224].Var19 = JSON.parse(JSON.stringify(var_486[var_682][var_225][19]));
-                    var_233[var_224].Var20 = JSON.parse(JSON.stringify(var_486[var_682][var_225][20]));
-                    var_233[var_224].Var21 = JSON.parse(JSON.stringify(var_486[var_682][var_225][21]));
-                    var_233[var_224].Var22 = JSON.parse(JSON.stringify(var_486[var_682][var_225][22]));
-                    var_233[var_224].Var23 = JSON.parse(JSON.stringify(var_486[var_682][var_225][23]));
-                    var_233[var_224].Var24 = JSON.parse(JSON.stringify(var_486[var_682][var_225][24]));
-                    var_233[var_224].Var25 = JSON.parse(JSON.stringify(var_486[var_682][var_225][25]));
-                    var_233[var_224].Var26 = JSON.parse(JSON.stringify(var_486[var_682][var_225][26]));
-                    var_233[var_224].Var27 = JSON.parse(JSON.stringify(var_486[var_682][var_225][27]));
-                    var_233[var_224].Var28 = JSON.parse(JSON.stringify(var_486[var_682][var_225][28]));
-                    var_233[var_224].Var29 = JSON.parse(JSON.stringify(var_486[var_682][var_225][29]));
+                    /*
+                            var_233[var_224].Var0 = JSON.parse(JSON.stringify(var_486[var_682][var_225][0]));
+                            var_233[var_224].Var3 = JSON.parse(JSON.stringify(var_486[var_682][var_225][3]));
+                            var_233[var_224].Var4 = JSON.parse(JSON.stringify(var_486[var_682][var_225][4]));
+                            var_233[var_224].Var5 = JSON.parse(JSON.stringify(var_486[var_682][var_225][5]));
+                            var_233[var_224].Var6 = JSON.parse(JSON.stringify(var_486[var_682][var_225][6]));
+                            var_233[var_224].Var11 = JSON.parse(JSON.stringify(var_486[var_682][var_225][11]));
+                            var_233[var_224].Var12 = JSON.parse(JSON.stringify(var_486[var_682][var_225][12]));
+                            var_233[var_224].Var13 = JSON.parse(JSON.stringify(var_486[var_682][var_225][13]));
+                            var_233[var_224].Var14 = JSON.parse(JSON.stringify(var_486[var_682][var_225][14]));
+                            var_233[var_224].Var15 = JSON.parse(JSON.stringify(var_486[var_682][var_225][15]));
+                            var_233[var_224].Var16 = JSON.parse(JSON.stringify(var_486[var_682][var_225][16]));
+                            var_233[var_224].Var17 = JSON.parse(JSON.stringify(var_486[var_682][var_225][17]));
+                            var_233[var_224].Var18 = JSON.parse(JSON.stringify(var_486[var_682][var_225][18]));
+                            var_233[var_224].Var19 = JSON.parse(JSON.stringify(var_486[var_682][var_225][19]));
+                            var_233[var_224].Var20 = JSON.parse(JSON.stringify(var_486[var_682][var_225][20]));
+                            var_233[var_224].Var21 = JSON.parse(JSON.stringify(var_486[var_682][var_225][21]));
+                            var_233[var_224].Var22 = JSON.parse(JSON.stringify(var_486[var_682][var_225][22]));
+                            var_233[var_224].Var23 = JSON.parse(JSON.stringify(var_486[var_682][var_225][23]));
+                            var_233[var_224].Var24 = JSON.parse(JSON.stringify(var_486[var_682][var_225][24]));
+                            var_233[var_224].Var25 = JSON.parse(JSON.stringify(var_486[var_682][var_225][25]));
+                            var_233[var_224].Var26 = JSON.parse(JSON.stringify(var_486[var_682][var_225][26]));
+                            var_233[var_224].Var27 = JSON.parse(JSON.stringify(var_486[var_682][var_225][27]));
+                            var_233[var_224].Var28 = JSON.parse(JSON.stringify(var_486[var_682][var_225][28]));
+                            var_233[var_224].Var29 = JSON.parse(JSON.stringify(var_486[var_682][var_225][29]));
+                            */
                     disc_rarity = var_233[var_224].Var13;
                     // ここまで？？
                     return [4 /*yield*/, func492()];
@@ -12324,11 +12328,13 @@ function func474() {
         });
     });
 }
+// ペットショップのdisc??
 function func475() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(475);
             var_2113 = var_77[var_66][var_67];
+            // No = 579 ペットショップのdiscであれば
             if (belongings_item_list == 579) {
                 var_2113 = var_77[var_236][var_237];
             }

@@ -857,7 +857,7 @@ function func008() {
                     _a.sent();
                     return [4 /*yield*/, func383()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // アイテムの出現数を増やす動作処理
                     return [4 /*yield*/, func393()];
                 case 16:
                     _a.sent();
@@ -1257,21 +1257,21 @@ function func009() {
                     var_225 = var_226;
                     // アイテム個数 var_225 が10以下であれば
                     if (var_225 <= 10) {
-                        var_227 = 1;
+                        item_page_number = 1;
                         Y_axis_item_position = (var_225 - 1) * 22 + 45;
                         var_229 = 44;
                         var_230 = 45;
                     }
                     // アイテム個数 var_225 が10より多ければ
                     if (var_225 > 10) {
-                        var_227 = 2;
+                        item_page_number = 2;
                         Y_axis_item_position = (var_225 - 11) * 22 + 45;
                         var_229 = 44;
                         var_230 = 45;
                     }
                     // アイテム個数 var_225 が0であれば
                     if (var_225 == 0) {
-                        var_227 = 3;
+                        item_page_number = 3;
                         Y_axis_item_position = 45;
                         var_229 = 44;
                         var_230 = 45;
@@ -7629,7 +7629,7 @@ function func053() {
                     if (!(var_497 == 1)) return [3 /*break*/, 27];
                     var_195 = 0;
                     var_196 = 0;
-                    var_227 = 1;
+                    item_page_number = 1;
                     Y_axis_item_position = 45;
                     var_225 = 1;
                     var_223 = var_224 + 10;
@@ -9593,7 +9593,7 @@ function func064() {
                     return [2 /*return*/];
                 case 4:
                     if (!(var_77[var_66][var_67] > 0)) return [3 /*break*/, 7];
-                    var_227 = 3;
+                    item_page_number = 3;
                     Y_axis_item_position = 45;
                     var_225 = 0;
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460

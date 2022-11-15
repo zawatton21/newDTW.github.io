@@ -306,7 +306,7 @@ var var_223;
 var var_224;
 var var_225;
 var var_226;
-var var_227;
+var item_page_number; // アイテム個数 var_225 が10以下であれば 1、アイテム個数 var_225 が10より多ければ 2、アイテム個数 var_225 が0であれば 3、
 var Y_axis_item_position; // アイテムを道具一覧で表示する際のY座標ポジション 
 var var_229;
 var var_230;
@@ -530,7 +530,7 @@ var var_442;
 var var_443;
 var var_444;
 var var_445;
-var var_446;
+var var_446; // 投げて落ちた先が地面、水面かどうかの判別？ 1 = 地面、0 = 水面
 var var_447;
 var var_448;
 var var_449;
@@ -2018,7 +2018,7 @@ var var_1930;
 var var_1931;
 var var_1932;
 var var_1933;
-var var_1934;
+var var_1934; // 装備discが呪われているかどうか 0 = 呪われていない、1 = 呪われている
 var disc_class; // 装備discをどの区分で装備するか。1 = 攻撃、2 = 防御、3 = 能力
 var var_1936;
 var var_1937;

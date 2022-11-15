@@ -70,7 +70,9 @@ function func400(this: any) {
             var_862[belongings_item_list][0] = 1;
         }
         // おそらくアイテム欄へ追加していくプログラム
-        var_224 = var_224 + 1;
+        var_224 = var_224 + 1; // 個数を追加
+
+        // 手持ちへ床に落ちているアイテム情報を移動
         var_233[var_224].Var0 = var_78[var_321].Var0;
         var_233[var_224].Var3 = var_78[var_321].Var3;
         var_233[var_224].Var4 = var_78[var_321].Var4;
@@ -125,6 +127,7 @@ function func400(this: any) {
         var_233[var_224].Var28 = JSON.parse(JSON.stringify(var_78[var_321].Var28));
         var_233[var_224].Var29 = JSON.parse(JSON.stringify(var_78[var_321].Var29));
         */
+       // 床に落ちていたアイテム情報を削除
         var_77[var_66][var_67] = 0;
         var_78[var_321].Var0 = 0;
         var_78[var_321].Var1 = 0;
