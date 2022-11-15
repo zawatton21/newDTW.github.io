@@ -309,7 +309,7 @@ let var_223 :any;
 let var_224 :any;
 let var_225 :any;
 let var_226 :any;
-let var_227 :any;
+let item_page_number :number; // アイテム個数 var_225 が10以下であれば 1、アイテム個数 var_225 が10より多ければ 2、アイテム個数 var_225 が0であれば 3、
 let Y_axis_item_position :number; // アイテムを道具一覧で表示する際のY座標ポジション 
 let var_229 :any;
 let var_230 :any;

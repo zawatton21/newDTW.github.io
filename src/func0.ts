@@ -931,21 +931,21 @@ function func009(this: any) {
             var_225 = var_226;
             // アイテム個数 var_225 が10以下であれば
             if (var_225 <= 10) {
-                var_227 = 1;
+                item_page_number = 1;
                 Y_axis_item_position = (var_225 - 1) * 22 + 45;
                 var_229 = 44;
                 var_230 = 45;
             }
             // アイテム個数 var_225 が10より多ければ
             if (var_225 > 10) {
-                var_227 = 2;
+                item_page_number = 2;
                 Y_axis_item_position = (var_225 - 11) * 22 + 45;
                 var_229 = 44;
                 var_230 = 45;
             }
             // アイテム個数 var_225 が0であれば
             if (var_225 == 0) {
-                var_227 = 3;
+                item_page_number = 3;
                 Y_axis_item_position = 45;
                 var_229 = 44;
                 var_230 = 45;
@@ -5680,7 +5680,7 @@ function func053(this: any) {
             if (var_497 == 1) { // var_497 = 1 は道具
                 var_195 = 0;
                 var_196 = 0;
-                var_227 = 1;
+                item_page_number = 1;
                 Y_axis_item_position = 45;
                 var_225 = 1;
                 var_223 = var_224 + 10;
@@ -6968,7 +6968,7 @@ function func064(this: any) {
             return;
         }
         if (var_77[var_66][var_67] > 0) {
-            var_227 = 3;
+            item_page_number = 3;
             Y_axis_item_position = 45;
             var_225 = 0;
             open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
@@ -9787,6 +9787,7 @@ function func080(this: any, is_key_reset = true) {
             key_C_on = getkey(var_660); // 入力判定：その場で向き変更(C)
             var_261 = getkey(32); // 入力判定：縮小マップのみ表示 (Space)
             var_661 = 15 + var_662;
+            
             ck_joystick(var_663, var_661);
             if (stat != 1 && var_254 == 0 && var_257 == 0 && var_255 == 0 && var_259 == 0 && var_253 == 0 && var_256 == 0 && var_258 == 0 && var_260 == 0 && key_Z_on == 0 && key_X_on == 0 && key_A_on == 0 && key_S_on == 0 && key_Shift_on == 0 && key_C_on == 0 && var_619 == 0 && var_620 == 0 && var_621 == 0 && var_261 == 0) {
                 if (var_663 == 1) {

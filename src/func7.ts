@@ -4309,7 +4309,7 @@ function func770(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(770);
         var_2000 = 1;
-        var_227 = 1;
+        item_page_number = 1;
         Y_axis_item_position = 45;
         var_225 = 1;
         var_223 = var_224 + 10;
@@ -4736,7 +4736,7 @@ function func774(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(774);
         var_2001 = 1;
-        var_227 = 1;
+        item_page_number = 1;
         Y_axis_item_position = 45;
         var_225 = 1;
         var_223 = var_224 + 10;
@@ -4772,7 +4772,7 @@ function func775(this: any) {
             yield func340(); // キー入力による選択処理
             yield func051();
             var_2001 = 1;
-            var_227 = 1;
+            item_page_number = 1;
             Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;
@@ -4814,7 +4814,7 @@ function func775(this: any) {
             yield func340(); // キー入力による選択処理
             yield func051();
             var_2001 = 1;
-            var_227 = 1;
+            item_page_number = 1;
             Y_axis_item_position = 45;
             var_225 = 1;
             var_223 = var_224 + 10;

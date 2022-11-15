@@ -1028,6 +1028,7 @@ function func139(this: any) {
         var_691[4] = var_658;
         var_691[5] = var_659;
         var_691[6] = var_660;
+        
         var_692 = 8192;
         var_693 = 2048;
         var_694 = 4096;
@@ -1038,7 +1039,9 @@ function func139(this: any) {
         var_699 = 262144;
         var_700 = 524288;
         var_701 = 1048576;
+        
         var_662 = var_692 + var_693 + var_694 + var_695 + var_696 + var_697 + var_698 + var_699 + var_700 + var_701;
+
         var_664[1] = var_692;
         var_664[2] = var_693;
         var_664[3] = var_694;
