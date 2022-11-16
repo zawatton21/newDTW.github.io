@@ -637,7 +637,7 @@ function func808(this: any) {
                 var_1735 = 9;
             }
             if (var_262 == 1) {
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 dangeon_number = 2;
             }
             yield func385(); // 各ダンジョンごとの出現アイテム管理
@@ -1693,7 +1693,7 @@ function func821(this: any) {
         var_312 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             redraw(0);
-            yield func168();
+            yield func168(); // ダンジョンクリア時のスコア判定
             color(0, 0, 0);
             gmode(4, null, null, var_311);
             pos(0, 0);
@@ -1721,7 +1721,7 @@ function func822(this: any) {
         var_311 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             redraw(0);
-            yield func168();
+            yield func168(); // ダンジョンクリア時のスコア判定
             color(0, 0, 0);
             gmode(4, null, null, var_311);
             pos(0, 0);
@@ -1851,7 +1851,7 @@ function func825(this: any) {
         if (dangeon_number == 1 && current_floor > dangeon1_floor) {
             dangeon1_floor = current_floor;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor > dangeon2_floor) {
             dangeon2_floor = current_floor;
         }
@@ -1899,7 +1899,7 @@ function func825(this: any) {
         if (var_407 == 2) {
             yield func933();
         }
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -1953,7 +1953,7 @@ function func827(this: any) {
         if (dangeon_number == 1 && current_floor > dangeon1_floor) {
             dangeon1_floor = current_floor;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor > dangeon2_floor) {
             dangeon2_floor = current_floor;
         }
@@ -2001,7 +2001,7 @@ function func827(this: any) {
         if (var_407 == 2) {
             yield func933();
         }
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -2055,7 +2055,7 @@ function func829(this: any) {
         if (dangeon_number == 1 && current_floor > dangeon1_floor) {
             dangeon1_floor = current_floor;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor > dangeon2_floor) {
             dangeon2_floor = current_floor;
         }
@@ -2113,7 +2113,7 @@ function func829(this: any) {
         }
         var_205 = 1;
         yield func231();
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -2168,7 +2168,7 @@ function func830(this: any) {
         if (dangeon_number == 1 && current_floor > dangeon1_floor) {
             dangeon1_floor = current_floor;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor > dangeon2_floor) {
             dangeon2_floor = current_floor;
         }
@@ -2186,7 +2186,7 @@ function func830(this: any) {
         yield func502();
         yield func504();
         yield func505();
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -2509,7 +2509,7 @@ function func834(this: any) {
         if (var_407 == 2) {
             yield func933();
         }
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -2799,7 +2799,7 @@ function func836(this: any) {
         var_524 = 1;
         var_205 = 1;
         yield func231();
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -6827,7 +6827,7 @@ function func876(this: any) {
         onexit(1);
         var_626 = 0;
         yield func111();
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -6951,7 +6951,7 @@ function func879(this: any) {
 function func880(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(880);
-        yield func108();
+        yield func108(); // BGM用mp3ファイル再生停止
         var_3462 = 0;
         var_375 = 0;
         yield func235();
@@ -7371,7 +7371,7 @@ function func881(this: any) {
 function func882(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(882);
-        yield func108();
+        yield func108(); // BGM用mp3ファイル再生停止
         var_3481 = 26;
         var_3482 = 106;
         var_3483 = var_3482;
@@ -7572,7 +7572,7 @@ function func884(this: any) {
 
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             if (var_3486 == 0) {
-                yield func178();
+                yield func178(); // 処理確認タイマー(3m秒)
                 yield func233();
                 onexit(0);
                 yield func841();
@@ -7590,7 +7590,7 @@ function func884(this: any) {
         }
         if (key_X_on == 1) {
             var_627 = 0;
-            yield func178();
+            yield func178(); // 処理確認タイマー(3m秒)
 
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             chdir(var_30);

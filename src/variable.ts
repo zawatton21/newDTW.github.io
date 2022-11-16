@@ -755,16 +755,16 @@ let var_664 :any;
 let bgm_file_name :string;
 let var_666 :any;
 let var_667 :any;
-let var_668 :any;
+let var_668 :any; // 効果音上限設定処理 (最大値:137)
 let se_volume :number; // 効果音の現在ボリューム
 let var_670 :any;
 let var_671 :any;
 let var_672 :any;
 let var_673 :any;
 let var_674 :any;
-let bgm_list :number;
+let bgm_list_id :number;
 let bgm_title :string;
-let var_677 :number; // belongings_item_list
+let receive_bgm_id :number; // BGM用iDを読み込むための変数。アイテムIDを直接代入したりしている。
 let var_678 :any;
 let var_679 :any;
 let var_680 :any;

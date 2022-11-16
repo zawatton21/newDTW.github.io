@@ -9650,7 +9650,7 @@ function func627(this: any) {
         if (dangeon_number == 1) {
             yield func628();
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
             yield func629();
         }
@@ -12076,7 +12076,7 @@ function func636(this: any) {
             }
             if (var_83[var_314].Var0 == 55) {
                 yield func640();
-                yield func161();
+                yield func161(); //亀の中に入った時の表示
                 return;
             }
             if (var_83[var_314].Var0 == 81) {
@@ -12707,7 +12707,7 @@ function func636(this: any) {
             if (dangeon_number == 1 && var_83[var_314].Var0 == 20) {
                 yield func685();
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && var_83[var_314].Var0 == 132) {
                 yield func686();
             }
@@ -12787,7 +12787,7 @@ function func636(this: any) {
             if (dangeon_number == 1 && var_83[var_314].Var0 == 20) {
                 yield func689();
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && var_83[var_314].Var0 == 132) {
                 yield func689();
             }
@@ -20820,7 +20820,7 @@ function func673(this: any) {
                 var_1049 = 1;
                 yield func231();
                 var_1049 = 0;
-                yield func159();
+                yield func159(); // ヴェネチアホテルでのイベントフラグ管理処理
                 return;
             }
             if (var_375 == 0) {

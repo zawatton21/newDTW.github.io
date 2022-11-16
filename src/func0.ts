@@ -301,7 +301,7 @@ function func004(this: any) {
         yield func183(); // デバックウィンドウ呼び出し？
         yield func081(); // 効果音を呼び出す関数(効果音リスト1)
         yield func082(); // 効果音を呼び出す関数(効果音リスト2)
-        yield func083();
+        yield func083(); // 効果音上限設定処理 (最大値:137)
         DSGETMASTERVOLUME();
         bgm_volume = stat;
         gsel(0);
@@ -312,15 +312,15 @@ function func004(this: any) {
         }
         color(0, 0, 0);
         boxf();
-        yield wait(50);
+        yield wait(50); // 動作確認タイマ 50ms
         onexit(func231);
         gsel(0);
-        yield func139();
+        yield func139(); // データ読込み処理(00.datファル、01 ~ 03.datセーブデータ解析処理)
         return;
     });
 }
 
-// ?
+// セーブデータを読み込む前のフラグ確認処理(ホテルのイベントフラグ、BGM再生曲、マップ背景画像)
 function func005(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(5);
@@ -328,11 +328,11 @@ function func005(this: any) {
         yield func229(); // セーブファイルからデータ読み出し関数
         // No = 0 なので、拠点(ホテル、亀、)
         if (dangeon_number == 0) {
-            yield func159();
+            yield func159(); // ヴェネチアホテルでのイベントフラグ管理処理
             return;
         }
-        yield func107();
-        yield func076();
+        yield func107(); 
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -355,7 +355,7 @@ function func006(this: any) {
         dbgprt(6);
         // No = 4 なので、一巡後の世界
         if (dangeon_number == 4) {
-            yield func458();
+            yield func458(); // 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
             if (var_69 == 1 && var_70 == 0) {
                 var_70 = 7;
             }
@@ -364,6 +364,7 @@ function func006(this: any) {
         yield func007();
     });
 }
+
 // 配列宣言？？
 function func007(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -441,7 +442,7 @@ function func008(this: any) {
                 var_90 = 0;
             }
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
             if (current_floor >= 1 && current_floor <= 5) {
                 var_92 = 3;
@@ -621,13 +622,13 @@ function func008(this: any) {
             yield func255();
             var_90 = 0;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 28 && var_86 != 0) {
             var_90 = 99;
             yield func255();
             var_90 = 0;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 29 && var_86 != 0) {
             var_90 = 99;
             yield func255();
@@ -793,7 +794,7 @@ function func008(this: any) {
         if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
             yield func121();
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             yield func117();
         }
@@ -807,7 +808,7 @@ function func008(this: any) {
         if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
             yield func075();
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             yield func075();
         }
@@ -823,12 +824,13 @@ function func008(this: any) {
         var_206 = 0;
         if (var_207 == 2) {
             var_207 = 0;
-            yield func152();
+            yield func152(); // 初めてダンジョンを訪れた際のディアボロの呟き
         }
         yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
         return;
     });
 }
+
 // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
 function func009(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -915,6 +917,7 @@ function func009(this: any) {
             yield func021(); // 波紋攻撃を喰らって麻痺している状態の動作処理
             return;
         }
+
         if (var_213 == 1 && var_214 == 0) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -1108,6 +1111,8 @@ function func009(this: any) {
         return;
     });
 }
+
+
 function func010(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(10);
@@ -1131,6 +1136,7 @@ function func010(this: any) {
         yield func011();
     });
 }
+
 function func011(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(11);
@@ -3055,7 +3061,7 @@ function func019(this: any) {
                 if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                     dangeon1_floor = current_floor;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                     dangeon2_floor = current_floor;
                 }
@@ -3076,7 +3082,7 @@ function func019(this: any) {
                 var_217 = 0;
                 var_205 = 1;
                 yield func231();
-                yield func076();
+                yield func076(); // マップ背景画像の読込
                 for (let cnt3 = 0; cnt3 < 80; ++cnt3) {
                     yield func339();
                 }
@@ -5248,7 +5254,7 @@ function func045(this: any) {
         if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
             return;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             return;
         }
@@ -6379,7 +6385,7 @@ function func060(this: any) {
                 if (dangeon_number == 1 && current_floor == 12) {
                     var_527 = 0;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_527 = 0;
                 }
@@ -6592,7 +6598,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
@@ -6773,7 +6779,7 @@ function func060(this: any) {
                     if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                         dangeon1_floor = current_floor;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                         dangeon2_floor = current_floor;
                     }
@@ -6802,7 +6808,7 @@ function func060(this: any) {
                 if (var_407 == 2) {
                     yield func932();
                 }
-                yield func076();
+                yield func076(); // マップ背景画像の読込
                 for (let cnt3 = 0; cnt3 < 80; ++cnt3) {
                     yield func339();
                 }
@@ -7261,7 +7267,7 @@ function func068(this: any) {
         if (dangeon_number == 1) {
             mes("" + dangeon1_floor + "階");
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
             mes("" + dangeon2_floor + "階");
         }
@@ -8124,7 +8130,7 @@ function func075(this: any) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「エンヤ婆」によって守られている！";
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「ﾚｸｲｴﾑ･ｼﾞｮﾙﾉ」によって守られている！";
@@ -8195,6 +8201,7 @@ function func075(this: any) {
         return;
     });
 }
+// マップ背景画像の読込
 function func076(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(76);
@@ -8234,7 +8241,7 @@ function func076(this: any) {
                     gcopy(34, 640, 400, 340, 40);
                 }
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2) {
                 if (current_floor != 30) {
                     gcopy(34, 640, 560, 340, 40);
@@ -8323,6 +8330,8 @@ function func076(this: any) {
         return;
     });
 }
+
+
 function func077(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(77);
@@ -8391,7 +8400,7 @@ function func077(this: any) {
                     gcopy(34, 640, 400, 340, 40);
                 }
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2) {
                 if (current_floor != 30) {
                     gcopy(34, 640, 560, 340, 40);
@@ -9603,7 +9612,7 @@ function func080(this: any, is_key_reset = true) {
                 // F7キーを押した際の動作　BGMのオン・オフ（オンにした場合DISC使用時や階段を降りてから再開）
                 conf_keyon = getkey(118); // キーF7入力確認
                 if (conf_keyon == 1 && var_631 == 1000) {
-                    DMSTOP();
+                    DMSTOP(); // BGM停止関数
                     var_631 = 0;
                     var_632 = 1;
                     var_633 = 0;
@@ -11193,6 +11202,7 @@ function func082(this: any) {
         return;
     });
 }
+// 効果音上限設定処理 (最大値:137)
 function func083(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(83);

@@ -8576,7 +8576,7 @@ function func511(this: any) {
             var_26_x = var_26[1];
             var_27_x = var_27[1];
             yield func047();
-            yield func108();
+            yield func108(); // BGM用mp3ファイル再生停止
             var_1599 = 1;
             var_271 = 1;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
@@ -11664,7 +11664,7 @@ function func536(this: any) {
                 if (dangeon_number == 1) {
                     var_2421 = 21;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2) {
                     var_2421 = 21;
                 }
@@ -11684,7 +11684,7 @@ function func536(this: any) {
                 if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 15;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 15;
                 }
@@ -11704,7 +11704,7 @@ function func536(this: any) {
                 if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 3;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 3;
                 }
@@ -11724,7 +11724,7 @@ function func536(this: any) {
                 if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 16;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 16;
                 }
@@ -11744,7 +11744,7 @@ function func536(this: any) {
                 if (dangeon_number == 1 && current_floor == 12) {
                     var_2421 = 9;
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_2421 = 9;
                 }
@@ -13875,7 +13875,7 @@ function func541(this: any) {
     
                 DSPLAY(audio_id = 118);
                 if (var_2463 == 0) {
-                    belongings_item_list = var_677;
+                    belongings_item_list = receive_bgm_id;
                     yield func106(); // BGM選曲呼び出し割り振り
                 }
                 yield func047();
@@ -14082,7 +14082,7 @@ function func541(this: any) {
             }
             var_108 = 0;
             if (var_410 == 401 && var_2463 == 99) {
-                if (var_677 == 401) {
+                if (receive_bgm_id == 401) {
                     belongings_item_list = 401;
                     yield func106(); // BGM選曲呼び出し割り振り
                 }
@@ -14106,7 +14106,7 @@ function func541(this: any) {
                 return;
             }
             if (var_2463 == 0 || var_2463 == 99) {
-                belongings_item_list = var_677;
+                belongings_item_list = receive_bgm_id;
                 yield func106(); // BGM選曲呼び出し割り振り
             }
             comments_row1 = comments_row1a;
@@ -16674,7 +16674,7 @@ function func550(this: any) {
         if (dangeon_number == 1) {
             var_356 = 307;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
             var_356 = 308;
         }
@@ -16776,7 +16776,7 @@ function func552(this: any) {
         }
         var_205 = 1;
         yield func231();
-        yield func076();
+        yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
         }
@@ -16869,7 +16869,7 @@ function func553(this: any) {
             if (dangeon_number == 1 && current_floor == 12) {
                 var_2497 = 1;
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && current_floor == 30) {
                 var_2497 = 1;
             }
@@ -19115,7 +19115,7 @@ function func562(this: any) {
                     var_83[var_97].Var0 = var_540[var_2566][0];
                     if (var_83[var_97].Var0 == 107) {
                         var_83[var_97].Var0 = 106;
-                        if (var_677 == 992) {
+                        if (receive_bgm_id == 992) {
                             yield func126();
                         }
                     }
@@ -19144,19 +19144,19 @@ function func562(this: any) {
         if (dangeon_number == 1 || dangeon_number == 3 || dangeon_number == 4) {
             var_2567 = 1;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor >= 26) {
             var_2567 = 1;
         }
         if (var_94 >= 1) {
             var_2567 = 1;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 1 && var_1040 == 1) {
             var_2567 = 0;
             var_1040 = 2;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && var_2567 == 0) {
             var_2568 = rnd(12);
             if (var_1033 == 1) {
@@ -19224,7 +19224,7 @@ function func563(this: any) {
             yield func556();
             var_2543 = 0;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             var_2543 = 6;
             yield func556();

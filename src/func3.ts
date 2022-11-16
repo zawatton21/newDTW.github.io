@@ -3183,7 +3183,7 @@ function func337(this: any) {
             yield func048();
         }
         if (var_634 >= 10 || var_635 >= 1 || var_636 >= 1 || var_633 >= 1 || var_632 >= 1 || var_1201 >= 1) {
-            yield func102();
+            yield func102(); // 各ボリューム調整キーを押した時の表示
         }
         if (open_item_menue == 1) { // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
             yield func460(); // 道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具)
@@ -16133,7 +16133,7 @@ function func373(this: any) {
                 var_1688 = "";
             }
             if (var_835[var_1687] != 0) {
-                yield func177();
+                yield func177(); // 死因原因
                 var_1688 = var_798;
             }
             pos(var_1680 + 10, var_1682 + var_1685 + 20);
@@ -17813,10 +17813,10 @@ function func384(this: any) {
             }
             if (var_1734 == 1) {
                 var_78[var_866].Var11 = 1;
-                // No >= 2 なので、レクイエムの第迷宮、ディアボロの試練、一巡後の世界
+                // No >= 2 なので、レクイエムの大迷宮、ディアボロの試練、一巡後の世界
                 if (dangeon_number >= 2 && var_1727 == 0) {
                     var_1768 = rnd(9);
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor < 10) {
                         var_1768 = 1;
                     }
@@ -19539,7 +19539,7 @@ function func393(this: any) {
             var_1748 = 0;
             var_452 = 0;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 1 && var_1037 != 0) {
             var_1732 = 1;
             var_452 = 1;

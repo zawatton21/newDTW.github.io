@@ -2373,7 +2373,7 @@ function DMPLAY(data0: any, data1: any) {
     // Ver 0.1305で追加
     (document.getElementById(bgm_source1) as any).play()
 }
-
+// BGM停止関数
 function DMSTOP() {
     // Ver 0.1305で追加
     (document.getElementById(bgm_source1) as any).pause()

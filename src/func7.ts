@@ -40,6 +40,7 @@ function func700(this: any) {
         return;
     });
 }
+
 function func701(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(701);
@@ -212,6 +213,8 @@ function func701(this: any) {
         return;
     });
 }
+
+// 
 function func702(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(702);
@@ -483,6 +486,7 @@ function func702(this: any) {
         return;
     });
 }
+
 function func703(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(703);
@@ -739,7 +743,7 @@ function func705(this: any) {
             if (dangeon_number == 1 && var_83[var_402].Var0 == 20) {
                 yield func685();
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && var_83[var_402].Var0 == 132) {
                 yield func686();
             }
@@ -3986,7 +3990,7 @@ function func758(this: any) {
         current_floor = current_floor + 1;
         yield func627();
         var_356 = var_977[var_2569];
-        yield func177();
+        yield func177(); // 死因原因
         current_floor = var_3143;
         yield func094();
         comments_row1 = comments_row1a;
@@ -6444,6 +6448,7 @@ function func796(this: any) {
         return;
     });
 }
+
 function func797(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(797);
@@ -6488,7 +6493,7 @@ function func798(this: any) {
         yield func080(); // 各キー入力確認
         if (key_X_on == 1) {
             var_1205 = 0;
-            yield func799();
+            yield func799(); // 口座へ入金、口座から出金した時の表示
         }
         if (var_254 == 1 && var_3179 != 6) {
 
@@ -6690,7 +6695,7 @@ function func798(this: any) {
             if (var_1205 == 1) {
                 var_1032 = var_1032 + var_3176;
                 wallet = wallet - var_3176;
-                yield func799();
+                yield func799(); // 口座へ入金、口座から出金した時の表示
                 return;
             }
             if (var_1205 == 2) {
@@ -6699,7 +6704,7 @@ function func798(this: any) {
                 if (wallet > 999999) {
                     wallet = 999999;
                 }
-                yield func799();
+                yield func799(); // 口座へ入金、口座から出金した時の表示
                 return;
             }
         }
@@ -6707,6 +6712,7 @@ function func798(this: any) {
         return;
     });
 }
+// 口座へ入金、口座から出金した時の表示
 function func799(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(799);

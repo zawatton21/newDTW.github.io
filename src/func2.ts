@@ -1723,6 +1723,7 @@ function func220(this: any) {
         return;
     });
 }
+
 function func221(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(221);
@@ -1743,6 +1744,7 @@ function func221(this: any) {
         yield func222();
     });
 }
+
 function func222(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(222);
@@ -1951,7 +1953,7 @@ function func223(this: any) {
         if (current_floor >= 30) {
             var_952 = var_952 + 7;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         dangeon_number = 2;
         for (let cnt1 = 0; cnt1 < var_952; ++cnt1) {
             yield func627();
@@ -2536,7 +2538,7 @@ function func229(this: any) {
         var_262 = var_704[58];
         var_839 = var_704[59];
         var_998 = var_704[60];
-        dangeon_number = var_704[61]; // ダンジョン場所配列 // エンヤホテル、レクイエムの第迷宮
+        dangeon_number = var_704[61]; // ダンジョン場所配列 // エンヤホテル、レクイエムの大迷宮
         var_98 = var_704[62];
         var_896 = var_704[63];
         var_897 = var_704[64];
@@ -2661,7 +2663,7 @@ function func229(this: any) {
         var_167 = var_704[183];
         var_153 = var_704[184];
         var_1032 = var_704[185];
-        var_677 = var_704[186];
+        receive_bgm_id = var_704[186];
         var_94 = var_704[187];
         var_1033 = var_704[188];
         var_681 = var_704[189];
@@ -2998,7 +3000,7 @@ function func231(this: any) {
         var_704[183] = var_167;
         var_704[184] = var_153;
         var_704[185] = var_1032;
-        var_704[186] = var_677;
+        var_704[186] = receive_bgm_id;
         var_704[187] = var_94;
         var_704[188] = var_1033;
         var_704[189] = var_681;
@@ -3674,7 +3676,7 @@ function func235(this: any) {
         var_167 = 0;
         var_153 = 0;
         var_1032 = 0;
-        var_677 = 0;
+        receive_bgm_id = 0;
         var_94 = 0;
         var_1060 = 0;
         var_684 = 0;
@@ -4064,7 +4066,7 @@ function func243(this: any) {
         if (dangeon_number == 1 && current_floor == 12) {
             var_86 = 0;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             var_86 = 0;
         }
@@ -4122,7 +4124,7 @@ function func244(this: any) {
         if (dangeon_number == 1 && current_floor == 12) {
             var_1072 = 111;
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             var_1072 = 121;
         }

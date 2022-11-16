@@ -2157,7 +2157,6 @@ function func420(this: any) {
         }
         var_1944 = belongings_item_list;
         yield func492(); // アイテムリスト呼び出し
-        // 
         if (belongings_item_list == 700 || belongings_item_list == 571 || belongings_item_list == 579 || belongings_item_list == 729 || belongings_item_list == 730 || belongings_item_list == 731 || belongings_item_list == 701 || belongings_item_list == 995) {
             var_1936 = 0;
         }
@@ -4828,12 +4827,16 @@ function func457(this: any) {
         return;
     });
 }
+
+// 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
 function func458(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(458);
         var_69 = 0;
         var_480 = 1;
-        for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {
+        for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {            
+            // No = 716 恐竜の化石
+            // 一巡後の世界で持っているだけで必ず大部屋モンスターハウスが出現する。使用すると次の階が西戸ハウスになってしまう
             if (var_233[var_480].Var0 == 716) {
                 var_69 = 1;
             }
@@ -4841,6 +4844,8 @@ function func458(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
+                    // No = 716 恐竜の化石
+                    // 一巡後の世界で持っているだけで必ず大部屋モンスターハウスが出現する。使用すると次の階が西戸ハウスになってしまう
                     if (var_486[var_485][var_484][0] == 716) {
                         var_69 = 1;
                     }
@@ -4852,6 +4857,7 @@ function func458(this: any) {
         return;
     });
 }
+
 // 道具画面(所持数0)の表示(メニュー画面/道具)
 function func459(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -16814,7 +16820,6 @@ function func498(this: any) {
                 var_78[var_2189].Var1 = 0;
                 var_78[var_2189].Var2 = 0;
             }
-    
             DSPLAY(audio_id = 180);
             var_199 = 2;
             var_389 = 2;
@@ -16908,7 +16913,7 @@ function func498(this: any) {
             var_1936 = 0;
             return;
         }
-        // 仗助のDISC
+        // No = 560 仗助のdiscの効果
         if (belongings_item_list == 560) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -16959,6 +16964,7 @@ function func498(this: any) {
             var_139 = 1;
             return;
         }
+        // No = 561  空き のdiscの効果
         if (belongings_item_list == 561) {
             if (var_262 == 1) {
                 item_message1 = "しかし何も起こらなかった…";
@@ -16975,6 +16981,7 @@ function func498(this: any) {
             yield func331();
             return;
         }
+        // No = 562 康一のdiscの効果
         if (belongings_item_list == 562) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17024,6 +17031,7 @@ function func498(this: any) {
             yield func340(); // キー入力による選択処理
             return;
         }
+        // No = 563 ンドゥールのdiscの効果
         if (belongings_item_list == 563) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17034,6 +17042,7 @@ function func498(this: any) {
             DSPLAY(audio_id = 153);
             return;
         }
+        // No = 564 噴上裕也のdiscの効果
         if (belongings_item_list == 564) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17066,6 +17075,7 @@ function func498(this: any) {
             yield func331();
             return;
         }
+        // No = 566 ケンゾーのdiscの効果
         if (belongings_item_list == 566) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17119,21 +17129,25 @@ function func498(this: any) {
             var_105 = 1;
             return;
         }
+        // No = 567 アヴドゥルのdiscの効果
         if (belongings_item_list == 567) {
             var_1945 = 1;
             var_1967 = var_225;
             return;
         }
+        // No = 590 ギアッチョのdiscの効果
         if (belongings_item_list == 590) {
             var_1945 = 2;
             var_1967 = var_225;
             return;
         }
+        // No = 565 プッチ神父のdiscの効果
         if (belongings_item_list == 565) {
             var_1945 = 3;
             var_1967 = var_225;
             return;
         }
+        // No = 568 ジョンガリ・Aのdiscの効果
         if (belongings_item_list == 568) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17187,6 +17201,7 @@ function func498(this: any) {
             var_138 = 1;
             return;
         }
+        // No = 569 ポルナレフのdiscの効果
         if (belongings_item_list == 569) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17276,6 +17291,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 570 ジョナサンのdiscの効果
         if (belongings_item_list == 570) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17356,6 +17372,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 571 ボインゴのdiscの効果
         if (belongings_item_list == 571) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17393,7 +17410,7 @@ function func498(this: any) {
             if (dangeon_number == 1 && current_floor == 12) {
                 comments_row2a = "するとこの階で…」";
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && current_floor == 30) {
                 comments_row2a = "するとこの階で…」";
             }
@@ -17419,7 +17436,7 @@ function func498(this: any) {
             var_2202 = rnd(13);
             // No = 4 なので、一巡後の世界
             if (dangeon_number == 4) {
-                yield func458();
+                yield func458(); // 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
                 if (var_69 == 1) {
                     var_2202 = 6;
                 }
@@ -17496,7 +17513,7 @@ function func498(this: any) {
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && current_floor == 29) {
                 comments_row1a = "「わけもわからず殺されて";
                 comments_row2a = "リタイアだァーッ！」";
@@ -17537,7 +17554,7 @@ function func498(this: any) {
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && current_floor == 30) {
                 comments_row1a = "「わけもわからず殺されて";
                 comments_row2a = "リタイアだァーッ！」";
@@ -17567,6 +17584,7 @@ function func498(this: any) {
             var_1252 = 0;
             return;
         }
+        // No = 572 承太郎のdiscの効果
         if (belongings_item_list == 572) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17606,7 +17624,6 @@ function func498(this: any) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-    
             DSPLAY(audio_id = 182);
             var_1299 = 3;
             var_271 = 1;
@@ -17620,6 +17637,7 @@ function func498(this: any) {
             var_111 = 1;
             return;
         }
+        // No = 573 重ちーのdiscの効果
         if (belongings_item_list == 573) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17634,6 +17652,7 @@ function func498(this: any) {
             yield func331();
             return;
         }
+        // No = 574 エンポリオのdiscの効果
         if (belongings_item_list == 574) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17648,6 +17667,7 @@ function func498(this: any) {
             DSPLAY(audio_id = 134);
             return;
         }
+        // No = 575 マニッシュボーイのdiscの効果
         if (belongings_item_list == 575) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17670,6 +17690,7 @@ function func498(this: any) {
                 return;
             }
         }
+        // No = 576 破裂するdiscの効果
         if (belongings_item_list == 576) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17678,6 +17699,7 @@ function func498(this: any) {
             var_177 = 1;
             return;
         }
+        // No = 577 ミキタカのdiscの効果
         if (belongings_item_list == 577) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17770,6 +17792,7 @@ function func498(this: any) {
             var_218 = 1;
             return;
         }
+        // No = 578 サンドマンのdiscの効果
         if (belongings_item_list == 578) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17786,7 +17809,7 @@ function func498(this: any) {
             }
             return;
         }
-        // No = 579 ペットショップのdiscであれば
+        // No = 579 ペットショップのdiscの効果
         if (belongings_item_list == 579) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17825,6 +17848,7 @@ function func498(this: any) {
             yield func499();
             return;
         }
+        // No = 580 ドッピオのdiscの効果
         if (belongings_item_list == 580) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17869,6 +17893,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 582 水が熱湯になるdiscの効果
         if (belongings_item_list == 582) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17901,6 +17926,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 583 ディアボロのdiscの効果
         if (belongings_item_list == 583) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -17945,6 +17971,7 @@ function func498(this: any) {
             var_1951 = 1;
             return;
         }
+        // No = 584 ヌケサクのdiscの効果
         if (belongings_item_list == 584) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18018,6 +18045,7 @@ function func498(this: any) {
             DSPLAY(audio_id = 164);
             return;
         }
+        // No = 585 億泰のdiscの効果
         if (belongings_item_list == 585) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18053,6 +18081,7 @@ function func498(this: any) {
             var_193 = 0;
             return;
         }
+        // No = 586 ペッシのdiscの効果
         if (belongings_item_list == 586) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18150,6 +18179,7 @@ function func498(this: any) {
                 return;
             }
         }
+        // No = 587 吉良吉影のdiscの効果
         if (belongings_item_list == 587) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18200,6 +18230,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 588 J・ガイルのdiscの効果
         if (belongings_item_list == 588) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18308,6 +18339,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 589 プロシュート兄貴のdiscの効果
         if (belongings_item_list == 589) {
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18353,7 +18385,7 @@ function func498(this: any) {
             var_172 = 1;
             return;
         }
-        // アイテム「点滴」を使用した時の効果
+        // No = 715 アイテム「点滴」を使用した時の効果
         if (belongings_item_list == 715) {
             var_271 = 1;
             var_1242 = 1;
@@ -18383,7 +18415,7 @@ function func498(this: any) {
             }
             return;
         }
-        // アイテム「ピッツァ」を使用した時の効果
+        // No = 600 アイテム「ピッツァ」を使用した時の効果
         if (belongings_item_list == 600) {
             var_360 = 0;
             var_2211 = 0;
@@ -18406,7 +18438,7 @@ function func498(this: any) {
             }
             return;
         }
-        // アイテム「ネアポリスのピッツァ」を使用した時の効果
+        // No = 602 アイテム「ネアポリスのピッツァ」を使用した時の効果
         if (belongings_item_list == 602) {
             var_360 = 0;
             var_2211 = 0;
@@ -18429,6 +18461,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 603 腐ったピッツァ、No = 644 猫バーガー、No = 645 猫ステーキ、No = 646 猫ジュース を使用した時の効果
         if (belongings_item_list == 603 || belongings_item_list == 644 || belongings_item_list == 645 || belongings_item_list == 646) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18532,7 +18565,7 @@ function func498(this: any) {
             }
             return;
         }
-        // アイテム「ポルポのピッツァ」を使用した時の効果
+        // No = 604 アイテム「ポルポのピッツァ」を使用した時の効果
         if (belongings_item_list == 604) {
             var_360 = 0;
             var_567 = var_567 + 10;
@@ -18556,7 +18589,7 @@ function func498(this: any) {
             }
             return;
         }
-        // // アイテム「焦げたピッツァ」を使用した時の効果
+        // No = 605  アイテム「焦げたピッツァ」を使用した時の効果
         if (belongings_item_list == 605) {
             var_360 = 0;
             var_2211 = 0;
@@ -18579,6 +18612,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 630  アイテム「娼婦風スパゲッティ」を使用した時の効果
         if (belongings_item_list == 630) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18594,7 +18628,7 @@ function func498(this: any) {
             var_1223 = 1;
             return;
         }
-        // 
+        // No = 631 アイテム「モッツァレラチーズとトマトのサラダ」を使用した時の効果
         if (belongings_item_list == 631) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18613,6 +18647,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 632 アイテム「キリマンジャロの雪解け水」を使用した時の効果
         if (belongings_item_list == 632) {
             var_360 = 0;
             var_350 = var_350 + 10;
@@ -18649,6 +18684,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 633 アイテム「子羊背肉のリンゴソースかけ」を使用した時の効果
         if (belongings_item_list == 633) {
             var_360 = 0;
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
@@ -18677,6 +18713,7 @@ function func498(this: any) {
             var_1255 = 0;
             return;
         }
+        // No = 634 アイテム「プリン」を使用した時の効果
         if (belongings_item_list == 634) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18765,6 +18802,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 635 アイテム「焦げた料理」を使用した時の効果
         if (belongings_item_list == 635) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18782,6 +18820,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 636 アイテム「サンドイッチ」を使用した時の効果
         if (belongings_item_list == 636) {
             comments_row1 = "";
             comments_row2 = "";
@@ -18814,6 +18853,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 639 アイテム「カエルの丸焼き」を使用した時の効果
         if (belongings_item_list == 639) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18831,6 +18871,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 640 アイテム「焦げた食べ物」を使用した時の効果
         if (belongings_item_list == 640) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18848,6 +18889,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 641 アイテム「消し炭」を使用した時の効果
         if (belongings_item_list == 641) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18871,6 +18913,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 647 アイテム「オレンジ」を使用した時の効果
         if (belongings_item_list == 647) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18888,6 +18931,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 648 アイテム「鎌倉カスター」を使用した時の効果
         if (belongings_item_list == 648) {
             var_360 = 0;
             if (var_350 == var_567) {
@@ -18905,6 +18949,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 650 アイテム「カエル」を使用した時の効果
         if (belongings_item_list == 650) {
             var_360 = 0;
             if (var_211 == var_352) {
@@ -18925,6 +18970,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 651 アイテム「大きいカエル」を使用した時の効果
         if (belongings_item_list == 651) {
             var_360 = 0;
             if (var_211 == var_352) {
@@ -18945,6 +18991,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 652 アイテム「カエルの死体」を使用した時の効果
         if (belongings_item_list == 652) {
             var_360 = 0;
             if (var_211 == var_352) {
@@ -18965,6 +19012,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 653 アイテム「超巨大なカエル」を使用した時の効果
         if (belongings_item_list == 653) {
             var_360 = 0;
             if (var_211 == var_352) {
@@ -18982,6 +19030,7 @@ function func498(this: any) {
             }
             return;
         }
+        // No = 654 アイテム「ヤドクガエル」を使用した時の効果
         if (belongings_item_list == 654) {
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -19013,6 +19062,7 @@ function func498(this: any) {
             var_199 = var_1940;
             return;
         }
+        // No = 655 アイテム「ザリガニ」を使用した時の効果
         if (belongings_item_list == 655) {
             var_360 = 0;
             if (var_211 == var_352) {

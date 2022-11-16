@@ -145,7 +145,7 @@ function func905(this: any) {
         if (dangeon_number == 1) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
         }
@@ -2361,7 +2361,7 @@ function func933(this: any) {
         if (dangeon_number == 1) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";
         }
-        // No = 2 なので、レクイエムの第迷宮
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛはレクイエムの大迷宮に入った";
         }
