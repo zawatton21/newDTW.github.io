@@ -752,16 +752,16 @@ var var_664;
 var bgm_file_name;
 var var_666;
 var var_667;
-var var_668;
+var var_668; // 効果音上限設定処理 (最大値:137)
 var se_volume; // 効果音の現在ボリューム
 var var_670;
 var var_671;
 var var_672;
 var var_673;
 var var_674;
-var bgm_list;
+var bgm_list_id;
 var bgm_title;
-var var_677; // belongings_item_list
+var receive_bgm_id; // BGM用iDを読み込むための変数。アイテムIDを直接代入したりしている。
 var var_678;
 var var_679;
 var var_680;

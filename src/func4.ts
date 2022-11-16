@@ -19,7 +19,9 @@ function func400(this: any) {
                 return;
             }
         }
+        
         yield func398(); // 道具(メニュー画面/道具)へ直接表示されるアイテム表示
+        
         // var_224 は持っているアイテム数と思われる。アイテムは20個まで持てる。
         // 所持アイテム数が20個以上になる場合
         if (var_224 >= 20) {
@@ -352,6 +354,7 @@ function func403(this: any) {
         var_1863 = var_233[var_225].Var27;
         var_1864 = var_233[var_225].Var28;
         var_1865 = var_233[var_225].Var29;
+
         if (var_233[var_225].Var12 == 1 && var_234 == 0) {
             yield func426();
             yield func427();
@@ -385,6 +388,7 @@ function func403(this: any) {
         yield func404(); // 拠点(ホテルや亀の倉庫)でアイテムを置く時の動作処理
     });
 }
+
 // 拠点(ホテルや亀の倉庫)でアイテムを置く時の動作処理
 function func404(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -505,6 +509,7 @@ function func404(this: any) {
                 }
             }
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
+            
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
@@ -586,6 +591,7 @@ function func404(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
+        
         yield func047();
         var_217 = 1;
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -821,7 +827,9 @@ function func408(this: any) {
         var_1881 = (var_233[var_225].Var7 + var_233[var_225].Var8) * 20 + 37 + 30;
         var_1882 = var_225;
         var_1883 = Y_axis_item_position;
+
         var_220 = 1; // 道具画面(メニュー画面/道具)呼び出し確認変数？
+        
         var_682 = var_233[var_225].Var6;
         var_1876 = var_225;
         var_1884 = var_233[var_1876].Var8 + 10;
@@ -1596,7 +1604,7 @@ function func418(this: any) {
         dbgprt(418);
         belongings_item_list = var_1846;
         disc_rarity = var_1833;
-        yield func399();
+        yield func399(); // 遠投状態で投げた時のアイテム表示
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -4275,6 +4283,7 @@ function func445(this: any) {
         return;
     });
 }
+
 function func446(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(446);
@@ -4426,7 +4435,7 @@ function func448(this: any) {
         }
         if (key_Z_on == 1 || key_A_on == 1) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func450();
+            yield func450(); // ジャッジメントの問に答え、ジャッジメントが去る時の動作処理
             return;
         }
         yield func448();
@@ -4476,11 +4485,12 @@ function func449(this: any) {
         return;
     });
 }
+// ジャッジメントの問に答え、ジャッジメントが去る時の動作処理
 function func450(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(450);
         if (var_1991 == 6) {
-            yield func451();
+            yield func451(); // ジャッジメントの問いに対して、願いの数を増やしてくれと選択した時の動作処理
             return;
         }
         var_1207 = 0;
@@ -4513,29 +4523,30 @@ function func450(this: any) {
         var_1586 = 0;
         var_271 = 0;
         if (var_1991 == 1) {
-            yield func452();
+            yield func452(); // ジャッジメントの問いに対して、お金持ちになりたいと選択した時の動作処理
             return;
         }
         if (var_1991 == 2) {
-            yield func453();
+            yield func453(); // ジャッジメントの問いに対して、満腹になりたいと選択した時の動作処理
             return;
         }
         if (var_1991 == 3) {
-            yield func454();
+            yield func454(); // ジャッジメントの問いに対して、体力を回復させてくれと選択した時の動作処理
             return;
         }
         if (var_1991 == 4) {
-            yield func455();
+            yield func455(); // ジャッジメントの問いに対して、敵の動きをとめてくれと選択した時の動作処理
             return;
         }
         if (var_1991 == 5) {
-            yield func456();
+            yield func456(); // ジャッジメントの問いに対して、アヴドゥルを生き返らせてくれと選択した時の動作処理
             return;
         }
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
+// ジャッジメントの問いに対して、願いの数を増やしてくれと選択した時の動作処理
 function func451(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(451);
@@ -4608,6 +4619,7 @@ function func451(this: any) {
         return;
     });
 }
+// ジャッジメントの問いに対して、お金持ちになりたいと選択した時の動作処理
 function func452(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(452);
@@ -4648,6 +4660,7 @@ function func452(this: any) {
         return;
     });
 }
+// ジャッジメントの問いに対して、満腹になりたいと選択した時の動作処理
 function func453(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(453);
@@ -4678,6 +4691,7 @@ function func453(this: any) {
         return;
     });
 }
+// ジャッジメントの問いに対して、体力を回復させてくれと選択した時の動作処理
 function func454(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(454);
@@ -4704,11 +4718,12 @@ function func454(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func457();
+        yield func457(); // ジャッジメントの問いに対して、体力を回復させてくれと選択した時、体力回復後の状態異常回復の動作処理
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
 }
+// ジャッジメントの問いに対して、敵の動きをとめてくれと選択した時の動作処理
 function func455(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(455);
@@ -4773,6 +4788,7 @@ function func455(this: any) {
         return;
     });
 }
+// ジャッジメントの問いに対して、アヴドゥルを生き返らせてくれと選択した時の動作処理
 function func456(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(456);
@@ -4799,6 +4815,7 @@ function func456(this: any) {
         return;
     });
 }
+// ジャッジメントの問いに対して、体力を回復させてくれと選択した時、体力回復後の状態異常回復の動作処理
 function func457(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(457);
@@ -4904,7 +4921,8 @@ function func459(this: any) {
         return;
     });
 }
-// 道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具)
+
+// アイテムリスト上のアイテム表示　道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具)
 function func460(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(460);
@@ -4984,7 +5002,7 @@ function func460(this: any) {
         if (item_page_number == 2) {
             var_1620 = 11;
         }
-        if (item_page_number == 3) {
+        if (item_page_number == 3) { // No = 3 は
             var_1620 = 0;
         }
         if (var_220 == 1) {
@@ -5210,16 +5228,19 @@ function func460(this: any) {
                         if (var_862[belongings_item_list][0] == 0 && dangeon_number != 0 && dangeon_number != 1 && dangeon_number != 99) {
                             color(200, 200, 200);
                         }
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     // 食糧、回復アイテム
                     if (belongings_item_list >= 600 && belongings_item_list < 700) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     // その他の消費
                     if (belongings_item_list >= 700 && belongings_item_list < 750) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     // ヤバいもの
@@ -5244,11 +5265,13 @@ function func460(this: any) {
                     // コミック スティールボールラン 7 ~ 15, 装備+99
                     if (belongings_item_list >= 750 && belongings_item_list < 800) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     // コミック
                     if (belongings_item_list >= 900 && belongings_item_list < 1000) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     if (var_2015 == 1) {
@@ -5745,6 +5768,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5754,6 +5778,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5765,6 +5790,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5776,6 +5802,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5785,17 +5812,19 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
                 }
             }
 
-
+            // var_255 入力判定：[↑] がON
             if (var_255 == 1 && item_page_number != 3) {
                 if (var_225 != 1 && var_225 != 11) {
                     Y_axis_item_position = Y_axis_item_position - 22;
                     var_225 = var_225 - 1;
+
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
@@ -5810,6 +5839,7 @@ function func461(this: any) {
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
                             //yield func337(); // メッセージ関係呼び出し
                             yield func337(); // メッセージ関係呼び出し
+                            
                             yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                             return;
                         }
@@ -5821,6 +5851,7 @@ function func461(this: any) {
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
                             //yield func337(); // メッセージ関係呼び出し
                             yield func337(); // メッセージ関係呼び出し
+                            
                             yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                             return;
                         }
@@ -5831,6 +5862,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5848,6 +5880,7 @@ function func461(this: any) {
                         yield func478();
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5861,6 +5894,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音 
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5874,6 +5908,7 @@ function func461(this: any) {
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -5888,6 +5923,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5902,6 +5938,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5917,6 +5954,7 @@ function func461(this: any) {
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -5931,6 +5969,7 @@ function func461(this: any) {
                         yield func478();
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5944,6 +5983,7 @@ function func461(this: any) {
                         yield func478();
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5958,6 +5998,7 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         //yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
+                        
                         yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                         return;
                     }
@@ -5971,6 +6012,7 @@ function func461(this: any) {
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -5983,6 +6025,7 @@ function func461(this: any) {
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -5996,6 +6039,7 @@ function func461(this: any) {
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -6004,30 +6048,31 @@ function func461(this: any) {
             if (key_Shift_on == 1 && var_1866 == 0 && var_234 == 0 && var_220 == 0 && var_231 == 0 && var_1945 == 0 && var_224 > 1 && var_1240 == 0 && var_1999 == 0 && var_2000 == 0 && var_2001 == 0 && var_1950 == 0 && var_2002 == 0 && var_2003 == 0 && var_2004 == 0 && var_2005 == 0 && var_2006 == 0 && var_2007 == 0 && item_page_number != 3) {
                 DSPLAY(audio_id = 208); //アイテムを整理する時の効果音
                 yield func467(); // Shiftキーを押してアイテムを整理する時の関数
+                
                 return;
             }
         }
         if (var_220 == 1 && var_233[var_1876].Var8 != 0 && var_233[var_1876].Var0 < 805) {
             if (var_259 == 1) {
                 if (var_225 != var_233[var_1876].Var8 && var_225 != var_1884) {
-                    
-                    Y_axis_item_position = Y_axis_item_position + 22;
-                    
-                    var_225 = var_225 + 1;
+                    Y_axis_item_position = Y_axis_item_position + 22;  
+                    var_225 = var_225 + 1;                  
+                    //Y_axis_item_position = var_233[var_1876].Var8 + 22;  
+                    //var_225 = var_233[var_1876].Var8 + 1;
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
                 if (var_225 == var_233[var_1876].Var8 || var_225 == var_1884) {
-
                     Y_axis_item_position = 45;
-                    
                     var_225 = 1;
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -6036,9 +6081,12 @@ function func461(this: any) {
                 if (var_225 != 1) {
                     Y_axis_item_position = Y_axis_item_position - 22;
                     var_225 = var_225 - 1;
+                    //Y_axis_item_position = var_233[var_1876].Var8 - 22;
+                    //var_225 = var_233[var_1876].Var8 - 1;
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -6048,6 +6096,7 @@ function func461(this: any) {
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
+                    
                     yield func461(); // 道具画面(メニュー画面/道具)呼び出し
                     return;
                 }
@@ -7411,6 +7460,8 @@ function func463(this: any) {
         return;
     });
 }
+
+
 function func464(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(464);

@@ -94,7 +94,7 @@ function func004() {
                     }
                     var_12 = 0;
                     version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-                    game_title = "newDTW ver0.1307";
+                    game_title = "newDTW ver0.1308";
                     buffer(17);
                     return [4 /*yield*/, picload("img3.gif")];
                 case 1:
@@ -432,7 +432,7 @@ function func004() {
                     _a.sent(); // 効果音を呼び出す関数(効果音リスト2)
                     return [4 /*yield*/, func083()];
                 case 60:
-                    _a.sent();
+                    _a.sent(); // 効果音上限設定処理 (最大値:137)
                     DSGETMASTERVOLUME();
                     bgm_volume = stat;
                     gsel(0);
@@ -454,18 +454,18 @@ function func004() {
                     boxf();
                     return [4 /*yield*/, wait(50)];
                 case 65:
-                    _a.sent();
+                    _a.sent(); // 動作確認タイマ 50ms
                     onexit(func231);
                     gsel(0);
                     return [4 /*yield*/, func139()];
                 case 66:
-                    _a.sent();
+                    _a.sent(); // データ読込み処理(00.datファル、01 ~ 03.datセーブデータ解析処理)
                     return [2 /*return*/];
             }
         });
     });
 }
-// ?
+// セーブデータを読み込む前のフラグ確認処理(ホテルのイベントフラグ、BGM再生曲、マップ背景画像)
 function func005() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_4;
@@ -480,14 +480,14 @@ function func005() {
                     if (!(dangeon_number == 0)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func159()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // ヴェネチアホテルでのイベントフラグ管理処理
                     return [2 /*return*/];
                 case 3: return [4 /*yield*/, func107()];
                 case 4:
                     _a.sent();
                     return [4 /*yield*/, func076()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_4 = 0;
                     _a.label = 6;
                 case 6:
@@ -529,7 +529,7 @@ function func006() {
                     if (!(dangeon_number == 4)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func458()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
                     if (var_69 == 1 && var_70 == 0) {
                         var_70 = 7;
                     }
@@ -642,7 +642,7 @@ function func008() {
                             var_90 = 0;
                         }
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2) {
                         if (current_floor >= 1 && current_floor <= 5) {
                             var_92 = 3;
@@ -1097,7 +1097,7 @@ function func008() {
                     var_207 = 0;
                     return [4 /*yield*/, func152()];
                 case 55:
-                    _a.sent();
+                    _a.sent(); // 初めてダンジョンを訪れた際のディアボロの呟き
                     _a.label = 56;
                 case 56: return [4 /*yield*/, func009()];
                 case 57:
@@ -1175,7 +1175,7 @@ function func009() {
                     var_214 = 0;
                     return [4 /*yield*/, func027()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // 動けるようになった時の表示
                     _a.label = 14;
                 case 14: return [4 /*yield*/, func337()];
                 case 15:
@@ -1213,7 +1213,7 @@ function func009() {
                     var_214 = 0;
                     return [4 /*yield*/, func022()];
                 case 23:
-                    _a.sent();
+                    _a.sent(); // 氷状態の動作処理
                     return [2 /*return*/];
                 case 24:
                     if (!(var_219 >= 1)) return [3 /*break*/, 26];
@@ -1221,7 +1221,7 @@ function func009() {
                     var_214 = 0;
                     return [4 /*yield*/, func025()];
                 case 25:
-                    _a.sent();
+                    _a.sent(); // 寝ている時の動作処理
                     return [2 /*return*/];
                 case 26:
                     if (!(var_178 >= 1)) return [3 /*break*/, 28];
@@ -1229,7 +1229,7 @@ function func009() {
                     var_214 = 0;
                     return [4 /*yield*/, func021()];
                 case 27:
-                    _a.sent();
+                    _a.sent(); // 波紋攻撃を喰らって麻痺している状態の動作処理
                     return [2 /*return*/];
                 case 28:
                     if (!(var_213 == 1 && var_214 == 0)) return [3 /*break*/, 34];
@@ -2358,7 +2358,7 @@ function func015() {
                     var_67 = var_237;
                     return [4 /*yield*/, func026()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // その場へ固定された時の動作処理
                     return [2 /*return*/];
                 case 2:
                     if (var_126 == 1) {
@@ -3540,7 +3540,7 @@ function func019() {
                     _a.sent();
                     return [4 /*yield*/, func034()];
                 case 73:
-                    _a.sent();
+                    _a.sent(); // 盲目状態から復帰した時の表示
                     _a.label = 74;
                 case 74:
                     if (!(var_132 >= 1)) return [3 /*break*/, 77];
@@ -3563,7 +3563,7 @@ function func019() {
                     var_240 = 0;
                     return [4 /*yield*/, func029()];
                 case 78:
-                    _a.sent();
+                    _a.sent(); // オアシスの壁を溶かす効果が切れた時の表示
                     _a.label = 79;
                 case 79:
                     if (!(var_140 >= 1)) return [3 /*break*/, 81];
@@ -3585,7 +3585,7 @@ function func019() {
                     var_240 = 0;
                     return [4 /*yield*/, func028()];
                 case 82:
-                    _a.sent();
+                    _a.sent(); // メタリカの透明化が切れた時の表示
                     _a.label = 83;
                 case 83:
                     if (!(var_218 >= 1 && var_218 < 30)) return [3 /*break*/, 85];
@@ -3605,7 +3605,7 @@ function func019() {
                     var_240 = 0;
                     return [4 /*yield*/, func033()];
                 case 86:
-                    _a.sent();
+                    _a.sent(); // スティッキーフィンガーズの発動効果が切れた時の表示
                     _a.label = 87;
                 case 87:
                     if (!(var_139 >= 1)) return [3 /*break*/, 89];
@@ -3823,7 +3823,7 @@ function func019() {
                     if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                         dangeon1_floor = current_floor;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                         dangeon2_floor = current_floor;
                     }
@@ -3850,7 +3850,7 @@ function func019() {
                     _a.sent();
                     return [4 /*yield*/, func076()];
                 case 142:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt3_11 = 0;
                     _a.label = 143;
                 case 143:
@@ -4361,7 +4361,7 @@ function func019() {
                     var_240 = 0;
                     return [4 /*yield*/, func030()];
                 case 230:
-                    _a.sent();
+                    _a.sent(); // 鈍足状態から復帰した時の表示
                     _a.label = 231;
                 case 231: return [4 /*yield*/, func331()];
                 case 232:
@@ -5245,6 +5245,7 @@ function func020() {
         });
     });
 }
+// 波紋攻撃を喰らって麻痺している状態の動作処理
 function func021() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_9, cnt1_11;
@@ -5325,6 +5326,7 @@ function func021() {
         });
     });
 }
+// 氷状態の動作処理
 function func022() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_10, cnt3_22, cnt3_23, cnt2_11, cnt1_12;
@@ -5580,6 +5582,7 @@ function func024() {
         });
     });
 }
+// 寝ている時の動作処理
 function func025() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_12, cnt1_13;
@@ -5661,6 +5664,7 @@ function func025() {
         });
     });
 }
+// その場へ固定された時の動作処理
 function func026() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_14;
@@ -5858,6 +5862,7 @@ function func026() {
         });
     });
 }
+// 動けるようになった時の表示
 function func027() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_15;
@@ -5897,6 +5902,7 @@ function func027() {
         });
     });
 }
+// メタリカの透明化が切れた時の表示
 function func028() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_16;
@@ -5936,6 +5942,7 @@ function func028() {
         });
     });
 }
+// オアシスの壁を溶かす効果が切れた時の表示
 function func029() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_17;
@@ -5975,6 +5982,7 @@ function func029() {
         });
     });
 }
+// 鈍足状態から復帰した時の表示
 function func030() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_18;
@@ -6014,6 +6022,7 @@ function func030() {
         });
     });
 }
+// ドッピオの変身が解除された時の表示
 function func031() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_19, cnt1_20, cnt1_21, cnt1_22, cnt1_23, cnt1_24, cnt1_25, cnt1_26, cnt1_27, cnt1_28, cnt1_29;
@@ -6185,6 +6194,7 @@ function func031() {
         });
     });
 }
+// スティッキーフィンガーズの発動効果持続中の動作処理
 function func032() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_13, cnt2_14, cnt2_15;
@@ -6199,7 +6209,7 @@ function func032() {
                     var_218 = 0;
                     return [4 /*yield*/, func033()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // スティッキーフィンガーズの発動効果が切れた時の表示
                     return [2 /*return*/];
                 case 3:
                     if (!(var_218 == 51)) return [3 /*break*/, 11];
@@ -6259,7 +6269,7 @@ function func032() {
                     var_218 = 0;
                     return [4 /*yield*/, func033()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // スティッキーフィンガーズの発動効果が切れた時の表示
                     return [3 /*break*/, 17];
                 case 16:
                     ++cnt2_14;
@@ -6306,6 +6316,7 @@ function func032() {
         });
     });
 }
+// スティッキーフィンガーズの発動効果が切れた時の表示
 function func033() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_30, cnt1_31, cnt1_32, cnt1_33;
@@ -6387,6 +6398,7 @@ function func033() {
         });
     });
 }
+// 盲目状態から復帰した時の表示
 function func034() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_34;
@@ -7069,7 +7081,7 @@ function func045() {
             if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
                 return [2 /*return*/];
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && current_floor == 30) {
                 return [2 /*return*/];
             }
@@ -8543,7 +8555,7 @@ function func060() {
                     if (dangeon_number == 1 && current_floor == 12) {
                         var_527 = 0;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         var_527 = 0;
                     }
@@ -9341,7 +9353,7 @@ function func060() {
                         if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                             dangeon1_floor = current_floor;
                         }
-                        // No = 2 なので、レクイエムの第迷宮
+                        // No = 2 なので、レクイエムの大迷宮
                         if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                             dangeon2_floor = current_floor;
                         }
@@ -9381,7 +9393,7 @@ function func060() {
                     _a.label = 210;
                 case 210: return [4 /*yield*/, func076()];
                 case 211:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt3_30 = 0;
                     _a.label = 212;
                 case 212:
@@ -9982,7 +9994,7 @@ function func068() {
             if (dangeon_number == 1) {
                 mes("" + dangeon1_floor + "階");
             }
-            // No = 2 なので、レクイエムの第迷宮
+            // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2) {
                 mes("" + dangeon2_floor + "階");
             }
@@ -11015,7 +11027,7 @@ function func075() {
                         comments_row1 = "注意せよ！ この階は";
                         comments_row2 = "「エンヤ婆」によって守られている！";
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         comments_row1 = "注意せよ！ この階は";
                         comments_row2 = "「ﾚｸｲｴﾑ･ｼﾞｮﾙﾉ」によって守られている！";
@@ -11107,6 +11119,7 @@ function func075() {
         });
     });
 }
+// マップ背景画像の読込
 function func076() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -11149,7 +11162,7 @@ function func076() {
                                 gcopy(34, 640, 400, 340, 40);
                             }
                         }
-                        // No = 2 なので、レクイエムの第迷宮
+                        // No = 2 なので、レクイエムの大迷宮
                         if (dangeon_number == 2) {
                             if (current_floor != 30) {
                                 gcopy(34, 640, 560, 340, 40);
@@ -11310,7 +11323,7 @@ function func077() {
                         gcopy(34, 640, 400, 340, 40);
                     }
                 }
-                // No = 2 なので、レクイエムの第迷宮
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2) {
                     if (current_floor != 30) {
                         gcopy(34, 640, 560, 340, 40);
@@ -12639,7 +12652,7 @@ function func080(is_key_reset) {
                     // F7キーを押した際の動作　BGMのオン・オフ（オンにした場合DISC使用時や階段を降りてから再開）
                     conf_keyon = getkey(118); // キーF7入力確認
                     if (!(conf_keyon == 1 && var_631 == 1000)) return [3 /*break*/, 65];
-                    DMSTOP();
+                    DMSTOP(); // BGM停止関数
                     var_631 = 0;
                     var_632 = 1;
                     var_633 = 0;
@@ -13845,6 +13858,7 @@ function func082() {
         });
     });
 }
+// 効果音上限設定処理 (最大値:137)
 function func083() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {

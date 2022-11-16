@@ -985,7 +985,7 @@ function func808() {
                         var_1735 = 9;
                     }
                     if (var_262 == 1) {
-                        // No = 2 なので、レクイエムの第迷宮
+                        // No = 2 なので、レクイエムの大迷宮
                         dangeon_number = 2;
                     }
                     return [4 /*yield*/, func385()];
@@ -2723,7 +2723,7 @@ function func821() {
                     redraw(0);
                     return [4 /*yield*/, func168()];
                 case 10:
-                    _a.sent();
+                    _a.sent(); // ダンジョンクリア時のスコア判定
                     color(0, 0, 0);
                     gmode(4, null, null, var_311);
                     pos(0, 0);
@@ -2770,7 +2770,7 @@ function func822() {
                     redraw(0);
                     return [4 /*yield*/, func168()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // ダンジョンクリア時のスコア判定
                     color(0, 0, 0);
                     gmode(4, null, null, var_311);
                     pos(0, 0);
@@ -2941,7 +2941,7 @@ function func825() {
                     if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                         dangeon1_floor = current_floor;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                         dangeon2_floor = current_floor;
                     }
@@ -3053,7 +3053,7 @@ function func825() {
                     _a.label = 32;
                 case 32: return [4 /*yield*/, func076()];
                 case 33:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_61 = 0;
                     _a.label = 34;
                 case 34:
@@ -3135,7 +3135,7 @@ function func827() {
                     if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                         dangeon1_floor = current_floor;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                         dangeon2_floor = current_floor;
                     }
@@ -3247,7 +3247,7 @@ function func827() {
                     _a.label = 32;
                 case 32: return [4 /*yield*/, func076()];
                 case 33:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_67 = 0;
                     _a.label = 34;
                 case 34:
@@ -3331,7 +3331,7 @@ function func829() {
                     if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                         dangeon1_floor = current_floor;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                         dangeon2_floor = current_floor;
                     }
@@ -3456,7 +3456,7 @@ function func829() {
                     _a.sent();
                     return [4 /*yield*/, func076()];
                 case 35:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_73 = 0;
                     _a.label = 36;
                 case 36:
@@ -3577,7 +3577,7 @@ function func830() {
                     if (dangeon_number == 1 && current_floor > dangeon1_floor) {
                         dangeon1_floor = current_floor;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor > dangeon2_floor) {
                         dangeon2_floor = current_floor;
                     }
@@ -3605,7 +3605,7 @@ function func830() {
                     _a.sent();
                     return [4 /*yield*/, func076()];
                 case 28:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_79 = 0;
                     _a.label = 29;
                 case 29:
@@ -4146,7 +4146,7 @@ function func834() {
                     _a.label = 31;
                 case 31: return [4 /*yield*/, func076()];
                 case 32:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_86 = 0;
                     _a.label = 33;
                 case 33:
@@ -4673,7 +4673,7 @@ function func836() {
                     _a.sent();
                     return [4 /*yield*/, func076()];
                 case 36:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_92 = 0;
                     _a.label = 37;
                 case 37:
@@ -10007,7 +10007,7 @@ function func876() {
                     _a.sent();
                     return [4 /*yield*/, func076()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_115 = 0;
                     _a.label = 8;
                 case 8:
@@ -10163,7 +10163,7 @@ function func880() {
                     dbgprt(880);
                     return [4 /*yield*/, func108()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM用mp3ファイル再生停止
                     var_3462 = 0;
                     var_375 = 0;
                     return [4 /*yield*/, func235()];
@@ -10604,7 +10604,7 @@ function func882() {
                     dbgprt(882);
                     return [4 /*yield*/, func108()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // BGM用mp3ファイル再生停止
                     var_3481 = 26;
                     var_3482 = 106;
                     var_3483 = var_3482;
@@ -10868,7 +10868,7 @@ function func884() {
                     if (!(var_3486 == 0)) return [3 /*break*/, 45];
                     return [4 /*yield*/, func178()];
                 case 42:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func233()];
                 case 43:
                     _a.sent();
@@ -10893,7 +10893,7 @@ function func884() {
                     var_627 = 0;
                     return [4 /*yield*/, func178()];
                 case 48:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     chdir(var_30);
                     return [4 /*yield*/, func142()];

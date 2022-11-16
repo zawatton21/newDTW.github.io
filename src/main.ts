@@ -10,11 +10,11 @@ const createWindow = () => {
   // Create the browser window.
   //レンダラー読み出し部分
   const mainWindow = new BrowserWindow({
-    width: 330,
-    height: 370, // macは340/365, windowsは 330/370
+    width: 340,
+    height: 365, // macは340/365, windowsは 330/370
     // ウィンドウの最小サイズ
-    minWidth: 330,
-    minHeight: 370, // macは340/365, windowsは 330/370
+    minWidth: 340,
+    minHeight: 365, // macは340/365, windowsは 330/370
 
     resizable: true,
     webPreferences: {
@@ -26,7 +26,7 @@ const createWindow = () => {
 )
 
   // Aspect ratio works on Windows, Linux, and Mac:
-  mainWindow.setAspectRatio(320 / 335); // macは340/340、windowsは 320/335
+  mainWindow.setAspectRatio(340 / 340); // macは340/340、windowsは 320/334
   
   // and load the index.html of the app.
   // mainWindow.loadFile('build/index.html') //electronでアプリをビルドする時はこちらを有効

@@ -358,6 +358,7 @@ function func701() {
         });
     });
 }
+// 
 function func702() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt3_2, cnt3_3, cnt3_4;
@@ -5898,7 +5899,7 @@ function func758() {
                     var_356 = var_977[var_2569];
                     return [4 /*yield*/, func177()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 死因原因
                     current_floor = var_3143;
                     return [4 /*yield*/, func094()];
                 case 10:
@@ -9739,7 +9740,7 @@ function func798() {
                     var_1205 = 0;
                     return [4 /*yield*/, func799()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // 口座へ入金、口座から出金した時の表示
                     _a.label = 4;
                 case 4:
                     if (!(var_254 == 1 && var_3179 != 6)) return [3 /*break*/, 6];
@@ -9956,7 +9957,7 @@ function func798() {
                     wallet = wallet - var_3176;
                     return [4 /*yield*/, func799()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // 口座へ入金、口座から出金した時の表示
                     return [2 /*return*/];
                 case 14:
                     if (!(var_1205 == 2)) return [3 /*break*/, 16];
@@ -9967,7 +9968,7 @@ function func798() {
                     }
                     return [4 /*yield*/, func799()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // 口座へ入金、口座から出金した時の表示
                     return [2 /*return*/];
                 case 16: return [4 /*yield*/, func798()];
                 case 17:
@@ -9977,6 +9978,7 @@ function func798() {
         });
     });
 }
+// 口座へ入金、口座から出金した時の表示
 function func799() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_79;

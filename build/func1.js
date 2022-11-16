@@ -62,393 +62,393 @@ function func101() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(101);
-            if (bgm_list == 0) {
+            if (bgm_list_id == 0) {
                 bgm_file_name = "0.mp3"; // ダンジョン基本BGM
             }
-            if (bgm_list == 100) {
+            if (bgm_list_id == 100) {
                 bgm_file_name = "116.mp3"; //ハーミットパープル
                 bgm_title = "The Beatles [Get Back]";
             }
-            if (bgm_list == 101) {
+            if (bgm_list_id == 101) {
                 bgm_file_name = "101.mp3";
                 bgm_title = "Michel Polnareff [Tout tout pour ma cherie]";
             }
-            if (bgm_list == 102) {
+            if (bgm_list_id == 102) {
                 bgm_file_name = "099.mp3";
                 bgm_title = "King Crimson [RED]";
             }
-            if (bgm_list == 103) {
+            if (bgm_list_id == 103) {
                 bgm_file_name = "103.mp3";
                 bgm_title = "Pink Floyd [Echoes]";
             }
-            if (bgm_list == 104) {
+            if (bgm_list_id == 104) {
                 bgm_file_name = "104.mp3";
                 bgm_title = "The Band [The Night They Drove Old Dixie Down]";
             }
-            if (bgm_list == 105) {
+            if (bgm_list_id == 105) {
                 bgm_file_name = "105.mp3";
                 bgm_title = "Red Hot Chili Peppers [Give It Away]";
             }
-            if (bgm_list == 106) {
+            if (bgm_list_id == 106) {
                 bgm_file_name = "106.mp3";
                 bgm_title = "Pink Floyd [Shine on You Crasy Diamond]";
             }
-            if (bgm_list == 107) {
+            if (bgm_list_id == 107) {
                 bgm_file_name = "107.mp3";
                 bgm_title = "The Beatles [Good Night]";
             }
-            if (bgm_list == 108) {
+            if (bgm_list_id == 108) {
                 bgm_file_name = "108.mp3";
                 bgm_title = "The Rolling Stones [Brown Sugar] (album[Sticky Fingers])";
             }
-            if (bgm_list == 109) {
+            if (bgm_list_id == 109) {
                 bgm_file_name = "109.mp3";
                 bgm_title = "Paula Abdul [Forever Your Girl]";
             }
-            if (bgm_list == 111) {
+            if (bgm_list_id == 111) {
                 bgm_file_name = "111.mp3";
                 bgm_title = "DIO [I Speed At Night]";
             }
-            if (bgm_list == 112) {
+            if (bgm_list_id == 112) {
                 bgm_file_name = "112.mp3";
                 bgm_title = "Queen [Killer Queen]";
             }
-            if (bgm_list == 113) {
+            if (bgm_list_id == 113) {
                 bgm_file_name = "113.mp3";
                 bgm_title = "The Clash [Rock The Casbah]";
             }
-            if (bgm_list == 114) {
+            if (bgm_list_id == 114) {
                 bgm_file_name = "114.mp3";
                 bgm_title = "White Snake [Love Aint No Stranger]";
             }
-            if (bgm_list == 115) {
+            if (bgm_list_id == 115) {
                 bgm_file_name = "115.mp3";
                 bgm_title = "Prince [Gold](album[Gold Experience])";
             }
-            if (bgm_list == 116) {
+            if (bgm_list_id == 116) {
                 bgm_file_name = "116.mp3";
                 bgm_title = "The Beatles [Get Back]";
             }
-            if (bgm_list == 117) {
+            if (bgm_list_id == 117) {
                 bgm_file_name = "117.mp3";
                 bgm_title = "Captain & Tennille [Love Will Keep Us Together]";
             }
-            if (bgm_list == 118) {
+            if (bgm_list_id == 118) {
                 bgm_file_name = "118.mp3";
                 bgm_title = "Van Halen [Pretty Woman](album[DIVER DOWN])";
             }
-            if (bgm_list == 119) {
+            if (bgm_list_id == 119) {
                 bgm_file_name = "119.mp3";
                 bgm_title = "Spice Girls [Wannabe]";
             }
-            if (bgm_list == 120) {
+            if (bgm_list_id == 120) {
                 bgm_file_name = "120.mp3";
                 bgm_title = "Dolly Parton [Jolene]";
             }
-            if (bgm_list == 121) {
+            if (bgm_list_id == 121) {
                 bgm_file_name = "121.mp3";
                 bgm_title = "JIMI HENDRIX [Purple Haze]";
             }
-            if (bgm_list == 122) {
+            if (bgm_list_id == 122) {
                 bgm_file_name = "122.mp3";
                 bgm_title = "Chaka Khan [Aint Nobody]";
             }
-            if (bgm_list == 123) {
+            if (bgm_list_id == 123) {
                 bgm_file_name = "123.mp3";
                 bgm_title = "Cream [Crossroads]";
             }
-            if (bgm_list == 124) {
+            if (bgm_list_id == 124) {
                 bgm_file_name = "124.mp3";
                 bgm_title = "Moody Blues [I Know Your Out There Somewhere]";
             }
-            if (bgm_list == 200) {
+            if (bgm_list_id == 200) {
                 bgm_file_name = "200.mp3";
                 bgm_title = "Curtis Mayfield [Superfly]";
             }
-            if (bgm_list == 201) {
+            if (bgm_list_id == 201) {
                 bgm_file_name = "201.mp3";
                 bgm_title = "The Beatles [Girl] (album [RUBBER SOUL])";
             }
-            if (bgm_list == 202) {
+            if (bgm_list_id == 202) {
                 bgm_file_name = "202.mp3";
                 bgm_title = "The Beatles [While My Guiter Gentry Weeps]";
             }
-            if (bgm_list == 203) {
+            if (bgm_list_id == 203) {
                 bgm_file_name = "203.mp3";
                 bgm_title = "Iggy Pop [The Passengers]";
             }
-            if (bgm_list == 204) {
+            if (bgm_list_id == 204) {
                 bgm_file_name = "204.mp3";
                 bgm_title = "Queen [Sheer Heart Attack]";
             }
-            if (bgm_list == 205) {
+            if (bgm_list_id == 205) {
                 bgm_file_name = "205.mp3";
                 bgm_title = "Kraftwerk [The Model]";
             }
-            if (bgm_list == 206) {
+            if (bgm_list_id == 206) {
                 bgm_file_name = "206.mp3";
                 bgm_title = "OASIS [Wonderwall]";
             }
-            if (bgm_list == 207) {
+            if (bgm_list_id == 207) {
                 bgm_file_name = "207.mp3";
                 bgm_title = "The Grateful Dead [Dark Star]";
             }
-            if (bgm_list == 300) {
+            if (bgm_list_id == 300) {
                 bgm_file_name = "300.mp3";
                 bgm_title = "Pearl jam [Alive]";
             }
-            if (bgm_list == 301) {
+            if (bgm_list_id == 301) {
                 bgm_file_name = "301.mp3";
                 bgm_title = "Neil Young [Heart of Gold](albam[HARVEST])";
             }
-            if (bgm_list == 302) {
+            if (bgm_list_id == 302) {
                 bgm_file_name = "302.mp3";
                 bgm_title = "AC/DC [Highway To Hell]";
             }
-            if (bgm_list == 303) {
+            if (bgm_list_id == 303) {
                 bgm_file_name = "303.mp3";
                 bgm_title = "[Enter the Dragon] ";
             }
-            if (bgm_list == 304) {
+            if (bgm_list_id == 304) {
                 bgm_file_name = "304.mp3";
                 bgm_title = "Weather Report [Birdland]";
             }
-            if (bgm_list == 305) {
+            if (bgm_list_id == 305) {
                 bgm_file_name = "305.mp3";
                 bgm_title = "Cinderella [Gypsyroad]";
             }
-            if (bgm_list == 306) {
+            if (bgm_list_id == 306) {
                 bgm_file_name = "306.mp3";
                 bgm_title = "Manhattan Transfer [Boy from NewYork City]";
             }
-            if (bgm_list == 308) {
+            if (bgm_list_id == 308) {
                 bgm_file_name = "308.mp3";
                 bgm_title = "Devo [Beautiful World]";
             }
-            if (bgm_list == 309) {
+            if (bgm_list_id == 309) {
                 bgm_file_name = "309.mp3";
                 bgm_title = "Soft Machine [Facelift]";
             }
-            if (bgm_list == 310) {
+            if (bgm_list_id == 310) {
                 bgm_file_name = "310.mp3";
                 bgm_title = "Nena [99 luftballons]";
             }
-            if (bgm_list == 311) {
+            if (bgm_list_id == 311) {
                 bgm_file_name = "311.mp3";
                 bgm_title = "Cheap Trick [Dream Police]";
             }
-            if (bgm_list == 312) {
+            if (bgm_list_id == 312) {
                 bgm_file_name = "312.mp3";
                 bgm_title = "Aerosmith [Walk This Way]";
             }
-            if (bgm_list == 313) {
+            if (bgm_list_id == 313) {
                 bgm_file_name = "313.mp3";
                 bgm_title = "Deep Purple [Highway Star]";
             }
-            if (bgm_list == 314) {
+            if (bgm_list_id == 314) {
                 bgm_file_name = "314.mp3";
                 bgm_title = "Stray Cats [Stray Cat Strut]";
             }
-            if (bgm_list == 315) {
+            if (bgm_list_id == 315) {
                 bgm_file_name = "315.mp3";
                 bgm_title = "King Crimson [Epitaph]";
             }
-            if (bgm_list == 316) {
+            if (bgm_list_id == 316) {
                 bgm_file_name = "316.mp3";
                 bgm_title = "Survivor [Eye of the Tiger]";
             }
-            if (bgm_list == 317) {
+            if (bgm_list_id == 317) {
                 bgm_file_name = "317.mp3";
                 bgm_title = "Kiss [Detroit Rock City]";
             }
-            if (bgm_list == 318) {
+            if (bgm_list_id == 318) {
                 bgm_file_name = "318.mp3";
                 bgm_title = "The Rolling Stones [Jumpin' Jack Flash ]";
             }
-            if (bgm_list == 319) {
+            if (bgm_list_id == 319) {
                 bgm_file_name = "319.mp3";
                 bgm_title = "Boyz II Men [End of the Road]";
             }
-            if (bgm_list == 320) {
+            if (bgm_list_id == 320) {
                 bgm_file_name = "320.mp3";
                 bgm_title = "Metallica [ATTITUDE]";
             }
-            if (bgm_list == 393) {
+            if (bgm_list_id == 393) {
                 bgm_file_name = "990.mp3";
                 bgm_title = "Queen [Bohemian Rhapsody]";
             }
-            if (bgm_list == 394) {
+            if (bgm_list_id == 394) {
                 bgm_file_name = "112.mp3";
                 bgm_title = "Queen [Killer Queen]";
             }
-            if (bgm_list == 395) {
+            if (bgm_list_id == 395) {
                 bgm_file_name = "395.mp3";
                 bgm_title = "Queen [Another One Bite the Dust]";
             }
-            if (bgm_list == 396) {
+            if (bgm_list_id == 396) {
                 bgm_file_name = "396.mp3";
                 bgm_title = "Led Zeppelin [Stairway To Heaven]";
             }
-            if (bgm_list == 397) {
+            if (bgm_list_id == 397) {
                 bgm_file_name = "304.mp3";
                 bgm_title = "Weather Report [Birdland] (album[HEAVY WEATHER])";
             }
-            if (bgm_list == 398) {
+            if (bgm_list_id == 398) {
                 bgm_file_name = "116.mp3";
                 bgm_title = "The Beatles [Get Back]";
             }
-            if (bgm_list == 399) {
+            if (bgm_list_id == 399) {
                 bgm_file_name = "115.mp3";
                 bgm_title = "Prince [Gold](album[Gold Experience])";
             }
-            if (bgm_list == 400) {
+            if (bgm_list_id == 400) {
                 bgm_file_name = "400.mp3";
                 bgm_title = "Sting [English Man In New York]";
             }
-            if (bgm_list == 401) {
+            if (bgm_list_id == 401) {
                 bgm_file_name = "401.mp3";
                 bgm_title = "Foo Fighters [Everlong]";
             }
-            if (bgm_list == 402) {
+            if (bgm_list_id == 402) {
                 bgm_file_name = "402.mp3";
                 bgm_title = "Hall and Oates [Kiss on my List]";
             }
-            if (bgm_list == 403) {
+            if (bgm_list_id == 403) {
                 bgm_file_name = "403.mp3";
                 bgm_title = "Sex Pistols [Anarchy in the UK]";
             }
-            if (bgm_list == 404) {
+            if (bgm_list_id == 404) {
                 bgm_file_name = "404.mp3";
                 bgm_title = "Petshop Boys [West End Girls]";
             }
-            if (bgm_list == 405) {
+            if (bgm_list_id == 405) {
                 bgm_file_name = "405.mp3";
                 bgm_title = "Police [Roxanne]";
             }
-            if (bgm_list == 406) {
+            if (bgm_list_id == 406) {
                 bgm_file_name = "405.mp3";
                 bgm_title = "Police [Roxanne]";
             }
-            if (bgm_list == 407) {
+            if (bgm_list_id == 407) {
                 bgm_file_name = "407.mp3";
                 bgm_title = "Sting [Shape of My Heart]";
             }
-            if (bgm_list == 408) {
+            if (bgm_list_id == 408) {
                 bgm_file_name = "408.mp3";
                 bgm_title = "Michael Jackson [Man in the Mirror]";
             }
-            if (bgm_list == 409) {
+            if (bgm_list_id == 409) {
                 bgm_file_name = "409.mp3";
                 bgm_title = "Steely Dan [Babylon Sisters]";
             }
-            if (bgm_list == 411) {
+            if (bgm_list_id == 411) {
                 bgm_file_name = "411.mp3";
                 bgm_title = "Eagles [Desperado]";
             }
-            if (bgm_list == 412) {
+            if (bgm_list_id == 412) {
                 bgm_file_name = "412.mp3";
                 bgm_title = "Bob Dylan [Knocking on Heavens Door]";
             }
-            if (bgm_list == 413) {
+            if (bgm_list_id == 413) {
                 bgm_file_name = "0.mp3";
                 bgm_title = "nothing";
             }
-            if (bgm_list == 414) {
+            if (bgm_list_id == 414) {
                 bgm_file_name = "414.mp3";
                 bgm_title = "Chuck Berry [Johnny B. Goode]";
             }
-            if (bgm_list == 977) {
+            if (bgm_list_id == 977) {
                 bgm_file_name = "105.mp3";
                 bgm_title = "Red Hot Chili Peppers [Give It Away]";
             }
-            if (bgm_list == 978) {
+            if (bgm_list_id == 978) {
                 bgm_file_name = "978.mp3";
                 bgm_title = "Pink Floyd [Atom Heart Mother]";
             }
-            if (bgm_list == 979) {
+            if (bgm_list_id == 979) {
                 bgm_file_name = "315.mp3";
                 bgm_title = "King Crimson [Epitaph]";
             }
-            if (bgm_list == 980) {
+            if (bgm_list_id == 980) {
                 bgm_file_name = "980.mp3";
                 bgm_title = "The Pixies [Where Is My Mind]";
             }
-            if (bgm_list == 981) {
+            if (bgm_list_id == 981) {
                 bgm_file_name = "981.mp3";
                 bgm_title = "Madonna [Like a Virgin]";
             }
-            if (bgm_list == 982) {
+            if (bgm_list_id == 982) {
                 bgm_file_name = "115.mp3";
                 bgm_title = "Prince [Gold](album[Gold Experience])";
             }
-            if (bgm_list == 983) {
+            if (bgm_list_id == 983) {
                 bgm_file_name = "203.mp3";
                 bgm_title = "Iggy Pop [The Passengers]";
             }
-            if (bgm_list == 984) {
+            if (bgm_list_id == 984) {
                 bgm_file_name = "313.mp3";
                 bgm_title = "Deep Purple [Highway Star]";
             }
-            if (bgm_list == 985) {
+            if (bgm_list_id == 985) {
                 bgm_file_name = "985.mp3";
                 bgm_title = "Deep Purple [Speed King]";
             }
             // ダンジョンを制覇した時のBGM
-            if (bgm_list == 986) {
+            if (bgm_list_id == 986) {
                 bgm_file_name = "986.mp3";
                 bgm_title = "ENYA [Orinoco Flow]";
             }
             // トニオさんの店　レストラン・レストラン・トラサルディーのBGM
-            if (bgm_list == 987) {
+            if (bgm_list_id == 987) {
                 bgm_file_name = "987.mp3";
                 bgm_title = "Bach italien";
             }
             // ヴェネチアホテルのBGM
-            if (bgm_list == 988) {
+            if (bgm_list_id == 988) {
                 bgm_file_name = "988.mp3";
                 bgm_title = "Eagles [Hotel California]";
             }
-            if (bgm_list == 989) {
+            if (bgm_list_id == 989) {
                 bgm_file_name = "989.mp3";
                 bgm_title = "T.rex [20th Century Boy]";
             }
-            if (bgm_list == 990) {
+            if (bgm_list_id == 990) {
                 bgm_file_name = "990.mp3";
                 bgm_title = "Queen [Bohemian Rhapsody]";
             }
-            if (bgm_list == 991) {
+            if (bgm_list_id == 991) {
                 bgm_file_name = "991.mp3";
                 bgm_title = "Beach Boys [Surfin' USA]";
             }
-            if (bgm_list == 992) {
+            if (bgm_list_id == 992) {
                 bgm_file_name = "992.mp3";
                 bgm_title = "Beach Boys [Good Vibrations]";
             }
-            if (bgm_list == 993) {
+            if (bgm_list_id == 993) {
                 bgm_file_name = "993.mp3";
                 bgm_title = "REO Speedwagon [Keep On Lovin You]";
             }
-            if (bgm_list == 994) {
+            if (bgm_list_id == 994) {
                 bgm_file_name = "994.mp3";
                 bgm_title = "Led Zeppelin [Kashmir]";
             }
-            if (bgm_list == 565) {
+            if (bgm_list_id == 565) {
                 bgm_file_name = "995.mp3";
                 bgm_title = "Handel [Messiah]";
             }
-            if (bgm_list == 996) {
+            if (bgm_list_id == 996) {
                 bgm_file_name = "996.mp3";
                 bgm_title = "Prince [1999]";
             }
-            if (bgm_list == 997) {
+            if (bgm_list_id == 997) {
                 bgm_file_name = "997.mp3";
                 bgm_title = "Ben E King [Stand by Me]";
             }
-            if (bgm_list == 998) {
+            if (bgm_list_id == 998) {
                 bgm_file_name = "998.mp3";
                 bgm_title = "Bad Company [Bad Company]";
             }
-            if (bgm_list == 999) {
+            if (bgm_list_id == 999) {
                 bgm_file_name = "999.mp3";
                 bgm_title = "Louis Armstrong [What a Wonderful World]";
             }
@@ -456,7 +456,7 @@ function func101() {
         });
     });
 }
-// ボリューム調整キーを押した時の動作
+// 各ボリューム調整キーを押した時の表示
 function func102() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -476,7 +476,7 @@ function func102() {
                 return [2 /*return*/];
             }
             if (var_635 == 0 && var_636 == 0) {
-                if (var_677 == 0 || var_677 == 987 || var_677 == 413) {
+                if (receive_bgm_id == 0 || receive_bgm_id == 987 || receive_bgm_id == 413) {
                     return [2 /*return*/];
                 }
                 color(255, 255, 255);
@@ -514,8 +514,6 @@ function func103() {
             switch (_a.label) {
                 case 0:
                     dbgprt(103);
-                    //yield func108(); // 曲停止関数
-                    //DMSTOP(); // 曲停止関数
                     bgm_file_name = "0.mp3";
                     return [4 /*yield*/, func101()];
                 case 1:
@@ -527,7 +525,7 @@ function func103() {
                     DMINIT();
                     return [4 /*yield*/, func104()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // BGM用mp3ファイル再生
                     if (stat == 1) {
                         return [3 /*break*/, 5];
                     }
@@ -536,7 +534,7 @@ function func103() {
                     ++cnt1_1;
                     return [3 /*break*/, 2];
                 case 5:
-                    var_677 = bgm_list;
+                    receive_bgm_id = bgm_list_id;
                     if (var_678 == 0) {
                         var_634 = 1;
                     }
@@ -545,20 +543,16 @@ function func103() {
         });
     });
 }
-// .mp3曲再生
+// BGM用mp3ファイル再生
 function func104() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(104);
-            //yield func108(); //曲停止関数
-            //DMSTOP(); // 曲停止関数
             exist(bgm_file_name);
             var_679 = strsize;
             var_680 = sdim(var_679);
             var_680 = bload(bgm_file_name);
             DMLOADMEMORY(var_680, var_679, 1);
-            //var_680 = bload(bgm_file_name, var_679);
-            //DMLOADMEMORY(var_680, 1);
             if (var_631 != 0) {
                 DMPLAY(var_631, 1);
             }
@@ -573,7 +567,7 @@ function func105() {
             switch (_a.label) {
                 case 0:
                     dbgprt(105);
-                    if (var_677 == belongings_item_list) {
+                    if (receive_bgm_id == belongings_item_list) {
                         return [2 /*return*/];
                     }
                     if (dangeon_number == 99) {
@@ -582,7 +576,7 @@ function func105() {
                     if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
                         return [2 /*return*/];
                     }
-                    bgm_list = belongings_item_list;
+                    bgm_list_id = belongings_item_list;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -604,16 +598,16 @@ function func106() {
                     if (var_681 == 988 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985 || var_681 == 978 || var_681 == 977) {
                         return [2 /*return*/];
                     }
-                    if (!(var_677 == belongings_item_list)) return [3 /*break*/, 4];
+                    if (!(receive_bgm_id == belongings_item_list)) return [3 /*break*/, 4];
                     if (!(var_681 == 989)) return [3 /*break*/, 2];
-                    bgm_list = 989; // 亀の中のBGM
+                    bgm_list_id = 989; // 亀の中のBGM
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                     return [2 /*return*/];
                 case 2:
-                    // bgm_list = 0　なら ダンジョンテーマソングを流す処理を呼び出し
-                    bgm_list = 0; // BGMをダンジョンテーマソングへ戻す
+                    // bgm_list_id = 0　なら ダンジョンテーマソングを流す処理を呼び出し
+                    bgm_list_id = 0; // BGMをダンジョンテーマソングへ戻す
                     return [4 /*yield*/, func103()];
                 case 3:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -629,7 +623,7 @@ function func107() {
             switch (_a.label) {
                 case 0:
                     dbgprt(107);
-                    bgm_list = var_677;
+                    bgm_list_id = receive_bgm_id;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -638,12 +632,12 @@ function func107() {
         });
     });
 }
-// mp3ファイル再生停止
+// BGM用mp3ファイル再生停止
 function func108() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(108);
-            DMSTOP();
+            DMSTOP(); // BGM停止関数
             return [2 /*return*/];
         });
     });
@@ -679,7 +673,7 @@ function func110() {
                         return [2 /*return*/];
                     }
                     var_678 = 1;
-                    bgm_list = 979;
+                    bgm_list_id = 979;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -697,7 +691,7 @@ function func111() {
                 case 0:
                     dbgprt(111);
                     var_678 = 1;
-                    bgm_list = 0;
+                    bgm_list_id = 0;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -731,7 +725,7 @@ function func113() {
                 case 0:
                     dbgprt(113);
                     var_678 = 1;
-                    bgm_list = 988;
+                    bgm_list_id = 988;
                     var_681 = 988;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -749,7 +743,7 @@ function func114() {
                 case 0:
                     dbgprt(114);
                     var_678 = 1;
-                    bgm_list = 989;
+                    bgm_list_id = 989;
                     var_681 = 989;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -767,11 +761,11 @@ function func115() {
                 case 0:
                     dbgprt(115);
                     var_678 = 0;
-                    bgm_list = var_486[var_682][var_683][0];
-                    if (bgm_list < 100) {
+                    bgm_list_id = var_486[var_682][var_683][0];
+                    if (bgm_list_id < 100) {
                         return [2 /*return*/];
                     }
-                    if (bgm_list >= 500 && bgm_list != 565) {
+                    if (bgm_list_id >= 500 && bgm_list_id != 565) {
                         return [2 /*return*/];
                     }
                     return [4 /*yield*/, func103()];
@@ -789,7 +783,7 @@ function func116() {
             switch (_a.label) {
                 case 0:
                     dbgprt(116);
-                    bgm_list = 990;
+                    bgm_list_id = 990;
                     var_681 = 990;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -805,7 +799,7 @@ function func117() {
             switch (_a.label) {
                 case 0:
                     dbgprt(117);
-                    bgm_list = 982;
+                    bgm_list_id = 982;
                     var_681 = 982;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -821,7 +815,7 @@ function func118() {
             switch (_a.label) {
                 case 0:
                     dbgprt(118);
-                    bgm_list = 986;
+                    bgm_list_id = 986;
                     var_681 = 986;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -837,7 +831,7 @@ function func119() {
             switch (_a.label) {
                 case 0:
                     dbgprt(119);
-                    bgm_list = 998;
+                    bgm_list_id = 998;
                     var_681 = 998;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -853,7 +847,7 @@ function func120() {
             switch (_a.label) {
                 case 0:
                     dbgprt(120);
-                    bgm_list = 978;
+                    bgm_list_id = 978;
                     var_681 = 978;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -869,7 +863,7 @@ function func121() {
             switch (_a.label) {
                 case 0:
                     dbgprt(121);
-                    bgm_list = 977;
+                    bgm_list_id = 977;
                     var_681 = 977;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -885,7 +879,7 @@ function func122() {
             switch (_a.label) {
                 case 0:
                     dbgprt(122);
-                    bgm_list = 999;
+                    bgm_list_id = 999;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -901,7 +895,7 @@ function func123() {
             switch (_a.label) {
                 case 0:
                     dbgprt(123);
-                    bgm_list = 997;
+                    bgm_list_id = 997;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -917,13 +911,13 @@ function func124() {
             switch (_a.label) {
                 case 0:
                     dbgprt(124);
-                    if (var_677 == 994) {
+                    if (receive_bgm_id == 994) {
                         return [2 /*return*/];
                     }
                     if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
                         return [2 /*return*/];
                     }
-                    bgm_list = 994;
+                    bgm_list_id = 994;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -938,13 +932,13 @@ function func125() {
             switch (_a.label) {
                 case 0:
                     dbgprt(125);
-                    if (var_677 == 993) {
+                    if (receive_bgm_id == 993) {
                         return [2 /*return*/];
                     }
                     if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
                         return [2 /*return*/];
                     }
-                    bgm_list = 993;
+                    bgm_list_id = 993;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -959,13 +953,13 @@ function func126() {
             switch (_a.label) {
                 case 0:
                     dbgprt(126);
-                    if (var_677 == 991) {
+                    if (receive_bgm_id == 991) {
                         return [2 /*return*/];
                     }
                     if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
                         return [2 /*return*/];
                     }
-                    bgm_list = 991;
+                    bgm_list_id = 991;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -980,13 +974,13 @@ function func127() {
             switch (_a.label) {
                 case 0:
                     dbgprt(127);
-                    if (var_677 == 992) {
+                    if (receive_bgm_id == 992) {
                         return [2 /*return*/];
                     }
                     if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
                         return [2 /*return*/];
                     }
-                    bgm_list = 992;
+                    bgm_list_id = 992;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -1001,13 +995,13 @@ function func128() {
             switch (_a.label) {
                 case 0:
                     dbgprt(128);
-                    if (var_677 == 983) {
+                    if (receive_bgm_id == 983) {
                         return [2 /*return*/];
                     }
                     if (var_681 == 988 || var_681 == 989 || var_681 == 990 || var_681 == 987 || var_681 == 996 || var_681 == 998 || var_681 == 984 || var_681 == 982 || var_681 == 986 || var_681 == 981 || var_681 == 980 || var_681 == 985) {
                         return [2 /*return*/];
                     }
-                    bgm_list = 983;
+                    bgm_list_id = 983;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -1022,7 +1016,7 @@ function func129() {
             switch (_a.label) {
                 case 0:
                     dbgprt(129);
-                    bgm_list = 996;
+                    bgm_list_id = 996;
                     var_681 = 996;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -1038,7 +1032,7 @@ function func130() {
             switch (_a.label) {
                 case 0:
                     dbgprt(130);
-                    bgm_list = 998;
+                    bgm_list_id = 998;
                     var_681 = 998;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -1054,7 +1048,7 @@ function func131() {
             switch (_a.label) {
                 case 0:
                     dbgprt(131);
-                    bgm_list = 985;
+                    bgm_list_id = 985;
                     var_681 = 985;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -1070,7 +1064,7 @@ function func132() {
             switch (_a.label) {
                 case 0:
                     dbgprt(132);
-                    bgm_list = 984;
+                    bgm_list_id = 984;
                     var_681 = 984;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -1086,7 +1080,7 @@ function func133() {
             switch (_a.label) {
                 case 0:
                     dbgprt(133);
-                    bgm_list = 981;
+                    bgm_list_id = 981;
                     var_681 = 981;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -1102,7 +1096,7 @@ function func134() {
             switch (_a.label) {
                 case 0:
                     dbgprt(134);
-                    bgm_list = 980;
+                    bgm_list_id = 980;
                     var_681 = 980;
                     return [4 /*yield*/, func103()];
                 case 1:
@@ -1118,7 +1112,7 @@ function func135() {
             switch (_a.label) {
                 case 0:
                     dbgprt(135);
-                    bgm_list = 980;
+                    bgm_list_id = 980;
                     return [4 /*yield*/, func103()];
                 case 1:
                     _a.sent(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -1133,8 +1127,8 @@ function func136() {
             switch (_a.label) {
                 case 0:
                     dbgprt(136);
-                    var_684 = var_677;
-                    bgm_list = 987;
+                    var_684 = receive_bgm_id;
+                    bgm_list_id = 987;
                     var_681 = 987;
                     var_678 = 1;
                     return [4 /*yield*/, func103()];
@@ -1152,10 +1146,10 @@ function func137() {
             switch (_a.label) {
                 case 0:
                     dbgprt(137);
-                    if (var_677 != 987) {
+                    if (receive_bgm_id != 987) {
                         return [2 /*return*/];
                     }
-                    bgm_list = var_684;
+                    bgm_list_id = var_684;
                     var_681 = 0;
                     if (var_684 == 996) {
                         var_681 = 996;
@@ -1249,6 +1243,7 @@ function func138() {
         });
     });
 }
+// データ読込み処理(00.datファル、01 ~ 03.datセーブデータ解析処理)
 function func139() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_3, cnt2_2, cnt3_1, cnt1_4, cnt2_3, cnt1_5, cnt2_4, cnt3_2, cnt2_5;
@@ -1348,7 +1343,7 @@ function func139() {
                     bsave(file_name = "00.dat", data = var_664, data_size = null, offset = 1500);
                     return [4 /*yield*/, func139()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // データ読込み処理(00.datファル、01 ~ 03.datセーブデータ解析処理)
                     return [2 /*return*/];
                 case 2:
                     exist("01.dat");
@@ -1388,7 +1383,7 @@ function func139() {
                                 var_705 = "エンヤホテル";
                             }
                         }
-                        // var_704[61] == 2 だとレクイエムの第迷宮
+                        // var_704[61] == 2 だとレクイエムの大迷宮
                         if (var_704[61] == 2) {
                             var_705 = "レクイエムの大迷宮";
                             if (var_704[1] == 30) {
@@ -1769,7 +1764,7 @@ function func139() {
                     var_631 = 1000;
                     return [4 /*yield*/, func109()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // タイトル画面でのオープニング曲再生
                     var_731 = 1;
                     DSPLAY(audio_id = 175);
                     cnt1_5 = 0;
@@ -1914,7 +1909,7 @@ function func140() {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func178()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     var_599 = 5;
                     cnt2_6 = 0;
                     _a.label = 9;
@@ -1964,7 +1959,7 @@ function func140() {
                     redraw(0);
                     return [4 /*yield*/, func146()];
                 case 17:
-                    _a.sent();
+                    _a.sent(); // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
                     return [4 /*yield*/, func180()];
                 case 18:
                     _a.sent();
@@ -2036,7 +2031,7 @@ function func141() {
                     if (!(var_635 >= 1 || var_636 >= 1 || var_633 >= 1 || var_632 >= 1)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func102()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 各ボリューム調整キーを押した時の表示
                     _a.label = 2;
                 case 2:
                     if (!(var_10 >= 1)) return [3 /*break*/, 4];
@@ -2073,7 +2068,7 @@ function func142() {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func178()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     var_599 = 5;
                     cnt2_9 = 0;
                     _a.label = 5;
@@ -2082,7 +2077,7 @@ function func142() {
                     redraw(0);
                     return [4 /*yield*/, func146()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
                     return [4 /*yield*/, func180()];
                 case 7:
                     _a.sent();
@@ -2289,7 +2284,7 @@ function func143() {
                     redraw(0);
                     return [4 /*yield*/, func146()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
                     if (!(var_10 >= 1)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func338()];
                 case 2:
@@ -2302,7 +2297,7 @@ function func143() {
         });
     });
 }
-// 最初のオープニング(第5部最終決戦のシーン)読み出し？
+// ログイン画面(タイトル画面/ログイン)動作処理 (ボス日記選択等のセーブデータロード処理)
 function func144() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -2334,17 +2329,17 @@ function func144() {
                     if (!(strsize == (-1))) return [3 /*break*/, 4];
                     return [4 /*yield*/, func178()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func150()];
                 case 3:
-                    _a.sent(); //セリフのやり取り func1_event.ts
+                    _a.sent(); // オープニング (5部最終決戦 ジョルノ達との戦いの場面)
                     return [2 /*return*/];
                 case 4: return [4 /*yield*/, func178()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func005()];
                 case 6:
-                    _a.sent(); // セーブデータを読みこみ関数を読む関数
+                    _a.sent(); // セーブデータを読み込む前のフラグ確認処理(ホテルのイベントフラグ、BGM再生曲、マップ背景画像)
                     return [2 /*return*/];
                 case 7:
                     if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 10];
@@ -2352,7 +2347,7 @@ function func144() {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func178()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func145()];
                 case 9:
                     _a.sent();
@@ -2362,7 +2357,7 @@ function func144() {
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func178()];
                 case 11:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     var_725 = 0;
                     return [4 /*yield*/, func142()];
                 case 12:
@@ -2412,10 +2407,10 @@ function func144() {
                     redraw(0);
                     return [4 /*yield*/, func146()];
                 case 22:
-                    _a.sent();
+                    _a.sent(); // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
                     return [4 /*yield*/, func148()];
                 case 23:
-                    _a.sent();
+                    _a.sent(); // ボス日記選択画面(タイトル画面/ログイン画面/ボス日記選択画面)の表示
                     if (!(var_10 >= 1)) return [3 /*break*/, 25];
                     return [4 /*yield*/, func338()];
                 case 24:
@@ -2428,7 +2423,7 @@ function func144() {
                     _a.sent();
                     return [4 /*yield*/, func144()];
                 case 27:
-                    _a.sent();
+                    _a.sent(); // ログイン画面(タイトル画面/ログイン)動作処理 (ボス日記選択等のセーブデータロード処理)
                     return [2 /*return*/];
             }
         });
@@ -2460,24 +2455,24 @@ function func145() {
                     if (!(key_X_on == 1)) return [3 /*break*/, 7];
                     return [4 /*yield*/, func178()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_737 = 0;
                     return [4 /*yield*/, func144()];
                 case 6:
-                    _a.sent(); //
+                    _a.sent(); // ログイン画面(タイトル画面/ログイン)動作処理 (ボス日記選択等のセーブデータロード処理)
                     return [2 /*return*/];
                 case 7:
                     redraw(0);
                     return [4 /*yield*/, func146()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
                     return [4 /*yield*/, func148()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // ボス日記選択画面(タイトル画面/ログイン画面/ボス日記選択画面)の表示
                     return [4 /*yield*/, func149()];
                 case 10:
-                    _a.sent();
+                    _a.sent(); // ボス日記消去選択時の表示
                     if (!(var_10 >= 1)) return [3 /*break*/, 12];
                     return [4 /*yield*/, func338()];
                 case 11:
@@ -2496,7 +2491,7 @@ function func145() {
         });
     });
 }
-// ログイン画面
+// ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
 function func146() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_7, cnt2_11, cnt1_8, cnt2_12;
@@ -2605,30 +2600,30 @@ function func147() {
                     if (!(var_64 == 0)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func178()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     var_726 = 1;
                     var_725 = 1;
                     return [4 /*yield*/, func144()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // ログイン画面(タイトル画面/ログイン)動作処理 (ボス日記選択等のセーブデータロード処理)
                     return [2 /*return*/];
                 case 3:
                     if (!(var_64 == 1)) return [3 /*break*/, 6];
                     return [4 /*yield*/, func178()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     var_726 = 1;
                     var_725 = 1;
                     var_734 = 1;
                     return [4 /*yield*/, func144()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // ログイン画面(タイトル画面/ログイン)動作処理 (ボス日記選択等のセーブデータロード処理)
                     return [2 /*return*/];
                 case 6:
                     if (!(var_64 == 2)) return [3 /*break*/, 9];
                     return [4 /*yield*/, func178()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     onexit(0);
                     return [4 /*yield*/, func882()];
                 case 8:
@@ -2646,7 +2641,7 @@ function func147() {
         });
     });
 }
-// ボス日記画面機能
+// ボス日記選択画面(タイトル画面/ログイン画面/ボス日記選択画面)の表示
 function func148() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_9;
@@ -2776,6 +2771,7 @@ function func148() {
         });
     });
 }
+// ボス日記消去選択時の表示
 function func149() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -2842,11 +2838,11 @@ function func150() {
                     _a.sent();
                     return [4 /*yield*/, func108()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // BGM用mp3ファイル再生停止
                     var_595 = 3;
                     return [4 /*yield*/, func076()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_10 = 0;
                     _a.label = 5;
                 case 5:
@@ -3904,7 +3900,7 @@ function func150() {
                     var_755 = 0;
                     return [4 /*yield*/, func159()];
                 case 193:
-                    _a.sent();
+                    _a.sent(); // ヴェネチアホテルでのイベントフラグ管理処理
                     return [2 /*return*/];
             }
         });
@@ -4818,6 +4814,7 @@ function func153() {
         });
     });
 }
+// レクイエムの大迷宮初クリア後、ヴェネチアホテルに戻った際のイベント
 function func154() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_70, cnt1_71, cnt1_72, cnt1_73, cnt1_74, cnt1_75, cnt1_76, cnt1_77, cnt1_78, cnt1_79;
@@ -5024,7 +5021,7 @@ function func154() {
         });
     });
 }
-// ディアボロの試練開放条件？
+// ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)
 function func155() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_80, cnt1_81, cnt1_82, cnt1_83, cnt1_84, cnt1_85, cnt1_86;
@@ -5860,6 +5857,7 @@ function func155() {
         });
     });
 }
+// 初めてダンジョンを訪れ、クリア出来ずにヴェネチアホテルに戻った際のディアボロの呟き
 function func156() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_87, cnt1_88, cnt1_89, cnt1_90, cnt1_91, cnt1_92, cnt1_93, cnt1_94, cnt1_95, cnt1_96, cnt1_97, cnt1_98;
@@ -6214,6 +6212,7 @@ function func158() {
         });
     });
 }
+// ヴェネチアホテルでのイベントフラグ管理処理
 function func159() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_100;
@@ -6328,7 +6327,7 @@ function func159() {
                     _a.sent();
                     return [4 /*yield*/, func076()];
                 case 25:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_100 = 0;
                     _a.label = 26;
                 case 26:
@@ -6358,35 +6357,35 @@ function func159() {
                     if (!(var_207 == 1)) return [3 /*break*/, 35];
                     return [4 /*yield*/, func151()];
                 case 34:
-                    _a.sent();
+                    _a.sent(); // 初めてヴェネチアホテルへ訪れた際のディアボロの呟き
                     _a.label = 35;
                 case 35:
                     if (!(var_207 == 3)) return [3 /*break*/, 37];
                     var_207 = 0;
                     return [4 /*yield*/, func153()];
                 case 36:
-                    _a.sent();
+                    _a.sent(); // ホテルの外初クリア後(エンヤホテル)、ヴェネチアホテルに戻った際のイベント
                     _a.label = 37;
                 case 37:
                     if (!(var_207 == 5)) return [3 /*break*/, 39];
                     var_207 = 0;
                     return [4 /*yield*/, func154()];
                 case 38:
-                    _a.sent();
+                    _a.sent(); // レクイエムの大迷宮初クリア後、ヴェネチアホテルに戻った際のイベント
                     _a.label = 39;
                 case 39:
                     if (!(var_770 == 1)) return [3 /*break*/, 41];
                     var_770 = 0;
                     return [4 /*yield*/, func156()];
                 case 40:
-                    _a.sent();
+                    _a.sent(); // 初めてダンジョンを訪れ、クリア出来ずにヴェネチアホテルに戻った際のディアボロの呟き
                     _a.label = 41;
                 case 41:
                     if (!(var_207 == 6)) return [3 /*break*/, 43];
                     var_207 = 0;
                     return [4 /*yield*/, func155()];
                 case 42:
-                    _a.sent();
+                    _a.sent(); // ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)
                     _a.label = 43;
                 case 43: return [4 /*yield*/, func837()];
                 case 44:
@@ -6453,7 +6452,7 @@ function func160() {
         });
     });
 }
-//亀の中に入ったとき
+//亀の中に入った時の表示
 function func161() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_101, cnt1_102, cnt1_103, cnt1_104;
@@ -7223,7 +7222,7 @@ function func165() {
                     redraw(0);
                     return [4 /*yield*/, func168()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // ダンジョンクリア時のスコア判定
                     return [4 /*yield*/, func180()];
                 case 3:
                     _a.sent();
@@ -7271,7 +7270,7 @@ function func166() {
                     redraw(0);
                     return [4 /*yield*/, func168()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // ダンジョンクリア時のスコア判定
                     if (!(var_10 >= 1)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func338()];
                 case 2:
@@ -7297,7 +7296,7 @@ function func166() {
                     if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 12];
                     return [4 /*yield*/, func178()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func167()];
                 case 10:
                     _a.sent();
@@ -7308,13 +7307,13 @@ function func166() {
                     var_629 = 0;
                     return [4 /*yield*/, func159()];
                 case 11:
-                    _a.sent();
+                    _a.sent(); // ヴェネチアホテルでのイベントフラグ管理処理
                     return [2 /*return*/];
                 case 12:
                     if (!(key_X_on == 1)) return [3 /*break*/, 16];
                     return [4 /*yield*/, func178()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func167()];
                 case 14:
                     _a.sent();
@@ -7325,7 +7324,7 @@ function func166() {
                     var_629 = 0;
                     return [4 /*yield*/, func159()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // ヴェネチアホテルでのイベントフラグ管理処理
                     return [2 /*return*/];
                 case 16:
                     if (!(var_767 == 0)) return [3 /*break*/, 95];
@@ -7335,7 +7334,7 @@ function func166() {
                     var_795 = 225;
                     return [4 /*yield*/, func178()];
                 case 17:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func169()];
                 case 18:
                     _a.sent();
@@ -7614,7 +7613,7 @@ function func167() {
                     redraw(0);
                     return [4 /*yield*/, func168()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // ダンジョンクリア時のスコア判定
                     return [4 /*yield*/, func180()];
                 case 3:
                     _a.sent();
@@ -7767,7 +7766,7 @@ function func168() {
                     var_356 = var_792[var_793][var_796][2];
                     return [4 /*yield*/, func177()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // 死因原因
                     mes("" + var_798);
                     _a.label = 3;
                 case 3:
@@ -7803,7 +7802,7 @@ function func168() {
                     var_356 = var_792[var_793][var_796][2];
                     return [4 /*yield*/, func177()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 死因原因
                     mes("" + var_798);
                     _a.label = 6;
                 case 6:
@@ -7826,7 +7825,7 @@ function func168() {
                     var_356 = var_792[var_793][0][2];
                     return [4 /*yield*/, func177()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // 死因原因
                     mes("" + var_798);
                     _a.label = 9;
                 case 9:
@@ -8007,7 +8006,7 @@ function func169() {
                     redraw(0);
                     return [4 /*yield*/, func168()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // ダンジョンクリア時のスコア判定
                     if (!(var_10 >= 1)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func338()];
                 case 2:
@@ -8034,37 +8033,37 @@ function func169() {
                     var_800 = 1;
                     return [4 /*yield*/, func178()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func171()];
                 case 10:
-                    _a.sent(); // 装備discの能力、Track等の並び替え
+                    _a.sent(); // 配列処理 (装備discの能力、Track等の並び替え)
                     return [2 /*return*/];
                 case 11:
                     if (!(var_794 == 2 && var_792[var_793][var_786][7] != 0)) return [3 /*break*/, 14];
                     var_800 = 1;
                     return [4 /*yield*/, func178()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func171()];
                 case 13:
-                    _a.sent(); // 装備discの能力、Track等の並び替え
+                    _a.sent(); // 配列処理 (装備discの能力、Track等の並び替え)
                     return [2 /*return*/];
                 case 14:
                     if (!(var_794 == 3 && var_792[var_793][var_786][10] != 0)) return [3 /*break*/, 17];
                     var_800 = 1;
                     return [4 /*yield*/, func178()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func171()];
                 case 16:
-                    _a.sent(); // 装備discの能力、Track等の並び替え
+                    _a.sent(); // 配列処理 (装備discの能力、Track等の並び替え)
                     return [2 /*return*/];
                 case 17:
                     if (!(key_X_on == 1)) return [3 /*break*/, 20];
                     var_794 = 0;
                     return [4 /*yield*/, func178()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func166()];
                 case 19:
                     _a.sent();
@@ -8298,7 +8297,7 @@ function func170() {
         });
     });
 }
-// 装備discの能力、Track等の並び替え
+// 配列処理 (装備discの能力、Track等の並び替え)
 function func171() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_116;
@@ -8461,7 +8460,7 @@ function func172() {
                     redraw(0);
                     return [4 /*yield*/, func170()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 装備discの説明欄 (合成した能力などの表示)
                     if (!(var_10 >= 1)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func338()];
                 case 2:
@@ -8487,7 +8486,7 @@ function func172() {
                     var_800 = 0;
                     return [4 /*yield*/, func178()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 処理確認タイマー(3m秒)
                     return [4 /*yield*/, func169()];
                 case 10:
                     _a.sent();
@@ -8534,7 +8533,7 @@ function func173() {
                     }
                     return [4 /*yield*/, func177()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 死因原因
                     if (var_830 != 0) {
                         var_831 = var_830;
                     }
@@ -8558,7 +8557,7 @@ function func173() {
                     _a.sent();
                     return [4 /*yield*/, func175()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // スコア表示？ gettime等時間に関するものがある
                     return [4 /*yield*/, func176()];
                 case 4:
                     _a.sent();
@@ -9900,6 +9899,7 @@ function func177() {
         });
     });
 }
+// 処理確認タイマー(3m秒)
 function func178() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_120;
@@ -10322,7 +10322,7 @@ function func185() {
                     gsel(0, 1);
                     return [4 /*yield*/, func076()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // マップ背景画像の読込
                     cnt1_125 = 0;
                     _a.label = 2;
                 case 2:

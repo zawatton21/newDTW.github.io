@@ -3423,7 +3423,7 @@ function func337() {
                     if (!(var_634 >= 10 || var_635 >= 1 || var_636 >= 1 || var_633 >= 1 || var_632 >= 1 || var_1201 >= 1)) return [3 /*break*/, 53];
                     return [4 /*yield*/, func102()];
                 case 52:
-                    _a.sent();
+                    _a.sent(); // 各ボリューム調整キーを押した時の表示
                     _a.label = 53;
                 case 53:
                     if (!(open_item_menue == 1)) return [3 /*break*/, 55];
@@ -16889,7 +16889,7 @@ function func373() {
                     if (!(var_835[var_1687] != 0)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func177()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // 死因原因
                     var_1688 = var_798;
                     _a.label = 3;
                 case 3:
@@ -18761,10 +18761,10 @@ function func384() {
                     }
                     if (var_1734 == 1) {
                         var_78[var_866].Var11 = 1;
-                        // No >= 2 なので、レクイエムの第迷宮、ディアボロの試練、一巡後の世界
+                        // No >= 2 なので、レクイエムの大迷宮、ディアボロの試練、一巡後の世界
                         if (dangeon_number >= 2 && var_1727 == 0) {
                             var_1768 = rnd(9);
-                            // No = 2 なので、レクイエムの第迷宮
+                            // No = 2 なので、レクイエムの大迷宮
                             if (dangeon_number == 2 && current_floor < 10) {
                                 var_1768 = 1;
                             }

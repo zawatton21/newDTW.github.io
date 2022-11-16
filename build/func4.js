@@ -118,7 +118,8 @@ function func400() {
                         var_862[belongings_item_list][0] = 1;
                     }
                     // おそらくアイテム欄へ追加していくプログラム
-                    var_224 = var_224 + 1;
+                    var_224 = var_224 + 1; // 個数を追加
+                    // 手持ちへ床に落ちているアイテム情報を移動
                     var_233[var_224].Var0 = var_78[var_321].Var0;
                     var_233[var_224].Var3 = var_78[var_321].Var3;
                     var_233[var_224].Var4 = var_78[var_321].Var4;
@@ -173,6 +174,7 @@ function func400() {
                     var_233[var_224].Var28 = JSON.parse(JSON.stringify(var_78[var_321].Var28));
                     var_233[var_224].Var29 = JSON.parse(JSON.stringify(var_78[var_321].Var29));
                     */
+                    // 床に落ちていたアイテム情報を削除
                     var_77[var_66][var_67] = 0;
                     var_78[var_321].Var0 = 0;
                     var_78[var_321].Var1 = 0;
@@ -2061,7 +2063,7 @@ function func418() {
                     disc_rarity = var_1833;
                     return [4 /*yield*/, func399()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 遠投状態で投げた時のアイテム表示
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -2794,7 +2796,6 @@ function func420() {
                     return [4 /*yield*/, func492()];
                 case 67:
                     _a.sent(); // アイテムリスト呼び出し
-                    // 
                     if (belongings_item_list == 700 || belongings_item_list == 571 || belongings_item_list == 579 || belongings_item_list == 729 || belongings_item_list == 730 || belongings_item_list == 731 || belongings_item_list == 701 || belongings_item_list == 995) {
                         var_1936 = 0;
                     }
@@ -5973,7 +5974,7 @@ function func448() {
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     return [4 /*yield*/, func450()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問に答え、ジャッジメントが去る時の動作処理
                     return [2 /*return*/];
                 case 16: return [4 /*yield*/, func448()];
                 case 17:
@@ -6027,6 +6028,7 @@ function func449() {
         });
     });
 }
+// ジャッジメントの問に答え、ジャッジメントが去る時の動作処理
 function func450() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_39, cnt1_40;
@@ -6037,7 +6039,7 @@ function func450() {
                     if (!(var_1991 == 6)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func451()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問いに対して、願いの数を増やしてくれと選択した時の動作処理
                     return [2 /*return*/];
                 case 2:
                     var_1207 = 0;
@@ -6092,31 +6094,31 @@ function func450() {
                     if (!(var_1991 == 1)) return [3 /*break*/, 13];
                     return [4 /*yield*/, func452()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問いに対して、お金持ちになりたいと選択した時の動作処理
                     return [2 /*return*/];
                 case 13:
                     if (!(var_1991 == 2)) return [3 /*break*/, 15];
                     return [4 /*yield*/, func453()];
                 case 14:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問いに対して、満腹になりたいと選択した時の動作処理
                     return [2 /*return*/];
                 case 15:
                     if (!(var_1991 == 3)) return [3 /*break*/, 17];
                     return [4 /*yield*/, func454()];
                 case 16:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問いに対して、体力を回復させてくれと選択した時の動作処理
                     return [2 /*return*/];
                 case 17:
                     if (!(var_1991 == 4)) return [3 /*break*/, 19];
                     return [4 /*yield*/, func455()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問いに対して、敵の動きをとめてくれと選択した時の動作処理
                     return [2 /*return*/];
                 case 19:
                     if (!(var_1991 == 5)) return [3 /*break*/, 21];
                     return [4 /*yield*/, func456()];
                 case 20:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問いに対して、アヴドゥルを生き返らせてくれと選択した時の動作処理
                     return [2 /*return*/];
                 case 21: return [4 /*yield*/, func019()];
                 case 22:
@@ -6126,6 +6128,7 @@ function func450() {
         });
     });
 }
+// ジャッジメントの問いに対して、願いの数を増やしてくれと選択した時の動作処理
 function func451() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_41, cnt1_42, cnt1_43, cnt1_44;
@@ -6255,6 +6258,7 @@ function func451() {
         });
     });
 }
+// ジャッジメントの問いに対して、お金持ちになりたいと選択した時の動作処理
 function func452() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_45;
@@ -6326,6 +6330,7 @@ function func452() {
         });
     });
 }
+// ジャッジメントの問いに対して、満腹になりたいと選択した時の動作処理
 function func453() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_46;
@@ -6379,6 +6384,7 @@ function func453() {
         });
     });
 }
+// ジャッジメントの問いに対して、体力を回復させてくれと選択した時の動作処理
 function func454() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_47;
@@ -6426,7 +6432,7 @@ function func454() {
                     _a.sent(); // キー入力による選択処理
                     return [4 /*yield*/, func457()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // ジャッジメントの問いに対して、体力を回復させてくれと選択した時、体力回復後の状態異常回復の動作処理
                     return [4 /*yield*/, func019()];
                 case 9:
                     _a.sent(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -6435,6 +6441,7 @@ function func454() {
         });
     });
 }
+// ジャッジメントの問いに対して、敵の動きをとめてくれと選択した時の動作処理
 function func455() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_48;
@@ -6507,6 +6514,7 @@ function func455() {
         });
     });
 }
+// ジャッジメントの問いに対して、アヴドゥルを生き返らせてくれと選択した時の動作処理
 function func456() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_49;
@@ -6558,6 +6566,7 @@ function func456() {
         });
     });
 }
+// ジャッジメントの問いに対して、体力を回復させてくれと選択した時、体力回復後の状態異常回復の動作処理
 function func457() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt2_30;
@@ -6606,6 +6615,7 @@ function func457() {
         });
     });
 }
+// 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
 function func458() {
     return __awaiter(this, void 0, void 0, function () {
         var cnt1_50, cnt3_11;
@@ -6614,6 +6624,8 @@ function func458() {
             var_69 = 0;
             var_480 = 1;
             for (cnt1_50 = 0; cnt1_50 < var_224; ++cnt1_50) {
+                // No = 716 恐竜の化石
+                // 一巡後の世界で持っているだけで必ず大部屋モンスターハウスが出現する。使用すると次の階が西戸ハウスになってしまう
                 if (var_233[var_480].Var0 == 716) {
                     var_69 = 1;
                 }
@@ -6621,6 +6633,8 @@ function func458() {
                     var_484 = 1;
                     var_485 = var_233[var_480].Var6;
                     for (cnt3_11 = 0; cnt3_11 < 10; ++cnt3_11) {
+                        // No = 716 恐竜の化石
+                        // 一巡後の世界で持っているだけで必ず大部屋モンスターハウスが出現する。使用すると次の階が西戸ハウスになってしまう
                         if (var_486[var_485][var_484][0] == 716) {
                             var_69 = 1;
                         }
@@ -6698,7 +6712,7 @@ function func459() {
         });
     });
 }
-// 道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具)
+// アイテムリスト上のアイテム表示　道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具)
 function func460() {
     return __awaiter(this, void 0, void 0, function () {
         var loopCount, cnt1_52, cnt6_1;
@@ -6780,7 +6794,7 @@ function func460() {
                     if (item_page_number == 2) {
                         var_1620 = 11;
                     }
-                    if (item_page_number == 3) {
+                    if (item_page_number == 3) { // No = 3 は
                         var_1620 = 0;
                     }
                     if (var_220 == 1) {
@@ -7004,16 +7018,19 @@ function func460() {
                         if (var_862[belongings_item_list][0] == 0 && dangeon_number != 0 && dangeon_number != 1 && dangeon_number != 99) {
                             color(200, 200, 200);
                         }
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     // 食糧、回復アイテム
                     if (belongings_item_list >= 600 && belongings_item_list < 700) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     // その他の消費
                     if (belongings_item_list >= 700 && belongings_item_list < 750) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     if (!(belongings_item_list >= 800 && belongings_item_list < 900)) return [3 /*break*/, 6];
@@ -7037,11 +7054,13 @@ function func460() {
                     // コミック スティールボールラン 7 ~ 15, 装備+99
                     if (belongings_item_list >= 750 && belongings_item_list < 800) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     // コミック
                     if (belongings_item_list >= 900 && belongings_item_list < 1000) {
                         color(255, 255, 255);
+                        pos(40, var_230);
                         mes(item_name);
                     }
                     if (!(var_2015 == 1)) return [3 /*break*/, 12];
@@ -7888,6 +7907,8 @@ function func461() {
                     if (!(var_225 != var_233[var_1876].Var8 && var_225 != var_1884)) return [3 /*break*/, 75];
                     Y_axis_item_position = Y_axis_item_position + 22;
                     var_225 = var_225 + 1;
+                    //Y_axis_item_position = var_233[var_1876].Var8 + 22;  
+                    //var_225 = var_233[var_1876].Var8 + 1;
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
@@ -7917,6 +7938,8 @@ function func461() {
                     if (!(var_225 != 1)) return [3 /*break*/, 81];
                     Y_axis_item_position = Y_axis_item_position - 22;
                     var_225 = var_225 - 1;
+                    //Y_axis_item_position = var_233[var_1876].Var8 - 22;
+                    //var_225 = var_233[var_1876].Var8 - 1;
                     DSPLAY(audio_id = 100);
                     //yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
@@ -20929,16 +20952,19 @@ function func498() {
                     var_105 = 1;
                     return [2 /*return*/];
                 case 126:
+                    // No = 567 アヴドゥルのdiscの効果
                     if (belongings_item_list == 567) {
                         var_1945 = 1;
                         var_1967 = var_225;
                         return [2 /*return*/];
                     }
+                    // No = 590 ギアッチョのdiscの効果
                     if (belongings_item_list == 590) {
                         var_1945 = 2;
                         var_1967 = var_225;
                         return [2 /*return*/];
                     }
+                    // No = 565 プッチ神父のdiscの効果
                     if (belongings_item_list == 565) {
                         var_1945 = 3;
                         var_1967 = var_225;
@@ -21329,7 +21355,7 @@ function func498() {
                     if (dangeon_number == 1 && current_floor == 12) {
                         comments_row2a = "するとこの階で…」";
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         comments_row2a = "するとこの階で…」";
                     }
@@ -21361,7 +21387,7 @@ function func498() {
                     if (!(dangeon_number == 4)) return [3 /*break*/, 195];
                     return [4 /*yield*/, func458()];
                 case 194:
-                    _a.sent();
+                    _a.sent(); // 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
                     if (var_69 == 1) {
                         var_2202 = 6;
                     }
@@ -21439,7 +21465,7 @@ function func498() {
                         comments_row2a = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor == 29) {
                         comments_row1a = "「わけもわからず殺されて";
                         comments_row2a = "リタイアだァーッ！」";
@@ -21480,7 +21506,7 @@ function func498() {
                         comments_row2a = "リタイアだァーッ！」";
                         var_70 = 0;
                     }
-                    // No = 2 なので、レクイエムの第迷宮
+                    // No = 2 なので、レクイエムの大迷宮
                     if (dangeon_number == 2 && current_floor == 30) {
                         comments_row1a = "「わけもわからず殺されて";
                         comments_row2a = "リタイアだァーッ！」";
@@ -22892,7 +22918,7 @@ function func498() {
                     }
                     return [2 /*return*/];
                 case 482:
-                    // アイテム「ピッツァ」を使用した時の効果
+                    // No = 600 アイテム「ピッツァ」を使用した時の効果
                     if (belongings_item_list == 600) {
                         var_360 = 0;
                         var_2211 = 0;
@@ -22915,7 +22941,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
-                    // アイテム「ネアポリスのピッツァ」を使用した時の効果
+                    // No = 602 アイテム「ネアポリスのピッツァ」を使用した時の効果
                     if (belongings_item_list == 602) {
                         var_360 = 0;
                         var_2211 = 0;
@@ -23058,7 +23084,7 @@ function func498() {
                     }
                     return [2 /*return*/];
                 case 492:
-                    // アイテム「ポルポのピッツァ」を使用した時の効果
+                    // No = 604 アイテム「ポルポのピッツァ」を使用した時の効果
                     if (belongings_item_list == 604) {
                         var_360 = 0;
                         var_567 = var_567 + 10;
@@ -23081,7 +23107,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
-                    // // アイテム「焦げたピッツァ」を使用した時の効果
+                    // No = 605  アイテム「焦げたピッツァ」を使用した時の効果
                     if (belongings_item_list == 605) {
                         var_360 = 0;
                         var_2211 = 0;
@@ -23104,6 +23130,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
+                    // No = 630  アイテム「娼婦風スパゲッティ」を使用した時の効果
                     if (belongings_item_list == 630) {
                         var_360 = 0;
                         if (var_350 == var_567) {
@@ -23119,7 +23146,7 @@ function func498() {
                         var_1223 = 1;
                         return [2 /*return*/];
                     }
-                    // 
+                    // No = 631 アイテム「モッツァレラチーズとトマトのサラダ」を使用した時の効果
                     if (belongings_item_list == 631) {
                         var_360 = 0;
                         if (var_350 == var_567) {
@@ -23361,6 +23388,7 @@ function func498() {
                     return [2 /*return*/];
                 case 529: return [2 /*return*/];
                 case 530:
+                    // No = 635 アイテム「焦げた料理」を使用した時の効果
                     if (belongings_item_list == 635) {
                         var_360 = 0;
                         if (var_350 == var_567) {
@@ -23414,6 +23442,7 @@ function func498() {
                     }
                     return [2 /*return*/];
                 case 533:
+                    // No = 639 アイテム「カエルの丸焼き」を使用した時の効果
                     if (belongings_item_list == 639) {
                         var_360 = 0;
                         if (var_350 == var_567) {
@@ -23431,6 +23460,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
+                    // No = 640 アイテム「焦げた食べ物」を使用した時の効果
                     if (belongings_item_list == 640) {
                         var_360 = 0;
                         if (var_350 == var_567) {
@@ -23488,6 +23518,7 @@ function func498() {
                     }
                     return [2 /*return*/];
                 case 542:
+                    // No = 647 アイテム「オレンジ」を使用した時の効果
                     if (belongings_item_list == 647) {
                         var_360 = 0;
                         if (var_350 == var_567) {
@@ -23505,6 +23536,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
+                    // No = 648 アイテム「鎌倉カスター」を使用した時の効果
                     if (belongings_item_list == 648) {
                         var_360 = 0;
                         if (var_350 == var_567) {
@@ -23522,6 +23554,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
+                    // No = 650 アイテム「カエル」を使用した時の効果
                     if (belongings_item_list == 650) {
                         var_360 = 0;
                         if (var_211 == var_352) {
@@ -23542,6 +23575,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
+                    // No = 651 アイテム「大きいカエル」を使用した時の効果
                     if (belongings_item_list == 651) {
                         var_360 = 0;
                         if (var_211 == var_352) {
@@ -23562,6 +23596,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
+                    // No = 652 アイテム「カエルの死体」を使用した時の効果
                     if (belongings_item_list == 652) {
                         var_360 = 0;
                         if (var_211 == var_352) {
@@ -23582,6 +23617,7 @@ function func498() {
                         }
                         return [2 /*return*/];
                     }
+                    // No = 653 アイテム「超巨大なカエル」を使用した時の効果
                     if (belongings_item_list == 653) {
                         var_360 = 0;
                         if (var_211 == var_352) {
@@ -23648,6 +23684,7 @@ function func498() {
                     var_199 = var_1940;
                     return [2 /*return*/];
                 case 551:
+                    // No = 655 アイテム「ザリガニ」を使用した時の効果
                     if (belongings_item_list == 655) {
                         var_360 = 0;
                         if (var_211 == var_352) {

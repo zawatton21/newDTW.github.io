@@ -73,7 +73,7 @@ function func004(this: any) {
         }
         var_12 = 0;
         version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        game_title = "newDTW ver0.1307";
+        game_title = "newDTW ver0.1308";
 
         
         buffer(17);

@@ -15346,7 +15346,7 @@ function func636() {
                     _a.sent();
                     return [4 /*yield*/, func161()];
                 case 103:
-                    _a.sent();
+                    _a.sent(); //亀の中に入った時の表示
                     return [2 /*return*/];
                 case 104:
                     if (!(var_83[var_314].Var0 == 81)) return [3 /*break*/, 107];
@@ -27192,7 +27192,7 @@ function func673() {
                     var_1049 = 0;
                     return [4 /*yield*/, func159()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // ヴェネチアホテルでのイベントフラグ管理処理
                     return [2 /*return*/];
                 case 10:
                     if (!(var_375 == 0)) return [3 /*break*/, 12];
