@@ -123,53 +123,55 @@ function func201() {
                     return [4 /*yield*/, func080()];
                 case 2:
                     _a.sent(); // 各キー入力確認
-                    if (!(var_254 == 1)) return [3 /*break*/, 5];
+                    if (!(var_254 == 1)) return [3 /*break*/, 6];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (var_690 != 10) {
                         var_690 = var_690 - 10;
                     }
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 3:
-                    // yield func337(); // メッセージ関係呼び出し
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 4:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func201()];
-                case 4:
+                case 5:
                     _a.sent();
                     return [2 /*return*/];
-                case 5:
-                    if (!(var_257 == 1)) return [3 /*break*/, 8];
+                case 6:
+                    if (!(var_257 == 1)) return [3 /*break*/, 10];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (var_690 != 90) {
                         var_690 = var_690 + 10;
                     }
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 6:
-                    // yield func337(); // メッセージ関係呼び出し
+                case 7:
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 8:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func201()];
-                case 7:
+                case 9:
                     _a.sent();
                     return [2 /*return*/];
-                case 8:
-                    if (!(key_Z_on == 1 || key_X_on == 1 || key_A_on == 1)) return [3 /*break*/, 12];
+                case 10:
+                    if (!(key_Z_on == 1 || key_X_on == 1 || key_A_on == 1)) return [3 /*break*/, 14];
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_909 = 0;
                     var_25[14] = var_690;
                     bsave("00.dat", var_25, null, 200);
                     return [4 /*yield*/, func337()];
-                case 9:
+                case 11:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func051()];
-                case 10:
+                case 12:
                     _a.sent();
                     return [4 /*yield*/, func199()];
-                case 11:
+                case 13:
                     _a.sent();
                     return [2 /*return*/];
-                case 12: return [4 /*yield*/, func201()];
-                case 13:
+                case 14: return [4 /*yield*/, func201()];
+                case 15:
                     _a.sent();
                     return [2 /*return*/];
             }
@@ -369,33 +371,35 @@ function func203() {
                     _a.sent();
                     return [2 /*return*/];
                 case 27:
-                    if (!(var_255 == 1)) return [3 /*break*/, 29];
+                    if (!(var_255 == 1)) return [3 /*break*/, 30];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     var_702 = var_702 - 1;
                     if (var_702 < 0) {
                         var_702 = 0;
                     }
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 28:
-                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 29;
+                    return [4 /*yield*/, func337()];
                 case 29:
-                    if (!(var_259 == 1)) return [3 /*break*/, 31];
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 30;
+                case 30:
+                    if (!(var_259 == 1)) return [3 /*break*/, 33];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     var_702 = var_702 + 1;
                     if (var_702 == 9) {
                         var_702 = 8;
                     }
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 30:
-                    // yield func337(); // メッセージ関係呼び出し
+                case 31:
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 31;
-                case 31: return [4 /*yield*/, func203()];
+                    return [4 /*yield*/, func337()];
                 case 32:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 33;
+                case 33: return [4 /*yield*/, func203()];
+                case 34:
                     _a.sent();
                     return [2 /*return*/];
             }
@@ -543,59 +547,63 @@ function func206() {
                     _a.sent();
                     return [2 /*return*/];
                 case 8:
-                    if (!(var_255 == 1)) return [3 /*break*/, 14];
+                    if (!(var_255 == 1)) return [3 /*break*/, 16];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                    if (!(var_910 == 0)) return [3 /*break*/, 11];
+                    if (!(var_910 == 0)) return [3 /*break*/, 12];
                     var_910 = 1;
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 9:
-                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func206()];
+                    return [4 /*yield*/, func337()];
                 case 10:
-                    _a.sent();
-                    return [2 /*return*/];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func206()];
                 case 11:
-                    if (!(var_910 == 1)) return [3 /*break*/, 14];
-                    var_910 = 0;
-                    // yield func337(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
+                    _a.sent();
+                    return [2 /*return*/];
                 case 12:
-                    // yield func337(); // メッセージ関係呼び出し
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func206()];
-                case 13:
-                    _a.sent();
-                    return [2 /*return*/];
-                case 14:
-                    if (!(var_259 == 1)) return [3 /*break*/, 20];
-                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                    if (!(var_910 == 1)) return [3 /*break*/, 17];
+                    if (!(var_910 == 1)) return [3 /*break*/, 16];
                     var_910 = 0;
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 15:
-                    // yield func337(); // メッセージ関係呼び出し
+                case 13:
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 14:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func206()];
-                case 16:
+                case 15:
                     _a.sent();
                     return [2 /*return*/];
+                case 16:
+                    if (!(var_259 == 1)) return [3 /*break*/, 24];
+                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    if (!(var_910 == 1)) return [3 /*break*/, 20];
+                    var_910 = 0;
+                    return [4 /*yield*/, func337()];
                 case 17:
-                    if (!(var_910 == 0)) return [3 /*break*/, 20];
-                    var_910 = 1;
-                    // yield func337(); // メッセージ関係呼び出し
+                    _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 18:
-                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func206()];
                 case 19:
                     _a.sent();
                     return [2 /*return*/];
-                case 20: return [4 /*yield*/, func206()];
+                case 20:
+                    if (!(var_910 == 0)) return [3 /*break*/, 24];
+                    var_910 = 1;
+                    return [4 /*yield*/, func337()];
                 case 21:
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 22:
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func206()];
+                case 23:
+                    _a.sent();
+                    return [2 /*return*/];
+                case 24: return [4 /*yield*/, func206()];
+                case 25:
                     _a.sent();
                     return [2 /*return*/];
             }
@@ -666,7 +674,7 @@ function func209() {
                     return [4 /*yield*/, func080()];
                 case 1:
                     _a.sent(); // 各キー入力確認
-                    if (!(var_259 == 1)) return [3 /*break*/, 3];
+                    if (!(var_259 == 1)) return [3 /*break*/, 4];
                     Y_axis_item_position = Y_axis_item_position + 20;
                     var_911 = var_911 + 1;
                     if (var_911 == 9) {
@@ -674,14 +682,15 @@ function func209() {
                         var_911 = 1;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 2:
-                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 3;
+                    return [4 /*yield*/, func337()];
                 case 3:
-                    if (!(var_255 == 1)) return [3 /*break*/, 5];
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 4;
+                case 4:
+                    if (!(var_255 == 1)) return [3 /*break*/, 7];
                     Y_axis_item_position = Y_axis_item_position - 20;
                     var_911 = var_911 - 1;
                     if (var_911 == 0) {
@@ -689,24 +698,25 @@ function func209() {
                         var_911 = 8;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 4:
-                    // yield func337(); // メッセージ関係呼び出し
-                    _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 5;
                 case 5:
-                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 11];
-                    if (!(var_911 == 7)) return [3 /*break*/, 8];
-                    return [4 /*yield*/, func214()];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
                 case 6:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 7;
+                case 7:
+                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 13];
+                    if (!(var_911 == 7)) return [3 /*break*/, 10];
+                    return [4 /*yield*/, func214()];
+                case 8:
                     _a.sent();
                     return [4 /*yield*/, func337()];
-                case 7:
+                case 9:
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 8;
-                case 8:
-                    if (!(var_911 == 8)) return [3 /*break*/, 11];
+                    _a.label = 10;
+                case 10:
+                    if (!(var_911 == 8)) return [3 /*break*/, 13];
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_691[1] = var_655;
                     var_691[2] = var_656;
@@ -716,135 +726,135 @@ function func209() {
                     var_691[6] = var_660;
                     bsave(file_name = "00.dat", data = var_691, data_size = null, offset = 1000);
                     return [4 /*yield*/, func051()];
-                case 9:
+                case 11:
                     _a.sent();
                     var_902 = 0;
                     return [4 /*yield*/, func193()];
-                case 10:
+                case 12:
                     _a.sent();
                     return [2 /*return*/];
-                case 11:
-                    if (!(var_911 >= 1 && var_911 <= 6)) return [3 /*break*/, 45];
+                case 13:
+                    if (!(var_911 >= 1 && var_911 <= 6)) return [3 /*break*/, 47];
                     var_447 = 48; // キー0
                     cnt2_1 = 0;
-                    _a.label = 12;
-                case 12:
-                    if (!(cnt2_1 < 10)) return [3 /*break*/, 19];
+                    _a.label = 14;
+                case 14:
+                    if (!(cnt2_1 < 10)) return [3 /*break*/, 21];
                     conf_keyon = getkey(var_447); // キー0 入力確認
-                    if (!(conf_keyon == 1)) return [3 /*break*/, 17];
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 19];
                     var_912 = var_447;
                     return [4 /*yield*/, func213()];
-                case 13:
-                    _a.sent();
-                    return [4 /*yield*/, func051()];
-                case 14:
-                    _a.sent();
-                    return [4 /*yield*/, func212()];
                 case 15:
                     _a.sent();
-                    return [4 /*yield*/, func337()];
+                    return [4 /*yield*/, func051()];
                 case 16:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [3 /*break*/, 19];
+                    _a.sent();
+                    return [4 /*yield*/, func212()];
                 case 17:
-                    var_447++;
-                    _a.label = 18;
+                    _a.sent();
+                    return [4 /*yield*/, func337()];
                 case 18:
-                    ++cnt2_1;
-                    return [3 /*break*/, 12];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [3 /*break*/, 21];
                 case 19:
-                    var_447 = 65; // キーA
-                    cnt2_2 = 0;
+                    var_447++;
                     _a.label = 20;
                 case 20:
-                    if (!(cnt2_2 < 26)) return [3 /*break*/, 27];
+                    ++cnt2_1;
+                    return [3 /*break*/, 14];
+                case 21:
+                    var_447 = 65; // キーA
+                    cnt2_2 = 0;
+                    _a.label = 22;
+                case 22:
+                    if (!(cnt2_2 < 26)) return [3 /*break*/, 29];
                     conf_keyon = getkey(var_447); // キーA 入力確認
-                    if (!(conf_keyon == 1)) return [3 /*break*/, 25];
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 27];
                     var_912 = var_447;
                     return [4 /*yield*/, func213()];
-                case 21:
-                    _a.sent();
-                    return [4 /*yield*/, func051()];
-                case 22:
-                    _a.sent();
-                    return [4 /*yield*/, func212()];
                 case 23:
                     _a.sent();
-                    return [4 /*yield*/, func337()];
+                    return [4 /*yield*/, func051()];
                 case 24:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [3 /*break*/, 27];
+                    _a.sent();
+                    return [4 /*yield*/, func212()];
                 case 25:
-                    var_447++;
-                    _a.label = 26;
+                    _a.sent();
+                    return [4 /*yield*/, func337()];
                 case 26:
-                    ++cnt2_2;
-                    return [3 /*break*/, 20];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [3 /*break*/, 29];
                 case 27:
+                    var_447++;
+                    _a.label = 28;
+                case 28:
+                    ++cnt2_2;
+                    return [3 /*break*/, 22];
+                case 29:
                     conf_keyon = getkey(16); // キーShift 入力確認
-                    if (!(conf_keyon == 1)) return [3 /*break*/, 33];
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 35];
                     var_912 = 16;
                     return [4 /*yield*/, func213()];
-                case 28:
-                    _a.sent();
-                    return [4 /*yield*/, func051()];
-                case 29:
-                    _a.sent();
-                    return [4 /*yield*/, func212()];
                 case 30:
                     _a.sent();
-                    return [4 /*yield*/, func337()];
+                    return [4 /*yield*/, func051()];
                 case 31:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func209()];
+                    _a.sent();
+                    return [4 /*yield*/, func212()];
                 case 32:
                     _a.sent();
-                    return [2 /*return*/];
+                    return [4 /*yield*/, func337()];
                 case 33:
-                    conf_keyon = getkey(13); // キーEnter 入力確認
-                    if (!(conf_keyon == 1)) return [3 /*break*/, 39];
-                    var_912 = 13;
-                    return [4 /*yield*/, func213()];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func209()];
                 case 34:
                     _a.sent();
-                    return [4 /*yield*/, func051()];
+                    return [2 /*return*/];
                 case 35:
-                    _a.sent();
-                    return [4 /*yield*/, func212()];
+                    conf_keyon = getkey(13); // キーEnter 入力確認
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 41];
+                    var_912 = 13;
+                    return [4 /*yield*/, func213()];
                 case 36:
                     _a.sent();
-                    return [4 /*yield*/, func337()];
-                case 37:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func209()];
-                case 38:
-                    _a.sent();
-                    return [2 /*return*/];
-                case 39:
-                    conf_keyon = getkey(17); // キーCtrl 入力確認
-                    if (!(conf_keyon == 1)) return [3 /*break*/, 45];
-                    var_912 = 17;
-                    return [4 /*yield*/, func213()];
-                case 40:
-                    _a.sent();
                     return [4 /*yield*/, func051()];
-                case 41:
+                case 37:
                     _a.sent();
                     return [4 /*yield*/, func212()];
-                case 42:
+                case 38:
                     _a.sent();
                     return [4 /*yield*/, func337()];
-                case 43:
+                case 39:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func209()];
-                case 44:
+                case 40:
                     _a.sent();
                     return [2 /*return*/];
-                case 45: return [4 /*yield*/, func337()];
-                case 46:
+                case 41:
+                    conf_keyon = getkey(17); // キーCtrl 入力確認
+                    if (!(conf_keyon == 1)) return [3 /*break*/, 47];
+                    var_912 = 17;
+                    return [4 /*yield*/, func213()];
+                case 42:
+                    _a.sent();
+                    return [4 /*yield*/, func051()];
+                case 43:
+                    _a.sent();
+                    return [4 /*yield*/, func212()];
+                case 44:
+                    _a.sent();
+                    return [4 /*yield*/, func337()];
+                case 45:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func209()];
-                case 47:
+                case 46:
+                    _a.sent();
+                    return [2 /*return*/];
+                case 47: return [4 /*yield*/, func337()];
+                case 48:
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func209()];
+                case 49:
                     _a.sent();
                     return [2 /*return*/];
             }
@@ -1235,7 +1245,7 @@ function func216() {
                     return [4 /*yield*/, func080()];
                 case 1:
                     _a.sent(); // 各キー入力確認
-                    if (!(var_259 == 1)) return [3 /*break*/, 3];
+                    if (!(var_259 == 1)) return [3 /*break*/, 4];
                     Y_axis_item_position = Y_axis_item_position + 20;
                     var_925 = var_925 + 1;
                     if (var_925 == 10) {
@@ -1243,14 +1253,15 @@ function func216() {
                         var_925 = 1;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 2:
-                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 3;
+                    return [4 /*yield*/, func337()];
                 case 3:
-                    if (!(var_255 == 1)) return [3 /*break*/, 5];
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 4;
+                case 4:
+                    if (!(var_255 == 1)) return [3 /*break*/, 7];
                     Y_axis_item_position = Y_axis_item_position - 20;
                     var_925 = var_925 - 1;
                     if (var_925 == 0) {
@@ -1258,16 +1269,17 @@ function func216() {
                         var_925 = 9;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 4:
-                    // yield func337(); // メッセージ関係呼び出し
-                    _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 5;
                 case 5:
-                    if (!(var_925 >= 1 && var_925 <= 7)) return [3 /*break*/, 85];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 6:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 7;
+                case 7:
+                    if (!(var_925 >= 1 && var_925 <= 7)) return [3 /*break*/, 87];
                     ck_joystick(var_929, var_662);
-                    if (!(var_929 == 8192)) return [3 /*break*/, 13];
+                    if (!(var_929 == 8192)) return [3 /*break*/, 15];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 8192;
@@ -1304,28 +1316,28 @@ function func216() {
                         var_927 = 8192;
                     }
                     return [4 /*yield*/, func217()];
-                case 6:
+                case 8:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 7:
+                case 9:
                     _a.sent();
                     cnt3_1 = 0;
-                    _a.label = 8;
-                case 8:
-                    if (!(cnt3_1 < 2)) return [3 /*break*/, 11];
-                    return [4 /*yield*/, func337()];
-                case 9:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 10;
                 case 10:
-                    ++cnt3_1;
-                    return [3 /*break*/, 8];
-                case 11: return [4 /*yield*/, func216()];
+                    if (!(cnt3_1 < 2)) return [3 /*break*/, 13];
+                    return [4 /*yield*/, func337()];
+                case 11:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 12;
                 case 12:
+                    ++cnt3_1;
+                    return [3 /*break*/, 10];
+                case 13: return [4 /*yield*/, func216()];
+                case 14:
                     _a.sent();
                     return [2 /*return*/];
-                case 13:
-                    if (!(var_929 == 2048)) return [3 /*break*/, 21];
+                case 15:
+                    if (!(var_929 == 2048)) return [3 /*break*/, 23];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 2048;
@@ -1362,28 +1374,28 @@ function func216() {
                         var_927 = 2048;
                     }
                     return [4 /*yield*/, func217()];
-                case 14:
+                case 16:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 15:
+                case 17:
                     _a.sent();
                     cnt3_2 = 0;
-                    _a.label = 16;
-                case 16:
-                    if (!(cnt3_2 < 2)) return [3 /*break*/, 19];
-                    return [4 /*yield*/, func337()];
-                case 17:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 18;
                 case 18:
-                    ++cnt3_2;
-                    return [3 /*break*/, 16];
-                case 19: return [4 /*yield*/, func216()];
+                    if (!(cnt3_2 < 2)) return [3 /*break*/, 21];
+                    return [4 /*yield*/, func337()];
+                case 19:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 20;
                 case 20:
+                    ++cnt3_2;
+                    return [3 /*break*/, 18];
+                case 21: return [4 /*yield*/, func216()];
+                case 22:
                     _a.sent();
                     return [2 /*return*/];
-                case 21:
-                    if (!(var_929 == 4096)) return [3 /*break*/, 29];
+                case 23:
+                    if (!(var_929 == 4096)) return [3 /*break*/, 31];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 4096;
@@ -1420,28 +1432,28 @@ function func216() {
                         var_927 = 4096;
                     }
                     return [4 /*yield*/, func217()];
-                case 22:
+                case 24:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 23:
+                case 25:
                     _a.sent();
                     cnt3_3 = 0;
-                    _a.label = 24;
-                case 24:
-                    if (!(cnt3_3 < 2)) return [3 /*break*/, 27];
-                    return [4 /*yield*/, func337()];
-                case 25:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 26;
                 case 26:
-                    ++cnt3_3;
-                    return [3 /*break*/, 24];
-                case 27: return [4 /*yield*/, func216()];
+                    if (!(cnt3_3 < 2)) return [3 /*break*/, 29];
+                    return [4 /*yield*/, func337()];
+                case 27:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 28;
                 case 28:
+                    ++cnt3_3;
+                    return [3 /*break*/, 26];
+                case 29: return [4 /*yield*/, func216()];
+                case 30:
                     _a.sent();
                     return [2 /*return*/];
-                case 29:
-                    if (!(var_929 == 32768)) return [3 /*break*/, 37];
+                case 31:
+                    if (!(var_929 == 32768)) return [3 /*break*/, 39];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 32768;
@@ -1478,28 +1490,28 @@ function func216() {
                         var_927 = 32768;
                     }
                     return [4 /*yield*/, func217()];
-                case 30:
+                case 32:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 31:
+                case 33:
                     _a.sent();
                     cnt3_4 = 0;
-                    _a.label = 32;
-                case 32:
-                    if (!(cnt3_4 < 2)) return [3 /*break*/, 35];
-                    return [4 /*yield*/, func337()];
-                case 33:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 34;
                 case 34:
-                    ++cnt3_4;
-                    return [3 /*break*/, 32];
-                case 35: return [4 /*yield*/, func216()];
+                    if (!(cnt3_4 < 2)) return [3 /*break*/, 37];
+                    return [4 /*yield*/, func337()];
+                case 35:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 36;
                 case 36:
+                    ++cnt3_4;
+                    return [3 /*break*/, 34];
+                case 37: return [4 /*yield*/, func216()];
+                case 38:
                     _a.sent();
                     return [2 /*return*/];
-                case 37:
-                    if (!(var_929 == 65536)) return [3 /*break*/, 45];
+                case 39:
+                    if (!(var_929 == 65536)) return [3 /*break*/, 47];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 65536;
@@ -1536,28 +1548,28 @@ function func216() {
                         var_927 = 65536;
                     }
                     return [4 /*yield*/, func217()];
-                case 38:
+                case 40:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 39:
+                case 41:
                     _a.sent();
                     cnt3_5 = 0;
-                    _a.label = 40;
-                case 40:
-                    if (!(cnt3_5 < 2)) return [3 /*break*/, 43];
-                    return [4 /*yield*/, func337()];
-                case 41:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 42;
                 case 42:
-                    ++cnt3_5;
-                    return [3 /*break*/, 40];
-                case 43: return [4 /*yield*/, func216()];
+                    if (!(cnt3_5 < 2)) return [3 /*break*/, 45];
+                    return [4 /*yield*/, func337()];
+                case 43:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 44;
                 case 44:
+                    ++cnt3_5;
+                    return [3 /*break*/, 42];
+                case 45: return [4 /*yield*/, func216()];
+                case 46:
                     _a.sent();
                     return [2 /*return*/];
-                case 45:
-                    if (!(var_929 == 16384)) return [3 /*break*/, 53];
+                case 47:
+                    if (!(var_929 == 16384)) return [3 /*break*/, 55];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 16384;
@@ -1594,28 +1606,28 @@ function func216() {
                         var_927 = 16384;
                     }
                     return [4 /*yield*/, func217()];
-                case 46:
+                case 48:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 47:
+                case 49:
                     _a.sent();
                     cnt3_6 = 0;
-                    _a.label = 48;
-                case 48:
-                    if (!(cnt3_6 < 2)) return [3 /*break*/, 51];
-                    return [4 /*yield*/, func337()];
-                case 49:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 50;
                 case 50:
-                    ++cnt3_6;
-                    return [3 /*break*/, 48];
-                case 51: return [4 /*yield*/, func216()];
+                    if (!(cnt3_6 < 2)) return [3 /*break*/, 53];
+                    return [4 /*yield*/, func337()];
+                case 51:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 52;
                 case 52:
+                    ++cnt3_6;
+                    return [3 /*break*/, 50];
+                case 53: return [4 /*yield*/, func216()];
+                case 54:
                     _a.sent();
                     return [2 /*return*/];
-                case 53:
-                    if (!(var_929 == 262144)) return [3 /*break*/, 61];
+                case 55:
+                    if (!(var_929 == 262144)) return [3 /*break*/, 63];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 262144;
@@ -1652,28 +1664,28 @@ function func216() {
                         var_927 = 262144;
                     }
                     return [4 /*yield*/, func217()];
-                case 54:
+                case 56:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 55:
+                case 57:
                     _a.sent();
                     cnt3_7 = 0;
-                    _a.label = 56;
-                case 56:
-                    if (!(cnt3_7 < 2)) return [3 /*break*/, 59];
-                    return [4 /*yield*/, func337()];
-                case 57:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 58;
                 case 58:
-                    ++cnt3_7;
-                    return [3 /*break*/, 56];
-                case 59: return [4 /*yield*/, func216()];
+                    if (!(cnt3_7 < 2)) return [3 /*break*/, 61];
+                    return [4 /*yield*/, func337()];
+                case 59:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 60;
                 case 60:
+                    ++cnt3_7;
+                    return [3 /*break*/, 58];
+                case 61: return [4 /*yield*/, func216()];
+                case 62:
                     _a.sent();
                     return [2 /*return*/];
-                case 61:
-                    if (!(var_929 == 524288)) return [3 /*break*/, 69];
+                case 63:
+                    if (!(var_929 == 524288)) return [3 /*break*/, 71];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 524288;
@@ -1710,28 +1722,28 @@ function func216() {
                         var_927 = 524288;
                     }
                     return [4 /*yield*/, func217()];
-                case 62:
+                case 64:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 63:
+                case 65:
                     _a.sent();
                     cnt3_8 = 0;
-                    _a.label = 64;
-                case 64:
-                    if (!(cnt3_8 < 2)) return [3 /*break*/, 67];
-                    return [4 /*yield*/, func337()];
-                case 65:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 66;
                 case 66:
-                    ++cnt3_8;
-                    return [3 /*break*/, 64];
-                case 67: return [4 /*yield*/, func216()];
+                    if (!(cnt3_8 < 2)) return [3 /*break*/, 69];
+                    return [4 /*yield*/, func337()];
+                case 67:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 68;
                 case 68:
+                    ++cnt3_8;
+                    return [3 /*break*/, 66];
+                case 69: return [4 /*yield*/, func216()];
+                case 70:
                     _a.sent();
                     return [2 /*return*/];
-                case 69:
-                    if (!(var_929 == 1048576)) return [3 /*break*/, 77];
+                case 71:
+                    if (!(var_929 == 1048576)) return [3 /*break*/, 79];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 1048576;
@@ -1768,28 +1780,28 @@ function func216() {
                         var_927 = 1048576;
                     }
                     return [4 /*yield*/, func217()];
-                case 70:
+                case 72:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 71:
+                case 73:
                     _a.sent();
                     cnt3_9 = 0;
-                    _a.label = 72;
-                case 72:
-                    if (!(cnt3_9 < 2)) return [3 /*break*/, 75];
-                    return [4 /*yield*/, func337()];
-                case 73:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 74;
                 case 74:
-                    ++cnt3_9;
-                    return [3 /*break*/, 72];
-                case 75: return [4 /*yield*/, func216()];
+                    if (!(cnt3_9 < 2)) return [3 /*break*/, 77];
+                    return [4 /*yield*/, func337()];
+                case 75:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 76;
                 case 76:
+                    ++cnt3_9;
+                    return [3 /*break*/, 74];
+                case 77: return [4 /*yield*/, func216()];
+                case 78:
                     _a.sent();
                     return [2 /*return*/];
-                case 77:
-                    if (!(var_929 == 131072)) return [3 /*break*/, 85];
+                case 79:
+                    if (!(var_929 == 131072)) return [3 /*break*/, 87];
                     if (var_925 == 1) {
                         var_926 = var_692;
                         var_692 = 131072;
@@ -1826,29 +1838,29 @@ function func216() {
                         var_927 = 131072;
                     }
                     return [4 /*yield*/, func217()];
-                case 78:
+                case 80:
                     _a.sent();
                     return [4 /*yield*/, func218()];
-                case 79:
+                case 81:
                     _a.sent();
                     cnt3_10 = 0;
-                    _a.label = 80;
-                case 80:
-                    if (!(cnt3_10 < 2)) return [3 /*break*/, 83];
-                    return [4 /*yield*/, func337()];
-                case 81:
-                    _a.sent(); // メッセージ関係呼び出し
                     _a.label = 82;
                 case 82:
-                    ++cnt3_10;
-                    return [3 /*break*/, 80];
-                case 83: return [4 /*yield*/, func216()];
+                    if (!(cnt3_10 < 2)) return [3 /*break*/, 85];
+                    return [4 /*yield*/, func337()];
+                case 83:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 84;
                 case 84:
+                    ++cnt3_10;
+                    return [3 /*break*/, 82];
+                case 85: return [4 /*yield*/, func216()];
+                case 86:
                     _a.sent();
                     return [2 /*return*/];
-                case 85:
-                    if (!(var_925 == 8)) return [3 /*break*/, 89];
-                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 89];
+                case 87:
+                    if (!(var_925 == 8)) return [3 /*break*/, 91];
+                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 91];
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_692 = 8192;
                     var_693 = 2048;
@@ -1861,18 +1873,18 @@ function func216() {
                     var_700 = 524288;
                     var_701 = 1048576;
                     return [4 /*yield*/, func217()];
-                case 86:
-                    _a.sent();
-                    return [4 /*yield*/, func337()];
-                case 87:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func216()];
                 case 88:
                     _a.sent();
-                    return [2 /*return*/];
+                    return [4 /*yield*/, func337()];
                 case 89:
-                    if (!(var_925 == 9)) return [3 /*break*/, 92];
-                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 92];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func216()];
+                case 90:
+                    _a.sent();
+                    return [2 /*return*/];
+                case 91:
+                    if (!(var_925 == 9)) return [3 /*break*/, 94];
+                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 94];
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     var_664[1] = var_692;
                     var_664[2] = var_693;
@@ -1887,17 +1899,17 @@ function func216() {
                     bsave(file_name = "00.dat", data = var_664, data_size = null, offset = 1500);
                     var_903 = 0;
                     return [4 /*yield*/, func051()];
-                case 90:
+                case 92:
                     _a.sent();
                     return [4 /*yield*/, func193()];
-                case 91:
+                case 93:
                     _a.sent();
                     return [2 /*return*/];
-                case 92: return [4 /*yield*/, func337()];
-                case 93:
+                case 94: return [4 /*yield*/, func337()];
+                case 95:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func216()];
-                case 94:
+                case 96:
                     _a.sent();
                     return [2 /*return*/];
             }

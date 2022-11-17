@@ -2176,11 +2176,14 @@ function func420(this: any) {
         if (belongings_item_list >= 100 && belongings_item_list < 400) {
             yield func493(); // 装備disc能力値の設定
         }
-        if (belongings_item_list < 100 || belongings_item_list >= 500) {
+        // if (belongings_item_list < 100 || belongings_item_list >= 500) {
+        //     yield func498(); // 消費アイテムの効果
+        // }
+        if (belongings_item_list >= 500 || belongings_item_list < 750) {
             yield func498(); // 消費アイテムの効果
         }
         belongings_item_list = var_1944;
-        yield func433();
+        //yield func433();
 
         if (var_234 == 0) {
             var_1931 = 0;
@@ -5780,7 +5783,6 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
-                        
                         yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -5793,7 +5795,6 @@ function func461(this: any) {
                         DSPLAY(audio_id = 100); // アイテム選択時の効果音
                         yield func337(); // メッセージ関係呼び出し
                         yield func337(); // メッセージ関係呼び出し
-                        
                         yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -6104,6 +6105,7 @@ function func461(this: any) {
                     
                     Y_axis_item_position = 45;
                     var_225 = 1;
+
                     DSPLAY(audio_id = 100);
                     yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
@@ -6116,8 +6118,7 @@ function func461(this: any) {
                     
                     Y_axis_item_position = Y_axis_item_position - 22;
                     var_225 = var_225 - 1;
-                    //Y_axis_item_position = var_233[var_1876].Var8 - 22;
-                    //var_225 = var_233[var_1876].Var8 - 1;
+
                     DSPLAY(audio_id = 100);
                     yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
@@ -6128,6 +6129,7 @@ function func461(this: any) {
                     
                     Y_axis_item_position = (var_233[var_1876].Var8 - 1) * 22 + 45;
                     var_225 = var_233[var_1876].Var8;
+
                     DSPLAY(audio_id = 100);
                     yield func337(); // メッセージ関係呼び出し
                     yield func337(); // メッセージ関係呼び出し
@@ -12412,6 +12414,7 @@ function func491(this: any) {
 function func492(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(492);
+        /*
         item_name = "";
         item_description1 = "";
         var_808 = "";
@@ -12425,6 +12428,22 @@ function func492(this: any) {
         var_2174 = 0;
         var_2039 = "";
         var_2175 = "";
+        */
+        if (belongings_item_list == 0) {
+        item_name = "";
+        item_description1 = "";
+        var_808 = "";
+        item_ability_description = "";
+        item_message1 = "";
+        item_message2 = "";
+        var_2173 = "";
+        buying_price = 0;
+        var_1984 = 0;
+        var_812 = 0;
+        var_2174 = 0;
+        var_2039 = "";
+        var_2175 = "";
+        }
         if (belongings_item_list == 1) {
             buying_price = 0;
             item_name = "お金";
@@ -16748,6 +16767,7 @@ function func498(this: any) {
             var_2187 = belongings_item_list;
             yield func492(); // アイテムリスト呼び出し
             var_2188 = item_name;
+
             if (var_862[belongings_item_list][0] == 0) {
                 if (belongings_item_list == 567 || belongings_item_list == 590 || belongings_item_list == 565) {
                     comments_row1 = comments_row1a;

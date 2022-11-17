@@ -9743,29 +9743,31 @@ function func798() {
                     _a.sent(); // 口座へ入金、口座から出金した時の表示
                     _a.label = 4;
                 case 4:
-                    if (!(var_254 == 1 && var_3179 != 6)) return [3 /*break*/, 6];
+                    if (!(var_254 == 1 && var_3179 != 6)) return [3 /*break*/, 7];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     var_3179 = var_3179 + 1;
                     var_3180 = var_3180 - 15;
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 5:
-                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 6;
+                    return [4 /*yield*/, func337()];
                 case 6:
-                    if (!(var_257 == 1 && var_3179 != 1)) return [3 /*break*/, 8];
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 7;
+                case 7:
+                    if (!(var_257 == 1 && var_3179 != 1)) return [3 /*break*/, 10];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     var_3179 = var_3179 - 1;
                     var_3180 = var_3180 + 15;
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 7:
-                    // yield func337(); // メッセージ関係呼び出し
-                    _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 8;
                 case 8:
-                    if (!(var_255 == 1)) return [3 /*break*/, 10];
+                    _a.sent(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 9:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 10;
+                case 10:
+                    if (!(var_255 == 1)) return [3 /*break*/, 13];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (var_3179 == 1) {
                         var_3170 = var_3170 + 1;
@@ -9851,14 +9853,15 @@ function func798() {
                         var_3175 = var_3181;
                         var_3176 = var_1032;
                     }
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 9:
-                    // yield func337(); // メッセージ関係呼び出し
+                case 11:
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 10;
-                case 10:
-                    if (!(var_259 == 1)) return [3 /*break*/, 12];
+                    return [4 /*yield*/, func337()];
+                case 12:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 13;
+                case 13:
+                    if (!(var_259 == 1)) return [3 /*break*/, 16];
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     if (var_3179 == 1) {
                         var_3170 = var_3170 - 1;
@@ -9944,34 +9947,35 @@ function func798() {
                         var_3175 = var_3181;
                         var_3176 = var_1032;
                     }
-                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 11:
-                    // yield func337(); // メッセージ関係呼び出し
+                case 14:
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 12;
-                case 12:
-                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 16];
-                    if (!(var_1205 == 1)) return [3 /*break*/, 14];
+                    return [4 /*yield*/, func337()];
+                case 15:
+                    _a.sent(); // メッセージ関係呼び出し
+                    _a.label = 16;
+                case 16:
+                    if (!(key_Z_on == 1 || key_A_on == 1)) return [3 /*break*/, 20];
+                    if (!(var_1205 == 1)) return [3 /*break*/, 18];
                     var_1032 = var_1032 + var_3176;
                     wallet = wallet - var_3176;
                     return [4 /*yield*/, func799()];
-                case 13:
+                case 17:
                     _a.sent(); // 口座へ入金、口座から出金した時の表示
                     return [2 /*return*/];
-                case 14:
-                    if (!(var_1205 == 2)) return [3 /*break*/, 16];
+                case 18:
+                    if (!(var_1205 == 2)) return [3 /*break*/, 20];
                     var_1032 = var_1032 - var_3176;
                     wallet = wallet + var_3176;
                     if (wallet > 999999) {
                         wallet = 999999;
                     }
                     return [4 /*yield*/, func799()];
-                case 15:
+                case 19:
                     _a.sent(); // 口座へ入金、口座から出金した時の表示
                     return [2 /*return*/];
-                case 16: return [4 /*yield*/, func798()];
-                case 17:
+                case 20: return [4 /*yield*/, func798()];
+                case 21:
                     _a.sent();
                     return [2 /*return*/];
             }
