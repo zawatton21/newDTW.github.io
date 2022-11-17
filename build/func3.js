@@ -2803,6 +2803,7 @@ function func330() {
         });
     });
 }
+// 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
 function func331() {
     return __awaiter(this, void 0, void 0, function () {
         var map_elem_size, cnt1_6, cnt2_13, cnt3_8, cnt1_7, cnt2_14;
@@ -16520,7 +16521,7 @@ function func368() {
                 case 1:
                     _a.sent(); // アイテムリスト呼び出し
                     // アイテム欄を開いていなければ？
-                    if (var_220 == 0) {
+                    if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                         var_814 = var_233[var_225].Var0;
                         var_1662 = var_233[var_225].Var3;
                         item_modified_value = var_233[var_225].Var4;
@@ -16548,7 +16549,7 @@ function func368() {
                         var_824 = var_233[var_225].Var29;
                     }
                     // アイテム欄を開いていれば？
-                    if (var_220 == 1) {
+                    if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
                         var_814 = var_486[var_682][var_225][0];
                         var_1662 = var_486[var_682][var_225][3];
                         item_modified_value = var_486[var_682][var_225][4];
@@ -16639,14 +16640,14 @@ function func369() {
                     if (var_1660 > 3) {
                         var_1660 = 0;
                     }
-                    if (var_220 == 0) {
+                    if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                         var_233[var_225].Var13 = var_1660;
                         if (var_225 == 0) {
                             var_1676 = var_77[var_66][var_67];
                             var_78[var_1676].Var13 = var_1660;
                         }
                     }
-                    if (var_220 == 1) {
+                    if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
                         var_486[var_682][var_225][13] = var_1660;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -16671,14 +16672,14 @@ function func369() {
                     if (var_1660 < 0) {
                         var_1660 = 3;
                     }
-                    if (var_220 == 0) {
+                    if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                         var_233[var_225].Var13 = var_1660;
                         if (var_225 == 0) {
                             var_1676 = var_77[var_66][var_67];
                             var_78[var_1676].Var13 = var_1660;
                         }
                     }
-                    if (var_220 == 1) {
+                    if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
                         var_486[var_682][var_225][13] = var_1660;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
@@ -16723,10 +16724,10 @@ function func370() {
                 case 1:
                     if (!(cnt1_11 < 10)) return [3 /*break*/, 4];
                     var_813[var_826] = "";
-                    if (var_220 == 0) {
+                    if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                         belongings_item_list = var_233[var_1670]["Var" + var_825];
                     }
-                    if (var_220 == 1) {
+                    if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
                         belongings_item_list = var_486[var_682][var_1670][var_825];
                     }
                     if (belongings_item_list == 104) {

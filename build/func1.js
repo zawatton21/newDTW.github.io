@@ -6319,7 +6319,7 @@ function func159() {
                     _a.sent();
                     return [4 /*yield*/, func331()];
                 case 23:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     var_217 = 0;
                     var_205 = 1;
                     return [4 /*yield*/, func231()];
@@ -11293,7 +11293,7 @@ function func199() {
                     var_689 = ginfo(18);
                     return [4 /*yield*/, func331()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [4 /*yield*/, func337()];
                 case 6:
                     _a.sent(); // メッセージ関係呼び出し
@@ -11323,7 +11323,7 @@ function func199() {
                     var_25[14] = var_690;
                     return [4 /*yield*/, func331()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [4 /*yield*/, func337()];
                 case 13:
                     _a.sent(); // メッセージ関係呼び出し

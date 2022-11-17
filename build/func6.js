@@ -625,7 +625,7 @@ function func603() {
                     var_83[var_673].Var2 = 0;
                     return [4 /*yield*/, func331()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     var_83[var_2749].Var12 = 0;
                     var_83[var_2749].Var39 = var_83[var_2749].Var39 + 1;
                     if (var_83[var_2749].Var39 == 1) {
@@ -3657,7 +3657,7 @@ function func617() {
                     return [3 /*break*/, 28];
                 case 31: return [4 /*yield*/, func331()];
                 case 32:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [2 /*return*/];
             }
         });
@@ -3732,7 +3732,7 @@ function func618() {
                     var_2546 = 0;
                     return [4 /*yield*/, func331()];
                 case 10:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     DSPLAY(audio_id = 199);
                     comments_row1 = "";
                     comments_row2 = "";
@@ -5234,7 +5234,7 @@ function func620() {
                     _a.sent();
                     return [4 /*yield*/, func331()];
                 case 251:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     cnt3_28 = 0;
                     _a.label = 252;
                 case 252:
@@ -5599,7 +5599,7 @@ function func620() {
                     var_83[var_412].Var10 = var_71[var_2350][var_2351];
                     return [4 /*yield*/, func331()];
                 case 310:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     _a.label = 311;
                 case 311: return [2 /*return*/];
                 case 312:
@@ -6441,7 +6441,7 @@ function func620() {
                     var_167 = 0;
                     return [4 /*yield*/, func331()];
                 case 446:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     var_2197 = 1;
                     return [2 /*return*/];
                 case 447:
@@ -7753,7 +7753,7 @@ function func620() {
                     var_83[var_2273].Var7 = 0;
                     return [4 /*yield*/, func331()];
                 case 665:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     var_1073 = rnd(3);
                     return [4 /*yield*/, func094()];
                 case 666:
@@ -7954,7 +7954,7 @@ function func620() {
                     var_83[var_2273].Var5 = 2;
                     return [4 /*yield*/, func331()];
                 case 707:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "地面から 土人形 が現れた！";
@@ -8069,7 +8069,7 @@ function func620() {
                     return [2 /*return*/];
                 case 722: return [4 /*yield*/, func331()];
                 case 723:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [4 /*yield*/, func094()];
                 case 724:
                     _a.sent();
@@ -8958,7 +8958,7 @@ function func620() {
                     var_1583 = 0;
                     return [4 /*yield*/, func331()];
                 case 876:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "吉良はｼｱｰﾊｰﾄｱﾀｯｸを繰り出した！";
@@ -16364,7 +16364,7 @@ function func636() {
                     var_83[var_314].Var0 = 0;
                     return [4 /*yield*/, func331()];
                 case 255:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     cnt2_56 = 0;
                     _a.label = 256;
                 case 256:
@@ -18454,7 +18454,7 @@ function func647() {
                 case 10:
                     var_251 = 0;
                     var_340 = var_233[var_225].Var0;
-                    if (var_220 == 1) {
+                    if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
                         var_340 = var_486[var_682][var_225][0];
                     }
                     if (var_1223 == 1) {
@@ -24439,7 +24439,7 @@ function func660() {
                     var_83[var_3068].Var8 = 0;
                     return [4 /*yield*/, func331()];
                 case 81:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     cnt2_144 = 0;
                     _a.label = 82;
                 case 82:
@@ -26937,7 +26937,7 @@ function func670() {
                     var_83[var_314].Var2 = 0;
                     return [4 /*yield*/, func331()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -28607,7 +28607,7 @@ function func687() {
                     var_311 = 255;
                     return [4 /*yield*/, func331()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     var_312 = 1;
                     cnt1_128 = 0;
                     _a.label = 6;
@@ -28755,7 +28755,7 @@ function func688() {
                     var_311 = 255;
                     return [4 /*yield*/, func331()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     var_312 = 1;
                     cnt1_131 = 0;
                     _a.label = 2;
@@ -29576,7 +29576,7 @@ function func698() {
                     var_2195 = 0;
                     return [4 /*yield*/, func331()];
                 case 61:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     var_2199 = 1;
                     cnt1_140 = 0;
                     _a.label = 62;
@@ -29925,7 +29925,7 @@ function func699() {
                     var_2195 = 0;
                     return [4 /*yield*/, func331()];
                 case 61:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [2 /*return*/];
             }
         });

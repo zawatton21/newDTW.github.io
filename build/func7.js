@@ -83,7 +83,7 @@ function func700() {
                     var_2217 = 0;
                     return [4 /*yield*/, func331()];
                 case 11:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [2 /*return*/];
             }
         });
@@ -750,7 +750,7 @@ function func703() {
                     var_175 = 0;
                     return [4 /*yield*/, func331()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     _a.label = 5;
                 case 5:
                     if (!(var_176 >= 1 && var_314 == var_176)) return [3 /*break*/, 10];
@@ -775,7 +775,7 @@ function func703() {
                     var_176 = 0;
                     return [4 /*yield*/, func331()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     _a.label = 10;
                 case 10: return [2 /*return*/];
             }
@@ -1626,7 +1626,7 @@ function func705() {
                     _a.label = 133;
                 case 133: return [4 /*yield*/, func331()];
                 case 134:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     _a.label = 135;
                 case 135:
                     if (var_83[var_402].Var0 == 33 && var_2196 == 0) {
@@ -5524,7 +5524,7 @@ function func754() {
                     var_83[var_2171].Var10 = var_71[var_1512][var_1513];
                     return [4 /*yield*/, func331()];
                 case 62:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     _a.label = 63;
                 case 63:
                     if (!(var_1505 == 3)) return [3 /*break*/, 65];
@@ -5535,7 +5535,7 @@ function func754() {
                     var_78[var_2171].Var9 = var_71[var_1512][var_1513];
                     return [4 /*yield*/, func331()];
                 case 64:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     _a.label = 65;
                 case 65:
                     cnt1_54 = 0;
@@ -6415,7 +6415,7 @@ function func770() {
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     return [4 /*yield*/, func461()];
                 case 2:
-                    _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
+                    _a.sent(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return [2 /*return*/];
             }
         });
@@ -6468,7 +6468,7 @@ function func771() {
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     return [4 /*yield*/, func461()];
                 case 8:
-                    _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
+                    _a.sent(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return [2 /*return*/];
                 case 9: return [4 /*yield*/, func426()];
                 case 10:
@@ -6530,7 +6530,7 @@ function func771() {
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     return [4 /*yield*/, func461()];
                 case 21:
-                    _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
+                    _a.sent(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return [2 /*return*/];
                 case 22: return [4 /*yield*/, func772()];
                 case 23:
@@ -6844,7 +6844,7 @@ function func772() {
                     var_83[var_3148].Var2 = 0;
                     return [4 /*yield*/, func331()];
                 case 30:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     _a.label = 31;
                 case 31:
                     var_217 = 1;
@@ -7002,7 +7002,7 @@ function func774() {
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     return [4 /*yield*/, func461()];
                 case 2:
-                    _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
+                    _a.sent(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return [2 /*return*/];
             }
         });
@@ -7050,7 +7050,7 @@ function func775() {
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     return [4 /*yield*/, func461()];
                 case 4:
-                    _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
+                    _a.sent(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return [2 /*return*/];
                 case 5: return [4 /*yield*/, func426()];
                 case 6:
@@ -7107,7 +7107,7 @@ function func775() {
                     open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     return [4 /*yield*/, func461()];
                 case 13:
-                    _a.sent(); // 道具画面(メニュー画面/道具)呼び出し
+                    _a.sent(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return [2 /*return*/];
                 case 14: return [4 /*yield*/, func776()];
                 case 15:

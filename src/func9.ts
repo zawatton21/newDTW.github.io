@@ -484,7 +484,7 @@ function func909(this: any) {
             }
         }
         yield func910();
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         return;
     });
 }
@@ -851,7 +851,7 @@ function func917(this: any) {
         var_1046 = 0;
 
         var_1058 = dim(30, 30);
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         comments_row1 = "敵が集まってしまった！";
         comments_row2 = "";
         var_198 = 1;
@@ -1018,7 +1018,7 @@ function func919(this: any) {
             }
             var_2194 = var_2194 + 1;
         }
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         if (var_3584 == 1) {
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -1217,7 +1217,7 @@ function func923(this: any) {
         }
         var_1756 = 0;
         var_452 = 0;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ピザ屋はその辺に置いて帰ったようだ。";

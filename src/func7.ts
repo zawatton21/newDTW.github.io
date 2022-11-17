@@ -36,7 +36,7 @@ function func700(this: any) {
         var_2217 = 1;
         yield func705();
         var_2217 = 0;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         return;
     });
 }
@@ -504,7 +504,7 @@ function func703(this: any) {
             var_300 = 0;
             yield func047();
             var_175 = 0;
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         }
         if (var_176 >= 1 && var_314 == var_176) {
             yield func340(); // キー入力による選択処理
@@ -520,7 +520,7 @@ function func703(this: any) {
             var_300 = 0;
             yield func047();
             var_176 = 0;
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         }
         return;
     });
@@ -1127,7 +1127,7 @@ function func705(this: any) {
             if (var_2538 >= 1) {
                 yield func691();
             }
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         }
         if (var_83[var_402].Var0 == 33 && var_2196 == 0) {
             var_83[var_402].Var0 = 34;
@@ -3773,7 +3773,7 @@ function func754(this: any) {
             var_83[var_2171].Var1 = var_1512;
             var_83[var_2171].Var2 = var_1513;
             var_83[var_2171].Var10 = var_71[var_1512][var_1513];
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         }
         if (var_1505 == 3) {
             var_77[var_1508][var_1509] = 0;
@@ -3781,7 +3781,7 @@ function func754(this: any) {
             var_78[var_2171].Var1 = var_1512;
             var_78[var_2171].Var2 = var_1513;
             var_78[var_2171].Var9 = var_71[var_1512][var_1513];
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -4320,7 +4320,7 @@ function func770(this: any) {
         var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
         yield func051();
         open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-        yield func461(); // 道具画面(メニュー画面/道具)呼び出し
+        yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
         return;
     });
 }
@@ -4351,7 +4351,7 @@ function func771(this: any) {
             yield func340(); // キー入力による選択処理
             yield func051();
             open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)呼び出し
+            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
         yield func426();
@@ -4390,7 +4390,7 @@ function func771(this: any) {
             yield func340(); // キー入力による選択処理
             yield func051();
             open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)呼び出し
+            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
         yield func772();
@@ -4644,7 +4644,7 @@ function func772(this: any) {
             var_83[var_3148].Var0 = 0;
             var_83[var_3148].Var1 = 0;
             var_83[var_3148].Var2 = 0;
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         }
         var_217 = 1;
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -4747,7 +4747,7 @@ function func774(this: any) {
         var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
         yield func051();
         open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-        yield func461(); // 道具画面(メニュー画面/道具)呼び出し
+        yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
         return;
     });
 }
@@ -4782,7 +4782,7 @@ function func775(this: any) {
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
             open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)呼び出し
+            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
         yield func426();
@@ -4824,7 +4824,7 @@ function func775(this: any) {
             var_223 = var_224 + 10;
             var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
             open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)呼び出し
+            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
         yield func776();
@@ -6500,7 +6500,7 @@ function func798(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             var_3179 = var_3179 + 1;
             var_3180 = var_3180 - 15;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_257 == 1 && var_3179 != 1) {
@@ -6508,7 +6508,7 @@ function func798(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             var_3179 = var_3179 - 1;
             var_3180 = var_3180 + 15;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
@@ -6598,7 +6598,7 @@ function func798(this: any) {
                 var_3175 = var_3181;
                 var_3176 = var_1032;
             }
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_259 == 1) {
@@ -6688,7 +6688,7 @@ function func798(this: any) {
                 var_3175 = var_3181;
                 var_3176 = var_1032;
             }
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (key_Z_on == 1 || key_A_on == 1) {

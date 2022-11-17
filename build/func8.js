@@ -4812,13 +4812,13 @@ function func838() {
                     dbgprt(838);
                     var_271 = 1;
                     var_1470 = 1;
-                    if (var_220 == 0) {
+                    if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                         belongings_item_list = var_233[var_1056].Var0;
                         var_1471 = var_233[var_1056].Var0;
                         disc_rarity = var_233[var_1056].Var13;
                         var_1249 = var_233[var_1056].Var13;
                     }
-                    if (var_220 == 1) {
+                    if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
                         belongings_item_list = var_486[var_485][var_484][0];
                         var_1471 = var_486[var_485][var_484][0];
                         disc_rarity = var_486[var_485][var_484][13];
@@ -10023,7 +10023,7 @@ function func876() {
                     var_68 = 1;
                     return [4 /*yield*/, func331()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [4 /*yield*/, func009()];
                 case 13:
                     _a.sent(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -13085,7 +13085,7 @@ function func895() {
                     gsel(0, 1);
                     return [4 /*yield*/, func331()];
                 case 27:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [4 /*yield*/, func929()];
                 case 28:
                     _a.sent();
@@ -13104,7 +13104,7 @@ function func895() {
                     gsel(0, 1);
                     return [4 /*yield*/, func331()];
                 case 32:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [4 /*yield*/, func907()];
                 case 33:
                     _a.sent();

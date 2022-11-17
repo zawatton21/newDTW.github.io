@@ -599,7 +599,7 @@ function func909() {
                     _a.sent();
                     return [4 /*yield*/, func331()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     return [2 /*return*/];
             }
         });
@@ -1065,7 +1065,7 @@ function func917() {
                     var_1058 = dim(30, 30);
                     return [4 /*yield*/, func331()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     comments_row1 = "敵が集まってしまった！";
                     comments_row2 = "";
                     var_198 = 1;
@@ -1309,7 +1309,7 @@ function func919() {
                     return [3 /*break*/, 14];
                 case 42: return [4 /*yield*/, func331()];
                 case 43:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     if (!(var_3584 == 1)) return [3 /*break*/, 49];
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -1634,7 +1634,7 @@ function func923() {
                     var_452 = 0;
                     return [4 /*yield*/, func331()];
                 case 16:
-                    _a.sent();
+                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "ピザ屋はその辺に置いて帰ったようだ。";

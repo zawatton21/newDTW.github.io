@@ -445,7 +445,7 @@ function func603(this: any) {
         var_83[var_673].Var0 = 0;
         var_83[var_673].Var1 = 0;
         var_83[var_673].Var2 = 0;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         var_83[var_2749].Var12 = 0;
         var_83[var_2749].Var39 = var_83[var_2749].Var39 + 1;
         if (var_83[var_2749].Var39 == 1) {
@@ -1131,27 +1131,27 @@ function func607(this: any) {
         if (var_83[var_673].Var1 > var_2621 && var_83[var_673].Var1 < var_2622 && var_83[var_673].Var2 > var_2624 && var_83[var_673].Var2 < var_2623) {
             var_83[var_673].Var21 = 1;
             var_411 = 1;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            var_411 = 3;
-            // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            var_411 = 4;
-            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            var_411 = 3;
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            var_411 = 4;
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 6;
@@ -2390,7 +2390,7 @@ function func617(this: any) {
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         return;
     });
 }
@@ -2437,7 +2437,7 @@ function func618(this: any) {
         var_673 = var_2353;
         var_1845 = 0;
         var_2546 = 0;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
 
         DSPLAY(audio_id = 199);
         comments_row1 = "";
@@ -3475,7 +3475,7 @@ function func620(this: any) {
                 var_26_x = var_26[2];
                 var_27_x = var_27[2];
                 yield func047();
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
@@ -3731,7 +3731,7 @@ function func620(this: any) {
                 var_82[var_2695][var_2696] = 0;
                 var_83[var_412].Var11 = 0;
                 var_83[var_412].Var10 = var_71[var_2350][var_2351];
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
             }
             return;
         }
@@ -4321,7 +4321,7 @@ function func620(this: any) {
                 var_389 = 0;
                 var_127 = 1;
                 var_167 = 0;
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 var_2197 = 1;
                 return;
             }
@@ -5232,7 +5232,7 @@ function func620(this: any) {
                 var_83[var_2273].Var5 = 2;
                 yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var7 = 0;
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 var_1073 = rnd(3);
                 yield func094();
                 comments_row1 = "";
@@ -5349,7 +5349,7 @@ function func620(this: any) {
                 var_411 = 0;
                 var_83[var_2273].Var21 = 0;
                 var_83[var_2273].Var5 = 2;
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "地面から 土人形 が現れた！";
@@ -5438,7 +5438,7 @@ function func620(this: any) {
                     var_2197 = 1;
                     return;
                 }
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 yield func094();
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -6045,7 +6045,7 @@ function func620(this: any) {
                 }
                 var_271 = 0;
                 var_1583 = 0;
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "吉良はｼｱｰﾊｰﾄｱﾀｯｸを繰り出した！";
@@ -12843,7 +12843,7 @@ function func636(this: any) {
             }
             var_82[var_347][var_348] = 0;
             var_83[var_314].Var0 = 0;
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -14431,7 +14431,7 @@ function func647(this: any) {
         }
         var_251 = 0;
         var_340 = var_233[var_225].Var0;
-        if (var_220 == 1) {
+        if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
             var_340 = var_486[var_682][var_225][0];
         }
         if (var_1223 == 1) {
@@ -14473,8 +14473,8 @@ function func647(this: any) {
         var_1266 = 4;
         yield func337(); // メッセージ関係呼び出し
         var_1266 = 6;
-        // yield func337(); // メッセージ関係呼び出し
-        // yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
+        yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_1197 = 1;
         var_1266 = 0;
@@ -18833,7 +18833,7 @@ function func660(this: any) {
             }
             var_83[var_1385].Var8 = 0;
             var_83[var_3068].Var8 = 0;
-            yield func331();
+            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -20644,7 +20644,7 @@ function func670(this: any) {
         var_83[var_314].Var0 = 0;
         var_83[var_314].Var1 = 0;
         var_83[var_314].Var2 = 0;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -21920,7 +21920,7 @@ function func687(this: any) {
 
         DSPLAY(audio_id = 192);
         var_311 = 255;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -22021,7 +22021,7 @@ function func688(this: any) {
 
         DSPLAY(audio_id = 192);
         var_311 = 255;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -22587,7 +22587,7 @@ function func698(this: any) {
         }
         var_2196 = 0;
         var_2195 = 0;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         var_2199 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
             if (var_83[var_2199].Var0 == 17 && var_83[var_2199].Var29 == 1) {
@@ -22816,7 +22816,7 @@ function func699(this: any) {
         }
         var_2196 = 0;
         var_2195 = 0;
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         return;
     });
 }

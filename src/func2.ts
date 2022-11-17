@@ -94,7 +94,7 @@ function func201(this: any) {
             if (var_690 != 10) {
                 var_690 = var_690 - 10;
             }
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func201();
             return;
@@ -104,7 +104,7 @@ function func201(this: any) {
             if (var_690 != 90) {
                 var_690 = var_690 + 10;
             }
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func201();
             return;
@@ -281,7 +281,7 @@ function func203(this: any) {
             if (var_702 < 0) {
                 var_702 = 0;
             }
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_259 == 1) {
@@ -290,7 +290,7 @@ function func203(this: any) {
             if (var_702 == 9) {
                 var_702 = 8;
             }
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         yield func203();
@@ -419,14 +419,14 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 0) {
                 var_910 = 1;
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 1) {
                 var_910 = 0;
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
@@ -436,14 +436,14 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 1) {
                 var_910 = 0;
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 0) {
                 var_910 = 1;
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
@@ -509,7 +509,7 @@ function func209(this: any) {
                 var_911 = 1;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
@@ -520,7 +520,7 @@ function func209(this: any) {
                 var_911 = 8;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (key_Z_on == 1 || key_A_on == 1) {
@@ -958,7 +958,7 @@ function func216(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
@@ -970,7 +970,7 @@ function func216(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_925 >= 1 && var_925 <= 7) {

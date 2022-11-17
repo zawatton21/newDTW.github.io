@@ -2786,21 +2786,21 @@ function func150(this: any) {
         yield func050();
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             var_83[4].Var5 = 7;
-            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 4;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 1;
-            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 4;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
@@ -3269,10 +3269,10 @@ function func153(this: any) {
         var_27_x = var_27[1];
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_758 = 1;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_758 = 2;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_198 = 1;
             var_300 = 0;
@@ -4041,10 +4041,10 @@ function func156(this: any) {
         var_27_x = var_27[1];
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_758 = 1;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_758 = 2;
-            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_198 = 1;
             var_300 = 0;
@@ -4273,7 +4273,7 @@ function func159(this: any) {
         var_768 = 0;
         var_769 = 0;
         yield func181();
-        yield func331();
+        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
         var_217 = 0;
         var_205 = 1;
         yield func231();
@@ -7898,7 +7898,7 @@ function func193(this: any) {
                 var_899 = 6;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7907,7 +7907,7 @@ function func193(this: any) {
                 var_899 = 0;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7916,7 +7916,7 @@ function func193(this: any) {
                 var_899 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7925,7 +7925,7 @@ function func193(this: any) {
                 var_899 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7934,7 +7934,7 @@ function func193(this: any) {
                 var_899 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7943,7 +7943,7 @@ function func193(this: any) {
                 var_899 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7952,7 +7952,7 @@ function func193(this: any) {
                 var_899 = 5;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7963,7 +7963,7 @@ function func193(this: any) {
                 var_899 = 0;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7972,7 +7972,7 @@ function func193(this: any) {
                 var_899 = 6;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7981,7 +7981,7 @@ function func193(this: any) {
                 var_899 = 5;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7990,7 +7990,7 @@ function func193(this: any) {
                 var_899 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -7999,7 +7999,7 @@ function func193(this: any) {
                 var_899 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -8008,7 +8008,7 @@ function func193(this: any) {
                 var_899 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -8017,7 +8017,7 @@ function func193(this: any) {
                 var_899 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func193();
                 return;
@@ -8073,7 +8073,7 @@ function func195(this: any) {
             if (var_906 == 0) {
                 var_906 = 0;
                 var_686 = 30;
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 1) {
@@ -8081,7 +8081,7 @@ function func195(this: any) {
                 var_686 = 30;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 2) {
@@ -8089,7 +8089,7 @@ function func195(this: any) {
                 var_686 = 40;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 3) {
@@ -8097,7 +8097,7 @@ function func195(this: any) {
                 var_686 = 50;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 4) {
@@ -8105,7 +8105,7 @@ function func195(this: any) {
                 var_686 = 60;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
         }
@@ -8113,7 +8113,7 @@ function func195(this: any) {
             if (var_906 == 4) {
                 var_906 = 4;
                 var_686 = 70;
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 3) {
@@ -8121,7 +8121,7 @@ function func195(this: any) {
                 var_686 = 70;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 2) {
@@ -8129,7 +8129,7 @@ function func195(this: any) {
                 var_686 = 60;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 1) {
@@ -8137,7 +8137,7 @@ function func195(this: any) {
                 var_686 = 50;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_906 == 0) {
@@ -8145,7 +8145,7 @@ function func195(this: any) {
                 var_686 = 40;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
         }
@@ -8342,7 +8342,7 @@ function func199(this: any) {
                 var_687 = ginfo(16);
                 var_688 = ginfo(17);
                 var_689 = ginfo(18);
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;
@@ -8362,7 +8362,7 @@ function func199(this: any) {
                 var_689 = 255;
                 var_690 = 60;
                 var_25[14] = var_690;
-                yield func331();
+                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;
@@ -8384,7 +8384,7 @@ function func199(this: any) {
             if (var_908 == 0) {
                 var_908 = 2;
                 // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;
@@ -8392,7 +8392,7 @@ function func199(this: any) {
             if (var_908 != 0) {
                 var_908 = var_908 - 1;
                 // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;
@@ -8404,7 +8404,7 @@ function func199(this: any) {
             if (var_908 == 2) {
                 var_908 = 0;
                 // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;
@@ -8412,7 +8412,7 @@ function func199(this: any) {
             if (var_908 != 2) {
                 var_908 = var_908 + 1;
                 // ここ間違えてる？？なぜ func337() が2回も呼ばれる？
-                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;
