@@ -2803,7 +2803,9 @@ function func330() {
         });
     });
 }
-// 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+// 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+// 消費アイテムを使った時のエフェクト等 (正方形が重なってピンク色にピカピカ光る)
+// ハーヴェストやエアロスミス等アイテム、敵の位置が表示
 function func331() {
     return __awaiter(this, void 0, void 0, function () {
         var map_elem_size, cnt1_6, cnt2_13, cnt3_8, cnt1_7, cnt2_14;
@@ -16557,31 +16559,31 @@ function func368() {
                     }
                     // アイテム欄を開いていれば？
                     if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                        var_814 = var_486[var_682][var_225][0];
-                        var_1662 = var_486[var_682][var_225][3];
-                        item_modified_value = var_486[var_682][var_225][4];
-                        free_space_value = var_486[var_682][var_225][5];
-                        var_1671 = var_486[var_682][var_225][6];
-                        var_1663 = var_486[var_682][var_225][7];
-                        var_1672 = var_486[var_682][var_225][11];
-                        var_805 = var_486[var_682][var_225][12];
-                        var_1660 = var_486[var_682][var_225][13];
-                        var_1661 = var_486[var_682][var_225][14];
-                        var_1673 = var_486[var_682][var_225][15];
-                        var_1674 = var_486[var_682][var_225][16];
-                        var_1675 = var_486[var_682][var_225][17];
-                        var_1666 = var_486[var_682][var_225][18];
-                        var_810 = var_486[var_682][var_225][19];
-                        var_815 = var_486[var_682][var_225][20];
-                        var_816 = var_486[var_682][var_225][21];
-                        var_817 = var_486[var_682][var_225][22];
-                        var_818 = var_486[var_682][var_225][23];
-                        var_819 = var_486[var_682][var_225][24];
-                        var_820 = var_486[var_682][var_225][25];
-                        var_821 = var_486[var_682][var_225][26];
-                        var_822 = var_486[var_682][var_225][27];
-                        var_823 = var_486[var_682][var_225][28];
-                        var_824 = var_486[var_682][var_225][29];
+                        var_814 = var_486[var_682][var_225].Var0;
+                        var_1662 = var_486[var_682][var_225].Var3;
+                        item_modified_value = var_486[var_682][var_225].Var4;
+                        free_space_value = var_486[var_682][var_225].Var5;
+                        var_1671 = var_486[var_682][var_225].Var6;
+                        var_1663 = var_486[var_682][var_225].Var7;
+                        var_1672 = var_486[var_682][var_225].Var11;
+                        var_805 = var_486[var_682][var_225].Var12;
+                        var_1660 = var_486[var_682][var_225].Var13;
+                        var_1661 = var_486[var_682][var_225].Var14;
+                        var_1673 = var_486[var_682][var_225].Var15;
+                        var_1674 = var_486[var_682][var_225].Var16;
+                        var_1675 = var_486[var_682][var_225].Var17;
+                        var_1666 = var_486[var_682][var_225].Var18;
+                        var_810 = var_486[var_682][var_225].Var19;
+                        var_815 = var_486[var_682][var_225].Var20;
+                        var_816 = var_486[var_682][var_225].Var21;
+                        var_817 = var_486[var_682][var_225].Var22;
+                        var_818 = var_486[var_682][var_225].Var23;
+                        var_819 = var_486[var_682][var_225].Var24;
+                        var_820 = var_486[var_682][var_225].Var25;
+                        var_821 = var_486[var_682][var_225].Var26;
+                        var_822 = var_486[var_682][var_225].Var27;
+                        var_823 = var_486[var_682][var_225].Var28;
+                        var_824 = var_486[var_682][var_225].Var29;
                     }
                     number_of_abilities = var_810;
                     if (!(var_814 >= 100 && var_814 < 400)) return [3 /*break*/, 3];
@@ -16655,7 +16657,7 @@ function func369() {
                         }
                     }
                     if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                        var_486[var_682][var_225][13] = var_1660;
+                        var_486[var_682][var_225].Var13 = var_1660;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     cnt3_22 = 0;
@@ -16687,7 +16689,7 @@ function func369() {
                         }
                     }
                     if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                        var_486[var_682][var_225][13] = var_1660;
+                        var_486[var_682][var_225].Var13 = var_1660;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
                     cnt3_23 = 0;
@@ -16735,7 +16737,7 @@ function func370() {
                         belongings_item_list = var_233[var_1670]["Var" + var_825];
                     }
                     if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                        belongings_item_list = var_486[var_682][var_1670][var_825];
+                        belongings_item_list = var_486[var_682][var_1670]["Var" + var_825];
                     }
                     if (belongings_item_list == 104) {
                         var_827 = 1;
@@ -19928,33 +19930,33 @@ function func385() {
                         var_78[var_866].Var7 = 10;
                     }
                     var_78[var_866].Var8 = 0;
-                    var_486[var_858][1][0] = 0;
-                    var_486[var_858][2][0] = 0;
-                    var_486[var_858][3][0] = 0;
-                    var_486[var_858][4][0] = 0;
-                    var_486[var_858][5][0] = 0;
-                    var_486[var_858][6][0] = 0;
-                    var_486[var_858][7][0] = 0;
-                    var_486[var_858][8][0] = 0;
-                    var_486[var_858][9][0] = 0;
-                    var_486[var_858][10][0] = 0;
+                    var_486[var_858][1].Var0 = 0;
+                    var_486[var_858][2].Var0 = 0;
+                    var_486[var_858][3].Var0 = 0;
+                    var_486[var_858][4].Var0 = 0;
+                    var_486[var_858][5].Var0 = 0;
+                    var_486[var_858][6].Var0 = 0;
+                    var_486[var_858][7].Var0 = 0;
+                    var_486[var_858][8].Var0 = 0;
+                    var_486[var_858][9].Var0 = 0;
+                    var_486[var_858][10].Var0 = 0;
                     if (var_78[var_866].Var0 == 851) {
                         var_78[var_866].Var7 = var_78[var_866].Var7 - 1;
                         var_78[var_866].Var8 = 1;
                         var_893 = rnd(2);
                         if (var_893 == 0) {
-                            var_486[var_858][1][15] = 37;
+                            var_486[var_858][1].Var15 = 37;
                         }
                         if (var_893 == 1) {
-                            var_486[var_858][1][15] = 48;
+                            var_486[var_858][1].Var15 = 48;
                         }
                     }
                     if (var_78[var_866].Var0 == 800) {
                         var_1782 = rnd(100);
                         if (var_1782 == 0) {
-                            var_486[var_858][1][0] = 648;
+                            var_486[var_858][1].Var0 = 648;
                             if (var_1734 == 1) {
-                                var_486[var_858][1][11] = 1;
+                                var_486[var_858][1].Var11 = 1;
                             }
                             var_78[var_866].Var7 = var_78[var_866].Var7 - 1;
                             var_78[var_866].Var8 = 1;
@@ -20507,7 +20509,7 @@ function func390() {
                 case 2:
                     _a.sent(); // 各ダンジョンごとの出現アイテム管理
                     for (cnt2_37 = 0; cnt2_37 < 30; ++cnt2_37) {
-                        var_486[var_1800][var_1803][cnt2_37] = var_78[var_866]["Var" + cnt2_37];
+                        var_486[var_1800][var_1803]["Var" + cnt2_37] = var_78[var_866]["Var" + cnt2_37];
                     }
                     var_1803++;
                     _a.label = 3;
@@ -20767,7 +20769,7 @@ function func395() {
                     for (cnt3_27 = 0; cnt3_27 < 11; ++cnt3_27) {
                         var_1812 = 0;
                         for (cnt4_4 = 0; cnt4_4 < 30; ++cnt4_4) {
-                            var_486[var_1810][var_1811][var_1812] = 0;
+                            var_486[var_1810][var_1811]["Var" + var_1812] = 0;
                             var_1812++;
                         }
                         var_1811++;

@@ -941,37 +941,37 @@ function func411(this: any) {
                     return;
                 }
             }
-            var_1846 = var_486[var_682][var_225][0];
-            var_1837 = var_486[var_682][var_225][3];
-            var_1835 = var_486[var_682][var_225][4];
-            var_1847 = var_486[var_682][var_225][5];
-            var_1848 = var_486[var_682][var_225][6];
-            var_1838 = var_486[var_682][var_225][7];
-            var_1849 = var_486[var_682][var_225][8];
-            var_1889 = var_486[var_682][var_225][9];
-            var_1890 = var_486[var_682][var_225][10];
-            var_1850 = var_486[var_682][var_225][11];
-            var_1851 = var_486[var_682][var_225][12];
-            var_1833 = var_486[var_682][var_225][13];
-            var_1834 = var_486[var_682][var_225][14];
-            var_1852 = var_486[var_682][var_225][15];
-            var_1853 = var_486[var_682][var_225][16];
-            var_1854 = var_486[var_682][var_225][17];
-            var_1855 = var_486[var_682][var_225][18];
-            var_1836 = var_486[var_682][var_225][19];
-            var_1856 = var_486[var_682][var_225][20];
-            var_1857 = var_486[var_682][var_225][21];
-            var_1858 = var_486[var_682][var_225][22];
-            var_1859 = var_486[var_682][var_225][23];
-            var_1860 = var_486[var_682][var_225][24];
-            var_1861 = var_486[var_682][var_225][25];
-            var_1862 = var_486[var_682][var_225][26];
-            var_1863 = var_486[var_682][var_225][27];
-            var_1864 = var_486[var_682][var_225][28];
-            var_1865 = var_486[var_682][var_225][29];
-            var_340 = var_486[var_682][var_225][0];
-            var_1887 = var_486[var_682][var_225][13];
-            var_1888 = Math.floor(var_486[var_682][var_225][13] / 10);
+            var_1846 = var_486[var_682][var_225].Var0;
+            var_1837 = var_486[var_682][var_225].Var3;
+            var_1835 = var_486[var_682][var_225].Var4;
+            var_1847 = var_486[var_682][var_225].Var5;
+            var_1848 = var_486[var_682][var_225].Var6;
+            var_1838 = var_486[var_682][var_225].Var7;
+            var_1849 = var_486[var_682][var_225].Var8;
+            var_1889 = var_486[var_682][var_225].Var9;
+            var_1890 = var_486[var_682][var_225].Var10;
+            var_1850 = var_486[var_682][var_225].Var11;
+            var_1851 = var_486[var_682][var_225].Var12;
+            var_1833 = var_486[var_682][var_225].Var13;
+            var_1834 = var_486[var_682][var_225].Var14;
+            var_1852 = var_486[var_682][var_225].Var15;
+            var_1853 = var_486[var_682][var_225].Var16;
+            var_1854 = var_486[var_682][var_225].Var17;
+            var_1855 = var_486[var_682][var_225].Var18;
+            var_1836 = var_486[var_682][var_225].Var19;
+            var_1856 = var_486[var_682][var_225].Var20;
+            var_1857 = var_486[var_682][var_225].Var21;
+            var_1858 = var_486[var_682][var_225].Var22;
+            var_1859 = var_486[var_682][var_225].Var23;
+            var_1860 = var_486[var_682][var_225].Var24;
+            var_1861 = var_486[var_682][var_225].Var25;
+            var_1862 = var_486[var_682][var_225].Var26;
+            var_1863 = var_486[var_682][var_225].Var27;
+            var_1864 = var_486[var_682][var_225].Var28;
+            var_1865 = var_486[var_682][var_225].Var29;
+            var_340 = var_486[var_682][var_225].Var0;
+            var_1887 = var_486[var_682][var_225].Var13;
+            var_1888 = Math.floor(var_486[var_682][var_225].Var13 / 10);
         }
         var_1246 = 1;
         var_1247 = var_1846;
@@ -1404,36 +1404,36 @@ function func414(this: any) {
                 }
                 yield func724();
                 var_77[var_448][var_450] = var_854;
-                var_78[var_854].Var0 = var_486[var_1904][var_1910][0];
+                var_78[var_854].Var0 = var_486[var_1904][var_1910].Var0;
                 var_78[var_854].Var1 = var_448;
                 var_78[var_854].Var2 = var_450;
-                var_78[var_854].Var3 = var_486[var_1904][var_1910][3];
-                var_78[var_854].Var4 = var_486[var_1904][var_1910][4];
-                var_78[var_854].Var5 = var_486[var_1904][var_1910][5];
-                var_78[var_854].Var6 = var_486[var_1904][var_1910][6];
-                var_78[var_854].Var7 = var_486[var_1904][var_1910][7];
-                var_78[var_854].Var8 = var_486[var_1904][var_1910][8];
+                var_78[var_854].Var3 = var_486[var_1904][var_1910].Var3;
+                var_78[var_854].Var4 = var_486[var_1904][var_1910].Var4;
+                var_78[var_854].Var5 = var_486[var_1904][var_1910].Var5;
+                var_78[var_854].Var6 = var_486[var_1904][var_1910].Var6;
+                var_78[var_854].Var7 = var_486[var_1904][var_1910].Var7;
+                var_78[var_854].Var8 = var_486[var_1904][var_1910].Var8;
                 var_78[var_854].Var9 = var_71[var_448][var_450];
                 var_78[var_854].Var10 = 1;
-                var_78[var_854].Var11 = var_486[var_1904][var_1910][11];
-                var_78[var_854].Var12 = var_486[var_1904][var_1910][12];
-                var_78[var_854].Var13 = var_486[var_1904][var_1910][13];
-                var_78[var_854].Var14 = var_486[var_1904][var_1910][14];
-                var_78[var_854].Var15 = var_486[var_1904][var_1910][15];
-                var_78[var_854].Var16 = var_486[var_1904][var_1910][16];
-                var_78[var_854].Var17 = var_486[var_1904][var_1910][17];
-                var_78[var_854].Var18 = var_486[var_1904][var_1910][18];
-                var_78[var_854].Var19 = var_486[var_1904][var_1910][19];
-                var_78[var_854].Var20 = var_486[var_1904][var_1910][20];
-                var_78[var_854].Var21 = var_486[var_1904][var_1910][21];
-                var_78[var_854].Var22 = var_486[var_1904][var_1910][22];
-                var_78[var_854].Var23 = var_486[var_1904][var_1910][23];
-                var_78[var_854].Var24 = var_486[var_1904][var_1910][24];
-                var_78[var_854].Var25 = var_486[var_1904][var_1910][25];
-                var_78[var_854].Var26 = var_486[var_1904][var_1910][26];
-                var_78[var_854].Var27 = var_486[var_1904][var_1910][27];
-                var_78[var_854].Var28 = var_486[var_1904][var_1910][28];
-                var_78[var_854].Var29 = var_486[var_1904][var_1910][29];
+                var_78[var_854].Var11 = var_486[var_1904][var_1910].Var11;
+                var_78[var_854].Var12 = var_486[var_1904][var_1910].Var12;
+                var_78[var_854].Var13 = var_486[var_1904][var_1910].Var13;
+                var_78[var_854].Var14 = var_486[var_1904][var_1910].Var14;
+                var_78[var_854].Var15 = var_486[var_1904][var_1910].Var15;
+                var_78[var_854].Var16 = var_486[var_1904][var_1910].Var16;
+                var_78[var_854].Var17 = var_486[var_1904][var_1910].Var17;
+                var_78[var_854].Var18 = var_486[var_1904][var_1910].Var18;
+                var_78[var_854].Var19 = var_486[var_1904][var_1910].Var19;
+                var_78[var_854].Var20 = var_486[var_1904][var_1910].Var20;
+                var_78[var_854].Var21 = var_486[var_1904][var_1910].Var21;
+                var_78[var_854].Var22 = var_486[var_1904][var_1910].Var22;
+                var_78[var_854].Var23 = var_486[var_1904][var_1910].Var23;
+                var_78[var_854].Var24 = var_486[var_1904][var_1910].Var24;
+                var_78[var_854].Var25 = var_486[var_1904][var_1910].Var25;
+                var_78[var_854].Var26 = var_486[var_1904][var_1910].Var26;
+                var_78[var_854].Var27 = var_486[var_1904][var_1910].Var27;
+                var_78[var_854].Var28 = var_486[var_1904][var_1910].Var28;
+                var_78[var_854].Var29 = var_486[var_1904][var_1910].Var29;
                 var_1910++;
             }
             yield func018();
@@ -1467,8 +1467,8 @@ function func414(this: any) {
                 var_1915 = var_1909;
                 var_1917 = 1;
                 for (let cnt3 = 0; cnt3 < var_1911; ++cnt3) {
-                    var_1918 = var_486[var_1916][var_1917][15];
-                    var_1919 = var_486[var_1916][var_1917][18];
+                    var_1918 = var_486[var_1916][var_1917].Var15;
+                    var_1919 = var_486[var_1916][var_1917].Var18;
                     if (var_1918 != 0) {
                         yield func556();
                     }
@@ -1571,13 +1571,13 @@ function func417(this: any) {
             var_484 = 1;
             var_485 = var_1848;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                    belongings_item_list = var_486[var_485][var_484][0];
+                if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                    belongings_item_list = var_486[var_485][var_484].Var0;
                     yield func492(); // アイテムリスト呼び出し
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                    if (var_486[var_485][var_484][19] > 1) {
-                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                    if (var_486[var_485][var_484].Var19 > 1) {
+                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                     }
                     payment_amount = payment_amount + buying_price + var_482;
                 }
@@ -1639,13 +1639,13 @@ function func418(this: any) {
             var_484 = 1;
             var_485 = var_1848;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                    belongings_item_list = var_486[var_485][var_484][0];
+                if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                    belongings_item_list = var_486[var_485][var_484].Var0;
                     yield func492(); // アイテムリスト呼び出し
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                    if (var_486[var_485][var_484][19] > 1) {
-                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                    if (var_486[var_485][var_484].Var19 > 1) {
+                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                     }
                     payment_amount = payment_amount + buying_price + var_482;
                 }
@@ -1715,13 +1715,13 @@ function func419(this: any) {
                 var_484 = 0;
                 var_485 = var_78[var_321].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                        belongings_item_list = var_486[var_485][var_484][0];
+                    if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                        belongings_item_list = var_486[var_485][var_484].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_482 = 0;
-                        var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                        if (var_486[var_485][var_484][19] > 1) {
-                            var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                        var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                        if (var_486[var_485][var_484].Var19 > 1) {
+                            var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                         }
                         var_1925 = var_1925 + buying_price + var_482;
                     }
@@ -1756,7 +1756,7 @@ function func420(this: any) {
         if (var_220 == 0 && var_233[var_225].Var15 == 2) { // 道具画面(メニュー画面/道具)が閉じている状態
             var_1930 = 1;
         }
-        if (var_220 == 1 && var_486[var_682][var_225][15] == 2) { // 道具画面(メニュー画面/道具)が開いている状態
+        if (var_220 == 1 && var_486[var_682][var_225].Var15 == 2) { // 道具画面(メニュー画面/道具)が開いている状態
             var_1930 = 1;
         }
         if (var_234 == 1) {
@@ -2005,7 +2005,7 @@ function func420(this: any) {
             }
         }
         if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-            belongings_item_list = var_486[var_682][var_225][0];
+            belongings_item_list = var_486[var_682][var_225].Var0;
         }
         if (dangeon_number != 1 && var_262 == 0) {
             var_1939 = 0;
@@ -2045,7 +2045,7 @@ function func420(this: any) {
                         belongings_item_list = var_233[var_225].Var0;
                     }
                     if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                        belongings_item_list = var_486[var_682][var_225][0];
+                        belongings_item_list = var_486[var_682][var_225].Var0;
                     }
                     var_862[belongings_item_list][0] = 1;
                     yield func492(); // アイテムリスト呼び出し
@@ -2070,7 +2070,7 @@ function func420(this: any) {
             belongings_item_list = var_233[var_225].Var0;
         }
         if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-            belongings_item_list = var_486[var_682][var_225][0];
+            belongings_item_list = var_486[var_682][var_225].Var0;
         }
         // 装備discの場合
         if (var_233[var_225].Var12 == 1 && belongings_item_list >= 100 && belongings_item_list < 400) {
@@ -2126,7 +2126,7 @@ function func420(this: any) {
             belongings_item_list = var_233[var_225].Var0;
         }
         if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-            belongings_item_list = var_486[var_682][var_225][0];
+            belongings_item_list = var_486[var_682][var_225].Var0;
         }
         var_1941 = 0;
         if (belongings_item_list < 500) {
@@ -2149,9 +2149,9 @@ function func420(this: any) {
             count_buying_price = count_buying_price + buying_price;
         }
         // 道具画面(メニュー画面/道具)が開いている状態
-        if (var_1941 == 0 && var_220 == 1 && var_486[var_682][var_225][11] == 1) {
+        if (var_1941 == 0 && var_220 == 1 && var_486[var_682][var_225].Var11 == 1) {
             var_106 = 1;
-            belongings_item_list = var_486[var_682][var_225][0];
+            belongings_item_list = var_486[var_682][var_225].Var0;
             yield func492(); // アイテムリスト呼び出し
             count_buying_price = count_buying_price + buying_price;
         }
@@ -2162,10 +2162,10 @@ function func420(this: any) {
             var_1943 = var_233[var_225].Var21;
         }
         if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-            belongings_item_list = var_486[var_682][var_225][0];
-            disc_rarity = var_486[var_682][var_225][13];
-            var_1942 = var_486[var_682][var_225][20];
-            var_1943 = var_486[var_682][var_225][21];
+            belongings_item_list = var_486[var_682][var_225].Var0;
+            disc_rarity = var_486[var_682][var_225].Var13;
+            var_1942 = var_486[var_682][var_225].Var20;
+            var_1943 = var_486[var_682][var_225].Var21;
         }
         //var_1944 = belongings_item_list;
 
@@ -2391,16 +2391,16 @@ function func422(this: any) {
 function func423(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(423);
-        var_486[var_682][var_225][3] = var_486[var_682][var_225][3] - 1;
-        if (var_486[var_682][var_225][11] == 1) {
+        var_486[var_682][var_225].Var3 = var_486[var_682][var_225].Var3 - 1;
+        if (var_486[var_682][var_225].Var11 == 1) {
             var_106 = 1;
             count_buying_price = count_buying_price + 50;
         }
-        if (var_486[var_682][var_225][0] >= 400 && var_486[var_682][var_225][0] < 500 && var_486[var_682][var_225][3] <= 0) {
+        if (var_486[var_682][var_225].Var0 >= 400 && var_486[var_682][var_225].Var0 < 500 && var_486[var_682][var_225].Var3 <= 0) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            belongings_item_list = var_486[var_682][var_225][0];
+            belongings_item_list = var_486[var_682][var_225].Var0;
             yield func492(); // アイテムリスト呼び出し
             var_299 = 0;
             comments_row1 = "";
@@ -2418,7 +2418,7 @@ function func423(this: any) {
             var_27_x = var_27[1];
             yield func047();
 
-            if (var_486[var_682][var_225][11] == 1) {
+            if (var_486[var_682][var_225].Var11 == 1) {
                 var_106 = 1;
                 count_buying_price = count_buying_price + buying_price;
             }
@@ -2944,205 +2944,205 @@ function func434(this: any) {
         dbgprt(434);
         var_1957 = 0;
 
-        var_486[var_682][var_225][0] = 0;
-        var_486[var_682][var_225][1] = 0;
-        var_486[var_682][var_225][2] = 0;
-        var_486[var_682][var_225][3] = 0;
-        var_486[var_682][var_225][4] = 0;
-        var_486[var_682][var_225][5] = 0;
-        var_486[var_682][var_225][6] = 0;
-        var_486[var_682][var_225][7] = 0;
-        var_486[var_682][var_225][8] = 0;
-        var_486[var_682][var_225][9] = 0;
-        var_486[var_682][var_225][10] = 0;
-        var_486[var_682][var_225][11] = 0;
-        var_486[var_682][var_225][12] = 0;
-        var_486[var_682][var_225][13] = 0;
-        var_486[var_682][var_225][14] = 0;
-        var_486[var_682][var_225][15] = 0;
-        var_486[var_682][var_225][16] = 0;
-        var_486[var_682][var_225][17] = 0;
-        var_486[var_682][var_225][18] = 0;
-        var_486[var_682][var_225][19] = 0;
-        var_486[var_682][var_225][20] = 0;
-        var_486[var_682][var_225][21] = 0;
-        var_486[var_682][var_225][22] = 0;
-        var_486[var_682][var_225][23] = 0;
-        var_486[var_682][var_225][24] = 0;
-        var_486[var_682][var_225][25] = 0;
-        var_486[var_682][var_225][26] = 0;
-        var_486[var_682][var_225][27] = 0;
-        var_486[var_682][var_225][28] = 0;
-        var_486[var_682][var_225][29] = 0;
+        var_486[var_682][var_225].Var0 = 0;
+        var_486[var_682][var_225].Var1 = 0;
+        var_486[var_682][var_225].Var2 = 0;
+        var_486[var_682][var_225].Var3 = 0;
+        var_486[var_682][var_225].Var4 = 0;
+        var_486[var_682][var_225].Var5 = 0;
+        var_486[var_682][var_225].Var6 = 0;
+        var_486[var_682][var_225].Var7 = 0;
+        var_486[var_682][var_225].Var8 = 0;
+        var_486[var_682][var_225].Var9 = 0;
+        var_486[var_682][var_225].Var10 = 0;
+        var_486[var_682][var_225].Var11 = 0;
+        var_486[var_682][var_225].Var12 = 0;
+        var_486[var_682][var_225].Var13 = 0;
+        var_486[var_682][var_225].Var14 = 0;
+        var_486[var_682][var_225].Var15 = 0;
+        var_486[var_682][var_225].Var16 = 0;
+        var_486[var_682][var_225].Var17 = 0;
+        var_486[var_682][var_225].Var18 = 0;
+        var_486[var_682][var_225].Var19 = 0;
+        var_486[var_682][var_225].Var20 = 0;
+        var_486[var_682][var_225].Var21 = 0;
+        var_486[var_682][var_225].Var22 = 0;
+        var_486[var_682][var_225].Var23 = 0;
+        var_486[var_682][var_225].Var24 = 0;
+        var_486[var_682][var_225].Var25 = 0;
+        var_486[var_682][var_225].Var26 = 0;
+        var_486[var_682][var_225].Var27 = 0;
+        var_486[var_682][var_225].Var28 = 0;
+        var_486[var_682][var_225].Var29 = 0;
 /*
-        var_486[var_682][var_225][0].fill(0);
-        var_486[var_682][var_225][1].fill(0);
-        var_486[var_682][var_225][2].fill(0);
-        var_486[var_682][var_225][3].fill(0);
-        var_486[var_682][var_225][4].fill(0);
-        var_486[var_682][var_225][5].fill(0);
-        var_486[var_682][var_225][6].fill(0);
-        var_486[var_682][var_225][7].fill(0);
-        var_486[var_682][var_225][8].fill(0);
-        var_486[var_682][var_225][9].fill(0);
-        var_486[var_682][var_225][10].fill(0);
-        var_486[var_682][var_225][11].fill(0);
-        var_486[var_682][var_225][12].fill(0);
-        var_486[var_682][var_225][13].fill(0);
-        var_486[var_682][var_225][14].fill(0);
-        var_486[var_682][var_225][15].fill(0);
-        var_486[var_682][var_225][16].fill(0);
-        var_486[var_682][var_225][17].fill(0);
-        var_486[var_682][var_225][18].fill(0);
-        var_486[var_682][var_225][19].fill(0);
-        var_486[var_682][var_225][20].fill(0);
-        var_486[var_682][var_225][21].fill(0);
-        var_486[var_682][var_225][22].fill(0);
-        var_486[var_682][var_225][23].fill(0);
-        var_486[var_682][var_225][24].fill(0);
-        var_486[var_682][var_225][25].fill(0);
-        var_486[var_682][var_225][26].fill(0);
-        var_486[var_682][var_225][27].fill(0);
-        var_486[var_682][var_225][28].fill(0);
-        var_486[var_682][var_225][29].fill(0);
+        var_486[var_682][var_225].Var0.fill(0);
+        var_486[var_682][var_225].Var1.fill(0);
+        var_486[var_682][var_225].Var2.fill(0);
+        var_486[var_682][var_225].Var3.fill(0);
+        var_486[var_682][var_225].Var4.fill(0);
+        var_486[var_682][var_225].Var5.fill(0);
+        var_486[var_682][var_225].Var6.fill(0);
+        var_486[var_682][var_225].Var7.fill(0);
+        var_486[var_682][var_225].Var8.fill(0);
+        var_486[var_682][var_225].Var9.fill(0);
+        var_486[var_682][var_225].Var10.fill(0);
+        var_486[var_682][var_225].Var11.fill(0);
+        var_486[var_682][var_225].Var12.fill(0);
+        var_486[var_682][var_225].Var13.fill(0);
+        var_486[var_682][var_225].Var14.fill(0);
+        var_486[var_682][var_225].Var15.fill(0);
+        var_486[var_682][var_225].Var16.fill(0);
+        var_486[var_682][var_225].Var17.fill(0);
+        var_486[var_682][var_225].Var18.fill(0);
+        var_486[var_682][var_225].Var19.fill(0);
+        var_486[var_682][var_225].Var20.fill(0);
+        var_486[var_682][var_225].Var21.fill(0);
+        var_486[var_682][var_225].Var22.fill(0);
+        var_486[var_682][var_225].Var23.fill(0);
+        var_486[var_682][var_225].Var24.fill(0);
+        var_486[var_682][var_225].Var25.fill(0);
+        var_486[var_682][var_225].Var26.fill(0);
+        var_486[var_682][var_225].Var27.fill(0);
+        var_486[var_682][var_225].Var28.fill(0);
+        var_486[var_682][var_225].Var29.fill(0);
 */
         var_1958 = 1;
         var_1959 = 2;
 
         for (let cnt1 = 0; cnt1 < var_233[var_1876].Var8; ++cnt1) {
-            if (var_486[var_682][var_1958][0] == 0) {
+            if (var_486[var_682][var_1958].Var0 == 0) {
                 /*
-                var_486[var_682][var_1958][0] = var_486[var_682][var_1959][0];
-                var_486[var_682][var_1958][1] = var_486[var_682][var_1959][1];
-                var_486[var_682][var_1958][2] = var_486[var_682][var_1959][2];
-                var_486[var_682][var_1958][3] = var_486[var_682][var_1959][3];
-                var_486[var_682][var_1958][4] = var_486[var_682][var_1959][4];
-                var_486[var_682][var_1958][5] = var_486[var_682][var_1959][5];
-                var_486[var_682][var_1958][6] = var_486[var_682][var_1959][6];
-                var_486[var_682][var_1958][7] = var_486[var_682][var_1959][7];
-                var_486[var_682][var_1958][8] = var_486[var_682][var_1959][8];
-                var_486[var_682][var_1958][9] = var_486[var_682][var_1959][9];
-                var_486[var_682][var_1958][10] = var_486[var_682][var_1959][10];
-                var_486[var_682][var_1958][11] = var_486[var_682][var_1959][11];
-                var_486[var_682][var_1958][12] = var_486[var_682][var_1959][12];
-                var_486[var_682][var_1958][13] = var_486[var_682][var_1959][13];
-                var_486[var_682][var_1958][14] = var_486[var_682][var_1959][14];
-                var_486[var_682][var_1958][15] = var_486[var_682][var_1959][15];
-                var_486[var_682][var_1958][16] = var_486[var_682][var_1959][16];
-                var_486[var_682][var_1958][17] = var_486[var_682][var_1959][17];
-                var_486[var_682][var_1958][18] = var_486[var_682][var_1959][18];
-                var_486[var_682][var_1958][19] = var_486[var_682][var_1959][19];
-                var_486[var_682][var_1958][20] = var_486[var_682][var_1959][20];
-                var_486[var_682][var_1958][21] = var_486[var_682][var_1959][21];
-                var_486[var_682][var_1958][22] = var_486[var_682][var_1959][22];
-                var_486[var_682][var_1958][23] = var_486[var_682][var_1959][23];
-                var_486[var_682][var_1958][24] = var_486[var_682][var_1959][24];
-                var_486[var_682][var_1958][25] = var_486[var_682][var_1959][25];
-                var_486[var_682][var_1958][26] = var_486[var_682][var_1959][26];
-                var_486[var_682][var_1958][27] = var_486[var_682][var_1959][27];
-                var_486[var_682][var_1958][28] = var_486[var_682][var_1959][28];
-                var_486[var_682][var_1958][29] = var_486[var_682][var_1959][29];
+                var_486[var_682][var_1958].Var0 = var_486[var_682][var_1959].Var0;
+                var_486[var_682][var_1958].Var1 = var_486[var_682][var_1959].Var1;
+                var_486[var_682][var_1958].Var2 = var_486[var_682][var_1959].Var2;
+                var_486[var_682][var_1958].Var3 = var_486[var_682][var_1959].Var3;
+                var_486[var_682][var_1958].Var4 = var_486[var_682][var_1959].Var4;
+                var_486[var_682][var_1958].Var5 = var_486[var_682][var_1959].Var5;
+                var_486[var_682][var_1958].Var6 = var_486[var_682][var_1959].Var6;
+                var_486[var_682][var_1958].Var7 = var_486[var_682][var_1959].Var7;
+                var_486[var_682][var_1958].Var8 = var_486[var_682][var_1959].Var8;
+                var_486[var_682][var_1958].Var9 = var_486[var_682][var_1959].Var9;
+                var_486[var_682][var_1958].Var10 = var_486[var_682][var_1959].Var10;
+                var_486[var_682][var_1958].Var11 = var_486[var_682][var_1959].Var11;
+                var_486[var_682][var_1958].Var12 = var_486[var_682][var_1959].Var12;
+                var_486[var_682][var_1958].Var13 = var_486[var_682][var_1959].Var13;
+                var_486[var_682][var_1958].Var14 = var_486[var_682][var_1959].Var14;
+                var_486[var_682][var_1958].Var15 = var_486[var_682][var_1959].Var15;
+                var_486[var_682][var_1958].Var16 = var_486[var_682][var_1959].Var16;
+                var_486[var_682][var_1958].Var17 = var_486[var_682][var_1959].Var17;
+                var_486[var_682][var_1958].Var18 = var_486[var_682][var_1959].Var18;
+                var_486[var_682][var_1958].Var19 = var_486[var_682][var_1959].Var19;
+                var_486[var_682][var_1958].Var20 = var_486[var_682][var_1959].Var20;
+                var_486[var_682][var_1958].Var21 = var_486[var_682][var_1959].Var21;
+                var_486[var_682][var_1958].Var22 = var_486[var_682][var_1959].Var22;
+                var_486[var_682][var_1958].Var23 = var_486[var_682][var_1959].Var23;
+                var_486[var_682][var_1958].Var24 = var_486[var_682][var_1959].Var24;
+                var_486[var_682][var_1958].Var25 = var_486[var_682][var_1959].Var25;
+                var_486[var_682][var_1958].Var26 = var_486[var_682][var_1959].Var26;
+                var_486[var_682][var_1958].Var27 = var_486[var_682][var_1959].Var27;
+                var_486[var_682][var_1958].Var28 = var_486[var_682][var_1959].Var28;
+                var_486[var_682][var_1958].Var29 = var_486[var_682][var_1959].Var29;
                 */
-                var_486[var_682][var_1958][0] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][0]));
-                var_486[var_682][var_1958][1] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][1]));
-                var_486[var_682][var_1958][2] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][2]));
-                var_486[var_682][var_1958][3] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][3]));
-                var_486[var_682][var_1958][4] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][4]));
-                var_486[var_682][var_1958][5] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][5]));
-                var_486[var_682][var_1958][6] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][6]));
-                var_486[var_682][var_1958][7] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][7]));
-                var_486[var_682][var_1958][8] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][8]));
-                var_486[var_682][var_1958][9] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][9]));
-                var_486[var_682][var_1958][10] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][10]));
-                var_486[var_682][var_1958][11] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][11]));
-                var_486[var_682][var_1958][12] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][12]));
-                var_486[var_682][var_1958][13] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][13]));
-                var_486[var_682][var_1958][14] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][14]));
-                var_486[var_682][var_1958][15] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][15]));
-                var_486[var_682][var_1958][16] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][16]));
-                var_486[var_682][var_1958][17] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][17]));
-                var_486[var_682][var_1958][18] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][18]));
-                var_486[var_682][var_1958][19] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][19]));
-                var_486[var_682][var_1958][20] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][20]));
-                var_486[var_682][var_1958][21] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][21]));
-                var_486[var_682][var_1958][22] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][22]));
-                var_486[var_682][var_1958][23] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][23]));
-                var_486[var_682][var_1958][24] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][24]));
-                var_486[var_682][var_1958][25] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][25]));
-                var_486[var_682][var_1958][26] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][26]));
-                var_486[var_682][var_1958][27] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][27]));
-                var_486[var_682][var_1958][28] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][28]));
-                var_486[var_682][var_1958][29] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][29]));
+                var_486[var_682][var_1958].Var0 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var0));
+                var_486[var_682][var_1958].Var1 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var1));
+                var_486[var_682][var_1958].Var2 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var2));
+                var_486[var_682][var_1958].Var3 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var3));
+                var_486[var_682][var_1958].Var4 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var4));
+                var_486[var_682][var_1958].Var5 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var5));
+                var_486[var_682][var_1958].Var6 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var6));
+                var_486[var_682][var_1958].Var7 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var7));
+                var_486[var_682][var_1958].Var8 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var8));
+                var_486[var_682][var_1958].Var9 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var9));
+                var_486[var_682][var_1958].Var10 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var10));
+                var_486[var_682][var_1958].Var11 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var11));
+                var_486[var_682][var_1958].Var12 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var12));
+                var_486[var_682][var_1958].Var13 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var13));
+                var_486[var_682][var_1958].Var14 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var14));
+                var_486[var_682][var_1958].Var15 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var15));
+                var_486[var_682][var_1958].Var16 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var16));
+                var_486[var_682][var_1958].Var17 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var17));
+                var_486[var_682][var_1958].Var18 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var18));
+                var_486[var_682][var_1958].Var19 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var19));
+                var_486[var_682][var_1958].Var20 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var20));
+                var_486[var_682][var_1958].Var21 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var21));
+                var_486[var_682][var_1958].Var22 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var22));
+                var_486[var_682][var_1958].Var23 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var23));
+                var_486[var_682][var_1958].Var24 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var24));
+                var_486[var_682][var_1958].Var25 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var25));
+                var_486[var_682][var_1958].Var26 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var26));
+                var_486[var_682][var_1958].Var27 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var27));
+                var_486[var_682][var_1958].Var28 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var28));
+                var_486[var_682][var_1958].Var29 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var29));
 
                 var_1957 = 1;
                 //var_224 = var_224 - 1; // Ver 0.1309 追加
             }
             if (var_1957 == 1) {
                 /*
-                var_486[var_682][var_1958][0] = var_486[var_682][var_1959][0];
-                var_486[var_682][var_1958][1] = var_486[var_682][var_1959][1];
-                var_486[var_682][var_1958][2] = var_486[var_682][var_1959][2];
-                var_486[var_682][var_1958][3] = var_486[var_682][var_1959][3];
-                var_486[var_682][var_1958][4] = var_486[var_682][var_1959][4];
-                var_486[var_682][var_1958][5] = var_486[var_682][var_1959][5];
-                var_486[var_682][var_1958][6] = var_486[var_682][var_1959][6];
-                var_486[var_682][var_1958][7] = var_486[var_682][var_1959][7];
-                var_486[var_682][var_1958][8] = var_486[var_682][var_1959][8];
-                var_486[var_682][var_1958][9] = var_486[var_682][var_1959][9];
-                var_486[var_682][var_1958][10] = var_486[var_682][var_1959][10];
-                var_486[var_682][var_1958][11] = var_486[var_682][var_1959][11];
-                var_486[var_682][var_1958][12] = var_486[var_682][var_1959][12];
-                var_486[var_682][var_1958][13] = var_486[var_682][var_1959][13];
-                var_486[var_682][var_1958][14] = var_486[var_682][var_1959][14];
-                var_486[var_682][var_1958][15] = var_486[var_682][var_1959][15];
-                var_486[var_682][var_1958][16] = var_486[var_682][var_1959][16];
-                var_486[var_682][var_1958][17] = var_486[var_682][var_1959][17];
-                var_486[var_682][var_1958][18] = var_486[var_682][var_1959][18];
-                var_486[var_682][var_1958][19] = var_486[var_682][var_1959][19];
-                var_486[var_682][var_1958][20] = var_486[var_682][var_1959][20];
-                var_486[var_682][var_1958][21] = var_486[var_682][var_1959][21];
-                var_486[var_682][var_1958][22] = var_486[var_682][var_1959][22];
-                var_486[var_682][var_1958][23] = var_486[var_682][var_1959][23];
-                var_486[var_682][var_1958][24] = var_486[var_682][var_1959][24];
-                var_486[var_682][var_1958][25] = var_486[var_682][var_1959][25];
-                var_486[var_682][var_1958][26] = var_486[var_682][var_1959][26];
-                var_486[var_682][var_1958][27] = var_486[var_682][var_1959][27];
-                var_486[var_682][var_1958][28] = var_486[var_682][var_1959][28];
-                var_486[var_682][var_1958][29] = var_486[var_682][var_1959][29];
+                var_486[var_682][var_1958].Var0 = var_486[var_682][var_1959].Var0;
+                var_486[var_682][var_1958].Var1 = var_486[var_682][var_1959].Var1;
+                var_486[var_682][var_1958].Var2 = var_486[var_682][var_1959].Var2;
+                var_486[var_682][var_1958].Var3 = var_486[var_682][var_1959].Var3;
+                var_486[var_682][var_1958].Var4 = var_486[var_682][var_1959].Var4;
+                var_486[var_682][var_1958].Var5 = var_486[var_682][var_1959].Var5;
+                var_486[var_682][var_1958].Var6 = var_486[var_682][var_1959].Var6;
+                var_486[var_682][var_1958].Var7 = var_486[var_682][var_1959].Var7;
+                var_486[var_682][var_1958].Var8 = var_486[var_682][var_1959].Var8;
+                var_486[var_682][var_1958].Var9 = var_486[var_682][var_1959].Var9;
+                var_486[var_682][var_1958].Var10 = var_486[var_682][var_1959].Var10;
+                var_486[var_682][var_1958].Var11 = var_486[var_682][var_1959].Var11;
+                var_486[var_682][var_1958].Var12 = var_486[var_682][var_1959].Var12;
+                var_486[var_682][var_1958].Var13 = var_486[var_682][var_1959].Var13;
+                var_486[var_682][var_1958].Var14 = var_486[var_682][var_1959].Var14;
+                var_486[var_682][var_1958].Var15 = var_486[var_682][var_1959].Var15;
+                var_486[var_682][var_1958].Var16 = var_486[var_682][var_1959].Var16;
+                var_486[var_682][var_1958].Var17 = var_486[var_682][var_1959].Var17;
+                var_486[var_682][var_1958].Var18 = var_486[var_682][var_1959].Var18;
+                var_486[var_682][var_1958].Var19 = var_486[var_682][var_1959].Var19;
+                var_486[var_682][var_1958].Var20 = var_486[var_682][var_1959].Var20;
+                var_486[var_682][var_1958].Var21 = var_486[var_682][var_1959].Var21;
+                var_486[var_682][var_1958].Var22 = var_486[var_682][var_1959].Var22;
+                var_486[var_682][var_1958].Var23 = var_486[var_682][var_1959].Var23;
+                var_486[var_682][var_1958].Var24 = var_486[var_682][var_1959].Var24;
+                var_486[var_682][var_1958].Var25 = var_486[var_682][var_1959].Var25;
+                var_486[var_682][var_1958].Var26 = var_486[var_682][var_1959].Var26;
+                var_486[var_682][var_1958].Var27 = var_486[var_682][var_1959].Var27;
+                var_486[var_682][var_1958].Var28 = var_486[var_682][var_1959].Var28;
+                var_486[var_682][var_1958].Var29 = var_486[var_682][var_1959].Var29;
                 */
-                var_486[var_682][var_1958][0] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][0]));
-                var_486[var_682][var_1958][1] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][1]));
-                var_486[var_682][var_1958][2] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][2]));
-                var_486[var_682][var_1958][3] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][3]));
-                var_486[var_682][var_1958][4] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][4]));
-                var_486[var_682][var_1958][5] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][5]));
-                var_486[var_682][var_1958][6] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][6]));
-                var_486[var_682][var_1958][7] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][7]));
-                var_486[var_682][var_1958][8] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][8]));
-                var_486[var_682][var_1958][9] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][9]));
-                var_486[var_682][var_1958][10] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][10]));
-                var_486[var_682][var_1958][11] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][11]));
-                var_486[var_682][var_1958][12] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][12]));
-                var_486[var_682][var_1958][13] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][13]));
-                var_486[var_682][var_1958][14] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][14]));
-                var_486[var_682][var_1958][15] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][15]));
-                var_486[var_682][var_1958][16] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][16]));
-                var_486[var_682][var_1958][17] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][17]));
-                var_486[var_682][var_1958][18] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][18]));
-                var_486[var_682][var_1958][19] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][19]));
-                var_486[var_682][var_1958][20] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][20]));
-                var_486[var_682][var_1958][21] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][21]));
-                var_486[var_682][var_1958][22] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][22]));
-                var_486[var_682][var_1958][23] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][23]));
-                var_486[var_682][var_1958][24] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][24]));
-                var_486[var_682][var_1958][25] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][25]));
-                var_486[var_682][var_1958][26] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][26]));
-                var_486[var_682][var_1958][27] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][27]));
-                var_486[var_682][var_1958][28] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][28]));
-                var_486[var_682][var_1958][29] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][29]));                            
+                var_486[var_682][var_1958].Var0 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var0));
+                var_486[var_682][var_1958].Var1 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var1));
+                var_486[var_682][var_1958].Var2 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var2));
+                var_486[var_682][var_1958].Var3 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var3));
+                var_486[var_682][var_1958].Var4 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var4));
+                var_486[var_682][var_1958].Var5 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var5));
+                var_486[var_682][var_1958].Var6 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var6));
+                var_486[var_682][var_1958].Var7 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var7));
+                var_486[var_682][var_1958].Var8 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var8));
+                var_486[var_682][var_1958].Var9 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var9));
+                var_486[var_682][var_1958].Var10 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var10));
+                var_486[var_682][var_1958].Var11 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var11));
+                var_486[var_682][var_1958].Var12 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var12));
+                var_486[var_682][var_1958].Var13 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var13));
+                var_486[var_682][var_1958].Var14 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var14));
+                var_486[var_682][var_1958].Var15 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var15));
+                var_486[var_682][var_1958].Var16 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var16));
+                var_486[var_682][var_1958].Var17 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var17));
+                var_486[var_682][var_1958].Var18 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var18));
+                var_486[var_682][var_1958].Var19 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var19));
+                var_486[var_682][var_1958].Var20 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var20));
+                var_486[var_682][var_1958].Var21 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var21));
+                var_486[var_682][var_1958].Var22 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var22));
+                var_486[var_682][var_1958].Var23 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var23));
+                var_486[var_682][var_1958].Var24 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var24));
+                var_486[var_682][var_1958].Var25 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var25));
+                var_486[var_682][var_1958].Var26 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var26));
+                var_486[var_682][var_1958].Var27 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var27));
+                var_486[var_682][var_1958].Var28 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var28));
+                var_486[var_682][var_1958].Var29 = JSON.parse(JSON.stringify(var_486[var_682][var_1959].Var29));                            
             }
 
-            // belongings_item_list = var_486[var_682][var_1959][0];
+            // belongings_item_list = var_486[var_682][var_1959].Var0;
             // belongings_item_list = 0
 
             var_1958 = var_1958 + 1;
@@ -3230,8 +3230,8 @@ function func437(this: any) {
         if (var_1965 == 1) {
             var_220 = 1; // 道具画面(メニュー画面/道具)呼び出し確認変数？
             var_225 = var_1932;
-            if (var_486[var_682][var_225][11] == 1) {
-                belongings_item_list = var_486[var_682][var_225][0];
+            if (var_486[var_682][var_225].Var11 == 1) {
+                belongings_item_list = var_486[var_682][var_225].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_106 = 1;
                 count_buying_price = count_buying_price + buying_price;
@@ -5015,7 +5015,7 @@ function func458(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     // No = 716 恐竜の化石
                     // 一巡後の世界で持っているだけで必ず大部屋モンスターハウスが出現する。使用すると次の階が西戸ハウスになってしまう
-                    if (var_486[var_485][var_484][0] == 716) {
+                    if (var_486[var_485][var_484].Var0 == 716) {
                         var_69 = 1;
                     }
                     var_484 = var_484 + 1;
@@ -5187,18 +5187,18 @@ function func460(this: any) {
             }
             if (var_220 == 1) {
                 var_2009 = var_1620;
-                var_2010 = var_486[var_682][var_1620][0];
-                var_2011 = var_486[var_682][var_1620][3];
-                var_2012 = var_486[var_682][var_1620][4];
-                var_2013 = var_486[var_682][var_1620][5];
-                var_1922 = var_486[var_682][var_1620][6];
-                var_2014 = var_486[var_682][var_1620][7];
-                var_2015 = var_486[var_682][var_1620][11];
-                var_2016 = var_486[var_682][var_1620][12];
-                var_2017 = var_486[var_682][var_1620][13];
-                var_2018 = var_486[var_682][var_1620][14];
-                var_2019 = var_486[var_682][var_1620][16];
-                var_2020 = var_486[var_682][var_1620][19];
+                var_2010 = var_486[var_682][var_1620].Var0;
+                var_2011 = var_486[var_682][var_1620].Var3;
+                var_2012 = var_486[var_682][var_1620].Var4;
+                var_2013 = var_486[var_682][var_1620].Var5;
+                var_1922 = var_486[var_682][var_1620].Var6;
+                var_2014 = var_486[var_682][var_1620].Var7;
+                var_2015 = var_486[var_682][var_1620].Var11;
+                var_2016 = var_486[var_682][var_1620].Var12;
+                var_2017 = var_486[var_682][var_1620].Var13;
+                var_2018 = var_486[var_682][var_1620].Var14;
+                var_2019 = var_486[var_682][var_1620].Var16;
+                var_2020 = var_486[var_682][var_1620].Var19;
             }
             belongings_item_list = var_2010;
             disc_rarity = var_2017;
@@ -5221,17 +5221,17 @@ function func460(this: any) {
                 pos(40, var_230);
                 if (var_862[851][0] == 0) {
                     var_1916 = var_233[var_1882].Var6;
-                    if (var_486[var_1916][var_1620][15] >= 1) {
+                    if (var_486[var_1916][var_1620].Var15 >= 1) {
                         mes("何か");
                     }
                 }
                 if (var_862[851][0] == 1) {
                     var_1916 = var_233[var_1882].Var6;
-                    enemy_list = var_486[var_1916][var_1620][15];
+                    enemy_list = var_486[var_1916][var_1620].Var15;
                     yield func626();
                     var_2022 = "" + enemy_name;
-                    if (var_486[var_1916][var_1620][18] >= 2) {
-                        var_2022 = "" + var_2022 + " Lv" + var_486[var_1916][var_1620][18];
+                    if (var_486[var_1916][var_1620].Var18 >= 2) {
+                        var_2022 = "" + var_2022 + " Lv" + var_486[var_1916][var_1620].Var18;
                     }
                     mes("" + var_2022);
                 }
@@ -5443,13 +5443,13 @@ function func460(this: any) {
                             var_484 = 0;
                             var_485 = var_1922;
                             for (let cnt6 = 0; cnt6 < 10; ++cnt6) {
-                                if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                                    belongings_item_list = var_486[var_485][var_484][0];
+                                if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                                    belongings_item_list = var_486[var_485][var_484].Var0;
                                     yield func492(); // アイテムリスト呼び出し
                                     var_482 = 0;
-                                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                                    if (var_486[var_485][var_484][19] > 1) {
-                                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                                    if (var_486[var_485][var_484].Var19 > 1) {
+                                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                                     }
                                     var_1925 = var_1925 + buying_price + var_482;
                                 }
@@ -5485,13 +5485,13 @@ function func460(this: any) {
                 var_2029 = var_233[var_225].Var16;
             }
             if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                var_2023 = var_486[var_682][var_225][0];
-                var_2024 = var_486[var_682][var_225][5];
-                var_2025 = var_486[var_682][var_225][12];
-                var_2026 = var_486[var_682][var_225][13];
-                var_2027 = var_486[var_682][var_225][14];
-                var_2028 = var_486[var_682][var_225][15];
-                var_2029 = var_486[var_682][var_225][16];
+                var_2023 = var_486[var_682][var_225].Var0;
+                var_2024 = var_486[var_682][var_225].Var5;
+                var_2025 = var_486[var_682][var_225].Var12;
+                var_2026 = var_486[var_682][var_225].Var13;
+                var_2027 = var_486[var_682][var_225].Var14;
+                var_2028 = var_486[var_682][var_225].Var15;
+                var_2029 = var_486[var_682][var_225].Var16;
             }
             if (item_page_number != 3) {
                 belongings_item_list = var_2023;
@@ -5561,10 +5561,10 @@ function func460(this: any) {
             }
             if (var_233[var_1882].Var0 == 851) {
                 var_1916 = var_233[var_1882].Var6;
-                if (var_486[var_1916][1][15] == 0 || var_233[var_1882].Var7 == 0) {
+                if (var_486[var_1916][1].Var15 == 0 || var_233[var_1882].Var7 == 0) {
                     mes("　　　　　　　　　何も入っていないぞ");
                 }
-                if (var_486[var_1916][1][15] != 0 && var_233[var_1882].Var7 != 0) {
+                if (var_486[var_1916][1].Var15 != 0 && var_233[var_1882].Var7 != 0) {
                     mes("　　　　　　　　　何かが見える");
                 }
             }
@@ -8499,30 +8499,30 @@ function func469(this: any) {
             count_buying_price = count_buying_price + 100;
         }
         var_683 = var_233[var_1876].Var8;
-        var_486[var_682][var_683][0] = var_233[var_225].Var0;
-        var_486[var_682][var_683][3] = var_233[var_225].Var3;
-        var_486[var_682][var_683][4] = var_233[var_225].Var4;
-        var_486[var_682][var_683][5] = var_233[var_225].Var5;
-        var_486[var_682][var_683][6] = var_233[var_225].Var6;
-        var_486[var_682][var_683][11] = var_233[var_225].Var11;
-        var_486[var_682][var_683][12] = var_233[var_225].Var12;
-        var_486[var_682][var_683][13] = var_233[var_225].Var13;
-        var_486[var_682][var_683][14] = var_233[var_225].Var14;
-        var_486[var_682][var_683][15] = var_233[var_225].Var15;
-        var_486[var_682][var_683][16] = var_233[var_225].Var16;
-        var_486[var_682][var_683][17] = var_233[var_225].Var17;
-        var_486[var_682][var_683][18] = var_233[var_225].Var18;
-        var_486[var_682][var_683][19] = var_233[var_225].Var19;
-        var_486[var_682][var_683][20] = var_233[var_225].Var20;
-        var_486[var_682][var_683][21] = var_233[var_225].Var21;
-        var_486[var_682][var_683][22] = var_233[var_225].Var22;
-        var_486[var_682][var_683][23] = var_233[var_225].Var23;
-        var_486[var_682][var_683][24] = var_233[var_225].Var24;
-        var_486[var_682][var_683][25] = var_233[var_225].Var25;
-        var_486[var_682][var_683][26] = var_233[var_225].Var26;
-        var_486[var_682][var_683][27] = var_233[var_225].Var27;
-        var_486[var_682][var_683][28] = var_233[var_225].Var28;
-        var_486[var_682][var_683][29] = var_233[var_225].Var29;
+        var_486[var_682][var_683].Var0 = var_233[var_225].Var0;
+        var_486[var_682][var_683].Var3 = var_233[var_225].Var3;
+        var_486[var_682][var_683].Var4 = var_233[var_225].Var4;
+        var_486[var_682][var_683].Var5 = var_233[var_225].Var5;
+        var_486[var_682][var_683].Var6 = var_233[var_225].Var6;
+        var_486[var_682][var_683].Var11 = var_233[var_225].Var11;
+        var_486[var_682][var_683].Var12 = var_233[var_225].Var12;
+        var_486[var_682][var_683].Var13 = var_233[var_225].Var13;
+        var_486[var_682][var_683].Var14 = var_233[var_225].Var14;
+        var_486[var_682][var_683].Var15 = var_233[var_225].Var15;
+        var_486[var_682][var_683].Var16 = var_233[var_225].Var16;
+        var_486[var_682][var_683].Var17 = var_233[var_225].Var17;
+        var_486[var_682][var_683].Var18 = var_233[var_225].Var18;
+        var_486[var_682][var_683].Var19 = var_233[var_225].Var19;
+        var_486[var_682][var_683].Var20 = var_233[var_225].Var20;
+        var_486[var_682][var_683].Var21 = var_233[var_225].Var21;
+        var_486[var_682][var_683].Var22 = var_233[var_225].Var22;
+        var_486[var_682][var_683].Var23 = var_233[var_225].Var23;
+        var_486[var_682][var_683].Var24 = var_233[var_225].Var24;
+        var_486[var_682][var_683].Var25 = var_233[var_225].Var25;
+        var_486[var_682][var_683].Var26 = var_233[var_225].Var26;
+        var_486[var_682][var_683].Var27 = var_233[var_225].Var27;
+        var_486[var_682][var_683].Var28 = var_233[var_225].Var28;
+        var_486[var_682][var_683].Var29 = var_233[var_225].Var29;
         yield func470(); //disc同士の合成関数(dioの骨)
         var_1977 = 0;
         if (var_476[var_225] == 1) {
@@ -8647,7 +8647,7 @@ function func469(this: any) {
         yield func051();
         if (yabaimono_id == 805 && var_2085 == 631 && var_683 >= 2) {
             var_2086 = var_683 - 1;
-            if (var_486[var_682][var_2086][0] >= 600 && var_486[var_682][var_2086][0] <= 605) {
+            if (var_486[var_682][var_2086].Var0 >= 600 && var_486[var_682][var_2086].Var0 <= 605) {
                 yield func472(); // グッチョの死体にピッツァ&トマトチーズのサラダを入れた時の動作処理
             }
         }
@@ -8705,7 +8705,7 @@ function func470(this: any) {
             }
             var_233[var_1876].Var8 = var_233[var_1876].Var8 - 1;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                var_486[var_682][var_683][cnt2] = 0;
+                var_486[var_682][var_683]["Var" + cnt2] = 0;
             }
             return;
         }
@@ -8726,7 +8726,7 @@ function func470(this: any) {
                 }
                 var_233[var_1876].Var8 = var_233[var_1876].Var8 - 1;
                 for (let cnt3 = 0; cnt3 < 30; ++cnt3) {
-                    var_486[var_682][var_683][cnt3] = 0;
+                    var_486[var_682][var_683]["Var" + cnt3] = 0;
                 }
             }
             return;
@@ -8738,15 +8738,15 @@ function func470(this: any) {
             var_233[var_1876].Var7 = var_233[var_1876].Var7 - 1;
             var_2089 = var_683 + 1;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                var_486[var_682][var_2089][cnt2] = var_486[var_682][var_683][cnt2];
+                var_486[var_682][var_2089]["Var" + cnt2] = var_486[var_682][var_683]["Var" + cnt2];
             }
             return;
         }
         if (yabaimono_id == 807) {
-            if (var_486[var_682][var_683][0] < 100 || var_486[var_682][var_683][0] >= 400) {
+            if (var_486[var_682][var_683].Var0 < 100 || var_486[var_682][var_683].Var0 >= 400) {
                 return;
             }
-            if (var_486[var_682][var_683][0] == 100 || var_486[var_682][var_683][0] == 398 || var_486[var_682][var_683][0] == 108 || var_486[var_682][var_683][0] == 110 || var_486[var_682][var_683][0] == 113 || var_486[var_682][var_683][0] == 118 || var_486[var_682][var_683][0] == 123) {
+            if (var_486[var_682][var_683].Var0 == 100 || var_486[var_682][var_683].Var0 == 398 || var_486[var_682][var_683].Var0 == 108 || var_486[var_682][var_683].Var0 == 110 || var_486[var_682][var_683].Var0 == 113 || var_486[var_682][var_683].Var0 == 118 || var_486[var_682][var_683].Var0 == 123) {
                 return;
             }
             var_2089 = var_683 - 1;
@@ -8755,90 +8755,90 @@ function func470(this: any) {
             }
             var_2090 = var_2089;
             var_2091 = var_683;
-            if (var_486[var_682][var_2089][0] < 100 || var_486[var_682][var_2089][0] >= 400) {
+            if (var_486[var_682][var_2089].Var0 < 100 || var_486[var_682][var_2089].Var0 >= 400) {
                 return;
             }
-            base_disc_list = var_486[var_682][var_2090][0];
-            with_disc_list = var_486[var_682][var_2091][0];
-            belongings_item_list = var_486[var_682][var_2090][0];
+            base_disc_list = var_486[var_682][var_2090].Var0;
+            with_disc_list = var_486[var_682][var_2091].Var0;
+            belongings_item_list = var_486[var_682][var_2090].Var0;
             yield func492(); // アイテムリスト呼び出し
-            var_2092 = var_486[var_682][var_2091][19];
+            var_2092 = var_486[var_682][var_2091].Var19;
             var_2093 = 20;
-            if (var_486[var_682][var_2090][5] != 0) {
+            if (var_486[var_682][var_2090].Var5 != 0) {
                 for (let cnt3 = 0; cnt3 < var_2092; ++cnt3) {
                     var_2094 = 20;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         var_2095 = 0;
-                        if (var_486[var_682][var_2090][var_2094] == var_486[var_682][var_2091][var_2093]) {
+                        if (var_486[var_682][var_2090]["Var" + var_2094] == var_486[var_682][var_2091]["Var" + var_2093]) {
                             var_2095 = 1;
                             break;
                         }
-                        if (var_486[var_682][var_2090][var_2094] == 0) {
+                        if (var_486[var_682][var_2090]["Var" + var_2094] == 0) {
                             var_2096 = var_2094;
                             break;
                         }
                         var_2094 = var_2094 + 1;
                     }
                     if (var_2095 == 0) {
-                        var_486[var_682][var_2090][var_2096] = var_486[var_682][var_2091][var_2093];
-                        var_486[var_682][var_2090][19] = var_486[var_682][var_2090][19] + 1;
-                        var_486[var_682][var_2090][5] = var_486[var_682][var_2090][5] - 1;
+                        var_486[var_682][var_2090]["Var" + var_2096] = var_486[var_682][var_2091]["Var" + var_2093];
+                        var_486[var_682][var_2090].Var19 = var_486[var_682][var_2090].Var19 + 1;
+                        var_486[var_682][var_2090].Var5 = var_486[var_682][var_2090].Var5 - 1;
                     }
-                    if (var_486[var_682][var_2090][5] == 0) {
+                    if (var_486[var_682][var_2090].Var5 == 0) {
                         break;
                     }
                     var_2093 = var_2093 + 1;
                 }
             }
             if (dangeon_number != 5) {
-                var_486[var_682][var_2090][4] = var_486[var_682][var_2090][4] + var_486[var_682][var_2091][4];
-                if (var_486[var_682][var_2090][4] >= 99) {
-                    var_486[var_682][var_2090][4] = 99;
+                var_486[var_682][var_2090][4] = var_486[var_682][var_2090].Var4 + var_486[var_682][var_2091].Var4;
+                if (var_486[var_682][var_2090].Var4 >= 99) {
+                    var_486[var_682][var_2090].Var4 = 99;
                 }
             }
-            if (var_486[var_682][var_2091][12] == 1 || var_486[var_682][var_2090][12] == 1) {
-                var_486[var_682][var_2090][12] = 1;
+            if (var_486[var_682][var_2091].Var12 == 1 || var_486[var_682][var_2090].Var12 == 1) {
+                var_486[var_682][var_2090].Var12 = 1;
             }
-            if (var_486[var_682][var_2091][12] == 2 || var_486[var_682][var_2090][12] == 2) {
-                var_486[var_682][var_2090][12] = 2;
+            if (var_486[var_682][var_2091].Var12 == 2 || var_486[var_682][var_2090].Var12 == 2) {
+                var_486[var_682][var_2090].Var12 = 2;
             }
-            if (var_486[var_682][var_2091][11] == 1) {
-                belongings_item_list = var_486[var_682][var_2091][0];
+            if (var_486[var_682][var_2091].Var11 == 1) {
+                belongings_item_list = var_486[var_682][var_2091].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_106 = 1;
                 var_482 = 0;
-                var_482 = (var_486[var_682][var_2091][3] + var_486[var_682][var_2091][4]) * 50;
-                if (var_486[var_682][var_2091][19] > 1) {
-                    var_482 = var_486[var_682][var_2091][19] * 500 + var_482;
+                var_482 = (var_486[var_682][var_2091].Var3 + var_486[var_682][var_2091].Var4) * 50;
+                if (var_486[var_682][var_2091].Var19 > 1) {
+                    var_482 = var_486[var_682][var_2091].Var19 * 500 + var_482;
                 }
                 buying_price = buying_price + var_482;
                 count_buying_price = count_buying_price + buying_price;
             }
-            var_486[var_682][var_2090][14] = 1;
-            belongings_item_list = var_486[var_682][var_2090][0];
+            var_486[var_682][var_2090].Var14 = 1;
+            belongings_item_list = var_486[var_682][var_2090].Var0;
             var_2097 = 0;
             // No = 100:ｽﾀｰ･ﾌﾟﾗﾁﾅのDISC、No = 111:ｻﾞ･ﾜｰﾙﾄﾞのDISC
             if (base_disc_list == 100 && with_disc_list == 111) {
                 var_2097 = 1;
                 // No = 398:ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISC
-                var_486[var_682][var_2090][0] = 398;
+                var_486[var_682][var_2090].Var0 = 398;
                 var_862[398][0] = 1;
             }
             // No = 112:ｷﾗｰ･ｸｨｰﾝのDISC、No = 204:ｼｱｰﾊｰﾄｱﾀｯｸのDISC
             if (base_disc_list == 112 && with_disc_list == 204) {
                 var_2097 = 2;
                 // No = 395:ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISC
-                var_486[var_682][var_2090][0] = 395;
+                var_486[var_682][var_2090].Var0 = 395;
                 var_862[395][0] = 1;
-                var_486[var_682][var_2090][20] = 395;
+                var_486[var_682][var_2090].Var20 = 395;
             }
             // No = 304:ｳｪｻﾞｰﾘﾎﾟｰﾄのDISC、No = 114:ﾎﾜｲﾄｽﾈｲｸのDISC
             if (base_disc_list == 304 && with_disc_list == 114) {
                 var_2097 = 4;
                 // No = 397:ﾍﾋﾞｰ･ｳｪｻﾞｰのDISC
-                var_486[var_682][var_2090][0] = 397;
+                var_486[var_682][var_2090].Var0 = 397;
                 var_862[397][0] = 1;
-                var_486[var_682][var_2090][20] = 397;
+                var_486[var_682][var_2090].Var20 = 397;
             }
             // No = 114:ﾎﾜｲﾄｽﾈｲｸのDISC
             if (base_disc_list == 114) {
@@ -8846,26 +8846,26 @@ function func470(this: any) {
                 var_2099 = 0;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
                     // No = 107:ﾃﾞｽ･13のDISC、No = 116:ﾊｰﾐｯﾄﾊﾟｰﾌﾟﾙのDISC、No = 201:ｲｴﾛｰﾃﾝﾊﾟﾗﾝｽのDISC、No = 202:ﾎﾜｲﾄｱﾙﾊﾞﾑのDISC
-                    if (var_486[var_682][var_2090][var_2098] == 107 || var_486[var_682][var_2090][var_2098] == 116 || var_486[var_682][var_2090][var_2098] == 201 || var_486[var_682][var_2090][var_2098] == 202) {
+                    if (var_486[var_682][var_2090]["Var" + var_2098] == 107 || var_486[var_682][var_2090]["Var" + var_2098] == 116 || var_486[var_682][var_2090]["Var" + var_2098] == 201 || var_486[var_682][var_2090]["Var" + var_2098] == 202) {
                         var_2099++;
                     }
                     var_2098++;
                 }
                 if (var_2099 >= 4) {
                     // No = 396:ﾒｲﾄﾞ･ｲﾝ･ﾍﾌﾞﾝのDISC
-                    var_486[var_682][var_2090][0] = 396;
+                    var_486[var_682][var_2090].Var0 = 396;
                     var_862[396][0] = 1;
-                    var_486[var_682][var_2090][20] = 396;
+                    var_486[var_682][var_2090].Var20 = 396;
                 }
             }
-            if (var_486[var_682][var_2091][11] == 1) {
+            if (var_486[var_682][var_2091].Var11 == 1) {
                 var_106 = 1;
-                belongings_item_list = var_486[var_682][var_2091][0];
+                belongings_item_list = var_486[var_682][var_2091].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
-                var_482 = (var_486[var_682][var_2091][3] + var_486[var_682][var_2091][4]) * 50;
-                if (var_486[var_682][var_2091][19] > 1) {
-                    var_482 = var_486[var_682][var_2091][19] * 500 + var_482;
+                var_482 = (var_486[var_682][var_2091].Var3 + var_486[var_682][var_2091].Var4) * 50;
+                if (var_486[var_682][var_2091].Var19 > 1) {
+                    var_482 = var_486[var_682][var_2091].Var19 * 500 + var_482;
                 }
                 buying_price = buying_price + var_482;
                 count_buying_price = count_buying_price + buying_price;
@@ -8884,43 +8884,43 @@ function func471(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(471);
         if (yabaimono_id == 808) {
-            var_486[var_682][var_683][14] = 1;
-            var_2101 = var_486[var_682][var_683][0];
+            var_486[var_682][var_683].Var14 = 1;
+            var_2101 = var_486[var_682][var_683].Var0;
             var_862[var_2101][0] = 1;
         }
         if (yabaimono_id == 809) {
-            if (var_486[var_682][var_683][12] == 1) {
-                var_486[var_682][var_683][12] = 0;
+            if (var_486[var_682][var_683].Var12 == 1) {
+                var_486[var_682][var_683].Var12 = 0;
             }
-            if (var_486[var_682][var_683][15] == 1 || var_486[var_682][var_683][15] == 2) {
-                var_486[var_682][var_683][15] = 0;
+            if (var_486[var_682][var_683].Var15 == 1 || var_486[var_682][var_683].Var15 == 2) {
+                var_486[var_682][var_683].Var15 = 0;
             }
-            if (var_486[var_682][var_683][0] == 570) {
-                if (var_486[var_682][var_683][11] == 1) {
+            if (var_486[var_682][var_683].Var0 == 570) {
+                if (var_486[var_682][var_683].Var11 == 1) {
                     count_buying_price = count_buying_price + 500;
                 }
                 for (let cnt3 = 0; cnt3 < 30; ++cnt3) {
-                    var_486[var_682][var_683][cnt3] = 0;
+                    var_486[var_682][var_683]["Var" + cnt3] = 0;
                 }
-                var_486[var_682][var_683][0] = 414;
-                var_486[var_682][var_683][3] = 5;
+                var_486[var_682][var_683].Var0 = 414;
+                var_486[var_682][var_683].Var3 = 5;
                 var_862[414][0] = 1;
             }
         }
         if (yabaimono_id == 816) {
-            if (var_486[var_682][var_683][11] == 1) {
-                belongings_item_list = var_486[var_682][var_683][0];
+            if (var_486[var_682][var_683].Var11 == 1) {
+                belongings_item_list = var_486[var_682][var_683].Var0;
                 yield func492(); // アイテムリスト呼び出し
                 var_482 = 0;
-                var_482 = (var_486[var_682][var_683][3] + var_486[var_682][var_683][4]) * 50;
-                if (var_486[var_682][var_683][19] > 1) {
-                    var_482 = var_486[var_682][var_683][19] * 500 + var_482;
+                var_482 = (var_486[var_682][var_683].Var3 + var_486[var_682][var_683].Var4) * 50;
+                if (var_486[var_682][var_683].Var19 > 1) {
+                    var_482 = var_486[var_682][var_683].Var19 * 500 + var_482;
                 }
                 count_buying_price = count_buying_price + buying_price + var_482;
             }
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
                 if (cnt2 != 11) {
-                    var_486[var_682][var_683][cnt3] = 0;
+                    var_486[var_682][var_683]["Var" + cnt3] = 0;
                 }
             }
             var_866 = 0;
@@ -8956,9 +8956,9 @@ function func471(this: any) {
                 dangeon_number = 0;
             }
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                var_486[var_682][var_683][cnt2] = var_78[var_866]["Var" + cnt2];
+                var_486[var_682][var_683]["Var" + cnt2] = var_78[var_866]["Var" + cnt2];
             }
-            var_486[var_682][var_683][11] = 0;
+            var_486[var_682][var_683].Var11 = 0;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
                 var_78[0]["Var" + cnt2] = 0;
             }
@@ -9065,7 +9065,7 @@ function func473(this: any) {
         }
         if (var_233[var_225].Var0 == 851) {
             var_1916 = var_233[var_225].Var6;
-            if (var_486[var_1916][1][15] == 0 || var_233[var_225].Var8 == 0) {
+            if (var_486[var_1916][1].Var15 == 0 || var_233[var_225].Var8 == 0) {
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -9276,8 +9276,8 @@ function func473(this: any) {
             if (var_71[var_2102][var_2103] != 0 && var_71[var_2102][var_2103] != 13 && var_82[var_2102][var_2103] == 0) {
                 var_1845 = 4;
                 var_1916 = var_233[var_225].Var6;
-                var_1918 = var_486[var_1916][1][15];
-                var_1919 = var_486[var_1916][1][18];
+                var_1918 = var_486[var_1916][1].Var15;
+                var_1919 = var_486[var_1916][1].Var18;
                 yield func556();
                 var_1918 = 0;
                 var_1845 = 0;
@@ -9292,27 +9292,27 @@ function func473(this: any) {
                 }
                 var_271 = 0;
                 var_1583 = 0;
-                var_486[var_1916][1][15] = 0;
+                var_486[var_1916][1].Var15 = 0;
                 var_1957 = 0;
                 var_447 = 1;
                 var_449 = 2;
                 var_2104 = var_233[var_225].Var7 + var_233[var_225].Var8;
                 for (let cnt3 = 0; cnt3 < var_2104; ++cnt3) {
-                    if (var_486[var_1916][var_447][15] == 0) {
-                        var_486[var_1916][var_447][15] = var_486[var_1916][var_449][15];
-                        var_486[var_1916][var_447][18] = var_486[var_1916][var_449][18];
+                    if (var_486[var_1916][var_447].Var15 == 0) {
+                        var_486[var_1916][var_447].Var15 = var_486[var_1916][var_449].Var15;
+                        var_486[var_1916][var_447].Var18 = var_486[var_1916][var_449].Var18;
                         var_1957 = 1;
                     }
                     if (var_1957 == 1) {
-                        var_486[var_1916][var_447][15] = var_486[var_1916][var_449][15];
-                        var_486[var_1916][var_447][18] = var_486[var_1916][var_449][18];
+                        var_486[var_1916][var_447].Var15 = var_486[var_1916][var_449].Var15;
+                        var_486[var_1916][var_447].Var18 = var_486[var_1916][var_449].Var18;
                     }
                     var_447 = var_447 + 1;
                     var_449 = var_449 + 1;
                 }
                 var_2105 = var_2104;
-                var_486[var_1916][var_2105][15] = 0;
-                var_486[var_1916][var_2105][18] = 0;
+                var_486[var_1916][var_2105].Var15 = 0;
+                var_486[var_1916][var_2105].Var18 = 0;
                 var_233[var_225].Var8 = var_233[var_225].Var8 - 1;
                 if (var_233[var_225].Var11 == 1) {
                     count_buying_price = count_buying_price + 100;
@@ -9583,55 +9583,55 @@ function func474(this: any) {
         var_1866 = 0;
         var_224 = var_224 + 1;
         var_683 = var_233[var_1876].Var8;
-        var_233[var_224].Var0 = var_486[var_682][var_225][0];
-        var_233[var_224].Var3 = var_486[var_682][var_225][3];
-        var_233[var_224].Var4 = var_486[var_682][var_225][4];
-        var_233[var_224].Var5 = var_486[var_682][var_225][5];
-        var_233[var_224].Var6 = var_486[var_682][var_225][6];
-        var_233[var_224].Var11 = var_486[var_682][var_225][11];
-        var_233[var_224].Var12 = var_486[var_682][var_225][12];
-        var_233[var_224].Var13 = var_486[var_682][var_225][13];
-        var_233[var_224].Var14 = var_486[var_682][var_225][14];
-        var_233[var_224].Var15 = var_486[var_682][var_225][15];
-        var_233[var_224].Var16 = var_486[var_682][var_225][16];
-        var_233[var_224].Var17 = var_486[var_682][var_225][17];
-        var_233[var_224].Var18 = var_486[var_682][var_225][18];
-        var_233[var_224].Var19 = var_486[var_682][var_225][19];
-        var_233[var_224].Var20 = var_486[var_682][var_225][20];
-        var_233[var_224].Var21 = var_486[var_682][var_225][21];
-        var_233[var_224].Var22 = var_486[var_682][var_225][22];
-        var_233[var_224].Var23 = var_486[var_682][var_225][23];
-        var_233[var_224].Var24 = var_486[var_682][var_225][24];
-        var_233[var_224].Var25 = var_486[var_682][var_225][25];
-        var_233[var_224].Var26 = var_486[var_682][var_225][26];
-        var_233[var_224].Var27 = var_486[var_682][var_225][27];
-        var_233[var_224].Var28 = var_486[var_682][var_225][28];
-        var_233[var_224].Var29 = var_486[var_682][var_225][29];
+        var_233[var_224].Var0 = var_486[var_682][var_225].Var0;
+        var_233[var_224].Var3 = var_486[var_682][var_225].Var3;
+        var_233[var_224].Var4 = var_486[var_682][var_225].Var4;
+        var_233[var_224].Var5 = var_486[var_682][var_225].Var5;
+        var_233[var_224].Var6 = var_486[var_682][var_225].Var6;
+        var_233[var_224].Var11 = var_486[var_682][var_225].Var11;
+        var_233[var_224].Var12 = var_486[var_682][var_225].Var12;
+        var_233[var_224].Var13 = var_486[var_682][var_225].Var13;
+        var_233[var_224].Var14 = var_486[var_682][var_225].Var14;
+        var_233[var_224].Var15 = var_486[var_682][var_225].Var15;
+        var_233[var_224].Var16 = var_486[var_682][var_225].Var16;
+        var_233[var_224].Var17 = var_486[var_682][var_225].Var17;
+        var_233[var_224].Var18 = var_486[var_682][var_225].Var18;
+        var_233[var_224].Var19 = var_486[var_682][var_225].Var19;
+        var_233[var_224].Var20 = var_486[var_682][var_225].Var20;
+        var_233[var_224].Var21 = var_486[var_682][var_225].Var21;
+        var_233[var_224].Var22 = var_486[var_682][var_225].Var22;
+        var_233[var_224].Var23 = var_486[var_682][var_225].Var23;
+        var_233[var_224].Var24 = var_486[var_682][var_225].Var24;
+        var_233[var_224].Var25 = var_486[var_682][var_225].Var25;
+        var_233[var_224].Var26 = var_486[var_682][var_225].Var26;
+        var_233[var_224].Var27 = var_486[var_682][var_225].Var27;
+        var_233[var_224].Var28 = var_486[var_682][var_225].Var28;
+        var_233[var_224].Var29 = var_486[var_682][var_225].Var29;
 /*
-        var_233[var_224].Var0 = JSON.parse(JSON.stringify(var_486[var_682][var_225][0]));
-        var_233[var_224].Var3 = JSON.parse(JSON.stringify(var_486[var_682][var_225][3]));
-        var_233[var_224].Var4 = JSON.parse(JSON.stringify(var_486[var_682][var_225][4]));
-        var_233[var_224].Var5 = JSON.parse(JSON.stringify(var_486[var_682][var_225][5]));
-        var_233[var_224].Var6 = JSON.parse(JSON.stringify(var_486[var_682][var_225][6]));
-        var_233[var_224].Var11 = JSON.parse(JSON.stringify(var_486[var_682][var_225][11]));
-        var_233[var_224].Var12 = JSON.parse(JSON.stringify(var_486[var_682][var_225][12]));
-        var_233[var_224].Var13 = JSON.parse(JSON.stringify(var_486[var_682][var_225][13]));
-        var_233[var_224].Var14 = JSON.parse(JSON.stringify(var_486[var_682][var_225][14]));
-        var_233[var_224].Var15 = JSON.parse(JSON.stringify(var_486[var_682][var_225][15]));
-        var_233[var_224].Var16 = JSON.parse(JSON.stringify(var_486[var_682][var_225][16]));
-        var_233[var_224].Var17 = JSON.parse(JSON.stringify(var_486[var_682][var_225][17]));
-        var_233[var_224].Var18 = JSON.parse(JSON.stringify(var_486[var_682][var_225][18]));
-        var_233[var_224].Var19 = JSON.parse(JSON.stringify(var_486[var_682][var_225][19]));
-        var_233[var_224].Var20 = JSON.parse(JSON.stringify(var_486[var_682][var_225][20]));
-        var_233[var_224].Var21 = JSON.parse(JSON.stringify(var_486[var_682][var_225][21]));
-        var_233[var_224].Var22 = JSON.parse(JSON.stringify(var_486[var_682][var_225][22]));
-        var_233[var_224].Var23 = JSON.parse(JSON.stringify(var_486[var_682][var_225][23]));
-        var_233[var_224].Var24 = JSON.parse(JSON.stringify(var_486[var_682][var_225][24]));
-        var_233[var_224].Var25 = JSON.parse(JSON.stringify(var_486[var_682][var_225][25]));
-        var_233[var_224].Var26 = JSON.parse(JSON.stringify(var_486[var_682][var_225][26]));
-        var_233[var_224].Var27 = JSON.parse(JSON.stringify(var_486[var_682][var_225][27]));
-        var_233[var_224].Var28 = JSON.parse(JSON.stringify(var_486[var_682][var_225][28]));
-        var_233[var_224].Var29 = JSON.parse(JSON.stringify(var_486[var_682][var_225][29]));
+        var_233[var_224].Var0 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var0));
+        var_233[var_224].Var3 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var3));
+        var_233[var_224].Var4 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var4));
+        var_233[var_224].Var5 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var5));
+        var_233[var_224].Var6 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var6));
+        var_233[var_224].Var11 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var11));
+        var_233[var_224].Var12 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var12));
+        var_233[var_224].Var13 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var13));
+        var_233[var_224].Var14 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var14));
+        var_233[var_224].Var15 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var15));
+        var_233[var_224].Var16 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var16));
+        var_233[var_224].Var17 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var17));
+        var_233[var_224].Var18 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var18));
+        var_233[var_224].Var19 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var19));
+        var_233[var_224].Var20 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var20));
+        var_233[var_224].Var21 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var21));
+        var_233[var_224].Var22 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var22));
+        var_233[var_224].Var23 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var23));
+        var_233[var_224].Var24 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var24));
+        var_233[var_224].Var25 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var25));
+        var_233[var_224].Var26 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var26));
+        var_233[var_224].Var27 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var27));
+        var_233[var_224].Var28 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var28));
+        var_233[var_224].Var29 = JSON.parse(JSON.stringify(var_486[var_682][var_225].Var29));
         */
         disc_rarity = var_233[var_224].Var13;
         // ここまで？？
@@ -9700,36 +9700,36 @@ function func476(this: any) {
         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
         var_1866 = 0;
         var_683 = var_233[var_1876].Var8;
-        belongings_item_list = var_486[var_682][var_225][0];
-        disc_rarity = var_486[var_682][var_225][13];
+        belongings_item_list = var_486[var_682][var_225].Var0;
+        disc_rarity = var_486[var_682][var_225].Var13;
         yield func492(); // アイテムリスト呼び出し
-        var_1846 = var_486[var_682][var_225][0];
-        var_1837 = var_486[var_682][var_225][3];
-        var_1835 = var_486[var_682][var_225][4];
-        var_1847 = var_486[var_682][var_225][5];
-        var_1848 = var_486[var_682][var_225][6];
-        var_1838 = var_486[var_682][var_225][7];
-        var_1849 = var_486[var_682][var_225][8];
-        var_1889 = var_486[var_682][var_225][9];
-        var_1850 = var_486[var_682][var_225][11];
-        var_1851 = var_486[var_682][var_225][12];
-        var_1833 = var_486[var_682][var_225][13];
-        var_1834 = var_486[var_682][var_225][14];
-        var_1852 = var_486[var_682][var_225][15];
-        var_1853 = var_486[var_682][var_225][16];
-        var_1854 = var_486[var_682][var_225][17];
-        var_1855 = var_486[var_682][var_225][18];
-        var_1836 = var_486[var_682][var_225][19];
-        var_1856 = var_486[var_682][var_225][20];
-        var_1857 = var_486[var_682][var_225][21];
-        var_1858 = var_486[var_682][var_225][22];
-        var_1859 = var_486[var_682][var_225][23];
-        var_1860 = var_486[var_682][var_225][24];
-        var_1861 = var_486[var_682][var_225][25];
-        var_1862 = var_486[var_682][var_225][26];
-        var_1863 = var_486[var_682][var_225][27];
-        var_1864 = var_486[var_682][var_225][28];
-        var_1865 = var_486[var_682][var_225][29];
+        var_1846 = var_486[var_682][var_225].Var0;
+        var_1837 = var_486[var_682][var_225].Var3;
+        var_1835 = var_486[var_682][var_225].Var4;
+        var_1847 = var_486[var_682][var_225].Var5;
+        var_1848 = var_486[var_682][var_225].Var6;
+        var_1838 = var_486[var_682][var_225].Var7;
+        var_1849 = var_486[var_682][var_225].Var8;
+        var_1889 = var_486[var_682][var_225].Var9;
+        var_1850 = var_486[var_682][var_225].Var11;
+        var_1851 = var_486[var_682][var_225].Var12;
+        var_1833 = var_486[var_682][var_225].Var13;
+        var_1834 = var_486[var_682][var_225].Var14;
+        var_1852 = var_486[var_682][var_225].Var15;
+        var_1853 = var_486[var_682][var_225].Var16;
+        var_1854 = var_486[var_682][var_225].Var17;
+        var_1855 = var_486[var_682][var_225].Var18;
+        var_1836 = var_486[var_682][var_225].Var19;
+        var_1856 = var_486[var_682][var_225].Var20;
+        var_1857 = var_486[var_682][var_225].Var21;
+        var_1858 = var_486[var_682][var_225].Var22;
+        var_1859 = var_486[var_682][var_225].Var23;
+        var_1860 = var_486[var_682][var_225].Var24;
+        var_1861 = var_486[var_682][var_225].Var25;
+        var_1862 = var_486[var_682][var_225].Var26;
+        var_1863 = var_486[var_682][var_225].Var27;
+        var_1864 = var_486[var_682][var_225].Var28;
+        var_1865 = var_486[var_682][var_225].Var29;
         yield func404(); // アイテムを置く時の動作処理
         return;
     });

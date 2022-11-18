@@ -14432,7 +14432,7 @@ function func647(this: any) {
         var_251 = 0;
         var_340 = var_233[var_225].Var0;
         if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-            var_340 = var_486[var_682][var_225][0];
+            var_340 = var_486[var_682][var_225].Var0;
         }
         if (var_1223 == 1) {
             var_340 = 699;
@@ -18451,7 +18451,7 @@ function func660(this: any) {
             var_3061 = 0;
             var_2104 = var_1838 + var_1849;
             for (let cnt2 = 0; cnt2 < var_2104; ++cnt2) {
-                if (var_486[var_1916][var_3060][15] == 0) {
+                if (var_486[var_1916][var_3060].Var15 == 0) {
                     var_3061 = var_3060;
                     break;
                 }
@@ -18463,8 +18463,8 @@ function func660(this: any) {
             }
             var_1838 = var_1838 - 1;
             var_1849 = var_1849 + 1;
-            var_486[var_1916][var_3060][15] = var_83[var_314].Var0;
-            var_486[var_1916][var_3060][18] = var_83[var_314].Var39;
+            var_486[var_1916][var_3060].Var15 = var_83[var_314].Var0;
+            var_486[var_1916][var_3060].Var18 = var_83[var_314].Var39;
             enemy_list = var_83[var_314].Var0;
     
             DSPLAY(audio_id = 130);

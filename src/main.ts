@@ -33,13 +33,13 @@ const createWindow = () => {
   mainWindow.loadFile('index.html') // electronでの検証用
   
   // メニューバーを非表示
-  mainWindow.setMenuBarVisibility(false)
+  mainWindow.setMenuBarVisibility(true)
 
   // ウィンドウの最小サイズ
   //mainWindow.setMinimumSize(345, 360)
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   //ipcMain.on('resize-me-please', (event, arg) => {
   //  mainWindow.setSize(680, 680)

@@ -2458,7 +2458,15 @@ function func229(this: any) {
         var_985 = var_985 + 6000;
         var_986 = bload(var_735, null, var_985);
         var_985 = var_985 + 400;
-        var_486 = bload(var_735, null, var_985);
+        
+        // var_486 = bload(var_735, null, var_985);
+        {
+            var_486 = [];
+            const data = bload(var_735, null, var_985);
+            data.forEach(function (d: any) {
+                var_83.push(ItemInfo.Load(d));
+            });
+        }
         var_985 = var_985 + 201600;
         equip_disc = bload(var_735, null, var_985);
         var_985 = var_985 + 1600;
@@ -3163,7 +3171,14 @@ function func231(this: any) {
         var_985 = var_985 + 6000;
         bsave(var_735, var_986, null, var_985);
         var_985 = var_985 + 400;
-        bsave(var_735, var_486, null, var_985);
+        
+        // bsave(var_735, var_486, null, var_985);
+        const save_486 = Array();
+        var_486.forEach(function (save: any) {
+            save_486.push(save.Save());
+        });
+      
+
         var_985 = var_985 + 201600;
         bsave(var_735, equip_disc, null, var_985);
         var_985 = var_985 + 1600;
@@ -3415,9 +3430,9 @@ function func233(this: any) {
                     var_484 = 1;
                     var_485 = var_233[var_1056].Var6;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        if (var_486[var_485][var_484][0] != 0) {
-                            var_486[var_485][var_484][14] = 1;
-                            var_1057 = var_486[var_485][var_484][0];
+                        if (var_486[var_485][var_484].Var0 != 0) {
+                            var_486[var_485][var_484].Var14 = 1;
+                            var_1057 = var_486[var_485][var_484].Var0;
                             var_862[var_1057][0] = 1;
                         }
                         var_484 = var_484 + 1;
@@ -4014,7 +4029,10 @@ function func242(this: any) {
         var_853 = dim(length1 = 50, length2 = 30, length3 = null, length4 = null);
         var_986 = dim(100);
 
-        var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
+        // var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
+        var_486 = ItemInfo.dim(length1 = 80, length2 = 21, length3 = null, length4 = null);
+        
+
         equip_disc = dim(400);
         var_987 = dim(30);
 
