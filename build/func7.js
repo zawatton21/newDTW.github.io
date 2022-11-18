@@ -83,7 +83,7 @@ function func700() {
                     var_2217 = 0;
                     return [4 /*yield*/, func331()];
                 case 11:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     return [2 /*return*/];
             }
         });
@@ -325,7 +325,7 @@ function func701() {
                 case 49:
                     if (var_211 > 1) {
                         var_2198 = Math.floor(var_211 / 2);
-                        if (var_156[314] == 1) {
+                        if (equip_disc[314] == 1) {
                             var_2198 = Math.floor(var_2198 / 2);
                         }
                         var_211 = var_211 - var_2198;
@@ -750,7 +750,7 @@ function func703() {
                     var_175 = 0;
                     return [4 /*yield*/, func331()];
                 case 4:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     _a.label = 5;
                 case 5:
                     if (!(var_176 >= 1 && var_314 == var_176)) return [3 /*break*/, 10];
@@ -775,7 +775,7 @@ function func703() {
                     var_176 = 0;
                     return [4 /*yield*/, func331()];
                 case 9:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     _a.label = 10;
                 case 10: return [2 /*return*/];
             }
@@ -1626,7 +1626,7 @@ function func705() {
                     _a.label = 133;
                 case 133: return [4 /*yield*/, func331()];
                 case 134:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     _a.label = 135;
                 case 135:
                     if (var_83[var_402].Var0 == 33 && var_2196 == 0) {
@@ -5524,7 +5524,7 @@ function func754() {
                     var_83[var_2171].Var10 = var_71[var_1512][var_1513];
                     return [4 /*yield*/, func331()];
                 case 62:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     _a.label = 63;
                 case 63:
                     if (!(var_1505 == 3)) return [3 /*break*/, 65];
@@ -5535,7 +5535,7 @@ function func754() {
                     var_78[var_2171].Var9 = var_71[var_1512][var_1513];
                     return [4 /*yield*/, func331()];
                 case 64:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     _a.label = 65;
                 case 65:
                     cnt1_54 = 0;
@@ -6774,7 +6774,7 @@ function func772() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 18:
-                    _a.sent(); // アイテム配列の "数" 増減？関数
+                    _a.sent(); // アイテム配列(所持アイテム)初期化関数
                     return [3 /*break*/, 21];
                 case 19:
                     var_447 = var_447 + 1;
@@ -6844,7 +6844,7 @@ function func772() {
                     var_83[var_3148].Var2 = 0;
                     return [4 /*yield*/, func331()];
                 case 30:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     _a.label = 31;
                 case 31:
                     var_217 = 1;
@@ -7210,7 +7210,7 @@ function func776() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 11:
-                    _a.sent(); // アイテム配列の "数" 増減？関数
+                    _a.sent(); // アイテム配列(所持アイテム)初期化関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";

@@ -53,7 +53,7 @@ function func600(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
-        if (var_156[115] == 1) {
+        if (equip_disc[115] == 1) {
             yield func695();
             if (var_2855 != 0) {
                 var_2855 = 0;
@@ -445,7 +445,7 @@ function func603(this: any) {
         var_83[var_673].Var0 = 0;
         var_83[var_673].Var1 = 0;
         var_83[var_673].Var2 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         var_83[var_2749].Var12 = 0;
         var_83[var_2749].Var39 = var_83[var_2749].Var39 + 1;
         if (var_83[var_2749].Var39 == 1) {
@@ -770,7 +770,7 @@ function func604(this: any) {
         if (var_128 >= 1) {
             var_2852 = Math.floor(var_2852 * 3 / 2);
         }
-        if (var_156[205] == 1) {
+        if (equip_disc[205] == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
         if (var_168 == 1) {
@@ -1063,7 +1063,7 @@ function func606(this: any) {
         if (var_128 >= 1) {
             var_2852 = Math.floor(var_2852 * 3 / 2);
         }
-        if (var_156[205] == 1) {
+        if (equip_disc[205] == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
         if (var_168 == 1) {
@@ -1223,7 +1223,7 @@ function func607(this: any) {
         if (var_128 >= 1) {
             var_2852 = Math.floor(var_2852 * 3 / 2);
         }
-        if (var_156[205] == 1) {
+        if (equip_disc[205] == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
         if (var_168 == 1) {
@@ -1977,7 +1977,7 @@ function func613(this: any) {
         if (var_128 >= 1) {
             yield func023();
         }
-        if (var_156[207] == 1) {
+        if (equip_disc[207] == 1) {
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "しかし 装備中のDISCによって";
@@ -2390,7 +2390,7 @@ function func617(this: any) {
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         return;
     });
 }
@@ -2437,7 +2437,7 @@ function func618(this: any) {
         var_673 = var_2353;
         var_1845 = 0;
         var_2546 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
 
         DSPLAY(audio_id = 199);
         comments_row1 = "";
@@ -2553,7 +2553,7 @@ function func620(this: any) {
                     var_27_x = var_27[1];
                     var_219 = 0;
                 }
-                if (var_156[351] == 1) {
+                if (equip_disc[351] == 1) {
                     comments_row1 = "装備DISCの効果によって";
                     comments_row2 = "眠くならなかった！";
                     var_25_x = var_25[1];
@@ -2768,7 +2768,7 @@ function func620(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                if (var_156[396] == 0) {
+                if (equip_disc[396] == 0) {
                     if (var_157 == 0) {
                         var_133 = 1;
                         var_397 = 0;
@@ -2795,7 +2795,7 @@ function func620(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                if (var_156[396] == 1) {
+                if (equip_disc[396] == 1) {
                     yield func340(); // キー入力による選択処理
                     yield func094();
                     comments_row1 = comments_row1a;
@@ -2846,7 +2846,7 @@ function func620(this: any) {
                 if (var_128 >= 1) {
                     yield func023();
                 }
-                if (var_156[396] == 0) {
+                if (equip_disc[396] == 0) {
                     if (var_157 == 0) {
                         var_133 = 1;
                         var_397 = 0;
@@ -2870,7 +2870,7 @@ function func620(this: any) {
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
-                if (var_156[396] == 1) {
+                if (equip_disc[396] == 1) {
                     yield func340(); // キー入力による選択処理
                     yield func094();
                     comments_row1 = comments_row1a;
@@ -3475,7 +3475,7 @@ function func620(this: any) {
                 var_26_x = var_26[2];
                 var_27_x = var_27[2];
                 yield func047();
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
@@ -3568,7 +3568,7 @@ function func620(this: any) {
             yield func337(); // メッセージ関係呼び出し
             var_83[var_412].Var7 = 0;
             var_742 = 0;
-            if (var_156[362] == 1) {
+            if (equip_disc[362] == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -3630,7 +3630,7 @@ function func620(this: any) {
             var_78[var_419].Var28 = var_233[var_475].Var28;
             var_78[var_419].Var29 = var_233[var_475].Var29;
             var_225 = var_475;
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3731,7 +3731,7 @@ function func620(this: any) {
                 var_82[var_2695][var_2696] = 0;
                 var_83[var_412].Var11 = 0;
                 var_83[var_412].Var10 = var_71[var_2350][var_2351];
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             }
             return;
         }
@@ -4057,7 +4057,7 @@ function func620(this: any) {
             yield func337(); // メッセージ関係呼び出し
             var_83[var_412].Var7 = 0;
             var_742 = 0;
-            if (var_156[119]) {
+            if (equip_disc[119]) {
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -4095,7 +4095,7 @@ function func620(this: any) {
             yield func492(); // アイテムリスト呼び出し
             target_item_name = item_name;
             var_225 = var_475;
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -4210,7 +4210,7 @@ function func620(this: any) {
                 var_2197 = 1;
                 return;
             }
-            if (var_156[360] == 1) {
+            if (equip_disc[360] == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -4321,7 +4321,7 @@ function func620(this: any) {
                 var_389 = 0;
                 var_127 = 1;
                 var_167 = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_2197 = 1;
                 return;
             }
@@ -4548,7 +4548,7 @@ function func620(this: any) {
                 if (var_128 >= 1) {
                     yield func023();
                 }
-                if (var_156[205] == 1) {
+                if (equip_disc[205] == 1) {
                     var_209 = Math.floor(var_209 * 2 / 3);
                 }
                 if (var_168 == 1) {
@@ -4688,7 +4688,7 @@ function func620(this: any) {
                 DSPLAY(audio_id = 129);
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
-                if (var_156[352] == 0) {
+                if (equip_disc[352] == 0) {
                     comments_row1a = "満腹度が急激に下がった！";
                     comments_row2a = "";
             
@@ -4698,7 +4698,7 @@ function func620(this: any) {
                         var_350 = 0;
                     }
                 }
-                if (var_156[352] == 1) {
+                if (equip_disc[352] == 1) {
                     comments_row1a = "しかし装備DISCの効果によって";
                     comments_row2a = "腹ヘリを防いだ！";
                 }
@@ -5232,7 +5232,7 @@ function func620(this: any) {
                 var_83[var_2273].Var5 = 2;
                 yield func337(); // メッセージ関係呼び出し
                 var_83[var_2273].Var7 = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_1073 = rnd(3);
                 yield func094();
                 comments_row1 = "";
@@ -5349,7 +5349,7 @@ function func620(this: any) {
                 var_411 = 0;
                 var_83[var_2273].Var21 = 0;
                 var_83[var_2273].Var5 = 2;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "地面から 土人形 が現れた！";
@@ -5438,7 +5438,7 @@ function func620(this: any) {
                     var_2197 = 1;
                     return;
                 }
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 yield func094();
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -5685,7 +5685,7 @@ function func620(this: any) {
                         yield func047();
                         yield func050();
                         var_225 = var_2897;
-                        yield func433(); // アイテム配列の "数" 増減？関数
+                        yield func433(); // アイテム配列(所持アイテム)初期化関数
                         var_479 = dim(40);
                         var_250 = 0;
                         var_410 = 0;
@@ -5774,7 +5774,7 @@ function func620(this: any) {
                 if (var_128 >= 1) {
                     yield func023();
                 }
-                if (var_156[207] == 1) {
+                if (equip_disc[207] == 1) {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -5903,7 +5903,7 @@ function func620(this: any) {
                 comments_row2a = "";
                 var_298 = "";
                 var_299 = 0;
-                if (var_156[352] == 0) {
+                if (equip_disc[352] == 0) {
                     comments_row1 = "養分を吸われて満腹度が下がった！";
                     comments_row2 = "";
             
@@ -5913,7 +5913,7 @@ function func620(this: any) {
                         var_350 = 0;
                     }
                 }
-                if (var_156[352] == 1) {
+                if (equip_disc[352] == 1) {
                     comments_row1 = "しかし装備DISCの効果によって";
                     comments_row2 = "腹ヘリを防いだ！";
                 }
@@ -6045,7 +6045,7 @@ function func620(this: any) {
                 }
                 var_271 = 0;
                 var_1583 = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "吉良はｼｱｰﾊｰﾄｱﾀｯｸを繰り出した！";
@@ -6171,7 +6171,7 @@ function func620(this: any) {
                 if (var_128 >= 1) {
                     yield func023();
                 }
-                if (var_156[361] == 1) {
+                if (equip_disc[361] == 1) {
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -6312,7 +6312,7 @@ function func620(this: any) {
                 var_78[var_419].Var28 = var_233[var_475].Var28;
                 var_78[var_419].Var29 = var_233[var_475].Var29;
                 var_225 = var_475;
-                yield func433(); // アイテム配列の "数" 増減？関数
+                yield func433(); // アイテム配列(所持アイテム)初期化関数
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -6377,7 +6377,7 @@ function func620(this: any) {
                 var_389 = 0;
             }
             if (var_2830 == 0 || var_2830 == 1) {
-                if (var_156[207] == 1) {
+                if (equip_disc[207] == 1) {
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし 装備中のDISCによって";
@@ -11752,7 +11752,7 @@ function func635(this: any) {
             var_357 = 108;
         }
         var_2923 = var_357;
-        if (var_156[101] == 1 && var_2924 == 0) {
+        if (equip_disc[101] == 1 && var_2924 == 0) {
             var_2925 = rnd(2);
         }
         var_2926 = 1;
@@ -11760,7 +11760,7 @@ function func635(this: any) {
         if (sympathy_id == 135) {
             var_341 = 1;
         }
-        if (var_156[105] == 0) {
+        if (equip_disc[105] == 0) {
             var_1030 = 0;
         }
         yield func636();
@@ -11799,7 +11799,7 @@ function func636(this: any) {
                 var_199 = 9;
             }
         }
-        if (var_156[121] == 1 && var_171 == 0) {
+        if (equip_disc[121] == 1 && var_171 == 0) {
             var_2927 = rnd(6);
             if (var_2927 == 1) {
                 var_288 = rnd(8);
@@ -12118,11 +12118,11 @@ function func636(this: any) {
             yield func651();
             return;
         }
-        if (var_82[var_347][var_348] == 0 && var_156[108] == 0) {
+        if (var_82[var_347][var_348] == 0 && equip_disc[108] == 0) {
             yield func651();
             return;
         }
-        if (var_82[var_347][var_348] == 0 && var_156[108] == 1) {
+        if (var_82[var_347][var_348] == 0 && equip_disc[108] == 1) {
             var_2933 = var_347;
             var_2934 = var_348;
             if (var_199 == 4) {
@@ -12209,7 +12209,7 @@ function func636(this: any) {
             var_748 = var_347 - var_66 + 4;
             var_749 = var_348 - var_67 + 4;
         }
-        if (var_156[318] == 1 && var_83[var_314].Var0 > 0) {
+        if (equip_disc[318] == 1 && var_83[var_314].Var0 > 0) {
             var_2936 = rnd(8);
             if (var_2936 == 0) {
                 var_747 = 1;
@@ -12388,7 +12388,7 @@ function func636(this: any) {
             var_27_x = var_27[1];
             yield func047();
             var_2939 = 1;
-            if (var_156[105] == 1) {
+            if (equip_disc[105] == 1) {
                 var_1030 = var_1030 + 1;
             }
             yield func651();
@@ -12466,7 +12466,7 @@ function func636(this: any) {
                 var_2940 = 0;
             }
         }
-        if (var_156[106] == 1 && var_2940 == 1) {
+        if (equip_disc[106] == 1 && var_2940 == 1) {
             var_2940 = 0;
         }
         if (var_357 == 104 && var_129 == 0) {
@@ -12478,7 +12478,7 @@ function func636(this: any) {
         if (var_357 == 106 && var_139 >= 1) {
             var_2940 = 0;
         }
-        if (var_156[105] == 1 && var_1030 >= 2) {
+        if (equip_disc[105] == 1 && var_1030 >= 2) {
             var_2940 = 0;
         }
         if (var_2940 == 0) {
@@ -12631,7 +12631,7 @@ function func636(this: any) {
             var_2434 = 0;
             var_2413 = 0;
         }
-        if (var_156[313] == 1 && var_211 != var_352 && var_209 != 0) {
+        if (equip_disc[313] == 1 && var_211 != var_352 && var_209 != 0) {
             var_2944 = rnd(8);
             if (var_2944 == 0 || var_1194 == 1) {
         
@@ -12682,7 +12682,7 @@ function func636(this: any) {
                 var_83[var_314].Var8 = 0;
             }
         }
-        if (var_156[317] == 1 && var_83[var_314].Var0 != 13 && var_83[var_314].Var0 != 143 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 20 && var_83[var_314].Var31 != 4 && var_83[var_314].Var31 != 5) {
+        if (equip_disc[317] == 1 && var_83[var_314].Var0 != 13 && var_83[var_314].Var0 != 143 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 20 && var_83[var_314].Var31 != 4 && var_83[var_314].Var31 != 5) {
             var_2953 = rnd(8);
             if (var_2953 == 0) {
                 var_1374 = var_83[var_314].Var0;
@@ -12749,7 +12749,7 @@ function func636(this: any) {
                     var_2416 = 0;
                 }
             }
-            if (var_156[307] == 1) {
+            if (equip_disc[307] == 1) {
                 var_2955 = rnd(2);
                 if (var_2955 == 1) {
                     var_2263 = var_83[var_314].Var0;
@@ -12843,7 +12843,7 @@ function func636(this: any) {
             }
             var_82[var_347][var_348] = 0;
             var_83[var_314].Var0 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -12868,7 +12868,7 @@ function func636(this: any) {
             var_2960 = 0;
             var_2961 = 0;
             var_2962 = 0;
-            if (var_83[var_314].Var14 == 0 && var_156[103] == 1) {
+            if (var_83[var_314].Var14 == 0 && equip_disc[103] == 1) {
                 var_2963 = rnd(8);
                 if (var_2963 == 0 || var_1194 == 1) {
             
@@ -12883,7 +12883,7 @@ function func636(this: any) {
                     }
                 }
             }
-            if (var_83[var_314].Var20 != 2 && var_156[319] == 1) {
+            if (var_83[var_314].Var20 != 2 && equip_disc[319] == 1) {
                 var_2963 = rnd(8);
                 if (var_2963 == 0 || var_1194 == 1) {
                     var_2961 = 1;
@@ -12908,7 +12908,7 @@ function func636(this: any) {
                     }
                 }
             }
-            if (var_83[var_314].Var13 == 0 && var_156[202] == 1) {
+            if (var_83[var_314].Var13 == 0 && equip_disc[202] == 1) {
                 var_2963 = rnd(8);
                 if (var_2963 == 0 || var_1194 == 1) {
                     var_2962 = 1;
@@ -13026,7 +13026,7 @@ function func636(this: any) {
             var_357 = 108;
             var_750 = 0;
         }
-        if (var_156[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
+        if (equip_disc[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
@@ -13067,7 +13067,7 @@ function func636(this: any) {
         if (var_83[var_314].Var0 == 164 || var_83[var_314].Var0 == 165) {
             var_83[var_314].Var5 = var_2942;
         }
-        if (var_156[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
+        if (equip_disc[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
             if (var_357 != 100 && var_357 != 398) {
                 var_2926 = 0;
                 yield func641();
@@ -13098,7 +13098,7 @@ function func637(this: any) {
         dbgprt(637);
         var_217 = 1;
         var_2965 = 0;
-        if (var_156[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
+        if (equip_disc[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
@@ -13137,7 +13137,7 @@ function func637(this: any) {
         if (var_83[var_314].Var0 == 164 || var_83[var_314].Var0 == 165) {
             var_83[var_314].Var5 = var_2942;
         }
-        if (var_156[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
+        if (equip_disc[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
             var_2926 = 0;
             yield func642();
             if (var_2968 == 1) {
@@ -13162,7 +13162,7 @@ function func638(this: any) {
                 enemy_defence = Math.floor(enemy_defence * (var_83[var_314].Var39 * 2 + 10) / 10);
             }
         }
-        if (var_156[206] == 1) {
+        if (equip_disc[206] == 1) {
             var_1073 = rnd(8);
             if (var_1073 == 0) {
                 enemy_defence = Math.floor(enemy_defence / 2);
@@ -13178,56 +13178,56 @@ function func638(this: any) {
         var_2817 = rnd(33);
         var_2817 = var_2817 + 111;
         var_209 = Math.floor(var_949 * var_2817 / 128);
-        if (var_156[117] == 1) {
+        if (equip_disc[117] == 1) {
             yield func645();
         }
         if (var_143 >= 2) {
             var_209 = var_209 + Math.floor(var_143 * var_209 / 5);
         }
-        if (var_156[399] == 1) {
+        if (equip_disc[399] == 1) {
             var_209 = Math.floor(var_209 * 3 / 2);
         }
-        if (var_156[111] == 1) {
+        if (equip_disc[111] == 1) {
             var_1337 = var_83[var_314].Var0;
             if (var_1337 == 147 || var_1337 == 134 || var_1337 == 119 || var_1337 == 35 || var_1337 == 135 || var_1337 == 120 || var_1337 == 128 || var_1337 == 140 || var_1337 == 68 || var_1337 == 131 || var_1337 == 132) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
-        if (var_156[114] == 1) {
+        if (equip_disc[114] == 1) {
             var_1337 = var_83[var_314].Var0;
             if (var_1337 == 141 || var_1337 == 134 || var_1337 == 99 || var_1337 == 72 || var_1337 == 80 || var_1337 == 148 || var_1337 == 153 || var_1337 == 154 || var_1337 == 156 || var_1337 == 157 || var_1337 == 159 || var_1337 == 93 || var_1337 == 96 || var_1337 == 98) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
-        if (var_156[369] == 1) {
+        if (equip_disc[369] == 1) {
             var_1337 = var_83[var_314].Var0;
             if (var_1337 == 62 || var_1337 == 63 || var_1337 == 85 || var_1337 == 64 || var_1337 == 106 || var_1337 == 107) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
-        if (var_156[370] == 1) {
+        if (equip_disc[370] == 1) {
             var_1337 = var_83[var_314].Var0;
             if (var_1337 == 27 || var_1337 == 97 || var_1337 == 58 || var_1337 == 14 || var_1337 == 15 || var_1337 == 38 || var_1337 == 155 || var_1337 == 129) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
-        if (var_156[112] == 1) {
+        if (equip_disc[112] == 1) {
             if (var_83[var_314].Var31 == 6 || var_83[var_314].Var31 == 7 || var_83[var_314].Var31 == 8) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
-        if (var_156[102] == 1) {
+        if (equip_disc[102] == 1) {
             if (var_83[var_314].Var31 == 9 || var_83[var_314].Var31 == 10) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
-        if (var_156[116] == 1 && var_83[var_314].Var31 == 2) {
+        if (equip_disc[116] == 1 && var_83[var_314].Var31 == 2) {
             var_209 = Math.floor(var_209 * 3 / 2);
         }
-        if (var_156[124] == 1 && var_83[var_314].Var0 == 131) {
+        if (equip_disc[124] == 1 && var_83[var_314].Var0 == 131) {
             var_209 = Math.floor(var_209 * 3 / 2);
         }
-        if (var_156[124] == 1 && var_83[var_314].Var0 == 132) {
+        if (equip_disc[124] == 1 && var_83[var_314].Var0 == 132) {
             var_209 = Math.floor(var_209 * 3 / 2);
         }
         if (var_125 == 1 && var_83[var_314].Var31 == 2) {
@@ -13254,7 +13254,7 @@ function func638(this: any) {
         if (var_182 == 1) {
             var_209 = var_209 * 2;
         }
-        if (var_156[308] == 1 && var_83[var_314].Var0 == var_831 && var_83[var_314].Var0 != 0) {
+        if (equip_disc[308] == 1 && var_83[var_314].Var0 == var_831 && var_83[var_314].Var0 != 0) {
             var_209 = var_209 * 2;
         }
         if (var_1035 >= 1) {
@@ -13285,7 +13285,7 @@ function func639(this: any) {
             }
         }
         if (var_83[var_314].Var0 == 72 || var_83[var_314].Var0 == 88 || var_83[var_314].Var0 == 99) {
-            if (var_83[var_314].Var20 == 0 && var_156[366] == 0) {
+            if (var_83[var_314].Var20 == 0 && equip_disc[366] == 0) {
                 if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3) {
                     var_2867 = 0;
                     var_2938 = 1;
@@ -13298,7 +13298,7 @@ function func639(this: any) {
                 var_2938 = 0;
             }
         }
-        if (var_156[105] == 1 && var_1030 >= 2) {
+        if (equip_disc[105] == 1 && var_1030 >= 2) {
             var_2867 = 1;
             var_2938 = 0;
         }
@@ -14207,7 +14207,7 @@ function func644(this: any) {
         var_27_x = var_27[1];
         yield func047();
         var_2939 = 1;
-        if (var_156[105] == 1) {
+        if (equip_disc[105] == 1) {
             var_1030 = var_1030 + 1;
         }
         var_2985 = 0;
@@ -14388,7 +14388,7 @@ function func646(this: any) {
             var_357 = 0;
             yield func494();
             var_225 = var_553;
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
             yield func494();
             var_896 = 0;
             var_2926 = 0;
@@ -15211,10 +15211,10 @@ function func651(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(651);
         var_2985 = 0;
-        if (var_156[118] == 1 && var_71[var_347][var_348] == 0) {
+        if (equip_disc[118] == 1 && var_71[var_347][var_348] == 0) {
             yield func653();
         }
-        if (var_156[104] == 1) {
+        if (equip_disc[104] == 1) {
             if (var_71[var_347][var_348] == 0 && var_71[var_66][var_67] != 0 && var_3014 == 0 && var_199 != 1 && var_199 != 3 && var_199 != 7 && var_199 != 9) {
                 if (var_92 != 1 && var_92 != 7 && var_92 != 16 && var_262 == 0) {
                     if (var_347 >= 5 && var_348 >= 5 && var_347 <= var_33 && var_348 <= var_34) {
@@ -15312,7 +15312,7 @@ function func651(this: any) {
             var_2927 = 0;
             var_1194 = 1;
         }
-        if (var_156[109] == 1 && var_211 == var_352 && var_71[var_347][var_348] != 0 && var_2939 == 0) {
+        if (equip_disc[109] == 1 && var_211 == var_352 && var_71[var_347][var_348] != 0 && var_2939 == 0) {
             var_3018 = 0;
             var_3019 = var_66;
             var_3020 = var_67;
@@ -15417,7 +15417,7 @@ function func651(this: any) {
             }
             yield func337(); // メッセージ関係呼び出し
         }
-        if (var_156[105] == 1 && var_1030 >= 2 && var_2939 == 1) {
+        if (equip_disc[105] == 1 && var_1030 >= 2 && var_2939 == 1) {
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -15475,7 +15475,7 @@ function func651(this: any) {
                 }
             }
         }
-        if (var_156[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
+        if (equip_disc[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
@@ -15508,7 +15508,7 @@ function func651(this: any) {
         if (var_357 == 122 || var_357 == 101) {
             var_357 = var_2923;
         }
-        if (var_156[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
+        if (equip_disc[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
             if (var_357 != 100 && var_357 != 398) {
                 var_2926 = 0;
                 yield func641();
@@ -16230,7 +16230,7 @@ function func654(this: any) {
             var_2868 = 0;
             return;
         }
-        if (var_156[203] == 1 && var_163 == 0) {
+        if (equip_disc[203] == 1 && var_163 == 0) {
             var_3036 = rnd(8);
             if (var_3036 == 0) {
                 if (var_127 == 0 && var_132 == 0 && var_83[var_673].Var30 == 0) {
@@ -16288,7 +16288,7 @@ function func654(this: any) {
             }
         }
         var_3037 = 0;
-        if (enemy_list == 14 || enemy_list == 66 || enemy_list == 47 || enemy_list == 120 || enemy_list == 160 || enemy_list == 67 || var_156[367] == 1) {
+        if (enemy_list == 14 || enemy_list == 66 || enemy_list == 47 || enemy_list == 120 || enemy_list == 160 || enemy_list == 67 || equip_disc[367] == 1) {
             if (var_83[var_673].Var20 == 0) {
                 var_3037 = rnd(4);
                 if (var_83[var_673].Var0 == 120) {
@@ -16455,11 +16455,11 @@ function func654(this: any) {
         var_389 = 0;
         var_240 = 0;
         var_743 = 0;
-        if (var_3037 == 1 && var_156[200] == 1) {
+        if (var_3037 == 1 && equip_disc[200] == 1) {
             yield func694();
             return;
         }
-        if (var_156[115] == 1) {
+        if (equip_disc[115] == 1) {
             yield func695();
             if (var_2855 != 0) {
                 var_2855 = 0;
@@ -16772,7 +16772,7 @@ function func657(this: any) {
         var_271 = 0;
         var_83[var_314].Var8 = 0;
         if (wallet < 1) {
-            if (var_156[396] == 0) {
+            if (equip_disc[396] == 0) {
                 if (var_157 == 0) {
                     var_133 = 1;
                     var_397 = 0;
@@ -16798,7 +16798,7 @@ function func657(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            if (var_156[396] == 1) {
+            if (equip_disc[396] == 1) {
                 yield func340(); // キー入力による選択処理
                 yield func094();
                 comments_row1 = comments_row1a;
@@ -17313,12 +17313,12 @@ function func658(this: any) {
             if (var_1073 != 0 || var_136 != 0 || var_135 != 0 || var_134 != 0) {
                 return;
             }
-            if (var_156[201] == 0 && var_83[var_314].Var0 == 9) {
+            if (equip_disc[201] == 0 && var_83[var_314].Var0 == 9) {
                 var_136 = 1;
         
                 DSPLAY(audio_id = 123);
             }
-            if (var_156[201] == 0 && var_83[var_314].Var0 == 10) {
+            if (equip_disc[201] == 0 && var_83[var_314].Var0 == 10) {
                 var_135 = 1;
         
                 DSPLAY(audio_id = 123);
@@ -17328,11 +17328,11 @@ function func658(this: any) {
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            if (var_156[201] == 0) {
+            if (equip_disc[201] == 0) {
                 comments_row1a = "肉片がくっついた！";
                 comments_row2a = "";
             }
-            if (var_156[201] == 1) {
+            if (equip_disc[201] == 1) {
                 comments_row1a = "肉片がくっつきそうになったが";
                 comments_row2a = "装備DISCによって防いだ";
             }
@@ -17353,7 +17353,7 @@ function func658(this: any) {
             if (var_1073 != 0 || var_137 != 0) {
                 return;
             }
-            if (var_156[201] == 0) {
+            if (equip_disc[201] == 0) {
                 var_137 = 1;
         
                 DSPLAY(audio_id = 123);
@@ -17363,11 +17363,11 @@ function func658(this: any) {
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            if (var_156[201] == 0) {
+            if (equip_disc[201] == 0) {
                 comments_row1a = "「憎き肉片」がくっついた！";
                 comments_row2a = "";
             }
-            if (var_156[201] == 1) {
+            if (equip_disc[201] == 1) {
                 comments_row1a = "「憎き肉片」がくっつきそうになったが";
                 comments_row2a = "装備DISCによって防いだ";
             }
@@ -18285,7 +18285,7 @@ function func660(this: any) {
         var_748 = var_83[var_314].Var1 - var_66 + 4;
         var_749 = var_83[var_314].Var2 - var_67 + 4;
         if (var_163 == 0 && var_123 == 0) {
-            if (var_83[var_314].Var0 == 64 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_1218 == 0 && var_156[122] == 0 && var_340 != 412) {
+            if (var_83[var_314].Var0 == 64 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_1218 == 0 && equip_disc[122] == 0 && var_340 != 412) {
                 var_1195 = 0;
                 var_1421 = var_340;
                 var_1249 = var_1887;
@@ -18295,7 +18295,7 @@ function func660(this: any) {
                 var_2995 = 1;
                 return;
             }
-            if (var_1270 == 1 && var_156[122] == 0 && var_1218 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0) {
+            if (var_1270 == 1 && equip_disc[122] == 0 && var_1218 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0) {
                 if (var_83[var_314].Var0 == 9) {
                     yield func663();
                     var_340 = var_3056;
@@ -18316,7 +18316,7 @@ function func660(this: any) {
                 var_2995 = 1;
                 return;
             }
-            if (var_83[var_314].Var0 == 156 && var_1218 == 0 && var_156[122] == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_340 != 412) {
+            if (var_83[var_314].Var0 == 156 && var_1218 == 0 && equip_disc[122] == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_340 != 412) {
                 if (var_340 != 304 && var_340 != 397) {
                     var_1195 = 0;
                     yield func665();
@@ -18325,7 +18325,7 @@ function func660(this: any) {
                     return;
                 }
             }
-            if (var_83[var_314].Var0 == 159 && var_1218 == 0 && var_156[122] == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_340 != 412) {
+            if (var_83[var_314].Var0 == 159 && var_1218 == 0 && equip_disc[122] == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_340 != 412) {
                 var_1195 = 0;
                 yield func665();
                 var_340 = var_3056;
@@ -18492,14 +18492,14 @@ function func660(this: any) {
             var_83[var_314].Var0 = 0;
             var_83[var_314].Var1 = 0;
             var_83[var_314].Var2 = 0;
-            if (var_156[122] == 1) {
+            if (equip_disc[122] == 1) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                     var_198 = 1;
                     var_300 = 0;
                 }
             }
-            if (var_156[122] == 0) {
+            if (equip_disc[122] == 0) {
                 var_1340 = (var_455 - var_66 + 4) * 40;
                 var_1341 = (var_456 - var_67 + 4) * 40;
                 var_271 = 1;
@@ -18833,7 +18833,7 @@ function func660(this: any) {
             }
             var_83[var_1385].Var8 = 0;
             var_83[var_3068].Var8 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -19863,7 +19863,7 @@ function func661(this: any) {
             if (var_340 == 698) {
                 var_3076 = 2;
             }
-            if (var_156[306] == 1) {
+            if (equip_disc[306] == 1) {
                 yield func428();
                 var_3076 = var_3076 + var_233[var_555].Var4;
             }
@@ -20536,7 +20536,7 @@ function func668(this: any) {
             }
             if (var_211 > 1) {
                 var_2198 = Math.floor(var_211 / 2);
-                if (var_156[314] == 1) {
+                if (equip_disc[314] == 1) {
                     var_2198 = Math.floor(var_2198 / 2);
                 }
                 var_211 = var_211 - var_2198;
@@ -20644,7 +20644,7 @@ function func670(this: any) {
         var_83[var_314].Var0 = 0;
         var_83[var_314].Var1 = 0;
         var_83[var_314].Var2 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -20702,7 +20702,7 @@ function func671(this: any) {
 function func672(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(672);
-        if (var_156[395] == 1 && var_1061 == 0) {
+        if (equip_disc[395] == 1 && var_1061 == 0) {
             yield func675();
             return;
         }
@@ -21033,7 +21033,7 @@ function func675(this: any) {
         var_898 = 0;
         belongings_item_list = var_3081;
         yield func430();
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         var_2392 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
             var_83[var_2392].Var6 = 0;
@@ -21102,7 +21102,7 @@ function func676(this: any) {
             yield func677();
             return;
         }
-        if (var_156[305] == 1) {
+        if (equip_disc[305] == 1) {
             var_1654 = Math.floor(var_1654 / 2);
             if (var_1654 <= 1) {
                 var_1654 = 1;
@@ -21920,7 +21920,7 @@ function func687(this: any) {
 
         DSPLAY(audio_id = 192);
         var_311 = 255;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -22021,7 +22021,7 @@ function func688(this: any) {
 
         DSPLAY(audio_id = 192);
         var_311 = 255;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -22539,7 +22539,7 @@ function func698(this: any) {
             }
             if (var_211 > 1) {
                 var_2198 = Math.floor(var_211 / 2);
-                if (var_156[314] == 1) {
+                if (equip_disc[314] == 1) {
                     var_2198 = Math.floor(var_2198 / 2);
                 }
                 var_211 = var_211 - var_2198;
@@ -22587,7 +22587,7 @@ function func698(this: any) {
         }
         var_2196 = 0;
         var_2195 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         var_2199 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
             if (var_83[var_2199].Var0 == 17 && var_83[var_2199].Var29 == 1) {
@@ -22768,7 +22768,7 @@ function func699(this: any) {
             }
             if (var_211 > 1) {
                 var_2198 = Math.floor(var_211 / 2);
-                if (var_156[314] == 1) {
+                if (equip_disc[314] == 1) {
                     var_2198 = Math.floor(var_2198 / 2);
                 }
                 var_211 = var_211 - var_2198;
@@ -22816,7 +22816,7 @@ function func699(this: any) {
         }
         var_2196 = 0;
         var_2195 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         return;
     });
 }

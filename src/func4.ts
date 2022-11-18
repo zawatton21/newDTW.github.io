@@ -385,11 +385,11 @@ function func403(this: any) {
                 return;
             }
         }
-        yield func404(); // 拠点(ホテルや亀の倉庫)でアイテムを置く時の動作処理
+        yield func404(); // アイテムを置く時の動作処理
     });
 }
 
-// 拠点(ホテルや亀の倉庫)でアイテムを置く時の動作処理
+// アイテムを置く時の動作処理
 function func404(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(404);
@@ -438,7 +438,7 @@ function func404(this: any) {
             if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                 yield func430();
             }
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
             DSPLAY(audio_id = 148);
             var_557 = 1;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
@@ -576,7 +576,7 @@ function func404(this: any) {
         if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
             yield func430();
         }
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1014,7 +1014,7 @@ function func411(this: any) {
         }
         var_1892 = 10;
         var_1893 = 0;
-        if (var_156[122] == 1 && var_262 == 0) {
+        if (equip_disc[122] == 1 && var_262 == 0) {
             var_1892 = 60;
             var_1893 = 1;
         }
@@ -1191,7 +1191,7 @@ function func411(this: any) {
             var_27_x = var_27[1];
             yield func047();
         }
-        if (var_446 == 0) { // 投げて落ちた先が水面であれば
+        if (var_446 == 0) { // 投げて落ちた先が水面等おけない床であれば
             var_78[var_854].Var0 = var_1846;
             var_78[var_854].Var1 = 0;
             var_78[var_854].Var2 = 0;
@@ -1247,7 +1247,7 @@ function func411(this: any) {
         if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
             yield func430();
         }
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -1496,11 +1496,11 @@ function func414(this: any) {
                 var_673 = var_1912;
             }
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         if (var_1903 == 1) {
             return;
         }
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -1513,9 +1513,9 @@ function func414(this: any) {
 function func415(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(415);
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         yield func667();
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -1588,7 +1588,7 @@ function func417(this: any) {
         if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
             yield func430();
         }
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -1656,7 +1656,7 @@ function func418(this: any) {
         if (var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
             yield func430();
         }
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -2167,7 +2167,7 @@ function func420(this: any) {
             var_1942 = var_486[var_682][var_225][20];
             var_1943 = var_486[var_682][var_225][21];
         }
-        var_1944 = belongings_item_list;
+        //var_1944 = belongings_item_list;
 
         yield func492(); // アイテムリスト呼び出し
         if (belongings_item_list == 700 || belongings_item_list == 571 || belongings_item_list == 579 || belongings_item_list == 729 || belongings_item_list == 730 || belongings_item_list == 731 || belongings_item_list == 701 || belongings_item_list == 995) {
@@ -2182,7 +2182,8 @@ function func420(this: any) {
         if (belongings_item_list >= 500 || belongings_item_list < 750) {
             yield func498(); // 消費アイテムの効果
         }
-        belongings_item_list = var_1944;
+        //belongings_item_list = var_1944;
+        // belongings_item_list = 0; // Var 0.1309で追加
         //yield func433();
 
         if (var_234 == 0) {
@@ -2196,25 +2197,26 @@ function func420(this: any) {
             if (belongings_item_list >= 750 && belongings_item_list < 770) {
                 var_1931 = 1;
             }
+            // 
             if (belongings_item_list != 567 && belongings_item_list != 590 && belongings_item_list != 565) {
                 if (var_1931 == 0) {
-                    yield func432();
+                    yield func432(); // disc関係の配列宣言処理 or それ以外は初期化処理
                 }
             }
             // No = 567 ジョンガリAのdisc
             if (belongings_item_list == 567 && var_1930 == 1) {
-                yield func432();
+                yield func432(); // disc関係の配列宣言処理 or それ以外は初期化処理
             }
             // No = 590 ギアッチョのdisc
             if (belongings_item_list == 590 && var_1930 == 1) {
-                yield func432();
+                yield func432(); // disc関係の配列宣言処理 or それ以外は初期化処理
             }
             // No = 565 ケンゾーのdisc
             if (belongings_item_list == 565 && var_1930 == 1) {
-                yield func432();
+                yield func432(); // disc関係の配列宣言処理 or それ以外は初期化処理
             }
             if (var_1931 == 1 && var_1930 == 1) {
-                yield func432();
+                yield func432(); // disc関係の配列宣言処理 or それ以外は初期化処理
             }
         }
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
@@ -2279,7 +2281,7 @@ function func420(this: any) {
             var_1927 = 0;
             var_1928 = 0;
             var_1929 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         var_234 = 0;
         var_220 = 0; // 道具画面(メニュー画面/道具)が閉じている状態
@@ -2339,7 +2341,7 @@ function func421(this: any) {
                 var_250 = 0;
                 var_410 = 0;
             }
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
         return;
     });
@@ -2420,7 +2422,7 @@ function func423(this: any) {
                 var_106 = 1;
                 count_buying_price = count_buying_price + buying_price;
             }
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
         return;
     });
@@ -2640,8 +2642,9 @@ function func431(this: any) {
     });
 }
 
-// 配列宣言処理
+
 // 装備disc、射撃discの合成数や修正値、数などの為の配列か?
+// 装備、射撃disc以外は初期化処理へ
 function func432(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(432);
@@ -2691,7 +2694,7 @@ function func432(this: any) {
                 return;
             }
         }
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
     });
 }
 
@@ -2706,6 +2709,7 @@ function func433(this: any) {
         // var_1957はアイテムを一つでも持っているかどうか？
         var_1957 = 0;
         // var_1957が0の時は、配列を初期化する
+
         var_233[var_225].Var0 = 0;
         var_233[var_225].Var1 = 0;
         var_233[var_225].Var2 = 0;
@@ -2736,11 +2740,44 @@ function func433(this: any) {
         var_233[var_225].Var27 = 0;
         var_233[var_225].Var28 = 0;
         var_233[var_225].Var29 = 0;
+        /*
+        var_233[var_225].Var0.fill(0);
+        var_233[var_225].Var1.fill(0);
+        var_233[var_225].Var2.fill(0);
+        var_233[var_225].Var3.fill(0);
+        var_233[var_225].Var4.fill(0);
+        var_233[var_225].Var5.fill(0);
+        var_233[var_225].Var6.fill(0);
+        var_233[var_225].Var7.fill(0);
+        var_233[var_225].Var8.fill(0);
+        var_233[var_225].Var9.fill(0);
+        var_233[var_225].Var10.fill(0);
+        var_233[var_225].Var11.fill(0);
+        var_233[var_225].Var12.fill(0);
+        var_233[var_225].Var13.fill(0);
+        var_233[var_225].Var14.fill(0);
+        var_233[var_225].Var15.fill(0);
+        var_233[var_225].Var16.fill(0);
+        var_233[var_225].Var17.fill(0);
+        var_233[var_225].Var18.fill(0);
+        var_233[var_225].Var19.fill(0);
+        var_233[var_225].Var20.fill(0);
+        var_233[var_225].Var21.fill(0);
+        var_233[var_225].Var22.fill(0);
+        var_233[var_225].Var23.fill(0);
+        var_233[var_225].Var24.fill(0);
+        var_233[var_225].Var25.fill(0);
+        var_233[var_225].Var26.fill(0);
+        var_233[var_225].Var27.fill(0);
+        var_233[var_225].Var28.fill(0);
+        var_233[var_225].Var29.fill(0);
+*/
         var_447 = 1;
         var_449 = 2;
 
         for (let cnt1 = 0; cnt1 < var_224; ++cnt1) {
             if (var_233[var_447].Var0 == 0) {
+                /*
                 var_233[var_447].Var0 = var_233[var_449].Var0;
                 var_233[var_447].Var1 = var_233[var_449].Var1;
                 var_233[var_447].Var2 = var_233[var_449].Var2;
@@ -2775,7 +2812,7 @@ function func433(this: any) {
                 var_477[var_447] = var_477[var_449];
                 var_478[var_447] = var_478[var_449];
                 var_479[var_447] = var_479[var_449];
-                /*
+                */
                 var_233[var_447].Var0 = JSON.parse(JSON.stringify(var_233[var_449].Var0));
                 var_233[var_447].Var1 = JSON.parse(JSON.stringify(var_233[var_449].Var1));
                 var_233[var_447].Var2 = JSON.parse(JSON.stringify(var_233[var_449].Var2));
@@ -2810,11 +2847,13 @@ function func433(this: any) {
                 var_477[var_447] = JSON.parse(JSON.stringify(var_477[var_449]));
                 var_478[var_447] = JSON.parse(JSON.stringify(var_478[var_449]));
                 var_479[var_447] = JSON.parse(JSON.stringify(var_479[var_449]));
-                */
+
                 var_1957 = 1;
                 var_224 = var_224 - 1; // アイテムの数を減らしている。唯一ここだけ
+
             }
             if (var_1957 == 1) {
+                /*
                 var_233[var_447].Var0 = var_233[var_449].Var0;
                 var_233[var_447].Var1 = var_233[var_449].Var1;
                 var_233[var_447].Var2 = var_233[var_449].Var2;
@@ -2849,7 +2888,7 @@ function func433(this: any) {
                 var_477[var_447] = var_477[var_449];
                 var_478[var_447] = var_478[var_449];
                 var_479[var_447] = var_479[var_449];
-                /*
+                */
                 var_233[var_447].Var0 = JSON.parse(JSON.stringify(var_233[var_449].Var0));
                 var_233[var_447].Var1 = JSON.parse(JSON.stringify(var_233[var_449].Var1));
                 var_233[var_447].Var2 = JSON.parse(JSON.stringify(var_233[var_449].Var2));
@@ -2884,7 +2923,7 @@ function func433(this: any) {
                 var_477[var_447] = JSON.parse(JSON.stringify(var_477[var_449]));
                 var_478[var_447] = JSON.parse(JSON.stringify(var_478[var_449]));
                 var_479[var_447] = JSON.parse(JSON.stringify(var_479[var_449]));
-                */
+
             }
             var_447 = var_447 + 1;
             var_449 = var_449 + 1;
@@ -2899,11 +2938,12 @@ function func433(this: any) {
         return;
     });
 }
-
+// アイテムリストを開いている時の配列初期化
 function func434(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(434);
         var_1957 = 0;
+
         var_486[var_682][var_225][0] = 0;
         var_486[var_682][var_225][1] = 0;
         var_486[var_682][var_225][2] = 0;
@@ -2934,11 +2974,44 @@ function func434(this: any) {
         var_486[var_682][var_225][27] = 0;
         var_486[var_682][var_225][28] = 0;
         var_486[var_682][var_225][29] = 0;
+/*
+        var_486[var_682][var_225][0].fill(0);
+        var_486[var_682][var_225][1].fill(0);
+        var_486[var_682][var_225][2].fill(0);
+        var_486[var_682][var_225][3].fill(0);
+        var_486[var_682][var_225][4].fill(0);
+        var_486[var_682][var_225][5].fill(0);
+        var_486[var_682][var_225][6].fill(0);
+        var_486[var_682][var_225][7].fill(0);
+        var_486[var_682][var_225][8].fill(0);
+        var_486[var_682][var_225][9].fill(0);
+        var_486[var_682][var_225][10].fill(0);
+        var_486[var_682][var_225][11].fill(0);
+        var_486[var_682][var_225][12].fill(0);
+        var_486[var_682][var_225][13].fill(0);
+        var_486[var_682][var_225][14].fill(0);
+        var_486[var_682][var_225][15].fill(0);
+        var_486[var_682][var_225][16].fill(0);
+        var_486[var_682][var_225][17].fill(0);
+        var_486[var_682][var_225][18].fill(0);
+        var_486[var_682][var_225][19].fill(0);
+        var_486[var_682][var_225][20].fill(0);
+        var_486[var_682][var_225][21].fill(0);
+        var_486[var_682][var_225][22].fill(0);
+        var_486[var_682][var_225][23].fill(0);
+        var_486[var_682][var_225][24].fill(0);
+        var_486[var_682][var_225][25].fill(0);
+        var_486[var_682][var_225][26].fill(0);
+        var_486[var_682][var_225][27].fill(0);
+        var_486[var_682][var_225][28].fill(0);
+        var_486[var_682][var_225][29].fill(0);
+*/
         var_1958 = 1;
         var_1959 = 2;
 
         for (let cnt1 = 0; cnt1 < var_233[var_1876].Var8; ++cnt1) {
             if (var_486[var_682][var_1958][0] == 0) {
+                /*
                 var_486[var_682][var_1958][0] = var_486[var_682][var_1959][0];
                 var_486[var_682][var_1958][1] = var_486[var_682][var_1959][1];
                 var_486[var_682][var_1958][2] = var_486[var_682][var_1959][2];
@@ -2969,9 +3042,43 @@ function func434(this: any) {
                 var_486[var_682][var_1958][27] = var_486[var_682][var_1959][27];
                 var_486[var_682][var_1958][28] = var_486[var_682][var_1959][28];
                 var_486[var_682][var_1958][29] = var_486[var_682][var_1959][29];
+                */
+                var_486[var_682][var_1958][0] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][0]));
+                var_486[var_682][var_1958][1] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][1]));
+                var_486[var_682][var_1958][2] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][2]));
+                var_486[var_682][var_1958][3] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][3]));
+                var_486[var_682][var_1958][4] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][4]));
+                var_486[var_682][var_1958][5] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][5]));
+                var_486[var_682][var_1958][6] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][6]));
+                var_486[var_682][var_1958][7] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][7]));
+                var_486[var_682][var_1958][8] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][8]));
+                var_486[var_682][var_1958][9] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][9]));
+                var_486[var_682][var_1958][10] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][10]));
+                var_486[var_682][var_1958][11] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][11]));
+                var_486[var_682][var_1958][12] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][12]));
+                var_486[var_682][var_1958][13] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][13]));
+                var_486[var_682][var_1958][14] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][14]));
+                var_486[var_682][var_1958][15] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][15]));
+                var_486[var_682][var_1958][16] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][16]));
+                var_486[var_682][var_1958][17] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][17]));
+                var_486[var_682][var_1958][18] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][18]));
+                var_486[var_682][var_1958][19] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][19]));
+                var_486[var_682][var_1958][20] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][20]));
+                var_486[var_682][var_1958][21] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][21]));
+                var_486[var_682][var_1958][22] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][22]));
+                var_486[var_682][var_1958][23] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][23]));
+                var_486[var_682][var_1958][24] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][24]));
+                var_486[var_682][var_1958][25] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][25]));
+                var_486[var_682][var_1958][26] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][26]));
+                var_486[var_682][var_1958][27] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][27]));
+                var_486[var_682][var_1958][28] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][28]));
+                var_486[var_682][var_1958][29] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][29]));
+
                 var_1957 = 1;
+                //var_224 = var_224 - 1; // Ver 0.1309 追加
             }
             if (var_1957 == 1) {
+                /*
                 var_486[var_682][var_1958][0] = var_486[var_682][var_1959][0];
                 var_486[var_682][var_1958][1] = var_486[var_682][var_1959][1];
                 var_486[var_682][var_1958][2] = var_486[var_682][var_1959][2];
@@ -3002,13 +3109,48 @@ function func434(this: any) {
                 var_486[var_682][var_1958][27] = var_486[var_682][var_1959][27];
                 var_486[var_682][var_1958][28] = var_486[var_682][var_1959][28];
                 var_486[var_682][var_1958][29] = var_486[var_682][var_1959][29];
+                */
+                var_486[var_682][var_1958][0] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][0]));
+                var_486[var_682][var_1958][1] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][1]));
+                var_486[var_682][var_1958][2] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][2]));
+                var_486[var_682][var_1958][3] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][3]));
+                var_486[var_682][var_1958][4] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][4]));
+                var_486[var_682][var_1958][5] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][5]));
+                var_486[var_682][var_1958][6] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][6]));
+                var_486[var_682][var_1958][7] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][7]));
+                var_486[var_682][var_1958][8] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][8]));
+                var_486[var_682][var_1958][9] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][9]));
+                var_486[var_682][var_1958][10] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][10]));
+                var_486[var_682][var_1958][11] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][11]));
+                var_486[var_682][var_1958][12] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][12]));
+                var_486[var_682][var_1958][13] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][13]));
+                var_486[var_682][var_1958][14] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][14]));
+                var_486[var_682][var_1958][15] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][15]));
+                var_486[var_682][var_1958][16] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][16]));
+                var_486[var_682][var_1958][17] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][17]));
+                var_486[var_682][var_1958][18] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][18]));
+                var_486[var_682][var_1958][19] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][19]));
+                var_486[var_682][var_1958][20] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][20]));
+                var_486[var_682][var_1958][21] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][21]));
+                var_486[var_682][var_1958][22] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][22]));
+                var_486[var_682][var_1958][23] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][23]));
+                var_486[var_682][var_1958][24] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][24]));
+                var_486[var_682][var_1958][25] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][25]));
+                var_486[var_682][var_1958][26] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][26]));
+                var_486[var_682][var_1958][27] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][27]));
+                var_486[var_682][var_1958][28] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][28]));
+                var_486[var_682][var_1958][29] = JSON.parse(JSON.stringify(var_486[var_682][var_1959][29]));                            
             }
+
+            // belongings_item_list = var_486[var_682][var_1959][0];
+            // belongings_item_list = 0
+
             var_1958 = var_1958 + 1;
             var_1959 = var_1959 + 1;
         }
         var_233[var_1876].Var7 = var_233[var_1876].Var7 + 1;
         var_233[var_1876].Var8 = var_233[var_1876].Var8 - 1;
-        if (var_1876 == 0) {
+        if (var_1876 == 0) { // var_1876 = var225と同じ
             yield func475();
         }
         return;
@@ -3067,7 +3209,7 @@ function func436(this: any) {
         if (sympathy_id == 119 || sympathy_id == 123) {
             var_1783 = Math.floor(var_1783 * 3 / 2);
         }
-        if (var_156[356] == 1) {
+        if (equip_disc[356] == 1) {
             var_1783 = Math.floor(var_1783 / 2);
         }
         return;
@@ -3094,7 +3236,7 @@ function func437(this: any) {
                 var_106 = 1;
                 count_buying_price = count_buying_price + buying_price;
             }
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
         if (var_234 == 0 && var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
             var_225 = var_1932;
@@ -3107,7 +3249,7 @@ function func437(this: any) {
                 var_106 = 1;
                 count_buying_price = count_buying_price + buying_price;
             }
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
         var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
         var_1965 = 0;
@@ -3417,7 +3559,7 @@ function func441(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        if (var_1973 == 1 && var_156[119] == 0) {
+        if (var_1973 == 1 && equip_disc[119] == 0) {
             var_77[var_66][var_67] = 0;
         }
         var_271 = 1;
@@ -3438,7 +3580,7 @@ function func441(this: any) {
         var_1353 = 0;
         var_271 = 0;
         var_1244 = 0;
-        if (var_156[119] == 1) {
+        if (equip_disc[119] == 1) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3536,7 +3678,7 @@ function func441(this: any) {
                 belongings_item_list = var_233[var_225].Var0;
                 yield func106(); // BGM選曲呼び出し割り振り
             }
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
         if (var_1973 == 1) {
             if (var_233[var_225].Var0 >= 800 && var_233[var_225].Var0 < 900) {
@@ -4665,7 +4807,7 @@ function func452(this: any) {
         }
         var_1759 = 0;
         var_452 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
@@ -4820,7 +4962,7 @@ function func456(this: any) {
             yield func556();
         }
         var_1998 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
     });
@@ -7696,7 +7838,7 @@ function func466(this: any) {
                         var_250 = var_233[var_2046].Var0;
                     }
                     var_225 = var_2047;
-                    yield func433(); // アイテム配列の "数" 増減？関数
+                    yield func433(); // アイテム配列(所持アイテム)初期化関数
                     var_2046 = 1;
                     var_2047 = 1;
                 }
@@ -8418,7 +8560,7 @@ function func469(this: any) {
         belongings_item_list = var_2085;
         yield func492(); // アイテムリスト呼び出し
         if (var_2040 == 0) {
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
         DSPLAY(audio_id = 130);
         var_1866 = 0;
@@ -9494,7 +9636,7 @@ function func474(this: any) {
         disc_rarity = var_233[var_224].Var13;
         // ここまで？？
         yield func492(); // アイテムリスト呼び出し
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         var_1866 = 0;
         comments_row1 = "";
         comments_row2 = "";
@@ -9588,7 +9730,7 @@ function func476(this: any) {
         var_1863 = var_486[var_682][var_225][27];
         var_1864 = var_486[var_682][var_225][28];
         var_1865 = var_486[var_682][var_225][29];
-        yield func404(); // 拠点(ホテルや亀の倉庫)でアイテムを置く時の動作処理
+        yield func404(); // アイテムを置く時の動作処理
         return;
     });
 }
@@ -9814,7 +9956,7 @@ function func480(this: any) {
         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
         var_2005 = 0;
         yield func430();
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -15557,32 +15699,37 @@ function func493(this: any) {
 function func494(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(494);
-        if (var_156[204] == 1) {
+        // No = 204 シアハートアタックのdiscを装備していれば
+        if (equip_disc[204] == 1) {
             var_352 = var_352 - var_1047;
         }
-        if (var_156[396] == 1) {
+        // No = 396 メイド・イン・ヘブンのdiscを装備していれば
+        if (equip_disc[396] == 1) {
             var_157 = 0;
         }
-        var_156 = dim(400);
+        
+        equip_disc = dim(400);
+
         if (var_357 > 0) {
             yield func426();
             var_2179 = var_553;
             var_2180 = 1;
-            yield func495();
+            yield func495(); // 装備disc関係??
         }
         if (var_358 > 0) {
             yield func427();
             var_2179 = var_554;
             var_2180 = 2;
-            yield func495();
+            yield func495(); // 装備disc関係??
         }
         if (var_215 > 0) {
             yield func428();
             var_2179 = var_555;
             var_2180 = 4;
-            yield func495();
+            yield func495(); // 装備disc関係??
         }
-        if (var_156[204] == 1) {
+        // No = 204 シアハートアタックのdiscを装備していれば
+        if (equip_disc[204] == 1) {
             var_1047 = 20;
             var_1047 = Math.floor(var_352 / 10) + var_566;
             var_2181 = var_352 + var_1047;
@@ -15594,10 +15741,12 @@ function func494(this: any) {
             }
             var_352 = var_352 + var_1047;
         }
-        if (var_156[320] == 1) {
+        // No = 320 メタリカのdiscを装備していれば
+        if (equip_disc[320] == 1) {
             var_140 = 0;
         }
-        if (var_156[396] == 1) {
+        // No = 396 メイド・イン・ヘブンのdiscを装備していれば
+        if (equip_disc[396] == 1) {
             var_157 = 1;
             var_133 = 0;
         }
@@ -15619,7 +15768,7 @@ function func494(this: any) {
     });
 }
 
-
+// 装備disc関係??
 function func495(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(495);
@@ -15880,7 +16029,7 @@ function func495(this: any) {
                     var_2184 = 0;
                 }
                 if (var_2180 == var_2184 || var_2184 == 0) {
-                    var_156[var_2183] = 1;
+                    equip_disc[var_2183] = 1;
                 }
             }
             var_2182 = var_2182 + 1;
@@ -17004,7 +17153,7 @@ function func498(this: any) {
             }
             if (var_211 > 1) {
                 var_2198 = Math.floor(var_211 / 2);
-                if (var_156[314] == 1) {
+                if (equip_disc[314] == 1) {
                     var_2198 = Math.floor(var_2198 / 2);
                 }
                 var_211 = var_211 - var_2198;
@@ -17092,7 +17241,7 @@ function func498(this: any) {
             if (var_2110 == 0) {
                 item_message1 = "しかし何も起こらなかった…";
             }
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             return;
         }
         // No = 562 康一のdiscの効果
@@ -17186,7 +17335,7 @@ function func498(this: any) {
                 return;
             }
             var_170 = 1;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             return;
         }
         // No = 566 ケンゾーのdiscの効果
@@ -17763,7 +17912,7 @@ function func498(this: any) {
             }
             DSPLAY(audio_id = 184);
             var_100 = 1;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             return;
         }
         // No = 574 エンポリオのdiscの効果
@@ -17787,7 +17936,7 @@ function func498(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1264 = 0;
-            if (var_156[351] == 1) {
+            if (equip_disc[351] == 1) {
                 item_message1 = "装備DISCの効果によって";
                 item_message2 = "眠くならなかった！";
                 return;
@@ -18688,7 +18837,7 @@ function func498(this: any) {
             }
             var_350 = var_567;
             item_message1 = "最大満腹度が" + var_567 + "になった。";
-            if (var_156[396] == 0) {
+            if (equip_disc[396] == 0) {
                 if (var_157 == 0) {
                     var_133 = 1;
                     var_397 = 0;
@@ -20804,7 +20953,7 @@ function func499(this: any) {
             var_83[var_2238].Var18 = 0;
             var_2238 = var_2238 + 1;
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         if (var_2112 == 1) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し

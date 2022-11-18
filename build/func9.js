@@ -599,7 +599,7 @@ function func909() {
                     _a.sent();
                     return [4 /*yield*/, func331()];
                 case 13:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     return [2 /*return*/];
             }
         });
@@ -776,7 +776,7 @@ function func911() {
                     _a.sent();
                     return [4 /*yield*/, func433()];
                 case 13:
-                    _a.sent(); // アイテム配列の "数" 増減？関数
+                    _a.sent(); // アイテム配列(所持アイテム)初期化関数
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -1065,7 +1065,7 @@ function func917() {
                     var_1058 = dim(30, 30);
                     return [4 /*yield*/, func331()];
                 case 9:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     comments_row1 = "敵が集まってしまった！";
                     comments_row2 = "";
                     var_198 = 1;
@@ -1309,7 +1309,7 @@ function func919() {
                     return [3 /*break*/, 14];
                 case 42: return [4 /*yield*/, func331()];
                 case 43:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     if (!(var_3584 == 1)) return [3 /*break*/, 49];
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -1634,7 +1634,7 @@ function func923() {
                     var_452 = 0;
                     return [4 /*yield*/, func331()];
                 case 16:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "ピザ屋はその辺に置いて帰ったようだ。";

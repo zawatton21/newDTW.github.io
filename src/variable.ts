@@ -238,7 +238,7 @@ let var_152 :any;
 let var_153 :any;
 let var_154 :any;
 let var_155 :any;
-let var_156 :any;
+let equip_disc :any[]; // 装備しているdisc(装備区分問わず)を格納し、装備しているかどうかを判別する。例えばメイド・イン・ヘブンのdiscを装備しているだと equip_disc[396] == 1 となる
 let var_157 :any;
 let var_158 :any;
 let var_159 :any;
@@ -246,7 +246,7 @@ let var_160 :any;
 let var_161 :any;
 let var_162 :any;
 let var_163 :any;
-let var_164 :any;
+let var_164 :number; // 時止め経過時のターン数？
 let var_165 :any;
 let var_166 :any;
 let var_167 :any;
@@ -320,7 +320,7 @@ let var_231 :any;
 // 800 ~ 900未満:ヤバいもの
 // 900 ~ 1000未満: コミック (空きがもう無い)
 let belongings_item_list :number;
-let var_233 :any;
+let var_233 :any[]; // 所持アイテム用配列
 let var_234 :any;
 let conf_keyon :number; // 各キー入力確認。ON = 1、OFF = 0
 let var_236 :any;

@@ -4860,7 +4860,7 @@ function func838() {
                     _a.label = 3;
                 case 3: return [4 /*yield*/, func433()];
                 case 4:
-                    _a.sent(); // アイテム配列の "数" 増減？関数
+                    _a.sent(); // アイテム配列(所持アイテム)初期化関数
                     if (!(var_3204 == 0)) return [3 /*break*/, 8];
                     cnt2_6 = 0;
                     _a.label = 5;
@@ -10047,7 +10047,7 @@ function func876() {
                     var_68 = 1;
                     return [4 /*yield*/, func331()];
                 case 12:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     return [4 /*yield*/, func009()];
                 case 13:
                     _a.sent(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -13109,7 +13109,7 @@ function func895() {
                     gsel(0, 1);
                     return [4 /*yield*/, func331()];
                 case 27:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     return [4 /*yield*/, func929()];
                 case 28:
                     _a.sent();
@@ -13128,7 +13128,7 @@ function func895() {
                     gsel(0, 1);
                     return [4 /*yield*/, func331()];
                 case 32:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     return [4 /*yield*/, func907()];
                 case 33:
                     _a.sent();

@@ -2681,7 +2681,9 @@ function func330(this: any) {
         return;
     });
 }
-// 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+// 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+// 消費アイテムを使った時のエフェクト等 (正方形が重なってピンク色にピカピカ光る)
+// ハーヴェストやエアロスミス等アイテム、敵の位置が表示
 function func331(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(331);
@@ -2738,7 +2740,6 @@ function func331(this: any) {
         var_1176 = var_67 - 4;
         var_1177 = var_67 + 4;
         color(0, 0, 0);
-
         boxf(left = 0, top1 = 0, right = 680, bottom = 300);
         var_1171 = 0;
         for (let cnt1 = 0; cnt1 < var_31 + 1; ++cnt1) {
@@ -2750,7 +2751,8 @@ function func331(this: any) {
                     var_1179 = 1;
                 }
                 if (var_73[var_1171][var_1172] == 1 && var_127 == 0 && var_132 == 0) {
-                    if (var_102 == 1 || var_98 == 1 || var_156[365] == 1) {
+                    // No = 365 ★階段感知の能力discを装備している時
+                    if (var_102 == 1 || var_98 == 1 || equip_disc[365] == 1) {
                         color(0, 255, 255);
 
                         boxf(var_1171 * var_37, var_1172 * var_38, var_1171 * var_37 + 4, var_1172 * var_38 + 4);
@@ -2761,7 +2763,8 @@ function func331(this: any) {
                     }
                 }
                 if (var_73[var_1171][var_1172] == 2 && var_127 == 0 && var_132 == 0) {
-                    if (var_102 == 1 || var_99 == 1 || var_156[365] == 1) {
+                    // No = 365 ★階段感知の能力discを装備している時
+                    if (var_102 == 1 || var_99 == 1 || equip_disc[365] == 1) {
                         color(0, 255, 255);
 
                         boxf(var_1171 * var_37, var_1172 * var_38, var_1171 * var_37 + 4, var_1172 * var_38 + 4);
@@ -2773,16 +2776,17 @@ function func331(this: any) {
                 }
                 if (var_77[var_1171][var_1172] > 0 && var_127 == 0 && var_132 == 0) {
                     var_1180 = var_77[var_1171][var_1172];
-                    if (var_100 == 1 || var_156[301] == 1 || var_78[var_1180].Var10 == 1) {
+                    // No = 301 ハーヴェストを装備している時
+                    if (var_100 == 1 || equip_disc[301] == 1 || var_78[var_1180].Var10 == 1) {
                         color(0, 255, 255);
-
                         boxf(var_1171 * var_37, var_1172 * var_38, var_1171 * var_37 + 4, var_1172 * var_38 + 4);
                         var_1179 = 3;
                     }
                 }
                 if (var_80[var_1171][var_1172] > 0 && var_127 == 0 && var_132 == 0) {
                     var_1181 = var_80[var_1171][var_1172];
-                    if (var_81[var_1181][4] == 1 || var_170 == 1 || var_121 == 1 || var_156[303] == 1) {
+                    // No = 303 ドラゴンズ・ドリームのdiscを装備している時
+                    if (var_81[var_1181][4] == 1 || var_170 == 1 || var_121 == 1 || equip_disc[303] == 1) {
                         color(255, 0, 255);
                         var_1182 = 0;
                         if (var_81[var_1181][0] == 82 || var_81[var_1181][0] == 86 || var_81[var_1181][0] == 87 || var_81[var_1181][0] == 88 || var_81[var_1181][0] == 90 || var_81[var_1181][0] == 91 || var_81[var_1181][0] == 92 || var_81[var_1181][0] == 93 || var_81[var_1181][0] == 94 || var_81[var_1181][0] == 99 || var_81[var_1181][0] == 79 || var_81[var_1181][0] == 80 || var_81[var_1181][0] == 81 || var_81[var_1181][0] == 78 || var_81[var_1181][0] == 77) {
@@ -2820,11 +2824,13 @@ function func331(this: any) {
                             var_1183 = 1;
                         }
                         if (var_83[var_1178].Var0 == 85) {
-                            if (var_140 != 0 || var_156[320] == 1) {
+                            // No = 320 メタリカを装備している時
+                            if (var_140 != 0 || equip_disc[320] == 1) {
                                 var_1183 = 1;
                             }
                         }
-                        if (var_156[312] == 1) {
+                        // No = 312 エアロスミスを装備している時
+                        if (equip_disc[312] == 1) {
                             var_1183 = 1;
                         }
                     }
@@ -2891,7 +2897,8 @@ function func331(this: any) {
                                 var_1179 = 8;
                             }
                         }
-                        if (var_101 == 1 || var_156[312] == 1 || var_132 >= 1 || var_391 == 1) {
+                        // No = 312 エアロスミスのdiscを装備している時
+                        if (var_101 == 1 || equip_disc[312] == 1 || var_132 >= 1 || var_391 == 1) {
     
                             boxf(var_1171 * var_37, var_1172 * var_38, var_1171 * var_37 + 4, var_1172 * var_38 + 4);
                             var_1179 = 4;
@@ -8891,7 +8898,7 @@ function func354(this: any) {
                 pos(5 * var_35, 3 * var_36 - 10);
                 gcopy(3, 560, 360, 40, 40);
             }
-            if (var_156[316] == 1 && var_268 != 0 && var_127 == 0) {
+            if (equip_disc[316] == 1 && var_268 != 0 && var_127 == 0) {
                 enemy_list = var_83[var_268].Var0;
                 yield func626();
                 var_1331 = enemy_hp;
@@ -8910,7 +8917,7 @@ function func354(this: any) {
                 }
                 mes(var_1333);
             }
-            if (var_156[315] == 999 && var_268 != 0 && var_127 == 0) {
+            if (equip_disc[315] == 999 && var_268 != 0 && var_127 == 0) {
                 enemy_list = var_83[var_268].Var0;
                 if (enemy_list != 46 && enemy_list != 30 && enemy_list != 124 && enemy_list != 85 && enemy_list != 99 && enemy_list == 153) {
                     yield func626();
@@ -8995,7 +9002,7 @@ function func354(this: any) {
                         var_1336 = (var_83[var_268].Var39 - 1) * 2 + var_1336;
                         var_1338 = (var_83[var_268].Var39 - 1) * 2 + var_1338;
                     }
-                    if (var_156[205] == 1) {
+                    if (equip_disc[205] == 1) {
                         var_1336 = Math.floor(var_1336 * 2 / 3);
                         var_1338 = Math.floor(var_1338 * 2 / 3);
                     }
@@ -16417,7 +16424,7 @@ function func380(this: any) {
         var_1707 = 1;
         var_1708 = 100;
         for (let cnt1 = 0; cnt1 < 300; ++cnt1) {
-            if (var_156[var_1708] == 1) {
+            if (equip_disc[var_1708] == 1) {
                 belongings_item_list = var_1708;
                 yield func492(); // アイテムリスト呼び出し
                 // No = 204:ｼｱｰﾊｰﾄｱﾀｯｸのDISC
@@ -16499,12 +16506,12 @@ function func380(this: any) {
             var_1706[var_1707][1] = "変な物を念写してﾐﾆﾏｯﾌﾟが見えないぞ";
             var_1707++;
         }
-        if (var_156[396] == 1) {
+        if (equip_disc[396] == 1) {
             var_1706[var_1707][2] = "5";
             var_1706[var_1707][1] = "アイテムが朽ちるぞ";
             var_1707++;
         }
-        if (var_156[396] == 1) {
+        if (equip_disc[396] == 1) {
             var_1706[var_1707][2] = "5";
             var_1706[var_1707][1] = "時間の経過が早いぞ";
             var_1707++;
@@ -16691,14 +16698,14 @@ function func380(this: any) {
             var_1706[var_1707][1] = "ﾌｰﾌｧｲﾀｰｽﾞのﾀﾞﾒｰｼﾞが上がっているぞ";
             var_1707++;
         }
-        if (var_156[308] == 1 && var_831 != 0) {
+        if (equip_disc[308] == 1 && var_831 != 0) {
             enemy_list = var_831;
             yield func626();
             var_1706[var_1707][2] = "0";
             var_1706[var_1707][1] = "" + enemy_name + "に恨みがあるぞ";
             var_1707++;
         }
-        if (var_156[117] == 1) {
+        if (equip_disc[117] == 1) {
             var_1710 = 0;
             var_1711 = var_66;
             var_1712 = var_67;
@@ -17113,7 +17120,7 @@ function func380(this: any) {
             var_1706[var_1707][1] = "ﾌﾟｯﾂﾝ状態だと強いぞ";
             var_1707++;
         }
-        if (var_156[105] == 1 && var_1030 >= 2) {
+        if (equip_disc[105] == 1 && var_1030 >= 2) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "反省しているぞ";
             var_1707++;
@@ -17648,7 +17655,7 @@ function func384(this: any) {
                 if (var_1736 >= 98 && var_1736 < 100) {
                     var_1735 = 0;
                 }
-                if (var_156[393] == 1 && var_1736 < 5) {
+                if (equip_disc[393] == 1 && var_1736 < 5) {
                     var_1735 = 9;
                 }
                 if (dangeon_number == 1 && var_1735 == 10) {
@@ -19001,7 +19008,7 @@ function func387(this: any) {
         if (var_1784 >= 97 && var_1784 < 100) {
             var_78[var_866].Var4 = 3;
         }
-        if (var_156[354] == 1 && var_1784 >= 85) {
+        if (equip_disc[354] == 1 && var_1784 >= 85) {
             var_78[var_866].Var4 = 0;
         }
         var_1785 = rnd(100);
@@ -19012,7 +19019,7 @@ function func387(this: any) {
             var_78[var_866].Var4 = 0;
             var_78[var_866].Var12 = 1;
         }
-        if (var_156[353] == 1 && var_1785 < 20) {
+        if (equip_disc[353] == 1 && var_1785 < 20) {
             var_78[var_866].Var4 = 0;
             var_78[var_866].Var12 = 1;
         }
@@ -19712,7 +19719,7 @@ function func396(this: any) {
             var_1822 = 40;
         }
         var_1823 = 0;
-        if (var_156[368] == 1 && var_78[var_1813].Var15 == 1) {
+        if (equip_disc[368] == 1 && var_78[var_1813].Var15 == 1) {
             if (var_1153 >= 0 && var_1153 <= 8) {
                 var_1823 = 0;
             }

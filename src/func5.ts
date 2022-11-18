@@ -605,7 +605,7 @@ function func506(this: any) {
                         count_buying_price = count_buying_price + buying_price;
                     }
                     yield func430();
-                    yield func433(); // アイテム配列の "数" 増減？関数
+                    yield func433(); // アイテム配列(所持アイテム)初期化関数
                     var_2254 = 1;
                     return;
                 }
@@ -649,7 +649,7 @@ function func506(this: any) {
                     }
 
                     var_1876 = var_2256;
-                    yield func433(); // アイテム配列の "数" 増減？関数
+                    yield func433(); // アイテム配列(所持アイテム)初期化関数
                     var_2254 = 1;
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     return;
@@ -709,7 +709,7 @@ function func506(this: any) {
                         count_buying_price = count_buying_price + buying_price;
                     }
                     yield func430();
-                    yield func433(); // アイテム配列の "数" 増減？関数
+                    yield func433(); // アイテム配列(所持アイテム)初期化関数
                     yield func507(); // スタンドパワーが力尽きて消滅した時の表示
                     return;
                 }
@@ -734,7 +734,7 @@ function func506(this: any) {
                         count_buying_price = count_buying_price + buying_price;
                     }
                     var_1876 = var_2256;
-                    yield func433(); // アイテム配列の "数" 増減？関数
+                    yield func433(); // アイテム配列(所持アイテム)初期化関数
                     yield func507(); // スタンドパワーが力尽きて消滅した時の表示
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     return;
@@ -1984,7 +1984,7 @@ function func511(this: any) {
                 var_175 = var_2268;
                 var_198 = 0;
             }
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -2362,7 +2362,7 @@ function func511(this: any) {
                         var_1547 = 0;
                         var_768 = 0;
                         var_2274 = 0;
-                        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                         break;
                     }
                 }
@@ -2494,7 +2494,7 @@ function func511(this: any) {
                 }
                 var_2280 = var_2280 + 1;
             }
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3143,7 +3143,7 @@ function func511(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -4070,7 +4070,7 @@ function func511(this: any) {
             yield func050();
             yield func047();
             var_121 = 1;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             yield func340(); // キー入力による選択処理
             var_2303 = 0;
             var_2304 = 0;
@@ -5793,7 +5793,7 @@ function func511(this: any) {
             }
             if (var_211 > 1) {
                 var_2198 = Math.floor(var_211 / 2);
-                if (var_156[314] == 1) {
+                if (equip_disc[314] == 1) {
                     var_2198 = Math.floor(var_2198 / 2);
                 }
                 var_211 = var_211 - var_2198;
@@ -7086,7 +7086,7 @@ function func511(this: any) {
                     yield func660();
                 }
                 yield func337(); // メッセージ関係呼び出し
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             }
             var_1195 = 0;
             var_1218 = 2;
@@ -8064,7 +8064,7 @@ function func511(this: any) {
                 if (var_202 == var_201 && var_94 != 8) {
                     var_99 = 1;
                 }
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             }
             if (var_2349 == 0) {
                 var_66 = var_236;
@@ -8276,7 +8276,7 @@ function func511(this: any) {
             DSPLAY(audio_id = 184);
             var_119 = 1;
             var_101 = 1;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -8330,7 +8330,7 @@ function func511(this: any) {
             var_121 = 1;
             var_101 = 1;
             DSPLAY(audio_id = 184);
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             gsel(19);
             color(10, 10, 10);
 
@@ -8514,7 +8514,7 @@ function func511(this: any) {
             }
             var_271 = 0;
             var_1586 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "マンガのキャラクターが現れた！";
@@ -9420,7 +9420,7 @@ function func523(this: any) {
         }
         var_225 = var_2091;
         yield func430();
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         if (var_570 == 0) {
             var_1284 = 11;
         }
@@ -9583,7 +9583,7 @@ function func523(this: any) {
                 var_896 = 0;
                 yield func430();
             }
-            yield func433(); // アイテム配列の "数" 増減？関数
+            yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
         if (var_2287 == 1) {
             if (var_1876 > var_2091) {
@@ -9627,7 +9627,7 @@ function func523(this: any) {
             var_234 = 0;
         }
         yield func494();
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         var_1240 = 0;
         var_199 = 2;
         var_217 = 1;
@@ -9718,7 +9718,7 @@ function func524(this: any) {
             count_buying_price = count_buying_price + buying_price;
         }
         yield func430();
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         yield func094();
         comments_row1 = "";
         comments_row2 = "";
@@ -10360,7 +10360,7 @@ function func529(this: any) {
             var_461 = 0;
             var_462 = 0;
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -10582,7 +10582,7 @@ function func531(this: any) {
             return;
         }
         yield func494();
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         return;
     });
 }
@@ -10994,7 +10994,7 @@ function func533(this: any) {
                         }
                         var_2401 = 1;
                         yield func430();
-                        yield func433(); // アイテム配列の "数" 増減？関数
+                        yield func433(); // アイテム配列(所持アイテム)初期化関数
                         break;
                     }
                 }
@@ -12638,7 +12638,7 @@ function func540(this: any) {
             var_81[var_2442][0] = 0;
             var_81[var_2442][1] = 0;
             var_81[var_2442][2] = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         return;
     });
@@ -12754,7 +12754,7 @@ function func541(this: any) {
             var_545 = 0;
             var_2447 = 1;
         }
-        if (var_156[355] == 1) {
+        if (equip_disc[355] == 1) {
             var_545 = 0;
             var_2447 = 1;
         }
@@ -12800,7 +12800,7 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_108 = 0;
-            if (var_156[207] == 1) {
+            if (equip_disc[207] == 1) {
 
                 DSPLAY(audio_id = 163);
                 comments_row1 = comments_row1a;
@@ -12815,7 +12815,7 @@ function func541(this: any) {
                 var_198 = 1;
                 var_300 = 0;
             }
-            if (var_156[207] == 0) {
+            if (equip_disc[207] == 0) {
                 var_565 = var_565 - 1;
                 if (var_565 < 0) {
                     var_565 = 0;
@@ -12896,7 +12896,7 @@ function func541(this: any) {
                 var_102 = 0;
                 yield func017();
                 yield func016();
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         
                 DSPLAY(audio_id = 164);
             }
@@ -13000,7 +13000,7 @@ function func541(this: any) {
             yield func050();
             var_198 = 1;
             var_300 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -13036,7 +13036,7 @@ function func541(this: any) {
                 yield func047();
             }
             if (var_2110 == 1) {
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -13316,7 +13316,7 @@ function func541(this: any) {
                 var_488 = belongings_item_list;
                 yield func492(); // アイテムリスト呼び出し
                 target_item_name = item_name;
-                if (var_156[119] == 0) {
+                if (equip_disc[119] == 0) {
                     var_225 = var_475;
                     var_2458 = 0;
                     if (var_233[var_475].Var0 >= 800 && var_233[var_475].Var0 < 900) {
@@ -13424,10 +13424,10 @@ function func541(this: any) {
                         }
                     }
                     var_225 = var_475;
-                    yield func433(); // アイテム配列の "数" 増減？関数
+                    yield func433(); // アイテム配列(所持アイテム)初期化関数
                 }
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
-                if (var_156[119] == 0) {
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+                if (equip_disc[119] == 0) {
                     yield func100();
                 }
                 comments_row1 = "";
@@ -13444,7 +13444,7 @@ function func541(this: any) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                if (var_156[119] == 1) {
+                if (equip_disc[119] == 1) {
                     yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -13666,7 +13666,7 @@ function func541(this: any) {
             var_81[var_2442][3] = 0;
             var_127 = 1;
             var_167 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -13847,7 +13847,7 @@ function func541(this: any) {
                 var_81[var_2442][0] = 0;
                 var_81[var_2442][1] = 0;
                 var_81[var_2442][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 return;
             }
             if (var_2462 == 0) {
@@ -13907,7 +13907,7 @@ function func541(this: any) {
                 var_897 = 0;
                 var_898 = 0;
                 var_999 = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 yield func340(); // キー入力による選択処理
                 if (var_2463 == 1) {
             
@@ -14053,7 +14053,7 @@ function func541(this: any) {
             if (var_410 == 401) {
                 var_2463 = 99;
             }
-            if (var_156[361] == 1) {
+            if (equip_disc[361] == 1) {
                 var_2463 = 2;
             }
     
@@ -14102,7 +14102,7 @@ function func541(this: any) {
                 var_479 = dim(40);
                 var_250 = 0;
                 var_410 = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 return;
             }
             if (var_2463 == 0 || var_2463 == 99) {
@@ -14154,7 +14154,7 @@ function func541(this: any) {
             var_897 = 0;
             var_898 = 0;
             var_999 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         if (var_81[var_2442][0] == 16) {
             var_81[var_2442][3] = 1;
@@ -14222,7 +14222,7 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_108 = 0;
-            if (var_156[396] == 0) {
+            if (equip_disc[396] == 0) {
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "足を負傷して 動きが遅くなってしまった！";
@@ -14239,7 +14239,7 @@ function func541(this: any) {
                     var_158 = 0;
                 }
             }
-            if (var_156[396] == 1) {
+            if (equip_disc[396] == 1) {
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "足を負傷したが、";
@@ -14267,7 +14267,7 @@ function func541(this: any) {
             if (var_140 >= 2 && var_140 <= 6) {
                 comments_row2 = "磁力がさらに強くなった！";
             }
-            if (var_140 == 7 && var_156[396] == 0) {
+            if (var_140 == 7 && equip_disc[396] == 0) {
                 comments_row2 = "磁力が強力すぎて体が重い！";
                 var_157 = 0;
                 var_158 = 0;
@@ -14285,7 +14285,7 @@ function func541(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            if (var_156[320] == 1) {
+            if (equip_disc[320] == 1) {
                 yield func340(); // キー入力による選択処理
 
                 DSPLAY(audio_id = 163);
@@ -14481,7 +14481,7 @@ function func541(this: any) {
             var_1481 = 0;
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            if (var_156[352] == 0) {
+            if (equip_disc[352] == 0) {
                 comments_row1a = "養分を吸い取られて、";
                 comments_row2a = "お腹がとても減ってしまった！";
         
@@ -14491,7 +14491,7 @@ function func541(this: any) {
                     var_350 = 0;
                 }
             }
-            if (var_156[352] == 1) {
+            if (equip_disc[352] == 1) {
                 comments_row1a = "しかし装備DISCの効果によって";
                 comments_row2a = "腹ヘリを防いだ！";
             }
@@ -14627,7 +14627,7 @@ function func541(this: any) {
             }
             if (var_233[var_1531].Var0 >= 800 && var_233[var_1531].Var0 < 900) {
                 var_2458 = 1;
-                if (var_156[119] == 1 && var_2458 == 1) {
+                if (equip_disc[119] == 1 && var_2458 == 1) {
                     yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -14679,10 +14679,10 @@ function func541(this: any) {
                 var_78[var_854].Var29 = var_233[var_225].Var29;
                 belongings_item_list = var_1846;
                 var_321 = var_854;
-                yield func433(); // アイテム配列の "数" 増減？関数
+                yield func433(); // アイテム配列(所持アイテム)初期化関数
                 yield func540();
                 yield func018();
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 return;
             }
             if (var_2458 == 1) {
@@ -14794,7 +14794,7 @@ function func541(this: any) {
                     }
                 }
                 var_225 = var_1531;
-                yield func433(); // アイテム配列の "数" 増減？関数
+                yield func433(); // アイテム配列(所持アイテム)初期化関数
                 yield func540();
                 yield func018();
                 yield func340(); // キー入力による選択処理
@@ -14815,7 +14815,7 @@ function func541(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 return;
             }
         }
@@ -14838,7 +14838,7 @@ function func541(this: any) {
             }
             var_2472 = 0;
             var_1845 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         if (var_81[var_2442][0] == 25) {
             var_81[var_2442][3] = 1;
@@ -15020,7 +15020,7 @@ function func541(this: any) {
                 var_1845 = 0;
                 var_1470 = 0;
             }
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             var_480 = 1;
             payment_amount = 0;
             for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {
@@ -16042,7 +16042,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "";
                 var_1396 = var_423;
                 var_1397 = var_424;
@@ -16157,7 +16157,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "ダイバーダウンの潜水攻撃！";
                 var_1396 = var_423;
                 var_1397 = var_424;
@@ -16190,7 +16190,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "タスクの穴の攻撃！";
                 var_1396 = var_423;
                 var_1397 = var_424;
@@ -16258,7 +16258,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 return;
             }
             if (var_81[var_2488][0] == 82) {
@@ -16270,7 +16270,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "クロスファイヤーハリケーンスペシャル！";
                 var_1396 = var_423;
                 var_1397 = var_424;
@@ -16377,7 +16377,7 @@ function func547(this: any) {
                     var_2492++;
                 }
                 var_83[var_421].Var28 = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
@@ -16401,7 +16401,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "法王の結界が発動した！";
                 enemy_list = var_83[var_421].Var0;
                 yield func626();
@@ -16441,7 +16441,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "ﾊｲｳｪｲｽﾀｰが養分を吸い取った！";
                 enemy_list = var_83[var_421].Var0;
                 yield func626();
@@ -16550,7 +16550,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 return;
             }
             if (var_145 == 1) {
@@ -16562,7 +16562,7 @@ function func547(this: any) {
                 var_81[var_2488][0] = 0;
                 var_81[var_2488][1] = 0;
                 var_81[var_2488][2] = 0;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "暗黒風水が発動した！";
                 enemy_list = var_83[var_421].Var0;
                 yield func626();
@@ -17224,7 +17224,7 @@ function func555(this: any) {
             }
             yield func627();
             var_2500 = rnd(9);
-            if (var_156[357] == 1) {
+            if (equip_disc[357] == 1) {
                 var_2500 = rnd(18);
             }
             if (var_2500 <= 2) {
@@ -18297,7 +18297,7 @@ function func556(this: any) {
             var_953 = var_2547;
         }
         var_2500 = rnd(9);
-        if (var_156[357] == 1) {
+        if (equip_disc[357] == 1) {
             var_2500 = rnd(18);
         }
         if (var_2500 <= 2) {
@@ -18738,7 +18738,7 @@ function func556(this: any) {
         var_83[var_673].Var37 = var_83[var_673].Var5;
         var_83[var_673].Var38 = 0;
         var_83[var_673].Var39 = 0;
-        if (var_156[359] == 1 && var_83[var_673].Var31 != 5 && var_83[var_673].Var31 != 4 && var_1845 == 0 && var_83[var_673].Var12 == 99 && dangeon_number != 4 && var_2535 == 0) {
+        if (equip_disc[359] == 1 && var_83[var_673].Var31 != 5 && var_83[var_673].Var31 != 4 && var_1845 == 0 && var_83[var_673].Var12 == 99 && dangeon_number != 4 && var_2535 == 0) {
             var_1073 = rnd(100);
             if (var_1073 < 20) {
                 var_83[var_673].Var39 = 2;
@@ -20873,7 +20873,7 @@ function func567(this: any) {
                 if (var_83[var_1641].Var0 != 85 && var_119 == 0 && sympathy_id != 166) {
                     return;
                 }
-                if (var_83[var_1641].Var0 == 85 && var_140 == 0 && var_119 == 0 && var_156[320] == 0 && sympathy_id != 166) {
+                if (var_83[var_1641].Var0 == 85 && var_140 == 0 && var_119 == 0 && equip_disc[320] == 0 && sympathy_id != 166) {
                     return;
                 }
             }
@@ -22306,13 +22306,13 @@ function func569(this: any) {
             if (var_83[var_2611].Var12 == 99 && var_83[var_2611].Var10 == var_201 && var_201 != var_279 && var_279 != 13 && var_201 != 13) {
                 if (var_83[var_2611].Var0 != 101 && var_83[var_2611].Var0 != 102 && var_83[var_2611].Var0 != 103 && var_83[var_2611].Var0 != 104) {
                     var_2625 = rnd(3);
-                    if (var_156[350] == 1) {
+                    if (equip_disc[350] == 1) {
                         var_2625 = 0;
                     }
-                    if (var_156[107] == 1) {
+                    if (equip_disc[107] == 1) {
                         var_2625 = rnd(4);
                     }
-                    if (var_156[107] == 1 && var_156[350] == 1) {
+                    if (equip_disc[107] == 1 && equip_disc[350] == 1) {
                         var_2625 = rnd(3);
                     }
                     if (var_96 >= 1 && var_201 == var_204) {
@@ -22334,13 +22334,13 @@ function func569(this: any) {
             if (var_83[var_2611].Var12 == 99 && var_83[var_2611].Var10 == var_279 && var_201 == 14 && var_279 != 13 && var_201 != 13) {
                 if (var_83[var_2611].Var0 != 101 && var_83[var_2611].Var0 != 102 && var_83[var_2611].Var0 != 103 && var_83[var_2611].Var0 != 104) {
                     var_2625 = rnd(3);
-                    if (var_156[350] == 1) {
+                    if (equip_disc[350] == 1) {
                         var_2625 = 0;
                     }
-                    if (var_156[107] == 1) {
+                    if (equip_disc[107] == 1) {
                         var_2625 = rnd(4);
                     }
-                    if (var_156[107] == 1 && var_156[350] == 1) {
+                    if (equip_disc[107] == 1 && equip_disc[350] == 1) {
                         var_2625 = rnd(3);
                     }
                     if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
@@ -22411,13 +22411,13 @@ function func569(this: any) {
                 }
                 if (var_2626 == 1) {
                     var_2625 = rnd(2);
-                    if (var_156[350] == 1) {
+                    if (equip_disc[350] == 1) {
                         var_2625 = 0;
                     }
-                    if (var_156[107] == 1) {
+                    if (equip_disc[107] == 1) {
                         var_2625 = rnd(4);
                     }
-                    if (var_156[107] == 1 && var_156[350] == 1) {
+                    if (equip_disc[107] == 1 && equip_disc[350] == 1) {
                         var_2625 = rnd(2);
                     }
                     if (var_96 >= 1 && var_201 == var_204) {
@@ -25909,7 +25909,7 @@ function func573(this: any) {
                 var_82[var_2350][var_2351] = var_2694;
                 var_83[var_412].Var9 = 0;
                 var_83[var_412].Var10 = var_71[var_2350][var_2351];
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             }
         }
         return;
@@ -29841,7 +29841,7 @@ function func584(this: any) {
             var_2804 = 0;
             return;
         }
-        if (var_156[397] == 1) {
+        if (equip_disc[397] == 1) {
             var_2805 = rnd(2);
             if (var_2805 == 0) {
         
@@ -29876,7 +29876,7 @@ function func584(this: any) {
                 return;
             }
         }
-        if (var_156[304] == 1) {
+        if (equip_disc[304] == 1) {
             var_2805 = rnd(4);
             if (var_2805 == 0) {
         
@@ -30374,7 +30374,7 @@ function func585(this: any) {
         if (var_128 >= 1) {
             var_209 = Math.floor(var_209 * 3 / 2);
         }
-        if (var_156[205] == 1) {
+        if (equip_disc[205] == 1) {
             var_209 = Math.floor(var_209 * 2 / 3);
         }
         if (var_168 == 1) {
@@ -30845,7 +30845,7 @@ function func588(this: any) {
         if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
             yield func722();
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -30947,7 +30947,7 @@ function func589(this: any) {
             }
             var_271 = 0;
             var_1583 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             yield func094();
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -31153,7 +31153,7 @@ function func590(this: any) {
         }
         var_271 = 0;
         var_1583 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         yield func094();
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -31219,7 +31219,7 @@ function func591(this: any) {
             var_198 = 1;
             var_300 = 0;
             yield func047();
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 var_300 = 0;
                 yield func337(); // メッセージ関係呼び出し
@@ -31305,7 +31305,7 @@ function func592(this: any) {
             var_2197 = 1;
             return;
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_300 = 0;
             yield func337(); // メッセージ関係呼び出し
@@ -31389,7 +31389,7 @@ function func593(this: any) {
             var_2197 = 1;
             return;
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_300 = 0;
             yield func337(); // メッセージ関係呼び出し
@@ -31469,7 +31469,7 @@ function func594(this: any) {
             var_2197 = 1;
             return;
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_300 = 0;
             yield func337(); // メッセージ関係呼び出し
@@ -31667,7 +31667,7 @@ function func595(this: any) {
         }
         var_271 = 0;
         var_1586 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         if (var_2841 == 0) {
@@ -31923,13 +31923,13 @@ function func596(this: any) {
             return;
         }
         var_2850 = 0;
-        if (var_156[320] == 1) {
+        if (equip_disc[320] == 1) {
             var_2851 = rnd(3);
             if (var_2851 == 1) {
                 var_2850 = 1;
             }
         }
-        if (var_156[315] == 1) {
+        if (equip_disc[315] == 1) {
             var_2851 = rnd(3);
             if (var_2851 == 1) {
                 var_2850 = 1;
@@ -31945,11 +31945,11 @@ function func596(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            if (var_156[320] == 1) {
+            if (equip_disc[320] == 1) {
                 comments_row1 = "磁力攻撃をﾒﾀﾘｶの能力で防いだ！";
                 comments_row2 = "";
             }
-            if (var_156[315] == 1) {
+            if (equip_disc[315] == 1) {
                 comments_row1 = "磁力攻撃を予知した！";
                 comments_row2 = "";
             }
@@ -31965,7 +31965,7 @@ function func596(this: any) {
             yield func094();
             var_2849 = rnd(7);
             var_2849 = var_2849 + 1;
-            if (var_156[315] == 1) {
+            if (equip_disc[315] == 1) {
                 var_2849 = rnd(5);
             }
             if (var_2849 == 0) {
@@ -32285,7 +32285,7 @@ function func598(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
-        if (var_156[115] == 1) {
+        if (equip_disc[115] == 1) {
             yield func695();
             if (var_2855 != 0) {
                 var_2855 = 0;
@@ -32351,7 +32351,7 @@ function func599(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
-        if (var_156[115] == 1) {
+        if (equip_disc[115] == 1) {
             yield func695();
             if (var_2855 != 0) {
                 var_2855 = 0;

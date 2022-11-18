@@ -4273,7 +4273,7 @@ function func159(this: any) {
         var_768 = 0;
         var_769 = 0;
         yield func181();
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         var_217 = 0;
         var_205 = 1;
         yield func231();
@@ -7824,7 +7824,7 @@ function func192(this: any) {
         var_898 = 0;
         var_225 = var_875;
         belongings_item_list = var_233[var_875].Var0;
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         yield func494();
         var_869 = 1;
         yield func187();
@@ -8342,7 +8342,7 @@ function func199(this: any) {
                 var_687 = ginfo(16);
                 var_688 = ginfo(17);
                 var_689 = ginfo(18);
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;
@@ -8362,7 +8362,7 @@ function func199(this: any) {
                 var_689 = 255;
                 var_690 = 60;
                 var_25[14] = var_690;
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 yield func337(); // メッセージ関係呼び出し
                 yield func199();
                 return;

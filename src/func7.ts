@@ -36,7 +36,7 @@ function func700(this: any) {
         var_2217 = 1;
         yield func705();
         var_2217 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         return;
     });
 }
@@ -190,7 +190,7 @@ function func701(this: any) {
         }
         if (var_211 > 1) {
             var_2198 = Math.floor(var_211 / 2);
-            if (var_156[314] == 1) {
+            if (equip_disc[314] == 1) {
                 var_2198 = Math.floor(var_2198 / 2);
             }
             var_211 = var_211 - var_2198;
@@ -504,7 +504,7 @@ function func703(this: any) {
             var_300 = 0;
             yield func047();
             var_175 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         if (var_176 >= 1 && var_314 == var_176) {
             yield func340(); // キー入力による選択処理
@@ -520,7 +520,7 @@ function func703(this: any) {
             var_300 = 0;
             yield func047();
             var_176 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         return;
     });
@@ -1127,7 +1127,7 @@ function func705(this: any) {
             if (var_2538 >= 1) {
                 yield func691();
             }
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         if (var_83[var_402].Var0 == 33 && var_2196 == 0) {
             var_83[var_402].Var0 = 34;
@@ -3773,7 +3773,7 @@ function func754(this: any) {
             var_83[var_2171].Var1 = var_1512;
             var_83[var_2171].Var2 = var_1513;
             var_83[var_2171].Var10 = var_71[var_1512][var_1513];
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         if (var_1505 == 3) {
             var_77[var_1508][var_1509] = 0;
@@ -3781,7 +3781,7 @@ function func754(this: any) {
             var_78[var_2171].Var1 = var_1512;
             var_78[var_2171].Var2 = var_1513;
             var_78[var_2171].Var9 = var_71[var_1512][var_1513];
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -4596,7 +4596,7 @@ function func772(this: any) {
                         }
                         var_2401 = 1;
                         yield func430();
-                        yield func433(); // アイテム配列の "数" 増減？関数
+                        yield func433(); // アイテム配列(所持アイテム)初期化関数
                         break;
                     }
                 }
@@ -4644,7 +4644,7 @@ function func772(this: any) {
             var_83[var_3148].Var0 = 0;
             var_83[var_3148].Var1 = 0;
             var_83[var_3148].Var2 = 0;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         var_217 = 1;
         yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -4903,7 +4903,7 @@ function func776(this: any) {
             yield func106(); // BGM選曲呼び出し割り振り
         }
         yield func430();
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";

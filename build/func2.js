@@ -3053,7 +3053,7 @@ function func229() {
                     var_477 = dim(40);
                     var_479 = dim(40);
                     var_478 = dim(40);
-                    var_156 = dim(400);
+                    equip_disc = dim(400);
                     var_984 = 0;
                     var_862 = dim(length1 = 1000, length2 = 4, length3 = null, length4 = null);
                     var_501 = 0;
@@ -3146,7 +3146,7 @@ function func229() {
                     var_985 = var_985 + 400;
                     var_486 = bload(var_735, null, var_985);
                     var_985 = var_985 + 201600;
-                    var_156 = bload(var_735, null, var_985);
+                    equip_disc = bload(var_735, null, var_985);
                     var_985 = var_985 + 1600;
                     var_987 = bload(var_735, null, var_985);
                     var_985 = var_985 + 120;
@@ -3862,7 +3862,7 @@ function func231() {
                     var_985 = var_985 + 400;
                     bsave(var_735, var_486, null, var_985);
                     var_985 = var_985 + 201600;
-                    bsave(var_735, var_156, null, var_985);
+                    bsave(var_735, equip_disc, null, var_985);
                     var_985 = var_985 + 1600;
                     bsave(var_735, var_987, null, var_985);
                     var_985 = var_985 + 120;
@@ -4128,7 +4128,7 @@ function func233() {
                     var_477 = dim(40);
                     var_479 = dim(40);
                     var_478 = dim(40);
-                    var_156 = dim(400);
+                    equip_disc = dim(400);
                     var_1058 = dim(30, 30);
                     var_1046 = 0;
                     var_1059 = 1;
@@ -4753,7 +4753,7 @@ function func242() {
             var_853 = dim(length1 = 50, length2 = 30, length3 = null, length4 = null);
             var_986 = dim(100);
             var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
-            var_156 = dim(400);
+            equip_disc = dim(400);
             var_987 = dim(30);
             var_991 = dim(3, 21, 30);
             var_87 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
@@ -5419,7 +5419,7 @@ function func246() {
                     if (dangeon_number == 5) {
                         var_1052 = rnd(5);
                     }
-                    if (var_156[364] == 1) {
+                    if (equip_disc[364] == 1) {
                         var_1052 = rnd(4);
                     }
                     if (!(var_1052 == 0)) return [3 /*break*/, 3];

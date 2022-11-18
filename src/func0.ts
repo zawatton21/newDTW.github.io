@@ -341,7 +341,7 @@ function func005(this: any) {
             onexit(1);
             var_65[var_66][var_67] = 1;
             var_68 = 1;
-            yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
@@ -718,7 +718,7 @@ function func008(this: any) {
         var_153 = 0;
         var_154 = 0;
         var_155 = 0;
-        if (var_156[396] == 0) {
+        if (equip_disc[396] == 0) {
             var_157 = 0;
             var_158 = 0;
         }
@@ -777,7 +777,7 @@ function func008(this: any) {
             var_99 = 1;
         }
         var_68 = 1;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
             yield func118();
@@ -1141,7 +1141,7 @@ function func011(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(11);
         var_268 = 0;
-        if (var_156[316] == 0) {
+        if (equip_disc[316] == 0) {
             if (var_127 == 0 && var_132 == 0) {
                 if (var_263[0] == 0 && var_263[1] == 0 && var_82[var_264][var_267] > 0) {
                     var_269 = var_82[var_264][var_267];
@@ -1241,7 +1241,7 @@ function func011(this: any) {
                 }
             }
         }
-        if (var_156[316] == 1) {
+        if (equip_disc[316] == 1) {
             if (var_127 == 0 && var_132 == 0) {
                 if (var_263[0] == 0 && var_263[1] == 0 && var_82[var_264][var_267] > 0) {
                     var_269 = var_82[var_264][var_267];
@@ -1641,49 +1641,49 @@ function func014(this: any) {
                 }
                 if (var_80[var_274][var_67] != 0) {
                     var_280 = var_80[var_274][var_67];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_275][var_67] != 0) {
                     var_280 = var_80[var_275][var_67];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_66][var_277] != 0) {
                     var_280 = var_80[var_66][var_277];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_66][var_276] != 0) {
                     var_280 = var_80[var_66][var_276];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_274][var_277] != 0) {
                     var_280 = var_80[var_274][var_277];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_275][var_277] != 0) {
                     var_280 = var_80[var_275][var_277];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_274][var_276] != 0) {
                     var_280 = var_80[var_274][var_276];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_275][var_276] != 0) {
                     var_280 = var_80[var_275][var_276];
-                    if (var_81[var_280][4] == 1 || var_121 == 1 || var_156[303] == 1 || var_156[315] == 1) {
+                    if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
@@ -2686,7 +2686,7 @@ function func019(this: any) {
                         }
                     }
                 }
-                if (var_156[311] == 1 && var_144 == 0 && var_218 == 0) {
+                if (equip_disc[311] == 1 && var_144 == 0 && var_218 == 0) {
                     yield func500();
                     if (var_211 <= 0) {
                         var_211 = 0;
@@ -2722,16 +2722,16 @@ function func019(this: any) {
                     if (var_129 != 0 || var_130 != 0) {
                         var_359 = 1;
                     }
-                    if (var_156[300] != 1 && var_359 == 0) {
+                    if (equip_disc[300] != 1 && var_359 == 0) {
                         var_360 = var_360 + 2;
                     }
-                    if (var_156[300] == 1 && var_359 == 0) {
+                    if (equip_disc[300] == 1 && var_359 == 0) {
                         var_360 = var_360 + 1;
                     }
-                    if (var_156[300] != 1 && var_359 == 1) {
+                    if (equip_disc[300] != 1 && var_359 == 1) {
                         var_360 = var_360 + 4;
                     }
-                    if (var_156[300] == 1 && var_359 == 1) {
+                    if (equip_disc[300] == 1 && var_359 == 1) {
                         var_360 = var_360 + 2;
                     }
                     // No = 0 なので、拠点(ホテル、亀、)
@@ -2759,22 +2759,22 @@ function func019(this: any) {
                         var_363 = 0;
                     }
                     if (var_350 == 1 && var_363 == 0) {
-                        if (var_156[300] != 1 && var_359 == 0) {
+                        if (equip_disc[300] != 1 && var_359 == 0) {
                             if (var_360 > 12) {
                                 var_363 = 1;
                             }
                         }
-                        if (var_156[300] == 1 && var_359 == 0) {
+                        if (equip_disc[300] == 1 && var_359 == 0) {
                             if (var_360 > 16) {
                                 var_363 = 1;
                             }
                         }
-                        if (var_156[300] != 1 && var_359 == 1) {
+                        if (equip_disc[300] != 1 && var_359 == 1) {
                             if (var_360 > 4) {
                                 var_363 = 1;
                             }
                         }
-                        if (var_156[300] == 1 && var_359 == 1) {
+                        if (equip_disc[300] == 1 && var_359 == 1) {
                             if (var_360 > 12) {
                                 var_363 = 1;
                             }
@@ -2800,7 +2800,7 @@ function func019(this: any) {
                     }
                 }
             }
-            if (var_156[315] == 1 && var_144 == 0 && var_262 == 0 && var_218 == 0) {
+            if (equip_disc[315] == 1 && var_144 == 0 && var_262 == 0 && var_218 == 0) {
                 if (var_66 != var_236 || var_67 != var_237) {
                     var_364 = 0;
                     if (var_80[var_290][var_67] != 0) {
@@ -2875,7 +2875,7 @@ function func019(this: any) {
                     var_167 = 0;
                     var_127 = 0;
                     var_240 = 0;
-                    yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     yield func034(); // 盲目状態から復帰した時の表示
                 }
             }
@@ -2884,7 +2884,7 @@ function func019(this: any) {
                 if (var_132 >= 20) {
                     var_132 = 0;
                     var_240 = 0;
-                    yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     yield func035();
                 }
             }
@@ -2898,7 +2898,7 @@ function func019(this: any) {
             }
             if (var_140 >= 1) {
                 var_141 = var_141 + 1;
-                if (var_156[363] == 1) {
+                if (equip_disc[363] == 1) {
                     var_141 = var_141 + 1;
                 }
                 if (var_141 >= 30) {
@@ -2996,7 +2996,7 @@ function func019(this: any) {
                         yield func400(); // アイテムを拾う際の動作処理
                     }
                 }
-                if (key_X_on == 1) {
+                if (key_X_on == 1) { // キーXを押しながらだとアイテムに乗れる
                     yield func419(); // アイテムに乗った時の動作処理
                 }
             }
@@ -3114,7 +3114,7 @@ function func019(this: any) {
             }
             if (var_157 == 1) {
                 var_158 = var_158 + 1;
-                if (var_156[396] == 1) {
+                if (equip_disc[396] == 1) { // No = 396 メイドインヘブンのdisc を装備していたら
                     var_158 = 0;
                     yield func043();
                 }
@@ -3166,7 +3166,7 @@ function func019(this: any) {
                 if (var_262 == 0) {
                     var_112 = var_112 + 1;
                 }
-                if (var_156[396] == 1 && var_112 < 680) {
+                if (equip_disc[396] == 1 && var_112 < 680) {
                     var_112 = var_112 + 2;
                 }
                 if (var_112 == 700 || var_112 == 850 || var_112 == 1000) {
@@ -3183,7 +3183,7 @@ function func019(this: any) {
                     yield func722();
                 }
                 var_165 = var_165 + 1;
-                if (var_156[358] == 1) {
+                if (equip_disc[358] == 1) {
                     var_165 = var_165 + 1;
                 }
                 // No = 1 なので、ホテルの外
@@ -3225,7 +3225,8 @@ function func019(this: any) {
                         yield func693();
                     }
                 }
-                if (var_156[302] == 1 && var_262 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0) {
+                // No = 302 ハイウェイ・トゥ・ヘルを装備している時 
+                if (equip_disc[302] == 1 && var_262 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0) {
                     var_388 = rnd(200);
                     if (var_388 == 0) {
                         var_240 = 0;
@@ -3243,7 +3244,7 @@ function func019(this: any) {
                     }
                 }
                 // エンプレスの罠を踏んだ時の効果
-                if (var_156[310] == 1 && var_262 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0) {
+                if (equip_disc[310] == 1 && var_262 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0) {
                     var_388 = rnd(200);
                     if (var_388 == 0) {
                         var_240 = 0;
@@ -3303,12 +3304,12 @@ function func019(this: any) {
                         var_27_x = var_27[1];
                         var_391 = 1;
                         DSPLAY(audio_id = 184);
-                        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                         yield func047();
                         yield func340(); // キー入力による選択処理
                         yield func051();
                         var_391 = 0;
-                        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     }
                 }
             }
@@ -3461,7 +3462,7 @@ function func019(this: any) {
                     var_240 = 0;
                     yield func030();// 鈍足状態から復帰した時の表示
                 }
-                yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             }
             if (var_169 == 999999) {
                 var_398 = 0;
@@ -3493,7 +3494,7 @@ function func019(this: any) {
                     var_300 = 0;
                     yield func047();
                     var_240 = 0;
-                    yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
                     }
@@ -3620,7 +3621,7 @@ function func020(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_409 = 0;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         if (var_163 == 1) {
             return;
         }
@@ -3708,7 +3709,7 @@ function func020(this: any) {
             var_411 = 0;
             var_318 = 0;
             if (wallet < 1) {
-                if (var_156[396] == 0) {
+                if (equip_disc[396] == 0) {
                     if (var_157 == 0) {
                         var_133 = 1;
                         var_397 = 0;
@@ -3733,7 +3734,7 @@ function func020(this: any) {
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
-                if (var_156[396] == 1) {
+                if (equip_disc[396] == 1) {
                     yield func340(); // キー入力による選択処理
                     yield func094();
                     comments_row1 = comments_row1a;
@@ -3860,7 +3861,7 @@ function func020(this: any) {
                     var_300 = 0;
                     yield func047();
                     var_240 = 0;
-                    yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
                     }
@@ -4106,7 +4107,7 @@ function func020(this: any) {
                     var_300 = 0;
                     yield func047();
                     var_240 = 0;
-                    yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
                     }
@@ -5208,7 +5209,7 @@ function func043(this: any) {
         yield func492(); // アイテムリスト呼び出し
         target_item_name = item_name;
         var_225 = var_475;
-        yield func433(); // アイテム配列の "数" 増減？関数
+        yield func433(); // アイテム配列(所持アイテム)初期化関数
         yield func100();
         comments_row1 = "";
         comments_row2 = "";
@@ -7119,7 +7120,7 @@ function func067(this: any) {
                 yield func492(); // アイテムリスト呼び出し
                 var_550 = var_550 + buying_price;
                 var_225 = var_552;
-                yield func433(); // アイテム配列の "数" 増減？関数
+                yield func433(); // アイテム配列(所持アイテム)初期化関数
                 var_551 = 1;
                 cnt1 = -1;
                 continue;
@@ -8006,7 +8007,7 @@ function func072(this: any) {
             var_102 = 1;
             var_103 = 1;
         }
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         return;
     });
 }
@@ -8045,7 +8046,7 @@ function func074(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(74);
         var_101 = 1;
-        yield func331(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         var_390 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
             var_83[var_390].Var12 = 0;

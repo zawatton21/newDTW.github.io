@@ -235,7 +235,7 @@ var var_152;
 var var_153;
 var var_154;
 var var_155;
-var var_156;
+var equip_disc; // 装備しているdisc(装備区分問わず)を格納し、装備しているかどうかを判別する。例えばメイド・イン・ヘブンのdiscを装備しているだと equip_disc[396] == 1 となる
 var var_157;
 var var_158;
 var var_159;
@@ -243,7 +243,7 @@ var var_160;
 var var_161;
 var var_162;
 var var_163;
-var var_164;
+var var_164; // 時止め経過時のターン数？
 var var_165;
 var var_166;
 var var_167;
@@ -317,7 +317,7 @@ var var_231;
 // 800 ~ 900未満:ヤバいもの
 // 900 ~ 1000未満: コミック (空きがもう無い)
 var belongings_item_list;
-var var_233;
+var var_233; // 所持アイテム用配列
 var var_234;
 var conf_keyon; // 各キー入力確認。ON = 1、OFF = 0
 var var_236;

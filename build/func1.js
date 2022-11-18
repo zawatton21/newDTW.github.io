@@ -6329,7 +6329,7 @@ function func159() {
                     _a.sent();
                     return [4 /*yield*/, func331()];
                 case 23:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     var_217 = 0;
                     var_205 = 1;
                     return [4 /*yield*/, func231()];
@@ -10619,7 +10619,7 @@ function func192() {
                     belongings_item_list = var_233[var_875].Var0;
                     return [4 /*yield*/, func433()];
                 case 1:
-                    _a.sent(); // アイテム配列の "数" 増減？関数
+                    _a.sent(); // アイテム配列(所持アイテム)初期化関数
                     return [4 /*yield*/, func494()];
                 case 2:
                     _a.sent();
@@ -11327,7 +11327,7 @@ function func199() {
                     var_689 = ginfo(18);
                     return [4 /*yield*/, func331()];
                 case 5:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     return [4 /*yield*/, func337()];
                 case 6:
                     _a.sent(); // メッセージ関係呼び出し
@@ -11357,7 +11357,7 @@ function func199() {
                     var_25[14] = var_690;
                     return [4 /*yield*/, func331()];
                 case 12:
-                    _a.sent(); // 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+                    _a.sent(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     return [4 /*yield*/, func337()];
                 case 13:
                     _a.sent(); // メッセージ関係呼び出し
