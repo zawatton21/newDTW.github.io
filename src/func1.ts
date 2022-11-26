@@ -658,7 +658,7 @@ function func115(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(115);
         var_678 = 0;
-        bgm_list_id = var_486[var_682][var_683].Var0;
+        bgm_list_id = var_486[var_682][var_683][0];
         if (bgm_list_id < 100) {
             return;
         }
@@ -6112,13 +6112,13 @@ function func174(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 != 1) {
-                        belongings_item_list = var_486[var_485][var_484].Var0;
+                    if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] != 1) {
+                        belongings_item_list = var_486[var_485][var_484][0];
                         yield func492(); // アイテムリスト呼び出し
                         var_482 = 0;
-                        var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
-                        if (var_486[var_485][var_484].Var19 > 1) {
-                            var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
+                        var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
+                        if (var_486[var_485][var_484][19] > 1) {
+                            var_482 = var_486[var_485][var_484][19] * 500 + var_482;
                         }
                         var_838 = var_838 + buying_price + var_482;
                     }
@@ -7512,9 +7512,9 @@ function func181(this: any) {
                     var_859 = 1;
                     var_860 = var_78[var_854].Var6;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        if (var_486[var_860][var_859].Var0 != 0) {
-                            var_486[var_860][var_859].Var14 = 1;
-                            var_861 = var_486[var_860][var_859].Var0;
+                        if (var_486[var_860][var_859][0] != 0) {
+                            var_486[var_860][var_859][14] = 1;
+                            var_861 = var_486[var_860][var_859][0];
                             var_862[var_861][0] = 1;
                         }
                         var_859++;
@@ -7874,10 +7874,10 @@ function func191(this: any) {
                 var_233[var_224].Var8 = 1;
                 var_893 = rnd(2);
                 if (var_893 == 0) {
-                    var_486[var_858][1].Var15 = 37;
+                    var_486[var_858][1][15] = 37;
                 }
                 if (var_893 == 1) {
-                    var_486[var_858][1].Var15 = 48;
+                    var_486[var_858][1][15] = 48;
                 }
             }
         }

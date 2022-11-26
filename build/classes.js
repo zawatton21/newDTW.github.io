@@ -188,51 +188,12 @@ var ItemInfo = /** @class */ (function () {
             this.Var25, this.Var26, this.Var27, this.Var28, this.Var29
         ];
     };
-    /*
-    static dim(num: any) {
-        const data = [];
-        for (let i = 0; i < num; i++) {
+    ItemInfo.dim = function (num) {
+        var data = [];
+        for (var i = 0; i < num; i++) {
             data.push(new ItemInfo());
         }
         return data;
-    }
-    */
-    ItemInfo.dim = function (length1, length2, length3, length4) {
-        if (length2 === void 0) { length2 = null; }
-        if (length3 === void 0) { length3 = null; }
-        if (length4 === void 0) { length4 = null; }
-        if (length4 != null) {
-            throw "4重配列なんてありませんよ";
-        }
-        var return_list = [];
-        for (var i = 0; i < length1; i++) {
-            if (length2 != null) {
-                return_list.push(new ItemInfo());
-                // return_list[i] = [];
-                for (var j = 0; j < length2; j++) {
-                    if (length3 != null) {
-                        return_list.push(new ItemInfo());
-                        // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
-                        return_list[i][j] = [];
-                        for (var k = 0; k < length3; k++) {
-                            return_list.push(new ItemInfo());
-                            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
-                            return_list[i][j][k] = 0;
-                        }
-                    }
-                    else {
-                        return_list.push(new ItemInfo());
-                        // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
-                        return_list[i][j] = 0;
-                    }
-                }
-            }
-            else {
-                return_list.push(new ItemInfo());
-                return_list[i] = 0;
-            }
-        }
-        return return_list;
     };
     return ItemInfo;
 }());

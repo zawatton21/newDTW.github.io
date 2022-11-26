@@ -2546,4 +2546,3 @@ function ChangeScale() {
 */
 // この関数をgetkey(123)のところに設ける？
 //window.addEventListener("resize", ChangeScale)
-

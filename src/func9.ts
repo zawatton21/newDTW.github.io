@@ -471,16 +471,16 @@ function func909(this: any) {
             if (var_78[var_2171].Var0 >= 800 && var_78[var_2171].Var0 < 900) {
                 yield func395();
                 var_78[var_2171].Var6 = var_858;
-                var_486[var_858][1].Var0 = 0;
-                var_486[var_858][2].Var0 = 0;
-                var_486[var_858][3].Var0 = 0;
-                var_486[var_858][4].Var0 = 0;
-                var_486[var_858][5].Var0 = 0;
-                var_486[var_858][6].Var0 = 0;
-                var_486[var_858][7].Var0 = 0;
-                var_486[var_858][8].Var0 = 0;
-                var_486[var_858][9].Var0 = 0;
-                var_486[var_858][10].Var0 = 0;
+                var_486[var_858][1][0] = 0;
+                var_486[var_858][2][0] = 0;
+                var_486[var_858][3][0] = 0;
+                var_486[var_858][4][0] = 0;
+                var_486[var_858][5][0] = 0;
+                var_486[var_858][6][0] = 0;
+                var_486[var_858][7][0] = 0;
+                var_486[var_858][8][0] = 0;
+                var_486[var_858][9][0] = 0;
+                var_486[var_858][10][0] = 0;
             }
         }
         yield func910();

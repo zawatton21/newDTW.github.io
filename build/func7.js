@@ -1883,16 +1883,16 @@ function func707() {
                     _a.label = 5;
                 case 5:
                     if (!(cnt5_3 < 10)) return [3 /*break*/, 9];
-                    if (!(var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 0)) return [3 /*break*/, 7];
-                    belongings_item_list = var_486[var_485][var_484].Var0;
+                    if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 0)) return [3 /*break*/, 7];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 6:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2476 = Math.floor(buying_price / 2);
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
-                    if (var_486[var_485][var_484].Var19 > 1) {
-                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
+                    if (var_486[var_485][var_484][19] > 1) {
+                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
                     }
                     var_1009 = var_1009 + var_2476 + var_482;
                     _a.label = 7;
@@ -1944,15 +1944,15 @@ function func707() {
                     _a.label = 17;
                 case 17:
                     if (!(cnt3_9 < 10)) return [3 /*break*/, 21];
-                    if (!(var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1)) return [3 /*break*/, 19];
-                    belongings_item_list = var_486[var_485][var_484].Var0;
+                    if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1)) return [3 /*break*/, 19];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 18:
                     _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
-                    if (var_486[var_485][var_484].Var19 > 1) {
-                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
+                    if (var_486[var_485][var_484][19] > 1) {
+                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
                     }
                     payment_amount = payment_amount + buying_price + var_482;
                     _a.label = 19;
@@ -2004,15 +2004,15 @@ function func707() {
                     _a.label = 28;
                 case 28:
                     if (!(cnt5_4 < 10)) return [3 /*break*/, 32];
-                    if (!(var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1)) return [3 /*break*/, 30];
-                    belongings_item_list = var_486[var_485][var_484].Var0;
+                    if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1)) return [3 /*break*/, 30];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 29:
                     _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
-                    if (var_486[var_485][var_484].Var19 > 1) {
-                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
+                    if (var_486[var_485][var_484][19] > 1) {
+                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
                     }
                     payment_amount = payment_amount + buying_price + var_482;
                     _a.label = 30;
@@ -2498,8 +2498,8 @@ function func715() {
                                     var_484 = 1;
                                     var_485 = var_78[var_3115].Var6;
                                     for (cnt5_5 = 0; cnt5_5 < 10; ++cnt5_5) {
-                                        if (var_486[var_485][var_484].Var0 > 1) {
-                                            var_486[var_485][var_484].Var11 = 1;
+                                        if (var_486[var_485][var_484][0] > 1) {
+                                            var_486[var_485][var_484][11] = 1;
                                         }
                                         var_484 = var_484 + 1;
                                     }
@@ -2682,8 +2682,8 @@ function func720() {
                     var_484 = 1;
                     var_485 = var_233[var_480].Var6;
                     for (cnt3_11 = 0; cnt3_11 < 10; ++cnt3_11) {
-                        if (var_486[var_485][var_484].Var11 == 1) {
-                            var_486[var_485][var_484].Var11 = 0;
+                        if (var_486[var_485][var_484][11] == 1) {
+                            var_486[var_485][var_484][11] = 0;
                         }
                         var_484 = var_484 + 1;
                     }
@@ -2703,8 +2703,8 @@ function func720() {
                             var_484 = 1;
                             var_485 = var_78[var_3115].Var6;
                             for (cnt5_6 = 0; cnt5_6 < 10; ++cnt5_6) {
-                                if (var_486[var_485][var_484].Var11 == 1) {
-                                    var_486[var_485][var_484].Var11 = 0;
+                                if (var_486[var_485][var_484][11] == 1) {
+                                    var_486[var_485][var_484][11] = 0;
                                 }
                                 var_484 = var_484 + 1;
                             }
@@ -2736,7 +2736,7 @@ function func721() {
                     var_484 = 1;
                     var_485 = var_233[var_480].Var6;
                     for (cnt3_12 = 0; cnt3_12 < 10; ++cnt3_12) {
-                        if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                        if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
                             var_1008 = var_1008 + 1;
                         }
                         var_484 = var_484 + 1;
@@ -2757,7 +2757,7 @@ function func721() {
                             var_484 = 1;
                             var_485 = var_78[var_3115].Var6;
                             for (cnt5_7 = 0; cnt5_7 < 10; ++cnt5_7) {
-                                if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                                if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
                                     var_1008 = var_1008 + 1;
                                 }
                                 var_484 = var_484 + 1;
@@ -2906,11 +2906,11 @@ function func723() {
                     var_484 = 1;
                     var_485 = var_233[var_480].Var6;
                     for (cnt3_13 = 0; cnt3_13 < 10; ++cnt3_13) {
-                        if (var_486[var_485][var_484].Var0 != 0) {
+                        if (var_486[var_485][var_484][0] != 0) {
                             var_3121++;
-                            var_3122 = var_486[var_485][var_484].Var0;
+                            var_3122 = var_486[var_485][var_484][0];
                             var_862[var_3122][0] = 1;
-                            var_486[var_485][var_484].Var14 = 1;
+                            var_486[var_485][var_484][14] = 1;
                         }
                         var_484 = var_484 + 1;
                     }
@@ -7397,10 +7397,10 @@ function func778() {
                             var_484 = 1;
                             var_485 = var_233[var_480].Var6;
                             for (cnt3_14 = 0; cnt3_14 < 10; ++cnt3_14) {
-                                if (var_486[var_485][var_484].Var0 == 393) {
+                                if (var_486[var_485][var_484][0] == 393) {
                                     var_3154 = 1;
                                 }
-                                if (var_486[var_485][var_484].Var0 == 995) {
+                                if (var_486[var_485][var_484][0] == 995) {
                                     var_3155 = 1;
                                 }
                                 var_484 = var_484 + 1;

@@ -12,7 +12,6 @@
 # このファイルと同階層のファイルだけ許可
 !/.gitignore
 !*.ts
-!*.js
 !*.html
 !*.json
 !*.css

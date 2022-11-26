@@ -6979,15 +6979,15 @@ function func043() {
                     _a.label = 3;
                 case 3:
                     if (!(cnt2_16 < 10)) return [3 /*break*/, 7];
-                    if (!(var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1)) return [3 /*break*/, 5];
-                    belongings_item_list = var_486[var_485][var_484].Var0;
+                    if (!(var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1)) return [3 /*break*/, 5];
+                    belongings_item_list = var_486[var_485][var_484][0];
                     return [4 /*yield*/, func492()];
                 case 4:
                     _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
-                    if (var_486[var_485][var_484].Var19 > 1) {
-                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
+                    if (var_486[var_485][var_484][19] > 1) {
+                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
                     }
                     payment_amount = payment_amount + buying_price + var_482;
                     count_buying_price = count_buying_price + payment_amount;

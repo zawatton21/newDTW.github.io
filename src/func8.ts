@@ -2326,7 +2326,7 @@ function func833(this: any) {
                     var_484 = 1;
                     var_485 = var_233[var_480].Var6;
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        if (var_486[var_485][var_484].Var0 == 396) {
+                        if (var_486[var_485][var_484][0] == 396) {
                             var_3202 = 1;
                         }
                         var_484 = var_484 + 1;
@@ -2820,7 +2820,7 @@ function func837(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_1056].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484].Var11 == 1 && var_486[var_485][var_484].Var0 != 0) {
+                    if (var_486[var_485][var_484][11] == 1 && var_486[var_485][var_484][0] != 0) {
                         var_3205 = var_484;
                         var_220 = 1; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                         var_682 = var_485;
@@ -2887,10 +2887,10 @@ function func838(this: any) {
             var_1249 = var_233[var_1056].Var13;
         }
         if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-            belongings_item_list = var_486[var_485][var_484].Var0;
-            var_1471 = var_486[var_485][var_484].Var0;
-            disc_rarity = var_486[var_485][var_484].Var13;
-            var_1249 = var_486[var_485][var_484].Var13;
+            belongings_item_list = var_486[var_485][var_484][0];
+            var_1471 = var_486[var_485][var_484][0];
+            disc_rarity = var_486[var_485][var_484][13];
+            var_1249 = var_486[var_485][var_484][13];
         }
         yield func492(); // アイテムリスト呼び出し
         var_3207 = item_name;
@@ -5755,8 +5755,7 @@ function func865(this: any) {
         var_73 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
         var_986 = dim(100);
 
-        // var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
-        var_486 = ItemInfo.dim(length1 = 80, length2 = 21, length3 = null, length4 = null);
+        var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
 
         var_76 = dim(length1 = 100, length2 = 5, length3 = 3, length4 = null);
 
@@ -5868,8 +5867,7 @@ function func869(this: any) {
         var_73 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
         var_986 = dim(100);
 
-        // var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
-        var_486 = ItemInfo.dim(length1 = 80, length2 = 21, length3 = null, length4 = null);
+        var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
 
         var_76 = dim(length1 = 100, length2 = 5, length3 = 3, length4 = null);
 
@@ -6857,8 +6855,7 @@ function func877(this: any) {
         var_73 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
         var_986 = dim(100);
 
-        // var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
-        var_486 = ItemInfo.dim(length1 = 80, length2 = 21, length3 = null, length4 = null);
+        var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
 
         var_76 = dim(length1 = 100, length2 = 5, length3 = 3, length4 = null);
 
@@ -6934,16 +6931,16 @@ function func879(this: any) {
             var_78[var_866].Var6 = var_858;
             var_78[var_866].Var7 = var_3342;
             var_78[var_866].Var8 = 0;
-            var_486[var_858][1].Var0 = 0;
-            var_486[var_858][2].Var0 = 0;
-            var_486[var_858][3].Var0 = 0;
-            var_486[var_858][4].Var0 = 0;
-            var_486[var_858][5].Var0 = 0;
-            var_486[var_858][6].Var0 = 0;
-            var_486[var_858][7].Var0 = 0;
-            var_486[var_858][8].Var0 = 0;
-            var_486[var_858][9].Var0 = 0;
-            var_486[var_858][10].Var0 = 0;
+            var_486[var_858][1][0] = 0;
+            var_486[var_858][2][0] = 0;
+            var_486[var_858][3][0] = 0;
+            var_486[var_858][4][0] = 0;
+            var_486[var_858][5][0] = 0;
+            var_486[var_858][6][0] = 0;
+            var_486[var_858][7][0] = 0;
+            var_486[var_858][8][0] = 0;
+            var_486[var_858][9][0] = 0;
+            var_486[var_858][10][0] = 0;
         }
         var_1771 = var_78[var_866].Var0;
         var_862[var_1771][0] = 1;
