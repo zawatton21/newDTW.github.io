@@ -5233,13 +5233,13 @@ function func043(this: any) {
             var_484 = 1;
             var_485 = var_233[var_480].Var6;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                    belongings_item_list = var_486[var_485][var_484][0];
+                if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                    belongings_item_list = var_486[var_485][var_484].Var0;
                     yield func492(); // アイテムリスト呼び出し
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                    if (var_486[var_485][var_484][19] > 1) {
-                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                    if (var_486[var_485][var_484].Var19 > 1) {
+                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                     }
                     payment_amount = payment_amount + buying_price + var_482;
                     count_buying_price = count_buying_price + payment_amount;

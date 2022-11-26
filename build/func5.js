@@ -708,15 +708,15 @@ function func506() {
                     return [2 /*return*/];
                 case 9:
                     if (!(var_220 == 1)) return [3 /*break*/, 15];
-                    var_570 = var_486[var_682][var_225][13];
-                    belongings_item_list = var_486[var_682][var_225][0];
+                    var_570 = var_486[var_682][var_225].Var13;
+                    belongings_item_list = var_486[var_682][var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 10:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (!(var_486[var_682][var_225][4] == 0 || var_486[var_682][var_225][14] == 0)) return [3 /*break*/, 14];
-                    if (!(var_486[var_682][var_225][11] == 1)) return [3 /*break*/, 12];
-                    belongings_item_list = var_486[var_682][var_225][0];
+                    if (!(var_486[var_682][var_225].Var4 == 0 || var_486[var_682][var_225].Var14 == 0)) return [3 /*break*/, 14];
+                    if (!(var_486[var_682][var_225].Var11 == 1)) return [3 /*break*/, 12];
+                    belongings_item_list = var_486[var_682][var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 11:
                     _a.sent(); // アイテムリスト呼び出し
@@ -732,9 +732,9 @@ function func506() {
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     return [2 /*return*/];
                 case 14:
-                    if (var_486[var_682][var_225][4] >= 1) {
-                        var_486[var_682][var_225][4] = var_486[var_682][var_225][4] - 1;
-                        if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
+                    if (var_486[var_682][var_225].Var4 >= 1) {
+                        var_486[var_682][var_225].Var4 = var_486[var_682][var_225].Var4 - 1;
+                        if (var_486[var_682][var_225].Var11 == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
                         }
@@ -811,13 +811,13 @@ function func506() {
                     _a.label = 27;
                 case 27:
                     if (!(var_220 == 1)) return [3 /*break*/, 32];
-                    if (!(var_486[var_682][var_225][3] <= 1)) return [3 /*break*/, 31];
-                    belongings_item_list = var_486[var_682][var_225][0];
+                    if (!(var_486[var_682][var_225].Var3 <= 1)) return [3 /*break*/, 31];
+                    belongings_item_list = var_486[var_682][var_225].Var0;
                     return [4 /*yield*/, func492()];
                 case 28:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2255 = item_name;
-                    if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
+                    if (var_486[var_682][var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + buying_price;
                     }
@@ -831,9 +831,9 @@ function func506() {
                     var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     return [2 /*return*/];
                 case 31:
-                    if (var_486[var_682][var_225][3] >= 2) {
-                        var_486[var_682][var_225][3] = var_486[var_682][var_225][3] - 1;
-                        if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
+                    if (var_486[var_682][var_225].Var3 >= 2) {
+                        var_486[var_682][var_225].Var3 = var_486[var_682][var_225].Var3 - 1;
+                        if (var_486[var_682][var_225].Var11 == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
                         }
@@ -1105,8 +1105,8 @@ function func511() {
                     }
                     if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
                         var_2256 = var_1876;
-                        activated_disc_id = var_486[var_682][var_225][0];
-                        if (var_862[activated_disc_id][0] == 1 && var_486[var_682][var_225][12] == 1 && var_486[var_682][var_225][14] == 1) {
+                        activated_disc_id = var_486[var_682][var_225].Var0;
+                        if (var_862[activated_disc_id][0] == 1 && var_486[var_682][var_225].Var12 == 1 && var_486[var_682][var_225].Var14 == 1) {
                             var_2257 = 1;
                         }
                     }
@@ -3344,7 +3344,7 @@ function func511() {
                         var_570 = var_233[var_225].Var13;
                     }
                     if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                        var_570 = var_486[var_682][var_225][13];
+                        var_570 = var_486[var_682][var_225].Var13;
                     }
                     if (var_234 == 1) {
                         var_570 = var_78[var_321].Var13;
@@ -14147,16 +14147,16 @@ function func523() {
                     if (var_1876 > var_2091) {
                         var_1876 = var_1876 - 1;
                     }
-                    if (!(var_486[var_682][var_2286][11] == 1)) return [3 /*break*/, 112];
+                    if (!(var_486[var_682][var_2286].Var11 == 1)) return [3 /*break*/, 112];
                     var_106 = 1;
-                    belongings_item_list = var_486[var_682][var_2286][0];
+                    belongings_item_list = var_486[var_682][var_2286].Var0;
                     return [4 /*yield*/, func492()];
                 case 111:
                     _a.sent(); // アイテムリスト呼び出し
                     var_482 = 0;
-                    var_482 = (var_486[var_682][var_2286][3] + var_486[var_682][var_2286][4]) * 50;
-                    if (var_486[var_682][var_2286][19] > 1) {
-                        var_482 = var_486[var_682][var_2286][19] * 500 + var_482;
+                    var_482 = (var_486[var_682][var_2286].Var3 + var_486[var_682][var_2286].Var4) * 50;
+                    if (var_486[var_682][var_2286].Var19 > 1) {
+                        var_482 = var_486[var_682][var_2286].Var19 * 500 + var_482;
                     }
                     buying_price = buying_price + var_482;
                     count_buying_price = count_buying_price + buying_price;
@@ -14343,9 +14343,9 @@ function func524() {
                         }
                     }
                     if (var_2301 == 1) {
-                        var_486[var_682][var_2300][3] = var_486[var_682][var_2300][3] + var_2371;
-                        if (var_486[var_682][var_2300][3] >= 99) {
-                            var_486[var_682][var_2300][3] = 99;
+                        var_486[var_682][var_2300].Var3 = var_486[var_682][var_2300].Var3 + var_2371;
+                        if (var_486[var_682][var_2300].Var3 >= 99) {
+                            var_486[var_682][var_2300].Var3 = 99;
                         }
                     }
                     if (var_2301 == 2) {
@@ -18977,36 +18977,36 @@ function func541() {
                 case 202:
                     _a.sent();
                     var_77[var_448][var_450] = var_854;
-                    var_78[var_854].Var0 = var_486[var_2459][var_1910][0];
+                    var_78[var_854].Var0 = var_486[var_2459][var_1910].Var0;
                     var_78[var_854].Var1 = var_448;
                     var_78[var_854].Var2 = var_450;
-                    var_78[var_854].Var3 = var_486[var_2459][var_1910][3];
-                    var_78[var_854].Var4 = var_486[var_2459][var_1910][4];
-                    var_78[var_854].Var5 = var_486[var_2459][var_1910][5];
-                    var_78[var_854].Var6 = var_486[var_2459][var_1910][6];
-                    var_78[var_854].Var7 = var_486[var_2459][var_1910][7];
-                    var_78[var_854].Var8 = var_486[var_2459][var_1910][8];
+                    var_78[var_854].Var3 = var_486[var_2459][var_1910].Var3;
+                    var_78[var_854].Var4 = var_486[var_2459][var_1910].Var4;
+                    var_78[var_854].Var5 = var_486[var_2459][var_1910].Var5;
+                    var_78[var_854].Var6 = var_486[var_2459][var_1910].Var6;
+                    var_78[var_854].Var7 = var_486[var_2459][var_1910].Var7;
+                    var_78[var_854].Var8 = var_486[var_2459][var_1910].Var8;
                     var_78[var_854].Var9 = var_71[var_448][var_450];
                     var_78[var_854].Var10 = 1;
-                    var_78[var_854].Var11 = var_486[var_2459][var_1910][11];
-                    var_78[var_854].Var12 = var_486[var_2459][var_1910][12];
-                    var_78[var_854].Var13 = var_486[var_2459][var_1910][13];
-                    var_78[var_854].Var14 = var_486[var_2459][var_1910][14];
-                    var_78[var_854].Var15 = var_486[var_2459][var_1910][15];
-                    var_78[var_854].Var16 = var_486[var_2459][var_1910][16];
-                    var_78[var_854].Var17 = var_486[var_2459][var_1910][17];
-                    var_78[var_854].Var18 = var_486[var_2459][var_1910][18];
-                    var_78[var_854].Var19 = var_486[var_2459][var_1910][19];
-                    var_78[var_854].Var20 = var_486[var_2459][var_1910][20];
-                    var_78[var_854].Var21 = var_486[var_2459][var_1910][21];
-                    var_78[var_854].Var22 = var_486[var_2459][var_1910][22];
-                    var_78[var_854].Var23 = var_486[var_2459][var_1910][23];
-                    var_78[var_854].Var24 = var_486[var_2459][var_1910][24];
-                    var_78[var_854].Var25 = var_486[var_2459][var_1910][25];
-                    var_78[var_854].Var26 = var_486[var_2459][var_1910][26];
-                    var_78[var_854].Var27 = var_486[var_2459][var_1910][27];
-                    var_78[var_854].Var28 = var_486[var_2459][var_1910][28];
-                    var_78[var_854].Var29 = var_486[var_2459][var_1910][29];
+                    var_78[var_854].Var11 = var_486[var_2459][var_1910].Var11;
+                    var_78[var_854].Var12 = var_486[var_2459][var_1910].Var12;
+                    var_78[var_854].Var13 = var_486[var_2459][var_1910].Var13;
+                    var_78[var_854].Var14 = var_486[var_2459][var_1910].Var14;
+                    var_78[var_854].Var15 = var_486[var_2459][var_1910].Var15;
+                    var_78[var_854].Var16 = var_486[var_2459][var_1910].Var16;
+                    var_78[var_854].Var17 = var_486[var_2459][var_1910].Var17;
+                    var_78[var_854].Var18 = var_486[var_2459][var_1910].Var18;
+                    var_78[var_854].Var19 = var_486[var_2459][var_1910].Var19;
+                    var_78[var_854].Var20 = var_486[var_2459][var_1910].Var20;
+                    var_78[var_854].Var21 = var_486[var_2459][var_1910].Var21;
+                    var_78[var_854].Var22 = var_486[var_2459][var_1910].Var22;
+                    var_78[var_854].Var23 = var_486[var_2459][var_1910].Var23;
+                    var_78[var_854].Var24 = var_486[var_2459][var_1910].Var24;
+                    var_78[var_854].Var25 = var_486[var_2459][var_1910].Var25;
+                    var_78[var_854].Var26 = var_486[var_2459][var_1910].Var26;
+                    var_78[var_854].Var27 = var_486[var_2459][var_1910].Var27;
+                    var_78[var_854].Var28 = var_486[var_2459][var_1910].Var28;
+                    var_78[var_854].Var29 = var_486[var_2459][var_1910].Var29;
                     var_1910++;
                     _a.label = 203;
                 case 203:
@@ -19051,8 +19051,8 @@ function func541() {
                     _a.label = 210;
                 case 210:
                     if (!(cnt7_2 < var_1911)) return [3 /*break*/, 214];
-                    var_1918 = var_486[var_1916][var_1917][15];
-                    var_1919 = var_486[var_1916][var_1917][18];
+                    var_1918 = var_486[var_1916][var_1917].Var15;
+                    var_1919 = var_486[var_1916][var_1917].Var18;
                     if (!(var_1918 != 0)) return [3 /*break*/, 212];
                     return [4 /*yield*/, func556()];
                 case 211:
@@ -21196,36 +21196,36 @@ function func541() {
                 case 646:
                     _a.sent();
                     var_77[var_448][var_450] = var_854;
-                    var_78[var_854].Var0 = var_486[var_2459][var_1910][0];
+                    var_78[var_854].Var0 = var_486[var_2459][var_1910].Var0;
                     var_78[var_854].Var1 = var_448;
                     var_78[var_854].Var2 = var_450;
-                    var_78[var_854].Var3 = var_486[var_2459][var_1910][3];
-                    var_78[var_854].Var4 = var_486[var_2459][var_1910][4];
-                    var_78[var_854].Var5 = var_486[var_2459][var_1910][5];
-                    var_78[var_854].Var6 = var_486[var_2459][var_1910][6];
-                    var_78[var_854].Var7 = var_486[var_2459][var_1910][7];
-                    var_78[var_854].Var8 = var_486[var_2459][var_1910][8];
+                    var_78[var_854].Var3 = var_486[var_2459][var_1910].Var3;
+                    var_78[var_854].Var4 = var_486[var_2459][var_1910].Var4;
+                    var_78[var_854].Var5 = var_486[var_2459][var_1910].Var5;
+                    var_78[var_854].Var6 = var_486[var_2459][var_1910].Var6;
+                    var_78[var_854].Var7 = var_486[var_2459][var_1910].Var7;
+                    var_78[var_854].Var8 = var_486[var_2459][var_1910].Var8;
                     var_78[var_854].Var9 = var_71[var_448][var_450];
                     var_78[var_854].Var10 = 0;
-                    var_78[var_854].Var11 = var_486[var_2459][var_1910][11];
-                    var_78[var_854].Var12 = var_486[var_2459][var_1910][12];
-                    var_78[var_854].Var13 = var_486[var_2459][var_1910][13];
-                    var_78[var_854].Var14 = var_486[var_2459][var_1910][14];
-                    var_78[var_854].Var15 = var_486[var_2459][var_1910][15];
-                    var_78[var_854].Var16 = var_486[var_2459][var_1910][16];
-                    var_78[var_854].Var17 = var_486[var_2459][var_1910][17];
-                    var_78[var_854].Var18 = var_486[var_2459][var_1910][18];
-                    var_78[var_854].Var19 = var_486[var_2459][var_1910][19];
-                    var_78[var_854].Var20 = var_486[var_2459][var_1910][20];
-                    var_78[var_854].Var21 = var_486[var_2459][var_1910][21];
-                    var_78[var_854].Var22 = var_486[var_2459][var_1910][22];
-                    var_78[var_854].Var23 = var_486[var_2459][var_1910][23];
-                    var_78[var_854].Var24 = var_486[var_2459][var_1910][24];
-                    var_78[var_854].Var25 = var_486[var_2459][var_1910][25];
-                    var_78[var_854].Var26 = var_486[var_2459][var_1910][26];
-                    var_78[var_854].Var27 = var_486[var_2459][var_1910][27];
-                    var_78[var_854].Var28 = var_486[var_2459][var_1910][28];
-                    var_78[var_854].Var29 = var_486[var_2459][var_1910][29];
+                    var_78[var_854].Var11 = var_486[var_2459][var_1910].Var11;
+                    var_78[var_854].Var12 = var_486[var_2459][var_1910].Var12;
+                    var_78[var_854].Var13 = var_486[var_2459][var_1910].Var13;
+                    var_78[var_854].Var14 = var_486[var_2459][var_1910].Var14;
+                    var_78[var_854].Var15 = var_486[var_2459][var_1910].Var15;
+                    var_78[var_854].Var16 = var_486[var_2459][var_1910].Var16;
+                    var_78[var_854].Var17 = var_486[var_2459][var_1910].Var17;
+                    var_78[var_854].Var18 = var_486[var_2459][var_1910].Var18;
+                    var_78[var_854].Var19 = var_486[var_2459][var_1910].Var19;
+                    var_78[var_854].Var20 = var_486[var_2459][var_1910].Var20;
+                    var_78[var_854].Var21 = var_486[var_2459][var_1910].Var21;
+                    var_78[var_854].Var22 = var_486[var_2459][var_1910].Var22;
+                    var_78[var_854].Var23 = var_486[var_2459][var_1910].Var23;
+                    var_78[var_854].Var24 = var_486[var_2459][var_1910].Var24;
+                    var_78[var_854].Var25 = var_486[var_2459][var_1910].Var25;
+                    var_78[var_854].Var26 = var_486[var_2459][var_1910].Var26;
+                    var_78[var_854].Var27 = var_486[var_2459][var_1910].Var27;
+                    var_78[var_854].Var28 = var_486[var_2459][var_1910].Var28;
+                    var_78[var_854].Var29 = var_486[var_2459][var_1910].Var29;
                     var_1910++;
                     _a.label = 647;
                 case 647:
@@ -21272,8 +21272,8 @@ function func541() {
                     _a.label = 654;
                 case 654:
                     if (!(cnt5_31 < var_1911)) return [3 /*break*/, 658];
-                    var_1918 = var_486[var_1916][var_1917][15];
-                    var_1919 = var_486[var_1916][var_1917][18];
+                    var_1918 = var_486[var_1916][var_1917].Var15;
+                    var_1919 = var_486[var_1916][var_1917].Var18;
                     if (!(var_1918 != 0)) return [3 /*break*/, 656];
                     return [4 /*yield*/, func556()];
                 case 655:
@@ -21734,16 +21734,16 @@ function func541() {
                     _a.label = 755;
                 case 755:
                     if (!(cnt4_21 < 10)) return [3 /*break*/, 759];
-                    if (!(var_486[var_485][var_484][0] > 0)) return [3 /*break*/, 757];
-                    belongings_item_list = var_486[var_485][var_484][0];
+                    if (!(var_486[var_485][var_484].Var0 > 0)) return [3 /*break*/, 757];
+                    belongings_item_list = var_486[var_485][var_484].Var0;
                     return [4 /*yield*/, func492()];
                 case 756:
                     _a.sent(); // アイテムリスト呼び出し
                     var_2476 = Math.floor(buying_price / 2);
                     var_482 = 0;
-                    var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                    if (var_486[var_485][var_484][19] > 1) {
-                        var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                    var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                    if (var_486[var_485][var_484].Var19 > 1) {
+                        var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                     }
                     payment_amount = payment_amount + var_2476 + var_482;
                     _a.label = 757;

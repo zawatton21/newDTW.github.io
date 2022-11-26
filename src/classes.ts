@@ -187,6 +187,7 @@ class ItemInfo {
             this.Var25, this.Var26, this.Var27, this.Var28, this.Var29
         ];
     }
+    /*
     static dim(num: any) {
         const data = [];
         for (let i = 0; i < num; i++) {
@@ -194,36 +195,41 @@ class ItemInfo {
         }
         return data;
     }
-/*
-    static dim1(length1: any, length2: any = null, length3: any = null, length4: any = null) {
+    */
+
+    static dim(length1: any, length2: any = null, length3: any = null, length4: any = null) {
         if (length4 != null) {
             throw "4重配列なんてありませんよ";
         }
         const return_list = [];
         for (let i = 0; i < length1; i++) {
             if (length2 != null) {
-                data.push(new ItemInfo());
+                return_list.push(new ItemInfo());
                 // return_list[i] = [];
                 for (let j = 0; j < length2; j++) {
                     if (length3 != null) {
+                        return_list.push(new ItemInfo());
                         // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                         return_list[i][j] = [];
                         for (let k = 0; k < length3; k++) {
+                            return_list.push(new ItemInfo());
                             // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                             return_list[i][j][k] = 0;
                         }
                     }
                     else {
+                        return_list.push(new ItemInfo());
                         // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                         return_list[i][j] = 0;
                     }
                 }
             }
             else {
+                return_list.push(new ItemInfo());
                 return_list[i] = 0;
             }
         }
         return return_list;
     }
-*/
+
 }

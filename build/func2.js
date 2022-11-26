@@ -2981,7 +2981,7 @@ function func228() {
 // セーブファイルからデータ読み出し関数
 function func229() {
     return __awaiter(this, void 0, void 0, function () {
-        var data_1, data_2, data_3;
+        var data_1, data_2, data_3, data_4;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -3140,7 +3140,14 @@ function func229() {
                     var_985 = var_985 + 6000;
                     var_986 = bload(var_735, null, var_985);
                     var_985 = var_985 + 400;
-                    var_486 = bload(var_735, null, var_985);
+                    // var_486 = bload(var_735, null, var_985);
+                    {
+                        var_486 = [];
+                        data_4 = bload(var_735, null, var_985);
+                        data_4.forEach(function (d) {
+                            var_83.push(ItemInfo.Load(d));
+                        });
+                    }
                     var_985 = var_985 + 201600;
                     equip_disc = bload(var_735, null, var_985);
                     var_985 = var_985 + 1600;
@@ -3475,7 +3482,7 @@ function func230() {
 // プレイデータを保存するセーブ機能
 function func231() {
     return __awaiter(this, void 0, void 0, function () {
-        var save_233, save_78, save_83;
+        var save_233, save_78, save_83, save_486;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -3856,7 +3863,10 @@ function func231() {
                     var_985 = var_985 + 6000;
                     bsave(var_735, var_986, null, var_985);
                     var_985 = var_985 + 400;
-                    bsave(var_735, var_486, null, var_985);
+                    save_486 = Array();
+                    var_486.forEach(function (save) {
+                        save_486.push(save.Save());
+                    });
                     var_985 = var_985 + 201600;
                     bsave(var_735, equip_disc, null, var_985);
                     var_985 = var_985 + 1600;
@@ -4108,9 +4118,9 @@ function func233() {
                                 var_484 = 1;
                                 var_485 = var_233[var_1056].Var6;
                                 for (cnt4_1 = 0; cnt4_1 < 10; ++cnt4_1) {
-                                    if (var_486[var_485][var_484][0] != 0) {
-                                        var_486[var_485][var_484][14] = 1;
-                                        var_1057 = var_486[var_485][var_484][0];
+                                    if (var_486[var_485][var_484].Var0 != 0) {
+                                        var_486[var_485][var_484].Var14 = 1;
+                                        var_1057 = var_486[var_485][var_484].Var0;
                                         var_862[var_1057][0] = 1;
                                     }
                                     var_484 = var_484 + 1;
@@ -4748,7 +4758,8 @@ function func242() {
             var_863 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
             var_853 = dim(length1 = 50, length2 = 30, length3 = null, length4 = null);
             var_986 = dim(100);
-            var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
+            // var_486 = dim(length1 = 80, length2 = 21, length3 = 30, length4 = null);
+            var_486 = ItemInfo.dim(length1 = 80, length2 = 21, length3 = null, length4 = null);
             equip_disc = dim(400);
             var_987 = dim(30);
             var_991 = dim(3, 21, 30);

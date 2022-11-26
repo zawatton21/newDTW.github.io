@@ -573,7 +573,7 @@ let var_482 :any;
 let buying_price :number; // アイテムごとに設定された購入金額
 let var_484 :any;
 let var_485 :any;
-let var_486 :any;
+let var_486 :any[]; // アイテム欄が開いている時のアイテム配列
 let disc_rarity :number; // 0より大きければレアdisc(色違い)
 let var_488 :any;
 let item_name :string;

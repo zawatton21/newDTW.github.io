@@ -1314,14 +1314,14 @@ function func707(this: any) {
                         var_484 = 1;
                         var_485 = var_78[var_3115].Var6;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                            if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 0) {
-                                belongings_item_list = var_486[var_485][var_484][0];
+                            if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 0) {
+                                belongings_item_list = var_486[var_485][var_484].Var0;
                                 yield func492(); // アイテムリスト呼び出し
                                 var_2476 = Math.floor(buying_price / 2);
                                 var_482 = 0;
-                                var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                                if (var_486[var_485][var_484][19] > 1) {
-                                    var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                                var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                                if (var_486[var_485][var_484].Var19 > 1) {
+                                    var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                                 }
                                 var_1009 = var_1009 + var_2476 + var_482;
                             }
@@ -1353,13 +1353,13 @@ function func707(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                        belongings_item_list = var_486[var_485][var_484][0];
+                    if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                        belongings_item_list = var_486[var_485][var_484].Var0;
                         yield func492(); // アイテムリスト呼び出し
                         var_482 = 0;
-                        var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                        if (var_486[var_485][var_484][19] > 1) {
-                            var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                        var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                        if (var_486[var_485][var_484].Var19 > 1) {
+                            var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                         }
                         payment_amount = payment_amount + buying_price + var_482;
                     }
@@ -1391,13 +1391,13 @@ function func707(this: any) {
                         var_484 = 1;
                         var_485 = var_78[var_3115].Var6;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                            if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
-                                belongings_item_list = var_486[var_485][var_484][0];
+                            if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
+                                belongings_item_list = var_486[var_485][var_484].Var0;
                                 yield func492(); // アイテムリスト呼び出し
                                 var_482 = 0;
-                                var_482 = (var_486[var_485][var_484][3] + var_486[var_485][var_484][4]) * 50;
-                                if (var_486[var_485][var_484][19] > 1) {
-                                    var_482 = var_486[var_485][var_484][19] * 500 + var_482;
+                                var_482 = (var_486[var_485][var_484].Var3 + var_486[var_485][var_484].Var4) * 50;
+                                if (var_486[var_485][var_484].Var19 > 1) {
+                                    var_482 = var_486[var_485][var_484].Var19 * 500 + var_482;
                                 }
                                 payment_amount = payment_amount + buying_price + var_482;
                             }
@@ -1696,8 +1696,8 @@ function func715(this: any) {
                         var_484 = 1;
                         var_485 = var_78[var_3115].Var6;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                            if (var_486[var_485][var_484][0] > 1) {
-                                var_486[var_485][var_484][11] = 1;
+                            if (var_486[var_485][var_484].Var0 > 1) {
+                                var_486[var_485][var_484].Var11 = 1;
                             }
                             var_484 = var_484 + 1;
                         }
@@ -1812,8 +1812,8 @@ function func720(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484][11] == 1) {
-                        var_486[var_485][var_484][11] = 0;
+                    if (var_486[var_485][var_484].Var11 == 1) {
+                        var_486[var_485][var_484].Var11 = 0;
                     }
                     var_484 = var_484 + 1;
                 }
@@ -1833,8 +1833,8 @@ function func720(this: any) {
                         var_484 = 1;
                         var_485 = var_78[var_3115].Var6;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                            if (var_486[var_485][var_484][11] == 1) {
-                                var_486[var_485][var_484][11] = 0;
+                            if (var_486[var_485][var_484].Var11 == 1) {
+                                var_486[var_485][var_484].Var11 = 0;
                             }
                             var_484 = var_484 + 1;
                         }
@@ -1863,7 +1863,7 @@ function func721(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
+                    if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
                         var_1008 = var_1008 + 1;
                     }
                     var_484 = var_484 + 1;
@@ -1884,7 +1884,7 @@ function func721(this: any) {
                         var_484 = 1;
                         var_485 = var_78[var_3115].Var6;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                            if (var_486[var_485][var_484][0] > 0 && var_486[var_485][var_484][11] == 1) {
+                            if (var_486[var_485][var_484].Var0 > 0 && var_486[var_485][var_484].Var11 == 1) {
                                 var_1008 = var_1008 + 1;
                             }
                             var_484 = var_484 + 1;
@@ -1990,11 +1990,11 @@ function func723(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484][0] != 0) {
+                    if (var_486[var_485][var_484].Var0 != 0) {
                         var_3121++;
-                        var_3122 = var_486[var_485][var_484][0];
+                        var_3122 = var_486[var_485][var_484].Var0;
                         var_862[var_3122][0] = 1;
-                        var_486[var_485][var_484][14] = 1;
+                        var_486[var_485][var_484].Var14 = 1;
                     }
                     var_484 = var_484 + 1;
                 }
@@ -5056,10 +5056,10 @@ function func778(this: any) {
                 var_484 = 1;
                 var_485 = var_233[var_480].Var6;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (var_486[var_485][var_484][0] == 393) {
+                    if (var_486[var_485][var_484].Var0 == 393) {
                         var_3154 = 1;
                     }
-                    if (var_486[var_485][var_484][0] == 995) {
+                    if (var_486[var_485][var_484].Var0 == 995) {
                         var_3155 = 1;
                     }
                     var_484 = var_484 + 1;

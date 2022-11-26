@@ -570,7 +570,7 @@ var var_482;
 var buying_price; // アイテムごとに設定された購入金額
 var var_484;
 var var_485;
-var var_486;
+var var_486; // アイテム欄が開いている時のアイテム配列
 var disc_rarity; // 0より大きければレアdisc(色違い)
 var var_488;
 var item_name;
