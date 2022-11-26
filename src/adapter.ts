@@ -1896,13 +1896,40 @@ function peek(string_data, index) {
 /* HSP言語 picload命令
 参照元: http://lhsp.s206.xrea.com/manual/
 
-画像ファイルをロードします。通常は、
-picload "test.bmp"
-とするだけで、"test.bmp"で指定された画像ファイルが現在の画
-
 picload "filename",p1		[画像ファイルをロード]
 "filename" : ロードするファイル名
 p1=0～1(0) : 画像ロードモード
+画像ファイルをロードします。通常は、
+
+picload "test.bmp"
+
+とするだけで、"test.bmp"で指定された画像ファイルが現在の画面にロードさ
+れ、ウィンドウサイズが自動的に絵のサイズに合わせられます。
+
+p1の画像ロードモードは、
+
+  モード０：ウィンドウを初期化してロード
+  モード１：現在の画面の上にロード
+
+p1のロードモードを省略もしくは０にすることで、画像のサイズで初期化した
+ウィンドウにロードされます。
+
+p1にロードモード１を指定することで、現在のウィンドウのサイズなどを一切
+変更せず指定した座標からロードすることができます。 この場合は、pos命令
+で指定した座標が左上となります。
+
+現在ロードできる、ファイル形式は以下の通りです。
+
+BMP形式  : 拡張子 BMP : Windows標準の4,8,24bitのデータ。
+                        RLE圧縮のデータも扱うことができます。
+GIF形式  : 拡張子 GIF : GIF形式のデータ。
+                        アニメーション形式は扱えません。
+JPEG形式 : 拡張子 JPG : JFIF標準のJPEGデータ。
+                        グレイスケールデータでもOKです。
+ICO形式  : 拡張子 ICO : Windows標準のICO形式のアイコンデータ。
+
+picload命令は、screen、buffer、 bgscr命令で初期化
+された画面に対して実行することができます。
 */
 function picload(img_name: any) {
     return __awaiter(this, void 0, void 0, function* () {

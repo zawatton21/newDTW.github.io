@@ -684,7 +684,7 @@ function func804() {
                         mes("" + item_description1 + "　空き容量 " + var_2024);
                     }
                     color(255, 255, 255);
-                    mes(var_808);
+                    mes(effects_message);
                     color(255, 255, 255);
                     if (var_812 == 1) {
                         color(255, 255, 0);
@@ -7143,7 +7143,7 @@ function func853() {
                     belongings_item_list = var_78[0].Var0;
                     return [4 /*yield*/, func397()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     gmode(2);
                     pos(var_3227, var_3228);
                     var_888 = var_3300[var_3249];
@@ -7787,7 +7787,7 @@ function func859() {
                     belongings_item_list = var_78[var_3305].Var0;
                     return [4 /*yield*/, func397()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 4;
                 case 4:
                     if (!(var_80[var_447][var_449] != 0)) return [3 /*break*/, 6];
@@ -7908,7 +7908,7 @@ function func861() {
                     var_3313 = belongings_item_list;
                     return [4 /*yield*/, func397()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 4;
                 case 4:
                     if (!(var_3266 == 9)) return [3 /*break*/, 6];
@@ -13691,12 +13691,12 @@ function func899() {
                     }
                     var_3557 = 1;
                     pos(var_3556 + 5, var_1632 + 5);
-                    var_575 = int(var_1068[13]);
+                    item_icon_id = int(var_1068[13]);
                     return [4 /*yield*/, func070()];
                 case 19:
-                    _a.sent();
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    _a.sent(); // アイテムの表示用アイコン座標指定
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     color(1, 1, 1);
                     pos(var_3556 + 5 + 31, var_1632 + 5 + 30);
@@ -13711,12 +13711,12 @@ function func899() {
                     pos(var_3556 + 5 + 32, var_1632 + 5 + 30);
                     mes("" + var_1068[15]);
                     pos(var_3556 + 60, var_1632 + 5);
-                    var_575 = int(var_1068[16]);
+                    item_icon_id = int(var_1068[16]);
                     return [4 /*yield*/, func070()];
                 case 20:
-                    _a.sent();
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    _a.sent(); // アイテムの表示用アイコン座標指定
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     color(1, 1, 1);
                     pos(var_3556 + 60 + 31, var_1632 + 5 + 30);
@@ -13731,12 +13731,12 @@ function func899() {
                     pos(var_3556 + 60 + 32, var_1632 + 5 + 30);
                     mes("" + var_1068[18]);
                     pos(var_3556 + 115, var_1632 + 5);
-                    var_575 = int(var_1068[19]);
+                    item_icon_id = int(var_1068[19]);
                     return [4 /*yield*/, func070()];
                 case 21:
-                    _a.sent();
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    _a.sent(); // アイテムの表示用アイコン座標指定
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     var_3557 = 0;
                     pos(var_3556 - 10, var_1632 + 5 + 50);

@@ -1131,27 +1131,27 @@ function func607(this: any) {
         if (var_83[var_673].Var1 > var_2621 && var_83[var_673].Var1 < var_2622 && var_83[var_673].Var2 > var_2624 && var_83[var_673].Var2 < var_2623) {
             var_83[var_673].Var21 = 1;
             var_411 = 1;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
-            yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            var_411 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            var_411 = 4;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            var_411 = 3;
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            var_411 = 4;
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 6;

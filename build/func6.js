@@ -1523,96 +1523,90 @@ function func607() {
                     if (var_2873 > var_34) {
                         var_2873 = var_34;
                     }
-                    if (!(var_83[var_673].Var1 > var_2621 && var_83[var_673].Var1 < var_2622 && var_83[var_673].Var2 > var_2624 && var_83[var_673].Var2 < var_2623)) return [3 /*break*/, 21];
+                    if (!(var_83[var_673].Var1 > var_2621 && var_83[var_673].Var1 < var_2622 && var_83[var_673].Var2 > var_2624 && var_83[var_673].Var2 < var_2623)) return [3 /*break*/, 15];
                     var_83[var_673].Var21 = 1;
                     var_411 = 1;
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 1:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 2:
                     _a.sent(); // メッセージ関係呼び出し
+                    var_411 = 2;
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 3:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
-                    var_411 = 2;
                     return [4 /*yield*/, func337()];
                 case 4:
                     _a.sent(); // メッセージ関係呼び出し
+                    var_411 = 3;
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 5:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 6:
                     _a.sent(); // メッセージ関係呼び出し
-                    var_411 = 3;
+                    var_411 = 4;
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 7:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 8:
                     _a.sent(); // メッセージ関係呼び出し
+                    var_411 = 3;
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 9:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
-                    var_411 = 4;
                     return [4 /*yield*/, func337()];
                 case 10:
                     _a.sent(); // メッセージ関係呼び出し
+                    var_411 = 4;
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 11:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 12:
                     _a.sent(); // メッセージ関係呼び出し
-                    var_411 = 3;
+                    var_411 = 6;
                     return [4 /*yield*/, func337()];
                 case 13:
                     _a.sent(); // メッセージ関係呼び出し
+                    var_411 = 7;
                     return [4 /*yield*/, func337()];
                 case 14:
                     _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
+                    _a.label = 15;
                 case 15:
-                    _a.sent(); // メッセージ関係呼び出し
-                    var_411 = 4;
-                    return [4 /*yield*/, func337()];
-                case 16:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 17:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 18:
-                    _a.sent(); // メッセージ関係呼び出し
-                    var_411 = 6;
-                    return [4 /*yield*/, func337()];
-                case 19:
-                    _a.sent(); // メッセージ関係呼び出し
-                    var_411 = 7;
-                    return [4 /*yield*/, func337()];
-                case 20:
-                    _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 21;
-                case 21:
                     var_271 = 1;
                     var_1429 = 1;
                     var_1430 = var_83[var_673].Var1;
                     var_1431 = var_83[var_673].Var2;
                     DSPLAY(audio_id = 116);
                     cnt1_16 = 0;
-                    _a.label = 22;
-                case 22:
-                    if (!(cnt1_16 < 10)) return [3 /*break*/, 25];
+                    _a.label = 16;
+                case 16:
+                    if (!(cnt1_16 < 10)) return [3 /*break*/, 19];
                     return [4 /*yield*/, func337()];
-                case 23:
+                case 17:
                     _a.sent(); // メッセージ関係呼び出し
                     var_1429 = var_1429 + 1;
-                    _a.label = 24;
-                case 24:
+                    _a.label = 18;
+                case 18:
                     ++cnt1_16;
-                    return [3 /*break*/, 22];
-                case 25:
+                    return [3 /*break*/, 16];
+                case 19:
                     var_742 = 0;
                     var_271 = 0;
                     var_1429 = 0;
@@ -1632,11 +1626,11 @@ function func607() {
                         var_1428 = 0;
                     }
                     cnt1_17 = 0;
-                    _a.label = 26;
-                case 26:
-                    if (!(cnt1_17 < 4)) return [3 /*break*/, 29];
+                    _a.label = 20;
+                case 20:
+                    if (!(cnt1_17 < 4)) return [3 /*break*/, 23];
                     return [4 /*yield*/, func337()];
-                case 27:
+                case 21:
                     _a.sent(); // メッセージ関係呼び出し
                     if (var_1426 == 0) {
                         var_1427 = var_1427;
@@ -1650,11 +1644,11 @@ function func607() {
                         var_1427 = var_1427 - 40;
                         var_1428 = var_1428 + 40;
                     }
-                    _a.label = 28;
-                case 28:
+                    _a.label = 22;
+                case 22:
                     ++cnt1_17;
-                    return [3 /*break*/, 26];
-                case 29:
+                    return [3 /*break*/, 20];
+                case 23:
                     var_271 = 0;
                     var_1425 = 0;
                     var_83[var_673].Var18 = 0;
@@ -1662,7 +1656,7 @@ function func607() {
                     var_411 = 0;
                     var_83[var_673].Var21 = 0;
                     return [4 /*yield*/, func584()];
-                case 30:
+                case 24:
                     _a.sent();
                     if (var_2803 == 1) {
                         return [2 /*return*/];
@@ -1699,26 +1693,26 @@ function func607() {
                     var_26_x = var_26[2];
                     var_27_x = var_27[2];
                     return [4 /*yield*/, func047()];
-                case 31:
+                case 25:
                     _a.sent();
-                    if (!(var_128 >= 1)) return [3 /*break*/, 33];
+                    if (!(var_128 >= 1)) return [3 /*break*/, 27];
                     return [4 /*yield*/, func023()];
-                case 32:
+                case 26:
                     _a.sent();
-                    _a.label = 33;
-                case 33:
+                    _a.label = 27;
+                case 27:
                     cnt1_18 = 0;
-                    _a.label = 34;
-                case 34:
-                    if (!(cnt1_18 < 8)) return [3 /*break*/, 37];
+                    _a.label = 28;
+                case 28:
+                    if (!(cnt1_18 < 8)) return [3 /*break*/, 31];
                     return [4 /*yield*/, func337()];
-                case 35:
+                case 29:
                     _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 36;
-                case 36:
+                    _a.label = 30;
+                case 30:
                     ++cnt1_18;
-                    return [3 /*break*/, 34];
-                case 37:
+                    return [3 /*break*/, 28];
+                case 31:
                     var_389 = 0;
                     var_211 = var_211 - var_2852;
                     var_208 = var_208 + var_2852;

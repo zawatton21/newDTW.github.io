@@ -329,11 +329,12 @@ function func502(this: any) {
         return;
     });
 }
+// 未識別状態のアイテムの説明を見た時のメッセージ処理
 function func503(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(503);
         if (belongings_item_list >= 800 && belongings_item_list < 900) {
-            var_808 = "なにかヤバイものだ";
+            effects_message = "なにかヤバイものだ";
             item_ability_description = "";
             item_description1 = "[ヤバイもの]";
             var_2248 = 0;
@@ -348,7 +349,7 @@ function func503(this: any) {
             return;
         }
         if (belongings_item_list >= 500 && belongings_item_list < 600) {
-            var_808 = "未識別のDISCだ";
+            effects_message = "未識別のDISCだ";
             item_ability_description = "";
             item_description1 = "[消耗DISC]";
             var_2250 = "のDISC";
@@ -357,7 +358,7 @@ function func503(this: any) {
             }
         }
         if (belongings_item_list < 400) {
-            var_808 = "未識別のDISCだ";
+            effects_message = "未識別のDISCだ";
             item_ability_description = "";
             item_description1 = "[装備DISC]";
             var_2250 = "の装備DISC";
@@ -2297,10 +2298,10 @@ function func511(this: any) {
     
             DSPLAY(audio_id = 128);
             var_1548 = 7;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_1548 = 8;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
         
@@ -7170,7 +7171,7 @@ function func511(this: any) {
                             var_2323 = var_2323 + 1;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            yield func337(); // メッセージ関係呼び出し
+                            // yield func337(); // メッセージ関係呼び出し
                             yield func337(); // メッセージ関係呼び出し
                             continue;
                         }
@@ -7179,7 +7180,7 @@ function func511(this: any) {
                             var_2323 = 0;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            yield func337(); // メッセージ関係呼び出し
+                            // yield func337(); // メッセージ関係呼び出し
                             yield func337(); // メッセージ関係呼び出し
                             continue;
                         }
@@ -7190,7 +7191,7 @@ function func511(this: any) {
                             var_2323 = var_2323 - 1;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            yield func337(); // メッセージ関係呼び出し
+                            // yield func337(); // メッセージ関係呼び出し
                             yield func337(); // メッセージ関係呼び出し
                             continue;
                         }
@@ -7199,7 +7200,7 @@ function func511(this: any) {
                             var_2323 = 7;
         
                             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            yield func337(); // メッセージ関係呼び出し
+                            // yield func337(); // メッセージ関係呼び出し
                             yield func337(); // メッセージ関係呼び出し
                             continue;
                         }
@@ -7698,7 +7699,7 @@ function func511(this: any) {
             if (activated_disc_id == 400 || activated_disc_id == 407) {
                 comments_row1 = "法王の結界を仕掛けた。";
                 comments_row2 = "";
-                return;
+                // return; Ver 0.1309 return削除。これがあるがために、「法王の結界」の罠を仕掛けるとフリーズする。
             }
             if (activated_disc_id == 317) {
                 comments_row1 = "シールを貼った。";
@@ -8877,7 +8878,7 @@ function func515(this: any) {
         var_271 = 1;
         var_1524 = 1;
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_1524++;
         }
@@ -9758,7 +9759,7 @@ function func524(this: any) {
         var_1570 = 1;
         var_1241 = 1;
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_198 = 1;
             var_300 = 0;
@@ -10010,7 +10011,7 @@ function func527(this: any) {
             var_2374 = var_2374 + 20;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func527();
             return;
@@ -10027,7 +10028,7 @@ function func527(this: any) {
             var_2374 = var_2374 - 20;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func527();
             return;
@@ -20761,31 +20762,32 @@ function func566(this: any) {
             var_2592 = 0;
         }
         var_1642 = 1;
-        yield func567();
+        yield func567();　// 敵キャラアイコンの指定 (各imageからドットを指定する)
     });
 }
+// 敵キャラアイコンの指定 (各imageからドットを指定する)
 function func567(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(567);
         if (var_1642 == 1) {
             if (var_83[var_1641].Var0 < 50) {
-                var_965 = 6;
-                var_1826 = 15;
+                var_965 = 6; // buffer(6) は "img_enemy1a.gif"
+                var_1826 = 15; // buffer(15) は "img_enemy1b.gif"
                 var_966 = var_83[var_1641].Var0;
             }
             if (var_83[var_1641].Var0 >= 50 && var_83[var_1641].Var0 < 100) {
-                var_965 = 21;
-                var_1826 = 22;
+                var_965 = 21; // buffer(21) は "img_enemy2a.gif"
+                var_1826 = 22; // buffer(22) は "img_enemy2b.gif"
                 var_966 = var_83[var_1641].Var0 - 50;
             }
             if (var_83[var_1641].Var0 >= 100 && var_83[var_1641].Var0 < 150) {
-                var_965 = 27;
-                var_1826 = 28;
+                var_965 = 27; // buffer(27) は "img_enemy3a.gif"
+                var_1826 = 28; // buffer(28) は "img_enemy3b.gif"
                 var_966 = var_83[var_1641].Var0 - 100;
             }
             if (var_83[var_1641].Var0 >= 150 && var_83[var_1641].Var0 < 200) {
-                var_965 = 13;
-                var_1826 = 20;
+                var_965 = 13; // buffer(13) は "img_enemy4a.gif"
+                var_1826 = 20; // buffer(20) は "img_enemy4b.gif"
                 var_966 = var_83[var_1641].Var0 - 150;
             }
             if (var_83[var_1641].Var0 == 97 && var_83[var_1641].Var31 >= 11 && var_83[var_1641].Var3 >= 1) {
@@ -21196,6 +21198,7 @@ function func567(this: any) {
                 var_2605 = 0;
             }
             if (var_83[var_1641].Var7 == 0) {
+                // 敵キャラアイコン上方向 240, 280, 320座標からそれぞれ40mm角
                 if (var_1640 == 8) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 240, var_966 * 40, 40, 40);
@@ -21207,6 +21210,7 @@ function func567(this: any) {
                         gcopy(var_965, 320, var_966 * 40, 40, 40);
                     }
                 }
+                // 敵キャラアイコン正面 0, 40, 80座標からそれぞれ40mm角
                 if (var_1640 == 2) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 0, var_966 * 40, 40, 40);
@@ -21218,6 +21222,7 @@ function func567(this: any) {
                         gcopy(var_965, 80, var_966 * 40, 40, 40);
                     }
                 }
+                // 敵キャラアイコン左方向 120, 160, 200座標からそれぞれ40mm角
                 if (var_1640 == 4) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 120, var_966 * 40, 40, 40);
@@ -21229,6 +21234,7 @@ function func567(this: any) {
                         gcopy(var_965, 200, var_966 * 40, 40, 40);
                     }
                 }
+                // 敵キャラアイコン右方向 360, 400, 440座標からそれぞれ40mm角
                 if (var_1640 == 6) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 360, var_966 * 40, 40, 40);
@@ -21240,6 +21246,7 @@ function func567(this: any) {
                         gcopy(var_965, 440, var_966 * 40, 40, 40);
                     }
                 }
+                // 敵キャラアイコン左下方向 480, 520, 560座標からそれぞれ40mm角
                 if (var_1640 == 1) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 480, var_966 * 40, 40, 40);
@@ -21251,6 +21258,7 @@ function func567(this: any) {
                         gcopy(var_965, 560, var_966 * 40, 40, 40);
                     }
                 }
+                // 敵キャラアイコン右下方向 720, 760, 800座標からそれぞれ40mm角
                 if (var_1640 == 3) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 720, var_966 * 40, 40, 40);
@@ -21262,6 +21270,7 @@ function func567(this: any) {
                         gcopy(var_965, 800, var_966 * 40, 40, 40);
                     }
                 }
+                // 敵キャラアイコン左上方向 600, 640, 680座標からそれぞれ40mm角
                 if (var_1640 == 7) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 600, var_966 * 40, 40, 40);
@@ -21273,6 +21282,7 @@ function func567(this: any) {
                         gcopy(var_965, 680, var_966 * 40, 40, 40);
                     }
                 }
+                // 敵キャラアイコン右上方向 840, 880, 920座標からそれぞれ40mm角
                 if (var_1640 == 9) {
                     if (var_2605 == var_2593 || var_2605 == var_2594 || var_2605 == var_2595 || var_2605 == var_2596) {
                         gcopy(var_965, 840, var_966 * 40, 40, 40);
@@ -29371,7 +29381,7 @@ function func581(this: any) {
         }
         if (var_83[var_673].Var0 == 21) {
             DSPLAY(audio_id = 159);
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し

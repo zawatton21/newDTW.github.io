@@ -94,7 +94,7 @@ function func201(this: any) {
             if (var_690 != 10) {
                 var_690 = var_690 - 10;
             }
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func201();
             return;
@@ -104,7 +104,7 @@ function func201(this: any) {
             if (var_690 != 90) {
                 var_690 = var_690 + 10;
             }
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func201();
             return;
@@ -130,6 +130,9 @@ function func202(this: any) {
         yield func203();
     });
 }
+// メッセージ色(メニュー/設定/システム)の設定動作処理
+// カラーパレットは dialog ("", 32) で表示させている (32番指示がカラーパレット表示)
+// 下記のサイトが参考になりそう。
 function func203(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(203);
@@ -188,7 +191,7 @@ function func203(this: any) {
                 return;
             }
             if (var_702 == 2) {
-                dialog("", 32);
+                dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
                     return;
@@ -198,7 +201,7 @@ function func203(this: any) {
                 var_27[7] = ginfo(18);
             }
             if (var_702 == 3) {
-                dialog("", 32);
+                dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
                     return;
@@ -208,7 +211,7 @@ function func203(this: any) {
                 var_27[8] = ginfo(18);
             }
             if (var_702 == 4) {
-                dialog("", 32);
+                dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
                     return;
@@ -218,7 +221,7 @@ function func203(this: any) {
                 var_27[12] = ginfo(18);
             }
             if (var_702 == 5) {
-                dialog("", 32);
+                dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
                     return;
@@ -228,7 +231,7 @@ function func203(this: any) {
                 var_27[9] = ginfo(18);
             }
             if (var_702 == 6) {
-                dialog("", 32);
+                dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
                     return;
@@ -238,7 +241,7 @@ function func203(this: any) {
                 var_27[10] = ginfo(18);
             }
             if (var_702 == 7) {
-                dialog("", 32);
+                dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
                     return;
@@ -281,7 +284,7 @@ function func203(this: any) {
             if (var_702 < 0) {
                 var_702 = 0;
             }
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_259 == 1) {
@@ -290,13 +293,14 @@ function func203(this: any) {
             if (var_702 == 9) {
                 var_702 = 8;
             }
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         yield func203();
         return;
     });
 }
+// メッセージ色(メニュー/設定/システム)の設定表示
 function func204(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(204);
@@ -509,7 +513,7 @@ function func209(this: any) {
                 var_911 = 1;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
@@ -520,7 +524,7 @@ function func209(this: any) {
                 var_911 = 8;
             }
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (key_Z_on == 1 || key_A_on == 1) {
@@ -958,7 +962,7 @@ function func216(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1) {
@@ -970,7 +974,7 @@ function func216(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_925 >= 1 && var_925 <= 7) {

@@ -916,6 +916,7 @@ function func137(this: any) {
     });
 }
 
+// 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
 function func138(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(138);
@@ -927,30 +928,45 @@ function func138(this: any) {
         if (var_11 == 0) {
             if (var_60 < 25) {
                 pos(150, 120);
+
+                // buffer(17)は"img_3.gif"。X座標40、Y座標0から切り取り長さ X方向40、Y方向80
+                // 絵:石仮面(目が光っていない & 赤石無し)
                 gcopy(17, 40, 0, 40, 80);
             }
             if (var_60 >= 25) {
                 pos(150, 120);
+                // buffer(17)は"img_3.gif"。X座標0、Y座標0から切り取り長さ X方向40、Y方向80
+                // 絵:石仮面(目が光っている & 赤石無し)
                 gcopy(17, 0, 0, 40, 80);
             }
         }
         if (var_11 == 1) {
             if (var_60 < 25) {
                 pos(150, 120);
+
+                // buffer(17)は"img_3.gif"。X座標120、Y座標0から切り取り長さ X方向40、Y方向80
+                // 絵:石仮面(目が光っていない & 赤石有り)                
                 gcopy(17, 120, 0, 40, 80);
             }
             if (var_60 >= 25) {
                 pos(150, 120);
+
+                // buffer(17)は"img_3.gif"。X座標80、Y座標0から切り取り長さ X方向40、Y方向80
+                // 絵:石仮面(目が光っている & 赤石有り)
                 gcopy(17, 80, 0, 40, 80);
             }
         }
         pos(100, 200);
+        // buffer(17)は"img_3.gif"。X座標0、Y座標80から切り取り長さ X方向160、Y方向40
+        // 絵文字:NOW LOADING
         gcopy(17, 0, 80, 160, 40);
         var_685 = 1;
         for (let cnt1 = 0; cnt1 < 25; ++cnt1) {
             var_447 = var_685 * 3 + 130;
             var_449 = 240;
             pos(var_447, var_449);
+            // buffer(17)は"img_3.gif"。X座標643、Y座標640から切り取り長さ X方向2、Y方向6
+            // 絵文字:ロード読み込み進行バー1
             gcopy(17, 643, 640, 2, 6);
             var_685++;
         }
@@ -960,6 +976,9 @@ function func138(this: any) {
                 var_447 = var_685 * 3 + 130;
                 var_449 = 240;
                 pos(var_447, var_449);
+
+                // buffer(17)は"img_3.gif"。X座標640、Y座標640から切り取り長さ X方向2、Y方向6
+                // 絵文字:ロード読み込み進行バー2
                 gcopy(17, 640, 640, 2, 6);
                 var_685++;
             }
@@ -2064,6 +2083,9 @@ function func146(this: any) {
         }
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         if (var_725 == 0 && var_509 == 0) {
+
+            // buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
+            // 絵:矢尻(ログイン画面での選択カーソル)           
             gcopy(8, 70, 50, 25, 20);
         }
         pos(240, 320);
@@ -2155,16 +2177,25 @@ function func148(this: any) {
             if (var_708 >= 1) {
                 pos(80, var_741 + 35);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)
                 gcopy(8, 100, 82, 17, 17);
             }
             if (var_709 >= 1) {
                 pos(102, var_741 + 35);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)                
                 gcopy(8, 120, 82, 17, 17);
             }
             if (var_710 >= 1) {
                 pos(124, var_741 + 35);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(ディアボロの試練？)クリア時)                      
                 gcopy(8, 140, 82, 17, 17);
             }
         }
@@ -2184,16 +2215,25 @@ function func148(this: any) {
             if (var_715 >= 1) {
                 pos(80, var_741 + 105);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+                
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)                
                 gcopy(8, 100, 82, 17, 17);
             }
             if (var_716 >= 1) {
                 pos(102, var_741 + 105);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+                
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)                
                 gcopy(8, 120, 82, 17, 17);
             }
             if (var_717 >= 1) {
                 pos(124, var_741 + 105);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+                
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(ディアボロの試練？)クリア時)                      
                 gcopy(8, 140, 82, 17, 17);
             }
         }
@@ -2215,16 +2255,25 @@ function func148(this: any) {
             if (var_722 >= 1) {
                 pos(80, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+                
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)                
                 gcopy(8, 100, 82, 17, 17);
             }
             if (var_723 >= 1) {
                 pos(102, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+                
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)                
                 gcopy(8, 120, 82, 17, 17);
             }
             if (var_724 >= 1) {
                 pos(124, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+                
+                // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
+                // 絵:エンブレム(ダンジョン(ディアボロの試練？)クリア時)                      
                 gcopy(8, 140, 82, 17, 17);
             }
         }
@@ -2242,6 +2291,9 @@ function func148(this: any) {
             pos(53, var_741 + 140 + 12);
         }
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
+        
+        // buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
+        // 絵:矢尻(ログイン画面での選択カーソル)            
         gcopy(8, 70, 50, 25, 20);
         return;
     });
@@ -2786,21 +2838,21 @@ function func150(this: any) {
         yield func050();
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             var_83[4].Var5 = 7;
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 4;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 1;
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 4;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
@@ -3269,10 +3321,10 @@ function func153(this: any) {
         var_27_x = var_27[1];
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_758 = 1;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_758 = 2;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_198 = 1;
             var_300 = 0;
@@ -4000,6 +4052,7 @@ function func155(this: any) {
 }
 
 // 初めてダンジョンを訪れ、クリア出来ずにヴェネチアホテルに戻った際のディアボロの呟き
+// GEレクイエムの能力で帰還した際も同様
 function func156(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(156);
@@ -4041,10 +4094,10 @@ function func156(this: any) {
         var_27_x = var_27[1];
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_758 = 1;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_758 = 2;
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_198 = 1;
             var_300 = 0;
@@ -4121,6 +4174,9 @@ function func157(this: any) {
             var_764 = 0;
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 pos(var_764 * var_35, var_763 * var_36);
+
+                // buffer(8)は"img1.gif"。X座標400、Y座標0から切り取り長さ X方向40、Y方向40
+                // 絵:??何もないぞ?? 
                 gcopy(8, 400, 0, 40, 40);
                 var_764 = var_764 + 1;
             }
@@ -4520,6 +4576,9 @@ function func163(this: any) {
         }
         pos(0, 0);
         gmode(2);
+
+        // buffer(18)は"img4.gif"。X座標var_779、Y座標var_780から切り取り長さ X方向340、Y方向340
+        // 絵: 
         gcopy(18, var_779, var_780, 340, 340);
         var_781 = 17;
         var_782 = 5;
@@ -4552,51 +4611,85 @@ function func163(this: any) {
         }
         gmode(2);
         if (var_404 == 0) {
+
+            // buffer(18)は"img4.gif"。X座標1400、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵: ヴェネチアホテルにあるPC (NPCが画面内に出てくる直前のノイズ画面)
             gcopy(18, 1400, 680, 40, 40);
         }
         if (var_783 == 1) {
+
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 680, 40, 40);
         }
         if (var_783 == 2) {
+
+
             gcopy(18, 1440, 720, 40, 40);
         }
         if (var_783 == 3) {
+
+
             gcopy(18, 1440, 760, 40, 40);
         }
         if (var_783 == 4) {
+
+
             gcopy(18, 1440, 800, 40, 40);
         }
         if (var_783 == 5) {
+
+
             gcopy(18, 1440, 840, 40, 40);
         }
         if (var_783 == 6) {
+
+
             gcopy(18, 1440, 880, 40, 40);
         }
         if (var_783 == 7) {
+
+
             gcopy(18, 1440, 920, 40, 40);
         }
         if (var_783 == 8) {
+
+
             gcopy(18, 1440, 960, 40, 40);
         }
         if (var_783 == 9) {
+
+
             gcopy(18, 1440, 1000, 40, 40);
         }
         if (var_783 == 10) {
+
+
             gcopy(18, 1440, 1040, 40, 40);
         }
         if (var_783 == 11) {
+
+
             gcopy(18, 1440, 1080, 40, 40);
         }
         if (var_783 == 12) {
+
+
             gcopy(18, 1400, 720, 40, 40);
         }
         if (var_783 == 13) {
+
+
             gcopy(18, 1400, 760, 40, 40);
         }
         if (var_783 == 14) {
+
+
             gcopy(18, 1400, 800, 40, 40);
         }
         if (var_783 == 15) {
+
+
             gcopy(18, 1400, 840, 40, 40);
         }
         if (var_404 >= 1) {
@@ -5648,7 +5741,7 @@ function func169(this: any) {
     });
 }
 
-// 装備discの説明欄 (合成した能力などの表示)
+// 装備、射撃discの説明欄 (合成した能力などの表示)
 function func170(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(170);
@@ -5690,22 +5783,22 @@ function func170(this: any) {
         }
         belongings_item_list = var_802;
         yield func492(); // アイテムリスト呼び出し
-        var_575 = var_802;
-        yield func070();
+        item_icon_id = var_802;
+        yield func070(); // アイテムの表示用アイコン座標指定
         if (disc_rarity == 0) {
-            var_576 = 11;
+            buffer_id = 11;
         }
         if (disc_rarity == 1) {
-            var_576 = 1;
+            buffer_id = 1;
         }
         if (disc_rarity == 2) {
-            var_576 = 16;
+            buffer_id = 16;
         }
         if (disc_rarity == 3) {
-            var_576 = 29;
+            buffer_id = 29;
         }
         pos(20, 50);
-        gcopy(var_576, var_577, var_578, 40, 40);
+        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
         pos(70, 65);
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         color(0, 255, 0);
@@ -5736,7 +5829,7 @@ function func170(this: any) {
         pos(30, 100);
         mes("" + item_description1 + "　空き容量 " + free_space_value);
         pos(30, 120);
-        mes(var_808);
+        mes(effects_message);
         track_number = 1;
         for (let cnt1 = 0; cnt1 < var_810 + free_space_value; ++cnt1) {
             pos(30, track_number * 20 + 120);
@@ -8331,7 +8424,7 @@ function func199(this: any) {
 
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             if (var_908 == 0) {
-                dialog("", 32);
+                dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func199();
                     return;

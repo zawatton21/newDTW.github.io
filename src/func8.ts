@@ -401,7 +401,7 @@ function func804(this: any) {
             mes("" + item_description1 + "　空き容量 " + var_2024);
         }
         color(255, 255, 255);
-        mes(var_808);
+        mes(effects_message);
         color(255, 255, 255);
         if (var_812 == 1) {
             color(255, 255, 0);
@@ -4499,7 +4499,7 @@ function func853(this: any) {
         pos(var_3225, var_3226);
         var_78[0].Var0 = var_884[var_873];
         belongings_item_list = var_78[0].Var0;
-        yield func397();
+        yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
         gmode(2);
         pos(var_3227, var_3228);
         var_888 = var_3300[var_3249];
@@ -5101,7 +5101,7 @@ function func859(this: any) {
                 if (var_77[var_447][var_449] != 0) {
                     var_3305 = var_77[var_447][var_449];
                     belongings_item_list = var_78[var_3305].Var0;
-                    yield func397();
+                    yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 }
                 if (var_80[var_447][var_449] != 0) {
                     var_3306 = var_80[var_447][var_449];
@@ -5196,7 +5196,7 @@ function func861(this: any) {
             var_78[0].Var0 = var_884[var_873];
             belongings_item_list = var_78[0].Var0;
             var_3313 = belongings_item_list;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
         }
         if (var_3266 == 9) {
             var_888 = var_3300[var_3249];
@@ -10206,10 +10206,10 @@ function func899(this: any) {
                     }
                     var_3557 = 1;
                     pos(var_3556 + 5, var_1632 + 5);
-                    var_575 = int(var_1068[13]);
-                    yield func070();
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    item_icon_id = int(var_1068[13]);
+                    yield func070(); // アイテムの表示用アイコン座標指定
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     color(1, 1, 1);
                     pos(var_3556 + 5 + 31, var_1632 + 5 + 30);
@@ -10224,10 +10224,10 @@ function func899(this: any) {
                     pos(var_3556 + 5 + 32, var_1632 + 5 + 30);
                     mes("" + var_1068[15]);
                     pos(var_3556 + 60, var_1632 + 5);
-                    var_575 = int(var_1068[16]);
-                    yield func070();
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    item_icon_id = int(var_1068[16]);
+                    yield func070(); // アイテムの表示用アイコン座標指定
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     color(1, 1, 1);
                     pos(var_3556 + 60 + 31, var_1632 + 5 + 30);
@@ -10242,10 +10242,10 @@ function func899(this: any) {
                     pos(var_3556 + 60 + 32, var_1632 + 5 + 30);
                     mes("" + var_1068[18]);
                     pos(var_3556 + 115, var_1632 + 5);
-                    var_575 = int(var_1068[19]);
-                    yield func070();
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    item_icon_id = int(var_1068[19]);
+                    yield func070(); // アイテムの表示用アイコン座標指定
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     var_3557 = 0;
                     pos(var_3556 - 10, var_1632 + 5 + 50);

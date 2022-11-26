@@ -2323,24 +2323,24 @@ function func926() {
                     var_3557 = 1;
                     var_3599 = 27;
                     pos(var_3556 + 5, var_1632 + 5);
-                    var_575 = var_1069[var_3597][13];
+                    item_icon_id = var_1069[var_3597][13];
                     return [4 /*yield*/, func070()];
                 case 29:
-                    _a.sent();
+                    _a.sent(); // アイテムの表示用アイコン座標指定
                     if (var_1069[var_3597][24] == 0) {
-                        var_576 = 11;
+                        buffer_id = 11;
                     }
                     if (var_1069[var_3597][24] == 1) {
-                        var_576 = 1;
+                        buffer_id = 1;
                     }
                     if (var_1069[var_3597][24] == 2) {
-                        var_576 = 16;
+                        buffer_id = 16;
                     }
                     if (var_1069[var_3597][24] == 3) {
-                        var_576 = 29;
+                        buffer_id = 29;
                     }
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     color(1, 1, 1);
                     pos(var_3556 + 1 + var_3599, var_1632 + 5 + 30);
@@ -2356,24 +2356,24 @@ function func926() {
                     mes("[攻]");
                     var_3599 = var_3599 + 55;
                     pos(var_3556 + 60, var_1632 + 5);
-                    var_575 = var_1069[var_3597][16];
+                    item_icon_id = var_1069[var_3597][16];
                     return [4 /*yield*/, func070()];
                 case 30:
-                    _a.sent();
+                    _a.sent(); // アイテムの表示用アイコン座標指定
                     if (var_1069[var_3597][26] == 0) {
-                        var_576 = 11;
+                        buffer_id = 11;
                     }
                     if (var_1069[var_3597][26] == 1) {
-                        var_576 = 1;
+                        buffer_id = 1;
                     }
                     if (var_1069[var_3597][26] == 2) {
-                        var_576 = 16;
+                        buffer_id = 16;
                     }
                     if (var_1069[var_3597][26] == 3) {
-                        var_576 = 29;
+                        buffer_id = 29;
                     }
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     color(1, 1, 1);
                     pos(var_3556 + 1 + var_3599, var_1632 + 5 + 30);
@@ -2389,24 +2389,24 @@ function func926() {
                     mes("[防]");
                     var_3599 = var_3599 + 55;
                     pos(var_3556 + 115, var_1632 + 5);
-                    var_575 = var_1069[var_3597][19];
+                    item_icon_id = var_1069[var_3597][19];
                     return [4 /*yield*/, func070()];
                 case 31:
-                    _a.sent();
+                    _a.sent(); // アイテムの表示用アイコン座標指定
                     if (var_1069[var_3597][28] == 0) {
-                        var_576 = 11;
+                        buffer_id = 11;
                     }
                     if (var_1069[var_3597][28] == 1) {
-                        var_576 = 1;
+                        buffer_id = 1;
                     }
                     if (var_1069[var_3597][28] == 2) {
-                        var_576 = 16;
+                        buffer_id = 16;
                     }
                     if (var_1069[var_3597][28] == 3) {
-                        var_576 = 29;
+                        buffer_id = 29;
                     }
-                    if (var_575 != 0) {
-                        gcopy(var_576, var_577, var_578, 40, 40);
+                    if (item_icon_id != 0) {
+                        gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     }
                     color(1, 1, 1);
                     pos(var_3556 + 1 + var_3599, var_1632 + 5 + 30);

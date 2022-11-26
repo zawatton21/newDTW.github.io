@@ -2803,7 +2803,9 @@ function func330() {
         });
     });
 }
-// 消費アイテムを使った時のエフェクト (正方形が重なってピンク色にピカピカ光る)
+// 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+// 消費アイテムを使った時のエフェクト等 (正方形が重なってピンク色にピカピカ光る)
+// ハーヴェストやエアロスミス等アイテム、敵の位置が表示
 function func331() {
     return __awaiter(this, void 0, void 0, function () {
         var map_elem_size, cnt1_6, cnt2_13, cnt3_8, cnt1_7, cnt2_14;
@@ -3567,7 +3569,7 @@ function func337() {
                     if (!(var_1209 == 1)) return [3 /*break*/, 98];
                     return [4 /*yield*/, func367()];
                 case 97:
-                    _a.sent();
+                    _a.sent(); // アイテムの名前や説明表示
                     _a.label = 98;
                 case 98:
                     if (!(var_68 == 1)) return [3 /*break*/, 100];
@@ -4948,7 +4950,7 @@ function func345() {
                     pos(145, 140);
                     return [4 /*yield*/, func397()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 2;
                 case 2:
                     if (!(var_199 == 8)) return [3 /*break*/, 4];
@@ -4957,7 +4959,7 @@ function func345() {
                     pos(175, 150);
                     return [4 /*yield*/, func397()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 4;
                 case 4:
                     if (!(var_199 == 4)) return [3 /*break*/, 6];
@@ -4966,7 +4968,7 @@ function func345() {
                     pos(175, 150);
                     return [4 /*yield*/, func397()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 6;
                 case 6:
                     if (!(var_199 == 6)) return [3 /*break*/, 8];
@@ -4975,14 +4977,14 @@ function func345() {
                     pos(145, 150);
                     return [4 /*yield*/, func397()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 8;
                 case 8:
                     if (!(var_199 == 1)) return [3 /*break*/, 10];
                     pos(150, 140);
                     return [4 /*yield*/, func397()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 150);
                     gcopy(3, 120, 0, 40, 40);
                     _a.label = 10;
@@ -4991,7 +4993,7 @@ function func345() {
                     pos(170, 140);
                     return [4 /*yield*/, func397()];
                 case 11:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 150);
                     gcopy(3, 440, 0, 40, 40);
                     _a.label = 12;
@@ -5002,7 +5004,7 @@ function func345() {
                     pos(160, 160);
                     return [4 /*yield*/, func397()];
                 case 13:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 14;
                 case 14:
                     if (!(var_199 == 9)) return [3 /*break*/, 16];
@@ -5011,7 +5013,7 @@ function func345() {
                     pos(160, 160);
                     return [4 /*yield*/, func397()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 16;
                 case 16: return [2 /*return*/];
                 case 17:
@@ -5066,7 +5068,7 @@ function func345() {
                     belongings_item_list = var_1253;
                     return [4 /*yield*/, func397()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     return [2 /*return*/];
                 case 19:
                     if (var_1252 == 3) {
@@ -5079,7 +5081,7 @@ function func345() {
                     belongings_item_list = var_1253;
                     return [4 /*yield*/, func397()];
                 case 20:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     return [2 /*return*/];
                 case 21:
                     if (var_1255 == 1) {
@@ -7828,7 +7830,7 @@ function func353() {
                     if (!(var_1270 == 1)) return [3 /*break*/, 2];
                     return [4 /*yield*/, func397()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 2;
                 case 2:
                     if (var_773 >= 1 && var_773 <= 6) {
@@ -9535,7 +9537,7 @@ function func354() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 7;
                 case 7:
                     if (!(var_1346 >= 1)) return [3 /*break*/, 9];
@@ -9584,7 +9586,7 @@ function func354() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 8:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 9;
                 case 9:
                     if (var_1350 >= 1) {
@@ -9640,7 +9642,7 @@ function func354() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 10:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 150);
                     if (var_1353 == 1) {
                         gcopy(3, 1160, 120, 40, 40);
@@ -11158,7 +11160,7 @@ function func354() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 13;
                 case 13:
                     if (var_1270 == 0) {
@@ -11383,12 +11385,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 15:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(170, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 16:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 17;
                 case 17:
                     if (!(var_1443 == 14)) return [3 /*break*/, 20];
@@ -11396,12 +11398,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(170, 172);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 19:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 20;
                 case 20:
                     if (!(var_1443 == 15)) return [3 /*break*/, 23];
@@ -11409,12 +11411,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 21:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(170, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 22:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 23;
                 case 23:
                     if (!(var_1443 == 16)) return [3 /*break*/, 26];
@@ -11422,12 +11424,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 24:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(170, 172);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 25:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 26;
                 case 26:
                     if (!(var_1443 > 16 && var_1443 < 25)) return [3 /*break*/, 29];
@@ -11435,12 +11437,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 27:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(170, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 28:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 29;
                 case 29:
                     if (!(var_1443 == 25 || var_1443 == 26)) return [3 /*break*/, 32];
@@ -11448,12 +11450,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 30:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(168, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 31:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 32;
                 case 32:
                     if (!(var_1443 == 27 || var_1443 == 28)) return [3 /*break*/, 35];
@@ -11461,12 +11463,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 33:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(166, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 34:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 35;
                 case 35:
                     if (!(var_1443 == 29 || var_1443 == 30)) return [3 /*break*/, 38];
@@ -11474,12 +11476,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 36:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(164, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 37:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 38;
                 case 38:
                     if (!(var_1443 == 31 || var_1443 == 32)) return [3 /*break*/, 41];
@@ -11487,12 +11489,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 39:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(162, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 40:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 41;
                 case 41:
                     if (!(var_1443 == 33 || var_1443 == 34)) return [3 /*break*/, 44];
@@ -11500,12 +11502,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 42:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 43:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 44;
                 case 44:
                     if (!(var_1443 == 35 || var_1443 == 36)) return [3 /*break*/, 47];
@@ -11513,12 +11515,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 45:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 46:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 47;
                 case 47:
                     if (!(var_1443 == 37 || var_1443 == 38)) return [3 /*break*/, 50];
@@ -11526,12 +11528,12 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 48:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 49:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 50;
                 case 50:
                     if (!(var_1443 == 39 || var_1443 == 40)) return [3 /*break*/, 53];
@@ -11539,14 +11541,14 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 51:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 52:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 53;
                 case 53:
                     if (!(var_1443 == 41 || var_1443 == 42)) return [3 /*break*/, 56];
@@ -11554,14 +11556,14 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 54:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 150);
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 55:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 56;
                 case 56:
                     if (!(var_1443 == 43 || var_1443 == 44)) return [3 /*break*/, 59];
@@ -11569,14 +11571,14 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 57:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 58:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 59;
                 case 59:
                     if (!(var_1443 == 45 || var_1443 == 46)) return [3 /*break*/, 62];
@@ -11584,14 +11586,14 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 60:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 61:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 62;
                 case 62:
                     if (!(var_1443 == 47 || var_1443 == 48)) return [3 /*break*/, 65];
@@ -11599,14 +11601,14 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 63:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     color(0, 0, 0);
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 30);
                     pos(160, 170);
                     belongings_item_list = with_disc_list;
                     return [4 /*yield*/, func397()];
                 case 64:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 65;
                 case 65:
                     if (!(var_1443 > 48 || var_1443 == 60)) return [3 /*break*/, 67];
@@ -11614,7 +11616,7 @@ function func354() {
                     belongings_item_list = base_disc_list;
                     return [4 /*yield*/, func397()];
                 case 66:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 67;
                 case 67:
                     pos(170, 150);
@@ -12013,7 +12015,7 @@ function func354X() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     gcopy(21, 0, 960, 40, 40);
                     _a.label = 2;
                 case 2:
@@ -12059,7 +12061,7 @@ function func354X() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     gcopy(3, 920, 400, 40, 40);
                     _a.label = 4;
                 case 4:
@@ -12206,7 +12208,7 @@ function func354X() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 5:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 6;
                 case 6:
                     if (!(var_1470 == 4)) return [3 /*break*/, 8];
@@ -12217,7 +12219,7 @@ function func354X() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 7:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 8;
                 case 8:
                     if (var_1472 >= 1) {
@@ -12913,7 +12915,7 @@ function func354X() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 9:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 10;
                 case 10:
                     if (var_1501 < 61) {
@@ -12977,7 +12979,7 @@ function func354X() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 12:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 13;
                 case 13:
                     if (!(var_1511 >= 1)) return [3 /*break*/, 15];
@@ -13029,7 +13031,7 @@ function func354X() {
                     var_1248 = var_1249;
                     return [4 /*yield*/, func397()];
                 case 14:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 15;
                 case 15:
                     if (var_1514 >= 1) {
@@ -13574,7 +13576,7 @@ function func354X() {
                     var_1248 = var_233[var_1531].Var13;
                     return [4 /*yield*/, func397()];
                 case 16:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 0);
                     gcopy(14, 400, 0, 40, 200);
                     _a.label = 17;
@@ -13586,7 +13588,7 @@ function func354X() {
                     var_1248 = var_233[var_1531].Var13;
                     return [4 /*yield*/, func397()];
                 case 18:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, var_774 - 160);
                     gcopy(14, 400, 0, 40, 200);
                     _a.label = 19;
@@ -14335,7 +14337,7 @@ function func354X() {
                     belongings_item_list = var_1571;
                     return [4 /*yield*/, func397()];
                 case 20:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     pos(160, 130);
                     if (var_1570 == 1 || var_1570 == 5 || var_1570 == 9 || var_1570 == 13 || var_1570 == 17) {
                         gcopy(3, 640, 680, 40, 40);
@@ -16300,35 +16302,36 @@ function func367() {
                     if (!(var_802 < 100 || var_802 >= 400)) return [3 /*break*/, 3];
                     return [4 /*yield*/, func397()];
                 case 2:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 3;
                 case 3:
                     if (!(var_802 >= 100 && var_802 < 400)) return [3 /*break*/, 7];
                     if (!(var_1661 == 0)) return [3 /*break*/, 5];
                     return [4 /*yield*/, func397()];
                 case 4:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 5;
                 case 5:
                     if (!(var_1661 == 1)) return [3 /*break*/, 7];
-                    var_575 = var_802;
+                    item_icon_id = var_802;
                     return [4 /*yield*/, func070()];
                 case 6:
-                    _a.sent();
+                    _a.sent(); // アイテムの表示用アイコン座標指定
                     if (var_1660 == 0) {
-                        var_576 = 11;
+                        buffer_id = 11; // buffer(11)は"img_stand0.gif"
                     }
                     if (var_1660 == 1) {
-                        var_576 = 1;
+                        buffer_id = 1; // buffer(1)は"img_stand1.gif"
                     }
                     if (var_1660 == 2) {
-                        var_576 = 16;
+                        buffer_id = 16; // buffer(16)は"img_stand2.gif"
                     }
                     if (var_1660 == 3) {
-                        var_576 = 29;
+                        buffer_id = 29; // buffer(29)は"img_stand3.gif"
                     }
                     pos(20, 50);
-                    gcopy(var_576, var_577, var_578, 40, 40);
+                    // 各スタンドごとのアイコン表示を指定 func070
+                    gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
                     _a.label = 7;
                 case 7:
                     pos(70, 65);
@@ -16416,11 +16419,12 @@ function func367() {
                             mes("" + item_description1 + "　空き容量 " + free_space_value);
                         }
                     }
+                    // 装備、射撃disc
                     if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] == 0) {
                         mes("" + item_description1);
                     }
                     pos(30, 120);
-                    mes(var_808);
+                    mes(effects_message);
                     if (var_802 < 100 || var_802 >= 400) {
                         pos(30, 140);
                         color(255, 255, 255);
@@ -16801,51 +16805,49 @@ function func372() {
                     return [4 /*yield*/, func080()];
                 case 1:
                     _a.sent(); // 各キー入力確認
-                    if (!(var_254 == 1 && var_1679 >= 2)) return [3 /*break*/, 5];
+                    if (!(var_254 == 1 && var_1679 >= 2)) return [3 /*break*/, 4];
                     var_1679 = var_1679 - 1;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 2:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 3:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func372()];
-                case 4:
+                case 3:
                     _a.sent();
                     return [2 /*return*/];
-                case 5:
-                    if (!(var_257 == 1 && var_1679 < var_1678)) return [3 /*break*/, 9];
+                case 4:
+                    if (!(var_257 == 1 && var_1679 < var_1678)) return [3 /*break*/, 7];
                     var_1679 = var_1679 + 1;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
-                case 6:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 7:
+                case 5:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func372()];
-                case 8:
+                case 6:
                     _a.sent();
                     return [2 /*return*/];
-                case 9:
-                    if (!(key_X_on == 1)) return [3 /*break*/, 12];
+                case 7:
+                    if (!(key_X_on == 1)) return [3 /*break*/, 10];
                     var_502 = 0;
                     var_508 = 1; // Mフラグ:資料(設定画面) func058
                     var_499 = 1; // Mフラグ:設定画面 func056
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func051()];
-                case 10:
+                case 8:
                     _a.sent();
                     return [4 /*yield*/, func057()];
-                case 11:
+                case 9:
                     _a.sent();
                     return [2 /*return*/];
-                case 12: return [4 /*yield*/, func337()];
-                case 13:
+                case 10: return [4 /*yield*/, func337()];
+                case 11:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func372()];
-                case 14:
+                case 12:
                     _a.sent();
                     return [2 /*return*/];
             }
@@ -16985,57 +16987,55 @@ function func376() {
                     return [4 /*yield*/, func080()];
                 case 1:
                     _a.sent(); // 各キー入力確認
-                    if (!(var_254 == 1)) return [3 /*break*/, 5];
+                    if (!(var_254 == 1)) return [3 /*break*/, 4];
                     var_1693 = var_1693 - 1;
                     if (var_1693 < 0) {
                         var_1693 = 17;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 2:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 3:
                     _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
+                    _a.label = 4;
                 case 4:
-                    _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 5;
-                case 5:
-                    if (!(var_257 == 1)) return [3 /*break*/, 9];
+                    if (!(var_257 == 1)) return [3 /*break*/, 7];
                     var_1693 = var_1693 + 1;
                     if (var_1693 > 17) {
                         var_1693 = 0;
                     }
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    // yield func337(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 5:
+                    // yield func337(); // メッセージ関係呼び出し
+                    _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 6:
                     _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
+                    _a.label = 7;
                 case 7:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 8:
-                    _a.sent(); // メッセージ関係呼び出し
-                    _a.label = 9;
-                case 9:
-                    if (!(key_X_on == 1)) return [3 /*break*/, 12];
+                    if (!(key_X_on == 1)) return [3 /*break*/, 10];
                     var_502 = 0;
                     var_508 = 1; // Mフラグ:資料(設定画面) func058
                     var_499 = 1; // Mフラグ:設定画面 func056
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     return [4 /*yield*/, func051()];
-                case 10:
+                case 8:
                     _a.sent();
                     return [4 /*yield*/, func057()];
-                case 11:
+                case 9:
                     _a.sent();
                     return [2 /*return*/];
-                case 12: return [4 /*yield*/, func337()];
-                case 13:
+                case 10: return [4 /*yield*/, func337()];
+                case 11:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func376()];
-                case 14:
+                case 12:
                     _a.sent();
                     return [2 /*return*/];
             }
@@ -17099,7 +17099,7 @@ function func377() {
                     if (!(var_988[var_1697] >= 1)) return [3 /*break*/, 4];
                     return [4 /*yield*/, func397()];
                 case 3:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     _a.label = 4;
                 case 4:
                     pos(var_1680 + 80, var_1682 + 13 + var_1684);
@@ -17161,46 +17161,44 @@ function func378() {
                     _a.sent();
                     return [2 /*return*/];
                 case 4:
-                    if (!(var_255 == 1 && var_503 < 31)) return [3 /*break*/, 9];
+                    if (!(var_255 == 1 && var_503 < 31)) return [3 /*break*/, 8];
                     var_503 = var_503 + 2;
                     var_504 = var_504 + 2;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    // yield func337(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 5:
+                    // yield func337(); // メッセージ関係呼び出し
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 6:
                     _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 7:
-                    _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func378()];
-                case 8:
+                case 7:
                     _a.sent();
                     return [2 /*return*/];
-                case 9:
-                    if (!(var_259 == 1 && var_503 >= 3)) return [3 /*break*/, 14];
+                case 8:
+                    if (!(var_259 == 1 && var_503 >= 3)) return [3 /*break*/, 12];
                     var_503 = var_503 - 2;
                     var_504 = var_504 - 2;
                     DSPLAY(audio_id = 100); // アイテム選択時の効果音
+                    // yield func337(); // メッセージ関係呼び出し
+                    return [4 /*yield*/, func337()];
+                case 9:
+                    // yield func337(); // メッセージ関係呼び出し
+                    _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func337()];
                 case 10:
                     _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 11:
-                    _a.sent(); // メッセージ関係呼び出し
-                    return [4 /*yield*/, func337()];
-                case 12:
-                    _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func378()];
-                case 13:
+                case 11:
                     _a.sent();
                     return [2 /*return*/];
-                case 14: return [4 /*yield*/, func337()];
-                case 15:
+                case 12: return [4 /*yield*/, func337()];
+                case 13:
                     _a.sent(); // メッセージ関係呼び出し
                     return [4 /*yield*/, func378()];
-                case 16:
+                case 14:
                     _a.sent();
                     return [2 /*return*/];
             }
@@ -20912,23 +20910,30 @@ function func396() {
                     }
                     return [4 /*yield*/, func397()];
                 case 1:
-                    _a.sent();
+                    _a.sent(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                     return [2 /*return*/];
             }
         });
     });
 }
+// 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
 function func397() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             dbgprt(397);
             if (belongings_item_list == 1) {
+                // buffer(9)は"img_item.gif"。X座標0、Y座標0から切り取り長さ X方向40、Y方向40
+                // 絵:お金。
                 gcopy(9, 0, 0, 40, 40);
             }
             if (belongings_item_list >= 100 && belongings_item_list < 400) {
+                // buffer(9)は"img_item.gif"。X座標40、Y座標0から切り取り長さ X方向40、Y方向40
+                // 絵:disc(黄色)、身識別、床に落ちている装備disc
                 gcopy(9, 40, 0, 40, 40);
             }
             if (belongings_item_list >= 400 && belongings_item_list < 450) {
+                // buffer(9)は"img_item.gif"。X座標240、Y座標0から切り取り長さ X方向40、Y方向40
+                // 絵:disc(銅色))、所持または床に落ちている射撃disc
                 gcopy(9, 240, 0, 40, 40);
             }
             if (belongings_item_list >= 450 && belongings_item_list < 500) {

@@ -659,10 +659,10 @@ var var_571;
 var var_572;
 var var_573;
 var var_574;
-var var_575; // belongings_item_list
-var var_576;
-var var_577;
-var var_578;
+var item_icon_id; // アイテムのアイコンを指示する用のアイテムID。
+var buffer_id; // bufferで指示するID番号。このIDで読み込んだ画像データを切り替える。
+var buffer_x_axis; // bufferで指示するX座標数値。この数値で読み込んだ画像データから表示する箇所を指定する。
+var buffer_y_axis; // bufferで指示するY座標数値。この数値で読み込んだ画像データから表示する箇所を指定する。
 var var_579;
 var var_580;
 var var_581;
@@ -892,7 +892,7 @@ var number_of_abilities; // 装備discの合成した数
 var var_805;
 var item_description1; // アイテムの説明。攻撃:0 防御:0 など
 var free_space_value; // 装備discにおいて、合成できる残り容量
-var var_808;
+var effects_message; // アイテムの"説明"を開いた時に表示される合成能力や消費アイテムの効果のメッセージ
 var track_number; // 装備discにおいて、合成した能力の順番
 var var_810;
 var var_811;

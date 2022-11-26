@@ -73,8 +73,7 @@ function func004(this: any) {
         }
         var_12 = 0;
         version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        game_title = "newDTW ver0.1308";
-
+        game_title = "newDTW ver0.1309";
         
         buffer(17);
         yield picload("img3.gif");
@@ -126,11 +125,11 @@ function func004(this: any) {
         yield wait(50);
         var_18 = 0;
         for (let cnt1 = 0; cnt1 < 25; ++cnt1) {
-            yield func138();
+            yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
             var_18 = var_18 + 10;
         }
         var_18 = 255;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         var_19 = 0;
         var_20 = 50;
         var_21 = "＊＊＊＊";
@@ -194,108 +193,153 @@ function func004(this: any) {
         var_57 = 260;
         var_58 = 248;
         var_59 = 320;
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(id = 3, disp_width = null, disp_height = null, mode = null);
         yield picload("img_mychara.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         buffer(id = 4, disp_width = 340, disp_height = 300, mode = null);
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(id = 5, disp_width = null, disp_height = null, mode = null);
         yield picload("img_map.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(id = 6, disp_width = null, disp_height = null, mode = null);
         yield picload("img_enemy1a.gif");
+        
         var_60++;
-        yield func138();
-        buffer(id = 7, disp_width = 340, disp_height = 300, mode = null);
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+        buffer(id = 7, disp_width = 340, disp_height = 300, mode = null);        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(id = 8, disp_width = null, disp_height = null, mode = null);
         yield picload("img1.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(9);
         yield picload("img_item.gif");
+
         buffer(id = 10, disp_width = 340, disp_height = 200, mode = null);
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(11);
         yield picload("img_stand0.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         buffer(id = 12, disp_width = 340, disp_height = 340, mode = null);
         color(0, 0, 200);
         boxf(left = 0, top1 = 0, right = 340, bottom = 340);
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(13);
         yield picload("img_enemy4a.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(14);
         yield picload("img_wana.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(15);
         yield picload("img_enemy1b.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(18);
         yield picload("img4.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(1);
         yield picload("img_stand1.gif");
+        
         buffer(id = 19, disp_width = 340, disp_height = 340, mode = null);
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(20);
         yield picload("img_enemy4b.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(21);
         yield picload("img_enemy2a.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(22);
         yield picload("img_enemy2b.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(23);
         yield picload("img_comic.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         buffer(id = 24, disp_width = 340, disp_height = 340, mode = 0);
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         buffer(id = 25, disp_width = 340, disp_height = 340, mode = 1);
         makepal();
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(27);
         yield picload("img_enemy3a.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(28);
         yield picload("img_enemy3b.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(29);
         yield picload("img_stand3.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+
         buffer(16);
         yield picload("img_stand2.gif");
+        
         buffer(34);
         yield picload("img_syageki.gif");
+        
         buffer(35);
         yield picload("img_effect.gif");
+        
         var_60++;
-        yield func138();
+        yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         buffer(id = 36, disp_width = 340, disp_height = 340, mode = null);
         buffer(32, 200, 200);
         yield func183(); // デバックウィンドウ呼び出し？
@@ -307,7 +351,7 @@ function func004(this: any) {
         gsel(0);
         var_18 = 255;
         for (let cnt1 = 0; cnt1 < 25; ++cnt1) {
-            yield func138();
+            yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
             var_18 = var_18 - 10;
         }
         color(0, 0, 0);
@@ -5486,9 +5530,13 @@ function func048(this: any) {
 
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(20, 250);
-        gcopy(12, 0, 0, 40, 64);
+
+        gcopy(12, 0, 0, 40, 64);　
+        
         pos(60, 250);
+        
         gcopy(12, 40, 0, 40, 64);
+        
         pos(100, 250);
         gcopy(12, 80, 0, 40, 64);
         pos(140, 250);
@@ -5642,7 +5690,7 @@ function func053(this: any) {
             var_246 = 45 + 18;
             var_248 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func053(); // メニュー画面呼び出し
             return;
@@ -5659,7 +5707,7 @@ function func053(this: any) {
             var_246 = 45;
             var_248 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func053(); // メニュー画面呼び出し
             return;
@@ -5668,7 +5716,7 @@ function func053(this: any) {
             var_245 = 19;
             var_247 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func053(); // メニュー画面呼び出し
             return;
@@ -5681,7 +5729,7 @@ function func053(this: any) {
             var_245 = 19 + 48;
             var_247 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func053(); // メニュー画面呼び出し
             return;
@@ -5802,7 +5850,7 @@ function func055(this: any) {
             var_246 = 45;
             var_500 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5812,7 +5860,7 @@ function func055(this: any) {
             var_246 = var_246 + 16;
             var_500 = 4;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5822,7 +5870,7 @@ function func055(this: any) {
             var_246 = var_246 + 16;
             var_500 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5832,7 +5880,7 @@ function func055(this: any) {
             var_246 = var_246 + 16;
             var_500 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5842,7 +5890,7 @@ function func055(this: any) {
             var_246 = var_246 + 16;
             var_500 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5852,7 +5900,7 @@ function func055(this: any) {
             var_246 = 109;
             var_500 = 4;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5862,7 +5910,7 @@ function func055(this: any) {
             var_246 = var_246 - 16;
             var_500 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5872,7 +5920,7 @@ function func055(this: any) {
             var_246 = var_246 - 16;
             var_500 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5882,7 +5930,7 @@ function func055(this: any) {
             var_246 = var_246 - 16;
             var_500 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -5892,7 +5940,7 @@ function func055(this: any) {
             var_246 = var_246 - 16;
             var_500 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
@@ -6069,7 +6117,7 @@ function func057(this: any) {
             var_507 = 45;
             var_505 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6079,7 +6127,7 @@ function func057(this: any) {
             var_507 = var_507 + 16;
             var_505 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6089,7 +6137,7 @@ function func057(this: any) {
             var_507 = var_507 + 16;
             var_505 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6099,7 +6147,7 @@ function func057(this: any) {
             var_507 = var_507 + 16;
             var_505 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6109,7 +6157,7 @@ function func057(this: any) {
             var_507 = 93;
             var_505 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6119,7 +6167,7 @@ function func057(this: any) {
             var_507 = var_507 - 16;
             var_505 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6129,7 +6177,7 @@ function func057(this: any) {
             var_507 = var_507 - 16;
             var_505 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6139,7 +6187,7 @@ function func057(this: any) {
             var_507 = var_507 - 16;
             var_505 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
@@ -6349,14 +6397,14 @@ function func060(this: any) {
             var_246 = var_246 + 19;
             var_406 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1 && var_406 == 0) {
             var_246 = var_246 - 19;
             var_406 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (key_Z_on == 1 || key_A_on == 1) {
@@ -7340,80 +7388,80 @@ function func069(this: any) {
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
             font("ＭＳ Ｐゴシック", 18, 1);
             color(255, 255, 255);
-            var_575 = 0;
+            item_icon_id = 0;
             if (cnt1 == 0) {
-                var_575 = var_357;
+                item_icon_id = var_357;
                 pos(35 + var_573, 256 - var_574);
                 color(255, 255, 0);
                 mes("攻撃");
             }
             if (cnt1 == 1) {
-                var_575 = var_358;
+                item_icon_id = var_358;
                 pos(35 + var_573, 256 - var_574);
                 color(255, 180, 90);
                 mes("防御");
             }
             if (cnt1 == 2) {
-                var_575 = var_215;
+                item_icon_id = var_215;
                 pos(35 + var_573, 256 - var_574);
                 color(240, 0, 240);
                 mes("能力");
             }
             if (cnt1 == 3) {
-                var_575 = var_410;
+                item_icon_id = var_410;
                 pos(35 + var_573, 256 - var_574);
                 color(225, 195, 145);
                 mes("射撃");
             }
-            yield func070();
-            if (var_575 != 0) {
+            yield func070(); // アイテムの表示用アイコン座標指定
+            if (item_icon_id != 0) {
                 pos(23 + var_573 + 10, 250 + 20 - var_574);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                if (var_575 < 400) {
+                if (item_icon_id < 400) { // アイテムがお金ではなく、射撃disc(400未満)であれば
                     if (cnt1 == 0) {
                         if (var_570 == 0) {
-                            var_576 = 11;
+                            buffer_id = 11;
                         }
                         if (var_570 == 1) {
-                            var_576 = 1;
+                            buffer_id = 1;
                         }
                         if (var_570 == 2) {
-                            var_576 = 16;
+                            buffer_id = 16;
                         }
                         if (var_570 == 3) {
-                            var_576 = 29;
+                            buffer_id = 29;
                         }
                     }
                     if (cnt1 == 1) {
                         if (var_571 == 0) {
-                            var_576 = 11;
+                            buffer_id = 11;
                         }
                         if (var_571 == 1) {
-                            var_576 = 1;
+                            buffer_id = 1;
                         }
                         if (var_571 == 2) {
-                            var_576 = 16;
+                            buffer_id = 16;
                         }
                         if (var_571 == 3) {
-                            var_576 = 29;
+                            buffer_id = 29;
                         }
                     }
                     if (cnt1 == 2) {
                         if (var_572 == 0) {
-                            var_576 = 11;
+                            buffer_id = 11;
                         }
                         if (var_572 == 1) {
-                            var_576 = 1;
+                            buffer_id = 1;
                         }
                         if (var_572 == 2) {
-                            var_576 = 16;
+                            buffer_id = 16;
                         }
                         if (var_572 == 3) {
-                            var_576 = 29;
+                            buffer_id = 29;
                         }
                     }
                 }
-                gcopy(var_576, var_577, var_578, 40, 40);
+                gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
             }
     
             font("ＭＳ Ｐゴシック", 18, 1);
@@ -7490,328 +7538,332 @@ function func069(this: any) {
         return;
     });
 }
+// アイテムの表示用アイコン座標指定
 function func070(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(70);
-        var_576 = 11;
-        if (var_575 == 100) {
-            var_577 = 80;
-            var_578 = 200;
-        }
-        if (var_575 == 101) {
-            var_577 = 80;
-            var_578 = 160;
-        }
-        if (var_575 == 102) {
-            var_577 = 80;
-            var_578 = 120;
-        }
-        if (var_575 == 103) {
-            var_577 = 80;
-            var_578 = 80;
-        }
-        if (var_575 == 104) {
-            var_577 = 80;
-            var_578 = 240;
-        }
-        if (var_575 == 105) {
-            var_577 = 80;
-            var_578 = 360;
-        }
-        if (var_575 == 106) {
-            var_577 = 80;
-            var_578 = 320;
-        }
-        if (var_575 == 107) {
-            var_577 = 80;
-            var_578 = 280;
-        }
-        if (var_575 == 108 || var_575 == 110) {
-            var_577 = 80;
-            var_578 = 440;
-        }
-        if (var_575 == 109) {
-            var_577 = 80;
-            var_578 = 480;
-        }
-        if (var_575 == 111) {
-            var_577 = 80;
-            var_578 = 520;
-        }
-        if (var_575 == 112) {
-            var_577 = 80;
-            var_578 = 560;
-        }
-        if (var_575 == 113) {
-            var_577 = 80;
-            var_578 = 600;
-        }
-        if (var_575 == 114) {
-            var_577 = 80;
-            var_578 = 640;
-        }
-        if (var_575 == 115) {
-            var_577 = 80;
-            var_578 = 680;
-        }
-        if (var_575 == 116) {
-            var_577 = 560;
-            var_578 = 720;
-        }
-        if (var_575 == 117) {
-            var_577 = 80;
-            var_578 = 880;
-        }
-        if (var_575 == 118) {
-            var_577 = 80;
-            var_578 = 920;
-        }
-        if (var_575 == 119) {
-            var_577 = 80;
-            var_578 = 1000;
-        }
-        if (var_575 == 120) {
-            var_577 = 80;
-            var_578 = 1040;
-        }
-        if (var_575 == 121) {
-            var_577 = 80;
-            var_578 = 1080;
-        }
-        if (var_575 == 122) {
-            var_577 = 1040;
-            var_578 = 120;
-        }
-        if (var_575 == 123) {
-            var_577 = 40;
-            var_578 = 1280;
-        }
-        if (var_575 == 124) {
-            var_577 = 80;
-            var_578 = 1320;
-        }
-        if (var_575 == 200) {
-            var_577 = 1040;
-            var_578 = 80;
-        }
-        if (var_575 == 201) {
-            var_577 = 1000;
-            var_578 = 1360;
-        }
-        if (var_575 == 202) {
-            var_577 = 1240;
-            var_578 = 120;
-        }
-        if (var_575 == 203) {
-            var_577 = 80;
-            var_578 = 1440;
-        }
-        if (var_575 == 204) {
-            var_577 = 480;
-            var_578 = 2000;
-        }
-        if (var_575 == 205) {
-            var_577 = 80;
-            var_578 = 1200;
-        }
-        if (var_575 == 206) {
-            var_577 = 1160;
-            var_578 = 120;
-        }
-        if (var_575 == 207) {
-            var_577 = 80;
-            var_578 = 1240;
-        }
-        if (var_575 == 300) {
-            var_577 = 1040;
-            var_578 = 160;
-        }
-        if (var_575 == 301) {
-            var_577 = 0;
-            var_578 = 1920;
-        }
-        if (var_575 == 302) {
-            var_577 = 1120;
-            var_578 = 160;
-        }
-        if (var_575 == 303) {
-            var_577 = 1160;
-            var_578 = 160;
-        }
-        if (var_575 == 304) {
-            var_577 = 80;
-            var_578 = 1400;
-        }
-        if (var_575 == 305) {
-            var_577 = 80;
-            var_578 = 2160;
-        }
-        if (var_575 == 306) {
-            var_577 = 1040;
-            var_578 = 200;
-        }
-        if (var_575 == 307) {
-            var_577 = 80;
-            var_578 = 1520;
-        }
-        if (var_575 == 308) {
-            var_577 = 0;
-            var_578 = 1880;
-        }
-        if (var_575 == 309) {
-            var_577 = 80;
-            var_578 = 2040;
-        }
-        if (var_575 == 310) {
-            var_577 = 1200;
-            var_578 = 200;
-        }
-        if (var_575 == 311) {
-            var_577 = 1120;
-            var_578 = 80;
-        }
-        if (var_575 == 312) {
-            var_577 = 480;
-            var_578 = 1960;
-        }
-        if (var_575 == 313) {
-            var_577 = 80;
-            var_578 = 1560;
-        }
-        if (var_575 == 314) {
-            var_577 = 1120;
-            var_578 = 120;
-        }
-        if (var_575 == 315) {
-            var_577 = 1160;
-            var_578 = 240;
-        }
-        if (var_575 == 316) {
-            var_577 = 1080;
-            var_578 = 160;
-        }
-        if (var_575 == 317) {
-            var_577 = 80;
-            var_578 = 1640;
-        }
-        if (var_575 == 318) {
-            var_577 = 80;
-            var_578 = 1680;
-        }
-        if (var_575 == 319) {
-            var_577 = 80;
-            var_578 = 1720;
-        }
-        if (var_575 == 320) {
-            var_577 = 1080;
-            var_578 = 200;
-        }
-        if (var_575 == 321) {
-            var_577 = 1160;
-            var_578 = 200;
-        }
-        if (var_575 == 393) {
-            var_577 = 1200;
-            var_578 = 120;
-        }
-        if (var_575 == 394) {
-            var_577 = 80;
-            var_578 = 760;
-        }
-        if (var_575 == 395) {
-            var_577 = 1120;
-            var_578 = 240;
-        }
-        if (var_575 == 396) {
-            var_577 = 1080;
-            var_578 = 120;
-        }
-        if (var_575 == 397) {
-            var_577 = 80;
-            var_578 = 1840;
-        }
-        if (var_575 == 398) {
-            var_577 = 80;
-            var_578 = 1600;
-        }
-        if (var_575 == 399) {
-            var_577 = 80;
-            var_578 = 1480;
-        }
-        if (var_575 == 400) {
-            var_577 = 40;
-            var_578 = 400;
-            var_576 = 34;
-        }
-        if (var_575 == 401) {
-            var_577 = 640;
-            var_578 = 200;
-            var_576 = 34;
-        }
-        if (var_575 == 402) {
-            var_577 = 640;
-            var_578 = 0;
-            var_576 = 34;
-        }
-        if (var_575 == 403) {
-            var_577 = 480;
-            var_578 = 560;
-            var_576 = 34;
-        }
-        if (var_575 == 404) {
-            var_577 = 160;
-            var_578 = 520;
-            var_576 = 34;
-        }
-        if (var_575 == 405) {
-            var_577 = 480;
-            var_578 = 1040;
-            var_576 = 21;
-        }
-        if (var_575 == 406) {
-            var_577 = 480;
-            var_578 = 1080;
-            var_576 = 21;
-        }
-        if (var_575 == 407) {
-            var_577 = 40;
-            var_578 = 400;
-            var_576 = 34;
-        }
-        if (var_575 == 408) {
-            var_577 = 1000;
-            var_578 = 440;
-            var_576 = 3;
-        }
-        if (var_575 == 409) {
-            var_577 = 480;
-            var_578 = 520;
-            var_576 = 6;
-        }
-        if (var_575 == 410) {
-            var_577 = 320;
-            var_578 = 1080;
-            var_576 = 34;
-        }
-        if (var_575 == 411) {
-            var_577 = 320;
-            var_578 = 1120;
-            var_576 = 34;
-        }
-        if (var_575 == 412) {
-            var_577 = 720;
-            var_578 = 520;
-            var_576 = 3;
-        }
-        if (var_575 == 413) {
-            var_577 = 960;
-            var_578 = 1960;
-            var_576 = 15;
-        }
-        if (var_575 == 414) {
-            var_577 = 1480;
-            var_578 = 1240;
-            var_576 = 34;
+
+        buffer_id = 11; // buffer(11)は、"img_stand0.gif"
+        // 
+        if (item_icon_id == 100) { // No = 100 スタープラチナ
+            buffer_x_axis = 80;
+            buffer_y_axis = 200;
+        }
+        if (item_icon_id == 101) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 160;
+        }
+        if (item_icon_id == 102) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 120;
+        }
+        if (item_icon_id == 103) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 80;
+        }
+        if (item_icon_id == 104) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 240;
+        }
+        if (item_icon_id == 105) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 360;
+        }
+        if (item_icon_id == 106) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 320;
+        }
+        if (item_icon_id == 107) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 280;
+        }
+        if (item_icon_id == 108 || item_icon_id == 110) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 440;
+        }
+        if (item_icon_id == 109) { // No = 109 マジシャンズレッド
+            buffer_x_axis = 80;
+            buffer_y_axis = 480;
+        }
+        if (item_icon_id == 111) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 520;
+        }
+        if (item_icon_id == 112) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 560;
+        }
+        if (item_icon_id == 113) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 600;
+        }
+        if (item_icon_id == 114) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 640;
+        }
+        if (item_icon_id == 115) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 680;
+        }
+        if (item_icon_id == 116) {
+            buffer_x_axis = 560;
+            buffer_y_axis = 720;
+        }
+        if (item_icon_id == 117) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 880;
+        }
+        if (item_icon_id == 118) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 920;
+        }
+        if (item_icon_id == 119) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1000;
+        }
+        if (item_icon_id == 120) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1040;
+        }
+        if (item_icon_id == 121) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1080;
+        }
+        if (item_icon_id == 122) {
+            buffer_x_axis = 1040;
+            buffer_y_axis = 120;
+        }
+        if (item_icon_id == 123) {
+            buffer_x_axis = 40;
+            buffer_y_axis = 1280;
+        }
+        if (item_icon_id == 124) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1320;
+        }
+        if (item_icon_id == 200) {
+            buffer_x_axis = 1040;
+            buffer_y_axis = 80;
+        }
+        if (item_icon_id == 201) {
+            buffer_x_axis = 1000;
+            buffer_y_axis = 1360;
+        }
+        if (item_icon_id == 202) {
+            buffer_x_axis = 1240;
+            buffer_y_axis = 120;
+        }
+        if (item_icon_id == 203) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1440;
+        }
+        if (item_icon_id == 204) {
+            buffer_x_axis = 480;
+            buffer_y_axis = 2000;
+        }
+        if (item_icon_id == 205) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1200;
+        }
+        if (item_icon_id == 206) {
+            buffer_x_axis = 1160;
+            buffer_y_axis = 120;
+        }
+        if (item_icon_id == 207) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1240;
+        }
+        if (item_icon_id == 300) {
+            buffer_x_axis = 1040;
+            buffer_y_axis = 160;
+        }
+        if (item_icon_id == 301) {
+            buffer_x_axis = 0;
+            buffer_y_axis = 1920;
+        }
+        if (item_icon_id == 302) {
+            buffer_x_axis = 1120;
+            buffer_y_axis = 160;
+        }
+        if (item_icon_id == 303) {
+            buffer_x_axis = 1160;
+            buffer_y_axis = 160;
+        }
+        if (item_icon_id == 304) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1400;
+        }
+        if (item_icon_id == 305) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 2160;
+        }
+        if (item_icon_id == 306) {
+            buffer_x_axis = 1040;
+            buffer_y_axis = 200;
+        }
+        if (item_icon_id == 307) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1520;
+        }
+        if (item_icon_id == 308) {
+            buffer_x_axis = 0;
+            buffer_y_axis = 1880;
+        }
+        if (item_icon_id == 309) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 2040;
+        }
+        if (item_icon_id == 310) {
+            buffer_x_axis = 1200;
+            buffer_y_axis = 200;
+        }
+        if (item_icon_id == 311) {
+            buffer_x_axis = 1120;
+            buffer_y_axis = 80;
+        }
+        if (item_icon_id == 312) {
+            buffer_x_axis = 480;
+            buffer_y_axis = 1960;
+        }
+        if (item_icon_id == 313) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1560;
+        }
+        if (item_icon_id == 314) {
+            buffer_x_axis = 1120;
+            buffer_y_axis = 120;
+        }
+        if (item_icon_id == 315) {
+            buffer_x_axis = 1160;
+            buffer_y_axis = 240;
+        }
+        if (item_icon_id == 316) {
+            buffer_x_axis = 1080;
+            buffer_y_axis = 160;
+        }
+        if (item_icon_id == 317) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1640;
+        }
+        if (item_icon_id == 318) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1680;
+        }
+        if (item_icon_id == 319) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1720;
+        }
+        if (item_icon_id == 320) {
+            buffer_x_axis = 1080;
+            buffer_y_axis = 200;
+        }
+        if (item_icon_id == 321) {
+            buffer_x_axis = 1160;
+            buffer_y_axis = 200;
+        }
+        if (item_icon_id == 393) {
+            buffer_x_axis = 1200;
+            buffer_y_axis = 120;
+        }
+        if (item_icon_id == 394) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 760;
+        }
+        if (item_icon_id == 395) {
+            buffer_x_axis = 1120;
+            buffer_y_axis = 240;
+        }
+        if (item_icon_id == 396) {
+            buffer_x_axis = 1080;
+            buffer_y_axis = 120;
+        }
+        if (item_icon_id == 397) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1840;
+        }
+        if (item_icon_id == 398) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1600;
+        }
+        if (item_icon_id == 399) {
+            buffer_x_axis = 80;
+            buffer_y_axis = 1480;
+        }
+        // ここからbufferが違う
+        if (item_icon_id == 400) {
+            buffer_x_axis = 40;
+            buffer_y_axis = 400;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 401) {
+            buffer_x_axis = 640;
+            buffer_y_axis = 200;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 402) {
+            buffer_x_axis = 640;
+            buffer_y_axis = 0;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 403) {
+            buffer_x_axis = 480;
+            buffer_y_axis = 560;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 404) {
+            buffer_x_axis = 160;
+            buffer_y_axis = 520;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 405) {
+            buffer_x_axis = 480;
+            buffer_y_axis = 1040;
+            buffer_id = 21;
+        }
+        if (item_icon_id == 406) {
+            buffer_x_axis = 480;
+            buffer_y_axis = 1080;
+            buffer_id = 21;
+        }
+        if (item_icon_id == 407) {
+            buffer_x_axis = 40;
+            buffer_y_axis = 400;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 408) {
+            buffer_x_axis = 1000;
+            buffer_y_axis = 440;
+            buffer_id = 3;
+        }
+        if (item_icon_id == 409) {
+            buffer_x_axis = 480;
+            buffer_y_axis = 520;
+            buffer_id = 6;
+        }
+        if (item_icon_id == 410) {
+            buffer_x_axis = 320;
+            buffer_y_axis = 1080;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 411) {
+            buffer_x_axis = 320;
+            buffer_y_axis = 1120;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 412) {
+            buffer_x_axis = 720;
+            buffer_y_axis = 520;
+            buffer_id = 3;
+        }
+        if (item_icon_id == 413) {
+            buffer_x_axis = 960;
+            buffer_y_axis = 1960;
+            buffer_id = 15;
+        }
+        if (item_icon_id == 414) {
+            buffer_x_axis = 1480;
+            buffer_y_axis = 1240;
+            buffer_id = 34;
         }
         return;
     });
@@ -8215,83 +8267,127 @@ function func076(this: any) {
             // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0) {
                 if (var_595 == 0) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標760から切り取り長さ X方向340、Y方向40
+                    // 絵文字:ヴェネチアホテル
                     gcopy(34, 640, 760, 340, 40);
                 }
                 if (var_595 == 1) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標720から切り取り長さ X方向340、Y方向40
+                    // 絵文字:亀の中
                     gcopy(34, 640, 720, 340, 40);
                 }
                 if (var_595 == 3) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標1200から切り取り長さ X方向340、Y方向40
+                    // 絵文字:ローマ・ティベレ河
                     gcopy(34, 640, 1200, 340, 40);
                 }
             }
             // No = 1 なので、ホテルの外
             if (dangeon_number == 1) {
                 if (current_floor <= 2) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標440から切り取り長さ X方向340、Y方向40
+                    // 絵文字:水の都
                     gcopy(34, 640, 440, 340, 40);
                 }
                 if (current_floor >= 3 && current_floor <= 5) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標480から切り取り長さ X方向340、Y方向40
+                    // 絵文字:森の郊外
                     gcopy(34, 640, 480, 340, 40);
                 }
                 if (current_floor >= 6 && current_floor <= 8) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標600から切り取り長さ X方向340、Y方向40
+                    // 絵文字:紅海の浜辺
                     gcopy(34, 640, 600, 340, 40);
                 }
                 if (current_floor >= 9 && current_floor <= 11) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標640から切り取り長さ X方向340、Y方向40
+                    // 絵文字:山岳地帯
                     gcopy(34, 640, 640, 340, 40);
                 }
                 if (current_floor == 12) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標400から切り取り長さ X方向340、Y方向40
+                    // 絵文字:エンヤホテル
                     gcopy(34, 640, 400, 340, 40);
                 }
             }
             // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2) {
                 if (current_floor != 30) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標560から切り取り長さ X方向340、Y方向40
+                    // 絵文字:レクイエムの大迷宮
                     gcopy(34, 640, 560, 340, 40);
                 }
                 if (current_floor == 30) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標880から切り取り長さ X方向340、Y方向40
+                    // 絵文字:黄金の風
                     gcopy(34, 640, 880, 340, 40);
                 }
             }
             // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3) {
                 if (current_floor != 99) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標520から切り取り長さ X方向340、Y方向40
+                    // 絵文字:ディアボロの試練
                     gcopy(34, 640, 520, 340, 40);
                 }
                 if (current_floor == 99) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標1160から切り取り長さ X方向340、Y方向40
+                    // 絵文字:自由人の狂想曲
                     gcopy(34, 640, 1160, 340, 40);
                 }
             }
             // No = 4 なので、一巡後の世界
             if (dangeon_number == 4) {
+                // buffer(34)は"img_syageki.gif"。X座標640、Y座標800から切り取り長さ X方向340、Y方向40
+                // 絵文字:一巡後の世界
                 gcopy(34, 640, 800, 340, 40);
             }
             if (dangeon_number == 5) {
                 if (current_floor != var_20) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標1040から切り取り長さ X方向340、Y方向40
+                    // 絵文字:鉄の牢獄
                     gcopy(34, 640, 1040, 340, 40);
                 }
                 if (current_floor == var_20) {
+                    // buffer(34)は"img_syageki.gif"。X座標1000、Y座標760から切り取り長さ X方向340、Y方向40
+                    // 青色空白:不明
                     gcopy(34, 1000, 760, 340, 40);
                 }
             }
             if (dangeon_number == 99) {
+                // buffer(34)は"img_syageki.gif"。X座標640、Y座標960から切り取り長さ X方向340、Y方向40
+                // 絵文字:魔少年の問題
                 gcopy(34, 640, 960, 340, 40);
             }
         }
         if (var_94 == 1) {
+            // buffer(34)は"img_syageki.gif"。X座標640、Y座標840から切り取り長さ X方向340、Y方向40
+            // 絵文字:虹村屋敷
             gcopy(34, 640, 840, 340, 40);
         }
         if (var_94 == 2) {
+            // buffer(34)は"img_syageki.gif"。X座標640、Y座標1000から切り取り長さ X方向340、Y方向40
+            // 絵文字:杜王町埠頭
             gcopy(34, 640, 1000, 340, 40);
         }
         if (var_94 == 3) {
+            // buffer(34)は"img_syageki.gif"。X座標640、Y座標680から切り取り長さ X方向340、Y方向40
+            // 絵文字:吉良屋敷
             gcopy(34, 640, 680, 340, 40);
         }
         if (var_94 == 7) {
+            // buffer(34)は"img_syageki.gif"。X座標640、Y座標1080から切り取り長さ X方向340、Y方向40
+            // 絵文字:砂漠
             gcopy(34, 640, 1080, 340, 40);
         }
         if (var_94 == 8) {
+            // buffer(34)は"img_syageki.gif"。X座標640、Y座標1120から切り取り長さ X方向340、Y方向40
+            // 絵文字:幻覚の迷宮
             gcopy(34, 640, 1120, 340, 40);
         }
         if (var_94 == 9) {
+            // buffer(34)は"img_syageki.gif"。X座標640、Y座標920から切り取り長さ X方向340、Y方向40
+            // 絵文字:幽霊部屋
             gcopy(34, 640, 920, 340, 40);
         }
         if (dangeon_number != 0 && dangeon_number != 99 && var_94 == 0) {
@@ -8311,17 +8407,31 @@ function func076(this: any) {
             if (current_floor >= 100) {
                 pos(70, 160);
             }
+            // buffer(34)は"img_syageki.gif"。X座標880、Y座標80から切り取り長さ X方向80、Y方向40
+            // 絵文字:地下
             gcopy(34, 880, 80, 80, 40);
             pos(220, 160);
+            
+            // buffer(34)は"img_syageki.gif"。X座標880、Y座標120から切り取り長さ X方向40、Y方向40
+            // 絵文字:階
             gcopy(34, 880, 120, 40, 40);
             pos(150, 160);
+            
+            // buffer(34)は"img_syageki.gif"。X座標var_596(現在の階？)、Y座標80から切り取り長さ X方向20、Y方向40
+            // 絵文字:数字(0~9)
             gcopy(34, var_596, 80, 20, 40);
             pos(170, 160);
+
+            // buffer(34)は"img_syageki.gif"。X座標var_597(現在の階？)、Y座標80から切り取り長さ X方向20、Y方向40
+            // 絵文字:数字(0~9)
             gcopy(34, var_597, 80, 20, 40);
             pos(190, 160);
+
             if (var_597 == 400) {
                 pos(180, 160);
             }
+            // buffer(34)は"img_syageki.gif"。X座標var_598(現在の階？)、Y座標80から切り取り長さ X方向20、Y方向40
+            // 絵文字:数字(0~9)
             gcopy(34, var_598, 80, 20, 40);
         }
         if (var_10 >= 1) {
@@ -8486,39 +8596,56 @@ function func077(this: any) {
         return;
     });
 }
+
 function func078(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(78);
         if (var_373 == 1) {
             pos(0, 0);
-
             gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
+            
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_373 == 2) {
             pos(0, 0);
-    
             gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
+
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_373 == 3) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
+            
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_373 == 4) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 110);
+
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_373 == 5) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 80);
+
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_373 == 6) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
+
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_600 >= 1) {

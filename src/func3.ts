@@ -3261,7 +3261,7 @@ function func337(this: any) {
             yield func382();
         }
         if (var_1209 == 1) {
-            yield func367();
+            yield func367(); // アイテムの名前や説明表示
         }
         if (var_68 == 1) {
             yield func077();
@@ -4549,35 +4549,35 @@ function func345(this: any) {
                 pos(160, 150);
                 gcopy(3, 480, 0, 40, 40);
                 pos(145, 140);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_199 == 8) {
                 pos(160, 150);
                 gcopy(3, 920, 0, 40, 40);
                 pos(175, 150);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_199 == 4) {
                 pos(160, 150);
                 gcopy(3, 560, 0, 40, 40);
                 pos(175, 150);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_199 == 6) {
                 pos(160, 150);
                 gcopy(3, 720, 0, 40, 40);
                 pos(145, 150);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_199 == 1) {
                 pos(150, 140);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(160, 150);
                 gcopy(3, 120, 0, 40, 40);
             }
             if (var_199 == 3) {
                 pos(170, 140);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(160, 150);
                 gcopy(3, 440, 0, 40, 40);
             }
@@ -4585,13 +4585,13 @@ function func345(this: any) {
                 pos(160, 150);
                 gcopy(3, 200, 0, 40, 40);
                 pos(160, 160);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_199 == 9) {
                 pos(160, 150);
                 gcopy(3, 360, 0, 40, 40);
                 pos(160, 160);
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             return;
         }
@@ -4644,7 +4644,7 @@ function func345(this: any) {
             gcopy(3, 1240, 160, 40, 40);
             pos(175, 135);
             belongings_item_list = var_1253;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             return;
         }
         if (var_1252 == 3) {
@@ -4655,7 +4655,7 @@ function func345(this: any) {
             gcopy(3, 1280, 160, 40, 40);
             pos(175, 135);
             belongings_item_list = var_1253;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             return;
         }
         if (var_1255 == 1) {
@@ -7347,7 +7347,7 @@ function func353(this: any) {
             belongings_item_list = var_1289;
             var_1248 = var_1249;
             if (var_1270 == 1) {
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
         }
         if (var_773 >= 1 && var_773 <= 6) {
@@ -9070,7 +9070,7 @@ function func354(this: any) {
                 pos((var_83[var_412].Var1 - var_66 + 4) * 40 - 10, (var_83[var_412].Var2 - var_67 + 4) * 40 - 10 - 10);
                 belongings_item_list = var_417;
                 var_1248 = var_1249;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
         }
         if (var_1346 >= 1) {
@@ -9118,7 +9118,7 @@ function func354(this: any) {
                 pos((var_1347 - var_66 + 4) * 40 - 10, (var_1348 - var_67 + 4) * 40 - 10 - 10);
                 belongings_item_list = var_417;
                 var_1248 = var_1249;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
         }
         if (var_1350 >= 1) {
@@ -9172,7 +9172,7 @@ function func354(this: any) {
             }
             belongings_item_list = var_1354;
             var_1248 = var_1249;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             pos(160, 150);
             if (var_1353 == 1) {
                 gcopy(3, 1160, 120, 40, 40);
@@ -10770,7 +10770,7 @@ function func354(this: any) {
             if (var_1270 != 0) {
                 belongings_item_list = var_1421;
                 var_1248 = var_1249;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1270 == 0) {
                 if (var_340 == 400) {
@@ -11003,158 +11003,158 @@ function func354(this: any) {
             if (var_1443 < 14) {
                 pos(150, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(170, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 14) {
                 pos(150, 172);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(170, 172);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 15) {
                 pos(150, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(170, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 16) {
                 pos(150, 172);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(170, 172);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 > 16 && var_1443 < 25) {
                 pos(150, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(170, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 25 || var_1443 == 26) {
                 pos(152, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(168, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 27 || var_1443 == 28) {
                 pos(154, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(166, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 29 || var_1443 == 30) {
                 pos(156, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(164, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 31 || var_1443 == 32) {
                 pos(158, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(162, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 33 || var_1443 == 34) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 35 || var_1443 == 36) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 37 || var_1443 == 38) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 39 || var_1443 == 40) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 41 || var_1443 == 42) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 150);
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 43 || var_1443 == 44) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 45 || var_1443 == 46) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 == 47 || var_1443 == 48) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 color(0, 0, 0);
     
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 30);
                 pos(160, 170);
                 belongings_item_list = with_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1443 > 48 || var_1443 == 60) {
                 pos(160, 170);
                 belongings_item_list = base_disc_list;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             pos(170, 150);
             if (var_1443 >= 10 && var_1443 < 11) {
@@ -11547,7 +11547,7 @@ function func354X(this: any) {
             }
             belongings_item_list = var_1459;
             var_1248 = var_1249;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             gcopy(21, 0, 960, 40, 40);
         }
         if (var_1460 >= 1) {
@@ -11590,7 +11590,7 @@ function func354X(this: any) {
             }
             belongings_item_list = var_1459;
             var_1248 = var_1249;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             gcopy(3, 920, 400, 40, 40);
         }
         if (var_1461 >= 1 && var_1461 <= 7) {
@@ -11745,7 +11745,7 @@ function func354X(this: any) {
                 pos(160, 130);
                 belongings_item_list = var_1471;
                 var_1248 = var_1249;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1470 == 4) {
                 color(0, 0, 0);
@@ -11754,7 +11754,7 @@ function func354X(this: any) {
                 pos(160, 120);
                 belongings_item_list = var_1471;
                 var_1248 = var_1249;
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
         }
         if (var_1472 >= 1) {
@@ -12478,7 +12478,7 @@ function func354X(this: any) {
                 if (var_1505 == 3) {
                     belongings_item_list = var_1386;
                     var_1248 = var_1249;
-                    yield func397();
+                    yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
                 }
             }
             if (var_1501 < 61) {
@@ -12539,7 +12539,7 @@ function func354X(this: any) {
             pos(var_1503, var_1504);
             belongings_item_list = var_1386;
             var_1248 = var_1249;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
         }
         if (var_1511 >= 1) {
             var_1503 = (var_1512 - var_66 + 4) * 40;
@@ -12588,7 +12588,7 @@ function func354X(this: any) {
             pos(var_1503, var_1504);
             belongings_item_list = var_1386;
             var_1248 = var_1249;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
         }
         if (var_1514 >= 1) {
             if (var_1514 == 0 || var_1514 == 2 || var_1514 == 4 || var_1514 == 6 || var_1514 == 8) {
@@ -13146,7 +13146,7 @@ function func354X(this: any) {
             pos(160, 150);
             belongings_item_list = var_233[var_1531].Var0;
             var_1248 = var_233[var_1531].Var13;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             pos(160, 0);
             gcopy(14, 400, 0, 40, 200);
         }
@@ -13155,7 +13155,7 @@ function func354X(this: any) {
             pos(160, var_774 - 10);
             belongings_item_list = var_233[var_1531].Var0;
             var_1248 = var_233[var_1531].Var13;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             pos(160, var_774 - 160);
             gcopy(14, 400, 0, 40, 200);
         }
@@ -13934,7 +13934,7 @@ function func354X(this: any) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             pos(160, 120);
             belongings_item_list = var_1571;
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             pos(160, 130);
             if (var_1570 == 1 || var_1570 == 5 || var_1570 == 9 || var_1570 == 13 || var_1570 == 17) {
                 gcopy(3, 640, 680, 40, 40);
@@ -15644,29 +15644,30 @@ function func367(this: any) {
         var_1248 = var_1660;
         yield func492(); // アイテムリスト呼び出し
         if (var_802 < 100 || var_802 >= 400) {
-            yield func397();
+            yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
         }
         if (var_802 >= 100 && var_802 < 400) {
             if (var_1661 == 0) {
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             if (var_1661 == 1) {
-                var_575 = var_802;
-                yield func070();
+                item_icon_id = var_802;
+                yield func070(); // アイテムの表示用アイコン座標指定
                 if (var_1660 == 0) {
-                    var_576 = 11;
+                    buffer_id = 11; // buffer(11)は"img_stand0.gif"
                 }
                 if (var_1660 == 1) {
-                    var_576 = 1;
+                    buffer_id = 1; // buffer(1)は"img_stand1.gif"
                 }
                 if (var_1660 == 2) {
-                    var_576 = 16;
+                    buffer_id = 16;  // buffer(16)は"img_stand2.gif"
                 }
                 if (var_1660 == 3) {
-                    var_576 = 29;
+                    buffer_id = 29; // buffer(29)は"img_stand3.gif"
                 }
                 pos(20, 50);
-                gcopy(var_576, var_577, var_578, 40, 40);
+                // 各スタンドごとのアイコン表示を指定 func070
+                gcopy(buffer_id, buffer_x_axis, buffer_y_axis, 40, 40);
             }
         }
         pos(70, 65);
@@ -15743,6 +15744,7 @@ function func367(this: any) {
         color(255, 255, 255);
         font(font_type = "ＭＳ Ｐゴシック", font_size = 14, font_style = 1);
         pos(30, 100);
+
         if (var_802 < 100 || var_802 >= 400) {
             mes(item_description1);
         }
@@ -15754,16 +15756,19 @@ function func367(this: any) {
                 mes("" + item_description1 + "　空き容量 " + free_space_value);
             }
         }
+        // 装備、射撃disc
         if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] == 0) {
             mes("" + item_description1);
         }
         pos(30, 120);
-        mes(var_808);
+        mes(effects_message);
+
         if (var_802 < 100 || var_802 >= 400) {
             pos(30, 140);
             color(255, 255, 255);
             mes(item_ability_description);
         }
+
         if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] != 0) {
             var_1664 = 0;
             if (dangeon_number == 5 && var_1661 == 0 && var_1660 >= 1) {
@@ -16073,7 +16078,7 @@ function func372(this: any) {
             var_1679 = var_1679 - 1;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func372();
             return;
@@ -16082,7 +16087,7 @@ function func372(this: any) {
             var_1679 = var_1679 + 1;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func372();
             return;
@@ -16203,7 +16208,7 @@ function func376(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
@@ -16214,7 +16219,7 @@ function func376(this: any) {
             }
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
@@ -16280,7 +16285,7 @@ function func377(this: any) {
                 var_1697 = belongings_item_list + 250 - 900;
             }
             if (var_988[var_1697] >= 1) {
-                yield func397();
+                yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
             }
             pos(var_1680 + 80, var_1682 + 13 + var_1684);
     
@@ -16332,7 +16337,7 @@ function func378(this: any) {
             var_504 = var_504 + 2;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func378();
@@ -16343,7 +16348,7 @@ function func378(this: any) {
             var_504 = var_504 - 2;
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func378();
@@ -19789,19 +19794,27 @@ function func396(this: any) {
                 pos(var_1818 * var_35 + 20 - 20, var_1819 * var_36 - 20 + 20);
             }
         }
-        yield func397();
+        yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
     });
 }
+
+// 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
 function func397(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(397);
         if (belongings_item_list == 1) {
+            // buffer(9)は"img_item.gif"。X座標0、Y座標0から切り取り長さ X方向40、Y方向40
+            // 絵:お金。
             gcopy(9, 0, 0, 40, 40);
         }
         if (belongings_item_list >= 100 && belongings_item_list < 400) {
+            // buffer(9)は"img_item.gif"。X座標40、Y座標0から切り取り長さ X方向40、Y方向40
+            // 絵:disc(黄色)、身識別、床に落ちている装備disc
             gcopy(9, 40, 0, 40, 40);
         }
         if (belongings_item_list >= 400 && belongings_item_list < 450) {
+            // buffer(9)は"img_item.gif"。X座標240、Y座標0から切り取り長さ X方向40、Y方向40
+            // 絵:disc(銅色))、所持または床に落ちている射撃disc
             gcopy(9, 240, 0, 40, 40);
         }
         if (belongings_item_list >= 450 && belongings_item_list < 500) {

@@ -662,10 +662,10 @@ let var_571 :any;
 let var_572 :any;
 let var_573 :any;
 let var_574 :any;
-let var_575 :number; // belongings_item_list
-let var_576 :any;
-let var_577 :any;
-let var_578 :any;
+let item_icon_id :number; // アイテムのアイコンを指示する用のアイテムID。
+let buffer_id :number; // bufferで指示するID番号。このIDで読み込んだ画像データを切り替える。
+let buffer_x_axis :number; // bufferで指示するX座標数値。この数値で読み込んだ画像データから表示する箇所を指定する。
+let buffer_y_axis :number; // bufferで指示するY座標数値。この数値で読み込んだ画像データから表示する箇所を指定する。
 let var_579 :any;
 let var_580 :any;
 let var_581 :any;
@@ -895,7 +895,7 @@ let number_of_abilities :number; // 装備discの合成した数
 let var_805 :any;
 let item_description1 :string; // アイテムの説明。攻撃:0 防御:0 など
 let free_space_value :number; // 装備discにおいて、合成できる残り容量
-let var_808 :any;
+let effects_message :string; // アイテムの"説明"を開いた時に表示される合成能力や消費アイテムの効果のメッセージ
 let track_number :number; // 装備discにおいて、合成した能力の順番
 let var_810 :any;
 let var_811 :any;
