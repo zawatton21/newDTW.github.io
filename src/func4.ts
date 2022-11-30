@@ -4339,7 +4339,7 @@ function func448(this: any) {
                 var_1991 = 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_1991 != 6) {
@@ -4347,7 +4347,7 @@ function func448(this: any) {
                 var_1991++;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
         }
@@ -4357,7 +4357,7 @@ function func448(this: any) {
                 var_1991 = 6;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_1991 != 1) {
@@ -4365,7 +4365,7 @@ function func448(this: any) {
                 var_1991--;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
         }

@@ -423,14 +423,14 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 0) {
                 var_910 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 1) {
                 var_910 = 0;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
@@ -440,14 +440,14 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 1) {
                 var_910 = 0;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 0) {
                 var_910 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;

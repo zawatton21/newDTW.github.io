@@ -1902,7 +1902,7 @@ function func511(this: any) {
             var_1480 = 1;
             for (let cnt2 = 0; cnt2 < 14; ++cnt2) {
                 var_1480++;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             var_271 = 0;
@@ -3078,21 +3078,21 @@ function func511(this: any) {
             yield func047();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 3;
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             yield func094();
@@ -3109,21 +3109,21 @@ function func511(this: any) {
             yield func047();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 3;
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1259 = 0;
@@ -29444,7 +29444,7 @@ function func581(this: any) {
     
             DSPLAY(audio_id = 123);
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_742 = 2;
                 var_1301++;

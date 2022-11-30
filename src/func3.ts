@@ -17297,7 +17297,7 @@ function func381(this: any) {
         if (var_254 == 1) {
             if (var_1721 == 1) {
                 var_1721 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17306,7 +17306,7 @@ function func381(this: any) {
                 var_1721 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17315,7 +17315,7 @@ function func381(this: any) {
                 var_1721 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17324,7 +17324,7 @@ function func381(this: any) {
                 var_1721 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17333,7 +17333,7 @@ function func381(this: any) {
                 var_1721 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17345,7 +17345,7 @@ function func381(this: any) {
                 var_1721 = 5;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17354,7 +17354,7 @@ function func381(this: any) {
                 var_1721 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17363,7 +17363,7 @@ function func381(this: any) {
                 var_1721 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17372,7 +17372,7 @@ function func381(this: any) {
                 var_1721 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
