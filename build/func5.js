@@ -687,6 +687,7 @@ function func506() {
                 case 6:
                     if (!(var_233[var_225].Var4 >= 1)) return [3 /*break*/, 9];
                     var_233[var_225].Var4 = var_233[var_225].Var4 - 1;
+                    // var_233[var_225].Var4 = var_233[var_225].Var4; // デバッグ用 発動しても修正値減らない
                     if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
                         count_buying_price = count_buying_price + 50;
@@ -734,6 +735,7 @@ function func506() {
                 case 14:
                     if (var_486[var_682][var_225][4] >= 1) {
                         var_486[var_682][var_225][4] = var_486[var_682][var_225][4] - 1;
+                        // var_486[var_682][var_225][4] = var_486[var_682][var_225][4]; // デバッグ用 発動しても修正値減らない
                         if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
@@ -768,6 +770,7 @@ function func506() {
                 case 20:
                     if (var_78[var_321].Var4 >= 1) {
                         var_78[var_321].Var4 = var_78[var_321].Var4 - 1;
+                        // var_78[var_321].Var4 = var_78[var_321].Var4; // デバッグ用 発動しても修正値減らない
                         if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                             var_106 = 1;
                             count_buying_price = count_buying_price + 50;
@@ -13714,6 +13717,7 @@ function func523() {
                     return [2 /*return*/];
                 case 38:
                     if (!(var_233[var_225].Var0 == 100 || var_233[var_225].Var0 == 398 || var_233[var_225].Var0 == 108 || var_233[var_225].Var0 == 110 || var_233[var_225].Var0 == 113 || var_233[var_225].Var0 == 118 || var_233[var_225].Var0 == 123)) return [3 /*break*/, 47];
+                    // if (var_233[var_225].Var0 == 398 || var_233[var_225].Var0 == 108 || var_233[var_225].Var0 == 110 || var_233[var_225].Var0 == 113 || var_233[var_225].Var0 == 118 || var_233[var_225].Var0 == 123) { // デバッグ用 ベースオンリーのdiscも合成できる
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";

@@ -17921,116 +17921,117 @@ function func385(this: any) {
             if (dangeon_number == 1) {
                 var_1772 = rnd(100);
                 if (var_1772 >= 0 && var_1772 < 15) {
-                    var_78[var_866].Var0 = 116;
+                    var_78[var_866].Var0 = 116; // No = 116 ハーミットパープル
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 >= 15 && var_1772 < 30) {
-                    var_78[var_866].Var0 = 103;
+                    var_78[var_866].Var0 = 103; // No = 103 エコーズACT3
                     var_78[var_866].Var16 = 20;
                     var_78[var_866].Var5 = 5;
                 }
                 if (var_1772 >= 30 && var_1772 < 45) {
-                    var_78[var_866].Var0 = 107;
+                    var_78[var_866].Var0 = 107; // No = 107 デス・13
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 45 && var_1772 < 60) {
-                    var_78[var_866].Var0 = 300;
+                    var_78[var_866].Var0 = 300; // No = 300 パール・ジャム
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 60 && var_1772 < 65) {
-                    var_78[var_866].Var0 = 306;
+                    var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 >= 65 && var_1772 < 70) {
-                    var_78[var_866].Var0 = 201;
+                    var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 70 && var_1772 < 75) {
-                    var_78[var_866].Var0 = 105;
+                    var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 75 && var_1772 < 77) {
-                    var_78[var_866].Var0 = 207;
+                    var_78[var_866].Var0 = 207; // No = 207 グレイトフル・デッド
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 77 && var_1772 < 79) {
-                    var_78[var_866].Var0 = 201;
+                    var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 79 && var_1772 < 81) {
-                    var_78[var_866].Var0 = 105;
+                    var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 81 && var_1772 < 83) {
-                    var_78[var_866].Var0 = 104;
+                    var_78[var_866].Var0 = 104; // No = 104 ザ・ハンド
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 83 && var_1772 < 85) {
-                    var_78[var_866].Var0 = 117;
+                    var_78[var_866].Var0 = 117; // No = 117 ダーク・ブルームーン
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 85 && var_1772 < 87) {
-                    var_78[var_866].Var0 = 119;
+                    var_78[var_866].Var0 = 119; // No = 119 スパイス・ガール
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 87 && var_1772 < 89) {
-                    var_78[var_866].Var0 = 203;
+                    var_78[var_866].Var0 = 203; // No = 203 ザ・フール
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 89 && var_1772 < 91) {
-                    var_78[var_866].Var0 = 113;
+                    var_78[var_866].Var0 = 113; // No = 113 クラッシュ
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 91 && var_1772 < 93) {
-                    var_78[var_866].Var0 = 306;
+                    var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 >= 93 && var_1772 < 95) {
-                    var_78[var_866].Var0 = 316;
+                    var_78[var_866].Var0 = 316; // No = 316 サバイバー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 == 95) {
-                    var_78[var_866].Var0 = 121;
+                    var_78[var_866].Var0 = 121; // No = 121 パープルヘイズ
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 == 96) {
-                    var_78[var_866].Var0 = 320;
+                    var_78[var_866].Var0 = 320; // No = 320 メタリカ
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 == 97) {
-                    var_78[var_866].Var0 = 205;
+                    var_78[var_866].Var0 = 205; // No = 205 クラフトワーク
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 == 98) {
-                    var_78[var_866].Var0 = 317;
+                    var_78[var_866].Var0 = 317; // No = 317 キッス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 == 99) {
-                    var_78[var_866].Var0 = 115;
+                    var_78[var_866].Var0 = 115; // No = 115 G・エクスペリエンス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
             }
+
             // No = 1 なので、ホテルの外以外
             if (dangeon_number != 1) {
                 var_1773 = rnd(100);

@@ -613,6 +613,7 @@ function func506(this: any) {
                 // 修正値が1以上の際は、発動をした時に1引く
                 if (var_233[var_225].Var4 >= 1) {
                     var_233[var_225].Var4 = var_233[var_225].Var4 - 1;
+                    // var_233[var_225].Var4 = var_233[var_225].Var4; // デバッグ用 発動しても修正値減らない
                     
                     if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
@@ -657,6 +658,7 @@ function func506(this: any) {
                 }
                 if (var_486[var_682][var_225][4] >= 1) {
                     var_486[var_682][var_225][4] = var_486[var_682][var_225][4] - 1;
+                    // var_486[var_682][var_225][4] = var_486[var_682][var_225][4]; // デバッグ用 発動しても修正値減らない
 
                     if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                         var_106 = 1;
@@ -687,6 +689,7 @@ function func506(this: any) {
                 }
                 if (var_78[var_321].Var4 >= 1) {
                     var_78[var_321].Var4 = var_78[var_321].Var4 - 1;
+                    // var_78[var_321].Var4 = var_78[var_321].Var4; // デバッグ用 発動しても修正値減らない
 
                     if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
@@ -9289,7 +9292,9 @@ function func523(this: any) {
             yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
+        // ベースオンリーのDiscをベースとして合成しない時の処理
         if (var_233[var_225].Var0 == 100 || var_233[var_225].Var0 == 398 || var_233[var_225].Var0 == 108 || var_233[var_225].Var0 == 110 || var_233[var_225].Var0 == 113 || var_233[var_225].Var0 == 118 || var_233[var_225].Var0 == 123) {
+        // if (var_233[var_225].Var0 == 398 || var_233[var_225].Var0 == 108 || var_233[var_225].Var0 == 110 || var_233[var_225].Var0 == 113 || var_233[var_225].Var0 == 118 || var_233[var_225].Var0 == 123) { // デバッグ用 ベースオンリーのdiscも合成できる
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
