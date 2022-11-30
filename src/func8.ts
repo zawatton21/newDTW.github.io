@@ -2519,7 +2519,7 @@ function func834(this: any) {
     });
 }
 
-// NPC ロッコ・バロッコ所長
+// NPC ロッコ・バロッコ所長に話しかけた時のメッセージ処理
 function func835(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(835);

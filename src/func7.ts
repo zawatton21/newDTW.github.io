@@ -2524,6 +2524,7 @@ function func737(this: any) {
         return;
     });
 }
+// ダンジョンをうろついているイギーに話しかけた時のメッセージ処理
 function func738(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(738);
@@ -3872,6 +3873,7 @@ function func755(this: any) {
         return;
     });
 }
+// 幽霊のポルナレフに話しかけた時のメッセージ処理
 function func756(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(756);
@@ -5037,7 +5039,7 @@ function func777(this: any) {
 }
 // ↑おそらくここまで鮮血のシャボン玉の機能
 
-// 岸辺露伴の設定
+// 岸辺露伴に話しかけた時のメッセージ処理
 function func778(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(778);
