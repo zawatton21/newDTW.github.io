@@ -289,7 +289,7 @@ let var_203 :any;
 let var_204 :any;
 let var_205 :any;
 let var_206 :any;
-let var_207 :any;
+let ivents_flag :number; // イベントフラグ。ヴェネチアホテルでのダンジョン開放に主に使われている
 let var_208 :any;
 let var_209 :any;
 let var_210 :any;
