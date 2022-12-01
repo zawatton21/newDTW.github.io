@@ -221,7 +221,7 @@ let var_135 :any;
 let var_136 :any;
 let var_137 :any;
 let var_138 :any;
-let var_139 :any;
+let var_139 :number; // ターン数経過カウンター。仗助のdiscやドッピオのdiscで使われている。0 = ダンジョンではない
 let var_140 :any;
 let var_141 :any;
 let var_142 :any;
@@ -620,7 +620,7 @@ let var_529 :any;
 let var_530 :any;
 let var_531 :any;
 let var_532 :any;
-let var_533 :any;
+let var_533 :number; // クリア時のスコア加算用。 
 let var_534 :any;
 let var_535 :any;
 let var_536 :any;

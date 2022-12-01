@@ -410,7 +410,7 @@ function func702(this: any) {
                     yield func337(); // メッセージ関係呼び出し
                 }
                 if (var_3102[1] == 1) {
-                    yield func094();
+                    yield func094(); // メッセージ送りの際の効果音
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     var_3104 = "おれの名は";
@@ -422,7 +422,7 @@ function func702(this: any) {
                     var_300 = 0;
                 }
                 if (var_3102[2] == 1) {
-                    yield func094();
+                    yield func094(); // メッセージ送りの際の効果音
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "「ジョーンズ」";
@@ -437,7 +437,7 @@ function func702(this: any) {
                     var_300 = 0;
                 }
                 if (var_3102[3] == 1) {
-                    yield func094();
+                    yield func094(); // メッセージ送りの際の効果音
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "「プラント」";
@@ -452,7 +452,7 @@ function func702(this: any) {
                     var_300 = 0;
                 }
                 if (var_3102[4] == 1) {
-                    yield func094();
+                    yield func094(); // メッセージ送りの際の効果音
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
                     comments_row1a = "「ボーンナム」";
@@ -471,7 +471,7 @@ function func702(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                yield func094();
+                yield func094(); // メッセージ送りの際の効果音
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "「血管針攻撃！！！」";
@@ -1031,7 +1031,7 @@ function func705(this: any) {
                         enemy_list = var_83[var_673].Var0;
                         yield func626();
                         var_83[var_673].Var3 = enemy_hp;
-                        yield func094();
+                        yield func094(); // メッセージ送りの際の効果音
                         comments_row1 = comments_row1a;
                         comments_row2 = comments_row2a;
                         comments_row1a = "DIO「なじむ　　実に！　　なじむぞ";
@@ -1058,7 +1058,7 @@ function func705(this: any) {
                         }
                         var_411 = 0;
                         var_83[var_673].Var21 = 0;
-                        yield func094();
+                        yield func094(); // メッセージ送りの際の効果音
                         comments_row1 = comments_row1a;
                         comments_row2 = comments_row2a;
                         comments_row1a = "DIO「最高に『ハイ！』ってやつだアアアア";
@@ -1153,6 +1153,7 @@ function func705(this: any) {
                     yield func658();
                 }
             }
+            // No = 61 ヨーヨーマッ
             if (var_2937 == 1 && var_83[var_402].Var0 == 61) {
                 if (var_2196 == 0) {
                     var_314 = var_402;
@@ -1262,7 +1263,7 @@ function func706(this: any) {
             if (var_83[var_286].Var2 > var_67) {
                 var_83[var_286].Var5 = 8;
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1442,7 +1443,7 @@ function func707(this: any) {
             yield func709(); // トニオさんに話しかけてアイテムを購入する際のメッセージ処理
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1469,7 +1470,7 @@ function func707(this: any) {
 function func708(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(708);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1498,7 +1499,7 @@ function func708(this: any) {
 function func709(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(709);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1749,7 +1750,7 @@ function func717(this: any) {
 function func718(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(718);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1781,7 +1782,7 @@ function func718(this: any) {
 function func719(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(719);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1942,7 +1943,7 @@ function func722(this: any) {
 
         DSPLAY(audio_id = 150);
         yield func132();
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1958,7 +1959,7 @@ function func722(this: any) {
         var_27_x = var_27[3];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ただじゃあおきませンッ！";
@@ -2039,7 +2040,7 @@ function func725(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(725);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2085,7 +2086,7 @@ function func726(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(726);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2139,7 +2140,7 @@ function func727(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(727);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2173,7 +2174,7 @@ function func728(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(728);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2241,7 +2242,7 @@ function func730(this: any) {
             yield func733();
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2257,7 +2258,7 @@ function func730(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "あまちゃんのあんたが好きだから";
@@ -2273,7 +2274,7 @@ function func730(this: any) {
         var_546 = 1;
         var_3126 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -2300,7 +2301,7 @@ function func731(this: any) {
         yield func047();
         yield func125();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "よろしくなッ！";
@@ -2319,7 +2320,7 @@ function func731(this: any) {
 function func732(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(732);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2423,7 +2424,7 @@ function func733(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -2546,7 +2547,7 @@ function func738(this: any) {
             yield func741();
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2578,7 +2579,7 @@ function func738(this: any) {
         var_546 = 1;
         var_3127 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -2606,7 +2607,7 @@ function func739(this: any) {
         yield func047();
         yield func128();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "（もたもたするなッ！マヌケ！！）";
@@ -2625,7 +2626,7 @@ function func739(this: any) {
 function func740(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(740);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2742,7 +2743,7 @@ function func741(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -2756,7 +2757,7 @@ function func741(this: any) {
         var_546 = 1;
         var_3131 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -2803,7 +2804,7 @@ function func743(this: any) {
             yield func746();
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2820,7 +2821,7 @@ function func743(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "そして私は味方だ。";
@@ -2836,7 +2837,7 @@ function func743(this: any) {
         var_546 = 1;
         var_3132 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -2863,7 +2864,7 @@ function func744(this: any) {
         yield func047();
         yield func124();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "君は｢仙道｣を学ばなければならんッ！";
@@ -2882,7 +2883,7 @@ function func744(this: any) {
 function func745(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(745);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2997,7 +2998,7 @@ function func746(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -3011,14 +3012,14 @@ function func746(this: any) {
         var_546 = 1;
         var_3134 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
 function func747(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(747);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3077,7 +3078,7 @@ function func747(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         yield func047();
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -3100,7 +3101,7 @@ function func748(this: any) {
             yield func752(); // ダンジョン内で仲間になったペッシに話しかけた時のメッセージ処理
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3116,7 +3117,7 @@ function func748(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "おれも連れてってくれよ！";
@@ -3132,7 +3133,7 @@ function func748(this: any) {
         var_546 = 1;
         var_3136 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -3166,7 +3167,7 @@ function func750(this: any) {
         var_83[var_3072].Var31 = 5;
         var_83[var_3072].Var14 = 0;
         var_1033 = 1;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3183,7 +3184,7 @@ function func750(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "はッ！";
@@ -3193,7 +3194,7 @@ function func750(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "兄貴はオレの事を思って殴ったんだね？";
@@ -3203,7 +3204,7 @@ function func750(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "さすが兄貴だあッ！";
@@ -3223,7 +3224,7 @@ function func750(this: any) {
 function func751(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(751);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3332,7 +3333,7 @@ function func752(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -3346,7 +3347,7 @@ function func752(this: any) {
         var_546 = 1;
         var_3137 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -3442,7 +3443,7 @@ function func753(this: any) {
         var_25_x = var_25[1];
         var_26_x = var_26[1];
         var_27_x = var_27[1];
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -3456,7 +3457,7 @@ function func753(this: any) {
         var_546 = 1;
         var_3137 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -3653,7 +3654,7 @@ function func754(this: any) {
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3715,7 +3716,7 @@ function func754(this: any) {
             var_83[var_2171].Var12 = 0;
             var_83[var_2171].Var13 = 0;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾍﾟｯｼ「きたッ！」";
@@ -3747,7 +3748,7 @@ function func754(this: any) {
             var_1500 = 0;
             var_411 = 0;
             var_83[var_3072].Var21 = 0;
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "ﾍﾟｯｼ「ちっ！　おしい…」";
@@ -3763,7 +3764,7 @@ function func754(this: any) {
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾍﾟｯｼ「かかったァ――ッ！」";
@@ -3816,7 +3817,7 @@ function func755(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(755);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3832,7 +3833,7 @@ function func755(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「SPW財団の調査によると、次の階では";
@@ -3865,13 +3866,13 @@ function func755(this: any) {
             comments_row2a = "";
             var_198 = 1;
             var_300 = 0;
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             yield func047();
             yield func050();
             yield func340(); // キー入力による選択処理
             var_3145 = var_3145 + 1;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "が出現するようです。";
@@ -3896,7 +3897,7 @@ function func756(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(756);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3913,7 +3914,7 @@ function func756(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾎﾟﾙﾅﾚﾌ「ところでそこのジッパー…」";
@@ -3923,7 +3924,7 @@ function func756(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾎﾟﾙﾅﾚﾌ「自分が入ったら";
@@ -3943,7 +3944,7 @@ function func757(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(757);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3960,7 +3961,7 @@ function func757(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「……」";
@@ -3981,7 +3982,7 @@ function func758(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(758);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3997,7 +3998,7 @@ function func758(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「ディアボロは次の階で…";
@@ -4013,7 +4014,7 @@ function func758(this: any) {
         var_356 = var_977[var_2569];
         yield func177(); // 死因原因
         current_floor = var_3143;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "" + var_849;
@@ -4023,7 +4024,7 @@ function func758(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｳｸｹｺ ｳﾋｺ ｳｹｹｹ ｳｹｺｹｺｹﾛｵ ";
@@ -4046,7 +4047,7 @@ function func759(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(759);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -4096,7 +4097,7 @@ function func759(this: any) {
         var_546 = 1;
         var_3147 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -4104,7 +4105,7 @@ function func760(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(760);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -4183,7 +4184,7 @@ function func765(this: any) {
         return;
     });
 }
-
+// ヴェネチアホテルのベッドの上の本に話しかけた時のメッセージ処理
 function func766(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(766);
@@ -4331,7 +4332,7 @@ function func769(this: any) {
         var_546 = 1;
         var_3150 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -4724,7 +4725,7 @@ function func773(this: any) {
             var_546 = 1;
             var_3151 = 1;
             var_548 = 1;
-            yield func839();
+            yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
             return;
         }
         if (var_987[0] != 0) {
@@ -4755,7 +4756,7 @@ function func773(this: any) {
             var_546 = 1;
             var_3152 = 1;
             var_548 = 1;
-            yield func839();
+            yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
             return;
         }
         yield func774();
@@ -5105,7 +5106,7 @@ function func778(this: any) {
             yield func783();
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5122,7 +5123,7 @@ function func778(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ん？何か用かい？";
@@ -5132,7 +5133,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "いやまてよ、ひょっとして君も";
@@ -5142,7 +5143,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "それはちょうど良かった！";
@@ -5152,7 +5153,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "このﾀﾞﾝｼﾞｮﾝのどこかに、";
@@ -5162,7 +5163,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "マンガを現実にするスタンドが";
@@ -5172,7 +5173,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "僕はそのスタンドをずっと";
@@ -5182,7 +5183,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "さっきのヤギが怪しいんだが、";
@@ -5192,7 +5193,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "どうやらそこの壁の穴が、";
@@ -5202,7 +5203,7 @@ function func778(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "どうだろう、代わりに取ってきて";
@@ -5218,14 +5219,14 @@ function func778(this: any) {
         var_546 = 1;
         var_3156 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
 function func779(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(779);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "グッド！";
@@ -5235,7 +5236,7 @@ function func779(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "よろしく頼むよ。";
@@ -5255,7 +5256,7 @@ function func779(this: any) {
 function func780(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(780);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "この岸部露伴が頭下げて";
@@ -5265,7 +5266,7 @@ function func780(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ふぅ～～ん";
@@ -5275,7 +5276,7 @@ function func780(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "君は、ちょいと深い所まで行って";
@@ -5285,7 +5286,7 @@ function func780(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "念のためもう一度聞くが、";
@@ -5295,7 +5296,7 @@ function func780(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "どうだろう、代わりに取ってきて";
@@ -5311,7 +5312,7 @@ function func780(this: any) {
         var_546 = 1;
         var_3156 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -5341,7 +5342,7 @@ function func781(this: any) {
         var_546 = 1;
         var_3157 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -5367,7 +5368,7 @@ function func782(this: any) {
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5384,7 +5385,7 @@ function func782(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "よし、お礼に…";
@@ -5394,7 +5395,7 @@ function func782(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "なになに、組織のボスだった頃の";
@@ -5404,7 +5405,7 @@ function func782(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ちょっと待っててくれよ。";
@@ -5416,14 +5417,14 @@ function func782(this: any) {
         yield func340(); // キー入力による選択処理
         var_83[var_761].Var21 = 1;
         var_411 = 1;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -5450,16 +5451,16 @@ function func782(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_411 = 2;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 1;
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_83[var_761].Var21 = 0;
         var_411 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "できたぜ。";
@@ -5469,7 +5470,7 @@ function func782(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "タイトル？タイトルは";
@@ -5596,7 +5597,7 @@ function func782(this: any) {
             var_199 = 4;
         }
         var_83[var_762].Var6 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5613,7 +5614,7 @@ function func782(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "そうだな…不思議のダンジョンに";
@@ -5623,7 +5624,7 @@ function func782(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ディアボロの大冒険！というのは";
@@ -5641,7 +5642,7 @@ function func782(this: any) {
 function func783(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(783);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5658,7 +5659,7 @@ function func783(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ぼくが行けりゃあ";
@@ -5668,7 +5669,7 @@ function func783(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "あいにく、";
@@ -5687,7 +5688,7 @@ function func783(this: any) {
 function func784(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(784);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5704,7 +5705,7 @@ function func784(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "僕のマンガが好きなのかい？";
@@ -5731,7 +5732,7 @@ function func784(this: any) {
         var_1261 = 0;
         var_271 = 0;
         var_1542 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5850,7 +5851,7 @@ function func785(this: any) {
 }
 // ↑ここまで岸辺露伴の設定
 
-// 亀の倉庫の取説
+// 亀の倉庫の取説へ話しかけた時のメッセージ処理
 function func786(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(786);
@@ -5929,7 +5930,7 @@ function func787(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(787);
         var_243 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5946,7 +5947,7 @@ function func787(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｱﾊﾞｯｷｫ「このﾀﾞﾝｼﾞｮﾝから脱出も可能だ」";
@@ -5956,7 +5957,7 @@ function func787(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｱﾊﾞｯｷｫ「地上まで帰還するか？」";
@@ -5972,7 +5973,7 @@ function func787(this: any) {
         var_546 = 1;
         var_3163 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -5983,7 +5984,7 @@ function func788(this: any) {
         var_1454 = 1;
         var_271 = 1;
         var_1455 = current_floor;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -6043,7 +6044,7 @@ function func788(this: any) {
 function func789(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(789);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｱﾊﾞｯｷｫ「ところで…茶でも飲むか？」";
@@ -6059,14 +6060,14 @@ function func789(this: any) {
         var_546 = 1;
         var_3163 = 2;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
 function func790(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(790);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｱﾊﾞｯｷｫ「ヌルイから飲むのは いやか？」";
@@ -6082,7 +6083,7 @@ function func790(this: any) {
         var_546 = 1;
         var_3163 = 3;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -6093,7 +6094,7 @@ function func791(this: any) {
             yield func792();
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「★※○■¶◆ЖΘ！！！」";
@@ -6136,7 +6137,7 @@ function func791(this: any) {
 function func792(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(792);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「うっ！」";
@@ -6172,7 +6173,7 @@ function func793(this: any) {
         dbgprt(793);
         var_243 = 0;
         if (var_1042 == 0) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6189,7 +6190,7 @@ function func793(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340(); // キー入力による選択処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "間田「岸辺露伴先生の";
@@ -6201,7 +6202,7 @@ function func793(this: any) {
             yield func340(); // キー入力による選択処理
         }
         if (var_1042 == 1) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6218,7 +6219,7 @@ function func793(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340(); // キー入力による選択処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "間田「残り回数が増えるから、";
@@ -6230,7 +6231,7 @@ function func793(this: any) {
             yield func340(); // キー入力による選択処理
         }
         if (var_1042 == 2) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6247,7 +6248,7 @@ function func793(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340(); // キー入力による選択処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "間田「まれに、いつもの３倍";
@@ -6259,7 +6260,7 @@ function func793(this: any) {
             yield func340(); // キー入力による選択処理
         }
         if (var_1042 == 3) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6276,7 +6277,7 @@ function func793(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340(); // キー入力による選択処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "間田「当然、関連のある部の";
@@ -6288,7 +6289,7 @@ function func793(this: any) {
             yield func340(); // キー入力による選択処理
         }
         if (var_1042 == 4) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6305,7 +6306,7 @@ function func793(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340(); // キー入力による選択処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "間田「ｺﾐｯｸｽで強化するときも、";
@@ -6317,7 +6318,7 @@ function func793(this: any) {
             yield func340(); // キー入力による選択処理
         }
         if (var_1042 == 5) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6334,7 +6335,7 @@ function func793(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340(); // キー入力による選択処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "間田「もったいぶらずに";
@@ -6346,7 +6347,7 @@ function func793(this: any) {
             yield func340(); // キー入力による選択処理
         }
         if (var_1042 == 6) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6363,7 +6364,7 @@ function func793(this: any) {
             var_27_x = var_27[1];
             yield func047();
             yield func340(); // キー入力による選択処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "間田「自分の漫画の原稿も入ってたり";
@@ -6408,7 +6409,7 @@ function func794(this: any) {
         var_546 = 1;
         var_3147 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }

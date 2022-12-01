@@ -763,7 +763,7 @@ function func914(this: any) {
 function func915(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(915);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -921,7 +921,7 @@ function func919(this: any) {
             var_1058 = dim(30, 30);
             return;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「ディアボロはここよッ！";
@@ -1094,7 +1094,7 @@ function func921(this: any) {
             yield func337(); // メッセージ関係呼び出し
             var_1321 = var_1321 + 1;
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1111,7 +1111,7 @@ function func921(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「ピッツァ３枚で３００Ｇ」";
@@ -1124,7 +1124,7 @@ function func921(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「もちろんお釣りはいらないよねッ！」";
@@ -1167,7 +1167,7 @@ function func922(this: any) {
 function func923(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(923);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -1184,7 +1184,7 @@ function func923(this: any) {
         var_27_x = var_27[1];
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「こんにちは――っ";
@@ -1197,7 +1197,7 @@ function func923(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "「どちらへ運びましょうか――ッ！？」";

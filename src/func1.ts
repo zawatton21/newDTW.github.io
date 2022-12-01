@@ -2380,7 +2380,7 @@ function func150(this: any) {
         var_271 = 0;
         var_594 = 0;
         yield func335();
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2396,7 +2396,7 @@ function func150(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「与えんッ！！」";
@@ -2552,7 +2552,7 @@ function func150(this: any) {
         var_83[1].Var2 = 10;
         var_82[28][10] = 1;
         var_83[1].Var5 = 6;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「オッ…オレはッ！";
@@ -2739,7 +2739,7 @@ function func150(this: any) {
         yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_83[3].Var6 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2815,7 +2815,7 @@ function func150(this: any) {
         var_409 = 0;
         yield func337(); // メッセージ関係呼び出し
         var_83[4].Var6 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2831,7 +2831,7 @@ function func150(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾄﾘｯｼｭ「どこよッ！";
@@ -2892,7 +2892,7 @@ function func150(this: any) {
         yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_83[2].Var6 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -2908,7 +2908,7 @@ function func150(this: any) {
         var_26_x = var_26[1];
         var_27_x = var_27[1];
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「ヤツはもう";
@@ -2917,7 +2917,7 @@ function func150(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「終わりが無いのが【終わり】」";
@@ -2926,7 +2926,7 @@ function func150(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「それが";
@@ -3040,7 +3040,7 @@ function func151(this: any) {
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3088,7 +3088,7 @@ function func151(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「どこから襲ってくるんだ？！」";
@@ -3145,7 +3145,7 @@ function func151(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「おかしいな…";
@@ -3154,7 +3154,7 @@ function func151(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「何か…";
@@ -3179,7 +3179,7 @@ function func152(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         yield func335();
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3227,7 +3227,7 @@ function func152(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「もしかするとこれは…」";
@@ -3236,7 +3236,7 @@ function func152(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「聞いたことがあるぞ";
@@ -3245,7 +3245,7 @@ function func152(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「ある者はダンジョンの奥に";
@@ -3254,7 +3254,7 @@ function func152(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「またある者は『幸福』を";
@@ -3263,7 +3263,7 @@ function func152(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「ここならば…";
@@ -3307,7 +3307,7 @@ function func153(this: any) {
         var_757 = 0;
         var_756 = 0;
         var_374 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3333,7 +3333,7 @@ function func153(this: any) {
             var_300 = 0;
         }
         var_758 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「ここはいつもの…」";
@@ -3374,7 +3374,7 @@ function func153(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「さっきのホテル、いや墓場にも";
@@ -3383,7 +3383,7 @@ function func153(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「そして、結局はこの場所へ";
@@ -3392,7 +3392,7 @@ function func153(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「あの老婆は別の場所を探せと";
@@ -3401,7 +3401,7 @@ function func153(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「ハッ？！」";
@@ -3411,7 +3411,7 @@ function func153(this: any) {
         yield func050();
         var_199 = 3;
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「そこの階段は…";
@@ -3420,7 +3420,7 @@ function func153(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「怪しいのは その中か？」";
@@ -3444,7 +3444,7 @@ function func154(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         yield func335();
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3492,7 +3492,7 @@ function func154(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "…またこのホテルか？";
@@ -3501,7 +3501,7 @@ function func154(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "これもレクイエムの能力なのか、";
@@ -3510,7 +3510,7 @@ function func154(this: any) {
         var_300 = 0;
         yield func050();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "どちらなのかはわからんが、";
@@ -3790,7 +3790,7 @@ function func155(this: any) {
         var_27_x = var_27[1];
         yield func340(); // キー入力による選択処理
         var_198 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -3974,7 +3974,7 @@ function func155(this: any) {
         var_409 = 0;
         yield func337(); // メッセージ関係呼び出し
         var_199 = 8;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -4080,7 +4080,7 @@ function func156(this: any) {
         var_271 = 0;
         var_757 = 0;
         var_374 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -4106,7 +4106,7 @@ function func156(this: any) {
             var_300 = 0;
         }
         var_758 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「ここはいつもの…」";
@@ -4147,7 +4147,7 @@ function func156(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「何でまたここに";
@@ -4522,6 +4522,7 @@ function func162(this: any) {
         return;
     });
 }
+// ヴェネチアホテルのアイテム配置
 function func163(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(163);
@@ -4582,7 +4583,7 @@ function func163(this: any) {
 
         // buffer(18)は"img4.gif"。X座標var_779、Y座標var_780から切り取り長さ X方向340、Y方向340
         // 絵: 
-        gcopy(18, var_779, var_780, 340, 340);
+        gcopy(18, var_779, var_780, 340, 340); // buffer(18)は"img4.gif" // マップ描画 (ヴェネチアホテル、亀の中)
         var_781 = 17;
         var_782 = 5;
         if (var_199 == 4) {
@@ -4617,83 +4618,83 @@ function func163(this: any) {
 
             // buffer(18)は"img4.gif"。X座標1400、Y座標680から切り取り長さ X方向40、Y方向40
             // 絵: ヴェネチアホテルにあるPC (NPCが画面内に出てくる直前のノイズ画面)
-            gcopy(18, 1400, 680, 40, 40);
+            gcopy(18, 1400, 680, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 1) {
 
             // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
             // 絵:
-            gcopy(18, 1440, 680, 40, 40);
+            gcopy(18, 1440, 680, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 2) {
 
 
-            gcopy(18, 1440, 720, 40, 40);
+            gcopy(18, 1440, 720, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 3) {
 
 
-            gcopy(18, 1440, 760, 40, 40);
+            gcopy(18, 1440, 760, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 4) {
 
 
-            gcopy(18, 1440, 800, 40, 40);
+            gcopy(18, 1440, 800, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 5) {
 
 
-            gcopy(18, 1440, 840, 40, 40);
+            gcopy(18, 1440, 840, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 6) {
 
 
-            gcopy(18, 1440, 880, 40, 40);
+            gcopy(18, 1440, 880, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 7) {
 
 
-            gcopy(18, 1440, 920, 40, 40);
+            gcopy(18, 1440, 920, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 8) {
 
 
-            gcopy(18, 1440, 960, 40, 40);
+            gcopy(18, 1440, 960, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 9) {
 
 
-            gcopy(18, 1440, 1000, 40, 40);
+            gcopy(18, 1440, 1000, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 10) {
 
 
-            gcopy(18, 1440, 1040, 40, 40);
+            gcopy(18, 1440, 1040, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 11) {
 
 
-            gcopy(18, 1440, 1080, 40, 40);
+            gcopy(18, 1440, 1080, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 12) {
 
 
-            gcopy(18, 1400, 720, 40, 40);
+            gcopy(18, 1400, 720, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 13) {
 
 
-            gcopy(18, 1400, 760, 40, 40);
+            gcopy(18, 1400, 760, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 14) {
 
 
-            gcopy(18, 1400, 800, 40, 40);
+            gcopy(18, 1400, 800, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 15) {
 
 
-            gcopy(18, 1400, 840, 40, 40);
+            gcopy(18, 1400, 840, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_404 >= 1) {
             var_781 = 17;
@@ -4759,7 +4760,7 @@ function func163(this: any) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
             gmode(2);
-            gcopy(18, 1400, 1000, 40, 80);
+            gcopy(18, 1400, 1000, 40, 80); // buffer(18)は"img4.gif"
             if (var_760 >= 1) {
                 if (var_199 == 4) {
                     pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4789,16 +4790,16 @@ function func163(this: any) {
                     pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
                 }
                 if (var_760 == 4) {
-                    gcopy(18, 1360, 1000, 40, 80);
+                    gcopy(18, 1360, 1000, 40, 80); // buffer(18)は"img4.gif"
                 }
                 if (var_760 == 3) {
-                    gcopy(18, 0, 240, 40, 40);
+                    gcopy(18, 0, 240, 40, 40); // buffer(18)は"img4.gif"
                 }
                 if (var_760 == 2) {
-                    gcopy(18, 0, 280, 40, 40);
+                    gcopy(18, 0, 280, 40, 40); // buffer(18)は"img4.gif"
                 }
                 if (var_760 == 1) {
-                    gcopy(18, 0, 320, 40, 40);
+                    gcopy(18, 0, 320, 40, 40); // buffer(18)は"img4.gif"
                 }
             }
         }
@@ -4833,7 +4834,7 @@ function func163(this: any) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
             gmode(2);
-            gcopy(18, 80, 1080, 120, 120);
+            gcopy(18, 80, 1080, 120, 120); // buffer(18)は"img4.gif"
             var_781 = 12;
             var_782 = 6;
             if (var_199 == 4) {
@@ -4898,13 +4899,13 @@ function func163(this: any) {
             }
             gmode(2);
             if (var_784 == 0 || var_784 == 3) {
-                gcopy(18, 0, 0, 40, 40);
+                gcopy(18, 0, 0, 40, 40); // buffer(18)は"img4.gif" 地球儀
             }
             if (var_784 == 1 || var_784 == 4) {
-                gcopy(18, 0, 40, 40, 40);
+                gcopy(18, 0, 40, 40, 40); // buffer(18)は"img4.gif" 地球儀
             }
             if (var_784 == 2 || var_784 == 5) {
-                gcopy(18, 0, 80, 40, 40);
+                gcopy(18, 0, 80, 40, 40); // buffer(18)は"img4.gif" 地球儀
             }
         }
         var_781 = 15;
@@ -4985,7 +4986,7 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gcopy(18, 80, 360, 120, 360);
+            gcopy(18, 80, 360, 120, 360); // buffer(18)は"img4.gif" 細長いやつ
         }
         if (var_559 < 2) {
             if (var_559 == 0) {
@@ -5023,11 +5024,12 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gcopy(18, 960, 1040, 360, 160);
+            gcopy(18, 960, 1040, 360, 160); // buffer(18)は"img4.gif" 細長いやつ
         }
         return;
     });
 }
+
 function func164(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(164);
@@ -5085,7 +5087,7 @@ function func164(this: any) {
         }
         pos(0, 0);
         gmode(2);
-        gcopy(18, var_779, var_780, 340, 340);
+        gcopy(18, var_779, var_780, 340, 340); // buffer(18)は"img4.gif"
         return;
     });
 }

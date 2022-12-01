@@ -1134,7 +1134,7 @@ function func511(this: any) {
                 bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1283 = 1;
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1250,7 +1250,7 @@ function func511(this: any) {
                 bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1283 = 1;
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1527,7 +1527,7 @@ function func511(this: any) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             var_2267 = dim(10);
             var_143 = 1;
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1949,7 +1949,7 @@ function func511(this: any) {
                 var_102 = 1;
             }
             if (var_2269 >= 1) {
-                yield func094();
+                yield func094(); // メッセージ送りの際の効果音
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -2180,7 +2180,7 @@ function func511(this: any) {
         // No = 115 Gエクスペリエンスの発動処理
         if (activated_disc_id == 115) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3060,7 +3060,7 @@ function func511(this: any) {
                 var_1845 = 0;
             }
             var_420 = 7;
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3095,7 +3095,7 @@ function func511(this: any) {
                 // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "フフフ･･･";
@@ -5297,7 +5297,7 @@ function func511(this: any) {
             var_1583 = 0;
             belongings_item_list = 308;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -5339,7 +5339,7 @@ function func511(this: any) {
             if (var_570 == 3) {
                 bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -5585,7 +5585,7 @@ function func511(this: any) {
             var_1583 = 0;
             belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6271,7 +6271,7 @@ function func511(this: any) {
         // No = 395 バイツァ・ダストの発動処理
         if (activated_disc_id == 395) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6417,7 +6417,7 @@ function func511(this: any) {
             }
             if (var_2314 == 1) {
                 yield func340(); // キー入力による選択処理
-                yield func094();
+                yield func094(); // メッセージ送りの際の効果音
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "すでに「瞳」の中に入っている！";
@@ -6479,7 +6479,7 @@ function func511(this: any) {
                 yield func047();
                 yield func340(); // キー入力による選択処理
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -7341,7 +7341,7 @@ function func511(this: any) {
                 yield func337(); // メッセージ関係呼び出し
                 var_1321 = var_1321 + 1;
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -7360,7 +7360,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "「あなたが今のぼくの本体なんです！」";
@@ -7375,7 +7375,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "「ぼくの能力は人に囁くだけ」";
@@ -7390,7 +7390,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "「イヒヒ！」　「ねっ！」";
@@ -7405,7 +7405,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "「ポコチンまで干からびさせて";
@@ -7420,7 +7420,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "「どこへ行こうとも…";
@@ -7435,7 +7435,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "「疲労とダメージで";
@@ -7450,7 +7450,7 @@ function func511(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "「精神がまいっちまって";
@@ -8096,7 +8096,7 @@ function func511(this: any) {
         }
         // No = 412 タスクの発動処理
         if (activated_disc_id == 412) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -8770,7 +8770,7 @@ function func513(this: any) {
             var_357 = var_2261;
         }
         var_1254 = 0;
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -9647,7 +9647,7 @@ function func524(this: any) {
         dbgprt(524);
         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
         if (var_233[var_225].Var0 != 600 && var_233[var_225].Var0 != 602 && var_233[var_225].Var0 != 604 && var_233[var_225].Var0 != 630 && var_233[var_225].Var0 != 631 && var_233[var_225].Var0 != 632 && var_233[var_225].Var0 != 633 && var_233[var_225].Var0 != 634 && var_233[var_225].Var0 != 636 && var_233[var_225].Var0 != 639) {
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -9725,7 +9725,7 @@ function func524(this: any) {
         }
         yield func430();
         yield func433(); // アイテム配列(所持アイテム)初期化関数
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -11073,7 +11073,7 @@ function func533(this: any) {
 function func534(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(534);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -16228,7 +16228,7 @@ function func547(this: any) {
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                yield func094();
+                yield func094(); // メッセージ送りの際の効果音
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -16613,7 +16613,7 @@ function func548(this: any) {
         var_546 = 1;
         var_2494 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -16728,7 +16728,7 @@ function func551(this: any) {
         var_546 = 1;
         var_2495 = 1;
         var_548 = 1;
-        yield func839();
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
@@ -22287,6 +22287,7 @@ function func569(this: any) {
             var_313 = 0;
             var_2616 = 1;
         }
+        // No = 61 ヨーヨーマッ
         if (var_83[var_2611].Var0 == 61 && var_313 == var_2611) {
             var_313 = 0;
             var_2616 = 1;
@@ -23144,6 +23145,7 @@ function func569(this: any) {
                     var_83[var_2611].Var4 = 0;
                 }
             }
+            // No = 61 ヨーヨーマッ
             if (var_83[var_2611].Var0 == 61 && var_83[var_2611].Var10 != 14) {
                 var_2648 = 1;
                 for (let cnt3 = 0; cnt3 < var_336; ++cnt3) {
@@ -26345,7 +26347,7 @@ function func575(this: any) {
             if (var_83[var_673].Var0 == 58) {
                 var_2708 = 1;
             }
-            if (var_83[var_673].Var0 == 61) {
+            if (var_83[var_673].Var0 == 61) { // No = 61 ヨーヨーマッ
                 var_2708 = 1;
             }
             if (var_83[var_673].Var0 == 116) {
@@ -28990,6 +28992,7 @@ function func579(this: any) {
                     if (var_83[var_673].Var0 == 19 && var_201 != 14 && var_201 == var_83[var_673].Var10 && var_157 != 1) {
                         yield func608();
                     }
+                    // No = 61 ヨーヨーマッ
                     if (var_83[var_673].Var0 == 61 && var_201 != 14 && var_201 == var_83[var_673].Var10 && var_157 != 1) {
                         yield func611();
                     }
@@ -30997,7 +31000,7 @@ function func589(this: any) {
             var_271 = 0;
             var_1583 = 0;
             yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             if (var_2352 == 0) {
@@ -31052,7 +31055,7 @@ function func589(this: any) {
                 var_2836++;
             }
             if (var_1565 >= 1) {
-                yield func094();
+                yield func094(); // メッセージ送りの際の効果音
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -31157,7 +31160,7 @@ function func589(this: any) {
 function func590(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(590);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -31203,7 +31206,7 @@ function func590(this: any) {
         var_271 = 0;
         var_1583 = 0;
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "……フフ";
@@ -31281,7 +31284,7 @@ function func592(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(592);
         var_2352 = rnd(3);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -31366,7 +31369,7 @@ function func593(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(593);
         var_2352 = rnd(5);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -31449,7 +31452,7 @@ function func593(this: any) {
 function func594(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(594);
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -31466,7 +31469,7 @@ function func594(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        yield func094();
+        yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         comments_row1a = "我とともに来たれ…";
@@ -31582,7 +31585,7 @@ function func595(this: any) {
         if (var_2352 == 7) {
             comments_row1 = "ウンガロ「これからはおれの時代だッ！」";
             comments_row2 = "";
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
         }
         var_25_x = var_25[2];
         var_26_x = var_26[2];
@@ -32011,7 +32014,7 @@ function func596(this: any) {
             yield func340(); // キー入力による選択処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            yield func094();
+            yield func094(); // メッセージ送りの際の効果音
             var_2849 = rnd(7);
             var_2849 = var_2849 + 1;
             if (equip_disc[315] == 1) {

@@ -9158,7 +9158,7 @@ function func354(this: any) {
             }
             if (var_83[var_1351].Var0 >= 150 && var_83[var_1351].Var0 < 200) {
                 var_965 = 13; // buffer(13)は"img_enemy4a.gif"
-                var_1352 = var_83[var_1351].Var0 - 150;
+                var_1352 = var_83[var_1351].Var0 - 150; // ロッコ・バロッコ所長はenemy_list = 173。173 - 150 = 23。23 * 40 = 920となり、Y軸920で合致する。
             }
             gcopy(var_965, 40, var_1352 * 40, 40, 40);
         }
@@ -9666,7 +9666,7 @@ function func354(this: any) {
             }
             if (var_1374 >= 150 && var_1374 < 200) {
                 var_1375 = 13; // buffer(13)は"img_enemy4a.gif"
-                var_1376 = var_1374 - 150;
+                var_1376 = var_1374 - 150; // ロッコ・バロッコ所長はenemy_list = 173。173 - 150 = 23。23 * 40 = 920となり、Y軸920で合致する。
             }
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             if (var_1365 == 4) {
@@ -9857,7 +9857,7 @@ function func354(this: any) {
             }
             if (var_83[var_1385].Var0 >= 150 && var_83[var_1385].Var0 < 200) {
                 var_1375 = 13; // buffer(13)は"img_enemy4a.gif"
-                var_1376 = var_1386 - 150;
+                var_1376 = var_1386 - 150; // ロッコ・バロッコ所長はenemy_list = 173。173 - 150 = 23。23 * 40 = 920となり、Y軸920で合致する。
             }
             if (var_199 == 4) {
                 pos((var_455 - var_66 + 4) * 40 + 20, (var_456 - var_67 + 4) * 40 - 10);
@@ -12368,7 +12368,7 @@ function func354X(this: any) {
                     }
                     if (var_1506 >= 150 && var_1506 < 200) {
                         var_1375 = 13; // buffer(13)は"img_enemy4a.gif"
-                        var_1376 = var_1386 - 150;
+                        var_1376 = var_1386 - 150; // ロッコ・バロッコ所長はenemy_list = 173。173 - 150 = 23。23 * 40 = 920となり、Y軸920で合致する。
                     }
                 }
                 var_1503 = (var_1437 - var_66 + 4) * 40;
@@ -19973,8 +19973,9 @@ function func397(this: any) {
                 }
             }
         }
+        // No = 700 没アイテム? マンホールのような見た目 
         if (belongings_item_list == 700) {
-            gcopy(9, 0, 80, 40, 40);
+            gcopy(9, 0, 80, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 701) {
             if (var_1248 < 50) {
@@ -19995,7 +19996,7 @@ function func397(this: any) {
             if (var_1248 >= 150 && var_1248 < 200) {
                 var_965 = 13; // buffer(13)は"img_enemy4a.gif"
                 var_1826 = 20;
-                var_966 = (var_1248 - 150) * 40;
+                var_966 = (var_1248 - 150) * 40; // ロッコ・バロッコ所長はenemy_list = 173。173 - 150 = 23。23 * 40 = 920となり、Y軸920で合致する。
             }
             var_1827 = ginfo(22);
             var_1828 = ginfo(23);
@@ -20023,71 +20024,73 @@ function func397(this: any) {
         }
 
         if (belongings_item_list == 711) {
-            gcopy(9, 360, 160, 40, 40);
+            gcopy(9, 360, 160, 40, 40); // buffer(9)は"img_item.gif"
         }
-
+        // No = 712 やばいクスリ
         if (belongings_item_list == 712) {
-            gcopy(9, 40, 40, 40, 40);
+            gcopy(9, 40, 40, 40, 40); // buffer(9)は"img_item.gif"
         }
+        // No = 713 ポルポのライター
         if (belongings_item_list == 713) {
-            gcopy(9, 200, 40, 40, 40);
+            gcopy(9, 200, 40, 40, 40); // buffer(9)は"img_item.gif"
         }
+        // No = 714 紫外線照射装置
         if (belongings_item_list == 714) {
-            gcopy(9, 80, 120, 40, 40);
+            gcopy(9, 80, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 715) {
-            gcopy(9, 160, 120, 40, 40);
+            gcopy(9, 160, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 716) {
-            gcopy(9, 320, 120, 40, 40);
+            gcopy(9, 320, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 717) {
-            gcopy(9, 120, 80, 40, 40);
+            gcopy(9, 120, 80, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 718) {
-            gcopy(9, 160, 80, 40, 40);
+            gcopy(9, 160, 80, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 719) {
-            gcopy(9, 160, 80, 40, 40);
+            gcopy(9, 160, 80, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 720) {
-            gcopy(9, 120, 160, 40, 40);
+            gcopy(9, 120, 160, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 721) {
-            gcopy(9, 240, 80, 40, 40);
+            gcopy(9, 240, 80, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 722) {
-            gcopy(9, 320, 40, 40, 40);
+            gcopy(9, 320, 40, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 723) {
-            gcopy(9, 200, 160, 40, 40);
+            gcopy(9, 200, 160, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 724) {
-            gcopy(9, 0, 120, 40, 40);
+            gcopy(9, 0, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 725) {
-            gcopy(9, 160, 40, 40, 40);
+            gcopy(9, 160, 40, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 726) {
-            gcopy(9, 360, 80, 40, 40);
+            gcopy(9, 360, 80, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 727) {
-            gcopy(9, 280, 120, 40, 40);
+            gcopy(9, 280, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 728) {
-            gcopy(9, 40, 120, 40, 40);
+            gcopy(9, 40, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 729) {
-            gcopy(9, 360, 120, 40, 40);
+            gcopy(9, 360, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 730) {
-            gcopy(9, 400, 120, 40, 40);
+            gcopy(9, 400, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 731) {
-            gcopy(9, 440, 120, 40, 40);
+            gcopy(9, 440, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list == 900) {
-            gcopy(23, 360, 360, 40, 40);
+            gcopy(23, 360, 360, 40, 40); // buffer(9)は"img_item.gif"
         }
         if (belongings_item_list >= 901 && belongings_item_list < 1000) {
             if (belongings_item_list >= 901 && belongings_item_list <= 910) {
