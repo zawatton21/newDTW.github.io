@@ -214,7 +214,7 @@ function func701(this: any) {
     });
 }
 
-// 
+// 吸血鬼4兄弟に攻撃した際のメッセージ表示
 function func702(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(702);
@@ -751,6 +751,7 @@ function func705(this: any) {
             if (dangeon_number == 3 && var_83[var_402].Var0 == 143) {
                 yield func687();
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && var_83[var_402].Var16 >= 1000) {
                 var_2921 = var_83[var_402].Var0;
                 yield func633();
@@ -1190,7 +1191,7 @@ function func705(this: any) {
         if (var_2946 == 101 || var_2946 == 102 || var_2946 == 103 || var_2946 == 104) {
             if (var_83[var_402].Var20 == 0 && var_2217 == 0 && var_2196 == 0) {
                 if (var_83[var_402].Var12 != 1 && var_83[var_402].Var12 != 2 && var_83[var_402].Var12 != 3 && var_83[var_402].Var12 != 4 && var_83[var_402].Var12 != 5) {
-                    yield func702();
+                    yield func702(); // 吸血鬼4兄弟に攻撃した際のメッセージ表示
                 }
             }
         }
@@ -1214,7 +1215,7 @@ function func705(this: any) {
         return;
     });
 }
-// トニオさんの店 レストラン・トラサルディーの設定
+// トニオさんの店 レストラン・トラサルディーへ入店した時のメッセージ表示
 function func706(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(706);
@@ -1434,11 +1435,11 @@ function func707(this: any) {
             return;
         }
         if (var_1009 > 0) {
-            yield func708();
+            yield func708(); // トニオさんに話しかけて、アイテムを売る際のメッセージ処理
             return;
         }
         if (payment_amount > 0) {
-            yield func709();
+            yield func709(); // トニオさんに話しかけてアイテムを購入する際のメッセージ処理
             return;
         }
         yield func094();
@@ -1464,6 +1465,7 @@ function func707(this: any) {
         return;
     });
 }
+// トニオさんに話しかけて、アイテムを売る際のメッセージ処理
 function func708(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(708);
@@ -1492,6 +1494,7 @@ function func708(this: any) {
         return;
     });
 }
+// トニオさんに話しかけてアイテムを購入する際のメッセージ処理
 function func709(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(709);
@@ -1604,7 +1607,7 @@ function func713(this: any) {
                 for (let cnt3 = 0; cnt3 < 6; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                yield func709();
+                yield func709(); // トニオさんに話しかけてアイテムを購入する際のメッセージ処理
                 return;
             }
             if (var_3118 == 0) {
@@ -1620,7 +1623,7 @@ function func713(this: any) {
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            yield func709();
+            yield func709(); // トニオさんに話しかけてアイテムを購入する際のメッセージ処理
             return;
         }
         if (key_X_on == 1) {
@@ -1708,7 +1711,7 @@ function func715(this: any) {
             var_449 = var_449 + 1;
         }
         DSPLAY(audio_id = 139);
-        yield func718();
+        yield func718(); // トニオさんの店を出る際のメッセージ処理
         return;
     });
 }
@@ -1719,7 +1722,7 @@ function func716(this: any) {
         wallet = wallet - payment_amount;
         if (wallet < 0) {
             wallet = var_3119;
-            yield func719();
+            yield func719(); // トニオさんの店で購入する際に、所持金が足らない時のメッセージ処理
             return;
         }
         payment_amount = 0;
@@ -1727,7 +1730,7 @@ function func716(this: any) {
         var_106 = 0;
         count_buying_price = 0;
         DSPLAY(audio_id = 139);
-        yield func718();
+        yield func718(); // トニオさんの店を出る際のメッセージ処理
         return;
     });
 }
@@ -1742,6 +1745,7 @@ function func717(this: any) {
         return;
     });
 }
+// トニオさんの店を出る際のメッセージ処理
 function func718(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(718);
@@ -1765,7 +1769,7 @@ function func718(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         if (payment_amount > 0) {
-            yield func709();
+            yield func709(); // トニオさんに話しかけてアイテムを購入する際のメッセージ処理
             return;
         }
         var_217 = 1;
@@ -1773,6 +1777,7 @@ function func718(this: any) {
         return;
     });
 }
+// トニオさんの店で購入する際に、所持金が足らない時のメッセージ処理
 function func719(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(719);
@@ -1898,6 +1903,7 @@ function func721(this: any) {
         return;
     });
 }
+// アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
 function func722(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(722);
@@ -2225,6 +2231,7 @@ function func729(this: any) {
         return;
     });
 }
+// ダンジョンをうろついているスピードワゴンに話しかけた際のメッセージ処理
 function func730(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(730);
@@ -2499,6 +2506,7 @@ function func736(this: any) {
         yield func737();
     });
 }
+
 function func737(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(737);
@@ -2524,6 +2532,7 @@ function func737(this: any) {
         return;
     });
 }
+// ダンジョンをうろついているイギーに話しかけた際のメッセージ処理
 function func738(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(738);
@@ -2569,6 +2578,7 @@ function func738(this: any) {
         return;
     });
 }
+// イギーを仲間にした時のメッセージ処理
 function func739(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(739);
@@ -3083,7 +3093,7 @@ function func748(this: any) {
             return;
         }
         if (var_83[var_3072].Var31 == 5) {
-            yield func752();
+            yield func752(); // ダンジョン内で仲間になったペッシに話しかけた時のメッセージ処理
             return;
         }
         yield func094();
@@ -3232,6 +3242,7 @@ function func751(this: any) {
         return;
     });
 }
+// ダンジョン内で仲間になったペッシに話しかけた時のメッセージ処理
 function func752(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(752);
@@ -3335,6 +3346,7 @@ function func752(this: any) {
         return;
     });
 }
+// ダンジョン内で仲間の成長したペッシに話しかけた時のメッセージ処理
 function func753(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(753);
@@ -3444,6 +3456,7 @@ function func753(this: any) {
         return;
     });
 }
+// ペッシに話しかけて釣りするを選んだ際の動作処理
 function func754(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(754);
@@ -3794,6 +3807,7 @@ function func754(this: any) {
         return;
     });
 }
+// ダンジョン内のSPW財団の男に話しかけた時のメッセージ処理
 function func755(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(755);
@@ -3872,6 +3886,7 @@ function func755(this: any) {
         return;
     });
 }
+// 亀の中の幽霊のポルナレフに話しかけた時のメッセージ処理
 function func756(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(756);
@@ -3956,6 +3971,7 @@ function func757(this: any) {
         return;
     });
 }
+// ボインゴに話しかけた時のメッセージ処理
 function func758(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(758);
@@ -4131,6 +4147,7 @@ function func764(this: any) {
         return;
     });
 }
+// ヴェネチアホテルの地球儀へ話しかけた時の動作処理
 function func765(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(765);
@@ -4161,6 +4178,7 @@ function func765(this: any) {
         return;
     });
 }
+
 function func766(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(766);
@@ -4188,13 +4206,14 @@ function func766(this: any) {
         return;
     });
 }
+// ディアボロの試練の入り口(フラグ前は壁)へ話しかけた時の動作処理
 function func767(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(767);
         var_243 = 0;
         if (var_526 >= 1 && var_993 >= 1) {
             yield func051();
-            yield func828();
+            yield func828(); // ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
             return;
         }
         DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -4242,6 +4261,7 @@ function func767(this: any) {
         return;
     });
 }
+// ヴェネチアホテルのベッドへ話しかけた時のメッセージ処理
 function func768(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(768);
@@ -4269,6 +4289,7 @@ function func768(this: any) {
         return;
     });
 }
+// サヴェジガーデン作戦の鳩へ話しかけた時の動作処理
 function func769(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(769);

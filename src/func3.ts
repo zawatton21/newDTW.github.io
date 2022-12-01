@@ -15771,6 +15771,7 @@ function func367(this: any) {
 
         if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] != 0) {
             var_1664 = 0;
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && var_1661 == 0 && var_1660 >= 1) {
                 var_1664 = 1;
             }
@@ -17267,6 +17268,7 @@ function func380(this: any) {
             var_1706[var_1707][1] = "ﾜｲｱｰﾄﾞの罠で自分が釣られるぞ";
             var_1707++;
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_1719 = 0;
             var_1720 = 1;
@@ -17297,7 +17299,7 @@ function func381(this: any) {
         if (var_254 == 1) {
             if (var_1721 == 1) {
                 var_1721 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17306,7 +17308,7 @@ function func381(this: any) {
                 var_1721 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17315,7 +17317,7 @@ function func381(this: any) {
                 var_1721 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17324,7 +17326,7 @@ function func381(this: any) {
                 var_1721 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17333,7 +17335,7 @@ function func381(this: any) {
                 var_1721 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17345,7 +17347,7 @@ function func381(this: any) {
                 var_1721 = 5;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17354,7 +17356,7 @@ function func381(this: any) {
                 var_1721 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17363,7 +17365,7 @@ function func381(this: any) {
                 var_1721 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17372,7 +17374,7 @@ function func381(this: any) {
                 var_1721 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func381();
                 return;
@@ -17817,6 +17819,7 @@ function func384(this: any) {
                     }
                 }
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
                 if (var_452 == 0 && current_floor >= 6 && current_floor <= 30 && var_1734 == 0 && var_94 == 0) {
                     var_1768 = rnd(20);
@@ -18826,6 +18829,7 @@ function func385(this: any) {
             if (var_1760 == 3) {
                 var_78[var_866].Var0 = 646;
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
                 if (var_78[var_866].Var0 >= 900 && var_78[var_866].Var0 < 1000) {
                     yield func386();
@@ -18904,11 +18908,13 @@ function func385(this: any) {
                     var_78[var_866].Var0 = 800;
                 }
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
                 if (var_78[var_866].Var0 == 807) {
                     yield func386();
                 }
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
                 if (var_78[var_866].Var0 == 804) {
                     yield func386();

@@ -574,6 +574,7 @@ function func008(this: any) {
                 var_92 = 2;
             }
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_93 = rnd(14);
             if (var_93 == 0) {
@@ -697,6 +698,7 @@ function func008(this: any) {
         yield func562();
         yield func560();
         yield func563();
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             yield func564();
         }
@@ -866,8 +868,8 @@ function func008(this: any) {
         var_205 = 1;
         yield func231();
         var_206 = 0;
-        if (var_207 == 2) {
-            var_207 = 0;
+        if (ivents_flag == 2) {
+            ivents_flag = 0; // イベントフラグ初期化
             yield func152(); // 初めてダンジョンを訪れた際のディアボロの呟き
         }
         yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -1018,11 +1020,11 @@ function func009(this: any) {
         var_236 = var_66;
         var_237 = var_67;
         if (var_139 >= 1) {
-            yield func079();
+            yield func079(); // 仗助のdisc、ドッピオのdiscを使用した際のランダム動作処理
             return;
         }
         if (var_144 >= 1) {
-            yield func079();
+            yield func079(); // 仗助のdisc、ドッピオのdiscを使用した際のランダム動作処理
             return;
         }
         yield func080(false); // 各キー入力確認 OFF?
@@ -3117,6 +3119,7 @@ function func019(this: any) {
                 if (dangeon_number == 4 && current_floor > dangeon4_floor) {
                     dangeon4_floor = current_floor;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor > dangeon5_floor) {
                     dangeon5_floor = current_floor;
                 }
@@ -3136,7 +3139,7 @@ function func019(this: any) {
             if (var_382 == 1) {
                 var_382 = 0;
                 if (var_85 == 0 && var_163 == 0 && var_383 == 0) {
-                    yield func722();
+                    yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
                 }
                 var_383 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3204,7 +3207,7 @@ function func019(this: any) {
                 if (var_72[var_66][var_67] >= 1 && var_72[var_236][var_237] == 0 && var_85 == 0 && var_210 == 0) {
                     if (var_66 != var_236 || var_67 != var_237) {
                         var_240 = 0;
-                        yield func706();
+                        yield func706(); // トニオさんの店 レストラン・トラサルディーへ入店した時のメッセージ表示
                     }
                 }
                 if (var_262 == 0) {
@@ -3224,7 +3227,7 @@ function func019(this: any) {
                     }
                 }
                 if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
-                    yield func722();
+                    yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
                 }
                 var_165 = var_165 + 1;
                 if (equip_disc[358] == 1) {
@@ -3435,7 +3438,7 @@ function func019(this: any) {
                     var_164 = 0;
                     var_163 = 0;
                     if (var_72[var_66][var_67] == 0 && var_85 == 0) {
-                        yield func722();
+                        yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
                     }
                 }
             }
@@ -3576,14 +3579,14 @@ function func019(this: any) {
             // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0 && var_66 == 11 && var_67 == 8) {
                 if (var_66 != var_236 || var_67 != var_237) {
-                    yield func824();
+                    yield func824(); // ホテルの外の入り口へ入ろうとした際のメッセージ処理
                     return;
                 }
             }
             // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0 && var_404 >= 1 && var_66 == 17 && var_67 == 9) {
                 if (var_66 != var_236 || var_67 != var_237) {
-                    yield func826();
+                    yield func826(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
                     return;
                 }
             }
@@ -5292,6 +5295,7 @@ function func044(this: any) {
         return;
     });
 }
+
 function func045(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(45);
@@ -5307,6 +5311,7 @@ function func045(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             return;
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5 && current_floor == var_20) {
             return;
         }
@@ -5333,6 +5338,7 @@ function func045(this: any) {
         }
         var_73[var_491][var_492] = 1;
         var_200 = var_71[var_491][var_492];
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5 && current_floor != 1) {
             for (let cnt2 = 0; true; ++cnt2) {
                 var_491 = rnd(var_33);
@@ -5951,7 +5957,7 @@ function func055(this: any) {
                 var_501 = 1;
                 DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 yield func051();
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func055();
@@ -5961,7 +5967,7 @@ function func055(this: any) {
                 var_501 = 0;
                 DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 yield func051();
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func055();
@@ -6442,6 +6448,7 @@ function func060(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_527 = 0;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_527 = 0;
                 }
@@ -6623,7 +6630,7 @@ function func060(this: any) {
                     var_373 = 0;
                     var_94 = 0;
                     if (var_404 == 0) {
-                        var_207 = 3;
+                        ivents_flag = 3; // ホテルの外初クリア後(エンヤホテル)、ヴェネチアホテルに戻った際のイベントフラグ
                     }
                     var_532 = 1;
                     var_356 = 301;
@@ -6675,8 +6682,8 @@ function func060(this: any) {
                     var_356 = 302;
                     var_533 = 100000;
                     if (var_526 == 0) {
-                        var_526 = 1;
-                        var_207 = 6;
+                        var_526 = 1; // DIO&プッチ神父出現フラグ(var_526 >= 1)
+                        ivents_flag = 6; // ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)フラグ
                     }
                     if (var_535 == 1 && var_536 == 0) {
                         var_356 = 312;
@@ -6732,6 +6739,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20 && var_73[var_66][var_67] == 1) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
@@ -6840,6 +6848,7 @@ function func060(this: any) {
                     if (dangeon_number == 4 && current_floor > dangeon4_floor) {
                         dangeon4_floor = current_floor;
                     }
+                    // No = 5 なので、鉄の牢獄
                     if (dangeon_number == 5 && current_floor > dangeon5_floor) {
                         dangeon5_floor = current_floor;
                     }
@@ -6991,6 +7000,7 @@ function func063(this: any) {
                 if (dangeon_number == 1 && current_floor == 12) {
                     var_543 = 1;
                 }
+                // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
                     var_543 = 1;
                 }
@@ -6998,6 +7008,7 @@ function func063(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_543 = 1;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_543 = 1;
                 }
@@ -7039,7 +7050,7 @@ function func064(this: any) {
         }
         // No = 0 なので、拠点(ホテル、亀、)
         if (dangeon_number == 0 && var_404 >= 1 && var_66 == 17 && var_67 == 9) {
-            yield func826();
+            yield func826(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
             return;
         }
         if (var_77[var_66][var_67] > 0) {
@@ -7328,6 +7339,7 @@ function func068(this: any) {
         if (dangeon_number == 4) {
             mes("" + dangeon4_floor + "階");
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             mes("" + dangeon5_floor + "階");
         }
@@ -8193,6 +8205,7 @@ function func075(this: any) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「ウンガロ」によって守られている！";
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5 && current_floor == var_20) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「" + var_24 + "」によって守られている！";
@@ -8342,6 +8355,7 @@ function func076(this: any) {
                 // 絵文字:一巡後の世界
                 gcopy(34, 640, 800, 340, 40);
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
                 if (current_floor != var_20) {
                     // buffer(34)は"img_syageki.gif"。X座標640、Y座標1040から切り取り長さ X方向340、Y方向40
@@ -8533,6 +8547,7 @@ function func077(this: any) {
             if (dangeon_number == 4) {
                 gcopy(34, 640, 800, 340, 40);
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
                 if (current_floor != var_20) {
                     gcopy(34, 640, 1040, 340, 40);
@@ -8659,7 +8674,7 @@ function func078(this: any) {
     });
 }
 
-// ドッピオ化した際の設定
+// 仗助のdisc、ドッピオのdiscを使用した際のランダム動作処理
 function func079(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(79);

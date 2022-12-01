@@ -84,6 +84,7 @@ function func200(this: any) {
         return;
     });
 }
+
 function func201(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(201);
@@ -423,14 +424,14 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 0) {
                 var_910 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 1) {
                 var_910 = 0;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
@@ -440,14 +441,14 @@ function func206(this: any) {
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             if (var_910 == 1) {
                 var_910 = 0;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
             }
             if (var_910 == 0) {
                 var_910 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func206();
                 return;
@@ -2684,7 +2685,7 @@ function func229(this: any) {
         var_1038 = var_704[200];
         var_1039 = var_704[201];
         var_1040 = var_704[202];
-        var_207 = var_704[203];
+        ivents_flag = var_704[203];
         var_830 = var_704[204];
         var_179 = var_704[205];
         var_180 = var_704[206];
@@ -3021,7 +3022,7 @@ function func231(this: any) {
         var_704[200] = var_1038;
         var_704[201] = var_1039;
         var_704[202] = var_1040;
-        var_704[203] = var_207;
+        var_704[203] = ivents_flag;
         var_704[204] = var_830;
         var_704[205] = var_179;
         var_704[206] = var_180;
@@ -3701,7 +3702,7 @@ function func235(this: any) {
         var_789 = 0;
         var_788 = 0;
         var_1014 = 0;
-        var_207 = 0;
+        ivents_flag = 0; // イベントフラグ初期化
         var_993 = 0;
         var_175 = 0;
         var_177 = 0;
@@ -3709,7 +3710,7 @@ function func235(this: any) {
         var_178 = 0;
         var_1038 = 0;
         var_1040 = 0;
-        var_207 = 0;
+        ivents_flag = 0; // イベントフラグ初期化
         var_830 = 0;
         var_179 = 0;
         var_180 = 0;
@@ -4078,6 +4079,7 @@ function func243(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             var_86 = 0;
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5 && current_floor == var_20) {
             var_86 = 1;
         }
@@ -4511,6 +4513,7 @@ function func245(this: any) {
         if (dangeon_number <= 2) {
             var_1080 = 0;
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_1080 = 0;
         }
@@ -4581,6 +4584,7 @@ function func246(this: any) {
         if (dangeon_number == 3) {
             var_1052 = rnd(5);
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_1052 = rnd(5);
         }
@@ -4599,6 +4603,7 @@ function func246(this: any) {
         if (dangeon_number == 1) {
             var_96 = 0;
         }
+        // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
             var_96 = 0;
         }
@@ -4606,6 +4611,7 @@ function func246(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             var_96 = 0;
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5 && current_floor == var_20) {
             var_96 = 0;
         }

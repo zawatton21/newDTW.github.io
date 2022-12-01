@@ -1996,6 +1996,7 @@ function func420(this: any) {
             if (dangeon_number == 4 && belongings_item_list >= 100 && belongings_item_list < 400) {
                 var_1939 = 1;
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && belongings_item_list >= 100 && belongings_item_list < 400) {
                 var_1939 = 1;
             }
@@ -4339,7 +4340,7 @@ function func448(this: any) {
                 var_1991 = 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_1991 != 6) {
@@ -4347,7 +4348,7 @@ function func448(this: any) {
                 var_1991++;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
         }
@@ -4357,7 +4358,7 @@ function func448(this: any) {
                 var_1991 = 6;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             if (var_1991 != 1) {
@@ -4365,7 +4366,7 @@ function func448(this: any) {
                 var_1991--;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
         }
@@ -15104,7 +15105,7 @@ function func492(this: any) {
         if (var_2176 == 1) {
             return;
         }
-        // No = 3 & 4 & 5 なので、ディアボロの試練、一巡後の世界、?
+        // No = 3 & 4 & 5 なので、ディアボロの試練、一巡後の世界、鉄の牢獄
         if (dangeon_number == 3 || dangeon_number == 4 || dangeon_number == 5) {
             if (belongings_item_list >= 100 && belongings_item_list < 400 && var_862[belongings_item_list][0] == 0) {
                 yield func503(); // 未識別状態のアイテムの説明を見た時のメッセージ処理
@@ -17444,6 +17445,7 @@ function func498(this: any) {
             if (dangeon_number == 3 && current_floor == 99) {
                 comments_row2a = "するとこの階で…」";
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && current_floor == var_20) {
                 comments_row2a = "するとこの階で…」";
             }
@@ -17551,6 +17553,7 @@ function func498(this: any) {
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && current_floor == var_2203) {
                 comments_row1a = "「わけもわからず殺されて";
                 comments_row2a = "リタイアだァーッ！」";
@@ -17592,6 +17595,7 @@ function func498(this: any) {
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && current_floor == var_20) {
                 comments_row1a = "「わけもわからず殺されて";
                 comments_row2a = "リタイアだァーッ！」";
@@ -20728,12 +20732,12 @@ function func499(this: any) {
             yield func074();
         }
         if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
-            yield func722();
+            yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
         }
         if (var_72[var_236][var_237] == 0 && var_72[var_66][var_67] >= 1 && var_85 == 0 && var_210 == 0) {
             if (var_66 != var_236 || var_67 != var_237) {
                 var_240 = 0;
-                yield func706();
+                yield func706(); // トニオさんの店 レストラン・トラサルディーへ入店した時のメッセージ表示
             }
         }
         var_383 = 1;

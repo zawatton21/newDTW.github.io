@@ -1899,7 +1899,7 @@ function func511(this: any) {
             var_1480 = 1;
             for (let cnt2 = 0; cnt2 < 14; ++cnt2) {
                 var_1480++;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             var_271 = 0;
@@ -2985,7 +2985,7 @@ function func511(this: any) {
                 yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
             }
             if (var_72[var_66][var_67] == 0 && var_85 == 0 && var_163 == 0) {
-                yield func722();
+                yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
             }
             var_217 = 1;
             yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -3075,21 +3075,21 @@ function func511(this: any) {
             yield func047();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 3;
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             yield func094();
@@ -3106,21 +3106,21 @@ function func511(this: any) {
             yield func047();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 3;
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 2;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_1259 = 1;
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1259 = 0;
@@ -7043,7 +7043,7 @@ function func511(this: any) {
                 var_237 = var_1895;
                 yield func016();
                 if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
-                    yield func722();
+                    yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
                 }
                 if (var_71[var_455][var_456] == 0) {
                     var_71[var_455][var_456] = 14;
@@ -10220,7 +10220,7 @@ function func529(this: any) {
             var_65[var_236][var_237] = 0;
             yield func016();
             if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
-                yield func722();
+                yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
             }
             yield func337(); // メッセージ関係呼び出し
         }
@@ -10667,7 +10667,7 @@ function func532(this: any) {
         if (var_190 == 1) {
             if (var_526 == 0) {
                 var_526 = 1;
-                var_207 = 6;
+                ivents_flag = 6; // ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)フラグ
             }
             if (var_535 == 1) {
                 var_356 = 312;
@@ -11573,6 +11573,7 @@ function func536(this: any) {
             if (dangeon_number == 3 || dangeon_number == 4) {
                 var_2420 = rnd(27);
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
                 var_2420 = rnd(26);
             }
@@ -11673,6 +11674,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 21;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 21;
                 }
@@ -11693,6 +11695,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 15;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 15;
                 }
@@ -11713,6 +11716,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 3;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 3;
                 }
@@ -11733,6 +11737,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 16;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 16;
                 }
@@ -11753,6 +11758,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 9;
                 }
+                // No = 5 なので、鉄の牢獄
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 9;
                 }
@@ -16687,6 +16693,7 @@ function func550(this: any) {
         if (dangeon_number == 4) {
             var_356 = 310;
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_356 = 313;
         }
@@ -16878,6 +16885,7 @@ function func553(this: any) {
             if (dangeon_number == 3 && current_floor == 99) {
                 var_2497 = 1;
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && current_floor == var_20) {
                 var_2497 = 1;
             }
@@ -22135,6 +22143,7 @@ function func568(this: any) {
             var_1274 = ginfo(22);
             var_1275 = ginfo(23);
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5 && var_83[var_1641].Var16 >= 1000 && var_83[var_1641].Var13 == 0) {
             var_1274 = ginfo(22);
             var_1275 = ginfo(23);
@@ -22328,6 +22337,7 @@ function func569(this: any) {
                     if (var_96 >= 1 && var_201 == var_204) {
                         var_2625 = 1;
                     }
+                    // No = 5 なので、鉄の牢獄
                     if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                         var_2625 = 1;
                     }
@@ -22353,6 +22363,7 @@ function func569(this: any) {
                     if (equip_disc[107] == 1 && equip_disc[350] == 1) {
                         var_2625 = rnd(3);
                     }
+                    // No = 5 なので、鉄の牢獄
                     if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                         var_2625 = 1;
                     }
@@ -29416,7 +29427,7 @@ function func581(this: any) {
     
             DSPLAY(audio_id = 123);
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 var_742 = 2;
                 var_1301++;
@@ -30853,7 +30864,7 @@ function func588(this: any) {
         var_67 = var_2826;
         yield func016();
         if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
-            yield func722();
+            yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
         }
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {

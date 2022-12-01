@@ -9662,6 +9662,7 @@ function func627(this: any) {
         if (dangeon_number == 4) {
             yield func634();
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             yield func631();
         }
@@ -11928,11 +11929,11 @@ function func636(this: any) {
                 return;
             }
             if (var_66 == 16 && var_67 == 7 && var_199 == 8) {
-                yield func765();
+                yield func765(); // ヴェネチアホテルの地球儀へ話しかけた時の動作処理
                 return;
             }
             if (var_66 == 15 && var_67 == 6 && var_199 == 6) {
-                yield func765();
+                yield func765(); // ヴェネチアホテルの地球儀へ話しかけた時の動作処理
                 return;
             }
             if (var_66 == 15 && var_67 == 7 && var_199 == 4) {
@@ -11948,23 +11949,23 @@ function func636(this: any) {
                 return;
             }
             if (var_66 == 15 && var_67 == 6 && var_199 == 8) {
-                yield func767();
+                yield func767(); // ディアボロの試練の入り口(フラグ前は壁)へ話しかけた時の動作処理
                 return;
             }
             if (var_404 == 0 && var_66 == 12 && var_67 == 8 && var_199 == 8) {
-                yield func768();
+                yield func768(); // ヴェネチアホテルのベッドへ話しかけた時のメッセージ処理
                 return;
             }
             if (var_404 == 0 && var_66 == 13 && var_67 == 8 && var_199 == 8) {
-                yield func768();
+                yield func768(); // ヴェネチアホテルのベッドへ話しかけた時のメッセージ処理
                 return;
             }
             if (var_526 >= 1 && var_66 == 12 && var_67 == 8 && var_199 == 8 && var_759 >= 2) {
-                yield func832();
+                yield func832(); // NPC プッチ神父との会話メッセージ
                 return;
             }
             if (var_526 >= 1 && var_66 == 13 && var_67 == 8 && var_199 == 8 && var_759 >= 2) {
-                yield func833();
+                yield func833(); // NPC DIOとの会話メッセージ
                 return;
             }
         }
@@ -11989,7 +11990,7 @@ function func636(this: any) {
             }
             if (var_83[var_314].Var0 == 173) {
                 yield func640();
-                yield func835();
+                yield func835(); // NPC ロッコ・バロッコ所長との会話メッセージ
                 return;
             }
             if (var_83[var_314].Var0 == 169) {
@@ -11999,12 +12000,12 @@ function func636(this: any) {
             }
             if (var_83[var_314].Var0 == 149) {
                 yield func640();
-                yield func756();
+                yield func756(); // 亀の中の幽霊のポルナレフに話しかけた時のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 108) {
                 yield func640();
-                yield func738();
+                yield func738(); // ダンジョンをうろついているイギーに話しかけた際のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 130) {
@@ -12024,7 +12025,7 @@ function func636(this: any) {
             }
             if (var_83[var_314].Var0 == 36) {
                 yield func640();
-                yield func730();
+                yield func730(); // ダンジョンをうろついているスピードワゴンに話しかけた際のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 105) {
@@ -12039,17 +12040,17 @@ function func636(this: any) {
             }
             if (var_83[var_314].Var0 == 107) {
                 yield func640();
-                yield func753();
+                yield func753(); // ダンジョン内で仲間の成長したペッシに話しかけた時のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 57) {
                 yield func640();
-                yield func755();
+                yield func755(); // ダンジョンをうろついているSPW財団の男に話しかけた時のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 58) {
                 yield func640();
-                yield func758();
+                yield func758(); // ダンジョンをうろついているボインゴに話しかけた時のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 61) {
@@ -12067,7 +12068,7 @@ function func636(this: any) {
             }
             if (var_83[var_314].Var0 == 74) {
                 yield func640();
-                yield func769();
+                yield func769(); // ダンジョンをうろついているサヴェジガーデン作戦の鳩へ話しかけた時の動作処理
                 return;
             }
             if (var_83[var_314].Var0 == 75) {
@@ -12715,6 +12716,7 @@ function func636(this: any) {
             if (dangeon_number == 3 && var_83[var_314].Var0 == 143) {
                 yield func687();
             }
+            // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                 var_2921 = var_83[var_314].Var0;
                 yield func633();
@@ -13018,7 +13020,7 @@ function func636(this: any) {
         }
         if (var_2946 == 101 || var_2946 == 102 || var_2946 == 103 || var_2946 == 104) {
             if (var_83[var_314].Var20 == 0 && var_83[var_314].Var12 != 1 && var_83[var_314].Var12 != 2 && var_83[var_314].Var12 != 3 && var_83[var_314].Var12 != 4 && var_83[var_314].Var12 != 5) {
-                yield func702();
+                yield func702(); // 吸血鬼4兄弟に攻撃した際のメッセージ表示
             }
         }
         var_217 = 1;
@@ -20810,7 +20812,7 @@ function func673(this: any) {
             var_3080 = 0;
             if (var_404 == 0 && var_1041 == 0) {
                 var_1041 = 1;
-                var_207 = 5;
+                ivents_flag = 5; // レクイエムの大迷宮初クリア後、ヴェネチアホテルに戻った際のイベントフラグ
             }
             if (dangeon_number == 0) {
                 yield func182();
@@ -21129,6 +21131,7 @@ function func676(this: any) {
                 var_3084 = 0;
             }
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
             var_1765 = 1;
         }

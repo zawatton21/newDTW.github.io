@@ -251,7 +251,7 @@ function func803(this: any) {
                 Y_axis_item_position = Y_axis_item_position + 22;
                 var_225 = var_225 + 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
@@ -261,7 +261,7 @@ function func803(this: any) {
                 var_225 = 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
                 // ここも間違っている?
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
@@ -272,7 +272,7 @@ function func803(this: any) {
                 Y_axis_item_position = Y_axis_item_position - 22;
                 var_225 = var_225 - 1;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
@@ -281,7 +281,7 @@ function func803(this: any) {
                 Y_axis_item_position = 45 + (var_1013 - 1) * 22;
                 var_225 = var_1013;
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func803();
                 return;
@@ -1287,7 +1287,7 @@ function func819(this: any) {
                 var_3196 = var_3196 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
@@ -1297,7 +1297,7 @@ function func819(this: any) {
                 var_3196 = 0;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
@@ -1307,7 +1307,7 @@ function func819(this: any) {
                 var_3196 = var_3196 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
@@ -1317,7 +1317,7 @@ function func819(this: any) {
                 var_3196 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func819();
                 return;
@@ -1401,7 +1401,7 @@ function func820(this: any) {
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1411,7 +1411,7 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1421,7 +1421,7 @@ function func820(this: any) {
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1431,7 +1431,7 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1441,7 +1441,7 @@ function func820(this: any) {
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1451,7 +1451,7 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1461,7 +1461,7 @@ function func820(this: any) {
                 var_513 = var_513 + 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1471,7 +1471,7 @@ function func820(this: any) {
                 var_513 = 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1483,7 +1483,7 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1493,7 +1493,7 @@ function func820(this: any) {
                 var_513 = 5;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1503,7 +1503,7 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1513,7 +1513,7 @@ function func820(this: any) {
                 var_513 = 4;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1523,7 +1523,7 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1533,7 +1533,7 @@ function func820(this: any) {
                 var_513 = 3;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1543,7 +1543,7 @@ function func820(this: any) {
                 var_513 = var_513 - 1;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1553,7 +1553,7 @@ function func820(this: any) {
                 var_513 = 2;
 
                 DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                yield func337(); // メッセージ関係呼び出し
+                // yield func337(); // メッセージ関係呼び出し
                 yield func337(); // メッセージ関係呼び出し
                 yield func820();
                 return;
@@ -1803,7 +1803,7 @@ function func823(this: any) {
         return;
     });
 }
-// 各ダンジョンへの入り口設定
+// ホテルの外の入り口へ入ろうとした際のメッセージ処理
 function func824(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(824);
@@ -1908,6 +1908,8 @@ function func825(this: any) {
         return;
     });
 }
+
+// レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
 function func826(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(826);
@@ -2010,6 +2012,7 @@ function func827(this: any) {
         return;
     });
 }
+// ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
 function func828(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(828);
@@ -2042,7 +2045,7 @@ function func829(this: any) {
         dbgprt(829);
         yield func723();
         if (var_3121 >= 1) {
-            yield func831();
+            yield func831(); // 持ち込み不可ダンジョンにアイテムを所持した状態で入ろうとした際の忠告メッセージ処理
             return;
         }
         var_68 = 0;
@@ -2103,7 +2106,7 @@ function func829(this: any) {
         var_565 = 8;
         var_566 = 8;
         if (var_759 == 1) {
-            var_759 = 2;
+            var_759 = 2; // DIO&プッチ神父出現フラグ (var_759 >= 2)
         }
         if (var_407 == 1) {
             yield func905();
@@ -2195,6 +2198,7 @@ function func830(this: any) {
         return;
     });
 }
+// 持ち込み不可ダンジョンにアイテムを所持した状態で入ろうとした際の忠告メッセージ処理
 function func831(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(831);
@@ -2220,7 +2224,7 @@ function func831(this: any) {
     });
 }
 
-// NPC プッチ神父
+// NPC プッチ神父との会話メッセージ
 function func832(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(832);
@@ -2306,11 +2310,11 @@ function func832(this: any) {
             yield func839();
             return;
         }
-        yield func833();
+        yield func833(); // NPC DIOとの会話メッセージ
     });
 }
 
-// NPC DIO
+// NPC DIOとの会話メッセージ
 function func833(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(833);
@@ -2519,7 +2523,7 @@ function func834(this: any) {
     });
 }
 
-// NPC ロッコ・バロッコ所長
+// NPC ロッコ・バロッコ所長との会話メッセージ
 function func835(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(835);
@@ -2733,12 +2737,13 @@ function func835(this: any) {
         return;
     });
 }
+
 function func836(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(836);
         yield func723();
         if (var_3121 >= 1) {
-            yield func831();
+            yield func831(); // 持ち込み不可ダンジョンにアイテムを所持した状態で入ろうとした際の忠告メッセージ処理
             return;
         }
         var_68 = 0;
@@ -2809,7 +2814,7 @@ function func836(this: any) {
     });
 }
 
-// NPC マリリン・マンソン ?
+// 店のアイテムを購入せずに帰還した際、NPC マリリン・マンソンの登場処理
 function func837(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(837);
@@ -2979,7 +2984,7 @@ function func838(this: any) {
         return;
     });
 }
-// ダンジョン内でメニュー画面を開く処理？？
+// ダンジョン内での動作フラグ処理
 function func839(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(839);
@@ -3098,7 +3103,7 @@ function func839(this: any) {
                     var_3127 = 0;
                     var_548 = 0;
                     yield func051();
-                    yield func739();
+                    yield func739(); // イギーを仲間にした時のメッセージ処理
                     return;
                 }
                 if (var_3136 == 1) {
@@ -3214,7 +3219,7 @@ function func839(this: any) {
                 if (var_3137 == 1) {
                     var_3137 = 0;
                     var_548 = 0;
-                    yield func754();
+                    yield func754(); // ペッシに話しかけて釣りするを選んだ際の動作処理
                     return;
                 }
                 if (var_3156 == 1) {

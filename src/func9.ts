@@ -157,6 +157,7 @@ function func905(this: any) {
         if (dangeon_number == 4) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_21 + "に入った";
         }
@@ -2373,6 +2374,7 @@ function func933(this: any) {
         if (dangeon_number == 4) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは一巡後の世界へ進んだ";
         }
+        // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_3561 = "行橙ﾃﾞｨｱﾎﾞﾛは" + var_21 + "に入った";
         }
