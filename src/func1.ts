@@ -1188,7 +1188,7 @@ function func139(this: any) {
             }
             var_706 = var_704[1];
             var_707 = var_704[108];
-            var_708 = var_704[88];
+            var_708 = var_704[88]; // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
             var_709 = var_704[93];
             var_710 = var_704[94];
         }
@@ -1279,7 +1279,7 @@ function func139(this: any) {
             }
             var_713 = var_704[1];
             var_714 = var_704[108];
-            var_715 = var_704[88];
+            var_715 = var_704[88]; // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
             var_716 = var_704[93];
             var_717 = var_704[94];
         }
@@ -1370,7 +1370,7 @@ function func139(this: any) {
             }
             var_720 = var_704[1];
             var_721 = var_704[108];
-            var_722 = var_704[88];
+            var_722 = var_704[88]; // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
             var_723 = var_704[93];
             var_724 = var_704[94];
         }
@@ -2177,6 +2177,8 @@ function func148(this: any) {
             }
             pos(200, var_741 + 35);
             mes("" + var_707 + "回死亡");
+
+            // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグがONなら
             if (var_708 >= 1) {
                 pos(80, var_741 + 35);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -2185,12 +2187,12 @@ function func148(this: any) {
                 // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)
                 gcopy(8, 100, 82, 17, 17);
             }
+            // エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)解放フラグ
             if (var_709 >= 1) {
                 pos(102, var_741 + 35);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
-                // 絵:エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)                
+                // 絵:エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)
                 gcopy(8, 120, 82, 17, 17);
             }
             if (var_710 >= 1) {
@@ -2215,14 +2217,16 @@ function func148(this: any) {
             }
             pos(200, var_741 + 105);
             mes("" + var_714 + "回死亡");
+
+            // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
             if (var_715 >= 1) {
                 pos(80, var_741 + 105);
-                gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                
+                gmode(mode = 2, data2 = null, data3 = null, alpha = null);   
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
-                // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)                
+                // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)
                 gcopy(8, 100, 82, 17, 17);
             }
+            // エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)解放フラグ
             if (var_716 >= 1) {
                 pos(102, var_741 + 105);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -2255,6 +2259,8 @@ function func148(this: any) {
             }
             pos(200, var_741 + 175);
             mes("" + var_721 + "回死亡");
+
+            // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
             if (var_722 >= 1) {
                 pos(80, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -2263,6 +2269,7 @@ function func148(this: any) {
                 // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)                
                 gcopy(8, 100, 82, 17, 17);
             }
+            // エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)解放フラグ
             if (var_723 >= 1) {
                 pos(102, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -4383,22 +4390,22 @@ function func160(this: any) {
             var_97 = var_97 + 1;
             var_771 = var_97;
             var_82[13][9] = var_97;
-            var_83[var_97].Var0 = 55;
+            var_83[var_97].Var0 = 55; // enemy_list = 55 なので亀
             var_83[var_97].Var1 = 13;
             var_83[var_97].Var2 = 9;
             var_83[var_97].Var3 = 20;
             var_83[var_97].Var4 = 1;
             var_83[var_97].Var5 = 3;
             var_83[var_97].Var10 = 1;
-            var_83[var_97].Var14 = 1;
+            var_83[var_97].Var14 = 1; // ランダム移動??
             var_83[var_97].Var31 = 4;
             var_83[var_97].Var32 = rnd(6);
         }
-        if (var_759 >= 1) {
+        if (var_759 >= 1) { // 岸辺露伴とのイベントフラグがON
             var_97 = var_97 + 1;
             var_761 = var_97;
             var_82[16][7] = var_97;
-            var_83[var_97].Var0 = 142;
+            var_83[var_97].Var0 = 142; // enemy_list = 142 なので岸辺露伴
             var_83[var_97].Var1 = 16;
             var_83[var_97].Var2 = 7;
             var_83[var_97].Var3 = 20;
@@ -4407,10 +4414,14 @@ function func160(this: any) {
             var_83[var_97].Var10 = 1;
             var_83[var_97].Var31 = 4;
             var_83[var_97].Var32 = rnd(6);
+            
+            // ここから下はオリジナルには無いロッコ・バロッコ所長をヴェネチアホテルへ追加する要素。
+            // おそらくウェブ版にて独自に追加したと思われる。Ver0.1310で廃止。
+            /*
             var_97 = var_97 + 1;
             var_761 = var_97;
             var_82[18][10] = var_97;
-            var_83[var_97].Var0 = 173;
+            var_83[var_97].Var0 = 173; // enemy_list = 173 なのでロッコ・バロッコ所長
             var_83[var_97].Var1 = 18;
             var_83[var_97].Var2 = 10;
             var_83[var_97].Var3 = 20;
@@ -4419,6 +4430,7 @@ function func160(this: any) {
             var_83[var_97].Var10 = 1;
             var_83[var_97].Var31 = 4;
             var_83[var_97].Var32 = rnd(6);
+            */
         }
         return;
     });
@@ -4729,6 +4741,7 @@ function func163(this: any) {
             gmode(2);
             gcopy(18, 1440, 1120, 40, 40);
         }
+        // ディアボロの試練解放フラグがON
         if (var_526 >= 1) {
             var_781 = 15;
             var_782 = 5;
@@ -4760,7 +4773,7 @@ function func163(this: any) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
             gmode(2);
-            gcopy(18, 1400, 1000, 40, 80); // buffer(18)は"img4.gif"
+            gcopy(18, 1400, 1000, 40, 80); // buffer(18)は"img4.gif" 壁に開いた穴(ディアボロの試練への入り口)
             if (var_760 >= 1) {
                 if (var_199 == 4) {
                     pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4834,7 +4847,7 @@ function func163(this: any) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
             gmode(2);
-            gcopy(18, 80, 1080, 120, 120); // buffer(18)は"img4.gif"
+            gcopy(18, 80, 1080, 120, 120); // buffer(18)は"img4.gif" // DIO用にブラインドが降ろされた窓
             var_781 = 12;
             var_782 = 6;
             if (var_199 == 4) {
@@ -4867,7 +4880,8 @@ function func163(this: any) {
             gmode(2);
             gcopy(18, 1360, 1120, 80, 80); // DIOとプッチ神父?
         }
-        if (var_523 >= 1) {
+
+        if (var_523 >= 1) { // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             var_781 = 16;
             var_782 = 5;
             if (var_199 == 4) {

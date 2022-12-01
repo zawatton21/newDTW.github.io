@@ -11963,10 +11963,12 @@ function func636(this: any) {
                 yield func768(); // ヴェネチアホテルのベッドへ話しかけた時のメッセージ処理
                 return;
             }
+            // var_526 >= 1 ディアボロの試練解放フラグがON
             if (var_526 >= 1 && var_66 == 12 && var_67 == 8 && var_199 == 8 && var_759 >= 2) {
                 yield func832(); // NPC プッチ神父との会話メッセージ
                 return;
             }
+            // var_526 >= 1 ディアボロの試練解放フラグがON
             if (var_526 >= 1 && var_66 == 13 && var_67 == 8 && var_199 == 8 && var_759 >= 2) {
                 yield func833(); // NPC DIOとの会話メッセージ
                 return;

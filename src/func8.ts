@@ -1388,10 +1388,10 @@ function func820(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(820);
         var_3197 = 0;
-        if (var_523 >= 1) {
+        if (var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             var_3197++;
         }
-        if (var_524 >= 1) {
+        if (var_524 >= 1) { // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
             var_3197++;
         }
         yield func337(); // メッセージ関係呼び出し
@@ -1437,6 +1437,7 @@ function func820(this: any) {
                 yield func820();
                 return;
             }
+            // ディアボロの試練解放フラグがON
             if (var_526 >= 1 && var_513 != 3) {
                 var_516 = var_516 + 16;
                 var_513 = var_513 + 1;
@@ -1447,6 +1448,7 @@ function func820(this: any) {
                 yield func820();
                 return;
             }
+            // ディアボロの試練解放フラグがON
             if (var_526 >= 1 && var_513 == 3) {
                 var_516 = 88;
                 var_513 = 1;
@@ -1519,6 +1521,7 @@ function func820(this: any) {
                 yield func820();
                 return;
             }
+            // ディアボロの試練解放フラグがON
             if (var_526 >= 1 && var_513 != 1) {
                 var_516 = var_516 - 16;
                 var_513 = var_513 - 1;
@@ -1529,6 +1532,7 @@ function func820(this: any) {
                 yield func820();
                 return;
             }
+            // ディアボロの試練解放フラグがON
             if (var_526 >= 1 && var_513 == 1) {
                 var_516 = 120;
                 var_513 = 3;
@@ -1601,7 +1605,8 @@ function func820(this: any) {
                 return;
             }
             if (var_513 == 4) {
-                if (var_524 == 0 && var_523 >= 1) {
+                // var_524 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
+                if (var_524 == 0 && var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
                     var_198 = 0;
         
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -1614,7 +1619,8 @@ function func820(this: any) {
                     yield func166();
                     return;
                 }
-                if (var_524 >= 1 && var_523 == 0) {
+                // var_524 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
+                if (var_524 >= 1 && var_523 == 0) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
                     var_198 = 0;
         
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -1627,7 +1633,8 @@ function func820(this: any) {
                     yield func166();
                     return;
                 }
-                if (var_524 >= 1 && var_523 >= 1) {
+                // var_524 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
+                if (var_524 >= 1 && var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
                     var_198 = 0;
         
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -1940,6 +1947,7 @@ function func826(this: any) {
         return;
     });
 }
+
 function func827(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(827);
@@ -2015,6 +2023,7 @@ function func827(this: any) {
         return;
     });
 }
+
 // ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
 function func828(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -2043,6 +2052,7 @@ function func828(this: any) {
         return;
     });
 }
+
 function func829(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(829);
@@ -2108,8 +2118,8 @@ function func829(this: any) {
         var_568 = 0;
         var_565 = 8;
         var_566 = 8;
-        if (var_759 == 1) {
-            var_759 = 2; // DIO&プッチ神父出現フラグ (var_759 >= 2)
+        if (var_759 == 1) { // ディアボロの試練解放フラグがONの場合。岸辺露伴イベントが始まった際に1になる。
+            var_759 = 2; // その状態でダンジョンへ入ると、DIO&プッチ神父出現フラグ (var_759 >= 2)
         }
         if (var_407 == 1) {
             yield func905();
@@ -2232,7 +2242,7 @@ function func832(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(832);
         var_243 = 0;
-        if (var_523 == 0) {
+        if (var_523 == 0) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -2285,7 +2295,7 @@ function func832(this: any) {
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        if (var_523 >= 1) {
+        if (var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -2322,7 +2332,7 @@ function func833(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(833);
         var_243 = 0;
-        if (var_523 == 0) {
+        if (var_523 == 0) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             var_3202 = 0;
             var_480 = 1;
             for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {
@@ -2358,7 +2368,7 @@ function func833(this: any) {
                 yield func047();
                 var_198 = 1;
                 var_300 = 0;
-                var_523 = 1;
+                var_523 = 1; // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
                 yield func340(); // キー入力による選択処理
                 yield func094(); // メッセージ送りの際の効果音
                 comments_row1 = comments_row1a;
@@ -2401,7 +2411,7 @@ function func833(this: any) {
                 yield func340(); // キー入力による選択処理
             }
         }
-        if (var_523 == 0) {
+        if (var_523 == 0) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -2424,7 +2434,7 @@ function func833(this: any) {
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        if (var_523 >= 1) {
+        if (var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -2531,7 +2541,7 @@ function func835(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(835);
         var_243 = 0;
-        if (var_524 >= 1) {
+        if (var_524 >= 1) { // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -2549,7 +2559,7 @@ function func835(this: any) {
             var_198 = 1;
             var_300 = 0;
         }
-        if (var_524 == 0) {
+        if (var_524 == 0) { // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -2726,7 +2736,7 @@ function func835(this: any) {
             var_300 = 0;
             yield func047();
             yield func050();
-            var_524 = 1;
+            var_524 = 1; // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
         }
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -2804,7 +2814,7 @@ function func836(this: any) {
         if (var_407 == 2) {
             yield func933();
         }
-        var_524 = 1;
+        var_524 = 1; // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
         var_205 = 1;
         yield func231();
         yield func076(); // マップ背景画像の読込

@@ -103,7 +103,7 @@ let var_17 :any;
 let var_18 :any;
 let var_19 :any;
 let var_20 :any;
-let var_21 :any;
+let var_21 :string; // dangeon_number 5 の名称 「鉄の牢獄」
 let var_22 :any;
 let var_23 :any;
 let var_24 :any;
@@ -603,17 +603,17 @@ let var_512 :any;
 let var_513 :any;
 let var_514 :any;
 let var_515 :any;
-let var_516 :any;
+let var_516 :number;
 let var_517 :any;
 let var_518 :any;
 let var_519 :any;
 let var_520 :any;
 let var_521 :any;
 let var_522 :any;
-let var_523 :any;
-let var_524 :any;
+let var_523 :number;  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
+let var_524 :number; // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
 let var_525 :any;
-let var_526 :any;
+let var_526 :number; // ディアボロの試練解放フラグ
 let var_527 :any;
 let var_528 :any;
 let var_529 :any;
@@ -795,22 +795,22 @@ let var_704 :any;
 let var_705 :any;
 let var_706 :any;
 let var_707 :any;
-let var_708 :any;
-let var_709 :any;
+let var_708 :number; // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
+let var_709 :number; // エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)解放フラグ
 let var_710 :any;
 let var_711 :any;
 let var_712 :any;
 let var_713 :any;
 let var_714 :any;
-let var_715 :any;
-let var_716 :any;
+let var_715 :number; // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
+let var_716 :number; // エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)解放フラグ
 let var_717 :any;
 let var_718 :any;
 let var_719 :any;
 let var_720 :any;
 let var_721 :any;
-let var_722 :any;
-let var_723 :any;
+let var_722 :number; // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
+let var_723 :number; // エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)解放フラグ
 let var_724 :any;
 let var_725 :any;
 let var_726 :any;
@@ -846,7 +846,7 @@ let var_755 :any;
 let var_756 :any;
 let var_757 :any;
 let var_758 :any;
-let var_759 :any;
+let var_759 :number;
 let var_760 :any;
 let var_761 :any;
 let var_762 :any;
@@ -1080,7 +1080,7 @@ let var_989 :any;
 let var_990 :any;
 let var_991 :any;
 let var_992 :any;
-let var_993 :any;
+let var_993 :number; // ディアボロの試練解放フラグ
 let var_994 :any;
 let var_995 :any;
 let var_996 :any;
@@ -3305,7 +3305,7 @@ let var_3193 :any;
 let var_3194 :any;
 let var_3195 :any;
 let var_3196 :any;
-let var_3197 :any;
+let var_3197 :number;
 let var_3198 :any;
 let var_3199 :any;
 let var_3200 :any;

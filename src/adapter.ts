@@ -8,17 +8,17 @@ function undef_func(str: any, arg: any = null) {
 // 攻略済みにする機能 (ウェブ版で追加された機能。全てのダンジョンを解放する)
 function data_update_for_debug(e: any) {
     var_404 = 1;
-    var_704[88] = 1;
-    var_704[34] = 1;
+    var_704[88] = 1; // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
+    var_704[34] = 1; // ディアボロの試練解放フラグ
     var_704[93] = 2;
     var_526 = 2;
-    var_993 = 1; // 岸辺露伴登場フラグ?
-    var_704[218] = 1; 
-    var_704[235] = 1;
-    var_704[221] = 2;
+    var_993 = 1; // ディアボロの試練解放フラグ
+    var_704[218] = 1; // var_523へ代入
+    var_704[235] = 1; // var_524へ代入
+    var_704[221] = 2; // var_759へ代入
     var_523 = 1; // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
     var_524 = 1; // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
-    var_759 = 2;
+    var_759 = 2; // 1になると岸辺露伴、DIO&プッチ神父、所長がヴェネチアホテルへ登場する
 }
 
 function is_changed(x: any, y: any) {
@@ -92,7 +92,7 @@ function InitInput() {
     };
     // ブラウザ版でのコントロールやデバッグボタン機能　使わないのでコメントアウト
     //コメントアウトしたが重要機能っぽい。
-    /*
+
     const buttons = document.getElementsByTagName("button");
     for (let i = 0; i < buttons.length; ++i) {
         if (buttons[i].id == "reset_data") {
@@ -170,7 +170,7 @@ function InitInput() {
         reset_input(0, 0);
         isClick = false;
     };
-    */
+
 }
 
 // 時間取得？
@@ -534,7 +534,11 @@ delete "filename"		[ファイル削除]
 エラー12(「ファイルが見つからないか無効な名前です」)となります。
 delete命令を実行する前に exist命令でファイルの有無を確認するようにしてください。
 */
-function delete_(data0: any) { undef_func("delete_", [data0]); }
+// function delete_(data0: any) { undef_func("delete_", [data0]); }
+function delete_(file_name: any) { // Ver0.1310で追加
+    localStorage.removeItem(file_name);
+    location.reload();
+}
 
 /* HSP言語 dim命令
 参照元: http://lhsp.s206.xrea.com/manual/

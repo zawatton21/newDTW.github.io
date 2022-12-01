@@ -2533,11 +2533,8 @@ function func737(this: any) {
         return;
     });
 }
-<<<<<<< HEAD
+
 // ダンジョンをうろついているイギーに話しかけた際のメッセージ処理
-=======
-// ダンジョンをうろついているイギーに話しかけた時のメッセージ処理
->>>>>>> cdcf65d8089461686060b345bab0ac8a571e09e0
 function func738(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(738);
@@ -4167,7 +4164,7 @@ function func765(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "地球儀が置いてある。";
-        if (var_523 >= 1) {
+        if (var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
             comments_row1 = "地球儀がすごい速度で回転している。";
         }
         comments_row2 = "";
@@ -4217,12 +4214,15 @@ function func767(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(767);
         var_243 = 0;
-        if (var_526 >= 1 && var_993 >= 1) {
+        // var_526 >= 1 ディアボロの試練解放フラグがON
+        if (var_526 >= 1 && var_993 >= 1) { // var_993 >= 1 ディアボロの試練解放フラグがONなら
             yield func051();
             yield func828(); // ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
             return;
         }
         DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
+
+        // ディアボロの試練解放フラグがON
         if (var_526 >= 1 && var_993 == 0) {
             comments_row1 = "";
             comments_row2 = "";
@@ -5102,8 +5102,9 @@ function func778(this: any) {
             yield func784();
             return;
         }
+        // ディアボロの試練解放フラグがONなら
         if (var_993 == 1) {
-            yield func783();
+            yield func783(); // ディアボロの試練解放後、岸辺露伴に話しかけた時のメッセージ処理
             return;
         }
         yield func094(); // メッセージ送りの際の効果音
@@ -5246,7 +5247,7 @@ function func779(this: any) {
         yield func047();
         yield func050();
         yield func340(); // キー入力による選択処理
-        var_993 = 1;
+        var_993 = 1; // ディアボロの試練解放フラグON
         yield func051();
         var_198 = 0;
         yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -5639,6 +5640,7 @@ function func782(this: any) {
         return;
     });
 }
+// ディアボロの試練解放後、岸辺露伴に話しかけた時のメッセージ処理
 function func783(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(783);
@@ -5685,6 +5687,7 @@ function func783(this: any) {
         return;
     });
 }
+
 function func784(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(784);
