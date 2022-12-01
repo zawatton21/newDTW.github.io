@@ -2022,19 +2022,19 @@ function func225(this: any) {
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 var_961 = var_959 + var_960;
                 if (var_958[var_961] < 50) {
-                    var_965 = 6;
+                    var_965 = 6; // buffer(6)は"img_enemy1a.gif"
                     var_966 = var_958[var_961];
                 }
                 if (var_958[var_961] >= 50 && var_958[var_961] < 100) {
-                    var_965 = 21;
+                    var_965 = 21; // buffer(21)は"img_enemy2a.gif"
                     var_966 = var_958[var_961] - 50;
                 }
                 if (var_958[var_961] >= 100 && var_958[var_961] < 150) {
-                    var_965 = 27;
+                    var_965 = 27; // buffer(27)は"img_enemy3a.gif"
                     var_966 = var_958[var_961] - 100;
                 }
                 if (var_958[var_961] >= 150 && var_958[var_961] < 200) {
-                    var_965 = 13;
+                    var_965 = 13; // buffer(13)は"img_enemy4a.gif"
                     var_966 = var_958[var_961] - 150;
                 }
                 pos(var_964, var_963);

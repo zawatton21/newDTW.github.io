@@ -2532,7 +2532,11 @@ function func737(this: any) {
         return;
     });
 }
+<<<<<<< HEAD
 // ダンジョンをうろついているイギーに話しかけた際のメッセージ処理
+=======
+// ダンジョンをうろついているイギーに話しかけた時のメッセージ処理
+>>>>>>> cdcf65d8089461686060b345bab0ac8a571e09e0
 function func738(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(738);
@@ -3886,6 +3890,7 @@ function func755(this: any) {
         return;
     });
 }
+
 // 亀の中の幽霊のポルナレフに話しかけた時のメッセージ処理
 function func756(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -5058,7 +5063,7 @@ function func777(this: any) {
 }
 // ↑おそらくここまで鮮血のシャボン玉の機能
 
-// 岸辺露伴の設定
+// 岸辺露伴に話しかけた時のメッセージ処理
 function func778(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(778);

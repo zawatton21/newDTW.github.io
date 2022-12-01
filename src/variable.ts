@@ -1052,7 +1052,7 @@ let var_961 :any;
 let var_962 :any;
 let var_963 :any;
 let var_964 :any;
-let var_965 :any;
+let var_965 :number; // 敵の画像読み込み専用buffer ID。6, 13, 21, 27。
 let var_966 :any;
 let enemy_power :any;
 let enemy_defence :any;
@@ -1371,7 +1371,7 @@ let var_1280 :any;
 let var_1281 :any;
 let var_1282 :any;
 let var_1283 :any;
-let var_1284 :any;
+let bufferid_stand_disc :number; // スタンドdisc専用読み込みbuffer ID。gcopyで読み込む画像の割り振りに使われる。1、11、16、29のみ。
 let var_1285 :any;
 let var_1286 :any;
 let var_1287 :any;
@@ -1462,7 +1462,7 @@ let var_1371 :any;
 let var_1372 :any;
 let var_1373 :any;
 let var_1374 :any;
-let var_1375 :any;
+let var_1375 :number; // 敵が攻撃を受けた際のリアクション画像を読み込む専用のbuffer ID。6, 13, 21, 27。
 let var_1376 :any;
 let var_1377 :any;
 let var_1378 :any;

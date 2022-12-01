@@ -11988,9 +11988,10 @@ function func636(this: any) {
                 yield func651();
                 return;
             }
+            // enemy_list = 173 NPC ロッコ・バロッコ所長
             if (var_83[var_314].Var0 == 173) {
                 yield func640();
-                yield func835(); // NPC ロッコ・バロッコ所長との会話メッセージ
+                yield func835(); // NPC ロッコ・バロッコ所長に話しかけた時のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 169) {
@@ -11998,14 +11999,16 @@ function func636(this: any) {
                 yield func728();
                 return;
             }
+            // enemy_list = 149 幽霊のポルナレフ
             if (var_83[var_314].Var0 == 149) {
                 yield func640();
                 yield func756(); // 亀の中の幽霊のポルナレフに話しかけた時のメッセージ処理
                 return;
             }
+            // enemy_list = 108 イギー 
             if (var_83[var_314].Var0 == 108) {
                 yield func640();
-                yield func738(); // ダンジョンをうろついているイギーに話しかけた際のメッセージ処理
+                yield func738(); // ダンジョンをうろついているイギーに話しかけた時のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 130) {
@@ -12013,9 +12016,10 @@ function func636(this: any) {
                 yield func760();
                 return;
             }
+            // enemy_list = 142 岸辺露伴
             if (var_83[var_314].Var0 == 142) {
                 yield func640();
-                yield func778();
+                yield func778(); // 岸辺露伴に話しかけた時のメッセージ処理
                 return;
             }
             if (var_83[var_314].Var0 == 33) {

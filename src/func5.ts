@@ -613,6 +613,7 @@ function func506(this: any) {
                 // 修正値が1以上の際は、発動をした時に1引く
                 if (var_233[var_225].Var4 >= 1) {
                     var_233[var_225].Var4 = var_233[var_225].Var4 - 1;
+                    // var_233[var_225].Var4 = var_233[var_225].Var4; // デバッグ用 発動しても修正値減らない
                     
                     if (var_233[var_225].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
@@ -657,6 +658,7 @@ function func506(this: any) {
                 }
                 if (var_486[var_682][var_225][4] >= 1) {
                     var_486[var_682][var_225][4] = var_486[var_682][var_225][4] - 1;
+                    // var_486[var_682][var_225][4] = var_486[var_682][var_225][4]; // デバッグ用 発動しても修正値減らない
 
                     if (var_486[var_682][var_225][11] == 1) { // お店で発動した場合？
                         var_106 = 1;
@@ -687,6 +689,7 @@ function func506(this: any) {
                 }
                 if (var_78[var_321].Var4 >= 1) {
                     var_78[var_321].Var4 = var_78[var_321].Var4 - 1;
+                    // var_78[var_321].Var4 = var_78[var_321].Var4; // デバッグ用 発動しても修正値減らない
 
                     if (var_78[var_321].Var11 == 1) { // お店で発動した場合？
                         var_106 = 1;
@@ -1018,16 +1021,16 @@ function func511(this: any) {
         if (activated_disc_id == 103) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1283 = 1;
             comments_row1 = "";
@@ -1119,16 +1122,16 @@ function func511(this: any) {
         if (activated_disc_id == 114) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1283 = 1;
             yield func094();
@@ -1235,16 +1238,16 @@ function func511(this: any) {
         if (activated_disc_id == 307) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1283 = 1;
             yield func094();
@@ -1326,16 +1329,16 @@ function func511(this: any) {
         if (activated_disc_id == 207) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             if (var_172 == 1) {
                 comments_row1 = "";
@@ -1560,16 +1563,16 @@ function func511(this: any) {
         if (activated_disc_id == 113) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1283 = 1;
             comments_row1 = "";
@@ -2002,16 +2005,16 @@ function func511(this: any) {
         if (activated_disc_id == 107) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             if (var_172 == 1) {
                 comments_row1 = "";
@@ -2648,16 +2651,16 @@ function func511(this: any) {
         if (activated_disc_id == 108) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             comments_row1 = "";
             comments_row2 = "";
@@ -2757,16 +2760,16 @@ function func511(this: any) {
         if (activated_disc_id == 104) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1283 = 1;
             var_2261 = var_357;
@@ -3503,16 +3506,16 @@ function func511(this: any) {
         if (activated_disc_id == 205) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             if (var_172 == 1) {
                 comments_row1 = "";
@@ -5325,16 +5328,16 @@ function func511(this: any) {
         if (activated_disc_id == 203) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             yield func094();
             comments_row1 = "";
@@ -5909,16 +5912,16 @@ function func511(this: any) {
         if (activated_disc_id == 316) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             if (var_172 == 1) {
                 comments_row1 = "";
@@ -8547,16 +8550,16 @@ function func511(this: any) {
         if (activated_disc_id == 399) {
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_199 = 2;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -9289,7 +9292,9 @@ function func523(this: any) {
             yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
+        // ベースオンリーのDiscをベースとして合成しない時の処理
         if (var_233[var_225].Var0 == 100 || var_233[var_225].Var0 == 398 || var_233[var_225].Var0 == 108 || var_233[var_225].Var0 == 110 || var_233[var_225].Var0 == 113 || var_233[var_225].Var0 == 118 || var_233[var_225].Var0 == 123) {
+        // if (var_233[var_225].Var0 == 398 || var_233[var_225].Var0 == 108 || var_233[var_225].Var0 == 110 || var_233[var_225].Var0 == 113 || var_233[var_225].Var0 == 118 || var_233[var_225].Var0 == 123) { // デバッグ用 ベースオンリーのdiscも合成できる
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -9423,16 +9428,16 @@ function func523(this: any) {
         yield func430();
         yield func433(); // アイテム配列(所持アイテム)初期化関数
         if (var_570 == 0) {
-            var_1284 = 11;
+            bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
         }
         if (var_570 == 1) {
-            var_1284 = 1;
+            bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
         }
         if (var_570 == 2) {
-            var_1284 = 16;
+            bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
         }
         if (var_570 == 3) {
-            var_1284 = 29;
+            bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
         }
         var_271 = 1;
         var_1443 = 1;
@@ -12460,22 +12465,22 @@ function func539(this: any) {
         }
         if (var_888 == 77) {
             if (var_81[var_365][6] < 50) {
-                var_965 = 6;
+                var_965 = 6; // buffer(6)は"img_enemy1a.gif"
                 var_1826 = 15;
                 var_966 = var_81[var_365][6] * 40;
             }
             if (var_81[var_365][6] >= 50 && var_81[var_365][6] < 100) {
-                var_965 = 21;
+                var_965 = 21; // buffer(21)は"img_enemy2a.gif"
                 var_1826 = 22;
                 var_966 = (var_81[var_365][6] - 50) * 40;
             }
             if (var_81[var_365][6] >= 100 && var_81[var_365][6] < 150) {
-                var_965 = 27;
+                var_965 = 27; // buffer(27)は"img_enemy3a.gif"
                 var_1826 = 28;
                 var_966 = (var_81[var_365][6] - 100) * 40;
             }
             if (var_81[var_365][6] >= 150 && var_81[var_365][6] < 200) {
-                var_965 = 13;
+                var_965 = 13; // buffer(13)は"img_enemy4a.gif"
                 var_1826 = 20;
                 var_966 = (var_81[var_365][6] - 150) * 40;
             }
@@ -20779,43 +20784,43 @@ function func567(this: any) {
         dbgprt(567);
         if (var_1642 == 1) {
             if (var_83[var_1641].Var0 < 50) {
-                var_965 = 6; // buffer(6) は "img_enemy1a.gif"
+                var_965 = 6; // buffer(6)は"img_enemy1a.gif" // buffer(6) は "img_enemy1a.gif"
                 var_1826 = 15; // buffer(15) は "img_enemy1b.gif"
                 var_966 = var_83[var_1641].Var0;
             }
             if (var_83[var_1641].Var0 >= 50 && var_83[var_1641].Var0 < 100) {
-                var_965 = 21; // buffer(21) は "img_enemy2a.gif"
+                var_965 = 21; // buffer(21)は"img_enemy2a.gif" // buffer(21) は "img_enemy2a.gif"
                 var_1826 = 22; // buffer(22) は "img_enemy2b.gif"
                 var_966 = var_83[var_1641].Var0 - 50;
             }
             if (var_83[var_1641].Var0 >= 100 && var_83[var_1641].Var0 < 150) {
-                var_965 = 27; // buffer(27) は "img_enemy3a.gif"
+                var_965 = 27; // buffer(27)は"img_enemy3a.gif" // buffer(27) は "img_enemy3a.gif"
                 var_1826 = 28; // buffer(28) は "img_enemy3b.gif"
                 var_966 = var_83[var_1641].Var0 - 100;
             }
             if (var_83[var_1641].Var0 >= 150 && var_83[var_1641].Var0 < 200) {
-                var_965 = 13; // buffer(13) は "img_enemy4a.gif"
+                var_965 = 13; // buffer(13)は"img_enemy4a.gif" // buffer(13) は "img_enemy4a.gif"
                 var_1826 = 20; // buffer(20) は "img_enemy4b.gif"
                 var_966 = var_83[var_1641].Var0 - 150;
             }
             if (var_83[var_1641].Var0 == 97 && var_83[var_1641].Var31 >= 11 && var_83[var_1641].Var3 >= 1) {
                 if (var_83[var_1641].Var31 < 50) {
-                    var_965 = 6;
+                    var_965 = 6; // buffer(6)は"img_enemy1a.gif"
                     var_1826 = 15;
                     var_966 = var_83[var_1641].Var31;
                 }
                 if (var_83[var_1641].Var31 >= 50 && var_83[var_1641].Var31 < 100) {
-                    var_965 = 21;
+                    var_965 = 21; // buffer(21)は"img_enemy2a.gif"
                     var_1826 = 22;
                     var_966 = var_83[var_1641].Var31 - 50;
                 }
                 if (var_83[var_1641].Var31 >= 100 && var_83[var_1641].Var31 < 150) {
-                    var_965 = 27;
+                    var_965 = 27; // buffer(27)は"img_enemy3a.gif"
                     var_1826 = 28;
                     var_966 = var_83[var_1641].Var31 - 100;
                 }
                 if (var_83[var_1641].Var31 >= 150 && var_83[var_1641].Var31 < 200) {
-                    var_965 = 13;
+                    var_965 = 13; // buffer(13)は"img_enemy4a.gif"
                     var_1826 = 20;
                     var_966 = var_83[var_1641].Var31 - 150;
                 }
@@ -21313,6 +21318,7 @@ function func567(this: any) {
                 if (var_742 >= 5) {
                     var_2606 = 3;
                 }
+                // enemy_list = 136 シーザー
                 if (var_83[var_1641].Var0 == 136 && var_1198 >= 1) {
                     if (var_83[var_1641].Var5 == 2) {
                         gcopy(var_1826, 960, var_966 * 40, 40, 40);
@@ -21341,6 +21347,7 @@ function func567(this: any) {
                     yield func568();
                     return;
                 }
+                // enemy_list = 136 シーザー
                 if (var_83[var_1641].Var0 == 136) {
                     if (var_742 <= 2) {
                         var_2606 = 1;
@@ -21359,6 +21366,7 @@ function func567(this: any) {
                         var_1826 = var_965;
                     }
                 }
+                // enemy_list = 22 ｱｳﾞﾄﾞｩﾙ人形、enemy_list = 17 シアハートアタック、enemy_list = 71 ドゥービー
                 if (var_83[var_1641].Var0 == 22 || var_83[var_1641].Var0 == 17 || var_83[var_1641].Var0 == 71) {
                     if (var_742 <= 3) {
                         var_2606 = 1;
@@ -21370,6 +21378,7 @@ function func567(this: any) {
                         var_2606 = 3;
                     }
                 }
+                // enemy_list = 140 ジョナサン
                 if (var_83[var_1641].Var0 == 140) {
                     if (var_742 <= 3) {
                         var_2606 = 1;
@@ -21384,6 +21393,7 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
+                // enemy_list = 168 不明
                 if (var_83[var_1641].Var0 == 168) {
                     if (var_742 <= 3) {
                         var_2606 = 1;
@@ -21398,6 +21408,7 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
+                // enemy_list = 39 ハイウェイスター、enemy_list = 3 タワーオブグレー
                 if (var_83[var_1641].Var0 == 39 || var_83[var_1641].Var0 == 3) {
                     if (var_742 <= 3) {
                         var_2606 = 1;
@@ -21412,6 +21423,7 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
+                // enemy_list = 34 不明
                 if (var_83[var_1641].Var0 == 34) {
                     if (var_742 == 1 || var_742 == 3 || var_742 == 5) {
                         var_2606 = 1;
@@ -21423,6 +21435,7 @@ function func567(this: any) {
                         var_2606 = 3;
                     }
                 }
+                // enemy_list = 29 グリーン・ディ
                 if (var_83[var_1641].Var0 == 29) {
                     if (var_742 <= 5) {
                         var_2606 = 1;
@@ -21437,6 +21450,7 @@ function func567(this: any) {
                         var_2606 = 2;
                     }
                 }
+                // enemy_list = 141 F・F
                 if (var_83[var_1641].Var0 == 141) {
                     if (var_742 <= 2) {
                         var_2606 = 1;
@@ -21454,6 +21468,7 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
+                // enemy_list = 51 ワンチェン
                 if (var_83[var_1641].Var0 == 51) {
                     if (var_742 <= 4) {
                         var_2606 = 1;
@@ -21468,6 +21483,7 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
+                // enemy_list = 135 若ジョセフ
                 if (var_83[var_1641].Var0 == 135) {
                     if (var_742 <= 3) {
                         var_2606 = 1;
@@ -21482,6 +21498,7 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
+                // enemy_list = 44 レッドホットチリペッパー
                 if (var_83[var_1641].Var0 == 44) {
                     if (var_742 == 1 || var_742 == 2) {
                         var_2606 = 1;
@@ -21496,6 +21513,7 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
+                // enemy_list = 56 シュトロハイム
                 if (var_83[var_1641].Var0 == 56) {
                     if (var_742 == 1 || var_742 == 3 || var_742 == 5 || var_742 == 7 || var_742 == 9 || var_742 == 11 || var_742 == 13) {
                         var_2606 = 3;
@@ -21504,6 +21522,7 @@ function func567(this: any) {
                         var_2606 = 2;
                     }
                 }
+                // enemy_list = 48 エアロスミス
                 if (var_83[var_1641].Var0 == 48) {
                     if (var_742 == 1 || var_742 == 4 || var_742 == 7 || var_742 == 10) {
                         var_2606 = 1;
@@ -21515,6 +21534,7 @@ function func567(this: any) {
                         var_2606 = 3;
                     }
                 }
+                // enemy_list = 46 ホルホース、enemy_list = 30 禁煙中ホルホース
                 if (var_83[var_1641].Var0 == 46 || var_83[var_1641].Var0 == 30) {
                     if (var_742 == 1) {
                         var_2606 = 1;
@@ -21526,6 +21546,7 @@ function func567(this: any) {
                         var_2606 = 3;
                     }
                 }
+                // enemy_list = 21 ストレイキャット
                 if (var_83[var_1641].Var0 == 21) {
                     if (var_742 == 1) {
                         var_2606 = 1;
@@ -21537,6 +21558,7 @@ function func567(this: any) {
                         var_2606 = 3;
                     }
                 }
+                // enemy_list = 164 エシディシの脳、enemy_list = 165 エボニーデビル
                 if (var_83[var_1641].Var0 == 164 || var_83[var_1641].Var0 == 165) {
                     if (var_742 == 1) {
                         var_2606 = 1;
@@ -21722,6 +21744,7 @@ function func567(this: any) {
                 if (var_1640 == 9) {
                     pos(var_764 * var_35 + 20 - var_1281, var_763 * var_36 - 20 - 10 + var_1281);
                 }
+                // enemy_list = 87 エシディシ
                 if (var_83[var_1641].Var0 == 87) {
                     if (var_1640 == 4) {
                         pos(var_764 * var_35 - 20 + var_1281 - 12, var_763 * var_36 - 10);
@@ -21748,12 +21771,15 @@ function func567(this: any) {
                         pos(var_764 * var_35 + 20 - var_1281 + 15, var_763 * var_36 - 20 - 10 + var_1281 - 5);
                     }
                 }
+                // enemy_list = 4 デス・13
                 if (var_83[var_1641].Var0 == 4) {
                     var_1291 = 7;
                 }
+                // enemy_list = 145 康一
                 if (var_83[var_1641].Var0 == 145) {
                     var_1291 = 2;
                 }
+                // 
                 if (var_83[var_1641].Var0 == 150) {
                     var_1291 = 2;
                 }
@@ -23386,6 +23412,7 @@ function func569(this: any) {
         if (var_83[var_2611].Var0 == 142) {
             var_83[var_2611].Var4 = 0;
         }
+        // enemy_list = 173 NPC ロッコ・バロッコ所長
         if (var_83[var_2611].Var0 == 173) {
             var_83[var_2611].Var4 = 0;
         }
@@ -26360,6 +26387,7 @@ function func575(this: any) {
             if (var_83[var_673].Var0 == 169) {
                 var_2708 = 1;
             }
+            // enemy_list = 173 NPC ロッコ・バロッコ所長
             if (var_83[var_673].Var0 == 173) {
                 var_2708 = 1;
             }

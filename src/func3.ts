@@ -6799,7 +6799,7 @@ function func352(this: any) {
                 return;
             }
             if (var_1283 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
                 yield func426();
                 var_570 = var_233[var_553].Var13;
                 if (var_341 == 2) {
@@ -6807,16 +6807,16 @@ function func352(this: any) {
                     var_570 = var_233[var_554].Var13;
                 }
                 if (var_570 == 0) {
-                    var_1284 = 11;
+                    bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
                 }
                 if (var_570 == 1) {
-                    var_1284 = 1;
+                    bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
                 }
                 if (var_570 == 2) {
-                    var_1284 = 16;
+                    bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
                 }
                 if (var_570 == 3) {
-                    var_1284 = 29;
+                    bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
                 }
             }
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -6832,80 +6832,80 @@ function func352(this: any) {
             }
             if (var_243 == 1 || var_243 == 2) {
                 if (var_199 == 2) {
-                    gcopy(var_1284, 0, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 0, var_1272, 40, 40);
                 }
                 if (var_199 == 4) {
-                    gcopy(var_1284, 120, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 120, var_1272, 40, 40);
                 }
                 if (var_199 == 8) {
-                    gcopy(var_1284, 240, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 240, var_1272, 40, 40);
                 }
                 if (var_199 == 6) {
-                    gcopy(var_1284, 360, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 360, var_1272, 40, 40);
                 }
                 if (var_199 == 1) {
-                    gcopy(var_1284, 480, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 480, var_1272, 40, 40);
                 }
                 if (var_199 == 3) {
-                    gcopy(var_1284, 720, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 720, var_1272, 40, 40);
                 }
                 if (var_199 == 7) {
-                    gcopy(var_1284, 600, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 600, var_1272, 40, 40);
                 }
                 if (var_199 == 9) {
-                    gcopy(var_1284, 840, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 840, var_1272, 40, 40);
                 }
             }
             if (var_243 == 3) {
                 if (var_199 == 2) {
-                    gcopy(var_1284, 40, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 40, var_1272, 40, 40);
                 }
                 if (var_199 == 4) {
-                    gcopy(var_1284, 160, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 160, var_1272, 40, 40);
                 }
                 if (var_199 == 8) {
-                    gcopy(var_1284, 280, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 280, var_1272, 40, 40);
                 }
                 if (var_199 == 6) {
-                    gcopy(var_1284, 400, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 400, var_1272, 40, 40);
                 }
                 if (var_199 == 1) {
-                    gcopy(var_1284, 520, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 520, var_1272, 40, 40);
                 }
                 if (var_199 == 3) {
-                    gcopy(var_1284, 760, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 760, var_1272, 40, 40);
                 }
                 if (var_199 == 7) {
-                    gcopy(var_1284, 640, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 640, var_1272, 40, 40);
                 }
                 if (var_199 == 9) {
-                    gcopy(var_1284, 880, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 880, var_1272, 40, 40);
                 }
             }
             if (var_243 >= 4 && var_243 < 10) {
                 if (var_199 == 2) {
-                    gcopy(var_1284, 80, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 80, var_1272, 40, 40);
                 }
                 if (var_199 == 4) {
-                    gcopy(var_1284, 200, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 200, var_1272, 40, 40);
                 }
                 if (var_199 == 8) {
-                    gcopy(var_1284, 320, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 320, var_1272, 40, 40);
                 }
                 if (var_199 == 6) {
-                    gcopy(var_1284, 440, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 440, var_1272, 40, 40);
                 }
                 if (var_199 == 1) {
-                    gcopy(var_1284, 560, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 560, var_1272, 40, 40);
                 }
                 if (var_199 == 3) {
-                    gcopy(var_1284, 800, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 800, var_1272, 40, 40);
                 }
                 if (var_199 == 7) {
-                    gcopy(var_1284, 680, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 680, var_1272, 40, 40);
                 }
                 if (var_199 == 9) {
-                    gcopy(var_1284, 920, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 920, var_1272, 40, 40);
                 }
             }
             if (var_357 == 110) {
@@ -6938,163 +6938,163 @@ function func352(this: any) {
                 }
                 if (var_199 == 2 && var_243 == 3) {
                     pos(160 + 5, 160 + 60 - var_1281);
-                    gcopy(var_1284, 1000, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1000, 400, 13, 40);
                 }
                 if (var_199 == 2 && var_243 == 4) {
                     pos(160 + 5, 160 + 60);
-                    gcopy(var_1284, 1013, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1013, 400, 13, 40);
                 }
                 if (var_199 == 2 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 + 5, 160 + 60);
-                    gcopy(var_1284, 1026, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1026, 400, 13, 40);
                 }
                 if (var_199 == 2 && var_243 == 8) {
                     pos(160 + 5, 160 + 60 - var_1281);
-                    gcopy(var_1284, 1026, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1026, 400, 13, 40);
                 }
                 if (var_199 == 2 && var_243 == 9) {
                     pos(160 + 5, 160 + 60 - var_1281);
-                    gcopy(var_1284, 1026, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1026, 400, 13, 40);
                 }
                 if (var_199 == 8 && var_243 == 3) {
                     pos(160 + 18, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1080, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1080, 400, 13, 40);
                 }
                 if (var_199 == 8 && var_243 == 4) {
                     pos(160 + 18, 160 - 80);
-                    gcopy(var_1284, 1093, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1093, 400, 13, 40);
                 }
                 if (var_199 == 8 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 + 18, 160 - 80);
-                    gcopy(var_1284, 1106, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1106, 400, 13, 40);
                 }
                 if (var_199 == 8 && var_243 == 8) {
                     pos(160 + 18, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1106, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1106, 400, 13, 40);
                 }
                 if (var_199 == 8 && var_243 == 9) {
                     pos(160 + 18, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1106, 400, 13, 40);
+                    gcopy(bufferid_stand_disc, 1106, 400, 13, 40);
                 }
                 if (var_199 == 4 && var_243 == 3) {
                     pos(160 - 70 + var_1281, 160 + 4);
-                    gcopy(var_1284, 1040, 400, 40, 13);
+                    gcopy(bufferid_stand_disc, 1040, 400, 40, 13);
                 }
                 if (var_199 == 4 && var_243 == 4) {
                     pos(160 - 70, 160 + 4);
-                    gcopy(var_1284, 1040, 413, 40, 13);
+                    gcopy(bufferid_stand_disc, 1040, 413, 40, 13);
                 }
                 if (var_199 == 4 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 - 70, 160 + 4);
-                    gcopy(var_1284, 1040, 426, 40, 13);
+                    gcopy(bufferid_stand_disc, 1040, 426, 40, 13);
                 }
                 if (var_199 == 4 && var_243 == 8) {
                     pos(160 - 70 + var_1281, 160 + 4);
-                    gcopy(var_1284, 1040, 426, 40, 13);
+                    gcopy(bufferid_stand_disc, 1040, 426, 40, 13);
                 }
                 if (var_199 == 4 && var_243 == 9) {
                     pos(160 - 70 + var_1281, 160 + 4);
-                    gcopy(var_1284, 1040, 426, 40, 13);
+                    gcopy(bufferid_stand_disc, 1040, 426, 40, 13);
                 }
                 if (var_199 == 6 && var_243 == 3) {
                     pos(160 + 70 - var_1281, 160 + 4);
-                    gcopy(var_1284, 1120, 400, 40, 13);
+                    gcopy(bufferid_stand_disc, 1120, 400, 40, 13);
                 }
                 if (var_199 == 6 && var_243 == 4) {
                     pos(160 + 70, 160 + 4);
-                    gcopy(var_1284, 1120, 413, 40, 13);
+                    gcopy(bufferid_stand_disc, 1120, 413, 40, 13);
                 }
                 if (var_199 == 6 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 + 70, 160 + 4);
-                    gcopy(var_1284, 1120, 426, 40, 13);
+                    gcopy(bufferid_stand_disc, 1120, 426, 40, 13);
                 }
                 if (var_199 == 6 && var_243 == 8) {
                     pos(160 + 70 - var_1281, 160 + 4);
-                    gcopy(var_1284, 1120, 426, 40, 13);
+                    gcopy(bufferid_stand_disc, 1120, 426, 40, 13);
                 }
                 if (var_199 == 6 && var_243 == 9) {
                     pos(160 + 70 - var_1281, 160 + 4);
-                    gcopy(var_1284, 1120, 426, 40, 13);
+                    gcopy(bufferid_stand_disc, 1120, 426, 40, 13);
                 }
                 if (var_199 == 1 && var_243 == 3) {
                     pos(160 - 69 + var_1281, 160 + 59 - var_1281);
-                    gcopy(var_1284, 1160, 400, 40, 40);
+                    gcopy(bufferid_stand_disc, 1160, 400, 40, 40);
                 }
                 if (var_199 == 1 && var_243 == 4) {
                     pos(160 - 69, 160 + 59);
-                    gcopy(var_1284, 1200, 400, 40, 40);
+                    gcopy(bufferid_stand_disc, 1200, 400, 40, 40);
                 }
                 if (var_199 == 1 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 - 69, 160 + 59);
-                    gcopy(var_1284, 1240, 400, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 400, 40, 40);
                 }
                 if (var_199 == 1 && var_243 == 8) {
                     pos(160 - 69 + var_1281, 160 + 59 - var_1281);
-                    gcopy(var_1284, 1240, 400, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 400, 40, 40);
                 }
                 if (var_199 == 1 && var_243 == 9) {
                     pos(160 - 69 + var_1281, 160 + 59 - var_1281);
-                    gcopy(var_1284, 1240, 400, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 400, 40, 40);
                 }
                 if (var_199 == 3 && var_243 == 3) {
                     pos(160 + 69 - var_1281, 160 + 59 - var_1281);
-                    gcopy(var_1284, 1160, 440, 40, 40);
+                    gcopy(bufferid_stand_disc, 1160, 440, 40, 40);
                 }
                 if (var_199 == 3 && var_243 == 4) {
                     pos(160 + 69, 160 + 59);
-                    gcopy(var_1284, 1200, 440, 40, 40);
+                    gcopy(bufferid_stand_disc, 1200, 440, 40, 40);
                 }
                 if (var_199 == 3 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 + 69, 160 + 59);
-                    gcopy(var_1284, 1240, 440, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 440, 40, 40);
                 }
                 if (var_199 == 3 && var_243 == 8) {
                     pos(160 + 69 - var_1281, 160 + 59 - var_1281);
-                    gcopy(var_1284, 1240, 440, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 440, 40, 40);
                 }
                 if (var_199 == 3 && var_243 == 9) {
                     pos(160 + 69 - var_1281, 160 + 59 - var_1281);
-                    gcopy(var_1284, 1240, 440, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 440, 40, 40);
                 }
                 if (var_199 == 7 && var_243 == 3) {
                     pos(160 - 69 + var_1281, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1040, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1040, 360, 40, 40);
                 }
                 if (var_199 == 7 && var_243 == 4) {
                     pos(160 - 69, 160 - 80);
-                    gcopy(var_1284, 1080, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1080, 360, 40, 40);
                 }
                 if (var_199 == 7 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 - 69, 160 - 80);
-                    gcopy(var_1284, 1120, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1120, 360, 40, 40);
                 }
                 if (var_199 == 7 && var_243 == 8) {
                     pos(160 - 69 + var_1281, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1120, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1120, 360, 40, 40);
                 }
                 if (var_199 == 7 && var_243 == 9) {
                     pos(160 - 69 + var_1281, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1120, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1120, 360, 40, 40);
                 }
                 if (var_199 == 9 && var_243 == 3) {
                     pos(160 + 69 - var_1281, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1160, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1160, 360, 40, 40);
                 }
                 if (var_199 == 9 && var_243 == 4) {
                     pos(160 + 69, 160 - 80);
-                    gcopy(var_1284, 1200, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1200, 360, 40, 40);
                 }
                 if (var_199 == 9 && var_243 >= 5 && var_243 < 10 && var_243 != 8 && var_243 != 9) {
                     pos(160 + 69, 160 - 80);
-                    gcopy(var_1284, 1240, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 360, 40, 40);
                 }
                 if (var_199 == 9 && var_243 == 8) {
                     pos(160 + 69 - var_1281, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1240, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 360, 40, 40);
                 }
                 if (var_199 == 9 && var_243 == 9) {
                     pos(160 + 69 - var_1281, 160 - 80 + var_1281);
-                    gcopy(var_1284, 1240, 360, 40, 40);
+                    gcopy(bufferid_stand_disc, 1240, 360, 40, 40);
                 }
             }
         }
@@ -7106,16 +7106,16 @@ function func352(this: any) {
                 var_570 = var_233[var_554].Var13;
             }
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             if (var_243 == 8) {
@@ -7154,80 +7154,80 @@ function func352(this: any) {
             }
             if (var_243 == 1 || var_243 == 2) {
                 if (var_199 == 2) {
-                    gcopy(var_1284, 0, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 0, 1120, 40, 80);
                 }
                 if (var_199 == 4) {
-                    gcopy(var_1284, 240, 1120, 80, 40);
+                    gcopy(bufferid_stand_disc, 240, 1120, 80, 40);
                 }
                 if (var_199 == 8) {
-                    gcopy(var_1284, 120, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 120, 1120, 40, 80);
                 }
                 if (var_199 == 6) {
-                    gcopy(var_1284, 320, 1160, 40, 40);
+                    gcopy(bufferid_stand_disc, 320, 1160, 40, 40);
                 }
                 if (var_199 == 1) {
-                    gcopy(var_1284, 0, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 0, 1120, 40, 80);
                 }
                 if (var_199 == 3) {
-                    gcopy(var_1284, 520, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 520, 1120, 40, 80);
                 }
                 if (var_199 == 7) {
-                    gcopy(var_1284, 560, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 560, 1120, 40, 80);
                 }
                 if (var_199 == 9) {
-                    gcopy(var_1284, 120, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 120, 1120, 40, 80);
                 }
             }
             if (var_243 == 3) {
                 if (var_199 == 2) {
-                    gcopy(var_1284, 40, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 40, 1120, 40, 80);
                 }
                 if (var_199 == 4) {
-                    gcopy(var_1284, 240, 1160, 80, 40);
+                    gcopy(bufferid_stand_disc, 240, 1160, 80, 40);
                 }
                 if (var_199 == 8) {
-                    gcopy(var_1284, 160, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 160, 1120, 40, 80);
                 }
                 if (var_199 == 6) {
-                    gcopy(var_1284, 360, 1160, 40, 40);
+                    gcopy(bufferid_stand_disc, 360, 1160, 40, 40);
                 }
                 if (var_199 == 1) {
-                    gcopy(var_1284, 40, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 40, 1120, 40, 80);
                 }
                 if (var_199 == 3) {
-                    gcopy(var_1284, 480, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 480, 1120, 40, 80);
                 }
                 if (var_199 == 7) {
-                    gcopy(var_1284, 600, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 600, 1120, 40, 80);
                 }
                 if (var_199 == 9) {
-                    gcopy(var_1284, 160, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 160, 1120, 40, 80);
                 }
             }
             if (var_243 >= 4 && var_243 < 10) {
                 if (var_199 == 2) {
-                    gcopy(var_1284, 80, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 80, 1120, 40, 80);
                 }
                 if (var_199 == 4) {
-                    gcopy(var_1284, 320, 1120, 40, 40);
+                    gcopy(bufferid_stand_disc, 320, 1120, 40, 40);
                 }
                 if (var_199 == 8) {
-                    gcopy(var_1284, 200, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 200, 1120, 40, 80);
                 }
                 if (var_199 == 6) {
-                    gcopy(var_1284, 360, 1120, 80, 40);
+                    gcopy(bufferid_stand_disc, 360, 1120, 80, 40);
                 }
                 if (var_199 == 1) {
-                    gcopy(var_1284, 80, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 80, 1120, 40, 80);
                 }
                 if (var_199 == 3) {
-                    gcopy(var_1284, 440, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 440, 1120, 40, 80);
                 }
                 if (var_199 == 7) {
-                    gcopy(var_1284, 640, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 640, 1120, 40, 80);
                 }
                 if (var_199 == 9) {
-                    gcopy(var_1284, 200, 1120, 40, 80);
+                    gcopy(bufferid_stand_disc, 200, 1120, 40, 80);
                 }
             }
         }
@@ -7235,16 +7235,16 @@ function func352(this: any) {
             yield func426();
             var_570 = var_233[var_553].Var13;
             if (var_570 == 0) {
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             if (var_570 == 1) {
-                var_1284 = 1;
+                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
             }
             if (var_570 == 2) {
-                var_1284 = 16;
+                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
             }
             if (var_570 == 3) {
-                var_1284 = 29;
+                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1285 = 0;
             if (var_357 == 398) {
@@ -7261,73 +7261,73 @@ function func352(this: any) {
             if (var_199 == 4) {
                 pos(160 - 50, 160 - 25);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 480, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 480, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 560, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 560, var_1285, 80, 80);
                 }
             }
             if (var_199 == 6) {
                 pos(160 + 10, 160 - 25);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 320, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 320, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 400, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 400, var_1285, 80, 80);
                 }
             }
             if (var_199 == 3) {
                 pos(160 + 10, 160 + 5);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 0, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 0, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 80, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 80, var_1285, 80, 80);
                 }
             }
             if (var_199 == 1) {
                 pos(160 - 50, 160 + 5);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 160, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 160, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 240, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 240, var_1285, 80, 80);
                 }
             }
             if (var_199 == 7) {
                 pos(160 - 50, 160 - 60);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 640, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 640, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 720, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 720, var_1285, 80, 80);
                 }
             }
             if (var_199 == 9) {
                 pos(160 + 10, 160 - 60);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 800, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 800, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 880, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 880, var_1285, 80, 80);
                 }
             }
             if (var_199 == 2) {
                 pos(160 - 20, 160 + 5);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 960, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 960, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 1040, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 1040, var_1285, 80, 80);
                 }
             }
             if (var_199 == 8) {
                 pos(160 - 20, 160 - 70);
                 if (var_243 == 1 || var_243 == 3 || var_243 == 5 || var_243 == 7 || var_243 == 9) {
-                    gcopy(var_1284, 1120, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 1120, var_1285, 80, 80);
                 }
                 if (var_243 == 2 || var_243 == 4 || var_243 == 6 || var_243 == 8 || var_243 == 10) {
-                    gcopy(var_1284, 1200, var_1285, 80, 80);
+                    gcopy(bufferid_stand_disc, 1200, var_1285, 80, 80);
                 }
             }
         }
@@ -9145,19 +9145,19 @@ function func354(this: any) {
                 pos((var_83[var_1351].Var1 - var_66 + 4) * 40, (var_83[var_1351].Var2 - var_67 + 4) * 40 - 10 - 240);
             }
             if (var_83[var_1351].Var0 < 50) {
-                var_965 = 6;
+                var_965 = 6; // buffer(6)は"img_enemy1a.gif"
                 var_1352 = var_83[var_1351].Var0;
             }
             if (var_83[var_1351].Var0 >= 50 && var_83[var_1351].Var0 < 100) {
-                var_965 = 21;
+                var_965 = 21; // buffer(21)は"img_enemy2a.gif"
                 var_1352 = var_83[var_1351].Var0 - 50;
             }
             if (var_83[var_1351].Var0 >= 100 && var_83[var_1351].Var0 < 150) {
-                var_965 = 27;
+                var_965 = 27; // buffer(27)は"img_enemy3a.gif"
                 var_1352 = var_83[var_1351].Var0 - 100;
             }
             if (var_83[var_1351].Var0 >= 150 && var_83[var_1351].Var0 < 200) {
-                var_965 = 13;
+                var_965 = 13; // buffer(13)は"img_enemy4a.gif"
                 var_1352 = var_83[var_1351].Var0 - 150;
             }
             gcopy(var_965, 40, var_1352 * 40, 40, 40);
@@ -9653,19 +9653,19 @@ function func354(this: any) {
             }
             pos(var_1369 * var_35 + var_1366, var_1370 * var_36 - 10 + var_1368);
             if (var_1374 < 50) {
-                var_1375 = 6;
+                var_1375 = 6; // buffer(6)は"img_enemy1a.gif"
                 var_1376 = var_1374;
             }
             if (var_1374 >= 50 && var_1374 < 100) {
-                var_1375 = 21;
+                var_1375 = 21; // buffer(21)は"img_enemy2a.gif"
                 var_1376 = var_1374 - 50;
             }
             if (var_1374 >= 100 && var_1374 < 150) {
-                var_1375 = 27;
+                var_1375 = 27; // buffer(27)は"img_enemy3a.gif"
                 var_1376 = var_1374 - 100;
             }
             if (var_1374 >= 150 && var_1374 < 200) {
-                var_1375 = 13;
+                var_1375 = 13; // buffer(13)は"img_enemy4a.gif"
                 var_1376 = var_1374 - 150;
             }
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -9844,19 +9844,19 @@ function func354(this: any) {
         if (var_1384 == 1) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             if (var_83[var_1385].Var0 < 50) {
-                var_1375 = 6;
+                var_1375 = 6; // buffer(6)は"img_enemy1a.gif"
                 var_1376 = var_1386;
             }
             if (var_83[var_1385].Var0 >= 50 && var_83[var_1385].Var0 < 100) {
-                var_1375 = 21;
+                var_1375 = 21; // buffer(21)は"img_enemy2a.gif"
                 var_1376 = var_1386 - 50;
             }
             if (var_83[var_1385].Var0 >= 100 && var_83[var_1385].Var0 < 150) {
-                var_1375 = 27;
+                var_1375 = 27; // buffer(27)は"img_enemy3a.gif"
                 var_1376 = var_1386 - 100;
             }
             if (var_83[var_1385].Var0 >= 150 && var_83[var_1385].Var0 < 200) {
-                var_1375 = 13;
+                var_1375 = 13; // buffer(13)は"img_enemy4a.gif"
                 var_1376 = var_1386 - 150;
             }
             if (var_199 == 4) {
@@ -10131,47 +10131,47 @@ function func354(this: any) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             if (var_1394 == 4 || var_1394 == 27) {
                 color(0, 0, 0);
     
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 60);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             if (var_1394 == 5 || var_1394 == 26) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 80);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             if (var_1394 == 6 || var_1394 == 25) {
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 120);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             if (var_1394 == 7 || var_1394 == 24) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             if (var_1394 == 8 || var_1394 == 23) {
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             if (var_1394 == 9 || var_1394 == 22) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 230);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             if (var_1394 >= 10 && var_1394 < 22) {
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 80, 1240, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1240, 40, 40);
             }
             pos(40, 150);
             color(0, 0, 0);
@@ -11161,34 +11161,34 @@ function func354(this: any) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 0, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 0, 320, 40, 40);
             }
             if (var_1443 >= 11 && var_1443 < 12) {
-                gcopy(var_1284, 0, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 0, 320, 40, 40);
             }
             if (var_1443 >= 12 && var_1443 < 13) {
-                gcopy(var_1284, 40, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 40, 320, 40, 40);
             }
             if (var_1443 >= 13 && var_1443 < 14) {
-                gcopy(var_1284, 80, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 320, 40, 40);
             }
             if (var_1443 >= 14 && var_1443 < 15) {
-                gcopy(var_1284, 80, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 320, 40, 40);
             }
             if (var_1443 >= 15 && var_1443 < 25) {
-                gcopy(var_1284, 80, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 320, 40, 40);
             }
             if (var_1443 >= 26 && var_1443 < 28) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 80, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 320, 40, 40);
             }
             if (var_1443 >= 28 && var_1443 < 30) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
-                gcopy(var_1284, 80, 320, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 320, 40, 40);
             }
         }
         if (var_1446 == 1) {
@@ -11248,7 +11248,7 @@ function func354(this: any) {
                 if (var_1449 == 9) {
                     pos(var_1450 + 10, var_1451 - 10);
                 }
-                var_1284 = 11;
+                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
             }
             var_1272 = 920;
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -11264,80 +11264,80 @@ function func354(this: any) {
             }
             if (var_1447 == 1 || var_1447 == 2) {
                 if (var_1449 == 8) {
-                    gcopy(var_1284, 0, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 0, var_1272, 40, 40);
                 }
                 if (var_1449 == 6) {
-                    gcopy(var_1284, 120, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 120, var_1272, 40, 40);
                 }
                 if (var_1449 == 2) {
-                    gcopy(var_1284, 240, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 240, var_1272, 40, 40);
                 }
                 if (var_1449 == 4) {
-                    gcopy(var_1284, 360, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 360, var_1272, 40, 40);
                 }
                 if (var_1449 == 9) {
-                    gcopy(var_1284, 480, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 480, var_1272, 40, 40);
                 }
                 if (var_1449 == 7) {
-                    gcopy(var_1284, 720, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 720, var_1272, 40, 40);
                 }
                 if (var_1449 == 3) {
-                    gcopy(var_1284, 600, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 600, var_1272, 40, 40);
                 }
                 if (var_1449 == 1) {
-                    gcopy(var_1284, 840, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 840, var_1272, 40, 40);
                 }
             }
             if (var_1447 == 3) {
                 if (var_1449 == 8) {
-                    gcopy(var_1284, 40, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 40, var_1272, 40, 40);
                 }
                 if (var_1449 == 6) {
-                    gcopy(var_1284, 160, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 160, var_1272, 40, 40);
                 }
                 if (var_1449 == 2) {
-                    gcopy(var_1284, 280, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 280, var_1272, 40, 40);
                 }
                 if (var_1449 == 4) {
-                    gcopy(var_1284, 400, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 400, var_1272, 40, 40);
                 }
                 if (var_1449 == 9) {
-                    gcopy(var_1284, 520, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 520, var_1272, 40, 40);
                 }
                 if (var_1449 == 7) {
-                    gcopy(var_1284, 760, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 760, var_1272, 40, 40);
                 }
                 if (var_1449 == 3) {
-                    gcopy(var_1284, 640, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 640, var_1272, 40, 40);
                 }
                 if (var_1449 == 1) {
-                    gcopy(var_1284, 880, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 880, var_1272, 40, 40);
                 }
             }
             if (var_1447 >= 4 && var_1447 < 10) {
                 if (var_1449 == 8) {
-                    gcopy(var_1284, 80, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 80, var_1272, 40, 40);
                 }
                 if (var_1449 == 6) {
-                    gcopy(var_1284, 200, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 200, var_1272, 40, 40);
                 }
                 if (var_1449 == 2) {
-                    gcopy(var_1284, 320, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 320, var_1272, 40, 40);
                 }
                 if (var_1449 == 4) {
-                    gcopy(var_1284, 440, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 440, var_1272, 40, 40);
                 }
                 if (var_1449 == 9) {
-                    gcopy(var_1284, 560, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 560, var_1272, 40, 40);
                 }
                 if (var_1449 == 7) {
-                    gcopy(var_1284, 800, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 800, var_1272, 40, 40);
                 }
                 if (var_1449 == 3) {
-                    gcopy(var_1284, 680, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 680, var_1272, 40, 40);
                 }
                 if (var_1449 == 1) {
-                    gcopy(var_1284, 920, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 920, var_1272, 40, 40);
                 }
             }
         }
@@ -11385,80 +11385,80 @@ function func354X(this: any) {
             }
             if (var_1452 == 1 || var_1452 == 2) {
                 if (var_1449 == 8) {
-                    gcopy(var_1284, 0, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 0, var_1272, 40, 40);
                 }
                 if (var_1449 == 6) {
-                    gcopy(var_1284, 120, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 120, var_1272, 40, 40);
                 }
                 if (var_1449 == 2) {
-                    gcopy(var_1284, 240, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 240, var_1272, 40, 40);
                 }
                 if (var_1449 == 4) {
-                    gcopy(var_1284, 360, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 360, var_1272, 40, 40);
                 }
                 if (var_1449 == 9) {
-                    gcopy(var_1284, 480, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 480, var_1272, 40, 40);
                 }
                 if (var_1449 == 7) {
-                    gcopy(var_1284, 720, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 720, var_1272, 40, 40);
                 }
                 if (var_1449 == 3) {
-                    gcopy(var_1284, 600, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 600, var_1272, 40, 40);
                 }
                 if (var_1449 == 1) {
-                    gcopy(var_1284, 840, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 840, var_1272, 40, 40);
                 }
             }
             if (var_1452 == 3) {
                 if (var_1449 == 8) {
-                    gcopy(var_1284, 40, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 40, var_1272, 40, 40);
                 }
                 if (var_1449 == 6) {
-                    gcopy(var_1284, 160, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 160, var_1272, 40, 40);
                 }
                 if (var_1449 == 2) {
-                    gcopy(var_1284, 280, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 280, var_1272, 40, 40);
                 }
                 if (var_1449 == 4) {
-                    gcopy(var_1284, 400, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 400, var_1272, 40, 40);
                 }
                 if (var_1449 == 9) {
-                    gcopy(var_1284, 520, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 520, var_1272, 40, 40);
                 }
                 if (var_1449 == 7) {
-                    gcopy(var_1284, 760, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 760, var_1272, 40, 40);
                 }
                 if (var_1449 == 3) {
-                    gcopy(var_1284, 640, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 640, var_1272, 40, 40);
                 }
                 if (var_1449 == 1) {
-                    gcopy(var_1284, 880, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 880, var_1272, 40, 40);
                 }
             }
             if (var_1452 >= 4 && var_1452 < 10) {
                 if (var_1449 == 8) {
-                    gcopy(var_1284, 80, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 80, var_1272, 40, 40);
                 }
                 if (var_1449 == 6) {
-                    gcopy(var_1284, 200, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 200, var_1272, 40, 40);
                 }
                 if (var_1449 == 2) {
-                    gcopy(var_1284, 320, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 320, var_1272, 40, 40);
                 }
                 if (var_1449 == 4) {
-                    gcopy(var_1284, 440, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 440, var_1272, 40, 40);
                 }
                 if (var_1449 == 9) {
-                    gcopy(var_1284, 560, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 560, var_1272, 40, 40);
                 }
                 if (var_1449 == 7) {
-                    gcopy(var_1284, 800, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 800, var_1272, 40, 40);
                 }
                 if (var_1449 == 3) {
-                    gcopy(var_1284, 680, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 680, var_1272, 40, 40);
                 }
                 if (var_1449 == 1) {
-                    gcopy(var_1284, 920, var_1272, 40, 40);
+                    gcopy(bufferid_stand_disc, 920, var_1272, 40, 40);
                 }
             }
         }
@@ -12355,19 +12355,19 @@ function func354X(this: any) {
                         var_1386 = var_83[var_1385].Var31;
                     }
                     if (var_1506 < 50) {
-                        var_1375 = 6;
+                        var_1375 = 6; // buffer(6)は"img_enemy1a.gif"
                         var_1376 = var_1386;
                     }
                     if (var_1506 >= 50 && var_1506 < 100) {
-                        var_1375 = 21;
+                        var_1375 = 21; // buffer(21)は"img_enemy2a.gif"
                         var_1376 = var_1386 - 50;
                     }
                     if (var_1506 >= 100 && var_1506 < 150) {
-                        var_1375 = 27;
+                        var_1375 = 27; // buffer(27)は"img_enemy3a.gif"
                         var_1376 = var_1386 - 100;
                     }
                     if (var_1506 >= 150 && var_1506 < 200) {
-                        var_1375 = 13;
+                        var_1375 = 13; // buffer(13)は"img_enemy4a.gif"
                         var_1376 = var_1386 - 150;
                     }
                 }
@@ -12820,21 +12820,21 @@ function func354X(this: any) {
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 10);
             }
             pos(160, 160 - (var_1520 - 2) * 5);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
             pos(160, 160 + (var_1520 - 4) * 5);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
             pos(160 - (var_1520 - 3) * 5, 160);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
             pos(160 + (var_1520 - 2) * 5, 160);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
             pos(160 - (var_1520 - 3) * 5, 160 - (var_1520 - 3) * 5);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
             pos(160 + (var_1520 - 1) * 5, 160 - (var_1520 - 1) * 5);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
             pos(160 - (var_1520 - 4) * 5, 160 + (var_1520 - 4) * 5);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
             pos(160 + (var_1520 - 3) * 5, 160 + (var_1520 - 3) * 5);
-            gcopy(var_1284, 1080, 160, 40, 40);
+            gcopy(bufferid_stand_disc, 1080, 160, 40, 40);
         }
         if (var_1521 >= 1) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -14012,21 +14012,21 @@ function func354X(this: any) {
             pos(120, var_774);
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             if (var_1574 == 1) {
-                gcopy(var_1284, 1120, 1440, 120, 80);
+                gcopy(bufferid_stand_disc, 1120, 1440, 120, 80);
             }
             if (var_1574 == 2) {
-                gcopy(var_1284, 1000, 1520, 120, 80);
+                gcopy(bufferid_stand_disc, 1000, 1520, 120, 80);
             }
             if (var_1574 == 3) {
-                gcopy(var_1284, 1120, 1520, 120, 80);
+                gcopy(bufferid_stand_disc, 1120, 1520, 120, 80);
             }
             if (var_1574 == 4) {
                 pos(120, var_774 + 20);
-                gcopy(var_1284, 1000, 1600, 120, 80);
+                gcopy(bufferid_stand_disc, 1000, 1600, 120, 80);
             }
             if (var_1574 == 5) {
                 pos(120, var_774 + 20);
-                gcopy(var_1284, 1120, 1600, 120, 80);
+                gcopy(bufferid_stand_disc, 1120, 1600, 120, 80);
             }
         }
         if (var_1575 >= 1) {
@@ -14034,7 +14034,7 @@ function func354X(this: any) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
             gcopy(3, 40, 0, 40, 40);
             pos(120, var_774 - 20);
-            gcopy(var_1284, 1000, 1440, 120, 40);
+            gcopy(bufferid_stand_disc, 1000, 1440, 120, 40);
         }
         if (var_1576 >= 1) {
             pos(160, var_774);
@@ -14316,203 +14316,203 @@ function func354X(this: any) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 4 || var_1592 == 31) {
                 color(0, 0, 0);
     
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 60);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 5 || var_1592 == 30) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 80);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 6 || var_1592 == 29) {
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 120);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 7 || var_1592 == 28) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 8 || var_1592 == 27) {
                 color(0, 0, 0);
         
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 9 || var_1592 == 26) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 230);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 10) {
                 pos(160, 160 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(160, 180 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 11) {
                 pos(160, 180 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(160, 200 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 12) {
                 pos(160, 200 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(140, 200 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 13) {
                 pos(140, 200 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(120, 180 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 14) {
                 pos(120, 180 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(120, 160 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 15) {
                 pos(120, 160 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(120, 140 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 16) {
                 pos(120, 140 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(140, 120 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 17) {
                 pos(140, 120 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(160, 120 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 18) {
                 pos(160, 120 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(180, 120 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 19) {
                 pos(180, 120 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(200, 140 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 20) {
                 pos(200, 140 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(200, 160 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 21) {
                 pos(200, 160 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(200, 180 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 22) {
                 pos(200, 180 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(180, 200 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 23) {
                 pos(180, 200 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(160, 200 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 24) {
                 pos(160, 200 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(160, 180 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
             if (var_1592 == 25) {
                 pos(160, 180 - 10);
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
                 pos(160, 160 - 10);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                gcopy(var_1284, 200, 280, 40, 40);
+                gcopy(bufferid_stand_disc, 200, 280, 40, 40);
             }
         }
         if (var_1593 >= 1) {
@@ -14587,34 +14587,34 @@ function func354X(this: any) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 0, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 0, 1480, 40, 40);
             }
             if (var_1599 >= 1 && var_1599 < 2) {
-                gcopy(var_1284, 0, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 0, 1480, 40, 40);
             }
             if (var_1599 >= 2 && var_1599 < 3) {
-                gcopy(var_1284, 40, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 40, 1480, 40, 40);
             }
             if (var_1599 >= 3 && var_1599 < 4) {
-                gcopy(var_1284, 80, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1480, 40, 40);
             }
             if (var_1599 >= 4 && var_1599 < 5) {
-                gcopy(var_1284, 80, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1480, 40, 40);
             }
             if (var_1599 >= 5 && var_1599 < 15) {
-                gcopy(var_1284, 80, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1480, 40, 40);
             }
             if (var_1599 >= 16 && var_1599 < 18) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 80, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1480, 40, 40);
             }
             if (var_1599 >= 18 && var_1599 < 20) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
-                gcopy(var_1284, 80, 1480, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 1480, 40, 40);
             }
         }
         if (var_1600 >= 1) {
@@ -14624,34 +14624,34 @@ function func354X(this: any) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 0, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 0, 440, 40, 40);
             }
             if (var_1600 >= 1 && var_1600 < 2) {
-                gcopy(var_1284, 0, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 0, 440, 40, 40);
             }
             if (var_1600 >= 2 && var_1600 < 3) {
-                gcopy(var_1284, 40, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 40, 440, 40, 40);
             }
             if (var_1600 >= 3 && var_1600 < 4) {
-                gcopy(var_1284, 80, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 440, 40, 40);
             }
             if (var_1600 >= 4 && var_1600 < 5) {
-                gcopy(var_1284, 80, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 440, 40, 40);
             }
             if (var_1600 >= 5 && var_1600 < 15) {
-                gcopy(var_1284, 80, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 440, 40, 40);
             }
             if (var_1600 >= 16 && var_1600 < 18) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
-                gcopy(var_1284, 80, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 440, 40, 40);
             }
             if (var_1600 >= 18 && var_1600 < 20) {
                 color(0, 0, 0);
 
                 gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
-                gcopy(var_1284, 80, 440, 40, 40);
+                gcopy(bufferid_stand_disc, 80, 440, 40, 40);
             }
         }
         if (var_1601 >= 1) {
@@ -17924,116 +17924,117 @@ function func385(this: any) {
             if (dangeon_number == 1) {
                 var_1772 = rnd(100);
                 if (var_1772 >= 0 && var_1772 < 15) {
-                    var_78[var_866].Var0 = 116;
+                    var_78[var_866].Var0 = 116; // No = 116 ハーミットパープル
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 >= 15 && var_1772 < 30) {
-                    var_78[var_866].Var0 = 103;
+                    var_78[var_866].Var0 = 103; // No = 103 エコーズACT3
                     var_78[var_866].Var16 = 20;
                     var_78[var_866].Var5 = 5;
                 }
                 if (var_1772 >= 30 && var_1772 < 45) {
-                    var_78[var_866].Var0 = 107;
+                    var_78[var_866].Var0 = 107; // No = 107 デス・13
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 45 && var_1772 < 60) {
-                    var_78[var_866].Var0 = 300;
+                    var_78[var_866].Var0 = 300; // No = 300 パール・ジャム
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 60 && var_1772 < 65) {
-                    var_78[var_866].Var0 = 306;
+                    var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 >= 65 && var_1772 < 70) {
-                    var_78[var_866].Var0 = 201;
+                    var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 70 && var_1772 < 75) {
-                    var_78[var_866].Var0 = 105;
+                    var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 75 && var_1772 < 77) {
-                    var_78[var_866].Var0 = 207;
+                    var_78[var_866].Var0 = 207; // No = 207 グレイトフル・デッド
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 77 && var_1772 < 79) {
-                    var_78[var_866].Var0 = 201;
+                    var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 79 && var_1772 < 81) {
-                    var_78[var_866].Var0 = 105;
+                    var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 81 && var_1772 < 83) {
-                    var_78[var_866].Var0 = 104;
+                    var_78[var_866].Var0 = 104; // No = 104 ザ・ハンド
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 83 && var_1772 < 85) {
-                    var_78[var_866].Var0 = 117;
+                    var_78[var_866].Var0 = 117; // No = 117 ダーク・ブルームーン
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 85 && var_1772 < 87) {
-                    var_78[var_866].Var0 = 119;
+                    var_78[var_866].Var0 = 119; // No = 119 スパイス・ガール
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 87 && var_1772 < 89) {
-                    var_78[var_866].Var0 = 203;
+                    var_78[var_866].Var0 = 203; // No = 203 ザ・フール
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 89 && var_1772 < 91) {
-                    var_78[var_866].Var0 = 113;
+                    var_78[var_866].Var0 = 113; // No = 113 クラッシュ
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 >= 91 && var_1772 < 93) {
-                    var_78[var_866].Var0 = 306;
+                    var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 >= 93 && var_1772 < 95) {
-                    var_78[var_866].Var0 = 316;
+                    var_78[var_866].Var0 = 316; // No = 316 サバイバー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 == 95) {
-                    var_78[var_866].Var0 = 121;
+                    var_78[var_866].Var0 = 121; // No = 121 パープルヘイズ
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 == 96) {
-                    var_78[var_866].Var0 = 320;
+                    var_78[var_866].Var0 = 320; // No = 320 メタリカ
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 == 97) {
-                    var_78[var_866].Var0 = 205;
+                    var_78[var_866].Var0 = 205; // No = 205 クラフトワーク
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
                 if (var_1772 == 98) {
-                    var_78[var_866].Var0 = 317;
+                    var_78[var_866].Var0 = 317; // No = 317 キッス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
                 if (var_1772 == 99) {
-                    var_78[var_866].Var0 = 115;
+                    var_78[var_866].Var0 = 115; // No = 115 G・エクスペリエンス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
             }
+
             // No = 1 なので、ホテルの外以外
             if (dangeon_number != 1) {
                 var_1773 = rnd(100);
@@ -19977,22 +19978,22 @@ function func397(this: any) {
         }
         if (belongings_item_list == 701) {
             if (var_1248 < 50) {
-                var_965 = 6;
+                var_965 = 6; // buffer(6)は"img_enemy1a.gif"
                 var_1826 = 15;
                 var_966 = var_1248 * 40;
             }
             if (var_1248 >= 50 && var_1248 < 100) {
-                var_965 = 21;
+                var_965 = 21; // buffer(21)は"img_enemy2a.gif"
                 var_1826 = 22;
                 var_966 = (var_1248 - 50) * 40;
             }
             if (var_1248 >= 100 && var_1248 < 150) {
-                var_965 = 27;
+                var_965 = 27; // buffer(27)は"img_enemy3a.gif"
                 var_1826 = 28;
                 var_966 = (var_1248 - 100) * 40;
             }
             if (var_1248 >= 150 && var_1248 < 200) {
-                var_965 = 13;
+                var_965 = 13; // buffer(13)は"img_enemy4a.gif"
                 var_1826 = 20;
                 var_966 = (var_1248 - 150) * 40;
             }
