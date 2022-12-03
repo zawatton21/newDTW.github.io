@@ -43,9 +43,9 @@ function func600(this: any) {
         var_299 = 0;
         comments_row1 = "「ワハハハハハ！」";
         comments_row2 = "" + var_209 + "のダメージをうけた。";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -206,9 +206,9 @@ function func602(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -231,9 +231,9 @@ function func602(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         if (var_2856 == 134) {
             var_1558 = (var_83[var_2749].Var1 - var_66 + 4) * 40;
@@ -305,9 +305,9 @@ function func602(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "" + enemy_name + "の";
         comments_row2a = "傷がふさがった。";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -413,9 +413,9 @@ function func603(this: any) {
                 comments_row2 = "恨みに震えている。";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 var_83[var_673].Var21 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
@@ -477,9 +477,9 @@ function func603(this: any) {
         comments_row2 = "" + var_2861 + "に取り憑いた！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         yield func340(); // キー入力による選択処理
 
@@ -488,9 +488,9 @@ function func603(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "" + var_2861 + "は";
         comments_row2a = "レベル " + var_83[var_2749].Var39 + " になった！";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -519,9 +519,9 @@ function func604(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
 
             DSPLAY(audio_id = 118);
@@ -540,9 +540,9 @@ function func604(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾎﾙ･ﾎｰｽ「新しいﾍﾟｰｼﾞが現れたぞ…」";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -554,9 +554,9 @@ function func604(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "【ﾎﾙ･ﾎｰｽの次の攻撃は…】";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -582,9 +582,9 @@ function func604(this: any) {
                 comments_row2a = "　でもくじけちゃダメだよ ﾎﾙ･ﾎｰｽ！】";
                 var_83[var_673].Var29 = 3;
             }
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -605,9 +605,9 @@ function func604(this: any) {
                 comments_row1a = "ﾎﾙ･ﾎｰｽ「にゃんじゃああ～～～ッ";
                 comments_row2a = "　　　これは！？」";
             }
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -698,9 +698,9 @@ function func604(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 var_83[var_673].Var7 = 0;
                 return;
@@ -788,9 +788,9 @@ function func604(this: any) {
         comments_row2 = "" + var_2852 + "のダメージをうけた！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         if (var_128 >= 1) {
             yield func023();
@@ -939,9 +939,9 @@ function func605(this: any) {
                     comments_row2 = "" + var_2852 + "のダメージをうけた！";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func047();
                     if (var_128 >= 1) {
                         yield func023();
@@ -1085,9 +1085,9 @@ function func606(this: any) {
         comments_row2 = "" + var_2852 + "のダメージをうけた！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         if (var_128 >= 1) {
             yield func023();
@@ -1241,9 +1241,9 @@ function func607(this: any) {
         comments_row2 = "" + var_2852 + "のダメージをうけた！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         if (var_128 >= 1) {
             yield func023();
@@ -1296,9 +1296,9 @@ function func608(this: any) {
             comments_row2 = "" + var_2852 + "のダメージをうけた！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             if (var_128 >= 1) {
                 yield func023();
@@ -1335,9 +1335,9 @@ function func608(this: any) {
             comments_row2 = "太陽のエネルギーがアップした！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -1371,9 +1371,9 @@ function func609(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -1510,18 +1510,18 @@ function func609(this: any) {
             comments_row2 = "「マン・イン・ザ・ミラー！」";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
             yield func340(); // キー入力による選択処理
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "ウイルスは許可しないィィィィ――ッ";
             comments_row2a = "";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -1551,9 +1551,9 @@ function func609(this: any) {
         comments_row2 = "" + var_2852 + "のダメージをうけた！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         if (var_128 >= 1) {
             yield func023();
@@ -1596,9 +1596,9 @@ function func610(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -1742,9 +1742,9 @@ function func610(this: any) {
         comments_row2 = "" + var_2852 + "のダメージをうけた！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         if (var_128 >= 1) {
             yield func023();
@@ -1818,9 +1818,9 @@ function func611(this: any) {
         comments_row2 = "" + var_2852 + "のダメージをうけた！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         if (var_128 >= 1) {
             yield func023();
@@ -1859,9 +1859,9 @@ function func612(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         var_1399 = (var_83[var_1393].Var1 - var_66 + 4) * 40;
         var_1400 = (var_83[var_1393].Var2 - var_67 + 4) * 40 - 10;
@@ -1899,9 +1899,9 @@ function func612(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "西戸の嘲笑は";
         comments_row2a = "ﾃﾞｨｱﾎﾞﾛを恐怖で呪縛した！";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_198 = 1;
         var_300 = 0;
         yield func050();
@@ -1911,9 +1911,9 @@ function func612(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ぼくをチェーンで殴る気だッ！";
         comments_row2a = "";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_198 = 1;
         var_300 = 0;
         yield func050();
@@ -1958,9 +1958,9 @@ function func613(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         for (let cnt1 = 0; cnt1 < 30; ++cnt1) {
             if (var_1392 == 11) {
@@ -1982,9 +1982,9 @@ function func613(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "しかし 装備中のDISCによって";
             comments_row2a = "老化攻撃を防いだ！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -2004,9 +2004,9 @@ function func613(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "しかし 装備中のDISCによって";
             comments_row2a = "体が冷やされ 無事だった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -2027,9 +2027,9 @@ function func613(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "精神力が下がってしまった！";
         comments_row2a = "";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -2082,9 +2082,9 @@ function func614(this: any) {
         }
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
 
         DSPLAY(audio_id = 185);
@@ -2114,9 +2114,9 @@ function func614(this: any) {
         }
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         var_240 = 0;
         var_83[var_673].Var6 = 1;
@@ -2166,9 +2166,9 @@ function func614(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[6];
-            var_26_x = var_26[6];
-            var_27_x = var_27[6];
+            var_25_x = var_25[12]; // Var0.1310で値修正 6 → 12
+            var_26_x = var_26[12]; // Var0.1310で値修正 6 → 12
+            var_27_x = var_27[12]; // Var0.1310で値修正 6 → 12
             yield func047();
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -2178,9 +2178,9 @@ function func614(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "どんな気分だ？";
             comments_row2a = "動けねえのに背後に立たれる気分はよ？";
-            var_25_x = var_25[6];
-            var_26_x = var_26[6];
-            var_27_x = var_27[6];
+            var_25_x = var_25[12]; // Var0.1310で値修正 6 → 12
+            var_26_x = var_26[12]; // Var0.1310で値修正 6 → 12
+            var_27_x = var_27[12]; // Var0.1310で値修正 6 → 12
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -2383,9 +2383,9 @@ function func617(this: any) {
         comments_row2 = "周囲の危険が増えた気がする…";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -2417,9 +2417,9 @@ function func618(this: any) {
         }
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -2451,9 +2451,9 @@ function func618(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -2538,9 +2538,9 @@ function func620(this: any) {
                 var_299 = 0;
                 if (var_120 == 0) {
                     comments_row1 = "ﾃﾞｨｱﾎﾞﾛは眠ってしまった！";
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             
                     DSPLAY(audio_id = 132);
                     var_219 = 1;
@@ -2548,25 +2548,25 @@ function func620(this: any) {
                 if (var_120 == 1) {
                     comments_row1 = "10時間熟睡した気分になっていて";
                     comments_row2 = "眠くならなかった！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_219 = 0;
                 }
                 if (equip_disc[351] == 1) {
                     comments_row1 = "装備DISCの効果によって";
                     comments_row2 = "眠くならなかった！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_219 = 0;
                 }
                 if (var_410 == 400 || var_410 == 407) {
                     comments_row1 = "装備DISCの効果によって";
                     comments_row2 = "眠らずにすんだ！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_219 = 0;
                 }
                 var_198 = 1;
@@ -2688,9 +2688,9 @@ function func620(this: any) {
             var_299 = 0;
             comments_row1 = "" + var_2886 + "が";
             comments_row2 = "呪われた！";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -2700,9 +2700,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "･･･と思ったが、";
                 comments_row2a = "漆黒のオーラに守られて無事だった。";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -2714,9 +2714,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "･･･と思ったが、";
                 comments_row2a = "装備DISCの効果によって呪いを防いだ！";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -2741,9 +2741,9 @@ function func620(this: any) {
                     comments_row1a = "僕を捕まえることはできない…！";
                     comments_row2a = "";
                 }
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -2786,9 +2786,9 @@ function func620(this: any) {
                 var_298 = "";
                 var_299 = 0;
                 comments_row1 = "動作がノロくなってしまった！";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -2802,9 +2802,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし装備スタンドの効果で";
                     comments_row2a = "速度は遅くならない！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -2832,9 +2832,9 @@ function func620(this: any) {
                 var_298 = "";
                 var_299 = 0;
                 comments_row1 = "「エコーズ ３ FREEZE ！」";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -2863,9 +2863,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "体が重くなってしまった！";
                 comments_row2a = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -2877,9 +2877,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし装備スタンドの効果で";
                     comments_row2a = "速度は遅くならない！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -2909,9 +2909,9 @@ function func620(this: any) {
                 var_299 = 0;
                 comments_row1 = "「ドガ！」「バキ！」「ボ！」「ビシ！」";
                 comments_row2 = "　　「ボ！」「ドヒュン！」「バキ！」";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -2931,9 +2931,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "頭がおかしくなってしまった！";
                 comments_row2a = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -2961,9 +2961,9 @@ function func620(this: any) {
                 var_298 = "";
                 var_299 = 0;
                 comments_row1 = "「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -3017,9 +3017,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "鉄塔がカエルに変化した！";
                 comments_row2a = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -3080,9 +3080,9 @@ function func620(this: any) {
             var_299 = 0;
             comments_row1 = "" + var_2888 + " G奪われた！";
             comments_row2 = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -3137,9 +3137,9 @@ function func620(this: any) {
                 var_298 = "";
                 var_299 = 0;
                 comments_row1 = "『プ…』";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -3166,9 +3166,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "精神力が下がってしまった！";
                 comments_row2a = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -3198,9 +3198,9 @@ function func620(this: any) {
                 comments_row1 = "オーバードライブ！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3211,9 +3211,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし波紋に強くなっていて平気だった";
                     comments_row2a = "";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -3256,9 +3256,9 @@ function func620(this: any) {
                     comments_row2 = "冷凍攻撃を防いだ！";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -3278,9 +3278,9 @@ function func620(this: any) {
                     comments_row2 = "冷凍攻撃を防いだ！";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -3301,9 +3301,9 @@ function func620(this: any) {
                 comments_row1 = "体を凍らされてしまった！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3325,9 +3325,9 @@ function func620(this: any) {
                 comments_row1 = "「コッチヲ見ロォ～」";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 var_2197 = 1;
                 return;
@@ -3353,9 +3353,9 @@ function func620(this: any) {
                 var_299 = 0;
                 comments_row1 = "「チャンスをやろう…";
                 comments_row2 = "　向かうべき『２つの道』を……！」";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -3386,9 +3386,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "" + target_item_name + "に";
                     comments_row2a = "新たな装備効果が発現した！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func050();
@@ -3400,9 +3400,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "「この【魂】　選ばれるものでは…」";
                     comments_row2a = "";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func050();
@@ -3418,9 +3418,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "「なかった！」";
                     comments_row2a = "";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func050();
@@ -3429,9 +3429,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "HPが半分になった。";
                     comments_row2a = "";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func050();
@@ -3475,9 +3475,9 @@ function func620(this: any) {
                 comments_row1 = "ｴﾝﾔ婆は 死体 を呼び寄せた！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
@@ -3504,9 +3504,9 @@ function func620(this: any) {
                 comments_row1 = "ﾊｰｳﾞｪｽﾄは様子をうかがっている…";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3538,9 +3538,9 @@ function func620(this: any) {
                 comments_row1 = "ﾊｰｳﾞｪｽﾄは様子をうかがっている…";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3583,9 +3583,9 @@ function func620(this: any) {
                 comments_row1 = "装備DISCの効果で盗まれなかった。";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3645,9 +3645,9 @@ function func620(this: any) {
             comments_row1 = "" + target_item_name + "を盗まれた！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             if (var_128 >= 1) {
                 yield func023();
@@ -3684,9 +3684,9 @@ function func620(this: any) {
                 comments_row2 = "爆弾だった！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 var_455 = var_2695;
                 var_456 = var_2696;
@@ -3828,9 +3828,9 @@ function func620(this: any) {
             comments_row2 = "" + target_item_name + "を盗まれた！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             if (var_128 >= 1) {
                 yield func023();
@@ -3877,9 +3877,9 @@ function func620(this: any) {
             comments_row2 = "「怪焔王」の流法！！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -3921,9 +3921,9 @@ function func620(this: any) {
                 comments_row1 = "燃やす攻撃に強くなっていて平気だった";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3942,9 +3942,9 @@ function func620(this: any) {
                 comments_row1 = "装備DISCの効果で燃やされなかった";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3981,9 +3981,9 @@ function func620(this: any) {
             comments_row2 = "消し炭になった！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             if (var_128 >= 1) {
                 yield func023();
@@ -4030,9 +4030,9 @@ function func620(this: any) {
             comments_row2 = "解体してやる！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -4073,9 +4073,9 @@ function func620(this: any) {
                 comments_row2 = "柔らかくしていて平気だった。";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -4111,9 +4111,9 @@ function func620(this: any) {
             comments_row2 = "バラバラにされてしまった！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             if (var_128 >= 1) {
                 yield func023();
@@ -4159,9 +4159,9 @@ function func620(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -4204,9 +4204,9 @@ function func620(this: any) {
                 comments_row2 = "生命が生まれるのを防いだ！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -4225,9 +4225,9 @@ function func620(this: any) {
                 comments_row1 = "装備DISCの効果で きかなかった";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -4268,9 +4268,9 @@ function func620(this: any) {
             comments_row2 = "" + var_2892 + "に生まれ変わった！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             if (var_128 >= 1) {
                 yield func023();
@@ -4307,9 +4307,9 @@ function func620(this: any) {
                 comments_row1 = "目を切り裂かれた！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 var_271 = 1;
                 var_1499 = 1;
@@ -4350,9 +4350,9 @@ function func620(this: any) {
             comments_row1 = "ｹﾞﾌﾞ神に足をつかまれた！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -4393,9 +4393,9 @@ function func620(this: any) {
             comments_row1 = "ブルりんにつかまった！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -4436,9 +4436,9 @@ function func620(this: any) {
                 comments_row1 = "ｳｴｽﾄｳｯﾄﾞ看守「完全に【ロック】したぜ」";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -4485,9 +4485,9 @@ function func620(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 yield func340(); // キー入力による選択処理
                 var_601 = rnd(20);
@@ -4503,9 +4503,9 @@ function func620(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 yield func050();
                 yield func340(); // キー入力による選択処理
@@ -4579,9 +4579,9 @@ function func620(this: any) {
                 comments_row2 = "" + var_209 + "のダメージを喰らった！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     var_585 = 3;
@@ -4627,9 +4627,9 @@ function func620(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -4666,9 +4666,9 @@ function func620(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
         
                 DSPLAY(audio_id = 123);
@@ -4741,9 +4741,9 @@ function func620(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -4795,9 +4795,9 @@ function func620(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -4848,9 +4848,9 @@ function func620(this: any) {
                 comments_row2 = "　レッド・バインド」！！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -4880,9 +4880,9 @@ function func620(this: any) {
                     comments_row1 = "装備DISCの効果で平気だった";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -5037,9 +5037,9 @@ function func620(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -5079,9 +5079,9 @@ function func620(this: any) {
                     comments_row1 = "燃やす攻撃に強くなっていて平気だった";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -5100,9 +5100,9 @@ function func620(this: any) {
                     comments_row1 = "装備DISCの効果で燃やされなかった";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -5139,9 +5139,9 @@ function func620(this: any) {
                 comments_row2 = "消し炭になった！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 if (var_128 >= 1) {
                     yield func023();
@@ -5196,9 +5196,9 @@ function func620(this: any) {
                     comments_row1 = "何かが爆弾にされた！";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 15; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -5262,9 +5262,9 @@ function func620(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
                     var_300 = 0;
@@ -5297,9 +5297,9 @@ function func620(this: any) {
                 comments_row1 = "HAIL 2 U !!";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                     var_300 = 0;
@@ -5318,9 +5318,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "お前の願いを言え！";
                     comments_row2a = "";
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -5360,9 +5360,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "地面から 土人形 が現れた！";
                 comments_row2a = "";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -5410,9 +5410,9 @@ function func620(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 var_83[var_673].Var21 = 1;
                 var_411 = 1;
@@ -5435,9 +5435,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "攻撃開始イ―――――ッ！";
                     comments_row2a = "";
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -5451,9 +5451,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "グリーンベレーッ！";
                 comments_row2a = "やれッ！";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -5532,9 +5532,9 @@ function func620(this: any) {
                 comments_row2 = "ジャアァ～～～ン　ケン！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -5575,9 +5575,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "";
                 comments_row2a = "『ホイッ！！』";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -5591,9 +5591,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "勝ったッ！";
                 comments_row2a = "エネルギーをいただくよッ！";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -5642,9 +5642,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "" + var_2900 + " の";
                     comments_row2a = "エネルギーを １ 吸い取られた！";
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -5669,9 +5669,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "" + var_2900 + " の";
                     comments_row2a = "エネルギーを " + var_2901 + " 吸い取られた！";
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -5684,9 +5684,9 @@ function func620(this: any) {
                         comments_row2 = comments_row2a;
                         comments_row1a = "" + var_2900 + "は";
                         comments_row2a = "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した";
-                        var_25_x = var_25[1];
-                        var_26_x = var_26[1];
-                        var_27_x = var_27[1];
+                        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                         var_198 = 1;
                         var_300 = 0;
                         yield func047();
@@ -5713,9 +5713,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "ま…　負け…　た";
                 comments_row2a = "う～～～う～～～うう～～～";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -5746,9 +5746,9 @@ function func620(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -5793,9 +5793,9 @@ function func620(this: any) {
                     comments_row2 = "若返りを防いだ！";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -5830,9 +5830,9 @@ function func620(this: any) {
                     comments_row1 = "胎児にまで戻された！";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -5852,9 +5852,9 @@ function func620(this: any) {
                 comments_row1 = "レベルが下がってしまった！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -5926,9 +5926,9 @@ function func620(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 if (var_128 >= 1) {
                     yield func023();
@@ -5984,9 +5984,9 @@ function func620(this: any) {
                     comments_row1 = "何かが爆弾にされた！";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 15; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -6006,9 +6006,9 @@ function func620(this: any) {
                 comments_row1 = "誰にも私を追うことはできない…";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                     var_300 = 0;
@@ -6028,9 +6028,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "君さえ消えていなくなってくれればね…";
                     comments_row2a = "";
-                    var_25_x = var_25[2];
-                    var_26_x = var_26[2];
-                    var_27_x = var_27[2];
+                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -6057,9 +6057,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "吉良はｼｱｰﾊｰﾄｱﾀｯｸを繰り出した！";
                 comments_row2a = "";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -6190,9 +6190,9 @@ function func620(this: any) {
                     comments_row2 = "DISCを抜き取られなかった。";
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -6331,9 +6331,9 @@ function func620(this: any) {
                 comments_row2 = "抜き取られてしまった！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 yield func619();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
@@ -6367,9 +6367,9 @@ function func620(this: any) {
                 comments_row1 = "接触老化攻撃だ！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 yield func619();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
@@ -6389,9 +6389,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし 装備中のDISCによって";
                     comments_row2a = "老化攻撃を防いだ！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -6404,9 +6404,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし 装備中のDISCによって";
                     comments_row2a = "体が冷やされ 無事だった！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -6429,9 +6429,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "精神力の最大値が １下がった！";
                 comments_row2a = "";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -6455,9 +6455,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "最大HPが " + var_2903 + "下がった！";
                 comments_row2a = "";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -6485,9 +6485,9 @@ function func620(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -6503,9 +6503,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "体力が逆転してしまった！！";
                     comments_row2a = "";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -6516,9 +6516,9 @@ function func620(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかしメビウスの輪を作って";
                     comments_row2a = "裏返り攻撃を防いだ！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -6543,9 +6543,9 @@ function func620(this: any) {
                 var_298 = "";
                 var_299 = 0;
                 comments_row1 = "ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰは無重力を作り出した！";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -6565,9 +6565,9 @@ function func620(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "思うように動けなくなってしまった！";
                 comments_row2a = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -6775,9 +6775,9 @@ function func623(this: any) {
             }
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -9680,13 +9680,14 @@ function func627(this: any) {
             var_953 = var_977[var_2917];
         }
         if (special_floor == 2) { // 杜王町埠頭
-            var_977 = [47, 39, 35, 145, 147, 147];
-            var_2917 = rnd(7);
+            // var_977 = [47, 39, 35, 145, 147, 147];
+            var_977 = [47, 39, 35, 145, 147]; // Var0.1310にて修正。
+            var_2917 = rnd(5); // Var0.1310にて修正。rnd(7) → rnd(6)。こうしていないとバグ敵が出現する。
             var_953 = var_977[var_2917];
         }
         if (special_floor == 3) { // 吉良屋敷
             var_977 = [17, 17, 31, 17, 31, 31];
-            var_2917 = rnd(6);
+            var_2917 = rnd(6); // Var0.1310にて修正。rnd(7) → rnd(6)。こうしていないとバグ敵が出現する。
             var_953 = var_977[var_2917];
         }
         if (special_floor == 4) { // 没特殊階層「星屑の十字軍」ボスは承太郎
@@ -12247,9 +12248,9 @@ function func636(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -12284,9 +12285,9 @@ function func636(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -12379,9 +12380,9 @@ function func636(this: any) {
                 }
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -12406,9 +12407,9 @@ function func636(this: any) {
             }
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
             var_2939 = 1;
             if (equip_disc[105] == 1) {
@@ -12463,9 +12464,9 @@ function func636(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -12546,9 +12547,9 @@ function func636(this: any) {
             }
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -12624,13 +12625,13 @@ function func636(this: any) {
         comments_row1 = "ﾃﾞｨｱﾎﾞﾛは" + enemy_name + "に";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         if (var_1194 == 1) {
-            var_25_x = var_25[6];
-            var_26_x = var_26[6];
-            var_27_x = var_27[6];
+            var_25_x = var_25[12]; // Var0.1310で値修正 6 → 12
+            var_26_x = var_26[12]; // Var0.1310で値修正 6 → 12
+            var_27_x = var_27[12]; // Var0.1310で値修正 6 → 12
         }
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -12675,9 +12676,9 @@ function func636(this: any) {
                 comments_row1a = "" + var_209 + "の養分を吸収した。";
                 comments_row2a = "";
                 var_2945 = enemy_list;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -12801,9 +12802,9 @@ function func636(this: any) {
             comments_row2a = "" + var_2956 + "の経験値を手に入れた";
             var_2945 = enemy_list;
             var_1034 = enemy_list;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -12992,9 +12993,9 @@ function func636(this: any) {
                     comments_row1a = "" + var_2943 + "を凍らせた！";
                     comments_row2a = "";
                 }
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -13747,9 +13748,9 @@ function func643(this: any) {
         var_2982 = 0;
         var_2983 = 0;
         var_2984 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
 
         DSPLAY(audio_id = 121);
         yield func337(); // メッセージ関係呼び出し
@@ -14227,9 +14228,9 @@ function func644(this: any) {
         }
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         var_2939 = 1;
         if (equip_disc[105] == 1) {
@@ -14395,9 +14396,9 @@ function func646(this: any) {
             var_299 = 0;
             comments_row1 = "" + item_name + "は";
             comments_row2 = "使いすぎて壊れてしまった。";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -14434,9 +14435,9 @@ function func647(this: any) {
             var_298 = "";
             var_299 = 0;
             comments_row1 = "射撃DISCを装備していないぞ";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -15221,9 +15222,9 @@ function func650(this: any) {
             comments_row2 = "　　　　当テル相手ガ ミツカラナイヨ―ッ」";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -15471,9 +15472,9 @@ function func651(this: any) {
             comments_row2 = "反省すると強いぜ・・・";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -15840,9 +15841,9 @@ function func652(this: any) {
                                 enemy_list = var_83[var_3024].Var0;
                                 yield func626();
                                 yield func638();
-                                var_25_x = var_25[1];
-                                var_26_x = var_26[1];
-                                var_27_x = var_27[1];
+                                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                                 yield func705();
                             }
                             if (var_2867 == 0) {
@@ -16042,9 +16043,9 @@ function func653(this: any) {
                         enemy_list = var_83[var_3024].Var0;
                         yield func626();
                         yield func638();
-                        var_25_x = var_25[1];
-                        var_26_x = var_26[1];
-                        var_27_x = var_27[1];
+                        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                         yield func705();
                         var_3014 = 1;
                     }
@@ -16162,9 +16163,9 @@ function func654(this: any) {
             comments_row2 = "ﾍﾟﾗﾍﾟﾗの人質を見て攻撃を躊躇した！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 var_3035 = 1;
@@ -16245,9 +16246,9 @@ function func654(this: any) {
             }
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -16297,9 +16298,9 @@ function func654(this: any) {
                 comments_row1 = "ザ・フールが攻撃を防いだ！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 var_271 = 1;
                 var_1383 = 1;
@@ -16412,9 +16413,9 @@ function func654(this: any) {
             }
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[3];
-            var_26_x = var_26[3];
-            var_27_x = var_27[3];
+            var_25_x = var_25[9]; // Var0.1310で値修正 3 → 9
+            var_26_x = var_26[9]; // Var0.1310で値修正 3 → 9
+            var_27_x = var_27[9]; // Var0.1310で値修正 3 → 9
             yield func047();
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -16442,9 +16443,9 @@ function func654(this: any) {
         comments_row1 = "" + enemy_name + "はﾃﾞｨｱﾎﾞﾛに";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -16467,9 +16468,9 @@ function func654(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "ビリっときたあああああ！！";
                 comments_row2a = "";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -16567,9 +16568,9 @@ function func655(this: any) {
             comments_row1 = "" + var_3040 + "の攻撃は外れた";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -16643,9 +16644,9 @@ function func655(this: any) {
         yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func705();
         var_83[var_2819].Var7 = 0;
         var_742 = 0;
@@ -16736,9 +16737,9 @@ function func657(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "玉美「イイイイイデェ～～～～ッ";
         comments_row2a = "　　　前歯がハァァ―――――ッ」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -16769,9 +16770,9 @@ function func657(this: any) {
                 comments_row1 = "「よし！それじゃあ明日までにキッチリ";
                 comments_row2 = "５０万持って来い！」";
             }
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -16817,9 +16818,9 @@ function func657(this: any) {
             var_298 = "";
             var_299 = 0;
             comments_row1 = "罪悪感で体が重くなった！";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -16830,9 +16831,9 @@ function func657(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "しかし装備スタンドの効果で";
                 comments_row2a = "速度は遅くならない！";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -16902,9 +16903,9 @@ function func657(this: any) {
             var_298 = "";
             var_299 = 0;
             comments_row1 = "罪悪感で" + target_item_name + " 奪われた！";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -16938,9 +16939,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "吉良「限界だッ！　押すねッ！」";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -16951,9 +16952,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "吉良『今だッ』！";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -16981,9 +16982,9 @@ function func658(this: any) {
                 var_299 = 0;
                 comments_row1 = "「Ｓ・Ｈ・Ｉ・Ｔ！」";
                 comments_row2 = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 var_198 = 1;
                 var_300 = 0;
@@ -16992,9 +16993,9 @@ function func658(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "吉良のバイツァダストを防いだ！";
                 comments_row2a = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -17010,9 +17011,9 @@ function func658(this: any) {
                 var_299 = 0;
                 comments_row1 = "吉良「…………な………";
                 comments_row2 = "このクソカスどもがァ――ッ！！」";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 var_198 = 1;
                 var_300 = 0;
@@ -17054,9 +17055,9 @@ function func658(this: any) {
                     }
                     var_198 = 1;
                     var_300 = 0;
-                    var_25_x = var_25[6];
-                    var_26_x = var_26[6];
-                    var_27_x = var_27[6];
+                    var_25_x = var_25[12]; // Var0.1310で値修正 6 → 12
+                    var_26_x = var_26[12]; // Var0.1310で値修正 6 → 12
+                    var_27_x = var_27[12]; // Var0.1310で値修正 6 → 12
                     yield func047();
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -17066,9 +17067,9 @@ function func658(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "ﾃﾞｨｱﾎﾞﾛ「そしてやれやれ";
                     comments_row2a = "　　　　　間に合ったぜ……」";
-                    var_25_x = var_25[6];
-                    var_26_x = var_26[6];
-                    var_27_x = var_27[6];
+                    var_25_x = var_25[12]; // Var0.1310で値修正 6 → 12
+                    var_26_x = var_26[12]; // Var0.1310で値修正 6 → 12
+                    var_27_x = var_27[12]; // Var0.1310で値修正 6 → 12
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -17181,9 +17182,9 @@ function func658(this: any) {
             var_299 = 0;
             comments_row1 = "「フ…フハ…　フハハハハハハハハハ";
             comments_row2 = "　　戻ったぞ…」";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             var_198 = 1;
             var_300 = 0;
@@ -17207,9 +17208,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "「いっしょに行こうよォ～～ッ」";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17240,9 +17241,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "" + var_2244 + "のﾀﾞﾒｰｼﾞを喰らった";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17260,9 +17261,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "うぉうッ！　臭いがッ！";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17286,9 +17287,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "" + var_2244 + "のﾀﾞﾒｰｼﾞを喰らった";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17321,9 +17322,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "キィイイイイイイ";
             comments_row2a = "　　コエエエエエエ　エエエエエエエエ";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17361,9 +17362,9 @@ function func658(this: any) {
                 comments_row1a = "肉片がくっつきそうになったが";
                 comments_row2a = "装備DISCによって防いだ";
             }
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17396,9 +17397,9 @@ function func658(this: any) {
                 comments_row1a = "「憎き肉片」がくっつきそうになったが";
                 comments_row2a = "装備DISCによって防いだ";
             }
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17431,9 +17432,9 @@ function func658(this: any) {
                 comments_row1a = "波紋でやられそうになったが、";
                 comments_row2a = "波紋に強くなっていて平気だった。";
             }
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17481,9 +17482,9 @@ function func658(this: any) {
                 comments_row2a = "冷たいのに強くなってて平気だった";
                 var_128 = 0;
             }
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17502,9 +17503,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾜﾑｳの透明化が解除された。";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17527,9 +17528,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾜﾑｳ「ブツ　ブツ　ブツ";
             comments_row2a = "　　　　ブツ　ブツ　ブツ」";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17565,9 +17566,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾜﾑｳ「なまじ目が見えたから";
             comments_row2a = "　　ヤツに虚をつかれた！」";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17589,9 +17590,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾜﾑｳはレベルが上がった！";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17620,9 +17621,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "恨みのパワーで";
             comments_row2a = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙの攻撃力が上がった！";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17659,9 +17660,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾚｯﾄﾞﾎｯﾄﾁﾘﾍﾟｯﾊﾟｰは反省している…";
             comments_row2a = "電力を集中させ 攻撃力が上がった！";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17714,9 +17715,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "「今ので覚えたぞ・・・！」";
             comments_row2a = "床屋のｶｰﾝの攻撃力が上がった！";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17762,9 +17763,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "「今ので覚えたぞ・・・！」";
             comments_row2a = "ｱﾇﾋﾞｽﾎﾟﾙﾅﾚﾌの攻撃力が上がった！";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17792,9 +17793,9 @@ function func658(this: any) {
             yield func094(); // メッセージ送りの際の効果音
             comments_row1a = "承太郎は何かメモをしている…";
             comments_row2a = "「忘れっぽいんでな…」";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17808,9 +17809,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "承太郎の攻撃力が上がった！";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -17831,9 +17832,9 @@ function func658(this: any) {
             comments_row2 = "　　　バルバルバルバルバルバル";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -17850,9 +17851,9 @@ function func658(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_83[var_314].Var21 = 1;
             var_411 = 1;
             for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
@@ -17867,9 +17868,9 @@ function func658(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             comments_row1 = "「これがッ！」　　「これがッ！」";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             var_411 = 4;
@@ -17911,9 +17912,9 @@ function func658(this: any) {
             }
             comments_row1 = "「これがッ！」　　「これがッ！」";
             comments_row2 = "「これが【バオー】だッ！」";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -17933,9 +17934,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ウオオオオオオオオオ――――ム！";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             var_198 = 1;
             var_300 = 0;
             yield func050();
@@ -17964,9 +17965,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "「このド畜生がッ！！」";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -18019,9 +18020,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "「暗黒空間にバラ撒いてやるッ！」";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -18070,9 +18071,9 @@ function func658(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "「これがおれの本体のハンサム顔だ！」";
             comments_row2a = "";
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -18134,9 +18135,9 @@ function func659(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             yield func340(); // キー入力による選択処理
             if (var_2712 == 1) {
@@ -18223,9 +18224,9 @@ function func659(this: any) {
             }
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18245,9 +18246,9 @@ function func659(this: any) {
             comments_row2 = "";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             yield func340(); // キー入力による選択処理
             gsel(19);
@@ -18288,9 +18289,9 @@ function func659(this: any) {
             comments_row2 = "スタンド能力は無効となる！";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -18426,9 +18427,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + var_3057 + "に";
             comments_row2 = "プランクトンを詰めた。";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -18449,9 +18450,9 @@ function func660(this: any) {
             if (var_3058 == 1) {
                 comments_row2a = "傷は完全に回復した。";
             }
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -18507,9 +18508,9 @@ function func660(this: any) {
             if (var_862[851][0] == 0) {
                 comments_row2 = "ヤバイものに閉じ込めた！";
             }
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -18575,9 +18576,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + var_3057 + "を";
             comments_row2 = "ｿﾞﾝﾋﾞ馬で縫った。";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -18586,9 +18587,9 @@ function func660(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "" + var_3057 + "の";
             comments_row2a = "傷は完全に回復した。";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -18635,9 +18636,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + var_3057 + "は";
             comments_row2 = "体力が回復した。";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -18649,9 +18650,9 @@ function func660(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "" + var_3057 + "は";
             comments_row2a = "混乱してしまった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -18876,9 +18877,9 @@ function func660(this: any) {
                 var_402 = var_314;
                 var_209 = 10;
                 var_403 = "とっさにかわされて";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func705();
                 var_340 = var_3056;
                 return;
@@ -18935,9 +18936,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "攻撃力が下がった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -18986,9 +18987,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "攻撃力が上がった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19032,9 +19033,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "動きが鈍くなった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19074,9 +19075,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "眠ってしまった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19109,9 +19110,9 @@ function func660(this: any) {
                 if (var_83[var_2964].Var20 >= 1) {
                     comments_row2 = "「攻撃することはできない！」";
                 }
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -19150,9 +19151,9 @@ function func660(this: any) {
                 var_299 = 0;
                 comments_row1 = "「ヘブンズドアー！」";
                 comments_row2 = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -19164,9 +19165,9 @@ function func660(this: any) {
                 comments_row2 = comments_row2a;
                 comments_row1a = "見えてなくて効かなかった…";
                 comments_row2a = "";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
@@ -19202,9 +19203,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "を";
             comments_row2 = "その場に固定した！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19241,9 +19242,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "氷漬けになった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19283,9 +19284,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "に";
             comments_row2 = "ラバーズが取り付いた！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19322,9 +19323,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "混乱してしまった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19361,9 +19362,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "鼓膜が破れてしまった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19400,9 +19401,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "の";
             comments_row2 = "目は見えなくなった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19442,9 +19443,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "の";
             comments_row2 = "動きが速くなった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19476,9 +19477,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "透明状態になった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19523,9 +19524,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "ｱｸｱ･ﾈｯｸﾚｽは";
             comments_row2 = "蒸発して透明になった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19566,9 +19567,9 @@ function func660(this: any) {
                 var_299 = 0;
                 comments_row1 = "" + enemy_name + "は";
                 comments_row2 = "レベルが上がった！";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -19598,9 +19599,9 @@ function func660(this: any) {
                 comments_row1 = "" + item_name + "が命中した！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 var_3072 = var_314;
                 yield func682();
@@ -19649,9 +19650,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "" + enemy_name + "は";
             comments_row2 = "レベルが下がった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19677,9 +19678,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "ﾍﾟｯｼ「プロシュート兄貴ィ！」";
             comments_row2 = "";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19689,9 +19690,9 @@ function func660(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾍﾟｯｼ「兄貴の覚悟が！";
             comments_row2a = "　【言葉】ではなく【心】で理解できた！」";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -19718,9 +19719,9 @@ function func660(this: any) {
             var_299 = 0;
             comments_row1 = "【10ターン後に破裂する！】";
             comments_row2 = "";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19767,9 +19768,9 @@ function func660(this: any) {
                 comments_row1 = "川尻浩作に矢が刺さった！";
             }
             comments_row2 = "";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_198 = 1;
             var_300 = 0;
             yield func047();
@@ -19832,9 +19833,9 @@ function func660(this: any) {
                 var_403 = "";
             }
         }
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func705();
         var_83[var_314].Var8 = 0;
         if (var_83[var_314].Var0 == 33) {
@@ -20095,9 +20096,9 @@ function func663(this: any) {
             comments_row1 = "" + item_name + "を";
             comments_row2 = "吸収している！！";
         }
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -20128,9 +20129,9 @@ function func663(this: any) {
             comments_row1a = "ﾉﾄｰﾘｱｽBIGはレベルが上がった！";
             comments_row2a = "";
         }
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -20168,9 +20169,9 @@ function func664(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "暗黒空間に消えた";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -20204,9 +20205,9 @@ function func665(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "ウェザーに届く寸前で燃え尽きた。";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -20238,9 +20239,9 @@ function func666(this: any) {
         comments_row1 = "ジェントリー・ウィープス！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         gsel(19);
         color(255, 255, 255);
@@ -20324,9 +20325,9 @@ function func666(this: any) {
         comments_row2 = "" + var_209 + "のダメージ！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -20680,9 +20681,9 @@ function func670(this: any) {
         var_299 = 0;
         comments_row1 = "ﾁﾘﾍﾟｯﾊﾟｰは海水に散って消えた…";
         comments_row2 = "";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -20770,23 +20771,23 @@ function func672(this: any) {
         var_299 = 0;
         if (var_1061 == 0) {
             comments_row1 = "ﾃﾞｨｱﾎﾞﾛ　再起不能";
-            var_25_x = var_25[3];
-            var_26_x = var_26[3];
-            var_27_x = var_27[3];
+            var_25_x = var_25[9]; // Var0.1310で値修正 3 → 9
+            var_26_x = var_26[9]; // Var0.1310で値修正 3 → 9
+            var_27_x = var_27[9]; // Var0.1310で値修正 3 → 9
         }
         if (var_1061 == 3) {
             if (var_144 == 0) {
                 comments_row1 = "ﾃﾞｨｱﾎﾞﾛは考えるのをやめた。";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             }
             if (var_144 != 0) {
                 comments_row1 = "さびしいよォォォォ……ボス";
                 comments_row2 = "電話ください………";
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             }
         }
         var_198 = 1;
@@ -20895,9 +20896,9 @@ function func675(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "アナザーワン・バイツァ・ダスト！！";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
 
         DSPLAY(audio_id = 180);
@@ -21076,9 +21077,9 @@ function func675(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "死の直前まで時間が戻った！";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         var_198 = 1;
         var_300 = 0;
@@ -21087,9 +21088,9 @@ function func675(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "" + var_3082 + "は";
         comments_row2a = "ｴﾈﾙｷﾞｰを使い果たして消滅した。";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21448,9 +21449,9 @@ function func680(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + current_level + "に上がった！";
             comments_row2a = "";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -21655,9 +21656,9 @@ function func683(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "" + var_3091 + "は";
             comments_row2a = "レベルが上がった！";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -21726,9 +21727,9 @@ function func685(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｴﾝﾔ婆「うぽわあ―――ッ！！」";
         comments_row2a = "";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21784,9 +21785,9 @@ function func685(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｴﾝﾔ婆「う…　うそじゃ";
         comments_row2a = "このわしが　こんなこと……」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21797,9 +21798,9 @@ function func685(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｴﾝﾔ婆「しかし…おまえが求める物など";
         comments_row2a = "こんなところにはないッ！」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21810,9 +21811,9 @@ function func685(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｴﾝﾔ婆「せいぜい他の場所を";
         comments_row2a = "探すんじゃなああああああ！」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21829,9 +21830,9 @@ function func686(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「うぐッ！！」";
         comments_row2a = "";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21842,9 +21843,9 @@ function func686(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「ば…ばかな…";
         comments_row2a = "こんなことが…」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21855,9 +21856,9 @@ function func686(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「G･E･ﾚｸｲｴﾑの能力を使えば、";
         comments_row2a = "その終わりのない状態を」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21868,9 +21869,9 @@ function func686(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「解除する事はできるだろう…。";
         comments_row2a = "";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21881,9 +21882,9 @@ function func686(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「…しかしボス」";
         comments_row2a = "";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21894,9 +21895,9 @@ function func686(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｼﾞｮﾙﾉ「はたしてそれで、";
         comments_row2a = "勝利したと言えるかな…？」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21914,9 +21915,9 @@ function func687(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｳﾝｶﾞﾛ「ウッガァ―――ッ！！」";
         comments_row2a = "";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21962,9 +21963,9 @@ function func687(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｳﾝｶﾞﾛ「オ…オレのスタンド";
         comments_row2a = "【ﾎﾞﾍﾐｱﾝﾗﾌﾟｿﾃﾞｨｰ】…」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21975,9 +21976,9 @@ function func687(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｳﾝｶﾞﾛ「この能力で、ダンジョン内を";
         comments_row2a = "ジョジョのキャラクターで」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -21988,9 +21989,9 @@ function func687(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｳﾝｶﾞﾛ「埋め尽くしてやろうと";
         comments_row2a = "思っていたのによォ～～」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -22001,9 +22002,9 @@ function func687(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ｳﾝｶﾞﾛ「もうこの世界には…";
         comments_row2a = "希望も何もねえッ…」";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -22074,9 +22075,9 @@ function func689(this: any) {
         comments_row1 = "このダンジョンを制覇した！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[6];
-        var_26_x = var_26[6];
-        var_27_x = var_27[6];
+        var_25_x = var_25[12]; // Var0.1310で値修正 6 → 12
+        var_26_x = var_26[12]; // Var0.1310で値修正 6 → 12
+        var_27_x = var_27[12]; // Var0.1310で値修正 6 → 12
         yield func047();
         for (let cnt1 = 0; true; ++cnt1) {
             var_491 = rnd(var_33);
@@ -22098,9 +22099,9 @@ function func689(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "どこかに階段が現れたようだ…";
         comments_row2a = "";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -22187,9 +22188,9 @@ function func690(this: any) {
             }
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[2];
-            var_26_x = var_26[2];
-            var_27_x = var_27[2];
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
             yield func047();
             yield func050();
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -22218,9 +22219,9 @@ function func691(this: any) {
         comments_row2a = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         yield func050();
         var_2538 = 0;
@@ -22271,9 +22272,9 @@ function func694(this: any) {
         var_403 = "ｽｰﾊﾟｰﾌﾗｲが攻撃を跳ね返した！";
         var_402 = var_673;
         var_3097 = 1;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func705();
         var_3097 = 0;
         yield func340(); // キー入力による選択処理
@@ -22314,9 +22315,9 @@ function func695(this: any) {
             var_403 = "" + var_3100 + "がダメージを反射した！";
             var_3098 = 1;
             var_402 = var_673;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             var_209 = Math.floor(var_209 / 3);
             if (var_209 <= 0) {
                 var_209 = 1;
@@ -22342,9 +22343,9 @@ function func696(this: any) {
             return;
         }
         var_403 = "ダメージを反射した！";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func705();
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -22415,9 +22416,9 @@ function func698(this: any) {
         comments_row1 = "カチリ";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         var_1343 = var_83[var_2890].Var1;
         var_1344 = var_83[var_2890].Var2;
@@ -22450,9 +22451,9 @@ function func698(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -22644,9 +22645,9 @@ function func699(this: any) {
         comments_row1 = "カチリ";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         yield func047();
         var_1343 = var_83[var_2890].Var1;
         var_1344 = var_83[var_2890].Var2;
@@ -22679,9 +22680,9 @@ function func699(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
-        var_25_x = var_25[2];
-        var_26_x = var_26[2];
-        var_27_x = var_27[2];
+        var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+        var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+        var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
         var_198 = 1;
         var_300 = 0;
         yield func047();

@@ -776,9 +776,9 @@ function func915(this: any) {
         comments_row2 = "ここにいるわよォ～～～ッ！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         var_3561 = "女帝";
         tcpput(var_3561, var_1050);
@@ -858,9 +858,9 @@ function func917(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         return;
     });
@@ -897,9 +897,9 @@ function func919(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         yield func340(); // キー入力による選択処理
         if (var_3572 >= 4) {
@@ -907,9 +907,9 @@ function func919(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "しかしよく聞こえなかった…";
             comments_row2a = "";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -927,9 +927,9 @@ function func919(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "「ディアボロはここよッ！";
         comments_row2a = "　ここにいるわよォ～～ッ！」";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -1026,9 +1026,9 @@ function func919(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "周囲の敵は声に誘われて";
             comments_row2a = "去っていった";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -1042,9 +1042,9 @@ function func919(this: any) {
             comments_row2 = comments_row2a;
             comments_row1a = "しかし何も起こらなかった";
             comments_row2a = "";
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func050();
             var_198 = 1;
             var_300 = 0;
@@ -1107,9 +1107,9 @@ function func921(this: any) {
         comments_row2 = "　注文しておいたよッ！」";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func094(); // メッセージ送りの際の効果音
@@ -1117,9 +1117,9 @@ function func921(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "「ピッツァ３枚で３００Ｇ」";
         comments_row2a = "";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -1130,9 +1130,9 @@ function func921(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "「もちろんお釣りはいらないよねッ！」";
         comments_row2a = "";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -1180,9 +1180,9 @@ function func923(this: any) {
         comments_row2 = "　デリバリーピッザですーっ」";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func094(); // メッセージ送りの際の効果音
@@ -1190,9 +1190,9 @@ function func923(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "「こんにちは――っ";
         comments_row2a = "　どちらですかーっ」";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -1203,9 +1203,9 @@ function func923(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "「どちらへ運びましょうか――ッ！？」";
         comments_row2a = "";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
@@ -1224,9 +1224,9 @@ function func923(this: any) {
         comments_row2 = comments_row2a;
         comments_row1a = "ピザ屋はその辺に置いて帰ったようだ。";
         comments_row2a = "";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func050();
         var_198 = 1;
         var_300 = 0;
