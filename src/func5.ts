@@ -7033,7 +7033,8 @@ function func511(this: any) {
                     var_455 = var_455 + 1;
                     var_456 = var_456 - 1;
                 }
-                if (var_94 == 9 && var_71[var_455][var_456] == 0) {
+                // 幽霊部屋
+                if (special_floor == 9 && var_71[var_455][var_456] == 0) {
                     break;
                 }
                 if (var_455 < 5 || var_455 > var_33 || var_456 < 5 || var_456 > var_34) {
@@ -7054,7 +7055,7 @@ function func511(this: any) {
                 if (var_77[var_455][var_456] > 0) {
                     var_77[var_455][var_456] = 0;
                 }
-                if (var_94 != 9) {
+                if (special_floor != 9) {
                     if (var_199 == 1 || var_199 == 3 || var_199 == 7 || var_199 == 9) {
                         var_2316 = var_455 - 1;
                         if (var_2316 < 5) {
@@ -8062,10 +8063,10 @@ function func511(this: any) {
                     yield func017();
                 }
                 yield func018();
-                if (var_200 == var_201 && var_94 != 8) {
+                if (var_200 == var_201 && special_floor != 8) {
                     var_98 = 1;
                 }
-                if (var_202 == var_201 && var_94 != 8) {
+                if (var_202 == var_201 && special_floor != 8) {
                     var_99 = 1;
                 }
                 yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
@@ -11316,11 +11317,9 @@ function func534(this: any) {
 function func535(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(535);
-
         var_80 = dim(length1= 70, length2 = 70, length3 = null, length4 = null);
-
         var_81 = dim(length1= 300, length2 = 7, length3 = null, length4 = null);
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             return;
         }
         if (current_floor >= 1 && current_floor <= 5) {
@@ -11389,7 +11388,8 @@ function func536(this: any) {
                             var_2328 = 0;
                             break;
                         }
-                        if (var_94 == 8 && var_71[var_2406][var_2407] == 14 && var_77[var_2406][var_2407] == 0 && var_73[var_2406][var_2407] == 0 && var_80[var_2406][var_2407] == 0 && var_72[var_2406][var_2407] <= 1) {
+                        // 幻覚の迷宮
+                        if (special_floor == 8 && var_71[var_2406][var_2407] == 14 && var_77[var_2406][var_2407] == 0 && var_73[var_2406][var_2407] == 0 && var_80[var_2406][var_2407] == 0 && var_72[var_2406][var_2407] <= 1) {
                             var_2328 = 0;
                             break;
                         }
@@ -11684,7 +11684,7 @@ function func536(this: any) {
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 21;
                 }
-                if (var_94 >= 1) {
+                if (special_floor >= 1) {
                     var_2421 = 21;
                 }
             }
@@ -11705,7 +11705,7 @@ function func536(this: any) {
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 15;
                 }
-                if (var_94 >= 1) {
+                if (special_floor >= 1) {
                     var_2421 = 15;
                 }
             }
@@ -11726,7 +11726,7 @@ function func536(this: any) {
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 3;
                 }
-                if (var_94 >= 1) {
+                if (special_floor >= 1) {
                     var_2421 = 3;
                 }
             }
@@ -11747,7 +11747,7 @@ function func536(this: any) {
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 16;
                 }
-                if (var_94 >= 1) {
+                if (special_floor >= 1) {
                     var_2421 = 16;
                 }
             }
@@ -11768,14 +11768,14 @@ function func536(this: any) {
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 9;
                 }
-                if (var_94 >= 1) {
+                if (special_floor >= 1) {
                     var_2421 = 9;
                 }
             }
             if (var_1804 == 1) {
                 var_2421 = 17;
             }
-            if (var_94 == 1) {
+            if (special_floor == 1) { // 虹村屋敷
                 var_2421 = 17;
             }
             if (var_2417 == 1) {
@@ -14616,7 +14616,8 @@ function func541(this: any) {
                     var_2470 = 1;
                     break;
                 }
-                if (var_94 == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
+                // 幻覚の迷宮
+                if (special_floor == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                     var_2470 = 1;
                     break;
                 }
@@ -14628,7 +14629,8 @@ function func541(this: any) {
                     if (var_71[var_1550][var_230] != 0 && var_71[var_1550][var_230] <= 12 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_72[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                         break;
                     }
-                    if (var_94 == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
+                    // 幻覚の迷宮
+                    if (special_floor == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                         var_2470 = 1;
                         break;
                     }
@@ -16643,7 +16645,7 @@ function func549(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_94 = 0;
+        special_floor = 0;
         var_532 = 1;
         var_356 = 300;
         yield func173();
@@ -16677,7 +16679,7 @@ function func550(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_94 = 0;
+        special_floor = 0;
         var_532 = 1;
         // No = 0 なので、拠点(ホテル、亀、)
         if (dangeon_number == 0) {
@@ -16762,31 +16764,31 @@ function func552(this: any) {
         var_2496 = rnd(9);
         var_2496 = var_2496 + 1;
         if (var_2496 == 1) {
-            var_94 = 1;
+            special_floor = 1; // 虹村屋敷
         }
         if (var_2496 == 2) {
-            var_94 = 2;
+            special_floor = 2; // 杜王町埠頭
         }
         if (var_2496 == 3) {
-            var_94 = 3;
+            special_floor = 3; // 吉良屋敷
         }
         if (var_2496 == 4) {
-            var_94 = 4;
+            special_floor = 4; // 没特殊階層「星屑の十字軍」ボスは承太郎
         }
         if (var_2496 == 5) {
-            var_94 = 5;
+            special_floor = 5; // 没特殊階層「ビンの中」ボスは毒グモ
         }
         if (var_2496 == 6) {
-            var_94 = 6;
+            special_floor = 6; // 没特殊階層「ナチス実験施設」ボスはサンタナ
         }
         if (var_2496 == 7) {
-            var_94 = 7;
+            special_floor = 7; // 広大な砂漠
         }
         if (var_2496 == 8) {
-            var_94 = 8;
+            special_floor = 8; // 幻覚の迷宮
         }
         if (var_2496 == 9) {
-            var_94 = 9;
+            special_floor = 9;
         }
         var_205 = 1;
         yield func231();
@@ -17169,13 +17171,13 @@ function func555(this: any) {
             var_952 = var_952 + 7;
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && special_floor == 0 && var_386 == 0) {
             return;
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             return;
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             var_952 = var_952 + 10;
         }
         for (let cnt1 = 0; cnt1 < var_952; ++cnt1) {
@@ -17232,12 +17234,13 @@ function func555(this: any) {
                     var_2499 = 12;
                     break;
                 }
-                if (var_94 == 8 && var_71[var_440][var_441] == 14 && var_65[var_440][var_441] == 0 && var_82[var_440][var_441] == 0) {
+                // 幻覚の迷宮
+                if (special_floor == 8 && var_71[var_440][var_441] == 14 && var_65[var_440][var_441] == 0 && var_82[var_440][var_441] == 0) {
                     var_2499 = 14;
                     break;
                 }
             }
-            yield func627();
+            yield func627(); // 各ダンジョンごとの出現敵設定
             var_2500 = rnd(9);
             if (equip_disc[357] == 1) {
                 var_2500 = rnd(18);
@@ -17474,7 +17477,7 @@ function func556(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(556);
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && special_floor == 0 && var_386 == 0) {
             return;
         }
         if (var_97 > 150 && var_123 == 0) {
@@ -17571,7 +17574,8 @@ function func556(this: any) {
                             var_1731 = 1;
                             break;
                         }
-                        if (var_94 == 8 && var_71[var_440][var_441] == 14 && var_65[var_440][var_441] == 0 && var_82[var_440][var_441] == 0) {
+                        // 幻覚の迷宮
+                        if (special_floor == 8 && var_71[var_440][var_441] == 14 && var_65[var_440][var_441] == 0 && var_82[var_440][var_441] == 0) {
                             var_2499 = 14;
                             var_1731 = 1;
                             break;
@@ -17833,7 +17837,8 @@ function func556(this: any) {
                         var_2110 = 1;
                         break;
                     }
-                    if (var_94 == 8 && var_71[var_440][var_441] == 14 && var_65[var_440][var_441] == 0 && var_82[var_440][var_441] == 0) {
+                    // 幻覚の迷宮
+                    if (special_floor == 8 && var_71[var_440][var_441] == 14 && var_65[var_440][var_441] == 0 && var_82[var_440][var_441] == 0) {
                         var_2499 = 14;
                         var_2110 = 1;
                         break;
@@ -17855,7 +17860,7 @@ function func556(this: any) {
             }
         }
         if (var_1729 == 0) {
-            yield func627();
+            yield func627(); // 各ダンジョンごとの出現敵設定
             if (var_85 == 1) {
                 var_2520 = rnd(2);
                 if (var_2520 == 0) {
@@ -19163,7 +19168,7 @@ function func562(this: any) {
         if (dangeon_number == 2 && current_floor >= 26) {
             var_2567 = 1;
         }
-        if (var_94 >= 1) {
+        if (special_floor >= 1) {
             var_2567 = 1;
         }
         // No = 2 なので、レクイエムの大迷宮
@@ -19233,7 +19238,7 @@ function func563(this: any) {
         var_387 = 0;
         var_386 = 0;
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_94 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && special_floor == 0) {
             var_2543 = 1;
             var_386 = 1;
             yield func556();
@@ -19251,38 +19256,38 @@ function func563(this: any) {
             yield func556();
             var_2543 = 0;
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             var_2543 = 3;
             yield func556();
             var_2543 = 0;
             var_387 = 1;
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             var_2543 = 2;
             yield func556();
             var_2543 = 0;
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             var_2543 = 4;
             yield func556();
             var_2543 = 0;
         }
-        if (var_94 == 4) {
+        if (special_floor == 4) { // 没特殊階層「星屑の十字軍」ボスは承太郎
             var_2543 = 5;
             yield func556();
             var_2543 = 0;
         }
-        if (var_94 == 6) {
+        if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
             var_2543 = 9;
             yield func556();
             var_2543 = 0;
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             var_2543 = 10;
             yield func556();
             var_2543 = 0;
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             var_2543 = 12;
             var_1845 = 4;
             var_2102 = 18;
@@ -31491,7 +31496,7 @@ function func594(this: any) {
         }
         current_floor = rnd(var_2840);
         current_floor = current_floor + 1;
-        yield func627();
+        yield func627(); // 各ダンジョンごとの出現敵設定
         // No = 0 なので、拠点(ホテル、亀、)
         if (dangeon_number == 0 || dangeon_number == 99) {
             var_953 = 37;

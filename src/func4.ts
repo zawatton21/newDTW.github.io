@@ -20690,10 +20690,10 @@ function func499(this: any) {
         yield func016();
         yield func017();
         yield func018();
-        if (var_200 == var_201 && var_94 != 8) {
+        if (var_200 == var_201 && special_floor != 8) {
             var_98 = 1;
         }
-        if (var_202 == var_201 && var_94 != 8) {
+        if (var_202 == var_201 && special_floor != 8) {
             var_99 = 1;
         }
         if (var_2112 == 0) {

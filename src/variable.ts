@@ -176,7 +176,7 @@ let var_90 :any;
 let current_floor :number; // 現在の階層
 let var_92 :any;
 let var_93 :any;
-let var_94 :any;
+let special_floor :number; // 特殊階層ID
 let var_95 :any;
 let var_96 :any;
 let var_97 :any;

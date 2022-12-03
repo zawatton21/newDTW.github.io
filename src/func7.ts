@@ -740,15 +740,15 @@ function func705(this: any) {
         }
         if (var_83[var_402].Var3 <= 0) {
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && var_83[var_402].Var0 == 20) {
+            if (dangeon_number == 1 && var_83[var_402].Var0 == 20) { // No = 20 エンヤ婆
                 yield func685();
             }
             // No = 2 なので、レクイエムの大迷宮
-            if (dangeon_number == 2 && var_83[var_402].Var0 == 132) {
+            if (dangeon_number == 2 && var_83[var_402].Var0 == 132) { // No = 132 レクイエムジョルノ
                 yield func686();
             }
             // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && var_83[var_402].Var0 == 143) {
+            if (dangeon_number == 3 && var_83[var_402].Var0 == 143) { // No = 143 ウンガロ
                 yield func687();
             }
             // No = 5 なので、鉄の牢獄
@@ -812,35 +812,36 @@ function func705(this: any) {
                 var_114 = 0;
             }
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && var_83[var_402].Var0 == 20) {
+            if (dangeon_number == 1 && var_83[var_402].Var0 == 20) { // No = 20 エンヤ婆
                 yield func689();
             }
-            if (var_94 == 1 && var_83[var_402].Var0 == 65) {
+            // 虹村屋敷
+            if (special_floor == 1 && var_83[var_402].Var0 == 65) { // No = 65 虹村形兆
                 yield func688();
             }
             // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && var_83[var_402].Var0 == 143) {
+            if (dangeon_number == 3 && var_83[var_402].Var0 == 143) { // No = 143 ウンガロ
                 yield func689();
             }
             // No = 2 なので、レクイエムの大迷宮
-            if (dangeon_number == 2 && var_83[var_402].Var0 == 132) {
+            if (dangeon_number == 2 && var_83[var_402].Var0 == 132) { // No = 132 レクイエムジョルノ
                 yield func689();
             }
-            if (var_83[var_402].Var0 == 53 && var_2196 != 0) {
+            if (var_83[var_402].Var0 == 53 && var_2196 != 0) { // No = 53 エクスペリエンスの花
                 var_3105 = 1;
             }
             if (var_83[var_402].Var20 == 0) {
-                if (var_83[var_402].Var0 == 79) {
+                if (var_83[var_402].Var0 == 79) { // No = 79 エコーズの卵
                     var_2957 = 1;
                     var_2958 = var_83[var_402].Var5;
                 }
-                if (var_83[var_402].Var0 == 91) {
+                if (var_83[var_402].Var0 == 91) { // No = 91 ACT1のさなぎ
                     var_2957 = 2;
                 }
-                if (var_83[var_402].Var0 == 92) {
+                if (var_83[var_402].Var0 == 92) { // No = 92 ACT2のさなぎ
                     var_2957 = 3;
                 }
-                if (var_83[var_402].Var0 == 77) {
+                if (var_83[var_402].Var0 == 77) { // No = 77 エコーズACT1
                     var_2957 = 4;
                 }
                 if (var_83[var_402].Var0 == 76) {
@@ -3843,7 +3844,7 @@ function func755(this: any) {
         var_3142 = sdim(length1 = 50, length2 = 20, length3 = null); 
         var_3143 = current_floor;
         current_floor = current_floor + 1;
-        yield func627();
+        yield func627(); // 各ダンジョンごとの出現敵設定
         var_3144 = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             if (var_977[var_3144] == 0) {
@@ -4007,7 +4008,7 @@ function func758(this: any) {
         yield func340(); // キー入力による選択処理
         var_3143 = current_floor;
         current_floor = current_floor + 1;
-        yield func627();
+        yield func627(); // 各ダンジョンごとの出現敵設定
         var_356 = var_977[var_2569];
         yield func177(); // 死因原因
         current_floor = var_3143;

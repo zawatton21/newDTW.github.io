@@ -1378,9 +1378,9 @@ function func139(this: any) {
 
         var_702 = bload(file_name = "00.dat", data_size = null, offset = 100);
 
-        var_25 = bload(file_name = "00.dat", data_size = null, offset = 200);
-        var_26 = bload(file_name = "00.dat", data_size = null, offset = 300);
-        var_27 = bload(file_name = "00.dat", data_size = null, offset = 400);
+        var_25_x = bload(file_name = "00.dat", data_size = null, offset = 200);
+        var_26_x = bload(file_name = "00.dat", data_size = null, offset = 300);
+        var_27_x = bload(file_name = "00.dat", data_size = null, offset = 400);
         if (var_702 == 0) {
             var_25[1] = 255;
             var_26[1] = 255;
@@ -7723,7 +7723,7 @@ function func185(this: any) {
         }
         var_352 = current_level * 4 + 15;
         var_211 = var_352;
-        var_94 = var_880;
+        special_floor = var_880;
         if (dangeon_number == 0) {
             // No = 1 なので、ホテルの外
             dangeon_number = 1;
@@ -8440,9 +8440,8 @@ function func199(this: any) {
         yield func337(); // メッセージ関係呼び出し
         yield func080(); // 各キー入力確認
         if (key_Z_on == 1 || key_A_on == 1) {
-
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-            if (var_908 == 0) {
+            if (var_908 == 0) { // マップの色を変更
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func199();
@@ -8459,13 +8458,13 @@ function func199(this: any) {
                 yield func199();
                 return;
             }
-            if (var_908 == 1) {
+            if (var_908 == 1) { // 透明度を変更
                 var_909 = 1;
                 yield func051();
                 yield func201();
                 return;
             }
-            if (var_908 == 2) {
+            if (var_908 == 2) { // 初期設定に戻す
                 var_25[13] = 0;
                 var_26[13] = 0;
                 var_27[13] = 255;

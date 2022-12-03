@@ -2892,6 +2892,7 @@ function func620(this: any) {
             }
             return;
         }
+        // No = 77 エコーズACT1
         if (enemy_list == 77) {
             var_2830 = rnd(5);
             if (var_2830 == 0 && var_126 == 0) {
@@ -2944,6 +2945,7 @@ function func620(this: any) {
             }
             return;
         }
+        // No = 132 レクイエムジョルノの動作処理
         if (enemy_list == 132) {
             if (var_146 >= 1 && var_147 == var_66 && var_148 == var_67) {
                 var_742 = 1;
@@ -3337,7 +3339,7 @@ function func620(this: any) {
                 return;
             }
         }
-        // No = 18 ブラック・サバスの
+        // No = 18 ブラック・サバスの行動
         if (enemy_list == 18) {
             var_2830 = rnd(8);
             if (var_2830 == 0) {
@@ -3442,6 +3444,7 @@ function func620(this: any) {
             }
             return;
         }
+        // No = 20 エンヤ婆の動作処理
         if (enemy_list == 20) {
             var_2830 = rnd(3);
             if (var_2830 == 0) {
@@ -5368,6 +5371,7 @@ function func620(this: any) {
             }
             return;
         }
+        // No = 65 虹村形兆の動作処理
         if (enemy_list == 65) {
             var_2830 = rnd(2);
             if (var_2830 == 0) {
@@ -9645,61 +9649,62 @@ function func626(this: any) {
         return;
     });
 }
+// 各ダンジョンごとの出現敵設定
 function func627(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(627);
         var_977 = dim(20);
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1) {
-            yield func628();
+            yield func628(); // ホテルの外のボス以外の出現敵設定
         }
         // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
-            yield func629();
+            yield func629(); // レクイエムの大迷宮のボス以外の出現敵設定
         }
         // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3) {
-            yield func630();
+            yield func630(); // ディアボロの試練のボス以外の出現敵設定
         }
         // No = 4 なので、一巡後の世界
         if (dangeon_number == 4) {
-            yield func634();
+            yield func634(); // 一巡後の世界のボス以外の出現敵設定
         }
         // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
-            yield func631();
+            yield func631(); // 鉄の牢獄のボス以外の出現敵設定
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             var_977 = [40, 41, 42, 54, 47, 79];
             var_2917 = rnd(6);
             var_953 = var_977[var_2917];
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             var_977 = [47, 39, 35, 145, 147, 147];
             var_2917 = rnd(7);
             var_953 = var_977[var_2917];
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             var_977 = [17, 17, 31, 17, 31, 31];
             var_2917 = rnd(6);
             var_953 = var_977[var_2917];
         }
-        if (var_94 == 4) {
+        if (special_floor == 4) { // 没特殊階層「星屑の十字軍」ボスは承太郎
             var_977 = [78, 119, 121, 122];
             var_2917 = rnd(4);
             var_953 = var_977[var_2917];
         }
-        if (var_94 == 5) {
+        if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
             var_977 = [100, 100, 48];
             var_2917 = rnd(3);
             var_953 = var_977[var_2917];
         }
-        if (var_94 == 6) {
+        if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
             var_977 = [2, 51, 52, 71, 11];
             var_2917 = rnd(5);
             var_953 = var_977[var_2917];
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             var_977 = [90, 90, 90, 90, 88, 88, 27];
             var_2917 = rnd(7);
             var_953 = var_977[var_2917];
@@ -9707,6 +9712,7 @@ function func627(this: any) {
         return;
     });
 }
+// ホテルの外のボス以外の出現敵設定
 function func628(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(628);
@@ -9783,6 +9789,7 @@ function func628(this: any) {
         return;
     });
 }
+// レクイエムの大迷宮の出現敵設定
 function func629(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(629);
@@ -9944,6 +9951,7 @@ function func629(this: any) {
         return;
     });
 }
+// ディアボロの試練の出現敵設定
 function func630(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(630);
@@ -12812,7 +12820,7 @@ function func636(this: any) {
             if (dangeon_number == 3 && var_83[var_314].Var0 == 143) {
                 yield func689();
             }
-            if (var_94 == 1 && var_83[var_314].Var0 == 65) {
+            if (special_floor == 1 && var_83[var_314].Var0 == 65) { // 虹村屋敷
                 yield func688();
             }
             if (var_175 >= 1 || var_176 >= 1) {
@@ -21130,16 +21138,16 @@ function func676(this: any) {
             var_1654 = 99999;
         }
         var_3084 = rnd(var_1654);
-        if (var_83[var_314].Var0 == 120 && var_94 == 99) {
+        if (var_83[var_314].Var0 == 120 && special_floor == 99) {
             var_3084 = 0;
         }
-        if (var_83[var_314].Var0 == 32 && var_94 == 3) {
+        if (var_83[var_314].Var0 == 32 && special_floor == 3) { // 吉良屋敷
             var_3084 = 0;
         }
-        if (var_83[var_314].Var0 == 44 && var_94 == 2) {
+        if (var_83[var_314].Var0 == 44 && special_floor == 2) { // 杜王町埠頭
             var_3084 = 0;
         }
-        if (var_83[var_314].Var0 == 65 && var_94 == 1) {
+        if (var_83[var_314].Var0 == 65 && special_floor == 1) { // 虹村屋敷
             var_3084 = 0;
         }
         if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114) {
@@ -21242,16 +21250,16 @@ function func676(this: any) {
             if (var_83[var_314].Var0 == 168) {
                 var_1757 = 1;
             }
-            if (var_83[var_314].Var0 == 32 && var_94 == 3) {
+            if (var_83[var_314].Var0 == 32 && special_floor == 3) { // 吉良屋敷
                 var_1737 = 1;
             }
-            if (var_83[var_314].Var0 == 44 && var_94 == 2) {
+            if (var_83[var_314].Var0 == 44 && special_floor == 2) { // 杜王町埠頭
                 var_1737 = 1;
             }
-            if (var_83[var_314].Var0 == 65 && var_94 == 1) {
+            if (var_83[var_314].Var0 == 65 && special_floor == 1) { // 虹村屋敷
                 var_1737 = 1;
             }
-            if (var_83[var_314].Var0 == 32 && var_94 == 0) {
+            if (var_83[var_314].Var0 == 32 && special_floor == 0) {
                 var_1073 = rnd(2);
                 if (var_1073 == 0) {
                     var_1758 = 1;

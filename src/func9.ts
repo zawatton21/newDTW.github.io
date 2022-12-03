@@ -336,7 +336,8 @@ function func909(this: any) {
                     var_3571 = 1;
                     break;
                 }
-                if (var_94 == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
+                // 幻覚の迷宮
+                if (special_floor == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                     var_2164 = var_1550;
                     var_2165 = var_230;
                     var_3571 = 1;

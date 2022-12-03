@@ -1817,7 +1817,7 @@ function func324(this: any) {
         if (var_262 == 1) {
             yield func163();
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             yield func164();
         }
         gsel(36);
@@ -1863,7 +1863,7 @@ function func325(this: any) {
         if (var_262 == 1) {
             return;
         }
-        if (var_94 == 7 && var_132 == 0) {
+        if (special_floor == 7 && var_132 == 0) { // 広大な砂漠
             if (var_490 == 1) {
                 pos(70, 150);
         
@@ -17524,7 +17524,8 @@ function func384(this: any) {
                         if (var_1142 == 1 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_72[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                             break;
                         }
-                        if (var_94 == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
+                        // 幻覚の迷宮
+                        if (special_floor == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                             break;
                         }
                     }
@@ -17806,13 +17807,13 @@ function func384(this: any) {
                 var_78[var_866].Var10 = 1;
             }
             if (dangeon_number != 5) {
-                if (var_452 == 0 && current_floor >= 15 && current_floor <= 18 && var_1734 == 0 && var_94 == 0) {
+                if (var_452 == 0 && current_floor >= 15 && current_floor <= 18 && var_1734 == 0 && special_floor == 0) {
                     var_1768 = rnd(5);
                     if (var_1768 == 0) {
                         var_78[var_866].Var15 = 1;
                     }
                 }
-                if (var_452 == 0 && current_floor >= 25 && current_floor <= 35 && var_1734 == 0 && var_94 == 0) {
+                if (var_452 == 0 && current_floor >= 25 && current_floor <= 35 && var_1734 == 0 && special_floor == 0) {
                     var_1768 = rnd(8);
                     if (var_1768 == 0) {
                         var_78[var_866].Var15 = 1;
@@ -17821,7 +17822,7 @@ function func384(this: any) {
             }
             // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
-                if (var_452 == 0 && current_floor >= 6 && current_floor <= 30 && var_1734 == 0 && var_94 == 0) {
+                if (var_452 == 0 && current_floor >= 6 && current_floor <= 30 && var_1734 == 0 && special_floor == 0) {
                     var_1768 = rnd(20);
                     if (var_1768 == 0) {
                         var_78[var_866].Var15 = 1;
