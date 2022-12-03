@@ -5537,16 +5537,11 @@ function func048(this: any) {
             return;
         }
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(20, 250);
-
         gcopy(12, 0, 0, 40, 64);　
-        
         pos(60, 250);
-        
         gcopy(12, 40, 0, 40, 64);
-        
         pos(100, 250);
         gcopy(12, 80, 0, 40, 64);
         pos(140, 250);
@@ -5568,7 +5563,7 @@ function func048(this: any) {
         pset(326, 253);
         pset(23, 311);
         pset(326, 311);
-        yield func049();
+        yield func049(); // メッセージ処理
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         if (var_299 == 0) {
             var_496 = 9;
@@ -5620,16 +5615,17 @@ function func049(this: any) {
         dbgprt(49);
         gsel(10);
         color(0, 0, 0);
-
         boxf(left = 0, top1 = 0, right = 340, bottom = 200);
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         pos(30, 0);
 
-        color(var_25_x, var_26_x, var_27_x);
-        mes("");        
+        //color1(var_25_x, var_26_x, var_27_x);
+        mes("");
+        color1(var_25_x, var_26_x, var_27_x);     
         mes(comments_row1);
         mes(comments_row2);
         mes(var_295);
+        color1(var_25_x, var_26_x, var_27_x);
         mes(comments_row1a);
         mes(comments_row2a);
         mes(var_298);

@@ -508,6 +508,11 @@ function color(red: number, green: number, blue: number) {
     context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
 }
 
+function color1(red: number, green: number, blue: number) {
+    // context.strokeStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
+    context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
+}
+
 /* 現在使用していない HSP言語 combox命令
 参照元: http://lhsp.s206.xrea.com/manual/
 
