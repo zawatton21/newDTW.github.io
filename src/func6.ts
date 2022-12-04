@@ -9686,8 +9686,9 @@ function func627(this: any) {
             var_953 = var_977[var_2917];
         }
         if (special_floor == 3) { // 吉良屋敷
-            var_977 = [17, 17, 31, 17, 31, 31];
-            var_2917 = rnd(6); // Var0.1310にて修正。rnd(7) → rnd(6)。こうしていないとバグ敵が出現する。
+            // var_977 = [17, 17, 31, 17, 31, 31];
+            var_977 = [17, 31]; // Var0.1310にて修正。
+            var_2917 = rnd(2); // Var0.1310にて修正。rnd(7) → rnd(2)。こうしていないとバグ敵が出現する。
             var_953 = var_977[var_2917];
         }
         if (special_floor == 4) { // 没特殊階層「星屑の十字軍」ボスは承太郎
@@ -10459,6 +10460,7 @@ function func630(this: any) {
         return;
     });
 }
+
 function func631(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(631);
@@ -12729,15 +12731,15 @@ function func636(this: any) {
         yield func626();
         if (var_83[var_314].Var3 <= 0) {
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && var_83[var_314].Var0 == 20) {
+            if (dangeon_number == 1 && var_83[var_314].Var0 == 20) { // No = 20 エンヤ婆
                 yield func685();
             }
             // No = 2 なので、レクイエムの大迷宮
-            if (dangeon_number == 2 && var_83[var_314].Var0 == 132) {
+            if (dangeon_number == 2 && var_83[var_314].Var0 == 132) { // No = 132 レクイエムジョルノ
                 yield func686();
             }
             // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && var_83[var_314].Var0 == 143) {
+            if (dangeon_number == 3 && var_83[var_314].Var0 == 143) { // No = 143 ウンガロ
                 yield func687();
             }
             // No = 5 なので、鉄の牢獄

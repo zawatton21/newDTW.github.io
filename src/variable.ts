@@ -285,7 +285,7 @@ let var_199 :any;
 let var_200 :any;
 let var_201 :any;
 let var_202 :any;
-let var_203 :any;
+let var_203 :number; // ホテルの外12Fの特殊階層の選択フラグ。4つの中から選択
 let var_204 :any;
 let var_205 :any;
 let var_206 :any;

@@ -8735,7 +8735,7 @@ function func471(this: any) {
                 // No = 1 なので、ホテルの外
                 dangeon_number = 1;
             }
-            yield func385(); // 各ダンジョンごとの出現アイテム管理
+            yield func385(); // 各ダンジョンごとの出現アイテム&出現確率管理
             if (var_262 == 1) {
                 // No = 0 なので、拠点(ホテル、亀、)
                 dangeon_number = 0;
@@ -17560,25 +17560,25 @@ function func498(this: any) {
                 var_70 = 0;
             }
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
+            if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
                 comments_row1a = "「ベンキを舐めさせられて";
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;
             }
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) {
+            if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) { // No = 1:虹村屋敷
                 comments_row1a = "「体中を蜂の巣にされて";
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;
             }
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) {
+            if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) { // No = 2:吉良屋敷
                 comments_row1a = "「爆発で粉々にされて";
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;
             }
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
+            if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) { // No = 3:杜王町埠頭
                 comments_row1a = "「電気で黒焦げにされて";
                 comments_row2a = "リタイアだァーッ！」";
                 var_70 = 0;

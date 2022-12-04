@@ -73,7 +73,7 @@ function func004(this: any) {
         }
         var_12 = 0;
         version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        game_title = "newDTW ver0.1309";
+        game_title = "newDTW original(ver0.1310)";
         
         buffer(17);
         yield picload("img3.gif");
@@ -847,19 +847,19 @@ function func008(this: any) {
         var_68 = 1;
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
             yield func118();
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) { // No = 1:虹村屋敷
             yield func119();
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) { // No = 2:吉良屋敷
             yield func120();
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) { // No = 3:杜王町埠頭
             yield func121();
         }
         // No = 2 なので、レクイエムの大迷宮
@@ -873,7 +873,7 @@ function func008(this: any) {
             yield func074();
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
             yield func075();
         }
         // No = 2 なので、レクイエムの大迷宮
@@ -5322,7 +5322,7 @@ function func045(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(45);
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
             return;
         }
         // No = 2 なので、レクイエムの大迷宮
@@ -6402,15 +6402,15 @@ function func059(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(59);
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) { // No = 1:虹村屋敷
             special_floor = 1; // 虹村屋敷
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) { // No = 2:吉良屋敷
             special_floor = 3; // 吉良屋敷
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) { // No = 3:杜王町埠頭
             special_floor = 2; // 杜王町埠頭
         }
         return;
@@ -6657,13 +6657,13 @@ function func060(this: any) {
                     }
                     var_532 = 1;
                     var_356 = 301;
-                    if (var_203 == 1) {
+                    if (var_203 == 1) { // No = 1:虹村屋敷
                         var_356 = 321;
                     }
-                    if (var_203 == 2) {
+                    if (var_203 == 2) { // No = 2:吉良屋敷
                         var_356 = 322;
                     }
-                    if (var_203 == 3) {
+                    if (var_203 == 3) { // No = 3:杜王町埠頭
                         var_356 = 325;
                     }
                     var_533 = 50000;

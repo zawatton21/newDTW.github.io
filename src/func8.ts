@@ -640,7 +640,7 @@ function func808(this: any) {
                 // No = 2 なので、レクイエムの大迷宮
                 dangeon_number = 2;
             }
-            yield func385(); // 各ダンジョンごとの出現アイテム管理
+            yield func385(); // 各ダンジョンごとの出現アイテム&出現確率管理
             if (var_262 == 1) {
                 // No = 0 なので、拠点(ホテル、亀、)
                 dangeon_number = 0;
@@ -1847,9 +1847,9 @@ function func825(this: any) {
         dbgprt(825);
         var_68 = 0;
         yield func723();
-        var_203 = 0;
+        var_203 = 0; // 初期値0 = エンヤホテル
         if (var_3121 >= 1) {
-            var_203 = rnd(4);
+            var_203 = rnd(4); // No = 0:エンヤホテル、No = 1:虹村屋敷、// No = 2:吉良屋敷
         }
         // No = 1 なので、ホテルの外
         dangeon_number = 1;
