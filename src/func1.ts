@@ -329,7 +329,7 @@ function func101(this: any) {
             bgm_title = "Chuck Berry [Johnny B. Goode]";
         }
         if (bgm_list_id == 977) {
-            bgm_file_name = "105.mp3";
+            bgm_file_name = "105.mp3"; // IDは977だが、ファイル名は違う:105.mp3
             bgm_title = "Red Hot Chili Peppers [Give It Away]";
         }
         if (bgm_list_id == 978) {
@@ -337,7 +337,7 @@ function func101(this: any) {
             bgm_title = "Pink Floyd [Atom Heart Mother]";
         }
         if (bgm_list_id == 979) {
-            bgm_file_name = "315.mp3";
+            bgm_file_name = "315.mp3"; // IDは979だが、ファイル名は違う:315.mp3
             bgm_title = "King Crimson [Epitaph]";
         }
         if (bgm_list_id == 980) {
