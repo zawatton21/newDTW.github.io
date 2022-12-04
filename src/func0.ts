@@ -852,11 +852,11 @@ function func008(this: any) {
         }
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) { // No = 1:虹村屋敷
-            yield func119();
+            yield func119(); // 虹村屋敷のBGM
         }
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) { // No = 2:吉良屋敷
-            yield func120();
+            yield func120(); // 吉良屋敷のBGM
         }
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) { // No = 3:杜王町埠頭

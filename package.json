@@ -39,7 +39,7 @@
   },
   "build": {
     "appId": "com.electron.yourapp",
-    "asar": false,
+    "asar": true,
     "directories": {
       "output": "dist"
     },
@@ -48,15 +48,6 @@
       "assets/**/*",
       "package.json",
       "package-lock.json"
-    ],
-    "extraResources": [
-      {
-        "from": "./assets/",
-        "to": "app/assets",
-        "filter": [
-          "**/*"
-        ]
-      }
     ],
     "mac": {
       "icon": "assets/icon/mac/icon_mac.icns",
@@ -79,11 +70,14 @@
       }
     },
     "linux": {
-      "icon": "assets/icon/linux/DTW.png",
-      "target": [
-        "AppImage",
-        "deb"
-      ]
+      "icon": " assets/icon/linux/DTW.png",
+      "target": {
+        "target": "AppImage",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      }
     },
     "deb": {},
     "nsis": {

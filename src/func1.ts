@@ -691,6 +691,7 @@ function func117(this: any) {
         return;
     });
 }
+// エンヤホテルのBGM
 function func118(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(118);
@@ -700,6 +701,7 @@ function func118(this: any) {
         return;
     });
 }
+// 虹村屋敷のBGM
 function func119(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(119);
@@ -709,6 +711,7 @@ function func119(this: any) {
         return;
     });
 }
+// 吉良屋敷のBGM
 function func120(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(120);
@@ -718,6 +721,7 @@ function func120(this: any) {
         return;
     });
 }
+// 杜王町埠頭のBGM
 function func121(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(121);
@@ -727,6 +731,7 @@ function func121(this: any) {
         return;
     });
 }
+// ゴールドエクスペリエンスレクイエムの発動で帰還する際のBGM
 function func122(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(122);

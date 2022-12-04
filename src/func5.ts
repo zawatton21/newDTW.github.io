@@ -8639,7 +8639,7 @@ function func511(this: any) {
                 var_1601 = var_1601 + 2;
             }
             var_312 = 0;
-            yield func122();
+            yield func122(); // ゴールドエクスペリエンスレクイエムの発動で帰還する際のBGM
             for (let cnt2 = 0; cnt2 < 100; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
                 var_1601 = var_1601 + 2;

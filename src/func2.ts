@@ -3485,6 +3485,9 @@ function func234(this: any) {
         var_295 = "";
         comments_row1a = "";
         comments_row2a = "";
+        var_25_x = 255; // Var0.1310で追加
+        var_26_x = 255; // Var0.1310で追加
+        var_27_x = 255; // Var0.1310で追加
         var_298 = "";
         var_299 = 0;
         comments_row1 = "セーブして終了します。";
@@ -3497,9 +3500,6 @@ function func234(this: any) {
         var_295 = "";
         comments_row1a = "";
         comments_row2a = "";
-        var_25_x = 255; // Var0.1310で追加
-        var_26_x = 255; // Var0.1310で追加
-        var_27_x = 255; // Var0.1310で追加
         var_298 = "";
         var_198 = 0;
         var_300 = 0;
