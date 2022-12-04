@@ -11990,7 +11990,7 @@ function func636(this: any) {
                     }
                 }
             }
-            if (var_83[var_314].Var0 == 50) {
+            if (var_83[var_314].Var0 == 50) { // enemy_list = 50 なので元いた場所
                 yield func651();
                 return;
             }
@@ -12000,7 +12000,7 @@ function func636(this: any) {
                 yield func835(); // NPC ロッコ・バロッコ所長に話しかけた時のメッセージ処理
                 return;
             }
-            if (var_83[var_314].Var0 == 169) {
+            if (var_83[var_314].Var0 == 169) { // enemy_list = 169 なのでヤク中の少年。enemy_list = 163にもいるので没キャラ?
                 yield func640();
                 yield func728();
                 return;
@@ -12047,22 +12047,22 @@ function func636(this: any) {
                 yield func743();
                 return;
             }
-            if (var_83[var_314].Var0 == 106) {
+            if (var_83[var_314].Var0 == 106) { // enemy_list = 106 なのでペッシ
                 yield func640();
                 yield func748();
                 return;
             }
-            if (var_83[var_314].Var0 == 107) {
+            if (var_83[var_314].Var0 == 107) { // enemy_list = 107 なので成長したペッシ
                 yield func640();
                 yield func753(); // ダンジョン内で仲間の成長したペッシに話しかけた時のメッセージ処理
                 return;
             }
-            if (var_83[var_314].Var0 == 57) {
+            if (var_83[var_314].Var0 == 57) { // enemy_list = 57 なのでSPW財団の男
                 yield func640();
                 yield func755(); // ダンジョンをうろついているSPW財団の男に話しかけた時のメッセージ処理
                 return;
             }
-            if (var_83[var_314].Var0 == 58) {
+            if (var_83[var_314].Var0 == 58) { // enemy_list = 58 なのでボインゴ
                 yield func640();
                 yield func758(); // ダンジョンをうろついているボインゴに話しかけた時のメッセージ処理
                 return;
@@ -12072,58 +12072,58 @@ function func636(this: any) {
                 yield func759();
                 return;
             }
-            if (var_83[var_314].Var0 == 163) {
+            if (var_83[var_314].Var0 == 163) { // No = 163 ヤク中の少年
                 yield func794();
                 return;
             }
-            if (var_83[var_314].Var0 == 70) {
+            if (var_83[var_314].Var0 == 70) { // No = 70 ダービー 没キャラ?
                 yield func761();
                 return;
             }
-            if (var_83[var_314].Var0 == 74) {
+            if (var_83[var_314].Var0 == 74) { // No = 74 サヴェジガーデン
                 yield func640();
                 yield func769(); // ダンジョンをうろついているサヴェジガーデン作戦の鳩へ話しかけた時の動作処理
                 return;
             }
-            if (var_83[var_314].Var0 == 75) {
-                yield func773();
+            if (var_83[var_314].Var0 == 75) { // No = 75 鮮血のシャボン
+                yield func773(); // 鮮血のシャボンへ話しかけた時のメッセージ処理
                 return;
             }
-            if (var_83[var_314].Var0 == 55) {
+            if (var_83[var_314].Var0 == 55) { // enemy_list = 55 なので亀
                 yield func640();
                 yield func161(); //亀の中に入った時の表示
                 return;
             }
-            if (var_83[var_314].Var0 == 81) {
+            if (var_83[var_314].Var0 == 81) { // enemy_list = 81 なのでアバッキオ
                 yield func640();
                 yield func787();
                 return;
             }
-            if (var_83[var_314].Var0 == 82) {
+            if (var_83[var_314].Var0 == 82) { // enemy_list = 82 なのでバーのバーテンダー 没キャラ?
                 yield func757();
                 return;
             }
-            if (var_83[var_314].Var0 == 83) {
+            if (var_83[var_314].Var0 == 83) { // enemy_list = 83 なので間田
                 yield func640();
                 yield func793();
                 return;
             }
-            if (var_83[var_314].Var0 == 49) {
+            if (var_83[var_314].Var0 == 49) { // enemy_list = 49 なのでコピー人形
                 yield func640();
                 yield func725();
                 return;
             }
-            if (var_83[var_314].Var31 == 5 && var_83[var_314].Var0 == 6) {
+            if (var_83[var_314].Var31 == 5 && var_83[var_314].Var0 == 6) { // enemy_list = 6 なのでエボニーデビルの人形
                 yield func640();
                 yield func726();
                 return;
             }
-            if (var_83[var_314].Var31 == 5 && var_83[var_314].Var0 == 17) {
+            if (var_83[var_314].Var31 == 5 && var_83[var_314].Var0 == 17) { // enemy_list = 17 なのでシアハートアタック
                 yield func640();
                 yield func727();
                 return;
             }
-            if (var_83[var_314].Var31 == 5) {
+            if (var_83[var_314].Var31 == 5) { // enemy_list = 5 なので小汚い浮浪者
                 yield func640();
                 yield func734();
                 return;

@@ -4679,7 +4679,7 @@ function func772(this: any) {
     });
 }
 
-// 鮮血のシャボン玉の機能
+// 鮮血のシャボンへ話しかけた時のメッセージ処理
 function func773(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(773);

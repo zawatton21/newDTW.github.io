@@ -4311,7 +4311,7 @@ function func159(this: any) {
         var_83 = CharactorInfo.dim(300);
 
         var_73 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-        yield func160();
+        yield func160(); // ヴェネチアホテルへ追加するNPCの設定処理(亀、岸辺露伴、ロッコ・バロッコ所長)
         if (var_66 == 13 && var_67 == 9) {
             var_65[var_66][var_67] = 0;
             var_66 = 13;
@@ -4381,12 +4381,12 @@ function func159(this: any) {
         return;
     });
 }
-
+// ヴェネチアホテルへ追加するNPCの設定処理(亀、岸辺露伴、ロッコ・バロッコ所長)
 function func160(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(160);
         var_97 = 0;
-        if (var_404 >= 1) {
+        if (var_404 >= 1) { // ホテルの外クリアフラグ
             var_97 = var_97 + 1;
             var_771 = var_97;
             var_82[13][9] = var_97;

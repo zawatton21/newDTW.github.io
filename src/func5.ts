@@ -7574,7 +7574,7 @@ function func511(this: any) {
             yield func647(); // 射撃攻撃動作処理
             return;
         }
-        // No = 405 エコーズAct2、No = 406 エコーズAct1、No = 408 マン・イン・ザ・ミラー、No = 409 ラバーズ、No = 410 タワーオブグレー、No = 404 ホルス神、No = 400 ハイエロファントグリーン、No = 317 キッス、No = 414 不明disc、No = 309 不明disc の発動処理
+        // No = 405 エコーズAct2、No = 406 エコーズAct1、No = 408 マン・イン・ザ・ミラー、No = 409 ラバーズ、No = 410 タワーオブグレー、No = 404 ホルス神、No = 400 ハイエロファントグリーン、No = 317 キッス、No = 414 不明disc、No = 309 ソフト・マシーン の発動処理
         if (activated_disc_id == 405 || activated_disc_id == 406 || activated_disc_id == 408 || activated_disc_id == 409 || activated_disc_id == 410 || activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 317 || activated_disc_id == 414 || activated_disc_id == 309) {
             if (var_73[var_66][var_67] != 0 || var_80[var_66][var_67] != 0 || var_77[var_66][var_67] != 0) {
                 comments_row1 = "";
@@ -7630,7 +7630,7 @@ function func511(this: any) {
             var_337 = var_337 + 1;
             var_2330 = var_337;
             var_80[var_66][var_67] = var_2330;
-            if (activated_disc_id == 309) {
+            if (activated_disc_id == 309) { // ソフト・マシーンのdisc
                 var_81[var_2330][0] = 78;
             }
             if (activated_disc_id == 410) {
@@ -7671,7 +7671,7 @@ function func511(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            if (activated_disc_id == 309) {
+            if (activated_disc_id == 309) {  // ソフト・マシーンのdisc
                 comments_row1 = "地面にｿﾌﾄ･ﾏｼｰﾝを潜ませた。";
                 comments_row2 = "";
             }
@@ -23394,7 +23394,7 @@ function func569(this: any) {
         if (var_83[var_2611].Var0 == 53) {
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 55) {
+        if (var_83[var_2611].Var0 == 55) { // enemy_list = 55 なので亀
             var_83[var_2611].Var4 = 1;
         }
         if (var_83[var_2611].Var0 == 75) {
@@ -26375,6 +26375,7 @@ function func575(this: any) {
             if (var_83[var_673].Var0 == 96) {
                 var_2708 = 1;
             }
+             // enemy_list = 55 なので亀
             if (var_83[var_673].Var0 == 55) {
                 var_2708 = 1;
             }
