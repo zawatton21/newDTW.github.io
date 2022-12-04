@@ -72,8 +72,10 @@ function func004(this: any) {
             var_11 = 0;
         }
         var_12 = 0;
-        version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        game_title = "newDTW ver0.1309";
+        // version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
+        // game_title = "newDTW original(ver0.1310)";
+        version_number = "0.14"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
+        game_title = "newDTW (ver0.1401)";
         
         buffer(17);
         yield picload("img3.gif");
@@ -143,23 +145,44 @@ function func004(this: any) {
         var_26[1] = 255;
         var_27[1] = 255;
         var_25[2] = 255;
-        var_26[2] = 150;
+        var_26[2] = 255; // Var0.1310にて値修正。 150 → 255
         var_27[2] = 255;
         var_25[3] = 255;
-        var_26[3] = 0;
-        var_27[3] = 0;
-        var_25[4] = 130;
+        var_26[3] = 255; // Var0.1310にて値修正。 0 → 255
+        var_27[3] = 255; // Var0.1310にて値修正。 0 → 255
+        var_25[4] = 255; // Var0.1310にて値修正。 130 → 255
         var_26[4] = 255;
-        var_27[4] = 130;
-        var_25[5] = 100;
-        var_26[5] = 160;
-        var_27[5] = 190;
+        var_27[4] = 255; // Var0.1310にて値修正。 130 → 255
+        var_25[5] = 255; // Var0.1310にて値修正。 100 → 255
+        var_26[5] = 255; // Var0.1310にて値修正。 160 → 255
+        var_27[5] = 255; // Var0.1310にて値修正。 190 → 255
         var_25[6] = 255;
         var_26[6] = 255;
-        var_27[6] = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_27[6] = 255; // Var0.1310にて値修正。 0 → 255
+
+        // Ver0.1310にて追加。追加したことで白色へ初期化できる。
+        var_25[7] = 255;
+        var_26[7] = 255;
+        var_27[7] = 255;
+        var_25[8] = 255;
+        var_26[8] = 255;
+        var_27[8] = 255;
+        var_25[9] = 255;
+        var_26[9] = 255;
+        var_27[9] = 255;
+        var_25[10] = 255;
+        var_26[10] = 255;
+        var_27[10] = 255;
+        var_25[11] = 255;
+        var_26[11] = 255;
+        var_27[11] = 255;
+        var_25[12] = 255;
+        var_26[12] = 255;
+        var_27[12] = 255;
+
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_28 = dim(length1= 10, length2 = 10, length3 = null, length4 = null);
         var_29 = dim(length1= 300, length2 = 10, length3 = null, length4 = null);
         yield func241();
@@ -469,35 +492,35 @@ function func008(this: any) {
         }
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1) {
-            if (current_floor <= 2) {
+            if (current_floor <= 2) { // 水の都
                 var_92 = 15;
             }
-            if (current_floor >= 3 && current_floor <= 5) {
+            if (current_floor >= 3 && current_floor <= 5) { // 郊外の森林
                 var_92 = 19;
             }
-            if (current_floor >= 6 && current_floor <= 8) {
+            if (current_floor >= 6 && current_floor <= 8) { // 紅海の浜辺
                 var_92 = 11;
             }
-            if (current_floor >= 9 && current_floor <= 11) {
+            if (current_floor >= 9 && current_floor <= 11) { // 山岳地帯
                 var_92 = 4;
             }
-            if (current_floor == 12) {
+            if (current_floor == 12) { // エンヤホテル
                 var_92 = 7;
                 var_90 = 0;
             }
         }
         // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
-            if (current_floor >= 1 && current_floor <= 5) {
+            if (current_floor >= 1 && current_floor <= 4) { // 下水道。Ver0.1310にて修正 (current_floor <= 5 → current_floor <= 4)
                 var_92 = 3;
             }
-            if (current_floor >= 5 && current_floor <= 8) {
+            if (current_floor >= 5 && current_floor <= 8) { // 青色迷宮
                 var_92 = 6;
             }
-            if (current_floor >= 9 && current_floor <= 11) {
+            if (current_floor >= 9 && current_floor <= 11) { // 茶色迷宮
                 var_92 = 2;
             }
-            if (current_floor >= 12 && current_floor <= 14) {
+            if (current_floor >= 12 && current_floor <= 14) { // 
                 var_92 = 5;
             }
             if (current_floor >= 15 && current_floor <= 19) {
@@ -566,11 +589,11 @@ function func008(this: any) {
                 var_92 = 9;
             }
             // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && current_floor >= 90) {
+            if (dangeon_number == 3 && current_floor >= 90) { // ディアボロの試練では 90~98Fまではマップ固定
                 var_92 = 22;
             }
             // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && current_floor == 99) {
+            if (dangeon_number == 3 && current_floor == 99) { // 自由人の狂想曲
                 var_92 = 2;
             }
         }
@@ -622,35 +645,35 @@ function func008(this: any) {
             }
             var_92 = 22;
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             var_92 = 8;
             var_90 = 0;
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             var_92 = 25;
             var_90 = 0;
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             var_92 = 14;
             var_90 = 0;
         }
-        if (var_94 == 5) {
+        if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
             var_92 = 1;
             var_90 = 0;
         }
-        if (var_94 == 6) {
+        if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
             var_92 = 3;
             var_90 = 0;
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             var_92 = 16;
             var_90 = 0;
         }
-        if (var_94 == 8) {
+        if (special_floor == 8) { // 幻覚の迷宮
             var_92 = 1;
             var_90 = 0;
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             var_92 = 7;
             var_90 = 0;
         }
@@ -813,7 +836,8 @@ function func008(this: any) {
         if (var_92 == 15 || var_92 == 19 || var_92 == 11 || var_92 == 23 || var_92 == 25) {
             var_103 = 1;
         }
-        if (var_94 == 5 || var_94 == 7 || var_94 == 9) {
+        // No = 5 // 没特殊階層「ビンの中」ボスは毒グモ, No = 7 広大な砂漠, No = 9 // 幽霊部屋
+        if (special_floor == 5 || special_floor == 7 || special_floor == 9) {
             var_103 = 1;
         }
         if (var_200 == var_201 && var_201 != 14) {
@@ -825,19 +849,19 @@ function func008(this: any) {
         var_68 = 1;
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
             yield func118();
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) {
-            yield func119();
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) { // No = 1:虹村屋敷
+            yield func119(); // 虹村屋敷のBGM
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) {
-            yield func120();
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) { // No = 2:吉良屋敷
+            yield func120(); // 吉良屋敷のBGM
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) { // No = 3:杜王町埠頭
             yield func121();
         }
         // No = 2 なので、レクイエムの大迷宮
@@ -851,7 +875,7 @@ function func008(this: any) {
             yield func074();
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
             yield func075();
         }
         // No = 2 なので、レクイエムの大迷宮
@@ -862,7 +886,7 @@ function func008(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             yield func075();
         }
-        if (var_94 >= 1) {
+        if (special_floor >= 1) {
             yield func075();
         }
         var_205 = 1;
@@ -2396,7 +2420,7 @@ function func016(this: any) {
 function func017(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(17);
-        if (var_94 == 8) {
+        if (special_floor == 8) { // 幻覚の迷宮
             return;
         }
         var_325 = 0;
@@ -3123,7 +3147,7 @@ function func019(this: any) {
                 if (dangeon_number == 5 && current_floor > dangeon5_floor) {
                     dangeon5_floor = current_floor;
                 }
-                var_94 = 0;
+                special_floor = 0;
                 yield func059();
                 var_372 = 0;
                 var_217 = 0;
@@ -3168,9 +3192,9 @@ function func019(this: any) {
                 if (var_158 == 20) {
                     var_240 = 0;
                     var_157 = 0;
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -3234,7 +3258,7 @@ function func019(this: any) {
                     var_165 = var_165 + 1;
                 }
                 // No = 1 なので、ホテルの外
-                if (dangeon_number == 1 && current_floor == 12 && var_94 == 0 && var_386 == 0) {
+                if (dangeon_number == 1 && current_floor == 12 && special_floor == 0 && var_386 == 0) {
                     var_165 = 0;
                 }
                 if (var_190 == 1) {
@@ -3244,19 +3268,19 @@ function func019(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_165 = 0;
                 }
-                if (var_94 == 1 && var_387 == 0) {
+                if (special_floor == 1 && var_387 == 0) { // 虹村屋敷
                     var_165 = 0;
                 }
                 if (var_375 == 1) {
                     var_165 = 0;
                 }
-                if (var_94 == 3) {
+                if (special_floor == 3) { // 吉良屋敷
                     var_165 = 0;
                 }
-                if (var_94 == 5) {
+                if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
                     var_165 = 0;
                 }
-                if (var_94 == 9) {
+                if (special_floor == 9) { // 幽霊部屋
                     var_165 = 0;
                 }
                 if (var_262 == 1) {
@@ -3307,9 +3331,9 @@ function func019(this: any) {
                         comments_row2 = "　　　ここにいるわよォ―――ッ」";
                         var_198 = 1;
                         var_300 = 0;
-                        var_25_x = var_25[5];
-                        var_26_x = var_26[5];
-                        var_27_x = var_27[5];
+                        var_25_x = var_25[11]; // Var0.1310で値修正 5 → 11
+                        var_26_x = var_26[11]; // Var0.1310で値修正 5 → 11
+                        var_27_x = var_27[11]; // Var0.1310で値修正 5 → 11
                         var_389 = 2;
                         yield func047();
                         yield func340(); // キー入力による選択処理
@@ -3346,9 +3370,9 @@ function func019(this: any) {
                         comments_row2 = "";
                         var_198 = 1;
                         var_300 = 0;
-                        var_25_x = var_25[1];
-                        var_26_x = var_26[1];
-                        var_27_x = var_27[1];
+                        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                         var_391 = 1;
                         DSPLAY(audio_id = 184);
                         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
@@ -3384,9 +3408,9 @@ function func019(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3463,9 +3487,9 @@ function func019(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3534,9 +3558,9 @@ function func019(this: any) {
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "ﾏﾘﾘﾝﾏﾝｿﾝ「マタ会オウ！」";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -3554,9 +3578,9 @@ function func019(this: any) {
                         var_402 = var_401;
                         var_209 = var_208;
                         var_403 = "とりついたﾗﾊﾞｰｽﾞの攻撃！";
-                        var_25_x = var_25[1];
-                        var_26_x = var_26[1];
-                        var_27_x = var_27[1];
+                        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                         var_240 = 0;
                         for (let cnt5 = 0; cnt5 < 5; ++cnt5) {
                             yield func337(); // メッセージ関係呼び出し
@@ -3618,9 +3642,9 @@ function func019(this: any) {
                 comments_row2 = "";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 yield func047();
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -3775,9 +3799,9 @@ function func020(this: any) {
                 var_298 = "";
                 var_299 = 0;
                 comments_row1 = "罪悪感で体が重くなった！";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -3788,9 +3812,9 @@ function func020(this: any) {
                     comments_row2 = comments_row2a;
                     comments_row1a = "しかし装備スタンドの効果で";
                     comments_row2a = "速度は遅くならない！";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     yield func050();
                     var_198 = 1;
                     var_300 = 0;
@@ -3859,9 +3883,9 @@ function func020(this: any) {
                 var_298 = "";
                 var_299 = 0;
                 comments_row1 = "罪悪感で" + target_item_name + " 奪われた！";
-                var_25_x = var_25[2];
-                var_26_x = var_26[2];
-                var_27_x = var_27[2];
+                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
                 var_198 = 1;
                 var_300 = 0;
                 yield func047();
@@ -3901,9 +3925,9 @@ function func020(this: any) {
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "残像ﾁｬﾘｵｯﾂは消えた。";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -4147,9 +4171,9 @@ function func020(this: any) {
                     var_298 = "";
                     var_299 = 0;
                     comments_row1 = "サーフィスは人形に戻った。";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -4192,9 +4216,9 @@ function func021(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             comments_row1 = "ﾃﾞｨｱﾎﾞﾛは動けるようになった";
             var_178 = 0;
             var_198 = 1;
@@ -4213,9 +4237,9 @@ function func021(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "…痺れていて動けない。";
         var_198 = 1;
         var_300 = 0;
@@ -4275,9 +4299,9 @@ function func022(this: any) {
                 comments_row2 = "凍傷にかかった時！";
                 var_198 = 1;
                 var_300 = 0;
-                var_25_x = var_25[1];
-                var_26_x = var_26[1];
-                var_27_x = var_27[1];
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                 yield func047();
                 yield func340(); // キー入力による選択処理
                 yield func094(); // メッセージ送りの際の効果音
@@ -4344,9 +4368,9 @@ function func022(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             comments_row1 = "ﾃﾞｨｱﾎﾞﾛは動けるようになった";
             var_128 = 0;
             var_198 = 1;
@@ -4365,9 +4389,9 @@ function func022(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "…凍っていて動けない。";
         var_198 = 1;
         var_300 = 0;
@@ -4417,9 +4441,9 @@ function func025(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             comments_row1 = "ﾃﾞｨｱﾎﾞﾛは目を覚ました";
             var_219 = 0;
             var_198 = 1;
@@ -4439,9 +4463,9 @@ function func025(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "…眠くて何もできない。";
         var_198 = 1;
         var_300 = 0;
@@ -4594,9 +4618,9 @@ function func026(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         if (var_114 == 0) {
             comments_row1 = "固定されて動けない！";
         }
@@ -4629,9 +4653,9 @@ function func027(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "動けるようになった。";
         var_198 = 1;
         var_300 = 0;
@@ -4653,9 +4677,9 @@ function func028(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "透明状態ではなくなった";
         var_198 = 1;
         var_300 = 0;
@@ -4678,9 +4702,9 @@ function func029(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "周囲がドロドロではなくなった";
         var_198 = 1;
         var_300 = 0;
@@ -4703,9 +4727,9 @@ function func030(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "鈍足状態が治った";
         var_198 = 1;
         var_300 = 0;
@@ -4769,9 +4793,9 @@ function func031(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "変身が解除された";
         var_198 = 1;
         var_300 = 0;
@@ -4800,9 +4824,9 @@ function func032(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             comments_row1 = "意識が…　ヤバクなって来た…";
             var_198 = 1;
             var_300 = 0;
@@ -4838,9 +4862,9 @@ function func032(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             comments_row1 = "ﾋﾟｽﾄﾙｽﾞ「早く【ジッパー】デ";
             comments_row2 = "　　　　体ヲ元ニ戻スンダ――――ッ！」";
             var_198 = 1;
@@ -4879,9 +4903,9 @@ function func033(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "元通りくっついた";
         var_198 = 1;
         var_300 = 0;
@@ -4907,9 +4931,9 @@ function func034(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "盲目状態が治った";
         var_198 = 1;
         var_300 = 0;
@@ -4930,9 +4954,9 @@ function func035(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "ンドゥールの気分が消えた";
         var_198 = 1;
         var_300 = 0;
@@ -4953,9 +4977,9 @@ function func036(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "混乱状態が治った";
         var_198 = 1;
         var_300 = 0;
@@ -4976,9 +5000,9 @@ function func037(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "冷静になった。";
         var_198 = 1;
         var_300 = 0;
@@ -5003,9 +5027,9 @@ function func038(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "ﾖｰﾖｰﾏｯ「もっとおおおおおお";
         comments_row2 = "　私を叱ってええええええ」";
         var_198 = 1;
@@ -5042,9 +5066,9 @@ function func039(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "錠前のショックで";
         comments_row2 = "正気に戻った。";
         var_198 = 1;
@@ -5066,9 +5090,9 @@ function func040(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "鉄塔が消滅した。";
         var_198 = 1;
         var_300 = 0;
@@ -5090,9 +5114,9 @@ function func041(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "ﾄﾞｯﾋﾟｵ「とぅるるるるるるるるるる」";
         var_198 = 1;
         var_300 = 0;
@@ -5181,9 +5205,9 @@ function func042(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "ﾄﾞｯﾋﾟｵと交代した。";
         var_198 = 1;
         var_300 = 0;
@@ -5265,9 +5289,9 @@ function func043(this: any) {
         comments_row2a = "";
         var_298 = "";
         var_299 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         comments_row1 = "" + target_item_name + "は";
         comments_row2 = "朽ち果ててしまった…";
         var_198 = 1;
@@ -5300,7 +5324,7 @@ function func045(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(45);
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) {
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
             return;
         }
         // No = 2 なので、レクイエムの大迷宮
@@ -5324,15 +5348,16 @@ function func045(this: any) {
             if (var_71[var_491][var_492] != 0 && var_71[var_491][var_492] <= 12 && var_72[var_491][var_492] == 0 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
                 break;
             }
-            if (var_94 == 8 && var_71[var_491][var_492] == 14 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
+            // 幻覚の迷宮
+            if (special_floor == 8 && var_71[var_491][var_492] == 14 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
                 break;
             }
         }
-        if (var_94 == 5) {
+        if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
             var_491 = 30;
             var_492 = 17;
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             var_491 = 23;
             var_492 = 13;
         }
@@ -5349,7 +5374,8 @@ function func045(this: any) {
                 if (var_71[var_491][var_492] != 0 && var_71[var_491][var_492] <= 12 && var_72[var_491][var_492] == 0 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
                     break;
                 }
-                if (var_94 == 8 && var_71[var_491][var_492] == 14 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
+                // 幻覚の迷宮
+                if (special_floor == 8 && var_71[var_491][var_492] == 14 && var_80[var_491][var_492] == 0 && var_77[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
                     break;
                 }
             }
@@ -5413,16 +5439,17 @@ function func046(this: any) {
                 var_201 = 12;
                 break;
             }
-            if (var_94 == 8 && var_71[var_491][var_492] == 14 && var_82[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
+            // 幻覚の迷宮
+            if (special_floor == 8 && var_71[var_491][var_492] == 14 && var_82[var_491][var_492] == 0 && var_73[var_491][var_492] == 0) {
                 var_201 = 14;
                 break;
             }
         }
-        if (var_94 == 5) {
+        if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
             var_491 = 19;
             var_492 = 17;
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             var_491 = 21;
             var_492 = 16;
         }
@@ -5432,7 +5459,7 @@ function func046(this: any) {
         var_201 = var_71[var_66][var_67];
         var_74[var_66][var_67] = 2;
         var_75[var_201] = 1;
-        if (var_94 != 8) {
+        if (special_floor != 8) {
             yield func017();
             yield func018();
             if (var_200 == var_201 && var_201 != 14) {
@@ -5533,16 +5560,11 @@ function func048(this: any) {
             return;
         }
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(20, 250);
-
         gcopy(12, 0, 0, 40, 64);　
-        
         pos(60, 250);
-        
         gcopy(12, 40, 0, 40, 64);
-        
         pos(100, 250);
         gcopy(12, 80, 0, 40, 64);
         pos(140, 250);
@@ -5564,7 +5586,7 @@ function func048(this: any) {
         pset(326, 253);
         pset(23, 311);
         pset(326, 311);
-        yield func049();
+        yield func049(); // メッセージ処理
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         if (var_299 == 0) {
             var_496 = 9;
@@ -5616,19 +5638,21 @@ function func049(this: any) {
         dbgprt(49);
         gsel(10);
         color(0, 0, 0);
-
         boxf(left = 0, top1 = 0, right = 340, bottom = 200);
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         pos(30, 0);
 
-        color(var_25_x, var_26_x, var_27_x);
+        //color1(var_25_x, var_26_x, var_27_x);
         mes("");
+        color1(var_25_x, var_26_x, var_27_x);     
         mes(comments_row1);
         mes(comments_row2);
         mes(var_295);
+        color1(var_25_x, var_26_x, var_27_x);
         mes(comments_row1a);
         mes(comments_row2a);
         mes(var_298);
+        
         gsel(0);
         return;
     });
@@ -6380,16 +6404,16 @@ function func059(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(59);
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) {
-            var_94 = 1;
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) { // No = 1:虹村屋敷
+            special_floor = 1; // 虹村屋敷
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) {
-            var_94 = 3;
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) { // No = 2:吉良屋敷
+            special_floor = 3; // 吉良屋敷
         }
         // No = 1 なので、ホテルの外
-        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) {
-            var_94 = 2;
+        if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) { // No = 3:杜王町埠頭
+            special_floor = 2; // 杜王町埠頭
         }
         return;
     });
@@ -6463,9 +6487,9 @@ function func060(this: any) {
                     var_299 = 0;
                     comments_row1 = "ｸﾞﾘｰﾝ･ﾃﾞｨが同じ部屋にいるぞ";
                     comments_row2 = "このままでは降りられないぞ";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -6555,9 +6579,9 @@ function func060(this: any) {
                     var_299 = 0;
                     comments_row1 = "「ありのまま起こったことを話すぜ！」";
                     comments_row2 = "";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -6594,9 +6618,9 @@ function func060(this: any) {
                         comments_row1 = "掴まれていて上れない！";
                     }
                     comments_row2 = "";
-                    var_25_x = var_25[1];
-                    var_26_x = var_26[1];
-                    var_27_x = var_27[1];
+                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
                     var_198 = 1;
                     var_300 = 0;
                     yield func047();
@@ -6629,19 +6653,19 @@ function func060(this: any) {
                         yield func337(); // メッセージ関係呼び出し
                     }
                     var_373 = 0;
-                    var_94 = 0;
+                    special_floor = 0;
                     if (var_404 == 0) {
                         ivents_flag = 3; // ホテルの外初クリア後(エンヤホテル)、ヴェネチアホテルに戻った際のイベントフラグ
                     }
                     var_532 = 1;
                     var_356 = 301;
-                    if (var_203 == 1) {
+                    if (var_203 == 1) { // No = 1:虹村屋敷
                         var_356 = 321;
                     }
-                    if (var_203 == 2) {
+                    if (var_203 == 2) { // No = 2:吉良屋敷
                         var_356 = 322;
                     }
-                    if (var_203 == 3) {
+                    if (var_203 == 3) { // No = 3:杜王町埠頭
                         var_356 = 325;
                     }
                     var_533 = 50000;
@@ -6678,7 +6702,7 @@ function func060(this: any) {
                         yield func337(); // メッセージ関係呼び出し
                     }
                     var_373 = 0;
-                    var_94 = 0;
+                    special_floor = 0;
                     var_532 = 1;
                     var_356 = 302;
                     var_533 = 100000;
@@ -6726,7 +6750,7 @@ function func060(this: any) {
                         yield func337(); // メッセージ関係呼び出し
                     }
                     var_373 = 0;
-                    var_94 = 0;
+                    special_floor = 0;
                     var_532 = 1;
                     var_356 = 303;
                     var_533 = 1000000;
@@ -6763,7 +6787,7 @@ function func060(this: any) {
                         yield func337(); // メッセージ関係呼び出し
                     }
                     var_373 = 0;
-                    var_94 = 0;
+                    special_floor = 0;
                     var_532 = 1;
                     var_356 = 314;
                     var_533 = 1000000;
@@ -6800,7 +6824,7 @@ function func060(this: any) {
                         yield func337(); // メッセージ関係呼び出し
                     }
                     var_373 = 0;
-                    var_94 = 0;
+                    special_floor = 0;
                     var_539 = 1;
                     yield func233();
                     yield func880();
@@ -6857,7 +6881,7 @@ function func060(this: any) {
                 if (var_73[var_66][var_67] == 2) {
                     current_floor = current_floor - 1;
                 }
-                var_94 = 0;
+                special_floor = 0;
                 yield func059();
                 var_205 = 1;
                 yield func231();
@@ -7098,9 +7122,9 @@ function func064(this: any) {
             comments_row1 = "特に何も無いようだ";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
         }
         yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -7130,9 +7154,9 @@ function func066(this: any) {
             comments_row1 = "足元にジッパーが付いている。";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
@@ -7147,9 +7171,9 @@ function func066(this: any) {
         comments_row1 = "持ち物全てをジッパーに捨てますか？";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         yield func340(); // キー入力による選択処理
         yield func051();
@@ -7199,9 +7223,9 @@ function func067(this: any) {
             comments_row1 = "捨てられるものがない。";
             var_198 = 1;
             var_300 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -7219,9 +7243,9 @@ function func067(this: any) {
         comments_row1 = "全て捨てた。";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         DSPLAY(audio_id = 148);
 
@@ -7914,9 +7938,9 @@ function func071(this: any) {
         }
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -7940,9 +7964,9 @@ function func072(this: any) {
         comments_row1 = "神砂嵐だ！！";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         if (var_112 == 1000) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -8166,9 +8190,9 @@ function func074(this: any) {
         }
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         for (let cnt1 = 0; cnt1 < 25; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -8211,47 +8235,47 @@ function func075(this: any) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「" + var_24 + "」によって守られている！";
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「虹村形兆」によって守られている！";
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「チリペッパー」によって守られている！";
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「吉良吉影」によって守られている！";
         }
-        if (var_94 == 4) {
+        if (special_floor == 4) { // 没特殊階層「星屑の十字軍」ボスは承太郎
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「承太郎」によって守られている！";
         }
-        if (var_94 == 5) {
+        if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「毒グモ」によって守られている！";
         }
-        if (var_94 == 6) {
+        if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「サンタナ」によって守られている！";
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             comments_row1 = "広大な砂漠だ！";
             comments_row2 = "";
         }
-        if (var_94 == 8) {
+        if (special_floor == 8) { // 幻覚の迷宮
             comments_row1 = "幻覚の迷宮だ！";
             comments_row2 = "";
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「エンポリオ」によって守られている！";
         }
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         DSPLAY(audio_id = 178);
         for (let cnt1 = 0; cnt1 < 40; ++cnt1) {
@@ -8277,7 +8301,7 @@ function func076(this: any) {
         boxf(left = 0, top1 = 0, right = 360, bottom = 360);
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         pos(0, 100);
-        if (var_94 == 0) {
+        if (special_floor == 0) {
             // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0) {
                 if (var_595 == 0) {
@@ -8375,37 +8399,37 @@ function func076(this: any) {
                 gcopy(34, 640, 960, 340, 40);
             }
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             // buffer(34)は"img_syageki.gif"。X座標640、Y座標840から切り取り長さ X方向340、Y方向40
             // 絵文字:虹村屋敷
             gcopy(34, 640, 840, 340, 40);
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             // buffer(34)は"img_syageki.gif"。X座標640、Y座標1000から切り取り長さ X方向340、Y方向40
             // 絵文字:杜王町埠頭
             gcopy(34, 640, 1000, 340, 40);
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             // buffer(34)は"img_syageki.gif"。X座標640、Y座標680から切り取り長さ X方向340、Y方向40
             // 絵文字:吉良屋敷
             gcopy(34, 640, 680, 340, 40);
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             // buffer(34)は"img_syageki.gif"。X座標640、Y座標1080から切り取り長さ X方向340、Y方向40
             // 絵文字:砂漠
             gcopy(34, 640, 1080, 340, 40);
         }
-        if (var_94 == 8) {
+        if (special_floor == 8) { // 幻覚の迷宮
             // buffer(34)は"img_syageki.gif"。X座標640、Y座標1120から切り取り長さ X方向340、Y方向40
             // 絵文字:幻覚の迷宮
             gcopy(34, 640, 1120, 340, 40);
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             // buffer(34)は"img_syageki.gif"。X座標640、Y座標920から切り取り長さ X方向340、Y方向40
             // 絵文字:幽霊部屋
             gcopy(34, 640, 920, 340, 40);
         }
-        if (dangeon_number != 0 && dangeon_number != 99 && var_94 == 0) {
+        if (dangeon_number != 0 && dangeon_number != 99 && special_floor == 0) {
             var_596 = Math.floor(current_floor / 100); // Math.floor は対象の値の小数点以下を切り捨て
             var_597 = Math.floor((current_floor - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
             var_598 = current_floor - var_596 * 100 - var_597 * 10;
@@ -8495,7 +8519,7 @@ function func077(this: any) {
         }
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         pos(0, 100);
-        if (var_94 == 0) {
+        if (special_floor == 0) {
             // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0) {
                 if (var_595 == 0) {
@@ -8561,25 +8585,25 @@ function func077(this: any) {
                 gcopy(34, 640, 960, 340, 40);
             }
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             gcopy(34, 640, 840, 340, 40);
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             gcopy(34, 640, 1000, 340, 40);
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             gcopy(34, 640, 680, 340, 40);
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             gcopy(34, 640, 1080, 340, 40);
         }
-        if (var_94 == 8) {
+        if (special_floor == 8) { // 幻覚の迷宮
             gcopy(34, 640, 1120, 340, 40);
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             gcopy(34, 640, 920, 340, 40);
         }
-        if (dangeon_number != 0 && dangeon_number != 99 && var_94 == 0) {
+        if (dangeon_number != 0 && dangeon_number != 99 && special_floor == 0) {
             var_596 = Math.floor(current_floor / 100); // Math.floor は対象の値の小数点以下を切り捨て
             var_597 = Math.floor((current_floor - var_596 * 100) / 10); // Math.floor は対象の値の小数点以下を切り捨て
             var_598 = current_floor - var_596 * 100 - var_597 * 10;
@@ -8694,9 +8718,9 @@ function func079(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             if (var_139 == 10) {
                 if (var_601 == 0) {
                     comments_row1 = "「このヘアースタイルが";
@@ -8740,9 +8764,9 @@ function func079(this: any) {
             comments_row2a = "";
             var_298 = "";
             var_299 = 0;
-            var_25_x = var_25[1];
-            var_26_x = var_26[1];
-            var_27_x = var_27[1];
+            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             if (var_144 == 10) {
                 comments_row1 = "ﾄﾞｯﾋﾟｵ「今 ボスから電話があったんだ…";
                 comments_row2 = "　　　　僕の任務は…」";
@@ -11391,8 +11415,8 @@ function func086(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(86);
         se_volume = se_volume + 1;
-        if (se_volume >= 100) {
-            se_volume = 100;
+        if (se_volume >= 150) { // Ver0.1310で値を修正 (100 → 150)
+            se_volume = 150; // Ver0.1310で値を修正 (100 → 150)
         }
         var_670 = 100;
         for (let cnt1 = 0; cnt1 < var_668; ++cnt1) {
@@ -11410,8 +11434,8 @@ function func087(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(87);
         bgm_volume = bgm_volume + 1;
-        if (bgm_volume >= 100) {
-            bgm_volume = 100;
+        if (bgm_volume >= 150) { // Ver0.1310で値を修正 (100 → 150)
+            bgm_volume = 150; // Ver0.1310で値を修正 (100 → 150)
         }
         DSSETMASTERVOLUME(bgm_volume);
         var_636 = 1;

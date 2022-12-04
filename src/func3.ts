@@ -1817,7 +1817,7 @@ function func324(this: any) {
         if (var_262 == 1) {
             yield func163();
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             yield func164();
         }
         gsel(36);
@@ -1863,7 +1863,7 @@ function func325(this: any) {
         if (var_262 == 1) {
             return;
         }
-        if (var_94 == 7 && var_132 == 0) {
+        if (special_floor == 7 && var_132 == 0) { // 広大な砂漠
             if (var_490 == 1) {
                 pos(70, 150);
         
@@ -17524,7 +17524,8 @@ function func384(this: any) {
                         if (var_1142 == 1 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_72[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                             break;
                         }
-                        if (var_94 == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
+                        // 幻覚の迷宮
+                        if (special_floor == 8 && var_71[var_1550][var_230] == 14 && var_77[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0) {
                             break;
                         }
                     }
@@ -17797,7 +17798,7 @@ function func384(this: any) {
             }
             var_77[var_1550][var_230] = var_866;
             if (var_1767 == 0) {
-                yield func385(); // 各ダンジョンごとの出現アイテム管理
+                yield func385(); // 各ダンジョンごとの出現アイテム&出現確率管理
             }
             var_78[var_866].Var1 = var_1550;
             var_78[var_866].Var2 = var_230;
@@ -17806,13 +17807,13 @@ function func384(this: any) {
                 var_78[var_866].Var10 = 1;
             }
             if (dangeon_number != 5) {
-                if (var_452 == 0 && current_floor >= 15 && current_floor <= 18 && var_1734 == 0 && var_94 == 0) {
+                if (var_452 == 0 && current_floor >= 15 && current_floor <= 18 && var_1734 == 0 && special_floor == 0) {
                     var_1768 = rnd(5);
                     if (var_1768 == 0) {
                         var_78[var_866].Var15 = 1;
                     }
                 }
-                if (var_452 == 0 && current_floor >= 25 && current_floor <= 35 && var_1734 == 0 && var_94 == 0) {
+                if (var_452 == 0 && current_floor >= 25 && current_floor <= 35 && var_1734 == 0 && special_floor == 0) {
                     var_1768 = rnd(8);
                     if (var_1768 == 0) {
                         var_78[var_866].Var15 = 1;
@@ -17821,7 +17822,7 @@ function func384(this: any) {
             }
             // No = 5 なので、鉄の牢獄
             if (dangeon_number == 5) {
-                if (var_452 == 0 && current_floor >= 6 && current_floor <= 30 && var_1734 == 0 && var_94 == 0) {
+                if (var_452 == 0 && current_floor >= 6 && current_floor <= 30 && var_1734 == 0 && special_floor == 0) {
                     var_1768 = rnd(20);
                     if (var_1768 == 0) {
                         var_78[var_866].Var15 = 1;
@@ -17912,7 +17913,7 @@ function func384(this: any) {
         return;
     });
 }
-// 各ダンジョンごとの出現アイテム管理
+// 各ダンジョンごとの出現アイテム&出現確率管理
 function func385(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(385);
@@ -17922,113 +17923,113 @@ function func385(this: any) {
         if (var_1735 == 1) {
             // No = 1 なので、ホテルの外
             if (dangeon_number == 1) {
-                var_1772 = rnd(100);
-                if (var_1772 >= 0 && var_1772 < 15) {
+                var_1772 = rnd(100); // 確率調整:100の中からランダムで数字を一つ
+                if (var_1772 >= 0 && var_1772 < 15) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 116; // No = 116 ハーミットパープル
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
-                if (var_1772 >= 15 && var_1772 < 30) {
+                if (var_1772 >= 15 && var_1772 < 30) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 103; // No = 103 エコーズACT3
                     var_78[var_866].Var16 = 20;
                     var_78[var_866].Var5 = 5;
                 }
-                if (var_1772 >= 30 && var_1772 < 45) {
+                if (var_1772 >= 30 && var_1772 < 45) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 107; // No = 107 デス・13
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 45 && var_1772 < 60) {
+                if (var_1772 >= 45 && var_1772 < 60) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 300; // No = 300 パール・ジャム
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 60 && var_1772 < 65) {
+                if (var_1772 >= 60 && var_1772 < 65) { // 出現確率: 5/100*100 = 5%
                     var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 4;
                 }
-                if (var_1772 >= 65 && var_1772 < 70) {
+                if (var_1772 >= 65 && var_1772 < 70) { // 出現確率: 5/100*100 = 5%
                     var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 70 && var_1772 < 75) {
+                if (var_1772 >= 70 && var_1772 < 75) { // 出現確率: 5/100*100 = 5%
                     var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 75 && var_1772 < 77) {
+                if (var_1772 >= 75 && var_1772 < 77) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 207; // No = 207 グレイトフル・デッド
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 77 && var_1772 < 79) {
+                if (var_1772 >= 77 && var_1772 < 79) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 79 && var_1772 < 81) {
+                if (var_1772 >= 79 && var_1772 < 81) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 81 && var_1772 < 83) {
+                if (var_1772 >= 81 && var_1772 < 83) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 104; // No = 104 ザ・ハンド
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 83 && var_1772 < 85) {
+                if (var_1772 >= 83 && var_1772 < 85) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 117; // No = 117 ダーク・ブルームーン
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 85 && var_1772 < 87) {
+                if (var_1772 >= 85 && var_1772 < 87) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 119; // No = 119 スパイス・ガール
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 87 && var_1772 < 89) {
+                if (var_1772 >= 87 && var_1772 < 89) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 203; // No = 203 ザ・フール
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 89 && var_1772 < 91) {
+                if (var_1772 >= 89 && var_1772 < 91) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 113; // No = 113 クラッシュ
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 >= 91 && var_1772 < 93) {
+                if (var_1772 >= 91 && var_1772 < 93) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 4;
                 }
-                if (var_1772 >= 93 && var_1772 < 95) {
+                if (var_1772 >= 93 && var_1772 < 95) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 316; // No = 316 サバイバー
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 == 95) {
+                if (var_1772 == 95) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 121; // No = 121 パープルヘイズ
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
-                if (var_1772 == 96) {
+                if (var_1772 == 96) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 320; // No = 320 メタリカ
                     var_78[var_866].Var16 = 5;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 == 97) {
+                if (var_1772 == 97) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 205; // No = 205 クラフトワーク
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
                 }
-                if (var_1772 == 98) {
+                if (var_1772 == 98) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 317; // No = 317 キッス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 4;
                 }
-                if (var_1772 == 99) {
+                if (var_1772 == 99) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 115; // No = 115 G・エクスペリエンス
                     var_78[var_866].Var16 = 10;
                     var_78[var_866].Var5 = 3;
@@ -18037,11 +18038,11 @@ function func385(this: any) {
 
             // No = 1 なので、ホテルの外以外
             if (dangeon_number != 1) {
-                var_1773 = rnd(100);
+                var_1773 = rnd(100); // 確率調整:100の中からランダムで数字を一つ
                 if (var_1773 >= 0 && var_1773 < 50) {
                     var_1772 = rnd(100);
                     if (var_1772 >= 0 && var_1772 < 20) {
-                        var_78[var_866].Var0 = 116;
+                        var_78[var_866].Var0 = 116; // No = 116 ハーミットパープル
                         var_78[var_866].Var16 = 10;
                         var_78[var_866].Var5 = 4;
                     }
@@ -18051,12 +18052,12 @@ function func385(this: any) {
                         var_78[var_866].Var5 = 4;
                     }
                     if (var_1772 >= 40 && var_1772 < 60) {
-                        var_78[var_866].Var0 = 103;
+                        var_78[var_866].Var0 = 103; // No = 103 エコーズACT3
                         var_78[var_866].Var16 = 20;
                         var_78[var_866].Var5 = 5;
                     }
                     if (var_1772 >= 60 && var_1772 < 80) {
-                        var_78[var_866].Var0 = 107;
+                        var_78[var_866].Var0 = 107; // No = 107 デス・13
                         var_78[var_866].Var16 = 10;
                         var_78[var_866].Var5 = 3;
                     }
@@ -18066,17 +18067,17 @@ function func385(this: any) {
                         var_78[var_866].Var5 = 3;
                     }
                     if (var_1772 >= 85 && var_1772 < 90) {
-                        var_78[var_866].Var0 = 201;
+                        var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                         var_78[var_866].Var16 = 10;
                         var_78[var_866].Var5 = 3;
                     }
                     if (var_1772 >= 90 && var_1772 < 95) {
-                        var_78[var_866].Var0 = 105;
+                        var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                         var_78[var_866].Var16 = 10;
                         var_78[var_866].Var5 = 3;
                     }
                     if (var_1772 >= 95 && var_1772 < 100) {
-                        var_78[var_866].Var0 = 104;
+                        var_78[var_866].Var0 = 104; // No = 104 ザ・ハンド
                         var_78[var_866].Var16 = 10;
                         var_78[var_866].Var5 = 3;
                     }
@@ -18997,6 +18998,7 @@ function func385(this: any) {
         return;
     });
 }
+
 function func386(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(386);
@@ -19491,7 +19493,7 @@ function func390(this: any) {
             if (var_1799 == 804) {
                 var_1735 = 9;
             }
-            yield func385(); // 各ダンジョンごとの出現アイテム管理
+            yield func385(); // 各ダンジョンごとの出現アイテム&出現確率管理
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
                 var_486[var_1800][var_1803][cnt2] = var_78[var_866]["Var" + cnt2];
             }

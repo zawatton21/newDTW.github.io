@@ -32,8 +32,8 @@ const createWindow = () => {
   // mainWindow.loadFile('build/index.html') //electronでアプリをビルドする時はこちらを有効
   mainWindow.loadFile('index.html') // electronでの検証用
   
-  // メニューバーを非表示
-  mainWindow.setMenuBarVisibility(true)
+  mainWindow.setMenuBarVisibility(false) // メニューバーを非表示
+  // mainWindow.setMenuBarVisibility(true) // メニューバーを表示
 
   // ウィンドウの最小サイズ
   //mainWindow.setMinimumSize(345, 360)

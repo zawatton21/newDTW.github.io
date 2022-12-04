@@ -143,7 +143,7 @@ function func203(this: any) {
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             if (var_702 == 0 || var_702 == 1) {
                 yield func051();
-                if (var_702 == 0) {
+                if (var_702 == 0) { // 色設定を使わないを選択
                     var_25[1] = 255;
                     var_26[1] = 255;
                     var_27[1] = 255;
@@ -162,6 +162,26 @@ function func203(this: any) {
                     var_25[6] = 255;
                     var_26[6] = 255;
                     var_27[6] = 255;
+
+                    // Ver0.1310にて追加。追加したことで白色へ初期化できる。
+                    var_25[7] = 255;
+                    var_26[7] = 255;
+                    var_27[7] = 255;
+                    var_25[8] = 255;
+                    var_26[8] = 255;
+                    var_27[8] = 255;
+                    var_25[9] = 255;
+                    var_26[9] = 255;
+                    var_27[9] = 255;
+                    var_25[10] = 255;
+                    var_26[10] = 255;
+                    var_27[10] = 255;
+                    var_25[11] = 255;
+                    var_26[11] = 255;
+                    var_27[11] = 255;
+                    var_25[12] = 255;
+                    var_26[12] = 255;
+                    var_27[12] = 255;
                 }
                 if (var_702 == 1) {
                     var_25[1] = var_25[7];
@@ -191,7 +211,7 @@ function func203(this: any) {
                 yield func193();
                 return;
             }
-            if (var_702 == 2) {
+            if (var_702 == 2) { // メッセージカラー設定(ディアボロの行動)
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
@@ -201,7 +221,7 @@ function func203(this: any) {
                 var_26[7] = ginfo(17);
                 var_27[7] = ginfo(18);
             }
-            if (var_702 == 3) {
+            if (var_702 == 3) { // メッセージカラー設定(敵の行動)
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
@@ -211,7 +231,7 @@ function func203(this: any) {
                 var_26[8] = ginfo(17);
                 var_27[8] = ginfo(18);
             }
-            if (var_702 == 4) {
+            if (var_702 == 4) { // メッセージカラー設定(会心の一撃)
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
@@ -221,7 +241,7 @@ function func203(this: any) {
                 var_26[12] = ginfo(17);
                 var_27[12] = ginfo(18);
             }
-            if (var_702 == 5) {
+            if (var_702 == 5) { // メッセージカラー設定(痛恨の一撃)
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
@@ -231,7 +251,7 @@ function func203(this: any) {
                 var_26[9] = ginfo(17);
                 var_27[9] = ginfo(18);
             }
-            if (var_702 == 6) {
+            if (var_702 == 6) { // メッセージカラー設定(罠メッセージ)
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
@@ -241,7 +261,7 @@ function func203(this: any) {
                 var_26[10] = ginfo(17);
                 var_27[10] = ginfo(18);
             }
-            if (var_702 == 7) {
+            if (var_702 == 7) { // メッセージカラー設定(状態変化等)
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func203();
@@ -251,7 +271,7 @@ function func203(this: any) {
                 var_26[11] = ginfo(17);
                 var_27[11] = ginfo(18);
             }
-            if (var_702 == 8) {
+            if (var_702 == 8) { // 初期値に戻すを選択
                 var_25[7] = 255;
                 var_26[7] = 255;
                 var_27[7] = 255;
@@ -1961,7 +1981,7 @@ function func223(this: any) {
         // No = 2 なので、レクイエムの大迷宮
         dangeon_number = 2;
         for (let cnt1 = 0; cnt1 < var_952; ++cnt1) {
-            yield func627();
+            yield func627(); // 各ダンジョンごとの出現敵設定
             enemy_list = var_953;
             yield func626();
             var_939 = var_939 + var_954;
@@ -2149,7 +2169,7 @@ function func226(this: any) {
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 var_975 = var_973 + var_974;
                 current_floor = var_976;
-                yield func627();
+                yield func627(); // 各ダンジョンごとの出現敵設定
                 var_958[var_975] = var_977[var_973];
                 var_973 = var_973 + 1;
             }
@@ -2669,7 +2689,7 @@ function func229(this: any) {
         var_153 = var_704[184];
         var_1032 = var_704[185];
         receive_bgm_id = var_704[186];
-        var_94 = var_704[187];
+        special_floor = var_704[187];
         var_1033 = var_704[188];
         var_681 = var_704[189];
         var_684 = var_704[190];
@@ -3006,7 +3026,7 @@ function func231(this: any) {
         var_704[184] = var_153;
         var_704[185] = var_1032;
         var_704[186] = receive_bgm_id;
-        var_704[187] = var_94;
+        var_704[187] = special_floor;
         var_704[188] = var_1033;
         var_704[189] = var_681;
         var_704[190] = var_684;
@@ -3351,7 +3371,7 @@ function func233(this: any) {
         var_166 = 0;
         var_167 = 0;
         var_153 = 0;
-        var_94 = 0;
+        special_floor = 0;
         var_420 = 0;
         var_168 = 0;
         var_169 = 0;
@@ -3396,7 +3416,7 @@ function func233(this: any) {
         var_193 = 0;
         var_1045 = 0;
         var_536 = 0;
-        var_203 = 0;
+        var_203 = 0; // No = 0:エンヤホテル
         var_194 = 0;
         var_98 = 0;
         var_200 = 0;
@@ -3465,6 +3485,9 @@ function func234(this: any) {
         var_295 = "";
         comments_row1a = "";
         comments_row2a = "";
+        var_25_x = 255; // Var0.1310で追加
+        var_26_x = 255; // Var0.1310で追加
+        var_27_x = 255; // Var0.1310で追加
         var_298 = "";
         var_299 = 0;
         comments_row1 = "セーブして終了します。";
@@ -3682,7 +3705,7 @@ function func235(this: any) {
         var_153 = 0;
         var_1032 = 0;
         receive_bgm_id = 0;
-        var_94 = 0;
+        special_floor = 0;
         var_1060 = 0;
         var_684 = 0;
         var_171 = 0;
@@ -3736,7 +3759,7 @@ function func235(this: any) {
         var_192 = 0;
         var_193 = 0;
         var_1045 = 0;
-        var_203 = 0;
+        var_203 = 0; // No = 0:エンヤホテル
         var_194 = 0;
         var_524 = 0; // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
         var_538 = 0;
@@ -4057,7 +4080,7 @@ function func243(this: any) {
         if (current_floor < 4) {
             var_86 = 1;
         }
-        if (var_94 >= 1) {
+        if (special_floor >= 1) {
             var_70 = 0;
         }
         // No = 1 なので、ホテルの外
@@ -4083,31 +4106,31 @@ function func243(this: any) {
         if (dangeon_number == 5 && current_floor == var_20) {
             var_86 = 1;
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             var_86 = 0;
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             var_86 = 0;
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             var_86 = 0;
         }
-        if (var_94 == 4) {
+        if (special_floor == 4) { // 没特殊階層「星屑の十字軍」ボスは承太郎
             var_86 = 1;
         }
-        if (var_94 == 5) {
+        if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
             var_86 = 0;
         }
-        if (var_94 == 6) {
+        if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
             var_86 = 0;
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             var_86 = 0;
         }
-        if (var_94 == 8) {
+        if (special_floor == 8) { // 幻覚の迷宮
             var_86 = 0;
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             var_86 = 0;
         }
         return;
@@ -4138,28 +4161,28 @@ function func244(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             var_1072 = 120;
         }
-        if (var_94 == 1) {
+        if (special_floor == 1) { // 虹村屋敷
             var_1072 = 114;
         }
-        if (var_94 == 2) {
+        if (special_floor == 2) { // 杜王町埠頭
             var_1072 = 112;
         }
-        if (var_94 == 3) {
+        if (special_floor == 3) { // 吉良屋敷
             var_1072 = 115;
         }
-        if (var_94 == 5) {
+        if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
             var_1072 = 116;
         }
-        if (var_94 == 6) {
+        if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
             var_1072 = 117;
         }
-        if (var_94 == 7) {
+        if (special_floor == 7) { // 広大な砂漠
             var_1072 = 113;
         }
-        if (var_94 == 8) {
+        if (special_floor == 8) { // 幻覚の迷宮
             var_1072 = 118;
         }
-        if (var_94 == 9) {
+        if (special_floor == 9) { // 幽霊部屋
             var_1072 = 119;
         }
         if (var_70 == 5) {
@@ -4237,15 +4260,15 @@ function func244(this: any) {
         if (dangeon_number != 5) {
             if (var_1072 == 11) {
                 yield func311();
-                var_94 = 7;
+                special_floor = 7; // 広大な砂漠
             }
             if (var_1072 == 12) {
                 yield func302();
-                var_94 = 8;
+                special_floor = 8; // 幻覚の迷宮
             }
             if (var_1072 == 13) {
                 yield func316();
-                var_94 = 9;
+                special_floor = 9;
             }
         }
         if (var_1072 == 111) {
@@ -4615,7 +4638,7 @@ function func246(this: any) {
         if (dangeon_number == 5 && current_floor == var_20) {
             var_96 = 0;
         }
-        if (var_94 >= 1) {
+        if (special_floor >= 1) {
             var_96 = 0;
         }
         var_560 = 1;
@@ -4822,7 +4845,8 @@ function func247(this: any) {
             }
         }
         if (var_1090 == 4) {
-            if (var_994 == 1 || var_94 == 8 || var_560 == 2 || var_560 == 3 || var_560 == 6 || var_560 == 7 || var_560 == 10 || var_560 == 11) {
+            // 幻覚の迷宮
+            if (var_994 == 1 || special_floor == 8 || var_560 == 2 || var_560 == 3 || var_560 == 6 || var_560 == 7 || var_560 == 10 || var_560 == 11) {
                 var_1090 = 1;
             }
             else {

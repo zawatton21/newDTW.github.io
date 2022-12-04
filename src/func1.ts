@@ -329,7 +329,7 @@ function func101(this: any) {
             bgm_title = "Chuck Berry [Johnny B. Goode]";
         }
         if (bgm_list_id == 977) {
-            bgm_file_name = "105.mp3";
+            bgm_file_name = "105.mp3"; // IDは977だが、ファイル名は違う:105.mp3
             bgm_title = "Red Hot Chili Peppers [Give It Away]";
         }
         if (bgm_list_id == 978) {
@@ -337,7 +337,7 @@ function func101(this: any) {
             bgm_title = "Pink Floyd [Atom Heart Mother]";
         }
         if (bgm_list_id == 979) {
-            bgm_file_name = "315.mp3";
+            bgm_file_name = "315.mp3"; // IDは979だが、ファイル名は違う:315.mp3
             bgm_title = "King Crimson [Epitaph]";
         }
         if (bgm_list_id == 980) {
@@ -691,6 +691,7 @@ function func117(this: any) {
         return;
     });
 }
+// エンヤホテルのBGM
 function func118(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(118);
@@ -700,6 +701,7 @@ function func118(this: any) {
         return;
     });
 }
+// 虹村屋敷のBGM
 function func119(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(119);
@@ -709,6 +711,7 @@ function func119(this: any) {
         return;
     });
 }
+// 吉良屋敷のBGM
 function func120(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(120);
@@ -718,6 +721,7 @@ function func120(this: any) {
         return;
     });
 }
+// 杜王町埠頭のBGM
 function func121(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(121);
@@ -727,6 +731,7 @@ function func121(this: any) {
         return;
     });
 }
+// ゴールドエクスペリエンスレクイエムの発動で帰還する際のBGM
 function func122(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(122);
@@ -1378,9 +1383,9 @@ function func139(this: any) {
 
         var_702 = bload(file_name = "00.dat", data_size = null, offset = 100);
 
-        var_25 = bload(file_name = "00.dat", data_size = null, offset = 200);
-        var_26 = bload(file_name = "00.dat", data_size = null, offset = 300);
-        var_27 = bload(file_name = "00.dat", data_size = null, offset = 400);
+        var_25_x = bload(file_name = "00.dat", data_size = null, offset = 200);
+        var_26_x = bload(file_name = "00.dat", data_size = null, offset = 300);
+        var_27_x = bload(file_name = "00.dat", data_size = null, offset = 400);
         if (var_702 == 0) {
             var_25[1] = 255;
             var_26[1] = 255;
@@ -1400,6 +1405,26 @@ function func139(this: any) {
             var_25[6] = 255;
             var_26[6] = 255;
             var_27[6] = 255;
+
+            // Ver0.1310にて追加。追加したことで白色へ初期化できる。
+            var_25[7] = 255;
+            var_26[7] = 255;
+            var_27[7] = 255;
+            var_25[8] = 255;
+            var_26[8] = 255;
+            var_27[8] = 255;
+            var_25[9] = 255;
+            var_26[9] = 255;
+            var_27[9] = 255;
+            var_25[10] = 255;
+            var_26[10] = 255;
+            var_27[10] = 255;
+            var_25[11] = 255;
+            var_26[11] = 255;
+            var_27[11] = 255;
+            var_25[12] = 255;
+            var_26[12] = 255;
+            var_27[12] = 255;
         }
         if (var_702 == 1) {
             var_25[1] = var_25[7];
@@ -2399,9 +2424,9 @@ function func150(this: any) {
         comments_row2 = "　　　後悔する時間をも…";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func340(); // キー入力による選択処理
         yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
@@ -2620,9 +2645,9 @@ function func150(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_742 = 1;
         var_83[2].Var7 = 1;
         var_743 = 1;
@@ -2758,9 +2783,9 @@ function func150(this: any) {
         comments_row2 = "　　　ついにッ！　倒したぞ！」";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -2834,9 +2859,9 @@ function func150(this: any) {
         comments_row2 = "　　　　どこかに浮かんできてる！？」";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func340(); // キー入力による選択処理
         yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
@@ -2911,9 +2936,9 @@ function func150(this: any) {
         comments_row2 = "　　　　全てはもう終わっている…」";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func340(); // キー入力による選択処理
         yield func094(); // メッセージ送りの際の効果音
         comments_row1 = comments_row1a;
@@ -2971,9 +2996,9 @@ function func150(this: any) {
         comments_row2 = "永遠に死に続けることとなった。";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func340(); // キー入力による選択処理
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -3059,9 +3084,9 @@ function func151(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_199 = 1;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -3198,9 +3223,9 @@ function func152(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_199 = 1;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -3326,9 +3351,9 @@ function func153(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_758 = 1;
             // yield func337(); // メッセージ関係呼び出し
@@ -3463,9 +3488,9 @@ function func154(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_199 = 1;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -3792,9 +3817,9 @@ function func155(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func340(); // キー入力による選択処理
         var_198 = 0;
         yield func094(); // メッセージ送りの際の効果音
@@ -3809,9 +3834,9 @@ function func155(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_83[var_761].Var6 = 1;
         var_83[var_761].Var1 = 10;
         var_83[var_761].Var2 = 8;
@@ -3993,9 +4018,9 @@ function func155(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -4049,9 +4074,9 @@ function func155(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -4099,9 +4124,9 @@ function func156(this: any) {
         comments_row2 = "";
         var_198 = 1;
         var_300 = 0;
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             var_758 = 1;
             // yield func337(); // メッセージ関係呼び出し
@@ -4449,9 +4474,9 @@ function func161(this: any) {
         var_298 = "";
         var_299 = 0;
         comments_row1 = "亀の中に入った";
-        var_25_x = var_25[1];
-        var_26_x = var_26[1];
-        var_27_x = var_27[1];
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_198 = 1;
         var_300 = 0;
         yield func047();
@@ -7723,7 +7748,7 @@ function func185(this: any) {
         }
         var_352 = current_level * 4 + 15;
         var_211 = var_352;
-        var_94 = var_880;
+        special_floor = var_880;
         if (dangeon_number == 0) {
             // No = 1 なので、ホテルの外
             dangeon_number = 1;
@@ -8440,9 +8465,8 @@ function func199(this: any) {
         yield func337(); // メッセージ関係呼び出し
         yield func080(); // 各キー入力確認
         if (key_Z_on == 1 || key_A_on == 1) {
-
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-            if (var_908 == 0) {
+            if (var_908 == 0) { // マップの色を変更
                 dialog("", 32); // 32なので、カラー選択ダイアログ(固定色)を表示させる。https://masudahp.web.fc2.com/hsp3/kiso/hspk013-2.html
                 if (stat == 0) {
                     yield func199();
@@ -8459,13 +8483,13 @@ function func199(this: any) {
                 yield func199();
                 return;
             }
-            if (var_908 == 1) {
+            if (var_908 == 1) { // 透明度を変更
                 var_909 = 1;
                 yield func051();
                 yield func201();
                 return;
             }
-            if (var_908 == 2) {
+            if (var_908 == 2) { // 初期設定に戻す
                 var_25[13] = 0;
                 var_26[13] = 0;
                 var_27[13] = 255;

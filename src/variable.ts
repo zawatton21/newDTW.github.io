@@ -176,7 +176,7 @@ let var_90 :any;
 let current_floor :number; // 現在の階層
 let var_92 :any;
 let var_93 :any;
-let var_94 :any;
+let special_floor :number; // 特殊階層ID
 let var_95 :any;
 let var_96 :any;
 let var_97 :any;
@@ -285,7 +285,7 @@ let var_199 :any;
 let var_200 :any;
 let var_201 :any;
 let var_202 :any;
-let var_203 :any;
+let var_203 :number; // ホテルの外12Fの特殊階層の選択フラグ。4つの中から選択
 let var_204 :any;
 let var_205 :any;
 let var_206 :any;

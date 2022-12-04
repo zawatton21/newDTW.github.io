@@ -503,8 +503,14 @@ p1,p2,p3がそれぞれ、R,G,Bの輝度になります。
 0が最も暗く、255が最も明るくなります。
 color 0,0,0 は黒に、color 255,255,255 は白になります。
 */
-function color(red: any, green: any, blue: any) {
-    context.strokeStyle = context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
+function color(red: number, green: number, blue: number) {
+    context.strokeStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
+    context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
+}
+
+function color1(red: number, green: number, blue: number) {
+    // context.strokeStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
+    context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
 }
 
 /* 現在使用していない HSP言語 combox命令
@@ -752,8 +758,14 @@ dialog命令で出したダイアログは、 HSPのウィンドウとは別に�
 のようになります。
 
 */
-// @ts-expect-error TS(7006): Parameter 'data0' implicitly has an 'any' type.
-function dialog(data0, data1, data2 = null) { undef_func("dialog", [data0, data1]); }
+
+// Ver 0.1310で追加。カラーパレットを表示。
+// function dialog(data0, data1, data2 = null) { undef_func("dialog", [data0, data1]); }
+function dialog(data0: string, data1: number, data2: string = null) { 
+    if (data1 == 32) {
+        document.getElementById('colorpicker').click(); // カラーパレット表示
+    }
+}
 
 /* HSP言語 gcopy命令
 参照元: http://lhsp.s206.xrea.com/manual/
@@ -999,6 +1011,12 @@ function ginfo(data_id: any) {
             return 0;
         case 5: // ウィンドウの左上Y座標
             return 0;
+        case 16: // Ver0.1310にて追加。現在設定されているカラーコード(R)
+            return Math.round((document.getElementById("return_r") as any).value);
+        case 17: // Ver0.1310にて追加。現在設定されているカラーコード(G)
+            return Math.round((document.getElementById("return_g") as any).value);
+        case 18: // Ver0.1310にて追加。現在設定されているカラーコード(B)
+            return Math.round((document.getElementById("return_b") as any).value);
         case 20: // デスクトップ全体のXサイズ(画面解像度)
             return disp_width;//return 340;
         case 21: //デスクトップ全体のYサイズ(画面解像度)
@@ -1393,9 +1411,10 @@ mes "strings"		[メッセージ表示]
 表示するメッセージに改行コードが含まれていた場合には、改行され次の行か
 ら表示を続けます。
 */
-function mes(text: string) {
+function mes(text: string, red: number = null, green: number = null, blue: number = null) {
     const ga = context.globalAlpha;
     context.globalAlpha = 1;
+    // context.fillStyle = "rgb(" + red + ", " + green + ", " + blue + ")";
     context.fillText(text, position[0], position[1] + line_size * 0.9);
     context.globalAlpha = ga;
     position[1] += line_size;
@@ -2373,9 +2392,9 @@ function DSSETMASTERVOLUME(volume_size: number) {
 
 
 // Ver 0.1305で追加
-let music_id: any = "102.mp3";
-let bgm_source1 :any;
-let bgm_source2 :any;
+let music_id: string = "102.mp3";
+let bgm_source1 :string;
+let bgm_source2 :string;
 
 function DMLOADMEMORY(music_id: any, data0: any, data1: any) {
     // Ver 0.1305で追加
