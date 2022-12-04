@@ -7233,6 +7233,51 @@ function func626(this: any) {
             var_1657 = "・ｺｰﾄを持っていると向かってくるぞ。";
             var_1658 = "・ｺｰﾄが落ちているとそこへ向かうぞ。";
         }
+        if (enemy_list == 2) {
+            enemy_name = "ヌケサク";
+            enemy_power = 4;
+            enemy_defence = 3;
+            var_954 = 5;
+            enemy_hp = 7;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 2;
+            var_1619 = 363;
+            enemy_description = "・とくに何もないぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 3) {
+            enemy_name = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰ";
+            enemy_power = 6;
+            enemy_defence = 5;
+            var_954 = 8;
+            enemy_hp = 9;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 3;
+            var_1619 = 311;
+            enemy_description = "・近い場所に瞬間移動することがあるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 4) {
+            enemy_name = "ﾃﾞｽ･13";
+            enemy_power = 11;
+            enemy_defence = 6;
+            var_954 = 95;
+            enemy_hp = 21;
+            var_1637 = 0;
+            var_1654 = 8;
+            var_972 = 3;
+            var_1619 = 325;
+            enemy_description = "・時々眠らせてくるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
         if (enemy_list == 5) {
             enemy_name = "小汚い浮浪者";
             enemy_power = 2;
@@ -7245,6 +7290,681 @@ function func626(this: any) {
             var_1619 = 105;
             enemy_description = "・とくに何もないぞ。";
             var_1656 = "・衛生観念のない虫けら同然の浮浪者だ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 6) {
+            enemy_name = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙの人形";
+            enemy_power = 9;
+            enemy_defence = 7;
+            var_954 = 45;
+            enemy_hp = 20;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 0;
+            var_1619 = 312;
+            enemy_description = "・攻撃を受けると恨みで攻撃力が上がるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 7) {
+            enemy_name = "運命の車輪";
+            enemy_power = 8;
+            enemy_defence = 7;
+            var_954 = 36;
+            enemy_hp = 18;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 3;
+            var_1619 = 316;
+            enemy_description = "・ガソリンの弾丸を撃ってくるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 8) {
+            enemy_name = "無愛想親父の死体";
+            enemy_power = 8;
+            enemy_defence = 4;
+            var_954 = 40;
+            enemy_hp = 13;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 0;
+            var_1619 = 318;
+            enemy_description = "・エンヤ婆に操られている死体だ。";
+            var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }        
+        if (enemy_list == 9) {
+            enemy_name = "ﾗﾊﾞｰｿｳﾙ";
+            enemy_power = 8;
+            enemy_defence = 8;
+            var_954 = 40;
+            enemy_hp = 17;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 1;
+            var_1619 = 314;
+            enemy_description = "・殴ると肉片が貼り付いてしまうことがあるぞ。";
+            var_1656 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 10) {
+            enemy_name = "ﾉﾄｰﾘｱｽBIG";
+            enemy_power = 19;
+            enemy_defence = 1;
+            var_954 = 320;
+            enemy_hp = 140;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 3;
+            var_1619 = 521;
+            enemy_description = "・攻撃すると肉片を貼り付けることがあるぞ。";
+            var_1656 = "・速く動いても同じ速度で追ってくるぞ。";
+            var_1657 = "・ゆっくり動くと追いかけてこないぞ。";
+            var_1658 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
+        }
+        if (enemy_list == 11) {
+            enemy_name = "ﾜｲｱｰﾄﾞのﾍﾞｯｸ";
+            enemy_power = 16;
+            enemy_defence = 15;
+            var_954 = 150;
+            enemy_hp = 38;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 2;
+            var_1619 = 212;
+            enemy_description = "・とくに何もないぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 12) {
+            enemy_name = "ｴｺｰｽﾞACT3";
+            enemy_power = 11;
+            enemy_defence = 7;
+            var_954 = 100;
+            enemy_hp = 25;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 8;
+            var_1619 = 419;
+            enemy_description = "・体を重くして鈍足にしてくるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 13) {
+            enemy_name = "ﾗﾊﾞｰｽﾞ";
+            enemy_power = 10;
+            enemy_defence = 8;
+            var_954 = 75;
+            enemy_hp = 18;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 3;
+            var_1619 = 322;
+            enemy_description = "・攻撃すると分裂して増えることがあるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 14) {
+            enemy_name = "床屋のｶｰﾝ";
+            enemy_power = 18;
+            enemy_defence = 17;
+            var_954 = 350;
+            enemy_hp = 48;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 1;
+            var_1619 = 345;
+            enemy_description = "・ダメージを受けると攻撃力がアップするぞ。";
+            var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 15) {
+            enemy_name = "ﾍﾟｯﾄｼｮｯﾌﾟ";
+            enemy_power = 21;
+            enemy_defence = 19;
+            var_954 = 850;
+            enemy_hp = 40;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 0;
+            var_1619 = 360;
+            enemy_description = "・氷のミサイルを発射してくるぞ。";
+            var_1656 = "・隣接時に氷漬けにしてくるぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 16) {
+            enemy_name = "ﾊｲﾌﾟﾘｴｽﾃｽ";
+            enemy_power = 11;
+            enemy_defence = 8;
+            var_954 = 30;
+            enemy_hp = 20;
+            var_1637 = 0;
+            var_1654 = 1;
+            var_972 = 3;
+            var_1619 = 328;
+            enemy_description = "・アイテムに化けているぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 17) {
+            enemy_name = "ｼｱｰﾊｰﾄｱﾀｯｸ";
+            enemy_power = 14;
+            enemy_defence = 40;
+            var_954 = 300;
+            enemy_hp = 5;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 8;
+            var_1619 = 443;
+            enemy_description = "・体力が少なくなると爆発するぞ。";
+            var_1656 = "・自分が爆発に巻き込まれると誘爆するぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 18) {
+            enemy_name = "ﾌﾞﾗｯｸ･ｻﾊﾞｽ";
+            enemy_power = 14;
+            enemy_defence = 15;
+            var_954 = 300;
+            enemy_hp = 42;
+            var_1637 = 0;
+            var_1654 = 10;
+            var_972 = 3;
+            var_1619 = 511;
+            enemy_description = "・影から影へ、瞬間的に移動するぞ。";
+            var_1656 = "・矢を刺して選別してくるぞ。";
+            var_1657 = "・選ばれると装備品に新たな能力がつくぞ。";
+            var_1658 = "・矢かライターを落とすぞ。";
+        }
+        if (enemy_list == 19) {
+            enemy_name = "ｱﾗﾋﾞｱﾌｧｯﾂ";
+            enemy_power = 0;
+            enemy_defence = 1;
+            var_954 = 110;
+            enemy_hp = 1;
+            var_1637 = 0;
+            var_1654 = 1;
+            var_972 = 1;
+            var_1619 = 323;
+            enemy_description = "・岩に化けて動かないぞ。";
+            var_1656 = "・太陽のレーザーを発射するぞ。";
+            var_1657 = "・気温を上げてレーザーの威力を上げるぞ。";
+            var_1658 = "・特定のアイテムを落とすぞ。";
+        }
+        if (enemy_list == 20) {
+            enemy_name = "ｴﾝﾔ婆";
+            enemy_power = 11;
+            enemy_defence = 5;
+            var_954 = 200;
+            enemy_hp = 80;
+            var_1637 = 0;
+            var_1654 = 1;
+            var_972 = 1;
+            var_1619 = 317;
+            enemy_description = "・倍の速さで動いているぞ。";
+            var_1656 = "・動く死体を呼び出すことがあるぞ。";
+            var_1657 = "・ダンジョンの主だぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 21) {
+            enemy_name = "ｽﾄﾚｲ･ｷｬｯﾄ";
+            enemy_power = 15;
+            enemy_defence = 15;
+            var_954 = 100;
+            enemy_hp = 45;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 6;
+            var_1619 = 446;
+            enemy_description = "・金縛りにする空気弾を撃ってくるぞ。";
+            var_1656 = "・撃った後は寝てしまうぞ。";
+            var_1657 = "・既に金縛りだとダメージ弾になるぞ。";
+            var_1658 = "・吉良が近くにいると爆弾空気弾になるぞ。";
+        }
+        if (enemy_list == 22) {
+            enemy_name = "ｱｳﾞﾄﾞｩﾙ人形";
+            enemy_power = 11;
+            enemy_defence = 1;
+            var_954 = 50;
+            enemy_hp = 30;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 0;
+            var_1619 = 327;
+            enemy_description = "・ジャッジメントに作られた土人形だ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 23) {
+            enemy_name = "ただの死体";
+            enemy_power = 1;
+            enemy_defence = 1;
+            var_954 = 1;
+            enemy_hp = 1;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 0;
+            var_1619 = 321;
+            enemy_description = "・とくに何もないぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 24) {
+            enemy_name = "穴ﾎﾞｺﾁｰｽﾞの死体";
+            enemy_power = 8;
+            enemy_defence = 4;
+            var_954 = 40;
+            enemy_hp = 13;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 0;
+            var_1619 = 319;
+            enemy_description = "・エンヤ婆に操られている死体だ。";
+            var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 25) {
+            enemy_name = "子連れﾆｷﾋﾞの死体";
+            enemy_power = 8;
+            enemy_defence = 4;
+            var_954 = 40;
+            enemy_hp = 13;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 0;
+            var_1619 = 320;
+            enemy_description = "・エンヤ婆に操られている死体だ。";
+            var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 26) {
+            enemy_name = "ﾊｰｳﾞｪｽﾄ";
+            enemy_power = 12;
+            enemy_defence = 8;
+            var_954 = 30;
+            enemy_hp = 12;
+            var_1637 = 0;
+            var_1654 = 1;
+            var_972 = 8;
+            var_1619 = 441;
+            enemy_description = "・アイテムを盗んで逃げるぞ。";
+            var_1656 = "・落ちているアイテムも拾って逃げるぞ。";
+            var_1657 = "・盗んだ後は倍の速さで移動するぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 27) {
+            enemy_name = "ｹﾞﾌﾞ神";
+            enemy_power = 16;
+            enemy_defence = 13;
+            var_954 = 195;
+            enemy_hp = 30;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 3;
+            var_1619 = 342;
+            enemy_description = "・地面に潜って他の場所に移動するぞ。";
+            var_1656 = "・足を掴んで移動できなくさせるぞ。";
+            var_1657 = "・目を切り裂いて盲目にしてくるぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 28) {
+            enemy_name = "ｼﾞｬｯｼﾞﾒﾝﾄ";
+            enemy_power = 15;
+            enemy_defence = 12;
+            var_954 = 150;
+            enemy_hp = 30;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 3;
+            var_1619 = 326;
+            enemy_description = "・土人形を作り出すことがあるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 29) {
+            enemy_name = "ｸﾞﾘｰﾝ･ﾃﾞｨ";
+            enemy_power = 15;
+            enemy_defence = 5;
+            var_954 = 165;
+            enemy_hp = 80;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 3;
+            var_1619 = 525;
+            enemy_description = "・同じ部屋にいると階段を降りられないぞ";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 30) {
+            enemy_name = "禁煙中ﾎﾙ･ﾎｰｽ";
+            enemy_power = 15;
+            enemy_defence = 16;
+            var_954 = 650;
+            enemy_hp = 45;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 1;
+            var_1619 = 349;
+            enemy_description = "・付かず離れず距離をとるぞ。";
+            var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
+            var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
+            var_1658 = "・予知によって弾丸のダメージが変わるぞ。";
+        }
+        if (enemy_list == 31) {
+            enemy_name = "吉良の親父";
+            enemy_power = 13;
+            enemy_defence = 9;
+            var_954 = 95;
+            enemy_hp = 22;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 7;
+            var_1619 = 444;
+            enemy_description = "・フワフワと動いているぞ。";
+            var_1656 = "・親父がいる部屋は写真の中だ。";
+            var_1657 = "　倒さないと出られないぞ。";
+            var_1658 = "・弓矢を落とすことがあるぞ。";
+        }
+        if (enemy_list == 32) {
+            enemy_name = "吉良吉影";
+            enemy_power = 22;
+            enemy_defence = 20;
+            var_954 = 750;
+            enemy_hp = 65;
+            var_1637 = 1;
+            var_1654 = 10;
+            var_972 = 7;
+            var_1619 = 442;
+            enemy_description = "・アイテムを爆弾に変えてくるぞ。";
+            var_1656 = "・床のアイテムも爆弾に変えることがあるぞ。";
+            var_1657 = "・ｼｱｰﾊｰﾄｱﾀｯｸを繰り出すことがあるぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 33) {
+            enemy_name = "トニオさん";
+            enemy_power = 100;
+            enemy_defence = 40;
+            var_954 = 1000;
+            enemy_hp = 950;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 4;
+            var_1619 = 435;
+            enemy_description = "・お店を守っているぞ。";
+            var_1656 = "・攻撃を受けると怒るぞ。";
+            var_1657 = "・泥棒すると仲間を呼ぶぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 34) {
+            enemy_name = "トニオさん";
+            enemy_power = 100;
+            enemy_defence = 40;
+            var_954 = 1000;
+            enemy_hp = 950;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 7;
+            var_1619 = 436;
+            enemy_description = "・「タダじゃあおきマセンッ！」";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 35) {
+            enemy_name = "仗助";
+            enemy_power = 20;
+            enemy_defence = 18;
+            var_954 = 380;
+            enemy_hp = 42;
+            var_1637 = 1;
+            var_1654 = 20;
+            var_972 = 7;
+            var_1619 = 401;
+            enemy_description = "・近くに怪我をした敵がいると治しに行くぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 36) {
+            enemy_name = "ｽﾋﾟｰﾄﾞﾜｺﾞﾝ";
+            enemy_power = 7;
+            enemy_defence = 7;
+            var_954 = 0;
+            enemy_hp = 50;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 4;
+            var_1619 = 104;
+            enemy_description = "・氷漬けになると助けてくれるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 37) {
+            enemy_name = "猫";
+            enemy_power = 1;
+            enemy_defence = 1;
+            var_954 = 1;
+            enemy_hp = 1;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 0;
+            var_1619 = 803;
+            enemy_description = "・にゃー";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 38) {
+            enemy_name = "ｱﾚｯｼｰ";
+            enemy_power = 18;
+            enemy_defence = 12;
+            var_954 = 220;
+            enemy_hp = 45;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 1;
+            var_1619 = 348;
+            enemy_description = "・若返り攻撃でレベルを下げてくるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 39) {
+            enemy_name = "ﾊｲｳｪｲｽﾀｰ";
+            enemy_power = 7;
+            enemy_defence = 5;
+            var_954 = 48;
+            enemy_hp = 14;
+            var_1637 = 0;
+            var_1654 = 10;
+            var_972 = 8;
+            var_1619 = 445;
+            enemy_description = "・倍の速さで移動するぞ。";
+            var_1656 = "・養分を吸い取って満腹度を下げてくるぞ。";
+            var_1657 = "・特別なアイテムを持っていることがあるぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 40) {
+            enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ";
+            enemy_power = 10;
+            enemy_defence = 5;
+            var_954 = 5;
+            enemy_hp = 20;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 8;
+            var_1619 = 408;
+            enemy_description = "・形兆が呼び出したスタンドだ。";
+            var_1656 = "・弾丸を発射してくるぞ。";
+            var_1657 = "・仲間の弾丸には当たらないぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 41) {
+            enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ戦車";
+            enemy_power = 14;
+            enemy_defence = 13;
+            var_954 = 7;
+            enemy_hp = 30;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 8;
+            var_1619 = 410;
+            enemy_description = "・形兆が呼び出したスタンドだ。";
+            var_1656 = "・砲弾を発射してくるぞ。";
+            var_1657 = "・仲間の弾丸には当たらないぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 42) {
+            enemy_name = "ｱﾊﾟｯﾁ";
+            enemy_power = 16;
+            enemy_defence = 10;
+            var_954 = 8;
+            enemy_hp = 30;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 8;
+            var_1619 = 411;
+            enemy_description = "・形兆が呼び出したスタンドだ。";
+            var_1656 = "・ミサイルを発射してくるぞ。";
+            var_1657 = "・仲間の弾丸には当たらないぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 43) {
+            enemy_name = "ｾｯｺ";
+            enemy_power = 21;
+            enemy_defence = 20;
+            var_954 = 580;
+            enemy_hp = 40;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 1;
+            var_1619 = 526;
+            enemy_description = "・ウロウロしながら近づいてくるぞ。";
+            var_1656 = "・壁の中でも自由に移動できるぞ。";
+            var_1657 = "・壁の中にいる時は普通の攻撃が効かないぞ。";
+            var_1658 = "・タイヤが当たると混乱するぞ。";
+        }
+        if (enemy_list == 44) {
+            enemy_name = "ﾚｯﾄﾞﾎｯﾄﾁﾘﾍﾟｯﾊﾟｰ";
+            enemy_power = 20;
+            enemy_defence = 16;
+            var_954 = 630;
+            enemy_hp = 52;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 8;
+            var_1619 = 437;
+            enemy_description = "・地下の電線を使って近くに瞬間移動するぞ。";
+            var_1656 = "・２回連続で攻撃してくるぞ。";
+            var_1657 = "・水に入るとダメージを受けるぞ。";
+            var_1658 = "・タイヤに弱いぞ。";
+        }
+        if (enemy_list == 45) {
+            enemy_name = "由花子";
+            enemy_power = 12;
+            enemy_defence = 13;
+            var_954 = 142;
+            enemy_hp = 32;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 7;
+            var_1619 = 433;
+            enemy_description = "・ｽﾀﾝﾄﾞDISCに呪縛をかけてくるぞ。";
+            var_1656 = "";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 46) {
+            enemy_name = "ﾎﾙ･ﾎｰｽ";
+            enemy_power = 15;
+            enemy_defence = 16;
+            var_954 = 262;
+            enemy_hp = 42;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 1;
+            var_1619 = 315;
+            enemy_description = "・付かず離れず距離をとってくるぞ。";
+            var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
+            var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
+            var_1658 = "・ガラスの破片をバラ撒くこともあるぞ。";
+        }
+        if (enemy_list == 47) {
+            enemy_name = "億泰";
+            enemy_power = 17;
+            enemy_defence = 14;
+            var_954 = 170;
+            enemy_hp = 36;
+            var_1637 = 1;
+            var_1654 = 20;
+            var_972 = 7;
+            var_1619 = 405;
+            enemy_description = "・ガオンと近くに引き寄せてくるぞ。";
+            var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 48) {
+            enemy_name = "ｴｱﾛｽﾐｽ";
+            enemy_power = 15;
+            enemy_defence = 12;
+            var_954 = 200;
+            enemy_hp = 30;
+            var_1637 = 0;
+            var_1654 = 20;
+            var_972 = 10;
+            var_1619 = 507;
+            enemy_description = "・弾丸を発射してくるぞ。";
+            var_1656 = "・どこからでも位置を察して飛んでくるぞ。";
+            var_1657 = "";
+            var_1658 = "";
+        }
+        if (enemy_list == 49) {
+            enemy_name = "ｺﾋﾟｰ人形";
+            enemy_power = var_580 + var_565;
+            enemy_defence = var_581;
+            var_954 = 0;
+            enemy_hp = var_352;
+            var_1637 = 0;
+            var_1654 = 1;
+            var_972 = 5;
+            var_1619 = 432;
+            enemy_description = "・ウロウロと歩くぞ。";
+            var_1656 = "・敵はコピー人形を優先して攻撃するぞ。";
+            var_1657 = "・10ターンで人形に戻るぞ。";
+            var_1658 = "";
+        }
+        if (enemy_list == 50) {
+            enemy_name = "元いた場所";
+            enemy_power = 0;
+            enemy_defence = 0;
+            var_954 = 0;
+            enemy_hp = 9999;
+            var_1637 = 0;
+            var_1654 = 999;
+            var_972 = 4;
+            var_1619 = 0;
+            enemy_description = "";
+            var_1656 = "";
             var_1657 = "";
             var_1658 = "";
         }
@@ -7278,21 +7998,7 @@ function func626(this: any) {
             var_1657 = "・多分ボケちゃっているぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 2) {
-            enemy_name = "ヌケサク";
-            enemy_power = 4;
-            enemy_defence = 3;
-            var_954 = 5;
-            enemy_hp = 7;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 2;
-            var_1619 = 363;
-            enemy_description = "・とくに何もないぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 93) {
             enemy_name = "ｴﾝﾎﾟﾘｵ";
             enemy_power = 5;
@@ -7308,21 +8014,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 3) {
-            enemy_name = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰ";
-            enemy_power = 6;
-            enemy_defence = 5;
-            var_954 = 8;
-            enemy_hp = 9;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 3;
-            var_1619 = 311;
-            enemy_description = "・近い場所に瞬間移動することがあるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 94) {
             enemy_name = "ブルりん";
             enemy_power = 8;
@@ -7368,66 +8060,8 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 7) {
-            enemy_name = "運命の車輪";
-            enemy_power = 8;
-            enemy_defence = 7;
-            var_954 = 36;
-            enemy_hp = 18;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 3;
-            var_1619 = 316;
-            enemy_description = "・ガソリンの弾丸を撃ってくるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 9) {
-            enemy_name = "ﾗﾊﾞｰｿｳﾙ";
-            enemy_power = 8;
-            enemy_defence = 8;
-            var_954 = 40;
-            enemy_hp = 17;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 1;
-            var_1619 = 314;
-            enemy_description = "・殴ると肉片が貼り付いてしまうことがあるぞ。";
-            var_1656 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 39) {
-            enemy_name = "ﾊｲｳｪｲｽﾀｰ";
-            enemy_power = 7;
-            enemy_defence = 5;
-            var_954 = 48;
-            enemy_hp = 14;
-            var_1637 = 0;
-            var_1654 = 10;
-            var_972 = 8;
-            var_1619 = 445;
-            enemy_description = "・倍の速さで移動するぞ。";
-            var_1656 = "・養分を吸い取って満腹度を下げてくるぞ。";
-            var_1657 = "・特別なアイテムを持っていることがあるぞ。";
-            var_1658 = "";
-        }
-        if (enemy_list == 26) {
-            enemy_name = "ﾊｰｳﾞｪｽﾄ";
-            enemy_power = 12;
-            enemy_defence = 8;
-            var_954 = 30;
-            enemy_hp = 12;
-            var_1637 = 0;
-            var_1654 = 1;
-            var_972 = 8;
-            var_1619 = 441;
-            enemy_description = "・アイテムを盗んで逃げるぞ。";
-            var_1656 = "・落ちているアイテムも拾って逃げるぞ。";
-            var_1657 = "・盗んだ後は倍の速さで移動するぞ。";
-            var_1658 = "";
-        }
+
+
         if (enemy_list == 76) {
             enemy_name = "ｴｺｰｽﾞACT2";
             enemy_power = 9;
@@ -7443,21 +8077,7 @@ function func626(this: any) {
             var_1657 = "・倒すと成長することがあるぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 6) {
-            enemy_name = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙの人形";
-            enemy_power = 9;
-            enemy_defence = 7;
-            var_954 = 45;
-            enemy_hp = 20;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 0;
-            var_1619 = 312;
-            enemy_description = "・攻撃を受けると恨みで攻撃力が上がるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 165) {
             enemy_name = "ｴﾎﾞﾆｰﾃﾞﾋﾞﾙ";
             enemy_power = 9;
@@ -7593,36 +8213,8 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 4) {
-            enemy_name = "ﾃﾞｽ･13";
-            enemy_power = 11;
-            enemy_defence = 6;
-            var_954 = 95;
-            enemy_hp = 21;
-            var_1637 = 0;
-            var_1654 = 8;
-            var_972 = 3;
-            var_1619 = 325;
-            enemy_description = "・時々眠らせてくるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 13) {
-            enemy_name = "ﾗﾊﾞｰｽﾞ";
-            enemy_power = 10;
-            enemy_defence = 8;
-            var_954 = 75;
-            enemy_hp = 18;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 3;
-            var_1619 = 322;
-            enemy_description = "・攻撃すると分裂して増えることがあるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
+
         if (enemy_list == 119) {
             enemy_name = "ｼﾞｮｾﾌ";
             enemy_power = 9;
@@ -7683,81 +8275,8 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 12) {
-            enemy_name = "ｴｺｰｽﾞACT3";
-            enemy_power = 11;
-            enemy_defence = 7;
-            var_954 = 100;
-            enemy_hp = 25;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 8;
-            var_1619 = 419;
-            enemy_description = "・体を重くして鈍足にしてくるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 20) {
-            enemy_name = "ｴﾝﾔ婆";
-            enemy_power = 11;
-            enemy_defence = 5;
-            var_954 = 200;
-            enemy_hp = 80;
-            var_1637 = 0;
-            var_1654 = 1;
-            var_972 = 1;
-            var_1619 = 317;
-            enemy_description = "・倍の速さで動いているぞ。";
-            var_1656 = "・動く死体を呼び出すことがあるぞ。";
-            var_1657 = "・ダンジョンの主だぞ。";
-            var_1658 = "";
-        }
-        if (enemy_list == 24) {
-            enemy_name = "穴ﾎﾞｺﾁｰｽﾞの死体";
-            enemy_power = 8;
-            enemy_defence = 4;
-            var_954 = 40;
-            enemy_hp = 13;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 0;
-            var_1619 = 319;
-            enemy_description = "・エンヤ婆に操られている死体だ。";
-            var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 25) {
-            enemy_name = "子連れﾆｷﾋﾞの死体";
-            enemy_power = 8;
-            enemy_defence = 4;
-            var_954 = 40;
-            enemy_hp = 13;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 0;
-            var_1619 = 320;
-            enemy_description = "・エンヤ婆に操られている死体だ。";
-            var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 8) {
-            enemy_name = "無愛想親父の死体";
-            enemy_power = 8;
-            enemy_defence = 4;
-            var_954 = 40;
-            enemy_hp = 13;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 0;
-            var_1619 = 318;
-            enemy_description = "・エンヤ婆に操られている死体だ。";
-            var_1656 = "・エンヤ婆がやられると、ただの死体に戻るぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
+
         if (enemy_list == 56) {
             enemy_name = "ｼｭﾄﾛﾊｲﾑ";
             enemy_power = 13;
@@ -7773,51 +8292,9 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 28) {
-            enemy_name = "ｼﾞｬｯｼﾞﾒﾝﾄ";
-            enemy_power = 15;
-            enemy_defence = 12;
-            var_954 = 150;
-            enemy_hp = 30;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 3;
-            var_1619 = 326;
-            enemy_description = "・土人形を作り出すことがあるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 22) {
-            enemy_name = "ｱｳﾞﾄﾞｩﾙ人形";
-            enemy_power = 11;
-            enemy_defence = 1;
-            var_954 = 50;
-            enemy_hp = 30;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 0;
-            var_1619 = 327;
-            enemy_description = "・ジャッジメントに作られた土人形だ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 31) {
-            enemy_name = "吉良の親父";
-            enemy_power = 13;
-            enemy_defence = 9;
-            var_954 = 95;
-            enemy_hp = 22;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 7;
-            var_1619 = 444;
-            enemy_description = "・フワフワと動いているぞ。";
-            var_1656 = "・親父がいる部屋は写真の中だ。";
-            var_1657 = "　倒さないと出られないぞ。";
-            var_1658 = "・弓矢を落とすことがあるぞ。";
-        }
+
+
+
         if (enemy_list == 140) {
             enemy_name = "ｼﾞｮﾅｻﾝ";
             enemy_power = 15;
@@ -7878,81 +8355,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 11) {
-            enemy_name = "ﾜｲｱｰﾄﾞのﾍﾞｯｸ";
-            enemy_power = 16;
-            enemy_defence = 15;
-            var_954 = 150;
-            enemy_hp = 38;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 2;
-            var_1619 = 212;
-            enemy_description = "・とくに何もないぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 45) {
-            enemy_name = "由花子";
-            enemy_power = 12;
-            enemy_defence = 13;
-            var_954 = 142;
-            enemy_hp = 32;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 7;
-            var_1619 = 433;
-            enemy_description = "・ｽﾀﾝﾄﾞDISCに呪縛をかけてくるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 29) {
-            enemy_name = "ｸﾞﾘｰﾝ･ﾃﾞｨ";
-            enemy_power = 15;
-            enemy_defence = 5;
-            var_954 = 165;
-            enemy_hp = 80;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 3;
-            var_1619 = 525;
-            enemy_description = "・同じ部屋にいると階段を降りられないぞ";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 47) {
-            enemy_name = "億泰";
-            enemy_power = 17;
-            enemy_defence = 14;
-            var_954 = 170;
-            enemy_hp = 36;
-            var_1637 = 1;
-            var_1654 = 20;
-            var_972 = 7;
-            var_1619 = 405;
-            enemy_description = "・ガオンと近くに引き寄せてくるぞ。";
-            var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 27) {
-            enemy_name = "ｹﾞﾌﾞ神";
-            enemy_power = 16;
-            enemy_defence = 13;
-            var_954 = 195;
-            enemy_hp = 30;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 3;
-            var_1619 = 342;
-            enemy_description = "・地面に潜って他の場所に移動するぞ。";
-            var_1656 = "・足を掴んで移動できなくさせるぞ。";
-            var_1657 = "・目を切り裂いて盲目にしてくるぞ。";
-            var_1658 = "";
-        }
+
         if (enemy_list == 136) {
             enemy_name = "ｼｰｻﾞｰ";
             enemy_power = 15;
@@ -7968,36 +8371,7 @@ function func626(this: any) {
             var_1657 = "・攻撃されても波紋で痺れることがあるぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 38) {
-            enemy_name = "ｱﾚｯｼｰ";
-            enemy_power = 18;
-            enemy_defence = 12;
-            var_954 = 220;
-            enemy_hp = 45;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 1;
-            var_1619 = 348;
-            enemy_description = "・若返り攻撃でレベルを下げてくるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 48) {
-            enemy_name = "ｴｱﾛｽﾐｽ";
-            enemy_power = 15;
-            enemy_defence = 12;
-            var_954 = 200;
-            enemy_hp = 30;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 10;
-            var_1619 = 507;
-            enemy_description = "・弾丸を発射してくるぞ。";
-            var_1656 = "・どこからでも位置を察して飛んでくるぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 78) {
             enemy_name = "ｱｳﾞﾄﾞｩﾙさん";
             enemy_power = 19;
@@ -8028,36 +8402,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 17) {
-            enemy_name = "ｼｱｰﾊｰﾄｱﾀｯｸ";
-            enemy_power = 14;
-            enemy_defence = 40;
-            var_954 = 300;
-            enemy_hp = 5;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 8;
-            var_1619 = 443;
-            enemy_description = "・体力が少なくなると爆発するぞ。";
-            var_1656 = "・自分が爆発に巻き込まれると誘爆するぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 46) {
-            enemy_name = "ﾎﾙ･ﾎｰｽ";
-            enemy_power = 15;
-            enemy_defence = 16;
-            var_954 = 262;
-            enemy_hp = 42;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 1;
-            var_1619 = 315;
-            enemy_description = "・付かず離れず距離をとってくるぞ。";
-            var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
-            var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
-            var_1658 = "・ガラスの破片をバラ撒くこともあるぞ。";
-        }
+
         if (enemy_list == 97) {
             enemy_name = "ｵｲﾝｺﾞ";
             enemy_power = 10;
@@ -8088,21 +8433,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 14) {
-            enemy_name = "床屋のｶｰﾝ";
-            enemy_power = 18;
-            enemy_defence = 17;
-            var_954 = 350;
-            enemy_hp = 48;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 1;
-            var_1619 = 345;
-            enemy_description = "・ダメージを受けると攻撃力がアップするぞ。";
-            var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 69) {
             enemy_name = "ﾌﾞﾗﾌｫｰﾄﾞ";
             enemy_power = 18;
@@ -8148,36 +8479,7 @@ function func626(this: any) {
             var_1657 = "・隣接すると重くなる攻撃をしてくるぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 18) {
-            enemy_name = "ﾌﾞﾗｯｸ･ｻﾊﾞｽ";
-            enemy_power = 14;
-            enemy_defence = 15;
-            var_954 = 300;
-            enemy_hp = 42;
-            var_1637 = 0;
-            var_1654 = 10;
-            var_972 = 3;
-            var_1619 = 511;
-            enemy_description = "・影から影へ、瞬間的に移動するぞ。";
-            var_1656 = "・矢を刺して選別してくるぞ。";
-            var_1657 = "・選ばれると装備品に新たな能力がつくぞ。";
-            var_1658 = "・矢かライターを落とすぞ。";
-        }
-        if (enemy_list == 35) {
-            enemy_name = "仗助";
-            enemy_power = 20;
-            enemy_defence = 18;
-            var_954 = 380;
-            enemy_hp = 42;
-            var_1637 = 1;
-            var_1654 = 20;
-            var_972 = 7;
-            var_1619 = 401;
-            enemy_description = "・近くに怪我をした敵がいると治しに行くぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 135) {
             enemy_name = "若ｼﾞｮｾﾌ";
             enemy_power = 19;
@@ -8193,21 +8495,7 @@ function func626(this: any) {
             var_1657 = "・攻撃されると波紋で痺れることがあるぞ。";
             var_1658 = "・老化攻撃を受けると弱くなってしまうぞ。";
         }
-        if (enemy_list == 10) {
-            enemy_name = "ﾉﾄｰﾘｱｽBIG";
-            enemy_power = 19;
-            enemy_defence = 1;
-            var_954 = 320;
-            enemy_hp = 140;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 3;
-            var_1619 = 521;
-            enemy_description = "・攻撃すると肉片を貼り付けることがあるぞ。";
-            var_1656 = "・速く動いても同じ速度で追ってくるぞ。";
-            var_1657 = "・ゆっくり動くと追いかけてこないぞ。";
-            var_1658 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
-        }
+
         if (enemy_list == 95) {
             enemy_name = "ｽﾄﾚｲﾂｫ";
             enemy_power = 19;
@@ -8268,21 +8556,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 43) {
-            enemy_name = "ｾｯｺ";
-            enemy_power = 21;
-            enemy_defence = 20;
-            var_954 = 580;
-            enemy_hp = 40;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 1;
-            var_1619 = 526;
-            enemy_description = "・ウロウロしながら近づいてくるぞ。";
-            var_1656 = "・壁の中でも自由に移動できるぞ。";
-            var_1657 = "・壁の中にいる時は普通の攻撃が効かないぞ。";
-            var_1658 = "・タイヤが当たると混乱するぞ。";
-        }
+
         if (enemy_list == 85) {
             enemy_name = "ﾘｿﾞｯﾄ";
             enemy_power = 10;
@@ -8298,36 +8572,7 @@ function func626(this: any) {
             var_1657 = "・体内で刃物を作る攻撃をしてくるぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 32) {
-            enemy_name = "吉良吉影";
-            enemy_power = 22;
-            enemy_defence = 20;
-            var_954 = 750;
-            enemy_hp = 65;
-            var_1637 = 1;
-            var_1654 = 10;
-            var_972 = 7;
-            var_1619 = 442;
-            enemy_description = "・アイテムを爆弾に変えてくるぞ。";
-            var_1656 = "・床のアイテムも爆弾に変えることがあるぞ。";
-            var_1657 = "・ｼｱｰﾊｰﾄｱﾀｯｸを繰り出すことがあるぞ。";
-            var_1658 = "";
-        }
-        if (enemy_list == 44) {
-            enemy_name = "ﾚｯﾄﾞﾎｯﾄﾁﾘﾍﾟｯﾊﾟｰ";
-            enemy_power = 20;
-            enemy_defence = 16;
-            var_954 = 630;
-            enemy_hp = 52;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 8;
-            var_1619 = 437;
-            enemy_description = "・地下の電線を使って近くに瞬間移動するぞ。";
-            var_1656 = "・２回連続で攻撃してくるぞ。";
-            var_1657 = "・水に入るとダメージを受けるぞ。";
-            var_1658 = "・タイヤに弱いぞ。";
-        }
+
         if (enemy_list == 72) {
             enemy_name = "ｹﾝｿﾞｰ";
             enemy_power = 18;
@@ -8373,21 +8618,7 @@ function func626(this: any) {
             var_1657 = "・まれに何か投げるぞ。";
             var_1658 = "・近くにいると階段を降りられないぞ。";
         }
-        if (enemy_list == 15) {
-            enemy_name = "ﾍﾟｯﾄｼｮｯﾌﾟ";
-            enemy_power = 21;
-            enemy_defence = 19;
-            var_954 = 850;
-            enemy_hp = 40;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 0;
-            var_1619 = 360;
-            enemy_description = "・氷のミサイルを発射してくるぞ。";
-            var_1656 = "・隣接時に氷漬けにしてくるぞ。";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 123) {
             enemy_name = "ﾌﾞﾁｬﾗﾃｨ";
             enemy_power = 22;
@@ -8433,51 +8664,7 @@ function func626(this: any) {
             var_1657 = "・グリーンベレーを呼び出すぞ。";
             var_1658 = "・地面に地雷を仕掛けるぞ。";
         }
-        if (enemy_list == 40) {
-            enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ";
-            enemy_power = 10;
-            enemy_defence = 5;
-            var_954 = 5;
-            enemy_hp = 20;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 8;
-            var_1619 = 408;
-            enemy_description = "・形兆が呼び出したスタンドだ。";
-            var_1656 = "・弾丸を発射してくるぞ。";
-            var_1657 = "・仲間の弾丸には当たらないぞ。";
-            var_1658 = "";
-        }
-        if (enemy_list == 41) {
-            enemy_name = "ﾊﾞｯﾄﾞｶﾝﾊﾟﾆｰ戦車";
-            enemy_power = 14;
-            enemy_defence = 13;
-            var_954 = 7;
-            enemy_hp = 30;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 8;
-            var_1619 = 410;
-            enemy_description = "・形兆が呼び出したスタンドだ。";
-            var_1656 = "・砲弾を発射してくるぞ。";
-            var_1657 = "・仲間の弾丸には当たらないぞ。";
-            var_1658 = "";
-        }
-        if (enemy_list == 42) {
-            enemy_name = "ｱﾊﾟｯﾁ";
-            enemy_power = 16;
-            enemy_defence = 10;
-            var_954 = 8;
-            enemy_hp = 30;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 8;
-            var_1619 = 411;
-            enemy_description = "・形兆が呼び出したスタンドだ。";
-            var_1656 = "・ミサイルを発射してくるぞ。";
-            var_1657 = "・仲間の弾丸には当たらないぞ。";
-            var_1658 = "";
-        }
+
         if (enemy_list == 54) {
             enemy_name = "ｸﾞﾘｰﾝﾍﾞﾚｰ";
             enemy_power = 20;
@@ -8508,36 +8695,8 @@ function func626(this: any) {
             var_1657 = "・離れているとサソリを飛ばしてくるぞ。";
             var_1658 = "・ダンジョンの主だぞ。";
         }
-        if (enemy_list == 30) {
-            enemy_name = "禁煙中ﾎﾙ･ﾎｰｽ";
-            enemy_power = 15;
-            enemy_defence = 16;
-            var_954 = 650;
-            enemy_hp = 45;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 1;
-            var_1619 = 349;
-            enemy_description = "・付かず離れず距離をとるぞ。";
-            var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
-            var_1657 = "・この弾丸は防御力の影響を受けないぞ。";
-            var_1658 = "・予知によって弾丸のダメージが変わるぞ。";
-        }
-        if (enemy_list == 21) {
-            enemy_name = "ｽﾄﾚｲ･ｷｬｯﾄ";
-            enemy_power = 15;
-            enemy_defence = 15;
-            var_954 = 100;
-            enemy_hp = 45;
-            var_1637 = 0;
-            var_1654 = 20;
-            var_972 = 6;
-            var_1619 = 446;
-            enemy_description = "・金縛りにする空気弾を撃ってくるぞ。";
-            var_1656 = "・撃った後は寝てしまうぞ。";
-            var_1657 = "・既に金縛りだとダメージ弾になるぞ。";
-            var_1658 = "・吉良が近くにいると爆弾空気弾になるぞ。";
-        }
+
+
         if (enemy_list == 122) {
             enemy_name = "ﾎﾟﾙﾅﾚﾌ";
             enemy_power = 25;
@@ -9168,21 +9327,7 @@ function func626(this: any) {
             var_1657 = "・エコーズACT3に成長するぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 16) {
-            enemy_name = "ﾊｲﾌﾟﾘｴｽﾃｽ";
-            enemy_power = 11;
-            enemy_defence = 8;
-            var_954 = 30;
-            enemy_hp = 20;
-            var_1637 = 0;
-            var_1654 = 1;
-            var_972 = 3;
-            var_1619 = 328;
-            enemy_description = "・アイテムに化けているぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 130) {
             enemy_name = "ﾏﾘﾘﾝﾏﾝｿﾝ";
             enemy_power = 10;
@@ -9213,36 +9358,8 @@ function func626(this: any) {
             var_1657 = "・５ターンで消えてしまうぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 37) {
-            enemy_name = "猫";
-            enemy_power = 1;
-            enemy_defence = 1;
-            var_954 = 1;
-            enemy_hp = 1;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 0;
-            var_1619 = 803;
-            enemy_description = "・にゃー";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 19) {
-            enemy_name = "ｱﾗﾋﾞｱﾌｧｯﾂ";
-            enemy_power = 0;
-            enemy_defence = 1;
-            var_954 = 110;
-            enemy_hp = 1;
-            var_1637 = 0;
-            var_1654 = 1;
-            var_972 = 1;
-            var_1619 = 323;
-            enemy_description = "・岩に化けて動かないぞ。";
-            var_1656 = "・太陽のレーザーを発射するぞ。";
-            var_1657 = "・気温を上げてレーザーの威力を上げるぞ。";
-            var_1658 = "・特定のアイテムを落とすぞ。";
-        }
+
+
         if (enemy_list == 90) {
             enemy_name = "岩";
             enemy_power = 0;
@@ -9316,36 +9433,7 @@ function func626(this: any) {
             var_1657 = "・ウワハハハハハ！";
             var_1658 = "・クチャ　クチャ　　ペッ";
         }
-        if (enemy_list == 33) {
-            enemy_name = "トニオさん";
-            enemy_power = 100;
-            enemy_defence = 40;
-            var_954 = 1000;
-            enemy_hp = 950;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 4;
-            var_1619 = 435;
-            enemy_description = "・お店を守っているぞ。";
-            var_1656 = "・攻撃を受けると怒るぞ。";
-            var_1657 = "・泥棒すると仲間を呼ぶぞ。";
-            var_1658 = "";
-        }
-        if (enemy_list == 34) {
-            enemy_name = "トニオさん";
-            enemy_power = 100;
-            enemy_defence = 40;
-            var_954 = 1000;
-            enemy_hp = 950;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 7;
-            var_1619 = 436;
-            enemy_description = "・「タダじゃあおきマセンッ！」";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 61) {
             enemy_name = "ﾖｰﾖｰﾏｯ";
             enemy_power = 1;
@@ -9451,21 +9539,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 23) {
-            enemy_name = "ただの死体";
-            enemy_power = 1;
-            enemy_defence = 1;
-            var_954 = 1;
-            enemy_hp = 1;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 0;
-            var_1619 = 321;
-            enemy_description = "・とくに何もないぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 81) {
             enemy_name = "ｱﾊﾞｯｷｫ";
             enemy_power = 1;
@@ -9496,21 +9570,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 50) {
-            enemy_name = "元いた場所";
-            enemy_power = 0;
-            enemy_defence = 0;
-            var_954 = 0;
-            enemy_hp = 9999;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 4;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 116) {
             enemy_name = "玉美";
             enemy_power = 0;
@@ -9541,21 +9601,7 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 49) {
-            enemy_name = "ｺﾋﾟｰ人形";
-            enemy_power = var_580 + var_565;
-            enemy_defence = var_581;
-            var_954 = 0;
-            enemy_hp = var_352;
-            var_1637 = 0;
-            var_1654 = 1;
-            var_972 = 5;
-            var_1619 = 432;
-            enemy_description = "・ウロウロと歩くぞ。";
-            var_1656 = "・敵はコピー人形を優先して攻撃するぞ。";
-            var_1657 = "・10ターンで人形に戻るぞ。";
-            var_1658 = "";
-        }
+
         if (enemy_list == 163) {
             enemy_name = "ﾔｸ中の少年";
             enemy_power = 1;
@@ -9571,21 +9617,7 @@ function func626(this: any) {
             var_1657 = "・中にブチャラティが入っているぞ。";
             var_1658 = "";
         }
-        if (enemy_list == 36) {
-            enemy_name = "ｽﾋﾟｰﾄﾞﾜｺﾞﾝ";
-            enemy_power = 7;
-            enemy_defence = 7;
-            var_954 = 0;
-            enemy_hp = 50;
-            var_1637 = 0;
-            var_1654 = 999;
-            var_972 = 4;
-            var_1619 = 104;
-            enemy_description = "・氷漬けになると助けてくれるぞ。";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
+
         if (enemy_list == 105) {
             enemy_name = "ﾂｪﾍﾟﾘさん";
             enemy_power = 9;
@@ -10388,17 +10420,17 @@ function func630(this: any) {
             var_953 = var_977[var_2917];
         }
         if (current_floor == 87) {
-            var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
+            var_977 = [153, 133, 129, 126, 137, 21, 64, 158, 159]; // Ver0.1401 No = 159 記憶が戻ったウェザーを追加
             var_2917 = rnd(8);
             var_953 = var_977[var_2917];
         }
         if (current_floor == 88) {
-            var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
+            var_977 = [153, 133, 129, 126, 137, 21, 64, 158, 159]; // Ver0.1401 No = 159 記憶が戻ったウェザーを追加
             var_2917 = rnd(8);
             var_953 = var_977[var_2917];
         }
         if (current_floor == 89) {
-            var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
+            var_977 = [153, 133, 129, 126, 137, 21, 64, 158, 159]; // Ver0.1401 No = 159 記憶が戻ったウェザーを追加
             var_2917 = rnd(8);
             var_953 = var_977[var_2917];
         }
@@ -13312,6 +13344,7 @@ function func639(this: any) {
                 }
             }
         }
+        // おそらく敵のヒラリ動作処理？ enemy_list == 72 ケンゾー、enemy_list == 88 ドノヴァン、enemy_list == 99 マンハッタントランスファー
         if (var_83[var_314].Var0 == 72 || var_83[var_314].Var0 == 88 || var_83[var_314].Var0 == 99) {
             if (var_83[var_314].Var20 == 0 && equip_disc[366] == 0) {
                 if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3) {

@@ -72,8 +72,10 @@ function func004(this: any) {
             var_11 = 0;
         }
         var_12 = 0;
-        version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        game_title = "newDTW original(ver0.1310)";
+        // version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
+        // game_title = "newDTW original(ver0.1310)";
+        version_number = "0.14"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
+        game_title = "newDTW (ver0.1401)";
         
         buffer(17);
         yield picload("img3.gif");
