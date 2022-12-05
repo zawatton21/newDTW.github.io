@@ -8238,8 +8238,8 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 70) { // Ver0.1401にて追加。
-            enemy_name = "D・ダービー";
+        if (enemy_list == 70) {
+            enemy_name = "";
             enemy_power = 0;
             enemy_defence = 0;
             enemy_exp_point = 0;
@@ -8418,8 +8418,8 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 82) { // Ver0.1401にて追加。
-            enemy_name = "バーテンダー";
+        if (enemy_list == 82) {
+            enemy_name = "";
             enemy_power = 0;
             enemy_defence = 0;
             enemy_exp_point = 0;
@@ -8523,8 +8523,8 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 89) { // Ver0.1401にて追加。
-            enemy_name = "フォーエバー"; // ストレングスの本体の猿
+        if (enemy_list == 89) {
+            enemy_name = "";
             enemy_power = 0;
             enemy_defence = 0;
             enemy_exp_point = 0;
@@ -8688,12 +8688,12 @@ function func626(this: any) {
             var_1657 = "・近くにいると弾丸を撃ってくるぞ。";
             var_1658 = "・この弾丸は防御力の影響を受けないぞ。";
         }
-        if (enemy_list == 100) { // Ver0.1401にて追加。
-            enemy_name = "ピアスを開けた徐倫";
-            enemy_power = 25;
-            enemy_defence = 27;
-            enemy_exp_point = 1100;
-            enemy_hp = 53;
+        if (enemy_list == 100) {
+            enemy_name = "";
+            enemy_power = 0;
+            enemy_defence = 0;
+            enemy_exp_point = 0;
+            enemy_hp = 0;
             var_1637 = 0;
             var_1654 = 0;
             var_972 = 0;
@@ -9691,8 +9691,8 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 167) { // Ver0.1401にて追加。
-            enemy_name = "影DIO";
+        if (enemy_list == 167) {
+            enemy_name = "";
             enemy_power = 0;
             enemy_defence = 0;
             enemy_exp_point = 0;
@@ -9721,8 +9721,8 @@ function func626(this: any) {
             var_1657 = "・ウワハハハハハ！";
             var_1658 = "・クチャ　クチャ　　ペッ";
         }
-        if (enemy_list == 169) { // Ver0.1401にて追加。
-            enemy_name = "ナランチャ";
+        if (enemy_list == 169) {
+            enemy_name = "";
             enemy_power = 0;
             enemy_defence = 0;
             enemy_exp_point = 0;
@@ -9751,12 +9751,12 @@ function func626(this: any) {
             var_1657 = "";
             var_1658 = "";
         }
-        if (enemy_list == 171) { // Ver0.1401にて追加。
-            enemy_name = "離婚した承太郎";
-            enemy_power = 80;
-            enemy_defence = 40;
-            enemy_exp_point = 1000;
-            enemy_hp = 500;
+        if (enemy_list == 171) {
+            enemy_name = "";
+            enemy_power = 0;
+            enemy_defence = 0;
+            enemy_exp_point = 0;
+            enemy_hp = 0;
             var_1637 = 0;
             var_1654 = 0;
             var_972 = 0;
@@ -9780,426 +9780,6 @@ function func626(this: any) {
             var_1656 = "・刺さるとスタンドが溶けて弱まるぞ。";
             var_1657 = "・オーラで強くなっているとオーラが消えるぞ。";
             var_1658 = "・移動しないぞ。";
-        }
-        if (enemy_list == 173) { // Ver0.1401にて追加。
-            enemy_name = "ロッコ・バロッコ所長";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 174) {
-            enemy_name = ""; // 不明
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 175) { // Ver0.1401にて追加。
-            enemy_name = "涙目のルカ";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 176) {
-            enemy_name = "杉本鈴美";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 177) { // Ver0.1401にて追加。
-            enemy_name = "スクアーロ"; // クラッシュの本体
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 178) { // Ver0.1401にて追加。
-            enemy_name = "ティッツァーノ"; // トーキング・ヘッドの本体
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 179) { // Ver0.1401にて追加。
-            enemy_name = "ﾎﾙﾏｼﾞｵ";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 180) { // Ver0.1401にて追加。
-            enemy_name = "ﾃﾞｯﾄﾞﾏﾝｽﾞ 吉良";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 181) { // Ver0.1401にて追加。
-            enemy_name = "サーレー"; // クラフトワークの本体
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 182) { // Ver0.1401にて追加。
-            enemy_name = "リキエル"; // スカイ・ハイの本体
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 183) {
-            enemy_name = "謎の卵";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 184) {
-            enemy_name = "ﾐｭｰﾐｭｰ";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 185) {
-            enemy_name = "ｳﾞｧﾚﾝﾀｲﾝ大統領";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 186) {
-            enemy_name = "恐竜";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 187) {
-            enemy_name = "大柳賢"; // ボーイⅡマンの本体
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 188) {
-            enemy_name = "ｼﾙﾊﾞｰﾁｬﾘｵｯﾂﾚｸｲｴﾑ";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 189) {
-            enemy_name = "";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 190) {
-            enemy_name = "辻彩"; // シンデレラの本体
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 191) {
-            enemy_name = "ポルナレフさん";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 192) {
-            enemy_name = "黒い絵の幽霊";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 193) {
-            enemy_name = "メローネ";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 194) {
-            enemy_name = "グェス";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 195) {
-            enemy_name = "グーグー・ドールズ";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 196) {
-            enemy_name = "ﾃﾞｨｴｺﾞ･ﾌﾞﾗﾝﾄﾞｰ";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 197) {
-            enemy_name = "平行世界のDIO";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 198) {
-            enemy_name = "";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 199) {
-            enemy_name = "";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
-        }
-        if (enemy_list == 200) {
-            enemy_name = "";
-            enemy_power = 0;
-            enemy_defence = 0;
-            enemy_exp_point = 0;
-            enemy_hp = 0;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
-            enemy_description = "";
-            var_1656 = "";
-            var_1657 = "";
-            var_1658 = "";
         }
         return;
     });
@@ -10943,17 +10523,17 @@ function func630(this: any) {
             var_953 = var_977[var_2917];
         }
         if (current_floor == 87) {
-            var_977 = [153, 133, 129, 126, 137, 21, 64, 159]; // Ver0.1401にて修正。No = 159 記憶が戻ったウェザーを追加、No = 158 プッツン由花子を削除
+            var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
             var_2917 = rnd(8);
             var_953 = var_977[var_2917];
         }
         if (current_floor == 88) {
-            var_977 = [153, 133, 129, 126, 137, 21, 64, 159]; // Ver0.1401にて修正。No = 159 記憶が戻ったウェザーを追加、No = 158 プッツン由花子を削除
+            var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
             var_2917 = rnd(8);
             var_953 = var_977[var_2917];
         }
         if (current_floor == 89) {
-            var_977 = [153, 133, 129, 126, 137, 21, 64, 159]; // Ver0.1401にて修正。No = 159 記憶が戻ったウェザーを追加、No = 158 プッツン由花子を削除
+            var_977 = [153, 133, 129, 126, 137, 21, 64, 158];
             var_2917 = rnd(8);
             var_953 = var_977[var_2917];
         }

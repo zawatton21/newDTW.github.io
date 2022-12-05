@@ -1041,7 +1041,7 @@ let var_950 :any;
 let var_951 :any;
 let var_952 :any;
 let var_953 :any;
-let enemy_exp_point :number; // 敵を倒した時にもらえる経験値
+let enemy_exp_point :any;
 let var_955 :any;
 let var_956 :any;
 let var_957 :any;
