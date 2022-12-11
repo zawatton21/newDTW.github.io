@@ -7575,7 +7575,7 @@ function func511(this: any) {
             yield func647(); // 射撃攻撃動作処理
             return;
         }
-        // No = 405 エコーズAct2、No = 406 エコーズAct1、No = 408 マン・イン・ザ・ミラー、No = 409 ラバーズ、No = 410 タワーオブグレー、No = 404 ホルス神、No = 400 ハイエロファントグリーン、No = 317 キッス、No = 414 不明disc、No = 309 ソフト・マシーン の発動処理
+        // No = 405 エコーズAct2、No = 406 エコーズAct1、No = 408 マン・イン・ザ・ミラー、No = 409 ラバーズ、No = 410 没disc(ハイウェイスター。かつて射撃discだった?)、No = 404 ホルス神、No = 400 ハイエロファントグリーン、No = 317 キッス、No = 414 不明disc、No = 309 ソフト・マシーン の発動処理
         if (activated_disc_id == 405 || activated_disc_id == 406 || activated_disc_id == 408 || activated_disc_id == 409 || activated_disc_id == 410 || activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 317 || activated_disc_id == 414 || activated_disc_id == 309) {
             if (var_73[var_66][var_67] != 0 || var_80[var_66][var_67] != 0 || var_77[var_66][var_67] != 0) {
                 comments_row1 = "";
