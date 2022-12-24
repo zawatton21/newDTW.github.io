@@ -773,6 +773,7 @@ function func604(this: any) {
         if (equip_disc[205] == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
+        // アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
         if (var_168 == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
@@ -1066,6 +1067,7 @@ function func606(this: any) {
         if (equip_disc[205] == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
+        // アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
         if (var_168 == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
@@ -1132,27 +1134,27 @@ function func607(this: any) {
             var_83[var_673].Var21 = 1;
             var_411 = 1;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 2;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 3;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 4;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_411 = 6;
             yield func337(); // メッセージ関係呼び出し
@@ -1226,6 +1228,7 @@ function func607(this: any) {
         if (equip_disc[205] == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
+        // アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
         if (var_168 == 1) {
             var_2852 = Math.floor(var_2852 * 2 / 3);
         }
@@ -1317,7 +1320,6 @@ function func608(this: any) {
         if (var_2751 == 2) {
             gsel(19);
             color(255, 0, 0);
-    
             boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_1165 = 1;
@@ -1498,7 +1500,7 @@ function func609(this: any) {
         }
         var_2196 = 0;
         var_2217 = 0;
-        if (var_410 == 408) {
+        if (shageki_disc_id == 408) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1939,7 +1941,6 @@ function func613(this: any) {
         var_1393 = var_673;
         gsel(19);
         color(150, 150, 150);
-
         boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_271 = 1;
@@ -1999,7 +2000,7 @@ function func613(this: any) {
             }
             return;
         }
-        if (var_215 == 202 || var_410 == 404) {
+        if (nouryoku_disc_id == 202 || shageki_disc_id == 404) {
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "しかし 装備中のDISCによって";
@@ -2021,7 +2022,6 @@ function func613(this: any) {
             }
             return;
         }
-
         DSPLAY(audio_id = 164);
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
@@ -2132,7 +2132,7 @@ function func614(this: any) {
             var_83[var_2392].Var18 = 0;
             var_2392 = var_2392 + 1;
         }
-        if (var_215 == 100 || var_215 == 111 || var_215 == 398) {
+        if (nouryoku_disc_id == 100 || nouryoku_disc_id == 111 || nouryoku_disc_id == 398) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -2493,4090 +2493,207 @@ function func619(this: any) {
         return;
     });
 }
+// 各敵の特殊能力(ディアボロへの攻撃)割り振り処理
 function func620(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(620);
         if (var_83[var_673].Var17 != 0 || var_83[var_673].Var23 != 0) {
             return;
         }
+        // No = 4 敵デス・13の特殊能力
         if (enemy_list == 4) {
-            var_2830 = rnd(5);
-            if (var_2830 == 0 && var_219 == 0 && var_128 == 0) {
-        
-                DSPLAY(audio_id = 131);
-                var_83[var_673].Var21 = 1;
-                var_271 = 1;
-                var_1286 = var_83[var_673].Var1 - var_66 + 4 * 40;
-                var_1287 = var_83[var_673].Var2 - var_67 + 4 * 40 - 50;
-                var_1309 = 1;
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    if (var_83[var_673].Var5 == 1 || var_83[var_673].Var5 == 2 || var_83[var_673].Var5 == 3) {
-                        var_411 = 1;
-                    }
-                    if (var_83[var_673].Var5 == 7 || var_83[var_673].Var5 == 8 || var_83[var_673].Var5 == 9) {
-                        var_411 = 2;
-                    }
-                    if (var_83[var_673].Var5 == 4) {
-                        var_411 = 3;
-                    }
-                    if (var_83[var_673].Var5 == 6) {
-                        var_411 = 4;
-                    }
-                    var_1309 = var_1309 + 1;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_271 = 0;
-                var_1309 = 0;
-                var_83[var_673].Var21 = 0;
-                yield func619();
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                if (var_120 == 0) {
-                    comments_row1 = "ﾃﾞｨｱﾎﾞﾛは眠ってしまった！";
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            
-                    DSPLAY(audio_id = 132);
-                    var_219 = 1;
-                }
-                if (var_120 == 1) {
-                    comments_row1 = "10時間熟睡した気分になっていて";
-                    comments_row2 = "眠くならなかった！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_219 = 0;
-                }
-                if (equip_disc[351] == 1) {
-                    comments_row1 = "装備DISCの効果によって";
-                    comments_row2 = "眠くならなかった！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_219 = 0;
-                }
-                if (var_410 == 400 || var_410 == 407) {
-                    comments_row1 = "装備DISCの効果によって";
-                    comments_row2 = "眠らずにすんだ！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_219 = 0;
-                }
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
+            yield enemy004();
             return;
         }
-        if (enemy_list == 158 || enemy_list == 45) {
-            var_412 = var_673;
-            if (var_224 == 0) {
-                return;
-            }
-            var_2885 = rnd(4);
-            if (var_2885 != 0) {
-                return;
-            }
-            var_474 = 0;
-            for (let cnt2 = 0; cnt2 < 100; ++cnt2) {
-                var_475 = rnd(var_224);
-                var_475 = var_475 + 1;
-                if (var_233[var_475].Var0 >= 100 && var_233[var_475].Var0 < 400 && var_233[var_475].Var12 != 1) {
-                    var_474 = 1;
-                    break;
-                }
-            }
-            if (var_474 == 0) {
-                return;
-            }
-            belongings_item_list = var_233[var_475].Var0;
-            disc_rarity = var_233[var_475].Var13;
-            yield func492(); // アイテムリスト呼び出し
-            var_2886 = item_name;
-            var_2887 = 0;
-            if (var_233[var_475].Var12 != 2) {
-                if (var_410 != 405) {
-                    var_233[var_475].Var12 = 1;
-                    var_233[var_475].Var14 = 1;
-                    yield func426();
-                    if (var_553 == var_475) {
-                        var_896 = 1;
-                    }
-                    yield func427();
-                    if (var_554 == var_475) {
-                        var_897 = 1;
-                    }
-                    yield func428();
-                    if (var_555 == var_475) {
-                        var_898 = 1;
-                    }
-                }
-                if (var_410 == 405) {
-                    yield func426();
-                    yield func427();
-                    yield func428();
-                    if (var_553 != var_475 && var_554 != var_475 && var_555 != var_475) {
-                        var_233[var_475].Var12 = 1;
-                        var_233[var_475].Var14 = 1;
-                    }
-                    if (var_553 == var_475 || var_554 == var_475 || var_555 == var_475) {
-                        var_2887 = 2;
-                    }
-                }
-            }
-            if (var_233[var_475].Var12 == 2) {
-                var_2887 = 1;
-            }
-            yield func619();
-            var_83[var_412].Var21 = 1;
-            if (var_83[var_412].Var5 == 2) {
-                var_411 = 1;
-            }
-            if (var_83[var_412].Var5 == 4) {
-                var_411 = 2;
-            }
-            if (var_83[var_412].Var5 == 8) {
-                var_411 = 3;
-            }
-            if (var_83[var_412].Var5 == 6) {
-                var_411 = 4;
-            }
-            if (var_83[var_412].Var5 == 1) {
-                var_411 = 5;
-            }
-            if (var_83[var_412].Var5 == 7) {
-                var_411 = 6;
-            }
-            if (var_83[var_412].Var5 == 3) {
-                var_411 = 7;
-            }
-            if (var_83[var_412].Var5 == 9) {
-                var_411 = 8;
-            }
-            var_389 = 2;
-    
-            DSPLAY(audio_id = 220);
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                var_2578 = 1;
-                yield func337(); // メッセージ関係呼び出し
-                var_2578 = 0;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_411 = 0;
-            var_83[var_412].Var21 = 0;
-            var_389 = 0;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "" + var_2886 + "が";
-            comments_row2 = "呪われた！";
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            if (var_2887 == 1) {
-                yield func340(); // キー入力による選択処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "･･･と思ったが、";
-                comments_row2a = "漆黒のオーラに守られて無事だった。";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-            }
-            if (var_2887 == 2) {
-                yield func340(); // キー入力による選択処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "･･･と思ったが、";
-                comments_row2a = "装備DISCの効果によって呪いを防いだ！";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                yield func340(); // キー入力による選択処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                var_1073 = rnd(4);
-                if (var_1073 == 0) {
-                    comments_row1a = "君はもう「エコーズact2」の能力に";
-                    comments_row2a = "勝つことはできない！";
-                }
-                if (var_1073 == 1) {
-                    comments_row1a = "「大嫌い」だ！";
-                    comments_row2a = "";
-                }
-                if (var_1073 == 2) {
-                    comments_row1a = "言ったってわからないから";
-                    comments_row2a = "こんな目に遭ったんだよ！";
-                }
-                if (var_1073 == 3) {
-                    comments_row1a = "僕を捕まえることはできない…！";
-                    comments_row2a = "";
-                }
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2197 = 1;
+        // No = 12 敵エコーズACT2の特殊能力
+        if (enemy_list == 12) {
+            yield enemy012();
             return;
         }
-        if (enemy_list == 170) {
-            if (var_133 == 0 && var_127 == 0) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-        
-                DSPLAY(audio_id = 123);
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                yield func619();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                if (equip_disc[396] == 0) {
-                    if (var_157 == 0) {
-                        var_133 = 1;
-                        var_397 = 0;
-                    }
-                    if (var_157 != 0) {
-                        var_157 = 0;
-                        var_158 = 0;
-                    }
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "動作がノロくなってしまった！";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                if (equip_disc[396] == 1) {
-                    yield func340(); // キー入力による選択処理
-                    yield func094(); // メッセージ送りの際の効果音
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "しかし装備スタンドの効果で";
-                    comments_row2a = "速度は遅くならない！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                }
-            }
-            var_2197 = 1;
+        // No = 15 敵ペットショップの特殊能力
+        if (enemy_list == 15) {
+            yield enemy015();
             return;
         }
-        if (enemy_list == 12 || enemy_list == 145 || enemy_list == 150) {
-            var_2830 = rnd(3);
-            if (var_2830 == 0 && var_133 == 0) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-        
-                DSPLAY(audio_id = 122);
-                if (enemy_list == 145 || enemy_list == 150) {
-                    var_743 = 1;
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「エコーズ ３ FREEZE ！」";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func340(); // キー入力による選択処理
-                var_743 = 0;
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                if (equip_disc[396] == 0) {
-                    if (var_157 == 0) {
-                        var_133 = 1;
-                        var_397 = 0;
-                    }
-                    if (var_157 != 0) {
-                        var_157 = 0;
-                        var_158 = 0;
-                    }
-                }
-                yield func619();
-        
-                DSPLAY(audio_id = 162);
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "体が重くなってしまった！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                if (equip_disc[396] == 1) {
-                    yield func340(); // キー入力による選択処理
-                    yield func094(); // メッセージ送りの際の効果音
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "しかし装備スタンドの効果で";
-                    comments_row2a = "速度は遅くならない！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                }
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
-            return;
-        }
-        // No = 77 エコーズACT1
-        if (enemy_list == 77) {
-            var_2830 = rnd(5);
-            if (var_2830 == 0 && var_126 == 0) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-        
-                DSPLAY(audio_id = 149);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「ドガ！」「バキ！」「ボ！」「ビシ！」";
-                comments_row2 = "　　「ボ！」「ドヒュン！」「バキ！」";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func340(); // キー入力による選択処理
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                var_126 = 1;
-                var_166 = 0;
-        
-                DSPLAY(audio_id = 134);
-                yield func619();
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "頭がおかしくなってしまった！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
-            return;
-        }
-        // No = 132 レクイエムジョルノの動作処理
-        if (enemy_list == 132) {
-            if (var_146 >= 1 && var_147 == var_66 && var_148 == var_67) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                var_743 = 1;
-        
-                DSPLAY(audio_id = 121);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func340(); // キー入力による選択処理
-                var_743 = 0;
-                var_146 = 0;
-                var_147 = 0;
-                var_148 = 0;
-                yield func619();
-                var_389 = 2;
-                var_1320 = 100;
-                var_1319 = 155;
-        
-                DSPLAY(audio_id = 200);
-                var_1316 = 1;
-                var_271 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1316++;
-                }
-                var_1316 = 0;
-                var_271 = 0;
-                var_1906 = var_66;
-                var_1907 = var_67;
-                var_1908 = var_66;
-                var_1909 = var_67;
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    var_309 = var_66;
-                    var_310 = var_67;
-                    var_66 = var_1906;
-                    var_67 = var_1907;
-                    yield func405();
-                    var_66 = var_309;
-                    var_67 = var_310;
-                    if (var_446 == 0) {
-                        break;
-                    }
-                    yield func724();
-                    var_77[var_448][var_450] = var_854;
-                    var_78[var_854].Var0 = 650;
-                    var_78[var_854].Var1 = var_448;
-                    var_78[var_854].Var2 = var_450;
-                    var_78[var_854].Var9 = var_71[var_448][var_450];
-                    var_78[var_854].Var10 = 1;
-                }
-                yield func018();
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "鉄塔がカエルに変化した！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_389 = 0;
-                var_2197 = 1;
-            }
-            return;
-        }
-        if (enemy_list == 130) {
-            if (wallet == 0 || var_169 <= 0 || var_169 == 999999) {
-                var_2197 = 1;
-                return;
-            }
-            var_2888 = 500;
-            if (var_169 < 500) {
-                var_2888 = var_169;
-            }
-            if (wallet < 500) {
-                var_2888 = wallet;
-            }
-            if (var_2888 > wallet) {
-                var_2888 = wallet;
-            }
-            if (var_169 < var_2888) {
-                var_2888 = var_169;
-            }
-            var_169 = var_169 - var_2888;
-            if (var_169 <= 0) {
-                var_169 = 0;
-            }
-            if (var_169 == 0) {
-                var_169 = 999999;
-            }
-            var_742 = 1;
-            var_83[var_673].Var7 = 1;
-            if (var_128 >= 1) {
-                yield func023();
-            }
-            yield func619();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_83[var_673].Var7 = 0;
-            wallet = wallet - var_2888;
-            if (wallet < 0) {
-                wallet = 0;
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "" + var_2888 + " G奪われた！";
-            comments_row2 = "";
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 999) {
-            var_2830 = rnd(4);
-            if (var_2830 == 0 && var_565 >= 1) {
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                yield func619();
-                if (var_83[var_673].Var5 == 2) {
-                    var_2889 = 8;
-                }
-                if (var_83[var_673].Var5 == 8) {
-                    var_2889 = 2;
-                }
-                if (var_83[var_673].Var5 == 4) {
-                    var_2889 = 6;
-                }
-                if (var_83[var_673].Var5 == 6) {
-                    var_2889 = 4;
-                }
-                if (var_83[var_673].Var5 == 7) {
-                    var_2889 = 3;
-                }
-                if (var_83[var_673].Var5 == 9) {
-                    var_2889 = 1;
-                }
-                if (var_83[var_673].Var5 == 1) {
-                    var_2889 = 9;
-                }
-                if (var_83[var_673].Var5 == 3) {
-                    var_2889 = 7;
-                }
-                var_83[var_673].Var5 = var_2889;
-                var_83[var_673].Var7 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_742 = 1;
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "『プ…』";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                var_389 = 2;
-                var_271 = 1;
-                var_458 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_458++;
-                    var_742 = 1;
-                }
-                var_271 = 0;
-                var_458 = 0;
-                var_389 = 0;
-                var_742 = 0;
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_565 = var_565 - 1;
-                if (var_565 <= 0) {
-                    var_565 = 0;
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "精神力が下がってしまった！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
-            return;
-        }
-        if (enemy_list == 9999) {
-            var_2830 = rnd(4);
-            if (var_2830 == 0 && var_134 == 0) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                if (var_215 != 116 && var_125 == 0) {
-                    var_134 = 1;
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "オーバードライブ！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                if (var_215 == 116 || var_125 >= 1) {
-                    yield func340(); // キー入力による選択処理
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "しかし波紋に強くなっていて平気だった";
-                    comments_row2a = "";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                }
-                yield func619();
-                var_2197 = 1;
-            }
-            return;
-        }
-        if (enemy_list == 15 || enemy_list == 64) {
-            var_2830 = rnd(4);
-            if (var_2830 == 0 && var_128 == 0 && var_219 == 0) {
-                var_1359 = 0;
-                if (enemy_list == 15) {
-                    var_1359 = 1;
-                }
-                var_314 = var_673;
-                var_1360 = var_83[var_673].Var1;
-                var_1361 = var_83[var_673].Var2;
-                var_271 = 1;
-                var_1358 = 1;
-        
-                DSPLAY(audio_id = 215);
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1358 = var_1358 + 1;
-                }
-                var_1358 = 0;
-                var_271 = 0;
-                if (var_173 == 1) {
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "冷やされる攻撃に強くなっていて";
-                    comments_row2 = "冷凍攻撃を防いだ！";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                if (var_215 == 109 || var_410 == 404 || var_215 == 202) {
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "装備中のDISCの効果で";
-                    comments_row2 = "冷凍攻撃を防いだ！";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                var_128 = 1;
-        
-                DSPLAY(audio_id = 126);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "体を凍らされてしまった！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
-            return;
-        }
+        // No = 17 シアハートアタックの特殊能力
         if (enemy_list == 17) {
-            if (var_83[var_673].Var3 == 2) {
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「コッチヲ見ロォ～」";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                var_2197 = 1;
-                return;
-            }
-            if (var_83[var_673].Var3 == 1) {
-                var_2890 = var_673;
-                yield func698();
-                var_2197 = 1;
-                return;
-            }
+            yield enemy017();
+            return;
         }
         // No = 18 ブラック・サバスの行動
         if (enemy_list == 18) {
-            var_2830 = rnd(8);
-            if (var_2830 == 0) {
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「チャンスをやろう…";
-                comments_row2 = "　向かうべき『２つの道』を……！」";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func619();
-        
-                DSPLAY(audio_id = 103); // 殴った時の効果音
-                var_747 = 1;
-                var_209 = 20;
-                var_389 = 2;
-        
-                DSPLAY(audio_id = 111);
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2228 = 1;
-                yield func531();
-                if (var_2228 == 0) {
-                    yield func340(); // キー入力による選択処理
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "" + target_item_name + "に";
-                    comments_row2a = "新たな装備効果が発現した！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func050();
-                }
-                if (var_2228 == 1) {
-                    yield func340(); // キー入力による選択処理
-                    yield func094(); // メッセージ送りの際の効果音
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "「この【魂】　選ばれるものでは…」";
-                    comments_row2a = "";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func050();
-                    yield func340(); // キー入力による選択処理
-                    var_2891 = Math.floor(var_211 / 2);
-                    var_211 = var_211 - var_2891;
-                    if (var_211 <= 1) {
-                        var_211 = 1;
-                    }
-                    var_208 = var_208 + var_2891;
-                    yield func094(); // メッセージ送りの際の効果音
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "「なかった！」";
-                    comments_row2a = "";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func050();
-                    yield func340(); // キー入力による選択処理
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "HPが半分になった。";
-                    comments_row2a = "";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func050();
-                }
-                var_389 = 0;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
+            yield enemy018();
             return;
         }
         // No = 20 エンヤ婆の動作処理
         if (enemy_list == 20) {
-            var_2830 = rnd(3);
-            if (var_2830 == 0) {
-        
-                DSPLAY(audio_id = 161);
-                var_1163 = 1;
-                for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_1163 = 0;
-                var_2521 = 1;
-                var_1845 = 1;
-                var_2353 = var_673;
-                var_2471 = rnd(4);
-                for (let cnt3 = 0; cnt3 < var_2471 + 1; ++cnt3) {
-                    yield func556();
-                }
-                var_673 = var_2353;
-                var_2521 = 0;
-                var_1845 = 0;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ｴﾝﾔ婆は 死体 を呼び寄せた！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
+            yield enemy020();
             return;
         }
+        // No = 26 敵ハーヴェストの特殊能力
         if (enemy_list == 26) {
-            var_412 = var_673;
-            if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0 || var_83[var_412].Var26 != 0) {
-                var_2197 = 1;
-                return;
-            }
-            if (var_224 == 0 || var_97 > 90 || var_336 > 90) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ﾊｰｳﾞｪｽﾄは様子をうかがっている…";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            var_474 = 0;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                var_475 = rnd(var_224);
-                var_475 = var_475 + 1;
-                if (var_476[var_475] == 0 && var_477[var_475] == 0 && var_478[var_475] == 0 && var_479[var_475] == 0 && var_233[var_475].Var11 == 0) {
-                    var_474 = 1;
-                    break;
-                }
-            }
-            var_2885 = rnd(3);
-            if (var_2885 == 0) {
-                var_474 = 0;
-            }
-            if (var_474 == 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ﾊｰｳﾞｪｽﾄは様子をうかがっている…";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-    
-            DSPLAY(audio_id = 122);
-            var_742 = 1;
-            var_83[var_412].Var7 = 1;
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_83[var_412].Var7 = 0;
-            var_742 = 0;
-            if (equip_disc[362] == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "装備DISCの効果で盗まれなかった。";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            var_83[var_412].Var15 = 1;
-            var_83[var_412].Var14 = 0;
-            var_83[var_412].Var26 = 1;
-            belongings_item_list = var_233[var_475].Var0;
-            var_417 = belongings_item_list;
-            var_1249 = var_233[var_475].Var13;
-            disc_rarity = var_233[var_475].Var13;
-            yield func492(); // アイテムリスト呼び出し
-            target_item_name = item_name;
-            var_419 = var_412 + 200;
-            var_78[var_419].Var0 = var_233[var_475].Var0;
-            var_78[var_419].Var1 = var_233[var_475].Var1;
-            var_78[var_419].Var2 = var_233[var_475].Var2;
-            var_78[var_419].Var3 = var_233[var_475].Var3;
-            var_78[var_419].Var4 = var_233[var_475].Var4;
-            var_78[var_419].Var5 = var_233[var_475].Var5;
-            var_78[var_419].Var6 = var_233[var_475].Var6;
-            var_78[var_419].Var7 = var_233[var_475].Var7;
-            var_78[var_419].Var8 = var_233[var_475].Var8;
-            var_78[var_419].Var9 = var_233[var_475].Var9;
-            var_78[var_419].Var10 = var_233[var_475].Var10;
-            var_78[var_419].Var11 = var_233[var_475].Var11;
-            var_78[var_419].Var12 = var_233[var_475].Var12;
-            var_78[var_419].Var13 = var_233[var_475].Var13;
-            var_78[var_419].Var14 = var_233[var_475].Var14;
-            var_78[var_419].Var15 = var_233[var_475].Var15;
-            var_78[var_419].Var16 = var_233[var_475].Var16;
-            var_78[var_419].Var17 = var_233[var_475].Var17;
-            var_78[var_419].Var18 = var_233[var_475].Var18;
-            var_78[var_419].Var19 = var_233[var_475].Var19;
-            var_78[var_419].Var20 = var_233[var_475].Var20;
-            var_78[var_419].Var21 = var_233[var_475].Var21;
-            var_78[var_419].Var22 = var_233[var_475].Var22;
-            var_78[var_419].Var23 = var_233[var_475].Var23;
-            var_78[var_419].Var24 = var_233[var_475].Var24;
-            var_78[var_419].Var25 = var_233[var_475].Var25;
-            var_78[var_419].Var26 = var_233[var_475].Var26;
-            var_78[var_419].Var27 = var_233[var_475].Var27;
-            var_78[var_419].Var28 = var_233[var_475].Var28;
-            var_78[var_419].Var29 = var_233[var_475].Var29;
-            var_225 = var_475;
-            yield func433(); // アイテム配列(所持アイテム)初期化関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "" + target_item_name + "を盗まれた！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            if (var_128 >= 1) {
-                yield func023();
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2197 = 1;
-            var_2695 = var_83[var_412].Var1;
-            var_2696 = var_83[var_412].Var2;
-            var_1349 = 0;
-            if (var_78[var_419].Var15 == 2) {
-                var_78[var_419].Var15 = 0;
-                var_83[var_412].Var11 = 1;
-                var_271 = 1;
-                var_1345 = 1;
-                for (let cnt3 = 0; cnt3 < 14; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1345 = var_1345 + 1;
-                    var_198 = 1;
-                    var_300 = 0;
-                }
-                var_271 = 0;
-                var_1345 = 0;
-                var_83[var_412].Var11 = 0;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "なんと" + target_item_name + "は";
-                comments_row2 = "爆弾だった！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                var_455 = var_2695;
-                var_456 = var_2696;
-                var_83[var_412].Var8 = 1; // var_83はCharactorInfo
-                yield func668();
-                return;
-            }
-            for (let cnt2 = 0; cnt2 < 500; ++cnt2) {
-                var_2350 = rnd(var_33);
-                var_2351 = rnd(var_34);
-                if (var_65[var_2350][var_2351] == 0 && var_82[var_2350][var_2351] == 0 && var_71[var_2350][var_2351] != 13 && var_71[var_2350][var_2351] != 0 && var_71[var_2350][var_2351] != var_201) {
-                    var_1349 = 1;
-                    break;
-                }
-            }
-            if (var_1349 == 0) {
-                var_83[var_412].Var11 = 1;
-                var_271 = 1;
-                var_1345 = 1;
-                for (let cnt3 = 0; cnt3 < 14; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1345 = var_1345 + 1;
-                }
-                var_271 = 0;
-                var_1345 = 0;
-                var_83[var_412].Var11 = 0;
-                return;
-            }
-            if (var_1349 == 1) {
-                var_83[var_412].Var11 = 1;
-                var_271 = 1;
-                var_1345 = 1;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1345 = var_1345 + 1;
-                    if (var_1345 == 16) {
-            
-                        DSPLAY(audio_id = 216);
-                    }
-                }
-                var_271 = 0;
-                var_1345 = 0;
-                var_83[var_412].Var1 = var_2350;
-                var_83[var_412].Var2 = var_2351;
-                var_82[var_2350][var_2351] = var_82[var_2695][var_2696];
-                var_82[var_2695][var_2696] = 0;
-                var_83[var_412].Var11 = 0;
-                var_83[var_412].Var10 = var_71[var_2350][var_2351];
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            }
+            yield enemy026();
             return;
         }
-        if (enemy_list == 144) {
-            var_412 = var_673;
-            if (wallet < 10) {
-                return;
-            }
-            if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0 || var_83[var_412].Var26 != 0) {
-                return;
-            }
-            var_2885 = rnd(4);
-    
-            DSPLAY(audio_id = 122);
-            var_742 = 1;
-            var_743 = 1;
-            var_83[var_412].Var7 = 1;
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_83[var_412].Var7 = 0;
-            var_742 = 0;
-            var_743 = 0;
-            var_83[var_412].Var26 = 1;
-            belongings_item_list = 1;
-            var_417 = belongings_item_list;
-            stolen_money = Math.floor(wallet / 2);
-            wallet = wallet - stolen_money;
-            if (wallet < 0) {
-                wallet = 0;
-            }
-            target_item_name = "" + stolen_money + "G";
-            var_419 = var_412 + 200;
-            var_78[var_419].Var0 = 1;
-            var_78[var_419].Var1 = 0;
-            var_78[var_419].Var2 = 0;
-            var_78[var_419].Var3 = 0;
-            var_78[var_419].Var4 = 0;
-            var_78[var_419].Var5 = 0;
-            var_78[var_419].Var6 = 0;
-            var_78[var_419].Var7 = 0;
-            var_78[var_419].Var8 = 0;
-            var_78[var_419].Var9 = 0;
-            var_78[var_419].Var10 = 0;
-            var_78[var_419].Var11 = 0;
-            var_78[var_419].Var12 = 0;
-            var_78[var_419].Var13 = stolen_money;
-            var_78[var_419].Var14 = 0;
-            var_78[var_419].Var15 = 0;
-            var_78[var_419].Var16 = 0;
-            var_78[var_419].Var17 = 0;
-            var_78[var_419].Var18 = 0;
-            var_78[var_419].Var19 = 0;
-            var_78[var_419].Var20 = 0;
-            var_78[var_419].Var21 = 0;
-            var_78[var_419].Var22 = 0;
-            var_78[var_419].Var23 = 0;
-            var_78[var_419].Var24 = 0;
-            var_78[var_419].Var25 = 0;
-            var_78[var_419].Var26 = 0;
-            var_78[var_419].Var27 = 0;
-            var_78[var_419].Var28 = 0;
-            var_78[var_419].Var29 = 0;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "川尻浩作に";
-            if (var_127 == 1 || var_132 >= 1) {
-                comments_row1 = "何者かに";
-            }
-            comments_row2 = "" + target_item_name + "を盗まれた！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            if (var_128 >= 1) {
-                yield func023();
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 87) {
-            var_412 = var_673;
-            if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0) {
-                return;
-            }
-            if (var_224 == 0 || var_97 > 90 || var_336 > 90) {
-                return;
-            }
-            var_474 = 0;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                var_475 = rnd(var_224);
-                var_475 = var_475 + 1;
-                if (var_476[var_475] == 0 && var_477[var_475] == 0 && var_478[var_475] == 0 && var_479[var_475] == 0 && var_233[var_475].Var11 == 0 && var_233[var_475].Var0 != 641) {
-                    var_474 = 1;
-                    break;
-                }
-            }
-            var_2885 = rnd(3);
-            if (var_2885 != 0) {
-                var_474 = 0;
-            }
-            if (var_474 == 0) {
-                return;
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "くらってくたばれ";
-            comments_row2 = "「怪焔王」の流法！！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_742 = 1;
-            var_83[var_412].Var7 = 1;
-            var_83[var_412].Var21 = 1;
-            var_411 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_411 = 2;
-            yield func337(); // メッセージ関係呼び出し
-            var_411 = 3;
-    
-            DSPLAY(audio_id = 128);
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
-                var_389 = 1;
-                var_1305++;
-                yield func337(); // メッセージ関係呼び出し
-                var_389 = 3;
-                var_1305++;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_411 = 0;
-            var_83[var_412].Var21 = 0;
-            var_271 = 0;
-            var_1305 = 0;
-            var_389 = 0;
-            var_83[var_412].Var7 = 0;
-            var_742 = 0;
-            if (var_173 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "燃やす攻撃に強くなっていて平気だった";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            if (var_215 == 109) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "装備DISCの効果で燃やされなかった";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            var_225 = var_475;
-            if (var_233[var_225].Var0 >= 800 && var_233[var_225].Var0 < 900) {
-                var_455 = var_66;
-                var_456 = var_67;
-                var_448 = var_66;
-                var_450 = var_67;
-                var_1903 = 1;
-                yield func414(); // ヤバいもの関係の容量設定？？
-                var_1903 = 0;
-            }
-            belongings_item_list = var_233[var_475].Var0;
-            disc_rarity = var_233[var_475].Var13;
-            yield func492(); // アイテムリスト呼び出し
-            target_item_name = item_name;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                var_233[var_475]["Var" + cnt2] = 0;
-            }
-            var_233[var_475].Var0 = 641;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "" + target_item_name + "は";
-            comments_row2 = "消し炭になった！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            if (var_128 >= 1) {
-                yield func023();
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 157) {
-            var_412 = var_673;
-            if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0) {
-                return;
-            }
-            if (var_224 == 0 || var_97 > 90 || var_336 > 90) {
-                return;
-            }
-            var_474 = 0;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                var_475 = rnd(var_224);
-                var_475 = var_475 + 1;
-                if (var_233[var_475].Var0 >= 800 && var_233[var_475].Var0 < 900 && var_233[var_475].Var11 == 0) {
-                    var_474 = 1;
-                    break;
-                }
-            }
-            var_2885 = rnd(3);
-            if (var_2885 != 0) {
-                var_474 = 0;
-            }
-            if (var_474 == 0) {
-                return;
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "いいもの持ってるな…";
-            comments_row2 = "解体してやる！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 122);
-            var_742 = 1;
-            var_83[var_412].Var7 = 1;
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_83[var_412].Var7 = 0;
-            var_742 = 0;
-            if (equip_disc[119]) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "破壊されそうになったが";
-                comments_row2 = "柔らかくしていて平気だった。";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            var_488 = var_233[var_225].Var0;
-            yield func100();
-            var_225 = var_475;
-            if (var_233[var_225].Var0 >= 800 && var_233[var_225].Var0 < 900) {
-                var_455 = var_66;
-                var_456 = var_67;
-                var_448 = var_66;
-                var_450 = var_67;
-                var_1903 = 1;
-                yield func414(); // ヤバいもの関係の容量設定？？
-                var_1903 = 0;
-            }
-            belongings_item_list = var_233[var_475].Var0;
-            yield func492(); // アイテムリスト呼び出し
-            target_item_name = item_name;
-            var_225 = var_475;
-            yield func433(); // アイテム配列(所持アイテム)初期化関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "" + target_item_name + "は";
-            comments_row2 = "バラバラにされてしまった！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            if (var_128 >= 1) {
-                yield func023();
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 131) {
-            var_412 = var_673;
-            if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0) {
-                return;
-            }
-            if (var_224 == 0 || var_97 > 90 || var_336 > 90) {
-                return;
-            }
-            var_474 = 0;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                var_475 = rnd(var_224);
-                var_475 = var_475 + 1;
-                if (var_476[var_475] == 0 && var_477[var_475] == 0 && var_478[var_475] == 0 && var_479[var_475] == 0 && var_233[var_475].Var11 == 0 && var_233[var_475].Var0 != 650 && var_233[var_475].Var0 != 651 && var_233[var_475].Var0 != 653 && var_233[var_475].Var0 != 654) {
-                    var_474 = 1;
-                    break;
-                }
-            }
-            var_2885 = rnd(5);
-            if (var_2885 != 0) {
-                var_474 = 0;
-            }
-            if (var_474 == 0) {
-                return;
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「ゴールド・エクスペリエンス！」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 121);
-            var_742 = 1;
-            var_83[var_412].Var7 = 1;
-            var_743 = 1;
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_389 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_83[var_412].Var7 = 0;
-            var_742 = 0;
-            var_743 = 0;
-            if (var_215 == 202) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ﾎﾜｲﾄｱﾙﾊﾞﾑの能力によって";
-                comments_row2 = "生命が生まれるのを防いだ！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            if (equip_disc[360] == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "装備DISCの効果で きかなかった";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            var_225 = var_475;
-            if (var_233[var_225].Var0 >= 800 && var_233[var_225].Var0 < 900) {
-                var_455 = var_66;
-                var_456 = var_67;
-                var_448 = var_66;
-                var_450 = var_67;
-                var_1903 = 1;
-                yield func414(); // ヤバいもの関係の容量設定？？
-                var_1903 = 0;
-            }
-            belongings_item_list = var_233[var_475].Var0;
-            disc_rarity = var_233[var_475].Var13;
-            yield func492(); // アイテムリスト呼び出し
-            target_item_name = item_name;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                var_233[var_475]["Var" + cnt2] = 0;
-            }
-            var_2892 = "";
-            var_233[var_475].Var0 = 650;
-            var_2892 = "ｶｴﾙ";
-    
-            DSPLAY(audio_id = 200);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "" + target_item_name + "は";
-            comments_row2 = "" + var_2892 + "に生まれ変わった！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            if (var_128 >= 1) {
-                yield func023();
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2197 = 1;
-            return;
-        }
-        // No = 27 ゲブ神
+        // No = 27 敵ゲブ神の特殊能力
         if (enemy_list == 27) {
-            if (var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            var_2893 = rnd(4);
-            if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
-                var_2893 = 2;
-            }
-            if (var_2893 == 1 && var_127 == 0) {
-        
-                DSPLAY(audio_id = 140);
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                var_389 = 2;
-                var_199 = 2;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "目を切り裂かれた！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                var_271 = 1;
-                var_1499 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1499++;
-                }
-                var_271 = 0;
-                var_1499 = 0;
-                var_83[var_673].Var7 = 0;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_389 = 0;
-                var_127 = 1;
-                var_167 = 0;
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                var_2197 = 1;
-                return;
-            }
-            if (var_2893 == 0 || var_114 >= 1 || var_128 != 0 || var_219 != 0) {
-                return;
-            }
-
-            DSPLAY(audio_id = 136);
-            var_742 = 1;
-            var_83[var_673].Var7 = 1;
-            var_463 = var_83[var_673].Var1;
-            var_464 = var_83[var_673].Var2;
-            var_114 = var_673;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ｹﾞﾌﾞ神に足をつかまれた！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_83[var_673].Var7 = 0;
-            var_461 = var_66;
-            var_462 = var_67;
-            yield func619();
-            var_2197 = 1;
+            yield enemy027();
             return;
         }
-        // No = 94 ブルしん
-        if (enemy_list == 94) {
-            if (var_114 >= 1 || var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            var_2893 = rnd(3);
-            if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
-                var_2893 = 1;
-            }
-            if (var_2893 == 0) {
-                return;
-            }
-
-            DSPLAY(audio_id = 136);
-            var_742 = 1;
-            var_83[var_673].Var7 = 1;
-            var_463 = var_83[var_673].Var1;
-            var_464 = var_83[var_673].Var2;
-            var_114 = var_673;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ブルりんにつかまった！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_83[var_673].Var7 = 0;
-            var_461 = var_66;
-            var_462 = var_67;
-            yield func619();
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 160) {
-            if (var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            if (var_114 == 0) {
-                var_2893 = rnd(9);
-                if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
-                    var_2893 = 6;
-                }
-                if (var_2893 <= 5) {
-                    return;
-                }
-    
-                DSPLAY(audio_id = 136);
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                var_463 = var_83[var_673].Var1;
-                var_464 = var_83[var_673].Var2;
-                var_114 = var_673;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ｳｴｽﾄｳｯﾄﾞ看守「完全に【ロック】したぜ」";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_83[var_673].Var7 = 0;
-                var_461 = var_66;
-                var_462 = var_67;
-                yield func619();
-                var_2197 = 1;
-                return;
-            }
-            if (var_114 != 0 && var_114 == var_673) {
-                var_601 = rnd(5);
-                for (let cnt3 = 0; cnt3 < 12; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                if (var_601 == 0) {
-                    comments_row1 = "「スカッとキレまくって　はらしてやる！！」";
-                    comments_row2 = "";
-                }
-                if (var_601 == 1) {
-                    comments_row1 = "「カスのくせによォォ～～";
-                    comments_row2 = "　ええ！　ナメやがって　てめえ」";
-                }
-                if (var_601 == 2) {
-                    comments_row1 = "「オレは最強だ！はらしてやる！」";
-                    comments_row2 = "";
-                }
-                if (var_601 == 3) {
-                    comments_row1 = "「お前はもう戦闘不能なんだあああ」";
-                    comments_row2 = "";
-                }
-                if (var_601 == 4) {
-                    comments_row1 = "「とどめが来たぞォ―――ッ！」";
-                    comments_row2 = "";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                yield func340(); // キー入力による選択処理
-                var_601 = rnd(20);
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                if (var_601 == 0) {
-                    comments_row1a = "「ｱｰｽ･ｳｨﾝﾄﾞ･ｱﾝﾄﾞ･ﾌｧｲﾔｰ」！！";
-                    comments_row2a = "";
-                }
-                if (var_601 >= 1) {
-                    comments_row1a = "「プラネット・ウェイブス」！！";
-                    comments_row2a = "";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                yield func050();
-                yield func340(); // キー入力による選択処理
-                var_271 = 1;
-                var_1440 = 1;
-                var_1442 = rnd(2);
-                if (var_1442 == 0) {
-                    var_1427 = 0;
-                    var_1428 = 0;
-                }
-                if (var_1442 == 1) {
-                    var_1427 = 320 - 40;
-                    var_1428 = 0;
-                }
-        
-                DSPLAY(audio_id = 201);
-                for (let cnt3 = 0; cnt3 < 7; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    if (var_1442 == 0) {
-                        var_1427 = var_1427 + 20;
-                        var_1428 = var_1428 + 20;
-                    }
-                    if (var_1442 == 1) {
-                        var_1427 = var_1427 - 20;
-                        var_1428 = var_1428 + 20;
-                    }
-                    var_1440 = var_1440 + 1;
-                }
-                var_271 = 0;
-                var_1440 = 0;
-                yield func584();
-                if (var_2803 == 1) {
-                    var_2197 = 1;
-                    return;
-                }
-                var_389 = 2;
-                var_209 = 50;
-        
-                DSPLAY(audio_id = 115);
-                if (var_83[var_673].Var39 >= 2) {
-                    var_209 = (var_83[var_673].Var39 - 1) * 2 + var_209;
-                }
-                if (var_128 >= 1) {
-                    var_209 = Math.floor(var_209 * 3 / 2);
-                }
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                if (equip_disc[205] == 1) {
-                    var_209 = Math.floor(var_209 * 2 / 3);
-                }
-                if (var_168 == 1) {
-                    var_209 = Math.floor(var_209 * 2 / 3);
-                }
-                var_747 = 1;
-                var_389 = 2;
-                var_211 = var_211 - var_209;
-                var_208 = var_208 + var_209;
-                if (var_211 <= 0) {
-                    var_211 = 0;
-                    var_356 = 257;
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "隕石が直撃した！";
-                comments_row2 = "" + var_209 + "のダメージを喰らった！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_585 = 3;
-                    yield func337(); // メッセージ関係呼び出し
-                    var_585 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_389 = 0;
-                var_2197 = 1;
-                return;
-            }
-            return;
-        }
-        if (enemy_list == 69) {
-            if (var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            var_2893 = rnd(3);
-            if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
-                var_2893 = 1;
-            }
-            if (var_2893 == 0) {
-                return;
-            }
-            if (var_114 == 0) {
-                yield func619();
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                var_463 = var_83[var_673].Var1;
-                var_464 = var_83[var_673].Var2;
-                var_114 = var_673;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ﾌﾞﾗﾌｫｰﾄﾞに髪の毛で掴まれた！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-    
-                DSPLAY(audio_id = 136);
-                var_1382 = 1;
-                var_271 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1382++;
-                }
-                var_1382 = 0;
-                var_271 = 0;
-                var_83[var_673].Var7 = 0;
-                var_461 = var_66;
-                var_462 = var_67;
-                var_2197 = 1;
-                return;
-            }
-            if (var_114 == var_673) {
-                var_2893 = rnd(3);
-                if (var_2893 == 0) {
-                    return;
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "髪の毛から血を吸い取られている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-        
-                DSPLAY(audio_id = 123);
-                var_389 = 2;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_1273 = 1;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_1273 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_1273 = 3;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_198 = 1;
-                    var_300 = 0;
-                }
-                var_1273 = 0;
-        
-                DSPLAY(audio_id = 129);
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                if (equip_disc[352] == 0) {
-                    comments_row1a = "満腹度が急激に下がった！";
-                    comments_row2a = "";
-            
-                    DSPLAY(audio_id = 129);
-                    var_350 = var_350 - 20;
-                    if (var_350 < 0) {
-                        var_350 = 0;
-                    }
-                }
-                if (equip_disc[352] == 1) {
-                    comments_row1a = "しかし装備DISCの効果によって";
-                    comments_row2a = "腹ヘリを防いだ！";
-                }
-                yield func047();
-                yield func050();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_389 = 0;
-                var_2197 = 1;
-                return;
-            }
-            return;
-        }
-        if (enemy_list == 1580) {
-            var_2893 = rnd(3);
-            if (var_2893 == 0 || var_114 >= 1 || var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            yield func619();
-            var_742 = 1;
-            var_83[var_673].Var7 = 1;
-            var_463 = var_83[var_673].Var1;
-            var_464 = var_83[var_673].Var2;
-            var_114 = var_673;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「絶対に逃がさないわッ！」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-
-            DSPLAY(audio_id = 136);
-            var_1382 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1382++;
-            }
-            var_1382 = 0;
-            var_271 = 0;
-            var_83[var_673].Var7 = 0;
-            var_461 = var_66;
-            var_462 = var_67;
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 119) {
-            if (var_114 >= 1 || var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            var_2893 = rnd(3);
-            if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
-                var_2893 = 1;
-            }
-            if (var_2893 == 0) {
-                return;
-            }
-            yield func619();
-            var_742 = 1;
-            var_743 = 1;
-            var_83[var_673].Var7 = 1;
-            var_463 = var_83[var_673].Var1;
-            var_464 = var_83[var_673].Var2;
-            var_114 = var_673;
-    
-            DSPLAY(audio_id = 127);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ハーミットパープルが絡みついた！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-
-            DSPLAY(audio_id = 136);
-            var_1381 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1381++;
-            }
-            var_1381 = 0;
-            var_271 = 0;
-            var_83[var_673].Var7 = 0;
-            var_743 = 0;
-            var_461 = var_66;
-            var_462 = var_67;
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 78) {
-            if (var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            var_2893 = rnd(4);
-            if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
-                var_2893 = 0;
-            }
-            if (var_2893 == 0 && var_114 == 0) {
-                yield func619();
-        
-                DSPLAY(audio_id = 128);
-                var_742 = 1;
-                var_743 = 1;
-                var_83[var_673].Var7 = 1;
-                var_463 = var_83[var_673].Var1;
-                var_464 = var_83[var_673].Var2;
-                var_114 = var_673;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「ムウン！";
-                comments_row2 = "　レッド・バインド」！！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-    
-                DSPLAY(audio_id = 136);
-                var_1380 = 1;
-                var_271 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1380++;
-                }
-                var_1380 = 0;
-                var_271 = 0;
-                var_83[var_673].Var7 = 0;
-                var_743 = 0;
-                if (var_215 == 109 || var_173 == 1) {
-                    yield func340(); // キー入力による選択処理
-                    var_114 = 0;
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "装備DISCの効果で平気だった";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                var_461 = var_66;
-                var_462 = var_67;
-                var_2473 = 0;
-                var_2474 = 0;
-                if (var_357 != 0 && var_358 == 0) {
-                    yield func426();
-                    if (var_233[var_553].Var4 != 0) {
-                        var_2474 = 1;
-                    }
-                }
-                if (var_357 == 0 && var_358 != 0) {
-                    yield func427();
-                    if (var_233[var_554].Var4 != 0) {
-                        var_2474 = 2;
-                    }
-                }
-                if (var_357 != 0 && var_358 != 0) {
-                    yield func426();
-                    yield func427();
-                    if (var_233[var_553].Var4 == 0 && var_233[var_554].Var4 == 0) {
-                        var_2474 = 0;
-                        var_2473 = 0;
-                    }
-                    if (var_233[var_553].Var4 != 0 && var_233[var_554].Var4 == 0) {
-                        var_2474 = 1;
-                    }
-                    if (var_233[var_553].Var4 == 0 && var_233[var_554].Var4 != 0) {
-                        var_2474 = 2;
-                    }
-                    if (var_233[var_553].Var4 != 0 && var_233[var_554].Var4 != 0) {
-                        var_2475 = rnd(2);
-                        if (var_2475 == 0) {
-                            var_2474 = 1;
-                        }
-                        if (var_2475 == 1) {
-                            var_2474 = 2;
-                        }
-                    }
-                }
-                if (var_357 == 0 && var_358 == 0) {
-                    var_2474 = 0;
-                    var_2473 = 0;
-                }
-                if (var_211 <= 0) {
-                    var_2474 = 0;
-                    var_2473 = 0;
-                }
-                if (var_2474 == 1 && var_233[var_553].Var12 == 2) {
-                    var_2474 = 0;
-                    var_2473 = 3;
-                }
-                if (var_2474 == 2 && var_233[var_554].Var12 == 2) {
-                    var_2474 = 0;
-                    var_2473 = 3;
-                }
-                if (var_2474 == 1) {
-                    yield func426();
-                    var_233[var_553].Var4 = var_233[var_553].Var4 - 1;
-                    var_580 = var_580 - 1;
-                    var_894 = var_894 - 1;
-                    var_2473 = 1;
-                    belongings_item_list = var_357;
-                    disc_rarity = var_233[var_553].Var13;
-                    yield func492(); // アイテムリスト呼び出し
-                }
-                if (var_2474 == 2) {
-                    yield func427();
-                    var_233[var_554].Var4 = var_233[var_554].Var4 - 1;
-                    var_581 = var_581 - 1;
-                    var_895 = var_895 - 1;
-                    var_2473 = 1;
-                    belongings_item_list = var_358;
-                    disc_rarity = var_233[var_554].Var13;
-                    yield func492(); // アイテムリスト呼び出し
-                }
-                if (var_2473 == 1) {
-                    yield func340(); // キー入力による選択処理
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "い・・・息が・・・";
-                    comments_row2a = "";
-                    yield func047();
-                    yield func050();
-                    yield func340(); // キー入力による選択処理
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "熱で呼吸が苦しくなると";
-                    comments_row2a = "スタンドは弱まってしまう！";
-                    yield func047();
-                    yield func050();
-                    yield func340(); // キー入力による選択処理
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "" + item_name + "は";
-                    comments_row2a = "弱くなってしまった…";
-                    yield func047();
-                    yield func050();
-                    yield func340(); // キー入力による選択処理
-                }
-                if (var_2473 == 3) {
-                    yield func340(); // キー入力による選択処理
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "スタンドが弱まりそうになったが";
-                    comments_row2a = "漆黒のオーラに包まれていて無事だった";
-                    yield func047();
-                    yield func050();
-                    yield func340(); // キー入力による選択処理
-                }
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            if (var_2893 == 1) {
-                var_412 = var_673;
-                if (var_83[var_412].Var17 != 0 || var_83[var_412].Var23 != 0) {
-                    return;
-                }
-                if (var_224 == 0 || var_97 > 90 || var_336 > 90) {
-                    return;
-                }
-                var_474 = 0;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    var_475 = rnd(var_224);
-                    var_475 = var_475 + 1;
-                    if (var_476[var_475] == 0 && var_477[var_475] == 0 && var_478[var_475] == 0 && var_479[var_475] == 0 && var_233[var_475].Var11 == 0 && var_233[var_475].Var0 != 641) {
-                        var_474 = 1;
-                        break;
-                    }
-                }
-                if (var_474 == 0) {
-                    return;
-                }
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「消し炭にしてくれる！」";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func619();
-                var_742 = 1;
-                var_743 = 1;
-                var_83[var_412].Var7 = 1;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-        
-                DSPLAY(audio_id = 128);
-                var_271 = 1;
-                for (let cnt3 = 0; cnt3 < 6; ++cnt3) {
-                    var_389 = 2;
-                    var_1305++;
-                    yield func337(); // メッセージ関係呼び出し
-                    var_389 = 0;
-                    var_1305++;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_271 = 0;
-                var_1305 = 0;
-                var_742 = 0;
-                var_743 = 0;
-                var_83[var_412].Var7 = 0;
-                var_389 = 0;
-                if (var_173 == 1) {
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "燃やす攻撃に強くなっていて平気だった";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                if (var_215 == 109) {
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "装備DISCの効果で燃やされなかった";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                var_225 = var_475;
-                if (var_233[var_225].Var0 >= 800 && var_233[var_225].Var0 < 900) {
-                    var_455 = var_66;
-                    var_456 = var_67;
-                    var_448 = var_66;
-                    var_450 = var_67;
-                    var_1903 = 1;
-                    yield func414(); // ヤバいもの関係の容量設定？？
-                    var_1903 = 0;
-                }
-                belongings_item_list = var_233[var_475].Var0;
-                disc_rarity = var_233[var_475].Var13;
-                yield func492(); // アイテムリスト呼び出し
-                target_item_name = item_name;
-                for (let cnt3 = 0; cnt3 < 30; ++cnt3) {
-                    var_233[var_475]["Var" + cnt3] = 0;
-                }
-                var_233[var_475].Var0 = 641;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "" + target_item_name + "は";
-                comments_row2 = "消し炭になった！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            return;
-        }
-        if (enemy_list == 137) {
-            var_2830 = rnd(6);
-            if (var_2830 == 1) {
-                if (var_224 == 0) {
-                    return;
-                }
-                var_474 = 0;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    var_475 = rnd(var_224);
-                    var_475 = var_475 + 1;
-                    if (var_233[var_475].Var0 >= 500 && var_233[var_475].Var0 < 800 && var_233[var_475].Var15 == 0) {
-                        var_474 = 1;
-                        break;
-                    }
-                    if (var_233[var_475].Var0 >= 900 && var_233[var_475].Var15 == 0) {
-                        var_474 = 1;
-                        break;
-                    }
-                }
-                if (var_474 == 1) {
-                    var_742 = 1;
-                    var_83[var_673].Var7 = 1;
-                    var_743 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_743 = 0;
-                    var_742 = 0;
-                    var_83[var_673].Var7 = 0;
-                    var_233[var_475].Var15 = 2;
-            
-                    DSPLAY(audio_id = 181);
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "何かが爆弾にされた！";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 15; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                }
-            }
-            if (var_2830 == 0 && var_83[var_673].Var10 == var_201 && var_201 != 14 && var_201 != 13 && var_201 != 0) {
-                var_1920 = 2;
-                var_1914 = var_83[var_673].Var1;
-                var_1915 = var_83[var_673].Var2;
-                var_1845 = 3;
-                var_2353 = var_673;
-                yield func556();
-                var_673 = var_2353;
-                var_1920 = 0;
-                var_1845 = 0;
-                if (var_2110 == 0) {
-                    return;
-                }
-                var_2273 = var_97;
-                var_83[var_2273].Var7 = 1;
-                var_83[var_2273].Var5 = 3;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var5 = 6;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var5 = 9;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var5 = 8;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var5 = 7;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var5 = 4;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var5 = 1;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var5 = 2;
-                yield func337(); // メッセージ関係呼び出し
-                var_83[var_2273].Var7 = 0;
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                var_1073 = rnd(3);
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                if (var_1073 == 0) {
-                    comments_row1 = "こォ～～ろォ～～すゥ～～っ！";
-                    comments_row2 = "";
-                }
-                if (var_1073 == 1) {
-                    comments_row1 = "カワイイおまえを守ってやるよ…";
-                    comments_row2 = "";
-                }
-                if (var_1073 == 2) {
-                    comments_row1 = "吉影や…";
-                    comments_row2 = "";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "写真の親父が吉良を助けに来た！";
-                comments_row2a = "";
-                yield func047();
-                yield func050();
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
-            return;
-        }
+        // No = 28 敵ジャッジメントの特殊能力
         if (enemy_list == 28) {
-            var_2830 = rnd(3);
-            if (var_2830 == 0) {
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "HAIL 2 U !!";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2524 = 1;
-                var_1845 = 1;
-                var_2353 = var_673;
-                yield func556();
-                var_673 = var_2353;
-                var_2524 = 0;
-                var_1845 = 0;
-                if (var_2110 == 0) {
-                    yield func094(); // メッセージ送りの際の効果音
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "お前の願いを言え！";
-                    comments_row2a = "";
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    var_2197 = 1;
-                    return;
-                }
-        
-                DSPLAY(audio_id = 166);
-                var_2273 = var_97;
-                var_83[var_2273].Var21 = 1;
-                var_411 = 1;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_411 = 2;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_411 = 3;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_411 = 4;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_411 = 0;
-                var_83[var_2273].Var21 = 0;
-                var_83[var_2273].Var5 = 2;
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "地面から 土人形 が現れた！";
-                comments_row2a = "";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                var_2197 = 1;
-            }
+            yield enemy028();
             return;
         }
-        // No = 65 虹村形兆の動作処理
-        if (enemy_list == 65) {
-            var_2830 = rnd(2);
-            if (var_2830 == 0) {
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                var_2882 = rnd(6);
-                if (var_2882 == 0) {
-                    comments_row1 = "全隊戦闘態勢ッ！";
-                    comments_row2 = "";
-                }
-                if (var_2882 == 1) {
-                    comments_row1 = "お前を殺す決定には変わりはない…";
-                    comments_row2 = "";
-                }
-                if (var_2882 == 2) {
-                    comments_row1 = "几帳面な性格でね―――";
-                    comments_row2 = "必ずやると言ったらやる！";
-                }
-                if (var_2882 == 3) {
-                    comments_row1 = "はたして無事でいられるかなあァ";
-                    comments_row2 = "―――――――ッ";
-                }
-                if (var_2882 == 4) {
-                    comments_row1 = "予告どおりは気分がいい～～～ッ";
-                    comments_row2 = "";
-                }
-                if (var_2882 == 5) {
-                    comments_row1 = "キッカケを与えてやるよォ――ッ";
-                    comments_row2 = "";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                var_83[var_673].Var21 = 1;
-                var_411 = 1;
-                for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_83[var_673].Var21 = 0;
-                var_411 = 0;
-                var_2534 = 1;
-                var_1845 = 1;
-                var_2353 = var_673;
-                yield func556();
-                var_673 = var_2353;
-                var_2534 = 0;
-                var_1845 = 0;
-                if (var_2110 == 0) {
-                    yield func094(); // メッセージ送りの際の効果音
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "攻撃開始イ―――――ッ！";
-                    comments_row2a = "";
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    var_2197 = 1;
-                    return;
-                }
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "グリーンベレーッ！";
-                comments_row2a = "やれッ！";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-            }
-            var_2197 = 1;
-            return;
-        }
-        if (enemy_list == 9999) {
-            if (var_128 != 0 || var_219 != 0) {
-                return;
-            }
-            var_2894 = 0;
-            var_2895 = 0;
-            var_2896 = var_673;
-            if (var_357 != 0) {
-                yield func426();
-                if (var_233[var_553].Var4 != 0) {
-                    var_2895 = 1;
-                    var_2897 = var_553;
-                }
-            }
-            if (var_358 != 0) {
-                yield func427();
-                if (var_233[var_554].Var4 != 0) {
-                    var_2895 = 2;
-                    var_2897 = var_554;
-                }
-            }
-            if (var_215 != 0) {
-                yield func428();
-                if (var_233[var_555].Var4 != 0) {
-                    var_2895 = 4;
-                    var_2897 = var_555;
-                }
-            }
-            if (var_410 != 0) {
-                var_2895 = 3;
-            }
-            if (var_2895 >= 1) {
-                if (var_83[var_2896].Var5 == 2) {
-                    var_199 = 8;
-                }
-                if (var_83[var_2896].Var5 == 8) {
-                    var_199 = 2;
-                }
-                if (var_83[var_2896].Var5 == 4) {
-                    var_199 = 6;
-                }
-                if (var_83[var_2896].Var5 == 6) {
-                    var_199 = 4;
-                }
-                if (var_83[var_2896].Var5 == 1) {
-                    var_199 = 9;
-                }
-                if (var_83[var_2896].Var5 == 3) {
-                    var_199 = 7;
-                }
-                if (var_83[var_2896].Var5 == 7) {
-                    var_199 = 3;
-                }
-                if (var_83[var_2896].Var5 == 9) {
-                    var_199 = 1;
-                }
-                var_83[var_2896].Var21 = 1;
-                var_411 = 1;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                var_2898 = rnd(3);
-                comments_row1 = "いくぞッ！";
-                comments_row2 = "ジャアァ～～～ン　ケン！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func340(); // キー入力による選択処理
-                var_2899 = rnd(6);
-                if (var_2899 == 0) {
-                    var_411 = 2;
-                    var_2894 = 2;
-                    var_1258 = 3;
-                }
-                if (var_2899 == 1) {
-                    var_411 = 2;
-                    var_2894 = 1;
-                    var_1258 = 2;
-                }
-                if (var_2899 == 2) {
-                    var_411 = 3;
-                    var_2894 = 2;
-                    var_1258 = 1;
-                }
-                if (var_2899 == 3) {
-                    var_411 = 3;
-                    var_2894 = 1;
-                    var_1258 = 3;
-                }
-                if (var_2899 == 4) {
-                    var_411 = 4;
-                    var_2894 = 2;
-                    var_1258 = 2;
-                }
-                if (var_2899 == 5) {
-                    var_411 = 4;
-                    var_2894 = 1;
-                    var_1258 = 1;
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "";
-                comments_row2a = "『ホイッ！！』";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                yield func050();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            if (var_2894 == 1) {
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "勝ったッ！";
-                comments_row2a = "エネルギーをいただくよッ！";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                yield func050();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_1258 = 0;
-                var_389 = 2;
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_411 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_411 = 6;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_411 = 7;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                }
-                var_411 = 8;
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_83[var_2896].Var21 = 0;
-                var_411 = 0;
-                var_389 = 0;
-                if (var_2895 == 1 || var_2895 == 2 || var_2895 == 4) {
-                    if (var_2895 == 1) {
-                        var_580 = var_580 - 1;
-                        var_894 = var_894 - 1;
-                    }
-                    if (var_2895 == 2) {
-                        var_581 = var_581 - 1;
-                        var_895 = var_895 - 1;
-                    }
-                    var_233[var_2897].Var4 = var_233[var_2897].Var4 - 1;
-                    belongings_item_list = var_233[var_2897].Var0;
-                    disc_rarity = var_233[var_2897].Var13;
-                    yield func492(); // アイテムリスト呼び出し
-                    var_2900 = item_name;
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "" + var_2900 + " の";
-                    comments_row2a = "エネルギーを １ 吸い取られた！";
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    yield func050();
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                if (var_2895 == 3) {
-                    yield func429();
-                    var_2897 = var_556;
-                    var_2901 = rnd(5);
-                    var_2901 = var_2901 + 3;
-                    var_233[var_2897].Var3 = var_233[var_2897].Var3 - var_2901;
-                    belongings_item_list = var_233[var_2897].Var0;
-                    disc_rarity = var_233[var_2897].Var13;
-                    yield func492(); // アイテムリスト呼び出し
-                    var_2900 = item_name;
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "" + var_2900 + " の";
-                    comments_row2a = "エネルギーを " + var_2901 + " 吸い取られた！";
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    yield func050();
-                    if (var_233[var_2897].Var3 < 1 && var_233[var_2897].Var0 >= 400 && var_233[var_2897].Var0 < 500) {
-                        for (let cnt5 = 0; cnt5 < 20; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        comments_row1 = comments_row1a;
-                        comments_row2 = comments_row2a;
-                        comments_row1a = "" + var_2900 + "は";
-                        comments_row2a = "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した";
-                        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                        var_198 = 1;
-                        var_300 = 0;
-                        yield func047();
-                        yield func050();
-                        var_225 = var_2897;
-                        yield func433(); // アイテム配列(所持アイテム)初期化関数
-                        var_479 = dim(40);
-                        var_250 = 0;
-                        var_410 = 0;
-                        yield func494();
-                    }
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-            }
-            if (var_2894 == 2) {
-                var_83[var_2896].Var21 = 0;
-                var_411 = 0;
-                var_1258 = 0;
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "ま…　負け…　た";
-                comments_row2a = "う～～～う～～～うう～～～";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                yield func050();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            if (var_2895 == 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                var_2898 = rnd(3);
-                if (var_2898 == 0) {
-                    comments_row1 = "ジャンケンしようよぉ～～";
-                }
-                if (var_2898 == 1) {
-                    comments_row1 = "ねえったら～～";
-                }
-                if (var_2898 == 2) {
-                    comments_row1 = "ジャンケンがしたいんだよ…";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-                return;
-            }
-            return;
-        }
-        if (enemy_list == 38) {
-            var_2830 = rnd(4);
-            if (var_2830 == 0) {
-        
-                DSPLAY(audio_id = 156);
-                var_83[var_673].Var21 = 1;
-                var_411 = 1;
-                var_1495 = 1;
-                var_271 = 1;
-                var_389 = 2;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1495++;
-                }
-                var_83[var_673].Var21 = 0;
-                var_411 = 0;
-                var_1495 = 0;
-                var_271 = 0;
-                var_389 = 0;
-                yield func619();
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                if (equip_disc[207] == 1) {
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "しかし 装備中のDISCによって";
-                    comments_row2 = "若返りを防いだ！";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                if (current_level > 1) {
-                    current_level = current_level - 1;
-                    var_352 = var_352 - 3;
-                    var_211 = var_211 - 3;
-                    var_568 = var_948[current_level] - 1;
-                    if (var_352 < 1) {
-                        var_352 = 1;
-                    }
-                    if (var_211 < 1) {
-                        var_211 = 1;
-                    }
-                }
-                if (current_level == 1) {
-            
-                    DSPLAY(audio_id = 151);
-                    var_211 = 0;
-                    var_356 = 213;
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "胎児にまで戻された！";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-        
-                DSPLAY(audio_id = 151);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "レベルが下がってしまった！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
-            return;
-        }
-        if (enemy_list == 39) {
-            var_2830 = rnd(4);
-            if (var_2830 == 0 && var_350 >= 11) {
-                var_83[var_673].Var21 = 1;
-                if (var_83[var_673].Var5 == 2) {
-                    var_411 = 1;
-                }
-                if (var_83[var_673].Var5 == 4) {
-                    var_411 = 2;
-                }
-                if (var_83[var_673].Var5 == 8) {
-                    var_411 = 3;
-                }
-                if (var_83[var_673].Var5 == 6) {
-                    var_411 = 4;
-                }
-                if (var_83[var_673].Var5 == 1) {
-                    var_411 = 5;
-                }
-                if (var_83[var_673].Var5 == 7) {
-                    var_411 = 6;
-                }
-                if (var_83[var_673].Var5 == 3) {
-                    var_411 = 7;
-                }
-                if (var_83[var_673].Var5 == 9) {
-                    var_411 = 8;
-                }
-                var_389 = 2;
-                var_271 = 1;
-                var_1481 = 1;
-        
-                DSPLAY(audio_id = 161);
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1481++;
-                }
-                var_271 = 0;
-                var_1481 = 0;
-                var_389 = 0;
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                if (equip_disc[352] == 0) {
-                    comments_row1 = "養分を吸われて満腹度が下がった！";
-                    comments_row2 = "";
-            
-                    DSPLAY(audio_id = 129);
-                    var_350 = var_350 - 10;
-                    if (var_350 < 0) {
-                        var_350 = 0;
-                    }
-                }
-                if (equip_disc[352] == 1) {
-                    comments_row1 = "しかし装備DISCの効果によって";
-                    comments_row2 = "腹ヘリを防いだ！";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                yield func619();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_83[var_673].Var21 = 0;
-                var_2197 = 1;
-            }
-            return;
-        }
+        // No = 32 吉良吉影の特殊能力
         if (enemy_list == 32) {
-            var_2830 = rnd(6);
-            if (var_2830 == 0) {
-                if (var_224 == 0) {
-                    return;
-                }
-                var_474 = 0;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    var_475 = rnd(var_224);
-                    var_475 = var_475 + 1;
-                    if (var_233[var_475].Var0 >= 500 && var_233[var_475].Var0 < 800 && var_233[var_475].Var15 == 0) {
-                        var_474 = 1;
-                        break;
-                    }
-                    if (var_233[var_475].Var0 >= 900 && var_233[var_475].Var15 == 0) {
-                        var_474 = 1;
-                        break;
-                    }
-                }
-                if (var_474 == 1) {
-                    var_742 = 1;
-                    var_83[var_673].Var7 = 1;
-                    var_743 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_743 = 0;
-                    var_742 = 0;
-                    var_83[var_673].Var7 = 0;
-                    var_233[var_475].Var15 = 2;
-            
-                    DSPLAY(audio_id = 181);
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "何かが爆弾にされた！";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 15; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                }
-            }
-            if (var_2830 == 1) {
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "誰にも私を追うことはできない…";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2523 = 1;
-                var_1845 = 1;
-                var_2353 = var_673;
-                yield func556();
-                var_2457 = var_673;
-                var_673 = var_2353;
-                var_2523 = 0;
-                var_1845 = 0;
-                if (var_2110 == 0) {
-                    yield func094(); // メッセージ送りの際の効果音
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "君さえ消えていなくなってくれればね…";
-                    comments_row2a = "";
-                    var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                    var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                    var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    var_2197 = 1;
-                    return;
-                }
-                var_1584 = (var_83[var_2457].Var1 - var_66 + 4) * 40;
-                var_1585 = (var_83[var_2457].Var2 - var_67 + 4) * 40;
-                var_271 = 1;
-                var_1583 = 1;
-        
-                DSPLAY(audio_id = 168);
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_1583++;
-                }
-                var_271 = 0;
-                var_1583 = 0;
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "吉良はｼｱｰﾊｰﾄｱﾀｯｸを繰り出した！";
-                comments_row2a = "";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                var_2197 = 1;
-            }
+            yield enemy032();
             return;
         }
+        // No = 38 アレッシーの特殊能力
+        if (enemy_list == 38) {
+            yield enemy038();
+            return;
+        }
+        // No = 39 敵ハイウェイスターの特殊能力
+        if (enemy_list == 39) {
+            yield enemy039();
+            return;
+        }
+        // No = 45 敵由花子の特殊能力
+        if (enemy_list == 45) {
+            yield enemy045();
+            return;
+        }
+        // No = 59 プッチ神父の特殊能力
         if (enemy_list == 59) {
-            var_412 = var_673;
-            if (var_83[var_412].Var26 == 1) {
-                return;
-            }
-            if (var_357 == 0 && var_358 == 0 && var_215 == 0) {
-                return;
-            }
-            if (var_72[var_66][var_67] != 0) {
-                return;
-            }
-            var_2830 = rnd(3);
-            if (var_2830 == 0) {
-                var_742 = 1;
-                var_83[var_412].Var7 = 1;
-                var_83[var_412].Var21 = 1;
-                var_2902 = 1;
-                var_743 = 0;
-        
-                DSPLAY(audio_id = 122);
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    if (cnt3 == 0 || cnt3 == 1 || cnt3 == 9) {
-                        if (var_83[var_412].Var5 == 2) {
-                            var_411 = 7;
-                        }
-                        if (var_83[var_412].Var5 == 8) {
-                            var_411 = 6;
-                        }
-                        if (var_83[var_412].Var5 == 4) {
-                            var_411 = 5;
-                        }
-                        if (var_83[var_412].Var5 == 6) {
-                            var_411 = 7;
-                        }
-                        if (var_83[var_412].Var5 == 1) {
-                            var_411 = 7;
-                        }
-                        if (var_83[var_412].Var5 == 3) {
-                            var_411 = 1;
-                        }
-                        if (var_83[var_412].Var5 == 7) {
-                            var_411 = 2;
-                        }
-                        if (var_83[var_412].Var5 == 9) {
-                            var_411 = 4;
-                        }
-                    }
-                    if (cnt3 == 2 || cnt3 == 3 || cnt3 == 8) {
-                        if (var_83[var_412].Var5 == 2) {
-                            var_411 = 1;
-                        }
-                        if (var_83[var_412].Var5 == 8) {
-                            var_411 = 3;
-                        }
-                        if (var_83[var_412].Var5 == 4) {
-                            var_411 = 2;
-                        }
-                        if (var_83[var_412].Var5 == 6) {
-                            var_411 = 4;
-                        }
-                        if (var_83[var_412].Var5 == 1) {
-                            var_411 = 5;
-                        }
-                        if (var_83[var_412].Var5 == 3) {
-                            var_411 = 7;
-                        }
-                        if (var_83[var_412].Var5 == 7) {
-                            var_411 = 6;
-                        }
-                        if (var_83[var_412].Var5 == 9) {
-                            var_411 = 9;
-                        }
-                    }
-                    if (cnt3 == 4 || cnt3 == 5 || cnt3 == 6 || cnt3 == 7) {
-                        if (var_83[var_412].Var5 == 2) {
-                            var_411 = 5;
-                        }
-                        if (var_83[var_412].Var5 == 8) {
-                            var_411 = 8;
-                        }
-                        if (var_83[var_412].Var5 == 4) {
-                            var_411 = 6;
-                        }
-                        if (var_83[var_412].Var5 == 6) {
-                            var_411 = 8;
-                        }
-                        if (var_83[var_412].Var5 == 1) {
-                            var_411 = 2;
-                        }
-                        if (var_83[var_412].Var5 == 3) {
-                            var_411 = 4;
-                        }
-                        if (var_83[var_412].Var5 == 7) {
-                            var_411 = 3;
-                        }
-                        if (var_83[var_412].Var5 == 9) {
-                            var_411 = 3;
-                        }
-                    }
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_743 = 0;
-                var_742 = 0;
-                var_83[var_412].Var7 = 0;
-                var_83[var_412].Var21 = 0;
-                var_411 = 0;
-                var_2902 = 0;
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                if (equip_disc[361] == 1) {
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "装備スタンドの効果のおかげで";
-                    comments_row2 = "DISCを抜き取られなかった。";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2197 = 1;
-                    return;
-                }
-                if (var_357 != 0 && var_358 != 0 && var_215 != 0) {
-                    var_2396 = rnd(3);
-                    if (var_2396 == 0) {
-                        var_2397 = 0;
-                    }
-                    if (var_2396 == 1) {
-                        var_2397 = 1;
-                    }
-                    if (var_2396 == 2) {
-                        var_2397 = 2;
-                    }
-                }
-                if (var_357 != 0 && var_358 != 0 && var_215 == 0) {
-                    var_2396 = rnd(2);
-                    if (var_2396 == 0) {
-                        var_2397 = 0;
-                    }
-                    if (var_2396 == 1) {
-                        var_2397 = 1;
-                    }
-                }
-                if (var_357 != 0 && var_358 == 0 && var_215 != 0) {
-                    var_2396 = rnd(2);
-                    if (var_2396 == 0) {
-                        var_2397 = 0;
-                    }
-                    if (var_2396 == 1) {
-                        var_2397 = 2;
-                    }
-                }
-                if (var_357 == 0 && var_358 != 0 && var_215 != 0) {
-                    var_2396 = rnd(2);
-                    if (var_2396 == 0) {
-                        var_2397 = 1;
-                    }
-                    if (var_2396 == 1) {
-                        var_2397 = 2;
-                    }
-                }
-                if (var_357 != 0 && var_358 == 0 && var_215 == 0) {
-                    var_2397 = 0;
-                }
-                if (var_357 == 0 && var_358 != 0 && var_215 == 0) {
-                    var_2397 = 1;
-                }
-                if (var_357 == 0 && var_358 == 0 && var_215 != 0) {
-                    var_2397 = 2;
-                }
-                if (var_2397 == 0) {
-                    yield func426();
-                    var_476 = dim(40);
-                    var_580 = var_580 - var_894;
-                    var_894 = 0;
-                    var_357 = 0;
-                    yield func494();
-                    belongings_item_list = var_233[var_553].Var0;
-                    disc_rarity = var_233[var_553].Var13;
-                    var_475 = var_553;
-                    var_896 = 0;
-                }
-                if (var_2397 == 1) {
-                    yield func427();
-                    var_477 = dim(40);
-                    var_581 = var_581 - var_895;
-                    var_895 = 0;
-                    var_358 = 0;
-                    yield func494();
-                    belongings_item_list = var_233[var_554].Var0;
-                    disc_rarity = var_233[var_554].Var13;
-                    var_475 = var_554;
-                    var_897 = 0;
-                }
-                if (var_2397 == 2) {
-                    yield func428();
-                    var_478 = dim(40);
-                    var_215 = 0;
-                    yield func494();
-                    belongings_item_list = var_233[var_555].Var0;
-                    disc_rarity = var_233[var_555].Var13;
-                    var_475 = var_555;
-                    var_898 = 0;
-                }
-                var_83[var_412].Var26 = 1;
-                belongings_item_list = var_233[var_475].Var0;
-                yield func106(); // BGM選曲呼び出し割り振り
-                yield func492(); // アイテムリスト呼び出し
-                target_item_name = item_name;
-                var_419 = var_412 + 200;
-                var_78[var_419].Var0 = var_233[var_475].Var0;
-                var_78[var_419].Var1 = var_233[var_475].Var1;
-                var_78[var_419].Var2 = var_233[var_475].Var2;
-                var_78[var_419].Var3 = var_233[var_475].Var3;
-                var_78[var_419].Var4 = var_233[var_475].Var4;
-                var_78[var_419].Var5 = var_233[var_475].Var5;
-                var_78[var_419].Var6 = var_233[var_475].Var6;
-                var_78[var_419].Var7 = var_233[var_475].Var7;
-                var_78[var_419].Var8 = var_233[var_475].Var8;
-                var_78[var_419].Var9 = var_233[var_475].Var9;
-                var_78[var_419].Var10 = var_233[var_475].Var10;
-                var_78[var_419].Var11 = var_233[var_475].Var11;
-                var_78[var_419].Var12 = var_233[var_475].Var12;
-                var_78[var_419].Var13 = var_233[var_475].Var13;
-                var_78[var_419].Var14 = var_233[var_475].Var14;
-                var_78[var_419].Var15 = var_233[var_475].Var15;
-                var_78[var_419].Var16 = var_233[var_475].Var16;
-                var_78[var_419].Var17 = var_233[var_475].Var17;
-                var_78[var_419].Var18 = var_233[var_475].Var18;
-                var_78[var_419].Var19 = var_233[var_475].Var19;
-                var_78[var_419].Var20 = var_233[var_475].Var20;
-                var_78[var_419].Var21 = var_233[var_475].Var21;
-                var_78[var_419].Var22 = var_233[var_475].Var22;
-                var_78[var_419].Var23 = var_233[var_475].Var23;
-                var_78[var_419].Var24 = var_233[var_475].Var24;
-                var_78[var_419].Var25 = var_233[var_475].Var25;
-                var_78[var_419].Var26 = var_233[var_475].Var26;
-                var_78[var_419].Var27 = var_233[var_475].Var27;
-                var_78[var_419].Var28 = var_233[var_475].Var28;
-                var_78[var_419].Var29 = var_233[var_475].Var29;
-                var_225 = var_475;
-                yield func433(); // アイテム配列(所持アイテム)初期化関数
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "装備中の" + target_item_name + "を";
-                comments_row2 = "抜き取られてしまった！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                yield func619();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
+            yield enemy059();
             return;
         }
+        // No = 63 プロシュート兄貴の特殊能力
         if (enemy_list == 63) {
-            var_2830 = rnd(5);
-            if (var_566 <= 0) {
-                return;
-            }
-            if (var_2830 == 0 || var_2830 == 1) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-                var_743 = 1;
-                var_389 = 2;
-        
-                DSPLAY(audio_id = 121);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "接触老化攻撃だ！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                yield func619();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_83[var_673].Var7 = 0;
-                var_743 = 0;
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                yield func340(); // キー入力による選択処理
-                var_389 = 0;
-            }
-            if (var_2830 == 0 || var_2830 == 1) {
-                if (equip_disc[207] == 1) {
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "しかし 装備中のDISCによって";
-                    comments_row2a = "老化攻撃を防いだ！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    var_2197 = 1;
-                    return;
-                }
-                if (var_215 == 202 || var_410 == 404) {
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "しかし 装備中のDISCによって";
-                    comments_row2a = "体が冷やされ 無事だった！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    var_2197 = 1;
-                    return;
-                }
-            }
-            if (var_2830 == 0) {
-                var_566 = var_566 - 1;
-                if (var_566 < 0) {
-                    var_566 = 0;
-                }
-                if (var_565 > var_566) {
-                    var_565 = var_566;
-                }
-        
-                DSPLAY(audio_id = 164);
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "精神力の最大値が １下がった！";
-                comments_row2a = "";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                var_2197 = 1;
-            }
-            if (var_2830 == 1) {
-        
-                DSPLAY(audio_id = 164);
-                var_2903 = rnd(3);
-                var_2903 = var_2903 + 3;
-                var_352 = var_352 - var_2903;
-                if (var_352 < 1) {
-                    var_352 = 1;
-                    var_2903 = 0;
-                }
-                if (var_211 > var_352) {
-                    var_211 = var_352;
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "最大HPが " + var_2903 + "下がった！";
-                comments_row2a = "";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                var_2197 = 1;
-            }
+            yield enemy063();
             return;
         }
-        // 敵 C-MOONの能力
-        if (enemy_list == 127) {
-            var_2830 = rnd(3);
-            if (var_2830 == 0) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-        
-                DSPLAY(audio_id = 147);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "C-MOONの裏返り攻撃！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func619();
-                if (var_215 != 120) {
-                    var_2904 = var_352 - var_211;
-                    var_211 = var_2904;
-                    if (var_211 == 0) {
-                        var_211 = 1;
-                    }
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "体力が逆転してしまった！！";
-                    comments_row2a = "";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                }
-                if (var_215 == 120) {
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "しかしメビウスの輪を作って";
-                    comments_row2a = "裏返り攻撃を防いだ！";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                }
-                var_2197 = 1;
-            }
+        // No = 64 敵ギアッチョの特殊能力
+        if (enemy_list == 64) {
+            yield enemy015();
             return;
         }
+        // No = 65 虹村形兆の特殊能力
+        if (enemy_list == 65) {
+            yield enemy065();
+            return;
+        }
+        // No = 69 ブラフォードの特殊能力
+        if (enemy_list == 69) {
+            yield enemy069();
+            return;
+        }
+        // No = 77 敵エコーズACT1の特殊能力
+        if (enemy_list == 77) {
+            yield enemy077();
+            return;
+        }
+        // No = 78 アヴドゥルさんの特殊能力
+        if (enemy_list == 78) {
+            yield enemy078();
+            return;
+        }
+        // No = 80 ラング・ラングラーの特殊能力
         if (enemy_list == 80) {
-            var_2830 = rnd(4);
-            if (var_2830 == 0 && var_126 == 0) {
-                var_742 = 1;
-                var_83[var_673].Var7 = 1;
-        
-                DSPLAY(audio_id = 161);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰは無重力を作り出した！";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func340(); // キー入力による選択処理
-                if (var_128 >= 1) {
-                    yield func023();
-                }
-                var_126 = 1;
-                var_166 = 0;
-        
-                DSPLAY(audio_id = 134);
-                yield func619();
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "思うように動けなくなってしまった！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2197 = 1;
-            }
+            yield enemy080();
+            return;
+        }
+        // No = 87 エシディシの特殊能力
+        if (enemy_list == 87) {
+            yield enemy087();
+            return;
+        }
+        // No = 94 ブルりんの特殊能力
+        if (enemy_list == 94) {
+            yield enemy094();
+            return;
+        }
+        // No = 119 ジョセフ(3部)の特殊能力
+        if (enemy_list == 119) {
+            yield enemy119();
+            return;
+        }
+        // No = 127 敵C-MOONの特殊能力
+        if (enemy_list == 127) {
+            yield enemy127();
+            return;
+        }
+        // No = 130 敵マリリンマンソンの特殊能力
+        if (enemy_list == 130) {
+            yield enemy130();
+            return;
+        }
+        // No = 131 ジョルノの特殊能力
+        if (enemy_list == 131) {
+            yield enemy131();
+            return;
+        }
+        // No = 132 レクイエムジョルノの動作処理
+        if (enemy_list == 132) {
+            yield enemy132();
+            return;
+        }
+        // No = 137 成長した吉良の特殊能力
+        if (enemy_list == 137) {
+            yield enemy137();
+            return;
+        }
+        // No = 144 川尻浩作の特殊能力
+        if (enemy_list == 144) {
+            yield enemy144();
+            return;
+        }
+        // No = 145 敵康一の特殊能力
+        if (enemy_list == 145) {
+            yield enemy012();
+            return;
+        }
+        // No = 150 敵康一act2の特殊能力
+        if (enemy_list == 150) {
+            yield enemy012();
+            return;
+        }
+        // No = 157 アナスイの特殊能力
+        if (enemy_list == 157) {
+            yield enemy157();
+            return;
+        }
+        // No = 158 プッツン由花子の特殊能力
+        if (enemy_list == 158) {
+            yield enemy045();
+            yield enemy158(); // Ver0.1401にて修正。おそらくバグと思われる。1580 → 158へ。プッツン由花子はNo = 158。ディアボロを逃がさない。
+            return;
+        }
+        // No = 160 ウェストウッド看守の特殊能力
+        if (enemy_list == 160) {
+            yield enemy160();
+            return;
+        }
+        // No = 170 敵カタツムリの特殊能力
+        if (enemy_list == 170) {
+            yield enemy170();
+            return;
+        }
+        // No = 999 没敵(不明)の特殊能力
+        if (enemy_list == 999) {
+            yield enemy999();
+            return;
+        }
+        // No = 9999 没敵(ジョナサン,ジョセフ等の波紋使い?)の特殊能力
+        if (enemy_list == 9999) {
+            yield enemy9999();
+            return;
+        }
+        // No = 没敵(昇り調子の大柳賢)の特殊能力
+        if (enemy_list == 9999) {
+            yield enemy9999a();
             return;
         }
         return;
@@ -6596,7 +2713,7 @@ function func621(this: any) {
 function func622(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(622);
-        if (var_92 == 1 || var_92 == 7 || var_92 == 16 || var_262 == 1) {
+        if (y_axis_map_image == 1 || y_axis_map_image == 7 || y_axis_map_image == 16 || var_262 == 1) {
             return;
         }
         if (var_347 >= 5 && var_348 >= 5 && var_347 <= var_33 && var_348 <= var_34) {
@@ -7211,7 +3328,7 @@ function func626(this: any) {
             enemy_hp = 4;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 528;
             enemy_description = "・フラフラと歩くぞ。";
             var_1656 = "・必ず「ｵﾚｯちのｺｰﾄ」を落とすぞ。";
@@ -7226,7 +3343,7 @@ function func626(this: any) {
             enemy_hp = 7;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 363;
             enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
@@ -7241,7 +3358,7 @@ function func626(this: any) {
             enemy_hp = 9;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 311;
             enemy_description = "・近い場所に瞬間移動することがあるぞ。";
             var_1656 = "";
@@ -7256,7 +3373,7 @@ function func626(this: any) {
             enemy_hp = 21;
             var_1637 = 0;
             var_1654 = 8;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 325;
             enemy_description = "・時々眠らせてくるぞ。";
             var_1656 = "";
@@ -7271,7 +3388,7 @@ function func626(this: any) {
             enemy_hp = 5;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 105;
             enemy_description = "・とくに何もないぞ。";
             var_1656 = "・衛生観念のない虫けら同然の浮浪者だ。";
@@ -7301,7 +3418,7 @@ function func626(this: any) {
             enemy_hp = 18;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 316;
             enemy_description = "・ガソリンの弾丸を撃ってくるぞ。";
             var_1656 = "";
@@ -7331,7 +3448,7 @@ function func626(this: any) {
             enemy_hp = 17;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 314;
             enemy_description = "・殴ると肉片が貼り付いてしまうことがあるぞ。";
             var_1656 = "・アイテムを投げると食べて攻撃力が上がるぞ。";
@@ -7346,7 +3463,7 @@ function func626(this: any) {
             enemy_hp = 140;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 521;
             enemy_description = "・攻撃すると肉片を貼り付けることがあるぞ。";
             var_1656 = "・速く動いても同じ速度で追ってくるぞ。";
@@ -7361,7 +3478,7 @@ function func626(this: any) {
             enemy_hp = 38;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 212;
             enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
@@ -7376,7 +3493,7 @@ function func626(this: any) {
             enemy_hp = 25;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 419;
             enemy_description = "・体を重くして鈍足にしてくるぞ。";
             var_1656 = "";
@@ -7391,7 +3508,7 @@ function func626(this: any) {
             enemy_hp = 18;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 322;
             enemy_description = "・攻撃すると分裂して増えることがあるぞ。";
             var_1656 = "";
@@ -7406,7 +3523,7 @@ function func626(this: any) {
             enemy_hp = 48;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 345;
             enemy_description = "・ダメージを受けると攻撃力がアップするぞ。";
             var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
@@ -7436,7 +3553,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 328;
             enemy_description = "・アイテムに化けているぞ。";
             var_1656 = "";
@@ -7451,7 +3568,7 @@ function func626(this: any) {
             enemy_hp = 5;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 443;
             enemy_description = "・体力が少なくなると爆発するぞ。";
             var_1656 = "・自分が爆発に巻き込まれると誘爆するぞ。";
@@ -7466,7 +3583,7 @@ function func626(this: any) {
             enemy_hp = 42;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 511;
             enemy_description = "・影から影へ、瞬間的に移動するぞ。";
             var_1656 = "・矢を刺して選別してくるぞ。";
@@ -7481,7 +3598,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 323;
             enemy_description = "・岩に化けて動かないぞ。";
             var_1656 = "・太陽のレーザーを発射するぞ。";
@@ -7496,7 +3613,7 @@ function func626(this: any) {
             enemy_hp = 80;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 317;
             enemy_description = "・倍の速さで動いているぞ。";
             var_1656 = "・動く死体を呼び出すことがあるぞ。";
@@ -7511,7 +3628,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 6;
+            var_972 = 6; // 動物・杜王町住人
             var_1619 = 446;
             enemy_description = "・金縛りにする空気弾を撃ってくるぞ。";
             var_1656 = "・撃った後は寝てしまうぞ。";
@@ -7586,7 +3703,7 @@ function func626(this: any) {
             enemy_hp = 12;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 441;
             enemy_description = "・アイテムを盗んで逃げるぞ。";
             var_1656 = "・落ちているアイテムも拾って逃げるぞ。";
@@ -7601,7 +3718,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 342;
             enemy_description = "・地面に潜って他の場所に移動するぞ。";
             var_1656 = "・足を掴んで移動できなくさせるぞ。";
@@ -7616,7 +3733,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 326;
             enemy_description = "・土人形を作り出すことがあるぞ。";
             var_1656 = "";
@@ -7631,7 +3748,7 @@ function func626(this: any) {
             enemy_hp = 80;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 525;
             enemy_description = "・同じ部屋にいると階段を降りられないぞ";
             var_1656 = "";
@@ -7646,7 +3763,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 349;
             enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
@@ -7661,7 +3778,7 @@ function func626(this: any) {
             enemy_hp = 22;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 444;
             enemy_description = "・フワフワと動いているぞ。";
             var_1656 = "・親父がいる部屋は写真の中だ。";
@@ -7676,7 +3793,7 @@ function func626(this: any) {
             enemy_hp = 65;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 442;
             enemy_description = "・アイテムを爆弾に変えてくるぞ。";
             var_1656 = "・床のアイテムも爆弾に変えることがあるぞ。";
@@ -7691,7 +3808,7 @@ function func626(this: any) {
             enemy_hp = 950;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 435;
             enemy_description = "・お店を守っているぞ。";
             var_1656 = "・攻撃を受けると怒るぞ。";
@@ -7706,7 +3823,7 @@ function func626(this: any) {
             enemy_hp = 950;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 436;
             enemy_description = "・「タダじゃあおきマセンッ！」";
             var_1656 = "";
@@ -7721,7 +3838,7 @@ function func626(this: any) {
             enemy_hp = 42;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 401;
             enemy_description = "・近くに怪我をした敵がいると治しに行くぞ。";
             var_1656 = "";
@@ -7736,7 +3853,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 104;
             enemy_description = "・氷漬けになると助けてくれるぞ。";
             var_1656 = "";
@@ -7766,7 +3883,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 348;
             enemy_description = "・若返り攻撃でレベルを下げてくるぞ。";
             var_1656 = "";
@@ -7781,7 +3898,7 @@ function func626(this: any) {
             enemy_hp = 14;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 445;
             enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・養分を吸い取って満腹度を下げてくるぞ。";
@@ -7796,7 +3913,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 408;
             enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・弾丸を発射してくるぞ。";
@@ -7811,7 +3928,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 410;
             enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・砲弾を発射してくるぞ。";
@@ -7826,7 +3943,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 411;
             enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・ミサイルを発射してくるぞ。";
@@ -7841,7 +3958,7 @@ function func626(this: any) {
             enemy_hp = 40;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 526;
             enemy_description = "・ウロウロしながら近づいてくるぞ。";
             var_1656 = "・壁の中でも自由に移動できるぞ。";
@@ -7856,7 +3973,7 @@ function func626(this: any) {
             enemy_hp = 52;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 437;
             enemy_description = "・地下の電線を使って近くに瞬間移動するぞ。";
             var_1656 = "・２回連続で攻撃してくるぞ。";
@@ -7871,7 +3988,7 @@ function func626(this: any) {
             enemy_hp = 32;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 433;
             enemy_description = "・ｽﾀﾝﾄﾞDISCに呪縛をかけてくるぞ。";
             var_1656 = "";
@@ -7886,7 +4003,7 @@ function func626(this: any) {
             enemy_hp = 42;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 315;
             enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・時々エンペラーの弾丸を発射するぞ。";
@@ -7901,7 +4018,7 @@ function func626(this: any) {
             enemy_hp = 36;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 405;
             enemy_description = "・ガオンと近くに引き寄せてくるぞ。";
             var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
@@ -7916,7 +4033,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 10;
+            var_972 = 10; // スタンド・裏切り者
             var_1619 = 507;
             enemy_description = "・弾丸を発射してくるぞ。";
             var_1656 = "・どこからでも位置を察して飛んでくるぞ。";
@@ -7931,7 +4048,7 @@ function func626(this: any) {
             enemy_hp = var_352;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 5;
+            var_972 = 5; // 味方
             var_1619 = 432;
             enemy_description = "・ウロウロと歩くぞ。";
             var_1656 = "・敵はコピー人形を優先して攻撃するぞ。";
@@ -7946,7 +4063,7 @@ function func626(this: any) {
             enemy_hp = 9999;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 0;
             enemy_description = "";
             var_1656 = "";
@@ -7961,7 +4078,7 @@ function func626(this: any) {
             enemy_hp = 14; // 体力
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 107;
             enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
@@ -7976,7 +4093,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 108;
             enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
@@ -7991,7 +4108,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 502;
             enemy_description = "・攻撃を受けるとﾀﾞﾒｰｼﾞを反射するぞ。";
             var_1656 = "";
@@ -8006,7 +4123,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 409;
             enemy_description = "・形兆が呼び出したスタンドだ。";
             var_1656 = "・仲間の弾丸には当たらないぞ。";
@@ -8021,7 +4138,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 512;
             enemy_description = "・中に部屋があるぞ。";
             var_1656 = "・アイテムを保管しておけるぞ。";
@@ -8036,7 +4153,7 @@ function func626(this: any) {
             enemy_hp = 23;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 204;
             enemy_description = "・マシンガンを撃ってくるぞ。";
             var_1656 = "";
@@ -8051,7 +4168,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 680;
             enemy_description = "・次の階に出現する敵を教えてくれるぞ。";
             var_1656 = "";
@@ -8066,7 +4183,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 344;
             enemy_description = "・次の階での死に方を教えてくれるぞ。";
             var_1656 = "";
@@ -8081,7 +4198,7 @@ function func626(this: any) {
             enemy_hp = 54;
             var_1637 = 1;
             var_1654 = 6;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 618;
             enemy_description = "・装備しているDISCを抜き取ってしまうぞ。";
             var_1656 = "・やっつければ取り戻せるぞ。";
@@ -8096,7 +4213,7 @@ function func626(this: any) {
             enemy_hp = 85;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 624;
             enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・２回連続で攻撃するぞ。";
@@ -8111,7 +4228,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 617;
             enemy_description = "・部屋に二人だけになると謎の攻撃をするぞ。";
             var_1656 = "・攻撃すると臭いでﾀﾞﾒｰｼﾞを食らうぞ。";
@@ -8126,7 +4243,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 516;
             enemy_description = "・アイテムに化けているぞ。";
             var_1656 = "";
@@ -8141,7 +4258,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 513;
             enemy_description = "・接触老化で最大精神力や最大ＨＰが下がるぞ。";
             var_1656 = "・同じ部屋にいると精神力を下げてくるぞ。";
@@ -8156,7 +4273,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 517;
             enemy_description = "・倍の速さで移動してくるぞ。";
             var_1656 = "・隣接すると凍らせてくるぞ。";
@@ -8171,7 +4288,7 @@ function func626(this: any) {
             enemy_hp = 55;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 407;
             enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・バッドカンパニー部隊を呼び出すぞ。";
@@ -8186,7 +4303,7 @@ function func626(this: any) {
             enemy_hp = 65;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 110;
             enemy_description = "・強烈な一撃を繰り出すことがあるぞ。";
             var_1656 = "";
@@ -8201,7 +4318,7 @@ function func626(this: any) {
             enemy_hp = 70;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 406;
             enemy_description = "・ガオンと近くに引き寄せてくるぞ。";
             var_1656 = "・強烈な一撃を繰り出すことがあるぞ。";
@@ -8216,7 +4333,7 @@ function func626(this: any) {
             enemy_hp = 60;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 402;
             enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・２回連続で攻撃するぞ。";
@@ -8231,7 +4348,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 109;
             enemy_description = "・髪の毛で縛り付けてくるぞ。";
             var_1656 = "・縛られた髪の毛で満腹度を吸い取るぞ。";
@@ -8261,7 +4378,7 @@ function func626(this: any) {
             enemy_hp = 34;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 112;
             enemy_description = "・とくに何もないぞ。";
             var_1656 = "";
@@ -8276,7 +4393,7 @@ function func626(this: any) {
             enemy_hp = 42;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 616;
             enemy_description = "・こちらの攻撃をヒラリとかわしやすいぞ。";
             var_1656 = "・風水の力で罠をたくさん呼び寄せるぞ。";
@@ -8291,7 +4408,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 111;
             enemy_description = "・倒すと首だけになって残るぞ。";
             var_1656 = "・首に触れると波紋のバラを飛ばしてくるぞ。";
@@ -8306,7 +4423,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 612;
             enemy_description = "・アイテムを一つ倉庫に運んでくれるぞ。";
             var_1656 = "";
@@ -8321,7 +4438,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 213;
             enemy_description = "・アイテムを一つ入れておけるぞ。";
             var_1656 = "・あとで発見した時に取り出せるぞ。";
@@ -8336,7 +4453,7 @@ function func626(this: any) {
             enemy_hp = 19;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 417;
             enemy_description = "・文字を投げつけて攻撃してくるぞ。";
             var_1656 = "・地面に文字の罠を貼り付けるぞ。";
@@ -8351,7 +4468,7 @@ function func626(this: any) {
             enemy_hp = 12;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 415;
             enemy_description = "・音を貼り付けて混乱させてくるぞ。";
             var_1656 = "・倒すと成長することがあるぞ。";
@@ -8366,7 +4483,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 303;
             enemy_description = "・レッドバインドで縛り付けてくるぞ。";
             var_1656 = "・喰らうとスタンドが弱くなってしまうぞ。";
@@ -8381,7 +4498,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 414;
             enemy_description = "・動かないぞ。";
             var_1656 = "・攻撃してこないぞ。";
@@ -8396,7 +4513,7 @@ function func626(this: any) {
             enemy_hp = 55;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 611;
             enemy_description = "・唾を吐いてくるぞ。";
             var_1656 = "・当たると無重力で思うように動けなくなるぞ。";
@@ -8411,7 +4528,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 504;
             enemy_description = "・ダンジョンから帰還させてくれるぞ。";
             var_1656 = "・お茶を勧めてくれるぞ。";
@@ -8441,7 +4558,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 431;
             enemy_description = "・必ずマンガを持ち歩いているぞ。";
             var_1656 = "・特に「GP BOY」は学校で読むほど大好きだ。";
@@ -8456,7 +4573,7 @@ function func626(this: any) {
             enemy_hp = 62;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 523;
             enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・グリーンディやセッコを呼び出すぞ。";
@@ -8471,7 +4588,7 @@ function func626(this: any) {
             enemy_hp = 43;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 522;
             enemy_description = "・磁力によって普段は姿が見えないぞ。";
             var_1656 = "・ランダムに移動しているぞ。";
@@ -8486,7 +4603,7 @@ function func626(this: any) {
             enemy_hp = 65;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 205;
             enemy_description = "・空気供給管を通って瞬時に移動するぞ。";
             var_1656 = "・同じ部屋に吸血鬼やゾンビがいると攻撃し、";
@@ -8501,7 +4618,7 @@ function func626(this: any) {
             enemy_hp = 80;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 208;
             enemy_description = "・アイテムを消し炭にしてしまうぞ。";
             var_1656 = "・床のアイテムも消し炭にしてしまうぞ。";
@@ -8516,7 +4633,7 @@ function func626(this: any) {
             enemy_hp = 6;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 206;
             enemy_description = "・ヒラヒラと舞って攻撃が当たりにくいぞ。";
             var_1656 = "";
@@ -8561,7 +4678,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 416;
             enemy_description = "・動かないぞ。";
             var_1656 = "・攻撃もしないぞ。";
@@ -8576,7 +4693,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 418;
             enemy_description = "・動かないぞ。";
             var_1656 = "・攻撃もしないぞ。";
@@ -8591,7 +4708,7 @@ function func626(this: any) {
             enemy_hp = 7;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 604;
             enemy_description = "・幽霊の弾丸を撃ってくるぞ。";
             var_1656 = "・特別なスタンドを扱えそうだ…";
@@ -8606,7 +4723,7 @@ function func626(this: any) {
             enemy_hp = 13;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 203;
             enemy_description = "・掴まえて動けなくしてくるぞ。";
             var_1656 = "・「たのもしいわ！あたしのブルりん！」";
@@ -8621,7 +4738,7 @@ function func626(this: any) {
             enemy_hp = 46;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 202;
             enemy_description = "・目から体液を発射してくるぞ。";
             var_1656 = "";
@@ -8636,7 +4753,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 605;
             enemy_description = "・感電して動けない。";
             var_1656 = "・特定のアイテムを持っているぞ。";
@@ -8651,7 +4768,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 343;
             enemy_description = "・誰か他の敵に化けていることがあるぞ。";
             var_1656 = "・爆弾仕掛けのオレンジを落とすぞ。";
@@ -8666,7 +4783,7 @@ function func626(this: any) {
             enemy_hp = 7;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 625;
             enemy_description = "・純粋酸素で全員にﾀﾞﾒｰｼﾞを与えるぞ。";
             var_1656 = "";
@@ -8681,7 +4798,7 @@ function func626(this: any) {
             enemy_hp = 18;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 607;
             enemy_description = "・フワフワと動いているぞ。";
             var_1656 = "・気流に舞って攻撃が当たりにくいぞ。";
@@ -8711,7 +4828,7 @@ function func626(this: any) {
             enemy_hp = 16;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 113;
             enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
@@ -8726,7 +4843,7 @@ function func626(this: any) {
             enemy_hp = 16;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 114;
             enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
@@ -8741,7 +4858,7 @@ function func626(this: any) {
             enemy_hp = 16;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 115;
             enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
@@ -8756,7 +4873,7 @@ function func626(this: any) {
             enemy_hp = 16;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 116;
             enemy_description = "・常に４人組で行動するぞ。";
             var_1656 = "・必ず眠っているぞ。";
@@ -8771,7 +4888,7 @@ function func626(this: any) {
             enemy_hp = 40;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 106;
             enemy_description = "・波紋が使える状態にしてくれるぞ。";
             var_1656 = "";
@@ -8786,7 +4903,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 514;
             enemy_description = "・ﾋﾞｰﾁﾎﾞｰｲで釣りができるぞ";
             var_1656 = "・兄貴のDISCでパワーアップするぞ。";
@@ -8801,7 +4918,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 515;
             enemy_description = "・ﾋﾞｰﾁﾎﾞｰｲで釣りができるぞ";
             var_1656 = "";
@@ -8816,7 +4933,7 @@ function func626(this: any) {
             enemy_hp = 40;
             var_1637 = 1;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 341;
             enemy_description = "・地面に砂DIOを作ってくれるぞ";
             var_1656 = "";
@@ -8831,7 +4948,7 @@ function func626(this: any) {
             enemy_hp = 80;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 210;
             enemy_description = "・透明で姿が見えないことがあるぞ。";
             var_1656 = "・瀕死になるとパワーアップするぞ。";
@@ -8846,7 +4963,7 @@ function func626(this: any) {
             enemy_hp = 75;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 214;
             enemy_description = "・２回連続で攻撃してくるぞ。";
             var_1656 = "";
@@ -8861,7 +4978,7 @@ function func626(this: any) {
             enemy_hp = 100;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 215;
             enemy_description = "・倍の速さで移動するぞ。";
             var_1656 = "・壁があっても自由に動けるぞ。";
@@ -8891,7 +5008,7 @@ function func626(this: any) {
             enemy_hp = 75;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 364;
             enemy_description = "・時間を止めて自分だけ動くぞ。";
             var_1656 = "・ジョセフを倒すとパワーアップするぞ。";
@@ -8906,7 +5023,7 @@ function func626(this: any) {
             enemy_hp = 90;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 365;
             enemy_description = "・さらに長く時間を止めるぞ。";
             var_1656 = "";
@@ -8921,7 +5038,7 @@ function func626(this: any) {
             enemy_hp = 26;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 8;
+            var_972 = 8; // スタンド・杜王町住人
             var_1619 = 404;
             enemy_description = "・霧になって他の場所へ瞬間移動するぞ。";
             var_1656 = "・念写に写りこんでしまう事があるぞ。";
@@ -8936,7 +5053,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 430;
             enemy_description = "・攻撃すると罪悪感でお金を奪われるぞ。";
             var_1656 = "・すれ違っただけでもお金を奪われるぞ。";
@@ -8951,7 +5068,7 @@ function func626(this: any) {
             enemy_hp = 10;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 524;
             enemy_description = "・すばやい動きで逃げるぞ。";
             var_1656 = "・倒すと「やばいクスリ」を落とす事があるぞ。";
@@ -8966,7 +5083,7 @@ function func626(this: any) {
             enemy_hp = 90;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 362;
             enemy_description = "・盲目状態で直線的に進むぞ。";
             var_1656 = "・壁を飲み込みながら進むぞ。";
@@ -8981,7 +5098,7 @@ function func626(this: any) {
             enemy_hp = 28;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 302;
             enemy_description = "・スタンドで縛り付けて動けなくさせるぞ。";
             var_1656 = "・攻撃されると波紋で痺れることがあるぞ。";
@@ -8996,7 +5113,7 @@ function func626(this: any) {
             enemy_hp = 90;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 301;
             enemy_description = "・頻繁に強烈な一撃を繰り出すぞ。";
             var_1656 = "・強烈な一撃を喰らうと吹っ飛ぶぞ。";
@@ -9011,7 +5128,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 304;
             enemy_description = "・エメラルドスプラッシュを撃ってくるぞ。";
             var_1656 = "・時々ニセモノが化けているぞ。";
@@ -9026,7 +5143,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 305;
             enemy_description = "・２回連続で攻撃してくるぞ。";
             var_1656 = "";
@@ -9041,7 +5158,7 @@ function func626(this: any) {
             enemy_hp = 60;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 503;
             enemy_description = "・２マス先まで攻撃が届くぞ。";
             var_1656 = "・あいだに他の敵がいても攻撃が届くぞ。";
@@ -9056,7 +5173,7 @@ function func626(this: any) {
             enemy_hp = 55;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 505;
             enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・フロア内のどこからでも弾丸を撃ってくるぞ。";
@@ -9071,7 +5188,7 @@ function func626(this: any) {
             enemy_hp = 42;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 506;
             enemy_description = "・ｳｨﾙｽで部屋の全員にﾀﾞﾒｰｼﾞを与えるぞ。";
             var_1656 = "";
@@ -9086,7 +5203,7 @@ function func626(this: any) {
             enemy_hp = 60;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 350;
             enemy_description = "・エメラルドスプラッシュを撃ってくるぞ。";
             var_1656 = "";
@@ -9101,7 +5218,7 @@ function func626(this: any) {
             enemy_hp = 75;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 623;
             enemy_description = "・隣接時に裏返り攻撃をしてくるぞ。";
             var_1656 = "・ＨＰの減っている数値が残り数値になるぞ。";
@@ -9116,7 +5233,7 @@ function func626(this: any) {
             enemy_hp = 60;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 403;
             enemy_description = "・ちょっとだけ時間を止めるぞ。";
             var_1656 = "・特定のアイテムを落とすぞ。";
@@ -9131,7 +5248,7 @@ function func626(this: any) {
             enemy_hp = 65;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 346;
             enemy_description = "・２回連続で攻撃してくるぞ。";
             var_1656 = "";
@@ -9146,7 +5263,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 0;
             enemy_description = "";
             var_1656 = "";
@@ -9161,7 +5278,7 @@ function func626(this: any) {
             enemy_hp = 25;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 501;
             enemy_description = "・アイテムをカエルに変化させるぞ。";
             var_1656 = "";
@@ -9176,7 +5293,7 @@ function func626(this: any) {
             enemy_hp = 300;
             var_1637 = 1;
             var_1654 = 1;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 527;
             enemy_description = "・攻撃を受けると状態異常がすべて元に戻るぞ。";
             var_1656 = "・状態異常の他にもいろいろ元に戻すぞ。";
@@ -9191,7 +5308,7 @@ function func626(this: any) {
             enemy_hp = 90;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 361;
             enemy_description = "・攻撃を受けるとｸﾘｰﾑの中に入ってしまうぞ。";
             var_1656 = "";
@@ -9206,7 +5323,7 @@ function func626(this: any) {
             enemy_hp = 25;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 601;
             enemy_description = "・近くに怪我をした敵がいると治しに行くぞ。";
             var_1656 = "";
@@ -9221,7 +5338,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 201;
             enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・地面に罠を仕掛けるぞ。";
@@ -9236,7 +5353,7 @@ function func626(this: any) {
             enemy_hp = 42;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 207;
             enemy_description = "・波紋を帯びたシャボンを発射してくるぞ。";
             var_1656 = "・あたると痺れることがあるぞ。";
@@ -9251,7 +5368,7 @@ function func626(this: any) {
             enemy_hp = 65;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 447;
             enemy_description = "・アイテムを爆弾にしてくるぞ。";
             var_1656 = "・落ちているアイテムも爆弾に変えるぞ。";
@@ -9266,7 +5383,7 @@ function func626(this: any) {
             enemy_hp = 25;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 102;
             enemy_description = "・殴ると凍ってしまうことがあるぞ。";
             var_1656 = "";
@@ -9281,7 +5398,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 211;
             enemy_description = "・ヒラリと攻撃をかわしやすいぞ。";
             var_1656 = "・殴ると波紋で痺れることがあるぞ。";
@@ -9296,7 +5413,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 101;
             enemy_description = "・攻撃時に波紋で痺れさせることがあるぞ。";
             var_1656 = "・ズームパンチで２マス先まで攻撃するぞ。";
@@ -9311,7 +5428,7 @@ function func626(this: any) {
             enemy_hp = 18;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 603;
             enemy_description = "・ＦＦの弾丸を撃ってくるぞ。";
             var_1656 = "・弾丸が他の敵に当たると体力が回復するぞ。";
@@ -9326,7 +5443,7 @@ function func626(this: any) {
             enemy_hp = 20;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 439;
             enemy_description = "・「ﾎﾞﾍﾐｱﾝﾗﾌﾟｿﾃﾞｨのDISC」を探しているぞ。";
             var_1656 = "・岸辺露伴は動かないぞ。";
@@ -9341,7 +5458,7 @@ function func626(this: any) {
             enemy_hp = 500;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 619;
             enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・マンガのキャラクターを呼び出すぞ。";
@@ -9356,7 +5473,7 @@ function func626(this: any) {
             enemy_hp = 50;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 444;
             enemy_description = "・他人のお金を盗むぞ。";
             var_1656 = "・なんてロマンチックなの……";
@@ -9371,7 +5488,7 @@ function func626(this: any) {
             enemy_hp = 30;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 412;
             enemy_description = "・付かず離れず距離をとってくるぞ。";
             var_1656 = "・３種類のエコーズを呼び出すぞ。";
@@ -9386,7 +5503,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 306;
             enemy_description = "・分身したチャリオッツだ。";
             var_1656 = "・一撃喰らうと消えてしまうぞ。";
@@ -9401,7 +5518,7 @@ function func626(this: any) {
             enemy_hp = 6;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 438;
             enemy_description = "・フラフラと歩くぞ。";
             var_1656 = "・攻撃してこないぞ。";
@@ -9416,7 +5533,7 @@ function func626(this: any) {
             enemy_hp = 27;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 602;
             enemy_description = "・地面にキッスのシールを貼るぞ。";
             var_1656 = "・他の敵がシールに触れると分裂するぞ。";
@@ -9446,7 +5563,7 @@ function func626(this: any) {
             enemy_hp = 40;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 413;
             enemy_description = "・３種類のエコーズを呼び出すぞ。";
             var_1656 = "・杜王町の仲間を呼び出すぞ。";
@@ -9461,7 +5578,7 @@ function func626(this: any) {
             enemy_hp = 10;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 6;
+            var_972 = 6; // 動物・杜王町住人
             var_1619 = 440;
             enemy_description = "・毒針を発射してくるぞ。";
             var_1656 = "・刺さるとスタンドが溶けて弱まるぞ。";
@@ -9476,7 +5593,7 @@ function func626(this: any) {
             enemy_hp = 40;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 9;
+            var_972 = 9; // 人間・裏切り者
             var_1619 = 508;
             enemy_description = "・柔らかくなってﾀﾞﾒｰｼﾞを受けない事があるぞ。";
             var_1656 = "・柔らかいと後ろに弾んでしまうぞ。";
@@ -9491,7 +5608,7 @@ function func626(this: any) {
             enemy_hp = 80;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 608;
             enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・道連れ攻撃で、離れていても攻撃してくるぞ。";
@@ -9506,7 +5623,7 @@ function func626(this: any) {
             enemy_hp = 60;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 613;
             enemy_description = "・透明で姿が見えないぞ。";
             var_1656 = "・今まで出現した敵を透明にして呼び出すぞ。";
@@ -9521,7 +5638,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 347;
             enemy_description = "・付かず離れず距離をとるぞ。";
             var_1656 = "・バステト女神の罠を設置するぞ。";
@@ -9536,7 +5653,7 @@ function func626(this: any) {
             enemy_hp = 60;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 610;
             enemy_description = "・弾丸が燃え尽きて届かないぞ。";
             var_1656 = "";
@@ -9551,7 +5668,7 @@ function func626(this: any) {
             enemy_hp = 55;
             var_1637 = 1;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 614;
             enemy_description = "・同じ部屋にいると壁を通して攻撃するぞ。";
             var_1656 = "・収納アイテムやヤバイものを壊してくるぞ";
@@ -9566,7 +5683,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 7;
+            var_972 = 7; // 人間・杜王町住人
             var_1619 = 434;
             enemy_description = "・髪の毛を飛ばしてくるぞ。";
             var_1656 = "・刺さると思うように動けなくなるぞ。";
@@ -9581,7 +5698,7 @@ function func626(this: any) {
             enemy_hp = 60;
             var_1637 = 1;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 621;
             enemy_description = "・弾丸が燃え尽きて届かないぞ。";
             var_1656 = "・攻撃を喰らうと周囲に血の槍を作るぞ。";
@@ -9596,7 +5713,7 @@ function func626(this: any) {
             enemy_hp = 70;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 615;
             enemy_description = "・掴んで動けなくさせるぞ。";
             var_1656 = "・掴んでいると隕石を落とすことがあるぞ。";
@@ -9611,7 +5728,7 @@ function func626(this: any) {
             enemy_hp = 100;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 801;
             enemy_description = "・攻撃を受けるとバオーに変身するぞ。";
             var_1656 = "";
@@ -9626,7 +5743,7 @@ function func626(this: any) {
             enemy_hp = 100;
             var_1637 = 0;
             var_1654 = 10;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 802;
             enemy_description = "・２回連続で攻撃するぞ。";
             var_1656 = "";
@@ -9639,7 +5756,7 @@ function func626(this: any) {
             enemy_hp = 1;
             var_1637 = 0;
             var_1654 = 1;
-            var_972 = 4;
+            var_972 = 4; // 味方
             var_1619 = 509;
             enemy_description = "・フラフラと歩いているぞ。";
             var_1656 = "・ぶん殴ると「やばいクスリ」を落とすぞ。";
@@ -9654,7 +5771,7 @@ function func626(this: any) {
             enemy_hp = 5;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 2;
+            var_972 = 2; // 吸血鬼
             var_1619 = 209;
             enemy_description = "・他の敵に取り付いてレベルを上げるぞ。";
             var_1656 = "";
@@ -9669,7 +5786,7 @@ function func626(this: any) {
             enemy_hp = 5;
             var_1637 = 0;
             var_1654 = 999;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 313;
             enemy_description = "・他の敵に乗り移ってレベルを上げるぞ。";
             var_1656 = "";
@@ -9684,7 +5801,7 @@ function func626(this: any) {
             enemy_hp = 45;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 3;
+            var_972 = 3; // スタンド
             var_1619 = 620;
             enemy_description = "・物語の中から現れたヤギだ。";
             var_1656 = "・付かず離れず距離をとるぞ。";
@@ -9714,7 +5831,7 @@ function func626(this: any) {
             enemy_hp = 70;
             var_1637 = 0;
             var_1654 = 3;
-            var_972 = 1;
+            var_972 = 1; // 人間
             var_1619 = 804;
             enemy_description = "・オレはこのデパートの影の支配者だ！";
             var_1656 = "　悪さをするヤツはゆるさねえ！";
@@ -9774,7 +5891,7 @@ function func626(this: any) {
             enemy_hp = 10;
             var_1637 = 0;
             var_1654 = 20;
-            var_972 = 6;
+            var_972 = 6; // 動物・杜王町住人
             var_1619 = 439;
             enemy_description = "・近づくと毒針を発射してくるぞ。";
             var_1656 = "・刺さるとスタンドが溶けて弱まるぞ。";
@@ -10274,12 +6391,12 @@ function func628(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(628);
         if (current_floor == 1) {
-            var_977 = [1, 5];
+            var_977 = [1, 5]; // No = 1 ヤク中のゴロツキ、No = 5 小汚い浮浪者
             var_2917 = rnd(2);
             var_953 = var_977[var_2917];
         }
         if (current_floor == 2) {
-            var_977 = [147, 1, 5];
+            var_977 = [147, 1, 5]; // No = 1 ヤク中のゴロツキ、No = 5 小汚い浮浪者
             var_2917 = rnd(3);
             var_953 = var_977[var_2917];
         }
@@ -11015,7 +7132,7 @@ function func630(this: any) {
         return;
     });
 }
-
+// 鉄の牢獄のボス以外の出現敵設定
 function func631(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(631);
@@ -11286,6 +7403,7 @@ function func631(this: any) {
         return;
     });
 }
+
 function func632(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(632);
@@ -11925,6 +8043,7 @@ function func633(this: any) {
         return;
     });
 }
+// 一巡後の世界のボス以外の出現敵設定
 function func634(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(634);
@@ -12318,10 +8437,10 @@ function func634(this: any) {
 function func635(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(635);
-        if (var_357 == 110) {
-            var_357 = 108;
+        if (kougeki_disc_id == 110) {
+            kougeki_disc_id = 108;
         }
-        var_2923 = var_357;
+        var_2923 = kougeki_disc_id;
         if (equip_disc[101] == 1 && var_2924 == 0) {
             var_2925 = rnd(2);
         }
@@ -12399,8 +8518,9 @@ function func636(this: any) {
                 }
             }
         }
-        if (var_357 == 100 || var_357 == 398) {
-            yield func643();
+        // No = 100 スタープラチナ、No = 398 スタプラザ・ワールド
+        if (kougeki_disc_id == 100 || kougeki_disc_id == 398) {
+            yield func643(); // 3方向攻撃処理?
             if (var_1280 == 1) {
                 var_1280 = 0;
                 var_243 = 0;
@@ -12444,7 +8564,7 @@ function func636(this: any) {
         var_2929 = var_347 + 1;
         var_2930 = var_348 + 1;
         var_2931 = var_348 - 1;
-        if (var_357 != 108 && var_71[var_66][var_67] != 0) {
+        if (kougeki_disc_id != 108 && var_71[var_66][var_67] != 0) {
             var_2932 = 0;
             if (var_199 == 1 && var_71[var_347][var_67] == 0) {
                 var_2932 = 1;
@@ -12785,7 +8905,7 @@ function func636(this: any) {
                 var_2935 = var_80[var_2933][var_2934];
                 var_81[var_2935][4] = 1;
             }
-            var_357 = 110;
+            kougeki_disc_id = 110;
             var_750 = 1;
             var_748 = var_347 - var_66 + 4;
             var_749 = var_348 - var_67 + 4;
@@ -13050,13 +9170,13 @@ function func636(this: any) {
         if (equip_disc[106] == 1 && var_2940 == 1) {
             var_2940 = 0;
         }
-        if (var_357 == 104 && var_129 == 0) {
+        if (kougeki_disc_id == 104 && var_129 == 0) {
             var_2940 = 0;
         }
         if (var_2927 == 1) {
             var_2940 = 0;
         }
-        if (var_357 == 106 && var_139 >= 1) {
+        if (kougeki_disc_id == 106 && var_139 >= 1) {
             var_2940 = 0;
         }
         if (equip_disc[105] == 1 && var_1030 >= 2) {
@@ -13066,7 +9186,8 @@ function func636(this: any) {
             var_209 = var_209 * 2;
             var_1194 = 1;
         }
-        if (var_357 == 123 && var_2940 == 0 && var_83[var_314].Var0 != 33 && var_83[var_314].Var0 != 34 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 143) {
+        // No = 123 クリームのDISC
+        if (kougeki_disc_id == 123 && var_2940 == 0 && var_83[var_314].Var0 != 33 && var_83[var_314].Var0 != 34 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 143) {
             var_209 = 999;
         }
         var_2927 = 0;
@@ -13256,7 +9377,7 @@ function func636(this: any) {
             var_2951 = var_83[var_314].Var1 - 1;
             var_2952 = var_83[var_314].Var2 - 1;
         }
-        if (var_83[var_314].Var0 == 13 && var_83[var_314].Var13 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_410 != 409) {
+        if (var_83[var_314].Var0 == 13 && var_83[var_314].Var13 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && shageki_disc_id != 409) {
             var_2953 = rnd(4);
             if (var_2953 == 0) {
                 var_83[var_314].Var8 = 1;
@@ -13605,8 +9726,8 @@ function func636(this: any) {
             }
         }
         var_217 = 1;
-        if (var_357 == 110) {
-            var_357 = 108;
+        if (kougeki_disc_id == 110) {
+            kougeki_disc_id = 108;
             var_750 = 0;
         }
         if (equip_disc[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
@@ -13623,17 +9744,17 @@ function func636(this: any) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0 && var_128 == 0 && var_178 == 0) {
-                if (var_357 == 101) {
+                if (kougeki_disc_id == 101) {
                     var_341 = 2;
                     var_243 = 1;
-                    var_357 = 122;
+                    kougeki_disc_id = 122;
                     yield func636();
                     return;
                 }
-                if (var_357 == 122) {
+                if (kougeki_disc_id == 122) {
                     var_341 = 2;
                     var_243 = 1;
-                    var_357 = 101;
+                    kougeki_disc_id = 101;
                     yield func636();
                     return;
                 }
@@ -13641,8 +9762,8 @@ function func636(this: any) {
         }
         var_2924 = 0;
         var_2965 = 0;
-        if (var_357 == 122 || var_357 == 101) {
-            var_357 = var_2923;
+        if (kougeki_disc_id == 122 || kougeki_disc_id == 101) {
+            kougeki_disc_id = var_2923;
         }
         if (var_83[var_314].Var0 > 0 && var_83[var_314].Var4 == 6) {
             var_83[var_314].Var5 = var_2942;
@@ -13651,7 +9772,7 @@ function func636(this: any) {
             var_83[var_314].Var5 = var_2942;
         }
         if (equip_disc[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
-            if (var_357 != 100 && var_357 != 398) {
+            if (kougeki_disc_id != 100 && kougeki_disc_id != 398) {
                 var_2926 = 0;
                 yield func641();
                 if (var_2968 == 1) {
@@ -13661,7 +9782,7 @@ function func636(this: any) {
                     return;
                 }
             }
-            if (var_357 == 100 || var_357 == 398) {
+            if (kougeki_disc_id == 100 || kougeki_disc_id == 398) {
                 var_2926 = 0;
                 yield func642();
                 if (var_2968 == 1) {
@@ -13695,24 +9816,24 @@ function func637(this: any) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
-                if (var_357 == 101) {
+                if (kougeki_disc_id == 101) {
                     var_341 = 2;
                     var_243 = 1;
-                    var_357 = 122;
+                    kougeki_disc_id = 122;
                     yield func636();
                     return;
                 }
-                if (var_357 == 122) {
+                if (kougeki_disc_id == 122) {
                     var_341 = 2;
                     var_243 = 1;
-                    var_357 = 101;
+                    kougeki_disc_id = 101;
                     yield func636();
                     return;
                 }
             }
         }
-        if (var_357 == 122 || var_357 == 101) {
-            var_357 = var_2923;
+        if (kougeki_disc_id == 122 || kougeki_disc_id == 101) {
+            kougeki_disc_id = var_2923;
         }
         if (var_83[var_314].Var0 > 0 && var_83[var_314].Var4 == 6) {
             var_83[var_314].Var5 = var_2942;
@@ -13737,6 +9858,7 @@ function func637(this: any) {
         return;
     });
 }
+// 敵を攻撃した時のダメージ計算
 function func638(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(638);
@@ -13745,6 +9867,7 @@ function func638(this: any) {
                 enemy_defence = Math.floor(enemy_defence * (var_83[var_314].Var39 * 2 + 10) / 10);
             }
         }
+        // No = 206 オアシスのDISCを装備している時
         if (equip_disc[206] == 1) {
             var_1073 = rnd(8);
             if (var_1073 == 0) {
@@ -13761,57 +9884,91 @@ function func638(this: any) {
         var_2817 = rnd(33);
         var_2817 = var_2817 + 111;
         var_209 = Math.floor(var_949 * var_2817 / 128);
+        // No = 117 ダークブルームーンのDISCを装備している時
         if (equip_disc[117] == 1) {
             yield func645();
         }
         if (var_143 >= 2) {
             var_209 = var_209 + Math.floor(var_143 * var_209 / 5);
         }
+        // No = 399 G・E・レクイエムのDISCを装備している時
         if (equip_disc[399] == 1) {
             var_209 = Math.floor(var_209 * 3 / 2);
         }
+        // No = 111 ザ・ワールドのDISCを装備している時
         if (equip_disc[111] == 1) {
             var_1337 = var_83[var_314].Var0;
             if (var_1337 == 147 || var_1337 == 134 || var_1337 == 119 || var_1337 == 35 || var_1337 == 135 || var_1337 == 120 || var_1337 == 128 || var_1337 == 140 || var_1337 == 68 || var_1337 == 131 || var_1337 == 132) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
+        // No = 114 ホワイトスイネイクのDISCを装備している時
         if (equip_disc[114] == 1) {
             var_1337 = var_83[var_314].Var0;
             if (var_1337 == 141 || var_1337 == 134 || var_1337 == 99 || var_1337 == 72 || var_1337 == 80 || var_1337 == 148 || var_1337 == 153 || var_1337 == 154 || var_1337 == 156 || var_1337 == 157 || var_1337 == 159 || var_1337 == 93 || var_1337 == 96 || var_1337 == 98) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
+        // No = 368 能力「暗殺倍打」をDISCへ合成している時
         if (equip_disc[369] == 1) {
             var_1337 = var_83[var_314].Var0;
+            // 暗殺チーム設定
             if (var_1337 == 62 || var_1337 == 63 || var_1337 == 85 || var_1337 == 64 || var_1337 == 106 || var_1337 == 107) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
+        // No = 370 能力「九柱神倍打」をDISCへ合成している時
         if (equip_disc[370] == 1) {
             var_1337 = var_83[var_314].Var0;
             if (var_1337 == 27 || var_1337 == 97 || var_1337 == 58 || var_1337 == 14 || var_1337 == 15 || var_1337 == 38 || var_1337 == 155 || var_1337 == 129) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
+        // No = 112 キラークイーンのDISCを装備している時
         if (equip_disc[112] == 1) {
             if (var_83[var_314].Var31 == 6 || var_83[var_314].Var31 == 7 || var_83[var_314].Var31 == 8) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
+        // No = 102 キング・クリムゾンのDISCを装備している時
         if (equip_disc[102] == 1) {
             if (var_83[var_314].Var31 == 9 || var_83[var_314].Var31 == 10) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
-        if (equip_disc[116] == 1 && var_83[var_314].Var31 == 2) {
+        // No = 116 ハーミットパープルのDISCを装備している時 Ver0.1401にて修正。他のDISC条件と書き方を統一
+        /*
+        if (equip_disc[116] == 1 && var_83[var_314].Var31 == 2) { 
             var_209 = Math.floor(var_209 * 3 / 2);
         }
+        */
+        if (equip_disc[116] == 1) { 
+            if (var_83[var_314].Var31 == 2) { // 敵がvar_972 = 2 吸血鬼属性の場合
+                var_209 = Math.floor(var_209 * 3 / 2);
+            }
+        }
+        // No = 124 ムーディーブルースのDISCを装備している時 Ver0.1401にて修正。他のDISC条件と書き方を統一
+        /*
         if (equip_disc[124] == 1 && var_83[var_314].Var0 == 131) {
             var_209 = Math.floor(var_209 * 3 / 2);
-        }
+        } 
         if (equip_disc[124] == 1 && var_83[var_314].Var0 == 132) {
             var_209 = Math.floor(var_209 * 3 / 2);
+        }
+        */
+        if (equip_disc[124] == 1) {
+            if (var_83[var_314].Var0 == 131 || var_83[var_314].Var0 == 132) { // 敵がNo = 131 ジョルノとNo = 132 レクイエムジョルノの場合
+                var_209 = Math.floor(var_209 * 3 / 2);
+            }
+        }
+        
+        // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグがONの時、直接攻撃(装備区分:攻撃に何も装備していない状態)のダメージ増加。
+        // func420の攻撃用disc装備を参考。
+        if (taskact1_on == 1) {
+            if (kougeki_disc_id == 0) {
+                var_209 = Math.floor(var_209 * 3 / 2);
+                //var_209 = 999;
+            }
         }
         if (var_125 == 1 && var_83[var_314].Var31 == 2) {
             var_209 = Math.floor(var_209 * 3 / 2);
@@ -13837,6 +9994,7 @@ function func638(this: any) {
         if (var_182 == 1) {
             var_209 = var_209 * 2;
         }
+        // No = 308 エボニーデビルのDISCを装備している時
         if (equip_disc[308] == 1 && var_83[var_314].Var0 == var_831 && var_83[var_314].Var0 != 0) {
             var_209 = var_209 * 2;
         }
@@ -13850,33 +10008,35 @@ function func638(this: any) {
         return;
     });
 }
+
 function func639(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(639);
         var_2867 = rnd(12);
         var_2938 = 0;
         if (var_129 == 0) {
-            if (var_357 == 104 && var_111 == 0) {
+            if (kougeki_disc_id == 104 && var_111 == 0) {
                 if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3 || var_2867 == 4 || var_2867 == 5) {
                     var_2867 = 0;
                 }
             }
-            if (var_357 == 104 && var_111 == 1) {
+            if (kougeki_disc_id == 104 && var_111 == 1) {
                 if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3) {
                     var_2867 = 0;
                 }
             }
         }
-        // おそらく敵のヒラリ動作処理？ enemy_list == 72 ケンゾー、enemy_list == 88 ドノヴァン、enemy_list == 99 マンハッタントランスファー
-        if (var_83[var_314].Var0 == 72 || var_83[var_314].Var0 == 88 || var_83[var_314].Var0 == 99) {
+        // 敵のヒラリ回避動作処理 enemy_list == 72 ケンゾー、enemy_list == 88 ドノヴァン、enemy_list == 99 マンハッタントランスファー
+        // Ver0.1401 enemy_list == 3 タワー・オブ・グレー、enemy_list == 139 リサリサ追加
+        if (var_83[var_314].Var0 == 3 || var_83[var_314].Var0 == 72 || var_83[var_314].Var0 == 88 || var_83[var_314].Var0 == 99 || var_83[var_314].Var0 == 139) {
             if (var_83[var_314].Var20 == 0 && equip_disc[366] == 0) {
-                if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3) {
+                if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3 || var_2867 == 4) { // Ver0.1401にて修正。敵がヒラリ回避をする確率3/12*100=25% → 確率4/12*100=33.33%
                     var_2867 = 0;
                     var_2938 = 1;
                 }
             }
         }
-        if (var_357 != 104) {
+        if (kougeki_disc_id != 104) {
             if (var_111 == 1 || var_83[var_314].Var12 != 0 || var_83[var_314].Var13 != 0) {
                 var_2867 = 1;
                 var_2938 = 0;
@@ -13893,6 +10053,7 @@ function func639(this: any) {
         return;
     });
 }
+
 function func640(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(640);
@@ -14001,6 +10162,7 @@ function func641(this: any) {
         return;
     });
 }
+
 function func642(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(642);
@@ -14127,6 +10289,7 @@ function func642(this: any) {
         return;
     });
 }
+// 3方向攻撃処理?
 function func643(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(643);
@@ -14838,13 +11001,13 @@ function func644(this: any) {
             var_83[var_314].Var5 = var_2657;
             var_83[var_314].Var7 = 0;
         }
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_198 = 0;
         var_300 = 0;
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_2939 = 0;
@@ -14938,7 +11101,7 @@ function func646(this: any) {
         }
         if (var_2987 == 0) {
             var_2985 = 1;
-            belongings_item_list = var_357;
+            belongings_item_list = kougeki_disc_id;
             yield func492(); // アイテムリスト呼び出し
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -14963,13 +11126,13 @@ function func646(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            belongings_item_list = var_357;
+            belongings_item_list = kougeki_disc_id;
             yield func106(); // BGM選曲呼び出し割り振り
             yield func426();
             var_476 = dim(40);
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             yield func494();
             var_225 = var_553;
             yield func433(); // アイテム配列(所持アイテム)初期化関数
@@ -14984,7 +11147,7 @@ function func646(this: any) {
 function func647(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(647);
-        if (var_251 == 1 && var_410 == 0) {
+        if (var_251 == 1 && shageki_disc_id == 0) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -15031,7 +11194,7 @@ function func647(this: any) {
         if (var_2106 == 2) {
             var_340 = 487;
             var_2106 = 0;
-            if (var_215 == 112 || var_215 == 394) {
+            if (nouryoku_disc_id == 112 || nouryoku_disc_id == 394) {
                 var_340 = 488;
                 var_2329 = 1;
             }
@@ -15039,7 +11202,7 @@ function func647(this: any) {
         if (var_2106 == 1 && var_2329 == 0) {
             var_340 = 489;
             var_2106 = 0;
-            if (var_215 == 112 || var_215 == 394) {
+            if (nouryoku_disc_id == 112 || nouryoku_disc_id == 394) {
                 var_340 = 488;
                 var_2329 = 1;
             }
@@ -15057,8 +11220,8 @@ function func647(this: any) {
         var_1266 = 4;
         yield func337(); // メッセージ関係呼び出し
         var_1266 = 6;
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_1197 = 1;
         var_1266 = 0;
@@ -15068,7 +11231,7 @@ function func647(this: any) {
         if (var_340 == 403) {
             var_1250 = 1;
         }
-        yield func097();
+        yield func097(); // 射撃攻撃時の効果音設定
         if (var_340 != 403) {
             if (var_199 == 4) {
                 var_1416 = 40;
@@ -15583,6 +11746,12 @@ function func649(this: any) {
         if (var_340 == 414) {
             gcopy(34, 320 + var_1416, 1240, 40, 40);
         }
+        if (var_340 == 415) { // Ver0.1401にて追加。タスクact1
+            gcopy(34, 320 + var_1416, 1240, 40, 40);
+        }
+        if (var_340 == 416) { // Ver0.1401にて追加。タスクact3
+            gcopy(34, 320 + var_1416, 1240, 40, 40);
+        }
         if (var_340 == 489) {
             color(0, 0, 0);
     
@@ -15800,7 +11969,7 @@ function func651(this: any) {
         }
         if (equip_disc[104] == 1) {
             if (var_71[var_347][var_348] == 0 && var_71[var_66][var_67] != 0 && var_3014 == 0 && var_199 != 1 && var_199 != 3 && var_199 != 7 && var_199 != 9) {
-                if (var_92 != 1 && var_92 != 7 && var_92 != 16 && var_262 == 0) {
+                if (y_axis_map_image != 1 && y_axis_map_image != 7 && y_axis_map_image != 16 && var_262 == 0) {
                     if (var_347 >= 5 && var_348 >= 5 && var_347 <= var_33 && var_348 <= var_34) {
                         var_71[var_347][var_348] = 14;
                         var_303 = var_347;
@@ -15844,8 +12013,8 @@ function func651(this: any) {
                 }
             }
         }
-        if (var_357 == 108 && var_82[var_347][var_348] == 0) {
-            var_357 = 110;
+        if (kougeki_disc_id == 108 && var_82[var_347][var_348] == 0) {
+            kougeki_disc_id = 110;
         }
         if (var_2932 == 0 && var_2939 == 0) {
             var_74[var_347][var_348] = 2;
@@ -15854,7 +12023,7 @@ function func651(this: any) {
             var_2935 = var_80[var_347][var_348];
             var_81[var_2935][4] = 1;
         }
-        if (var_357 == 110) {
+        if (kougeki_disc_id == 110) {
             if (var_199 == 4) {
                 var_3016 = var_347 - 1;
                 var_3017 = var_348;
@@ -16044,11 +12213,11 @@ function func651(this: any) {
         var_2938 = 0;
         var_217 = 1;
         var_1194 = 0;
-        if (var_357 == 110) {
-            var_357 = 108;
+        if (kougeki_disc_id == 110) {
+            kougeki_disc_id = 108;
             var_750 = 0;
         }
-        if (var_357 == 113) {
+        if (kougeki_disc_id == 113) {
             if (var_71[var_347][var_348] == 13) {
                 yield func652();
             }
@@ -16073,27 +12242,27 @@ function func651(this: any) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
-                if (var_357 == 101) {
+                if (kougeki_disc_id == 101) {
                     var_341 = 2;
                     var_243 = 1;
-                    var_357 = 122;
+                    kougeki_disc_id = 122;
                     yield func636();
                     return;
                 }
-                if (var_357 == 122) {
+                if (kougeki_disc_id == 122) {
                     var_341 = 2;
                     var_243 = 1;
-                    var_357 = 101;
+                    kougeki_disc_id = 101;
                     yield func636();
                     return;
                 }
             }
         }
-        if (var_357 == 122 || var_357 == 101) {
-            var_357 = var_2923;
+        if (kougeki_disc_id == 122 || kougeki_disc_id == 101) {
+            kougeki_disc_id = var_2923;
         }
         if (equip_disc[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
-            if (var_357 != 100 && var_357 != 398) {
+            if (kougeki_disc_id != 100 && kougeki_disc_id != 398) {
                 var_2926 = 0;
                 yield func641();
                 if (var_2968 == 1) {
@@ -16103,7 +12272,7 @@ function func651(this: any) {
                     return;
                 }
             }
-            if (var_357 == 100 || var_357 == 398) {
+            if (kougeki_disc_id == 100 || kougeki_disc_id == 398) {
                 var_2926 = 0;
                 yield func642();
                 if (var_2968 == 1) {
@@ -16637,7 +12806,7 @@ function func654(this: any) {
         yield func626();
         var_2197 = 0;
         if (var_83[var_673].Var20 == 0) {
-            yield func620();
+            yield func620(); // 各敵の特殊能力(ディアボロへの攻撃)割り振り処理
         }
         if (var_2197 == 1) {
             var_83[var_673].Var7 = 0;
@@ -17017,7 +13186,7 @@ function func654(this: any) {
         }
         if (var_83[var_673].Var0 == 140 || var_83[var_673].Var0 == 136 || var_83[var_673].Var0 == 73 || var_83[var_673].Var0 == 135 || var_83[var_673].Var0 == 139 || var_83[var_673].Var0 == 119 || var_83[var_673].Var0 == 111) {
             var_1073 = rnd(5);
-            if (var_1073 == 0 && var_178 == 0 && var_83[var_673].Var20 == 0 && var_215 != 116 && var_125 == 0) {
+            if (var_1073 == 0 && var_178 == 0 && var_83[var_673].Var20 == 0 && nouryoku_disc_id != 116 && var_125 == 0) {
                 yield func340(); // キー入力による選択処理
         
                 DSPLAY(audio_id = 120);
@@ -17195,12 +13364,12 @@ function func655(this: any) {
         }
         var_742 = 1;
         var_83[var_2819].Var7 = 1;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_672 = var_83[var_673].Var0;
         yield func093();
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
         var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
@@ -17303,7 +13472,7 @@ function func657(this: any) {
         var_300 = 0;
         yield func047();
         yield func340(); // キー入力による選択処理
-        if (var_410 == 406) {
+        if (shageki_disc_id == 406) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -17576,7 +13745,7 @@ function func658(this: any) {
                 var_198 = 1;
                 var_300 = 0;
                 yield func340(); // キー入力による選択処理
-                if (var_215 == 111 || var_215 == 398) {
+                if (nouryoku_disc_id == 111 || nouryoku_disc_id == 398) {
                     var_114 = 0;
                     var_463 = 0;
                     var_464 = 0;
@@ -17603,11 +13772,11 @@ function func658(this: any) {
                     comments_row2a = "";
                     var_298 = "";
                     var_299 = 0;
-                    if (var_215 == 111) {
+                    if (nouryoku_disc_id == 111) {
                         comments_row1 = "『ザ・ワールド』！";
                         comments_row2 = "";
                     }
-                    if (var_215 == 398) {
+                    if (nouryoku_disc_id == 398) {
                         comments_row1 = "『ｽﾀｰﾌﾟﾗﾁﾅ･ｻﾞ･ﾜｰﾙﾄﾞ』！";
                         comments_row2 = "";
                     }
@@ -17972,7 +14141,7 @@ function func658(this: any) {
             if (var_1073 != 0 || var_178 != 0) {
                 return;
             }
-            if (var_215 != 116 && var_125 == 0) {
+            if (nouryoku_disc_id != 116 && var_125 == 0) {
                 var_178 = 1;
         
                 DSPLAY(audio_id = 120);
@@ -17982,11 +14151,11 @@ function func658(this: any) {
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            if (var_215 != 116 && var_125 == 0) {
+            if (nouryoku_disc_id != 116 && var_125 == 0) {
                 comments_row1a = "オーノーだズラ！";
                 comments_row2a = "波紋を流されちまったズラ！";
             }
-            if (var_215 == 116 || var_125 >= 1) {
+            if (nouryoku_disc_id == 116 || var_125 >= 1) {
                 comments_row1a = "波紋でやられそうになったが、";
                 comments_row2a = "波紋に強くなっていて平気だった。";
             }
@@ -18015,7 +14184,7 @@ function func658(this: any) {
             }
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            if (var_215 != 109 && var_410 != 404 && var_215 != 202 && var_173 == 0) {
+            if (nouryoku_disc_id != 109 && shageki_disc_id != 404 && nouryoku_disc_id != 202 && var_173 == 0) {
                 var_1073 = rnd(3);
                 if (var_1073 == 0) {
                     comments_row1a = "チェックが甘かったな…！";
@@ -18030,7 +14199,7 @@ function func658(this: any) {
                     comments_row2a = "";
                 }
             }
-            if (var_215 == 109 || var_410 == 404 || var_215 == 202) {
+            if (nouryoku_disc_id == 109 || shageki_disc_id == 404 || nouryoku_disc_id == 202) {
                 comments_row1a = "凍らされそうになったが、";
                 comments_row2a = "装備ｽﾀﾝﾄﾞのおかげで平気だった";
                 var_128 = 0;
@@ -19020,7 +15189,7 @@ function func660(this: any) {
             return;
         }
         if (var_1270 == 1 && var_1852 == 2) {
-            if (var_215 == 112 || var_215 == 394) {
+            if (nouryoku_disc_id == 112 || nouryoku_disc_id == 394) {
                 var_340 = 488;
             }
         }
@@ -20356,7 +16525,16 @@ function func660(this: any) {
                 var_403 = "F・Fのパワーは全開だ！";
             }
         }
+        // No = 414 タスクact2 & アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
         if (var_340 == 414 && var_168 == 1) {
+            var_403 = "爪の回転がアップしている！";
+        }
+        // Ver0.1401にて追加。No = 415 タスクact1 & アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
+        if (var_340 == 415 && var_168 == 1) {
+            var_403 = "爪の回転がアップしている！";
+        }
+        // Ver0.1401にて追加。No = 416 タスクact3 & アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
+        if (var_340 == 416 && var_168 == 1) {
             var_403 = "爪の回転がアップしている！";
         }
         if (var_340 == 411) {
@@ -20404,6 +16582,7 @@ function func660(this: any) {
         return;
     });
 }
+// 射撃discの攻撃力設定
 function func661(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(661);
@@ -20439,8 +16618,23 @@ function func661(this: any) {
             if (var_340 == 411) {
                 var_3076 = 5;
             }
-            if (var_340 == 414) {
+            if (var_340 == 414) { // No = 414 タスクact2
                 var_3076 = 12;
+            }
+            if (var_340 == 415) { // Ver0.1401にて追加。No = 415 タスクact1
+                var_3076 = 7;
+            }
+            if (var_340 == 416) { // Ver0.1401にて追加。No = 416 タスクact3
+                var_3076 = 16;
+            }
+            if (var_340 == 417) { // Ver0.1401にて追加。No = 417 ラット
+                var_3076 = 4;
+            }
+            if (var_340 == 418) { // Ver0.1401にて追加。No = 418 スカイ・ハイ
+                var_3076 = 0;
+            }
+            if (var_340 == 419) { // Ver0.1401にて追加。No = 419 チューブラー・ベルズ
+                var_3076 = 2;
             }
             if (var_340 == 490) {
                 var_3076 = 8;
@@ -21440,8 +17634,8 @@ function func674(this: any) {
 function func675(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(675);
-        belongings_item_list = var_215;
-        var_3081 = var_215;
+        belongings_item_list = nouryoku_disc_id;
+        var_3081 = nouryoku_disc_id;
         yield func428();
         disc_rarity = var_233[var_555].Var13;
         yield func492(); // アイテムリスト呼び出し
@@ -22293,7 +18487,7 @@ function func685(this: any) {
         var_300 = 0;
         yield func047();
         if (var_123 == 0) {
-            var_92 = 10;
+            y_axis_map_image = 10;
         }
         if (var_123 != 0) {
             var_396 = 10;

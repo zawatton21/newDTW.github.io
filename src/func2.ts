@@ -409,6 +409,7 @@ function func205(this: any) {
         yield func206();
     });
 }
+// 設定から解像度変更する処理
 function func206(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(206);
@@ -419,7 +420,7 @@ function func206(this: any) {
             yield func051();
             if (var_910 == 0) {
                 var_10 = 0;
-                width(680, 680);
+                width(340, 340); // Ver0.1401にて修正。width(340, 340); → width(680, 680); 
             }
             if (var_910 == 1) {
                 var_10 = 1;
@@ -482,7 +483,6 @@ function func207(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(207);
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(42, 137);
         gcopy(12, 0, 0, 123, 63);
@@ -495,7 +495,6 @@ function func207(this: any) {
         pset(161, 140);
         pset(45, 195);
         pset(161, 195);
-
         font("ＭＳ　Ｐゴシック", 16, 1);
         color(255, 255, 255);
         pos(85, 150);
@@ -635,7 +634,6 @@ function func210(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(210);
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(5, 35);
         gcopy(12, 0, 0, 332, 205);
@@ -658,7 +656,6 @@ function func210(this: any) {
         pset(331, 246);
         pset(9, 331);
         pset(331, 331);
-
         font("ＭＳ ゴシック", 16, 1);
         color(255, 255, 255);
         if (var_911 == 1) {
@@ -720,7 +717,6 @@ function func210(this: any) {
         }
         pos(40, 195);
         mes("ゲームに戻る");
-
         font("ＭＳ Ｐゴシック", 12, 1);
         color(255, 255, 255);
         pos(20, 250);
@@ -730,7 +726,6 @@ function func210(this: any) {
         mes("　無効となることがあるため、斜め移動は");
         mes("　SHIFTキーのままをお勧めします。");
         color(255, 255, 255);
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         pos(15, Y_axis_item_position);
         mes(">");
@@ -981,7 +976,6 @@ function func216(this: any) {
                 Y_axis_item_position = 140;
                 var_925 = 1;
             }
-
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
@@ -993,7 +987,6 @@ function func216(this: any) {
                 Y_axis_item_position = 300;
                 var_925 = 9;
             }
-
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
@@ -2190,7 +2183,7 @@ function func227(this: any) {
         var_979 = var_979 + "" + "\n";
         var_980 = 1;
         var_979 = var_979 + "■■■攻撃ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
-        if (var_357 != 0) {
+        if (kougeki_disc_id != 0) {
             yield func426();
             belongings_item_list = var_233[var_553].Var0;
             disc_rarity = var_233[var_553].Var13;
@@ -2229,7 +2222,7 @@ function func227(this: any) {
         }
         var_979 = var_979 + "" + "\n";
         var_979 = var_979 + "■■■防御ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
-        if (var_358 != 0) {
+        if (bougyo_disc_id != 0) {
             yield func427();
             belongings_item_list = var_233[var_554].Var0;
             disc_rarity = var_233[var_554].Var13;
@@ -2268,7 +2261,7 @@ function func227(this: any) {
         }
         var_979 = var_979 + "" + "\n";
         var_979 = var_979 + "■■■能力ｽﾀﾝﾄﾞ■■■■■■■■■■■■■■" + "\n";
-        if (var_215 != 0) {
+        if (nouryoku_disc_id != 0) {
             yield func428();
             belongings_item_list = var_233[var_555].Var0;
             disc_rarity = var_233[var_555].Var13;
@@ -2370,10 +2363,10 @@ function func229(this: any) {
         var_374 = 0;
         var_128 = 0;
         var_389 = 0;
-        var_357 = 0;
-        var_358 = 0;
-        var_215 = 0;
-        var_410 = 0;
+        kougeki_disc_id = 0;
+        bougyo_disc_id = 0;
+        nouryoku_disc_id = 0;
+        shageki_disc_id = 0;
         var_250 = 0;
         var_839 = 0;
         var_586 = 0;
@@ -2386,6 +2379,9 @@ function func229(this: any) {
         var_169 = 0;
         var_170 = 0;
         var_172 = 0;
+        
+        taskact1_on = 0; // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグ
+
         var_233 = ItemInfo.dim(100);
         var_476 = dim(40);
         var_477 = dim(40);
@@ -2537,10 +2533,10 @@ function func229(this: any) {
         var_374 = var_704[32];
         var_128 = var_704[33];
         var_993 = var_704[34];
-        var_357 = var_704[35];
-        var_358 = var_704[36];
-        var_215 = var_704[37];
-        var_410 = var_704[38];
+        kougeki_disc_id = var_704[35];
+        bougyo_disc_id = var_704[36];
+        nouryoku_disc_id = var_704[37];
+        shageki_disc_id = var_704[38];
         var_250 = var_704[39];
         var_224 = var_704[40];
         var_66 = var_704[41];
@@ -2550,7 +2546,7 @@ function func229(this: any) {
         var_336 = var_704[45];
         var_97 = var_704[46];
         var_337 = var_704[47];
-        var_92 = var_704[48];
+        y_axis_map_image = var_704[48];
         var_96 = var_704[49];
         var_95 = var_704[50];
         var_994 = var_704[51];
@@ -2874,10 +2870,10 @@ function func231(this: any) {
         var_704[32] = var_374;
         var_704[33] = var_128;
         var_704[34] = var_993;
-        var_704[35] = var_357;
-        var_704[36] = var_358;
-        var_704[37] = var_215;
-        var_704[38] = var_410;
+        var_704[35] = kougeki_disc_id;
+        var_704[36] = bougyo_disc_id;
+        var_704[37] = nouryoku_disc_id;
+        var_704[38] = shageki_disc_id;
         var_704[39] = var_250;
         var_704[40] = var_224;
         var_704[41] = var_66;
@@ -2887,7 +2883,7 @@ function func231(this: any) {
         var_704[45] = var_336;
         var_704[46] = var_97;
         var_704[47] = var_337;
-        var_704[48] = var_92;
+        var_704[48] = y_axis_map_image;
         var_704[49] = var_96;
         var_704[50] = var_95;
         var_704[51] = var_994;
@@ -3310,10 +3306,10 @@ function func233(this: any) {
         var_374 = 0;
         var_128 = 0;
         var_389 = 0;
-        var_357 = 0;
-        var_358 = 0;
-        var_215 = 0;
-        var_410 = 0;
+        kougeki_disc_id = 0;
+        bougyo_disc_id = 0;
+        nouryoku_disc_id = 0;
+        shageki_disc_id = 0;
         var_250 = 0;
         var_896 = 0;
         var_897 = 0;
@@ -3422,6 +3418,9 @@ function func233(this: any) {
         var_200 = 0;
         var_99 = 0;
         var_202 = 0;
+
+        taskact1_on = 0; // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグ
+
         var_862 = dim(length1 = 1000, length2 = 4, length3 = null, length4 = null);
         if (var_532 == 0) {
             var_233 = ItemInfo.dim(100);
@@ -3557,10 +3556,10 @@ function func235(this: any) {
         var_374 = 0;
         var_128 = 0;
         var_389 = 0;
-        var_357 = 0;
-        var_358 = 0;
-        var_215 = 0;
-        var_410 = 0;
+        kougeki_disc_id = 0;
+        bougyo_disc_id = 0;
+        nouryoku_disc_id = 0;
+        shageki_disc_id = 0;
         var_250 = 0;
         var_224 = 0;
         var_66 = 0;
@@ -3570,7 +3569,7 @@ function func235(this: any) {
         var_336 = 0;
         var_97 = 0;
         var_337 = 0;
-        var_92 = 0;
+        y_axis_map_image = 0;
         var_96 = 0;
         var_95 = 0;
         var_994 = 0;
@@ -3765,6 +3764,7 @@ function func235(this: any) {
         var_538 = 0;
         var_99 = 0;
         var_202 = 0;
+        taskact1_on = 0; // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグ
         return;
     });
 }
@@ -4137,7 +4137,7 @@ function func243(this: any) {
     });
 }
 
-
+// ダンジョンマップ選択関数(IDによって割り振り)
 function func244(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(244);
@@ -4145,197 +4145,197 @@ function func244(this: any) {
         var_994 = 0;
         var_1052 = 0;
         var_96 = 0;
-        var_1072 = rnd(11);
+        special_map_id = rnd(11);
         if (dangeon_number == 3) {
-            var_1072 = rnd(14);
+            special_map_id = rnd(14);
         }
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1 && current_floor == 12) {
-            var_1072 = 111;
+            special_map_id = 111; // エンヤホテルのダンジョンマップ
         }
         // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
-            var_1072 = 121;
+            special_map_id = 121; // 黄金の風のダンジョンマップ
         }
         // No = 3 なので、ディアボロの試練
-        if (dangeon_number == 3 && current_floor == 99) {
-            var_1072 = 120;
+        if (dangeon_number == 3 && current_floor == 99) { // 最終フロア自由人の狂想曲
+            special_map_id = 120; // 自由人の狂想曲のダンジョンマップ
         }
         if (special_floor == 1) { // 虹村屋敷
-            var_1072 = 114;
+            special_map_id = 114; // 虹村屋敷のダンジョンマップ
         }
         if (special_floor == 2) { // 杜王町埠頭
-            var_1072 = 112;
+            special_map_id = 112; // 杜王町埠頭のダンジョンマップ
         }
         if (special_floor == 3) { // 吉良屋敷
-            var_1072 = 115;
+            special_map_id = 115; // 吉良屋敷のダンジョンマップ
         }
         if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
-            var_1072 = 116;
+            special_map_id = 116;
         }
         if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
-            var_1072 = 117;
+            special_map_id = 117;
         }
         if (special_floor == 7) { // 広大な砂漠
-            var_1072 = 113;
+            special_map_id = 113;
         }
         if (special_floor == 8) { // 幻覚の迷宮
-            var_1072 = 118;
+            special_map_id = 118;
         }
         if (special_floor == 9) { // 幽霊部屋
-            var_1072 = 119;
+            special_map_id = 119;
         }
         if (var_70 == 5) {
-            var_1072 = 6;
+            special_map_id = 6;
         }
         if (var_70 == 6) {
-            var_1072 = 3;
+            special_map_id = 3;
         }
         if (var_70 == 7) {
-            var_1072 = 0;
+            special_map_id = 0;
         }
         if (var_70 == 11) {
-            var_1072 = 11;
+            special_map_id = 11;
         }
         if (var_70 == 12) {
-            var_1072 = 12;
+            special_map_id = 12;
         }
         if (var_70 == 99) {
-            var_1072 = 122;
+            special_map_id = 122;
         }
         if (var_70 == 1 || var_70 == 2 || var_70 == 3 || var_70 == 4 || var_70 == 8 || var_70 == 9 || var_70 == 10 || var_70 == 13) {
             var_1073 = rnd(4);
             if (var_1073 == 0) {
-                var_1072 = 1;
+                special_map_id = 1;
             }
             if (var_1073 == 1) {
-                var_1072 = 2;
+                special_map_id = 2;
             }
             if (var_1073 == 2) {
-                var_1072 = 9;
+                special_map_id = 9;
             }
             if (var_1073 == 3) {
-                var_1072 = 10;
+                special_map_id = 10;
             }
         }
-        if (var_1072 == 0) {
+        if (special_map_id == 0) {
             var_1073 = rnd(3);
             if (var_1073 == 0 || var_1073 == 1) {
-                yield func300();
+                yield func300(); // 大部屋ダンジョンマップ
             }
             if (var_1073 == 2) {
-                yield func301();
+                yield func301(); // 大部屋ダンジョンマップ(水床あり)
             }
         }
-        if (var_1072 == 1) {
+        if (special_map_id == 1) {
             yield func303();
         }
-        if (var_1072 == 2) {
+        if (special_map_id == 2) {
             yield func304();
         }
-        if (var_1072 == 3) {
+        if (special_map_id == 3) {
             yield func305();
         }
-        if (var_1072 == 4) {
+        if (special_map_id == 4) {
             yield func306();
         }
-        if (var_1072 == 5) {
+        if (special_map_id == 5) {
             yield func307();
         }
-        if (var_1072 == 6) {
+        if (special_map_id == 6) {
             yield func319();
         }
-        if (var_1072 == 7) {
+        if (special_map_id == 7) {
             yield func308();
         }
-        if (var_1072 == 8) {
+        if (special_map_id == 8) {
             yield func318();
         }
-        if (var_1072 == 9) {
+        if (special_map_id == 9) {
             yield func320();
         }
-        if (var_1072 == 10) {
+        if (special_map_id == 10) {
             yield func321();
         }
         if (dangeon_number != 5) {
-            if (var_1072 == 11) {
-                yield func311();
+            if (special_map_id == 11) {
+                yield func311();  // 広大な砂漠のダンジョンマップ
                 special_floor = 7; // 広大な砂漠
             }
-            if (var_1072 == 12) {
-                yield func302();
+            if (special_map_id == 12) {
+                yield func302(); // 幻覚の迷宮のダンジョンマップ
                 special_floor = 8; // 幻覚の迷宮
             }
-            if (var_1072 == 13) {
-                yield func316();
+            if (special_map_id == 13) {
+                yield func316(); // 幽霊部屋のダンジョンマップ
                 special_floor = 9;
             }
         }
-        if (var_1072 == 111) {
-            yield func309();
+        if (special_map_id == 111) {
+            yield func309(); // エンヤホテルのダンジョンマップ
         }
-        if (var_1072 == 112) {
-            yield func310();
+        if (special_map_id == 112) {
+            yield func310(); // 杜王町埠頭のダンジョンマップ
         }
-        if (var_1072 == 113) {
-            yield func311();
+        if (special_map_id == 113) {
+            yield func311(); // 広大な砂漠のダンジョンマップ
         }
-        if (var_1072 == 114) {
-            yield func312();
+        if (special_map_id == 114) {
+            yield func312(); // 虹村屋敷のダンジョンマップ
         }
-        if (var_1072 == 115) {
-            yield func313();
+        if (special_map_id == 115) {
+            yield func313(); // 吉良屋敷のダンジョンマップ
         }
-        if (var_1072 == 116) {
-            yield func314();
+        if (special_map_id == 116) {
+            yield func314(); // 没特殊階層「ビンの中」ボスは毒グモのダンジョンマップ
         }
-        if (var_1072 == 117) {
-            yield func315();
+        if (special_map_id == 117) {
+            yield func315(); // 没特殊階層「ナチス実験施設」ボスはサンタナのダンジョンマップ
         }
-        if (var_1072 == 118) {
-            yield func302();
+        if (special_map_id == 118) {
+            yield func302(); // 幻覚の迷宮のダンジョンマップ
         }
-        if (var_1072 == 119) {
-            yield func316();
+        if (special_map_id == 119) {
+            yield func316(); // 幽霊部屋のダンジョンマップ
         }
-        if (var_1072 == 120) {
-            yield func317();
+        if (special_map_id == 120) {
+            yield func317(); // 自由人の狂想曲のダンジョンマップ
         }
-        if (var_1072 == 121) {
-            yield func322();
+        if (special_map_id == 121) {
+            yield func322(); // 黄金の風のダンジョンマップ
         }
-        if (var_1072 == 122) {
-            yield func300();
+        if (special_map_id == 122) {
+            yield func300(); // 大部屋ダンジョンマップ
         }
-        if (var_1072 == 0) {
+        if (special_map_id == 0) {
             var_204 = 1;
             var_96 = 1;
         }
-        if (var_1072 == 1) {
+        if (special_map_id == 1) {
             var_1074 = rnd(2);
             var_1074 = var_1074 + 1;
             var_204 = var_1074;
             yield func245();
         }
-        if (var_1072 == 2) {
+        if (special_map_id == 2) {
             var_1074 = rnd(4);
             var_1074 = var_1074 + 1;
             var_204 = var_1074;
             yield func245();
         }
-        if (var_1072 == 9) {
+        if (special_map_id == 9) {
             var_1074 = rnd(6);
             var_1074 = var_1074 + 1;
             var_204 = var_1074;
             yield func245();
         }
-        if (var_1072 == 10) {
+        if (special_map_id == 10) {
             var_1074 = rnd(3);
             var_1074 = var_1074 + 1;
             var_204 = var_1074;
             yield func245();
         }
-        if (var_1072 == 122) {
+        if (special_map_id == 122) {
             var_204 = 1;
             var_96 = 9;
         }
@@ -4599,7 +4599,7 @@ function func246(this: any) {
         dbgprt(246);
         var_95 = 0;
         var_994 = 0;
-        yield func293();
+        yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
         var_1052 = 0;
         var_96 = 0;
         var_1052 = rnd(6);
@@ -4734,7 +4734,7 @@ function func247(this: any) {
                     var_96 = 0;
                 }
             }
-            if (var_1091 >= 98 && var_1091 < 100) {
+            if (var_1091 >= 98 && var_1091 < 100) { // 幻覚の迷宮が出る確率 2%
                 var_1090 = 4;
                 if (var_204 == var_560) {
                     var_96 = 0;
@@ -4743,49 +4743,49 @@ function func247(this: any) {
         }
         if (var_1090 == 0) {
             var_493[var_560] = 0;
-            yield func256();
+            yield func256();  // 不明マップ??
         }
         if (var_1090 == 2) {
             var_493[var_560] = 1;
             var_1092 = rnd(13);
             if (var_1092 == 0) {
-                yield func258();
+                yield func258(); // 不明マップ??
             }
             if (var_1092 == 1) {
-                yield func259();
+                yield func259(); // 不明マップ??
             }
             if (var_1092 == 2) {
-                yield func260();
+                yield func260(); // 不明マップ??
             }
             if (var_1092 == 3) {
-                yield func261();
+                yield func261(); // 不明マップ??
             }
             if (var_1092 == 4) {
-                yield func262();
+                yield func262(); // 不明マップ??
             }
             if (var_1092 == 5) {
-                yield func263();
+                yield func263(); // 不明マップ??
             }
             if (var_1092 == 6) {
-                yield func264();
+                yield func264(); // 不明マップ??
             }
             if (var_1092 == 7) {
-                yield func265();
+                yield func265(); // 不明マップ??
             }
             if (var_1092 == 8) {
-                yield func266();
+                yield func266(); // 不明マップ??
             }
             if (var_1092 == 9) {
-                yield func267();
+                yield func267(); // 不明マップ??
             }
             if (var_1092 == 10) {
-                yield func268();
+                yield func268(); // 不明マップ??
             }
             if (var_1092 == 11) {
-                yield func269();
+                yield func269(); // 不明マップ??
             }
             if (var_1092 == 12) {
-                yield func270();
+                yield func270(); // 不明マップ??
             }
         }
         if (var_1090 == 3) {
@@ -4796,52 +4796,52 @@ function func247(this: any) {
                 var_1092 = rnd(15);
             }
             if (var_1092 == 0) {
-                yield func271();
+                yield func271(); // 不明マップ??
             }
             if (var_1092 == 1) {
-                yield func272();
+                yield func272(); // 不明マップ??
             }
             if (var_1092 == 2) {
-                yield func273();
+                yield func273(); // 不明マップ??
             }
             if (var_1092 == 3) {
-                yield func274();
+                yield func274(); // 不明マップ??
             }
             if (var_1092 == 4) {
-                yield func275();
+                yield func275(); // 不明マップ??
             }
             if (var_1092 == 5) {
-                yield func276();
+                yield func276(); // 不明マップ??
             }
             if (var_1092 == 6) {
-                yield func277();
+                yield func277(); // 不明マップ??
             }
             if (var_1092 == 7) {
-                yield func278();
+                yield func278(); // 不明マップ??
             }
             if (var_1092 == 8) {
-                yield func279();
+                yield func279(); // 不明マップ??
             }
             if (var_1092 == 9) {
-                yield func280();
+                yield func280(); // 不明マップ??
             }
             if (var_1092 == 10) {
-                yield func281();
+                yield func281(); // 不明マップ??
             }
             if (var_1092 == 11) {
-                yield func282();
+                yield func282(); // 不明マップ??
             }
             if (var_1092 == 12) {
-                yield func283();
+                yield func283(); // 不明マップ??
             }
             if (var_1092 == 13) {
-                yield func284();
+                yield func284(); // 不明マップ??
             }
             if (var_1092 == 14) {
-                yield func285();
+                yield func285(); // 不明マップ??
             }
             if (var_1092 == 15) {
-                yield func286();
+                yield func286(); // 不明マップ??
             }
         }
         if (var_1090 == 4) {
@@ -4851,7 +4851,7 @@ function func247(this: any) {
             }
             else {
                 var_493[var_560] = 2;
-                yield func287();
+                yield func287(); // 不明マップ??
                 var_1004 = 1;
                 var_994 = 1;
                 var_95 = var_560;
@@ -5966,6 +5966,7 @@ function func255(this: any) {
         return;
     });
 }
+// 
 function func256(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(256);
@@ -6602,6 +6603,7 @@ function func287(this: any) {
         return;
     });
 }
+// ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
 function func288(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(288);
@@ -6611,10 +6613,10 @@ function func288(this: any) {
         var_1102 = 1;
         var_1082 = 30;
         var_1084 = 23;
-        var_983 = "###################^^^########";
+        var_983 =           "###################^^^########";
         var_983 = var_983 + "##########.########^^^111111##";
         var_983 = var_983 + "##########...######^^^111111##";
-        var_983 = var_983 + "######........#####^^^111111##";
+        var_983 = var_983 + "######........#####^^^111111##"; // この辺がヴェネチアホテルのマップ + ローマ・ティベレ河のマップ
         var_983 = var_983 + "#######.......#####^^^111111##";
         var_983 = var_983 + "#######.......#####^^^111111##";
         var_983 = var_983 + "###################^^^111111##";
@@ -6629,7 +6631,7 @@ function func288(this: any) {
         var_983 = var_983 + "##############################";
         var_983 = var_983 + "##########....################";
         var_983 = var_983 + "#########^#...################";
-        var_983 = var_983 + "#######.#.....################";
+        var_983 = var_983 + "#######.#.....################"; // この辺が亀のマップ
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "##############################";
         var_983 = var_983 + "##############################";
@@ -6637,6 +6639,7 @@ function func288(this: any) {
         return;
     });
 }
+// ヴェネチアホテル+亀マップ配置処理(亀の成長1)
 function func289(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(289);
@@ -6646,10 +6649,10 @@ function func289(this: any) {
         var_1102 = 1;
         var_1082 = 30;
         var_1084 = 23;
-        var_983 = "##############################";
+        var_983 =           "##############################";
         var_983 = var_983 + "##########.###################";
         var_983 = var_983 + "##########...#################";
-        var_983 = var_983 + "######........################";
+        var_983 = var_983 + "######........################"; // この辺がヴェネチアホテルのマップ
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "##############################";
@@ -6664,7 +6667,7 @@ function func289(this: any) {
         var_983 = var_983 + "##############################";
         var_983 = var_983 + "##########....################";
         var_983 = var_983 + "#########^#...################";
-        var_983 = var_983 + "#######.#.....################";
+        var_983 = var_983 + "#######.#.....################"; // この辺が亀のマップ
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "##############################";
@@ -6672,6 +6675,7 @@ function func289(this: any) {
         return;
     });
 }
+// ヴェネチアホテル+亀マップ配置処理(亀の成長2)
 function func290(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(290);
@@ -6681,10 +6685,10 @@ function func290(this: any) {
         var_1102 = 1;
         var_1082 = 30;
         var_1084 = 23;
-        var_983 = "##############################";
+        var_983 =           "##############################";
         var_983 = var_983 + "##########.###################";
         var_983 = var_983 + "##########...#################";
-        var_983 = var_983 + "######........################";
+        var_983 = var_983 + "######........################"; // この辺がヴェネチアホテルのマップ
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "##############################";
@@ -6699,7 +6703,7 @@ function func290(this: any) {
         var_983 = var_983 + "##############################";
         var_983 = var_983 + "##########....################";
         var_983 = var_983 + "#########^#...################";
-        var_983 = var_983 + "#######.#.....################";
+        var_983 = var_983 + "#######.#.....################"; // この辺が亀のマップ
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "#######.......################";
@@ -6707,6 +6711,7 @@ function func290(this: any) {
         return;
     });
 }
+// ヴェネチアホテル+亀マップ配置処理(亀の成長3)
 function func291(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(291);
@@ -6716,10 +6721,10 @@ function func291(this: any) {
         var_1102 = 1;
         var_1082 = 30;
         var_1084 = 23;
-        var_983 = "##############################";
+        var_983 =           "##############################";
         var_983 = var_983 + "##########.###################";
         var_983 = var_983 + "##########...#################";
-        var_983 = var_983 + "######........################";
+        var_983 = var_983 + "######........################"; // この辺がヴェネチアホテルのマップ
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "##############################";
@@ -6734,7 +6739,7 @@ function func291(this: any) {
         var_983 = var_983 + "##############################";
         var_983 = var_983 + "######.###....################";
         var_983 = var_983 + "######.##^#...################";
-        var_983 = var_983 + "######..#.....################";
+        var_983 = var_983 + "######..#.....################"; // この辺が亀のマップ
         var_983 = var_983 + "######........################";
         var_983 = var_983 + "######........################";
         var_983 = var_983 + "######........################";
@@ -6742,6 +6747,7 @@ function func291(this: any) {
         return;
     });
 }
+// ヴェネチアホテル+亀マップ配置処理(亀の成長4)
 function func292(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(292);
@@ -6751,10 +6757,10 @@ function func292(this: any) {
         var_1102 = 1;
         var_1082 = 30;
         var_1084 = 23;
-        var_983 = "##############################";
+        var_983 =           "##############################";
         var_983 = var_983 + "##########.###################";
         var_983 = var_983 + "##########...#################";
-        var_983 = var_983 + "######........################";
+        var_983 = var_983 + "######........################"; // この辺がヴェネチアホテルのマップ
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "#######.......################";
         var_983 = var_983 + "##############################";
@@ -6769,7 +6775,7 @@ function func292(this: any) {
         var_983 = var_983 + "##############################";
         var_983 = var_983 + "#####..###....################";
         var_983 = var_983 + "#####..##^#...################";
-        var_983 = var_983 + "#####...#.....################";
+        var_983 = var_983 + "#####...#.....################"; // この辺が亀のマップ
         var_983 = var_983 + "#####.........################";
         var_983 = var_983 + "#####.........################";
         var_983 = var_983 + "#####.........################";
@@ -6777,13 +6783,14 @@ function func292(this: any) {
         return;
     });
 }
+// ダンジョンマップ初期化処理(+ヴェネチアホテル)
 function func293(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(293);
         var_983 = sdim(3000);
 
         var_71 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-        var_983 = "########################################################";
+        var_983 =           "########################################################";
         var_983 = var_983 + "########################################################";
         var_983 = var_983 + "########################################################";
         var_983 = var_983 + "########################################################";
@@ -6831,7 +6838,7 @@ function func294(this: any) {
         var_1136 = sdim(3000);
 
         var_1137 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-        var_1136 = "########################################################";
+        var_1136 =            "########################################################";
         var_1136 = var_1136 + "########################################################";
         var_1136 = var_1136 + "########################################################";
         var_1136 = var_1136 + "########################################################";

@@ -40,8 +40,8 @@ function reset_input(x: any, y: any) {
     // 37:← (左矢印), 38:↑ (上矢印), 39:→ (右矢印), 40:↓ (下矢印)
     pushing_key_list[37] = pushing_key_list[38] = pushing_key_list[39] = pushing_key_list[40] = 0;
     // 88:X, 90:Z
-    if (pushing_key_list[88] == 1 && pushing_key_list[90] == 1) {
-        pushing_key_list[88] = pushing_key_list[90] = 0;
+    if (pushing_key_list[88] == 1 && pushing_key_list[90] == 1) { // 88:Xキー, 90:Zキー
+        pushing_key_list[88] = pushing_key_list[90] = 0; // 88:Xキー, 90:Zキー
         document.getElementById("XH").style.border = '';
     }
     if ((x <= 5) || (y <= 5) || (x >= canvasSize - 5) || (y >= canvasSize - 5)) {
@@ -51,19 +51,19 @@ function reset_input(x: any, y: any) {
     const b1 = canvasSize / 3;
     const b2 = canvasSize / 3 * 2;
     if (x < b1) {
-        pushing_key_list[37] = 1;
+        pushing_key_list[37] = 1; // 37:← (左矢印)
     }
     if (x > b2) {
-        pushing_key_list[39] = 1;
+        pushing_key_list[39] = 1; // 38:↑ (上矢印)
     }
     if (y < b1) {
-        pushing_key_list[38] = 1;
+        pushing_key_list[38] = 1; // 39:→ (右矢印)
     }
     if (y > b2) {
-        pushing_key_list[40] = 1;
+        pushing_key_list[40] = 1; // 40:↓ (下矢印)
     }
     if (b1 < x && x < b2 && b1 < y && y < b2) {
-        pushing_key_list[88] = pushing_key_list[90] = 1;
+        pushing_key_list[88] = pushing_key_list[90] = 1; // 88:Xキー, 90:Zキー
     }
     pre_pos = [x, y];
 }
@@ -107,8 +107,8 @@ function InitInput() {
         }
         if (buttons[i].id == "XH") {
             buttons[i].onmousedown = function (e) {
-    if (pushing_key_list[88] > 0) {
-        pushing_key_list[88] = 0;
+    if (pushing_key_list[88] > 0) { // 88:Xキー
+        pushing_key_list[88] = 0; // 88:Xキー
         (this as any).style.border = 'inset 2px';
     }
     else {
@@ -117,14 +117,14 @@ function InitInput() {
     }
 };
             buttons[i].ontouchstart = function (e) {
-                if (pushing_key_list[88] > 0) {
+                if (pushing_key_list[88] > 0) { // 88:Xキー
                     console.log(e);
-                    pushing_key_list[88] = 0;
+                    pushing_key_list[88] = 0; // 88:Xキー
                     // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                     this["style"].border = 'inset 2px';
                 }
                 else {
-                    pushing_key_list[88] = 1;
+                    pushing_key_list[88] = 1; // 88:Xキー
                     // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                     this["style"].border = '';
                 }
@@ -2346,7 +2346,7 @@ p3,p4 : ディスプレイ上でのウィンドウX,Y座標（1ドット単位�
 p1,p2およびp3,p4パラメータが省略された場合は、現在の設定が使われます。
 */
 //function width(data0:any, data1:any) { undef_func("width", [data0, data1]); }
-function width(width: any, height: any) {
+function width(width: any, height: any) { // func206にて使用している。
     //screen_(null, width, height, null);
 /*
     mainWindow.resizeTo(width, height);

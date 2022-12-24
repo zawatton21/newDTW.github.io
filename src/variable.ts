@@ -174,7 +174,7 @@ let var_88 :any;
 let var_89 :any;
 let var_90 :any;
 let current_floor :number; // 現在の階層
-let var_92 :any;
+let y_axis_map_image :number; // map.gif上でのY座標指定用。gcopy(5)
 let var_93 :any;
 let special_floor :number; // 特殊階層ID
 let var_95 :any;
@@ -238,7 +238,7 @@ let var_152 :any;
 let var_153 :any;
 let var_154 :any;
 let var_155 :any;
-let equip_disc :any[]; // 装備しているdisc(装備区分問わず)を格納し、装備しているかどうかを判別する。例えばメイド・イン・ヘブンのdiscを装備しているだと equip_disc[396] == 1 となる
+let equip_disc :any[]; // 装備しているdisc(装備区分問わず、射撃discは除く)を格納し、装備しているかどうかを判別する。例えばメイド・イン・ヘブンのdiscを装備しているだと equip_disc[396] == 1 となる。
 let var_157 :any;
 let var_158 :any;
 let var_159 :any;
@@ -297,7 +297,7 @@ let var_211 :any;
 let var_212 :any;
 let var_213 :any;
 let var_214 :any;
-let var_215 :number; // belongings_item_list 多い
+let nouryoku_disc_id :number; // 能力装備disc専用ID
 let var_216 :any;
 let var_217 :any;
 let var_218 :any;
@@ -443,9 +443,9 @@ let var_352 :any;
 let var_353 :any;
 let var_354 :any;
 let var_355 :any;
-let var_356 :any;
-let var_357 :number; // belongings_item_list 多い
-let var_358 :number; // belongings_item_list
+let var_356 :number; // 死因要因メッセージID 選択フラグ
+let kougeki_disc_id :number; // 攻撃装備disc用ID
+let bougyo_disc_id :number; // 防御装備disc用ID
 let var_359 :any;
 let var_360 :any;
 let var_361 :any;
@@ -497,7 +497,7 @@ let var_406 :any;
 let var_407 :any;
 let var_408 :any;
 let var_409 :any;
-let var_410 :number; // belongings_item_list
+let shageki_disc_id :number; // 射撃disc専用ID。
 let var_411 :any;
 let var_412 :any;
 let var_413 :any;
@@ -758,7 +758,7 @@ let var_667 :any;
 let var_668 :any; // 効果音上限設定処理 (最大値:137)
 let se_volume :number; // 効果音の現在ボリューム
 let var_670 :any;
-let var_671 :any;
+let se_file_name :number; // 効果音ID。DSPLAYで効果音を指定する際に使用する。
 let var_672 :any;
 let var_673 :any;
 let var_674 :any;
@@ -897,7 +897,7 @@ let item_description1 :string; // アイテムの説明。攻撃:0 防御:0 な�
 let free_space_value :number; // 装備discにおいて、合成できる残り容量
 let effects_message :string; // アイテムの"説明"を開いた時に表示される合成能力や消費アイテムの効果のメッセージ
 let track_number :number; // 装備discにおいて、合成した能力の順番
-let var_810 :any;
+let var_810 :number; // 装備discにおてい、合成出来る回数??
 let var_811 :any;
 let var_812 :any;
 let var_813 :any;
@@ -1159,7 +1159,7 @@ let var_1068 :any;
 let var_1069 :any;
 let var_1070 :any;
 let var_1071 :any;
-let var_1072 :any;
+let special_map_id :number; // ダンジョンマップID。
 let var_1073 :any;
 let var_1074 :any;
 let var_1075 :any;
@@ -1934,7 +1934,7 @@ let var_1843 :any;
 let var_1844 :any;
 let var_1845 :any;
 let var_1846 :number; // belongings_item_list
-let var_1847 :any;
+let var_1847 :number; // free_space_valueと同じく装備discの空き容量。関数同士の受け渡しに使用
 let var_1848 :any;
 let var_1849 :any;
 let var_1850 :any;
@@ -2111,7 +2111,7 @@ let var_2020 :number; // 装備discの合成した数
 let var_2021 :any;
 let var_2022 :any;
 let var_2023 :any;
-let var_2024 :any;
+let var_2024 :number; // free_space_valueと同じく"空き容量："の表示に使われている
 let var_2025 :any;
 let var_2026 :any;
 let var_2027 :any;
@@ -3189,7 +3189,7 @@ let var_3077 :any;
 let var_3078 :any;
 let var_3079 :any;
 let var_3080 :any;
-let var_3081 :number; // belongings_item_list var_215 の橋渡し
+let var_3081 :number; // belongings_item_list nouryoku_disc_id の橋渡し
 let var_3082 :any;
 let var_3083 :any;
 let var_3084 :any;
@@ -3712,3 +3712,5 @@ let var_3600 :any;
 let var_3601 :any;
 let var_3602 :any;
 let var_3603 :any;
+let taskact1_on : number; // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグ
+let key_F_on: number; // Ver0.1401にて追加。入力判定：射撃disc「フー・ファイターズ」を所持している場合に発動(F)

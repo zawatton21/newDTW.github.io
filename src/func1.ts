@@ -1,29 +1,29 @@
 function func100(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(100);
-        var_671 = 171;
+        se_file_name = 171;
         if (var_488 >= 100 && var_488 < 500) {
-            var_671 = 171;
+            se_file_name = 171;
         }
         if (var_488 == 800) {
-            var_671 = 203;
+            se_file_name = 203;
         }
         if (var_488 >= 750 && var_488 < 800) {
-            var_671 = 203;
+            se_file_name = 203;
         }
         if (var_488 >= 900 && var_488 < 1000) {
-            var_671 = 203;
+            se_file_name = 203;
         }
         if (var_488 >= 805 && var_488 <= 809) {
-            var_671 = 204;
+            se_file_name = 204;
         }
         if (var_488 == 854) {
-            var_671 = 204;
+            se_file_name = 204;
         }
         if (var_488 == 850 || var_488 == 851) {
-            var_671 = 205;
+            se_file_name = 205;
         }
-        DSPLAY(audio_id = var_671);
+        DSPLAY(audio_id = se_file_name);
         var_488 = 0;
         return;
     });
@@ -75,6 +75,10 @@ function func101(this: any) {
         if (bgm_list_id == 109) {
             bgm_file_name = "109.mp3";
             bgm_title = "Paula Abdul [Forever Your Girl]";
+        }
+        if (bgm_list_id == 110) {  // Ver0.1401にて追加。B･D･ザ･ハウスのDISC
+            bgm_file_name = "";
+            bgm_title = "";
         }
         if (bgm_list_id == 111) {
             bgm_file_name = "111.mp3";
@@ -164,6 +168,66 @@ function func101(this: any) {
             bgm_file_name = "207.mp3";
             bgm_title = "The Grateful Dead [Dark Star]";
         }
+        if (bgm_list_id == 208) { // Ver0.1401にて追加。C-MOONのDISC
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 250) { // Ver0.1401にて追加。オー!ロンサム・ミー
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 251) { // Ver0.1401にて追加。シビル・ウォー
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 252) { // Ver0.1401にて追加。クリーム・スターター
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 253) { // Ver0.1401にて追加。スケアリー・モンスターズ
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 254) { // Ver0.1401にて追加。C・ザ・レインボー
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 255) { // Ver0.1401にて追加。イン・ア・サイレント・ウェイ
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 256) { // Ver0.1401にて追加。チョコレイト・ディスコ
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 257) { // Ver0.1401にて追加。T・O・T・B ワン
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 258) { // Ver0.1401にて追加。ボールブレイカー&スキャン
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 259) { // Ver0.1401にて追加。TATOO YOU!
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 260) { // Ver0.1401にて追加。20th Century Boy
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 261) { // Ver0.1401にて追加。D4C
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 262) { // Ver0.1401にて追加。タスクact4
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
+        if (bgm_list_id == 263) { // Ver0.1401にて追加。D4Cラブトレイン
+            bgm_file_name = "207.mp3";
+            bgm_title = "The Grateful Dead [Dark Star]";
+        }
         if (bgm_list_id == 300) {
             bgm_file_name = "300.mp3";
             bgm_title = "Pearl jam [Alive]";
@@ -192,11 +256,15 @@ function func101(this: any) {
             bgm_file_name = "306.mp3";
             bgm_title = "Manhattan Transfer [Boy from NewYork City]";
         }
+        if (bgm_list_id == 307) { // Ver0.1401にて追加。リトル・フィートのDISC
+            bgm_file_name = "";
+            bgm_title = "";
+        }
         if (bgm_list_id == 308) {
             bgm_file_name = "308.mp3";
             bgm_title = "Devo [Beautiful World]";
         }
-        if (bgm_list_id == 309) {
+        if (bgm_list_id == 309) { // Ver0.1401にて追加。ソフト・マシーンのDISC
             bgm_file_name = "309.mp3";
             bgm_title = "Soft Machine [Facelift]";
         }
@@ -325,6 +393,26 @@ function func101(this: any) {
             bgm_title = "nothing";
         }
         if (bgm_list_id == 414) {
+            bgm_file_name = "414.mp3";
+            bgm_title = "Chuck Berry [Johnny B. Goode]";
+        }
+        if (bgm_list_id == 415) { // Ver0.1401にて追加。タスクact1のBGM
+            bgm_file_name = "414.mp3";
+            bgm_title = "Chuck Berry [Johnny B. Goode]";
+        }
+        if (bgm_list_id == 416) { // Ver0.1401にて追加。タスクact3のBGM
+            bgm_file_name = "414.mp3";
+            bgm_title = "Chuck Berry [Johnny B. Goode]";
+        }
+        if (bgm_list_id == 417) { // Ver0.1401にて追加。ラットのBGM
+            bgm_file_name = "414.mp3";
+            bgm_title = "Chuck Berry [Johnny B. Goode]";
+        }
+        if (bgm_list_id == 418) { // Ver0.1401にて追加。スカイ・ハイのBGM
+            bgm_file_name = "414.mp3";
+            bgm_title = "Chuck Berry [Johnny B. Goode]";
+        }
+        if (bgm_list_id == 419) { // Ver0.1401にて追加。チューブラー・ベルズのBGM
             bgm_file_name = "414.mp3";
             bgm_title = "Chuck Berry [Johnny B. Goode]";
         }
@@ -1639,7 +1727,8 @@ function func140(this: any) {
         }
         var_628 = 1;
         yield func080(); // 各キー入力確認
-        if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1 || key_Shift_on == 1 || key_C_on == 1) {
+        // Ver0.1401にて「key_F_on == 1」を追加
+        if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1 || key_Shift_on == 1 || key_C_on == 1 || key_F_on == 1) {
 
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             yield func178(); // 処理確認タイマー(3m秒)
@@ -2391,7 +2480,7 @@ function func150(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(150);
         yield func233();
-        yield func158();
+        yield func158(); // オープニング戦マップ配置処理
         yield func108(); // BGM用mp3ファイル再生停止
         var_595 = 3;
         yield func076(); // マップ背景画像の読込
@@ -2879,7 +2968,7 @@ function func150(this: any) {
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 4;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 1;
             // yield func337(); // メッセージ関係呼び出し
@@ -2888,7 +2977,7 @@ function func150(this: any) {
             yield func337(); // メッセージ関係呼び出し
             var_83[4].Var5 = 4;
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         for (let cnt1 = 0; cnt1 < 8; ++cnt1) {
@@ -4231,6 +4320,7 @@ function func157(this: any) {
         return;
     });
 }
+// オープニング戦マップ配置処理
 function func158(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(158);
@@ -4238,12 +4328,12 @@ function func158(this: any) {
         var_262 = 1;
         current_floor = 0;
         var_199 = 8;
-        var_92 = 18;
-        yield func293();
+        y_axis_map_image = 18;
+        yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
         var_560 = 1;
         var_561 = 5;
         var_562 = 5;
-        yield func288();
+        yield func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
         yield func248();
         // No = 0 なので、拠点(ホテル、亀、)
         dangeon_number = 0;
@@ -4304,25 +4394,25 @@ function func159(this: any) {
         current_floor = 0;
         var_199 = 2;
         var_68 = 1;
-        var_92 = 1;
-        yield func293();
+        y_axis_map_image = 1;
+        yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
         var_560 = 1;
         var_561 = 5;
         var_562 = 5;
         if (var_559 == 0) {
-            yield func288();
+            yield func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
         }
         if (var_559 == 1) {
-            yield func289();
+            yield func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
         }
         if (var_559 == 2) {
-            yield func290();
+            yield func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
         }
         if (var_559 == 3) {
-            yield func291();
+            yield func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
         }
         if (var_559 == 4) {
-            yield func292();
+            yield func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
         }
         yield func248();
         // No = 0 なので、拠点(ホテル、亀、)
@@ -5903,7 +5993,6 @@ function func170(this: any) {
             if (var_812 == 4) {
                 color(240, 0, 240);
             }
-    
             font("ＭＳ ゴシック", 14, 1);
             if (var_813[track_number] != "") {
                 mes("" + var_813[track_number]);
@@ -6213,17 +6302,17 @@ function func175(this: any) {
         var_792[var_793][0][51] = gettime(1); // now.getMonth()+1;// 月（month）。「1～12」の範囲の数値が返る。
         var_792[var_793][0][52] = gettime(3); // now.getDate();// 日（day）。「1～31」の範囲の数値が返る。
         var_792[var_793][0][19] = 0;
-        if (var_357 != 0) {
+        if (kougeki_disc_id != 0) {
             yield func426();
-            var_792[var_793][0][4] = var_357;
+            var_792[var_793][0][4] = kougeki_disc_id;
             if (var_233[var_553].Var13 == 1) {
-                var_792[var_793][0][4] = var_357 + 1000;
+                var_792[var_793][0][4] = kougeki_disc_id + 1000;
             }
             if (var_233[var_553].Var13 == 2) {
-                var_792[var_793][0][4] = var_357 + 2000;
+                var_792[var_793][0][4] = kougeki_disc_id + 2000;
             }
             if (var_233[var_553].Var13 == 3) {
-                var_792[var_793][0][4] = var_357 + 3000;
+                var_792[var_793][0][4] = kougeki_disc_id + 3000;
             }
             var_792[var_793][0][5] = var_233[var_553].Var4;
             var_792[var_793][0][6] = var_233[var_553].Var19;
@@ -6240,17 +6329,17 @@ function func175(this: any) {
             var_792[var_793][0][53] = var_233[var_553].Var5;
             var_792[var_793][0][56] = var_233[var_553].Var12;
         }
-        if (var_358 != 0) {
+        if (bougyo_disc_id != 0) {
             yield func427();
-            var_792[var_793][0][7] = var_358;
+            var_792[var_793][0][7] = bougyo_disc_id;
             if (var_233[var_554].Var13 == 1) {
-                var_792[var_793][0][7] = var_358 + 1000;
+                var_792[var_793][0][7] = bougyo_disc_id + 1000;
             }
             if (var_233[var_554].Var13 == 2) {
-                var_792[var_793][0][7] = var_358 + 2000;
+                var_792[var_793][0][7] = bougyo_disc_id + 2000;
             }
             if (var_233[var_554].Var13 == 3) {
-                var_792[var_793][0][7] = var_358 + 3000;
+                var_792[var_793][0][7] = bougyo_disc_id + 3000;
             }
             var_792[var_793][0][8] = var_233[var_554].Var4;
             var_792[var_793][0][9] = var_233[var_554].Var19;
@@ -6267,17 +6356,17 @@ function func175(this: any) {
             var_792[var_793][0][54] = var_233[var_554].Var5;
             var_792[var_793][0][57] = var_233[var_554].Var12;
         }
-        if (var_215 != 0) {
+        if (nouryoku_disc_id != 0) {
             yield func428();
-            var_792[var_793][0][10] = var_215;
+            var_792[var_793][0][10] = nouryoku_disc_id;
             if (var_233[var_555].Var13 == 1) {
-                var_792[var_793][0][10] = var_215 + 1000;
+                var_792[var_793][0][10] = nouryoku_disc_id + 1000;
             }
             if (var_233[var_555].Var13 == 2) {
-                var_792[var_793][0][10] = var_215 + 2000;
+                var_792[var_793][0][10] = nouryoku_disc_id + 2000;
             }
             if (var_233[var_555].Var13 == 3) {
-                var_792[var_793][0][10] = var_215 + 3000;
+                var_792[var_793][0][10] = nouryoku_disc_id + 3000;
             }
             var_792[var_793][0][11] = var_233[var_555].Var4;
             var_792[var_793][0][12] = var_233[var_555].Var19;
@@ -7946,16 +8035,16 @@ function func192(this: any) {
         var_476 = dim(40);
         var_580 = var_580 - var_894;
         var_894 = 0;
-        var_357 = 0;
+        kougeki_disc_id = 0;
         var_477 = dim(40);
         var_581 = var_581 - var_895;
         var_895 = 0;
-        var_358 = 0;
+        bougyo_disc_id = 0;
         var_479 = dim(40);
         var_250 = 0;
-        var_410 = 0;
+        shageki_disc_id = 0;
         var_478 = dim(40);
-        var_215 = 0;
+        nouryoku_disc_id = 0;
         var_896 = 0;
         var_897 = 0;
         var_898 = 0;

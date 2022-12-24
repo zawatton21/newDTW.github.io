@@ -3932,8 +3932,8 @@ function func841(this: any) {
         yield func856();
         yield func847();
         width(680, 680);
-        var_92 = 2;
-        var_3263 = var_92;
+        y_axis_map_image = 2;
+        var_3263 = y_axis_map_image;
         var_3264 = 1;
         var_3265 = 1;
         var_3266 = 6;
@@ -4722,10 +4722,10 @@ function func855(this: any) {
             }
             for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
                 if (var_447 < 5 || var_447 > 56 || var_449 < 5 || var_449 > 37) {
-                    var_92 = 6;
+                    y_axis_map_image = 6;
                 }
                 else {
-                    var_92 = var_3263;
+                    y_axis_map_image = var_3263;
                 }
                 var_1146 = var_447 - 1;
                 if (var_1146 < 0) {
@@ -4792,215 +4792,215 @@ function func855(this: any) {
                 var_1151 = var_1151 + 10;
                 pos(var_1150, var_1151);
                 if (var_71[var_447][var_449] >= 1 && var_71[var_447][var_449] <= 12) {
-                    gcopy(5, 0, var_92 * 40, 40, 40);
+                    gcopy(5, 0, y_axis_map_image * 40, 40, 40);
                     pos(var_1150 + 3, var_1151 + 30);
                     font("ＭＳ Ｐゴシック", 11);
                     color(155, 155, 155);
                     mes(var_71[var_447][var_449]);
                 }
                 if (var_73[var_447][var_449] == 1) {
-                    gcopy(5, 0, var_92 * 40, 40, 40);
+                    gcopy(5, 0, y_axis_map_image * 40, 40, 40);
                 }
                 if (var_71[var_447][var_449] == 14 || var_71[var_447][var_449] == 21 || var_71[var_447][var_449] == 22 || var_71[var_447][var_449] == 23 || var_71[var_447][var_449] == 24) {
-                    gcopy(5, 120, var_92 * 40, 40, 40);
+                    gcopy(5, 120, y_axis_map_image * 40, 40, 40);
                 }
                 if (var_71[var_447][var_449] == 0) {
                     if (var_87[var_447][var_449] <= 5) {
-                        gcopy(5, 240, var_92 * 40, 40, 40);
+                        gcopy(5, 240, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] == 6 || var_87[var_447][var_449] == 7) {
-                        gcopy(5, 280, var_92 * 40, 40, 40);
+                        gcopy(5, 280, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] == 8 || var_87[var_447][var_449] == 9) {
-                        gcopy(5, 320, var_92 * 40, 40, 40);
+                        gcopy(5, 320, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_1148] != 0 && var_71[var_1146][var_1148] <= 24 && var_71[var_1146][var_449] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 760, var_92 * 40, 40, 40);
+                        gcopy(5, 760, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_1148] != 0 && var_71[var_1147][var_1148] <= 24 && var_71[var_1147][var_449] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 800, var_92 * 40, 40, 40);
+                        gcopy(5, 800, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_1149] != 0 && var_71[var_1146][var_1149] <= 24 && var_71[var_447][var_1149] == 0 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 840, var_92 * 40, 40, 40);
+                        gcopy(5, 840, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_1149] != 0 && var_71[var_1147][var_1149] <= 24 && var_71[var_447][var_1149] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 880, var_92 * 40, 40, 40);
+                        gcopy(5, 880, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 24 && var_71[var_447][var_1149] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 520, var_92 * 40, 40, 40);
+                        gcopy(5, 520, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 24 && var_71[var_447][var_1149] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 560, var_92 * 40, 40, 40);
+                        gcopy(5, 560, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 24 && var_71[var_1146][var_449] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 480, var_92 * 40, 40, 40);
+                        gcopy(5, 480, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 24 && var_71[var_1146][var_449] == 0 && var_71[var_1147][var_449] == 0) {
                         if (var_87[var_447][var_449] <= 3) {
-                            gcopy(5, 360, var_92 * 40, 40, 40);
+                            gcopy(5, 360, y_axis_map_image * 40, 40, 40);
                         }
                         if (var_87[var_447][var_449] == 4 || var_87[var_447][var_449] == 5) {
-                            gcopy(5, 400, var_92 * 40, 40, 40);
+                            gcopy(5, 400, y_axis_map_image * 40, 40, 40);
                         }
                         if (var_87[var_447][var_449] == 6 || var_87[var_447][var_449] == 7) {
-                            gcopy(5, 440, var_92 * 40, 40, 40);
+                            gcopy(5, 440, y_axis_map_image * 40, 40, 40);
                         }
                         if (var_87[var_447][var_449] == 8 || var_87[var_447][var_449] == 9) {
                             if (var_1153 == 0 || var_1153 == 1) {
-                                gcopy(5, 1240, var_92 * 40, 40, 40);
+                                gcopy(5, 1240, y_axis_map_image * 40, 40, 40);
                             }
                             if (var_1153 == 2 || var_1153 == 3) {
-                                gcopy(5, 1280, var_92 * 40, 40, 40);
+                                gcopy(5, 1280, y_axis_map_image * 40, 40, 40);
                             }
                             if (var_1153 == 4 || var_1153 == 5) {
-                                gcopy(5, 1320, var_92 * 40, 40, 40);
+                                gcopy(5, 1320, y_axis_map_image * 40, 40, 40);
                             }
                             if (var_1153 == 6 || var_1153 == 7) {
-                                gcopy(5, 1360, var_92 * 40, 40, 40);
+                                gcopy(5, 1360, y_axis_map_image * 40, 40, 40);
                             }
                         }
                     }
                     if (var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 24 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 24 && var_71[var_447][var_1149] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 600, var_92 * 40, 40, 40);
+                        gcopy(5, 600, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 24 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 24 && var_71[var_447][var_1149] == 0 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 640, var_92 * 40, 40, 40);
+                        gcopy(5, 640, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 24 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 24 && var_71[var_447][var_1148] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 680, var_92 * 40, 40, 40);
+                        gcopy(5, 680, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 24 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 24 && var_71[var_447][var_1148] == 0 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 720, var_92 * 40, 40, 40);
+                        gcopy(5, 720, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 24 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 24 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 24 && var_71[var_447][var_1149] == 0) {
-                        gcopy(5, 1000, var_92 * 40, 40, 40);
+                        gcopy(5, 1000, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 24 && var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 24 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 24 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 1040, var_92 * 40, 40, 40);
+                        gcopy(5, 1040, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 24 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 24 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 24 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 1080, var_92 * 40, 40, 40);
+                        gcopy(5, 1080, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 24 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 24 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 24 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 1120, var_92 * 40, 40, 40);
+                        gcopy(5, 1120, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 24 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 24 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 24 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 24) {
-                        gcopy(5, 1160, var_92 * 40, 40, 40);
+                        gcopy(5, 1160, y_axis_map_image * 40, 40, 40);
                     }
                 }
                 if (var_71[var_447][var_449] == 13) {
                     if (var_1153 == 0 || var_1153 == 1 || var_1153 == 2 || var_1153 == 3) {
-                        gcopy(5, 1520, var_92 * 40, 40, 40);
+                        gcopy(5, 1520, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_1153 == 4 || var_1153 == 5 || var_1153 == 6 || var_1153 == 7) {
-                        gcopy(5, 1560, var_92 * 40, 40, 40);
+                        gcopy(5, 1560, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_1153 == 8 || var_1153 == 9 || var_1153 == 10 || var_1153 == 11) {
-                        gcopy(5, 1600, var_92 * 40, 40, 40);
+                        gcopy(5, 1600, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1148] != 13) {
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150 + 8, var_1151);
-                            gcopy(5, 1400 + 8, var_92 * 40, 24, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40, 24, 4);
                         }
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150 + 8, var_1151);
-                            gcopy(5, 1400 + 8, var_92 * 40, 32, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1400, var_92 * 40, 32, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1400, var_92 * 40, 40, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40, 40, 4);
                         }
                     }
                     if (var_71[var_447][var_1149] != 13) {
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150 + 8, var_1151 + 36);
-                            gcopy(5, 1400 + 8, var_92 * 40 + 36, 24, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40 + 36, 24, 4);
                         }
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150 + 8, var_1151 + 36);
-                            gcopy(5, 1400 + 8, var_92 * 40 + 36, 32, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40 + 36, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150, var_1151 + 36);
-                            gcopy(5, 1400, var_92 * 40 + 36, 32, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40 + 36, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150, var_1151 + 36);
-                            gcopy(5, 1400, var_92 * 40 + 36, 40, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40 + 36, 40, 4);
                         }
                     }
                     if (var_71[var_1146][var_449] != 13) {
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150, var_1151 + 8);
-                            gcopy(5, 1440, var_92 * 40 + 8, 4, 24);
+                            gcopy(5, 1440, y_axis_map_image * 40 + 8, 4, 24);
                         }
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1440, var_92 * 40, 4, 32);
+                            gcopy(5, 1440, y_axis_map_image * 40, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150, var_1151 + 8);
-                            gcopy(5, 1440, var_92 * 40 + 8, 4, 32);
+                            gcopy(5, 1440, y_axis_map_image * 40 + 8, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1440, var_92 * 40, 4, 40);
+                            gcopy(5, 1440, y_axis_map_image * 40, 4, 40);
                         }
                     }
                     if (var_71[var_1147][var_449] != 13) {
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150 + 36, var_1151 + 8);
-                            gcopy(5, 1440 + 36, var_92 * 40 + 8, 4, 24);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40 + 8, 4, 24);
                         }
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150 + 36, var_1151);
-                            gcopy(5, 1440 + 36, var_92 * 40, 4, 32);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150 + 36, var_1151 + 8);
-                            gcopy(5, 1440 + 36, var_92 * 40 + 8, 4, 32);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40 + 8, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150 + 36, var_1151);
-                            gcopy(5, 1440 + 36, var_92 * 40, 4, 40);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40, 4, 40);
                         }
                     }
                     if (var_71[var_447][var_1148] != 13 && var_71[var_1146][var_449] != 13) {
                         pos(var_1150, var_1151);
-                        gcopy(5, 1480, var_92 * 40, 8, 8);
+                        gcopy(5, 1480, y_axis_map_image * 40, 8, 8);
                     }
                     if (var_71[var_447][var_1149] != 13 && var_71[var_1146][var_449] != 13) {
                         pos(var_1150, var_1151 + 32);
-                        gcopy(5, 1480, var_92 * 40 + 32, 8, 8);
+                        gcopy(5, 1480, y_axis_map_image * 40 + 32, 8, 8);
                     }
                     if (var_71[var_447][var_1148] != 13 && var_71[var_1147][var_449] != 13) {
                         pos(var_1150 + 32, var_1151);
-                        gcopy(5, 1480 + 32, var_92 * 40, 8, 8);
+                        gcopy(5, 1480 + 32, y_axis_map_image * 40, 8, 8);
                     }
                     if (var_71[var_447][var_1149] != 13 && var_71[var_1147][var_449] != 13) {
                         pos(var_1150 + 32, var_1151 + 32);
-                        gcopy(5, 1480 + 32, var_92 * 40 + 32, 8, 8);
+                        gcopy(5, 1480 + 32, y_axis_map_image * 40 + 32, 8, 8);
                     }
                     if (var_71[var_447][var_1148] == 13 && var_71[var_1146][var_449] == 13 && var_71[var_1146][var_1148] != 13) {
                         pos(var_1150, var_1151);
-                        gcopy(5, 1480 + 16, var_92 * 40 + 16, 4, 4);
+                        gcopy(5, 1480 + 16, y_axis_map_image * 40 + 16, 4, 4);
                     }
                     if (var_71[var_447][var_1148] == 13 && var_71[var_1147][var_449] == 13 && var_71[var_1147][var_1148] != 13) {
                         pos(var_1150 + 37, var_1151);
-                        gcopy(5, 1480 + 21, var_92 * 40 + 16, 4, 4);
+                        gcopy(5, 1480 + 21, y_axis_map_image * 40 + 16, 4, 4);
                     }
                     if (var_71[var_447][var_1149] == 13 && var_71[var_1147][var_449] == 13 && var_71[var_1147][var_1149] != 13) {
                         pos(var_1150 - 1, var_1151 + 37);
-                        gcopy(5, 1480 + 15, var_92 * 40 + 22, 4, 4);
+                        gcopy(5, 1480 + 15, y_axis_map_image * 40 + 22, 4, 4);
                     }
                     if (var_71[var_447][var_1149] == 13 && var_71[var_1147][var_449] == 13 && var_71[var_1147][var_1149] != 13) {
                         pos(var_1150 + 37, var_1151 + 37);
-                        gcopy(5, 1480 + 21, var_92 * 40 + 22, 4, 4);
+                        gcopy(5, 1480 + 21, y_axis_map_image * 40 + 22, 4, 4);
                     }
                 }
                 if (var_71[var_447][var_449] >= 21 && var_71[var_447][var_449] <= 24) {
@@ -5043,8 +5043,8 @@ function func857(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(857);
         yield func858();
-        var_92 = var_3261;
-        var_3263 = var_92;
+        y_axis_map_image = var_3261;
+        var_3263 = y_axis_map_image;
         objsel(0);
         yield func852();
         return;
@@ -5114,7 +5114,7 @@ function func859(this: any) {
                 pos((var_447 - var_66 - 1) * 40 + 10, (var_449 - var_67 - 1) * 40 + 10);
                 gmode(2);
                 if (var_73[var_447][var_449] == 1) {
-                    gcopy(5, 1200, var_92 * 40, 40, 40);
+                    gcopy(5, 1200, y_axis_map_image * 40, 40, 40);
                 }
                 if (var_77[var_447][var_449] != 0) {
                     var_3305 = var_77[var_447][var_449];
@@ -6829,8 +6829,8 @@ function func876(this: any) {
         var_337 = 0;
         yield func877();
         yield func858();
-        var_92 = var_3261;
-        if (var_92 == 15 || var_92 == 19 || var_92 == 22 || var_92 == 11 || var_92 == 23) {
+        y_axis_map_image = var_3261;
+        if (y_axis_map_image == 15 || y_axis_map_image == 19 || y_axis_map_image == 22 || y_axis_map_image == 11 || y_axis_map_image == 23) {
             var_103 = 1;
         }
         var_199 = 2;

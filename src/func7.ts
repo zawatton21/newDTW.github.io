@@ -4594,7 +4594,7 @@ function func772(this: any) {
                             var_476 = dim(40);
                             var_580 = var_580 - var_894;
                             var_894 = 0;
-                            var_357 = 0;
+                            kougeki_disc_id = 0;
                             yield func494();
                             var_1977 = 1;
                         }
@@ -4602,19 +4602,19 @@ function func772(this: any) {
                             var_477 = dim(40);
                             var_581 = var_581 - var_895;
                             var_895 = 0;
-                            var_358 = 0;
+                            bougyo_disc_id = 0;
                             yield func494();
                             var_1977 = 1;
                         }
                         if (var_555 == var_225) {
                             var_478 = dim(40);
-                            var_215 = 0;
+                            nouryoku_disc_id = 0;
                             yield func494();
                             var_1977 = 1;
                         }
                         if (var_556 == var_225) {
                             var_479 = dim(40);
-                            var_410 = 0;
+                            shageki_disc_id = 0;
                             var_250 = 0;
                             var_1977 = 1;
                         }
@@ -4902,7 +4902,7 @@ function func776(this: any) {
             var_476 = dim(40);
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             yield func494();
             var_1977 = 1;
         }
@@ -4910,19 +4910,19 @@ function func776(this: any) {
             var_477 = dim(40);
             var_581 = var_581 - var_895;
             var_895 = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
             yield func494();
             var_1977 = 1;
         }
         if (var_555 == var_225) {
             var_478 = dim(40);
-            var_215 = 0;
+            nouryoku_disc_id = 0;
             yield func494();
             var_1977 = 1;
         }
         if (var_556 == var_225) {
             var_479 = dim(40);
-            var_410 = 0;
+            shageki_disc_id = 0;
             var_250 = 0;
             var_1977 = 1;
         }
@@ -6094,7 +6094,7 @@ function func790(this: any) {
 function func791(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(791);
-        if (var_215 == 115) {
+        if (nouryoku_disc_id == 115) {
             yield func792();
             return;
         }

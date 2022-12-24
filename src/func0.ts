@@ -456,7 +456,7 @@ function func007(this: any) {
             yield func246();
         }
         if (var_86 == 0) {
-            yield func244();
+            yield func244(); // ダンジョンマップ選択関数(IDによって割り振り)
         }
         if (var_86 != 0) {
             yield func253();
@@ -493,188 +493,188 @@ function func008(this: any) {
         // No = 1 なので、ホテルの外
         if (dangeon_number == 1) {
             if (current_floor <= 2) { // 水の都
-                var_92 = 15;
+                y_axis_map_image = 15;
             }
             if (current_floor >= 3 && current_floor <= 5) { // 郊外の森林
-                var_92 = 19;
+                y_axis_map_image = 19;
             }
             if (current_floor >= 6 && current_floor <= 8) { // 紅海の浜辺
-                var_92 = 11;
+                y_axis_map_image = 11;
             }
             if (current_floor >= 9 && current_floor <= 11) { // 山岳地帯
-                var_92 = 4;
+                y_axis_map_image = 4;
             }
             if (current_floor == 12) { // エンヤホテル
-                var_92 = 7;
+                y_axis_map_image = 7;
                 var_90 = 0;
             }
         }
         // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2) {
             if (current_floor >= 1 && current_floor <= 4) { // 下水道。Ver0.1310にて修正 (current_floor <= 5 → current_floor <= 4)
-                var_92 = 3;
+                y_axis_map_image = 3;
             }
             if (current_floor >= 5 && current_floor <= 8) { // 青色迷宮
-                var_92 = 6;
+                y_axis_map_image = 6;
             }
             if (current_floor >= 9 && current_floor <= 11) { // 茶色迷宮
-                var_92 = 2;
+                y_axis_map_image = 2;
             }
             if (current_floor >= 12 && current_floor <= 14) { // 
-                var_92 = 5;
+                y_axis_map_image = 5;
             }
             if (current_floor >= 15 && current_floor <= 19) {
-                var_92 = 4;
+                y_axis_map_image = 4;
             }
             if (current_floor >= 20 && current_floor <= 22) {
-                var_92 = 24;
+                y_axis_map_image = 24;
             }
             if (current_floor >= 23 && current_floor <= 25) {
-                var_92 = 20;
+                y_axis_map_image = 20;
             }
             if (current_floor >= 26) {
-                var_92 = 12;
+                y_axis_map_image = 12;
             }
         }
         // No = 3 なので、ディアボロの試練、No = 4 なので、一巡後の世界
         if (dangeon_number == 3 || dangeon_number == 4) {
             var_93 = rnd(16);
             if (var_93 == 0) {
-                var_92 = 2;
+                y_axis_map_image = 2;
             }
             if (var_93 == 1) {
-                var_92 = 3;
+                y_axis_map_image = 3;
             }
             if (var_93 == 2) {
-                var_92 = 6;
+                y_axis_map_image = 6;
             }
             if (var_93 == 3) {
-                var_92 = 5;
+                y_axis_map_image = 5;
             }
             if (var_93 == 4) {
-                var_92 = 4;
+                y_axis_map_image = 4;
             }
             if (var_93 == 5) {
-                var_92 = 8;
+                y_axis_map_image = 8;
                 var_90 = 0;
             }
             if (var_93 == 6) {
-                var_92 = 18;
+                y_axis_map_image = 18;
             }
             if (var_93 == 7) {
-                var_92 = 13;
+                y_axis_map_image = 13;
             }
             if (var_93 == 8) {
-                var_92 = 14;
+                y_axis_map_image = 14;
             }
             if (var_93 == 9) {
-                var_92 = 12;
+                y_axis_map_image = 12;
             }
             if (var_93 == 10) {
-                var_92 = 21;
+                y_axis_map_image = 21;
             }
             if (var_93 == 11) {
-                var_92 = 20;
+                y_axis_map_image = 20;
             }
             if (var_93 == 12) {
-                var_92 = 11;
+                y_axis_map_image = 11;
             }
             if (var_93 == 13) {
-                var_92 = 13;
+                y_axis_map_image = 13;
             }
             if (var_93 == 14) {
-                var_92 = 24;
+                y_axis_map_image = 24;
             }
             if (var_93 == 15) {
-                var_92 = 9;
+                y_axis_map_image = 9;
             }
             // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3 && current_floor >= 90) { // ディアボロの試練では 90~98Fまではマップ固定
-                var_92 = 22;
+                y_axis_map_image = 22;
             }
             // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3 && current_floor == 99) { // 自由人の狂想曲
-                var_92 = 2;
+                y_axis_map_image = 2;
             }
         }
         // No = 5 なので、鉄の牢獄
         if (dangeon_number == 5) {
             var_93 = rnd(14);
             if (var_93 == 0) {
-                var_92 = 2;
+                y_axis_map_image = 2;
             }
             if (var_93 == 1) {
-                var_92 = 3;
+                y_axis_map_image = 3;
             }
             if (var_93 == 2) {
-                var_92 = 6;
+                y_axis_map_image = 6;
             }
             if (var_93 == 3) {
-                var_92 = 5;
+                y_axis_map_image = 5;
             }
             if (var_93 == 4) {
-                var_92 = 4;
+                y_axis_map_image = 4;
             }
             if (var_93 == 5) {
-                var_92 = 8;
+                y_axis_map_image = 8;
                 var_90 = 0;
             }
             if (var_93 == 6) {
-                var_92 = 18;
+                y_axis_map_image = 18;
             }
             if (var_93 == 7) {
-                var_92 = 13;
+                y_axis_map_image = 13;
             }
             if (var_93 == 8) {
-                var_92 = 14;
+                y_axis_map_image = 14;
             }
             if (var_93 == 9) {
-                var_92 = 12;
+                y_axis_map_image = 12;
             }
             if (var_93 == 10) {
-                var_92 = 21;
+                y_axis_map_image = 21;
             }
             if (var_93 == 11) {
-                var_92 = 20;
+                y_axis_map_image = 20;
             }
             if (var_93 == 12) {
-                var_92 = 24;
+                y_axis_map_image = 24;
             }
             if (var_93 == 13) {
-                var_92 = 9;
+                y_axis_map_image = 9;
             }
-            var_92 = 22;
+            y_axis_map_image = 22;
         }
         if (special_floor == 1) { // 虹村屋敷
-            var_92 = 8;
+            y_axis_map_image = 8;
             var_90 = 0;
         }
         if (special_floor == 2) { // 杜王町埠頭
-            var_92 = 25;
+            y_axis_map_image = 25;
             var_90 = 0;
         }
         if (special_floor == 3) { // 吉良屋敷
-            var_92 = 14;
+            y_axis_map_image = 14;
             var_90 = 0;
         }
         if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
-            var_92 = 1;
+            y_axis_map_image = 1;
             var_90 = 0;
         }
         if (special_floor == 6) { // 没特殊階層「ナチス実験施設」ボスはサンタナ
-            var_92 = 3;
+            y_axis_map_image = 3;
             var_90 = 0;
         }
         if (special_floor == 7) { // 広大な砂漠
-            var_92 = 16;
+            y_axis_map_image = 16;
             var_90 = 0;
         }
         if (special_floor == 8) { // 幻覚の迷宮
-            var_92 = 1;
+            y_axis_map_image = 1;
             var_90 = 0;
         }
         if (special_floor == 9) { // 幽霊部屋
-            var_92 = 7;
+            y_axis_map_image = 7;
             var_90 = 0;
         }
         if (var_86 == 0) {
@@ -829,11 +829,13 @@ function func008(this: any) {
         var_194 = 0;
         var_195 = 0;
         var_196 = 0; // Mフラグ:メニュー画面 func054
+
+        taskact1_on = 0; // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグ
         open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
         var_198 = 0;
         var_65[var_66][var_67] = 1;
         var_199 = 2;
-        if (var_92 == 15 || var_92 == 19 || var_92 == 11 || var_92 == 23 || var_92 == 25) {
+        if (y_axis_map_image == 15 || y_axis_map_image == 19 || y_axis_map_image == 11 || y_axis_map_image == 23 || y_axis_map_image == 25) {
             var_103 = 1;
         }
         // No = 5 // 没特殊階層「ビンの中」ボスは毒グモ, No = 7 広大な砂漠, No = 9 // 幽霊部屋
@@ -917,7 +919,7 @@ function func009(this: any) {
             yield func672();
             return;
         }
-        if (var_71[var_66][var_67] == 13 && var_215 != 202 && var_215 != 117 && var_125 == 0) {
+        if (var_71[var_66][var_67] == 13 && nouryoku_disc_id != 202 && nouryoku_disc_id != 117 && var_125 == 0) {
             var_216 = 1;
             var_213 = 0;
             var_214 = 0;
@@ -1093,6 +1095,65 @@ function func009(this: any) {
             yield func010();
             return;
         }
+        // Ver0.1401にて追加。入力判定：射撃disc「フー・ファイターズ」を所持している場合に発動(F)
+        if (key_F_on == 1) {
+            if (var_224 >= 1) {
+                for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
+                    var_225 = rnd(var_224);
+                    var_225 = var_225 + 1;
+                    //var_225 = var_475;
+                    var_221 = 0;
+                    open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
+                    var_231 = 0;
+                    if (var_233[var_225].Var0 == 401) {
+                        activated_disc_id = var_233[var_225].Var0
+                        yield stand401(); // No = 401 フー・ファイターズの発動処理
+                        break;
+                    }
+                }
+                comments_row1 = "";
+                comments_row2 = "";
+                var_295 = "";
+                comments_row1a = "";
+                comments_row2a = "";
+                var_298 = "";
+                var_299 = 0;
+                comments_row1 = "ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ";
+                var_198 = 1;
+                var_300 = 0;
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+                yield func047();
+                var_234 = 0;
+                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
+                var_217 = 1;
+                yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                return;
+            }
+            if (var_224 == 0) {
+                comments_row1 = "";
+                comments_row2 = "";
+                var_295 = "";
+                comments_row1a = "";
+                comments_row2a = "";
+                var_298 = "";
+                var_299 = 0;
+                comments_row1 = "ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ";
+                var_198 = 1;
+                var_300 = 0;
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+                yield func047();
+                var_234 = 0;
+                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
+                var_217 = 1;
+                yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                return;
+            }
+            return;
+        }                
         if (var_253 == 1) {
             var_66 = var_66 - 1;
             var_67 = var_67 - 1;
@@ -1582,6 +1643,65 @@ function func012(this: any) {
             yield func053(); // メニュー画面呼び出し
             return;
         }
+        // Ver0.1401にて追加。入力判定：射撃disc「フー・ファイターズ」を所持している場合に発動(F)
+        if (key_F_on == 1) {
+            if (var_224 >= 1) {
+                for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
+                    var_225 = rnd(var_224);
+                    var_225 = var_225 + 1;
+                    //var_225 = var_475;
+                    var_221 = 0;
+                    open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
+                    var_231 = 0;
+                    if (var_233[var_225].Var0 == 401) {
+                        activated_disc_id = var_233[var_225].Var0
+                        yield stand401(); // No = 401 フー・ファイターズの発動処理
+                        break;
+                    }
+                }
+                comments_row1 = "";
+                comments_row2 = "";
+                var_295 = "";
+                comments_row1a = "";
+                comments_row2a = "";
+                var_298 = "";
+                var_299 = 0;
+                comments_row1 = "ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ";
+                var_198 = 1;
+                var_300 = 0;
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+                yield func047();
+                var_234 = 0;
+                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
+                var_217 = 1;
+                yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                return;
+            }
+            if (var_224 == 0) {
+                comments_row1 = "";
+                comments_row2 = "";
+                var_295 = "";
+                comments_row1a = "";
+                comments_row2a = "";
+                var_298 = "";
+                var_299 = 0;
+                comments_row1 = "ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ";
+                var_198 = 1;
+                var_300 = 0;
+                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+                yield func047();
+                var_234 = 0;
+                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
+                var_217 = 1;
+                yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                return;
+            }
+            return;
+        }
         yield func012();
         return;
     });
@@ -2031,7 +2151,7 @@ function func015(this: any) {
             if (var_292 < 0) {
                 var_292 = 0;
             }
-            if (var_71[var_66][var_67] == 13 && var_215 != 202 && var_215 != 117 && var_125 == 0) {
+            if (var_71[var_66][var_67] == 13 && nouryoku_disc_id != 202 && nouryoku_disc_id != 117 && var_125 == 0) {
                 var_66 = var_236; // buffer指定用X座標
                 var_67 = var_237; // buffer指定用Y座標
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -2116,7 +2236,7 @@ function func015(this: any) {
             }
             var_301 = 0;
             if (var_201 != 14 && var_71[var_66][var_67] >= 13 && var_139 == 0 && var_144 == 0 && var_123 == 0 && var_163 == 0) {
-                if (var_215 != 112 && var_215 != 204 && var_215 != 394 && var_215 != 395) {
+                if (nouryoku_disc_id != 112 && nouryoku_disc_id != 204 && nouryoku_disc_id != 394 && nouryoku_disc_id != 395) {
                     var_302 = 1;
                     for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
                         if (var_83[var_302].Var0 == 31 && var_83[var_302].Var20 == 0 && var_83[var_302].Var10 == var_201 && var_83[var_302].Var12 == 0 && var_83[var_302].Var13 == 0 && var_83[var_302].Var14 == 0 && var_83[var_302].Var17 == 0 && var_83[var_302].Var23 == 0) {
@@ -2746,7 +2866,7 @@ function func019(this: any) {
                     }
                 }
                 if (var_71[var_66][var_67] == 13) {
-                    if (var_357 == 105 || var_358 == 105 || var_215 == 105) {
+                    if (kougeki_disc_id == 105 || bougyo_disc_id == 105 || nouryoku_disc_id == 105) {
                         yield func501();
                         if (var_211 <= 0) {
                             var_211 = 0;
@@ -3501,7 +3621,7 @@ function func019(this: any) {
                 var_83[var_124].Var1 = 0;
                 var_83[var_124].Var2 = 0;
                 var_123 = 0;
-                var_92 = var_396;
+                y_axis_map_image = var_396;
             }
         }
         if (var_151 == 0) {
@@ -3696,7 +3816,7 @@ function func020(this: any) {
         if (var_163 == 1) {
             return;
         }
-        if (var_318 >= 1 && var_410 == 406) {
+        if (var_318 >= 1 && shageki_disc_id == 406) {
             var_240 = 0;
             var_83[var_318].Var21 = 1;
             if (var_199 == 2) {
@@ -3730,7 +3850,7 @@ function func020(this: any) {
             var_411 = 0;
             var_318 = 0;
         }
-        if (var_318 >= 1 && var_410 != 406) {
+        if (var_318 >= 1 && shageki_disc_id != 406) {
             var_240 = 0;
             var_412 = var_318;
             var_83[var_318].Var21 = 1;
@@ -4811,7 +4931,8 @@ function func032(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(32);
         yield func080(); // 各キー入力確認
-        if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1) {
+        // Ver0.1401にて「key_F_on == 1」を追加
+        if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1 || key_F_on == 1) {
             var_218 = 0;
             yield func033(); // スティッキーフィンガーズの発動効果が切れた時の表示
             return;
@@ -4847,14 +4968,15 @@ function func032(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
                 yield func080(); // 各キー入力確認
-                if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1) {
+                // Ver0.1401にて「key_F_on == 1」を追加
+                if (key_Z_on == 1 || key_X_on == 1 || key_A_on == 1 || key_S_on == 1 || key_F_on == 1) {
                     var_218 = 0;
                     yield func033(); // スティッキーフィンガーズの発動効果が切れた時の表示
                     break;
                 }
             }
         }
-        if (var_218 >= 51 && var_410 == 403 && var_211 == 2) {
+        if (var_218 >= 51 && shageki_disc_id == 403 && var_211 == 2) {
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -5881,7 +6003,7 @@ function func055(this: any) {
             var_500 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5891,7 +6013,7 @@ function func055(this: any) {
             var_500 = 4;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5901,7 +6023,7 @@ function func055(this: any) {
             var_500 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5911,7 +6033,7 @@ function func055(this: any) {
             var_500 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5921,7 +6043,7 @@ function func055(this: any) {
             var_500 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5931,7 +6053,7 @@ function func055(this: any) {
             var_500 = 4;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5941,7 +6063,7 @@ function func055(this: any) {
             var_500 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5951,7 +6073,7 @@ function func055(this: any) {
             var_500 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5961,7 +6083,7 @@ function func055(this: any) {
             var_500 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -5971,7 +6093,7 @@ function func055(this: any) {
             var_500 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func055();
             return;
@@ -6075,7 +6197,6 @@ function func056(this: any) {
         pset(121, 40);
         pset(15, 163 - var_510);
         pset(121, 163 - var_510);
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         pos(33, 47);
         color(255, 255, 255);
@@ -6126,7 +6247,6 @@ function func056(this: any) {
         if (var_508 == 1 || var_509 == 1 || var_511 >= 1) {
             color(150, 150, 150);
         }
-
         font("MS ゴシック", 16, 1);
         pos(var_245, var_246);
         mes(">");
@@ -6148,7 +6268,7 @@ function func057(this: any) {
             var_505 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6158,7 +6278,7 @@ function func057(this: any) {
             var_505 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6168,7 +6288,7 @@ function func057(this: any) {
             var_505 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6178,7 +6298,7 @@ function func057(this: any) {
             var_505 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6188,7 +6308,7 @@ function func057(this: any) {
             var_505 = 3;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6198,7 +6318,7 @@ function func057(this: any) {
             var_505 = 0;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6208,7 +6328,7 @@ function func057(this: any) {
             var_505 = 1;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6218,7 +6338,7 @@ function func057(this: any) {
             var_505 = 2;
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func057();
             return;
@@ -6296,7 +6416,6 @@ function func058(this: any) {
         pset(121 + var_517, 40 + var_518);
         pset(15 + var_517, 163 - var_510 + var_518);
         pset(121 + var_517, 163 - var_510 + var_518);
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         pos(33 + var_517, 47 + var_518);
         color(255, 255, 255);
@@ -6323,7 +6442,6 @@ function func058(this: any) {
         if (var_512 == 1 || var_511 >= 1) {
             color(150, 150, 150);
         }
-
         font("MS ゴシック", 16, 1);
         pos(var_506 + var_517, var_507 + var_518);
         mes(">");
@@ -6356,7 +6474,6 @@ function func058(this: any) {
                 var_525 = 28;
             }
             color(0, 0, 0);
-
             gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
             pos(12 + var_519, 37 + var_520);
             gcopy(12, 0, 0, 213, 88 - var_525 + var_521);
@@ -6369,7 +6486,6 @@ function func058(this: any) {
             pset(221 + var_519, 40 + var_520);
             pset(15 + var_519, 120 + var_520 - var_525 + var_521);
             pset(221 + var_519, 120 + var_520 - var_525 + var_521);
-    
             font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
             color(255, 255, 255);
             pos(33 + var_519, 47 + var_520);
@@ -6387,7 +6503,6 @@ function func058(this: any) {
                 mes("一巡後の世界");
             }
             color(255, 255, 255);
-    
             font("MS ゴシック", 16, 1);
             pos(var_515, var_516);
             mes(">");
@@ -6447,7 +6562,7 @@ function func060(this: any) {
                 var_528 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
                     if (var_83[var_528].Var0 == 29 && var_83[var_528].Var10 == var_201 && var_201 != 14 && var_83[var_528].Var20 == 0 && var_83[var_528].Var12 == 0 && var_83[var_528].Var13 == 0 && var_83[var_528].Var17 == 0 && var_83[var_528].Var23 == 0) {
-                        if (var_215 != 206 && var_215 != 108 && var_130 != 1) {
+                        if (nouryoku_disc_id != 206 && nouryoku_disc_id != 108 && var_130 != 1) {
                             var_527 = 1;
                         }
                         if (var_73[var_66][var_67] == 2) {
@@ -6455,7 +6570,7 @@ function func060(this: any) {
                         }
                     }
                     if (var_83[var_528].Var0 == 113 && var_83[var_528].Var10 == var_201 && var_201 != 14 && var_83[var_528].Var20 == 0 && var_83[var_528].Var12 == 0 && var_83[var_528].Var13 == 0 && var_83[var_528].Var17 == 0 && var_83[var_528].Var23 == 0) {
-                        if (var_215 != 100 && var_215 != 111 && var_215 != 398) {
+                        if (nouryoku_disc_id != 100 && nouryoku_disc_id != 111 && nouryoku_disc_id != 398) {
                             var_527 = 2;
                         }
                     }
@@ -6943,6 +7058,7 @@ function func061(this: any) {
         var_286 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
             var_542 = 0;
+            // No = 36 スピードワゴン、No = 105 ツェッペリさん
             if (var_83[var_286].Var0 == 36 || var_83[var_286].Var0 == 105 || var_83[var_286].Var0 == 106 || var_83[var_286].Var0 == 107 || var_83[var_286].Var0 == 108) {
                 if (var_83[var_286].Var31 == 5 && var_83[var_286].Var1 > var_281 && var_83[var_286].Var1 < var_282 && var_83[var_286].Var2 > var_283 && var_83[var_286].Var2 < var_284) {
                     var_542 = 1;
@@ -7261,41 +7377,41 @@ function func067(this: any) {
         }
         var_558 = 0;
         // Var_559は亀の成長レベル(拡張レベル)、var_550は投資した栄養の合計
-        if (var_559 == 0 && var_550 >= 5000) {
+        if (var_559 == 0 && var_550 >= 10000) { // Ver0.1401にて修正。5000 → 10000
             var_559 = 1;
             var_558 = 1;
         }
-        if (var_559 == 1 && var_550 >= 10000) {
+        if (var_559 == 1 && var_550 >= 20000) { // Ver0.1401にて修正。10000 → 20000
             var_559 = 2;
             var_558 = 1;
         }
-        if (var_559 == 2 && var_550 >= 20000) {
+        if (var_559 == 2 && var_550 >= 40000) { // Ver0.1401にて修正。20000 → 40000
             var_559 = 3;
             var_558 = 1;
         }
-        if (var_559 == 3 && var_550 >= 40000) {
+        if (var_559 == 3 && var_550 >= 80000) { // Ver0.1401にて修正。40000 → 80000
             var_559 = 4;
             var_558 = 1;
         }
         if (var_558 == 1) {
-            yield func293();
+            yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
             var_560 = 1;
             var_561 = 5;
             var_562 = 5;
             if (var_559 == 0) {
-                yield func288();
+                yield func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
             }
             if (var_559 == 1) {
-                yield func289();
+                yield func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
             }
             if (var_559 == 2) {
-                yield func290();
+                yield func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
             }
             if (var_559 == 3) {
-                yield func291();
+                yield func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
             }
             if (var_559 == 4) {
-                yield func292();
+                yield func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
             }
             yield func248();
             comments_row1 = comments_row1a;
@@ -7390,19 +7506,19 @@ function func069(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(69);
         var_569 = 0;
-        if (var_410 != 0) {
+        if (shageki_disc_id != 0) {
             yield func429();
             var_569 = var_233[var_556].Var3;
         }
-        if (var_357 != 0) {
+        if (kougeki_disc_id != 0) {
             yield func426();
             var_570 = var_233[var_553].Var13;
         }
-        if (var_358 != 0) {
+        if (bougyo_disc_id != 0) {
             yield func427();
             var_571 = var_233[var_554].Var13;
         }
-        if (var_215 != 0) {
+        if (nouryoku_disc_id != 0) {
             yield func428();
             var_572 = var_233[var_555].Var13;
         }
@@ -7427,25 +7543,25 @@ function func069(this: any) {
             color(255, 255, 255);
             item_icon_id = 0;
             if (cnt1 == 0) {
-                item_icon_id = var_357;
+                item_icon_id = kougeki_disc_id;
                 pos(35 + var_573, 256 - var_574);
                 color(255, 255, 0);
                 mes("攻撃");
             }
             if (cnt1 == 1) {
-                item_icon_id = var_358;
+                item_icon_id = bougyo_disc_id;
                 pos(35 + var_573, 256 - var_574);
                 color(255, 180, 90);
                 mes("防御");
             }
             if (cnt1 == 2) {
-                item_icon_id = var_215;
+                item_icon_id = nouryoku_disc_id;
                 pos(35 + var_573, 256 - var_574);
                 color(240, 0, 240);
                 mes("能力");
             }
             if (cnt1 == 3) {
-                item_icon_id = var_410;
+                item_icon_id = shageki_disc_id;
                 pos(35 + var_573, 256 - var_574);
                 color(225, 195, 145);
                 mes("射撃");
@@ -7579,42 +7695,42 @@ function func069(this: any) {
 function func070(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(70);
-
         buffer_id = 11; // buffer(11)は、"img_stand0.gif"
         // 
         if (item_icon_id == 100) { // No = 100 スタープラチナ
             buffer_x_axis = 80;
             buffer_y_axis = 200;
         }
-        if (item_icon_id == 101) {
+        if (item_icon_id == 101) { // No = 101 シルバーチャリオッツ
             buffer_x_axis = 80;
             buffer_y_axis = 160;
         }
-        if (item_icon_id == 102) {
+        if (item_icon_id == 102) { // No = 102 キング・クリムゾン
             buffer_x_axis = 80;
             buffer_y_axis = 120;
         }
-        if (item_icon_id == 103) {
+        if (item_icon_id == 103) { // No = 103 エコーズAct3
             buffer_x_axis = 80;
             buffer_y_axis = 80;
         }
-        if (item_icon_id == 104) {
+        if (item_icon_id == 104) { // No = 104 ザ・ハンド
             buffer_x_axis = 80;
             buffer_y_axis = 240;
         }
-        if (item_icon_id == 105) {
+        if (item_icon_id == 105) { // No = 105 チリペッパー
             buffer_x_axis = 80;
             buffer_y_axis = 360;
         }
-        if (item_icon_id == 106) {
+        if (item_icon_id == 106) { // No = 106 クレイジー・D
             buffer_x_axis = 80;
             buffer_y_axis = 320;
         }
-        if (item_icon_id == 107) {
+        if (item_icon_id == 107) { // No = 103 デス・13
             buffer_x_axis = 80;
             buffer_y_axis = 280;
         }
-        if (item_icon_id == 108 || item_icon_id == 110) {
+        //if (item_icon_id == 108 || item_icon_id == 110) { // Ver0.1401にて修正。item_icon_id == 110を削除
+        if (item_icon_id == 108) { // No = 108 スティッキーフィンガーズ
             buffer_x_axis = 80;
             buffer_y_axis = 440;
         }
@@ -7622,284 +7738,358 @@ function func070(this: any) {
             buffer_x_axis = 80;
             buffer_y_axis = 480;
         }
-        if (item_icon_id == 111) {
+        if (item_icon_id == 110) { // Ver0.1401にて追加。No = 110 B･D･ザ･ハウス
+            buffer_x_axis = 1080;
+            buffer_y_axis = 240;
+        }
+        if (item_icon_id == 111) { // No = 111 ザ・ワールド
             buffer_x_axis = 80;
             buffer_y_axis = 520;
         }
-        if (item_icon_id == 112) {
+        if (item_icon_id == 112) { // No = 112 キラー・クイーン
             buffer_x_axis = 80;
             buffer_y_axis = 560;
         }
-        if (item_icon_id == 113) {
+        if (item_icon_id == 113) { // No = 113 クラッシュ
             buffer_x_axis = 80;
             buffer_y_axis = 600;
         }
-        if (item_icon_id == 114) {
+        if (item_icon_id == 114) { // No = 114 ホワイトスネイク
             buffer_x_axis = 80;
             buffer_y_axis = 640;
         }
-        if (item_icon_id == 115) {
+        if (item_icon_id == 115) { // No = 115 G・エクスペリエンス
             buffer_x_axis = 80;
             buffer_y_axis = 680;
         }
-        if (item_icon_id == 116) {
+        if (item_icon_id == 116) { // No = 116 ハーミットパープル
             buffer_x_axis = 560;
             buffer_y_axis = 720;
         }
-        if (item_icon_id == 117) {
+        if (item_icon_id == 117) { // No = 117 ダークブルームーン
             buffer_x_axis = 80;
             buffer_y_axis = 880;
         }
-        if (item_icon_id == 118) {
+        if (item_icon_id == 118) { // No = 118 ダイバーダウン
             buffer_x_axis = 80;
             buffer_y_axis = 920;
         }
-        if (item_icon_id == 119) {
+        if (item_icon_id == 119) { // No = 119 スパイスガール
             buffer_x_axis = 80;
             buffer_y_axis = 1000;
         }
-        if (item_icon_id == 120) {
+        if (item_icon_id == 120) { // No = 120 ストーン・フリー
             buffer_x_axis = 80;
             buffer_y_axis = 1040;
         }
-        if (item_icon_id == 121) {
+        if (item_icon_id == 121) { // No = 121 パープル・ヘイズ
             buffer_x_axis = 80;
             buffer_y_axis = 1080;
         }
-        if (item_icon_id == 122) {
+        if (item_icon_id == 122) { // No = 122 アヌビス神
             buffer_x_axis = 1040;
             buffer_y_axis = 120;
         }
-        if (item_icon_id == 123) {
+        if (item_icon_id == 123) { // No = 123 クリーム
             buffer_x_axis = 40;
             buffer_y_axis = 1280;
         }
-        if (item_icon_id == 124) {
+        if (item_icon_id == 124) { // No = 124 ムーディーブルース
             buffer_x_axis = 80;
             buffer_y_axis = 1320;
         }
-        if (item_icon_id == 200) {
+        if (item_icon_id == 200) { // No = 200 スーパーフライ
             buffer_x_axis = 1040;
             buffer_y_axis = 80;
         }
-        if (item_icon_id == 201) {
+        if (item_icon_id == 201) { // No = 201 イエローテンパラス
             buffer_x_axis = 1000;
             buffer_y_axis = 1360;
         }
-        if (item_icon_id == 202) {
+        if (item_icon_id == 202) { // No = 202 ホワイトアルバム
             buffer_x_axis = 1240;
             buffer_y_axis = 120;
         }
-        if (item_icon_id == 203) {
+        if (item_icon_id == 203) { // No = 203 ザ・フール
             buffer_x_axis = 80;
             buffer_y_axis = 1440;
         }
-        if (item_icon_id == 204) {
+        if (item_icon_id == 204) { // No = 204 シアハートアタック
             buffer_x_axis = 480;
             buffer_y_axis = 2000;
         }
-        if (item_icon_id == 205) {
+        if (item_icon_id == 205) { // No = 205 クラフトワーク
             buffer_x_axis = 80;
             buffer_y_axis = 1200;
         }
-        if (item_icon_id == 206) {
+        if (item_icon_id == 206) { // No = 206 オアシス
             buffer_x_axis = 1160;
             buffer_y_axis = 120;
         }
-        if (item_icon_id == 207) {
+        if (item_icon_id == 207) { // No = 207 グレイトフル・デッド
             buffer_x_axis = 80;
             buffer_y_axis = 1240;
         }
-        if (item_icon_id == 300) {
+        if (item_icon_id == 208) { // Ver0.1401にて追加。C-MOON
+            buffer_x_axis = 80;
+            buffer_y_axis = 2280;
+        }
+        if (item_icon_id == 250) { // Ver0.1401にて追加。オー!ロンサム・ミー
+            buffer_x_axis = 1160;
+            buffer_y_axis = 280;
+        }
+        if (item_icon_id == 251) { // Ver0.1401にて追加。シビル・ウォー
+            buffer_x_axis = 1080;
+            buffer_y_axis = 280;
+        }
+        if (item_icon_id == 252) { // Ver0.1401にて追加。クリーム・スターター
+            buffer_x_axis = 1000;
+            buffer_y_axis = 2360;
+        }
+        if (item_icon_id == 253) { // Ver0.1401にて追加。スケアリー・モンスターズ
+            buffer_x_axis = 1120;
+            buffer_y_axis = 280;
+        }
+        if (item_icon_id == 254) { // Ver0.1401にて追加。C・ザ・レインボー
+            buffer_x_axis = 1040;
+            buffer_y_axis = 280;
+        }
+        if (item_icon_id == 255) { // Ver0.1401にて追加。イン・ア・サイレント・ウェイ
+            buffer_x_axis = 80;
+            buffer_y_axis = 2440;
+        }
+        if (item_icon_id == 256) { // Ver0.1401にて追加。チョコレイト・ディスコ
+            buffer_x_axis = 1200;
+            buffer_y_axis = 280;
+        }
+        if (item_icon_id == 257) { // Ver0.1401にて追加。T・O・T・B ワン
+            buffer_x_axis = 80;
+            buffer_y_axis = 2280;
+        }
+        if (item_icon_id == 258) { // Ver0.1401にて追加。ボールブレイカー&スキャン
+            buffer_x_axis = 1240;
+            buffer_y_axis = 280;
+        }
+        if (item_icon_id == 259) { // Ver0.1401にて追加。TATOO YOU!
+            buffer_x_axis = 1200;
+            buffer_y_axis = 320;
+        }
+        if (item_icon_id == 260) { // Ver0.1401にて追加。20th Century Boy
+            buffer_x_axis = 1040;
+            buffer_y_axis = 320;
+        }
+        if (item_icon_id == 261) { // Ver0.1401にて追加。DDDC
+            buffer_x_axis = 80;
+            buffer_y_axis = 2400;
+        }
+        if (item_icon_id == 262) { // Ver0.1401にて追加。タスクact4
+            buffer_x_axis = 80;
+            buffer_y_axis = 2280;
+        }
+        if (item_icon_id == 263) { // Ver0.1401にて追加。D4Cラブトレイン
+            buffer_x_axis = 80;
+            buffer_y_axis = 2280;
+        }
+        if (item_icon_id == 300) { // No = 300 パールジャム
             buffer_x_axis = 1040;
             buffer_y_axis = 160;
         }
-        if (item_icon_id == 301) {
+        if (item_icon_id == 301) { // No = 301 ハーヴェスト
             buffer_x_axis = 0;
             buffer_y_axis = 1920;
         }
-        if (item_icon_id == 302) {
+        if (item_icon_id == 302) { // No = 302 ハイウェイ・トゥ・ヘル
             buffer_x_axis = 1120;
             buffer_y_axis = 160;
         }
-        if (item_icon_id == 303) {
+        if (item_icon_id == 303) { // No = 303 ドラゴンズドリーム
             buffer_x_axis = 1160;
             buffer_y_axis = 160;
         }
-        if (item_icon_id == 304) {
+        if (item_icon_id == 304) { // No = 304 ウェザーリポート
             buffer_x_axis = 80;
             buffer_y_axis = 1400;
         }
-        if (item_icon_id == 305) {
+        if (item_icon_id == 305) { // No = 305 シンデレラ
             buffer_x_axis = 80;
             buffer_y_axis = 2160;
         }
-        if (item_icon_id == 306) {
+        if (item_icon_id == 306) { // No = 306 マンハッタントランスファー
             buffer_x_axis = 1040;
             buffer_y_axis = 200;
         }
-        if (item_icon_id == 307) {
+        if (item_icon_id == 307) { // No = 307 不明
             buffer_x_axis = 80;
             buffer_y_axis = 1520;
         }
-        if (item_icon_id == 308) {
+        if (item_icon_id == 308) { // No = 308 エボニー・デビル
             buffer_x_axis = 0;
             buffer_y_axis = 1880;
         }
-        if (item_icon_id == 309) {
+        if (item_icon_id == 309) { // No = 309 ソフト・マシーン
             buffer_x_axis = 80;
             buffer_y_axis = 2040;
         }
-        if (item_icon_id == 310) {
+        if (item_icon_id == 310) { // No = 310 エンプレス
             buffer_x_axis = 1200;
             buffer_y_axis = 200;
         }
-        if (item_icon_id == 311) {
+        if (item_icon_id == 311) { // No = 311 チープ・トリック
             buffer_x_axis = 1120;
             buffer_y_axis = 80;
         }
-        if (item_icon_id == 312) {
+        if (item_icon_id == 312) { // No = 312 エアロスミス
             buffer_x_axis = 480;
             buffer_y_axis = 1960;
         }
-        if (item_icon_id == 313) {
+        if (item_icon_id == 313) { // No = 313 ハイウェイスター
             buffer_x_axis = 80;
             buffer_y_axis = 1560;
         }
-        if (item_icon_id == 314) {
+        if (item_icon_id == 314) { // No = 314 ストレイキャット
             buffer_x_axis = 1120;
             buffer_y_axis = 120;
         }
-        if (item_icon_id == 315) {
+        if (item_icon_id == 315) { // No = 315 エピタフ
             buffer_x_axis = 1160;
             buffer_y_axis = 240;
         }
-        if (item_icon_id == 316) {
+        if (item_icon_id == 316) { // No = 316 サバイバー
             buffer_x_axis = 1080;
             buffer_y_axis = 160;
         }
-        if (item_icon_id == 317) {
+        if (item_icon_id == 317) { // No = 317 キッス
             buffer_x_axis = 80;
             buffer_y_axis = 1640;
         }
-        if (item_icon_id == 318) {
+        if (item_icon_id == 318) { // No = 318 ジャンピングJフラッシュ
             buffer_x_axis = 80;
             buffer_y_axis = 1680;
         }
-        if (item_icon_id == 319) {
+        if (item_icon_id == 319) { // No = 319 ボーイⅡマン
             buffer_x_axis = 80;
             buffer_y_axis = 1720;
         }
-        if (item_icon_id == 320) {
+        if (item_icon_id == 320) { // No = 320 メタリカ
             buffer_x_axis = 1080;
             buffer_y_axis = 200;
         }
-        if (item_icon_id == 321) {
+        if (item_icon_id == 321) { // No = 321 没ディスク
             buffer_x_axis = 1160;
             buffer_y_axis = 200;
         }
-        if (item_icon_id == 393) {
+        if (item_icon_id == 393) { // No = 393 ボヘミアンラプソディ
             buffer_x_axis = 1200;
             buffer_y_axis = 120;
         }
-        if (item_icon_id == 394) {
+        if (item_icon_id == 394) { // No = 394 キラータイガークイーン
             buffer_x_axis = 80;
             buffer_y_axis = 760;
         }
-        if (item_icon_id == 395) {
+        if (item_icon_id == 395) { // No = 395 バイツァ・ダスト
             buffer_x_axis = 1120;
             buffer_y_axis = 240;
         }
-        if (item_icon_id == 396) {
+        if (item_icon_id == 396) { // No = 396 メイド・イン・ヘブン
             buffer_x_axis = 1080;
             buffer_y_axis = 120;
         }
-        if (item_icon_id == 397) {
+        if (item_icon_id == 397) { // No = 397 ヘビー・ウェザー
             buffer_x_axis = 80;
             buffer_y_axis = 1840;
         }
-        if (item_icon_id == 398) {
+        if (item_icon_id == 398) { // No = 398 スタプラザワールド
             buffer_x_axis = 80;
             buffer_y_axis = 1600;
         }
-        if (item_icon_id == 399) {
+        if (item_icon_id == 399) { // No = 399 G・E・レクイエム
             buffer_x_axis = 80;
             buffer_y_axis = 1480;
         }
         // ここからbufferが違う
-        if (item_icon_id == 400) {
+        if (item_icon_id == 400) { // No = 400 ハイエロファントグリーン
             buffer_x_axis = 40;
             buffer_y_axis = 400;
             buffer_id = 34;
         }
-        if (item_icon_id == 401) {
+        if (item_icon_id == 401) { // No = 401 フー・ファイターズ
             buffer_x_axis = 640;
             buffer_y_axis = 200;
             buffer_id = 34;
         }
-        if (item_icon_id == 402) {
+        if (item_icon_id == 402) { // No = 402 エンペラー
             buffer_x_axis = 640;
             buffer_y_axis = 0;
             buffer_id = 34;
         }
-        if (item_icon_id == 403) {
+        if (item_icon_id == 403) { // No = 403 セックスピストルズ
             buffer_x_axis = 480;
             buffer_y_axis = 560;
             buffer_id = 34;
         }
-        if (item_icon_id == 404) {
+        if (item_icon_id == 404) { // No = 404 ホルス神
             buffer_x_axis = 160;
             buffer_y_axis = 520;
             buffer_id = 34;
         }
-        if (item_icon_id == 405) {
+        if (item_icon_id == 405) { // No = 405 エコーズACT2
             buffer_x_axis = 480;
             buffer_y_axis = 1040;
             buffer_id = 21;
         }
-        if (item_icon_id == 406) {
+        if (item_icon_id == 406) { // No = 406 エコーズACT1
             buffer_x_axis = 480;
             buffer_y_axis = 1080;
             buffer_id = 21;
         }
-        if (item_icon_id == 407) {
+        if (item_icon_id == 407) { // No = 407 ハイエロファントエメラルド
             buffer_x_axis = 40;
             buffer_y_axis = 400;
             buffer_id = 34;
         }
-        if (item_icon_id == 408) {
+        if (item_icon_id == 408) { // No = 408 マン・イン・ザ・ミラー
             buffer_x_axis = 1000;
             buffer_y_axis = 440;
             buffer_id = 3;
         }
-        if (item_icon_id == 409) {
+        if (item_icon_id == 409) { // No = 409 ラバーズ
             buffer_x_axis = 480;
             buffer_y_axis = 520;
             buffer_id = 6;
         }
-        if (item_icon_id == 410) {
+        if (item_icon_id == 410) { // No = 410 没ディスク
             buffer_x_axis = 320;
             buffer_y_axis = 1080;
             buffer_id = 34;
         }
-        if (item_icon_id == 411) {
+        if (item_icon_id == 411) { // No = 411 タワー・オブ・グレー
             buffer_x_axis = 320;
             buffer_y_axis = 1120;
             buffer_id = 34;
         }
-        if (item_icon_id == 412) {
+        if (item_icon_id == 412) { // No = 412 ヘブンズ・ドアー
             buffer_x_axis = 720;
             buffer_y_axis = 520;
             buffer_id = 3;
         }
-        if (item_icon_id == 413) {
+        if (item_icon_id == 413) { // No = 413 没ディスク
             buffer_x_axis = 960;
             buffer_y_axis = 1960;
             buffer_id = 15;
         }
-        if (item_icon_id == 414) {
+        if (item_icon_id == 414) { // No = 414 タスクact2
             buffer_x_axis = 1480;
             buffer_y_axis = 1240;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 415) { // Ver0.1401にて追加。No = 415 タスクact1
+            buffer_x_axis = 1480;
+            buffer_y_axis = 1200;
+            buffer_id = 34;
+        }
+        if (item_icon_id == 416) { // Ver0.1401にて追加。No = 416 タスクact3
+            buffer_x_axis = 1480;
+            buffer_y_axis = 1280;
             buffer_id = 34;
         }
         return;
@@ -8384,7 +8574,7 @@ function func076(this: any) {
             if (dangeon_number == 5) {
                 if (current_floor != var_20) {
                     // buffer(34)は"img_syageki.gif"。X座標640、Y座標1040から切り取り長さ X方向340、Y方向40
-                    // 絵文字:鉄の牢獄
+                    // 絵文字:鉄獄 Ver0.1401にて修正。鉄の牢獄 → 鉄獄
                     gcopy(34, 640, 1040, 340, 40);
                 }
                 if (current_floor == var_20) {
@@ -9567,19 +9757,6 @@ function func079(this: any) {
 }
 
 
-let change_scale: any;
-
-function ChangeScale() {
-        if (change_scale.percent === window.devicePixelRatio) {
-            let scale: any = document.documentElement.clientWidth;
-            scale = scale / change_scale.container;
-            scale = "scale(" + scale + ")";
-            document.body.style.transform = scale;
-        } else {
-            change_scale.percent = window.devicePixelRatio;
-        }
-    }
-
 // 各キー操作。joystick関数があるので、動作に関するもの？？
 // 各キー入力確認
 function func080(this: any, is_key_reset = true) {
@@ -9600,6 +9777,7 @@ function func080(this: any, is_key_reset = true) {
             key_C_on = 0;
             key_Shift_on = 0; // キーShift入力初期化
             key_S_on = 0; // キーS入力初期化
+            key_F_on = 0; // Ver0.1401にて追加。キーF入力初期化
             var_619 = 0;
             var_620 = 0;
             var_621 = 0;
@@ -9776,7 +9954,6 @@ function func080(this: any, is_key_reset = true) {
                     }
                     return;
                 }
-    
                 // F7キーを押した際の動作　BGMのオン・オフ（オンにした場合DISC使用時や階段を降りてから再開）
                 conf_keyon = getkey(118); // キーF7入力確認
                 if (conf_keyon == 1 && var_631 == 1000) {
@@ -9982,6 +10159,9 @@ function func080(this: any, is_key_reset = true) {
             key_S_on = getkey(var_658); // 入力判定：射撃(S)
             key_Shift_on = getkey(var_659); // 入力判定：押しながらで斜めのみ移動(Shift)
             key_C_on = getkey(var_660); // 入力判定：その場で向き変更(C)
+
+            key_F_on = getkey(70); // Ver0.1401にて追加。入力判定：射撃disc「フー・ファイターズ」を所持している場合に発動(F)
+
             var_261 = getkey(32); // 入力判定：縮小マップのみ表示 (Space)
             var_661 = 15 + var_662;
             
@@ -11460,56 +11640,57 @@ function func088(this: any) {
         return;
     });
 }
+// 各装備discごとの攻撃音設定
 function func089(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(89);
-        var_671 = 102;
-        if (var_357 == 0) {
-            var_671 = 102;
+        se_file_name = 102;
+        if (kougeki_disc_id == 0) {
+            se_file_name = 102;
         }
-        if (var_357 == 101) {
-            var_671 = 112;
+        if (kougeki_disc_id == 101) {
+            se_file_name = 112; // 112.wav 刀を振るう金属音
         }
-        if (var_357 == 122) {
-            var_671 = 112;
+        if (kougeki_disc_id == 122) {
+            se_file_name = 112; // 112.wav 刀を振るう金属音
         }
-        if (var_357 == 113) {
-            var_671 = 113;
+        if (kougeki_disc_id == 113) {
+            se_file_name = 113; // 113.wav 爪で切り裂く音
         }
-        if (var_357 == 117) {
-            var_671 = 113;
+        if (kougeki_disc_id == 117) {
+            se_file_name = 113; // 113.wav 爪で切り裂く音
         }
-        if (var_357 == 107) {
-            var_671 = 113;
+        if (kougeki_disc_id == 107) {
+            se_file_name = 113; // 113.wav 爪で切り裂く音
         }
-        if (var_357 == 105) {
-            var_671 = 120;
+        if (kougeki_disc_id == 105) {
+            se_file_name = 120; // 120.wav 電撃音
         }
-        if (var_357 == 201) {
-            var_671 = 123;
+        if (kougeki_disc_id == 201) {
+            se_file_name = 123;
         }
-        if (var_357 == 116) {
-            var_671 = 127;
+        if (kougeki_disc_id == 116) {
+            se_file_name = 127;
         }
-        if (var_357 == 109) {
-            var_671 = 128;
+        if (kougeki_disc_id == 109) {
+            se_file_name = 128;
         }
-        if (var_357 == 394) {
-            var_671 = 113;
+        if (kougeki_disc_id == 394) {
+            se_file_name = 113; // 113.wav 爪で切り裂く音
         }
-        if (var_357 == 100 || var_357 == 102 || var_357 == 104 || var_357 == 106 || var_357 == 108 || var_357 == 111 || var_357 == 112 || var_357 == 114) {
-            var_671 = 121;
+        if (kougeki_disc_id == 100 || kougeki_disc_id == 102 || kougeki_disc_id == 104 || kougeki_disc_id == 106 || kougeki_disc_id == 108 || kougeki_disc_id == 111 || kougeki_disc_id == 112 || kougeki_disc_id == 114) {
+            se_file_name = 121; // 121.wav 大きいパンチ音
         }
-        if (var_357 == 115 || var_357 == 118 || var_357 == 119 || var_357 == 120 || var_357 == 121 || var_357 == 203 || var_357 == 304 || var_357 == 123) {
-            var_671 = 121;
+        if (kougeki_disc_id == 115 || kougeki_disc_id == 118 || kougeki_disc_id == 119 || kougeki_disc_id == 120 || kougeki_disc_id == 121 || kougeki_disc_id == 203 || kougeki_disc_id == 304 || kougeki_disc_id == 123) {
+            se_file_name = 121; // 121.wav 大きいパンチ音
         }
-        if (var_357 == 394 || var_357 == 395 || var_357 == 397 || var_357 == 398 || var_357 == 399) {
-            var_671 = 121;
+        if (kougeki_disc_id == 394 || kougeki_disc_id == 395 || kougeki_disc_id == 397 || kougeki_disc_id == 398 || kougeki_disc_id == 399) {
+            se_file_name = 121; // 121.wav 大きいパンチ音
         }
-        if (var_357 == 103 || var_357 == 124 || var_357 == 205 || var_357 == 207 || var_357 == 301 || var_357 == 309) {
-            var_671 = 122;
+        if (kougeki_disc_id == 103 || kougeki_disc_id == 124 || kougeki_disc_id == 205 || kougeki_disc_id == 207 || kougeki_disc_id == 301 || kougeki_disc_id == 309) {
+            se_file_name = 122; // 122.wav 小さいパンチ音
         }
-        DSPLAY(audio_id = var_671);
+        DSPLAY(audio_id = se_file_name);
         return;
     });
 }
@@ -11524,16 +11705,16 @@ function func090(this: any) {
 function func091(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(91);
-        var_671 = 103;
-        DSPLAY(audio_id = var_671);
+        se_file_name = 103;
+        DSPLAY(audio_id = se_file_name);
         return;
     });
 }
 function func092(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(92);
-        var_671 = 103;
-        DSPLAY(audio_id = var_671);
+        se_file_name = 103;
+        DSPLAY(audio_id = se_file_name);
         var_672 = 0;
         return;
     });
@@ -11541,35 +11722,35 @@ function func092(this: any) {
 function func093(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(93);
-        var_671 = 102;
+        se_file_name = 102;
         if (var_672 == 3 || var_672 == 13) {
-            var_671 = 124;
+            se_file_name = 124;
         }
         if (var_672 == 2 || var_672 == 22) {
-            var_671 = 114;
+            se_file_name = 114;
         }
         if (var_672 == 9 || var_672 == 10) {
-            var_671 = 123;
+            se_file_name = 123;
         }
         if (var_672 == 29) {
-            var_671 = 147;
+            se_file_name = 147;
         }
         if (var_672 == 122 || var_672 == 129) {
-            var_671 = 112;
+            se_file_name = 112;
         }
         if (var_672 == 14 || var_672 == 66 || var_672 == 110 || var_672 == 162) {
-            var_671 = 222;
+            se_file_name = 222;
         }
         if (var_672 == 44) {
-            var_671 = 223;
+            se_file_name = 223;
         }
         if (var_672 == 51) {
-            var_671 = 224;
+            se_file_name = 224;
         }
         if (var_672 == 17) {
-            var_671 = 155;
+            se_file_name = 155;
         }
-        DSPLAY(audio_id = var_671);
+        DSPLAY(audio_id = se_file_name);
         var_672 = 0;
         return;
     });
@@ -11586,89 +11767,90 @@ function func094(this: any) {
 function func095(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(95);
-        var_671 = 109;
+        se_file_name = 109;
         if (var_83[var_673].Var0 == 93) {
-            var_671 = 109;
+            se_file_name = 109;
         }
         if (var_83[var_673].Var0 == 56) {
-            var_671 = 110;
+            se_file_name = 110;
         }
         if (var_83[var_673].Var0 == 136) {
-            var_671 = 194;
+            se_file_name = 194;
         }
         if (var_83[var_673].Var0 == 21) {
-            var_671 = 169;
+            se_file_name = 169;
         }
         if (var_83[var_673].Var0 == 95 || var_83[var_673].Var0 == 121 || var_83[var_673].Var0 == 126) {
-            var_671 = 176;
+            se_file_name = 176;
         }
         if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 132) {
-            var_671 = 121;
+            se_file_name = 121;
         }
         if (var_83[var_673].Var0 == 47 || var_83[var_673].Var0 == 67) {
             return;
         }
-        DSPLAY(audio_id = var_671);
+        DSPLAY(audio_id = se_file_name);
         return;
     });
 }
 function func096(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(96);
-        var_671 = 103;
+        se_file_name = 103;
         if (var_674 == 151 || var_674 == 171 || var_674 == 132) {
-            var_671 = 111;
+            se_file_name = 111;
         }
         if (var_674 == 113) {
-            var_671 = 115;
+            se_file_name = 115;
         }
         if (var_674 == 136) {
-            var_671 = 195;
+            se_file_name = 195;
         }
-        DSPLAY(audio_id = var_671);
+        DSPLAY(audio_id = se_file_name);
         var_674 = 0;
         return;
     });
 }
+// 射撃攻撃時の効果音設定
 function func097(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(97);
-        var_671 = 109;
+        se_file_name = 109;
         if (var_340 == 408 || var_340 == 412 || var_340 == 405 || var_340 == 406 || var_340 == 699) {
-            var_671 = 107;
+            se_file_name = 107;
         }
         if (var_340 == 411 || var_340 == 409) {
-            var_671 = 124;
+            se_file_name = 124;
         }
         if (var_340 == 400 || var_340 == 407) {
-            var_671 = 176;
+            se_file_name = 176;
         }
         if (var_340 == 404) {
-            var_671 = 215;
+            se_file_name = 215;
         }
         if (var_340 == 698) {
-            var_671 = 128;
+            se_file_name = 128;
         }
         if (var_340 == 487 || var_340 == 488 || var_340 == 489) {
-            var_671 = 169;
+            se_file_name = 169;
         }
-        DSPLAY(audio_id = var_671);
+        DSPLAY(audio_id = se_file_name);
         return;
     });
 }
 function func098(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(98);
-        var_671 = 103;
-        DSPLAY(audio_id = var_671);
+        se_file_name = 103;
+        DSPLAY(audio_id = se_file_name);
         return;
     });
 }
 function func099(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(99);
-        var_671 = 142;
-        DSPLAY(audio_id = var_671);
+        se_file_name = 142;
+        DSPLAY(audio_id = se_file_name);
         return;
     });
 }

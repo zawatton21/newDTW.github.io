@@ -17,8 +17,6 @@
 !*.css
 !*.png
 !*gif
-!*.wav
-!*.mp3
 !*.icns
 !*.ico
 !*.eslintrc

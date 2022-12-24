@@ -19,9 +19,7 @@ function func400(this: any) {
                 return;
             }
         }
-        
         yield func398(); // 道具(メニュー画面/道具)へ直接表示されるアイテム表示
-        
         // var_224 は持っているアイテム数と思われる。アイテムは20個まで持てる。
         // 所持アイテム数が20個以上になる場合
         if (var_224 >= 20) {
@@ -428,41 +426,41 @@ function func404(this: any) {
             }
             var_558 = 0;
             // var_559は亀の成長レベル
-            if (var_559 == 0 && var_550 >= 5000) {
+            if (var_559 == 0 && var_550 >= 10000) { // Ver0.1401にて修正。5000 → 10000
                 var_559 = 1;
                 var_558 = 1;
             }
-            if (var_559 == 1 && var_550 >= 10000) {
+            if (var_559 == 1 && var_550 >= 20000) { // Ver0.1401にて修正。10000 → 20000
                 var_559 = 2;
                 var_558 = 1;
             }
-            if (var_559 == 2 && var_550 >= 20000) {
+            if (var_559 == 2 && var_550 >= 40000) { // Ver0.1401にて修正。20000 → 40000
                 var_559 = 3;
                 var_558 = 1;
             }
-            if (var_559 == 3 && var_550 >= 40000) {
+            if (var_559 == 3 && var_550 >= 80000) { // Ver0.1401にて修正。40000 → 80000
                 var_559 = 4;
                 var_558 = 1;
             }
             if (var_558 == 1) {
-                yield func293();
+                yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
                 var_560 = 1;
                 var_561 = 5;
                 var_562 = 5;
                 if (var_559 == 0) {
-                    yield func288();
+                    yield func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
                 }
                 if (var_559 == 1) {
-                    yield func289();
+                    yield func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
                 }
                 if (var_559 == 2) {
-                    yield func290();
+                    yield func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
                 }
                 if (var_559 == 3) {
-                    yield func291();
+                    yield func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
                 }
                 if (var_559 == 4) {
-                    yield func292();
+                    yield func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
                 }
                 yield func248();
                 comments_row1 = comments_row1a;
@@ -1030,7 +1028,7 @@ function func411(this: any) {
             if (var_1893 == 0) {
                 if (var_71[var_455][var_456] == 0) {
                     if (var_1270 == 1 && var_1852 == 2) {
-                        if (var_215 == 112 || var_215 == 394) {
+                        if (nouryoku_disc_id == 112 || nouryoku_disc_id == 394) {
                             yield func660();
                             var_1897 = 1;
                         }
@@ -2312,7 +2310,7 @@ function func421(this: any) {
                 yield func106(); // BGM選曲呼び出し割り振り
                 var_479 = dim(40);
                 var_250 = 0;
-                var_410 = 0;
+                shageki_disc_id = 0;
             }
             yield func433(); // アイテム配列(所持アイテム)初期化関数
         }
@@ -2578,7 +2576,7 @@ function func430(this: any) {
             var_476 = dim(40);
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
@@ -2586,20 +2584,20 @@ function func430(this: any) {
             var_477 = dim(40);
             var_581 = var_581 - var_895;
             var_895 = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
             yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
         if (var_479[var_225] == 1) {
             var_479 = dim(40);
             var_250 = 0;
-            var_410 = 0;
+            shageki_disc_id = 0;
             yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
         if (var_478[var_225] == 1) {
             var_478 = dim(40);
-            var_215 = 0;
+            nouryoku_disc_id = 0;
             yield func431(); // BGM選曲関数呼び出し
             yield func494();
         }
@@ -2638,7 +2636,7 @@ function func432(this: any) {
             if (belongings_item_list >= 400 && belongings_item_list < 450 && var_479[var_225] == 1) {
                 var_479 = dim(40);
                 var_250 = 0;
-                var_410 = 0;
+                shageki_disc_id = 0;
                 return;
             }
             if (belongings_item_list >= 100 && belongings_item_list < 400) {
@@ -2662,7 +2660,7 @@ function func432(this: any) {
                 var_479 = dim(40);
                 var_479[var_225] = 1;
                 var_250 = var_225;
-                var_410 = belongings_item_list;
+                shageki_disc_id = belongings_item_list;
                 return;
             }
         }
@@ -3433,7 +3431,7 @@ function func441(this: any) {
             var_1977 = 0;
             if (var_476[var_225] == 1) {
                 var_476[var_225] = 0;
-                var_357 = 0;
+                kougeki_disc_id = 0;
                 var_580 = var_580 - var_894;
                 var_894 = 0;
                 yield func494();
@@ -3441,7 +3439,7 @@ function func441(this: any) {
             }
             if (var_477[var_225] == 1) {
                 var_477[var_225] = 0;
-                var_358 = 0;
+                bougyo_disc_id = 0;
                 var_581 = var_581 - var_895;
                 var_895 = 0;
                 yield func494();
@@ -3449,13 +3447,13 @@ function func441(this: any) {
             }
             if (var_479[var_225] == 1) {
                 var_479[var_225] = 0;
-                var_410 = 0;
+                shageki_disc_id = 0;
                 var_250 = 0;
                 var_1977 = 1;
             }
             if (var_478[var_225] == 1) {
                 var_478[var_225] = 0;
-                var_215 = 0;
+                nouryoku_disc_id = 0;
                 yield func494();
                 var_1977 = 1;
             }
@@ -3780,31 +3778,37 @@ function func444(this: any) {
         yield func492(); // アイテムリスト呼び出し
         strengthen_item_name = item_name;
         var_1983 = 0;
+        // 3部コミック
         if (var_1950 == 3) {
             if (var_1984 == 3 || var_1984 == 7 || var_1984 == 9 || var_1984 == 10) {
                 var_1983 = 1;
             }
         }
+        // 4部コミック
         if (var_1950 == 4) {
             if (var_1984 == 4 || var_1984 == 7 || var_1984 == 8 || var_1984 == 10) {
                 var_1983 = 1;
             }
         }
+        // 5部コミック
         if (var_1950 == 5) {
             if (var_1984 == 5 || var_1984 == 8 || var_1984 == 9) {
                 var_1983 = 1;
             }
         }
+        // 6部コミック
         if (var_1950 == 6) {
             if (var_1984 == 6 || var_1984 == 7) {
                 var_1983 = 1;
             }
         }
+        // 部コミック
         if (var_1950 == 10) {
             if (var_1984 == 3 || var_1984 == 4 || var_1984 == 5 || var_1984 == 7 || var_1984 == 8 || var_1984 == 9 || var_1984 == 10) {
                 var_1983 = 1;
             }
         }
+        // 7部コミック
         if (var_1950 == 7) {
             var_1983 = 1;
         }
@@ -4092,31 +4096,37 @@ function func445(this: any) {
         yield func492(); // アイテムリスト呼び出し
         strengthen_item_name = item_name;
         var_1983 = 0;
+        // 3部コミック
         if (var_1950 == 3) {
             if (var_1984 == 3 || var_1984 == 7 || var_1984 == 9 || var_1984 == 10) {
                 var_1983 = 1;
             }
         }
+        // 4部コミック
         if (var_1950 == 4) {
             if (var_1984 == 4 || var_1984 == 7 || var_1984 == 8 || var_1984 == 10) {
                 var_1983 = 1;
             }
         }
+        // 5部コミック
         if (var_1950 == 5) {
             if (var_1984 == 5 || var_1984 == 8 || var_1984 == 9) {
                 var_1983 = 1;
             }
         }
+        // 6部コミック
         if (var_1950 == 6) {
             if (var_1984 == 6 || var_1984 == 7) {
                 var_1983 = 1;
             }
         }
+        // 部コミック
         if (var_1950 == 10) {
             if (var_1984 == 3 || var_1984 == 4 || var_1984 == 5 || var_1984 == 7 || var_1984 == 8 || var_1984 == 9 || var_1984 == 10 || var_1984 == 11) {
                 var_1983 = 1;
             }
         }
+        // 7部コミック
         if (var_1950 == 7) {
             var_1983 = 1;
         }
@@ -5294,7 +5304,7 @@ function func460(this: any) {
                 color(255, 0, 0);
                 mes("呪縛");
             }
-            if (var_215 == 112 || var_215 == 204 || var_215 == 394 || var_215 == 395) {
+            if (nouryoku_disc_id == 112 || nouryoku_disc_id == 204 || nouryoku_disc_id == 394 || nouryoku_disc_id == 395) {
                 if (var_2028 == 2) {
                     pos(275, 283);
                     color(255, 0, 0);
@@ -8228,19 +8238,19 @@ function func469(this: any) {
             return;
         }
         var_2084 = 0;
-        if (var_357 != 0 && var_225 != 0) {
+        if (kougeki_disc_id != 0 && var_225 != 0) {
             yield func426();
             if (var_553 == var_225 && var_233[var_225].Var12 == 1) {
                 var_2084 = 1;
             }
         }
-        if (var_358 != 0 && var_225 != 0) {
+        if (bougyo_disc_id != 0 && var_225 != 0) {
             yield func427();
             if (var_554 == var_225 && var_233[var_225].Var12 == 1) {
                 var_2084 = 1;
             }
         }
-        if (var_215 != 0 && var_225 != 0) {
+        if (nouryoku_disc_id != 0 && var_225 != 0) {
             yield func428();
             if (var_555 == var_225 && var_233[var_225].Var12 == 1) {
                 var_2084 = 1;
@@ -8312,7 +8322,7 @@ function func469(this: any) {
         var_1977 = 0;
         if (var_476[var_225] == 1) {
             var_476[var_225] = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             var_580 = var_580 - var_894;
             var_894 = 0;
             yield func494();
@@ -8320,7 +8330,7 @@ function func469(this: any) {
         }
         if (var_477[var_225] == 1) {
             var_477[var_225] = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
             var_581 = var_581 - var_895;
             var_895 = 0;
             yield func494();
@@ -8328,13 +8338,13 @@ function func469(this: any) {
         }
         if (var_479[var_225] == 1) {
             var_479[var_225] = 0;
-            var_410 = 0;
+            shageki_disc_id = 0;
             var_250 = 0;
             var_1977 = 1;
         }
         if (var_478[var_225] == 1) {
             var_478[var_225] = 0;
-            var_215 = 0;
+            nouryoku_disc_id = 0;
             yield func494();
             var_1977 = 1;
         }
@@ -8668,11 +8678,13 @@ function func470(this: any) {
 function func471(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(471);
+        // No = 808 聖人の眼球へアイテムを入れた時の処理
         if (yabaimono_id == 808) {
             var_486[var_682][var_683][14] = 1;
             var_2101 = var_486[var_682][var_683][0];
             var_862[var_2101][0] = 1;
         }
+        // No = 809 聖人の左腕へアイテムを入れた時の処理
         if (yabaimono_id == 809) {
             if (var_486[var_682][var_683][12] == 1) {
                 var_486[var_682][var_683][12] = 0;
@@ -8680,6 +8692,7 @@ function func471(this: any) {
             if (var_486[var_682][var_683][15] == 1 || var_486[var_682][var_683][15] == 2) {
                 var_486[var_682][var_683][15] = 0;
             }
+            // No = 570 ジョナサンのDISCを入れた時の処理
             if (var_486[var_682][var_683][0] == 570) {
                 if (var_486[var_682][var_683][11] == 1) {
                     count_buying_price = count_buying_price + 500;
@@ -8687,11 +8700,12 @@ function func471(this: any) {
                 for (let cnt3 = 0; cnt3 < 30; ++cnt3) {
                     var_486[var_682][var_683][cnt3] = 0;
                 }
-                var_486[var_682][var_683][0] = 414;
-                var_486[var_682][var_683][3] = 5;
+                var_486[var_682][var_683][0] = 414; // Ver0.1401にて修正。414 → 415 タスクact1へ変更。
+                var_486[var_682][var_683][3] = 5; // 変化したタスクact1の射撃回数
                 var_862[414][0] = 1;
             }
         }
+        // No = 816 ミキタカのカバンへアイテムを入れた時の処理
         if (yabaimono_id == 816) {
             if (var_486[var_682][var_683][11] == 1) {
                 belongings_item_list = var_486[var_682][var_683][0];
@@ -12363,7 +12377,7 @@ function func492(this: any) {
             effects_message = "[発動]射撃攻撃を防げるようになるぞ";
             item_ability_description = "３方向に攻撃できるぞ";
             var_812 = 1;
-            var_1984 = 7;
+            var_1984 = 7; // 対応コミック部。7はスタープラチナ専用??
             var_2173 = "星";
             var_2174 = 1;
             var_2039 = "弾丸止め";
@@ -12481,6 +12495,18 @@ function func492(this: any) {
             if (var_172 == 1) {
                 effects_message = "[★発動]部屋内の敵にランダムでダメージＳ";
             }
+        }
+        if (belongings_item_list == 110) { // Ver0.1401にて追加。
+            buying_price = 8200;
+            item_name = "B･D･ザ･ハウスのDISC";
+            item_description1 = "攻撃:0　防御:0";
+            effects_message = "[発動]次の階を部屋の幽霊にするぞ";
+            item_ability_description = "稀に消費アイテムが2度使えるぞ"; // 「com1=なんと康一のDISCは com2=アイテムの幽霊として復活した!」
+            var_812 = 4; // 装備区分: 能力
+            var_1984 = 6; // 対応コミック部
+            var_2173 = "幽";
+            var_2174 = 1;
+            var_2039 = "去るのを待つんだ";
         }
         if (belongings_item_list == 111) {
             buying_price = 15600;
@@ -12761,6 +12787,186 @@ function func492(this: any) {
                 effects_message = "[★発動]フロア内全ての敵の攻撃力を下げるぞ";
             }
         }
+        if (belongings_item_list == 208) { // Ver0.1401にて追加。
+            buying_price = 2700;
+            item_name = "C-MOONのDISC";
+            item_description1 = "攻撃:1　防御:0";
+            effects_message = "[発動]隣接した敵を全部吹っ飛ばすぞ";
+            item_ability_description = "稀に殴った相手を瀕死にするぞ";
+            var_812 = 1; // 装備区分: 攻撃
+            var_1984 = 6; // 対応コミック部
+            var_2173 = "月";
+            var_2174 = 4; // 合成の空き容量
+            var_2039 = "重力の反転";
+        }
+        if (belongings_item_list == 250) { // Ver0.1401にて追加。
+            buying_price = 800;
+            item_name = "ｵｰ!ﾛﾝｻﾑ･ﾐｰのDISC";
+            item_description1 = "攻撃:0　防御:1";
+            effects_message = "[発動]体をﾊﾞﾗﾊﾞﾗにして4ﾏｽ以内で移動するぞ";
+            item_ability_description = "爆発に巻き込まれると移動するぞ";
+            var_812 = 3; // 装備区分: 全体
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "紐";
+            var_2174 = 0;
+            var_2039 = "ロープを投げた・・・";
+        }
+        if (belongings_item_list == 251) { // Ver0.1401にて追加。
+            buying_price = 1250;
+            item_name = "ｼﾋﾞﾙ･ｳｫｰのDISC";
+            item_description1 = "攻撃:0　防御:0";
+            effects_message = "[発動]ｱｲﾃﾑが捨てられなくなるぞ";
+            item_ability_description = "捨てた分ﾀﾞﾒｰｼﾞを喰らうぞ";
+            var_812 = 3; // 装備区分: 全体
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "鬱";
+            var_2174 = 1;
+            var_2039 = "おっかぶるッ！！";
+        }
+        if (belongings_item_list == 252) { // Ver0.1401にて追加。
+            buying_price = 2500;
+            item_name = "ｸﾘｰﾑ･ｽﾀｰﾀｰのDISC";
+            item_description1 = "攻撃:3　防御:1";
+            effects_message = "[発動]自分と仲間を回復するぞ";
+            item_ability_description = "敵がﾛｰｽﾄﾋﾞｰﾌｻﾝﾄﾞｳｨｯﾁを落とすぞ";
+            var_812 = 1; // 装備区分: 攻撃
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "栗";
+            var_2174 = 2;
+            var_2039 = "協力し合おう！";
+        }
+        if (belongings_item_list == 253) { // Ver0.1401にて追加。
+            buying_price = 4800;
+            item_name = "ｽｹｱﾘｰ･ﾓﾝｽﾀｰｽﾞのDISC";
+            item_description1 = "攻撃:7　防御:2";
+            effects_message = "[発動]周りの敵を恐竜化させるぞ";
+            item_ability_description = "固定・眠っている敵が見えなくなるぞ";
+            var_812 = 3; // 装備区分: 全体
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "竜";
+            var_2174 = 3;
+            var_2039 = "恐竜化！";
+        }
+        if (belongings_item_list == 254) { // Ver0.1401にて追加。
+            buying_price = 1800;
+            item_name = "C･ｻﾞ･ﾚｲﾝﾎﾞｰのDISC";
+            item_description1 = "攻撃:2　防御:1";
+            effects_message = "[発動]雨が降れば倍速で動けるぞ";
+            item_ability_description = "雨を固定するぞ";
+            var_812 = 2; // 装備区分: 防御
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "雨";
+            var_2174 = 2;
+            var_2039 = "呪われろッ！";
+        }
+        if (belongings_item_list == 255) { // Ver0.1401にて追加。
+            buying_price = 3800;
+            item_name = "ｲﾝ･ｱ･ｻｲﾚﾝﾄ･ｳｪｲのDISC";
+            item_description1 = "攻撃:3　防御:4";
+            effects_message = "[発動]20ﾀｰﾝの間30以下のﾀﾞﾒｰｼﾞを防ぐぞ";
+            item_ability_description = "次の回で音の罠を仕掛けるぞ";
+            var_812 = 2; // 装備区分: 防御
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "音";
+            var_2174 = 2;
+            var_2039 = "ブン！ブン！";
+        }
+        if (belongings_item_list == 256) { // Ver0.1401にて追加。
+            buying_price = 9000;
+            item_name = "ﾁｮｺﾚｲﾄ･ﾃﾞｨｽｺのDISC";
+            item_description1 = "攻撃:0　防御:1";
+            effects_message = "[発動]10ﾀｰﾝの間ﾀﾞﾒｰｼﾞを受け流すぞ";
+            item_ability_description = "稀に遠距離攻撃を受け流すぞ";
+            var_812 = 2; // 装備区分: 防御
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "甘";
+            var_2174 = 3;
+            var_2039 = "チョコレイト・ディスコ";
+        }
+        if (belongings_item_list == 257) { // Ver0.1401にて追加。
+            buying_price = 5200;
+            item_name = "T･O･T･B ﾜﾝのDISC";
+            item_description1 = "攻撃:1　防御:4";
+            effects_message = "[発動]砂鉄で前方の敵の移動を封じるぞ";
+            item_ability_description = "鉄の弾丸などを砂鉄で防ぐぞ";
+            var_812 = 2; // 装備区分: 防御
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "一";
+            var_2174 = 2;
+            var_2039 = "ヤツらに何もさせるな！";
+        }
+        if (belongings_item_list == 258) { // Ver0.1401にて追加。
+            buying_price = 10000;
+            item_name = "ﾎﾞｰﾙﾌﾞﾚｲｶｰ&ｽｷｬﾝのDISC";
+            item_description1 = "攻撃:0　防御:0";
+            effects_message = "[発動]ﾀﾞﾝｼﾞｮﾝやｱｲﾃﾑをｽｷｬﾝするぞ";
+            item_ability_description = "投擲すると敵が弱くなるぞ";
+            var_812 = 4; // 装備区分: 能力
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "球";
+            var_2174 = 0;
+            var_2039 = "スキャン";
+        }
+        if (belongings_item_list == 259) { // Ver0.1401にて追加。
+            buying_price = 800;
+            item_name = "TATOO YOU!のDISC";
+            item_description1 = "攻撃:0　防御:0";
+            effects_message = "[発動]正面のｷｬﾗを5ﾀｰﾝ隠すぞ";
+            item_ability_description = "全体攻撃が隣接した味方に当たらないぞ";
+            var_812 = 4; // 装備区分: 能力
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "墨";
+            var_2174 = 3;
+            var_2039 = "TATOO YOU!";
+        }
+        if (belongings_item_list == 260) { // Ver0.1401にて追加。
+            buying_price = 20000;
+            item_name = "20th Century BoyのDISC";
+            item_description1 = "攻撃:0　防御:13";
+            effects_message = "[発動]20ﾀｰﾝの間動けなくなり、その間は敵からのﾀﾞﾒｰｼﾞを反射するぞ";
+            item_ability_description = "会心の一撃が出ない、稀に攻撃を受け流し無効化するぞ";
+            var_812 = 2; // 装備区分: 防御
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "世";
+            var_2174 = 0;
+            var_2039 = "防御の体勢";
+        }
+        if (belongings_item_list == 261) { // Ver0.1401にて追加。
+            buying_price = 11800;
+            item_name = "D4CのDISC";
+            item_description1 = "攻撃:4　防御:5";
+            effects_message = "[発動]前方の敵を別次元に送るぞ";
+            item_ability_description = "SBR参加者に大ﾀﾞﾒｰｼﾞを与えるぞ";
+            var_812 = 1; // 装備区分: 攻撃
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "次";
+            var_2174 = 3;
+            var_2039 = "ドジャァアアアアン!";
+        }
+        if (belongings_item_list == 262) { // Ver0.1401にて追加。
+            buying_price = 24000;
+            item_name = "ﾀｽｸact4のDISC";
+            item_description1 = "攻撃:13　防御:1";
+            effects_message = "[発動]無限の回転を撃ち完全消滅させるぞ";
+            item_ability_description = "攻撃した相手が3ﾀｰﾝ後に消滅するぞ";
+            var_812 = 1; // 装備区分: 攻撃
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "牙";
+            var_2174 = 0;
+            var_2039 = "黄金の回転！";
+        }
+        if (belongings_item_list == 263) { // Ver0.1401にて追加。
+            buying_price = 36000;
+            item_name = "D4CﾗﾌﾞﾄﾚｲﾝのDISC";
+            item_description1 = "攻撃:6　防御:9";
+            effects_message = "[発動]しばらく無敵になるぞ";
+            item_ability_description = "聖人の遺体所持でﾀﾞﾒｰｼﾞを抑えるるぞ";
+            var_812 = 2; // 装備区分: 防御
+            var_1984 = 7; // 対応コミック部
+            var_2173 = "愛";
+            var_2174 = 1;
+            var_2039 = "黄金の回転！";
+        }
         if (belongings_item_list == 300) {
             buying_price = 2000;
             item_name = "ﾊﾟｰﾙ･ｼﾞｬﾑのDISC";
@@ -12851,6 +13057,18 @@ function func492(this: any) {
             var_2174 = 0;
             var_2039 = "空気の流れを読む！";
         }
+        if (belongings_item_list == 307) { // Ver0.1401にて追加。
+            buying_price = 2500;
+            item_name = "ﾘﾄﾙ･ﾌｨｰﾄのDISC";
+            item_description1 = "攻撃:0　防御:0";
+            effects_message = "[発動]敵のいる位置がわかるようになるぞ";
+            item_ability_description = "射撃ｽﾀﾝﾄﾞの攻撃力が修正値分上昇";
+            var_812 = 4;
+            var_1984 = 6;
+            var_2173 = "衛";
+            var_2174 = 0;
+            var_2039 = "空気の流れを読む！";
+        }
         if (belongings_item_list == 308) {
             buying_price = 2200;
             item_name = "ｴﾎﾞﾆｰ･ﾃﾞﾋﾞﾙのDISC";
@@ -12862,6 +13080,18 @@ function func492(this: any) {
             var_2173 = "悪";
             var_2174 = 1;
             var_2039 = "恨みはらさで…";
+        }
+        if (belongings_item_list == 309) { // Ver0.1401にて追加。
+            buying_price = 4000;
+            item_name = "ｿﾌﾄ･ﾏｼｰﾝのDISC";
+            item_description1 = "攻撃:3　防御:1";
+            effects_message = "[発動]人質を作り出す罠を仕掛けるぞ";
+            item_ability_description = "敵とすれ違えるぞ\t\t";
+            var_812 = 2; // スタンド効果の対象装備区分。1:攻撃、2:防御、3:全体、4:能力
+            var_1984 = 5; // 強化できるコミック部
+            var_2173 = "柔";
+            var_2174 = 1;
+            var_2039 = "ペチャンコ";
         }
         if (belongings_item_list == 310) {
             buying_price = 1000;
@@ -13447,6 +13677,16 @@ function func492(this: any) {
             var_2174 = 0;
             var_2039 = "ラバーズ";
         }
+        if (belongings_item_list == 410) { // Ver0.1401にて追加。没disc(ハイウェイスター。かつて射撃discだった?)。
+            buying_price = 0;
+            item_name = "";
+            item_description1 = "";
+            effects_message = "";
+            item_ability_description = "";
+            var_1984 = 0;
+            var_2174 = 0;
+            var_2039 = "";
+        }
         if (belongings_item_list == 411) {
             buying_price = 1300;
             item_name = "ﾀﾜｰ･ｵﾌﾞ･ｸﾞﾚｰのDISC";
@@ -13467,15 +13707,75 @@ function func492(this: any) {
             var_2174 = 0;
             var_2039 = "ヘブンズドアー";
         }
+        if (belongings_item_list == 413) { // Ver0.1401にて追加。没disc(サーフィス?)。
+            buying_price = 0;
+            item_name = "";
+            item_description1 = "";
+            effects_message = "";
+            item_ability_description = "";
+            var_1984 = 0;
+            var_2174 = 0;
+            var_2039 = "";
+        }
         if (belongings_item_list == 414) {
             buying_price = 1200;
-            item_name = "ﾀｽｸのDISC";
+            item_name = "ﾀｽｸact2のDISC"; // Ver0.1401にて修正。ﾀｽｸのDISC → ﾀｽｸact2のDISC
             item_description1 = "[遠距離ｽﾀﾝﾄﾞ]　攻撃力:12";
             effects_message = "離れた敵にダメージを与えるぞ";
             item_ability_description = "[発動]足元に移動する穴を仕掛けるぞ";
-            var_1984 = 99;
+            var_1984 = 7; // Ver0.1401にて修正。99 → 7
             var_2174 = 0;
             var_2039 = "黄金の回転へ！";
+        }
+        if (belongings_item_list == 415) { // Ver0.1401にて追加。
+            buying_price = 900;
+            item_name = "ﾀｽｸact1のDISC";
+            item_description1 = "[遠距離ｽﾀﾝﾄﾞ]　攻撃力:7";
+            effects_message = "離れた敵にダメージを与えるぞ";
+            item_ability_description = "[発動]素手でのダメージが増えるぞ";
+            var_1984 = 7; // 強化できるコミック部
+            var_2174 = 0;
+            var_2039 = "僕の指の爪が！";
+        }
+        if (belongings_item_list == 416) { // Ver0.1401にて追加。
+            buying_price = 5000;
+            item_name = "ﾀｽｸact3のDISC";
+            item_description1 = "[遠距離ｽﾀﾝﾄﾞ]　攻撃力:16";
+            effects_message = "離れた敵にダメージを与えるぞ";
+            item_ability_description = "[発動]足元に移動する穴を仕掛けるぞ";
+            var_1984 = 7; // 強化できるコミック部
+            var_2174 = 0;
+            var_2039 = "黄金の回転へ！";
+        }
+        if (belongings_item_list == 417) { // Ver0.1401にて追加。
+            buying_price = 2000;
+            item_name = "ﾗｯﾄのDISC";
+            item_description1 = "[遠距離ｽﾀﾝﾄﾞ]　攻撃力:4";
+            effects_message = "離れた敵にダメージを与えるぞ";
+            item_ability_description = "[発動]";
+            var_1984 = 4; // 強化できるコミック部
+            var_2174 = 0;
+            var_2039 = "";
+        }
+        if (belongings_item_list == 418) { // Ver0.1401にて追加。
+            buying_price = 1180;
+            item_name = "ｽｶｲ･ﾊｲのDISC";
+            item_description1 = "[遠距離ｽﾀﾝﾄﾞ]　攻撃力:0(ﾀﾞﾒｰｼﾞ無)";
+            effects_message = "敵を盲目にするぞ";
+            item_ability_description = "[発動]隣接した盲目の敵にﾀﾞﾒｰｼﾞを与えるぞ";
+            var_1984 = 6; // 強化できるコミック部
+            var_2174 = 0;
+            var_2039 = "スカイ・ハイ！";
+        }
+        if (belongings_item_list == 419) { // Ver0.1401にて追加。
+            buying_price = 1180;
+            item_name = "ﾁｭｰﾌﾞﾗｰ･ﾍﾞﾙｽﾞのDISC";
+            item_description1 = "[遠距離ｽﾀﾝﾄﾞ]　攻撃力:2";
+            effects_message = "離れた敵にダメージを与えるぞ";
+            item_ability_description = "[発動]敵の臭いを記憶するぞ";
+            var_1984 = 7; // 強化できるコミック部
+            var_2174 = 0;
+            var_2039 = "追跡する世界です";
         }
         if (belongings_item_list == 560) {
             buying_price = 400;
@@ -13710,6 +14010,38 @@ function func492(this: any) {
             item_ability_description = "";
             item_message1 = "どのアイテムに使いますか？";
         }
+        if (belongings_item_list == 591) { // Ver0.1401にて追加
+            buying_price = 5000;
+            item_name = "ﾎﾟｺﾛｺのDISC";
+            item_description1 = "[記憶DISC]";
+            effects_message = "無性に腹が立ってｱｲﾃﾑを壊すぞ";
+            item_ability_description = "";
+            item_message1 = "どのアイテムに使いますか？";
+        }
+        if (belongings_item_list == 592) { // Ver0.1401にて追加
+            buying_price = 3000;
+            item_name = "ｼﾞｮﾆｨのDISC";
+            item_description1 = "[記憶DISC]";
+            effects_message = "無性に腹が立ってｱｲﾃﾑを壊すぞ";
+            item_ability_description = "";
+            item_message1 = "どのアイテムに使いますか？";
+        }
+        if (belongings_item_list == 593) { // Ver0.1401にて追加
+            buying_price = 4200;
+            item_name = "ﾘﾝｺﾞｫのDISC";
+            item_description1 = "[記憶DISC]";
+            effects_message = "無性に腹が立ってｱｲﾃﾑを壊すぞ";
+            item_ability_description = "";
+            item_message1 = "どのアイテムに使いますか？";
+        }
+        if (belongings_item_list == 594) { // Ver0.1401にて追加
+            buying_price = 400;
+            item_name = "ﾂｪﾍﾟﾘ男爵のDISC";
+            item_description1 = "[記憶DISC]";
+            effects_message = "無性に腹が立ってｱｲﾃﾑを壊すぞ";
+            item_ability_description = "";
+            item_message1 = "どのアイテムに使いますか？";
+        }
         if (belongings_item_list == 600) {
             buying_price = 100;
             item_name = "ﾋﾟｯﾂｧ";
@@ -13918,14 +14250,24 @@ function func492(this: any) {
             item_ability_description = "食べると体力が１０回復するぞ";
             item_message1 = "体力が回復した";
         }
+
+        
+        if (belongings_item_list == 701) { // Ver0.1401にて追加。没アイテム(ソフト・マシーンの発動で罠にした敵?)
+            buying_price = 0;
+            item_name = "";
+            item_description1 = "";
+            effects_message = "";
+            item_ability_description = "";
+            item_message1 = "";
+        }
         if (belongings_item_list == 712) {
             buying_price = 10000;
             item_name = "やばいクスリ";
             item_description1 = "[消費ｱｲﾃﾑ]";
             effects_message = "高値で取引されているブツだ";
             item_ability_description = "体力が全回復するが混乱するぞ";
-            item_message1 = "　あっあっあっ　　　　　うﾋﾋ";
-            item_message2 = "　　ウケケ　　　　うおっうぉっ";
+            item_message1 = "  あっあっあっ　        うﾋﾋ";
+            item_message2 = "  ウケケ　    うおっうぉっ";
         }
         if (belongings_item_list == 713) {
             buying_price = 100;
@@ -13970,7 +14312,7 @@ function func492(this: any) {
             buying_price = 1000;
             item_name = "聖なる弓矢";
             item_description1 = "[消費ｱｲﾃﾑ]";
-            effects_message = "装備中のDISCの合成容量が１増えるぞ";
+            effects_message = "装備中のDISCの合成容量が1増えるぞ";
             item_ability_description = "";
             item_message1 = "";
         }
@@ -14083,6 +14425,15 @@ function func492(this: any) {
             item_message1 = "";
             item_message2 = "";
         }
+        if (belongings_item_list == 732) {
+            buying_price = 1500;
+            item_name = "ﾍﾞﾙﾄのﾊﾞｯｸﾙ";
+            item_description1 = "[消費ｱｲﾃﾑ]";
+            effects_message = "黄金比で作られたバックルだ。";
+            item_ability_description = "ﾀｽｸact1をact2へ進化させるぞ。";
+            item_message1 = "";
+            item_message2 = "";
+        }        
         if (belongings_item_list == 750) {
             buying_price = 390;
             item_name = "STEEL BALL RUN　7巻";
@@ -15138,63 +15489,63 @@ function func493(this: any) {
         if (disc_class == 1 && var_476[var_225] == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             return;
         }
         if (disc_class == 2 && var_477[var_225] == 1) {
             var_581 = var_581 - var_895;
             var_895 = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
             return;
         }
         if (disc_class == 3 && var_478[var_225] == 1) {
-            var_215 = 0;
+            nouryoku_disc_id = 0;
             return;
         }
         if (disc_class == 1 && var_477[var_225] == 1) {
             var_581 = var_581 - var_895;
             var_895 = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
             var_477 = dim(40);
         }
         if (disc_class == 1 && var_478[var_225] == 1) {
-            var_215 = 0;
+            nouryoku_disc_id = 0;
             var_478 = dim(40);
         }
         if (disc_class == 2 && var_476[var_225] == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             var_476 = dim(40);
         }
         if (disc_class == 2 && var_478[var_225] == 1) {
-            var_215 = 0;
+            nouryoku_disc_id = 0;
             var_478 = dim(40);
         }
         if (disc_class == 3 && var_476[var_225] == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             var_476 = dim(40);
         }
         if (disc_class == 3 && var_477[var_225] == 1) {
             var_581 = var_581 - var_895;
             var_895 = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
             var_477 = dim(40);
         }
         if (disc_class == 1) {
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
         }
         if (disc_class == 2) {
             var_581 = var_581 - var_895;
             var_895 = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
         }
         if (disc_class == 3) {
-            var_215 = 0;
+            nouryoku_disc_id = 0;
         }
         if (belongings_item_list == 100) {
             var_2177 = 8;
@@ -15447,15 +15798,15 @@ function func493(this: any) {
         if (disc_class == 1) {
             var_894 = var_2177 + var_233[var_225].Var4;
             var_580 = var_580 + var_894;
-            var_357 = belongings_item_list;
+            kougeki_disc_id = belongings_item_list;
         }
         if (disc_class == 2) {
             var_895 = var_2178 + var_233[var_225].Var4;
             var_581 = var_581 + var_895;
-            var_358 = belongings_item_list;
+            bougyo_disc_id = belongings_item_list;
         }
         if (disc_class == 3) {
-            var_215 = belongings_item_list;
+            nouryoku_disc_id = belongings_item_list;
         }
         return;
     });
@@ -15474,19 +15825,19 @@ function func494(this: any) {
         
         equip_disc = dim(400);
 
-        if (var_357 > 0) {
+        if (kougeki_disc_id > 0) {
             yield func426();
             var_2179 = var_553;
             var_2180 = 1;
             yield func495(); // 装備disc関係??
         }
-        if (var_358 > 0) {
+        if (bougyo_disc_id > 0) {
             yield func427();
             var_2179 = var_554;
             var_2180 = 2;
             yield func495(); // 装備disc関係??
         }
-        if (var_215 > 0) {
+        if (nouryoku_disc_id > 0) {
             yield func428();
             var_2179 = var_555;
             var_2180 = 4;
@@ -15521,7 +15872,7 @@ function func494(this: any) {
             var_211 = var_352;
         }
         yield func496(); // 装備discの共鳴組み合わせ関数
-        if (var_71[var_66][var_67] == 13 && var_215 != 202 && var_215 != 117 && var_125 == 0 && var_1059 == 0) {
+        if (var_71[var_66][var_67] == 13 && nouryoku_disc_id != 202 && nouryoku_disc_id != 117 && var_125 == 0 && var_1059 == 0) {
             var_216 = 1;
             var_213 = 0;
             var_214 = 0;
@@ -15609,7 +15960,7 @@ function func495(this: any) {
                 if (var_233[var_2179]["Var" + var_2182] == 123) {
                     var_2184 = 1;
                 }
-                if (var_233[var_2179]["Var" + var_2182] == 124) {
+                if (var_233[var_2179]["Var" + var_2182] == 124) { // No = 124 ムーディー・ブルース
                     var_2184 = 1;
                 }
                 if (var_233[var_2179]["Var" + var_2182] == 200) {
@@ -15621,7 +15972,7 @@ function func495(this: any) {
                 if (var_233[var_2179]["Var" + var_2182] == 202) {
                     var_2184 = 1;
                 }
-                if (var_233[var_2179]["Var" + var_2182] == 203) {
+                if (var_233[var_2179]["Var" + var_2182] == 203) { // No = 203 ザ・フール
                     var_2184 = 2;
                 }
                 if (var_233[var_2179]["Var" + var_2182] == 204) {
@@ -15863,9 +16214,9 @@ function func496(this: any) {
             var_352 = var_352 - var_1048;
         }
         sympathy_id = 0;
-        sympathy_base_disc_id = var_357;
-        sympathy_with_disc_id = var_358;
-        var_1173 = var_215;
+        sympathy_base_disc_id = kougeki_disc_id;
+        sympathy_with_disc_id = bougyo_disc_id;
+        var_1173 = nouryoku_disc_id;
         if (sympathy_base_disc_id != 0 && sympathy_base_disc_id == sympathy_with_disc_id) {
             sympathy_id = 1;
         }
@@ -16672,7 +17023,7 @@ function func497(this: any) {
     });
 }
 
-// 消費アイテム効果
+// 消費アイテム効果 Ver0.1401にて、今後の追加がし易いようにプログラム大幅見直し。
 function func498(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(498);
@@ -16942,3175 +17293,401 @@ function func498(this: any) {
         }
         // No = 560 仗助のdiscの効果
         if (belongings_item_list == 560) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_601 = rnd(4);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (var_601 == 0) {
-                comments_row1 = "ｱﾝｼﾞｪﾛに けなされた事を思い出した";
-                comments_row2 = "";
-            }
-            if (var_601 == 1) {
-                comments_row1 = "不良に けなされた事を思い出した";
-                comments_row2 = "";
-            }
-            if (var_601 == 2) {
-                comments_row1 = "承太郎に けなされた事を思い出した";
-                comments_row2 = "";
-            }
-            if (var_601 == 3) {
-                comments_row1 = "露伴に けなされた事を思い出した";
-                comments_row2 = "";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            if (var_199 == 1) {
-                var_199 = 4;
-            }
-            if (var_199 == 7) {
-                var_199 = 8;
-            }
-            if (var_199 == 9) {
-                var_199 = 6;
-            }
-            if (var_199 == 3) {
-                var_199 = 2;
-            }
-            var_139 = 1;
+            yield item560();
             return;
         }
         // No = 561  空き のdiscの効果
         if (belongings_item_list == 561) {
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            var_2200 = 1;
-            var_1845 = 1;
-            yield func556();
-            var_2200 = 0;
-            var_1845 = 0;
-            if (var_2110 == 0) {
-                item_message1 = "しかし何も起こらなかった…";
-            }
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+            yield item561();
             return;
         }
         // No = 562 康一のdiscの効果
         if (belongings_item_list == 562) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (current_level >= 99) {
-                item_message1 = "これ以上成長できなかった…";
-                return;
-            }
-    
-            DSPLAY(audio_id = 142);
-            var_568 = var_948[current_level];
-            yield func681();
-            var_2201 = 0;
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「うわオッ！」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「ひょっとして成長したんですかァ！？";
-            comments_row2a = "ぼく！？」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
+            yield item562();
             return;
         }
         // No = 563 ンドゥールのdiscの効果
         if (belongings_item_list == 563) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            var_132 = 1;
-    
-            DSPLAY(audio_id = 153);
+            yield item563();
             return;
         }
         // No = 564 噴上裕也のdiscの効果
         if (belongings_item_list == 564) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「クンクンクン・・・」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            var_170 = 1;
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+            yield item564();
             return;
         }
         // No = 566 ケンゾーのdiscの効果
         if (belongings_item_list == 566) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            var_1073 = rnd(4);
-            if (var_1073 == 0) {
-                comments_row1 = "「健康の秘訣は睡眠8時間半と";
-                comments_row2 = "　毎朝一杯の尿療法」";
-            }
-            if (var_1073 == 1) {
-                comments_row1 = "「40年前";
-                comments_row2 = "　わしは輝いておったんじゃあああああ」";
-            }
-            if (var_1073 == 2) {
-                comments_row1 = "「教祖復活じゃああああああ";
-                comments_row2 = "　あああああああああああああ」";
-            }
-            if (var_1073 == 3) {
-                comments_row1 = "「完璧なる【守りの方角】";
-                comments_row2 = "これで極めたって事じゃよのオオ！」";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 182);
-            var_1299 = 8;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_105 = 1;
+            yield item566();
             return;
         }
         // No = 567 アヴドゥルのdiscの効果
         if (belongings_item_list == 567) {
-            var_1945 = 1;
-            var_1967 = var_225;
+            yield item567();
             return;
         }
         // No = 590 ギアッチョのdiscの効果
         if (belongings_item_list == 590) {
-            var_1945 = 2;
-            var_1967 = var_225;
+            yield item590();
             return;
         }
         // No = 565 プッチ神父のdiscの効果
         if (belongings_item_list == 565) {
-            var_1945 = 3;
-            var_1967 = var_225;
+            yield item565();
             return;
         }
         // No = 568 ジョンガリ・Aのdiscの効果
         if (belongings_item_list == 568) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            var_1073 = rnd(4);
-            if (var_1073 == 0) {
-                comments_row1 = "「【筋肉】は信用できない";
-                comments_row2 = "　ライフルは【骨】でささえる」";
-            }
-            if (var_1073 == 1) {
-                comments_row1 = "「風が【蝿】の動きだ」";
-                comments_row2 = "";
-            }
-            if (var_1073 == 2) {
-                comments_row1 = "「我が【心】のささえを奪った復讐には";
-                comments_row2 = "決着をつけなくてはならないッ!!」";
-            }
-            if (var_1073 == 3) {
-                comments_row1 = "「15秒以内に仕留めるッ！」";
-                comments_row2 = "";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 182);
-            var_1299 = 8;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_138 = 1;
+            yield item568();
             return;
         }
         // No = 569 ポルナレフのdiscの効果
         if (belongings_item_list == 569) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_601 = rnd(5);
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (var_601 == 0) {
-                comments_row1 = "ｱﾌﾞﾄﾞｩﾙが死んだ時の事を思い出した。";
-                comments_row2 = "";
-            }
-            if (var_601 == 1) {
-                comments_row1 = "ｲｷﾞｰが死んだ時の事を思い出した。";
-                comments_row2 = "";
-            }
-            if (var_601 == 2) {
-                comments_row1 = "ｼｪﾘｰが死んだ時の事を思い出した。";
-                comments_row2 = "";
-            }
-            if (var_601 == 3) {
-                comments_row1 = "ｱﾌﾞﾄﾞｩﾙが死んだ時の事を思い出した。";
-                comments_row2 = "";
-            }
-            if (var_601 == 4) {
-                comments_row1 = "階段でDIOに会った時の事を思い出した。";
-                comments_row2 = "";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            if (var_601 == 0) {
-                comments_row1a = "「このドグサレがァァ――――ッ!!」";
-                comments_row2a = "";
-            }
-            if (var_601 == 1) {
-                comments_row1a = "「今のおれには…";
-                comments_row2a = "悲しみで泣いている時間なんかないぜ」";
-            }
-            if (var_601 == 2) {
-                comments_row1a = "「しかるべき報いを与えてやるッ！」";
-                comments_row2a = "";
-            }
-            if (var_601 == 3) {
-                comments_row1a = "「やつの気持ちを無駄にはしない";
-                comments_row2a = "　生きるために戦う……！」";
-            }
-            if (var_601 == 4) {
-                comments_row1a = "このままではまずい…はね返さなくてな…";
-                comments_row2a = "おれに勇気をくれッ！";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-    
-            DSPLAY(audio_id = 182);
-            var_1299 = 3;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_104 = 1;
-            if (var_109 == 1) {
-                var_104 = 0;
-                var_109 = 0;
-            }
+            yield item569();
             return;
         }
         // No = 570 ジョナサンのdiscの効果
         if (belongings_item_list == 570) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            var_1073 = rnd(4);
-            if (var_1073 == 0) {
-                comments_row1 = "「ふるえるぞハート！";
-                comments_row2 = "　燃え尽きるほどヒ―――ト！！」";
-            }
-            if (var_1073 == 1) {
-                comments_row1 = "「刻むぞ　血液のビート！」";
-                comments_row2 = "";
-            }
-            if (var_1073 == 2) {
-                comments_row1 = "「浄めてやるッ";
-                comments_row2 = "　その穢れたる野望！」";
-            }
-            if (var_1073 == 3) {
-                comments_row1 = "「たっぷり波紋を流し込んでやるッ！」";
-                comments_row2 = "";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_125 = 1;
-    
-            DSPLAY(audio_id = 182);
-            var_1299 = 1;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            if (var_130 != 0) {
-                var_389 = 2;
-                var_134 = 1;
-                var_211 = 1;
-                var_747 = 1;
-
-                DSPLAY(audio_id = 105);
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "吸血鬼体質で波紋呼吸をしてしまった！";
-                comments_row2a = "";
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                item_message1 = "酷いダメージを受けて回復しない！";
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_389 = 0;
-            }
+            yield item570();
             return;
         }
         // No = 571 ボインゴのdiscの効果
         if (belongings_item_list == 571) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            var_70 = 0;
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            var_1252 = 1;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "あ…新しい予知が…現れた…ぞ…";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-
-            DSPLAY(audio_id = 118);
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「ﾃﾞｨｱﾎﾞﾛはﾀﾞﾝｼﾞｮﾝを歩いていました。";
-            comments_row2a = "すると次の階で…」";
-            // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12) {
-                comments_row2a = "するとこの階で…」";
-            }
-            // No = 2 なので、レクイエムの大迷宮
-            if (dangeon_number == 2 && current_floor == 30) {
-                comments_row2a = "するとこの階で…」";
-            }
-            // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && current_floor == 99) {
-                comments_row2a = "するとこの階で…」";
-            }
-            // No = 5 なので、鉄の牢獄
-            if (dangeon_number == 5 && current_floor == var_20) {
-                comments_row2a = "するとこの階で…」";
-            }
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-
-            DSPLAY(audio_id = 118);
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            var_2202 = rnd(13);
-            // No = 4 なので、一巡後の世界
-            if (dangeon_number == 4) {
-                yield func458(); // 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
-                if (var_69 == 1) {
-                    var_2202 = 6;
-                }
-            }
-            var_2203 = var_20 - 1;
-            if (var_2202 == 0) {
-                var_70 = 1;
-                comments_row1a = "「ﾓﾝｽﾀｰﾊｳｽでﾎﾞｺﾎﾞｺに殴られて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 1) {
-                var_70 = 2;
-                comments_row1a = "「養分を吸い取られ";
-                comments_row2a = "餓死してリタイアだァーッ！」";
-            }
-            if (var_2202 == 2) {
-                var_70 = 3;
-                comments_row1a = "「体中の血を吸われて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 3) {
-                var_70 = 4;
-                comments_row1a = "「体中を蜂の巣にされて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 4) {
-                var_70 = 5;
-                comments_row1a = "「泥棒大成功！";
-                comments_row2a = "ﾃﾞｨｱﾎﾞﾛはほんとにラッキー！」";
-            }
-            if (var_2202 == 5) {
-                var_70 = 6;
-                comments_row1a = "「トニオさんに殴られて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 6) {
-                var_70 = 7;
-                comments_row1a = "「大部屋ﾓﾝｽﾀｰﾊｳｽだ！";
-                comments_row2a = "ﾃﾞｨｱﾎﾞﾛは考えるのをやめた。」";
-            }
-            if (var_2202 == 7) {
-                var_70 = 8;
-                comments_row1a = "「ｽﾀﾝﾄﾞﾊｳｽで殺されて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 8) {
-                var_70 = 9;
-                comments_row1a = "「輝く黄金の精神に囲まれて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 9) {
-                var_70 = 10;
-                comments_row1a = "「囚人の群れに囲まれて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 10) {
-                var_70 = 11;
-                comments_row1a = "「広大な砂漠で行き倒れて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 11) {
-                var_70 = 12;
-                comments_row1a = "「どこへ行くのかわからなくて";
-                comments_row2a = "リタイアだァーッ！」";
-            }
-            if (var_2202 == 12) {
-                var_70 = 13;
-                comments_row1a = "「俺が最強だぁああああ―――ッ！」";
-                comments_row2a = "";
-            }
-            // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 11) {
-                comments_row1a = "「ベンキを舐めさせられて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 2 なので、レクイエムの大迷宮
-            if (dangeon_number == 2 && current_floor == 29) {
-                comments_row1a = "「わけもわからず殺されて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && current_floor == 98) {
-                comments_row1a = "「わけもわからず殺されて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 5 なので、鉄の牢獄
-            if (dangeon_number == 5 && current_floor == var_2203) {
-                comments_row1a = "「わけもわからず殺されて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 0) { // No = 0:エンヤホテル
-                comments_row1a = "「ベンキを舐めさせられて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 1) { // No = 1:虹村屋敷
-                comments_row1a = "「体中を蜂の巣にされて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 2) { // No = 2:吉良屋敷
-                comments_row1a = "「爆発で粉々にされて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && current_floor == 12 && var_203 == 3) { // No = 3:杜王町埠頭
-                comments_row1a = "「電気で黒焦げにされて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 2 なので、レクイエムの大迷宮
-            if (dangeon_number == 2 && current_floor == 30) {
-                comments_row1a = "「わけもわからず殺されて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && current_floor == 99) {
-                comments_row1a = "「わけもわからず殺されて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            // No = 5 なので、鉄の牢獄
-            if (dangeon_number == 5 && current_floor == var_20) {
-                comments_row1a = "「わけもわからず殺されて";
-                comments_row2a = "リタイアだァーッ！」";
-                var_70 = 0;
-            }
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1252 = 0;
+            yield item571();
             return;
         }
         // No = 572 承太郎のdiscの効果
         if (belongings_item_list == 572) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            var_1073 = rnd(4);
-            if (var_1073 == 0) {
-                comments_row1 = "「やれやれだぜ・・・」";
-                comments_row2 = "";
-            }
-            if (var_1073 == 1) {
-                comments_row1 = "「やれやれだぜ・・・」";
-                comments_row2 = "";
-            }
-            if (var_1073 == 2) {
-                comments_row1 = "「やれやれだぜ・・・」";
-                comments_row2 = "";
-            }
-            if (var_1073 == 3) {
-                comments_row1 = "「やれやれだぜ・・・」";
-                comments_row2 = "";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            DSPLAY(audio_id = 182);
-            var_1299 = 3;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_111 = 1;
+            yield item572();
             return;
         }
         // No = 573 重ちーのdiscの効果
         if (belongings_item_list == 573) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…"; // var_262 = 1でなければ "ｱｲﾃﾑの場所がわかった！"
-                return;
-            }
-            DSPLAY(audio_id = 184);
-            var_100 = 1;
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+            yield item573();
             return;
         }
         // No = 574 エンポリオのdiscの効果
         if (belongings_item_list == 574) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            var_126 = 1;
-    
-            DSPLAY(audio_id = 134);
+            yield item574();
             return;
         }
         // No = 575 マニッシュボーイのdiscの効果
         if (belongings_item_list == 575) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (equip_disc[351] == 1) {
-                item_message1 = "装備DISCの効果によって";
-                item_message2 = "眠くならなかった！";
-                return;
-            }
-            if (var_120 == 1) {
-                item_message1 = "10時間熟睡した気分になっていて";
-                item_message2 = "眠くならなかった！";
-                return;
-            }
-            if (var_120 == 0) {
-                var_219 = 1;
-        
-                DSPLAY(audio_id = 132);
-                return;
-            }
+            yield item575();
+            return;
         }
         // No = 576 破裂するdiscの効果
         if (belongings_item_list == 576) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            var_177 = 1;
+            yield item576();
             return;
         }
         // No = 577 ミキタカのdiscの効果
         if (belongings_item_list == 577) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            var_470 = 1;
-            for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 123);
-            var_470 = 2;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 3;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 4;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 5;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 6;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 7;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 8;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 9;
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 102);
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                var_470 = 10;
-                yield func337(); // メッセージ関係呼び出し
-                var_470 = 11;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 12;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 13;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 14;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 15;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 16;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 17;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 18;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 19;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            DSPLAY(audio_id = 232);
-            var_470 = 20;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_470 = 0;
-            var_218 = 1;
+            yield item576();
             return;
         }
         // No = 578 サンドマンのdiscの効果
         if (belongings_item_list == 578) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (var_133 == 0) {
-                var_157 = 1;
-                var_158 = 0;
-        
-                DSPLAY(audio_id = 154);
-            }
-            if (var_133 != 0) {
-                var_133 = 0;
-            }
+            yield item578();
             return;
         }
         // No = 579 ペットショップのdiscの効果
         if (belongings_item_list == 579) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                DSPLAY(audio_id = 219);
-                var_1243 = 1;
-                yield func337(); // メッセージ関係呼び出し
-                var_1243 = 2;
-                yield func337(); // メッセージ関係呼び出し
-                var_1243 = 3;
-                yield func337(); // メッセージ関係呼び出し
-                var_1243 = 2;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1243 = 0;
-
-            DSPLAY(audio_id = 216);
-            var_374 = 1;
-            var_1264 = 0;
-            var_774 = 160;
-            var_1576 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_774 = var_774 - 20;
-            }
-            var_1576 = 0;
-            var_271 = 0;
-            var_374 = 0;
-            yield func499();
+            yield item579();
             return;
         }
         // No = 580 ドッピオのdiscの効果
         if (belongings_item_list == 580) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            var_144 = 1;
-    
-            DSPLAY(audio_id = 168);
-            var_1584 = 160;
-            var_1585 = 160;
-            var_271 = 1;
-            var_1583 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1583++;
-            }
-            var_271 = 0;
-            var_1583 = 0;
-            var_116 = 0;
-            var_114 = 0;
-            var_126 = 0;
-            var_134 = 0;
-            var_135 = 0;
-            var_136 = 0;
-            var_137 = 0;
-            var_177 = 0;
-            if (var_199 == 1) {
-                var_199 = 4;
-            }
-            if (var_199 == 7) {
-                var_199 = 8;
-            }
-            if (var_199 == 9) {
-                var_199 = 6;
-            }
-            if (var_199 == 3) {
-                var_199 = 2;
-            }
+            yield item580();
             return;
         }
         // No = 582 水が熱湯になるdiscの効果
         if (belongings_item_list == 582) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            var_2204 = 0;
-            var_2205 = 1;
-            for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {
-                if (var_233[var_2205].Var0 == 401) {
-                    var_2204 = 1;
-                    var_233[var_2205].Var3 = 1;
-                }
-                var_2205++;
-            }
-            if (var_2204 == 1) {
-        
-                DSPLAY(audio_id = 175);
-                var_1584 = 160;
-                var_1585 = 160;
-                var_271 = 1;
-                var_1583 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1583++;
-                }
-                var_271 = 0;
-                var_1583 = 0;
-                item_message1 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCの回数が";
-                item_message2 = "残り １ になってしまった！！";
-            }
+            yield item582();
             return;
         }
         // No = 583 ディアボロのdiscの効果
         if (belongings_item_list == 583) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ここは「退く」のだ……………";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "ここで一時「退く」のは";
-            comments_row2a = "敗北ではない……………！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-            item_message1 = "オレは頂点に返り咲ける能力があるッ！";
-            item_message2 = "";
-            var_1951 = 1;
+            yield item583();
             return;
         }
         // No = 584 ヌケサクのdiscの効果
         if (belongings_item_list == 584) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            var_601 = rnd(5);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "嫌な記憶がよみがえってきた…";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            if (var_601 == 0) {
-                comments_row1a = "「黙って引っ込んでろよ　いいな…」";
-                comments_row2a = "";
-            }
-            if (var_601 == 1) {
-                comments_row1a = "「よけいなことをしてみろ";
-                comments_row2a = "おれたちが てめーを殺すぜ」";
-            }
-            if (var_601 == 2) {
-                comments_row1a = "「おとなしく補欠してろヌケサク」";
-                comments_row2a = "";
-            }
-            if (var_601 == 3) {
-                comments_row1a = "「きさまの能力では";
-                comments_row2a = "ジョースターたちを倒すのは無理だ」";
-            }
-            if (var_601 == 4) {
-                comments_row1a = "「しょせんきさまはただの吸血鬼」";
-                comments_row2a = "";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-    
-            DSPLAY(audio_id = 151);
-            var_1299 = 4;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_109 = 1;
-            if (var_104 == 1) {
-                var_104 = 0;
-                var_109 = 0;
-            }
-    
-            DSPLAY(audio_id = 164);
+            yield item584();
             return;
         }
         // No = 585 億泰のdiscの効果
         if (belongings_item_list == 585) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            var_1073 = rnd(2);
-            if (var_1073 == 0) {
-                comments_row1 = "「あっ！　こりゃたまらん！";
-                comments_row2 = "　　ヨダレ　ずびっ！」";
-            }
-            if (var_1073 == 1) {
-                comments_row1 = "「うわあああああ";
-                comments_row2 = "　はっ　腹が空いていくうよぉ～～っ」";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-    
-            DSPLAY(audio_id = 164);
-            var_129 = 1;
-            var_193 = 0;
+            yield item585();
             return;
         }
         // No = 586 ペッシのdiscの効果
         if (belongings_item_list == 586) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            if (current_level > 1) {
-                for (let cnt3 = 0; cnt3 < 6; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_1264 = 0;
-                var_389 = 2;
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "兄貴ィ～～　もう駄目だァ～～";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-        
-                DSPLAY(audio_id = 151);
-                var_1299 = 4;
-                var_271 = 1;
-                var_1297 = 1;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1297++;
-                }
-                var_271 = 0;
-                var_1297 = 0;
-                current_level = current_level - 1;
-                var_352 = var_352 - 3;
-                var_211 = var_211 - 3;
-                if (var_352 < 1) {
-                    var_352 = 1;
-                }
-                if (var_211 < 1) {
-                    var_211 = 1;
-                }
-                var_568 = var_948[current_level] - 1;
-                var_389 = 0;
-                return;
-            }
-            if (current_level == 1) {
-                for (let cnt3 = 0; cnt3 < 6; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_1264 = 0;
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "おれはもう「マンモーニ」じゃねえッ！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-        
-                DSPLAY(audio_id = 142);
-                var_1299 = 9;
-                var_271 = 1;
-                var_1297 = 1;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1297++;
-                }
-                var_271 = 0;
-                var_1297 = 0;
-                var_568 = var_948[current_level];
-                yield func681();
-                var_2201 = 0;
-                item_message1 = "ディアボロはレベルが上がった！";
-                item_message2 = "";
-                return;
-            }
+            yield item586();
+            return;
         }
         // No = 587 吉良吉影のdiscの効果
         if (belongings_item_list == 587) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            var_2206 = 1;
-            var_2207 = 0;
-            for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {
-                if (var_233[var_2206].Var15 == 2) {
-                    var_233[var_2206].Var15 = 0;
-                    var_2207 = 1;
-                }
-                var_2206 = var_2206 + 1;
-            }
-            if (var_2207 == 0) {
-                var_474 = 0;
-                for (let cnt3 = 0; cnt3 < 50; ++cnt3) {
-                    var_475 = rnd(var_224);
-                    var_475 = var_475 + 1;
-                    if (var_233[var_475].Var0 >= 500 && var_233[var_475].Var0 < 800 && var_233[var_475].Var15 == 0) {
-                        var_474 = 1;
-                        break;
-                    }
-                    if (var_233[var_475].Var0 >= 900 && var_233[var_475].Var15 == 0) {
-                        var_474 = 1;
-                        break;
-                    }
-                }
-                if (var_474 == 1) {
-                    var_233[var_475].Var15 = 2;
-                }
-                yield func340(); // キー入力による選択処理
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "何かのｱｲﾃﾑが爆弾になったかも…";
-                comments_row2a = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func050();
-                yield func340(); // キー入力による選択処理
-                item_message1 = "う～む　どうだったかな……？";
-                item_message2 = "自信がない…";
-            }
+            yield item587();
             return;
         }
         // No = 588 J・ガイルのdiscの効果
         if (belongings_item_list == 588) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "Ｊガイルの気分になって大声で叫んだ。";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_2208 = rnd(3);
-            enemy_list = var_1034;
-            if (enemy_list == 0) {
-                enemy_list = 5;
-            }
-            yield func626();
-            var_2209 = enemy_name;
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            if (var_2208 == 0) {
-                comments_row1a = "「" + var_2209 + "は";
-                comments_row2a = "　おまえらのために死んだ」";
-            }
-            if (var_2208 == 1) {
-                comments_row1a = "「青春を犠牲にして俺を追い続けたのに";
-                comments_row2a = "　途中で挫折するとは」";
-            }
-            if (var_2208 == 2) {
-                comments_row1a = "「お前らの仲間にあの世であったら";
-                comments_row2a = "　聞かせてもらうといい…」";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            if (var_2208 == 0) {
-                comments_row1a = "「おまえらが いなけりゃ";
-                comments_row2a = "　死ななかったかもなぁ！」";
-            }
-            if (var_2208 == 1) {
-                comments_row1a = "「なんとつまらない・・・";
-                comments_row2a = "　さびしい人生よ！！！」";
-            }
-            if (var_2208 == 2) {
-                comments_row1a = "「どーやってオレに";
-                comments_row2a = "　殺してもらったかをなぁああ～ッ！」";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "全ての敵が目を覚ました！";
-            comments_row2a = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-            var_2210 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_2210].Var0 != 0 || var_83[var_2210].Var31 != 4 || var_83[var_2210].Var0 != 0) {
-                }
-                if (var_83[var_2210].Var25 >= 50) {
-                    var_83[var_2210].Var25 -= 2;
-                    if (var_83[var_2210].Var25 < 50) {
-                        var_83[var_2210].Var25 = 0;
-                    }
-                }
-                if (var_83[var_2210].Var25 < 50) {
-                    var_83[var_2210].Var25 += 2;
-                    if (var_83[var_2210].Var25 >= 50) {
-                        var_83[var_2210].Var25 = 49;
-                    }
-                }
-                var_83[var_2210].Var12 = 0;
-                var_2210++;
-            }
+            yield item588();
             return;
         }
         // No = 589 プロシュート兄貴のdiscの効果
         if (belongings_item_list == 589) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1264 = 0;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            var_1073 = rnd(2);
-            if (var_1073 == 0) {
-                comments_row1 = "「ブッ殺す」と心の中で思ったならッ！";
-                comments_row2 = "スデに行動は終わっているんだッ！";
-            }
-            if (var_1073 == 1) {
-                comments_row1 = "いったん食らい付いたら決して…";
-                comments_row2 = "スタンド能力を解除したりはしねえッ！";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 182);
-            var_1299 = 8;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_172 = 1;
+            yield item589();
             return;
         }
         // No = 715 アイテム「点滴」を使用した時の効果
         if (belongings_item_list == 715) {
-            var_271 = 1;
-            var_1242 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_271 = 0;
-            var_1242 = 0;
-            var_360 = 0;
-            var_2211 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                var_2211 = 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 30;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "「栄養補給させてもらったぜ！」";
-            }
-            if (var_2211 == 1) {
-                item_message1 = "最大満腹度が" + var_567 + "になった。";
-            }
+            yield item715();
             return;
         }
         // No = 600 アイテム「ピッツァ」を使用した時の効果
         if (belongings_item_list == 600) {
-            var_360 = 0;
-            var_2211 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 2;
-                var_2211 = 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 50;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
-            if (var_2211 == 1) {
-                item_message1 = "最大満腹度が" + var_567 + "になった。";
-            }
+            yield item600();
             return;
         }
         // No = 602 アイテム「ネアポリスのピッツァ」を使用した時の効果
         if (belongings_item_list == 602) {
-            var_360 = 0;
-            var_2211 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 4;
-                var_2211 = 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 100;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
-            if (var_2211 == 1) {
-                item_message1 = "最大満腹度が" + var_567 + "になった。";
-            }
+            yield item602();
             return;
         }
-        // No = 603 腐ったピッツァ、No = 644 猫バーガー、No = 645 猫ステーキ、No = 646 猫ジュース を使用した時の効果
-        if (belongings_item_list == 603 || belongings_item_list == 644 || belongings_item_list == 645 || belongings_item_list == 646) {
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (sympathy_id != 120 && sympathy_id != 124) {
-                var_2212 = rnd(5);
-                if (current_level == 1 && var_2212 == 4) {
-                    var_2212 = 3;
-                }
-                if (var_352 <= 5 && var_2212 == 3) {
-                    var_2212 = 0;
-                }
-                if (var_566 == 0 && var_2212 == 2) {
-                    var_2212 = 0;
-                }
-                if (var_565 == 0 && var_2212 == 0) {
-                    var_2212 = 0;
-                }
-                var_1214 = 0;
-                var_389 = 2;
-                if (var_2212 != 4) {
-            
-                    DSPLAY(audio_id = 164);
-                }
-                if (var_2212 == 4) {
-            
-                    DSPLAY(audio_id = 151);
-                }
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_389 = 0;
-                var_360 = 0;
-                var_350 = var_350 + 20;
-                if (var_350 > var_567) {
-                    var_350 = var_567;
-                }
-                if (var_2212 == 0) {
-                    var_211 = 1;
-                    item_message1 = "グエッ！";
-                    item_message2 = "ひどいダメージを受けた！";
-                }
-                if (var_2212 == 1) {
-                    var_565 = var_565 - 3;
-                    if (var_565 < 0) {
-                        var_565 = 0;
-                    }
-                    item_message1 = "グエッ！";
-                    item_message2 = "精神力が下がってしまった！";
-                }
-                if (var_2212 == 2) {
-                    var_566 = var_566 - 1;
-                    if (var_566 < 0) {
-                        var_566 = 0;
-                    }
-                    if (var_565 > var_566) {
-                        var_565 = var_566;
-                    }
-                    item_message1 = "グエエエエッ！";
-                    item_message2 = "最大精神力が下がってしまった！";
-                }
-                if (var_2212 == 3) {
-                    var_352 = var_352 - 5;
-                    if (var_352 <= 0) {
-                        var_352 = 1;
-                    }
-                    var_211 = var_211 - 5;
-                    if (var_211 <= 0) {
-                        var_211 = 1;
-                    }
-                    item_message1 = "グエエエエッ！";
-                    item_message2 = "最大HPが下がってしまった！";
-                }
-                if (var_2212 == 4) {
-                    current_level = current_level - 1;
-                    var_352 = var_352 - 3;
-                    var_211 = var_211 - 3;
-                    if (current_level < 1) {
-                        current_level = 1;
-                    }
-                    if (var_352 <= 1) {
-                        var_352 = 1;
-                    }
-                    if (var_211 <= 1) {
-                        var_211 = 1;
-                    }
-                    var_568 = var_948[current_level] - 1;
-                    item_message1 = "グエエエエｴｴｴッ！";
-                    item_message2 = "レベルが下がってしまった！";
-                }
-            }
-            if (sympathy_id == 120 || sympathy_id == 124) {
-                var_1214 = 0;
-                item_message1 = "「ンまァア～～い！」";
-                item_message2 = "";
-                var_360 = 0;
-                var_350 = var_350 + 20;
-                if (var_350 > var_567) {
-                    var_350 = var_567;
-                }
-            }
+        // No = 603 「腐ったピッツァ」を使用した時の効果
+        if (belongings_item_list == 603) {
+            yield item603();
             return;
         }
         // No = 604 アイテム「ポルポのピッツァ」を使用した時の効果
         if (belongings_item_list == 604) {
-            var_360 = 0;
-            var_567 = var_567 + 10;
-            if (var_567 > 999) {
-                var_567 = 999;
-            }
-            var_350 = var_567;
-            item_message1 = "最大満腹度が" + var_567 + "になった。";
-            if (equip_disc[396] == 0) {
-                if (var_157 == 0) {
-                    var_133 = 1;
-                    var_397 = 0;
-                }
-                if (var_157 != 0) {
-                    var_157 = 0;
-                    var_158 = 0;
-                }
-                item_message2 = "お腹がいっぱいで動きが重い…";
-        
-                DSPLAY(audio_id = 162);
-            }
+            yield item604();
             return;
         }
         // No = 605  アイテム「焦げたピッツァ」を使用した時の効果
         if (belongings_item_list == 605) {
-            var_360 = 0;
-            var_2211 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                var_2211 = 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
-            if (var_2211 == 1) {
-                item_message1 = "最大満腹度が" + var_567 + "になった。";
-            }
+            yield item605();
             return;
         }
         // No = 630  アイテム「娼婦風スパゲッティ」を使用した時の効果
         if (belongings_item_list == 630) {
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 20;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            var_1223 = 1;
+            yield item630();
             return;
         }
         // No = 631 アイテム「モッツァレラチーズとトマトのサラダ」を使用した時の効果
         if (belongings_item_list == 631) {
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            if (var_565 == var_566) {
-                item_message1 = "お腹が膨れた";
-            }
-            var_565 = var_566;
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
+            yield item631();
             return;
         }
         // No = 632 アイテム「キリマンジャロの雪解け水」を使用した時の効果
         if (belongings_item_list == 632) {
-            var_360 = 0;
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            var_1214 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                var_1256 = 1;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1256 = 2;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1256 = 0;
-            var_127 = 0;
-            var_132 = 0;
-            var_119 = 1;
-            var_121 = 1;
-            var_120 = 1;
-            if (var_410 == 401) {
-                yield func429();
-                if (var_233[var_556].Var3 == 99) {
-                    item_message2 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのパワーは全開だ！";
-                }
-                if (var_233[var_556].Var3 <= 98) {
-                    var_233[var_556].Var3 = var_233[var_556].Var3 + 5;
-                    if (var_233[var_556].Var3 >= 99) {
-                        var_233[var_556].Var3 = 99;
-                    }
-                    item_message2 = "ﾌｰ･ﾌｧｲﾀｰｽﾞのｴﾈﾙｷﾞｰが増加した！";
-                }
-            }
+            yield item632();
             return;
         }
         // No = 633 アイテム「子羊背肉のリンゴソースかけ」を使用した時の効果
         if (belongings_item_list == 633) {
-            var_360 = 0;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1214 = 0;
-    
-            DSPLAY(audio_id = 111);
-            var_1255 = 1;
-            var_567 = var_567 + 10;
-            if (var_567 > 999) {
-                var_567 = 999;
-            }
-            var_350 = var_350 + 20;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            var_1579 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1579 = var_1579 + 1;
-            }
-            var_271 = 0;
-            var_1579 = 0;
-            var_1255 = 0;
+            yield item633();
             return;
         }
         // No = 634 アイテム「プリン」を使用した時の効果
         if (belongings_item_list == 634) {
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_129 == 0) {
-                var_360 = 0;
-                if (var_350 == var_567) {
-                    var_567 = var_567 + 1;
-                    if (var_567 > 999) {
-                        var_567 = 999;
-                    }
-                }
-                if (var_133 == 0 && var_126 == 0) {
-                    item_message1 = "お腹がちょっと膨れた";
-                }
-                var_133 = 0;
-                var_126 = 0;
-                var_350 = var_350 + 10;
-                if (var_350 > var_567) {
-                    var_350 = var_567;
-                }
-                return;
-            }
-            if (var_129 != 0) {
-                var_360 = 0;
-                if (var_350 == var_567) {
-                    var_567 = var_567 + 1;
-                    if (var_567 > 999) {
-                        var_567 = 999;
-                    }
-                }
-                var_133 = 0;
-                var_126 = 0;
-                var_350 = var_350 + 10;
-                if (var_350 > var_567) {
-                    var_350 = var_567;
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "「デザートはプリン～～～？";
-                comments_row2a = "ケッ！　おれは不良だよ…！」";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func050();
-                yield func340(); // キー入力による選択処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "「プリンなんて女子供の食う物なんて";
-                comments_row2a = "チャンチャラおかしくて…」";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func050();
-                yield func340(); // キー入力による選択処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "「ンまぁ～～い！」";
-                comments_row2a = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func050();
-                var_1214 = 0;
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    var_1256 = 1;
-                    // yield func337(); // メッセージ関係呼び出し
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1256 = 2;
-                    // yield func337(); // メッセージ関係呼び出し
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_1256 = 0;
-                item_message1 = "このフロアでお腹が減らなくなった！";
-                var_193 = 1;
-                return;
-            }
+            yield item634();
             return;
         }
         // No = 635 アイテム「焦げた料理」を使用した時の効果
         if (belongings_item_list == 635) {
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
+            yield item635();
             return;
         }
         // No = 636 アイテム「サンドイッチ」を使用した時の効果
         if (belongings_item_list == 636) {
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「ピクニックに来ている気分だね…」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_567;
-            var_566 = var_566 + 1;
-            var_565 = var_565 + 1;
-            if (var_566 > 99) {
-                var_566 = 99;
-                var_565 = 99;
-            }
+            yield item636();
             return;
         }
         // No = 639 アイテム「カエルの丸焼き」を使用した時の効果
         if (belongings_item_list == 639) {
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 20;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
+            yield item639();
             return;
         }
         // No = 640 アイテム「焦げた食べ物」を使用した時の効果
         if (belongings_item_list == 640) {
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
+            yield item640();
             return;
         }
         // No = 641 アイテム「消し炭」を使用した時の効果
         if (belongings_item_list == 641) {
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1214 = 0;
-            var_389 = 2;
-    
-            DSPLAY(audio_id = 164);
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_389 = 0;
-            var_360 = 0;
-            var_567 = var_567 - 10;
-            if (var_567 < 1) {
-                var_567 = 1;
-            }
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
+            yield item641();
+            return;
+        }
+        // No = 644 「猫バーガー」を使用した時の効果。No = 603 「腐ったピッツァ」と効果同じ。
+        if (belongings_item_list == 644) {
+            yield item603();
+            return;
+        }
+        // No = 645 「猫ステーキ」を使用した時の効果。No = 603 「腐ったピッツァ」と効果同じ。
+        if (belongings_item_list == 645) {
+            yield item603();
+            return;
+        }
+        // No = 646 「猫ジュース」を使用した時の効果。No = 603 「腐ったピッツァ」と効果同じ。
+        if (belongings_item_list == 646) {
+            yield item603();
             return;
         }
         // No = 647 アイテム「オレンジ」を使用した時の効果
         if (belongings_item_list == 647) {
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 20;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
+            yield item647();
             return;
         }
         // No = 648 アイテム「鎌倉カスター」を使用した時の効果
         if (belongings_item_list == 648) {
-            var_360 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 7;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            if (var_350 == var_567) {
-                item_message1 = "お腹がいっぱいになった。";
-            }
+            yield item648();
             return;
         }
         // No = 650 アイテム「カエル」を使用した時の効果
         if (belongings_item_list == 650) {
-            var_360 = 0;
-            if (var_211 == var_352) {
-                var_352 = var_352 + 1;
-                item_message1 = "最大HPが１あがった！";
-                if (var_352 > 999) {
-                    var_352 = 999;
-                    item_message1 = "最大HPは限界まで達した！";
-                }
-            }
-            var_211 = var_211 + 50;
-            if (var_211 > var_352) {
-                var_211 = var_352;
-            }
-            var_350 = var_350 + 5;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
+            yield item650();
             return;
         }
         // No = 651 アイテム「大きいカエル」を使用した時の効果
         if (belongings_item_list == 651) {
-            var_360 = 0;
-            if (var_211 == var_352) {
-                var_352 = var_352 + 2;
-                item_message1 = "最大HPが２あがった！";
-                if (var_352 > 999) {
-                    var_352 = 999;
-                    item_message1 = "最大HPは限界まで達した！";
-                }
-            }
-            var_211 = var_211 + 100;
-            if (var_211 > var_352) {
-                var_211 = var_352;
-            }
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
+            yield item651();
             return;
         }
         // No = 652 アイテム「カエルの死体」を使用した時の効果
         if (belongings_item_list == 652) {
-            var_360 = 0;
-            if (var_211 == var_352) {
-                var_352 = var_352 + 1;
-                item_message1 = "最大HPが１あがった！";
-                if (var_352 > 999) {
-                    var_352 = 999;
-                    item_message1 = "最大HPは限界まで達した！";
-                }
-            }
-            var_211 = var_211 + 20;
-            if (var_211 > var_352) {
-                var_211 = var_352;
-            }
-            var_350 = var_350 + 5;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
+            yield item652();
             return;
         }
         // No = 653 アイテム「超巨大なカエル」を使用した時の効果
         if (belongings_item_list == 653) {
-            var_360 = 0;
-            if (var_211 == var_352) {
-                var_352 = var_352 + 5;
-                item_message1 = "最大HPが５あがった！";
-                if (var_352 > 999) {
-                    var_352 = 999;
-                    item_message1 = "最大HPは限界まで達した！";
-                }
-            }
-            var_211 = var_352;
-            var_350 = var_350 + 20;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
+            yield item653();
             return;
         }
         // No = 654 アイテム「ヤドクガエル」を使用した時の効果
         if (belongings_item_list == 654) {
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1214 = 0;
-            var_1940 = var_199;
-            var_199 = 2;
-            var_389 = 2;
-            var_747 = 1;
-            var_209 = 20;
-            var_360 = 0;
-            var_350 = var_350 + 10;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            var_211 = var_211 - 80;
-            if (var_211 <= 0) {
-                var_211 = 0;
-            }
-            var_208 = var_208 + 80;
-            if (var_211 <= 0) {
-                var_211 = 0;
-                var_356 = 260;
-            }
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_389 = 0;
-            var_199 = var_1940;
+            yield item654();
             return;
         }
         // No = 655 アイテム「ザリガニ」を使用した時の効果
         if (belongings_item_list == 655) {
-            var_360 = 0;
-            if (var_211 == var_352) {
-                var_352 = var_352 + 1;
-                item_message1 = "最大HPが１あがった！";
-                if (var_352 > 999) {
-                    var_352 = 999;
-                    item_message1 = "最大HPは限界まで達した！";
-                }
-            }
-            var_211 = var_211 + 10;
-            if (var_211 > var_352) {
-                var_211 = var_352;
-            }
-            var_350 = var_350 + 5;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
+            yield item655();
             return;
         }
+        // No = 701 没アイテム「ソフト・マシーンの発動によって罠にした敵」を使用した時の効果
         if (belongings_item_list == 701) {
-            if (var_77[var_66][var_67] != 0 || var_80[var_66][var_67] != 0 || var_73[var_66][var_67] != 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "足元のものが邪魔で";
-                comments_row2 = "うまく使えなかった。";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                return;
-            }
-            var_337 = var_337 + 1;
-            var_80[var_66][var_67] = var_337;
-            var_81[var_337][0] = 77;
-            var_81[var_337][1] = var_66;
-            var_81[var_337][2] = var_67;
-            var_81[var_337][4] = 1;
-            var_81[var_337][5] = var_71[var_66][var_67];
-            var_81[var_337][6] = disc_rarity;
-            enemy_list = disc_rarity;
-            yield func626();
-            var_2213 = enemy_name;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "" + var_2213 + "を";
-            comments_row2 = "地面に出して人質にした！";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "この上にいれば";
-            comments_row2a = "" + var_2213 + "から攻撃されないぞ";
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
+            yield item701();
             return;
         }
+        // No = 9999 没アイテム？
         if (belongings_item_list == 9999) {
-            if (var_199 == 2) {
-                var_2102 = var_66;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 8) {
-                var_2102 = var_66;
-                var_2103 = var_67 - 1;
-            }
-            if (var_199 == 4) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67;
-            }
-            if (var_199 == 6) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67;
-            }
-            if (var_199 == 1) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 3) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 7) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67 - 1;
-            }
-            if (var_199 == 9) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67 - 1;
-            }
-            var_2107 = 0;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ペラペラに空気を入れた。";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_71[var_2102][var_2103] == 0 || var_71[var_2102][var_2103] == 13 || var_82[var_2102][var_2103] != 0) {
-                var_2108 = 0;
-            }
-            if (var_71[var_2102][var_2103] != 0 && var_71[var_2102][var_2103] != 13 && var_82[var_2102][var_2103] == 0) {
-                var_2108 = 1;
-            }
-            if (var_2108 == 0) {
-                var_2214 = disc_rarity;
-                var_1845 = 1;
-                yield func556();
-                var_2214 = 0;
-                var_1845 = 0;
-                if (var_2110 == 1) {
-                    var_2107 = 1;
-                    var_199 = var_2111;
-                }
-                if (var_2110 == 0) {
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "十分なスペースがないため";
-                    comments_row2a = "うまくいかなかった…";
-                    yield func050();
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    var_231 = 0;
-                    var_234 = 0;
-                    var_2040 = 0;
-                    return;
-                }
-            }
-            if (var_2108 == 1) {
-                var_2214 = disc_rarity;
-                var_1845 = 4;
-                yield func556();
-                var_2214 = 0;
-                var_1845 = 0;
-                var_2107 = 1;
-            }
-            if (var_2107 == 1) {
-                var_1584 = (var_83[var_673].Var1 - var_66 + 4) * 40;
-                var_1585 = (var_83[var_673].Var2 - var_67 + 4) * 40;
-                var_271 = 1;
-                var_1583 = 1;
-        
-                DSPLAY(audio_id = 168);
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_1583++;
-                }
-                var_271 = 0;
-                var_1583 = 0;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
+            yield item9999();
             return;
         }
+        // No = 712 アイテム「やばいクスリ」を使用した時の効果
         if (belongings_item_list == 712) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_211 = var_352;
-            var_126 = 1;
-    
-            DSPLAY(audio_id = 134);
+            yield item712();
             return;
         }
+        // No = 713 アイテム「ﾎﾟﾙﾎﾟのﾗｲﾀｰ」を使用した時の効果
         if (belongings_item_list == 713) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2215 = 1;
-            var_1845 = 1;
-            yield func556();
-            var_2215 = 0;
-            var_1845 = 0;
-            for (let cnt2 = 0; cnt2 < 16; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
+            yield item713();
             return;
         }
-        // 
+        // No = 714 アイテム「紫外線照射装置」を使用した時の効果
         if (belongings_item_list == 714) {
-            var_2216 = var_199;
-            var_199 = 2;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "そして　くらえッ！";
-            comments_row2 = "新しい対吸血鬼兵器！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            DSPLAY(audio_id = 174);
-            var_1245 = 1;
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 2;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 3;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 4;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 7;
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "紫外線照射装置ィィィィィィィィィィ！！";
-            comments_row2a = "";
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-    
-            DSPLAY(audio_id = 176);
-            var_1245 = 6;
-            gsel(19);
-            color(254, 254, 254);
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_529 = 2;
-            var_403 = "スカッとするぜーッ！！";
-            var_2217 = 1;
-            var_2194 = 1;
-            var_2196 = 3;
-            var_2195 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2218 = 999;
-                var_2219 = 0;
-                if (var_2194 != var_124) {
-                    var_2220 = 0;
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_402 = var_2194;
-                        var_209 = var_2218;
-                        yield func516();
-                        yield func705();
-                        for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        var_2220 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_71[var_2223][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_71[var_2224][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_71[var_2221][var_2225] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var31 == 2 && var_83[var_2194].Var0 != 111 && var_71[var_2221][var_2226] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2220 == 0) {
-                for (let cnt3 = 0; cnt3 < 30; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            var_2196 = 0;
-            var_2195 = 0;
-            var_529 = 0;
-            var_2217 = 0;
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 5;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 4;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 3;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 2;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1245 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_199 = var_2216;
-            if (var_2220 == 1) {
-                item_message1 = "スカッとするぜーッ！！";
-            }
+            yield item714();
             return;
         }
+        // item_list = 724 石仮面
         if (belongings_item_list == 724) {
-            var_1251 = 1;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「俺は人間をやめるぞォ――！」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            var_1251 = 2;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1251 = 4;
-            var_1940 = var_199;
-            var_199 = 2;
-            var_271 = 1;
-            var_1411 = 1;
-            for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-        
-                DSPLAY(audio_id = 111);
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-            }
-            for (let cnt2 = 0; cnt2 < 17; ++cnt2) {
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-            }
-            var_1411 = 0;
-            var_271 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_130 = 1;
-            item_message1 = "吸血鬼体質になった！";
-            var_1251 = 0;
-            if (var_125 != 0) {
-                var_389 = 2;
-                var_134 = 1;
-                var_211 = 1;
-                var_747 = 1;
-
-                DSPLAY(audio_id = 105);
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "吸血鬼体質で波紋呼吸をしてしまった！";
-                comments_row2a = "";
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                item_message1 = "酷いダメージを受けて回復しない！";
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_389 = 0;
-            }
-            var_199 = var_1940;
+            yield item724();
             return;
         }
+        // item_list == 728 赤石つき石仮面
         if (belongings_item_list == 728) {
-            var_1251 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1251 = 6;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1251 = 8;
-            var_1940 = var_199;
-            var_199 = 2;
-            var_271 = 1;
-            var_1411 = 1;
-            var_1413 = 1;
-            for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-        
-                DSPLAY(audio_id = 111);
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-            }
-            for (let cnt2 = 0; cnt2 < 17; ++cnt2) {
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1411++;
-            }
-            var_1411 = 0;
-            var_1413 = 0;
-            var_271 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_182 = 1;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「究極の生命体ﾃﾞｨｱﾎﾞﾛの誕生だッーっ」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            var_1251 = 0;
-            var_199 = var_1940;
+            yield item728();
             return;
         }
+        // No = 726 アイテム「鉄球」を使用した時の効果
         if (belongings_item_list == 726) {
-    
-            DSPLAY(audio_id = 182);
-            var_1299 = 9;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_168 = 1;
+            yield item726();
             return;
         }
+        // No = 727 アイテム「ｿﾞﾝﾋﾞ馬」を使用した時の効果
         if (belongings_item_list == 727) {
-
-            DSPLAY(audio_id = 143);
-            var_1558 = 160;
-            var_1559 = 160;
-            var_271 = 1;
-            var_1557 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1557++;
-                var_198 = 1;
-                var_300 = 0;
-            }
-            var_271 = 0;
-            var_1557 = 0;
-            var_211 = var_352;
+            yield item727();
             return;
         }
+        // No = 797 アイテム「」を使用した時の効果
         if (belongings_item_list == 797) {
-            var_352 = 980;
-            var_211 = 980;
+            yield item797();
             return;
         }
+        // No = 798 アイテム「」を使用した時の効果
         if (belongings_item_list == 798) {
-            if (var_357 != 0) {
-                yield func426();
-                if (var_233[var_553].Var4 <= 89) {
-                    var_233[var_553].Var4 = var_233[var_553].Var4 + 10;
-                    var_580 = var_580 + 10;
-                    var_894 = var_894 + 10;
-                }
-            }
-            if (var_358 != 0) {
-                yield func427();
-                if (var_233[var_554].Var4 <= 89) {
-                    var_233[var_554].Var4 = var_233[var_554].Var4 + 10;
-                    var_581 = var_581 + 10;
-                    var_895 = var_895 + 10;
-                }
-            }
-            if (var_215 != 0) {
-                yield func428();
-                if (var_233[var_555].Var4 <= 89) {
-                    var_233[var_555].Var4 = var_233[var_555].Var4 + 10;
-                }
-            }
+            yield item798();
+            return;
         }
+        // No = 799 アイテム「装備＋９９」を使用した時の効果
         if (belongings_item_list == 799) {
-            if (var_357 != 0) {
-                yield func426();
-                var_2227 = 99 - var_233[var_553].Var4;
-                var_233[var_553].Var4 = 99;
-                var_580 = var_580 + var_2227;
-                var_894 = var_894 + var_2227;
-            }
-            if (var_358 != 0) {
-                yield func427();
-                var_2227 = 99 - var_233[var_554].Var4;
-                var_233[var_554].Var4 = 99;
-                var_581 = var_581 + var_2227;
-                var_895 = var_895 + var_2227;
-            }
-            if (var_215 != 0) {
-                yield func428();
-                var_233[var_555].Var4 = 99;
-            }
+            yield item799();
+            return;
         }
+        // No = 718 アイテム「聖なる弓矢」を使用した時の効果
         if (belongings_item_list == 718) {
-    
-            DSPLAY(audio_id = 111);
-            var_1257 = 1;
-            var_1591 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1591 = var_1591 + 1;
-            }
-            var_1257 = 0;
-            var_1591 = 0;
-            var_271 = 0;
-            yield func530();
+            yield item718();
             return;
         }
+        // No = 719 アイテム「吉良の弓矢」を使用した時の効果
         if (belongings_item_list == 719) {
-    
-            DSPLAY(audio_id = 111);
-            var_1257 = 1;
-            var_1591 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1591 = var_1591 + 1;
-            }
-            var_1257 = 0;
-            var_1591 = 0;
-            var_271 = 0;
-            var_2228 = 1;
-            yield func531();
-            if (var_2228 == 0) {
-                item_message1 = "" + target_item_name + "に";
-                item_message2 = "新たな装備効果が発現した！";
-            }
-            if (var_2228 == 1) {
-                item_message1 = "しかしﾃﾞｨｱﾎﾞﾛは";
-                item_message2 = "矢に選ばれなかった…";
-            }
+            yield item719();
             return;
         }
+        // No = 720 アイテム「ときのがくぼう」を使用した時の効果
         if (belongings_item_list == 720) {
-            var_163 = 1;
-            var_164 = 1;
-            var_153 = 0;
-            var_114 = 0;
-            var_463 = 0;
-            var_464 = 0;
-            var_461 = 0;
-            var_462 = 0;
-    
-            DSPLAY(audio_id = 185);
-            var_271 = 1;
-            var_1491 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1491++;
-            }
-            var_271 = 0;
-            var_1491 = 0;
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1952 = 1;
+            yield item720();
             return;
         }
+        // No = 722 アイテム「ｼｰｻﾞｰのﾊﾞﾝﾀﾞﾅ」を使用した時の効果
         if (belongings_item_list == 722) {
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「シーザーは今・・・　さっき」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「ここで死んだ」";
-            comments_row2a = "";
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-    
-            DSPLAY(audio_id = 134);
-            var_126 = 1;
-            var_166 = 0;
+            yield item722();
             return;
         }
+        // No = 716 アイテム「恐竜の化石」を使用した時の効果
         if (belongings_item_list == 716) {
-            if (dangeon_number != 4) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "しかしここでは何も起こらなかった…";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                return;
-            }
-            var_70 = 99;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "遠くから声が聞こえる…";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「ここに泥棒がいると";
-            comments_row2a = "　電話がかかったですって…？」";
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「ハハハ…";
-            comments_row2a = "　きっとイタズラ電話でしょう」";
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
+            yield item716();
             return;
         }
+        // No = 723 アイテム「魔法のランプ」を使用した時の効果
         if (belongings_item_list == 723) {
-            for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_262 == 1) {
-                item_message1 = "しかし何も起こらなかった…";
-                return;
-            }
-            var_1055 = 1;
+            yield item723();
             return;
         }
+        // No = 729 アイテム「吉良の財布」を使用した時の効果
         if (belongings_item_list == 729) {
-            var_2229 = rnd(5);
-            var_2229 = var_2229 + 1;
-            var_2229 = var_2229 * 1000;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "財布の中には" + var_2229 + "G入っていた！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-    
-            DSPLAY(audio_id = 207);
-            wallet = wallet + var_2229;
-            if (wallet > 999999) {
-                wallet = 999999;
-            }
+            yield item729();
             return;
         }
+        // No = 730 アイテム「大家のカバン」を使用した時の効果
         if (belongings_item_list == 730) {
-            var_2229 = disc_rarity;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "カバンの中には" + var_2229 + "G入っていた！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-    
-            DSPLAY(audio_id = 207);
-            wallet = wallet + var_2229;
-            if (wallet > 999999) {
-                wallet = 999999;
-            }
+            yield item730();
             return;
         }
+        // No = 731 アイテム「盗まれた財布」を使用した時の効果
         if (belongings_item_list == 731) {
-            var_2230 = rnd(5);
-            var_2229 = disc_rarity;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "財布の中には" + var_2229 + "G入っていた！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            if (var_2230 != 0) {
-        
-                DSPLAY(audio_id = 207);
-                wallet = wallet + var_2229;
-                if (wallet > 999999) {
-                    wallet = 999999;
-                }
-            }
-            if (var_2230 == 0) {
-                yield func340(); // キー入力による選択処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "……と思ったら、はしっこのとこだけ";
-                comments_row2a = "やぶかれたお金だった！";
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "「やっ！　野郎ッ！」";
-                comments_row2a = "";
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-            }
+            yield item731();
             return;
         }
+        // Ver0.14にて追加。No = 732 アイテム「ベルトのバックル」を使用した時の効果
+        if (belongings_item_list == 732) {
+            yield item732();
+            return;
+        }        
+        // コミック「GP BOY」を読んだ時の効果
         if (belongings_item_list == 900) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20119,8 +17696,8 @@ function func498(this: any) {
             item_message2 = "やっぱりセナは速ェや…";
             return;
         }
+        // 一部コミックを読んだ時の効果
         if (belongings_item_list >= 901 && belongings_item_list <= 905) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20144,8 +17721,8 @@ function func498(this: any) {
             }
             return;
         }
+        // 二部コミックを読んだ時の効果
         if (belongings_item_list >= 906 && belongings_item_list <= 911) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20194,8 +17771,8 @@ function func498(this: any) {
             var_1950 = 7;
             return;
         }
-        if (belongings_item_list == 987) {
 
+        if (belongings_item_list == 987) {
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20223,7 +17800,6 @@ function func498(this: any) {
             return;
         }
         if (belongings_item_list == 988) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20250,7 +17826,6 @@ function func498(this: any) {
             return;
         }
         if (belongings_item_list == 989) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20276,7 +17851,6 @@ function func498(this: any) {
             return;
         }
         if (belongings_item_list == 990) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20299,7 +17873,6 @@ function func498(this: any) {
             return;
         }
         if (belongings_item_list == 991) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20330,7 +17903,6 @@ function func498(this: any) {
             return;
         }
         if (belongings_item_list == 992) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20447,7 +18019,6 @@ function func498(this: any) {
                     var_2232 = 1;
                 }
                 if (var_2232 == 1) {
-            
                     DSPLAY(audio_id = 161);
                     var_1324 = (var_83[var_2231].Var1 - var_66 + 4) * 40;
                     var_1325 = (var_83[var_2231].Var2 - var_67 + 4) * 40 - 10;
@@ -20484,7 +18055,6 @@ function func498(this: any) {
                     return;
                 }
                 if (var_2232 == 2) {
-            
                     DSPLAY(audio_id = 161);
                     var_1324 = (var_83[var_2231].Var1 - var_66 + 4) * 40;
                     var_1325 = (var_83[var_2231].Var2 - var_67 + 4) * 40 - 10;
@@ -20517,7 +18087,6 @@ function func498(this: any) {
             return;
         }
         if (belongings_item_list == 9999) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -20548,13 +18117,11 @@ function func498(this: any) {
             return;
         }
         if (belongings_item_list == 996) {
-
             DSPLAY(audio_id = 118);
             for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1252 = 3;
-    
             DSPLAY(audio_id = 142);
             var_1299 = 9;
             var_271 = 1;
@@ -20705,7 +18272,6 @@ function func499(this: any) {
                 yield func337(); // メッセージ関係呼び出し
                 var_774 = var_774 + 20;
             }
-
             DSPLAY(audio_id = 217);
             var_1578 = 0;
             var_271 = 0;

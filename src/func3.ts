@@ -1,3 +1,4 @@
+// 大部屋ダンジョンマップ
 function func300(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(300);
@@ -57,6 +58,7 @@ function func300(this: any) {
         return;
     });
 }
+// 大部屋ダンジョンマップ(水床あり)
 function func301(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(301);
@@ -116,6 +118,7 @@ function func301(this: any) {
         return;
     });
 }
+// 幻覚の迷宮のダンジョンマップ
 function func302(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(302);
@@ -533,6 +536,7 @@ function func308(this: any) {
         return;
     });
 }
+ // エンヤホテルのダンジョンマップ
 function func309(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(309);
@@ -592,6 +596,7 @@ function func309(this: any) {
         return;
     });
 }
+// 杜王町埠頭のダンジョンマップ
 function func310(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(310);
@@ -651,6 +656,7 @@ function func310(this: any) {
         return;
     });
 }
+ // 広大な砂漠のダンジョンマップ
 function func311(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(311);
@@ -710,6 +716,7 @@ function func311(this: any) {
         return;
     });
 }
+// 虹村屋敷のダンジョンマップ
 function func312(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(312);
@@ -769,6 +776,7 @@ function func312(this: any) {
         return;
     });
 }
+// 吉良屋敷のダンジョンマップ
 function func313(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(313);
@@ -828,6 +836,7 @@ function func313(this: any) {
         return;
     });
 }
+ // 没特殊階層「ビンの中」ボスは毒グモのダンジョンマップ
 function func314(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(314);
@@ -887,6 +896,7 @@ function func314(this: any) {
         return;
     });
 }
+// 没特殊階層「ナチス実験施設」ボスはサンタナのダンジョンマップ
 function func315(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(315);
@@ -946,6 +956,7 @@ function func315(this: any) {
         return;
     });
 }
+// 幽霊部屋のダンジョンマップ
 function func316(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(316);
@@ -964,7 +975,7 @@ function func316(this: any) {
         var_493[10] = 0;
         var_493[11] = 0;
         var_493[12] = 0;
-        var_983 = "########################################################";
+        var_983 =           "########################################################";
         var_983 = var_983 + "########################################################";
         var_983 = var_983 + "########################################################";
         var_983 = var_983 + "########################################################";
@@ -1005,6 +1016,7 @@ function func316(this: any) {
         return;
     });
 }
+// 自由人の狂想曲のダンジョンマップ
 function func317(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(317);
@@ -1302,6 +1314,7 @@ function func321(this: any) {
         return;
     });
 }
+// 黄金の風のダンジョンマップ
 function func322(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(322);
@@ -1542,24 +1555,24 @@ function func324(this: any) {
                 pos(var_1150, var_1151);
                 if (var_71[var_447][var_449] != 0 && var_71[var_447][var_449] <= 12) {
                     if (var_87[var_447][var_449] <= 4) {
-                        gcopy(5, 0, var_92 * 40, 40, 40);
+                        gcopy(5, 0, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] >= 5 && var_87[var_447][var_449] <= 7) {
-                        gcopy(5, 40, var_92 * 40, 40, 40);
+                        gcopy(5, 40, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] == 8 || var_87[var_447][var_449] == 9) {
-                        gcopy(5, 80, var_92 * 40, 40, 40);
+                        gcopy(5, 80, y_axis_map_image * 40, 40, 40);
                     }
                 }
                 if (var_71[var_447][var_449] == 14) {
                     if (var_87[var_447][var_449] <= 4) {
-                        gcopy(5, 120, var_92 * 40, 40, 40);
+                        gcopy(5, 120, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] >= 5 && var_87[var_447][var_449] <= 7) {
-                        gcopy(5, 160, var_92 * 40, 40, 40);
+                        gcopy(5, 160, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] == 8 || var_87[var_447][var_449] == 9) {
-                        gcopy(5, 200, var_92 * 40, 40, 40);
+                        gcopy(5, 200, y_axis_map_image * 40, 40, 40);
                     }
                 }
                 if (var_349 >= 1 && var_71[var_447][var_449] != 0 && var_71[var_447][var_449] != 13 && var_71[var_447][var_449] <= 14) {
@@ -1611,201 +1624,201 @@ function func324(this: any) {
                 }
                 if (var_71[var_447][var_449] == 0) {
                     if (var_87[var_447][var_449] <= 5) {
-                        gcopy(5, 240, var_92 * 40, 40, 40);
+                        gcopy(5, 240, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] == 6 || var_87[var_447][var_449] == 7) {
-                        gcopy(5, 280, var_92 * 40, 40, 40);
+                        gcopy(5, 280, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_87[var_447][var_449] == 8 || var_87[var_447][var_449] == 9) {
-                        gcopy(5, 320, var_92 * 40, 40, 40);
+                        gcopy(5, 320, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_1148] != 0 && var_71[var_1146][var_1148] <= 14 && var_71[var_1146][var_449] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 760, var_92 * 40, 40, 40);
+                        gcopy(5, 760, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_1148] != 0 && var_71[var_1147][var_1148] <= 14 && var_71[var_1147][var_449] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 800, var_92 * 40, 40, 40);
+                        gcopy(5, 800, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_1149] != 0 && var_71[var_1146][var_1149] <= 14 && var_71[var_447][var_1149] == 0 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 840, var_92 * 40, 40, 40);
+                        gcopy(5, 840, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_1149] != 0 && var_71[var_1147][var_1149] <= 14 && var_71[var_447][var_1149] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 880, var_92 * 40, 40, 40);
+                        gcopy(5, 880, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 14 && var_71[var_447][var_1149] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 520, var_92 * 40, 40, 40);
+                        gcopy(5, 520, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 14 && var_71[var_447][var_1149] == 0 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 560, var_92 * 40, 40, 40);
+                        gcopy(5, 560, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 14 && var_71[var_1146][var_449] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 480, var_92 * 40, 40, 40);
+                        gcopy(5, 480, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 14 && var_71[var_1146][var_449] == 0 && var_71[var_1147][var_449] == 0) {
                         if (var_87[var_447][var_449] <= 3) {
-                            gcopy(5, 360, var_92 * 40, 40, 40);
+                            gcopy(5, 360, y_axis_map_image * 40, 40, 40);
                         }
                         if (var_87[var_447][var_449] == 4 || var_87[var_447][var_449] == 5) {
-                            gcopy(5, 400, var_92 * 40, 40, 40);
+                            gcopy(5, 400, y_axis_map_image * 40, 40, 40);
                         }
                         if (var_87[var_447][var_449] == 6 || var_87[var_447][var_449] == 7) {
-                            gcopy(5, 440, var_92 * 40, 40, 40);
+                            gcopy(5, 440, y_axis_map_image * 40, 40, 40);
                         }
                         if (var_87[var_447][var_449] == 8 || var_87[var_447][var_449] == 9) {
                             if (var_1153 == 0 || var_1153 == 1 || var_1153 == 8) {
-                                gcopy(5, 1240, var_92 * 40, 40, 40);
+                                gcopy(5, 1240, y_axis_map_image * 40, 40, 40);
                             }
                             if (var_1153 == 2 || var_1153 == 3 || var_1153 == 9) {
-                                gcopy(5, 1280, var_92 * 40, 40, 40);
+                                gcopy(5, 1280, y_axis_map_image * 40, 40, 40);
                             }
                             if (var_1153 == 4 || var_1153 == 5 || var_1153 == 10) {
-                                gcopy(5, 1320, var_92 * 40, 40, 40);
+                                gcopy(5, 1320, y_axis_map_image * 40, 40, 40);
                             }
                             if (var_1153 == 6 || var_1153 == 7 || var_1153 == 11) {
-                                gcopy(5, 1360, var_92 * 40, 40, 40);
+                                gcopy(5, 1360, y_axis_map_image * 40, 40, 40);
                             }
                         }
                     }
                     if (var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 14 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 14 && var_71[var_447][var_1149] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 600, var_92 * 40, 40, 40);
+                        gcopy(5, 600, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 14 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 14 && var_71[var_447][var_1149] == 0 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 640, var_92 * 40, 40, 40);
+                        gcopy(5, 640, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 14 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 14 && var_71[var_447][var_1148] == 0 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 680, var_92 * 40, 40, 40);
+                        gcopy(5, 680, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 14 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 14 && var_71[var_447][var_1148] == 0 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 720, var_92 * 40, 40, 40);
+                        gcopy(5, 720, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 14 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 14 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 14 && var_71[var_447][var_1149] == 0) {
-                        gcopy(5, 1000, var_92 * 40, 40, 40);
+                        gcopy(5, 1000, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 14 && var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 14 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 14 && var_71[var_447][var_1148] == 0) {
-                        gcopy(5, 1040, var_92 * 40, 40, 40);
+                        gcopy(5, 1040, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 14 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 14 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 14 && var_71[var_1147][var_449] == 0) {
-                        gcopy(5, 1080, var_92 * 40, 40, 40);
+                        gcopy(5, 1080, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 14 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 14 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 14 && var_71[var_1146][var_449] == 0) {
-                        gcopy(5, 1120, var_92 * 40, 40, 40);
+                        gcopy(5, 1120, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1149] != 0 && var_71[var_447][var_1149] <= 14 && var_71[var_1147][var_449] != 0 && var_71[var_1147][var_449] <= 14 && var_71[var_447][var_1148] != 0 && var_71[var_447][var_1148] <= 14 && var_71[var_1146][var_449] != 0 && var_71[var_1146][var_449] <= 14) {
-                        gcopy(5, 1160, var_92 * 40, 40, 40);
+                        gcopy(5, 1160, y_axis_map_image * 40, 40, 40);
                     }
                 }
                 if (var_71[var_447][var_449] == 13) {
                     if (var_1153 == 0 || var_1153 == 1 || var_1153 == 2 || var_1153 == 3) {
-                        gcopy(5, 1520, var_92 * 40, 40, 40);
+                        gcopy(5, 1520, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_1153 == 4 || var_1153 == 5 || var_1153 == 6 || var_1153 == 7) {
-                        gcopy(5, 1560, var_92 * 40, 40, 40);
+                        gcopy(5, 1560, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_1153 == 8 || var_1153 == 9 || var_1153 == 10 || var_1153 == 11) {
-                        gcopy(5, 1600, var_92 * 40, 40, 40);
+                        gcopy(5, 1600, y_axis_map_image * 40, 40, 40);
                     }
                     if (var_71[var_447][var_1148] != 13) {
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150 + 8, var_1151);
-                            gcopy(5, 1400 + 8, var_92 * 40, 24, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40, 24, 4);
                         }
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150 + 8, var_1151);
-                            gcopy(5, 1400 + 8, var_92 * 40, 32, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1400, var_92 * 40, 32, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1400, var_92 * 40, 40, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40, 40, 4);
                         }
                     }
                     if (var_71[var_447][var_1149] != 13) {
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150 + 8, var_1151 + 36);
-                            gcopy(5, 1400 + 8, var_92 * 40 + 36, 24, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40 + 36, 24, 4);
                         }
                         if (var_71[var_1146][var_449] != 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150 + 8, var_1151 + 36);
-                            gcopy(5, 1400 + 8, var_92 * 40 + 36, 32, 4);
+                            gcopy(5, 1400 + 8, y_axis_map_image * 40 + 36, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] != 13) {
                             pos(var_1150, var_1151 + 36);
-                            gcopy(5, 1400, var_92 * 40 + 36, 32, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40 + 36, 32, 4);
                         }
                         if (var_71[var_1146][var_449] == 13 && var_71[var_1147][var_449] == 13) {
                             pos(var_1150, var_1151 + 36);
-                            gcopy(5, 1400, var_92 * 40 + 36, 40, 4);
+                            gcopy(5, 1400, y_axis_map_image * 40 + 36, 40, 4);
                         }
                     }
                     if (var_71[var_1146][var_449] != 13) {
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150, var_1151 + 8);
-                            gcopy(5, 1440, var_92 * 40 + 8, 4, 24);
+                            gcopy(5, 1440, y_axis_map_image * 40 + 8, 4, 24);
                         }
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1440, var_92 * 40, 4, 32);
+                            gcopy(5, 1440, y_axis_map_image * 40, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150, var_1151 + 8);
-                            gcopy(5, 1440, var_92 * 40 + 8, 4, 32);
+                            gcopy(5, 1440, y_axis_map_image * 40 + 8, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150, var_1151);
-                            gcopy(5, 1440, var_92 * 40, 4, 40);
+                            gcopy(5, 1440, y_axis_map_image * 40, 4, 40);
                         }
                     }
                     if (var_71[var_1147][var_449] != 13) {
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150 + 36, var_1151 + 8);
-                            gcopy(5, 1440 + 36, var_92 * 40 + 8, 4, 24);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40 + 8, 4, 24);
                         }
                         if (var_71[var_447][var_1149] != 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150 + 36, var_1151);
-                            gcopy(5, 1440 + 36, var_92 * 40, 4, 32);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] != 13) {
                             pos(var_1150 + 36, var_1151 + 8);
-                            gcopy(5, 1440 + 36, var_92 * 40 + 8, 4, 32);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40 + 8, 4, 32);
                         }
                         if (var_71[var_447][var_1149] == 13 && var_71[var_447][var_1148] == 13) {
                             pos(var_1150 + 36, var_1151);
-                            gcopy(5, 1440 + 36, var_92 * 40, 4, 40);
+                            gcopy(5, 1440 + 36, y_axis_map_image * 40, 4, 40);
                         }
                     }
                     if (var_71[var_447][var_1148] != 13 && var_71[var_1146][var_449] != 13) {
                         pos(var_1150, var_1151);
-                        gcopy(5, 1480, var_92 * 40, 8, 8);
+                        gcopy(5, 1480, y_axis_map_image * 40, 8, 8);
                     }
                     if (var_71[var_447][var_1149] != 13 && var_71[var_1146][var_449] != 13) {
                         pos(var_1150, var_1151 + 32);
-                        gcopy(5, 1480, var_92 * 40 + 32, 8, 8);
+                        gcopy(5, 1480, y_axis_map_image * 40 + 32, 8, 8);
                     }
                     if (var_71[var_447][var_1148] != 13 && var_71[var_1147][var_449] != 13) {
                         pos(var_1150 + 32, var_1151);
-                        gcopy(5, 1480 + 32, var_92 * 40, 8, 8);
+                        gcopy(5, 1480 + 32, y_axis_map_image * 40, 8, 8);
                     }
                     if (var_71[var_447][var_1149] != 13 && var_71[var_1147][var_449] != 13) {
                         pos(var_1150 + 32, var_1151 + 32);
-                        gcopy(5, 1480 + 32, var_92 * 40 + 32, 8, 8);
+                        gcopy(5, 1480 + 32, y_axis_map_image * 40 + 32, 8, 8);
                     }
                     if (var_71[var_447][var_1148] == 13 && var_71[var_1146][var_449] == 13 && var_71[var_1146][var_1148] != 13) {
                         pos(var_1150, var_1151);
-                        gcopy(5, 1480 + 16, var_92 * 40 + 16, 4, 4);
+                        gcopy(5, 1480 + 16, y_axis_map_image * 40 + 16, 4, 4);
                     }
                     if (var_71[var_447][var_1148] == 13 && var_71[var_1147][var_449] == 13 && var_71[var_1147][var_1148] != 13) {
                         pos(var_1150 + 37, var_1151);
-                        gcopy(5, 1480 + 21, var_92 * 40 + 16, 4, 4);
+                        gcopy(5, 1480 + 21, y_axis_map_image * 40 + 16, 4, 4);
                     }
                     if (var_71[var_447][var_1149] == 13 && var_71[var_1146][var_449] == 13 && var_71[var_1146][var_1149] != 13) {
                         pos(var_1150 - 1, var_1151 + 37);
-                        gcopy(5, 1480 + 15, var_92 * 40 + 22, 4, 4);
+                        gcopy(5, 1480 + 15, y_axis_map_image * 40 + 22, 4, 4);
                     }
                     if (var_71[var_447][var_1149] == 13 && var_71[var_1147][var_449] == 13 && var_71[var_1147][var_1149] != 13) {
                         pos(var_1150 + 37, var_1151 + 37);
-                        gcopy(5, 1480 + 21, var_92 * 40 + 22, 4, 4);
+                        gcopy(5, 1480 + 21, y_axis_map_image * 40 + 22, 4, 4);
                     }
                 }
                 var_764++;
@@ -1883,7 +1896,7 @@ function func325(this: any) {
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
                     pos(var_1158, var_1156);
                     gmode(4, null, null, var_690);
-                    if (var_92 == 7 || var_92 == 13 || var_92 == 19 || var_92 == 24) {
+                    if (y_axis_map_image == 7 || y_axis_map_image == 13 || y_axis_map_image == 19 || y_axis_map_image == 24) {
                         var_1160 = var_690 + 20;
                         if (var_1160 >= 255) {
                             var_1160 = 255;
@@ -3121,7 +3134,7 @@ function func337(this: any) {
             yield func412();
         }
         if (var_1192 >= 1) {
-            yield func583();
+            yield func583(); // 敵の射撃攻撃モーション処理(ドット絵座標設定等)
         }
         if (var_1193 >= 1) {
             yield func348();
@@ -3564,6 +3577,7 @@ function func339(this: any) {
         return;
     });
 }
+// キー入力による選択処理
 function func340(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(680);
@@ -3601,6 +3615,9 @@ function func340(this: any) {
                 break;
             }
             if (key_C_on == 1) { // キーC入力確認
+                break;
+            }
+            if (key_F_on == 1) { // Ver0.1401にて追加。キーF入力確認
                 break;
             }
             yield func337(); // メッセージ関係呼び出し
@@ -4208,11 +4225,11 @@ function func344(this: any) {
         }
         if (var_71[var_66][var_67] == 13) {
             if (var_125 == 0) {
-                if (var_215 == 202) {
+                if (nouryoku_disc_id == 202) {
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     gcopy(3, 1520, 0, 40, 45);
                 }
-                if (var_215 == 117) {
+                if (nouryoku_disc_id == 117) {
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     if (var_784 == 0 || var_784 == 1 || var_784 == 2) {
                         gcopy(3, 1320, 0, 40, 45);
@@ -5286,7 +5303,7 @@ function func345(this: any) {
                     gcopy(3, 920, 40, 40, 40);
                 }
                 if (var_1220 == 1 || var_1191 == 1 || var_1266 >= 1) {
-                    yield func346();
+                    yield func346(); // 射撃discの攻撃時に表示されるスタンド本体ドット絵設定
                 }
                 return;
             }
@@ -5594,6 +5611,7 @@ function func345(this: any) {
         return;
     });
 }
+// 射撃discの攻撃時に表示されるスタンド本体ドット絵設定
 function func346(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(346);
@@ -5625,29 +5643,38 @@ function func346(this: any) {
         if (var_199 == 9) {
             pos(var_764 * var_35 + 20, var_763 * var_36 - 10 - 20);
         }
-        if (var_340 == 400 || var_340 == 407) {
+        if (var_340 == 400 || var_340 == 407) { // No = 400 ハイエロファントグリーン、No = 407 ハイエロファントエメラルド
             var_1271 = 400;
         }
-        if (var_340 == 401) {
+        if (var_340 == 401) { // No = 401 フー・ファイターズ
             var_1271 = 720;
         }
-        if (var_340 == 402 || var_340 == 490) {
+        if (var_340 == 402 || var_340 == 490) { // No = 402 エンペラー、No = 490 不明
             var_1271 = 0;
         }
-        if (var_340 == 403) {
+        if (var_340 == 403) { // No = 403 セックス・ピストルズ
             var_1271 = 560;
         }
-        if (var_340 == 404) {
+        if (var_340 == 404) { // No = 404 ホルス神
             var_1271 = 520;
         }
-        if (var_340 == 405) {
+        if (var_340 == 405) { // No = 405 エコーズACT2
             var_1271 = 800;
         }
-        if (var_340 == 406) {
+        if (var_340 == 406) { // No = 406 エコーズACT1
             var_1271 = 640;
         }
-        if (var_340 == 414) {
+        if (var_340 == 414) { // No = 414 タスクact2
             var_1271 = 1240;
+        }
+        if (var_340 == 415) { // Ver0.1401にて追加。No = 415 タスクact1
+            var_1271 = 1240;
+        }
+        if (var_340 == 416) { // Ver0.1401にて追加。No = 416 タスクact3
+            var_1271 = 1240;
+        }
+        if (var_340 == 417) { // Ver0.1401にて追加。No = 417 ラット
+            var_1271 = 1200;
         }
         if (var_1271 == 1) {
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -5768,73 +5795,73 @@ function func347(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(347);
         if (var_243 >= 1 && var_243 < 11) {
-            if (var_357 == 122) {
+            if (kougeki_disc_id == 122) {
                 var_1272 = 1120;
             }
-            if (var_357 == 123) {
+            if (kougeki_disc_id == 123) {
                 var_1272 = 1280;
             }
-            if (var_357 == 0) {
+            if (kougeki_disc_id == 0) {
                 var_1272 = 0;
             }
-            if (var_357 == 200) {
+            if (kougeki_disc_id == 200) {
                 var_1272 = 0;
             }
-            if (var_357 == 202) {
+            if (kougeki_disc_id == 202) {
                 var_1272 = 640;
             }
-            if (var_357 == 204) {
+            if (kougeki_disc_id == 204) {
                 var_1272 = 640;
             }
-            if (var_357 == 206) {
+            if (kougeki_disc_id == 206) {
                 var_1272 = 640;
             }
-            if (var_357 == 300) {
+            if (kougeki_disc_id == 300) {
                 var_1272 = 0;
             }
-            if (var_357 == 301) {
+            if (kougeki_disc_id == 301) {
                 var_1272 = 600;
             }
-            if (var_357 == 302) {
+            if (kougeki_disc_id == 302) {
                 var_1272 = 0;
             }
-            if (var_357 == 303) {
+            if (kougeki_disc_id == 303) {
                 var_1272 = 0;
             }
-            if (var_357 == 306) {
+            if (kougeki_disc_id == 306) {
                 var_1272 = 0;
             }
-            if (var_357 == 308) {
+            if (kougeki_disc_id == 308) {
                 var_1272 = 640;
             }
-            if (var_357 == 310) {
+            if (kougeki_disc_id == 310) {
                 var_1272 = 0;
             }
-            if (var_357 == 311) {
+            if (kougeki_disc_id == 311) {
                 var_1272 = 0;
             }
-            if (var_357 == 312) {
+            if (kougeki_disc_id == 312) {
                 var_1272 = 600;
             }
-            if (var_357 == 314) {
+            if (kougeki_disc_id == 314) {
                 var_1272 = 0;
             }
-            if (var_357 == 315) {
+            if (kougeki_disc_id == 315) {
                 var_1272 = 2120;
             }
-            if (var_357 == 316) {
+            if (kougeki_disc_id == 316) {
                 var_1272 = 0;
             }
-            if (var_357 == 320) {
+            if (kougeki_disc_id == 320) {
                 var_1272 = 0;
             }
-            if (var_357 == 393) {
+            if (kougeki_disc_id == 393) {
                 var_1272 = 0;
             }
-            if (var_357 == 395) {
+            if (kougeki_disc_id == 395) {
                 var_1272 = 0;
             }
-            if (var_357 == 396) {
+            if (kougeki_disc_id == 396) {
                 var_1272 = 0;
             }
             if (var_1272 != 0) {
@@ -6142,6 +6169,7 @@ function func349(this: any) {
         return;
     });
 }
+// おそらく射撃攻撃のモーション設定
 function func350(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(350);
@@ -6210,7 +6238,8 @@ function func350(this: any) {
                 pos(4 * var_35 + 30, 4 * var_36 - 30 - 10);
             }
         }
-        if (var_340 == 414) {
+        // タスクの射撃モーション設定。
+        if (var_340 == 414 || var_340 == 415 || var_340 == 416) { // Ver0.14にて修正。415、416を追加。
             if (var_199 == 4) {
                 pos(4 * var_35 - 20, 4 * var_36 - 10 + 10);
             }
@@ -6578,10 +6607,11 @@ function func351(this: any) {
         return;
     });
 }
+// 装備disc攻撃モーションドット座標指定
 function func352(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(352);
-        if (var_357 > 0 && var_1280 == 0 && var_357 != 122) {
+        if (kougeki_disc_id > 0 && var_1280 == 0 && kougeki_disc_id != 122) {
             var_1281 = 0;
             if (var_243 == 1) {
                 var_1281 = 8;
@@ -6622,7 +6652,7 @@ function func352(this: any) {
             if (var_199 == 9) {
                 pos(160 + 30 - var_1281, 150 - 30 + var_1281);
             }
-            if (var_357 == 315) {
+            if (kougeki_disc_id == 315) {
                 if (var_199 == 4) {
                     var_1282 = 12;
                     pos(160 - 30 + var_1281 + var_1282, 150 - 3);
@@ -6657,143 +6687,155 @@ function func352(this: any) {
                 }
             }
             var_1272 = 0;
-            if (var_357 == 100) {
+            if (kougeki_disc_id == 100) {
                 var_1272 = 200;
             }
-            if (var_357 == 398) {
-                var_1272 = 1600;
-            }
-            if (var_357 == 101) {
+            if (kougeki_disc_id == 101) {
                 var_1272 = 160;
             }
-            if (var_357 == 102) {
+            if (kougeki_disc_id == 102) {
                 var_1272 = 120;
             }
-            if (var_357 == 103) {
+            if (kougeki_disc_id == 103) {
                 var_1272 = 80;
             }
-            if (var_357 == 104) {
+            if (kougeki_disc_id == 104) {
                 var_1272 = 240;
             }
-            if (var_357 == 105) {
+            if (kougeki_disc_id == 105) {
                 var_1272 = 360;
             }
-            if (var_357 == 106) {
+            if (kougeki_disc_id == 106) {
                 var_1272 = 320;
             }
-            if (var_357 == 107) {
+            if (kougeki_disc_id == 107) {
                 var_1272 = 280;
             }
-            if (var_357 == 108) {
+            if (kougeki_disc_id == 108) {
                 var_1272 = 440;
             }
-            if (var_357 == 110) {
-                var_1272 = 400;
-            }
-            if (var_357 == 109) {
+            if (kougeki_disc_id == 109) {
                 var_1272 = 480;
             }
-            if (var_357 == 111) {
+            if (kougeki_disc_id == 110) {
+                var_1272 = 400;
+            }
+            if (kougeki_disc_id == 111) {
                 var_1272 = 520;
             }
-            if (var_357 == 112 || var_357 == 395) {
+            if (kougeki_disc_id == 112 || kougeki_disc_id == 395) {
                 var_1272 = 560;
             }
-            if (var_357 == 113) {
+            if (kougeki_disc_id == 113) {
                 var_1272 = 600;
             }
-            if (var_357 == 114) {
+            if (kougeki_disc_id == 114) {
                 var_1272 = 640;
             }
-            if (var_357 == 115) {
+            if (kougeki_disc_id == 115) {
                 var_1272 = 680;
             }
-            if (var_357 == 116) {
+            if (kougeki_disc_id == 116) {
                 var_1272 = 720;
             }
-            if (var_357 == 117) {
+            if (kougeki_disc_id == 117) {
                 var_1272 = 880;
             }
-            if (var_357 == 118) {
+            if (kougeki_disc_id == 118) {
                 var_1272 = 920;
             }
-            if (var_357 == 119) {
+            if (kougeki_disc_id == 119) {
                 var_1272 = 1000;
             }
-            if (var_357 == 120) {
+            if (kougeki_disc_id == 120) {
                 var_1272 = 1040;
             }
-            if (var_357 == 121) {
+            if (kougeki_disc_id == 121) {
                 var_1272 = 1080;
             }
-            if (var_357 == 205) {
-                var_1272 = 1200;
-            }
-            if (var_357 == 207) {
-                var_1272 = 1240;
-            }
-            if (var_357 == 124) {
-                var_1272 = 1320;
-            }
-            if (var_357 == 201) {
-                var_1272 = 1360;
-            }
-            if (var_357 == 304) {
-                var_1272 = 1400;
-            }
-            if (var_357 == 397) {
-                var_1272 = 1840;
-            }
-            if (var_357 == 203) {
-                var_1272 = 1440;
-            }
-            if (var_357 == 318) {
-                var_1272 = 1520;
-            }
-            if (var_357 == 399) {
-                var_1272 = 1480;
-            }
-            if (var_357 == 394) {
-                var_1272 = 760;
-            }
-            if (var_357 == 313) {
-                var_1272 = 1560;
-            }
-            if (var_357 == 315) {
-                var_1272 = 2120;
-            }
-            if (var_357 == 317) {
-                var_1272 = 1640;
-            }
-            if (var_357 == 318) {
-                var_1272 = 1680;
-            }
-            if (var_357 == 319) {
-                var_1272 = 1720;
-            }
-            if (var_357 == 123) {
+            if (kougeki_disc_id == 123) {
                 var_1272 = 1280;
             }
-            if (var_357 == 308) {
-                var_1272 = 1880;
+            if (kougeki_disc_id == 124) {
+                var_1272 = 1320;
             }
-            if (var_357 == 301) {
-                var_1272 = 1920;
+            if (kougeki_disc_id == 201) {
+                var_1272 = 1360;
             }
-            if (var_357 == 312) {
-                var_1272 = 1960;
+            if (kougeki_disc_id == 203) {
+                var_1272 = 1440;
             }
-            if (var_357 == 204) {
+            if (kougeki_disc_id == 204) {
                 var_1272 = 2000;
             }
-            if (var_357 == 307) {
+            if (kougeki_disc_id == 205) {
+                var_1272 = 1200;
+            }
+            if (kougeki_disc_id == 207) {
+                var_1272 = 1240;
+            }
+            if (kougeki_disc_id == 208) { // Ver0.1401にて追加。C-MOON
+                var_1272 = 2280;
+            }
+            if (kougeki_disc_id == 252) { // Ver0.1401にて追加。クリーム・スターター
+                var_1272 = 2360;
+            }
+            if (kougeki_disc_id == 255) { // Ver0.1401にて追加。イン・ア・サイレント・ウェイ
+                var_1272 = 2440;
+            }
+            if (kougeki_disc_id == 261) { // Ver0.1401にて追加。D4C
+                var_1272 = 2400;
+            }
+            if (kougeki_disc_id == 301) {
+                var_1272 = 1920;
+            }
+            if (kougeki_disc_id == 304) {
+                var_1272 = 1400;
+            }
+            if (kougeki_disc_id == 305) {
+                var_1272 = 2160;
+            }
+            if (kougeki_disc_id == 307) {
                 var_1272 = 1520;
             }
-            if (var_357 == 309) {
+            if (kougeki_disc_id == 308) {
+                var_1272 = 1880;
+            }
+            if (kougeki_disc_id == 309) {
                 var_1272 = 2040;
             }
-            if (var_357 == 305) {
-                var_1272 = 2160;
+            if (kougeki_disc_id == 312) {
+                var_1272 = 1960;
+            }
+            if (kougeki_disc_id == 313) {
+                var_1272 = 1560;
+            }
+            if (kougeki_disc_id == 315) {
+                var_1272 = 2120;
+            }
+            if (kougeki_disc_id == 317) {
+                var_1272 = 1640;
+            }
+            if (kougeki_disc_id == 318) {
+                var_1272 = 1520;
+            }
+            if (kougeki_disc_id == 318) {
+                var_1272 = 1680;
+            }
+            if (kougeki_disc_id == 319) {
+                var_1272 = 1720;
+            }
+            if (kougeki_disc_id == 394) {
+                var_1272 = 760;
+            }
+            if (kougeki_disc_id == 397) {
+                var_1272 = 1840;
+            }
+            if (kougeki_disc_id == 398) {
+                var_1272 = 1600;
+            }
+            if (kougeki_disc_id == 399) {
+                var_1272 = 1480;
             }
             if (var_1272 == 0 && var_243 != 0) {
                 return;
@@ -6908,7 +6950,7 @@ function func352(this: any) {
                     gcopy(bufferid_stand_disc, 920, var_1272, 40, 40);
                 }
             }
-            if (var_357 == 110) {
+            if (kougeki_disc_id == 110) {
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                 if (var_243 == 1 || var_243 == 7 || var_243 == 8) {
                     color(0, 0, 0);
@@ -7098,7 +7140,7 @@ function func352(this: any) {
                 }
             }
         }
-        if (var_357 == 122) {
+        if (kougeki_disc_id == 122) {
             yield func426();
             var_570 = var_233[var_553].Var13;
             if (var_341 == 2) {
@@ -7247,7 +7289,7 @@ function func352(this: any) {
                 bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
             }
             var_1285 = 0;
-            if (var_357 == 398) {
+            if (kougeki_disc_id == 398) {
                 var_1285 = 1760;
             }
             if (var_243 == 1 || var_243 >= 8) {
@@ -8940,12 +8982,14 @@ function func354(this: any) {
                     var_1334 = 111;
                     var_1335 = 143;
                     var_1336 = Math.floor(var_949 * var_1334 / 128);
+                    // 波紋使い関係??
                     if (var_130 != 0) {
                         var_1337 = var_83[var_268].Var0;
                         if (var_1337 == 147 || var_1337 == 73 || var_1337 == 119 || var_1337 == 136 || var_1337 == 135 || var_1337 == 139 || var_1337 == 140 || var_1337 == 105) {
                             var_1336 = Math.floor(var_1336 * 3 / 2);
                         }
                     }
+
                     if (var_182 == 1) {
                         var_1336 = Math.floor(var_1336 / 2);
                     }
@@ -9006,6 +9050,7 @@ function func354(this: any) {
                         var_1336 = Math.floor(var_1336 * 2 / 3);
                         var_1338 = Math.floor(var_1338 * 2 / 3);
                     }
+                    // アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
                     if (var_168 == 1) {
                         var_1336 = Math.floor(var_1336 * 2 / 3);
                         var_1338 = Math.floor(var_1338 * 2 / 3);
@@ -10817,6 +10862,15 @@ function func354(this: any) {
                 }
                 if (var_340 == 414) {
                     gcopy(34, 320 + var_1416, 1240, 40, 40);
+                }
+                if (var_340 == 415) { // Ver0.1401にて追加。タスクact1
+                    gcopy(34, 320 + var_1416, 1240, 40, 40);
+                }
+                if (var_340 == 416) { // Ver0.1401にて追加。タスクact3
+                    gcopy(34, 320 + var_1416, 1240, 40, 40);
+                }
+                if (var_340 == 417) { // Ver0.1401にて追加。No = 417 ラット
+                    gcopy(34, 320 + var_1416, 1200, 40, 40);
                 }
                 if (var_340 == 489) {
                     color(0, 0, 0);
@@ -15110,7 +15164,6 @@ function func361(this: any) {
             return;
         }
         if (key_X_on == 1 && var_1609 == 1) {
-
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             var_502 = 0;
             var_1609 = 0;
@@ -15401,6 +15454,7 @@ function func365(this: any) {
         enemy_list = var_1616[var_1607];
         yield func626();
         var_83[299].Var15 = 0;
+        // 倍速移動敵の選択
         if (enemy_list == 20 || enemy_list == 39 || enemy_list == 60 || enemy_list == 64 || enemy_list == 101 || enemy_list == 102 || enemy_list == 103 || enemy_list == 104 || enemy_list == 117 || enemy_list == 111 || enemy_list == 96 || enemy_list == 68 || enemy_list == 151 || enemy_list == 168) {
             var_83[299].Var15 = 1;
         }
@@ -15501,6 +15555,7 @@ function func365(this: any) {
         return;
     });
 }
+// 敵図鑑(各敵の分類)
 function func366(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(366);
@@ -15508,6 +15563,7 @@ function func366(this: any) {
         enemy_list = var_989[var_1607];
         yield func626();
         var_83[299].Var15 = 0;
+        // 倍速移動敵の選択
         if (enemy_list == 20 || enemy_list == 39 || enemy_list == 60 || enemy_list == 64 || enemy_list == 101 || enemy_list == 102 || enemy_list == 103 || enemy_list == 104 || enemy_list == 117 || enemy_list == 111 || enemy_list == 96 || enemy_list == 68 || enemy_list == 151 || enemy_list == 168) {
             var_83[299].Var15 = 1;
         }
@@ -15779,7 +15835,6 @@ function func367(this: any) {
             for (let cnt2 = 0; cnt2 < var_810 + free_space_value; ++cnt2) {
                 pos(30, track_number * 20 + 120);
                 color(255, 255, 255);
-        
                 font("MS UI ゴシック", 12, 1);
                 mes("Track" + track_number + ":");
                 track_number = track_number + 1;
@@ -16056,8 +16111,6 @@ function func370(this: any) {
     });
 }
 
-
-
 function func371(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(371);
@@ -16210,7 +16263,7 @@ function func376(this: any) {
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_257 == 1) {
@@ -16221,7 +16274,7 @@ function func376(this: any) {
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
         }
         if (key_X_on == 1) {
@@ -16339,7 +16392,7 @@ function func378(this: any) {
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func378();
             return;
@@ -16350,7 +16403,7 @@ function func378(this: any) {
 
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+            // yield func337(); // メッセージ関係呼び出し
             yield func337(); // メッセージ関係呼び出し
             yield func378();
             return;
@@ -16711,6 +16764,12 @@ function func380(this: any) {
             var_1706[var_1707][1] = "" + enemy_name + "に恨みがあるぞ";
             var_1707++;
         }
+        // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグがONの時
+        if (taskact1_on != 0) {
+            var_1706[var_1707][2] = "0";
+            var_1706[var_1707][1] = "素手でのダメージが増えるぞ";
+            var_1707++;
+        }        
         if (equip_disc[117] == 1) {
             var_1710 = 0;
             var_1711 = var_66;
@@ -17116,12 +17175,12 @@ function func380(this: any) {
             var_1706[var_1707][1] = "共鳴で精神力が１上がっているぞ";
             var_1707++;
         }
-        if (var_357 == 104) {
+        if (kougeki_disc_id == 104) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "会心の一撃かミスしか出ないぞ";
             var_1707++;
         }
-        if (var_357 == 106) {
+        if (kougeki_disc_id == 106) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ﾌﾟｯﾂﾝ状態だと強いぞ";
             var_1707++;
@@ -17131,139 +17190,139 @@ function func380(this: any) {
             var_1706[var_1707][1] = "反省しているぞ";
             var_1707++;
         }
-        if (var_215 == 100 || var_215 == 111 || var_215 == 398) {
+        if (nouryoku_disc_id == 100 || nouryoku_disc_id == 111 || nouryoku_disc_id == 398) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "時間停止攻撃を防ぐぞ";
             var_1707++;
         }
-        if (var_215 == 100 || var_215 == 111 || var_215 == 398) {
+        if (nouryoku_disc_id == 100 || nouryoku_disc_id == 111 || nouryoku_disc_id == 398) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "DIOが近くにいても階段を降りられるぞ";
             var_1707++;
         }
-        if (var_215 == 202 || var_410 == 404) {
+        if (nouryoku_disc_id == 202 || shageki_disc_id == 404) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "老化攻撃を防ぐぞ";
             var_1707++;
         }
-        if (var_215 == 202 || var_410 == 404 || var_215 == 109) {
+        if (nouryoku_disc_id == 202 || shageki_disc_id == 404 || nouryoku_disc_id == 109) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "冷凍攻撃を防ぐぞ";
             var_1707++;
         }
-        if (var_215 == 120) {
+        if (nouryoku_disc_id == 120) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "裏返り攻撃を防ぐぞ";
             var_1707++;
         }
-        if (var_215 == 116) {
+        if (nouryoku_disc_id == 116) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "波紋を流されないぞ";
             var_1707++;
         }
-        if (var_215 == 202 || var_215 == 117) {
+        if (nouryoku_disc_id == 202 || nouryoku_disc_id == 117) {
             if (var_125 == 0) {
                 var_1706[var_1707][2] = "7";
                 var_1706[var_1707][1] = "水の上を歩けるぞ";
                 var_1707++;
             }
         }
-        if (var_215 == 112 || var_215 == 204 || var_215 == 394 || var_215 == 395) {
+        if (nouryoku_disc_id == 112 || nouryoku_disc_id == 204 || nouryoku_disc_id == 394 || nouryoku_disc_id == 395) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "親父の写真に閉じ込められないぞ";
             var_1707++;
         }
-        if (var_215 == 112 || var_215 == 204 || var_215 == 394 || var_215 == 395) {
+        if (nouryoku_disc_id == 112 || nouryoku_disc_id == 204 || nouryoku_disc_id == 394 || nouryoku_disc_id == 395) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "爆弾を見分けられるぞ";
             var_1707++;
         }
-        if (var_215 == 112 || var_215 == 394) {
+        if (nouryoku_disc_id == 112 || nouryoku_disc_id == 394) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "爆弾ｱｲﾃﾑを投げると爆発するぞ";
             var_1707++;
         }
-        if (var_215 == 109) {
+        if (nouryoku_disc_id == 109) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "火炎による特殊攻撃を防ぐぞ";
             var_1707++;
         }
-        if (var_215 == 100 || var_215 == 398) {
+        if (nouryoku_disc_id == 100 || nouryoku_disc_id == 398) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ﾛｰﾄﾞﾛｰﾗｰの罠のﾀﾞﾒｰｼﾞを半減するぞ";
             var_1707++;
         }
-        if (var_215 == 113) {
+        if (nouryoku_disc_id == 113) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ﾄｰｷﾝｸﾞﾍｯﾄﾞの罠を防ぐぞ";
             var_1707++;
         }
-        if (var_215 == 115) {
+        if (nouryoku_disc_id == 115) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "歯をクラゲに変えられるぞ";
             var_1707++;
         }
-        if (var_215 == 202) {
+        if (nouryoku_disc_id == 202) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "アイテムのカエル化を防ぐぞ";
             var_1707++;
         }
-        if (var_215 == 206 || var_215 == 108 || var_130 != 0) {
+        if (nouryoku_disc_id == 206 || nouryoku_disc_id == 108 || var_130 != 0) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ｸﾞﾘｰﾝﾃﾞｨがいても低いところに降りられるぞ";
             var_1707++;
         }
-        if (var_410 == 400 || var_410 == 407) {
+        if (shageki_disc_id == 400 || shageki_disc_id == 407) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "夢の世界に引き込まれるのを防ぐぞ";
             var_1707++;
         }
-        if (var_410 == 401) {
+        if (shageki_disc_id == 401) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ﾎﾜｲﾄｽﾈｲｸの罠でF･Fが優先的に外されるぞ";
             var_1707++;
         }
-        if (var_410 == 402) {
+        if (shageki_disc_id == 402) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "鏡を踏んでもﾊﾝｸﾞﾄﾞﾏﾝに刺されないぞ";
             var_1707++;
         }
-        if (var_410 == 403) {
+        if (shageki_disc_id == 403) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ﾛｰﾘﾝｸﾞｽﾄｰﾝの罠のﾀﾞﾒｰｼﾞを半減するぞ";
             var_1707++;
         }
-        if (var_410 == 405) {
+        if (shageki_disc_id == 405) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "装備中のDISCに由花子の呪いがかからないぞ";
             var_1707++;
         }
-        if (var_410 == 406) {
+        if (shageki_disc_id == 406) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "カツアゲに負けない自信がつくぞ";
             var_1707++;
         }
-        if (var_410 == 408) {
+        if (shageki_disc_id == 408) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "殺人ｳｲﾙｽのﾀﾞﾒｰｼﾞを半減するぞ";
             var_1707++;
         }
-        if (var_410 == 409) {
+        if (shageki_disc_id == 409) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "敵のﾗﾊﾞｰｽﾞがｳｼﾞｭｳｼﾞｭ増えないぞ";
             var_1707++;
         }
-        if (var_410 == 411) {
+        if (shageki_disc_id == 411) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "落とし穴に落ちないぞ";
             var_1707++;
         }
-        if (var_410 == 412) {
+        if (shageki_disc_id == 412) {
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ﾍﾌﾞﾝｽﾞﾄﾞｱｰの罠を書き換えるぞ";
             var_1707++;
         }
-        if (var_410 == 414) {
+        if (shageki_disc_id == 415) { // Ver0.1401にて修正。414 → 415 タスクact1へ変更。
             var_1706[var_1707][2] = "7";
             var_1706[var_1707][1] = "ﾜｲｱｰﾄﾞの罠で自分が釣られるぞ";
             var_1707++;
@@ -17913,7 +17972,7 @@ function func384(this: any) {
         return;
     });
 }
-// 各ダンジョンごとの出現アイテム&出現確率管理
+// 各ダンジョンごとの出現アイテム&出現確率管理(合成の空き容量もここで設定している)
 function func385(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(385);
@@ -17926,43 +17985,43 @@ function func385(this: any) {
                 var_1772 = rnd(100); // 確率調整:100の中からランダムで数字を一つ
                 if (var_1772 >= 0 && var_1772 < 15) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 116; // No = 116 ハーミットパープル
-                    var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 4;
+                    var_78[var_866].Var16 = 10; 
+                    var_78[var_866].Var5 = 4; // 合成空き容量: 4
                 }
                 if (var_1772 >= 15 && var_1772 < 30) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 103; // No = 103 エコーズACT3
                     var_78[var_866].Var16 = 20;
-                    var_78[var_866].Var5 = 5;
+                    var_78[var_866].Var5 = 5; // 合成空き容量: 5
                 }
                 if (var_1772 >= 30 && var_1772 < 45) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 107; // No = 107 デス・13
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 45 && var_1772 < 60) { // 出現確率: 15/100*100 = 15%
                     var_78[var_866].Var0 = 300; // No = 300 パール・ジャム
                     var_78[var_866].Var16 = 5;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 60 && var_1772 < 65) { // 出現確率: 5/100*100 = 5%
                     var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
-                    var_78[var_866].Var5 = 4;
+                    var_78[var_866].Var5 = 4; // 合成空き容量: 4
                 }
                 if (var_1772 >= 65 && var_1772 < 70) { // 出現確率: 5/100*100 = 5%
                     var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 70 && var_1772 < 75) { // 出現確率: 5/100*100 = 5%
                     var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 75 && var_1772 < 77) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 207; // No = 207 グレイトフル・デッド
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 77 && var_1772 < 79) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
@@ -17972,17 +18031,17 @@ function func385(this: any) {
                 if (var_1772 >= 79 && var_1772 < 81) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 81 && var_1772 < 83) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 104; // No = 104 ザ・ハンド
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 83 && var_1772 < 85) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 117; // No = 117 ダーク・ブルームーン
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 85 && var_1772 < 87) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 119; // No = 119 スパイス・ガール
@@ -17992,37 +18051,37 @@ function func385(this: any) {
                 if (var_1772 >= 87 && var_1772 < 89) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 203; // No = 203 ザ・フール
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 89 && var_1772 < 91) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 113; // No = 113 クラッシュ
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 >= 91 && var_1772 < 93) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                     var_78[var_866].Var16 = 5;
-                    var_78[var_866].Var5 = 4;
+                    var_78[var_866].Var5 = 4; // 合成空き容量: 4
                 }
                 if (var_1772 >= 93 && var_1772 < 95) { // 出現確率: 2/100*100 = 2%
                     var_78[var_866].Var0 = 316; // No = 316 サバイバー
                     var_78[var_866].Var16 = 5;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 == 95) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 121; // No = 121 パープルヘイズ
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 4;
+                    var_78[var_866].Var5 = 4; // 合成空き容量: 4
                 }
                 if (var_1772 == 96) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 320; // No = 320 メタリカ
                     var_78[var_866].Var16 = 5;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 == 97) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 205; // No = 205 クラフトワーク
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
                 if (var_1772 == 98) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 317; // No = 317 キッス
@@ -18032,10 +18091,9 @@ function func385(this: any) {
                 if (var_1772 == 99) { // 出現確率: 1/100*100 = 1%
                     var_78[var_866].Var0 = 115; // No = 115 G・エクスペリエンス
                     var_78[var_866].Var16 = 10;
-                    var_78[var_866].Var5 = 3;
+                    var_78[var_866].Var5 = 3; // 合成空き容量: 3
                 }
             }
-
             // No = 1 なので、ホテルの外以外
             if (dangeon_number != 1) {
                 var_1773 = rnd(100); // 確率調整:100の中からランダムで数字を一つ
@@ -18044,231 +18102,231 @@ function func385(this: any) {
                     if (var_1772 >= 0 && var_1772 < 20) {
                         var_78[var_866].Var0 = 116; // No = 116 ハーミットパープル
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 4;
+                        var_78[var_866].Var5 = 4; // 合成空き容量: 4
                     }
                     if (var_1772 >= 20 && var_1772 < 40) {
-                        var_78[var_866].Var0 = 124;
+                        var_78[var_866].Var0 = 124; // No = 124 ムーディー・ブルース
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 4;
+                        var_78[var_866].Var5 = 4; // 合成空き容量: 4
                     }
                     if (var_1772 >= 40 && var_1772 < 60) {
                         var_78[var_866].Var0 = 103; // No = 103 エコーズACT3
                         var_78[var_866].Var16 = 20;
-                        var_78[var_866].Var5 = 5;
+                        var_78[var_866].Var5 = 5; // 合成空き容量: 5
                     }
                     if (var_1772 >= 60 && var_1772 < 80) {
                         var_78[var_866].Var0 = 107; // No = 107 デス・13
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 80 && var_1772 < 85) {
                         var_78[var_866].Var0 = 207;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 85 && var_1772 < 90) {
                         var_78[var_866].Var0 = 201; // No = 201 イエローテンパラス
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 90 && var_1772 < 95) {
                         var_78[var_866].Var0 = 105; // No = 105 チリペッパー
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 95 && var_1772 < 100) {
                         var_78[var_866].Var0 = 104; // No = 104 ザ・ハンド
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                 }
                 if (var_1773 >= 50 && var_1773 < 68) {
                     var_1772 = rnd(100);
                     if (var_1772 >= 0 && var_1772 < 15) {
-                        var_78[var_866].Var0 = 106;
+                        var_78[var_866].Var0 = 106; // No = 106 クレイジー・D
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 15 && var_1772 < 20) {
-                        var_78[var_866].Var0 = 114;
+                        var_78[var_866].Var0 = 114; // No = 114 ホワイトスネイク
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 4;
+                        var_78[var_866].Var5 = 4; // 合成空き容量: 4
                     }
                     if (var_1772 >= 20 && var_1772 < 31) {
-                        var_78[var_866].Var0 = 113;
+                        var_78[var_866].Var0 = 113; // No = 113 クラッシュ
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 31 && var_1772 < 42) {
-                        var_78[var_866].Var0 = 122;
+                        var_78[var_866].Var0 = 122; // No = 122 アヌビス神
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 5;
+                        var_78[var_866].Var5 = 5; // 合成空き容量: 5
                     }
                     if (var_1772 >= 42 && var_1772 < 53) {
-                        var_78[var_866].Var0 = 117;
+                        var_78[var_866].Var0 = 117; // No = 117 ダークブルームーン
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 53 && var_1772 < 64) {
-                        var_78[var_866].Var0 = 121;
+                        var_78[var_866].Var0 = 121; // No = 121 パープルヘイズ
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 4;
+                        var_78[var_866].Var5 = 4; // 合成空き容量: 4
                     }
                     if (var_1772 >= 64 && var_1772 < 75) {
-                        var_78[var_866].Var0 = 318;
+                        var_78[var_866].Var0 = 318; // No = 318 ジャンピンJフラッシュ
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 75 && var_1772 < 80) {
-                        var_78[var_866].Var0 = 118;
+                        var_78[var_866].Var0 = 118; // No = 118 ダイバーダウン
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 2;
+                        var_78[var_866].Var5 = 2; // 合成空き容量: 2
                     }
                     if (var_1772 >= 80 && var_1772 < 85) {
-                        var_78[var_866].Var0 = 317;
+                        var_78[var_866].Var0 = 317; // No = 317 キッス
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 4;
+                        var_78[var_866].Var5 = 4; // 合成空き容量: 4
                     }
                     if (var_1772 >= 85 && var_1772 < 90) {
-                        var_78[var_866].Var0 = 319;
+                        var_78[var_866].Var0 = 319; // No = 319 ボーイⅡマン
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 90 && var_1772 < 95) {
-                        var_78[var_866].Var0 = 115;
+                        var_78[var_866].Var0 = 115; // No = 115 G・エクスペリエンス
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 95 && var_1772 < 100) {
-                        var_78[var_866].Var0 = 313;
+                        var_78[var_866].Var0 = 313; // No = 313 ハイウェイ・スター
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                 }
                 if (var_1773 >= 68 && var_1773 < 80) {
                     var_1772 = rnd(100);
                     if (var_1772 >= 0 && var_1772 < 20) {
-                        var_78[var_866].Var0 = 119;
+                        var_78[var_866].Var0 = 119; // No = 119 スパイスガール
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 20 && var_1772 < 40) {
-                        var_78[var_866].Var0 = 203;
+                        var_78[var_866].Var0 = 203; // No = 203 ザ・フール
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 40 && var_1772 < 60) {
-                        var_78[var_866].Var0 = 200;
+                        var_78[var_866].Var0 = 200; // No = 200 スーパーフライ
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 60 && var_1772 < 75) {
-                        var_78[var_866].Var0 = 205;
+                        var_78[var_866].Var0 = 205; // No = 205 クラフトワーク
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 75 && var_1772 < 80) {
-                        var_78[var_866].Var0 = 206;
+                        var_78[var_866].Var0 = 206; // No = 206 オアシス
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 80 && var_1772 < 85) {
-                        var_78[var_866].Var0 = 304;
+                        var_78[var_866].Var0 = 304; // No = 304 ウェザー・リポート
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 85 && var_1772 < 90) {
-                        var_78[var_866].Var0 = 120;
+                        var_78[var_866].Var0 = 120; // No = 120 ストーン・フリー
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 2;
+                        var_78[var_866].Var5 = 2; // 合成空き容量: 2
                     }
                     if (var_1772 >= 90 && var_1772 < 95) {
-                        var_78[var_866].Var0 = 202;
+                        var_78[var_866].Var0 = 202; // No = 202 ホワイトアルバム
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 2;
+                        var_78[var_866].Var5 = 2; // 合成空き容量: 2
                     }
                     if (var_1772 >= 95 && var_1772 < 100) {
-                        var_78[var_866].Var0 = 204;
+                        var_78[var_866].Var0 = 204; // No = 204 シアハートアタック
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 2;
+                        var_78[var_866].Var5 = 2; // 合成空き容量: 2
                     }
                 }
                 if (var_1773 >= 80 && var_1773 < 98) {
                     var_1772 = rnd(100);
                     if (var_1772 >= 0 && var_1772 < 20) {
-                        var_78[var_866].Var0 = 306;
+                        var_78[var_866].Var0 = 306; // No = 306 マンハッタントランスファー
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 4;
+                        var_78[var_866].Var5 = 4; // 合成空き容量: 4
                     }
                     if (var_1772 >= 20 && var_1772 < 40) {
-                        var_78[var_866].Var0 = 300;
+                        var_78[var_866].Var0 = 300; // No = 300 パール・ジャム
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 40 && var_1772 < 50) {
-                        var_78[var_866].Var0 = 311;
+                        var_78[var_866].Var0 = 311; // No = 311 チープトリック
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 5;
+                        var_78[var_866].Var5 = 5; // 合成空き容量: 5
                     }
                     if (var_1772 >= 50 && var_1772 < 60) {
-                        var_78[var_866].Var0 = 310;
+                        var_78[var_866].Var0 = 310; // No = 310 エンプレス
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 5;
+                        var_78[var_866].Var5 = 5; // 合成空き容量: 5
                     }
                     if (var_1772 >= 60 && var_1772 < 70) {
                         var_78[var_866].Var0 = 302;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 70 && var_1772 < 80) {
                         var_78[var_866].Var0 = 320;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 80 && var_1772 < 89) {
                         var_78[var_866].Var0 = 316;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 89 && var_1772 < 91) {
                         var_78[var_866].Var0 = 314;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 >= 91 && var_1772 < 93) {
                         var_78[var_866].Var0 = 308;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 2;
+                        var_78[var_866].Var5 = 2; // 合成空き容量: 2
                     }
                     if (var_1772 >= 93 && var_1772 < 95) {
                         var_78[var_866].Var0 = 395;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 3;
+                        var_78[var_866].Var5 = 3; // 合成空き容量: 3
                     }
                     if (var_1772 == 95) {
                         var_78[var_866].Var0 = 315;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 96) {
                         var_78[var_866].Var0 = 303;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 97) {
                         var_78[var_866].Var0 = 305;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 98) {
                         var_78[var_866].Var0 = 301;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 99) {
                         var_78[var_866].Var0 = 312;
                         var_78[var_866].Var16 = 5;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                 }
                 if (var_1773 >= 98 && var_1773 < 100) {
@@ -18276,42 +18334,42 @@ function func385(this: any) {
                     if (var_1772 == 0) {
                         var_78[var_866].Var0 = 123;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 1) {
                         var_78[var_866].Var0 = 109;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 2) {
                         var_78[var_866].Var0 = 112;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 3) {
                         var_78[var_866].Var0 = 101;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 4) {
                         var_78[var_866].Var0 = 108;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 5) {
                         var_78[var_866].Var0 = 100;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 6) {
                         var_78[var_866].Var0 = 111;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                     if (var_1772 == 7) {
                         var_78[var_866].Var0 = 102;
                         var_78[var_866].Var16 = 10;
-                        var_78[var_866].Var5 = 1;
+                        var_78[var_866].Var5 = 1; // 合成空き容量: 1
                     }
                 }
             }
@@ -18319,7 +18377,7 @@ function func385(this: any) {
             if (var_1746 == 1) {
                 var_78[var_866].Var0 = 399;
                 var_78[var_866].Var16 = 10;
-                var_78[var_866].Var5 = 1;
+                var_78[var_866].Var5 = 1; // 合成空き容量: 1
                 var_78[var_866].Var4 = 3;
                 var_78[var_866].Var14 = 1;
                 var_78[var_866].Var12 = 0;
@@ -18329,7 +18387,7 @@ function func385(this: any) {
             if (var_1750 == 1) {
                 var_78[var_866].Var0 = 393;
                 var_78[var_866].Var16 = 10;
-                var_78[var_866].Var5 = 1;
+                var_78[var_866].Var5 = 1; // 合成空き容量: 1
                 var_78[var_866].Var4 = 3;
                 var_78[var_866].Var14 = 1;
                 var_78[var_866].Var12 = 0;
@@ -18351,6 +18409,7 @@ function func385(this: any) {
                 yield func388();
             }
         }
+        // 射撃discの出現確率
         if (var_1735 == 3) {
             var_1774 = rnd(5);
             if (var_1774 <= 2) {
@@ -18403,6 +18462,7 @@ function func385(this: any) {
             var_1771 = var_78[var_866].Var0;
             var_862[var_1771][0] = 1;
         }
+        // 消費アイテムの出現確率
         if (var_1735 == 5) {
             var_1773 = rnd(25);
             // No = 1 なので、ホテルの外
@@ -18414,16 +18474,16 @@ function func385(this: any) {
                 var_1773 = rnd(30);
             }
             if (var_1773 == 0) {
-                var_78[var_866].Var0 = 575;
+                var_78[var_866].Var0 = 575; // No = 575 マニッシュボーイのDISC
             }
             if (var_1773 == 1) {
-                var_78[var_866].Var0 = 563;
+                var_78[var_866].Var0 = 563; // No = 563 ンドゥールのDISC
             }
             if (var_1773 == 2) {
-                var_78[var_866].Var0 = 566;
+                var_78[var_866].Var0 = 566; // No = 566 ケンゾーのDISC
             }
             if (var_1773 == 3) {
-                var_78[var_866].Var0 = 574;
+                var_78[var_866].Var0 = 574; // No = 
             }
             if (var_1773 == 4) {
                 var_78[var_866].Var0 = 569;
@@ -18527,6 +18587,7 @@ function func385(this: any) {
                 var_862[var_1771][0] = 1;
             }
         }
+        // 
         if (var_1735 == 4) {
             var_1773 = rnd(100);
             if (var_1773 == 0) {
@@ -18561,6 +18622,7 @@ function func385(this: any) {
             var_1771 = var_78[var_866].Var0;
             var_862[var_1771][0] = 1;
         }
+        // 
         if (var_1735 == 6) {
             var_1777 = rnd(10);
             if (var_1777 < 7) {
@@ -18610,6 +18672,7 @@ function func385(this: any) {
             var_1771 = var_78[var_866].Var0;
             var_862[var_1771][0] = 1;
         }
+        // コミックの出現率
         if (var_1735 == 9) {
             var_1773 = rnd(100);
             if (var_1773 >= 0 && var_1773 <= 6) {
@@ -18690,104 +18753,108 @@ function func385(this: any) {
                     var_78[var_866].Var0 = 758;
                 }
             }
+            // その他消費アイテムの出現率
             if (var_1773 >= 90 && var_1773 <= 100) {
-                var_1073 = rnd(6);
+                var_1073 = rnd(7); // Ver0.1401にて修正。ベルトのバックルを追加したので 6 → 7へ変更。
                 if (var_1073 == 0) {
-                    var_78[var_866].Var0 = 727;
+                    var_78[var_866].Var0 = 727; // No = 727 ゾンビ馬
                 }
                 if (var_1073 == 1) {
-                    var_78[var_866].Var0 = 726;
+                    var_78[var_866].Var0 = 726; // No = 726 鉄球
                 }
                 if (var_1073 == 2) {
-                    var_78[var_866].Var0 = 724;
+                    var_78[var_866].Var0 = 724; // No = 724 石仮面
                 }
                 if (var_1073 == 3) {
-                    var_78[var_866].Var0 = 723;
+                    var_78[var_866].Var0 = 723; // No = 723 魔法のランプ
                 }
                 if (var_1073 == 4) {
-                    var_78[var_866].Var0 = 714;
+                    var_78[var_866].Var0 = 714; // No = 714 紫外線照射装置
                 }
                 if (var_1073 == 5) {
                     var_1780 = rnd(100);
                     if (var_1780 == 0) {
-                        var_78[var_866].Var0 = 987;
+                        var_78[var_866].Var0 = 987; // No = 987 バオー来訪者 1巻
                     }
                     if (var_1780 == 1) {
-                        var_78[var_866].Var0 = 988;
+                        var_78[var_866].Var0 = 988; // No = 988 バオー来訪者 2巻
                     }
                     if (var_1780 == 2) {
-                        var_78[var_866].Var0 = 989;
+                        var_78[var_866].Var0 = 989; // No = 989 魔少年ビーティー
                     }
                     if (var_1780 == 3) {
-                        var_78[var_866].Var0 = 990;
+                        var_78[var_866].Var0 = 990; // No = 990 ゴージャス☆アイリン
                     }
                     if (var_1780 == 4) {
-                        var_78[var_866].Var0 = 991;
+                        var_78[var_866].Var0 = 991; // No = 991 死刑執行中脱獄進行中
                     }
                     if (var_1780 == 5) {
-                        var_78[var_866].Var0 = 992;
+                        var_78[var_866].Var0 = 992; // No = 992 変人偏屈列伝
                     }
                     if (var_1780 == 6) {
-                        var_78[var_866].Var0 = 993;
+                        var_78[var_866].Var0 = 993; // No = 993 JOJO 6251
                     }
                     if (var_1780 == 7) {
-                        var_78[var_866].Var0 = 994;
+                        var_78[var_866].Var0 = 994; // No = 994 JOJO A GOGO
                     }
                     if (var_1780 >= 8) {
-                        var_78[var_866].Var0 = 718;
+                        var_78[var_866].Var0 = 718; // No = 718 聖なる弓矢
                     }
+                }
+                if (var_1073 == 6) {
+                    var_78[var_866].Var0 = 732; // Ver0.1401にて追加。No = 732 ベルトのバックル
                 }
             }
             if (var_78[var_866].Var0 == 724 && var_11 == 1) {
                 var_1073 = rnd(2);
                 if (var_1073 == 0) {
-                    var_78[var_866].Var0 = 728;
+                    var_78[var_866].Var0 = 728; // No = 728 赤石つき石仮面
                 }
             }
             // No = 1 なので、ホテルの外
             if (dangeon_number == 1 && var_1773 >= 90) {
-                var_78[var_866].Var0 = 650;
+                var_78[var_866].Var0 = 650; // No = 650 カエル
             }
             if (var_1753 == 1) {
-                var_78[var_866].Var0 = 713;
+                var_78[var_866].Var0 = 713; // No = 713 ポルポのライター
             }
             if (var_1737 == 1) {
-                var_78[var_866].Var0 = 718;
+                var_78[var_866].Var0 = 718; // No = 718 聖なる弓矢
             }
             if (var_1752 == 1) {
-                var_78[var_866].Var0 = 725;
+                var_78[var_866].Var0 = 725; // No = 725 オレッちのコート
             }
             if (var_1742 == 1) {
-                var_78[var_866].Var0 = 720;
+                var_78[var_866].Var0 = 720; // No = 720 ときのがくぼう
             }
             if (var_1743 == 1) {
-                var_78[var_866].Var0 = 900;
+                var_78[var_866].Var0 = 900; // No = 900 GB BOY
             }
             if (var_1751 == 1) {
-                var_78[var_866].Var0 = 996;
+                var_78[var_866].Var0 = 996; // No = 996 ヒロヒコのサイン色紙
             }
             if (var_1754 == 1) {
-                var_78[var_866].Var0 = 712;
+                var_78[var_866].Var0 = 712; // No = 712 やばいクスリ
             }
             if (var_1755 == 1) {
-                var_78[var_866].Var0 = 715;
+                var_78[var_866].Var0 = 715; // No = 715 点滴
             }
             if (var_1756 == 1) {
-                var_78[var_866].Var0 = 600;
+                var_78[var_866].Var0 = 600; // No = 600 ピッツァ
             }
             if (var_1757 == 1) {
-                var_78[var_866].Var0 = 716;
+                var_78[var_866].Var0 = 716; // No = 716 恐竜の化石
             }
             if (var_1758 == 1) {
-                var_78[var_866].Var0 = 729;
+                var_78[var_866].Var0 = 729;  // No = 729 吉良の財布
                 var_78[var_866].Var15 = 2;
             }
             if (var_1762 >= 1) {
-                var_78[var_866].Var0 = 700;
+                var_78[var_866].Var0 = 700; // No = 700 不明
                 var_78[var_866].Var13 = var_1762;
             }
             if (var_1761 >= 1) {
-                var_78[var_866].Var0 = 701;
+                var_78[var_866].Var0 = 701; // No = 701 不明
                 var_78[var_866].Var13 = var_1761;
             }
             if (var_1778 == 1 && var_1773 >= 90) {
@@ -19044,6 +19111,7 @@ function func387(this: any) {
         return;
     });
 }
+// おそらくレアdiscの出現確率設定??
 function func388(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(388);
@@ -19230,6 +19298,7 @@ function func388(this: any) {
         return;
     });
 }
+
 function func389(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(389);
@@ -19979,6 +20048,7 @@ function func397(this: any) {
         if (belongings_item_list == 700) {
             gcopy(9, 0, 80, 40, 40); // buffer(9)は"img_item.gif"
         }
+        // No = 701 没アイテム「ソフト・マシーンの発動によって罠にした敵」
         if (belongings_item_list == 701) {
             if (var_1248 < 50) {
                 var_965 = 6; // buffer(6)は"img_enemy1a.gif"
@@ -20008,7 +20078,6 @@ function func397(this: any) {
             pos(1, 1);
             gzoom(40, 30, var_965, 960, var_966, 40, 40, 1);
             gsel(0);
-
             gmode(mode = 6, data2 = null, data3 = null, alpha = 255)
             pos(var_1827, var_1828 + 5 + 2);
             gcopy(32, 0, 0, 42, 42);
@@ -20091,9 +20160,15 @@ function func397(this: any) {
         if (belongings_item_list == 731) {
             gcopy(9, 440, 120, 40, 40); // buffer(9)は"img_item.gif"
         }
+        // Ver0.14にて追加。No = 732 ベルトのバックル
+        if (belongings_item_list == 732) {
+            gcopy(9, 400, 80, 40, 40); // buffer(9)は"img_item.gif"
+        }
+        // No = 900 コミック「GB BOY」
         if (belongings_item_list == 900) {
             gcopy(23, 360, 360, 40, 40); // buffer(9)は"img_item.gif"
         }
+        // 
         if (belongings_item_list >= 901 && belongings_item_list < 1000) {
             if (belongings_item_list >= 901 && belongings_item_list <= 910) {
                 var_1829 = (belongings_item_list - 901) * 40;

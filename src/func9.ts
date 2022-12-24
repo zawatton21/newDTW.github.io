@@ -195,15 +195,15 @@ function func907(this: any) {
         yield func428();
         yield func429();
         if (sympathy_id == 135) {
-            if (var_358 == 122) {
-                var_357 = 101;
+            if (bougyo_disc_id == 122) {
+                kougeki_disc_id = 101;
             }
-            if (var_358 == 101) {
-                var_357 = 122;
+            if (bougyo_disc_id == 101) {
+                kougeki_disc_id = 122;
             }
         }
         var_3516 = dim(30);
-        var_3516[0] = var_410;
+        var_3516[0] = shageki_disc_id;
         var_3516[1] = current_level;
         var_3516[2] = var_352;
         var_3516[3] = var_211;
@@ -214,13 +214,13 @@ function func907(this: any) {
         var_3516[8] = current_floor;
         var_3516[9] = wallet;
         var_3516[10] = dangeon_number;
-        var_3516[11] = var_357;
+        var_3516[11] = kougeki_disc_id;
         var_3516[12] = var_233[var_553].Var4;
         var_3516[13] = var_580;
-        var_3516[14] = var_358;
+        var_3516[14] = bougyo_disc_id;
         var_3516[15] = var_233[var_554].Var4;
         var_3516[16] = var_581;
-        var_3516[17] = var_215;
+        var_3516[17] = nouryoku_disc_id;
         var_3516[18] = var_233[var_555].Var4;
         var_3516[19] = var_233[var_556].Var3;
         var_3566 = 0;
@@ -605,7 +605,7 @@ function func911(this: any) {
             var_476 = dim(40);
             var_580 = var_580 - var_894;
             var_894 = 0;
-            var_357 = 0;
+            kougeki_disc_id = 0;
             yield func494();
             var_1977 = 1;
         }
@@ -613,19 +613,19 @@ function func911(this: any) {
             var_477 = dim(40);
             var_581 = var_581 - var_895;
             var_895 = 0;
-            var_358 = 0;
+            bougyo_disc_id = 0;
             yield func494();
             var_1977 = 1;
         }
         if (var_555 == var_225) {
             var_478 = dim(40);
-            var_215 = 0;
+            nouryoku_disc_id = 0;
             yield func494();
             var_1977 = 1;
         }
         if (var_556 == var_225) {
             var_479 = dim(40);
-            var_410 = 0;
+            shageki_disc_id = 0;
             var_250 = 0;
             var_1977 = 1;
         }
@@ -1458,7 +1458,13 @@ function func924(this: any) {
             var_3559 = "ﾍﾌﾞﾝｽﾞﾄﾞｱｰのDISC";
         }
         if (var_3558 == 414) {
-            var_3559 = "ﾀｽｸのDISC";
+            var_3559 = "ﾀｽｸact2のDISC"; // Ver0.1401にて修正。ﾀｽｸのDISC → ﾀｽｸact2のDISC
+        }
+        if (var_3558 == 415) { // Ver0.1401にて追加。
+            var_3559 = "ﾀｽｸact1のDISC";
+        }
+        if (var_3558 == 416) { // Ver0.1401にて追加。
+            var_3559 = "ﾀｽｸact3のDISC";
         }
         return;
     });
@@ -2206,11 +2212,11 @@ function func929(this: any) {
         yield func428();
         yield func429();
         if (sympathy_id == 135) {
-            if (var_358 == 122) {
-                var_357 = 101;
+            if (bougyo_disc_id == 122) {
+                kougeki_disc_id = 101;
             }
-            if (var_358 == 101) {
-                var_357 = 122;
+            if (bougyo_disc_id == 101) {
+                kougeki_disc_id = 122;
             }
         }
         var_3516 = dim(30);
@@ -2224,15 +2230,15 @@ function func929(this: any) {
         var_3516[8] = current_floor;
         var_3516[9] = wallet;
         var_3516[10] = dangeon_number;
-        var_3516[11] = var_357;
+        var_3516[11] = kougeki_disc_id;
         var_3516[12] = var_233[var_553].Var4;
         var_3516[13] = var_580;
-        var_3516[14] = var_358;
+        var_3516[14] = bougyo_disc_id;
         var_3516[15] = var_233[var_554].Var4;
         var_3516[16] = var_581;
-        var_3516[17] = var_215;
+        var_3516[17] = nouryoku_disc_id;
         var_3516[18] = var_233[var_555].Var4;
-        var_3516[19] = var_410;
+        var_3516[19] = shageki_disc_id;
         var_3516[20] = var_233[var_556].Var3;
         var_3516[21] = var_233[var_553].Var19;
         var_3516[22] = var_233[var_553].Var13;

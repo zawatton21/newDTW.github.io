@@ -913,7 +913,7 @@ function func510(this: any) {
     });
 }
 
-// 各discごとの発動動作処理 (スタンド能力)
+// 各discごとの発動動作処理 (スタンド能力) Ver0.1401にて、今後の追加がし易いようにプログラム大幅見直し。
 function func511(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(511);
@@ -979,7672 +979,382 @@ function func511(this: any) {
         }
         // No = 100 スタープラチナの発動処理
         if (activated_disc_id == 100) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_155 = 1;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "射撃攻撃を防げるようになった！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            DSPLAY(audio_id = 182);
-            var_1299 = 8;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 103 エコーズAct3の発動処理
-        if (activated_disc_id == 103) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            var_1283 = 1;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ACT ３ FREEZE　！！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_2261 = var_357;
-            var_357 = 103;
-            var_243 = 1;
-            var_347 = var_66;
-            var_348 = var_67;
-            if (var_199 == 4) {
-                var_347 = var_347 - 1;
-            }
-            if (var_199 == 6) {
-                var_347 = var_347 + 1;
-            }
-            if (var_199 == 8) {
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 2) {
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 1) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 3) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 7) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 9) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 - 1;
-            }
-    
-            DSPLAY(audio_id = 122);
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_82[var_347][var_348] != 0) {
-                var_2231 = var_82[var_347][var_348];
-                if (var_83[var_2231].Var0 != 50) {
-                    if (var_83[var_2231].Var12 == 99) {
-                        var_83[var_2231].Var12 = 0;
-                    }
-                    var_83[var_2231].Var13 = 0;
-                    if (var_83[var_2231].Var15 == 0) {
-                        var_83[var_2231].Var14 = 1;
-                
-                        DSPLAY(audio_id = 162);
-                    }
-                    if (var_83[var_2231].Var15 != 0) {
-                        var_83[var_2231].Var14 = 0;
-                        var_83[var_2231].Var15 = 0;
-                    }
-                    var_747 = 1;
-                }
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1283 = 0;
-            var_357 = var_2261;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-         // No = 114 ホワイトスネイクの発動処理
-        if (activated_disc_id == 114) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            var_1283 = 1;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「一手」 遅カッタ…ナ…！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_2261 = var_357;
-            var_357 = 114;
-            var_243 = 1;
-            var_347 = var_66;
-            var_348 = var_67;
-            if (var_199 == 4) {
-                var_347 = var_347 - 1;
-            }
-            if (var_199 == 6) {
-                var_347 = var_347 + 1;
-            }
-            if (var_199 == 8) {
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 2) {
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 1) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 3) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 7) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 9) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_82[var_347][var_348] != 0) {
-                var_2231 = var_82[var_347][var_348];
-                if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143) {
-                    var_747 = 1;
-                    var_83[var_2231].Var12 = 99;
-                }
-            }
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            gsel(19);
-            color(255, 255, 255);
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_311 = 0;
-            var_312 = 1;
-            for (let cnt2 = 0; cnt2 < 51; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 + 5;
-            }
-            if (var_82[var_347][var_348] != 0) {
-        
-                DSPLAY(audio_id = 123);
-                var_2231 = var_82[var_347][var_348];
-                if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143) {
-                    var_402 = var_2231;
-                    var_209 = 999;
-                    var_2195 = 1;
-                    var_2196 = 2;
-                    var_2262 = 1;
-                    yield func705();
-                    var_2262 = 0;
-                    var_2196 = 0;
-                    var_2195 = 0;
-                }
-            }
-            for (let cnt2 = 0; cnt2 < 51; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 - 5;
-            }
-            var_312 = 0;
-            var_1283 = 0;
-            var_357 = var_2261;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 307 不明disc の発動処理 
-        if (activated_disc_id == 307) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            var_1283 = 1;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "お前は敗北を認めた！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_2261 = var_357;
-            var_357 = 307;
-            var_243 = 1;
-            var_347 = var_66;
-            var_348 = var_67;
-            if (var_199 == 4) {
-                var_347 = var_347 - 1;
-            }
-            if (var_199 == 6) {
-                var_347 = var_347 + 1;
-            }
-            if (var_199 == 8) {
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 2) {
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 1) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 3) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 7) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 9) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_82[var_347][var_348] != 0) {
-        
-                DSPLAY(audio_id = 123);
-                var_2231 = var_82[var_347][var_348];
-                if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143) {
-                    var_402 = var_2231;
-                    var_209 = 999;
-                    var_2195 = 1;
-                    var_2196 = 2;
-                    var_2263 = var_83[var_2231].Var0;
-                    yield func705();
-                    var_2263 = 0;
-                    var_2196 = 0;
-                    var_2195 = 0;
-                }
-            }
-            var_1283 = 0;
-            var_357 = var_2261;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 207 グレイトフル・デッドの発動処理 
-        if (activated_disc_id == 207) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「グレイトフル・デッド！！」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_2264 = 0;
-            var_1940 = var_199;
-            var_199 = 2;
-            var_271 = 1;
-            var_1394 = 1;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                if (var_1394 == 11) {
-            
-                    DSPLAY(audio_id = 161);
-                }
-                var_1394++;
-            }
-            var_271 = 0;
-            var_1394 = 0;
-            var_2265 = 0;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2266 = 0;
-                if (var_83[var_2194].Var0 != 0) {
-                    var_1993 = var_66 - 1;
-                    if (var_1993 < 0) {
-                        var_1993 = 0;
-                    }
-                    var_1994 = var_66 + 1;
-                    if (var_1994 > var_33) {
-                        var_1994 = var_33;
-                    }
-                    var_1995 = var_67 + 1;
-                    if (var_1995 > var_34) {
-                        var_1995 = var_34;
-                    }
-                    var_1996 = var_67 - 1;
-                    if (var_1996 < 0) {
-                        var_1996 = 0;
-                    }
-                    if (var_2266 == 0 && var_2194 != var_124 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                    if (var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            yield func519();
-                            var_2266 = 1;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            yield func519();
-                            var_2266 = 1;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            yield func519();
-                            var_2266 = 1;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            yield func519();
-                            var_2266 = 1;
-                        }
-                    }
-                    if (var_2266 == 0 && var_172 >= 1) {
-                        yield func519();
-                        var_2266 = 1;
-                    }
-                }
-                if (var_2266 == 1) {
-                    var_2265 = 1;
-                }
-                var_2194 = var_2194 + 1;
-            }
-            if (var_2265 == 1 || var_172 >= 1) {
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                if (var_172 == 0) {
-                    comments_row1a = "近くにいる敵は急激に老化して";
-                    comments_row2a = "攻撃力が下がった！";
-                }
-                if (var_172 >= 1) {
-                    comments_row1a = "この階にいる全ての敵は";
-                    comments_row2a = "急激に老化して攻撃力が下がった！";
-                }
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            var_199 = var_1940;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 122 アヌビス神の発動処理 
-        if (activated_disc_id == 122) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_2267 = dim(10);
-            var_143 = 1;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「どの程度の ふみ込みまで";
-            comments_row2 = "　耐えられるか 憶えるゼ！」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 140);
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 113 クラッシュの発動処理
-        if (activated_disc_id == 113) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            var_1283 = 1;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「クラッシュ！くらいつけッ！」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_2261 = var_357;
-            var_357 = 113;
-            var_243 = 1;
-            var_347 = var_66;
-            var_348 = var_67;
-            if (var_199 == 4) {
-                var_347 = var_347 - 1;
-            }
-            if (var_199 == 6) {
-                var_347 = var_347 + 1;
-            }
-            if (var_199 == 8) {
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 2) {
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 1) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 3) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 7) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 9) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 - 1;
-            }
-    
-            DSPLAY(audio_id = 104);
-            if (var_82[var_347][var_348] != 0) {
-                var_314 = var_82[var_347][var_348];
-                if (var_83[var_314].Var0 != 50) {
-                    var_747 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    yield func669();
-                }
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1283 = 0;
-            var_357 = var_2261;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 105 チリペッパーの発動処理
-        if (activated_disc_id == 105) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            gsel(19);
-            color(255, 255, 255);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_311 = 255;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "限界なく明るくなるッ！！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-    
-            DSPLAY(audio_id = 161);
-            var_312 = 1;
-            for (let cnt2 = 0; cnt2 < 51; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 - 5;
-            }
-            var_312 = 0;
-            var_103 = 1;
-            var_121 = 1;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_336; ++cnt2) {
-                if (var_78[var_2194].Var0 != 0) {
-                    var_1993 = var_66 - 1;
-                    if (var_1993 < 0) {
-                        var_1993 = 0;
-                    }
-                    var_1994 = var_66 + 1;
-                    if (var_1994 > var_33) {
-                        var_1994 = var_33;
-                    }
-                    var_1995 = var_67 + 1;
-                    if (var_1995 > var_34) {
-                        var_1995 = var_34;
-                    }
-                    var_1996 = var_67 - 1;
-                    if (var_1996 < 0) {
-                        var_1996 = 0;
-                    }
-                    if (var_78[var_2194].Var9 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_66 && var_78[var_2194].Var2 == var_1995) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_66 && var_78[var_2194].Var2 == var_1996) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_1993 && var_78[var_2194].Var2 == var_67) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_1994 && var_78[var_2194].Var2 == var_67) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_1993 && var_78[var_2194].Var2 == var_1995) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_1994 && var_78[var_2194].Var2 == var_1995) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_1993 && var_78[var_2194].Var2 == var_1996) {
-                        yield func512();
-                    }
-                    if (var_78[var_2194].Var1 == var_1994 && var_78[var_2194].Var2 == var_1996) {
-                        yield func512();
-                    }
-                    if (var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_78[var_2194].Var1;
-                        var_2222 = var_78[var_2194].Var2;
-                        var_2223 = var_78[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_78[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_78[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_78[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_78[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            yield func512();
-                        }
-                        if (var_78[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            yield func512();
-                        }
-                        if (var_78[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            yield func512();
-                        }
-                        if (var_78[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            yield func512();
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_2194].Var0 != 0) {
-                    var_1993 = var_66 - 1;
-                    if (var_1993 < 0) {
-                        var_1993 = 0;
-                    }
-                    var_1994 = var_66 + 1;
-                    if (var_1994 > var_33) {
-                        var_1994 = var_33;
-                    }
-                    var_1995 = var_67 + 1;
-                    if (var_1995 > var_34) {
-                        var_1995 = var_34;
-                    }
-                    var_1996 = var_67 - 1;
-                    if (var_1996 < 0) {
-                        var_1996 = 0;
-                    }
-                    if (var_2194 != var_124 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                        var_83[var_2194].Var23 = 1;
-                        if (var_83[var_2194].Var0 == 97) {
-                            var_83[var_2194].Var31 = 0;
-                        }
-                    }
-                    if (var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_83[var_2194].Var23 = 1;
-                            if (var_83[var_2194].Var0 == 97) {
-                                var_83[var_2194].Var31 = 0;
-                            }
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_83[var_2194].Var23 = 1;
-                            if (var_83[var_2194].Var0 == 97) {
-                                var_83[var_2194].Var31 = 0;
-                            }
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_83[var_2194].Var23 = 1;
-                            if (var_83[var_2194].Var0 == 97) {
-                                var_83[var_2194].Var31 = 0;
-                            }
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_83[var_2194].Var23 = 1;
-                            if (var_83[var_2194].Var0 == 97) {
-                                var_83[var_2194].Var31 = 0;
-                            }
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            var_114 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 116 ハーミットパープルの発動能力
-        if (activated_disc_id == 116) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_1940 = var_199;
-            var_199 = 2;
-            var_1258 = 3;
-            DSPLAY(audio_id = 127);
-            var_271 = 1;
-            var_1480 = 1;
-            for (let cnt2 = 0; cnt2 < 14; ++cnt2) {
-                var_1480++;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_271 = 0;
-            var_1480 = 0;
-            var_1258 = 0;
-            var_175 = 0;
-            var_176 = 0;
-            var_2268 = 0;
-            var_2269 = 0;
-            var_2270 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_2270].Var0 == 113) {
-                    var_2271 = rnd(20);
-                    if (var_2271 >= 10) {
-                        var_2269 = var_2270;
-                        break;
-                    }
-                }
-                if (var_83[var_2270].Var0 == 115) {
-                    var_2271 = rnd(20);
-                    if (var_2271 >= 10) {
-                        var_2268 = var_2270;
-                        break;
-                    }
-                }
-                var_2270++;
-            }
-            if (var_2268 == 0 && var_2269 == 0) {
-                DSPLAY(audio_id = 184);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "この階の地図を念写した！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                var_102 = 1;
-            }
-            if (var_2269 >= 1) {
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "「きさま、見ているなッ！！」";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-                var_176 = var_2269;
-                var_198 = 0;
-            }
-            if (var_2268 >= 1) {
-                DSPLAY(audio_id = 184);
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "この階のｱｸｱ･ﾈｯｸﾚｽを念写した！";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-                var_175 = var_2268;
-                var_198 = 0;
-            }
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_199 = var_1940;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 107 デス13の発動能力
-        if (activated_disc_id == 107) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-    
-            DSPLAY(audio_id = 131);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「ラリホ～～～～～っ！」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_1940 = var_199;
-            var_199 = 2;
-            var_271 = 1;
-            var_1592 = 1;
-            for (let cnt2 = 0; cnt2 < 34; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1592++;
-            }
-            var_271 = 0;
-            var_1592 = 0;
-            var_2265 = 0;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2266 = 0;
-                if (var_83[var_2194].Var0 != 0) {
-                    var_1993 = var_66 - 1;
-                    if (var_1993 < 0) {
-                        var_1993 = 0;
-                    }
-                    var_1994 = var_66 + 1;
-                    if (var_1994 > var_33) {
-                        var_1994 = var_33;
-                    }
-                    var_1995 = var_67 + 1;
-                    if (var_1995 > var_34) {
-                        var_1995 = var_34;
-                    }
-                    var_1996 = var_67 - 1;
-                    if (var_1996 < 0) {
-                        var_1996 = 0;
-                    }
-                    if (var_2266 == 0 && var_2194 != var_124 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12 && var_172 == 1) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                        yield func520();
-                        var_2266 = 1;
-                    }
-                    if (var_201 <= 12 && var_201 != 0 && var_172 == 1) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            yield func520();
-                            var_2266 = 1;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            yield func520();
-                            var_2266 = 1;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            yield func520();
-                            var_2266 = 1;
-                        }
-                        if (var_2266 == 0 && var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            yield func520();
-                            var_2266 = 1;
-                        }
-                    }
-                }
-                if (var_2266 == 1) {
-                    var_2265 = 1;
-                }
-                var_2194 = var_2194 + 1;
-            }
-            var_114 = 0;
-            if (var_2265 == 1) {
-        
-                DSPLAY(audio_id = 132);
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            var_199 = var_1940;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 115 Gエクスペリエンスの発動処理
-        if (activated_disc_id == 115) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "生まれろ…　新しい生命…";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 16; ++cnt2) {
-                var_300 = 0;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                var_2272 = 1;
-                var_1845 = 1;
-                yield func556();
-                var_2272 = 0;
-                var_1845 = 0;
-                if (var_2110 != 0) {
-                    var_2273 = var_97;
-                    var_83[var_2273].Var21 = 1;
-                    var_411 = 1;
-                    for (let cnt4 = 0; cnt4 < 3; ++cnt4) {
-                        var_300 = 0;
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_411 = 2;
-                    for (let cnt4 = 0; cnt4 < 3; ++cnt4) {
-                        var_300 = 0;
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_411 = 3;
-                    for (let cnt4 = 0; cnt4 < 3; ++cnt4) {
-                        var_300 = 0;
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_411 = 4;
-                    for (let cnt4 = 0; cnt4 < 3; ++cnt4) {
-                        var_300 = 0;
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_411 = 0;
-                    var_83[var_2273].Var21 = 0;
-                    var_83[var_2273].Var5 = 2;
-                }
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 109 マジシャンズレッドの発動処理
-        if (activated_disc_id == 109) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            var_199 = 2;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_271 = 1;
-            var_1545 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_1545 = 2;
-            yield func337(); // メッセージ関係呼び出し
-            var_1545 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_1545 = 4;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "クロスファイヤーハリケーンスペシャル！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            gsel(19);
-            color(255, 0, 0);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_529 = 1;
-    
-            DSPLAY(audio_id = 128);
-            var_1548 = 7;
-            // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            var_1548 = 8;
-            // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-        
-                DSPLAY(audio_id = 128);
-                var_1548 = 1;
-                yield func337(); // メッセージ関係呼び出し
-                var_1548 = 2;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1548 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                for (let cnt3 = 0; cnt3 < 300; ++cnt3) {
-                    var_1550 = rnd(var_33);
-                    var_230 = rnd(var_34);
-                    if (var_71[var_1550][var_230] == var_201 && var_82[var_1550][var_230] != 0 && var_71[var_1550][var_230] != 14) {
-                        var_421 = var_82[var_1550][var_230];
-                        var_271 = 1;
-                        var_1549 = 1;
-                        for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                            var_1549++;
-                        }
-                        var_1549 = 0;
-                        var_403 = "クロスファイヤーハリケーンスペシャル！";
-                        enemy_list = var_83[var_421].Var0;
-                        yield func626();
-                        var_402 = var_421;
-                        var_314 = var_421;
-                        var_209 = var_565 * 5;
-                        var_2219 = rnd(3);
-                        var_209 = var_209 + var_2219;
-                        if (var_172 >= 1) {
-                            var_209 = var_209 * 2;
-                        }
-                        yield func705();
-                        break;
-                    }
-                    if (var_71[var_1550][var_230] == var_201 && var_77[var_1550][var_230] == 0 && var_80[var_1550][var_230] == 0 && var_73[var_1550][var_230] == 0 && var_65[var_1550][var_230] == 0 && var_82[var_1550][var_230] == 0 && var_71[var_1550][var_230] != 14) {
-                        var_271 = 1;
-                        var_1549 = 1;
-                        for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                            var_1549++;
-                        }
-                        var_1549 = 0;
-                        var_768 = 1;
-                        var_2274 = 1;
-                        yield func536();
-                        var_1396 = var_1550;
-                        var_1397 = var_230;
-                        var_1547 = 1;
-                        var_271 = 1;
-                
-                        DSPLAY(audio_id = 128);
-                        for (let cnt5 = 0; cnt5 < 7; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                            var_1547++;
-                        }
-                        var_1547 = 0;
-                        var_768 = 0;
-                        var_2274 = 0;
-                        yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                        break;
-                    }
-                }
-            }
-            var_1545 = 3;
-            yield func337(); // メッセージ関係呼び出し
-            var_1545 = 2;
-            yield func337(); // メッセージ関係呼び出し
-            var_1545 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_1545 = 0;
-            var_271 = 0;
-            var_529 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 301 ハーヴェストの発動処理
-        if (activated_disc_id == 301) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "アイテムを取って来いッ！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_1483 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1483++;
-            }
-            var_1483 = 0;
-            var_271 = 0;
-            var_2275 = var_66 - 1;
-            if (var_2275 < 0) {
-                var_2275 = 0;
-            }
-            var_2276 = var_66 + 1;
-            if (var_2276 > var_33) {
-                var_2276 = var_33;
-            }
-            var_2277 = var_67 - 1;
-            if (var_2277 < 0) {
-                var_2277 = 0;
-            }
-            var_2278 = var_67 + 1;
-            if (var_2278 > var_34) {
-                var_2278 = var_34;
-            }
-            var_347 = var_66;
-            var_348 = var_67;
-            var_2279 = 0;
-            var_2280 = 1;
-            for (let cnt2 = 0; cnt2 < var_336; ++cnt2) {
-                var_2281 = 0;
-                if (var_78[var_2280].Var0 != 0 && var_78[var_2280].Var11 == 0) {
-                    var_2282 = var_78[var_2280].Var1;
-                    var_2283 = var_78[var_2280].Var2;
-                    if (var_2281 == 0 && var_77[var_347][var_348] == 0 && var_80[var_347][var_348] == 0 && var_71[var_347][var_348] != 0 && var_71[var_347][var_348] != 13 && var_73[var_347][var_348] == 0) {
-                        var_2284 = var_347;
-                        var_2285 = var_348;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_2275][var_348] == 0 && var_80[var_2275][var_348] == 0 && var_71[var_2275][var_348] != 0 && var_71[var_2275][var_348] != 13 && var_73[var_2275][var_348] == 0) {
-                        var_2284 = var_2275;
-                        var_2285 = var_348;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_2276][var_348] == 0 && var_80[var_2276][var_348] == 0 && var_71[var_2276][var_348] != 0 && var_71[var_2276][var_348] != 13 && var_73[var_2276][var_348] == 0) {
-                        var_2284 = var_2276;
-                        var_2285 = var_348;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_347][var_2278] == 0 && var_80[var_347][var_2278] == 0 && var_71[var_347][var_2278] != 0 && var_71[var_347][var_2278] != 13 && var_73[var_347][var_2278] == 0) {
-                        var_2284 = var_347;
-                        var_2285 = var_2278;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_347][var_2277] == 0 && var_80[var_347][var_2277] == 0 && var_71[var_347][var_2277] != 0 && var_71[var_347][var_2277] != 13 && var_73[var_347][var_2277] == 0) {
-                        var_2284 = var_347;
-                        var_2285 = var_2277;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_2275][var_2278] == 0 && var_80[var_2275][var_2278] == 0 && var_71[var_2275][var_2278] != 0 && var_71[var_2275][var_2278] != 13 && var_73[var_2275][var_2278] == 0) {
-                        var_2284 = var_2275;
-                        var_2285 = var_2278;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_2276][var_2278] == 0 && var_80[var_2276][var_2278] == 0 && var_71[var_2276][var_2278] != 0 && var_71[var_2276][var_2278] != 13 && var_73[var_2276][var_2278] == 0) {
-                        var_2284 = var_2276;
-                        var_2285 = var_2278;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_2275][var_2277] == 0 && var_80[var_2275][var_2277] == 0 && var_71[var_2275][var_2277] != 0 && var_71[var_2275][var_2277] != 13 && var_73[var_2275][var_2277] == 0) {
-                        var_2284 = var_2275;
-                        var_2285 = var_2277;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 0 && var_77[var_2276][var_2277] == 0 && var_80[var_2276][var_2277] == 0 && var_71[var_2276][var_2277] != 0 && var_71[var_2276][var_2277] != 13 && var_73[var_2276][var_2277] == 0) {
-                        var_2284 = var_2276;
-                        var_2285 = var_2277;
-                        var_2281 = 1;
-                    }
-                    if (var_2281 == 1) {
-                        var_77[var_2284][var_2285] = var_77[var_2282][var_2283];
-                        var_78[var_2280].Var1 = var_2284;
-                        var_78[var_2280].Var2 = var_2285;
-                        var_78[var_2280].Var9 = var_71[var_2284][var_2285];
-                        var_78[var_2280].Var10 = 1;
-                        var_77[var_2282][var_2283] = 0;
-                        var_2279++;
-                    }
-                    if (var_2281 == 0) {
-                        break;
-                    }
-                }
-                var_2280 = var_2280 + 1;
-            }
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (var_2279 == 0) {
-                comments_row1 = "１個も拾ってこなかったど！";
-            }
-            if (var_2279 >= 1) {
-                comments_row1 = "" + var_2279 + "個　拾ってきた。";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            if (var_2279 >= 1) {
-                var_1489 = 1;
-                var_271 = 1;
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_1489 = 0;
-                var_271 = 0;
-            }
-            if (var_2279 == 0) {
-                for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 106 クレイジーDの発動処理
-        if (activated_disc_id == 106) {
-            if (var_220 == 0 && var_234 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
-                var_570 = var_233[var_225].Var13;
-            }
-            if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                var_570 = var_486[var_682][var_225][13];
-            }
-            if (var_234 == 1) {
-                var_570 = var_78[var_321].Var13;
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ベースとなるアイテムを選んでください";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func340(); // キー入力による選択処理
-            var_2286 = var_225;
-            var_198 = 0;
-            var_1240 = 1;
-            if (var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
-                var_2287 = 1;
-            }
-            item_page_number = 1;
-            Y_axis_item_position = 45;
-            var_225 = 1;
-            var_223 = var_224 + 10;
-            var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            yield func051();
-            open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
-            return;
-        }
-        // No = 300 パール・ジャムの発動処理
-        if (activated_disc_id == 300) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "パールジャムを食べた。";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_1214 = 1;
-            DSPLAY(audio_id = 119); // 食べた時の効果音
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func340(); // キー入力による選択処理
-            var_1214 = 0;
-            var_360 = 0;
-            var_2211 = 0;
-            if (var_350 == var_567) {
-                var_567 = var_567 + 1;
-                var_2211 = 1;
-                if (var_567 > 999) {
-                    var_567 = 999;
-                }
-            }
-            var_350 = var_350 + 50;
-            if (var_350 > var_567) {
-                var_350 = var_567;
-            }
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "お腹が少し膨らんだ";
-            comments_row2a = "";
-            if (var_350 == var_567) {
-                comments_row1a = "お腹がいっぱいになった。";
-                comments_row2a = "";
-            }
-            if (var_2211 == 1) {
-                comments_row1a = "最大満腹度が" + var_567 + "になった。";
-                comments_row2a = "";
-            }
-            yield func047();
-            yield func050();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 108 スティッキー・フィンガーズの発動処理
-        if (activated_disc_id == 108) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "こいつ自身に見せつけるしかねえッ！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_199 = 2;
-            var_1600 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                if (var_1600 == 3) {
-                    var_389 = 2;
-    
-                    DSPLAY(audio_id = 105);
-                    var_747 = 1;
-                }
-                var_1600++;
-            }
-            var_1600 = 0;
-            var_271 = 0;
-            var_389 = 0;
-            var_471 = 2;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func051();
-            DSPLAY(audio_id = 148);
-            var_747 = 1;
-            var_1212 = 1;
-            var_108 = 1;
-            var_471 = 3;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_471 = 4;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_471 = 5;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_471 = 6;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_471 = 7;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_471 = 8;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_471 = 0;
-            var_1212 = 0;
-            var_108 = 0;
-            var_218 = 30;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「覚悟」ってのはこういうことだぜ…";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 104 ザ・ハンドの発動処理
-        if (activated_disc_id == 104) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            var_1283 = 1;
-            var_2261 = var_357;
-            var_357 = 104;
-            var_243 = 1;
-            var_1194 = 1;
-    
-            DSPLAY(audio_id = 121);
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "空間をけずりとる！ ";
-            comments_row2 = "……するとお～～～～っ！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func340(); // キー入力による選択処理
-            var_455 = var_66;
-            var_456 = var_67;
-            if (var_199 == 4) {
-                var_455 = var_455 - 1;
-            }
-            if (var_199 == 6) {
-                var_455 = var_455 + 1;
-            }
-            if (var_199 == 8) {
-                var_456 = var_456 - 1;
-            }
-            if (var_199 == 2) {
-                var_456 = var_456 + 1;
-            }
-            if (var_199 == 1) {
-                var_455 = var_455 - 1;
-                var_456 = var_456 + 1;
-            }
-            if (var_199 == 3) {
-                var_455 = var_455 + 1;
-                var_456 = var_456 + 1;
-            }
-            if (var_199 == 7) {
-                var_455 = var_455 - 1;
-                var_456 = var_456 - 1;
-            }
-            if (var_199 == 9) {
-                var_455 = var_455 + 1;
-                var_456 = var_456 - 1;
-            }
-            var_2289 = var_455;
-            var_2290 = var_456;
-            var_2291 = var_66;
-            var_2292 = var_67;
-            var_455 = var_66;
-            var_456 = var_67;
-            for (let cnt2 = 0; cnt2 < 40; ++cnt2) {
-                var_1894 = var_455;
-                var_1895 = var_456;
-                if (var_199 == 4) {
-                    var_455 = var_455 - 1;
-                }
-                if (var_199 == 6) {
-                    var_455 = var_455 + 1;
-                }
-                if (var_199 == 8) {
-                    var_456 = var_456 - 1;
-                }
-                if (var_199 == 2) {
-                    var_456 = var_456 + 1;
-                }
-                if (var_199 == 1) {
-                    var_455 = var_455 - 1;
-                    var_456 = var_456 + 1;
-                }
-                if (var_199 == 3) {
-                    var_455 = var_455 + 1;
-                    var_456 = var_456 + 1;
-                }
-                if (var_199 == 7) {
-                    var_455 = var_455 - 1;
-                    var_456 = var_456 - 1;
-                }
-                if (var_199 == 9) {
-                    var_455 = var_455 + 1;
-                    var_456 = var_456 - 1;
-                }
-                if (var_455 < 5 || var_455 > var_33 || var_456 < 5 || var_456 > var_34) {
-                    var_455 = var_1894;
-                    var_456 = var_1895;
-                }
-                if (var_71[var_455][var_456] == 0) {
-                    break;
-                }
-                if (var_82[var_455][var_456] > 0 || var_77[var_455][var_456] > 0) {
-                    if (var_82[var_455][var_456] > 0) {
-                        var_2293 = var_82[var_455][var_456];
-                        var_82[var_455][var_456] = 0;
-                        if (var_71[var_2289][var_2290] == 13) {
-                            var_2294 = var_2289 - 1;
-                            if (var_2294 < 0) {
-                                var_2294 = 0;
-                            }
-                            var_2295 = var_2289 + 1;
-                            if (var_2295 > var_33) {
-                                var_2295 = var_33;
-                            }
-                            var_2296 = var_2290 + 1;
-                            if (var_2296 > var_34) {
-                                var_2296 = var_34;
-                            }
-                            var_2297 = var_2290 - 1;
-                            if (var_2297 < 0) {
-                                var_2297 = 0;
-                            }
-                            var_2298 = 0;
-                            if (var_2298 == 0 && var_71[var_2294][var_2296] != 0 && var_71[var_2294][var_2296] != 13 && var_82[var_2294][var_2296] == 0 && var_65[var_2294][var_2296] == 0) {
-                                var_2289 = var_2294;
-                                var_2290 = var_2296;
-                                var_2298 = 1;
-                            }
-                            if (var_2298 == 0 && var_71[var_2295][var_2296] != 0 && var_71[var_2295][var_2296] != 13 && var_82[var_2295][var_2296] == 0 && var_65[var_2295][var_2296] == 0) {
-                                var_2289 = var_2295;
-                                var_2290 = var_2296;
-                                var_2298 = 1;
-                            }
-                            if (var_2298 == 0 && var_71[var_2294][var_2297] != 0 && var_71[var_2294][var_2297] != 13 && var_82[var_2294][var_2297] == 0 && var_65[var_2294][var_2297] == 0) {
-                                var_2289 = var_2294;
-                                var_2290 = var_2297;
-                                var_2298 = 1;
-                            }
-                            if (var_2298 == 0 && var_71[var_2295][var_2297] != 0 && var_71[var_2295][var_2297] != 13 && var_82[var_2295][var_2297] == 0 && var_65[var_2295][var_2297] == 0) {
-                                var_2289 = var_2295;
-                                var_2290 = var_2297;
-                                var_2298 = 1;
-                            }
-                            if (var_2298 == 0 && var_71[var_2294][var_1895] != 0 && var_71[var_2294][var_1895] != 13 && var_82[var_2294][var_1895] == 0 && var_65[var_2294][var_1895] == 0) {
-                                var_2289 = var_2294;
-                                var_2298 = 1;
-                            }
-                            if (var_2298 == 0 && var_71[var_2295][var_1895] != 0 && var_71[var_2295][var_1895] != 13 && var_82[var_2295][var_1895] == 0 && var_65[var_2295][var_1895] == 0) {
-                                var_2289 = var_2295;
-                                var_2298 = 1;
-                            }
-                            if (var_2298 == 0 && var_71[var_1894][var_2296] != 0 && var_71[var_1894][var_2296] != 13 && var_82[var_1894][var_2296] == 0 && var_65[var_1894][var_2296] == 0) {
-                                var_2290 = var_2296;
-                                var_2298 = 1;
-                            }
-                            if (var_2298 == 0 && var_71[var_1894][var_2297] != 0 && var_71[var_1894][var_2297] != 13 && var_82[var_1894][var_2297] == 0 && var_65[var_1894][var_2297] == 0) {
-                                var_2290 = var_2297;
-                                var_2298 = 1;
-                            }
-                        }
-                        var_83[var_2293].Var1 = var_2289;
-                        var_83[var_2293].Var2 = var_2290;
-                        var_82[var_2289][var_2290] = var_2293;
-                    }
-                    if (var_77[var_455][var_456] > 0) {
-                        if (var_73[var_2291][var_2292] >= 1 || var_77[var_2291][var_2292] != 0) {
-                            if (var_199 == 4) {
-                                var_2291 = var_2291 - 1;
-                            }
-                            if (var_199 == 6) {
-                                var_2291 = var_2291 + 1;
-                            }
-                            if (var_199 == 8) {
-                                var_2292 = var_2292 - 1;
-                            }
-                            if (var_199 == 2) {
-                                var_2292 = var_2292 + 1;
-                            }
-                            if (var_199 == 1) {
-                                var_2291 = var_2291 - 1;
-                                var_2292 = var_456 + 1;
-                            }
-                            if (var_199 == 3) {
-                                var_2291 = var_2291 + 1;
-                                var_2292 = var_456 + 1;
-                            }
-                            if (var_199 == 7) {
-                                var_2291 = var_2291 - 1;
-                                var_2292 = var_456 - 1;
-                            }
-                            if (var_199 == 9) {
-                                var_2291 = var_2291 + 1;
-                                var_2292 = var_456 - 1;
-                            }
-                        }
-                        var_2293 = var_77[var_455][var_456];
-                        var_77[var_455][var_456] = 0;
-                        var_78[var_2293].Var1 = var_2291;
-                        var_78[var_2293].Var2 = var_2292;
-                        var_77[var_2291][var_2292] = var_2293;
-                    }
-                    var_198 = 0;
-                    for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    break;
-                }
-            }
-            var_1283 = 0;
-            var_357 = var_2261;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            if (var_72[var_66][var_67] == 0 && var_85 == 0 && var_163 == 0) {
-                yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand100();
             return;
         }
         // No = 101 シルバーチャリオッツの発動処理
         if (activated_disc_id == 101) {
-            if (var_420 != 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "チャリオッツは分身中だ。";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_234 = 0;
-                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            var_2299 = 1;
-            var_1845 = 1;
-            yield func556();
-            var_83[var_673].Var11 = 1;
-            var_2299 = 0;
-            var_1845 = 0;
-            if (var_2110 == 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "チャリオッツを出せる場所が無いぞ。";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_234 = 0;
-                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            for (let cnt2 = 0; cnt2 < 7; ++cnt2) {
-                var_2299 = 1;
-                var_1845 = 1;
-                yield func556();
-                var_83[var_673].Var11 = 1;
-                var_2299 = 0;
-                var_1845 = 0;
-            }
-            var_420 = 7;
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ブラボー！";
-            comments_row2 = "おお…　ブラボー！！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                var_1259 = 1;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 2;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 3;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 2;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 1;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "フフフ･･･";
-            comments_row2a = "感覚の目でよーく見てろ！";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                var_1259 = 1;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 2;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 3;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 2;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-                var_1259 = 1;
-                // yield func337(); // メッセージ関係呼び出し
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1259 = 0;
-            var_199 = 2;
-            yield func337(); // メッセージ関係呼び出し
-            for (let cnt2 = 0; cnt2 < var_97 + 1; ++cnt2) {
-                if (var_83[cnt2][0] == 146 && var_83[cnt2][31] == 5) {
-                    var_83[cnt3][11] = 0;
-                }
-            }
-    
-            DSPLAY(audio_id = 112);　// 刀の切れる音 or 強化した時のシャキーン 効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "これだ！　甲冑を外したスタンド";
-            comments_row2a = "「シルバー・チャリオッツ」！";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 319 ボーイⅡマンの発動処理
-        if (activated_disc_id == 319) {
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "能力を消すDISCを選んでください";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func340(); // キー入力による選択処理
-            var_2300 = var_225;
-            var_2301 = 0;
-            if (var_220 != 0) {
-                var_2301 = 1;
-            }
-            if (var_234 != 0) {
-                var_2301 = 2;
-            }
-            var_198 = 0;
-            var_2006 = 1;
-            item_page_number = 1;
-            Y_axis_item_position = 45;
-            var_225 = 1;
-            var_223 = var_224 + 10;
-            var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            yield func051();
-            open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
-            return;
-        }
-        // 時止め能力 (ザ・ワールド & スタプラ・ザワールドの発動能力)
-        if (activated_disc_id == 111 || activated_disc_id == 398) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_163 = 1;
-            var_164 = 1;
-            var_153 = 0;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (activated_disc_id == 111) {
-                comments_row1 = "「ザ・ワールド」！！";
-            }
-            if (activated_disc_id == 398) {
-                comments_row1 = "「スタープラチナ・ザ・ワールド」！！";
-            }
-            comments_row2 = "時よ止まれ！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_114 = 0;
-            var_463 = 0;
-            var_464 = 0;
-            var_461 = 0;
-            var_462 = 0;
-    
-            DSPLAY(audio_id = 185);
-            var_271 = 1;
-            var_1491 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1491++;
-            }
-            var_271 = 0;
-            var_1491 = 0;
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-            return;
-        }
-        // No = 300 イエローテンパランスの発動処理
-        if (activated_disc_id == 201) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "このオレのスタンド「黄の節制」に";
-            comments_row2 = "弱点はない！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-    
-            DSPLAY(audio_id = 123);
-            var_271 = 1;
-            var_1310 = 1;
-            var_374 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1310++;
-                if (var_1310 == 7) {
-                    var_1310 = 1;
-                }
-                var_300 = 0;
-            }
-            var_374 = 0;
-            var_271 = 0;
-            var_1310 = 0;
-            if (var_114 != 0) {
-                if (var_83[var_114].Var0 == 78) {
-                    var_114 = 0;
-                }
-            }
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "このフロアで熱と冷気に強くなった！";
-            comments_row2a = "";
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-            var_173 = 1;
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 310 エンプレスの発動処理
-        if (activated_disc_id == 310) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12])) {
-                yield func915();
-                return;
-            }
-            var_1845 = 1;
-            yield func556();
-            var_1845 = 0;
-            if (var_2110 != 0) {
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    var_1845 = 1;
-                    yield func556();
-                    var_1845 = 0;
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "敵が集まってしまった！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-            }
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 403 セックス・ピストルズの発動処理
-        if (activated_disc_id == 403) {
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "どれを食べますか？";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            var_2300 = var_225;
-            var_2301 = 0;
-            if (var_220 != 0) {
-                var_2301 = 1;
-            }
-            if (var_234 != 0) {
-                var_2301 = 2;
-            }
-            var_198 = 0;
-            var_2004 = 1;
-            item_page_number = 1;
-            Y_axis_item_position = 45;
-            var_225 = 1;
-            var_223 = var_224 + 10;
-            var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            yield func051();
-            open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
-            return;
-        }
-        // No = 120 ストーンフリーの発動処理
-        if (activated_disc_id == 120) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "『ストーンフリーーッ！』";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1558 = 160;
-            var_1559 = 160;
-            var_271 = 1;
-            var_1557 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1557++;
-                var_198 = 1;
-                var_300 = 0;
-            }
-            var_271 = 0;
-            var_1557 = 0;
-            var_211 = var_352;
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "傷口を縫って体力が回復した。";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 200 スーパーフライの発動処理
-        if (activated_disc_id == 200) {
-            if (var_73[var_66][var_67] != 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "ここには鉄塔を建てられない。";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「スーパーフライ！」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            var_147 = var_66;
-            var_148 = var_67;
-            var_146 = 1;
-    
-            DSPLAY(audio_id = 188);
-            var_114 = 0;
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "鉄塔を建てた！";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 205 クラフトワークの発動処理
-        if (activated_disc_id == 205) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1992 = 1;
-            var_2302 = 0;
-            var_1993 = var_66 - 1;
-            var_1994 = var_66 + 1;
-            var_1995 = var_67 + 1;
-            var_1996 = var_67 - 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_1992].Var1 == var_66 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_66 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_67) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_67) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 99;
-                    var_2302 = 1;
-                }
-                if (var_172 >= 1) {
-                    if (var_83[var_1992].Var10 == var_201 && var_201 != 14) {
-                        var_83[var_1992].Var13 = 99;
-                        var_2302 = 1;
-                    }
-                    if (var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_1992].Var1;
-                        var_2222 = var_83[var_1992].Var2;
-                        var_2223 = var_83[var_1992].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_1992].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_1992].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_1992].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_1992].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_83[var_1992].Var13 = 99;
-                            var_2302 = 1;
-                        }
-                        if (var_83[var_1992].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_83[var_1992].Var13 = 99;
-                            var_2302 = 1;
-                        }
-                        if (var_83[var_1992].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_83[var_1992].Var13 = 99;
-                            var_2302 = 1;
-                        }
-                        if (var_83[var_1992].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_83[var_1992].Var13 = 99;
-                            var_2302 = 1;
-                        }
-                    }
-                }
-                var_1992 = var_1992 + 1;
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (var_2302 == 1) {
-                comments_row1 = "その場所に固定するッ！";
-        
-                DSPLAY(audio_id = 126);
-            }
-            if (var_2302 == 0) {
-                comments_row1 = "しかし何も起こらなかった…";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            if (var_2302 == 1) {
-                var_114 = 0;
-                var_463 = 0;
-                var_464 = 0;
-                var_461 = 0;
-                var_462 = 0;
-            }
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 206 オアシスの発動処理
-        if (activated_disc_id == 206) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "周囲がドロドロになってきた…";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            var_159 = 1;
-            var_289 = var_66 - 1;
-            if (var_289 < 0) {
-                var_289 = 0;
-            }
-            var_290 = var_66 + 1;
-            if (var_290 > var_33) {
-                var_290 = var_33;
-            }
-            var_291 = var_67 + 1;
-            if (var_291 > var_34) {
-                var_291 = var_34;
-            }
-            var_292 = var_67 - 1;
-            if (var_292 < 0) {
-                var_292 = 0;
-            }
-            var_345 = 0;
-
-            var_346 = dim(10, 10);
-            if (var_71[var_66][var_67] == 0) {
-                var_347 = var_66;
-                var_348 = var_67;
-                yield func622();
-                var_345 = 1;
-                var_346[0][1] = var_347;
-                var_346[0][2] = var_348;
-            }
-            if (var_71[var_289][var_67] == 0) {
-                var_347 = var_289;
-                var_348 = var_67;
-                yield func622();
-                var_345 = 1;
-                var_346[4][1] = var_347;
-                var_346[4][2] = var_348;
-            }
-            if (var_71[var_290][var_67] == 0) {
-                var_347 = var_290;
-                var_348 = var_67;
-                yield func622();
-                var_345 = 1;
-                var_346[6][1] = var_347;
-                var_346[6][2] = var_348;
-            }
-            if (var_71[var_66][var_291] == 0) {
-                var_347 = var_66;
-                var_348 = var_291;
-                yield func622();
-                var_345 = 1;
-                var_346[2][1] = var_347;
-                var_346[2][2] = var_348;
-            }
-            if (var_71[var_66][var_292] == 0) {
-                var_347 = var_66;
-                var_348 = var_292;
-                yield func622();
-                var_345 = 1;
-                var_346[8][1] = var_347;
-                var_346[8][2] = var_348;
-            }
-            if (var_71[var_289][var_291] == 0) {
-                var_347 = var_289;
-                var_348 = var_291;
-                yield func622();
-                var_345 = 1;
-                var_346[1][1] = var_347;
-                var_346[1][2] = var_348;
-            }
-            if (var_71[var_290][var_291] == 0) {
-                var_347 = var_290;
-                var_348 = var_291;
-                yield func622();
-                var_345 = 1;
-                var_346[3][1] = var_347;
-                var_346[3][2] = var_348;
-            }
-            if (var_71[var_289][var_292] == 0) {
-                var_347 = var_289;
-                var_348 = var_292;
-                yield func622();
-                var_345 = 1;
-                var_346[7][1] = var_347;
-                var_346[7][2] = var_348;
-            }
-            if (var_71[var_290][var_292] == 0) {
-                var_347 = var_290;
-                var_348 = var_292;
-                yield func622();
-                var_345 = 1;
-                var_346[9][1] = var_347;
-                var_346[9][2] = var_348;
-            }
-            if (var_345 == 1) {
-        
-                DSPLAY(audio_id = 123);
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    var_349++;
-                    yield func337(); // メッセージ関係呼び出し
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_349 = 0;
-    
-                var_346 = dim(10, 10);
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 304 ウェザーリポートの発動処理
-        if (activated_disc_id == 304) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            gsel(19);
-            color(1, 1, 1);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_311 = 0;
-            DSPLAY(audio_id = 178);
-            var_312 = 1;
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 + 5;
-            }
-            var_174 = 1;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "雨が降ってきた。";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_1594 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 40; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_403 = "雷が落ちた！";
-            var_2217 = 1;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2218 = var_565 * 3;
-                var_2219 = rnd(3);
-                var_2218 = var_2218 + var_2219;
-                if (var_172 >= 1) {
-                    var_2218 = var_2218 * 2;
-                }
-                if (var_2194 != var_124) {
-                    var_2220 = 0;
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_402 = var_2194;
-                        var_209 = var_2218;
-                        yield func518();
-                        yield func705();
-                        for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        var_2220 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func518();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2217 = 0;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "";
-            comments_row2 = "　――――　雨があがった　――――";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_1594 = 0;
-            var_271 = 0;
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 - 5;
-            }
-            var_311 = 0;
-            var_312 = 0;
-            yield func340(); // キー入力による選択処理
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "地面が洗い流され、";
-            comments_row2a = "罠が見えるようになった。";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func050();
-            yield func047();
-            var_121 = 1;
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            yield func340(); // キー入力による選択処理
-            var_2303 = 0;
-            var_2304 = 0;
-            var_2305 = 0;
-            var_2205 = 1;
-            for (let cnt2 = 0; cnt2 < var_336; ++cnt2) {
-                if (var_78[var_2205].Var0 == 651) {
-                    var_78[var_2205].Var0 = 653;
-                    var_2303 = 1;
-                }
-                if (var_78[var_2205].Var0 == 650) {
-                    var_78[var_2205].Var0 = 651;
-                    var_2303 = 1;
-                }
-                var_2205++;
-            }
-            var_2205 = 1;
-            for (let cnt2 = 0; cnt2 < var_224; ++cnt2) {
-                if (var_233[var_2205].Var0 == 401) {
-                    var_2304 = 1;
-                }
-                var_2205++;
-            }
-            var_2205 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_2205].Var0 == 115 || var_83[var_2205].Var0 == 27 || var_83[var_2205].Var0 == 21) {
-                    var_2305 = 1;
-                    var_83[var_2205].Var39 = var_83[var_2205].Var39 + 1;
-                    if (var_83[var_2205].Var39 == 1) {
-                        var_83[var_2205].Var39 = 2;
-                    }
-                    enemy_list = var_83[var_2205].Var0;
-                    yield func626();
-                    var_83[var_2205].Var3 = Math.floor(enemy_hp * (var_83[var_2205].Var39 + 10) / 10);
-                    if (var_83[var_2205].Var3 >= 999) {
-                        var_83[var_2205].Var3 = 999;
-                    }
-                }
-                var_2205++;
-            }
-            if (var_2304 == 1) {
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "フー・ファイターズの威力がアップした！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                var_198 = 1;
-                var_300 = 0;
-                yield func050();
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            if (var_2303 == 1) {
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "地面のカエルが成長したようだ。";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                var_198 = 1;
-                var_300 = 0;
-                yield func050();
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            if (var_2305 == 1) {
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "パワーアップした敵がいるようだ…";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                var_198 = 1;
-                var_300 = 0;
-                yield func050();
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand101();
             return;
         }
         // No = 102 キングクリムゾンの発動処理
         if (activated_disc_id == 102) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「キング・クリムゾン」！！";
-            comments_row2 = "我以外の時間は消し飛ぶ！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-
-            var_393 = dim(10, 10);
-            if (var_123 == 0) {
-                var_396 = var_92;
-            }
-            var_123 = 1;
-            var_92 = 17;
-            var_114 = 0;
-            var_463 = 0;
-            var_464 = 0;
-            var_461 = 0;
-            var_462 = 0;
-    
-            DSPLAY(audio_id = 185);
-            var_271 = 1;
-            var_1491 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1491++;
-            }
-            var_271 = 0;
-            var_1491 = 0;
-            var_2306 = 1;
-            var_1845 = 4;
-            var_2102 = var_66;
-            var_2103 = var_67;
-            var_347 = var_66;
-            var_348 = var_67;
-            yield func556();
-            var_2306 = 0;
-            var_1845 = 0;
-            var_124 = var_97;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand102();
             return;
         }
-        // No = 121 パープルヘイズの発動処理
-        if (activated_disc_id == 121) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            gsel(19);
-            color(150, 0, 150);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_529 = 1;
-            var_403 = "ウイルスが敵の体を蝕んでいる！";
-            var_2217 = 1;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2218 = var_565 * 4;
-                var_2219 = rnd(3);
-                var_2218 = var_2218 + var_2219;
-                if (var_172 >= 1) {
-                    var_2218 = var_2218 * 2;
-                }
-                if (var_2194 != var_124) {
-                    var_2220 = 0;
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_402 = var_2194;
-                        var_209 = var_2218;
-                        yield func516();
-                        yield func705();
-                        for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        var_2220 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func516();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_529 = 0;
-            var_2217 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 103 エコーズAct3の発動処理
+        if (activated_disc_id == 103) {
+            yield stand103();
             return;
         }
-        // No = 318 ジャンピングJフラッシュの発動処理
-        if (activated_disc_id == 318) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            gsel(19);
-            color(250, 250, 250);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_529 = 1;
-            var_403 = "血液が沸騰している！";
-            var_2217 = 1;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2218 = var_565 * 3;
-                var_2219 = rnd(3);
-                var_2218 = var_2218 + var_2219;
-                if (var_172 >= 1) {
-                    var_2218 = var_2218 * 2;
-                }
-                if (var_2194 != var_124) {
-                    var_2220 = 0;
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_402 = var_2194;
-                        var_209 = var_2218;
-                        yield func517();
-                        yield func705();
-                        for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        var_2220 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2218;
-                            yield func517();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_529 = 0;
-            var_2217 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 104 ザ・ハンドの発動処理
+        if (activated_disc_id == 104) {
+            yield stand104();
+            return;
+        }
+        // No = 105 チリペッパーの発動処理
+        if (activated_disc_id == 105) {
+            yield stand105();
+            return;
+        }
+        // No = 106 クレイジーDの発動処理
+        if (activated_disc_id == 106) {
+            yield stand106();
+            return;
+        }
+        // No = 107 デス13の発動能力
+        if (activated_disc_id == 107) {
+            yield stand107();
+            return;
+        }
+        // No = 108 スティッキー・フィンガーズの発動処理
+        if (activated_disc_id == 108) {
+            yield stand108();
+            return;
+        }
+        // No = 109 マジシャンズレッドの発動処理
+        if (activated_disc_id == 109) {
+            yield stand109();
+            return;
+        }
+        // No = 111 ザ・ワールドの発動能力
+        if (activated_disc_id == 111) {
+            yield stand111();
+            return;
+        }
+        // No = 112 キラークイーンの発動処理
+        if (activated_disc_id == 112) {
+            yield stand112();
+            return;
+        }
+        // No = 113 クラッシュの発動処理
+        if (activated_disc_id == 113) {
+            yield stand113();
+            return;
+        }
+        // No = 114 ホワイトスネイクの発動処理
+        if (activated_disc_id == 114) {
+            yield stand114();
+            return;
+        }
+        // No = 115 Gエクスペリエンスの発動処理
+        if (activated_disc_id == 115) {
+            yield stand115();
+            return;
+        }
+        // No = 116 ハーミットパープルの発動能力
+        if (activated_disc_id == 116) {
+            yield stand116();
             return;
         }
         // No = 117 ダークブルームーンの発動処理
         if (activated_disc_id == 117) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            gsel(19);
-            color(0, 0, 150);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_2307 = 0;
-            var_529 = 1;
-            var_403 = "フジツボでエネルギーを吸い取っている！";
-            var_2217 = 1;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2308 = var_565 * 2;
-                var_2219 = rnd(3);
-                var_2308 = var_2308 + var_2219;
-                if (var_172 >= 1) {
-                    var_2308 = var_2308 * 2;
-                }
-                if (var_2194 != var_124) {
-                    var_2220 = 0;
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_402 = var_2194;
-                        var_209 = var_2308;
-                        var_2307 = var_2307 + var_2308;
-                        yield func515();
-                        yield func705();
-                        for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        var_2220 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func515();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_529 = 0;
-            if (var_2307 != 0) {
-    
-                DSPLAY(audio_id = 143);
-                var_1299 = 0;
-                var_271 = 1;
-                var_1297 = 1;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1297++;
-                }
-                var_271 = 0;
-                var_1297 = 0;
-                var_211 = var_211 + var_2307;
-                if (var_211 > var_352) {
-                    var_211 = var_352;
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "合計 " + var_2307 + " のエネルギーを吸収した。";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            var_2217 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand117();
             return;
         }
-        // No = 313 ハイウェイスターの発動処理
-        if (activated_disc_id == 313) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            var_2307 = 0;
-            var_403 = "養分を吸い取っている！";
-            var_2217 = 1;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2308 = var_565 * 2;
-                var_2219 = rnd(3);
-                var_2308 = var_2308 + var_2219;
-                if (var_172 >= 1) {
-                    var_2308 = var_2308 * 2;
-                }
-                if (var_2194 != var_124) {
-                    var_2220 = 0;
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_402 = var_2194;
-                        var_209 = var_2308;
-                        var_2307 = var_2307 + var_2308;
-                        yield func514();
-                        yield func705();
-                        for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        var_2220 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func514();
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2307 != 0) {
-    
-                DSPLAY(audio_id = 143);
-                var_1299 = 0;
-                var_271 = 1;
-                var_1297 = 1;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1297++;
-                }
-                var_271 = 0;
-                var_1297 = 0;
-                var_360 = 0;
-                var_350 = var_350 + var_2307;
-                if (var_350 > var_567) {
-                    var_350 = var_567;
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "合計 " + var_2307 + " の養分を吸収した。";
-                if (var_350 == var_567) {
-                    comments_row2 = "満腹度が完全回復した。";
-                }
-                if (var_350 < var_567) {
-                    comments_row2 = "満腹度が回復した。";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 12; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            var_2217 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 308 エボニーデビルの発動処理
-        if (activated_disc_id == 308) {
-            if (var_199 == 2) {
-                var_2102 = var_66;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 8) {
-                var_2102 = var_66;
-                var_2103 = var_67 - 1;
-            }
-            if (var_199 == 4) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67;
-            }
-            if (var_199 == 6) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67;
-            }
-            if (var_199 == 1) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 3) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 7) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67 - 1;
-            }
-            if (var_199 == 9) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67 - 1;
-            }
-            if (var_71[var_2102][var_2103] == 0 || var_71[var_2102][var_2103] == 13 || var_82[var_2102][var_2103] != 0) {
-                var_2108 = 0;
-            }
-            if (var_71[var_2102][var_2103] != 0 && var_71[var_2102][var_2103] != 13 && var_82[var_2102][var_2103] == 0) {
-                var_2108 = 1;
-            }
-            if (var_2108 == 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "そこには人形を出せないぞ。";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_234 = 0;
-                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            var_2309 = 1;
-            var_1845 = 4;
-            yield func556();
-            var_2309 = 0;
-            var_1845 = 0;
-            var_1584 = (var_83[var_673].Var1 - var_66 + 4) * 40;
-            var_1585 = (var_83[var_673].Var2 - var_67 + 4) * 40;
-            var_271 = 1;
-            var_1583 = 1;
-    
-            DSPLAY(audio_id = 168);
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1583++;
-            }
-            var_271 = 0;
-            var_1583 = 0;
-            belongings_item_list = 308;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "うけけけけけけけけけけッ！！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 203 ザ・フールの発動処理
-        if (activated_disc_id == 203) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「アッフォオオ―――――ン！」";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_374 = 1;
-            var_1575 = 1;
-            var_271 = 1;
-            var_774 = 160;
-            yield func337(); // メッセージ関係呼び出し
-            var_774 = 150;
-            yield func337(); // メッセージ関係呼び出し
-            var_774 = 140;
-            yield func337(); // メッセージ関係呼び出し
-            var_774 = 130;
-            yield func337(); // メッセージ関係呼び出し
-            var_774 = 120;
-            yield func337(); // メッセージ関係呼び出し
-            var_774 = 110;
-            yield func337(); // メッセージ関係呼び出し
-            var_774 = 100;
-            yield func337(); // メッセージ関係呼び出し
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                var_774 = 102;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_774 = 104;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_774 = 106;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_774 = 108;
-                for (let cnt3 = 0; cnt3 < 4; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_774 = 106;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_774 = 104;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_774 = 102;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_774 = 100;
-                var_1574 = 1;
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1574++;
-                }
-                var_1574 = 0;
-            }
-            for (let cnt2 = 0; cnt2 < 16; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_774 = var_774 - 10;
-            }
-            var_1575 = 0;
-            var_271 = 0;
-            var_2265 = 0;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2266 = 0;
-                if (var_83[var_2194].Var0 != 0) {
-                    var_1993 = var_66 - 1;
-                    if (var_1993 < 0) {
-                        var_1993 = 0;
-                    }
-                    var_1994 = var_66 + 1;
-                    if (var_1994 > var_33) {
-                        var_1994 = var_33;
-                    }
-                    var_1995 = var_67 + 1;
-                    if (var_1995 > var_34) {
-                        var_1995 = var_34;
-                    }
-                    var_1996 = var_67 - 1;
-                    if (var_1996 < 0) {
-                        var_1996 = 0;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                    if (var_2266 == 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                        yield func521();
-                        var_2266 = 1;
-                    }
-                }
-                if (var_2266 == 1) {
-                    var_2265 = 1;
-                }
-                var_2194 = var_2194 + 1;
-            }
-            if (var_2265 == 1) {
-        
-                DSPLAY(audio_id = 153);
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "周りの敵は目に砂が入って";
-                comments_row2a = "盲目になってしまった！";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                var_198 = 1;
-                var_300 = 0;
-                yield func050();
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            var_374 = 0;
-            yield func499();
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 112 キラークイーン、No = 394 キラータイガークイーンの発動処理
-        if (activated_disc_id == 112 || activated_disc_id == 394) {
-            if (var_199 == 2) {
-                var_2102 = var_66;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 8) {
-                var_2102 = var_66;
-                var_2103 = var_67 - 1;
-            }
-            if (var_199 == 4) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67;
-            }
-            if (var_199 == 6) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67;
-            }
-            if (var_199 == 1) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 3) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67 + 1;
-            }
-            if (var_199 == 7) {
-                var_2102 = var_66 - 1;
-                var_2103 = var_67 - 1;
-            }
-            if (var_199 == 9) {
-                var_2102 = var_66 + 1;
-                var_2103 = var_67 - 1;
-            }
-            if (var_71[var_2102][var_2103] == 0 || var_71[var_2102][var_2103] == 13 || var_82[var_2102][var_2103] != 0) {
-                var_2108 = 0;
-            }
-            if (var_71[var_2102][var_2103] != 0 && var_71[var_2102][var_2103] != 13 && var_82[var_2102][var_2103] == 0) {
-                var_2108 = 1;
-            }
-            if (var_2108 == 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "そこには出せないぞ。";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_234 = 0;
-                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            var_2310 = 1;
-            var_1845 = 4;
-            yield func556();
-            var_2310 = 0;
-            var_1845 = 0;
-            var_1584 = (var_83[var_673].Var1 - var_66 + 4) * 40;
-            var_1585 = (var_83[var_673].Var2 - var_67 + 4) * 40;
-            var_271 = 1;
-            var_1583 = 1;
-    
-            DSPLAY(audio_id = 168);
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-                var_1583++;
-            }
-            var_271 = 0;
-            var_1583 = 0;
-            belongings_item_list = activated_disc_id;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「シアー・ハート・アタック」！！";
-            comments_row2 = "狙った標的は必ず仕留める…";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 204 シアハートアタックの発動処理
-        if (activated_disc_id == 204) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 165);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "カチリ";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1389 = var_66;
-            var_1390 = var_67;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
-            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            var_1993 = var_1389 - 1;
-            if (var_1993 < 0) {
-                var_1993 = 0;
-            }
-            var_1994 = var_1389 + 1;
-            var_1995 = var_1390 + 1;
-            var_1996 = var_1390 - 1;
-            if (var_1996 < 0) {
-                var_1996 = 0;
-            }
-            if (var_71[var_1993][var_1390] == 0) {
-                var_347 = var_1993;
-                var_348 = var_1390;
-                yield func622();
-            }
-            if (var_71[var_1994][var_1390] == 0) {
-                var_347 = var_1994;
-                var_348 = var_1390;
-                yield func622();
-            }
-            if (var_71[var_1389][var_1995] == 0) {
-                var_347 = var_1389;
-                var_348 = var_1995;
-                yield func622();
-            }
-            if (var_71[var_1389][var_1996] == 0) {
-                var_347 = var_1389;
-                var_348 = var_1996;
-                yield func622();
-            }
-            if (var_71[var_1993][var_1995] == 0) {
-                var_347 = var_1993;
-                var_348 = var_1995;
-                yield func622();
-            }
-            if (var_71[var_1994][var_1995] == 0) {
-                var_347 = var_1994;
-                var_348 = var_1995;
-                yield func622();
-            }
-            if (var_71[var_1993][var_1996] == 0) {
-                var_347 = var_1993;
-                var_348 = var_1996;
-                yield func622();
-            }
-            if (var_71[var_1994][var_1996] == 0) {
-                var_347 = var_1994;
-                var_348 = var_1996;
-                yield func622();
-            }
-            if (var_77[var_1389][var_1390] > 0) {
-                var_77[var_1389][var_1390] = 0;
-            }
-            if (var_77[var_1993][var_1390] > 0) {
-                var_77[var_1993][var_1390] = 0;
-            }
-            if (var_77[var_1994][var_1390] > 0) {
-                var_77[var_1994][var_1390] = 0;
-            }
-            if (var_77[var_1389][var_1995] > 0) {
-                var_77[var_1389][var_1995] = 0;
-            }
-            if (var_77[var_1389][var_1996] > 0) {
-                var_77[var_1389][var_1996] = 0;
-            }
-            if (var_77[var_1993][var_1995] > 0) {
-                var_77[var_1993][var_1995] = 0;
-            }
-            if (var_77[var_1994][var_1995] > 0) {
-                var_77[var_1994][var_1995] = 0;
-            }
-            if (var_77[var_1993][var_1996] > 0) {
-                var_77[var_1993][var_1996] = 0;
-            }
-            if (var_77[var_1994][var_1996] > 0) {
-                var_77[var_1994][var_1996] = 0;
-            }
-            var_199 = 2;
-            var_389 = 2;
-            var_1263 = 1;
-    
-            DSPLAY(audio_id = 180);
-            var_271 = 1;
-            var_1388 = 1;
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                var_585 = 3;
-                yield func337(); // メッセージ関係呼び出し
-                var_585 = 0;
-                yield func337(); // メッセージ関係呼び出し
-                var_1388++;
-            }
-            for (let cnt2 = 0; cnt2 < 24; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                if (cnt2 == 25) {
-                    var_1263 = 0;
-                }
-                var_1388++;
-            }
-            var_271 = 0;
-            var_1388 = 0;
-            var_1263 = 0;
-            var_403 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
-            var_2194 = 1;
-            var_2195 = 1;
-            var_2196 = 2;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1389 && var_83[var_2194].Var2 == var_1995) {
-                    yield func700();
-                }
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1389 && var_83[var_2194].Var2 == var_1996) {
-                    yield func700();
-                }
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1390) {
-                    yield func700();
-                }
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1390) {
-                    yield func700();
-                }
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                    yield func700();
-                }
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                    yield func700();
-                }
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                    yield func700();
-                }
-                if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                    yield func700();
-                }
-                var_209 = 0;
-                var_2194 = var_2194 + 1;
-            }
-            var_2196 = 0;
-            var_2195 = 0;
-            if (var_211 == 1) {
-                var_211 = 0;
-                var_356 = 209;
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            if (var_211 > 1) {
-                var_2198 = Math.floor(var_211 / 2);
-                if (equip_disc[314] == 1) {
-                    var_2198 = Math.floor(var_2198 / 2);
-                }
-                var_211 = var_211 - var_2198;
-                if (var_211 <= 0) {
-                    var_211 = 1;
-                }
-                var_208 = var_2198 + var_208;
-            }
-            var_389 = 0;
-            var_2199 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_2199].Var0 == 17 && var_83[var_2199].Var29 == 1) {
-                    yield func699();
-                    var_2199 = 1;
-                    cnt2 = -1;
-                    continue;
-                }
-                var_2199++;
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 312 エアロスミスの発動処理
-        if (activated_disc_id == 312) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            var_2311 = dim(300);
-            var_271 = 1;
-            var_1224 = var_199;
-            var_1225 = 5;
-            var_1517 = 160;
-            var_1518 = 140;
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1224 = 1;
-            var_1225 = 0;
-            for (let cnt2 = 0; cnt2 < 80; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1224 = 10;
-            var_1225 = 0;
-            var_1517 = 680;
-            var_1518 = 160;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_271 = 0;
-            var_1224 = 0;
-            var_403 = "ｴｱﾛｽﾐｽの弾丸が直撃！";
-            var_2217 = 1;
-            var_2312 = var_97 + 1;
-            var_2313 = 0;
-            for (let cnt2 = 0; cnt2 < 200; ++cnt2) {
-                var_2194 = rnd(var_2312);
-                if (var_2194 != var_124 && var_83[var_2194].Var0 != 0 && var_2311[var_2194] == 0) {
-                    var_2308 = var_565 * 5;
-                    var_2219 = rnd(3);
-                    var_2308 = var_2308 + var_2219;
-                    if (var_172 >= 1) {
-                        var_2308 = var_2308 * 2;
-                    }
-                    var_209 = var_2308;
-                    var_402 = var_2194;
-                    yield func705();
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_2311[var_2194] = 1;
-                    var_2313 = var_2313 + 1;
-                }
-                if (var_2313 == 10) {
-                    break;
-                }
-            }
-            var_2313 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2217 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 316 サバイバーの発動処理
-        if (activated_disc_id == 316) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            if (var_174 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "地面が濡れて伝達力が上がっている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            var_271 = 1;
-            var_1520 = 1;
-    
-            DSPLAY(audio_id = 161);
-            for (let cnt2 = 0; cnt2 < 26; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1520++;
-            }
-            var_1520 = 0;
-            var_271 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1992 = 1;
-            var_1993 = var_66 - 1;
-            var_1994 = var_66 + 1;
-            var_1995 = var_67 + 1;
-            var_1996 = var_67 - 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_1992].Var10 == var_201 && var_201 != 14) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_201 <= 12 && var_201 != 0) {
-                    var_2221 = var_83[var_1992].Var1;
-                    var_2222 = var_83[var_1992].Var2;
-                    var_2223 = var_83[var_1992].Var1 - 1;
-                    if (var_2223 < 0) {
-                        var_2223 = 0;
-                    }
-                    var_2224 = var_83[var_1992].Var1 + 1;
-                    if (var_2224 > var_33) {
-                        var_2224 = var_33;
-                    }
-                    var_2225 = var_83[var_1992].Var2 + 1;
-                    if (var_2225 > var_34) {
-                        var_2225 = var_34;
-                    }
-                    var_2226 = var_83[var_1992].Var2 - 1;
-                    if (var_2226 < 0) {
-                        var_2226 = 0;
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var17 = 1;
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var17 = 1;
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var17 = 1;
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var17 = 1;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_66 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_66 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_67) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_67) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                if (var_172 == 1 || var_174 == 1) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var17 = 1;
-                }
-                var_1992 = var_1992 + 1;
-            }
-            yield func135();
-            var_114 = 0;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "ファイトクラブだっ！！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 202 ホワイトアルバムの発動処理
-        if (activated_disc_id == 202) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "低温世界で動ける物質はなにもなくなる";
-            comments_row2 = "全てを止められる！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            gsel(19);
-            color(255, 255, 255);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-    
-            DSPLAY(audio_id = 126);
-            var_529 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1992 = 1;
-            var_1993 = var_66 - 1;
-            var_1994 = var_66 + 1;
-            var_1995 = var_67 + 1;
-            var_1996 = var_67 - 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_1992].Var10 == var_201 && var_201 != 14) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_66 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_66 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_67) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_67) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_1995) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_1993 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_83[var_1992].Var1 == var_1994 && var_83[var_1992].Var2 == var_1996) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    if (var_114 == var_1992) {
-                        var_114 = 0;
-                    }
-                }
-                if (var_201 <= 12 && var_201 != 0) {
-                    var_2221 = var_83[var_1992].Var1;
-                    var_2222 = var_83[var_1992].Var2;
-                    var_2223 = var_83[var_1992].Var1 - 1;
-                    if (var_2223 < 0) {
-                        var_2223 = 0;
-                    }
-                    var_2224 = var_83[var_1992].Var1 + 1;
-                    if (var_2224 > var_33) {
-                        var_2224 = var_33;
-                    }
-                    var_2225 = var_83[var_1992].Var2 + 1;
-                    if (var_2225 > var_34) {
-                        var_2225 = var_34;
-                    }
-                    var_2226 = var_83[var_1992].Var2 - 1;
-                    if (var_2226 < 0) {
-                        var_2226 = 0;
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var13 = 1;
-                        if (var_114 == var_1992) {
-                            var_114 = 0;
-                        }
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var13 = 1;
-                        if (var_114 == var_1992) {
-                            var_114 = 0;
-                        }
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var13 = 1;
-                        if (var_114 == var_1992) {
-                            var_114 = 0;
-                        }
-                    }
-                    if (var_83[var_1992].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                        var_83[var_1992].Var12 = 0;
-                        var_83[var_1992].Var13 = 1;
-                        if (var_114 == var_1992) {
-                            var_114 = 0;
-                        }
-                    }
-                }
-                if (var_172 >= 1) {
-                    var_83[var_1992].Var12 = 0;
-                    var_83[var_1992].Var13 = 1;
-                    var_114 = 0;
-                }
-                var_1992 = var_1992 + 1;
-            }
-            var_114 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_529 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 395 バイツァ・ダストの発動処理
-        if (activated_disc_id == 395) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "キラークィーン【第３の爆弾】";
-            comments_row2 = "「BITE THE DUST」（負けて死ね）！！";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_198 = 1;
-            var_300 = 0;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_198 = 1;
-                var_300 = 0;
-            }
-            var_2314 = 0;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_2194 != var_124 && var_83[var_2194].Var0 != 132 && var_83[var_2194].Var0 != 143 && var_83[var_2194].Var0 != 34 && var_83[var_2194].Var31 != 4 && var_83[var_2194].Var31 != 5) {
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_83[var_2194].Var12 = 0;
-                        var_83[var_2194].Var13 = 0;
-                        var_83[var_2194].Var24 = 3;
-                        var_2314 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_83[var_2194].Var12 = 0;
-                            var_83[var_2194].Var13 = 0;
-                            var_83[var_2194].Var24 = 3;
-                            var_2314 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            if (var_2314 == 1) {
-                yield func340(); // キー入力による選択処理
-                yield func094(); // メッセージ送りの際の効果音
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "すでに「瞳」の中に入っている！";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            if (var_2314 == 0) {
-                yield func340(); // キー入力による選択処理
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "しかし何もおこらなかった…";
-                comments_row2a = "";
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 302 ハイウェイ・トゥ・ヘルの発動処理
-        if (activated_disc_id == 302) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_172 == 1) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "発動能力がパワーアップしている！";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                yield func340(); // キー入力による選択処理
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "オレって情けねえよなあ～～～。";
-            comments_row2 = "死にたくなった･･･";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1054 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-
-            DSPLAY(audio_id = 136);
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                var_1054 = 2;
-                yield func337(); // メッセージ関係呼び出し
-                var_1054 = 3;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_211 == 1) {
-                var_211 = 0;
-                var_212 = 1;
-                var_356 = 247;
-                var_199 = 2;
-                for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            if (var_211 > 1) {
-                var_211 = Math.floor(var_211 / 2);
-                var_208 = Math.floor(var_211 / 2) + var_208;
-            }
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2307 = 0;
-            var_403 = "道連れにしている！";
-            var_2217 = 1;
-            var_2194 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_2308 = var_565 * 2;
-                var_2219 = rnd(3);
-                var_2308 = var_2308 + var_2219;
-                if (var_172 >= 1) {
-                    var_2308 = var_2308 * 2;
-                }
-                if (var_2194 != var_124) {
-                    var_2220 = 0;
-                    if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
-                        var_402 = var_2194;
-                        var_209 = var_2308;
-                        var_2307 = var_2307 + var_2308;
-                        yield func705();
-                        for (let cnt5 = 0; cnt5 < 2; ++cnt5) {
-                            yield func337(); // メッセージ関係呼び出し
-                        }
-                        var_2220 = 1;
-                    }
-                    if (var_2220 == 0) {
-                        var_1993 = var_66 - 1;
-                        if (var_1993 < 0) {
-                            var_1993 = 0;
-                        }
-                        var_1994 = var_66 + 1;
-                        if (var_1994 > var_33) {
-                            var_1994 = var_33;
-                        }
-                        var_1995 = var_67 + 1;
-                        if (var_1995 > var_34) {
-                            var_1995 = var_34;
-                        }
-                        var_1996 = var_67 - 1;
-                        if (var_1996 < 0) {
-                            var_1996 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_66 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_67) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1995) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1993 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var1 == var_1994 && var_83[var_2194].Var2 == var_1996) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                    if (var_2220 == 0 && var_201 <= 12 && var_201 != 0) {
-                        var_2221 = var_83[var_2194].Var1;
-                        var_2222 = var_83[var_2194].Var2;
-                        var_2223 = var_83[var_2194].Var1 - 1;
-                        if (var_2223 < 0) {
-                            var_2223 = 0;
-                        }
-                        var_2224 = var_83[var_2194].Var1 + 1;
-                        if (var_2224 > var_33) {
-                            var_2224 = var_33;
-                        }
-                        var_2225 = var_83[var_2194].Var2 + 1;
-                        if (var_2225 > var_34) {
-                            var_2225 = var_34;
-                        }
-                        var_2226 = var_83[var_2194].Var2 - 1;
-                        if (var_2226 < 0) {
-                            var_2226 = 0;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2223][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2224][var_2222] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2225] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                        if (var_83[var_2194].Var0 != 0 && var_71[var_2221][var_2226] == var_201) {
-                            var_402 = var_2194;
-                            var_209 = var_2308;
-                            var_2307 = var_2307 + var_2308;
-                            yield func705();
-                            for (let cnt6 = 0; cnt6 < 2; ++cnt6) {
-                                yield func337(); // メッセージ関係呼び出し
-                            }
-                            var_2220 = 1;
-                        }
-                    }
-                }
-                var_2194 = var_2194 + 1;
-            }
-            var_1054 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2217 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 303 ドラゴンズ・ドリームの発動処理
-        if (activated_disc_id == 303) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "攻撃をかわしやすくなった！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-    
-            DSPLAY(audio_id = 182);
-            var_1299 = 8;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            var_105 = 1;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 413 不明disc の発動処理
-        if (activated_disc_id == 413) {
-            var_2109 = 1;
-            var_1845 = 1;
-            yield func556();
-            var_2109 = 0;
-            var_1845 = 0;
-            if (var_2110 == 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "人形を置く場所が無いぞ。";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_234 = 0;
-                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_439 = var_673;
-            var_83[var_439].Var11 = 1;
-            var_83[var_439].Var5 = 2;
-            var_271 = 1;
-            var_444 = 1;
-            for (let cnt2 = 0; cnt2 < 25; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_444 = var_444 + 1;
-            }
-            var_271 = 0;
-            var_444 = 0;
-            var_83[var_439].Var11 = 0;
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 320 メタリカの発動処理
-        if (activated_disc_id == 320) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_131 = 1;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "砂鉄を吸い寄せて透明になった。";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 305 シンデレラの発動処理
-        if (activated_disc_id == 305) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_1024 = 1;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "幸運な顔のメイクをしてみた。";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "次のフロアでアイテムがたくさん";
-            comments_row2a = "出現する気がする…！";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-            return;
-        }
-        // No = 396 メイド・イン・ヘブンの発動処理
-        if (activated_disc_id == 396) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-    
-            DSPLAY(audio_id = 154);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "自分だけ速く動けるようになった！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            if (var_133 == 0) {
-                var_157 = 1;
-                var_158 = 0;
-            }
-            if (var_133 != 0) {
-                var_133 = 0;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 118 ダイバーダウンの発動処理
+        if (activated_disc_id == 118) {
+            yield stand118();
             return;
         }
         // No = 119 スパイス・ガールの発動処理
         if (activated_disc_id == 119) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-    
-            DSPLAY(audio_id = 152);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "体にゴムのような弾力がついた！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_150 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand119();
+            return;
+        }
+        // No = 120 ストーンフリーの発動処理
+        if (activated_disc_id == 120) {
+            yield stand120();
+            return;
+        }
+        // No = 121 パープルヘイズの発動処理
+        if (activated_disc_id == 121) {
+            yield stand121();
+            return;
+        }
+        // No = 122 アヌビス神の発動処理 
+        if (activated_disc_id == 122) {
+            yield stand122();
             return;
         }
         // No = 123 クリームの発動処理
         if (activated_disc_id == 123) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_340 = 123;
-            var_1264 = 0;
-            var_1218 = 1;
-            var_1219 = 0;
-            for (let cnt2 = 0; cnt2 < 25; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_455 = var_66;
-            var_456 = var_67;
-            var_1220 = 1;
-            var_198 = 0;
-            var_1222 = 1;
-            yield func337(); // メッセージ関係呼び出し
-            var_1222 = 0;
-            if (var_199 == 4) {
-                var_1416 = 40;
-            }
-            if (var_199 == 6) {
-                var_1416 = 120;
-            }
-            if (var_199 == 8) {
-                var_1416 = 80;
-            }
-            if (var_199 == 2) {
-                var_1416 = 0;
-            }
-            if (var_199 == 1) {
-                var_1416 = 160;
-            }
-            if (var_199 == 3) {
-                var_1416 = 240;
-            }
-            if (var_199 == 7) {
-                var_1416 = 200;
-            }
-            if (var_199 == 9) {
-                var_1416 = 280;
-            }
-            var_2315 = 10;
-            belongings_item_list = var_233[var_225].Var0;
-            yield func492(); // アイテムリスト呼び出し
-            var_1218 = 3;
-            var_1195 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                var_1894 = var_455;
-                var_1895 = var_456;
-                if (var_199 == 4) {
-                    var_455 = var_455 - 1;
-                }
-                if (var_199 == 6) {
-                    var_455 = var_455 + 1;
-                }
-                if (var_199 == 8) {
-                    var_456 = var_456 - 1;
-                }
-                if (var_199 == 2) {
-                    var_456 = var_456 + 1;
-                }
-                if (var_199 == 1) {
-                    var_455 = var_455 - 1;
-                    var_456 = var_456 + 1;
-                }
-                if (var_199 == 3) {
-                    var_455 = var_455 + 1;
-                    var_456 = var_456 + 1;
-                }
-                if (var_199 == 7) {
-                    var_455 = var_455 - 1;
-                    var_456 = var_456 - 1;
-                }
-                if (var_199 == 9) {
-                    var_455 = var_455 + 1;
-                    var_456 = var_456 - 1;
-                }
-                // 幽霊部屋
-                if (special_floor == 9 && var_71[var_455][var_456] == 0) {
-                    break;
-                }
-                if (var_455 < 5 || var_455 > var_33 || var_456 < 5 || var_456 > var_34) {
-                    var_455 = var_1894;
-                    var_456 = var_1895;
-                }
-                var_66 = var_455;
-                var_67 = var_456;
-                var_236 = var_1894;
-                var_237 = var_1895;
-                yield func016();
-                if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
-                    yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
-                }
-                if (var_71[var_455][var_456] == 0) {
-                    var_71[var_455][var_456] = 14;
-                }
-                if (var_77[var_455][var_456] > 0) {
-                    var_77[var_455][var_456] = 0;
-                }
-                if (special_floor != 9) {
-                    if (var_199 == 1 || var_199 == 3 || var_199 == 7 || var_199 == 9) {
-                        var_2316 = var_455 - 1;
-                        if (var_2316 < 5) {
-                            var_2316 = 5;
-                        }
-                        var_2317 = var_455 + 1;
-                        if (var_2317 > var_33) {
-                            var_2317 = var_33;
-                        }
-                        var_2318 = var_456 + 1;
-                        if (var_2318 > var_34) {
-                            var_2318 = var_34;
-                        }
-                        var_2319 = var_456 - 1;
-                        if (var_2319 < 5) {
-                            var_2319 = 5;
-                        }
-                        if (var_71[var_2316][var_456] == 0) {
-                            var_71[var_2316][var_456] = 14;
-                        }
-                        if (var_71[var_2317][var_456] == 0) {
-                            var_71[var_2317][var_456] = 14;
-                        }
-                        if (var_71[var_455][var_2318] == 0) {
-                            var_71[var_455][var_2318] = 14;
-                        }
-                        if (var_71[var_455][var_2319] == 0) {
-                            var_71[var_455][var_2319] = 14;
-                        }
-                    }
-                }
-                if (var_82[var_455][var_456] > 0) {
-                    yield func660();
-                }
-                yield func337(); // メッセージ関係呼び出し
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            }
-            var_1195 = 0;
-            var_1218 = 2;
-            var_1219 = 0;
-            yield func016();
-            for (let cnt2 = 0; cnt2 < 16; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1218 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand123();
             return;
         }
         // No = 124 ムーディー・ブルースの発動処理
         if (activated_disc_id == 124) {
-            if (var_407 == 2) {
-                var_2320 = 0;
-    
-                var_2321 = sdim(100, 10);
-                for (let cnt3 = 0; cnt3 < 8; ++cnt3) {
-                    var_2321[cnt3] = "" + var_1070[cnt3];
-                    if (var_1069[cnt3][4] == 0) {
-                        var_2321[cnt4] = "(no entry)";
-                    }
-                    if (var_1069[cnt3][4] != 0) {
-                        var_2320++;
-                    }
-                }
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "誰に送りますか？";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 4; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func340(); // キー入力による選択処理
-                yield func051();
-                var_2322 = 0;
-                var_1210 = 1;
-                var_2323 = 0;
-                var_2324 = 8;
-                var_2325 = var_2324 - 1;
-                var_2326 = var_2324 * 20 + 37 + 30;
-                Y_axis_item_position = 45;
-                for (let cnt3 = 0; true; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    yield func080(); // 各キー入力確認
-                    if (key_X_on == 1) {
-            
-                        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                        var_2322 = 1;
-                        break;
-                    }
-                    if (key_Z_on == 1 || key_A_on == 1) {
-                        if (var_2321[var_2323] != "(no entry)") {
-                            if (var_2321[var_2323] != var_40) {
-                    
-                                DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                                break;
-                            }
-                        }
-                    }
-                    if (var_259 == 1) {
-                        if (var_2323 != 7) {
-                            Y_axis_item_position = Y_axis_item_position + 22;
-                            var_2323 = var_2323 + 1;
-        
-                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            // yield func337(); // メッセージ関係呼び出し
-                            yield func337(); // メッセージ関係呼び出し
-                            continue;
-                        }
-                        if (var_2323 == 7) {
-                            Y_axis_item_position = 45;
-                            var_2323 = 0;
-        
-                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            // yield func337(); // メッセージ関係呼び出し
-                            yield func337(); // メッセージ関係呼び出し
-                            continue;
-                        }
-                    }
-                    if (var_255 == 1) {
-                        if (var_2323 != 0) {
-                            Y_axis_item_position = Y_axis_item_position - 22;
-                            var_2323 = var_2323 - 1;
-        
-                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            // yield func337(); // メッセージ関係呼び出し
-                            yield func337(); // メッセージ関係呼び出し
-                            continue;
-                        }
-                        if (var_2323 == 0) {
-                            Y_axis_item_position = 45 + 7 * 22;
-                            var_2323 = 7;
-        
-                            DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                            // yield func337(); // メッセージ関係呼び出し
-                            yield func337(); // メッセージ関係呼び出し
-                            continue;
-                        }
-                    }
-                }
-                var_1210 = 0;
-                if (var_2322 == 0) {
-                    comments_row1 = "";
-                    comments_row2 = "";
-                    var_295 = "";
-                    comments_row1a = "";
-                    comments_row2a = "";
-                    var_298 = "";
-                    var_299 = 0;
-                    comments_row1 = "どれを送りますか？";
-                    comments_row2 = "";
-                    var_198 = 1;
-                    var_300 = 0;
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    yield func047();
-                    for (let cnt4 = 0; cnt4 < 4; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    yield func340(); // キー入力による選択処理
-                    var_2300 = var_225;
-                    var_2301 = 0;
-                    if (var_220 != 0) {
-                        var_2301 = 1;
-                    }
-                    if (var_234 != 0) {
-                        var_2301 = 2;
-                    }
-                    var_2007 = 1;
-                    item_page_number = 1;
-                    Y_axis_item_position = 45;
-                    var_225 = 1;
-                    var_223 = var_224 + 10;
-                    var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                    yield func051();
-                    open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-                    yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
-                    return;
-                }
-            }
-            if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12])) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                comments_row1 = "どれを相手に送りますか？";
-                comments_row2 = "";
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 4; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func340(); // キー入力による選択処理
-                var_2300 = var_225;
-                var_2301 = 0;
-                if (var_220 != 0) {
-                    var_2301 = 1;
-                }
-                if (var_234 != 0) {
-                    var_2301 = 2;
-                }
-                var_2007 = 1;
-                item_page_number = 1;
-                Y_axis_item_position = 45;
-                var_225 = 1;
-                var_223 = var_224 + 10;
-                var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                yield func051();
-                open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-                yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
-                return;
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "どれを倉庫に送りますか？";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func340(); // キー入力による選択処理
-            var_2008 = 1;
-            var_2300 = var_225;
-            var_2301 = 0;
-            if (var_220 != 0) {
-                var_2301 = 1;
-            }
-            if (var_234 != 0) {
-                var_2301 = 2;
-            }
-            var_2007 = 1;
-            item_page_number = 1;
-            Y_axis_item_position = 45;
-            var_225 = 1;
-            var_223 = var_224 + 10;
-            var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            yield func051();
-            open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
-            yield func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
+            yield stand124();
             return;
         }
-        // No = 311 チープトリックの発動処理
-        if (activated_disc_id == 311) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_407 == 1 && var_536 == 1 && dangeon_number == int(var_1068[12]) && wallet >= 300) {
-                yield func921();
-                return;
-            }
-            var_271 = 1;
-            var_1321 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1321 = var_1321 + 1;
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「おんぶして」　「ねっ！」";
-            comments_row2 = "　　　　「おんぶして…」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「あなたが今のぼくの本体なんです！」";
-            comments_row2a = "　「わかる？」　「ね？」";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「ぼくの能力は人に囁くだけ」";
-            comments_row2a = "　　「ね？」「誰か助け呼ぶの？」";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「イヒヒ！」　「ねっ！」";
-            comments_row2a = "　　　「イヒヒヒヒ」";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「ポコチンまで干からびさせて";
-            comments_row2a = "　　死ぬのはおまえだッ！」";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「どこへ行こうとも…";
-            comments_row2a = "　　疲れるだけだよ」」";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「疲労とダメージで";
-            comments_row2a = "　　ぶっ倒れるのが先か」";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「精神がまいっちまって";
-            comments_row2a = "　　自滅するのが先か…」";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1321 = var_1321 + 1;
-            }
-    
-            DSPLAY(audio_id = 164);
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "最大精神力が１下がってしまった！";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_566 = var_566 - 1;
-            if (var_566 <= 0) {
-                var_566 = 0;
-            }
-            var_565 = var_565 - 1;
-            if (var_565 < 0) {
-                var_565 = 0;
-            }
-            var_271 = 0;
-            var_1321 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 200 スーパーフライの発動処理
+        if (activated_disc_id == 200) {
+            yield stand200();
             return;
         }
-        // No = 397 ヘビー・ウェザーの発動処理
-        if (activated_disc_id == 397) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_2327 = 1;
-            var_768 = 1;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func536();
-                if (var_2328 == 1) {
-                    break;
-                }
-            }
-            var_768 = 0;
-            var_2327 = 0;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「悪魔の虹」が大量にあらわれた！！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 201 イエローテンパランスの発動処理
+        if (activated_disc_id == 201) {
+            yield stand201();
             return;
         }
-        // No = 314 ストレイキャットの発動処理
-        if (activated_disc_id == 314) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            var_2329 = 0;
-            DSPLAY(audio_id = 159);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「うにゃあ」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_2106 = 1;
-            yield func647(); // 射撃攻撃動作処理
+        // No = 202 ホワイトアルバムの発動処理
+        if (activated_disc_id == 202) {
+            yield stand202();
             return;
         }
-        // No = 405 エコーズAct2、No = 406 エコーズAct1、No = 408 マン・イン・ザ・ミラー、No = 409 ラバーズ、No = 410 没disc(ハイウェイスター。かつて射撃discだった?)、No = 404 ホルス神、No = 400 ハイエロファントグリーン、No = 317 キッス、No = 414 不明disc、No = 309 ソフト・マシーン の発動処理
-        if (activated_disc_id == 405 || activated_disc_id == 406 || activated_disc_id == 408 || activated_disc_id == 409 || activated_disc_id == 410 || activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 317 || activated_disc_id == 414 || activated_disc_id == 309) {
-            if (var_73[var_66][var_67] != 0 || var_80[var_66][var_67] != 0 || var_77[var_66][var_67] != 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                if (activated_disc_id == 409 || activated_disc_id == 406 || activated_disc_id == 410 || activated_disc_id == 309) {
-                    comments_row1 = "ここには潜ませられない。";
-                    comments_row2 = "";
-                }
-                if (activated_disc_id == 404 || activated_disc_id == 400 || activated_disc_id == 405 || activated_disc_id == 408) {
-                    comments_row1 = "ここには仕掛けられない。";
-                    comments_row2 = "";
-                }
-                if (activated_disc_id == 317) {
-                    comments_row1 = "ここには貼れない。";
-                    comments_row2 = "";
-                }
-                if (activated_disc_id == 414) {
-                    comments_row1 = "ここには撃てない。";
-                    comments_row2 = "";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-            if (activated_disc_id == 414) {
-                var_271 = 1;
-                var_1496 = 1;
-                for (let cnt3 = 0; cnt3 < 25; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1496++;
-                }
-                var_271 = 0;
-                var_1496 = 0;
-                var_1971 = var_199;
-                var_199 = 2;
-                var_1197 = 1;
-                var_1220 = 1;
-                DSPLAY(audio_id = 109);
-            }
-            var_337 = var_337 + 1;
-            var_2330 = var_337;
-            var_80[var_66][var_67] = var_2330;
-            if (activated_disc_id == 309) { // ソフト・マシーンのdisc
-                var_81[var_2330][0] = 78;
-            }
-            if (activated_disc_id == 410) {
-                var_81[var_2330][0] = 89;
-            }
-            if (activated_disc_id == 406) {
-                var_81[var_2330][0] = 87;
-            }
-            if (activated_disc_id == 408) {
-                var_81[var_2330][0] = 88;
-            }
-            if (activated_disc_id == 405) {
-                var_81[var_2330][0] = 90;
-            }
-            if (activated_disc_id == 409) {
-                var_81[var_2330][0] = 91;
-            }
-            if (activated_disc_id == 404) {
-                var_81[var_2330][0] = 93;
-            }
-            if (activated_disc_id == 400) {
-                var_81[var_2330][0] = 92;
-            }
-            if (activated_disc_id == 317) {
-                var_81[var_2330][0] = 81;
-            }
-            if (activated_disc_id == 414) {
-                var_81[var_2330][0] = 79;
-            }
-            var_81[var_2330][1] = var_66;
-            var_81[var_2330][2] = var_67;
-            var_81[var_2330][4] = 1;
-            var_81[var_2330][5] = var_201;
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (activated_disc_id == 309) {  // ソフト・マシーンのdisc
-                comments_row1 = "地面にｿﾌﾄ･ﾏｼｰﾝを潜ませた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 406) {
-                comments_row1 = "地面に文字を貼り付けた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 408) {
-                comments_row1 = "足元に鏡を仕掛けた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 405) {
-                comments_row1 = "地面に文字を貼り付けた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 409) {
-                comments_row1 = "こっそりラバーズを潜ませた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 404) {
-                comments_row1 = "足元に氷の罠を仕掛けた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 410) {
-                comments_row1 = "ﾊｲｳｪｲ･ｽﾀｰを潜ませた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 400 || activated_disc_id == 407) {
-                comments_row1 = "法王の結界を仕掛けた。";
-                comments_row2 = "";
-                // return; Ver 0.1309 return削除。これがあるがために、「法王の結界」の罠を仕掛けるとフリーズする。
-            }
-            if (activated_disc_id == 317) {
-                comments_row1 = "シールを貼った。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 414) {
-                comments_row1 = "地面に穴を開けた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id != 414) {
-        
-                DSPLAY(audio_id = 165);
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (activated_disc_id == 414) {
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_199 = var_1971;
-                var_1220 = 0;
-                var_1197 = 0;
-            }
-            belongings_item_list = activated_disc_id;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 203 ザ・フールの発動処理
+        if (activated_disc_id == 203) {
+            yield stand203();
             return;
         }
-        // No = 118 ダイバーダウン、No = 407 ハイエロファントエメラルドの発動処理
-        if (activated_disc_id == 118 || activated_disc_id == 407) {
-            var_2331 = 0;
-            var_2332 = var_66;
-            var_2333 = var_67;
-            var_2334 = var_66 - 1;
-            if (var_2334 <= 0) {
-                var_2334 = 0;
-            }
-            var_2335 = var_66 + 1;
-            if (var_2335 >= var_33) {
-                var_2335 = var_33;
-            }
-            var_2336 = var_67 - 1;
-            if (var_2336 <= 0) {
-                var_2336 = 0;
-            }
-            var_2337 = var_67 + 1;
-            if (var_2337 >= var_34) {
-                var_2337 = var_34;
-            }
-            if (activated_disc_id == 118) {
-                var_2338 = 94;
-            }
-            if (activated_disc_id == 407) {
-                var_2338 = 92;
-            }
-            if (var_71[var_2332][var_2333] != 0 && var_71[var_2332][var_2333] != 13 && var_73[var_2332][var_2333] == 0 && var_77[var_2332][var_2333] == 0 && var_80[var_2332][var_2333] == 0) {
-                var_337 = var_337 + 1;
-                var_80[var_2332][var_2333] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2332;
-                var_81[var_337][2] = var_2333;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2332][var_2333];
-                var_2331 = 1;
-            }
-            if (var_71[var_2334][var_2333] != 0 && var_71[var_2334][var_2333] != 13 && var_73[var_2334][var_2333] == 0 && var_77[var_2334][var_2333] == 0 && var_80[var_2334][var_2333] == 0) {
-                var_2339 = var_2334;
-                var_2340 = var_2333;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_71[var_2335][var_2333] != 0 && var_71[var_2335][var_2333] != 13 && var_73[var_2335][var_2333] == 0 && var_77[var_2335][var_2333] == 0 && var_80[var_2335][var_2333] == 0) {
-                var_2339 = var_2335;
-                var_2340 = var_2333;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_71[var_2332][var_2337] != 0 && var_71[var_2332][var_2337] != 13 && var_73[var_2332][var_2337] == 0 && var_77[var_2332][var_2337] == 0 && var_80[var_2332][var_2337] == 0) {
-                var_2339 = var_2332;
-                var_2340 = var_2337;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_71[var_2332][var_2336] != 0 && var_71[var_2332][var_2336] != 13 && var_73[var_2332][var_2336] == 0 && var_77[var_2332][var_2336] == 0 && var_80[var_2332][var_2336] == 0) {
-                var_2339 = var_2332;
-                var_2340 = var_2336;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_71[var_2334][var_2337] != 0 && var_71[var_2334][var_2337] != 13 && var_73[var_2334][var_2337] == 0 && var_77[var_2334][var_2337] == 0 && var_80[var_2334][var_2337] == 0) {
-                var_2339 = var_2334;
-                var_2340 = var_2337;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_71[var_2334][var_2336] != 0 && var_71[var_2334][var_2336] != 13 && var_73[var_2334][var_2336] == 0 && var_77[var_2334][var_2336] == 0 && var_80[var_2334][var_2336] == 0) {
-                var_2339 = var_2334;
-                var_2340 = var_2336;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_71[var_2335][var_2337] != 0 && var_71[var_2335][var_2337] != 13 && var_73[var_2335][var_2337] == 0 && var_77[var_2335][var_2337] == 0 && var_80[var_2335][var_2337] == 0) {
-                var_2339 = var_2335;
-                var_2340 = var_2337;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_71[var_2335][var_2336] != 0 && var_71[var_2335][var_2336] != 13 && var_73[var_2335][var_2336] == 0 && var_77[var_2335][var_2336] == 0 && var_80[var_2335][var_2336] == 0) {
-                var_2339 = var_2335;
-                var_2340 = var_2336;
-                var_337 = var_337 + 1;
-                var_80[var_2339][var_2340] = var_337;
-                var_81[var_337][0] = var_2338;
-                var_81[var_337][1] = var_2339;
-                var_81[var_337][2] = var_2340;
-                var_81[var_337][4] = 1;
-                var_81[var_337][5] = var_71[var_2339][var_2340];
-                var_2331 = 1;
-            }
-            if (var_2331 == 0) {
-                comments_row1 = "";
-                comments_row2 = "";
-                var_295 = "";
-                comments_row1a = "";
-                comments_row2a = "";
-                var_298 = "";
-                var_299 = 0;
-                if (activated_disc_id == 118) {
-                    comments_row1 = "この辺りには潜ませられない。";
-                    comments_row2 = "";
-                }
-                if (activated_disc_id == 407) {
-                    comments_row1 = "この辺りには仕掛けられない。";
-                    comments_row2 = "";
-                }
-                var_198 = 1;
-                var_300 = 0;
-                var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
-                return;
-            }
-    
-            DSPLAY(audio_id = 165);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (activated_disc_id == 118) {
-                comments_row1 = "地面にダイバーダウンを潜ませた。";
-                comments_row2 = "";
-            }
-            if (activated_disc_id == 407) {
-                comments_row1 = "法王の結界を仕掛けた。";
-                comments_row2 = "";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            belongings_item_list = activated_disc_id;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 204 シアハートアタックの発動処理
+        if (activated_disc_id == 204) {
+            yield stand204();
             return;
         }
-        // No = 401 フー・ファイターズの発動処理
-        if (activated_disc_id == 401) {
-            var_2341 = 0;
-            var_211 = var_211 + 20;
-            if (var_120 == 1 || var_174 == 1) {
-                var_211 = var_211 + 20;
-            }
-            if (var_211 >= var_352) {
-                var_211 = var_352;
-                var_2341 = 1;
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "傷口にプランクトンを詰めた。";
-            if (var_120 == 1 || var_174 == 1) {
-                comments_row2 = "いつもより多く回復した。";
-            }
-            if (var_2341 == 1) {
-                comments_row2 = "体力が完全に回復した。";
-            }
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-
-            DSPLAY(audio_id = 143);
-            var_1299 = 5;
-            var_271 = 1;
-            var_1297 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1297++;
-            }
-            var_271 = 0;
-            var_1297 = 0;
-            belongings_item_list = activated_disc_id;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 205 クラフトワークの発動処理
+        if (activated_disc_id == 205) {
+            yield stand205();
             return;
         }
-        // No = 402 エンペラーの発動処理
-        if (activated_disc_id == 402) {
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「エンペラー」！！";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            belongings_item_list = activated_disc_id;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_2342 = 1;
-            yield func647(); // 射撃攻撃動作処理
+        // No = 206 オアシスの発動処理
+        if (activated_disc_id == 206) {
+            yield stand206();
             return;
         }
-        // No = 411 ヘブンズドアーの発動処理
-        if (activated_disc_id == 411) {
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_114 = 0;
-            var_463 = 0;
-            var_464 = 0;
-            var_461 = 0;
-            var_462 = 0;
-            var_2343 = var_66;
-            var_2344 = var_67;
-            var_2345 = var_66 - 5;
-            if (var_2345 < 0) {
-                var_2345 = 0;
-            }
-            var_2346 = var_66 + 5;
-            if (var_2346 > var_33) {
-                var_2346 = var_33;
-            }
-            var_2347 = var_67 + 5;
-            if (var_2347 > var_34) {
-                var_2347 = var_34;
-            }
-            var_2348 = var_67 - 5;
-            if (var_2348 < 0) {
-                var_2348 = 0;
-            }
-            var_2349 = 0;
-            for (let cnt2 = 0; cnt2 < 10000; ++cnt2) {
-                var_2350 = rnd(var_33);
-                var_2351 = rnd(var_34);
-                if (var_2350 == var_2343 && var_2351 == var_2344) {
-                    continue;
-                }
-                if (var_2350 > var_2345 && var_2350 < var_2346 && var_2351 > var_2348 && var_2351 < var_2347 && var_82[var_2350][var_2351] == 0 && var_71[var_2350][var_2351] != 0 && var_71[var_2350][var_2351] != 13) {
-                    var_2349 = 1;
-                    break;
-                }
-            }
-            var_199 = 2;
-            if (var_2349 == 1) {
-                var_66 = var_2350;
-                var_67 = var_2351;
-                yield func016();
-                if (var_201 != 14) {
-                    yield func017();
-                }
-                yield func018();
-                if (var_200 == var_201 && special_floor != 8) {
-                    var_98 = 1;
-                }
-                if (var_202 == var_201 && special_floor != 8) {
-                    var_99 = 1;
-                }
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            }
-            if (var_2349 == 0) {
-                var_66 = var_236;
-                var_67 = var_237;
-            }
-            var_1286 = 170;
-            var_1287 = 140;
-            var_271 = 1;
-            var_1306 = 1;
-            DSPLAY(audio_id = 190);
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1306++;
-            }
-            var_271 = 0;
-            var_1306 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            belongings_item_list = activated_disc_id;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 207 グレイトフル・デッドの発動処理 
+        if (activated_disc_id == 207) {
+            yield stand207();
             return;
         }
-        // No = 412 タスクの発動処理
-        if (activated_disc_id == 412) {
-            yield func094(); // メッセージ送りの際の効果音
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「ヘブンズドアーッ」！！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_2261 = var_357;
-            var_357 = 0;
-            var_243 = 1;
-            var_347 = var_66;
-            var_348 = var_67;
-            if (var_199 == 4) {
-                var_347 = var_347 - 1;
-            }
-            if (var_199 == 6) {
-                var_347 = var_347 + 1;
-            }
-            if (var_199 == 8) {
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 2) {
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 1) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 3) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 + 1;
-            }
-            if (var_199 == 7) {
-                var_347 = var_347 - 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_199 == 9) {
-                var_347 = var_347 + 1;
-                var_348 = var_348 - 1;
-            }
-            if (var_82[var_347][var_348] != 0) {
-                var_2231 = var_82[var_347][var_348];
-                var_2232 = 0;
-                if (var_83[var_2231].Var23 == 0) {
-                    var_2232 = 1;
-                }
-                if (var_83[var_2231].Var23 != 0) {
-                    var_2232 = 2;
-                }
-                if (var_83[var_2231].Var0 == 50) {
-                    var_2232 = 0;
-                }
-                if (var_83[var_2231].Var0 == 118) {
-                    var_2232 = 1;
-                }
-                if (var_2232 == 1) {
-            
-                    DSPLAY(audio_id = 161);
-                    var_1324 = (var_83[var_2231].Var1 - var_66 + 4) * 40;
-                    var_1325 = (var_83[var_2231].Var2 - var_67 + 4) * 40 - 10;
-                    var_271 = 1;
-                    var_1323 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                        var_1323++;
-                    }
-                    var_83[var_2231].Var8 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                        var_1323++;
-                    }
-                    var_271 = 0;
-                    var_1323 = 0;
-                    var_2233 = var_1038 + 1;
-                    var_2234 = 0;
-                    for (let cnt4 = 0; cnt4 < var_2233; ++cnt4) {
-                        if (var_989[cnt4] == var_83[var_2231].Var0) {
-                            var_2234 = 1;
-                            var_1610 = cnt4;
-                            break;
-                        }
-                    }
-                    if (var_2234 == 0) {
-                        var_1038 = var_1038 + 1;
-                        var_989[var_1038] = var_83[var_2231].Var0;
-                        var_1610 = var_1038;
-                    }
-                    var_198 = 0;
-                    var_1609 = 1;
-
-                    DSPLAY(audio_id = 100); // アイテム選択時の効果音
-                    var_502 = 1;
-        
-                    DSPLAY(audio_id = 118);
-                    yield func356();
-                    return;
-                }
-                if (var_2232 == 2) {
-                    var_1324 = (var_83[var_2231].Var1 - var_66 + 4) * 40;
-                    var_1325 = (var_83[var_2231].Var2 - var_67 + 4) * 40 - 10;
-                    var_271 = 1;
-                    var_1323 = 1;
-                    for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        yield func337(); // メッセージ関係呼び出し
-                    }
-                    var_271 = 0;
-                    var_1323 = 0;
-                    comments_row1 = comments_row1a;
-                    comments_row2 = comments_row2a;
-                    comments_row1a = "見えてなくて効かなかった…";
-                    comments_row2a = "";
-                    var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-                    var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-                    var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-                    var_198 = 1;
-                    var_300 = 0;
-                    yield func047();
-                    yield func050();
-                }
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_357 = var_2261;
-            belongings_item_list = activated_disc_id;
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        // No = 300 パール・ジャムの発動処理
+        if (activated_disc_id == 300) {
+            yield stand300();
+            return;
+        }
+        // No = 301 ハーヴェストの発動処理
+        if (activated_disc_id == 301) {
+            yield stand301();
+            return;
+        }
+        // No = 302 ハイウェイ・トゥ・ヘルの発動処理
+        if (activated_disc_id == 302) {
+            yield stand302();
+            return;
+        }
+        // No = 303 ドラゴンズ・ドリームの発動処理
+        if (activated_disc_id == 303) {
+            yield stand303();
+            return;
+        }
+        // No = 304 ウェザーリポートの発動処理
+        if (activated_disc_id == 304) {
+            yield stand304();
+            return;
+        }
+        // No = 305 シンデレラの発動処理
+        if (activated_disc_id == 305) {
+            yield stand305();
             return;
         }
         // No = 306 マンハッタン・トランスファーの発動処理
         if (activated_disc_id == 306) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「気流……」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            gsel(19);
-            color(10, 10, 10);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_311 = 0;
-            var_312 = 1;
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 + 10;
-                var_198 = 1;
-                var_300 = 0;
-            }
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「このフロアの空気の流れを読む…！」";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-            DSPLAY(audio_id = 184);
-            var_119 = 1;
-            var_101 = 1;
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 - 10;
-                var_198 = 1;
-                var_300 = 0;
-            }
-            var_312 = 0;
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "敵の行動がわかるようになった！";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            yield func050();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand306();
+            return;
+        }
+        // No = 307 不明disc の発動処理 
+        if (activated_disc_id == 307) {
+            yield stand307();
+            return;
+        }
+        // No = 308 エボニーデビルの発動処理
+        if (activated_disc_id == 308) {
+            yield stand308();
+            return;
+        }
+        // No = 309 ソフト・マシーンの発動処理
+        if (activated_disc_id == 309) {
+            yield stand309();
+            return;
+        }
+        // No = 310 エンプレスの発動処理
+        if (activated_disc_id == 310) {
+            yield stand310();
+            return;
+        }
+        // No = 311 チープトリックの発動処理
+        if (activated_disc_id == 311) {
+            yield stand311();
+            return;
+        }
+        // No = 312 エアロスミスの発動処理
+        if (activated_disc_id == 312) {
+            yield stand312();
+            return;
+        }
+        // No = 313 ハイウェイスターの発動処理
+        if (activated_disc_id == 313) {
+            yield stand313();
+            return;
+        }
+        // No = 314 ストレイキャットの発動処理
+        if (activated_disc_id == 314) {
+            yield stand314();
             return;
         }
         // No = 315 エピタフの発動処理
         if (activated_disc_id == 315) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「エピタフ！」";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            var_119 = 1;
-            var_121 = 1;
-            var_101 = 1;
-            DSPLAY(audio_id = 184);
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            gsel(19);
-            color(10, 10, 10);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_311 = 255;
-            var_312 = 1;
-            for (let cnt2 = 0; cnt2 < 51; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 - 5;
-                var_198 = 1;
-                var_300 = 0;
-            }
-            var_312 = 0;
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "「迫り来る危険を感知できる…！」";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            yield func050();
-            yield func340(); // キー入力による選択処理
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "見えないものが見えるようになった！";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            yield func050();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand315();
+            return;
+        }
+        // No = 316 サバイバーの発動処理
+        if (activated_disc_id == 316) {
+            yield stand316();
+            return;
+        }
+        // No = 317 キッスの発動処理
+        if (activated_disc_id == 317) {
+            yield stand317();
+            return;
+        }
+        // No = 318 ジャンピングJフラッシュの発動処理
+        if (activated_disc_id == 318) {
+            yield stand318();
+            return;
+        }
+        // No = 319 ボーイⅡマンの発動処理
+        if (activated_disc_id == 319) {
+            yield stand319();
+            return;
+        }
+        // No = 320 メタリカの発動処理
+        if (activated_disc_id == 320) {
+            yield stand320();
             return;
         }
         // No = 393 ボヘミアンラプソディの発動処理
         if (activated_disc_id == 393) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_2352 = rnd(6);
-            if (var_97 >= 50) {
-                var_2352 = 10;
-            }
-
-            DSPLAY(audio_id = 118);
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            if (var_2352 == 0) {
-                comments_row1 = "ﾃﾞｨｱﾎﾞﾛは";
-                comments_row2 = "「ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ」を読んだ";
-            }
-            if (var_2352 == 1) {
-                comments_row1 = "ﾃﾞｨｱﾎﾞﾛは";
-                comments_row2 = "「戦闘潮流」を読んだ";
-            }
-            if (var_2352 == 2) {
-                comments_row1 = "ﾃﾞｨｱﾎﾞﾛは";
-                comments_row2 = "「ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ」を読んだ";
-            }
-            if (var_2352 == 3) {
-                comments_row1 = "ﾃﾞｨｱﾎﾞﾛは";
-                comments_row2 = "「ダイヤモンドは砕けない」を読んだ";
-            }
-            if (var_2352 == 4) {
-                comments_row1 = "ﾃﾞｨｱﾎﾞﾛは";
-                comments_row2 = "「黄金の風」を読んだ";
-            }
-            if (var_2352 == 5) {
-                comments_row1 = "ﾃﾞｨｱﾎﾞﾛは";
-                comments_row2 = "「ｽﾄｰﾝ･ｵｰｼｬﾝ」を読んだ";
-            }
-            if (var_2352 == 6) {
-                comments_row1 = "ﾃﾞｨｱﾎﾞﾛ「これからはおれの時代だッ！」";
-                comments_row2 = "";
-            }
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 16; ++cnt2) {
-                var_300 = 0;
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2352 == 6) {
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                if (var_2254 == 1) {
-                    var_2254 = 0;
-                    yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-                }
-                var_217 = 1;
-                yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-                return;
-            }
-            var_1584 = 0;
-            var_1585 = 0;
-            var_1587 = 0;
-            var_1588 = 0;
-            var_1589 = 0;
-            var_1590 = 0;
-            yield func625();
-            var_1845 = 1;
-            var_2353 = var_673;
-            yield func556();
-            var_2354 = 0;
-            var_1584 = (var_83[var_673].Var1 - var_66 + 4) * 40;
-            var_1585 = (var_83[var_673].Var2 - var_67 + 4) * 40;
-            var_673 = var_2353;
-            var_1845 = 0;
-            if (var_2110 == 0) {
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "しかし何も起こらなかった…";
-                comments_row2a = "";
-                var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
-                var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
-                var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                yield func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    var_300 = 0;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_2355 = 0;
-                if (var_2254 == 1) {
-                    var_2254 = 0;
-                    yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-                }
-                var_217 = 1;
-                yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
-                return;
-            }
-            yield func625();
-            var_1845 = 1;
-            var_2353 = var_673;
-            yield func556();
-            var_2354 = 0;
-            var_1587 = (var_83[var_673].Var1 - var_66 + 4) * 40;
-            var_1588 = (var_83[var_673].Var2 - var_67 + 4) * 40;
-            var_673 = var_2353;
-            var_1845 = 0;
-            yield func625();
-            var_1845 = 1;
-            var_2353 = var_673;
-            yield func556();
-            var_2354 = 0;
-            var_1589 = (var_83[var_673].Var1 - var_66 + 4) * 40;
-            var_1590 = (var_83[var_673].Var2 - var_67 + 4) * 40;
-            var_673 = var_2353;
-            var_1845 = 0;
-    
-            DSPLAY(audio_id = 168);
-            var_271 = 1;
-            var_1586 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                var_300 = 0;
-                yield func337(); // メッセージ関係呼び出し
-                var_1586++;
-            }
-            var_271 = 0;
-            var_1586 = 0;
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "マンガのキャラクターが現れた！";
-            comments_row2a = "";
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                var_300 = 0;
-                yield func337(); // メッセージ関係呼び出し
-                var_2355 = 0;
-            }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            }
-            var_217 = 1;
-            yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            yield stand393();
+            return;
+        }
+        // No = 394 キラータイガークイーンの発動処理
+        if (activated_disc_id == 394) {
+            yield stand112();
+            return;
+        }
+        // No = 395 バイツァ・ダストの発動処理
+        if (activated_disc_id == 395) {
+            yield stand395();
+            return;
+        }
+        // No = 396 メイド・イン・ヘブンの発動処理
+        if (activated_disc_id == 396) {
+            yield stand396();
+            return;
+        }
+        // No = 397 ヘビー・ウェザーの発動処理
+        if (activated_disc_id == 397) {
+            yield stand397();
+            return;
+        }
+        // No = 398 スタプラ・ザワールドの発動能力
+        if (activated_disc_id == 398) {
+            yield stand398();
             return;
         }
         // No = 399 Gエクスペリエンスレクイエムの発動処理
         if (activated_disc_id == 399) {
-            yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            if (var_570 == 0) {
-                bufferid_stand_disc = 11; //buffer(11)は"img_stand0.gif"
-            }
-            if (var_570 == 1) {
-                bufferid_stand_disc = 1; // buffer(1)は"img_stand1.gif"
-            }
-            if (var_570 == 2) {
-                bufferid_stand_disc = 16; // buffer(16)は"img_stand2.gif"
-            }
-            if (var_570 == 3) {
-                bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
-            }
-            var_199 = 2;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func108(); // BGM用mp3ファイル再生停止
-            var_1599 = 1;
-            var_271 = 1;
-            for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                if (var_1599 == 3) {
-                    var_389 = 2;
-                    var_747 = 1;
-                    var_211 = 0;
-    
-                    DSPLAY(audio_id = 105);
-                }
-                var_1599++;
-            }
-            var_1599 = 0;
-            var_271 = 0;
-            if (var_2254 == 1) {
-                var_2254 = 0;
-                yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            comments_row1 = "";
-            comments_row2 = "";
-            var_295 = "";
-            comments_row1a = "";
-            comments_row2a = "";
-            var_298 = "";
-            var_299 = 0;
-            comments_row1 = "死に続ける能力が解除された！";
-            comments_row2 = "";
-            var_198 = 1;
-            var_300 = 0;
-            var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
-            var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
-            var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
-            yield func047();
-            yield func340(); // キー入力による選択処理
-            var_389 = 0;
-            var_103 = 1;
-            var_311 = 255;
-            var_374 = 1;
-            var_1601 = 1;
-            var_271 = 1;
-            var_501 = 1;
-            gsel(19);
-            color(255, 255, 255);
-
-            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
-            gsel(0);
-            var_312 = 1;
-            for (let cnt2 = 0; cnt2 < 51; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_311 = var_311 - 5;
-                var_1601 = var_1601 + 2;
-            }
-            var_312 = 0;
-            yield func122(); // ゴールドエクスペリエンスレクイエムの発動で帰還する際のBGM
-            for (let cnt2 = 0; cnt2 < 100; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_1601 = var_1601 + 2;
-            }
-            yield func532();
+            yield stand399();
+            return;
+        }
+        // No = 400 ハイエロファントグリーンの発動処理
+        if (activated_disc_id == 400) {
+            yield stand400();
+            return;
+        }
+        // No = 401 フー・ファイターズの発動処理
+        if (activated_disc_id == 401) {
+            yield stand401();
+            return;
+        }
+        // No = 402 エンペラーの発動処理
+        if (activated_disc_id == 402) {
+            yield stand402();
+            return;
+        }
+        // No = 403 セックス・ピストルズの発動処理
+        if (activated_disc_id == 403) {
+            yield stand403();
+            return;
+        }
+        // No = 404 ホルス神の発動処理
+        if (activated_disc_id == 404) {
+            yield stand404();
+            return;
+        }
+        // No = 405 エコーズAct2の発動処理
+        if (activated_disc_id == 405) {
+            yield stand405();
+            return;
+        }
+        // No = 406 エコーズAct1の発動処理
+        if (activated_disc_id == 406) {
+            yield stand406();
+            return;
+        }
+        // No = 407 ハイエロファントエメラルドの発動処理
+        if (activated_disc_id == 407) {
+            yield stand407();
+            return;
+        }
+        // No = 408 マン・イン・ザ・ミラーの発動処理
+        if (activated_disc_id == 408) {
+            yield stand408();
+            return;
+        }
+        // No = 409 ラバーズの発動処理
+        if (activated_disc_id == 409) {
+            yield stand409();
+            return;
+        }
+        // No = 410 不明disc(没ハイウェイスター。かつては射撃discだった?)の発動処理
+        if (activated_disc_id == 410) {
+            yield stand410();
+            return;
+        }
+        // No = 411 タワーオブグレーの発動処理
+        if (activated_disc_id == 411) {
+            yield stand411();
+            return;
+        }
+        // No = 412 ヘブンズ・ドアーの発動処理
+        if (activated_disc_id == 412) {
+            yield stand412();
+            return;
+        }
+        // No = 413 不明disc(没discサーフィス?) の発動処理
+        if (activated_disc_id == 413) {
+            yield stand413();
+            return;
+        }
+        // No = 414 タスクact2の発動処理
+        if (activated_disc_id == 414) {
+            yield stand414();
+            return;
+        }
+        // No = 415 タスクact1の発動処理。Ver0.1401にて追加。
+        if (activated_disc_id == 415) {
+            yield stand415();
             return;
         }
         comments_row1 = "";
@@ -8768,7 +1478,7 @@ function func513(this: any) {
         if (var_1949 == 0) {
             belongings_item_list = activated_disc_id;
             yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-            var_357 = var_2261;
+            kougeki_disc_id = var_2261;
         }
         var_1254 = 0;
         yield func094(); // メッセージ送りの際の効果音
@@ -9398,7 +2108,7 @@ function func523(this: any) {
                 var_477 = dim(40);
                 var_581 = var_581 - var_895;
                 var_895 = 0;
-                var_358 = 0;
+                bougyo_disc_id = 0;
             }
         }
         var_2097 = 0;
@@ -9586,7 +2296,7 @@ function func523(this: any) {
                 count_buying_price = count_buying_price + buying_price;
             }
             var_225 = var_2286;
-            if (var_357 == 106) {
+            if (kougeki_disc_id == 106) {
                 var_896 = 0;
                 yield func430();
             }
@@ -10386,11 +3096,11 @@ function func530(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(530);
         var_2393 = 0;
-        if (var_357 == 0 && var_358 == 0 && var_215 == 0) {
+        if (kougeki_disc_id == 0 && bougyo_disc_id == 0 && nouryoku_disc_id == 0) {
             item_message1 = "スタンドを身につけていなかった…";
             return;
         }
-        if (var_357 != 0) {
+        if (kougeki_disc_id != 0) {
             yield func426();
             var_2394 = var_233[var_553].Var5 + var_233[var_553].Var19;
             if (var_2394 >= 8) {
@@ -10405,7 +3115,7 @@ function func530(this: any) {
                 item_message2 = "";
             }
         }
-        if (var_358 != 0) {
+        if (bougyo_disc_id != 0) {
             yield func427();
             var_2394 = var_233[var_554].Var5 + var_233[var_554].Var19;
             if (var_2394 >= 8) {
@@ -10420,7 +3130,7 @@ function func530(this: any) {
                 item_message2 = "";
             }
         }
-        if (var_215 != 0) {
+        if (nouryoku_disc_id != 0) {
             yield func428();
             var_2394 = var_233[var_555].Var5 + var_233[var_555].Var19;
             if (var_2394 >= 8) {
@@ -10446,11 +3156,11 @@ function func531(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(531);
         var_2228 = 0;
-        if (var_357 == 0 && var_358 == 0 && var_215 == 0) {
+        if (kougeki_disc_id == 0 && bougyo_disc_id == 0 && nouryoku_disc_id == 0) {
             var_2228 = 1;
             return;
         }
-        if (var_357 != 0 && var_358 != 0 && var_215 != 0) {
+        if (kougeki_disc_id != 0 && bougyo_disc_id != 0 && nouryoku_disc_id != 0) {
             var_2396 = rnd(3);
             if (var_2396 == 0) {
                 var_2397 = 0;
@@ -10462,7 +3172,7 @@ function func531(this: any) {
                 var_2397 = 2;
             }
         }
-        if (var_357 != 0 && var_358 != 0 && var_215 == 0) {
+        if (kougeki_disc_id != 0 && bougyo_disc_id != 0 && nouryoku_disc_id == 0) {
             var_2396 = rnd(2);
             if (var_2396 == 0) {
                 var_2397 = 0;
@@ -10471,7 +3181,7 @@ function func531(this: any) {
                 var_2397 = 1;
             }
         }
-        if (var_357 != 0 && var_358 == 0 && var_215 != 0) {
+        if (kougeki_disc_id != 0 && bougyo_disc_id == 0 && nouryoku_disc_id != 0) {
             var_2396 = rnd(2);
             if (var_2396 == 0) {
                 var_2397 = 0;
@@ -10480,7 +3190,7 @@ function func531(this: any) {
                 var_2397 = 2;
             }
         }
-        if (var_357 == 0 && var_358 != 0 && var_215 != 0) {
+        if (kougeki_disc_id == 0 && bougyo_disc_id != 0 && nouryoku_disc_id != 0) {
             var_2396 = rnd(2);
             if (var_2396 == 0) {
                 var_2397 = 1;
@@ -10489,13 +3199,13 @@ function func531(this: any) {
                 var_2397 = 2;
             }
         }
-        if (var_357 != 0 && var_358 == 0 && var_215 == 0) {
+        if (kougeki_disc_id != 0 && bougyo_disc_id == 0 && nouryoku_disc_id == 0) {
             var_2397 = 0;
         }
-        if (var_357 == 0 && var_358 != 0 && var_215 == 0) {
+        if (kougeki_disc_id == 0 && bougyo_disc_id != 0 && nouryoku_disc_id == 0) {
             var_2397 = 1;
         }
-        if (var_357 == 0 && var_358 == 0 && var_215 != 0) {
+        if (kougeki_disc_id == 0 && bougyo_disc_id == 0 && nouryoku_disc_id != 0) {
             var_2397 = 2;
         }
         if (var_2397 == 0) {
@@ -10971,7 +3681,7 @@ function func533(this: any) {
                             var_476 = dim(40);
                             var_580 = var_580 - var_894;
                             var_894 = 0;
-                            var_357 = 0;
+                            kougeki_disc_id = 0;
                             yield func494();
                             var_1977 = 1;
                         }
@@ -10979,19 +3689,19 @@ function func533(this: any) {
                             var_477 = dim(40);
                             var_581 = var_581 - var_895;
                             var_895 = 0;
-                            var_358 = 0;
+                            bougyo_disc_id = 0;
                             yield func494();
                             var_1977 = 1;
                         }
                         if (var_555 == var_225) {
                             var_478 = dim(40);
-                            var_215 = 0;
+                            nouryoku_disc_id = 0;
                             yield func494();
                             var_1977 = 1;
                         }
                         if (var_556 == var_225) {
                             var_479 = dim(40);
-                            var_410 = 0;
+                            shageki_disc_id = 0;
                             var_250 = 0;
                             var_1977 = 1;
                         }
@@ -12323,6 +5033,7 @@ function func538(this: any) {
         yield func539();
     });
 }
+// 各罠ごとのアイコン処理
 function func539(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -12656,7 +5367,7 @@ function func540(this: any) {
         return;
     });
 }
-
+// 各罠を踏んだ時の動作処理
 function func541(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(541);
@@ -12666,7 +5377,7 @@ function func541(this: any) {
         if (var_81[var_2442][0] == 96) {
             return;
         }
-        if (var_81[var_2442][0] == 98 && var_410 == 402 && var_545 == 0) {
+        if (var_81[var_2442][0] == 98 && shageki_disc_id == 402 && var_545 == 0) {
             return;
         }
         if (var_545 == 0) {
@@ -12791,6 +5502,7 @@ function func541(this: any) {
             return;
         }
         var_1216 = 0;
+        // No = 1 セト神の罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 1) {
             var_108 = 1;
             var_81[var_2442][3] = 1;
@@ -12814,7 +5526,6 @@ function func541(this: any) {
             }
             var_108 = 0;
             if (equip_disc[207] == 1) {
-
                 DSPLAY(audio_id = 163);
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -12835,6 +5546,7 @@ function func541(this: any) {
                 }
             }
         }
+        // No = 2 ジェイルハウスロックの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 2) {
             var_108 = 1;
             var_81[var_2442][3] = 1;
@@ -12914,6 +5626,7 @@ function func541(this: any) {
                 DSPLAY(audio_id = 164);
             }
         }
+        // No = 3 ダイバーダウンの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 3) {
             var_2454 = rnd(10);
             var_2455 = Math.floor(var_211 / 5) + var_2454;
@@ -12950,34 +5663,7 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
         }
-        if (var_81[var_2442][0] == 30) {
-            var_2455 = 20;
-            var_209 = 20;
-            var_1396 = var_66;
-            var_1397 = var_67;
-            var_81[var_2442][3] = 1;
-            var_108 = 1;
-            var_747 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-        
-                DSPLAY(audio_id = 104);
-            }
-            var_108 = 0;
-            var_81[var_2442][3] = 0;
-            var_211 = var_211 - var_2455;
-            var_208 = var_208 + var_2455;
-            if (var_211 <= 0) {
-                var_211 = 0;
-                var_356 = 282;
-                var_199 = 2;
-            }
-            comments_row2 = "" + var_2455 + "のダメージをうけた！";
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-        }
+        // No = 4 アンダーワールドの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 4) {
             var_81[var_2442][3] = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -13022,6 +5708,7 @@ function func541(this: any) {
             var_81[var_2442][1] = 0;
             var_81[var_2442][2] = 0;
         }
+        // No = 5 猫袋の罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 5) {
             comments_row2 = "「ボ ﾑ ギ ！」";
             yield func047();
@@ -13081,10 +5768,11 @@ function func541(this: any) {
                 var_1583 = 0;
             }
         }
+        // No = 6 ダービー弟の落とし穴の罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 6) {
             var_108 = 1;
             var_81[var_2442][3] = 1;
-            if (var_410 != 411) {
+            if (shageki_disc_id != 411) {
                 var_271 = 1;
                 var_1543 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
@@ -13102,7 +5790,8 @@ function func541(this: any) {
                 var_1543 = 0;
                 var_372 = 1;
             }
-            if (var_410 == 411) {
+            // No = 411 タワーオブグレーを装備していた場合
+            if (shageki_disc_id == 411) {
                 var_271 = 1;
                 var_1544 = 1;
                 DSPLAY(audio_id = 190);
@@ -13135,6 +5824,7 @@ function func541(this: any) {
                 var_108 = 0;
             }
         }
+        // No = 7 ローリングストーンズの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 7) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -13146,10 +5836,10 @@ function func541(this: any) {
             }
             var_271 = 0;
             var_1535 = 0;
-            if (var_410 != 403) {
+            if (shageki_disc_id != 403) {
                 var_2455 = Math.floor(var_211 / 2);
             }
-            if (var_410 == 403) {
+            if (shageki_disc_id == 403) {
                 var_2455 = Math.floor(var_211 / 4);
             }
             var_211 = var_211 - var_2455;
@@ -13161,7 +5851,7 @@ function func541(this: any) {
             }
             comments_row2 = "巨大な岩に押しつぶされた！";
             yield func047();
-            if (var_410 == 403) {
+            if (shageki_disc_id == 403) {
                 yield func340(); // キー入力による選択処理
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -13181,6 +5871,7 @@ function func541(this: any) {
             var_81[var_2442][3] = 0;
             var_108 = 0;
         }
+        // No = 8 ホワイトアルバムの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 8) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -13201,12 +5892,12 @@ function func541(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            if (var_215 == 109 || var_215 == 202 || var_410 == 404 || var_173 == 1) {
+            if (nouryoku_disc_id == 109 || nouryoku_disc_id == 202 || shageki_disc_id == 404 || var_173 == 1) {
                 yield func340(); // キー入力による選択処理
                 var_128 = 0;
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
-                if (var_215 == 109 || var_215 == 202 || var_410 == 404) {
+                if (nouryoku_disc_id == 109 || nouryoku_disc_id == 202 || shageki_disc_id == 404) {
                     comments_row1a = "しかし、装備中のDISCのおかげで";
                     comments_row2a = "氷漬けを解除できた。";
                 }
@@ -13223,6 +5914,7 @@ function func541(this: any) {
                 yield func047();
             }
         }
+        // No = 9, 31 エコーズACT2の罠(ボヨヨン)を踏んだ時の動作処理
         if (var_81[var_2442][0] == 9 || var_81[var_2442][0] == 31) {
             var_300 = 0;
             comments_row2 = "地面に「ボョヨオン」と書かれていた！";
@@ -13250,6 +5942,7 @@ function func541(this: any) {
             yield func499();
             var_382 = 1;
         }
+        // No = 10 クラフトワークの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 10) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -13284,6 +5977,7 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
         }
+        // No = 11 ワムウの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 11) {
             var_81[var_2442][3] = 1;
             var_2454 = rnd(10);
@@ -13476,6 +6170,7 @@ function func541(this: any) {
                 }
             }
         }
+        // No = 12 DIOの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 12) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -13496,11 +6191,11 @@ function func541(this: any) {
                 var_199 = 2;
             }
             if (var_211 > 1) {
-                if (var_215 != 100 && var_215 != 398) {
+                if (nouryoku_disc_id != 100 && nouryoku_disc_id != 398) {
                     var_208 = var_211 - 1 + var_208;
                     var_211 = 1;
                 }
-                if (var_215 == 100 || var_215 == 398) {
+                if (nouryoku_disc_id == 100 || nouryoku_disc_id == 398) {
                     var_208 = Math.floor(var_211 / 2) + var_208;
                     var_211 = Math.floor(var_211 / 2);
                 }
@@ -13640,7 +6335,7 @@ function func541(this: any) {
             var_2196 = 0;
             var_2195 = 0;
             if (var_211 != 0) {
-                if (var_215 == 100 || var_215 == 398) {
+                if (nouryoku_disc_id == 100 || nouryoku_disc_id == 398) {
                     yield func340(); // キー入力による選択処理
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
@@ -13657,6 +6352,7 @@ function func541(this: any) {
             }
             var_108 = 0;
         }
+        // No = 13 スカイ・ハイの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 13) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -13684,6 +6380,7 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
         }
+        // No = 14 エコーズACT2(ドジュウ)の罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 14) {
             var_2460 = 0;
             var_2461 = 1;
@@ -13742,6 +6439,7 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
         }
+        // No = 15 ヘブンズ・ドアーの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 15) {
             var_108 = 1;
             var_81[var_2442][3] = 1;
@@ -13781,7 +6479,7 @@ function func541(this: any) {
             }
     
             DSPLAY(audio_id = 103); // 殴られた時の効果音
-            if (var_410 == 412) {
+            if (shageki_disc_id == 412) {
                 var_1261 = 1;
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -13865,7 +6563,7 @@ function func541(this: any) {
             }
             if (var_2462 == 0) {
                 var_2463 = 0;
-                if (var_357 == 0 && var_358 == 0 && var_215 == 0 && var_410 == 0) {
+                if (kougeki_disc_id == 0 && bougyo_disc_id == 0 && nouryoku_disc_id == 0 && shageki_disc_id == 0) {
                     var_2463 = 1;
                 }
                 var_1261 = 1;
@@ -13905,16 +6603,16 @@ function func541(this: any) {
                 var_476 = dim(40);
                 var_580 = var_580 - var_894;
                 var_894 = 0;
-                var_357 = 0;
+                kougeki_disc_id = 0;
                 var_477 = dim(40);
                 var_581 = var_581 - var_895;
                 var_895 = 0;
-                var_358 = 0;
+                bougyo_disc_id = 0;
                 var_479 = dim(40);
                 var_250 = 0;
-                var_410 = 0;
+                shageki_disc_id = 0;
                 var_478 = dim(40);
-                var_215 = 0;
+                nouryoku_disc_id = 0;
                 yield func494();
                 var_896 = 0;
                 var_897 = 0;
@@ -14050,125 +6748,7 @@ function func541(this: any) {
                 yield func529();
             }
         }
-        if (var_81[var_2442][0] == 26) {
-            var_108 = 1;
-            var_81[var_2442][3] = 1;
-            comments_row2 = "";
-            yield func047();
-            var_300 = 0;
-            var_2463 = 0;
-            if (var_357 == 0 && var_358 == 0 && var_215 == 0 && var_410 != 0) {
-                var_2463 = 99;
-            }
-            if (var_357 == 0 && var_358 == 0 && var_215 == 0 && var_410 == 0) {
-                var_2463 = 1;
-            }
-            if (var_410 == 401) {
-                var_2463 = 99;
-            }
-            if (equip_disc[361] == 1) {
-                var_2463 = 2;
-            }
-    
-            DSPLAY(audio_id = 103); // 殴られた時の効果音
-            if (var_2463 == 0) {
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    var_1262 = 1;
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1262 = 2;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            if (var_2463 == 99) {
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    var_1262 = 3;
-                    yield func337(); // メッセージ関係呼び出し
-                    var_1262 = 4;
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            if (var_2463 != 0 && var_2463 != 99) {
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-            var_108 = 0;
-            if (var_410 == 401 && var_2463 == 99) {
-                if (receive_bgm_id == 401) {
-                    belongings_item_list = 401;
-                    yield func106(); // BGM選曲呼び出し割り振り
-                }
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCを外された！";
-                comments_row2a = "";
-                yield func047();
-                yield func050();
-                var_198 = 1;
-                var_300 = 0;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-                var_1262 = 0;
-                var_81[var_2442][3] = 0;
-                var_479 = dim(40);
-                var_250 = 0;
-                var_410 = 0;
-                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                return;
-            }
-            if (var_2463 == 0 || var_2463 == 99) {
-                belongings_item_list = receive_bgm_id;
-                yield func106(); // BGM選曲呼び出し割り振り
-            }
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            if (var_2463 == 0) {
-                comments_row1a = "装備が全て外れてしまった！";
-            }
-            if (var_2463 == 1) {
-                comments_row1a = "しかし何も起こらなかった。";
-            }
-            if (var_2463 == 2) {
-                comments_row1a = "しかし装備DISCの効果によって";
-                comments_row2a = "DISCを抜き取られなかった。";
-            }
-            if (var_2463 == 99) {
-                comments_row1a = "装備が全て外れてしまった！";
-            }
-            yield func047();
-            yield func050();
-            var_198 = 1;
-            var_300 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_1262 = 0;
-            var_81[var_2442][3] = 0;
-            if (var_2463 != 0 && var_2463 != 99) {
-                return;
-            }
-            var_476 = dim(40);
-            var_580 = var_580 - var_894;
-            var_894 = 0;
-            var_357 = 0;
-            var_477 = dim(40);
-            var_581 = var_581 - var_895;
-            var_895 = 0;
-            var_358 = 0;
-            var_479 = dim(40);
-            var_250 = 0;
-            var_410 = 0;
-            var_478 = dim(40);
-            var_215 = 0;
-            yield func494();
-            var_896 = 0;
-            var_897 = 0;
-            var_898 = 0;
-            var_999 = 0;
-            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        }
+        // No = 16 トーキング・ヘッドの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 16) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -14187,7 +6767,7 @@ function func541(this: any) {
             var_81[var_2442][3] = 0;
             var_126 = 1;
             var_166 = 0;
-            if (var_215 == 113) {
+            if (nouryoku_disc_id == 113) {
                 var_126 = 0;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -14207,6 +6787,7 @@ function func541(this: any) {
                 var_300 = 0;
             }
         }
+        // No = 17 バッドカンパニーの地雷を踏んだ時の動作処理
         if (var_81[var_2442][0] == 17) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -14263,12 +6844,12 @@ function func541(this: any) {
                 var_300 = 0;
             }
         }
+        // No = 18 バステト女神の罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 18) {
             var_140 = var_140 + 1;
             var_141 = 1;
             var_108 = 1;
             var_747 = 1;
-    
             DSPLAY(audio_id = 120);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -14321,6 +6902,7 @@ function func541(this: any) {
                 var_2464 = 0;
             }
         }
+        // No = 19 ラクガキの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 19) {
             yield func047();
             var_1845 = 0;
@@ -14387,6 +6969,7 @@ function func541(this: any) {
             var_81[var_2442][2] = 0;
             return;
         }
+        // No = 20 エコーズACT2(ドヒュウ)の罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 20) {
             var_81[var_2442][3] = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -14400,6 +6983,7 @@ function func541(this: any) {
             yield func529();
             var_81[var_2442][3] = 0;
         }
+        // No = 21 エンプレスの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 21) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -14439,45 +7023,7 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
         }
-        if (var_81[var_2442][0] == 2999) {
-            var_81[var_2442][3] = 1;
-            var_108 = 1;
-            DSPLAY(audio_id = 173);
-            comments_row2 = "「」";
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            DSPLAY(audio_id = 173);
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "";
-            comments_row2a = "";
-            yield func047();
-            yield func050();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            yield func340(); // キー入力による選択処理
-            var_198 = 1;
-            var_300 = 0;
-            var_108 = 0;
-            var_390 = 1;
-            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                var_83[var_390].Var12 = 0;
-                var_390 = var_390 + 1;
-            }
-            var_81[var_2442][3] = 0;
-            comments_row1 = comments_row1a;
-            comments_row2 = comments_row2a;
-            comments_row1a = "";
-            comments_row2a = "";
-            yield func047();
-            yield func050();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-        }
+        // No = 22 ハイウェイ・スターの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 22) {
             var_108 = 1;
             comments_row2 = "";
@@ -14517,8 +7063,9 @@ function func541(this: any) {
             }
             var_108 = 0;
         }
+        // No = 23 ワイアードの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 23) {
-            if (var_410 == 414) {
+            if (shageki_disc_id == 415) { // Ver0.1401にて修正。414 → 415 タスクact1へ変更。
                 var_1530 = 1;
                 var_81[var_2442][3] = 1;
                 var_108 = 1;
@@ -14834,6 +7381,7 @@ function func541(this: any) {
                 return;
             }
         }
+        // No = 24 リンプ・ビズキットの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 24) {
             var_108 = 1;
             comments_row2 = "透明な何者かを呼んでしまった！";
@@ -14855,6 +7403,7 @@ function func541(this: any) {
             var_1845 = 0;
             yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
+        // No = 25 ネズミ捕りの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 25) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -14885,19 +7434,19 @@ function func541(this: any) {
             var_1541 = 0;
             var_2473 = 0;
             var_2474 = 0;
-            if (var_357 != 0 && var_358 == 0) {
+            if (kougeki_disc_id != 0 && bougyo_disc_id == 0) {
                 yield func426();
                 if (var_233[var_553].Var4 != 0) {
                     var_2474 = 1;
                 }
             }
-            if (var_357 == 0 && var_358 != 0) {
+            if (kougeki_disc_id == 0 && bougyo_disc_id != 0) {
                 yield func427();
                 if (var_233[var_554].Var4 != 0) {
                     var_2474 = 2;
                 }
             }
-            if (var_357 != 0 && var_358 != 0) {
+            if (kougeki_disc_id != 0 && bougyo_disc_id != 0) {
                 yield func426();
                 yield func427();
                 if (var_233[var_553].Var4 == 0 && var_233[var_554].Var4 == 0) {
@@ -14920,7 +7469,7 @@ function func541(this: any) {
                     }
                 }
             }
-            if (var_357 == 0 && var_358 == 0) {
+            if (kougeki_disc_id == 0 && bougyo_disc_id == 0) {
                 var_2474 = 0;
                 var_2473 = 0;
             }
@@ -14942,7 +7491,7 @@ function func541(this: any) {
                 var_580 = var_580 - 1;
                 var_894 = var_894 - 1;
                 var_2473 = 1;
-                belongings_item_list = var_357;
+                belongings_item_list = kougeki_disc_id;
                 disc_rarity = var_233[var_553].Var13;
                 yield func492(); // アイテムリスト呼び出し
             }
@@ -14952,7 +7501,7 @@ function func541(this: any) {
                 var_581 = var_581 - 1;
                 var_895 = var_895 - 1;
                 var_2473 = 1;
-                belongings_item_list = var_358;
+                belongings_item_list = bougyo_disc_id;
                 disc_rarity = var_233[var_554].Var13;
                 yield func492(); // アイテムリスト呼び出し
             }
@@ -14997,6 +7546,127 @@ function func541(this: any) {
             }
             var_108 = 0;
         }
+        // No = 26 ホワイトスネイクの罠を踏んだ時の動作処理
+        if (var_81[var_2442][0] == 26) {
+            var_108 = 1;
+            var_81[var_2442][3] = 1;
+            comments_row2 = "";
+            yield func047();
+            var_300 = 0;
+            var_2463 = 0;
+            if (kougeki_disc_id == 0 && bougyo_disc_id == 0 && nouryoku_disc_id == 0 && shageki_disc_id != 0) {
+                var_2463 = 99;
+            }
+            if (kougeki_disc_id == 0 && bougyo_disc_id == 0 && nouryoku_disc_id == 0 && shageki_disc_id == 0) {
+                var_2463 = 1;
+            }
+            if (shageki_disc_id == 401) {
+                var_2463 = 99;
+            }
+            if (equip_disc[361] == 1) {
+                var_2463 = 2;
+            }
+    
+            DSPLAY(audio_id = 103); // 殴られた時の効果音
+            if (var_2463 == 0) {
+                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
+                    var_1262 = 1;
+                    yield func337(); // メッセージ関係呼び出し
+                    var_1262 = 2;
+                    yield func337(); // メッセージ関係呼び出し
+                }
+            }
+            if (var_2463 == 99) {
+                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
+                    var_1262 = 3;
+                    yield func337(); // メッセージ関係呼び出し
+                    var_1262 = 4;
+                    yield func337(); // メッセージ関係呼び出し
+                }
+            }
+            if (var_2463 != 0 && var_2463 != 99) {
+                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
+                    yield func337(); // メッセージ関係呼び出し
+                    yield func337(); // メッセージ関係呼び出し
+                }
+            }
+            var_108 = 0;
+            if (shageki_disc_id == 401 && var_2463 == 99) {
+                if (receive_bgm_id == 401) {
+                    belongings_item_list = 401;
+                    yield func106(); // BGM選曲呼び出し割り振り
+                }
+                comments_row1 = comments_row1a;
+                comments_row2 = comments_row2a;
+                comments_row1a = "ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCを外された！";
+                comments_row2a = "";
+                yield func047();
+                yield func050();
+                var_198 = 1;
+                var_300 = 0;
+                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
+                    yield func337(); // メッセージ関係呼び出し
+                }
+                var_1262 = 0;
+                var_81[var_2442][3] = 0;
+                var_479 = dim(40);
+                var_250 = 0;
+                shageki_disc_id = 0;
+                yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+                return;
+            }
+            if (var_2463 == 0 || var_2463 == 99) {
+                belongings_item_list = receive_bgm_id;
+                yield func106(); // BGM選曲呼び出し割り振り
+            }
+            comments_row1 = comments_row1a;
+            comments_row2 = comments_row2a;
+            if (var_2463 == 0) {
+                comments_row1a = "装備が全て外れてしまった！";
+            }
+            if (var_2463 == 1) {
+                comments_row1a = "しかし何も起こらなかった。";
+            }
+            if (var_2463 == 2) {
+                comments_row1a = "しかし装備DISCの効果によって";
+                comments_row2a = "DISCを抜き取られなかった。";
+            }
+            if (var_2463 == 99) {
+                comments_row1a = "装備が全て外れてしまった！";
+            }
+            yield func047();
+            yield func050();
+            var_198 = 1;
+            var_300 = 0;
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            var_1262 = 0;
+            var_81[var_2442][3] = 0;
+            if (var_2463 != 0 && var_2463 != 99) {
+                return;
+            }
+            var_476 = dim(40);
+            var_580 = var_580 - var_894;
+            var_894 = 0;
+            kougeki_disc_id = 0;
+            var_477 = dim(40);
+            var_581 = var_581 - var_895;
+            var_895 = 0;
+            bougyo_disc_id = 0;
+            var_479 = dim(40);
+            var_250 = 0;
+            shageki_disc_id = 0;
+            var_478 = dim(40);
+            nouryoku_disc_id = 0;
+            yield func494();
+            var_896 = 0;
+            var_897 = 0;
+            var_898 = 0;
+            var_999 = 0;
+            yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
+        }
+        // No = 27 没罠 マリリンマンソンの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 27) {
             var_81[var_2442][3] = 1;
             var_108 = 1;
@@ -15109,6 +7779,7 @@ function func541(this: any) {
             var_81[var_2442][3] = 0;
             var_108 = 0;
         }
+        // No = 28 オエコモバの罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 28) {
             var_81[var_2442][3] = 1;
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
@@ -15183,6 +7854,36 @@ function func541(this: any) {
             yield func540();
             return;
         }
+        // No = 30 血の槍の罠を踏んだ時の動作処理
+        if (var_81[var_2442][0] == 30) {
+            var_2455 = 20;
+            var_209 = 20;
+            var_1396 = var_66;
+            var_1397 = var_67;
+            var_81[var_2442][3] = 1;
+            var_108 = 1;
+            var_747 = 1;
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+        
+                DSPLAY(audio_id = 104);
+            }
+            var_108 = 0;
+            var_81[var_2442][3] = 0;
+            var_211 = var_211 - var_2455;
+            var_208 = var_208 + var_2455;
+            if (var_211 <= 0) {
+                var_211 = 0;
+                var_356 = 282;
+                var_199 = 2;
+            }
+            comments_row2 = "" + var_2455 + "のダメージをうけた！";
+            yield func047();
+            for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+        }
+        // No = 77 ディアボロが仕掛けた罠を踏んだ時の動作処理
         if (var_81[var_2442][0] == 77) {
             comments_row2 = "" + var_889 + "がいるぞ。";
             yield func047();
@@ -15204,24 +7905,6 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
         }
-        if (var_81[var_2442][0] == 84) {
-            comments_row2 = "ここには『上り階段の記憶』があるぞ。";
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_370 = 1;
-        }
-        if (var_81[var_2442][0] == 85) {
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            comments_row2 = "";
-            yield func047();
-            var_372 = 1;
-            var_70 = 0;
-            var_1031 = 1;
-        }
         if (var_81[var_2442][0] == 80) {
             comments_row2 = "砂のDIOが潜んでいるぞ。";
             yield func047();
@@ -15242,6 +7925,56 @@ function func541(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
+        }
+        if (var_81[var_2442][0] == 83) {
+            var_81[var_2442][3] = 1;
+            var_108 = 1;
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            comments_row2 = "波紋で体が焼かれている！";
+            yield func047();
+            for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            var_108 = 0;
+            var_81[var_2442][3] = 0;
+            var_80[var_66][var_67] = 0;
+            var_81[var_2442][0] = 0;
+            var_81[var_2442][1] = 0;
+            var_81[var_2442][2] = 0;
+            var_134 = 1;
+            if (nouryoku_disc_id == 116 || var_125 >= 1) {
+                yield func340(); // キー入力による選択処理
+                var_134 = 0;
+                comments_row1 = comments_row1a;
+                comments_row2 = comments_row2a;
+                comments_row1a = "しかし、";
+                comments_row2a = "波紋に強くなっていて平気だった。";
+                yield func047();
+                yield func050();
+                for (let cnt3 = 0; cnt3 < 11; ++cnt3) {
+                    yield func337(); // メッセージ関係呼び出し
+                }
+            }
+        }
+        if (var_81[var_2442][0] == 84) {
+            comments_row2 = "ここには『上り階段の記憶』があるぞ。";
+            yield func047();
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            var_370 = 1;
+        }
+        if (var_81[var_2442][0] == 85) {
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            comments_row2 = "";
+            yield func047();
+            var_372 = 1;
+            var_70 = 0;
+            var_1031 = 1;
         }
         if (var_81[var_2442][0] == 86) {
             comments_row2 = "ここには『悪魔の虹』があるぞ。";
@@ -15352,44 +8085,12 @@ function func541(this: any) {
             var_81[var_2442][1] = 0;
             var_81[var_2442][2] = 0;
             var_134 = 1;
-            if (var_215 == 116 || var_125 >= 1) {
+            if (nouryoku_disc_id == 116 || var_125 >= 1) {
                 yield func340(); // キー入力による選択処理
                 var_134 = 0;
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "しかし気の毒なことに、";
-                comments_row2a = "波紋に強くなっていて平気だった。";
-                yield func047();
-                yield func050();
-                for (let cnt3 = 0; cnt3 < 11; ++cnt3) {
-                    yield func337(); // メッセージ関係呼び出し
-                }
-            }
-        }
-        if (var_81[var_2442][0] == 83) {
-            var_81[var_2442][3] = 1;
-            var_108 = 1;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            comments_row2 = "波紋で体が焼かれている！";
-            yield func047();
-            for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-            }
-            var_108 = 0;
-            var_81[var_2442][3] = 0;
-            var_80[var_66][var_67] = 0;
-            var_81[var_2442][0] = 0;
-            var_81[var_2442][1] = 0;
-            var_81[var_2442][2] = 0;
-            var_134 = 1;
-            if (var_215 == 116 || var_125 >= 1) {
-                yield func340(); // キー入力による選択処理
-                var_134 = 0;
-                comments_row1 = comments_row1a;
-                comments_row2 = comments_row2a;
-                comments_row1a = "しかし、";
                 comments_row2a = "波紋に強くなっていて平気だった。";
                 yield func047();
                 yield func050();
@@ -15446,6 +8147,46 @@ function func541(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_372 = 1;
+        }
+        // No = 2999 没罠を踏んだ時の動作処理
+        if (var_81[var_2442][0] == 2999) {
+            var_81[var_2442][3] = 1;
+            var_108 = 1;
+            DSPLAY(audio_id = 173);
+            comments_row2 = "「」";
+            yield func047();
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            DSPLAY(audio_id = 173);
+            comments_row1 = comments_row1a;
+            comments_row2 = comments_row2a;
+            comments_row1a = "";
+            comments_row2a = "";
+            yield func047();
+            yield func050();
+            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            yield func340(); // キー入力による選択処理
+            var_198 = 1;
+            var_300 = 0;
+            var_108 = 0;
+            var_390 = 1;
+            for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
+                var_83[var_390].Var12 = 0;
+                var_390 = var_390 + 1;
+            }
+            var_81[var_2442][3] = 0;
+            comments_row1 = comments_row1a;
+            comments_row2 = comments_row2a;
+            comments_row1a = "";
+            comments_row2a = "";
+            yield func047();
+            yield func050();
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
         }
         yield func540();
         return;
@@ -16901,11 +9642,11 @@ function func553(this: any) {
                 gcopy(5, 1200, 0, 40, 40);
             }
             if (var_2497 == 0) {
-                gcopy(5, 1200, var_92 * 40, 40, 40);
+                gcopy(5, 1200, y_axis_map_image * 40, 40, 40);
             }
         }
         if (var_73[var_447][var_449] == 2) {
-            gcopy(5, 1640, var_92 * 40, 40, 40);
+            gcopy(5, 1640, y_axis_map_image * 40, 40, 40);
         }
         return;
     });
@@ -17331,6 +10072,7 @@ function func555(this: any) {
                 var_83[var_673].Var14 = 1;
             }
             var_83[var_673].Var15 = 0;
+            // 倍速移動敵の選択
             if (var_953 == 39 || var_953 == 60 || var_953 == 64 || var_953 == 101 || var_953 == 117 || var_953 == 111 || var_953 == 68 || var_953 == 151 || var_953 == 168) {
                 var_83[var_673].Var15 = 1;
             }
@@ -18602,6 +11344,7 @@ function func556(this: any) {
             var_83[var_673].Var14 = 1;
         }
         var_83[var_673].Var15 = 0;
+
         if (var_953 == 20 || var_953 == 39 || var_953 == 60 || var_953 == 64 || var_953 == 101 || var_953 == 102 || var_953 == 103 || var_953 == 104 || var_953 == 117 || var_953 == 111 || var_953 == 96 || var_953 == 68 || var_953 == 151 || var_953 == 168) {
             var_83[var_673].Var15 = 1;
         }
@@ -22984,6 +15727,7 @@ function func569(this: any) {
                     var_616++;
                 }
             }
+            // enemy_list = 113 DIOと enemy_list = 114 最高にハイなDIOの設定
             if (var_83[var_2611].Var0 == 113 || var_83[var_2611].Var0 == 114) {
                 var_616 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
@@ -26529,6 +19273,7 @@ function func575(this: any) {
                     var_616++;
                 }
             }
+            // enemy_list = 113 DIOと enemy_list = 114 最高にハイなDIOの設定
             if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114) {
                 if (var_83[var_673].Var10 != 14 && var_201 == var_83[var_673].Var10) {
                     var_616 = 1;
@@ -29071,6 +21816,7 @@ function func580(this: any) {
         return;
     });
 }
+// 各敵の能力動作処理設定
 function func581(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(581);
@@ -29260,6 +22006,7 @@ function func581(this: any) {
             }
             return;
         }
+        // DIOと最高にハイなDIと承太郎の設定 時止め系?
         if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114 || var_83[var_673].Var0 == 128) {
             if (var_83[var_673].Var18 == 1) {
                 yield func614();
@@ -29700,6 +22447,7 @@ function func582(this: any) {
         return;
     });
 }
+// 敵の射撃攻撃モーション処理(ドット絵座標設定等)
 function func583(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(583);
@@ -30436,6 +23184,7 @@ function func585(this: any) {
         if (equip_disc[205] == 1) {
             var_209 = Math.floor(var_209 * 2 / 3);
         }
+        // アイテム「鉄球」を使用して射撃攻撃ダメージがアップしている場合
         if (var_168 == 1) {
             var_209 = Math.floor(var_209 * 2 / 3);
         }
@@ -30556,7 +23305,7 @@ function func585(this: any) {
         yield func047();
         if (var_83[var_673].Var0 == 136 && var_211 >= 1) {
             var_1073 = rnd(4);
-            if (var_1073 == 0 && var_178 == 0 && var_215 != 116 && var_125 == 0) {
+            if (var_1073 == 0 && var_178 == 0 && nouryoku_disc_id != 116 && var_125 == 0) {
                 yield func340(); // キー入力による選択処理
         
                 DSPLAY(audio_id = 120);
@@ -30651,19 +23400,19 @@ function func587(this: any) {
         dbgprt(587);
         var_2473 = 0;
         var_2474 = 0;
-        if (var_357 != 0 && var_358 == 0) {
+        if (kougeki_disc_id != 0 && bougyo_disc_id == 0) {
             yield func426();
             if (var_233[var_553].Var4 != 0) {
                 var_2474 = 1;
             }
         }
-        if (var_357 == 0 && var_358 != 0) {
+        if (kougeki_disc_id == 0 && bougyo_disc_id != 0) {
             yield func427();
             if (var_233[var_554].Var4 != 0) {
                 var_2474 = 2;
             }
         }
-        if (var_357 != 0 && var_358 != 0) {
+        if (kougeki_disc_id != 0 && bougyo_disc_id != 0) {
             yield func426();
             yield func427();
             if (var_233[var_553].Var4 == 0 && var_233[var_554].Var4 == 0) {
@@ -30686,7 +23435,7 @@ function func587(this: any) {
                 }
             }
         }
-        if (var_357 == 0 && var_358 == 0) {
+        if (kougeki_disc_id == 0 && bougyo_disc_id == 0) {
             var_2474 = 0;
             var_2473 = 0;
         }
@@ -30704,7 +23453,7 @@ function func587(this: any) {
             var_580 = var_580 - 1;
             var_894 = var_894 - 1;
             var_2473 = 1;
-            belongings_item_list = var_357;
+            belongings_item_list = kougeki_disc_id;
             disc_rarity = var_233[var_553].Var13;
             yield func492(); // アイテムリスト呼び出し
             var_2822 = item_name;
@@ -30715,7 +23464,7 @@ function func587(this: any) {
             var_581 = var_581 - 1;
             var_895 = var_895 - 1;
             var_2473 = 1;
-            belongings_item_list = var_358;
+            belongings_item_list = bougyo_disc_id;
             disc_rarity = var_233[var_554].Var13;
             yield func492(); // アイテムリスト呼び出し
             var_2822 = item_name;
@@ -31603,8 +24352,8 @@ function func595(this: any) {
         var_83[var_673].Var21 = 1;
         var_411 = 1;
         var_411 = 1;
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
         yield func337(); // メッセージ関係呼び出し
@@ -31616,15 +24365,15 @@ function func595(this: any) {
         yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 3;
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
         yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 1;
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 1;
         var_83[var_673].Var21 = 0;
