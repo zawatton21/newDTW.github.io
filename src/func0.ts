@@ -597,53 +597,53 @@ function func008(this: any) {
                 y_axis_map_image = 2;
             }
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             var_93 = rnd(14);
             if (var_93 == 0) {
-                y_axis_map_image = 2;
+                y_axis_map_image = 25; // Ver0.1402 2 → 25へ変更
             }
             if (var_93 == 1) {
-                y_axis_map_image = 3;
+                y_axis_map_image = 25; // Ver0.1402 3 → 25へ変更
             }
             if (var_93 == 2) {
-                y_axis_map_image = 6;
+                y_axis_map_image = 25; // Ver0.1402 6 → 25へ変更
             }
             if (var_93 == 3) {
-                y_axis_map_image = 5;
+                y_axis_map_image = 25; // Ver0.1402 5 → 25へ変更
             }
             if (var_93 == 4) {
-                y_axis_map_image = 4;
+                y_axis_map_image = 25; // Ver0.1402 4 → 25へ変更
             }
             if (var_93 == 5) {
-                y_axis_map_image = 8;
+                y_axis_map_image = 25; // Ver0.1402 8 → 25へ変更
                 var_90 = 0;
             }
             if (var_93 == 6) {
-                y_axis_map_image = 18;
+                y_axis_map_image = 25; // Ver0.1402 18 → 25へ変更
             }
             if (var_93 == 7) {
-                y_axis_map_image = 13;
+                y_axis_map_image = 25; // Ver0.1402 13 → 25へ変更
             }
             if (var_93 == 8) {
-                y_axis_map_image = 14;
+                y_axis_map_image = 25; // Ver0.1402 14 → 25へ変更
             }
             if (var_93 == 9) {
-                y_axis_map_image = 12;
+                y_axis_map_image = 25; // Ver0.1402 12 → 25へ変更
             }
             if (var_93 == 10) {
-                y_axis_map_image = 21;
+                y_axis_map_image = 25; // Ver0.1402 21 → 25へ変更
             }
             if (var_93 == 11) {
-                y_axis_map_image = 20;
+                y_axis_map_image = 25; // Ver0.1402 20 → 25へ変更
             }
             if (var_93 == 12) {
-                y_axis_map_image = 24;
+                y_axis_map_image = 25; // Ver0.1402 24 → 25へ変更
             }
             if (var_93 == 13) {
-                y_axis_map_image = 9;
+                y_axis_map_image = 25; // Ver0.1402 9 → 25へ変更
             }
-            y_axis_map_image = 22;
+            y_axis_map_image = 25; // Ver0.1402 22 → 25へ変更
         }
         if (special_floor == 1) { // 虹村屋敷
             y_axis_map_image = 8;
@@ -721,7 +721,7 @@ function func008(this: any) {
         yield func562();
         yield func560();
         yield func563();
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             yield func564();
         }
@@ -3263,7 +3263,7 @@ function func019(this: any) {
                 if (dangeon_number == 4 && current_floor > dangeon4_floor) {
                     dangeon4_floor = current_floor;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor > dangeon5_floor) {
                     dangeon5_floor = current_floor;
                 }
@@ -5457,7 +5457,7 @@ function func045(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             return;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor == var_20) {
             return;
         }
@@ -5485,7 +5485,7 @@ function func045(this: any) {
         }
         var_73[var_491][var_492] = 1;
         var_200 = var_71[var_491][var_492];
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor != 1) {
             for (let cnt2 = 0; true; ++cnt2) {
                 var_491 = rnd(var_33);
@@ -6588,7 +6588,7 @@ function func060(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_527 = 0;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_527 = 0;
                 }
@@ -6879,7 +6879,7 @@ function func060(this: any) {
                     yield func173();
                     return;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20 && var_73[var_66][var_67] == 1) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
@@ -6988,7 +6988,7 @@ function func060(this: any) {
                     if (dangeon_number == 4 && current_floor > dangeon4_floor) {
                         dangeon4_floor = current_floor;
                     }
-                    // No = 5 なので、鉄の牢獄
+                    // No = 5 なので、鉄獄(鉄の牢獄)
                     if (dangeon_number == 5 && current_floor > dangeon5_floor) {
                         dangeon5_floor = current_floor;
                     }
@@ -7149,7 +7149,7 @@ function func063(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_543 = 1;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_543 = 1;
                 }
@@ -7480,7 +7480,7 @@ function func068(this: any) {
         if (dangeon_number == 4) {
             mes("" + dangeon4_floor + "階");
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             mes("" + dangeon5_floor + "階");
         }
@@ -8420,7 +8420,7 @@ function func075(this: any) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「ウンガロ」によって守られている！";
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor == var_20) {
             comments_row1 = "注意せよ！ この階は";
             comments_row2 = "「" + var_24 + "」によって守られている！";
@@ -8570,7 +8570,7 @@ function func076(this: any) {
                 // 絵文字:一巡後の世界
                 gcopy(34, 640, 800, 340, 40);
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5) {
                 if (current_floor != var_20) {
                     // buffer(34)は"img_syageki.gif"。X座標640、Y座標1040から切り取り長さ X方向340、Y方向40
@@ -8762,7 +8762,7 @@ function func077(this: any) {
             if (dangeon_number == 4) {
                 gcopy(34, 640, 800, 340, 40);
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5) {
                 if (current_floor != var_20) {
                     gcopy(34, 640, 1040, 340, 40);
