@@ -15827,7 +15827,7 @@ function func367(this: any) {
 
         if (var_802 >= 100 && var_802 < 400 && var_862[var_802][0] != 0) {
             var_1664 = 0;
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5 && var_1661 == 0 && var_1660 >= 1) {
                 var_1664 = 1;
             }
@@ -17327,7 +17327,7 @@ function func380(this: any) {
             var_1706[var_1707][1] = "ﾜｲｱｰﾄﾞの罠で自分が釣られるぞ";
             var_1707++;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             var_1719 = 0;
             var_1720 = 1;
@@ -17879,7 +17879,7 @@ function func384(this: any) {
                     }
                 }
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5) {
                 if (var_452 == 0 && current_floor >= 6 && current_floor <= 30 && var_1734 == 0 && special_floor == 0) {
                     var_1768 = rnd(20);
@@ -18410,7 +18410,7 @@ function func385(this: any) {
             }
         }
         // 射撃discの出現確率
-        if (var_1735 == 3) {
+        if (var_1735 == 3 && dangeon_number != 5) { // Ver0.1402にて修正。射撃discはダンジョン「鉄獄」以外で出現するように。
             var_1774 = rnd(5);
             if (var_1774 <= 2) {
                 var_1773 = rnd(100);
@@ -18461,6 +18461,15 @@ function func385(this: any) {
             }
             var_1771 = var_78[var_866].Var0;
             var_862[var_1771][0] = 1;
+        }
+        if (var_1735 == 3 && dangeon_number == 5) { // Ver0.1402にて追加。射撃discをカエルへ。
+            var_1774 = rnd(100);
+            if (var_1773 >= 0 && var_1773 < 64) {
+                var_78[var_866].Var0 = 650;
+            }
+            if (var_1773 >= 64 && var_1773 < 100) {
+                var_78[var_866].Var0 = 651;
+            }
         }
         // 消費アイテムの出現確率
         if (var_1735 == 5) {
@@ -18884,29 +18893,31 @@ function func385(this: any) {
                 }
             }
             if (dangeon_number == 99) {
-                var_78[var_866].Var0 = 641;
+                var_78[var_866].Var0 = 641; // No = 641 消し炭
             }
             if (var_454 == 1) {
-                var_78[var_866].Var0 = 717;
+                var_78[var_866].Var0 = 717; // No = 717 コピー人形の破片
             }
             if (var_1760 == 1) {
-                var_78[var_866].Var0 = 644;
+                var_78[var_866].Var0 = 644; // No = 644 猫バーガー
             }
             if (var_1760 == 2) {
-                var_78[var_866].Var0 = 645;
+                var_78[var_866].Var0 = 645; // No = 645 猫ステーキ
             }
             if (var_1760 == 3) {
-                var_78[var_866].Var0 = 646;
+                var_78[var_866].Var0 = 646; // No = 646 猫ジュース
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
+            // Ver0.1402にてコメントアウト。
+            /*
             if (dangeon_number == 5) {
                 if (var_78[var_866].Var0 >= 900 && var_78[var_866].Var0 < 1000) {
-                    yield func386();
+                    yield func386(); // 床に落ちているアイテムを「消し炭」にする
                 }
                 if (var_78[var_866].Var0 >= 750 && var_78[var_866].Var0 < 800) {
-                    yield func386();
+                    yield func386(); // 床に落ちているアイテムを「消し炭」にする
                 }
-            }
+            }*/
             var_1771 = var_78[var_866].Var0;
             var_862[var_1771][0] = 1;
         }
@@ -18977,18 +18988,20 @@ function func385(this: any) {
                     var_78[var_866].Var0 = 800;
                 }
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
+            // Ver0.1402にてコメントアウト。
+            /*
             if (dangeon_number == 5) {
                 if (var_78[var_866].Var0 == 807) {
-                    yield func386();
+                    yield func386(); // 床に落ちているアイテムを「消し炭」にする
                 }
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5) {
                 if (var_78[var_866].Var0 == 804) {
-                    yield func386();
+                    yield func386(); // 床に落ちているアイテムを「消し炭」にする
                 }
-            }
+            }*/
             if (dangeon_number != 4) {
                 if (var_78[var_866].Var0 == 815) {
                     var_78[var_866].Var0 = 800;
@@ -19065,7 +19078,7 @@ function func385(this: any) {
         return;
     });
 }
-
+// 床に落ちているアイテムを「消し炭」にする
 function func386(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(386);

@@ -1976,7 +1976,7 @@ function func223(this: any) {
         for (let cnt1 = 0; cnt1 < var_952; ++cnt1) {
             yield func627(); // 各ダンジョンごとの出現敵設定
             enemy_list = var_953;
-            yield func626();
+            yield func626(); // 敵リスト
             var_939 = var_939 + enemy_exp_point;
         }
         var_940 = Math.floor(var_939 / var_952);
@@ -2056,7 +2056,7 @@ function func225(this: any) {
                     boxf(var_964, var_963, var_964 + 55, var_963 + 54);
                     gcopy(var_965, 40, var_966 * 40, 40, 40);
                     enemy_list = var_958[var_961];
-                    yield func626();
+                    yield func626(); // 敵リスト
                     font("ＭＳ ゴシック", 12);
                     if (var_957 <= 1) {
                         pos(var_964, var_963 + 42);
@@ -3824,7 +3824,7 @@ function func238(this: any) {
                 var_211 = 0;
                 var_356 = 305;
                 var_1061 = 3;
-                yield func239();
+                yield func239(); // ダンジョンを抜け出す際の動作処理の実行
                 return;
             }
         }
@@ -3841,12 +3841,12 @@ function func238(this: any) {
         return;
     });
 }
-
+// ダンジョンを抜け出す際の動作処理の実行
 function func239(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(239);
         var_212 = 1;
-        yield func672();
+        yield func672(); // ダンジョンを抜け出す際の動作処理
         return;
     });
 }
@@ -4102,7 +4102,7 @@ function func243(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             var_86 = 0;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor == var_20) {
             var_86 = 1;
         }
@@ -4536,7 +4536,7 @@ function func245(this: any) {
         if (dangeon_number <= 2) {
             var_1080 = 0;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             var_1080 = 0;
         }
@@ -4607,7 +4607,7 @@ function func246(this: any) {
         if (dangeon_number == 3) {
             var_1052 = rnd(5);
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             var_1052 = rnd(5);
         }
@@ -4634,7 +4634,7 @@ function func246(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             var_96 = 0;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor == var_20) {
             var_96 = 0;
         }

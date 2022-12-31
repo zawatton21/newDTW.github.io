@@ -1841,7 +1841,7 @@ function func824(this: any) {
         return;
     });
 }
-// ダンジョン内での動作処理
+// ダンジョン「ホテルの外」へ入った時の初期化処理
 function func825(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(825);
@@ -1851,8 +1851,7 @@ function func825(this: any) {
         if (var_3121 >= 1) {
             var_203 = rnd(4); // No = 0:エンヤホテル、No = 1:虹村屋敷、// No = 2:吉良屋敷
         }
-        // No = 1 なので、ホテルの外
-        dangeon_number = 1;
+        dangeon_number = 1; // No = 1 なので、ホテルの外
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
@@ -1947,7 +1946,7 @@ function func826(this: any) {
         return;
     });
 }
-
+// ダンジョン「レクイエムの大迷宮」へ入った時の初期化処理
 function func827(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(827);
@@ -1957,7 +1956,7 @@ function func827(this: any) {
         if (var_3121 == 0 && var_1037 == 0 && wallet == 0 && var_1040 == 0) {
             var_535 = 1;
         }
-        dangeon_number = 2;
+        dangeon_number = 2; // No = 2 レクイエムの大迷宮
         current_floor = 1;
         if (current_floor > var_376) {
             var_376 = current_floor;
@@ -2046,13 +2045,13 @@ function func828(this: any) {
         var_245 = 19;
         var_246 = 45;
         var_546 = 1;
-        var_3200 = 1;
+        var_3200 = 1; // 
         var_548 = 1;
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
 }
-
+// ダンジョン「ディアボロの試練」へ入った時の初期化処理
 function func829(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(829);
@@ -2138,6 +2137,7 @@ function func829(this: any) {
         return;
     });
 }
+
 function func830(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(830);
@@ -2467,11 +2467,11 @@ function func833(this: any) {
             yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
             return;
         }
-        yield func834();
+        yield func834(); // ダンジョン「一巡後の世界」へ入った時の初期化処理
     });
 }
 
-
+// ダンジョン「一巡後の世界」へ入った時の初期化処理
 function func834(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(834);
@@ -2551,7 +2551,7 @@ function func835(this: any) {
             var_298 = "";
             var_299 = 0;
             comments_row1 = "ﾛｯｺ･ﾊﾞﾛｯｺ所長";
-            comments_row2 = "「『鉄の牢獄』に挑戦してみますか？」";
+            comments_row2 = "「『鉄獄』に挑戦してみますか？」"; // Ver0.1402にて修正。「鉄の牢獄」→「鉄獄」
             var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
             var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
             var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
@@ -2660,7 +2660,7 @@ function func835(this: any) {
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            comments_row1a = "名づけて、『鉄の牢獄』！";
+            comments_row1a = "名づけて、『鉄獄』！"; // Ver0.1402にて修正。『鉄の牢獄』→ 『鉄獄』
             comments_row2a = "";
             var_198 = 1;
             var_300 = 0;
@@ -2730,7 +2730,7 @@ function func835(this: any) {
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            comments_row1a = "それでは…　『鉄の牢獄』に";
+            comments_row1a = "それでは…　『鉄獄』に"; // Ver0.1402にて修正。『鉄の牢獄』→ 『鉄獄』
             comments_row2a = "挑戦してみますか？";
             var_198 = 1;
             var_300 = 0;
@@ -2750,7 +2750,7 @@ function func835(this: any) {
         return;
     });
 }
-
+// ダンジョン「鉄獄(鉄の牢獄)」へ入った時の初期化処理
 function func836(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(836);
@@ -2826,7 +2826,6 @@ function func836(this: any) {
         return;
     });
 }
-
 // 店のアイテムを購入せずに帰還した際、NPC マリリン・マンソンの登場処理
 function func837(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -3150,31 +3149,31 @@ function func839(this: any) {
                 if (var_3198 == 1) {
                     var_3198 = 0;
                     var_548 = 0;
-                    yield func825(); // ダンジョン内での動作処理
+                    yield func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
                     return;
                 }
                 if (var_3199 == 1) {
                     var_3199 = 0;
                     var_548 = 0;
-                    yield func827();
+                    yield func827(); // ダンジョン「レクイエムの大迷宮」へ入った時の初期化処理
                     return;
                 }
                 if (var_3200 == 1) {
                     var_3200 = 0;
                     var_548 = 0;
-                    yield func829();
+                    yield func829(); // ダンジョン「ディアボロの試練」へ入った時の初期化処理
                     return;
                 }
                 if (var_3201 == 1) {
                     var_3201 = 0;
                     var_548 = 0;
-                    yield func834();
+                    yield func834(); // ダンジョン「一巡後の世界」へ入った時の初期化処理
                     return;
                 }
                 if (var_3203 == 1) {
                     var_3203 = 0;
                     var_548 = 0;
-                    yield func836();
+                    yield func836(); // ダンジョン「鉄獄(鉄の牢獄)」へ入った時の初期化処理
                     return;
                 }
                 if (var_3192 == 1) {

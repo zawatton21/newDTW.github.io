@@ -1732,14 +1732,14 @@ function func519(this: any) {
                 var_114 = 0;
             }
             enemy_list = 147;
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_2194].Var3 = enemy_hp;
             var_2264 = 1;
         }
         if (var_83[var_2194].Var0 == 135) {
             var_83[var_2194].Var0 = 119;
             enemy_list = 119;
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_2194].Var3 = enemy_hp;
             var_2264 = 1;
         }
@@ -4289,7 +4289,7 @@ function func536(this: any) {
             if (dangeon_number == 3 || dangeon_number == 4) {
                 var_2420 = rnd(27);
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5) {
                 var_2420 = rnd(26);
             }
@@ -4390,7 +4390,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 21;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 21;
                 }
@@ -4411,7 +4411,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 15;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 15;
                 }
@@ -4432,7 +4432,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 3;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 3;
                 }
@@ -4453,7 +4453,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 16;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 16;
                 }
@@ -4474,7 +4474,7 @@ function func536(this: any) {
                 if (dangeon_number == 3 && current_floor == 99) {
                     var_2421 = 9;
                 }
-                // No = 5 なので、鉄の牢獄
+                // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
                     var_2421 = 9;
                 }
@@ -8758,7 +8758,7 @@ function func547(this: any) {
                 if (var_83[var_421].Var0 == 97 && var_83[var_421].Var31 >= 11) {
                     enemy_list = var_83[var_421].Var31;
                 }
-                yield func626();
+                yield func626(); // 敵リスト
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -8836,7 +8836,7 @@ function func547(this: any) {
                     yield func337(); // メッセージ関係呼び出し
                 }
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -8924,7 +8924,7 @@ function func547(this: any) {
                     var_1533++;
                 }
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_402 = var_421;
                 var_314 = var_421;
                 yield func638();
@@ -8954,7 +8954,7 @@ function func547(this: any) {
                     yield func337(); // メッセージ関係呼び出し
                 }
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_402 = var_421;
                 var_314 = var_421;
                 var_340 = 414;
@@ -8999,7 +8999,7 @@ function func547(this: any) {
                     var_1534++;
                 }
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_402 = var_421;
                 var_314 = var_421;
                 var_209 = 40;
@@ -9039,7 +9039,7 @@ function func547(this: any) {
                     var_1546++;
                 }
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_402 = var_421;
                 var_314 = var_421;
                 var_209 = var_565 * 5;
@@ -9160,7 +9160,7 @@ function func547(this: any) {
                 yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "法王の結界が発動した！";
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_402 = var_421;
                 var_314 = var_421;
                 var_340 = 400;
@@ -9200,7 +9200,7 @@ function func547(this: any) {
                 yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "ﾊｲｳｪｲｽﾀｰが養分を吸い取った！";
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_402 = var_421;
                 var_314 = var_421;
                 var_340 = 410;
@@ -9224,7 +9224,7 @@ function func547(this: any) {
                 if (var_83[var_421].Var0 == 97 && var_83[var_421].Var31 >= 11) {
                     enemy_list = var_83[var_421].Var31;
                 }
-                yield func626();
+                yield func626(); // 敵リスト
                 var_2493 = enemy_name;
                 comments_row1 = "";
                 comments_row2 = "";
@@ -9321,7 +9321,7 @@ function func547(this: any) {
                 yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 var_403 = "暗黒風水が発動した！";
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_402 = var_421;
                 var_314 = var_421;
                 yield func638();
@@ -9442,7 +9442,7 @@ function func550(this: any) {
         if (dangeon_number == 4) {
             var_356 = 310;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             var_356 = 313;
         }
@@ -9634,7 +9634,7 @@ function func553(this: any) {
             if (dangeon_number == 3 && current_floor == 99) {
                 var_2497 = 1;
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5 && current_floor == var_20) {
                 var_2497 = 1;
             }
@@ -9798,7 +9798,7 @@ function func554(this: any) {
         }
         if (var_888 == 77) {
             enemy_list = var_2446;
-            yield func626();
+            yield func626(); // 敵リスト
             var_889 = "人質の" + enemy_name;
             var_2498 = "人質だ";
         }
@@ -10026,7 +10026,7 @@ function func555(this: any) {
             var_82[var_440][var_441] = var_673;
             var_83[var_673].Var0 = var_953;
             enemy_list = var_953;
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_673].Var1 = var_440;
             var_83[var_673].Var2 = var_441;
             var_83[var_673].Var3 = enemy_hp;
@@ -11242,7 +11242,7 @@ function func556(this: any) {
         var_82[var_440][var_441] = var_673;
         var_83[var_673].Var0 = var_953;
         enemy_list = var_953;
-        yield func626();
+        yield func626(); // 敵リスト
         var_83[var_673].Var1 = var_440;
         var_83[var_673].Var2 = var_441;
         var_83[var_673].Var3 = enemy_hp;
@@ -11638,7 +11638,7 @@ function func557(this: any) {
         var_82[var_440][var_441] = var_673;
         var_83[var_673].Var0 = var_953;
         enemy_list = var_953;
-        yield func626();
+        yield func626(); // 敵リスト
         var_83[var_673].Var1 = var_440;
         var_83[var_673].Var2 = var_441;
         var_83[var_673].Var3 = enemy_hp;
@@ -12256,7 +12256,7 @@ function func565(this: any) {
             return;
         }
         enemy_list = var_83[var_1641].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_1640 = var_83[var_1641].Var5;
         if (var_409 == 0) {
             var_2577 = 0;
@@ -14918,7 +14918,7 @@ function func568(this: any) {
             var_1274 = ginfo(22);
             var_1275 = ginfo(23);
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && var_83[var_1641].Var16 >= 1000 && var_83[var_1641].Var13 == 0) {
             var_1274 = ginfo(22);
             var_1275 = ginfo(23);
@@ -15113,7 +15113,7 @@ function func569(this: any) {
                     if (var_96 >= 1 && var_201 == var_204) {
                         var_2625 = 1;
                     }
-                    // No = 5 なので、鉄の牢獄
+                    // No = 5 なので、鉄獄(鉄の牢獄)
                     if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                         var_2625 = 1;
                     }
@@ -15139,7 +15139,7 @@ function func569(this: any) {
                     if (equip_disc[107] == 1 && equip_disc[350] == 1) {
                         var_2625 = rnd(3);
                     }
-                    // No = 5 なので、鉄の牢獄
+                    // No = 5 なので、鉄獄(鉄の牢獄)
                     if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                         var_2625 = 1;
                     }
@@ -15469,17 +15469,19 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 3;
             }
         }
+        // 敵の瞬間移動能力
         if (var_83[var_2611].Var20 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
+            // enemy_list = 3 タワーオブグレー、44 レッド・ホット・チリ・ペッパー、115 アクア・ネックレス、27 ゲブ神、18 ブラック・サバス、86 サンタナ
             if (var_83[var_2611].Var0 == 3 || var_83[var_2611].Var0 == 44 || var_83[var_2611].Var0 == 115 || var_83[var_2611].Var0 == 27 || var_83[var_2611].Var0 == 18 || var_83[var_2611].Var0 == 86) {
-                if (var_83[var_2611].Var0 == 27) {
+                if (var_83[var_2611].Var0 == 27) { // enemy_list = 27 ゲブ神
                     var_83[var_2611].Var4 = 5;
                 }
-                if (var_201 != 14 && var_83[var_2611].Var10 == var_201) {
+                if (var_201 != 14 && var_83[var_2611].Var10 == var_201) { // 部屋にいる時のみ発動
                     var_2639 = rnd(3);
-                    if (var_83[var_2611].Var0 == 3) {
+                    if (var_83[var_2611].Var0 == 3) { // enemy_list = 3 タワーオブグレー
                         var_2639 = rnd(2);
                     }
-                    if (var_83[var_2611].Var0 == 86) {
+                    if (var_83[var_2611].Var0 == 86) { // enemy_list = 86 サンタナ
                         var_2639 = rnd(4);
                     }
                     if (var_2639 == 0) {
@@ -15511,6 +15513,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 48 エアロスミス、enemy_list == 15 ペットショップ
             if (var_83[var_2611].Var0 == 48 || var_83[var_2611].Var0 == 15) {
                 if (var_201 != 14 && var_83[var_2611].Var10 != var_201 && var_83[var_2611].Var20 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
                     var_2639 = rnd(10);
@@ -15536,37 +15539,48 @@ function func569(this: any) {
             if (var_83[var_2611].Var0 == 10 && var_133 != 0) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 31 吉良の親父
             if (var_83[var_2611].Var0 == 31) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 43 セッコ
             if (var_83[var_2611].Var0 == 43) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 85 リゾット
             if (var_83[var_2611].Var0 == 85) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 153 マックイィーン
             if (var_83[var_2611].Var0 == 153) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 99 マンハッタントランスファー
             if (var_83[var_2611].Var0 == 99) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 37 猫
             if (var_83[var_2611].Var0 == 37) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 147 ジョセフ(4部)
             if (var_83[var_2611].Var0 == 147) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 149 不明
             if (var_83[var_2611].Var0 == 149) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 170 カタツムリ
             if (var_83[var_2611].Var0 == 170) {
                 var_83[var_2611].Var4 = 1;
             }
+            // enemy_list = 109 ワムウ
             if (var_83[var_2611].Var0 == 109 && var_83[var_2611].Var30 == 1) {
                 var_83[var_2611].Var4 = 1;
             }
         }
+        // enemy_list = 36 スピードワゴン
         if (var_83[var_2611].Var0 == 36) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15574,6 +15588,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 58 ボインゴ
         if (var_83[var_2611].Var0 == 58) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15581,6 +15596,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 57 SPW財団の男
         if (var_83[var_2611].Var0 == 57) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15588,6 +15604,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 74 サヴェジガーデン
         if (var_83[var_2611].Var0 == 74) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15595,6 +15612,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 81 アバッキオ
         if (var_83[var_2611].Var0 == 81) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15602,6 +15620,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 83 間田
         if (var_83[var_2611].Var0 == 83) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15609,6 +15628,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 105 ツェペリさん
         if (var_83[var_2611].Var0 == 105) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15616,6 +15636,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 106 ペッシ
         if (var_83[var_2611].Var0 == 106) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15630,6 +15651,7 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 108 イギー
         if (var_83[var_2611].Var0 == 108) {
             var_83[var_2611].Var4 = 3;
             // No = 0 なので、拠点(ホテル、亀、)
@@ -15637,9 +15659,11 @@ function func569(this: any) {
                 var_83[var_2611].Var4 = 0;
             }
         }
+        // enemy_list = 163 ヤク中の少年
         if (var_83[var_2611].Var0 == 163) {
             var_83[var_2611].Var4 = 1;
         }
+        // enemy_list = 82 不明
         if (var_83[var_2611].Var0 == 82) {
             var_83[var_2611].Var4 = 0;
         }
@@ -15649,9 +15673,11 @@ function func569(this: any) {
         if (var_83[var_2611].Var31 == 5 && var_71[var_66][var_67] == 13) {
             var_83[var_2611].Var4 = 1;
         }
+        // enemy_list = 49 コピー人形
         if (var_83[var_2611].Var0 == 49) {
             var_83[var_2611].Var4 = 1;
         }
+        // enemy_list = 48 エアロスミスでなければ
         if (var_131 >= 1 && var_83[var_2611].Var0 != 48) {
             var_83[var_2611].Var4 = 3;
         }
@@ -15670,6 +15696,7 @@ function func569(this: any) {
                     var_83[var_2611].Var4 = 2;
                     break;
                 }
+                // enemy_list = 49 コピー人形
                 if (var_83[var_616].Var0 == 49 && var_83[var_2611].Var31 != 5 && var_83[var_2611].Var31 != 4 && var_83[var_2611].Var4 == 2 && var_83[var_616].Var10 == var_83[var_2611].Var10) {
                     var_2618 = 1;
                     var_2644 = var_83[var_616].Var1;
@@ -15686,6 +15713,7 @@ function func569(this: any) {
             }
         }
         if (var_83[var_2611].Var20 == 0 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0) {
+            // enemy_list = 134 ジョリーン、enemy_list = 35 仗助
             if (var_83[var_2611].Var0 == 134 || var_83[var_2611].Var0 == 35) {
                 var_616 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
@@ -15702,6 +15730,7 @@ function func569(this: any) {
                     var_616++;
                 }
             }
+            // enemy_list = 86 サンタナ
             if (var_83[var_2611].Var0 == 86) {
                 var_616 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
@@ -15714,6 +15743,7 @@ function func569(this: any) {
                     var_616++;
                 }
             }
+            // enemy_list = 165 エボニーデビル、enemy_list = 164 エシディシの脳
             if (var_83[var_2611].Var0 == 165 || var_83[var_2611].Var0 == 164) {
                 var_83[var_2611].Var4 = 3;
                 var_616 = 1;
@@ -15731,7 +15761,7 @@ function func569(this: any) {
             if (var_83[var_2611].Var0 == 113 || var_83[var_2611].Var0 == 114) {
                 var_616 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
-                    if (var_83[var_616].Var0 == 119) {
+                    if (var_83[var_616].Var0 == 119) { // enemy_list = 119 ジョセフ(3部)
                         if (var_83[var_2611].Var10 == var_83[var_616].Var10 && var_83[var_2611].Var10 != 14) {
                             var_83[var_2611].Var4 = 2;
                             var_2618 = 1;
@@ -15742,6 +15772,7 @@ function func569(this: any) {
                     var_616++;
                 }
             }
+            // enemy_list = 44 レッド・ホット・チリ・ペッパー
             if (var_83[var_2611].Var0 == 44) {
                 var_616 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
@@ -15756,9 +15787,11 @@ function func569(this: any) {
                     var_616++;
                 }
             }
+            // enemy_list == 134 ジョリーン
             if (var_83[var_2611].Var0 == 134 && var_83[var_2611].Var10 != 14) {
                 var_2648 = 1;
                 for (let cnt3 = 0; cnt3 < var_336; ++cnt3) {
+                    // No = 572 承太郎のDISCが床に落ちていれば
                     if (var_78[var_2648].Var0 == 572 && var_78[var_2648].Var9 == var_83[var_2611].Var10) {
                         var_83[var_2611].Var4 = 2;
                         var_2618 = 1;
@@ -15774,6 +15807,7 @@ function func569(this: any) {
                     var_2648 = var_2648 + 1;
                 }
             }
+            // enemy_list == 17 シアハートアタック
             if (var_83[var_2611].Var0 == 17 && var_83[var_2611].Var10 != 14) {
                 var_2648 = 1;
                 for (let cnt3 = 0; cnt3 < var_336; ++cnt3) {
@@ -15792,6 +15826,7 @@ function func569(this: any) {
                     var_2648 = var_2648 + 1;
                 }
             }
+            // enemy_list == 32 吉良吉影、enemy_list == 137 成長した吉良
             if (var_83[var_2611].Var0 == 32 || var_83[var_2611].Var0 == 137) {
                 if (var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var10 != 14 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0) {
                     var_2646 = var_2611;
@@ -15835,6 +15870,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 87 エシディシ
             if (var_83[var_2611].Var0 == 87) {
                 if (var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var10 != 14 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0) {
                     var_2646 = var_2611;
@@ -15867,6 +15903,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 26 ハーヴェスト
             if (var_83[var_2611].Var0 == 26) {
                 if (var_83[var_2611].Var26 == 0 && var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var10 != 14 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0) {
                     var_2646 = var_2611;
@@ -15895,7 +15932,7 @@ function func569(this: any) {
                     var_83[var_2611].Var4 = 0;
                 }
             }
-            // No = 61 ヨーヨーマッ
+            // enemy_list == 61 ヨーヨーマッ
             if (var_83[var_2611].Var0 == 61 && var_83[var_2611].Var10 != 14) {
                 var_2648 = 1;
                 for (let cnt3 = 0; cnt3 < var_336; ++cnt3) {
@@ -15916,15 +15953,18 @@ function func569(this: any) {
                     var_2648 = var_2648 + 1;
                 }
             }
+            // enemy_list == 48 エアロスミス
             if (var_83[var_2611].Var0 == 48 && var_83[var_2611].Var10 != 14) {
                 var_2648 = 1;
                 for (let cnt3 = 0; cnt3 < var_336; ++cnt3) {
+                    // No = 713 ポルポのライター
                     if (var_78[var_2648].Var0 == 713 && var_78[var_2648].Var9 == var_83[var_2611].Var10) {
                         var_83[var_2611].Var4 = 1;
                     }
                     var_2648 = var_2648 + 1;
                 }
             }
+            // enemy_list == 1 ヤク中のゴロツキ
             if (var_83[var_2611].Var0 == 1) {
                 var_83[var_2611].Var4 = 1;
                 if (var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var10 != 14) {
@@ -15957,7 +15997,7 @@ function func569(this: any) {
                 if (var_83[var_2611].Var4 == 1 && var_83[var_2611].Var1 >= var_2635 && var_83[var_2611].Var1 <= var_2636 && var_83[var_2611].Var2 >= var_2638 && var_83[var_2611].Var2 <= var_2637) {
                     var_2653 = 1;
                     for (let cnt4 = 0; cnt4 < var_224; ++cnt4) {
-                        if (var_233[var_2653].Var0 == 725) {
+                        if (var_233[var_2653].Var0 == 725) { // No = 725 オレッちのコートを所持している場合
                             var_83[var_2611].Var4 = 2;
                             var_2617 = 0;
                             break;
@@ -15966,6 +16006,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 76 エコーズACT2
             if (var_83[var_2611].Var0 == 76 && var_83[var_2611].Var10 <= 12 && var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
                 if (var_77[var_423][var_424] == 0 && var_80[var_423][var_424] == 0 && var_73[var_423][var_424] == 0) {
                     var_2654 = rnd(4);
@@ -15987,6 +16028,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 65 虹村形兆
             if (var_83[var_2611].Var0 == 65 && var_83[var_2611].Var10 <= 12 && var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
                 if (var_77[var_423][var_424] == 0 && var_80[var_423][var_424] == 0 && var_73[var_423][var_424] == 0) {
                     var_2654 = rnd(8);
@@ -16010,6 +16052,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 148 エルメェス
             if (var_83[var_2611].Var0 == 148 && var_83[var_2611].Var29 < 3 && var_83[var_2611].Var10 <= 12 && var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
                 if (var_77[var_423][var_424] == 0 && var_80[var_423][var_424] == 0 && var_73[var_423][var_424] == 0) {
                     var_2654 = rnd(4);
@@ -16021,6 +16064,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 135 若ジョセフ
             if (var_83[var_2611].Var0 == 135 && var_83[var_2611].Var10 <= 12 && var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
                 if (var_77[var_423][var_424] == 0 && var_80[var_423][var_424] == 0 && var_73[var_423][var_424] == 0) {
                     var_2654 = rnd(4);
@@ -16031,6 +16075,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list == 155 マライア
             if (var_83[var_2611].Var0 == 155 && var_83[var_2611].Var10 <= 12 && var_83[var_2611].Var10 == var_201 && var_83[var_2611].Var17 == 0 && var_83[var_2611].Var23 == 0 && var_83[var_2611].Var12 == 0 && var_83[var_2611].Var13 == 0) {
                 if (var_77[var_423][var_424] == 0 && var_80[var_423][var_424] == 0 && var_73[var_423][var_424] == 0) {
                     var_2654 = rnd(4);
@@ -16053,10 +16098,10 @@ function func569(this: any) {
                 }
             }
         }
-        if (var_83[var_2611].Var0 == 33) {
+        if (var_83[var_2611].Var0 == 33) { // enemy_list == 33 トニオさん
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 33 && var_72[var_66][var_67] >= 1) {
+        if (var_83[var_2611].Var0 == 33 && var_72[var_66][var_67] >= 1) { // enemy_list == 33 トニオさん
             yield func721();
             if (var_1008 > 0) {
                 var_83[var_2611].Var4 = 2;
@@ -16084,88 +16129,88 @@ function func569(this: any) {
                 }
             }
         }
-        if (var_83[var_2611].Var0 == 26 && var_83[var_2611].Var26 >= 1 && var_83[var_2611].Var20 == 0) {
+        if (var_83[var_2611].Var0 == 26 && var_83[var_2611].Var26 >= 1 && var_83[var_2611].Var20 == 0) { // enemy_list == ハーヴェスト
             var_83[var_2611].Var4 = 6;
         }
-        if (var_83[var_2611].Var0 == 144 && var_83[var_2611].Var26 >= 1 && var_83[var_2611].Var20 == 0) {
+        if (var_83[var_2611].Var0 == 144 && var_83[var_2611].Var26 >= 1 && var_83[var_2611].Var20 == 0) { // enemy_list == 144 川尻浩作
+        }
+        if (var_83[var_2611].Var0 == 116 && var_83[var_2611].Var26 >= 1 && var_83[var_2611].Var20 == 0) { // enemy_list == 116 玉美
             var_83[var_2611].Var4 = 6;
         }
-        if (var_83[var_2611].Var0 == 116 && var_83[var_2611].Var26 >= 1 && var_83[var_2611].Var20 == 0) {
+        if (var_83[var_2611].Var0 == 117 && var_83[var_2611].Var20 == 0) { // enemy_list == 117 チョコラータの上半身
             var_83[var_2611].Var4 = 6;
         }
-        if (var_83[var_2611].Var0 == 117 && var_83[var_2611].Var20 == 0) {
-            var_83[var_2611].Var4 = 6;
-        }
-        if (var_83[var_2611].Var23 >= 1 && var_83[var_2611].Var0 != 118) {
+        if (var_83[var_2611].Var23 >= 1 && var_83[var_2611].Var0 != 118) { // enemy_list == 118 クリームじゃなければ
             var_83[var_2611].Var4 = 7;
         }
-        if (var_218 >= 1 && var_83[var_2611].Var0 != 33) {
+        if (var_218 >= 1 && var_83[var_2611].Var0 != 33) { // enemy_list == 33 トニオさんじゃなければ
             var_83[var_2611].Var4 = 3;
         }
-        if (var_144 >= 1 && var_83[var_2611].Var0 != 33) {
+        if (var_144 >= 1 && var_83[var_2611].Var0 != 33) { // enemy_list == 33 トニオさんじゃなければ
             var_83[var_2611].Var4 = 3;
         }
         if (var_83[var_2611].Var17 >= 1) {
             var_83[var_2611].Var4 = 1;
         }
-        if (var_83[var_2611].Var0 == 91) {
+        if (var_83[var_2611].Var0 == 91) { // enemy_list == 91 ACT1のさなぎ
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 92) {
+        if (var_83[var_2611].Var0 == 92) { // enemy_list == 92 ACT2のさなぎ
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 94 && var_83[var_2611].Var23 == 0) {
+        if (var_83[var_2611].Var0 == 94 && var_83[var_2611].Var23 == 0) { // enemy_list == 94 ブルりん
             var_83[var_2611].Var4 = 5;
         }
-        if (var_83[var_2611].Var0 == 21 && var_83[var_2611].Var23 == 0) {
+        if (var_83[var_2611].Var0 == 21 && var_83[var_2611].Var23 == 0) { // enemy_list == 21 ストレイキャット
             var_83[var_2611].Var4 = 5;
         }
-        if (var_83[var_2611].Var0 == 172 && var_83[var_2611].Var23 == 0) {
+        if (var_83[var_2611].Var0 == 172 && var_83[var_2611].Var23 == 0) { // enemy_list == 172 虫食いでない
             var_83[var_2611].Var4 = 5;
         }
+        // enemy_list == 27 ゲブ神、94 ブルりん、21 ストレイキャット、172 虫食いでない
         if (var_83[var_2611].Var0 == 27 || var_83[var_2611].Var0 == 94 || var_83[var_2611].Var0 == 21 || var_83[var_2611].Var0 == 172) {
             if (var_83[var_2611].Var23 >= 1 || var_218 >= 1 || var_144 >= 1 || var_131 >= 1) {
                 var_83[var_2611].Var4 = 0;
             }
         }
-        if (var_83[var_2611].Var0 == 19) {
+        if (var_83[var_2611].Var0 == 19) { // enemy_list == 19 アラビアファッツ
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 90) {
+        if (var_83[var_2611].Var0 == 90) { // enemy_list == 0 岩
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 23) {
+        if (var_83[var_2611].Var0 == 23) { // enemy_list == 23 ただの死体
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 70) {
+        if (var_83[var_2611].Var0 == 70) { // enemy_list == 70 ダービー
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 53) {
+        if (var_83[var_2611].Var0 == 53) { // enemy_list == 53 エクスペリエンスの花
             var_83[var_2611].Var4 = 0;
         }
         if (var_83[var_2611].Var0 == 55) { // enemy_list = 55 なので亀
             var_83[var_2611].Var4 = 1;
         }
-        if (var_83[var_2611].Var0 == 75) {
+        if (var_83[var_2611].Var0 == 75) { // enemy_list == 75 鮮血のシャボン
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 96) {
+        if (var_83[var_2611].Var0 == 96) { // enemy_list == 96 感電エンポリオ
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 79) {
+        if (var_83[var_2611].Var0 == 79) { // enemy_list == 79 エコーズの卵
             var_83[var_2611].Var4 = 0;
         }
+        // enemy_list == 69 ブラフォード
         if (var_83[var_2611].Var0 == 69 && var_114 >= 1 && var_66 == var_461 && var_67 == var_462) {
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 50) {
+        if (var_83[var_2611].Var0 == 50) { // enemy_list == 50 元いた場所
             var_83[var_2611].Var4 = 0;
         }
-        if (var_83[var_2611].Var0 == 142) {
+        if (var_83[var_2611].Var0 == 142) { // enemy_list == 142 露伴
             var_83[var_2611].Var4 = 0;
         }
-        // enemy_list = 173 NPC ロッコ・バロッコ所長
-        if (var_83[var_2611].Var0 == 173) {
+        if (var_83[var_2611].Var0 == 173) { // enemy_list = 173 NPC ロッコ・バロッコ所長
             var_83[var_2611].Var4 = 0;
         }
         if (var_146 >= 1 && var_147 == var_83[var_2611].Var1 && var_148 == var_83[var_2611].Var2) {
@@ -16238,6 +16283,8 @@ function func569(this: any) {
                     var_609 = 1;
                 }
             }
+            // おそらく敵の壁抜け能力
+            // enemy=list = 43 セッコ、enemy=list = 111 究極カーズ 
             if (var_83[var_2611].Var0 == 43 || var_83[var_2611].Var0 == 111) {
                 if (var_83[var_2611].Var20 == 0 && dangeon_number != 0) {
                     var_602 = 0;
@@ -16274,6 +16321,7 @@ function func569(this: any) {
                     }
                 }
             }
+            // enemy_list = 118 クリーム
             if (var_83[var_2611].Var0 == 118) {
                 if (var_83[var_2611].Var20 == 0 && dangeon_number != 0) {
                     var_602 = 0;
@@ -17415,7 +17463,9 @@ function func569(this: any) {
                     }
                 }
             }
+            // 敵の瞬間移動能力
             if (var_83[var_2611].Var4 == 4) {
+                // enemy_list = 3 タワーオブグレー、44 レッド・ホット・チリ・ペッパー、115 アクア・ネックレス、27 ゲブ神、18 ブラック・サバス、118 クリーム、86 サンタナ、48 エアロスミス、15 ペットショップ
                 if (var_83[var_2611].Var0 == 3 || var_83[var_2611].Var0 == 44 || var_83[var_2611].Var0 == 115 || var_83[var_2611].Var0 == 27 || var_83[var_2611].Var0 == 18 || var_83[var_2611].Var0 == 118 || var_83[var_2611].Var0 == 86 || var_83[var_2611].Var0 == 48 || var_83[var_2611].Var0 == 15) {
                     var_2671 = var_2611;
                     var_2672 = var_83[var_2671].Var1;
@@ -17424,12 +17474,14 @@ function func569(this: any) {
                     for (let cnt4 = 0; cnt4 < 500; ++cnt4) {
                         var_2350 = rnd(var_33);
                         var_2351 = rnd(var_34);
+                        // enemy_list = 118 クリームじゃなければ
                         if (var_83[var_2611].Var0 != 118 && var_71[var_2350][var_2351] == var_201 && var_65[var_2350][var_2351] == 0 && var_82[var_2350][var_2351] == 0 && var_71[var_2350][var_2351] != 13) {
                             if (var_2350 > var_2621 && var_2350 < var_2622 && var_2351 > var_2624 && var_2351 < var_2623) {
                                 var_1349 = 1;
                                 break;
                             }
                         }
+                        // enemy_list = 118 クリームであれば
                         if (var_83[var_2611].Var0 == 118 && var_65[var_2350][var_2351] == 0 && var_82[var_2350][var_2351] == 0) {
                             if (var_2350 > var_2621 && var_2350 < var_2622 && var_2351 > var_2624 && var_2351 < var_2623) {
                                 var_1349 = 1;
@@ -17450,7 +17502,7 @@ function func569(this: any) {
                         var_82[var_2672][var_2673] = 0;
                         var_83[var_2671].Var10 = var_71[var_2350][var_2351];
                         var_83[var_2671].Var11 = 2;
-                        if (var_83[var_2611].Var0 == 118) {
+                        if (var_83[var_2611].Var0 == 118) { // enemy_list = 118 クリームであれば
                             var_83[var_2671].Var11 = 1;
                         }
                         var_83[var_2671].Var22 = 1;
@@ -17514,7 +17566,7 @@ function func569(this: any) {
             }
             if (var_83[var_2611].Var4 == 7) {
                 var_610 = 0;
-                if (var_83[var_2611].Var0 != 118) {
+                if (var_83[var_2611].Var0 != 118) { // enemy_list = 118 クリームでなければ
                     if (var_610 == 0 && var_602 == 0 && var_83[var_2611].Var5 == 4 && var_82[var_425][var_424] == 0 && var_71[var_425][var_424] != 13 && var_65[var_425][var_424] == 0) {
                         var_423 = var_423 - 1;
                         var_83[var_2611].Var5 = 4;
@@ -17560,7 +17612,7 @@ function func569(this: any) {
                         var_610 = 1;
                     }
                 }
-                if (var_83[var_2611].Var0 == 118) {
+                if (var_83[var_2611].Var0 == 118) { // enemy_list = 118 クリームであれば
                     if (var_610 == 0 && var_602 == 0 && var_83[var_2611].Var5 == 4 && var_82[var_425][var_424] == 0 && var_65[var_425][var_424] == 0) {
                         var_423 = var_423 - 1;
                         var_83[var_2611].Var5 = 4;
@@ -17661,6 +17713,7 @@ function func569(this: any) {
                 var_83[var_2611].Var2 = var_424;
                 var_82[var_2619][var_2620] = 0;
                 var_82[var_423][var_424] = var_2614;
+                // enemy_list = 118 クリームであれば
                 if (var_83[var_2611].Var0 == 118 && var_83[var_2611].Var20 == 0 && var_83[var_2611].Var10 == 0) {
                     var_71[var_423][var_424] = 14;
                     var_2676 = 14;
@@ -18715,6 +18768,7 @@ function func573(this: any) {
         return;
     });
 }
+// おそらく敵のワープ機能のグラフィック処理
 function func574(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(574);
@@ -18829,7 +18883,8 @@ function func574(this: any) {
                         yield func337(); // メッセージ関係呼び出し
                     }
                 }
-                if (var_83[var_2694].Var0 == 3) {
+                // 瞬間移動後の画像処理
+                if (var_83[var_2694].Var0 == 3) { // enemy_list = 3 タワーオブグレー
                     var_83[var_2694].Var11 = 0;
                     var_271 = 1;
                     var_1306 = 1;
@@ -21644,7 +21699,7 @@ function func578(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(578);
         enemy_list = var_83[var_2646].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_2792 = enemy_hp;
         if (var_83[var_2646].Var39 >= 2) {
             var_2792 = Math.floor(enemy_hp * (var_83[var_2646].Var39 + 10) / 10);
@@ -21682,7 +21737,7 @@ function func579(this: any) {
                     if (var_83[var_673].Var9 == 1) {
                         var_2794 = var_66;
                         var_2795 = var_67;
-                        yield func654();
+                        yield func654(); // 敵の攻撃動作処理
                     }
                     if (var_83[var_673].Var9 == 1 && var_83[var_673].Var27 == 0) {
                         if (var_211 != 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_66 == var_2794 && var_67 == var_2795 && var_83[var_673].Var13 == 0) {
@@ -21690,20 +21745,20 @@ function func579(this: any) {
                                 var_2796 = 1;
                                 var_2794 = var_66;
                                 var_2795 = var_67;
-                                yield func654();
+                                yield func654(); // 敵の攻撃動作処理
                                 var_2796 = 0;
                             }
                         }
                         if (var_211 != 0 && var_157 == 0 && var_66 == var_2794 && var_67 == var_2795 && var_83[var_673].Var15 == 1 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_83[var_673].Var0 != 101 && var_83[var_673].Var0 != 102 && var_83[var_673].Var0 != 103 && var_83[var_673].Var0 != 104 && var_83[var_673].Var0 != 151 && var_83[var_673].Var13 == 0) {
                             var_2794 = var_66;
                             var_2795 = var_67;
-                            yield func654();
+                            yield func654(); // 敵の攻撃動作処理
                             if (var_211 != 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_66 == var_2794 && var_67 == var_2795 && var_83[var_673].Var13 == 0) {
                                 if (var_83[var_673].Var0 == 122 || var_83[var_673].Var0 == 129 || var_83[var_673].Var0 == 44 || var_83[var_673].Var0 == 110 || var_83[var_673].Var0 == 162 || var_83[var_673].Var0 == 60) {
                                     var_2796 = 1;
                                     var_2794 = var_66;
                                     var_2795 = var_67;
-                                    yield func654();
+                                    yield func654(); // 敵の攻撃動作処理
                                     var_2796 = 0;
                                 }
                             }
@@ -21716,20 +21771,20 @@ function func579(this: any) {
                                 var_2796 = 1;
                                 var_2794 = var_66;
                                 var_2795 = var_67;
-                                yield func654();
+                                yield func654(); // 敵の攻撃動作処理
                                 var_2796 = 0;
                             }
                         }
                         if (var_83[var_2793].Var0 != 0 && var_83[var_2793].Var3 != 0 && var_83[var_2793].Var15 == 0 && var_83[var_673].Var15 == 1 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_83[var_673].Var0 != 101 && var_83[var_673].Var0 != 102 && var_83[var_673].Var0 != 103 && var_83[var_673].Var0 != 104 && var_83[var_673].Var0 != 151 && var_83[var_673].Var13 == 0) {
                             var_2794 = var_66;
                             var_2795 = var_67;
-                            yield func654();
+                            yield func654(); // 敵の攻撃動作処理
                             if (var_83[var_2793].Var0 != 0 && var_83[var_2793].Var3 != 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_83[var_673].Var13 == 0) {
                                 if (var_83[var_673].Var0 == 122 || var_83[var_673].Var0 == 129 || var_83[var_673].Var0 == 44 || var_83[var_673].Var0 == 110 || var_83[var_673].Var0 == 162 || var_83[var_673].Var0 == 60) {
                                     var_2796 = 1;
                                     var_2794 = var_66;
                                     var_2795 = var_67;
-                                    yield func654();
+                                    yield func654(); // 敵の攻撃動作処理
                                     var_2796 = 0;
                                 }
                             }
@@ -23152,7 +23207,7 @@ function func585(this: any) {
         var_674 = var_83[var_673].Var0;
         yield func096();
         enemy_list = var_83[var_673].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         if (var_83[var_673].Var39 >= 2) {
             enemy_power = Math.floor(enemy_power * (var_83[var_673].Var39 * 2 + 10) / 10);
         }
@@ -23347,10 +23402,10 @@ function func586(this: any) {
         var_2819 = var_673;
         var_402 = var_82[var_455][var_456];
         enemy_list = var_83[var_402].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_971 = enemy_defence;
         enemy_list = var_83[var_2819].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_2820 = enemy_power;
         if (var_83[var_402].Var0 == 53) {
             var_971 = enemy_defence;
@@ -24356,20 +24411,20 @@ function func595(this: any) {
         // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 1;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 3;
         // yield func337(); // メッセージ関係呼び出し
         // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 2;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_411 = 1;
         // yield func337(); // メッセージ関係呼び出し
@@ -25093,8 +25148,9 @@ function func598(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
+        // No = 115 G・エクスペリエンスのDISCを装備している場合
         if (equip_disc[115] == 1) {
-            yield func695();
+            yield func695(); // 敵からのダメージを反射する際の動作処理
             if (var_2855 != 0) {
                 var_2855 = 0;
                 return;
@@ -25159,8 +25215,9 @@ function func599(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
+        // No = 115 G・エクスペリエンスのDISCを装備している場合
         if (equip_disc[115] == 1) {
-            yield func695();
+            yield func695(); // 敵からのダメージを反射する際の動作処理
             if (var_2855 != 0) {
                 var_2855 = 0;
                 return;

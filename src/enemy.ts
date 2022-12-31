@@ -9,10 +9,61 @@ function enemy002(this: any) {
 
     });
 }
-
+// Ver0.1402にて追加。No = 3 敵タワーオブグレーの特殊能力。瞬間移動。
 function enemy003(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
-
+        if (var_201 != 14 && var_83[var_314].Var10 == var_201) { // 部屋にいる時のみ発動
+            var_2672 = var_83[var_314].Var1;
+            var_2673 = var_83[var_314].Var2;
+            var_1349 = 0;
+            for (let cnt4 = 0; cnt4 < 500; ++cnt4) {
+                var_2350 = rnd(var_33);
+                var_2351 = rnd(var_34);
+                // enemy_list = 118 クリームじゃなければ
+                if (var_71[var_2350][var_2351] == var_201 && var_65[var_2350][var_2351] == 0 && var_82[var_2350][var_2351] == 0 && var_71[var_2350][var_2351] != 13) {
+                    if (var_2350 > var_2621 && var_2350 < var_2622 && var_2351 > var_2624 && var_2351 < var_2623) {
+                        var_1349 = 1;
+                        break;
+                    }
+                }
+            }
+            if (var_1349 == 0) {
+                var_2350 = var_2672;
+                var_2351 = var_2673;
+            }
+            if (var_1349 == 1) {
+                var_83[var_314].Var35 = var_2672;
+                var_83[var_314].Var36 = var_2673;
+                var_83[var_314].Var1 = var_2350;
+                var_83[var_314].Var2 = var_2351;
+                var_82[var_2350][var_2351] = var_82[var_2672][var_2673];
+                var_82[var_2672][var_2673] = 0;
+                var_83[var_314].Var10 = var_71[var_2350][var_2351];
+                var_83[var_314].Var11 = 2;
+                var_83[var_314].Var22 = 1;
+                var_83[var_314].Var6 = 0;
+                var_83[var_314].Var5 = 2;
+            }
+        }
+        // 瞬間移動後の画像処理
+        var_83[var_314].Var11 = 0;
+        var_271 = 1;
+        var_1306 = 1;
+        var_1286 = (var_83[var_314].Var1 - var_66 + 4) * 40;
+        var_1287 = (var_83[var_314].Var2 - var_67 + 4) * 40 - 50;
+        DSPLAY(audio_id = 190);
+        for (let cnt4 = 0; cnt4 < 5; ++cnt4) {
+            yield func337(); // メッセージ関係呼び出し
+            var_1306 = var_1306 + 1;
+        }
+        var_1306 = 0;
+        var_271 = 0;// ここまで (瞬間移動後の画像処理)
+        yield func047();
+        for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
+            yield func337(); // メッセージ関係呼び出し
+        }
+        var_2197 = 1;
+        return;
     });
 }
 // No = 4 敵デス・13の特殊能力

@@ -292,7 +292,7 @@ function func402(this: any) {
         return;
     });
 }
-
+// 装備したdiscを床に置く時(取り外す際)の動作処理
 function func403(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(403);
@@ -825,11 +825,11 @@ function func409(this: any) {
                 return;
             }
         }
-        yield func410(); // 装備したdiscを取り外す際の動作
+        yield func410(); // 装備したdiscを投げる時(取り外す際)の動作処理
     });
 }
 
-// 装備したdiscを取り外す際の動作
+// 装備したdiscを投げる時(取り外す際)の動作処理
 function func410(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(410);
@@ -1817,6 +1817,9 @@ function func420(this: any) {
             if (var_898 == 1 && var_478[var_225] == 1) {
                 var_1934 = 1;
             }
+            // スーパープライの呪いを解除した後、外したにもかかわらず、新しく装備しようとすると"呪われていてはずせない！"のコメントが表示された。
+            // 装備を外すのに何個もフラグがあるのが問題?
+            /* 
             if (var_1934 == 1) {
                 comments_row1 = "";
                 comments_row2 = "";
@@ -1842,7 +1845,7 @@ function func420(this: any) {
                 var_1933 = 0;
                 yield func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                 return;
-            }
+            }*/
         }
         comments_row1 = "";
         comments_row2 = "";
@@ -1994,7 +1997,7 @@ function func420(this: any) {
             if (dangeon_number == 4 && belongings_item_list >= 100 && belongings_item_list < 400) {
                 var_1939 = 1;
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5 && belongings_item_list >= 100 && belongings_item_list < 400) {
                 var_1939 = 1;
             }
@@ -2505,7 +2508,7 @@ function func425(this: any) {
         var_234 = 0;
         var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
         var_251 = 0;
-        yield func410(); // 装備したdiscを取り外す際の動作
+        yield func410(); // 装備したdiscを投げる時(取り外す際)の動作処理
         return;
     });
 }
@@ -5023,7 +5026,7 @@ function func460(this: any) {
                 if (var_862[851][0] == 1) {
                     var_1916 = var_233[var_1882].Var6;
                     enemy_list = var_486[var_1916][var_1620][15];
-                    yield func626();
+                    yield func626(); // 敵リスト
                     var_2022 = "" + enemy_name;
                     if (var_486[var_1916][var_1620][18] >= 2) {
                         var_2022 = "" + var_2022 + " Lv" + var_486[var_1916][var_1620][18];
@@ -7172,7 +7175,7 @@ function func463(this: any) {
                     var_221 = 0;
                     open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
                     DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    yield func403();
+                    yield func403(); // 装備したdiscを床に置く時(取り外す際)の動作処理
                     return;
                 }
                 if (var_222 == 7) {
@@ -17383,7 +17386,7 @@ function func498(this: any) {
         }
         // No = 577 ミキタカのdiscの効果
         if (belongings_item_list == 577) {
-            yield item576();
+            yield item577();
             return;
         }
         // No = 578 サンドマンのdiscの効果

@@ -1016,6 +1016,7 @@ function stand107(this: any) {
                     yield func520();
                     var_2266 = 1;
                 }
+                // var_172 == 1 プロシュートの兄貴のDISCを使用して発動能力がUPしている場合
                 if (var_201 <= 12 && var_201 != 0 && var_172 == 1) {
                     var_2221 = var_83[var_2194].Var1;
                     var_2222 = var_83[var_2194].Var2;
@@ -1277,7 +1278,7 @@ function stand109(this: any) {
                     var_1549 = 0;
                     var_403 = "クロスファイヤーハリケーンスペシャル！";
                     enemy_list = var_83[var_421].Var0;
-                    yield func626();
+                    yield func626(); // 敵リスト
                     var_402 = var_421;
                     var_314 = var_421;
                     var_209 = var_565 * 5;
@@ -5199,7 +5200,7 @@ function stand304(this: any) {
                     var_83[var_2205].Var39 = 2;
                 }
                 enemy_list = var_83[var_2205].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 var_83[var_2205].Var3 = Math.floor(enemy_hp * (var_83[var_2205].Var39 + 10) / 10);
                 if (var_83[var_2205].Var3 >= 999) {
                     var_83[var_2205].Var3 = 999;

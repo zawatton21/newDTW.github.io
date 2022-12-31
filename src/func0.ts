@@ -75,7 +75,7 @@ function func004(this: any) {
         // version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
         // game_title = "newDTW original(ver0.1310)";
         version_number = "0.14"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        game_title = "newDTW (ver0.1401)";
+        game_title = "newDTW (ver0.1402)";
         
         buffer(17);
         yield picload("img3.gif");
@@ -134,7 +134,7 @@ function func004(this: any) {
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         var_19 = 0;
         var_20 = 50;
-        var_21 = "鉄の牢獄"; // Ver0.1310で修正。鉄の牢獄
+        var_21 = "鉄獄"; // Ver0.1402にて修正。鉄の牢獄→鉄獄。Ver0.1310で修正。鉄の牢獄。
         var_22 = "＊＊＊＊";
         var_23 = 1;
         var_24 = "＊＊＊＊";
@@ -601,49 +601,49 @@ function func008(this: any) {
         if (dangeon_number == 5) {
             var_93 = rnd(14);
             if (var_93 == 0) {
-                y_axis_map_image = 25; // Ver0.1402 2 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 2 → 26へ変更
             }
             if (var_93 == 1) {
-                y_axis_map_image = 25; // Ver0.1402 3 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 3 → 26へ変更
             }
             if (var_93 == 2) {
-                y_axis_map_image = 25; // Ver0.1402 6 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 6 → 26へ変更
             }
             if (var_93 == 3) {
-                y_axis_map_image = 25; // Ver0.1402 5 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 5 → 26へ変更
             }
             if (var_93 == 4) {
-                y_axis_map_image = 25; // Ver0.1402 4 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 4 → 26へ変更
             }
             if (var_93 == 5) {
-                y_axis_map_image = 25; // Ver0.1402 8 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 8 → 26へ変更
                 var_90 = 0;
             }
             if (var_93 == 6) {
-                y_axis_map_image = 25; // Ver0.1402 18 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 18 → 26へ変更
             }
             if (var_93 == 7) {
-                y_axis_map_image = 25; // Ver0.1402 13 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 13 → 26へ変更
             }
             if (var_93 == 8) {
-                y_axis_map_image = 25; // Ver0.1402 14 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 14 → 26へ変更
             }
             if (var_93 == 9) {
-                y_axis_map_image = 25; // Ver0.1402 12 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 12 → 26へ変更
             }
             if (var_93 == 10) {
-                y_axis_map_image = 25; // Ver0.1402 21 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 21 → 26へ変更
             }
             if (var_93 == 11) {
-                y_axis_map_image = 25; // Ver0.1402 20 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 20 → 26へ変更
             }
             if (var_93 == 12) {
-                y_axis_map_image = 25; // Ver0.1402 24 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 24 → 26へ変更
             }
             if (var_93 == 13) {
-                y_axis_map_image = 25; // Ver0.1402 9 → 25へ変更
+                y_axis_map_image = 26; // Ver0.1402 9 → 26へ変更
             }
-            y_axis_map_image = 25; // Ver0.1402 22 → 25へ変更
+            y_axis_map_image = 26; // Ver0.1402 22 → 26へ変更
         }
         if (special_floor == 1) { // 虹村屋敷
             y_axis_map_image = 8;
@@ -916,7 +916,7 @@ function func009(this: any) {
         if (var_212 == 1) {
             var_213 = 0;
             var_214 = 0;
-            yield func672();
+            yield func672(); // ダンジョンを抜け出す際の動作処理
             return;
         }
         if (var_71[var_66][var_67] == 13 && nouryoku_disc_id != 202 && nouryoku_disc_id != 117 && var_125 == 0) {
@@ -1068,7 +1068,7 @@ function func009(this: any) {
         }
         if (key_Z_on == 1) { // キーZ入力確認
             var_243 = 1;
-            yield func635();
+            yield func635(); // ディアボロの攻撃動作処理
             return;
         }
         if (key_A_on == 1) { // キーA入力確認
@@ -1098,9 +1098,10 @@ function func009(this: any) {
         // Ver0.1401にて追加。入力判定：射撃disc「フー・ファイターズ」を所持している場合に発動(F)
         if (key_F_on == 1) {
             if (var_224 >= 1) {
+                var_225 = 0; // Ver0.1402にて追加。必ず0からスタートすることで漏れが無くなる。
                 for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                    var_225 = rnd(var_224);
-                    var_225 = var_225 + 1;
+                    // var_225 = rnd(var_224); // var_225 = 0; の方が良くない？
+                    // var_225 = var_225 + 1;
                     //var_225 = var_475;
                     var_221 = 0;
                     open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
@@ -1110,6 +1111,7 @@ function func009(this: any) {
                         yield stand401(); // No = 401 フー・ファイターズの発動処理
                         break;
                     }
+                    var_225 = var_225 + 1; // Ver0.1402にて追加。ループの最後に1プラスする。
                 }
                 comments_row1 = "";
                 comments_row2 = "";
@@ -1617,7 +1619,7 @@ function func012(this: any) {
             var_271 = 0;
             var_272 = 0;
             var_243 = 1;
-            yield func635();
+            yield func635(); // ディアボロの攻撃動作処理
             return;
         }
         if (key_S_on == 1) { // キーS入力確認
@@ -1646,9 +1648,10 @@ function func012(this: any) {
         // Ver0.1401にて追加。入力判定：射撃disc「フー・ファイターズ」を所持している場合に発動(F)
         if (key_F_on == 1) {
             if (var_224 >= 1) {
+                var_225 = 0; // Ver0.1402にて追加。必ず0からスタートすることで漏れが無くなる。
                 for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                    var_225 = rnd(var_224);
-                    var_225 = var_225 + 1;
+                    // var_225 = rnd(var_224); // var_225 = 0; の方が良くない？
+                    // var_225 = var_225 + 1;
                     //var_225 = var_475;
                     var_221 = 0;
                     open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) func460
@@ -1658,6 +1661,7 @@ function func012(this: any) {
                         yield stand401(); // No = 401 フー・ファイターズの発動処理
                         break;
                     }
+                    var_225 = var_225 + 1; // Ver0.1402にて追加。ループの最後に1プラスする。
                 }
                 comments_row1 = "";
                 comments_row2 = "";
@@ -2948,6 +2952,7 @@ function func019(this: any) {
                     if (var_350 > 1) {
                         var_363 = 0;
                     }
+                    // 満腹度の減少調整処理
                     if (var_350 == 1 && var_363 == 0) {
                         if (equip_disc[300] != 1 && var_359 == 0) {
                             if (var_360 > 12) {
@@ -4194,7 +4199,7 @@ function func020(this: any) {
             }
             if (var_83[var_421].Var31 == 5 && var_367 == 1) {
                 enemy_list = var_83[var_421].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 if (var_83[var_421].Var39 >= 2) {
                     enemy_hp = Math.floor(enemy_hp * (var_83[var_421].Var39 + 10) / 10);
                     if (enemy_hp >= 999) {
@@ -9032,49 +9037,49 @@ function func079(this: any) {
             if (var_82[var_425][var_424] != 0 && var_71[var_425][var_424] != 0) {
                 var_199 = 4;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
             if (var_82[var_426][var_424] != 0 && var_71[var_426][var_424] != 0) {
                 var_199 = 6;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
             if (var_82[var_423][var_427] != 0 && var_71[var_423][var_427] != 0) {
                 var_199 = 2;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
             if (var_82[var_423][var_428] != 0 && var_71[var_423][var_428] != 0) {
                 var_199 = 8;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
             if (var_82[var_425][var_427] != 0 && var_71[var_425][var_427] != 0 && var_71[var_425][var_424] != 0 && var_71[var_423][var_427] != 0) {
                 var_199 = 1;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
             if (var_82[var_426][var_427] != 0 && var_71[var_426][var_427] != 0 && var_71[var_426][var_424] != 0 && var_71[var_423][var_427] != 0) {
                 var_199 = 3;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
             if (var_82[var_425][var_428] != 0 && var_71[var_425][var_428] != 0 && var_71[var_425][var_424] != 0 && var_71[var_423][var_428] != 0) {
                 var_199 = 7;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
             if (var_82[var_426][var_428] != 0 && var_71[var_426][var_428] != 0 && var_71[var_426][var_424] != 0 && var_71[var_423][var_428] != 0) {
                 var_199 = 9;
                 var_243 = 1;
-                yield func635();
+                yield func635(); // ディアボロの攻撃動作処理
                 return;
             }
         }

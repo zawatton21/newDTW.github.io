@@ -3046,7 +3046,7 @@ let var_2934 :any;
 let var_2935 :any;
 let var_2936 :any;
 let var_2937 :any;
-let var_2938 :any;
+let var_2938 :number; // 敵のヒラリ回避発動フラグ
 let var_2939 :any;
 let var_2940 :any;
 let var_2941 :any;

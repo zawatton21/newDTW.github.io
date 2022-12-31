@@ -751,7 +751,7 @@ function func705(this: any) {
             if (dangeon_number == 3 && var_83[var_402].Var0 == 143) { // No = 143 ウンガロ
                 yield func687();
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5 && var_83[var_402].Var16 >= 1000) {
                 var_2921 = var_83[var_402].Var0;
                 yield func633();

@@ -516,7 +516,7 @@ function item571(this: any) {
         if (dangeon_number == 3 && current_floor == 99) {
             comments_row2a = "するとこの階で…」";
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor == var_20) {
             comments_row2a = "するとこの階で…」";
         }
@@ -623,7 +623,7 @@ function item571(this: any) {
             comments_row2a = "リタイアだァーッ！」";
             var_70 = 0;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor == var_2203) {
             comments_row1a = "「わけもわからず殺されて";
             comments_row2a = "リタイアだァーッ！」";
@@ -665,7 +665,7 @@ function item571(this: any) {
             comments_row2a = "リタイアだァーッ！」";
             var_70 = 0;
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && current_floor == var_20) {
             comments_row1a = "「わけもわからず殺されて";
             comments_row2a = "リタイアだァーッ！」";
@@ -1387,7 +1387,7 @@ function item588(this: any) {
         if (enemy_list == 0) {
             enemy_list = 5;
         }
-        yield func626();
+        yield func626(); // 敵リスト
         var_2209 = enemy_name;
         yield func340(); // キー入力による選択処理
         yield func094(); // メッセージ送りの際の効果音
@@ -2346,7 +2346,7 @@ function item701(this: any) {
         var_81[var_337][5] = var_71[var_66][var_67];
         var_81[var_337][6] = disc_rarity;
         enemy_list = disc_rarity;
-        yield func626();
+        yield func626(); // 敵リスト
         var_2213 = enemy_name;
         comments_row1 = "";
         comments_row2 = "";

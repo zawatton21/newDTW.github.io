@@ -4532,6 +4532,7 @@ function func160(this: any) {
             
             // ここから下はオリジナルには無いロッコ・バロッコ所長をヴェネチアホテルへ追加する要素。
             // おそらくウェブ版にて独自に追加したと思われる。Ver0.1310で廃止。
+            /*
             var_97 = var_97 + 1;
             var_761 = var_97;
             var_82[18][10] = var_97;
@@ -4544,7 +4545,7 @@ function func160(this: any) {
             var_83[var_97].Var10 = 1;
             var_83[var_97].Var31 = 4;
             var_83[var_97].Var32 = rnd(6);
-
+            */
         }
         return;
     });

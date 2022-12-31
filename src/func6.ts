@@ -53,8 +53,9 @@ function func600(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_389 = 0;
+        // No = 115 G・エクスペリエンスのDISCを装備している場合
         if (equip_disc[115] == 1) {
-            yield func695();
+            yield func695(); // 敵からのダメージを反射する際の動作処理
             if (var_2855 != 0) {
                 var_2855 = 0;
                 return;
@@ -68,7 +69,7 @@ function func601(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(601);
         enemy_list = var_83[var_673].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         if (var_83[var_673].Var39 >= 2) {
             enemy_power = Math.floor(enemy_power * (var_83[var_673].Var39 * 2 + 10) / 10);
         }
@@ -296,7 +297,7 @@ function func602(this: any) {
             var_743 = 0;
         }
         enemy_list = var_83[var_2749].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_83[var_2749].Var3 = var_83[var_2749].Var3 + 50;
         if (var_83[var_2749].Var3 > var_2792) {
             var_83[var_2749].Var3 = var_2792;
@@ -455,7 +456,7 @@ function func603(this: any) {
             var_83[var_2749].Var39 = var_83[var_2749].Var39 + 1;
         }
         enemy_list = var_83[var_2749].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_83[var_2749].Var3 = Math.floor(enemy_hp * (var_83[var_2749].Var39 + 10) / 10);
         if (var_83[var_2749].Var3 >= 999) {
             var_83[var_2749].Var3 = 999;
@@ -2499,6 +2500,11 @@ function func620(this: any) {
         dbgprt(620);
         if (var_83[var_673].Var17 != 0 || var_83[var_673].Var23 != 0) {
             return;
+        }
+        // No = 3 敵タワーオブグレーの特殊能力
+        if (enemy_list == 3) {
+            // yield enemy003();
+            // return;
         }
         // No = 4 敵デス・13の特殊能力
         if (enemy_list == 4) {
@@ -6342,7 +6348,7 @@ function func627(this: any) {
         if (dangeon_number == 4) {
             yield func634(); // 一巡後の世界のボス以外の出現敵設定
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
             yield func631(); // 鉄の牢獄のボス以外の出現敵設定
         }
@@ -8434,6 +8440,7 @@ function func634(this: any) {
         return;
     });
 }
+// ディアボロの攻撃動作処理
 function func635(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(635);
@@ -8452,9 +8459,10 @@ function func635(this: any) {
         if (equip_disc[105] == 0) {
             var_1030 = 0;
         }
-        yield func636();
+        yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
     });
 }
+// ディアボロが攻撃or話しかけた時の動作処理
 function func636(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(636);
@@ -8488,6 +8496,7 @@ function func636(this: any) {
                 var_199 = 9;
             }
         }
+        // No = 121 パープルヘイズのDISCを装備している場合
         if (equip_disc[121] == 1 && var_171 == 0) {
             var_2927 = rnd(6);
             if (var_2927 == 1) {
@@ -8568,42 +8577,42 @@ function func636(this: any) {
             var_2932 = 0;
             if (var_199 == 1 && var_71[var_347][var_67] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_199 == 1 && var_71[var_66][var_348] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_199 == 3 && var_71[var_347][var_67] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_199 == 3 && var_71[var_66][var_348] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_199 == 7 && var_71[var_347][var_67] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_199 == 7 && var_71[var_66][var_348] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_199 == 9 && var_71[var_347][var_67] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_199 == 9 && var_71[var_66][var_348] == 0) {
                 var_2932 = 1;
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
         }
@@ -8677,7 +8686,7 @@ function func636(this: any) {
                 }
             }
             if (var_83[var_314].Var0 == 50) { // enemy_list = 50 なので元いた場所
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             // enemy_list = 173 NPC ロッコ・バロッコ所長
@@ -8816,11 +8825,11 @@ function func636(this: any) {
             }
         }
         if (var_71[var_347][var_348] == 0) {
-            yield func651();
+            yield func651(); // 攻撃動作処理
             return;
         }
         if (var_82[var_347][var_348] == 0 && equip_disc[108] == 0) {
-            yield func651();
+            yield func651(); // 攻撃動作処理
             return;
         }
         if (var_82[var_347][var_348] == 0 && equip_disc[108] == 1) {
@@ -8898,7 +8907,7 @@ function func636(this: any) {
                     var_347 = var_347 + 1;
                     var_348 = var_348 - 1;
                 }
-                yield func651();
+                yield func651(); // 攻撃動作処理
                 return;
             }
             if (var_80[var_2933][var_2934] > 0) {
@@ -8910,6 +8919,7 @@ function func636(this: any) {
             var_748 = var_347 - var_66 + 4;
             var_749 = var_348 - var_67 + 4;
         }
+        // No = 318 ジャンピンJフラッシュのDISCを装備している場合
         if (equip_disc[318] == 1 && var_83[var_314].Var0 > 0) {
             var_2936 = rnd(8);
             if (var_2936 == 0) {
@@ -8976,7 +8986,7 @@ function func636(this: any) {
         if (var_143 >= 1) {
             var_314 = var_82[var_347][var_348];
             enemy_list = var_83[var_314].Var0;
-            yield func626();
+            yield func626(); // 敵リスト
             var_2267[8] = var_2267[7];
             var_2267[7] = var_2267[6];
             var_2267[6] = var_2267[5];
@@ -9069,7 +9079,7 @@ function func636(this: any) {
                 var_243 = 1;
             }
         }
-        yield func639();
+        yield func639(); // 敵の回避処理
         if (var_2867 == 0) {
             comments_row1 = "";
             comments_row2 = "";
@@ -9079,7 +9089,7 @@ function func636(this: any) {
             var_298 = "";
             var_299 = 0;
             comments_row1 = "ﾃﾞｨｱﾎﾞﾛの攻撃は外れた";
-            if (var_2938 == 1) {
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
                 comments_row1 = "ヒラリと攻撃をかわされた";
             }
             var_198 = 1;
@@ -9089,13 +9099,13 @@ function func636(this: any) {
             var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
             yield func047();
             var_2939 = 1;
-            if (equip_disc[105] == 1) {
+            if (equip_disc[105] == 1) { // No = 105 チリペッパーのDISCを装備している場合
                 var_1030 = var_1030 + 1;
             }
-            yield func651();
+            yield func651(); // 攻撃動作処理
             return;
         }
-        if (var_83[var_314].Var0 == 152) {
+        if (var_83[var_314].Var0 == 152) { // enemy_list == 152 トリッシュ
             var_2936 = rnd(4);
             if (var_2936 == 0) {
                 var_243 = 1;
@@ -9159,7 +9169,7 @@ function func636(this: any) {
         }
         var_314 = var_82[var_347][var_348];
         enemy_list = var_83[var_314].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         yield func638();
         var_2940 = rnd(22);
         if (var_162 == 1) {
@@ -9287,7 +9297,7 @@ function func636(this: any) {
         if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
             enemy_list = var_83[var_314].Var31;
         }
-        yield func626();
+        yield func626(); // 敵リスト
         var_2943 = enemy_name;
         var_1030 = 0;
         if (var_127 != 0 || var_132 != 0) {
@@ -9322,6 +9332,7 @@ function func636(this: any) {
         var_300 = 0;
         yield func047();
         yield func337(); // メッセージ関係呼び出し
+        // enemy_list == 159 記憶が戻ったウェザー
         if (var_83[var_314].Var0 == 159 && var_83[var_314].Var20 == 0) {
             var_1550 = var_83[var_314].Var1;
             var_230 = var_83[var_314].Var2;
@@ -9333,6 +9344,7 @@ function func636(this: any) {
             var_2434 = 0;
             var_2413 = 0;
         }
+        // No= 313 ハイウェイスターのDISCを装備している場合
         if (equip_disc[313] == 1 && var_211 != var_352 && var_209 != 0) {
             var_2944 = rnd(8);
             if (var_2944 == 0 || var_1194 == 1) {
@@ -9404,7 +9416,7 @@ function func636(this: any) {
         }
         var_314 = var_82[var_347][var_348];
         enemy_list = var_83[var_314].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         if (var_83[var_314].Var3 <= 0) {
             // No = 1 なので、ホテルの外
             if (dangeon_number == 1 && var_83[var_314].Var0 == 20) { // No = 20 エンヤ婆
@@ -9418,7 +9430,7 @@ function func636(this: any) {
             if (dangeon_number == 3 && var_83[var_314].Var0 == 143) { // No = 143 ウンガロ
                 yield func687();
             }
-            // No = 5 なので、鉄の牢獄
+            // No = 5 なので、鉄獄(鉄の牢獄)
             if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
                 var_2921 = var_83[var_314].Var0;
                 yield func633();
@@ -9463,7 +9475,7 @@ function func636(this: any) {
             yield func340(); // キー入力による選択処理
             var_314 = var_82[var_347][var_348];
             enemy_list = var_83[var_314].Var0;
-            yield func626();
+            yield func626(); // 敵リスト
             var_2956 = enemy_exp_point;
             if (var_83[var_314].Var39 >= 2) {
                 var_2956 = Math.floor(var_2956 * (var_83[var_314].Var39 + 10) / 10);
@@ -9736,7 +9748,7 @@ function func636(this: any) {
             if (var_82[var_2966][var_2967] != 0) {
                 var_2925 = 1;
                 var_243 = 1;
-                yield func636();
+                yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                 return;
             }
         }
@@ -9748,14 +9760,14 @@ function func636(this: any) {
                     var_341 = 2;
                     var_243 = 1;
                     kougeki_disc_id = 122;
-                    yield func636();
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
                 if (kougeki_disc_id == 122) {
                     var_341 = 2;
                     var_243 = 1;
                     kougeki_disc_id = 101;
-                    yield func636();
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
             }
@@ -9778,7 +9790,7 @@ function func636(this: any) {
                 if (var_2968 == 1) {
                     var_2968 = 0;
                     var_243 = 1;
-                    yield func636();
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
             }
@@ -9788,7 +9800,7 @@ function func636(this: any) {
                 if (var_2968 == 1) {
                     var_2968 = 0;
                     var_243 = 1;
-                    yield func636();
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
             }
@@ -9802,13 +9814,14 @@ function func637(this: any) {
         dbgprt(637);
         var_217 = 1;
         var_2965 = 0;
+        // No = 101 シルバーチャリオッツのDISCを装備している場合
         if (equip_disc[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
                 var_2925 = 1;
                 var_243 = 1;
-                yield func636();
+                yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                 return;
             }
         }
@@ -9816,18 +9829,18 @@ function func637(this: any) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
-                if (kougeki_disc_id == 101) {
+                if (kougeki_disc_id == 101) { // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
                     var_341 = 2;
                     var_243 = 1;
-                    kougeki_disc_id = 122;
-                    yield func636();
+                    kougeki_disc_id = 122; // No = 122 アヌビス神のDISCを攻撃装備している場合
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
-                if (kougeki_disc_id == 122) {
+                if (kougeki_disc_id == 122) { // No = 122 アヌビス神のDISCを攻撃装備している場合
                     var_341 = 2;
                     var_243 = 1;
-                    kougeki_disc_id = 101;
-                    yield func636();
+                    kougeki_disc_id = 101; // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
             }
@@ -9847,7 +9860,7 @@ function func637(this: any) {
             if (var_2968 == 1) {
                 var_2968 = 0;
                 var_243 = 1;
-                yield func636();
+                yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                 return;
             }
         }
@@ -10008,7 +10021,7 @@ function func638(this: any) {
         return;
     });
 }
-
+// 敵の回避処理
 function func639(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(639);
@@ -10028,14 +10041,34 @@ function func639(this: any) {
         }
         // 敵のヒラリ回避動作処理 enemy_list == 72 ケンゾー、enemy_list == 88 ドノヴァン、enemy_list == 99 マンハッタントランスファー
         // Ver0.1401 enemy_list == 3 タワー・オブ・グレー、enemy_list == 139 リサリサ追加
-        if (var_83[var_314].Var0 == 3 || var_83[var_314].Var0 == 72 || var_83[var_314].Var0 == 88 || var_83[var_314].Var0 == 99 || var_83[var_314].Var0 == 139) {
+        // Ver0.1402 タワーオブグレーのみ別枠へ移動 (ダンジョンごとにヒラリ回避をONOFF)
+        if (var_83[var_314].Var0 == 72 || var_83[var_314].Var0 == 88 || var_83[var_314].Var0 == 99 || var_83[var_314].Var0 == 139) {
             if (var_83[var_314].Var20 == 0 && equip_disc[366] == 0) {
                 if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3 || var_2867 == 4) { // Ver0.1401にて修正。敵がヒラリ回避をする確率3/12*100=25% → 確率4/12*100=33.33%
-                    var_2867 = 0;
-                    var_2938 = 1;
+                    var_2867 = 0; // 発動後の発動確率初期化処理
+                    var_2938 = 1; // ヒラリ回避発動フラグON
                 }
             }
         }
+        // Ver0.1402にて追加。タワー・オブ・グレーのヒラリ回避。
+        if (var_83[var_314].Var0 == 3) {
+            if (var_83[var_314].Var20 == 0 && equip_disc[366] == 0) {
+                if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3 || var_2867 == 4) { // Ver0.1401にて修正。敵がヒラリ回避をする確率3/12*100=25% → 確率4/12*100=33.33%
+                    var_2867 = 0; // 発動後の発動確率初期化処理
+                    var_2938 = 1; // ヒラリ回避発動フラグON
+                }
+            }
+        }/*
+        // Ver0.1402 enemy_list == 3 タワー・オブ・グレーのヒラリ回避。一巡後の世界で有効。
+        if (dangeon_number == 4 && var_83[var_314].Var0 == 3) {
+            if (var_83[var_314].Var20 == 0 && equip_disc[366] == 0) {
+                if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3 || var_2867 == 4) { // Ver0.1401にて修正。敵がヒラリ回避をする確率3/12*100=25% → 確率4/12*100=33.33%
+                    var_2867 = 0; // 発動後の発動確率初期化処理
+                    var_2938 = 1; // ヒラリ回避発動フラグON
+                }
+            }
+        }
+        */
         if (kougeki_disc_id != 104) {
             if (var_111 == 1 || var_83[var_314].Var12 != 0 || var_83[var_314].Var13 != 0) {
                 var_2867 = 1;
@@ -10474,15 +10507,15 @@ function func643(this: any) {
         var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
 
         DSPLAY(audio_id = 121);
-        yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
-
-        DSPLAY(audio_id = 121);
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
 
         DSPLAY(audio_id = 121);
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
+
+        DSPLAY(audio_id = 121);
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             if (var_199 == 4) {
@@ -10492,9 +10525,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10509,9 +10542,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2975];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10526,9 +10559,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10542,9 +10575,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10559,9 +10592,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2975];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10576,9 +10609,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10592,9 +10625,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10609,9 +10642,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2974][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10626,9 +10659,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10642,9 +10675,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10659,9 +10692,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2974][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10676,9 +10709,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10692,9 +10725,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2975];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10709,9 +10742,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10726,9 +10759,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2974][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10742,9 +10775,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2975];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10759,9 +10792,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10776,9 +10809,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2974][var_2930];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10792,9 +10825,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2974][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10809,9 +10842,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10826,9 +10859,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2928][var_2975];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10842,9 +10875,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2974][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10859,9 +10892,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2931];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
@@ -10876,9 +10909,9 @@ function func643(this: any) {
                     var_314 = var_82[var_2929][var_2975];
                     enemy_list = var_83[var_402].Var0;
                     if (var_83[var_402].Var31 != 4 && var_83[var_402].Var31 != 5) {
-                        yield func644();
+                         yield func644(); // No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
                         if (var_2867 != 0) {
-                            yield func626();
+                            yield func626(); // 敵リスト
                             yield func638();
                             yield func705();
                         }
@@ -10889,11 +10922,12 @@ function func643(this: any) {
         return;
     });
 }
+// No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
 function func644(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(644);
         var_2867 = 0;
-        yield func639();
+        yield func639(); // 敵の回避処理
         if (var_143 >= 1) {
             var_2267[8] = var_2267[7];
             var_2267[7] = var_2267[6];
@@ -10944,7 +10978,7 @@ function func644(this: any) {
         var_299 = 0;
         comments_row1 = "「オラオララオラオラオラオオラオラ」";
         comments_row2 = "ﾃﾞｨｱﾎﾞﾛの攻撃は外れた";
-        if (var_2938 == 1) {
+        if (var_2938 == 1) { // ヒラリ回避発動フラグON
             comments_row2 = "ヒラリと攻撃をかわされた";
         }
         var_198 = 1;
@@ -10961,45 +10995,170 @@ function func644(this: any) {
         if (var_2939 == 1) {
             yield func090();
         }
-        if (var_2938 == 1) {
-            var_2657 = var_83[var_314].Var5;
+        if (var_83[var_314].Var0 != 3) {
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_2657 = var_83[var_314].Var5;
+            }
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 1;
+                var_83[var_314].Var7 = 1;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 2;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 3;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2985 == 0) {
+                yield func089();
+            }
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 6;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 9;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 8;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2939 == 1) {
+                yield func090();
+            }
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 7;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = 4;
+            }
+            yield func337(); // メッセージ関係呼び出し
+            if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                var_83[var_314].Var5 = var_2657;
+                var_83[var_314].Var7 = 0;
+            }
         }
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 1;
-            var_83[var_314].Var7 = 1;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 2;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 3;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 6;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 9;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 8;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 7;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = 4;
-        }
-        yield func337(); // メッセージ関係呼び出し
-        if (var_2938 == 1) {
-            var_83[var_314].Var5 = var_2657;
-            var_83[var_314].Var7 = 0;
+        // Ver0.1402にて追加。
+        if (var_83[var_314].Var0 == 3) {
+            if (var_201 != 14 && var_83[var_314].Var10 == var_201) { // 部屋にいる時のみ発動
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_2657 = var_83[var_314].Var5;
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 1;
+                    var_83[var_314].Var7 = 1;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 2;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 3;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2985 == 0) {
+                    yield func089();
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 6;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 9;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 8;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2939 == 1) {
+                    yield func090();
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 7;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 4;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = var_2657;
+                    var_83[var_314].Var7 = 0;
+                }
+                // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    yield enemy003(); // No = 3 敵タワーオブグレーの特殊能力。瞬間移動。
+                    // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
+                    //yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                }
+                // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                }
+            }
+            else { // 通路にいる場合の動作処理
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_2657 = var_83[var_314].Var5;
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 1;
+                    var_83[var_314].Var7 = 1;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 2;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 3;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2985 == 0) {
+                    yield func089();
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 6;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 9;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 8;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2939 == 1) {
+                    yield func090();
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 7;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 4;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = var_2657;
+                    var_83[var_314].Var7 = 0;
+                }
+                // 下記を設定することで、ヒラリ回避を実行した時のみターン消費させられる。
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) {
+                    yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                }
+            }
         }
         // yield func337(); // メッセージ関係呼び出し
         // yield func337(); // メッセージ関係呼び出し
@@ -11008,7 +11167,7 @@ function func644(this: any) {
         var_300 = 0;
         // yield func337(); // メッセージ関係呼び出し
         // yield func337(); // メッセージ関係呼び出し
-        yield func337(); // メッセージ関係呼び出し
+        //yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_2939 = 0;
         var_2932 = 0;
@@ -11018,6 +11177,7 @@ function func644(this: any) {
         return;
     });
 }
+
 function func645(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(645);
@@ -11960,13 +12120,16 @@ function func650(this: any) {
         return;
     });
 }
+// 攻撃動作処理
 function func651(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(651);
         var_2985 = 0;
+        // No = 118 ダイバーダウンのDISCを攻撃装備している時
         if (equip_disc[118] == 1 && var_71[var_347][var_348] == 0) {
-            yield func653();
+            yield func653(); // No = 118 ダイバーダウンのDISCを攻撃装備している時の壁属性媒体から遠隔装備
         }
+        // No = 104 ザ・ハンドのDISCを攻撃装備している時
         if (equip_disc[104] == 1) {
             if (var_71[var_347][var_348] == 0 && var_71[var_66][var_67] != 0 && var_3014 == 0 && var_199 != 1 && var_199 != 3 && var_199 != 7 && var_199 != 9) {
                 if (y_axis_map_image != 1 && y_axis_map_image != 7 && y_axis_map_image != 16 && var_262 == 0) {
@@ -12013,8 +12176,9 @@ function func651(this: any) {
                 }
             }
         }
+        // No = 108 スティッキーフィンガーズのDISCを攻撃装備 & 敵と隣接していない時
         if (kougeki_disc_id == 108 && var_82[var_347][var_348] == 0) {
-            kougeki_disc_id = 110;
+            kougeki_disc_id = 110; // No = 110 スティッキーフィンガーズ(2マス先攻撃)のDISC
         }
         if (var_2932 == 0 && var_2939 == 0) {
             var_74[var_347][var_348] = 2;
@@ -12023,6 +12187,7 @@ function func651(this: any) {
             var_2935 = var_80[var_347][var_348];
             var_81[var_2935][4] = 1;
         }
+        // No = 110 スティッキーフィンガーズ(2マス先攻撃)のDISCを攻撃装備している時
         if (kougeki_disc_id == 110) {
             if (var_199 == 4) {
                 var_3016 = var_347 - 1;
@@ -12065,6 +12230,7 @@ function func651(this: any) {
             var_2927 = 0;
             var_1194 = 1;
         }
+        // No = 109 マジシャンズレッドのDISCを攻撃装備している時
         if (equip_disc[109] == 1 && var_211 == var_352 && var_71[var_347][var_348] != 0 && var_2939 == 0) {
             var_3018 = 0;
             var_3019 = var_66;
@@ -12121,55 +12287,175 @@ function func651(this: any) {
                 return;
             }
         }
-        if (var_3022 == 0) {
-            if (var_2938 == 1) {
-                var_2657 = var_83[var_314].Var5;
+        if (var_3022 == 0) { // No = 118 ダイバーダウンのDISCを攻撃装備して遠隔攻撃していない時
+            if (var_83[var_314].Var0 != 3) {
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_2657 = var_83[var_314].Var5;
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 1;
+                    var_83[var_314].Var7 = 1;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 2;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 3;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2985 == 0) {
+                    yield func089();
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 6;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 9;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 8;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2939 == 1) {
+                    yield func090();
+                }
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 7;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = 4;
+                }
+                yield func337(); // メッセージ関係呼び出し
+                if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                    var_83[var_314].Var5 = var_2657;
+                    var_83[var_314].Var7 = 0;
+                }
             }
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 1;
-                var_83[var_314].Var7 = 1;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 2;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 3;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2985 == 0) {
-                yield func089();
-            }
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 6;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 9;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 8;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2939 == 1) {
-                yield func090();
-            }
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 7;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = 4;
-            }
-            yield func337(); // メッセージ関係呼び出し
-            if (var_2938 == 1) {
-                var_83[var_314].Var5 = var_2657;
-                var_83[var_314].Var7 = 0;
+            // Ver0.1402にて追加。
+            if (var_83[var_314].Var0 == 3) {
+                if (var_201 != 14 && var_83[var_314].Var10 == var_201) { // 部屋にいる時のみ発動
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_2657 = var_83[var_314].Var5;
+                    }
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 1;
+                        var_83[var_314].Var7 = 1;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 2;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 3;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2985 == 0) {
+                        yield func089();
+                    }
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 6;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 9;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 8;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2939 == 1) {
+                        yield func090();
+                    }
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 7;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 4;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = var_2657;
+                        var_83[var_314].Var7 = 0;
+                    }
+                    // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        yield enemy003(); // No = 3 敵タワーオブグレーの特殊能力。瞬間移動。
+                        // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
+                        //yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                    }
+                    // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
+                        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                    }
+                }
+                else { // 通路にいる場合の動作処理
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_2657 = var_83[var_314].Var5;
+                    }
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 1;
+                        var_83[var_314].Var7 = 1;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 2;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 3;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2985 == 0) {
+                        yield func089();
+                    }
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 6;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 9;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 8;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2939 == 1) {
+                        yield func090();
+                    }
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 7;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = 4;
+                    }
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) { // ヒラリ回避発動フラグON
+                        var_83[var_314].Var5 = var_2657;
+                        var_83[var_314].Var7 = 0;
+                    }
+                    // 下記を設定することで、ヒラリ回避を実行した時のみターン消費させられる。
+                    yield func337(); // メッセージ関係呼び出し
+                    if (var_2938 == 1) {
+                        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                    }
+                }
             }
             yield func337(); // メッセージ関係呼び出し
         }
+        // No = 105 チリペッパーを攻撃装備している場合
         if (equip_disc[105] == 1 && var_1030 >= 2 && var_2939 == 1) {
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -12213,54 +12499,60 @@ function func651(this: any) {
         var_2938 = 0;
         var_217 = 1;
         var_1194 = 0;
+        // No = 110 不明discを攻撃装備している場合
         if (kougeki_disc_id == 110) {
-            kougeki_disc_id = 108;
+            kougeki_disc_id = 108; // No = 108 スティッキーフィンガーズのDISCを攻撃装備している場合
             var_750 = 0;
         }
+        // No = 113 クラッシュのDISCを装備している場合
         if (kougeki_disc_id == 113) {
             if (var_71[var_347][var_348] == 13) {
-                yield func652();
+                yield func652(); // No = 113 クラッシュのDISCを攻撃装備している時の水属性媒体から遠隔攻撃処理
             }
             if (var_77[var_347][var_348] != 0 && var_82[var_347][var_348] == 0) {
                 var_3023 = var_77[var_347][var_348];
-                if (var_78[var_3023].Var0 == 632) {
-                    yield func652();
+                if (var_78[var_3023].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
+                    yield func652(); // No = 113 クラッシュのDISCを攻撃装備している時の水属性媒体から遠隔攻撃処理
                 }
             }
         }
+        // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
         if (equip_disc[101] == 1 && var_2925 == 0 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
                 var_2925 = 1;
                 var_243 = 1;
-                yield func636();
+                yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                 return;
             }
         }
+        // No = 135 「達人二刀流」が発動している場合 (「シルバーチャリオッツ」 & 「アヌビス神」を装備)
         if (sympathy_id == 135 && var_341 == 1 && var_83[var_314].Var0 > 0 && var_2924 == 0 && var_2965 == 0 && var_128 == 0 && var_178 == 0) {
             var_2966 = var_83[var_314].Var1;
             var_2967 = var_83[var_314].Var2;
             if (var_82[var_2966][var_2967] != 0) {
-                if (kougeki_disc_id == 101) {
+                if (kougeki_disc_id == 101) { // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
                     var_341 = 2;
                     var_243 = 1;
-                    kougeki_disc_id = 122;
-                    yield func636();
+                    kougeki_disc_id = 122; // No = 122 アヌビス神のDISCを攻撃装備している場合
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
-                if (kougeki_disc_id == 122) {
+                if (kougeki_disc_id == 122) { // No = 122 アヌビス神のDISCを攻撃装備している場合
                     var_341 = 2;
                     var_243 = 1;
-                    kougeki_disc_id = 101;
-                    yield func636();
+                    kougeki_disc_id = 101; // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
             }
         }
+        // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
         if (kougeki_disc_id == 122 || kougeki_disc_id == 101) {
             kougeki_disc_id = var_2923;
         }
+        // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
         if (equip_disc[120] == 1 && var_2926 == 1 && var_128 == 0 && var_178 == 0) {
             if (kougeki_disc_id != 100 && kougeki_disc_id != 398) {
                 var_2926 = 0;
@@ -12268,17 +12560,18 @@ function func651(this: any) {
                 if (var_2968 == 1) {
                     var_2968 = 0;
                     var_243 = 1;
-                    yield func636();
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
             }
+            // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
             if (kougeki_disc_id == 100 || kougeki_disc_id == 398) {
                 var_2926 = 0;
                 yield func642();
                 if (var_2968 == 1) {
                     var_2968 = 0;
                     var_243 = 1;
-                    yield func636();
+                    yield func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
             }
@@ -12287,6 +12580,7 @@ function func651(this: any) {
         return;
     });
 }
+// No = 113 クラッシュのDISCを攻撃装備している時の水属性媒体から遠隔攻撃処理
 function func652(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(652);
@@ -12367,7 +12661,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1713][var_1712] != 0) {
                     var_3026 = var_77[var_1713][var_1712];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 4;
                         var_1450 = var_1713;
@@ -12376,7 +12670,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1714][var_1712] != 0) {
                     var_3026 = var_77[var_1714][var_1712];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 6;
                         var_1450 = var_1714;
@@ -12385,7 +12679,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1711][var_1716] != 0) {
                     var_3026 = var_77[var_1711][var_1716];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 8;
                         var_1450 = var_1711;
@@ -12394,7 +12688,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1711][var_1715] != 0) {
                     var_3026 = var_77[var_1711][var_1715];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 2;
                         var_1450 = var_1711;
@@ -12403,7 +12697,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1713][var_1716] != 0) {
                     var_3026 = var_77[var_1713][var_1716];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 7;
                         var_1450 = var_1713;
@@ -12412,7 +12706,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1714][var_1716] != 0) {
                     var_3026 = var_77[var_1714][var_1716];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 9;
                         var_1450 = var_1714;
@@ -12421,7 +12715,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1713][var_1715] != 0) {
                     var_3026 = var_77[var_1713][var_1715];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 1;
                         var_1450 = var_1713;
@@ -12430,7 +12724,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_77[var_1714][var_1715] != 0) {
                     var_3026 = var_77[var_1714][var_1715];
-                    if (var_78[var_3026].Var0 == 632) {
+                    if (var_78[var_3026].Var0 == 632) { // No = 632 キリマンジャロの雪解け水が床アイテムとしてある場合
                         var_3025 = 1;
                         var_1449 = 3;
                         var_1450 = var_1714;
@@ -12439,6 +12733,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1713][var_1712] != 0) {
                     var_3026 = var_82[var_1713][var_1712];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 4;
@@ -12448,6 +12743,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1714][var_1712] != 0) {
                     var_3026 = var_82[var_1714][var_1712];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 6;
@@ -12457,6 +12753,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1711][var_1716] != 0) {
                     var_3026 = var_82[var_1711][var_1716];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 8;
@@ -12466,6 +12763,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1711][var_1715] != 0) {
                     var_3026 = var_82[var_1711][var_1715];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 2;
@@ -12475,6 +12773,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1713][var_1716] != 0) {
                     var_3026 = var_82[var_1713][var_1716];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 7;
@@ -12484,6 +12783,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1714][var_1716] != 0) {
                     var_3026 = var_82[var_1714][var_1716];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 9;
@@ -12493,6 +12793,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1713][var_1715] != 0) {
                     var_3026 = var_82[var_1713][var_1715];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 1;
@@ -12502,6 +12803,7 @@ function func652(this: any) {
                 }
                 if (var_3025 == 0 && var_82[var_1714][var_1715] != 0) {
                     var_3026 = var_82[var_1714][var_1715];
+                    // enemy_list == 27 ゲブ神、enemy_list == 115 アクアネックレス
                     if (var_83[var_3026].Var0 == 27 || var_83[var_3026].Var0 == 115) {
                         var_3025 = 1;
                         var_1449 = 3;
@@ -12566,7 +12868,7 @@ function func652(this: any) {
                             }
                             if (var_2867 != 0) {
                                 enemy_list = var_83[var_3024].Var0;
-                                yield func626();
+                                yield func626(); // 敵リスト
                                 yield func638();
                                 var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
                                 var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
@@ -12593,6 +12895,7 @@ function func652(this: any) {
         return;
     });
 }
+// No = 118 ダイバーダウンのDISCを攻撃装備している時の壁属性媒体から遠隔装備
 function func653(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(653);
@@ -12768,7 +13071,7 @@ function func653(this: any) {
                     }
                     if (var_2867 != 0) {
                         enemy_list = var_83[var_3024].Var0;
-                        yield func626();
+                        yield func626(); // 敵リスト
                         yield func638();
                         var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
                         var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
@@ -12791,6 +13094,7 @@ function func653(this: any) {
         return;
     });
 }
+// 敵の攻撃動作処理
 function func654(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(654);
@@ -12803,7 +13107,7 @@ function func654(this: any) {
             return;
         }
         enemy_list = var_83[var_673].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_2197 = 0;
         if (var_83[var_673].Var20 == 0) {
             yield func620(); // 各敵の特殊能力(ディアボロへの攻撃)割り振り処理
@@ -12868,7 +13172,7 @@ function func654(this: any) {
             if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
                 enemy_list = var_83[var_673].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_3033 = enemy_name;
             if (var_127 != 0 || var_132 != 0) {
                 var_3033 = "何者か";
@@ -12877,7 +13181,7 @@ function func654(this: any) {
                 var_3033 = "何者か";
             }
             enemy_list = var_3030;
-            yield func626();
+            yield func626(); // 敵リスト
             var_3034 = enemy_name;
             comments_row1 = "";
             comments_row2 = "";
@@ -12950,7 +13254,7 @@ function func654(this: any) {
             if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
                 enemy_list = var_83[var_673].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             if (var_127 != 0 || var_132 != 0) {
                 enemy_name = "何者か";
             }
@@ -12983,6 +13287,7 @@ function func654(this: any) {
             var_2868 = 0;
             return;
         }
+        // No = 203 ザ・フールのDISCを装備している場合
         if (equip_disc[203] == 1 && var_163 == 0) {
             var_3036 = rnd(8);
             if (var_3036 == 0) {
@@ -13014,7 +13319,7 @@ function func654(this: any) {
                 }
                 yield func656();
                 enemy_list = var_83[var_673].Var0;
-                yield func626();
+                yield func626(); // 敵リスト
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -13041,6 +13346,7 @@ function func654(this: any) {
             }
         }
         var_3037 = 0;
+        // 14 床屋のカーン、66 タルカス、
         if (enemy_list == 14 || enemy_list == 66 || enemy_list == 47 || enemy_list == 120 || enemy_list == 160 || enemy_list == 67 || equip_disc[367] == 1) {
             if (var_83[var_673].Var20 == 0) {
                 var_3037 = rnd(4);
@@ -13056,7 +13362,7 @@ function func654(this: any) {
             }
         }
         enemy_list = var_83[var_673].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_743 = 0;
         if (var_1637 == 1) {
             var_743 = 1;
@@ -13104,7 +13410,7 @@ function func654(this: any) {
         }
         var_389 = 1;
         var_585 = 0;
-        yield func337(); // メッセージ関係呼び出し
+        // yield func337(); // メッセージ関係呼び出し
         yield func337(); // メッセージ関係呼び出し
         var_83[var_673].Var7 = 0;
         var_742 = 0;
@@ -13112,7 +13418,7 @@ function func654(this: any) {
         if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
             enemy_list = var_83[var_673].Var31;
         }
-        yield func626();
+        yield func626(); // 敵リスト
         if (var_113 == 1) {
             var_209 = Math.floor(var_209 * 2 / 3) + 1;
         }
@@ -13152,7 +13458,7 @@ function func654(this: any) {
             if (var_83[var_673].Var0 == 97 && var_83[var_673].Var31 >= 11) {
                 enemy_list = var_83[var_673].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
         }
         if (var_127 != 0 || var_132 != 0) {
             enemy_name = "何者か";
@@ -13208,17 +13514,20 @@ function func654(this: any) {
         var_389 = 0;
         var_240 = 0;
         var_743 = 0;
+        // 
         if (var_3037 == 1 && equip_disc[200] == 1) {
             yield func694();
             return;
         }
+        // No = 115 G・エクスペリエンスのDISCを装備している場合
         if (equip_disc[115] == 1) {
-            yield func695();
+            yield func695(); // 敵からのダメージを反射する際の動作処理
             if (var_2855 != 0) {
                 var_2855 = 0;
                 return;
             }
         }
+        // enemy_list == 120 承太郎
         if (var_83[var_673].Var0 == 120 && var_3037 == 1 && var_211 >= 1) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -13238,6 +13547,8 @@ function func654(this: any) {
         return;
     });
 }
+
+
 function func655(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(655);
@@ -13255,7 +13566,7 @@ function func655(this: any) {
         if (var_83[var_402].Var0 == 97 && var_83[var_402].Var31 >= 11) {
             enemy_list = var_83[var_402].Var31;
         }
-        yield func626();
+        yield func626(); // 敵リスト
         var_971 = enemy_defence;
         var_2861 = enemy_name;
         var_3039 = var_83[var_402].Var5;
@@ -13270,7 +13581,7 @@ function func655(this: any) {
         if (var_83[var_2819].Var0 == 97 && var_83[var_2819].Var31 >= 11) {
             enemy_list = var_83[var_2819].Var31;
         }
-        yield func626();
+        yield func626(); // 敵リスト
         var_2820 = enemy_power;
         var_3040 = enemy_name;
         if (var_127 != 0 || var_132 != 0) {
@@ -13393,7 +13704,7 @@ function func656(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(656);
         enemy_list = var_83[var_673].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_743 = 0;
         if (var_1637 == 1) {
             var_743 = 1;
@@ -13890,7 +14201,7 @@ function func658(this: any) {
                 var_83[var_3042].Var39 = 2;
             }
             enemy_list = 137;
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_3042].Var3 = Math.floor(enemy_hp * (var_83[var_3042].Var39 + 10) / 10);
             if (var_83[var_3042].Var3 >= 999) {
                 var_83[var_3042].Var3 = 999;
@@ -14308,7 +14619,7 @@ function func658(this: any) {
                 var_83[var_314].Var39 = 3;
             }
             enemy_list = var_83[var_314].Var0;
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var3 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
             if (var_83[var_314].Var3 >= 999) {
                 var_83[var_314].Var3 = 999;
@@ -15034,7 +15345,7 @@ function func660(this: any) {
         var_3056 = var_340;
         var_314 = var_82[var_455][var_456];
         enemy_list = var_83[var_314].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_748 = var_83[var_314].Var1 - var_66 + 4;
         var_749 = var_83[var_314].Var2 - var_67 + 4;
         if (var_163 == 0 && var_123 == 0) {
@@ -15122,7 +15433,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_3057 = enemy_name;
             var_83[var_314].Var3 = var_83[var_314].Var3 + 20;
             if (var_120 == 1 || var_174 == 1) {
@@ -15284,7 +15595,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_3057 = enemy_name;
             var_83[var_314].Var3 = enemy_hp;
             if (var_83[var_314].Var39 >= 2) {
@@ -15344,7 +15655,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_3057 = enemy_name;
             var_83[var_314].Var3 = enemy_hp;
             if (var_83[var_314].Var39 >= 2) {
@@ -15650,7 +15961,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 164);
@@ -15701,7 +16012,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 182);
@@ -15747,7 +16058,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 162);
@@ -15790,7 +16101,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
     
             DSPLAY(audio_id = 132);
             comments_row1 = "";
@@ -15917,7 +16228,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 126);
@@ -15958,7 +16269,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
             comments_row1 = "";
             comments_row2 = "";
@@ -16000,7 +16311,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
             comments_row1 = "";
             comments_row2 = "";
@@ -16037,7 +16348,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 134);
@@ -16076,7 +16387,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 134);
@@ -16115,7 +16426,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 153);
@@ -16157,7 +16468,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
     
             DSPLAY(audio_id = 154);
@@ -16193,7 +16504,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_314].Var8 = 1;
             comments_row1 = "";
             comments_row2 = "";
@@ -16277,7 +16588,7 @@ function func660(this: any) {
                 if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                     enemy_list = var_83[var_314].Var31;
                 }
-                yield func626();
+                yield func626(); // 敵リスト
                 var_83[var_314].Var3 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
                 if (var_83[var_314].Var3 >= 999) {
                     var_83[var_314].Var3 = 999;
@@ -16361,7 +16672,7 @@ function func660(this: any) {
             if (var_83[var_314].Var0 == 97 && var_83[var_314].Var31 >= 11) {
                 enemy_list = var_83[var_314].Var31;
             }
-            yield func626();
+            yield func626(); // 敵リスト
             if (var_83[var_314].Var3 >= enemy_hp) {
                 var_83[var_314].Var3 = enemy_hp;
             }
@@ -16893,7 +17204,7 @@ function func663(this: any) {
             var_83[var_314].Var39 = 2;
         }
         enemy_list = var_83[var_314].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         var_83[var_314].Var3 = Math.floor(enemy_hp * (var_83[var_314].Var39 + 10) / 10);
         if (var_83[var_314].Var3 >= 999) {
             var_83[var_314].Var3 = 999;
@@ -17029,7 +17340,7 @@ function func666(this: any) {
         var_1424 = 0;
         var_271 = 0;
         enemy_list = var_83[var_314].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         if (var_83[var_314].Var39 >= 2) {
             enemy_power = Math.floor(enemy_power * (var_83[var_314].Var39 * 2 + 10) / 10);
         }
@@ -17478,6 +17789,7 @@ function func671(this: any) {
         return;
     });
 }
+// ダンジョンを抜け出す際の動作処理
 function func672(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(672);
@@ -17868,7 +18180,7 @@ function func676(this: any) {
         var_449 = var_450;
         var_314 = var_82[var_347][var_348];
         enemy_list = var_83[var_314].Var0;
-        yield func626();
+        yield func626(); // 敵リスト
         if (var_83[var_314].Var26 >= 1) {
             if (var_83[var_314].Var0 == 144) {
                 yield func678();
@@ -17908,7 +18220,7 @@ function func676(this: any) {
                 var_3084 = 0;
             }
         }
-        // No = 5 なので、鉄の牢獄
+        // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
             var_1765 = 1;
         }
@@ -18392,7 +18704,7 @@ function func683(this: any) {
                 var_83[var_673].Var39 = 2;
             }
             enemy_list = var_83[var_673].Var0;
-            yield func626();
+            yield func626(); // 敵リスト
             var_3091 = enemy_name;
             var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
             if (var_83[var_673].Var3 >= 999) {
@@ -18464,7 +18776,7 @@ function func684(this: any) {
         }
         if (var_83[var_673].Var39 >= 2) {
             enemy_list = var_83[var_673].Var0;
-            yield func626();
+            yield func626(); // 敵リスト
             var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 * 2 + 10) / 10);
         }
         return;
@@ -19034,6 +19346,7 @@ function func694(this: any) {
         return;
     });
 }
+// 敵からのダメージを反射する際の動作処理
 function func695(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(695);
