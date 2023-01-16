@@ -416,6 +416,11 @@ function func101(this: any) {
             bgm_file_name = "414.mp3";
             bgm_title = "Chuck Berry [Johnny B. Goode]";
         }
+        // Ver0.1403にて追加。酒場のBGM
+        if (bgm_list_id == 976) {
+            bgm_file_name = "976.mp3";
+            bgm_title = "Terence Trent D'Arby [Sign Your Name]";
+        }
         if (bgm_list_id == 977) {
             bgm_file_name = "105.mp3"; // IDは977だが、ファイル名は違う:105.mp3
             bgm_title = "Red Hot Chili Peppers [Give It Away]";
@@ -467,6 +472,7 @@ function func101(this: any) {
             bgm_file_name = "988.mp3";
             bgm_title = "Eagles [Hotel California]";
         }
+        // 亀の中のBGM
         if (bgm_list_id == 989) {
             bgm_file_name = "989.mp3";
             bgm_title = "T.rex [20th Century Boy]";
@@ -638,6 +644,12 @@ function func106(this: any) {
                 yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
                 return;
             }
+            // Ver0.1403にて追加。var_681 = 976 が設定させていたら、その値を返す
+            if (var_681 == 976) {
+                bgm_list_id = 976; // 酒場のBGM
+                yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
+                return;
+            }
             // bgm_list_id = 0　なら ダンジョンテーマソングを流す処理を呼び出し
             bgm_list_id = 0; // BGMをダンジョンテーマソングへ戻す
             yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
@@ -744,7 +756,18 @@ function func114(this: any) {
         return;
     });
 }
-
+// 酒場の選曲(BGM "")
+function func114b(this: any) {
+    return __awaiter(this, void 0, void 0, function* () {
+        dbgprt(114);
+        var_678 = 1;
+        bgm_list_id = 976; // BGM ""
+        var_681 = 976;
+        yield func103(); // BGM再生関数を呼び出し(選曲されていない時は、ダンジョン内のテーマソング　"0.mp3" 設定)
+        var_678 = 0;
+        return;
+    });
+}
 function func115(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(115);
@@ -1593,7 +1616,7 @@ function func139(this: any) {
         redraw(0);
         color(0, 0, 0);
         boxf(left = 0, top1 = 0, right = 340, bottom = 340);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         var_727 = 0;
         var_728 = 350;
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
@@ -1623,7 +1646,7 @@ function func139(this: any) {
             redraw(0);
             color(0, 0, 0);
             boxf(left = 0, top1 = 0, right = 340, bottom = 340);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             var_727 = 0;
             var_728 = 350;
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
@@ -1735,7 +1758,7 @@ function func140(this: any) {
             var_599 = 5;
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
                 redraw(0);
-                gmode(2);
+                gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
                 var_727 = 0;
                 var_728 = 350;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
@@ -1752,7 +1775,7 @@ function func140(this: any) {
                 }
                 pos(36, 110);
                 gcopy(17, 1080, 360, 90, 83);
-                yield func180();
+                yield func180(); // ロード中の黒画面処理?
                 if (var_10 >= 1) {
                     yield func338();
                 }
@@ -1764,7 +1787,7 @@ function func140(this: any) {
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
                 redraw(0);
                 yield func146(); // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
-                yield func180();
+                yield func180(); // ロード中の黒画面処理?
                 if (var_10 >= 1) {
                     yield func338();
                 }
@@ -1785,7 +1808,7 @@ function func141(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(141);
         redraw(0);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         var_727 = 0;
         var_728 = 350;
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
@@ -1843,7 +1866,7 @@ function func142(this: any) {
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
                 redraw(0);
                 yield func146(); // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
-                yield func180();
+                yield func180(); // ロード中の黒画面処理?
                 if (var_10 >= 1) {
                     yield func338();
                 }
@@ -1854,7 +1877,7 @@ function func142(this: any) {
             var_599 = 0;
             for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
                 redraw(0);
-                gmode(2);
+                gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
                 var_727 = 0;
                 var_728 = 350;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
@@ -1871,7 +1894,7 @@ function func142(this: any) {
                 }
                 pos(36, 110);
                 gcopy(17, 1080, 360, 90, 83);
-                yield func180();
+                yield func180(); // ロード中の黒画面処理?
                 if (var_10 >= 1) {
                     yield func338();
                 }
@@ -1880,7 +1903,7 @@ function func142(this: any) {
                 var_599 = var_599 + 1;
             }
             pos(0, 0);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             yield func140();
             return;
         }
@@ -2200,7 +2223,6 @@ function func146(this: any) {
         }
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         if (var_725 == 0 && var_509 == 0) {
-
             // buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
             // 絵:矢尻(ログイン画面での選択カーソル)           
             gcopy(8, 70, 50, 25, 20);
@@ -2296,7 +2318,6 @@ function func148(this: any) {
             if (var_708 >= 1) {
                 pos(80, var_741 + 35);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
                 // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)
                 gcopy(8, 100, 82, 17, 17);
@@ -2312,7 +2333,6 @@ function func148(this: any) {
             if (var_710 >= 1) {
                 pos(124, var_741 + 35);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
                 // 絵:エンブレム(ダンジョン(ディアボロの試練？)クリア時)                      
                 gcopy(8, 140, 82, 17, 17);
@@ -2344,7 +2364,6 @@ function func148(this: any) {
             if (var_716 >= 1) {
                 pos(102, var_741 + 105);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
                 // 絵:エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)                
                 gcopy(8, 120, 82, 17, 17);
@@ -2352,7 +2371,6 @@ function func148(this: any) {
             if (var_717 >= 1) {
                 pos(124, var_741 + 105);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
                 // 絵:エンブレム(ダンジョン(ディアボロの試練？)クリア時)                      
                 gcopy(8, 140, 82, 17, 17);
@@ -2378,7 +2396,6 @@ function func148(this: any) {
             if (var_722 >= 1) {
                 pos(80, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
                 // 絵:エンブレム(ダンジョン(ホテルの外？)クリア時)                
                 gcopy(8, 100, 82, 17, 17);
@@ -2387,7 +2404,6 @@ function func148(this: any) {
             if (var_723 >= 1) {
                 pos(102, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
                 // 絵:エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)                
                 gcopy(8, 120, 82, 17, 17);
@@ -2395,7 +2411,6 @@ function func148(this: any) {
             if (var_724 >= 1) {
                 pos(124, var_741 + 175);
                 gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-                
                 // buffer(8)は"img1.gif"。X座標100、Y座標82から切り取り長さ X方向17、Y方向17
                 // 絵:エンブレム(ダンジョン(ディアボロの試練？)クリア時)                      
                 gcopy(8, 140, 82, 17, 17);
@@ -2415,7 +2430,6 @@ function func148(this: any) {
             pos(53, var_741 + 140 + 12);
         }
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
-        
         // buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
         // 絵:矢尻(ログイン画面での選択カーソル)            
         gcopy(8, 70, 50, 25, 20);
@@ -2482,7 +2496,7 @@ function func150(this: any) {
         yield func233();
         yield func158(); // オープニング戦マップ配置処理
         yield func108(); // BGM用mp3ファイル再生停止
-        var_595 = 3;
+        var_595 = 3; // dangeon_number = 0 での場所確認。3 = ローマ・ティベレ河
         yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             yield func339();
@@ -2571,7 +2585,7 @@ function func150(this: any) {
         var_83[1].Var6 = 0;
         var_742 = 1;
         var_83[1].Var7 = 1;
-        var_743 = 1;
+        var_743 = 1; //スタンド像付与フラグON
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -2590,7 +2604,7 @@ function func150(this: any) {
         var_531 = 0;
         var_742 = 0;
         var_83[1].Var7 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         var_83[1].Var5 = 4;
         var_83[5].Var0 = 49;
         var_83[5].Var1 = 30;
@@ -2739,7 +2753,7 @@ function func150(this: any) {
         var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         var_742 = 1;
         var_83[2].Var7 = 1;
-        var_743 = 1;
+        var_743 = 1; //スタンド像付与フラグON
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
@@ -2757,7 +2771,7 @@ function func150(this: any) {
         }
         var_742 = 0;
         var_83[2].Var7 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         var_83[1].Var6 = 1;
         var_83[1].Var1 = 27;
         var_83[1].Var2 = 10;
@@ -3140,7 +3154,7 @@ function func150(this: any) {
         var_199 = 2;
         var_374 = 0;
         var_211 = 15;
-        var_595 = 0;
+        var_595 = 0; // dangeon_number = 0 での場所確認。0 = ヴェネチアホテル
         var_312 = 0;
         ivents_flag = 1; // 初めてヴェネチアホテルへ訪れた際のディアボロの呟きフラグ
         var_755 = 0;
@@ -4287,7 +4301,7 @@ function func157(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(157);
         redraw(0);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(0, 0);
         gcopy(17, 0, 0, 340, 340);
         color(0, 0, 0);
@@ -4298,7 +4312,6 @@ function func157(this: any) {
             var_764 = 0;
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 pos(var_764 * var_35, var_763 * var_36);
-
                 // buffer(8)は"img1.gif"。X座標400、Y座標0から切り取り長さ X方向40、Y方向40
                 // 絵:??何もないぞ?? 
                 gcopy(8, 400, 0, 40, 40);
@@ -4325,7 +4338,7 @@ function func158(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(158);
         var_767 = 0;
-        var_262 = 1;
+        var_262 = 1; // dangeon_number = 0 確認フラグON
         current_floor = 0;
         var_199 = 8;
         y_axis_map_image = 18;
@@ -4352,6 +4365,7 @@ function func158(this: any) {
         var_67 = 10;
         var_65[var_66][var_67] = 1;
         var_374 = 1;
+        // キャラ配置と思われる
         var_97 = 0;
         var_97 = var_97 + 1;
         var_82[28][10] = var_97;
@@ -4360,13 +4374,15 @@ function func158(this: any) {
         var_83[var_97].Var2 = 10;
         var_83[var_97].Var5 = 6;
         var_83[var_97].Var32 = rnd(6);
+
         var_97 = var_97 + 1;
         var_82[32][10] = var_97;
-        var_83[var_97].Var0 = 132;
+        var_83[var_97].Var0 = 132; // No = 132 レクイエムジョルノ
         var_83[var_97].Var1 = 32;
         var_83[var_97].Var2 = 10;
         var_83[var_97].Var5 = 4;
         var_83[var_97].Var32 = rnd(6);
+        
         var_97 = var_97 + 1;
         var_82[30][7] = var_97;
         var_83[var_97].Var0 = 124;
@@ -4374,6 +4390,7 @@ function func158(this: any) {
         var_83[var_97].Var2 = 7;
         var_83[var_97].Var5 = 2;
         var_83[var_97].Var32 = rnd(6);
+
         var_97 = var_97 + 1;
         var_82[31][8] = var_97;
         var_83[var_97].Var0 = 152;
@@ -4390,7 +4407,7 @@ function func159(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(159);
         var_767 = 0;
-        var_262 = 1;
+        var_262 = 1; // dangeon_number = 0 確認フラグON
         current_floor = 0;
         var_199 = 2;
         var_68 = 1;
@@ -4399,21 +4416,34 @@ function func159(this: any) {
         var_560 = 1;
         var_561 = 5;
         var_562 = 5;
+        var_3198 = 0; // Ver0.1403にて追加。ホテルの外へ向かう際のメッセージフラグOFF
+        go_to_hotel = 0; // Ver0.1403にて追加。酒場からホテルの部屋に戻る際のメッセージフラグ
+        // マップ読み込み処理
+        // Ver0.1403にて修正
         if (var_559 == 0) {
+            //yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
             yield func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
         }
         if (var_559 == 1) {
+            //yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
             yield func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
         }
         if (var_559 == 2) {
+            //yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
             yield func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
         }
         if (var_559 == 3) {
             yield func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
         }
         if (var_559 == 4) {
+            //yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
             yield func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
         }
+        // Ver0.1403にて追加。
+        //if (var_595 == 2){ // dangeon_number = 0 での場所確認。2 = 酒場
+        //    yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
+            //yield map_bar(); // Ver0.1403にて追加。酒場(バー)のマップ
+        //}
         yield func248();
         // No = 0 なので、拠点(ホテル、亀、)
         dangeon_number = 0;
@@ -4426,7 +4456,8 @@ function func159(this: any) {
         var_83 = CharactorInfo.dim(300);
 
         var_73 = dim(length1 = 70, length2 = 70, length3 = null, length4 = null);
-        yield func160(); // ヴェネチアホテルへ追加するNPCの設定処理(亀、岸辺露伴、ロッコ・バロッコ所長)
+        yield func160(); // ヴェネチアホテルへ追加するNPCの設定処理(亀、岸辺露伴)
+        yield func160b(); // 酒場へ追加するNPCの設定処理(ロッコ・バロッコ所長)
         if (var_66 == 13 && var_67 == 9) {
             var_65[var_66][var_67] = 0;
             var_66 = 13;
@@ -4464,11 +4495,14 @@ function func159(this: any) {
         }
         var_68 = 1;
         onexit(1);
-        if (var_595 == 0) {
+        if (var_595 == 0) { // dangeon_number = 0 での場所確認。0 = ヴェネチアホテル
             yield func113(); // ヴェネチアホテルのBGMを選曲
         }
-        if (var_595 == 1) {
+        if (var_595 == 1) { // dangeon_number = 0 での場所確認。1 = 亀の中
             yield func114(); // 亀の中の選曲(BGM "20th Century Boy")
+        }
+        if (var_595 == 2) { // dangeon_number = 0 での場所確認。2 = 酒場
+            yield func114b(); // 酒場の選曲
         }
         if (ivents_flag == 1) {
             yield func151(); // 初めてヴェネチアホテルへ訪れた際のディアボロの呟き
@@ -4496,7 +4530,7 @@ function func159(this: any) {
         return;
     });
 }
-// ヴェネチアホテルへ追加するNPCの設定処理(亀、岸辺露伴、ロッコ・バロッコ所長)
+// ヴェネチアホテルへ追加するNPCの設定処理(亀、岸辺露伴)
 function func160(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(160);
@@ -4506,8 +4540,8 @@ function func160(this: any) {
             var_771 = var_97;
             var_82[13][9] = var_97;
             var_83[var_97].Var0 = 55; // enemy_list = 55 なので亀
-            var_83[var_97].Var1 = 13;
-            var_83[var_97].Var2 = 9;
+            var_83[var_97].Var1 = 13; // マップ上のX軸
+            var_83[var_97].Var2 = 9; // マップ上のY軸
             var_83[var_97].Var3 = 20;
             var_83[var_97].Var4 = 1;
             var_83[var_97].Var5 = 3;
@@ -4521,36 +4555,85 @@ function func160(this: any) {
             var_761 = var_97;
             var_82[16][7] = var_97;
             var_83[var_97].Var0 = 142; // enemy_list = 142 なので岸辺露伴
-            var_83[var_97].Var1 = 16;
-            var_83[var_97].Var2 = 7;
+            var_83[var_97].Var1 = 16; // マップ上のX軸
+            var_83[var_97].Var2 = 7; // マップ上のY軸
             var_83[var_97].Var3 = 20;
             var_83[var_97].Var4 = 0;
             var_83[var_97].Var5 = 2;
             var_83[var_97].Var10 = 1;
             var_83[var_97].Var31 = 4;
             var_83[var_97].Var32 = rnd(6);
-            
-            // ここから下はオリジナルには無いロッコ・バロッコ所長をヴェネチアホテルへ追加する要素。
-            // おそらくウェブ版にて独自に追加したと思われる。Ver0.1310で廃止。
-            /*
+        }
+        /* まだ調整中なのでコメントアウト
+        if (var_759 >= 1) { // 岸辺露伴とのイベントフラグがON
             var_97 = var_97 + 1;
             var_761 = var_97;
-            var_82[18][10] = var_97;
-            var_83[var_97].Var0 = 173; // enemy_list = 173 なのでロッコ・バロッコ所長
-            var_83[var_97].Var1 = 18;
-            var_83[var_97].Var2 = 10;
+            var_82[18][8] = var_97;
+            var_83[var_97].Var0 = 180; // enemy_list = 180 NPC デッドマンズ吉良
+            var_83[var_97].Var1 = 18; // マップ上のX軸
+            var_83[var_97].Var2 = 8; // マップ上のY軸
             var_83[var_97].Var3 = 20;
             var_83[var_97].Var4 = 0;
             var_83[var_97].Var5 = 2;
             var_83[var_97].Var10 = 1;
             var_83[var_97].Var31 = 4;
             var_83[var_97].Var32 = rnd(6);
-            */
+        }
+        */
+        return;
+    });
+}
+// Ver0.1403にて追加。酒場へ追加するNPCの設定処理(ロッコ・バロッコ所長)
+function func160b(this: any) {
+    return __awaiter(this, void 0, void 0, function* () {
+        //var_97 = 0; 常時OFF。ONにすると亀が消える。おそらくキャラ配置配列初期化?
+        // ここから下はオリジナルには無いロッコ・バロッコ所長をヴェネチアホテルへ追加する要素。
+        // おそらくウェブ版にて独自に追加したと思われる。Ver0.1310で廃止。Ver0.1403より復活。酒場へ追加するように位置修正。
+        if (var_759 >= 1) { // 岸辺露伴とのイベントフラグがON
+            var_97 = var_97 + 1;
+            var_761 = var_97;
+            var_82[18][31] = var_97; // マップ上のX軸とY軸の配列 var_82[X軸][Y軸]
+            var_83[var_97].Var0 = 173; // enemy_list = 173 なのでロッコ・バロッコ所長
+            var_83[var_97].Var1 = 18; // マップ上のX軸 18 → 18
+            var_83[var_97].Var2 = 31; // マップ上のY軸 10 → 31
+            var_83[var_97].Var3 = 20;
+            var_83[var_97].Var4 = 0;
+            var_83[var_97].Var5 = 2;
+            var_83[var_97].Var10 = 1;
+            var_83[var_97].Var31 = 4;
+            var_83[var_97].Var32 = rnd(6);
+
+            // Ver0.1403より追加。バーテンダー。
+            var_97 = var_97 + 1;
+            var_761 = var_97;
+            var_82[23][30] = var_97; // マップ上のX軸とY軸の配列 var_82[X軸][Y軸]
+            var_83[var_97].Var0 = 82; // enemy_list = 82 なのでバーテンダー
+            var_83[var_97].Var1 = 23; // マップ上のX軸
+            var_83[var_97].Var2 = 30; // マップ上のY軸
+            var_83[var_97].Var3 = 20;
+            var_83[var_97].Var4 = 0;
+            var_83[var_97].Var5 = 2;
+            var_83[var_97].Var10 = 1;
+            var_83[var_97].Var31 = 4;
+            var_83[var_97].Var32 = rnd(6);
+
+            // Ver0.1403より追加。D・ダービー。
+            var_97 = var_97 + 1;
+            var_761 = var_97;
+            var_82[18][34] = var_97; // マップ上のX軸とY軸の配列 var_82[X軸][Y軸]
+            var_83[var_97].Var0 = 70; // enemy_list = 70 なのでD・ダービー
+            var_83[var_97].Var1 = 18; // マップ上のX軸
+            var_83[var_97].Var2 = 34; // マップ上のY軸
+            var_83[var_97].Var3 = 20;
+            var_83[var_97].Var4 = 0;
+            var_83[var_97].Var5 = 2;
+            var_83[var_97].Var10 = 1;
+            var_83[var_97].Var31 = 4;
+            var_83[var_97].Var32 = rnd(6);
         }
         return;
     });
 }
-
 //亀の中に入った時の表示
 function func161(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -4575,10 +4658,10 @@ function func161(this: any) {
         }
         yield func114(); // 亀の中の選曲(BGM "20th Century Boy")
         var_65[var_66][var_67] = 0;
-        var_66 = 14;
-        var_67 = 23;
+        var_66 = 14; // X軸
+        var_67 = 23; // Y軸
         yield func016();
-        var_595 = 1;
+        var_595 = 1; // dangeon_number = 0 での場所確認。1 = 亀の中
         var_374 = 1;
         var_772 = 1;
         var_773 = 1;
@@ -4603,7 +4686,76 @@ function func161(this: any) {
         return;
     });
 }
-
+// Ver0.1403にて追加。酒場に入った時の表示
+function func161a(this: any) {
+    return __awaiter(this, void 0, void 0, function* () {
+        dbgprt(161);
+        var_243 = 0;
+        comments_row1 = "";
+        comments_row2 = "";
+        var_295 = "";
+        comments_row1a = "";
+        comments_row2a = "";
+        var_298 = "";
+        var_299 = 0;
+        comments_row1 = "酒場に入った";
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+        var_198 = 1;
+        var_300 = 0;
+        yield func047();
+        for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
+            yield func337(); // メッセージ関係呼び出し
+        }
+        yield func114b(); // 酒場の選曲(BGM "")
+        var_65[var_66][var_67] = 1;
+        var_66 = 25; // X軸 ok25 前21
+        var_67 = 32; // Y軸　ok31 前32
+        yield func016();
+        var_595 = 2; // dangeon_number = 0 での場所確認。2 = 酒場
+        for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
+            yield func337(); // メッセージ関係呼び出し
+        }
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+        return;
+    });
+}
+// Ver0.1403にて追加。酒場からホテルの部屋へ戻った時の表示
+function func161b(this: any) {
+    return __awaiter(this, void 0, void 0, function* () {
+        dbgprt(161);
+        var_243 = 0;
+        comments_row1 = "";
+        comments_row2 = "";
+        var_295 = "";
+        comments_row1a = "";
+        comments_row2a = "";
+        var_298 = "";
+        var_299 = 0;
+        comments_row1 = "部屋に戻った";
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+        var_198 = 1;
+        var_300 = 0;
+        yield func047();
+        for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
+            yield func337(); // メッセージ関係呼び出し
+        }
+        yield func113(); // ヴェネチアホテルのBGMを選曲
+        var_65[var_66][var_67] = 1;
+        var_66 = 11; // X軸
+        var_67 = 8; // Y軸
+        yield func016();
+        var_595 = 0; // dangeon_number = 0 での場所確認。0 = ヴェネチアホテル
+        for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
+            yield func337(); // メッセージ関係呼び出し
+        }
+        yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+        return;
+    });
+}
 function func162(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(162);
@@ -4634,7 +4786,7 @@ function func162(this: any) {
         var_66 = 13;
         var_67 = 10;
         yield func016();
-        var_595 = 0;
+        var_595 = 0; // dangeon_number = 0 での場所確認。0 = ヴェネチアホテル
         var_773 = 7;
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -4649,7 +4801,7 @@ function func162(this: any) {
         return;
     });
 }
-// ヴェネチアホテルのアイテム配置
+// ヴェネチアホテル & 亀の中のアイテム配置
 function func163(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(163);
@@ -4665,53 +4817,53 @@ function func163(this: any) {
         if (var_409 == 3) {
             var_778 = 30;
         }
-        var_779 = (var_66 - 5) * var_35 + var_778;
-        var_780 = (var_67 - 5) * var_36 + var_778;
+        var_779 = (var_66 - 5) * var_35 + var_778; // var_35は固定値40
+        var_780 = (var_67 - 5) * var_36 + var_778; // var_36は固定値40
         if (var_217 == 0) {
             if (var_199 == 6) {
-                var_779 = (var_66 - 5) * var_35 - var_778;
-                var_780 = (var_67 - 5) * var_36;
+                var_779 = (var_66 - 5) * var_35 - var_778; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36; // var_36は固定値40
             }
             if (var_199 == 4) {
-                var_779 = (var_66 - 5) * var_35 + var_778;
-                var_780 = (var_67 - 5) * var_36;
+                var_779 = (var_66 - 5) * var_35 + var_778; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36; // var_36は固定値40
             }
             if (var_199 == 2) {
-                var_779 = (var_66 - 5) * var_35;
-                var_780 = (var_67 - 5) * var_36 - var_778;
+                var_779 = (var_66 - 5) * var_35; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36 - var_778; // var_36は固定値40
             }
             if (var_199 == 8) {
-                var_779 = (var_66 - 5) * var_35;
-                var_780 = (var_67 - 5) * var_36 + var_778;
+                var_779 = (var_66 - 5) * var_35; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36 + var_778; // var_36は固定値40
             }
             if (var_199 == 9) {
-                var_779 = (var_66 - 5) * var_35 - var_778;
-                var_780 = (var_67 - 5) * var_36 + var_778;
+                var_779 = (var_66 - 5) * var_35 - var_778; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36 + var_778; // var_36は固定値40
             }
             if (var_199 == 7) {
-                var_779 = (var_66 - 5) * var_35 + var_778;
-                var_780 = (var_67 - 5) * var_36 + var_778;
+                var_779 = (var_66 - 5) * var_35 + var_778; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36 + var_778; // var_36は固定値40
             }
             if (var_199 == 3) {
-                var_779 = (var_66 - 5) * var_35 - var_778;
-                var_780 = (var_67 - 5) * var_36 - var_778;
+                var_779 = (var_66 - 5) * var_35 - var_778; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36 - var_778; // var_36は固定値40
             }
             if (var_199 == 1) {
-                var_779 = (var_66 - 5) * var_35 + var_778;
-                var_780 = (var_67 - 5) * var_36 - var_778;
+                var_779 = (var_66 - 5) * var_35 + var_778; // var_35は固定値40
+                var_780 = (var_67 - 5) * var_36 - var_778; // var_36は固定値40
             }
         }
         if (var_217 == 1) {
-            var_779 = (var_66 - 5) * var_35;
-            var_780 = (var_67 - 5) * var_36;
+            var_779 = (var_66 - 5) * var_35; // var_35は固定値40
+            var_780 = (var_67 - 5) * var_36; // var_36は固定値40
         }
         pos(0, 0);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
 
         // buffer(18)は"img4.gif"。X座標var_779、Y座標var_780から切り取り長さ X方向340、Y方向340
         // 絵: 
         gcopy(18, var_779, var_780, 340, 340); // buffer(18)は"img4.gif" // マップ描画 (ヴェネチアホテル、亀の中)
-        var_781 = 17;
+        var_781 = 17; // x軸17, y軸5なのでPCの位置 
         var_782 = 5;
         if (var_199 == 4) {
             pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4740,91 +4892,92 @@ function func163(this: any) {
         if (var_217 == 1) {
             pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
         }
-        gmode(2);
-        if (var_404 == 0) {
-
+        // ヴェネチアホテルにあるPCの画面ドット関係
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
+        if (var_404 == 0) { // 冒険中でなければ？？
             // buffer(18)は"img4.gif"。X座標1400、Y座標680から切り取り長さ X方向40、Y方向40
             // 絵: ヴェネチアホテルにあるPC (NPCが画面内に出てくる直前のノイズ画面)
             gcopy(18, 1400, 680, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 1) {
-
             // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
-            // 絵:
+            // 絵: ヴェネチアホテルにあるPC (NPCが画面内に出てくる直前のノイズ画面)
             gcopy(18, 1440, 680, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 2) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 720, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 3) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 760, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 4) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 800, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 5) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 840, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 6) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 880, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 7) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 920, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 8) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 960, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 9) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 1000, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 10) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 1040, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 11) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1440, 1080, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 12) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1400, 720, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 13) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1400, 760, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 14) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1400, 800, 40, 40); // buffer(18)は"img4.gif"
         }
         if (var_783 == 15) {
-
-
+            // buffer(18)は"img4.gif"。X座標1440、Y座標680から切り取り長さ X方向40、Y方向40
+            // 絵:
             gcopy(18, 1400, 840, 40, 40); // buffer(18)は"img4.gif"
         }
+
+
         if (var_404 >= 1) {
-            var_781 = 17;
+            var_781 = 17; // x軸17, y軸9なのでレクイエム階段の位置 
             var_782 = 9;
             if (var_199 == 4) {
                 pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4853,12 +5006,12 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             gcopy(18, 1440, 1120, 40, 40);
         }
-        // ディアボロの試練解放フラグがON
+        // var_526 >= 1 ディアボロの試練解放フラグがON
         if (var_526 >= 1) {
-            var_781 = 15;
+            var_781 = 15; // x軸15, y軸5なので試練に向かう壁穴の位置 
             var_782 = 5;
             if (var_199 == 4) {
                 pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4887,8 +5040,9 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             gcopy(18, 1400, 1000, 40, 80); // buffer(18)は"img4.gif" 壁に開いた穴(ディアボロの試練への入り口)
+            
             if (var_760 >= 1) {
                 if (var_199 == 4) {
                     pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4918,21 +5072,26 @@ function func163(this: any) {
                     pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
                 }
                 if (var_760 == 4) {
+                    // 岸辺露伴のイベントで、壁に穴を開けた後の絵
                     gcopy(18, 1360, 1000, 40, 80); // buffer(18)は"img4.gif"
                 }
                 if (var_760 == 3) {
+                    // 岸辺露伴のイベントで、壁に穴を開ける時の破片1
                     gcopy(18, 0, 240, 40, 40); // buffer(18)は"img4.gif"
                 }
                 if (var_760 == 2) {
+                    // 岸辺露伴のイベントで、壁に穴を開ける時の破片2
                     gcopy(18, 0, 280, 40, 40); // buffer(18)は"img4.gif"
                 }
                 if (var_760 == 1) {
+                    // 岸辺露伴のイベントで、壁に穴を開ける時の破片3
                     gcopy(18, 0, 320, 40, 40); // buffer(18)は"img4.gif"
                 }
             }
         }
+        // var_526 >= 1 ディアボロの試練解放フラグがON & var_759 >= 2 DIO&プッチ神父出現フラグがON
         if (var_526 >= 1 && var_759 >= 2) {
-            var_781 = 12;
+            var_781 = 12; // x軸12, y軸4なのでDIO用にブラインドが降ろされた窓
             var_782 = 4;
             if (var_199 == 4) {
                 pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4961,9 +5120,10 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             gcopy(18, 80, 1080, 120, 120); // buffer(18)は"img4.gif" // DIO用にブラインドが降ろされた窓
-            var_781 = 12;
+            
+            var_781 = 12; // x軸12, y軸6なのでDIOとプッチ神父
             var_782 = 6;
             if (var_199 == 4) {
                 pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -4992,12 +5152,12 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             gcopy(18, 1360, 1120, 80, 80); // DIOとプッチ神父?
         }
 
         if (var_523 >= 1) { // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
-            var_781 = 16;
+            var_781 = 16; // x軸16, y軸5なので地球儀の位置
             var_782 = 5;
             if (var_199 == 4) {
                 pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -5026,7 +5186,7 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             if (var_784 == 0 || var_784 == 3) {
                 gcopy(18, 0, 0, 40, 40); // buffer(18)は"img4.gif" 地球儀
             }
@@ -5037,7 +5197,9 @@ function func163(this: any) {
                 gcopy(18, 0, 80, 40, 40); // buffer(18)は"img4.gif" 地球儀
             }
         }
-        var_781 = 15;
+
+        // ここから亀の中の配置
+        var_781 = 15; // x軸15, y軸21なので亀の中のジッパーの位置
         var_782 = 21;
         if (var_199 == 4) {
             pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
@@ -5066,18 +5228,19 @@ function func163(this: any) {
         if (var_217 == 1) {
             pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
         }
-        gmode(2);
+        
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         if (var_557 == 0 || var_557 >= 13) {
-            gcopy(14, 0, 400, 40, 40);
+            gcopy(14, 0, 400, 40, 40); // buffer(14)は"img_wana.gif" ジッパー(完閉じ 1/4)
         }
         if (var_557 == 1 || var_557 == 2 || var_557 == 11 || var_557 == 12) {
-            gcopy(14, 40, 400, 40, 40);
+            gcopy(14, 40, 400, 40, 40); // buffer(14)は"img_wana.gif" ジッパー(ちょい開け 2/4)
         }
         if (var_557 == 3 || var_557 == 4 || var_557 == 9 || var_557 == 10) {
-            gcopy(14, 80, 400, 40, 40);
+            gcopy(14, 80, 400, 40, 40); // buffer(14)は"img_wana.gif" ジッパー(開け 3/4)
         }
         if (var_557 == 5 || var_557 == 6 || var_557 == 7 || var_557 == 8) {
-            gcopy(14, 120, 400, 40, 40);
+            gcopy(14, 120, 400, 40, 40); // buffer(14)は"img_wana.gif" ジッパー(完開け 4/4)
         }
         if (var_559 < 4) {
             if (var_559 < 3) {
@@ -5115,7 +5278,7 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gcopy(18, 80, 360, 120, 360); // buffer(18)は"img4.gif" 細長いやつ
+            gcopy(18, 80, 360, 120, 360); // buffer(18)は"img4.gif" 仕切り(縦)。細長いやつ。
         }
         if (var_559 < 2) {
             if (var_559 == 0) {
@@ -5153,12 +5316,110 @@ function func163(this: any) {
             if (var_217 == 1) {
                 pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
             }
-            gcopy(18, 960, 1040, 360, 160); // buffer(18)は"img4.gif" 細長いやつ
+            gcopy(18, 960, 1040, 360, 160); // buffer(18)は"img4.gif" 仕切り(横)。細長いやつ
+        }
+        // Ver0.1403にて追加(func328より移植)。亀の中から外へ出る場所の光表示処理。
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
+            color(0, 0, 0);
+            gmode(4, null, null, 180);
+            var_781 = 14;
+            var_782 = 17;
+            if (var_199 == 4) {
+                pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36);
+            }
+            if (var_199 == 6) {
+                pos((var_781 - var_66 + 4) * var_35 + var_778, (var_782 - var_67 + 4) * var_36);
+            }
+            if (var_199 == 8) {
+                pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36 - var_778);
+            }
+            if (var_199 == 2) {
+                pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36 + var_778);
+            }
+            if (var_199 == 1) {
+                pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36 + var_778);
+            }
+            if (var_199 == 3) {
+                pos((var_781 - var_66 + 4) * var_35 + var_778, (var_782 - var_67 + 4) * var_36 + var_778);
+            }
+            if (var_199 == 7) {
+                pos((var_781 - var_66 + 4) * var_35 - var_778, (var_782 - var_67 + 4) * var_36 - var_778);
+            }
+            if (var_199 == 9) {
+                pos((var_781 - var_66 + 4) * var_35 + var_778, (var_782 - var_67 + 4) * var_36 - var_778);
+            }
+            if (var_217 == 1) {
+                pos((var_781 - var_66 + 4) * var_35, (var_782 - var_67 + 4) * var_36);
+            }
+            // buffer(8)は"img1.gif"。X座標760、Y座標1000から切り取り長さ X方向40、Y方向200
+            // 絵:亀の中から外へ出る場所の光
+            gcopy(8, 760, 1000, 40, 200);
         }
         return;
     });
 }
-
+// 酒場の配置(マップ読み込み)
+function func163b(this: any) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (var_409 == 0) {
+            var_778 = 0;
+        }
+        if (var_409 == 1) {
+            var_778 = 10;
+        }
+        if (var_409 == 2) {
+            var_778 = 20;
+        }
+        if (var_409 == 3) {
+            var_778 = 30;
+        }
+        var_779 = (var_66 + 2) * var_35 + var_778;
+        var_780 = (var_67) * var_36 + var_778;
+        if (var_217 == 0) {
+            if (var_199 == 1) {
+                var_779 = (var_66 + 2) * var_35 + var_778;
+                var_780 = (var_67) * var_36 - var_778;
+            }
+            if (var_199 == 2) {
+                var_779 = (var_66 + 2) * var_35;
+                var_780 = (var_67) * var_36 - var_778;
+            }
+            if (var_199 == 3) {
+                var_779 = (var_66 + 2) * var_35 - var_778;
+                var_780 = (var_67) * var_36 - var_778;
+            }
+            if (var_199 == 4) {
+                var_779 = (var_66 + 2) * var_35 + var_778;
+                var_780 = (var_67) * var_36;
+            }
+            if (var_199 == 6) {
+                var_779 = (var_66 + 2) * var_35 - var_778;
+                var_780 = (var_67) * var_36;
+            }
+            if (var_199 == 7) {
+                var_779 = (var_66 + 2) * var_35 + var_778;
+                var_780 = (var_67) * var_36 + var_778;
+            }
+            if (var_199 == 8) {
+                var_779 = (var_66 + 2) * var_35;
+                var_780 = (var_67) * var_36 + var_778;
+            }
+            if (var_199 == 9) {
+                var_779 = (var_66 + 2) * var_35 - var_778;
+                var_780 = (var_67) * var_36 + var_778;
+            }
+        }
+        if (var_217 == 1) {
+            var_779 = (var_66 + 2) * var_35; // ((var_66 = 25) + 2) * (var_35 = 40) = 1080
+            var_780 = (var_67) * var_36; // (var_67 = 32) * (var_36 = 40) = 1280
+        }
+        pos(0, 0);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
+        gcopy(18, var_779, var_780, 380, 400); // buffer(18)は"img4.gif" x: 1080、y: 1280 よりx方向へ380、y方向へ400切り抜き
+        return;
+    });
+}
+// 幽霊部屋の配置(マップ読み込み)
 function func164(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(164);
@@ -5177,17 +5438,29 @@ function func164(this: any) {
         var_779 = (var_66 + 2) * var_35 + var_778;
         var_780 = (var_67 + 1) * var_36 + var_778;
         if (var_217 == 0) {
-            if (var_199 == 6) {
+            if (var_199 == 1) {
+                var_779 = (var_66 + 2) * var_35 + var_778;
+                var_780 = (var_67 + 1) * var_36 - var_778;
+            }
+            if (var_199 == 2) {
+                var_779 = (var_66 + 2) * var_35;
+                var_780 = (var_67 + 1) * var_36 - var_778;
+            }
+            if (var_199 == 3) {
                 var_779 = (var_66 + 2) * var_35 - var_778;
-                var_780 = (var_67 + 1) * var_36;
+                var_780 = (var_67 + 1) * var_36 - var_778;
             }
             if (var_199 == 4) {
                 var_779 = (var_66 + 2) * var_35 + var_778;
                 var_780 = (var_67 + 1) * var_36;
             }
-            if (var_199 == 2) {
-                var_779 = (var_66 + 2) * var_35;
-                var_780 = (var_67 + 1) * var_36 - var_778;
+            if (var_199 == 6) {
+                var_779 = (var_66 + 2) * var_35 - var_778;
+                var_780 = (var_67 + 1) * var_36;
+            }
+            if (var_199 == 7) {
+                var_779 = (var_66 + 2) * var_35 + var_778;
+                var_780 = (var_67 + 1) * var_36 + var_778;
             }
             if (var_199 == 8) {
                 var_779 = (var_66 + 2) * var_35;
@@ -5197,29 +5470,18 @@ function func164(this: any) {
                 var_779 = (var_66 + 2) * var_35 - var_778;
                 var_780 = (var_67 + 1) * var_36 + var_778;
             }
-            if (var_199 == 7) {
-                var_779 = (var_66 + 2) * var_35 + var_778;
-                var_780 = (var_67 + 1) * var_36 + var_778;
-            }
-            if (var_199 == 3) {
-                var_779 = (var_66 + 2) * var_35 - var_778;
-                var_780 = (var_67 + 1) * var_36 - var_778;
-            }
-            if (var_199 == 1) {
-                var_779 = (var_66 + 2) * var_35 + var_778;
-                var_780 = (var_67 + 1) * var_36 - var_778;
-            }
         }
         if (var_217 == 1) {
-            var_779 = (var_66 + 2) * var_35;
-            var_780 = (var_67 + 1) * var_36;
+            var_779 = (var_66 + 2) * var_35; // var_35 = 40
+            var_780 = (var_67 + 1) * var_36; // var_36 = 40
         }
         pos(0, 0);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         gcopy(18, var_779, var_780, 340, 340); // buffer(18)は"img4.gif"
         return;
     });
 }
+
 function func165(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(165);
@@ -5255,7 +5517,7 @@ function func165(this: any) {
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
             redraw(0);
             yield func168(); // ダンジョンクリア時のスコア判定
-            yield func180();
+            yield func180(); // ロード中の黒画面処理?
             if (var_10 >= 1) {
                 yield func338();
             }
@@ -5453,7 +5715,7 @@ function func167(this: any) {
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
             redraw(0);
             yield func168(); // ダンジョンクリア時のスコア判定
-            yield func180();
+            yield func180(); // ロード中の黒画面処理?
             if (var_10 >= 1) {
                 yield func338();
             }
@@ -5879,7 +6141,7 @@ function func169(this: any) {
 function func170(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(170);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(0, 0);
         if (var_767 == 0) {
             gcopy(17, 360, 0, 340, 340);
@@ -5907,7 +6169,7 @@ function func170(this: any) {
         pset(331, 38);
         pset(9, var_801 - 1);
         pset(331, var_801 - 1);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(285, 45);
         gcopy(9, 360, 0, 40, 20);
         // 攻撃が特殊disc??
@@ -5950,12 +6212,16 @@ function func170(this: any) {
         }
         if (var_805 == 1) {
             pos(62, 73);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
+            // buffer(8)は"img1.gif"。X座標40、Y座標50から切り取り長さ X方向10、Y方向10
+            // 絵:ドクロマーク          
             gcopy(8, 40, 50, 10, 10);
         }
         if (var_805 == 2) {
             pos(61, 74);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
+            // buffer(8)は"img1.gif"。X座標40、Y座標80から切り取り長さ X方向10、Y方向10
+            // 絵:星マーク   
             gcopy(8, 40, 80, 10, 10);
         }
         color(255, 255, 255);
@@ -6833,7 +7099,7 @@ function func177(this: any) {
         if (var_356 == 131) {
             var_849 = "ｼﾞｮﾙﾉに殴られ精神だけ暴走し";
         }
-        if (var_356 == 132) {
+        if (var_356 == 132) { // No = 132 レクイエムジョルノ
             var_849 = "ﾚｸｲｴﾑｼﾞｮﾙﾉにまたやられて";
         }
         if (var_356 == 133) {
@@ -6950,8 +7216,10 @@ function func177(this: any) {
         if (var_356 == 170) {
             var_849 = "カタツムリにされて";
         }
+        // 死因リストが326まで埋まってしまっている。func654にて　var_356 = var_83[var_673].Var0　とされているので、新キャラは326以降に作った方が無難か？
         if (var_356 == 171) {
-            var_849 = "ワムウの首にやられて";
+            // var_849 = "ワムウの首にやられて"; // Ver0.1403にて修正。使用していないのでコメントアウト
+            var_849 = "承太郎に時を止められて"; // Ver0.1403にて追加。
         }
         if (var_356 == 172) {
             var_849 = "虫喰いでないににこごりにされ";
@@ -7554,43 +7822,50 @@ function func179(this: any) {
         return;
     });
 }
+// ロード中の黒画面処理?
 function func180(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(180);
         if (var_599 == 0) {
             pos(0, 0);
-
             gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 1) {
             pos(0, 0);
-    
             gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 2) {
             pos(0, 0);
-
             gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 3) {
             pos(0, 0);
-
             gmode(4, null, null, 80);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 4) {
             pos(0, 0);
-
             gmode(mode = 4, data2 = null, data3 = null, alpha = 40);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 5) {
             pos(0, 0);
-
             gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         return;
@@ -7842,10 +8117,9 @@ function func185(this: any) {
             // No = 1 なので、ホテルの外
             dangeon_number = 1;
         }
-        var_262 = 0;
-        var_595 = 0;
+        var_262 = 0; // dangeon_number = 0 確認フラグOFF
+        var_595 = 0; // dangeon_number = 0 での場所確認。0 = ヴェネチアホテル
         gsel(window_id = 31, window_mode = -1);
-
         gsel(0, 1);
         yield func076(); // マップ背景画像の読込
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
@@ -8425,7 +8699,9 @@ function func196(this: any) {
         if (var_906 == 4) {
             pos(50, 227);
         }
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
+        // buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
+        // 絵:カーソルアイコン(鏃)
         gcopy(8, 70, 50, 25, 20);
         return;
     });
@@ -8532,8 +8808,10 @@ function func197(this: any) {
         if (var_899 == 6) {
             pos(112, 207);
         }
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         if (var_900 == 0) {
+            // buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
+            // 絵:カーソルアイコン(鏃)
             gcopy(8, 70, 50, 25, 20);
         }
         return;

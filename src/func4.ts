@@ -446,7 +446,7 @@ function func404(this: any) {
                 yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
                 var_560 = 1;
                 var_561 = 5;
-                var_562 = 5;
+                var_562 = 0;
                 if (var_559 == 0) {
                     yield func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
                 }
@@ -1227,7 +1227,7 @@ function func411(this: any) {
         return;
     });
 }
-
+// アイテムを投げて床に落ちた時のアイテム表示処理
 function func412(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(412);
@@ -1506,7 +1506,7 @@ function func416(this: any) {
         if (var_340 >= 800 && var_340 < 900) {
             var_1900 = 1;
         }
-        if (var_111 == 1 || var_138 == 1) {
+        if (var_111 == 1 || var_138 == 1) { // var_111 命中率を上げるフラグがONであれば
             var_1900 = 1;
         }
         // 共鳴ID = 136 「はっはっは　狙え狙え」(投影命中率上昇)
@@ -4777,7 +4777,7 @@ function func457(this: any) {
             var_134 = 0;
             var_126 = 0;
             var_132 = 0;
-            var_127 = 0;
+            var_127 = 0;  // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグOFF
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "状態異常が治った！";
@@ -8748,12 +8748,12 @@ function func471(this: any) {
             if (var_1736 >= 86 && var_1736 < 100) {
                 var_1735 = 9;
             }
-            if (var_262 == 1) {
+            if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
                 // No = 1 なので、ホテルの外
                 dangeon_number = 1;
             }
             yield func385(); // 各ダンジョンごとの出現アイテム&出現確率管理
-            if (var_262 == 1) {
+            if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
                 // No = 0 なので、拠点(ホテル、亀、)
                 dangeon_number = 0;
             }
@@ -9320,15 +9320,15 @@ function func473(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_234 = 0;
-            if (var_262 == 0) {
+            if (var_262 == 0) { // var_262 == 0 なので、dangeon_number = 0 でなければ
                 var_231 = 0;
                 var_234 = 0;
                 var_2040 = 0;
                 var_2112 = 1;
                 DSPLAY(audio_id = 190);
-                yield func499();
+                yield func499(); // ダンジョン動作処理?
             }
-            if (var_262 != 0) {
+            if (var_262 != 0) { // var_262 != 0 なので、dangeon_number = 0 であれば
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
                 comments_row1a = "ここでは何も起こらなかった。";
@@ -12468,7 +12468,7 @@ function func492(this: any) {
             var_2173 = "夢";
             var_2174 = 1;
             var_2039 = "ラリホ～ッ！";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]部屋内の敵を眠らせるぞ";
             }
         }
@@ -12495,7 +12495,7 @@ function func492(this: any) {
             var_2173 = "赤";
             var_2174 = 1;
             var_2039 = "ｸﾛｽﾌｧｲｱｰﾊﾘｹｰﾝ";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]部屋内の敵にランダムでダメージＳ";
             }
         }
@@ -12594,7 +12594,7 @@ function func492(this: any) {
             var_2173 = "青";
             var_2174 = 0;
             var_2039 = "フジツボ";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]部屋内の敵から体力を吸い取るぞ";
             }
         }
@@ -12645,7 +12645,7 @@ function func492(this: any) {
             var_2173 = "毒";
             var_2174 = 1;
             var_2039 = "殺人ウイルス";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]ウイルスで部屋内全員にダメージＡ";
             }
         }
@@ -12720,7 +12720,7 @@ function func492(this: any) {
             var_2173 = "氷";
             var_2174 = 0;
             var_2039 = "超低温の世界";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]フロア内全ての敵を凍らせるぞ";
             }
         }
@@ -12759,7 +12759,7 @@ function func492(this: any) {
             var_2173 = "停";
             var_2174 = 1;
             var_2039 = "「固定」";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]部屋内の敵をその場に固定するぞ";
             }
         }
@@ -12786,7 +12786,7 @@ function func492(this: any) {
             var_2173 = "老";
             var_2174 = 0;
             var_2039 = "老化攻撃";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]フロア内全ての敵の攻撃力を下げるぞ";
             }
         }
@@ -13005,7 +13005,7 @@ function func492(this: any) {
             var_2173 = "道";
             var_2174 = 0;
             var_2039 = "一緒にいこうよォ～";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]道連れで部屋全体にダメージＣ";
             }
         }
@@ -13032,7 +13032,7 @@ function func492(this: any) {
             var_2173 = "天";
             var_2174 = 0;
             var_2039 = "落雷";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]落雷で部屋内全員にダメージＢ";
             }
         }
@@ -13131,7 +13131,7 @@ function func492(this: any) {
             var_2173 = "飛";
             var_2174 = 1;
             var_2039 = "無差別乱射";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]フロア中にランダムでダメージＳ";
             }
         }
@@ -13146,7 +13146,7 @@ function func492(this: any) {
             var_2173 = "養";
             var_2174 = 0;
             var_2039 = "養分をくれェ～";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]部屋内の敵から養分を吸い取るぞ";
             }
         }
@@ -13185,7 +13185,7 @@ function func492(this: any) {
             var_2173 = "乱";
             var_2174 = 1;
             var_2039 = "ファイトクラブ";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]フロア内全ての敵が混乱するぞ";
             }
         }
@@ -13212,7 +13212,7 @@ function func492(this: any) {
             var_2173 = "空";
             var_2174 = 0;
             var_2039 = "真空の部屋";
-            if (var_172 == 1) {
+            if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 effects_message = "[★発動]真空で部屋内全員にダメージＢ";
             }
         }
@@ -14017,9 +14017,9 @@ function func492(this: any) {
             buying_price = 5000;
             item_name = "ﾎﾟｺﾛｺのDISC";
             item_description1 = "[記憶DISC]";
-            effects_message = "無性に腹が立ってｱｲﾃﾑを壊すぞ";
+            effects_message = "50億人にひとりの幸運が訪れる";
             item_ability_description = "";
-            item_message1 = "どのアイテムに使いますか？";
+            item_message1 = "何かラッキーなようだ";
         }
         if (belongings_item_list == 592) { // Ver0.1401にて追加
             buying_price = 3000;
@@ -14432,8 +14432,8 @@ function func492(this: any) {
             buying_price = 1500;
             item_name = "ﾍﾞﾙﾄのﾊﾞｯｸﾙ";
             item_description1 = "[消費ｱｲﾃﾑ]";
-            effects_message = "黄金比で作られたバックルだ。";
-            item_ability_description = "ﾀｽｸact1をact2へ進化させるぞ。";
+            effects_message = "黄金比で作られたバックルだ"; // Ver0.1403にて修正。句読点の「。」を削除
+            item_ability_description = "ﾀｽｸact1をact2へ進化させるぞ"; // Ver0.1403にて修正。句読点の「。」を削除
             item_message1 = "";
             item_message2 = "";
         }        
@@ -15437,7 +15437,7 @@ function func492(this: any) {
             item_ability_description = "レベルが一気に１０上がるぞ";
             item_message1 = "ディアボロはレベルが上がった！";
         }
-        if (var_869 == 1 || var_262 == 1) {
+        if (var_869 == 1 || var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             return;
         }
         if (var_375 == 1) {
@@ -15823,7 +15823,7 @@ function func494(this: any) {
         }
         // No = 396 メイド・イン・ヘブンのdiscを装備していれば
         if (equip_disc[396] == 1) {
-            var_157 = 0;
+            var_157 = 0; // var_157 倍速移動フラグOFF
         }
         
         equip_disc = dim(400);
@@ -15865,7 +15865,7 @@ function func494(this: any) {
         }
         // No = 396 メイド・イン・ヘブンのdiscを装備していれば
         if (equip_disc[396] == 1) {
-            var_157 = 1;
+            var_157 = 1; // var_157 倍速移動フラグON
             var_133 = 0;
         }
         if (var_352 <= 1) {
@@ -15879,8 +15879,8 @@ function func494(this: any) {
             var_216 = 1;
             var_213 = 0;
             var_214 = 0;
-            DSPLAY(audio_id = 216);
-            yield func499();
+            DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
+            yield func499(); // ダンジョン動作処理?
         }
         return;
     });
@@ -17319,6 +17319,11 @@ function func498(this: any) {
             yield item564();
             return;
         }
+        // No = 565 プッチ神父のdiscの効果
+        if (belongings_item_list == 565) {
+            yield item565();
+            return;
+        }
         // No = 566 ケンゾーのdiscの効果
         if (belongings_item_list == 566) {
             yield item566();
@@ -17327,16 +17332,6 @@ function func498(this: any) {
         // No = 567 アヴドゥルのdiscの効果
         if (belongings_item_list == 567) {
             yield item567();
-            return;
-        }
-        // No = 590 ギアッチョのdiscの効果
-        if (belongings_item_list == 590) {
-            yield item590();
-            return;
-        }
-        // No = 565 プッチ神父のdiscの効果
-        if (belongings_item_list == 565) {
-            yield item565();
             return;
         }
         // No = 568 ジョンガリ・Aのdiscの効果
@@ -17442,6 +17437,16 @@ function func498(this: any) {
         // No = 589 プロシュート兄貴のdiscの効果
         if (belongings_item_list == 589) {
             yield item589();
+            return;
+        }
+        // No = 590 ギアッチョのdiscの効果
+        if (belongings_item_list == 590) {
+            yield item590();
+            return;
+        }
+        // Ver0.1403にて追加。No = 591 ポコロコのdiscの効果
+        if (belongings_item_list == 591) {
+            yield item591();
             return;
         }
         // No = 715 アイテム「点滴」を使用した時の効果
@@ -17870,9 +17875,9 @@ function func498(this: any) {
             }
             var_271 = 0;
             var_1297 = 0;
-            var_105 = 1;
-            var_111 = 1;
-            var_104 = 1;
+            var_105 = 1; // var_105 攻撃を躱わしやすくなるフラグON
+            var_111 = 1; // 命中率を上げるフラグON
+            var_104 = 1; // var_104 攻撃力が上がるフラグON
             return;
         }
         if (belongings_item_list == 991) {
@@ -17881,8 +17886,7 @@ function func498(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1252 = 3;
-    
-            DSPLAY(audio_id = 142);
+            DSPLAY(audio_id = 142); // レベルアップした時の効果音
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -17911,8 +17915,7 @@ function func498(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1252 = 3;
-    
-            DSPLAY(audio_id = 142);
+            DSPLAY(audio_id = 142); // レベルアップした時の効果音
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -18095,8 +18098,7 @@ function func498(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1252 = 3;
-    
-            DSPLAY(audio_id = 142);
+            DSPLAY(audio_id = 142); // レベルアップした時の効果音
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -18125,7 +18127,7 @@ function func498(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_1252 = 3;
-            DSPLAY(audio_id = 142);
+            DSPLAY(audio_id = 142); // レベルアップした時の効果音
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -18160,7 +18162,7 @@ function func498(this: any) {
         return;
     });
 }
-
+// ダンジョン動作処理?
 function func499(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(499);

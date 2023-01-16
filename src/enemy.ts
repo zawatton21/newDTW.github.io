@@ -199,7 +199,7 @@ function enemy012(this: any) {
             var_83[var_673].Var7 = 1;
             DSPLAY(audio_id = 122);
             if (enemy_list == 145 || enemy_list == 150) {
-                var_743 = 1;
+                var_743 = 1; //スタンド像付与フラグON
             }
             comments_row1 = "";
             comments_row2 = "";
@@ -219,17 +219,17 @@ function enemy012(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             yield func340(); // キー入力による選択処理
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             if (var_128 >= 1) {
                 yield func023();
             }
             if (equip_disc[396] == 0) {
-                if (var_157 == 0) {
+                if (var_157 == 0) { // var_157 倍速移動フラグOFFであれば
                     var_133 = 1;
                     var_397 = 0;
                 }
-                if (var_157 != 0) {
-                    var_157 = 0;
+                if (var_157 != 0) { // var_157 倍速移動フラグがOFFでなければ
+                    var_157 = 0; // var_157 倍速移動フラグOFF
                     var_158 = 0;
                 }
             }
@@ -524,11 +524,11 @@ function enemy020(this: any) {
         var_2830 = rnd(3);
         if (var_2830 == 0) {
             DSPLAY(audio_id = 161);
-            var_1163 = 1;
+            var_1163 = 1; // 敵エンヤ婆の能力発動フラグON
             for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            var_1163 = 0;
+            var_1163 = 0; // 敵エンヤ婆の能力発動フラグOFF
             var_2521 = 1;
             var_1845 = 1;
             var_2353 = var_673;
@@ -830,8 +830,7 @@ function enemy026(this: any) {
                 yield func337(); // メッセージ関係呼び出し
                 var_1345 = var_1345 + 1;
                 if (var_1345 == 16) {
-        
-                    DSPLAY(audio_id = 216);
+                    DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
                 }
             }
             var_271 = 0;
@@ -890,7 +889,7 @@ function enemy027(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_389 = 0;
-            var_127 = 1;
+            var_127 = 1;  // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグON
             var_167 = 0;
             yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             var_2197 = 1;
@@ -1044,11 +1043,11 @@ function enemy032(this: any) {
             if (var_474 == 1) {
                 var_742 = 1;
                 var_83[var_673].Var7 = 1;
-                var_743 = 1;
+                var_743 = 1; //スタンド像付与フラグON
                 for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                var_743 = 0;
+                var_743 = 0; //スタンド像付与フラグOFF
                 var_742 = 0;
                 var_83[var_673].Var7 = 0;
                 var_233[var_475].Var15 = 2;
@@ -1529,7 +1528,7 @@ function enemy059(this: any) {
             var_83[var_412].Var7 = 1;
             var_83[var_412].Var21 = 1;
             var_2902 = 1;
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             DSPLAY(audio_id = 122);
             for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                 if (cnt3 == 0 || cnt3 == 1 || cnt3 == 9) {
@@ -1612,7 +1611,7 @@ function enemy059(this: any) {
                 }
                 yield func337(); // メッセージ関係呼び出し
             }
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             var_742 = 0;
             var_83[var_412].Var7 = 0;
             var_83[var_412].Var21 = 0;
@@ -1799,7 +1798,7 @@ function enemy063(this: any) {
             var_83[var_673].Var7 = 1;
             var_742 = 1;
             var_83[var_673].Var7 = 1;
-            var_743 = 1;
+            var_743 = 1; //スタンド像付与フラグON
             var_389 = 2;
             DSPLAY(audio_id = 121);
             comments_row1 = "";
@@ -1821,7 +1820,7 @@ function enemy063(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             var_83[var_673].Var7 = 0;
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             if (var_128 >= 1) {
                 yield func023();
             }
@@ -2190,7 +2189,7 @@ function enemy078(this: any) {
             yield func619();
             DSPLAY(audio_id = 128);
             var_742 = 1;
-            var_743 = 1;
+            var_743 = 1; //スタンド像付与フラグON
             var_83[var_673].Var7 = 1;
             var_463 = var_83[var_673].Var1;
             var_464 = var_83[var_673].Var2;
@@ -2223,7 +2222,7 @@ function enemy078(this: any) {
             var_1380 = 0;
             var_271 = 0;
             var_83[var_673].Var7 = 0;
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             if (nouryoku_disc_id == 109 || var_173 == 1) {
                 yield func340(); // キー入力による選択処理
                 var_114 = 0;
@@ -2403,7 +2402,7 @@ function enemy078(this: any) {
             }
             yield func619();
             var_742 = 1;
-            var_743 = 1;
+            var_743 = 1; //スタンド像付与フラグON
             var_83[var_412].Var7 = 1;
             for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                 yield func337(); // メッセージ関係呼び出し
@@ -2421,7 +2420,7 @@ function enemy078(this: any) {
             var_271 = 0;
             var_1305 = 0;
             var_742 = 0;
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             var_83[var_412].Var7 = 0;
             var_389 = 0;
             if (var_173 == 1) {
@@ -2777,7 +2776,7 @@ function enemy119(this: any) {
         }
         yield func619();
         var_742 = 1;
-        var_743 = 1;
+        var_743 = 1; //スタンド像付与フラグON
         var_83[var_673].Var7 = 1;
         var_463 = var_83[var_673].Var1;
         var_464 = var_83[var_673].Var2;
@@ -2811,7 +2810,7 @@ function enemy119(this: any) {
         var_1381 = 0;
         var_271 = 0;
         var_83[var_673].Var7 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         var_461 = var_66;
         var_462 = var_67;
         var_2197 = 1;
@@ -2991,7 +2990,7 @@ function enemy131(this: any) {
         DSPLAY(audio_id = 121);
         var_742 = 1;
         var_83[var_412].Var7 = 1;
-        var_743 = 1;
+        var_743 = 1; //スタンド像付与フラグON
         var_389 = 3;
         yield func337(); // メッセージ関係呼び出し
         var_389 = 3;
@@ -3012,7 +3011,7 @@ function enemy131(this: any) {
         yield func337(); // メッセージ関係呼び出し
         var_83[var_412].Var7 = 0;
         var_742 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         if (nouryoku_disc_id == 202) {
             comments_row1 = "";
             comments_row2 = "";
@@ -3108,7 +3107,7 @@ function enemy132(this: any) {
         if (var_146 >= 1 && var_147 == var_66 && var_148 == var_67) {
             var_742 = 1;
             var_83[var_673].Var7 = 1;
-            var_743 = 1;
+            var_743 = 1; //スタンド像付与フラグON
             DSPLAY(audio_id = 121);
             comments_row1 = "";
             comments_row2 = "";
@@ -3128,7 +3127,7 @@ function enemy132(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             yield func340(); // キー入力による選択処理
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             var_146 = 0;
             var_147 = 0;
             var_148 = 0;
@@ -3213,11 +3212,11 @@ function enemy137(this: any) {
             if (var_474 == 1) {
                 var_742 = 1;
                 var_83[var_673].Var7 = 1;
-                var_743 = 1;
+                var_743 = 1; //スタンド像付与フラグON
                 for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
                     yield func337(); // メッセージ関係呼び出し
                 }
-                var_743 = 0;
+                var_743 = 0; //スタンド像付与フラグOFF
                 var_742 = 0;
                 var_83[var_673].Var7 = 0;
                 var_233[var_475].Var15 = 2;
@@ -3333,7 +3332,7 @@ function enemy144(this: any) {
         var_2885 = rnd(4);
         DSPLAY(audio_id = 122);
         var_742 = 1;
-        var_743 = 1;
+        var_743 = 1; //スタンド像付与フラグON
         var_83[var_412].Var7 = 1;
         var_389 = 3;
         yield func337(); // メッセージ関係呼び出し
@@ -3355,7 +3354,7 @@ function enemy144(this: any) {
         yield func337(); // メッセージ関係呼び出し
         var_83[var_412].Var7 = 0;
         var_742 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         var_83[var_412].Var26 = 1;
         belongings_item_list = 1;
         var_417 = belongings_item_list;
@@ -3732,7 +3731,7 @@ function enemy160(this: any) {
             }
             var_271 = 0;
             var_1440 = 0;
-            yield func584();
+            yield func584(); // 射撃攻撃を受けた時の回避動作処理(弾丸を止める、燃え尽きる等)
             if (var_2803 == 1) {
                 var_2197 = 1;
                 return;
@@ -3801,7 +3800,7 @@ function enemy170(this: any) {
         if (var_133 == 0 && var_127 == 0) {
             var_742 = 1;
             var_83[var_673].Var7 = 1;
-    
+
             DSPLAY(audio_id = 123);
             if (var_128 >= 1) {
                 yield func023();
@@ -3811,12 +3810,12 @@ function enemy170(this: any) {
                 yield func337(); // メッセージ関係呼び出し
             }
             if (equip_disc[396] == 0) {
-                if (var_157 == 0) {
+                if (var_157 == 0) { // var_157 倍速移動フラグOFFであれば
                     var_133 = 1;
                     var_397 = 0;
                 }
-                if (var_157 != 0) {
-                    var_157 = 0;
+                if (var_157 != 0) { // var_157 倍速移動フラグOFFでなければ
+                    var_157 = 0; // var_157 倍速移動フラグOFF
                     var_158 = 0;
                 }
             }
@@ -3837,6 +3836,7 @@ function enemy170(this: any) {
             for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                 yield func337(); // メッセージ関係呼び出し
             }
+            // No = 396 メイドインヘヴンのDISCを装備している場合
             if (equip_disc[396] == 1) {
                 yield func340(); // キー入力による選択処理
                 yield func094(); // メッセージ送りの際の効果音

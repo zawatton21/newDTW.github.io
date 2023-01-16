@@ -102,7 +102,7 @@ let var_16 :any;
 let var_17 :any;
 let var_18 :any;
 let var_19 :any;
-let var_20 :any;
+let var_20 :number; // 鉄の牢獄の最終階層
 let var_21 :string; // dangeon_number 5 の名称 「鉄の牢獄」
 let var_22 :any;
 let var_23 :any;
@@ -186,14 +186,14 @@ let var_100 :any;
 let var_101 :any;
 let var_102 :any;
 let var_103 :any;
-let var_104 :any;
-let var_105 :any;
+let var_104 :number; // 攻撃力が上がるフラグ。1 = ON
+let var_105 :number; // 攻撃を躱わしやすくなるフラグ。1 = ON
 let var_106 :any;
 let count_buying_price :number; // 購入金額の合計をカウントする為の変数
 let var_108 :any;
 let var_109 :any;
 let var_110 :any;
-let var_111 :any;
+let var_111 :number; // 命中率を上げるフラグ。1 = ONなので投げたアイテムが必中になる
 let var_112 :any;
 let var_113 :any;
 let var_114 :any;
@@ -203,18 +203,18 @@ let var_117 :any;
 let var_118 :any;
 let var_119 :any;
 let var_120 :any;
-let var_121 :any;
+let var_121 :number; // var_121 罠が見えるようになるフラグ。1 = ON
 let var_122 :any;
 let var_123 :any;
 let var_124 :any;
 let var_125 :any;
 let var_126 :any;
-let var_127 :any;
+let var_127 :number; // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグ
 let var_128 :any;
 let var_129 :any;
 let var_130 :any;
 let var_131 :any;
-let var_132 :any;
+let var_132 :number; // 記憶DISC「ンドゥール」の効果発動フラグ
 let var_133 :any;
 let var_134 :any;
 let var_135 :any;
@@ -233,13 +233,13 @@ let var_147 :any;
 let var_148 :any;
 let var_149 :any;
 let var_150 :any;
-let var_151 :any;
+let var_151 :number; // 敵時止め経過ターン
 let var_152 :any;
 let var_153 :any;
 let var_154 :any;
 let var_155 :any;
 let equip_disc :any[]; // 装備しているdisc(装備区分問わず、射撃discは除く)を格納し、装備しているかどうかを判別する。例えばメイド・イン・ヘブンのdiscを装備しているだと equip_disc[396] == 1 となる。
-let var_157 :any;
+let var_157 :number;  // 倍速移動フラグ。0 = 等速、1 = 2倍速、2 = ？
 let var_158 :any;
 let var_159 :any;
 let var_160 :any;
@@ -247,14 +247,14 @@ let var_161 :any;
 let var_162 :any;
 let var_163 :any;
 let var_164 :number; // 時止め経過時のターン数？
-let var_165 :any;
+let var_165 :number; // 現フロアに出現する敵の増加数。0 = 増えない。
 let var_166 :any;
 let var_167 :any;
 let var_168 :any;
 let var_169 :any;
-let var_170 :any;
+let var_170 :number; // 罠が見えるようになるフラグ(あくまでMAP上に見えるだけ。噴上裕也のDISC限定)。1 = ON
 let var_171 :any;
-let var_172 :any;
+let var_172 :number; // 発動効果が向上するフラグ。1 = ON
 let var_173 :any;
 let var_174 :any;
 let var_175 :any;
@@ -349,7 +349,7 @@ let var_258 :any;
 let var_259 :any;
 let var_260 :any;
 let var_261 :any;
-let var_262 :any;
+let var_262 :number; // dangeon_number = 0であるかどうかの確認フラグ。1 = 確定
 let var_263 :any;
 let var_264 :any;
 let var_265 :any;
@@ -443,7 +443,7 @@ let var_352 :any;
 let var_353 :any;
 let var_354 :any;
 let var_355 :any;
-let var_356 :number; // 死因要因メッセージID 選択フラグ
+let var_356 :number; // 死因要因メッセージID選択
 let kougeki_disc_id :number; // 攻撃装備disc用ID
 let bougyo_disc_id :number; // 防御装備disc用ID
 let var_359 :any;
@@ -614,7 +614,7 @@ let var_523 :number;  // 一巡後の世界へ行けるようになった時の�
 let var_524 :number; // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
 let var_525 :any;
 let var_526 :number; // ディアボロの試練解放フラグ
-let var_527 :any;
+let var_527 :number; // グリーンディやDIOが同じ部屋にいる時に階段を降りれなくフラグ。0 = 初期化、1 = グリーンディ、2 = DIO
 let var_528 :any;
 let var_529 :any;
 let var_530 :any;
@@ -635,7 +635,7 @@ let var_544 :any;
 let var_545 :any;
 let var_546 :any;
 let var_547 :any;
-let var_548 :any;
+let var_548 :number; // 選択肢処理フラグ。これがONだと「はい、いいえ」「買う、やめる」等の選択肢が出現する。
 let var_549 :any;
 let var_550 :any;
 let var_551 :any;
@@ -682,7 +682,7 @@ let var_591 :any;
 let var_592 :any;
 let var_593 :any;
 let var_594 :any;
-let var_595 :any;
+let var_595 :number; // dangeon_number = 0 での場所確認。0 = ヴェネチアホテル、1 = 亀の中、3 == ローマ・ティベレ河
 let var_596 :any;
 let var_597 :any;
 let var_598 :any;
@@ -830,7 +830,7 @@ let var_739 :any;
 let var_740 :any;
 let var_741 :any;
 let var_742 :any;
-let var_743 :any;
+let var_743 :number; // スタンド像付与フラグ。1 = ON
 let var_744 :any;
 let var_745 :any;
 let var_746 :any;
@@ -1111,7 +1111,7 @@ let var_1020 :any;
 let var_1021 :any;
 let var_1022 :any;
 let var_1023 :any;
-let var_1024 :any;
+let var_1024 :number; // 次の階の出現アイテム数＋6個するフラグ。1 = ON
 let var_1025 :any;
 let var_1026 :any;
 let var_1027 :any;
@@ -1250,7 +1250,7 @@ let var_1159 :any;
 let var_1160 :any;
 let var_1161 :any;
 let var_1162 :any;
-let var_1163 :any;
+let var_1163 :number; // 敵エンヤ婆の能力発動フラグ。
 let var_1164 :any;
 let var_1165 :any;
 let var_1166 :any;
@@ -1378,7 +1378,7 @@ let var_1287 :any;
 let var_1288 :any;
 let var_1289 :number; // belongings_item_list
 let var_1290 :any;
-let var_1291 :any;
+let var_1291 :number; // 敵キャラの攻撃モーション用スタンドのドット絵選択
 let var_1292 :any;
 let var_1293 :any;
 let var_1294 :any;
@@ -1706,7 +1706,7 @@ let var_1615 :any;
 let var_1616 :any;
 let var_1617 :any;
 let var_1618 :any;
-let var_1619 :any;
+let var_1619 :number; // 敵図鑑の並び
 let var_1620 :any;
 let var_1621 :any;
 let var_1622 :any;
@@ -1724,7 +1724,7 @@ let var_1633 :any;
 let var_1634 :any;
 let var_1635 :any;
 let var_1636 :any;
-let var_1637 :any;
+let var_1637 :number; // 攻撃モーションにスタンド像を付与するフラグ。0 = 攻撃時物理攻撃モーション、1 = 攻撃時スタンド攻撃モーション
 let var_1638 :any;
 let var_1639 :any;
 let var_1640 :any;
@@ -1833,11 +1833,11 @@ let var_1742 :any;
 let var_1743 :any;
 let var_1744 :any;
 let var_1745 :any;
-let var_1746 :any;
+let var_1746 :number; // 倒された後にNo = 399 G・E・レクイエムを落とすフラグ
 let var_1747 :any;
 let var_1748 :any;
 let var_1749 :any;
-let var_1750 :any;
+let var_1750 :number; // 倒された後にNo = 393 ボヘミアンラプソディを落とすフラグ
 let var_1751 :any;
 let var_1752 :any;
 let var_1753 :any;
@@ -2652,7 +2652,7 @@ let var_2540 :any;
 let var_2541 :any;
 let var_2542 :any;
 let var_2543 :any;
-let var_2544 :any;
+let var_2544 :number; // オーラ敵フラグ。1 = ON。dangeon_number = 5の鉄獄のみオーラ敵を生成する処理が動くようになっている。func564
 let var_2545 :any;
 let var_2546 :any;
 let var_2547 :any;
@@ -2816,7 +2816,7 @@ let var_2704 :any;
 let var_2705 :any;
 let var_2706 :any;
 let var_2707 :any;
-let var_2708 :any;
+let var_2708 :number; // 敵が攻撃してこなくなるフラグ。1 = 攻撃してこない
 let var_2709 :any;
 let var_2710 :any;
 let var_2711 :any;
@@ -2828,7 +2828,7 @@ let var_2716 :any;
 let var_2717 :any;
 let var_2718 :any;
 let var_2719 :any;
-let var_2720 :any;
+let var_2720 :number; // 敵の特殊能力発動フラグ。1 = ON
 let var_2721 :any;
 let var_2722 :any;
 let var_2723 :any;
@@ -2859,7 +2859,7 @@ let var_2747 :any;
 let var_2748 :any;
 let var_2749 :any;
 let var_2750 :any;
-let var_2751 :any;
+let var_2751 :number; // 敵が特殊攻撃をしてくる確率
 let var_2752 :any;
 let var_2753 :any;
 let var_2754 :any;
@@ -3306,7 +3306,7 @@ let var_3194 :any;
 let var_3195 :any;
 let var_3196 :any;
 let var_3197 :number;
-let var_3198 :any;
+let var_3198 :number; // ホテルの外へ向かう際のメッセージフラグ
 let var_3199 :any;
 let var_3200 :any;
 let var_3201 :any;
@@ -3714,3 +3714,6 @@ let var_3602 :any;
 let var_3603 :any;
 let taskact1_on : number; // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグ
 let key_F_on: number; // Ver0.1401にて追加。入力判定：射撃disc「フー・ファイターズ」を所持している場合に発動(F)
+let x_axis_bar: number;
+let y_axis_bar: number;
+let go_to_hotel: number; // Ver0.1403にて追加。酒場からホテルの部屋に戻る際のメッセージフラグ

@@ -707,6 +707,7 @@ function func705(this: any) {
             var_300 = 0;
             yield func047();
         }
+        // enemy_list == 159 記憶が戻ったウェザー
         if (var_83[var_402].Var0 == 159 && var_83[var_402].Var20 == 0 && var_2821 == 0) {
             var_1550 = var_83[var_402].Var1;
             var_230 = var_83[var_402].Var2;
@@ -741,19 +742,19 @@ function func705(this: any) {
         if (var_83[var_402].Var3 <= 0) {
             // No = 1 なので、ホテルの外
             if (dangeon_number == 1 && var_83[var_402].Var0 == 20) { // No = 20 エンヤ婆
-                yield func685();
+                yield func685(); // エンヤ婆を倒した時のメッセージ処理
             }
             // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && var_83[var_402].Var0 == 132) { // No = 132 レクイエムジョルノ
-                yield func686();
+                yield func686(); // レクイエムジョルノを倒した時のメッセージ処理
             }
             // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3 && var_83[var_402].Var0 == 143) { // No = 143 ウンガロ
-                yield func687();
+                yield func687(); // ウンガロを倒した時のメッセージ処理
             }
             // No = 5 なので、鉄獄(鉄の牢獄)
-            if (dangeon_number == 5 && var_83[var_402].Var16 >= 1000) {
-                var_2921 = var_83[var_402].Var0;
+            if (dangeon_number == 5 && var_83[var_314].Var0 == 171) { // Ver0.1403にて修正。.Var16 >= 1000 → .Var0 == 171。No = 171 離婚した承太郎
+                // var_2921 = var_83[var_314].Var0; Ver 0.1403にてコメントアウト
                 yield func633();
             }
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
@@ -825,6 +826,10 @@ function func705(this: any) {
             }
             // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && var_83[var_402].Var0 == 132) { // No = 132 レクイエムジョルノ
+                yield func689();
+            }
+            // Ver0.1403にて追加。No = 5 なので、鉄獄
+            if (dangeon_number == 5 && var_83[var_402].Var0 == 171) { // No = 171 離婚した承太郎
                 yield func689();
             }
             if (var_83[var_402].Var0 == 53 && var_2196 != 0) { // No = 53 エクスペリエンスの花
@@ -1093,8 +1098,7 @@ function func705(this: any) {
                     }
                     comments_row1 = comments_row1a;
                     comments_row2 = comments_row2a;
-            
-                    DSPLAY(audio_id = 142);
+                    DSPLAY(audio_id = 142); // レベルアップした時の効果音
                     if (var_127 != 0 || var_132 != 0) {
                         enemy_name = "何者か";
                     }
@@ -1138,27 +1142,28 @@ function func705(this: any) {
         if (var_83[var_402].Var20 == 0 && var_83[var_402].Var12 == 0 && var_83[var_402].Var13 == 0 && var_83[var_402].Var17 == 0 && var_163 == 0 && var_123 == 0 && var_151 == 0) {
             if (var_83[var_402].Var0 == 121 && var_83[var_402].Var29 == 1) {
                 var_314 = var_402;
-                yield func658();
+                yield func658(); // 敵が攻撃を受けた時の動作処理
             }
+            // enemy_list == 120 承太郎
             if (var_83[var_402].Var0 == 6 || var_83[var_402].Var0 == 44 || var_83[var_402].Var0 == 14 || var_83[var_402].Var0 == 120 || var_83[var_402].Var0 == 133 || var_83[var_402].Var0 == 118 || var_83[var_402].Var0 == 84) {
                 var_314 = var_402;
-                yield func658();
+                yield func658(); // 敵が攻撃を受けた時の動作処理
             }
             if (var_83[var_402].Var0 == 129 || var_83[var_402].Var0 == 161 || var_83[var_402].Var0 == 137 || var_83[var_402].Var0 == 143 || var_83[var_402].Var0 == 109) {
                 var_314 = var_402;
-                yield func658();
+                yield func658(); // 敵が攻撃を受けた時の動作処理
             }
             if (var_83[var_402].Var0 == 153) {
                 if (var_2196 == 0) {
                     var_314 = var_402;
-                    yield func658();
+                    yield func658(); // 敵が攻撃を受けた時の動作処理
                 }
             }
             // No = 61 ヨーヨーマッ
             if (var_2937 == 1 && var_83[var_402].Var0 == 61) {
                 if (var_2196 == 0) {
                     var_314 = var_402;
-                    yield func658();
+                    yield func658(); // 敵が攻撃を受けた時の動作処理
                 }
             }
             if (var_83[var_402].Var0 == 116 && var_2196 == 0) {
@@ -1178,9 +1183,10 @@ function func705(this: any) {
                 }
             }
         }
-        if (var_83[var_402].Var0 == 132 || var_83[var_402].Var0 == 143) {
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (var_83[var_402].Var0 == 132 || var_83[var_402].Var0 == 143 || var_83[var_314].Var0 == 171) { // No = 132 レクイエムジョルノ、No = 143 ウンガロ、No = 171 離婚した承太郎
             var_314 = var_402;
-            yield func659();
+            yield func659(); // 敵ボスキャラの状態異常回復処理(レクイエムジョルノ、ウンガロ、離婚した承太郎)
         }
         var_83[var_402].Var8 = 0;
         if (var_83[var_402].Var13 != 0) {
@@ -2274,7 +2280,7 @@ function func730(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3126 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -2492,6 +2498,7 @@ function func735(this: any) {
         return;
     });
 }
+// 岸辺露伴に話しかけた時の初期化処理
 function func736(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(736);
@@ -2505,10 +2512,10 @@ function func736(this: any) {
         var_777 = 0;
         var_772 = 0;
         var_1201 = 1;
-        yield func737();
+        yield func737(); // 岸辺露伴に話しかけた時の選択処理？
     });
 }
-
+// 岸辺露伴に話しかけた時の選択処理？
 function func737(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(737);
@@ -2576,7 +2583,7 @@ function func738(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3127 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -2754,7 +2761,7 @@ function func741(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3131 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -2834,7 +2841,7 @@ function func743(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3132 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -3009,7 +3016,7 @@ function func746(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3134 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -3130,7 +3137,7 @@ function func748(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3136 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -3344,7 +3351,7 @@ function func752(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3137 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -3454,7 +3461,7 @@ function func753(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3137 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -3938,6 +3945,7 @@ function func756(this: any) {
         return;
     });
 }
+// キャラに話しかけた時のメッセージ(コメントなし)
 function func757(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(757);
@@ -4094,7 +4102,7 @@ function func759(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3147 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -4332,7 +4340,7 @@ function func769(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3150 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -4725,7 +4733,7 @@ function func773(this: any) {
             var_246 = 45;
             var_546 = 1;
             var_3151 = 1;
-            var_548 = 1;
+            var_548 = 1; // 選択肢処理フラグON
             yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
             return;
         }
@@ -4756,7 +4764,7 @@ function func773(this: any) {
             var_246 = 45;
             var_546 = 1;
             var_3152 = 1;
-            var_548 = 1;
+            var_548 = 1; // 選択肢処理フラグON
             yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
             return;
         }
@@ -5220,7 +5228,7 @@ function func778(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3156 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -5313,7 +5321,7 @@ function func780(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3156 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -5343,7 +5351,7 @@ function func781(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3157 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -5976,7 +5984,7 @@ function func787(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3163 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -6063,7 +6071,7 @@ function func789(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3163 = 2;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -6086,7 +6094,7 @@ function func790(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3163 = 3;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -6412,7 +6420,7 @@ function func794(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3147 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });

@@ -280,7 +280,7 @@ function func602(this: any) {
         if (var_2856 == 35) {
             var_742 = 1;
             var_83[var_673].Var7 = 1;
-            var_743 = 1;
+            var_743 = 1; //スタンド像付与フラグON
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
@@ -294,7 +294,7 @@ function func602(this: any) {
             }
             var_742 = 0;
             var_83[var_673].Var7 = 0;
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
         }
         enemy_list = var_83[var_2749].Var0;
         yield func626(); // 敵リスト
@@ -431,7 +431,6 @@ function func603(this: any) {
             return;
         }
         var_240 = 0;
-
         DSPLAY(audio_id = 197);
         var_742 = 1;
         var_83[var_673].Var7 = 1;
@@ -640,7 +639,6 @@ function func604(this: any) {
         yield func337(); // メッセージ関係呼び出し
         var_83[var_673].Var21 = 0;
         var_411 = 0;
-
         DSPLAY(audio_id = 116);
         var_742 = 1;
         var_83[var_673].Var7 = 1;
@@ -741,7 +739,7 @@ function func604(this: any) {
         var_1434 = 0;
         var_83[var_673].Var18 = 0;
         var_83[var_673].Var7 = 0;
-        yield func584();
+        yield func584(); // 射撃攻撃を受けた時の回避動作処理(弾丸を止める、燃え尽きる等)
         if (var_2803 == 1) {
             return;
         }
@@ -820,19 +818,18 @@ function func605(this: any) {
         var_240 = 0;
         var_742 = 1;
         var_83[var_673].Var7 = 1;
-        var_743 = 1;
-
+        var_743 = 1; //スタンド像付与フラグON
         DSPLAY(audio_id = 102);
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_742 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         var_83[var_673].Var18 = 0;
         var_83[var_673].Var7 = 0;
         var_2866 = 0;
         var_2867 = rnd(8);
-        if (var_105 == 1) {
+        if (var_105 == 1) { // var_105 攻撃を躱わしやすくなるフラグがONであれば
             if (var_2867 == 2 || var_2867 == 3) {
                 var_2867 = 0;
                 var_2868 = 1;
@@ -1054,7 +1051,7 @@ function func606(this: any) {
         }
         var_271 = 0;
         var_1432 = 0;
-        yield func584();
+        yield func584(); // 射撃攻撃を受けた時の回避動作処理(弾丸を止める、燃え尽きる等)
         if (var_2803 == 1) {
             return;
         }
@@ -1211,7 +1208,7 @@ function func607(this: any) {
         var_83[var_673].Var7 = 0;
         var_411 = 0;
         var_83[var_673].Var21 = 0;
-        yield func584();
+        yield func584(); // 射撃攻撃を受けた時の回避動作処理(弾丸を止める、燃え尽きる等)
         if (var_2803 == 1) {
             return;
         }
@@ -1272,7 +1269,8 @@ function func608(this: any) {
         if (var_83[var_673].Var12 >= 1 || var_83[var_673].Var13 == 1 || var_83[var_673].Var17 == 1 || var_83[var_673].Var23 == 1) {
             return;
         }
-        var_2751 = rnd(30);
+        var_2751 = rnd(30); // 敵が特殊攻撃をしてくる確率
+        // var_2751 敵が特殊攻撃をしてくる確率
         if (var_2751 == 1) {
             var_747 = 1;
             var_389 = 2;
@@ -1318,6 +1316,7 @@ function func608(this: any) {
             }
             var_240 = 0;
         }
+        // var_2751 敵が特殊攻撃をしてくる確率
         if (var_2751 == 2) {
             gsel(19);
             color(255, 0, 0);
@@ -1924,7 +1923,7 @@ function func612(this: any) {
         var_240 = 0;
         var_83[var_1393].Var6 = 1;
         var_83[var_1393].Var18 = 0;
-        var_2708 = 1;
+        var_2708 = 1; // 敵が攻撃してこなくなるフラグON
         var_2197 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -1994,7 +1993,7 @@ function func613(this: any) {
             var_1165 = 0;
             var_240 = 0;
             var_83[var_1393].Var6 = 1;
-            var_2708 = 1;
+            var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             var_2197 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -2016,7 +2015,7 @@ function func613(this: any) {
             var_1165 = 0;
             var_240 = 0;
             var_83[var_1393].Var6 = 1;
-            var_2708 = 1;
+            var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             var_2197 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -2042,7 +2041,7 @@ function func613(this: any) {
         var_1165 = 0;
         var_240 = 0;
         var_83[var_1393].Var6 = 1;
-        var_2708 = 1;
+        var_2708 = 1; // 敵が攻撃してこなくなるフラグON
         var_2197 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -2050,6 +2049,7 @@ function func613(this: any) {
         return;
     });
 }
+// 敵キャラの時止め能力処理
 function func614(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(614);
@@ -2058,14 +2058,18 @@ function func614(this: any) {
             return;
         }
         var_152 = var_673;
-        if (var_83[var_673].Var0 == 113) {
-            var_151 = 5;
+        if (var_83[var_673].Var0 == 113) { // No = 113 DIO
+            var_151 = 5; // 時止めターン: 5
         }
-        if (var_83[var_673].Var0 == 114) {
-            var_151 = 7;
+        if (var_83[var_673].Var0 == 114) { // No = 114 最高にハイなDIO
+            var_151 = 7; // 時止めターン: 7
         }
-        if (var_83[var_673].Var0 == 128) {
-            var_151 = 4;
+        if (var_83[var_673].Var0 == 128) { // No = 128 承太郎(4部)
+            var_151 = 4; // 時止めターン: 4
+        }
+        // Ver0.1403にて追加。
+        if (var_83[var_673].Var0 == 171) { // No = 171 離婚した承太郎
+            var_151 = 5; // 時止めターン: 5
         }
         var_83[var_673].Var18 = 0;
         comments_row1 = "";
@@ -2077,7 +2081,8 @@ function func614(this: any) {
         var_299 = 0;
         comments_row1 = "「ザ・ワールド」！！";
         comments_row2 = "時よ止まれ！";
-        if (var_83[var_673].Var0 == 128) {
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (var_83[var_673].Var0 == 128 || var_83[var_673].Var0 == 171) {
             comments_row1 = "「スタープラチナ・ザ・ワールド」！！";
             comments_row2 = "";
         }
@@ -2113,6 +2118,11 @@ function func614(this: any) {
             comments_row1 = "ひさしぶりに……";
             comments_row2 = "時をとめられたぜ";
         }
+        // Ver0.1403にて追加。No = 171 離婚した承太郎。
+        if (var_83[var_673].Var0 == 171) {
+            comments_row1 = "時は最大で5秒ほど";
+            comments_row2 = "止まっている";
+        }
         var_198 = 1;
         var_300 = 0;
         var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
@@ -2121,7 +2131,7 @@ function func614(this: any) {
         yield func047();
         var_240 = 0;
         var_83[var_673].Var6 = 1;
-        var_2708 = 1;
+        var_2708 = 1; // 敵が攻撃してこなくなるフラグON
         var_2197 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -2643,7 +2653,7 @@ function func620(this: any) {
         }
         // No = 132 レクイエムジョルノの動作処理
         if (enemy_list == 132) {
-            yield enemy132();
+            yield enemy132(); // No = 132 レクイエムジョルノの動作処理
             return;
         }
         // No = 137 成長した吉良の特殊能力
@@ -2709,7 +2719,7 @@ function func621(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(621);
         if (var_1238 >= 1) {
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             pos((var_83[var_314].Var1 - var_66 + 4) * 40, (var_83[var_314].Var2 - var_67 + 4) * 40 - 10);
             gcopy(3, 640, 360, 40, 40);
         }
@@ -2719,6 +2729,7 @@ function func621(this: any) {
 function func622(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(622);
+         // var_262 == 1 なので、dangeon_number = 0 であれば
         if (y_axis_map_image == 1 || y_axis_map_image == 7 || y_axis_map_image == 16 || var_262 == 1) {
             return;
         }
@@ -3822,7 +3833,7 @@ function func626(this: any) {
             var_1658 = "";
         }
         if (enemy_list == 34) {
-            enemy_name = "トニオさん";
+            enemy_name = "トニオさん"; // ブチギレ状態
             enemy_power = 100;
             enemy_defence = 40;
             enemy_exp_point = 1000;
@@ -4782,7 +4793,7 @@ function func626(this: any) {
             var_1658 = "";
         }
         if (enemy_list == 98) {
-            enemy_name = "ｴﾝﾎﾟﾘｵ";
+            enemy_name = "ｴﾝﾎﾟﾘｵ"; // ウェザーリポートのDISC付
             enemy_power = 70;
             enemy_defence = 3;
             enemy_exp_point = 7;
@@ -4819,9 +4830,9 @@ function func626(this: any) {
             enemy_hp = 53;
             var_1637 = 0;
             var_1654 = 0;
-            var_972 = 0;
+            var_972 = 1; // 人間
             var_1619 = 0;
-            enemy_description = "";
+            enemy_description = "・近くに怪我をした敵がいると治しに行くぞ。";
             var_1656 = "";
             var_1657 = "";
             var_1658 = "";
@@ -5097,7 +5108,7 @@ function func626(this: any) {
             var_1658 = "・時々ｳﾞｧﾆﾗｱｲｽが顔を出して位置を確認するぞ。";
         }
         if (enemy_list == 119) {
-            enemy_name = "ｼﾞｮｾﾌ";
+            enemy_name = "ｼﾞｮｾﾌ"; // 3部
             enemy_power = 9;
             enemy_defence = 3;
             enemy_exp_point = 90;
@@ -5112,7 +5123,7 @@ function func626(this: any) {
             var_1658 = "";
         }
         if (enemy_list == 120) {
-            enemy_name = "承太郎";
+            enemy_name = "承太郎"; // 3部
             enemy_power = 80;
             enemy_defence = 30;
             enemy_exp_point = 5000;
@@ -5142,7 +5153,7 @@ function func626(this: any) {
             var_1658 = "";
         }
         if (enemy_list == 122) {
-            enemy_name = "ﾎﾟﾙﾅﾚﾌ";
+            enemy_name = "ﾎﾟﾙﾅﾚﾌ"; // 3部
             enemy_power = 25;
             enemy_defence = 22;
             enemy_exp_point = 1500;
@@ -5232,7 +5243,7 @@ function func626(this: any) {
             var_1658 = "";
         }
         if (enemy_list == 128) {
-            enemy_name = "承太郎";
+            enemy_name = "承太郎"; // 第4部の承太郎
             enemy_power = 33;
             enemy_defence = 23;
             enemy_exp_point = 1800;
@@ -5517,7 +5528,7 @@ function func626(this: any) {
             var_1658 = "";
         }
         if (enemy_list == 147) {
-            enemy_name = "ｼﾞｮｾﾌ";
+            enemy_name = "ｼﾞｮｾﾌ"; // 4部
             enemy_power = 1;
             enemy_defence = 2;
             enemy_exp_point = 3;
@@ -5880,14 +5891,14 @@ function func626(this: any) {
             enemy_defence = 40;
             enemy_exp_point = 1000;
             enemy_hp = 500;
-            var_1637 = 0;
-            var_1654 = 0;
-            var_972 = 0;
-            var_1619 = 0;
+            var_1637 = 1; // 攻撃モーションにスタンド像を付与するフラグON
+            var_1654 = 1; // 1 = 必ず落とす
+            var_972 = 1; // 人間
+            var_1619 = 626; // 626はエンポリオ(ウェザー付)敵図鑑の並び
             enemy_description = "";
             var_1656 = "";
             var_1657 = "";
-            var_1658 = "";
+            var_1658 = "・ダンジョンの主だぞ。";
         }
         if (enemy_list == 172) {
             enemy_name = "虫食いでない";
@@ -8772,7 +8783,8 @@ function func636(this: any) {
                 return;
             }
             if (var_83[var_314].Var0 == 70) { // No = 70 ダービー 没キャラ?
-                yield func761();
+                // yield func761(); // 現在未使用。D・ダービーのみのコメント設定をしようとしていたと思われる。
+                yield func757();// キャラに話しかけた時のメッセージ(コメントなし)
                 return;
             }
             if (var_83[var_314].Var0 == 74) { // No = 74 サヴェジガーデン
@@ -8795,7 +8807,7 @@ function func636(this: any) {
                 return;
             }
             if (var_83[var_314].Var0 == 82) { // enemy_list = 82 なのでバーのバーテンダー 没キャラ?
-                yield func757();
+                yield func757();// キャラに話しかけた時のメッセージ(コメントなし)
                 return;
             }
             if (var_83[var_314].Var0 == 83) { // enemy_list = 83 なので間田
@@ -8821,6 +8833,11 @@ function func636(this: any) {
             if (var_83[var_314].Var31 == 5) { // enemy_list = 5 なので小汚い浮浪者
                 yield func640();
                 yield func734();
+                return;
+            }
+            // Ver0.1403にて追加。
+            if (var_83[var_314].Var0 == 180) { // No = 180 デッドマンズ吉良
+                yield func757();// キャラに話しかけた時のメッセージ(コメントなし)
                 return;
             }
         }
@@ -9196,8 +9213,9 @@ function func636(this: any) {
             var_209 = var_209 * 2;
             var_1194 = 1;
         }
-        // No = 123 クリームのDISC
-        if (kougeki_disc_id == 123 && var_2940 == 0 && var_83[var_314].Var0 != 33 && var_83[var_314].Var0 != 34 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 143) {
+        // No = 123 クリームのDISC、、No = 132 レクイエムジョルノ、No = 143 ウンガロ
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (kougeki_disc_id == 123 && var_2940 == 0 && var_83[var_314].Var0 != 33 && var_83[var_314].Var0 != 34 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 143 && var_83[var_314].Var0 != 171) {
             var_209 = 999;
         }
         var_2927 = 0;
@@ -9397,7 +9415,10 @@ function func636(this: any) {
                 var_83[var_314].Var8 = 0;
             }
         }
-        if (equip_disc[317] == 1 && var_83[var_314].Var0 != 13 && var_83[var_314].Var0 != 143 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 20 && var_83[var_314].Var31 != 4 && var_83[var_314].Var31 != 5) {
+        // No = 317 キッスの装備discを装備している際の敵が分裂する処理
+        // No = 132 レクイエムジョルノ、NO = 143 ウンガロでなければ
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (equip_disc[317] == 1 && var_83[var_314].Var0 != 13 && var_83[var_314].Var0 != 171 && var_83[var_314].Var0 != 143 && var_83[var_314].Var0 != 132 && var_83[var_314].Var0 != 20 && var_83[var_314].Var31 != 4 && var_83[var_314].Var31 != 5) {
             var_2953 = rnd(8);
             if (var_2953 == 0) {
                 var_1374 = var_83[var_314].Var0;
@@ -9420,19 +9441,19 @@ function func636(this: any) {
         if (var_83[var_314].Var3 <= 0) {
             // No = 1 なので、ホテルの外
             if (dangeon_number == 1 && var_83[var_314].Var0 == 20) { // No = 20 エンヤ婆
-                yield func685();
+                yield func685(); // エンヤ婆を倒した時のメッセージ処理
             }
             // No = 2 なので、レクイエムの大迷宮
             if (dangeon_number == 2 && var_83[var_314].Var0 == 132) { // No = 132 レクイエムジョルノ
-                yield func686();
+                yield func686(); // レクイエムジョルノを倒した時のメッセージ処理
             }
             // No = 3 なので、ディアボロの試練
             if (dangeon_number == 3 && var_83[var_314].Var0 == 143) { // No = 143 ウンガロ
-                yield func687();
+                yield func687(); // ウンガロを倒した時のメッセージ処理
             }
             // No = 5 なので、鉄獄(鉄の牢獄)
-            if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
-                var_2921 = var_83[var_314].Var0;
+            if (dangeon_number == 5 && var_83[var_314].Var0 == 171) { // Ver0.1403にて修正。.Var16 >= 1000 → .Var0 == 171。No = 171 離婚した承太郎
+                // var_2921 = var_83[var_314].Var0; Ver 0.1403にてコメントアウト
                 yield func633();
             }
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
@@ -9500,18 +9521,22 @@ function func636(this: any) {
             var_300 = 0;
             yield func047();
             // No = 1 なので、ホテルの外
-            if (dangeon_number == 1 && var_83[var_314].Var0 == 20) {
+            if (dangeon_number == 1 && var_83[var_314].Var0 == 20) { // No = 20 エンヤ婆
                 yield func689();
             }
             // No = 2 なので、レクイエムの大迷宮
-            if (dangeon_number == 2 && var_83[var_314].Var0 == 132) {
+            if (dangeon_number == 2 && var_83[var_314].Var0 == 132) { // No = 132 レクイエムジョルノ
                 yield func689();
             }
             // No = 3 なので、ディアボロの試練
-            if (dangeon_number == 3 && var_83[var_314].Var0 == 143) {
+            if (dangeon_number == 3 && var_83[var_314].Var0 == 143) { // No = 143 ウンガロ
                 yield func689();
             }
-            if (special_floor == 1 && var_83[var_314].Var0 == 65) { // 虹村屋敷
+            // Ver0.1403にて追加。No = 5 なので、鉄獄
+            if (dangeon_number == 5 && var_83[var_314].Var0 == 171) { // No = 171 離婚した承太郎
+                yield func689();
+            }
+            if (special_floor == 1 && var_83[var_314].Var0 == 65) { // No = 65 虹村形兆
                 yield func688();
             }
             if (var_175 >= 1 || var_176 >= 1) {
@@ -9695,16 +9720,16 @@ function func636(this: any) {
         var_1194 = 0;
         if (var_83[var_314].Var20 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var13 == 0 && var_83[var_314].Var17 == 0 && var_163 == 0 && var_123 == 0 && var_151 == 0) {
             if (var_83[var_314].Var0 == 121 && var_83[var_314].Var29 == 1) {
-                yield func658();
+                yield func658(); // 敵が攻撃を受けた時の動作処理
             }
             if (var_83[var_314].Var0 == 6 || var_83[var_314].Var0 == 44 || var_83[var_314].Var0 == 14 || var_83[var_314].Var0 == 120 || var_83[var_314].Var0 == 133 || var_83[var_314].Var0 == 118 || var_83[var_314].Var0 == 161 || var_83[var_314].Var0 == 109) {
-                yield func658();
+                yield func658(); // 敵が攻撃を受けた時の動作処理
             }
             if (var_83[var_314].Var0 == 9 || var_83[var_314].Var0 == 10 || var_83[var_314].Var0 == 84 || var_83[var_314].Var0 == 139 || var_83[var_314].Var0 == 138 || var_83[var_314].Var0 == 86 || var_83[var_314].Var0 == 129 || var_83[var_314].Var0 == 137 || var_83[var_314].Var0 == 143) {
-                yield func658();
+                yield func658(); // 敵が攻撃を受けた時の動作処理
             }
             if (var_83[var_314].Var0 == 153) {
-                yield func658();
+                yield func658(); // 敵が攻撃を受けた時の動作処理
             }
             if (var_83[var_314].Var0 == 116) {
                 yield func657();
@@ -9721,8 +9746,9 @@ function func636(this: any) {
                 }
             }
         }
-        if (var_83[var_314].Var0 == 132 || var_83[var_314].Var0 == 143) {
-            yield func659();
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (var_83[var_314].Var0 == 132 || var_83[var_314].Var0 == 143 || var_83[var_314].Var0 == 171) { // No = 132 レクイエムジョルノ、No = 143 ウンガロ、No = 171 離婚した承太郎
+            yield func659(); // 敵ボスキャラの状態異常回復処理(レクイエムジョルノ、ウンガロ、離婚した承太郎)
         }
         if (var_83[var_314].Var0 == 116 && var_139 >= 1) {
             var_139 = 0;
@@ -9911,7 +9937,9 @@ function func638(this: any) {
         // No = 111 ザ・ワールドのDISCを装備している時
         if (equip_disc[111] == 1) {
             var_1337 = var_83[var_314].Var0;
-            if (var_1337 == 147 || var_1337 == 134 || var_1337 == 119 || var_1337 == 35 || var_1337 == 135 || var_1337 == 120 || var_1337 == 128 || var_1337 == 140 || var_1337 == 68 || var_1337 == 131 || var_1337 == 132) {
+             // No = 132 レクイエムジョルノ
+             // Ver0.1403にて追加。No = 171 離婚した承太郎
+            if (var_1337 == 147 || var_1337 == 134 || var_1337 == 119 || var_1337 == 35 || var_1337 == 135 || var_1337 == 120 || var_1337 == 128 || var_1337 == 140 || var_1337 == 68 || var_1337 == 131 || var_1337 == 132 || var_1337 == 171) {
                 var_209 = Math.floor(var_209 * 3 / 2);
             }
         }
@@ -9986,7 +10014,7 @@ function func638(this: any) {
         if (var_125 == 1 && var_83[var_314].Var31 == 2) {
             var_209 = Math.floor(var_209 * 3 / 2);
         }
-        if (var_104 == 1) {
+        if (var_104 == 1) { // var_104 攻撃力が上がるフラグがONであれば
             var_209 = Math.floor((var_209 + var_209 + var_209) / 2);
         }
         if (var_109 == 1) {
@@ -10028,12 +10056,12 @@ function func639(this: any) {
         var_2867 = rnd(12);
         var_2938 = 0;
         if (var_129 == 0) {
-            if (kougeki_disc_id == 104 && var_111 == 0) {
+            if (kougeki_disc_id == 104 && var_111 == 0) { // var_111 命中率を上げるフラグがOFF
                 if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3 || var_2867 == 4 || var_2867 == 5) {
                     var_2867 = 0;
                 }
             }
-            if (kougeki_disc_id == 104 && var_111 == 1) {
+            if (kougeki_disc_id == 104 && var_111 == 1) { // var_111 命中率を上げるフラグがON
                 if (var_2867 == 1 || var_2867 == 2 || var_2867 == 3) {
                     var_2867 = 0;
                 }
@@ -10070,6 +10098,7 @@ function func639(this: any) {
         }
         */
         if (kougeki_disc_id != 104) {
+             // var_111 命中率を上げるフラグがON
             if (var_111 == 1 || var_83[var_314].Var12 != 0 || var_83[var_314].Var13 != 0) {
                 var_2867 = 1;
                 var_2938 = 0;
@@ -11735,7 +11764,7 @@ function func647(this: any) {
 function func648(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(648);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         if (var_2996 == 1) {
             if (var_2989 == 4) {
                 var_2997 = 120;
@@ -11852,7 +11881,7 @@ function func648(this: any) {
                 var_2998 = (var_456 - var_67 + 4) * 40 - 10 + 20;
             }
         }
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(var_2997, var_2998);
         yield func649();
         return;
@@ -11917,21 +11946,21 @@ function func649(this: any) {
     
             gmode(mode = 4, data2 = null, data3 = null, alpha  = 150);
             gcopy(34, 320 + var_1416, 680, 40, 40);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         }
         if (var_340 == 488) {
             color(0, 0, 0);
     
             gmode(mode = 4, data2 = null, data3 = null, alpha  = 150);
             gcopy(34, 320 + var_1416, 680, 40, 40);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         }
         if (var_340 == 487) {
             color(0, 0, 0);
     
             gmode(mode = 4, data2 = null, data3 = null, alpha  = 150);
             gcopy(34, 320 + var_1416, 680, 40, 40);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         }
         if (var_340 == 490) {
             gcopy(34, 320 + var_1416, 0, 40, 40);
@@ -12077,7 +12106,7 @@ function func650(this: any) {
         }
         var_3002 = 0;
         var_3003 = 0;
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             var_2994 = 0;
         }
         if (var_2994 == 1) {
@@ -12863,6 +12892,7 @@ function func652(this: any) {
                         var_1452++;
                         if (var_1452 == 4) {
                             var_2867 = rnd(12);
+                            // var_111 命中率を上げるフラグがON
                             if (var_111 == 1 || var_83[var_3024].Var12 != 0 || var_83[var_3024].Var13 != 0) {
                                 var_2867 = 1;
                             }
@@ -13066,6 +13096,7 @@ function func653(this: any) {
                 var_1447 = var_1447 + 1;
                 if (var_1447 == 4) {
                     var_2867 = rnd(12);
+                    // var_111 命中率を上げるフラグがON
                     if (var_111 == 1 || var_83[var_3024].Var12 != 0 || var_83[var_3024].Var13 != 0) {
                         var_2867 = 1;
                     }
@@ -13212,7 +13243,7 @@ function func654(this: any) {
         if (var_110 == 1) {
             var_2867 = 1;
         }
-        if (var_105 == 1) {
+        if (var_105 == 1) { // var_105 攻撃を躱わしやすくなるフラグがONであれば
             if (var_2867 == 2 || var_2867 == 3) {
                 var_2867 = 0;
                 var_2868 = 1;
@@ -13346,10 +13377,12 @@ function func654(this: any) {
             }
         }
         var_3037 = 0;
-        // 14 床屋のカーン、66 タルカス、
+        // 敵が攻撃を受けた際の攻撃力上昇処理
+        // enemy_list = 14 床屋のカーン、enemy_list = 66 タルカス、
         if (enemy_list == 14 || enemy_list == 66 || enemy_list == 47 || enemy_list == 120 || enemy_list == 160 || enemy_list == 67 || equip_disc[367] == 1) {
             if (var_83[var_673].Var20 == 0) {
                 var_3037 = rnd(4);
+                // enemy_list = 120 承太郎(3部)
                 if (var_83[var_673].Var0 == 120) {
                     var_3037 = rnd(3);
                 }
@@ -13363,12 +13396,12 @@ function func654(this: any) {
         }
         enemy_list = var_83[var_673].Var0;
         yield func626(); // 敵リスト
-        var_743 = 0;
-        if (var_1637 == 1) {
-            var_743 = 1;
+        var_743 = 0; //スタンド像付与フラグOFF
+        if (var_1637 == 1) { // 攻撃モーションにスタンド像を付与するフラグがONの場合
+            var_743 = 1; //スタンド像付与フラグON
         }
         if (var_83[var_673].Var0 == 129 && var_2796 == 1) {
-            var_743 = 1;
+            var_743 = 1; //スタンド像付与フラグON
         }
         var_742 = 1;
         var_83[var_673].Var7 = 1;
@@ -13494,7 +13527,6 @@ function func654(this: any) {
             var_1073 = rnd(5);
             if (var_1073 == 0 && var_178 == 0 && var_83[var_673].Var20 == 0 && nouryoku_disc_id != 116 && var_125 == 0) {
                 yield func340(); // キー入力による選択処理
-        
                 DSPLAY(audio_id = 120);
                 var_178 = 1;
                 comments_row1 = comments_row1a;
@@ -13513,7 +13545,7 @@ function func654(this: any) {
         var_83[var_673].Var7 = 0;
         var_389 = 0;
         var_240 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         // 
         if (var_3037 == 1 && equip_disc[200] == 1) {
             yield func694();
@@ -13643,8 +13675,8 @@ function func655(this: any) {
         var_2817 = rnd(33);
         var_2817 = var_2817 + 111;
         var_209 = Math.floor(var_949 * var_2817 / 128) + 1;
-        if (var_1637 == 1) {
-            var_743 = 1;
+        if (var_1637 == 1) { // 攻撃モーションにスタンド像を付与するフラグがONの場合
+            var_743 = 1; //スタンド像付与フラグON
         }
         var_2196 = 1;
         if (var_83[var_402].Var0 != 79) {
@@ -13696,7 +13728,7 @@ function func655(this: any) {
             var_83[var_402].Var5 = var_3039;
         }
         var_240 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         return;
     });
 }
@@ -13705,9 +13737,9 @@ function func656(this: any) {
         dbgprt(656);
         enemy_list = var_83[var_673].Var0;
         yield func626(); // 敵リスト
-        var_743 = 0;
-        if (var_1637 == 1) {
-            var_743 = 1;
+        var_743 = 0; //スタンド像付与フラグOFF
+        if (var_1637 == 1) { // 攻撃モーションにスタンド像を付与するフラグがONの場合
+            var_743 = 1; //スタンド像付与フラグON
         }
         var_742 = 1;
         var_83[var_673].Var7 = 1;
@@ -13754,7 +13786,7 @@ function func656(this: any) {
         }
         var_83[var_673].Var7 = 0;
         var_389 = 0;
-        var_743 = 0;
+        var_743 = 0; //スタンド像付与フラグOFF
         var_240 = 0;
         return;
     });
@@ -13837,12 +13869,12 @@ function func657(this: any) {
         var_83[var_314].Var8 = 0;
         if (wallet < 1) {
             if (equip_disc[396] == 0) {
-                if (var_157 == 0) {
+                if (var_157 == 0) { // var_157 倍速移動フラグOFFであれば
                     var_133 = 1;
                     var_397 = 0;
                 }
-                if (var_157 != 0) {
-                    var_157 = 0;
+                if (var_157 != 0) { // var_157 倍速移動フラグOFFでなければ
+                    var_157 = 0; // var_157 倍速移動フラグOFF
                     var_158 = 0;
                 }
             }
@@ -13955,6 +13987,7 @@ function func657(this: any) {
         return;
     });
 }
+// 敵が攻撃を受けた時の動作処理
 function func658(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(658);
@@ -14121,7 +14154,6 @@ function func658(this: any) {
                 var_83[var_3042].Var8 = 0;
                 return;
             }
-    
             DSPLAY(audio_id = 165);
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -14151,7 +14183,6 @@ function func658(this: any) {
             if (var_83[var_3042].Var1 >= var_3046 && var_83[var_3042].Var1 <= var_3047 && var_83[var_3042].Var2 >= var_3049 && var_83[var_3042].Var2 <= var_3048) {
                 var_3043 = 1;
             }
-    
             DSPLAY(audio_id = 180);
             var_1389 = var_83[var_3042].Var1;
             var_1390 = var_83[var_3042].Var2;
@@ -14188,7 +14219,6 @@ function func658(this: any) {
             var_3043 = 0;
             gsel(19);
             color(255, 255, 255);
-    
             boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_311 = 255;
@@ -14265,7 +14295,6 @@ function func658(this: any) {
             var_271 = 0;
             var_389 = 2;
             var_747 = 1;
-    
             DSPLAY(audio_id = 105);
             var_1212 = 1;
             var_2244 = var_209;
@@ -14612,8 +14641,7 @@ function func658(this: any) {
             var_300 = 0;
             yield func047();
             yield func340(); // キー入力による選択処理
-    
-            DSPLAY(audio_id = 142);
+            DSPLAY(audio_id = 142); // レベルアップした時の効果音
             var_83[var_314].Var39 = var_83[var_314].Var39 + 2;
             if (var_83[var_314].Var39 == 2) {
                 var_83[var_314].Var39 = 3;
@@ -14653,7 +14681,6 @@ function func658(this: any) {
                     var_83[var_314].Var25 = 49;
                 }
             }
-    
             DSPLAY(audio_id = 182);
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -14735,7 +14762,6 @@ function func658(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-    
             DSPLAY(audio_id = 112);　// 刀の切れる音 or 強化した時のシャキーン 効果音
             var_411 = 2;
             yield func337(); // メッセージ関係呼び出し
@@ -14813,6 +14839,7 @@ function func658(this: any) {
             }
             var_83[var_314].Var21 = 0;
         }
+        // enemy_list == 120 承太郎
         if (var_83[var_314].Var0 == 120) {
             if (var_83[var_314].Var25 >= 50) {
                 var_83[var_314].Var25 -= 5;
@@ -14841,7 +14868,6 @@ function func658(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
             }
-    
             DSPLAY(audio_id = 182);
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
@@ -15136,21 +15162,28 @@ function func658(this: any) {
         return;
     });
 }
+// 敵ボスキャラの状態異常回復処理(レクイエムジョルノ、ウンガロ、離婚した承太郎)
 function func659(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(659);
         var_2712 = 0;
         var_616 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
-            if (var_83[var_616].Var0 == 49) {
+            if (var_83[var_616].Var0 == 49) { // No = 49 コピー人形
                 var_2712 = 1;
             }
             var_616++;
         }
+        // No = 132 レクイエムジョルノ
         if (var_83[var_314].Var0 == 132 && var_83[var_314].Var20 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var13 == 0 && var_83[var_314].Var14 == 0 && var_83[var_314].Var17 == 0 && var_83[var_314].Var23 == 0 && var_83[var_314].Var19 == 0 && var_83[var_314].Var25 <= 50 && var_2712 == 0) {
             return;
         }
+        // No = 143 ウンガロ
         if (var_83[var_314].Var0 == 143 && var_83[var_314].Var20 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var13 == 0 && var_83[var_314].Var14 == 0 && var_83[var_314].Var17 == 0 && var_83[var_314].Var23 == 0 && var_83[var_314].Var19 == 0 && var_83[var_314].Var25 <= 50) {
+            return;
+        }
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (var_83[var_314].Var0 == 171 && var_83[var_314].Var20 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var13 == 0 && var_83[var_314].Var14 == 0 && var_83[var_314].Var17 == 0 && var_83[var_314].Var23 == 0 && var_83[var_314].Var19 == 0 && var_83[var_314].Var25 <= 50) {
             return;
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
@@ -15160,7 +15193,8 @@ function func659(this: any) {
         if (var_83[var_314].Var20 != 0 || var_83[var_314].Var12 != 0 || var_83[var_314].Var13 != 0 || var_83[var_314].Var14 != 0 || var_83[var_314].Var17 != 0 || var_83[var_314].Var23 != 0 || var_83[var_314].Var19 != 0 || var_83[var_314].Var25 != 0) {
             var_3055 = 1;
         }
-        if (var_83[var_314].Var0 == 132) {
+        // No = 132 レクイエムジョルノの状態異常無効化能力
+        if (var_83[var_314].Var0 == 132) {  // No = 132 レクイエムジョルノ
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -15181,7 +15215,7 @@ function func659(this: any) {
             if (var_2712 == 1) {
                 var_421 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
-                    if (var_83[var_421].Var0 == 49) {
+                    if (var_83[var_421].Var0 == 49) { // No = 49 コピー人形
                         var_439 = var_83[var_421].Var0;
                         var_83[var_421].Var5 = 2;
                         var_440 = var_83[var_421].Var1;
@@ -15217,12 +15251,10 @@ function func659(this: any) {
             }
             gsel(19);
             color(255, 255, 0);
-    
             boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_311 = 255;
             var_312 = 1;
-    
             DSPLAY(audio_id = 161);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -15271,7 +15303,8 @@ function func659(this: any) {
             }
             return;
         }
-        if (var_83[var_314].Var0 == 143) {
+        // No = 143 ウンガロの状態異常無効化能力
+        if (var_83[var_314].Var0 == 143) { // No = 143 ウンガロ
             yield func094(); // メッセージ送りの際の効果音
             comments_row1 = "";
             comments_row2 = "";
@@ -15291,12 +15324,10 @@ function func659(this: any) {
             yield func340(); // キー入力による選択処理
             gsel(19);
             color(255, 255, 255);
-    
             boxf(left = 0, top1 = 0, right = 680, bottom = 680);
             gsel(0);
             var_311 = 255;
             var_312 = 1;
-    
             DSPLAY(audio_id = 161);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
@@ -15336,6 +15367,70 @@ function func659(this: any) {
             }
             return;
         }
+        // Ver0.1403にて追加。No = 171 離婚した承太郎の状態異常無効化能力
+        if (var_83[var_314].Var0 == 171) { // No = 171 離婚した承太郎
+            yield func094(); // メッセージ送りの際の効果音
+            comments_row1 = "";
+            comments_row2 = "";
+            var_295 = "";
+            comments_row1a = "";
+            comments_row2a = "";
+            var_298 = "";
+            var_299 = 0;
+            comments_row1 = "「スタープラチナ・ザ・ワールド」！！";
+            comments_row2 = "";
+            var_198 = 1;
+            var_300 = 0;
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
+            yield func047();
+            yield func340(); // キー入力による選択処理
+            gsel(19);
+            color(255, 255, 255);
+            boxf(left = 0, top1 = 0, right = 680, bottom = 680);
+            gsel(0);
+            var_311 = 255;
+            var_312 = 1;
+            DSPLAY(audio_id = 161);
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+                var_311 = var_311 - 25;
+                if (var_311 <= 0) {
+                    var_311 = 0;
+                }
+            }
+            var_312 = 0;
+            var_83[var_314].Var20 = 0;
+            var_83[var_314].Var12 = 0;
+            var_83[var_314].Var13 = 0;
+            var_83[var_314].Var14 = 0;
+            var_83[var_314].Var17 = 0;
+            var_83[var_314].Var23 = 0;
+            var_83[var_314].Var19 = 0;
+            var_83[var_314].Var25 = 0;
+            var_83[var_314].Var4 = 3;
+            yield func094(); // メッセージ送りの際の効果音
+            comments_row1 = "";
+            comments_row2 = "";
+            var_295 = "";
+            comments_row1a = "";
+            comments_row2a = "";
+            var_298 = "";
+            var_299 = 0;
+            comments_row1 = "承太郎は時止めにより";
+            comments_row2 = "ギリギリで見切った！";
+            var_198 = 1;
+            var_300 = 0;
+            var_25_x = var_25[8]; // Var0.1310で値修正 2 → 8
+            var_26_x = var_26[8]; // Var0.1310で値修正 2 → 8
+            var_27_x = var_27[8]; // Var0.1310で値修正 2 → 8
+            yield func047();
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+            }
+            return;
+        }
         return;
     });
 }
@@ -15349,49 +15444,56 @@ function func660(this: any) {
         var_748 = var_83[var_314].Var1 - var_66 + 4;
         var_749 = var_83[var_314].Var2 - var_67 + 4;
         if (var_163 == 0 && var_123 == 0) {
+            // enemy_list == 64 ギアッチョ & No = 122 アヌビス神のdiscを装備していない
             if (var_83[var_314].Var0 == 64 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_1218 == 0 && equip_disc[122] == 0 && var_340 != 412) {
                 var_1195 = 0;
                 var_1421 = var_340;
                 var_1249 = var_1887;
                 var_1393 = var_314;
-                yield func666();
+                yield func666(); // 敵ギアッチョの射撃&投擲無効化処理
                 var_340 = var_3056;
                 var_2995 = 1;
                 return;
             }
+            // No = 122 アヌビス神のdiscを装備していない
             if (var_1270 == 1 && equip_disc[122] == 0 && var_1218 == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0) {
+                // enemy_list == 9 ラバーソウル
                 if (var_83[var_314].Var0 == 9) {
-                    yield func663();
+                    yield func663(); // 敵ラバーソウル&ノートリアスBIGの投擲無効化処理
                     var_340 = var_3056;
                     var_1249 = var_1887;
                     return;
                 }
+                // enemy_list == 10 ノートリアスBIG
                 if (var_83[var_314].Var0 == 10) {
-                    yield func663();
+                    yield func663(); // 敵ラバーソウル&ノートリアスBIGの投擲無効化処理
                     var_340 = var_3056;
                     var_1249 = var_1887;
                     return;
                 }
             }
+            // enemy_list = 118 クリーム
             if (var_83[var_314].Var0 == 118 && var_1218 == 0) {
                 var_1195 = 0;
-                yield func664();
+                yield func664(); // 敵クリームの射撃&投擲無効化処理
                 var_340 = var_3056;
                 var_2995 = 1;
                 return;
             }
+            // enemy_list == 156 ウェザーリポート & No = 122 アヌビス神のdiscを装備していない
             if (var_83[var_314].Var0 == 156 && var_1218 == 0 && equip_disc[122] == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_340 != 412) {
                 if (var_340 != 304 && var_340 != 397) {
                     var_1195 = 0;
-                    yield func665();
+                    yield func665(); // 敵ウェザーリポートの射撃&投擲無効化処理
                     var_340 = var_3056;
                     var_2995 = 1;
                     return;
                 }
             }
+            // enemy_list == 159 記憶が戻ったウェザー & No = 122 アヌビス神のdiscを装備していない
             if (var_83[var_314].Var0 == 159 && var_1218 == 0 && equip_disc[122] == 0 && var_83[var_314].Var12 == 0 && var_83[var_314].Var20 == 0 && var_83[var_314].Var17 == 0 && var_340 != 412) {
                 var_1195 = 0;
-                yield func665();
+                yield func665(); // 敵ウェザーリポートの射撃&投擲無効化処理
                 var_340 = var_3056;
                 var_2995 = 1;
                 return;
@@ -15506,7 +15608,8 @@ function func660(this: any) {
         }
         if (var_340 == 851) {
             var_1901 = 0;
-            if (var_83[var_314].Var0 == 33 || var_83[var_314].Var0 == 34 || var_83[var_314].Var0 == 143 || var_83[var_314].Var0 == 132 || var_83[var_314].Var31 == 4 || var_83[var_314].Var31 == 5) {
+            // Ver0.1403にて追加。No = 171 離婚した承太郎
+            if (var_83[var_314].Var0 == 33 || var_83[var_314].Var0 == 34 || var_83[var_314].Var0 == 171 || var_83[var_314].Var0 == 143 || var_83[var_314].Var0 == 132 || var_83[var_314].Var31 == 4 || var_83[var_314].Var31 == 5) {
                 var_340 = var_3056;
                 return;
             }
@@ -15907,6 +16010,7 @@ function func660(this: any) {
         }
         if (var_340 == 123) {
             var_314 = var_82[var_455][var_456];
+            // Ver0.1403にて追加。No = 171 離婚した承太郎
             if (var_83[var_314].Var0 == 33 || var_83[var_314].Var0 == 34 || var_83[var_314].Var0 == 143 || var_83[var_314].Var0 == 132 || var_83[var_314].Var0 == 20) {
                 if (var_83[var_314].Var12 == 99) {
                     var_83[var_314].Var12 = 0;
@@ -16102,7 +16206,6 @@ function func660(this: any) {
                 enemy_list = var_83[var_314].Var31;
             }
             yield func626(); // 敵リスト
-    
             DSPLAY(audio_id = 132);
             comments_row1 = "";
             comments_row2 = "";
@@ -16594,8 +16697,7 @@ function func660(this: any) {
                     var_83[var_314].Var3 = 999;
                 }
                 var_83[var_314].Var8 = 1;
-        
-                DSPLAY(audio_id = 142);
+                DSPLAY(audio_id = 142); // レベルアップした時の効果音
                 comments_row1 = "";
                 comments_row2 = "";
                 var_295 = "";
@@ -17125,6 +17227,7 @@ function func662(this: any) {
         return;
     });
 }
+// 敵ラバーソウル&ノートリアスBIGの投擲無効化処理
 function func663(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(663);
@@ -17142,7 +17245,6 @@ function func663(this: any) {
         if (var_1270 == 0) {
             item_name = "弾丸";
         }
-
         DSPLAY(audio_id = 123);
         comments_row1 = "";
         comments_row2 = "";
@@ -17180,8 +17282,7 @@ function func663(this: any) {
         var_1288 = 0;
         var_411 = 0;
         var_83[var_314].Var21 = 0;
-
-        DSPLAY(audio_id = 142);
+        DSPLAY(audio_id = 142); // レベルアップした時の効果音
         comments_row1 = comments_row1a;
         comments_row2 = comments_row2a;
         if (var_83[var_314].Var0 == 9) {
@@ -17215,6 +17316,7 @@ function func663(this: any) {
         return;
     });
 }
+// 敵クリームの射撃&投擲無効化処理
 function func664(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(664);
@@ -17222,7 +17324,6 @@ function func664(this: any) {
             var_83[var_314].Var12 = 0;
         }
         var_83[var_314].Var13 = 0;
-
         DSPLAY(audio_id = 122);
         comments_row1 = "";
         comments_row2 = "";
@@ -17251,6 +17352,7 @@ function func664(this: any) {
         return;
     });
 }
+// 敵ウェザーリポートの射撃&投擲無効化処理
 function func665(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(665);
@@ -17258,7 +17360,6 @@ function func665(this: any) {
             var_83[var_314].Var12 = 0;
         }
         var_83[var_314].Var13 = 0;
-
         DSPLAY(audio_id = 175);
         comments_row1 = "";
         comments_row2 = "";
@@ -17287,6 +17388,7 @@ function func665(this: any) {
         return;
     });
 }
+// 敵ギアッチョの射撃&投擲無効化処理
 function func666(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(666);
@@ -17308,7 +17410,6 @@ function func666(this: any) {
         yield func047();
         gsel(19);
         color(255, 255, 255);
-
         boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_311 = 255;
@@ -17323,7 +17424,6 @@ function func666(this: any) {
         }
         var_1415 = 0;
         var_1423 = 1;
-
         DSPLAY(audio_id = 215);
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
             yield func337(); // メッセージ関係呼び出し
@@ -17677,7 +17777,7 @@ function func669(this: any) {
             yield func337(); // メッセージ関係呼び出し
             if (var_1350 == 2) {
     
-                DSPLAY(audio_id = 216);
+                DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
             }
             var_1350 = var_1350 + 1;
         }
@@ -17768,7 +17868,7 @@ function func671(this: any) {
                 pos(var_748 * var_35, var_749 * var_36 - 10);
             }
             if (var_1217 >= 0 && var_1217 < 7) {
-                gmode(2);
+                gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             }
             if (var_1217 == 7) {
                 color(0, 0, 0);
@@ -17937,7 +18037,7 @@ function func673(this: any) {
 function func674(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(674);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(var_2400, 290);
         gcopy(8, 40, 0, 230, 40);
         return;
@@ -17994,7 +18094,8 @@ function func675(this: any) {
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
             var_2218 = 999;
             var_2219 = 0;
-            if (var_2194 != var_124 && var_83[var_2194].Var0 != 132 && var_83[var_2194].Var0 != 143 && var_83[var_2194].Var0 != 34 && var_83[var_2194].Var31 != 4 && var_83[var_2194].Var31 != 5) {
+            // Ver0.1403にて追加。No = 171 離婚した承太郎
+            if (var_2194 != var_124 && var_83[var_2194].Var0 != 132 && var_83[var_2194].Var0 != 143 && var_83[var_2194].Var0 != 171 && var_83[var_2194].Var0 != 34 && var_83[var_2194].Var31 != 4 && var_83[var_2194].Var31 != 5) {
                 if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
                     yield func700();
                 }
@@ -18093,7 +18194,7 @@ function func675(this: any) {
         var_134 = 0;
         var_126 = 0;
         var_132 = 0;
-        var_127 = 0;
+        var_127 = 0;  // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグOFF
         var_133 = 0;
         var_135 = 0;
         var_136 = 0;
@@ -18110,7 +18211,6 @@ function func675(this: any) {
         var_585 = 0;
         var_112 = var_112 - 151;
         var_311 = 255;
-
         DSPLAY(audio_id = 161);
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
@@ -18203,6 +18303,7 @@ function func676(this: any) {
             var_1654 = 99999;
         }
         var_3084 = rnd(var_1654);
+        // enemy_list == 120 承太郎
         if (var_83[var_314].Var0 == 120 && special_floor == 99) {
             var_3084 = 0;
         }
@@ -18268,12 +18369,13 @@ function func676(this: any) {
             if (var_83[var_314].Var0 == 20) {
                 var_1737 = 1;
             }
-            if (var_83[var_314].Var0 == 143) {
-                var_1750 = 1;
+            if (var_83[var_314].Var0 == 143) { // No = 132 
+                var_1750 = 1; // 倒された後にNo = 393 ボヘミアンラプソディを落とすフラグON
             }
-            if (var_83[var_314].Var0 == 132) {
-                var_1746 = 1;
+            if (var_83[var_314].Var0 == 132) { // No = 132 レクイエムジョルノ
+                var_1746 = 1; // 倒された後にNo = 399 G・E・レクイエムを落とすフラグ
             }
+            // enemy_list == 120 承太郎
             if (var_83[var_314].Var0 == 120 || var_83[var_314].Var0 == 128) {
                 var_1742 = 1;
             }
@@ -18341,14 +18443,14 @@ function func676(this: any) {
             var_1739 = 0;
             var_1738 = 0;
             var_1741 = 0;
-            var_1746 = 0;
+            var_1746 = 0; // 倒された後にNo = 399 G・E・レクイエムを落とすフラグOFF
             var_1742 = 0;
             var_1745 = 0;
             var_1744 = 0;
             var_1760 = 0;
             var_1747 = 0;
             var_1749 = 0;
-            var_1750 = 0;
+            var_1750 = 0; // 倒された後にNo = 393 ボヘミアンラプソディを落とすフラグOFF
             var_1754 = 0;
             var_1778 = 0;
             var_1740 = 0;
@@ -18714,8 +18816,7 @@ function func683(this: any) {
         }
         if (var_2201 == 1) {
             yield func340(); // キー入力による選択処理
-    
-            DSPLAY(audio_id = 142);
+            DSPLAY(audio_id = 142); // レベルアップした時の効果音
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
             comments_row1a = "" + var_3091 + "は";
@@ -18782,6 +18883,7 @@ function func684(this: any) {
         return;
     });
 }
+// エンヤ婆を倒した時のメッセージ処理
 function func685(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(685);
@@ -18826,11 +18928,9 @@ function func685(this: any) {
         }
         gsel(19);
         color(255, 255, 255);
-
         boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
         var_311 = 255;
-
         DSPLAY(audio_id = 192);
         var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
@@ -18885,6 +18985,7 @@ function func685(this: any) {
         return;
     });
 }
+// レクイエムジョルノを倒した時のメッセージ処理
 function func686(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(686);
@@ -18970,6 +19071,7 @@ function func686(this: any) {
         return;
     });
 }
+// ウンガロを倒した時のメッセージ処理
 function func687(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(687);
@@ -19107,10 +19209,8 @@ function func688(this: any) {
         var_103 = 1;
         gsel(19);
         color(255, 255, 255);
-
         boxf(left = 0, top1 = 0, right = 680, bottom = 680);
         gsel(0);
-
         DSPLAY(audio_id = 192);
         var_311 = 255;
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理

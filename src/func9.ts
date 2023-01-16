@@ -1756,7 +1756,7 @@ function func926(this: any) {
                             var_3232 = 18;
                             color(0, 0, 0);
                             boxf(left = var_3231 - 1, top1 = var_3232 - 1, right = 9 * var_3233 + var_3232 + 1, bottom = 9 * var_3233 + var_3232 + 1);
-                            gmode(2);
+                            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
                             color(255, 255, 255);
                             line(var_3231 - 1, var_3232 - 1, var_3231 - 1, 9 * var_3233 + var_3232 + 1);
                             line(var_3231 - 2, var_3232 - 1, 9 * var_3233 + var_3231 + 1, var_3232 - 1);

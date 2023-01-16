@@ -4,7 +4,6 @@ function func800(this: any) {
         var_3186 = 10;
         var_3187 = 120;
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(var_3186 - 3, 37);
         gcopy(12, 0, 0, var_3187 + 7, 53);
@@ -17,7 +16,6 @@ function func800(this: any) {
         pset(var_3186 + var_3187 + 1, 40);
         pset(var_3186, 85);
         pset(var_3186 + var_3187 + 1, 85);
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 20, font_style = 1);
         color(255, 255, 255);
         pos(var_3186 + 10, 53);
@@ -32,11 +30,9 @@ function func800(this: any) {
         mes("" + var_3171);
         pos(var_3186 + 10 + 75, 53);
         mes("" + var_3170);
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         pos(var_3186 + 10 + 90, 55);
         mes("G");
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 20, font_style = 1);
         color(0, 255, 0);
         pos(var_3180, 55);
@@ -474,7 +470,7 @@ function func805(this: any) {
                 var_246 = 45;
                 var_546 = 1;
                 var_3191 = 1;
-                var_548 = 1;
+                var_548 = 1; // 選択肢処理フラグON
                 yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
                 return;
             }
@@ -506,7 +502,7 @@ function func805(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3192 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -636,12 +632,12 @@ function func808(this: any) {
             if (var_1736 >= 85 && var_1736 < 100) {
                 var_1735 = 9;
             }
-            if (var_262 == 1) {
+            if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
                 // No = 2 なので、レクイエムの大迷宮
                 dangeon_number = 2;
             }
             yield func385(); // 各ダンジョンごとの出現アイテム&出現確率管理
-            if (var_262 == 1) {
+            if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
                 // No = 0 なので、拠点(ホテル、亀、)
                 dangeon_number = 0;
             }
@@ -832,7 +828,7 @@ function func809(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3193 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -899,7 +895,7 @@ function func810(this: any) {
                 var_246 = 45;
                 var_546 = 1;
                 var_3193 = 2;
-                var_548 = 1;
+                var_548 = 1; // 選択肢処理フラグON
                 yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
                 return;
             }
@@ -1098,7 +1094,7 @@ function func813(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3195 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -1147,7 +1143,7 @@ function func814(this: any) {
                 var_246 = 45;
                 var_546 = 1;
                 var_3195 = 2;
-                var_548 = 1;
+                var_548 = 1; // 選択肢処理フラグON
                 yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
                 return;
             }
@@ -1706,7 +1702,7 @@ function func821(this: any) {
             color(0, 0, 0);
             gmode(4, null, null, var_311);
             pos(0, 0);
-            gcopy(19, 0, 0, 680, 680);
+            gcopy(19, 0, 0, 340, 340);
             if (var_10 >= 1) {
                 yield func338();
             }
@@ -1735,7 +1731,7 @@ function func822(this: any) {
             color(0, 0, 0);
             gmode(4, null, null, var_311);
             pos(0, 0);
-            gcopy(19, 0, 0, 680, 680);
+            gcopy(19, 0, 0, 340, 340);
             if (var_10 >= 1) {
                 yield func338();
             }
@@ -1814,7 +1810,7 @@ function func823(this: any) {
     });
 }
 // ホテルの外の入り口へ入ろうとした際のメッセージ処理
-function func824(this: any) {
+function func824a(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(824);
         DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -1836,7 +1832,63 @@ function func824(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3198 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        return;
+    });
+}
+// Ver0.1403にて追加。// 酒場 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
+function func824b(this: any) {
+    return __awaiter(this, void 0, void 0, function* () {
+        dbgprt(824);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
+        comments_row1 = "";
+        comments_row2 = "";
+        var_295 = "";
+        comments_row1a = "";
+        comments_row2a = "";
+        var_298 = "";
+        var_299 = 0;
+        comments_row1 = "どこへ行きますか？";
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+        yield func047();
+        var_198 = 1;
+        var_300 = 0;
+        var_245 = 19;
+        var_246 = 45;
+        var_546 = 1;
+        var_3198 = 1;
+        var_548 = 1; // 選択肢処理フラグON
+        yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        return;
+    });
+}
+// Ver0.1403にて追加。// ホテルの部屋 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
+function func824c(this: any) {
+    return __awaiter(this, void 0, void 0, function* () {
+        dbgprt(824);
+        DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
+        comments_row1 = "";
+        comments_row2 = "";
+        var_295 = "";
+        comments_row1a = "";
+        comments_row2a = "";
+        var_298 = "";
+        var_299 = 0;
+        comments_row1 = "どこへ行きますか？";
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+        yield func047();
+        var_198 = 1;
+        var_300 = 0;
+        var_245 = 19;
+        var_246 = 45;
+        var_546 = 1;
+        go_to_hotel = 1; // Ver0.1403にて追加。酒場からホテルの部屋に戻る際のメッセージフラグON
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -1901,7 +1953,7 @@ function func825(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_262 = 0;
+        var_262 = 0; // dangeon_number = 0 確認フラグOFF
         if (var_407 == 1) {
             yield func905();
         }
@@ -1941,7 +1993,7 @@ function func826(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3199 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -1996,7 +2048,7 @@ function func827(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_262 = 0;
+        var_262 = 0; // dangeon_number = 0 確認フラグOFF
         yield func111();
         yield func182();
         // アイテム数が20でなければ
@@ -2046,7 +2098,7 @@ function func828(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3200 = 1; // 
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -2101,7 +2153,7 @@ function func829(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_262 = 0;
+        var_262 = 0; // dangeon_number = 0 確認フラグOFF
         yield func111();
         yield func182();
         yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
@@ -2162,7 +2214,7 @@ function func830(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_262 = 0;
+        var_262 = 0; // dangeon_number = 0 確認フラグOFF
         yield func111();
         yield func233();
         var_350 = 100;
@@ -2319,7 +2371,7 @@ function func832(this: any) {
             var_246 = 45;
             var_546 = 1;
             var_3201 = 1;
-            var_548 = 1;
+            var_548 = 1; // 選択肢処理フラグON
             yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
             return;
         }
@@ -2510,7 +2562,7 @@ function func834(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_262 = 0;
+        var_262 = 0; // dangeon_number = 0 確認フラグOFF
         yield func111();
         yield func182();
         // アイテム数20でなければ
@@ -2745,7 +2797,7 @@ function func835(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_3203 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -2791,7 +2843,7 @@ function func836(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_373 = 0;
-        var_262 = 0;
+        var_262 = 0; // dangeon_number = 0 確認フラグOFF
         yield func111();
         yield func182();
         yield func062(); // ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
@@ -3005,187 +3057,199 @@ function func839(this: any) {
         if (var_259 == 1 && var_546 == 1) {
             var_246 = var_246 + 19;
             var_546 = 0;
-
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337(); // メッセージ関係呼び出し
         }
         if (var_255 == 1 && var_546 == 0) {
             var_246 = var_246 - 19;
             var_546 = 1;
-
             DSPLAY(audio_id = 100); // アイテム選択時の効果音
             yield func337(); // メッセージ関係呼び出し
         }
         if (key_Z_on == 1 || key_A_on == 1) {
-            if (var_546 == 1) {
-    
+            if (var_546 == 1) {// 二つある選択肢の上側を選んだ時のフロー
                 DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 if (var_3208 == 1) {
                     var_3208 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func762();
                     return;
                 }
                 if (var_3209 == 1) {
                     var_3209 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func763();
                     return;
                 }
                 if (var_3150 == 1) {
                     var_3150 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func770();
                     return;
                 }
                 if (var_3150 == 2) {
                     var_3150 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func772();
                     return;
                 }
                 if (var_3151 == 1) {
                     var_3151 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func774();
                     return;
                 }
                 if (var_3151 == 2) {
                     var_3151 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func776();
                     return;
                 }
                 if (var_3152 == 1) {
                     var_3152 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func777();
                     return;
                 }
                 if (var_3163 == 1) {
                     var_3163 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func788();
                     return;
                 }
                 if (var_3163 == 2) {
                     var_3163 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func791();
                     return;
                 }
                 if (var_3163 == 3) {
                     var_3163 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func791();
                     return;
                 }
                 if (var_3126 == 1) {
                     var_3126 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func731();
                     return;
                 }
                 if (var_3132 == 1) {
                     var_3132 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func744();
                     return;
                 }
                 if (var_3134 == 1) {
                     var_3134 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func747();
                     return;
                 }
                 if (var_3127 == 1) {
                     var_3127 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func739(); // イギーを仲間にした時のメッセージ処理
                     return;
                 }
                 if (var_3136 == 1) {
                     var_3136 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func749();
                     return;
                 }
-                if (var_547 == 1) {
+                if (var_547 == 1) { // 亀のジッパーで捨てるフラグONのとき
                     var_547 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
-                    yield func067();
+                    yield func067(); // 亀のジッパーでアイテムを捨てる動作関数
                     return;
                 }
                 if (var_2494 == 1) {
                     var_2494 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func549();
                     return;
                 }
                 if (var_2495 == 1) {
                     var_3210 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func552();
                     return;
                 }
-                if (var_3198 == 1) {
+                // Ver0.1403にて修正。var_759 == 0を追加することで、酒場出現する前のみとした。
+                if (var_3198 == 1 && var_759 == 0) {
                     var_3198 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
+                    return;
+                }
+                // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
+                if (var_3198 == 1 && var_759 >= 1) {
+                    var_3198 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
+                    yield func161a();// Ver0.1403にて追加。酒場に入った時の表示
+                    return;
+                }
+                // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
+                if (go_to_hotel == 1 && var_759 >= 1) {
+                    go_to_hotel = 0; // Ver0.1403にて追加。酒場からホテルの部屋に戻る際のメッセージフラグON
+                    var_548 = 0; // 選択肢処理フラグOFF
+                    yield func161b();// Ver0.1403にて追加。ホテルの部屋に戻った時の表示
                     return;
                 }
                 if (var_3199 == 1) {
                     var_3199 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func827(); // ダンジョン「レクイエムの大迷宮」へ入った時の初期化処理
                     return;
                 }
                 if (var_3200 == 1) {
                     var_3200 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func829(); // ダンジョン「ディアボロの試練」へ入った時の初期化処理
                     return;
                 }
                 if (var_3201 == 1) {
                     var_3201 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func834(); // ダンジョン「一巡後の世界」へ入った時の初期化処理
                     return;
                 }
                 if (var_3203 == 1) {
                     var_3203 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func836(); // ダンジョン「鉄獄(鉄の牢獄)」へ入った時の初期化処理
                     return;
                 }
                 if (var_3192 == 1) {
                     var_3192 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func806();
                     return;
                 }
                 if (var_3191 == 1) {
                     var_3191 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_1032 = var_1032 - var_3190;
                     wallet = 0;
@@ -3194,61 +3258,61 @@ function func839(this: any) {
                 }
                 if (var_3147 == 1) {
                     var_3147 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func795();
                     return;
                 }
                 if (var_3193 == 1) {
                     var_3193 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func810();
                     return;
                 }
                 if (var_3193 == 2) {
                     var_3193 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func811();
                     return;
                 }
                 if (var_3195 == 1) {
                     var_3195 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func814();
                     return;
                 }
                 if (var_3195 == 2) {
                     var_3195 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func815();
                     return;
                 }
                 if (var_3131 == 1) {
                     var_3131 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func742();
                     return;
                 }
                 if (var_3137 == 1) {
                     var_3137 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func754(); // ペッシに話しかけて釣りするを選んだ際の動作処理
                     return;
                 }
                 if (var_3156 == 1) {
                     var_3156 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func779();
                     return;
                 }
                 if (var_3157 == 1) {
                     var_3157 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func782();
                     return;
                 }
                 if (var_563 == 1) {
                     var_563 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func830();
                     return;
@@ -3256,12 +3320,11 @@ function func839(this: any) {
             }
         }
         if (key_Z_on == 1 || key_A_on == 1) {
-            if (var_546 == 0) {
-    
+            if (var_546 == 0) {// 二つある選択肢の下側を選んだ時のフロー
                 DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 if (var_3208 == 1) {
                     var_3208 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     var_198 = 0;
                     yield func051();
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3269,14 +3332,14 @@ function func839(this: any) {
                 }
                 if (var_3209 == 1) {
                     var_3209 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func764();
                     return;
                 }
                 if (var_3150 >= 1) {
                     var_3150 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     var_198 = 0;
                     yield func051();
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3284,7 +3347,7 @@ function func839(this: any) {
                 }
                 if (var_3151 >= 1) {
                     var_3151 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     var_198 = 0;
                     yield func051();
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3292,7 +3355,7 @@ function func839(this: any) {
                 }
                 if (var_3152 == 1) {
                     var_3152 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     var_198 = 0;
                     yield func051();
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3300,21 +3363,21 @@ function func839(this: any) {
                 }
                 if (var_3163 == 1) {
                     var_3163 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func789();
                     return;
                 }
                 if (var_3163 == 2) {
                     var_3163 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func790();
                     return;
                 }
                 if (var_3163 == 3) {
                     var_3163 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     var_198 = 0;
                     yield func051();
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3322,21 +3385,21 @@ function func839(this: any) {
                 }
                 if (var_3126 == 1) {
                     var_3126 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func732();
                     return;
                 }
                 if (var_3132 == 1) {
                     var_3132 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func745();
                     return;
                 }
                 if (var_3134 == 1) {
                     var_3134 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3344,21 +3407,21 @@ function func839(this: any) {
                 }
                 if (var_3127 == 1) {
                     var_3127 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func740();
                     return;
                 }
                 if (var_3136 == 1) {
                     var_3136 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func751();
                     return;
                 }
                 if (var_547 == 1) {
                     var_547 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3366,7 +3429,7 @@ function func839(this: any) {
                 }
                 if (var_2494 == 1) {
                     var_2494 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3374,23 +3437,38 @@ function func839(this: any) {
                 }
                 if (var_2495 == 1) {
                     var_2495 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
-                if (var_3198 == 1) {
+                // Ver0.1403にて修正。var_759 == 0を追加することで、酒場出現する前のみとした。
+                if (var_3198 == 1 && var_759 == 0) {
                     var_3198 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                    return;
+                }
+                // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
+                if (var_3198 == 1 && var_759 >= 1) {
+                    var_3198 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
+                    yield func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
+                    return;
+                }
+                // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
+                if (go_to_hotel == 1 && var_759 >= 1) {
+                    go_to_hotel = 0; // Ver0.1403にて追加。酒場からホテルの部屋に戻る際のメッセージフラグON
+                    var_548 = 0; // 選択肢処理フラグOFF
+                    yield func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
                     return;
                 }
                 if (var_3199 == 1) {
                     var_3199 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3398,7 +3476,7 @@ function func839(this: any) {
                 }
                 if (var_3200 == 1) {
                     var_3200 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3406,7 +3484,7 @@ function func839(this: any) {
                 }
                 if (var_3201 == 1) {
                     var_3201 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3414,7 +3492,7 @@ function func839(this: any) {
                 }
                 if (var_3203 == 1) {
                     var_3203 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3422,7 +3500,7 @@ function func839(this: any) {
                 }
                 if (var_3192 == 1) {
                     var_3192 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     var_198 = 0;
                     var_1206 = 1;
                     yield func051();
@@ -3431,7 +3509,7 @@ function func839(this: any) {
                 }
                 if (var_3191 == 1) {
                     var_3191 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     var_198 = 0;
                     var_1206 = 1;
                     yield func051();
@@ -3440,7 +3518,7 @@ function func839(this: any) {
                 }
                 if (var_3147 == 1) {
                     var_3147 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3448,31 +3526,31 @@ function func839(this: any) {
                 }
                 if (var_3193 == 1) {
                     var_3193 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func812();
                     return;
                 }
                 if (var_3193 == 2) {
                     var_3193 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func812();
                     return;
                 }
                 if (var_3195 == 1) {
                     var_3195 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func817();
                     return;
                 }
                 if (var_3195 == 2) {
                     var_3195 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func817();
                     return;
                 }
                 if (var_3131 == 1) {
                     var_3131 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3480,7 +3558,7 @@ function func839(this: any) {
                 }
                 if (var_3137 == 1) {
                     var_3137 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3488,13 +3566,13 @@ function func839(this: any) {
                 }
                 if (var_3156 == 1) {
                     var_3156 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func780();
                     return;
                 }
                 if (var_3157 == 1) {
                     var_3157 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     var_198 = 0;
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3502,7 +3580,7 @@ function func839(this: any) {
                 }
                 if (var_563 == 1) {
                     var_563 = 0;
-                    var_548 = 0;
+                    var_548 = 0; // 選択肢処理フラグOFF
                     yield func051();
                     yield func066();
                     return;
@@ -3510,11 +3588,10 @@ function func839(this: any) {
             }
         }
         if (key_X_on == 1) {
-
             DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
             if (var_3208 == 1) {
                 var_3208 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 var_198 = 0;
                 yield func051();
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3522,14 +3599,14 @@ function func839(this: any) {
             }
             if (var_3209 == 1) {
                 var_3209 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func764();
                 return;
             }
             if (var_3150 >= 1) {
                 var_3150 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 var_198 = 0;
                 yield func051();
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3537,7 +3614,7 @@ function func839(this: any) {
             }
             if (var_3151 >= 1) {
                 var_3151 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 var_198 = 0;
                 yield func051();
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3545,7 +3622,7 @@ function func839(this: any) {
             }
             if (var_3152 == 1) {
                 var_3152 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 var_198 = 0;
                 yield func051();
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3553,21 +3630,21 @@ function func839(this: any) {
             }
             if (var_3163 == 1) {
                 var_3163 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func789();
                 return;
             }
             if (var_3163 == 2) {
                 var_3163 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func790();
                 return;
             }
             if (var_3163 == 3) {
                 var_3163 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 var_198 = 0;
                 yield func051();
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3575,28 +3652,28 @@ function func839(this: any) {
             }
             if (var_3126 == 1) {
                 var_3126 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func732();
                 return;
             }
             if (var_3132 == 1) {
                 var_3132 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func745();
                 return;
             }
             if (var_3127 == 1) {
                 var_3127 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func740();
                 return;
             }
             if (var_3134 == 1) {
                 var_3134 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3604,14 +3681,14 @@ function func839(this: any) {
             }
             if (var_3136 == 1) {
                 var_3136 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func751();
                 return;
             }
             if (var_547 == 1) {
                 var_547 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3619,7 +3696,7 @@ function func839(this: any) {
             }
             if (var_2494 == 1) {
                 var_2494 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3627,7 +3704,7 @@ function func839(this: any) {
             }
             if (var_2495 == 1) {
                 var_2495 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3635,7 +3712,16 @@ function func839(this: any) {
             }
             if (var_3198 == 1) {
                 var_3198 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
+                yield func051();
+                var_198 = 0;
+                yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
+                return;
+            }
+            // Ver0.1403にて追加。
+            if (go_to_hotel == 1) {
+                go_to_hotel = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3643,7 +3729,7 @@ function func839(this: any) {
             }
             if (var_3199 == 1) {
                 var_3199 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3651,7 +3737,7 @@ function func839(this: any) {
             }
             if (var_3200 == 1) {
                 var_3200 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3659,7 +3745,7 @@ function func839(this: any) {
             }
             if (var_3201 == 1) {
                 var_3201 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3667,7 +3753,7 @@ function func839(this: any) {
             }
             if (var_3203 == 1) {
                 var_3203 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3675,7 +3761,7 @@ function func839(this: any) {
             }
             if (var_3192 == 1) {
                 var_3192 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 var_198 = 0;
                 var_1206 = 1;
                 yield func051();
@@ -3684,7 +3770,7 @@ function func839(this: any) {
             }
             if (var_3191 == 1) {
                 var_3191 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 var_198 = 0;
                 var_1206 = 1;
                 yield func051();
@@ -3693,7 +3779,7 @@ function func839(this: any) {
             }
             if (var_3147 == 1) {
                 var_3147 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3701,31 +3787,31 @@ function func839(this: any) {
             }
             if (var_3193 == 1) {
                 var_3193 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func812();
                 return;
             }
             if (var_3193 == 2) {
                 var_3193 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func812();
                 return;
             }
             if (var_3195 == 1) {
                 var_3195 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func817();
                 return;
             }
             if (var_3195 == 2) {
                 var_3195 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func817();
                 return;
             }
             if (var_3131 == 1) {
                 var_3131 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3733,7 +3819,7 @@ function func839(this: any) {
             }
             if (var_3137 == 1) {
                 var_3137 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3741,13 +3827,13 @@ function func839(this: any) {
             }
             if (var_3156 == 1) {
                 var_3156 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func780();
                 return;
             }
             if (var_3157 == 1) {
                 var_3157 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 var_198 = 0;
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
@@ -3755,7 +3841,7 @@ function func839(this: any) {
             }
             if (var_563 == 1) {
                 var_563 = 0;
-                var_548 = 0;
+                var_548 = 0; // 選択肢処理フラグOFF
                 yield func051();
                 yield func066();
                 return;
@@ -3769,13 +3855,11 @@ function func839(this: any) {
         return;
     });
 }
-
-
+// 選択肢処理(はい、いいえ & 買う、やめる等)
 function func840(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(840);
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(12, 37);
         gcopy(12, 0, 0, 113, 53);
@@ -3788,13 +3872,27 @@ function func840(this: any) {
         pset(121, 40);
         pset(15, 85);
         pset(121, 85);
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         color(255, 255, 255);
         pos(33, 47);
-        if (var_3192 == 0 && var_3147 == 0 && var_3136 == 0 && var_3163 != 2 && var_3163 != 3) {
+        if (go_to_hotel == 0 && var_3198 == 0 && var_3192 == 0 && var_3147 == 0 && var_3136 == 0 && var_3163 != 2 && var_3163 != 3) {
             mes("はい");
             mes("いいえ");
+        }
+        // Ver0.1403にて追加。ホテルの外へ向かうかどうかの選択。酒場へ行けるようになるまで。
+        if (dangeon_number == 0 && var_66 == 11 && var_67 == 8 && var_759 == 0 && var_3198 == 1) {
+            mes("はい");
+            mes("いいえ");
+        }
+        // Ver0.1403にて追加。酒場へ向かうかホテルの外へ向かうかどうかの選択。酒場へ行けるようになった後。
+        if (dangeon_number == 0 && var_66 == 11 && var_67 == 8 && var_759 >= 1 && var_3198 == 1) {
+            mes("酒場");
+            mes("ﾎﾃﾙの外");
+        }
+        // Ver0.1403にて追加。部屋へ戻るかテルの外へ向かうかどうかの選択。酒場へ行けるようになった後。
+        if (dangeon_number == 0 && var_66 == 25 && var_67 == 32 && var_759 >= 1 && go_to_hotel == 1) {
+            mes("部屋");
+            mes("ﾎﾃﾙの外");
         }
         if (var_3192 == 1) {
             mes("買う");
@@ -3809,7 +3907,6 @@ function func840(this: any) {
             mes("断る");
         }
         color(255, 255, 255);
-
         font("MS ゴシック", 16, 1);
         pos(var_245, var_246);
         mes(">");
@@ -3826,12 +3923,12 @@ function func841(this: any) {
         if (var_637 >= 1) {
             var_637 = 0;
             gsel(window_id = 37, window_mode = -1);
-            screen_(0, 680, 680, 2);
+            screen_(0, 340, 340, 2);
         
             SetWindowLongA(hwnd, -8, var_15);
             if (var_640 == 0) {
                 var_10 = 0;
-                width(680, 680);
+                width(340, 340);
             }
             if (var_640 == 1) {
                 var_640 = 0;
@@ -3930,7 +4027,7 @@ function func841(this: any) {
         var_3262 = 0;
         yield func856();
         yield func847();
-        width(680, 680);
+        width(340, 340);
         y_axis_map_image = 2;
         var_3263 = y_axis_map_image;
         var_3264 = 1;
@@ -4156,7 +4253,7 @@ function func849(this: any) {
         }
         clrobj();
         if (var_10 == 0) {
-            width(680, 680);
+            width(340, 340);
         }
         if (var_10 == 1) {
             width(680, 680);
@@ -4412,7 +4509,7 @@ function func852(this: any) {
 function func853(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(853);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         font("ＭＳ Ｐゴシック", 12);
         color(236, 233, 216);
         boxf(left = 680, top1 = 0, right = 680, bottom = 680);
@@ -4512,16 +4609,16 @@ function func853(this: any) {
         var_1640 = 2;
         yield func567();
         var_1642 = 0;
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(var_3225, var_3226);
         var_78[0].Var0 = var_884[var_873];
         belongings_item_list = var_78[0].Var0;
         yield func397(); // 所持、または床に落ちているアイテムのアイコン表示(読み込んだ画像ファイルから座標指定)
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(var_3227, var_3228);
         var_888 = var_3300[var_3249];
         yield func539();
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         font("ＭＳ Ｐゴシック", 11);
         color(255, 255, 255);
         var_3301 = var_3245;
@@ -4707,7 +4804,7 @@ function func854(this: any) {
 function func855(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(855);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         var_449 = var_67;
         var_763 = -1;
         if (var_449 < 0) {
@@ -5111,7 +5208,7 @@ function func859(this: any) {
             var_447 = var_66;
             for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
                 pos((var_447 - var_66 - 1) * 40 + 10, (var_449 - var_67 - 1) * 40 + 10);
-                gmode(2);
+                gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
                 if (var_73[var_447][var_449] == 1) {
                     gcopy(5, 1200, y_axis_map_image * 40, 40, 40);
                 }
@@ -5173,7 +5270,7 @@ function func860(this: any) {
 function func861(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(861);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(var_3264 * 40 + 10, var_3265 * 40 + 10);
         gcopy(3, 240, 120, 40, 40);
 
@@ -6359,7 +6456,7 @@ function func871(this: any) {
         clrobj();
         yield func233();
         if (var_10 == 0) {
-            width(680, 680);
+            width(340, 340);
         }
         if (var_10 == 1) {
             width(680, 680);
@@ -7624,13 +7721,13 @@ function func885(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(885);
         redraw(0);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(0, 0);
-        gcopy(3, 0, 400, 680, 680);
+        gcopy(3, 0, 400, 340, 340);
 
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(0, 0);
-        gcopy(12, 0, 0, 680, 680);
+        gcopy(12, 0, 0, 340, 340);
         var_1631 = 20;
         var_1632 = 10;
         var_1633 = 300;
@@ -7642,7 +7739,7 @@ function func885(this: any) {
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(var_1631 - 3, var_1632 - 3);
         gcopy(12, 0, 0, var_1633 + 5, var_1634 + 5);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         color(255, 255, 255);
         line(var_1631 - var_1635, var_1632 - var_1636 - 1, var_1631 + var_1633 + var_1635, var_1632 - var_1636 - 1);
         line(var_1631 - var_1635, var_1632 + var_1634 + var_1636, var_1631 + var_1633 + var_1635, var_1632 + var_1634 + var_1636);
@@ -7668,7 +7765,7 @@ function func885(this: any) {
             gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
             pos(var_1631 - 3, var_1632 - 3);
             gcopy(12, 0, 0, var_1633 + 5, var_1634 + 5);
-            gmode(2);
+            gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
             color(255, 255, 255);
             line(var_1631 - var_1635, var_1632 - var_1636 - 1, var_1631 + var_1633 + var_1635, var_1632 - var_1636 - 1);
             line(var_1631 - var_1635, var_1632 + var_1634 + var_1636, var_1631 + var_1633 + var_1635, var_1632 + var_1634 + var_1636);
@@ -7694,7 +7791,7 @@ function func885(this: any) {
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(var_1631 - 3, var_1632 - 3);
         gcopy(12, 0, 0, var_1633 + 5, 220 + 5);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         color(255, 255, 255);
         line(var_1631 - var_1635, var_1632 - var_1636 - 1, var_1631 + var_1633 + var_1635, var_1632 - var_1636 - 1);
         line(var_1631 - var_1635, var_1632 + var_1634 + var_1636, var_1631 + var_1633 + var_1635 - 170, var_1632 + var_1634 + var_1636);
@@ -7740,18 +7837,20 @@ function func885(this: any) {
             var_3494++;
             var_3500 = var_3500 + 20;
         }
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(var_3481, var_3482);
         if (var_3486 == 0) {
             pos(var_3481, 59);
         }
+        // buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
+        // 絵:カーソルアイコン(鏃)
         gcopy(8, 70, 50, 25, 20);
         color(0, 0, 0);
 
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(290, 50);
         gcopy(3, 1560, 0, 40, 45);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(290, 48);
         gcopy(3, 760, 120, 40, 40);
         pos(150, 32);
@@ -9535,7 +9634,7 @@ function func894(this: any) {
         gsel(ginfo(3), 1);
         title("ログイン");
         cls(4);
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(35, 35);
         gcopy(17, 0, 560, 280, 120);
         color(0, 0, 0);
@@ -9568,7 +9667,7 @@ function func895(this: any) {
         clrobj();
         color(0, 0, 0);
         boxf();
-        gmode(2);
+        gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         pos(35, 35);
         gcopy(17, 0, 560, 280, 120);
         color(0, 0, 0);
@@ -9982,7 +10081,7 @@ function func899(this: any) {
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(var_1631 - 3, var_1632 - 3);
                     gcopy(12, 0, 0, var_1633 + 7, var_1634 + 5);
-                    gmode(2);
+                    gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
                     color(255, 255, 255);
                     line(var_1631 - var_1635, var_1632 - var_1636 - 1, var_1631 + var_1633 + var_1635, var_1632 - var_1636 - 1);
                     line(var_1631 - var_1635, var_1632 + var_1634 + var_1636, var_1631 + var_1633 + var_1635, var_1632 + var_1634 + var_1636);
@@ -10077,7 +10176,7 @@ function func899(this: any) {
                     gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     pos(var_1631 - 3, var_1632 - 3);
                     gcopy(12, 0, 0, var_1633 + 7, 110 + 5);
-                    gmode(2);
+                    gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
                     color(255, 255, 255);
                     line(var_1631 - var_1635, var_1632 - var_1636 - 1, var_1631 + var_1633 + var_1635, var_1632 - var_1636 - 1);
                     line(var_1631 - var_1635, var_1632 + var_1634 + var_1636, var_1631 + var_1633 + var_1635, var_1632 + var_1634 + var_1636);

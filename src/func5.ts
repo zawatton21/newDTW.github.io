@@ -937,7 +937,7 @@ function func511(this: any) {
                 var_2257 = 1;
             }
         }
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             yield func509(); // discの発動をしようとして、発動できない場所の時の動作処理
             return;
         }
@@ -2156,7 +2156,6 @@ function func523(this: any) {
             yield func337(); // メッセージ関係呼び出し
             var_1443 = var_1443 + 1;
             if (var_1443 == 10) {
-
                 DSPLAY(audio_id = 105);
             }
         }
@@ -3840,7 +3839,7 @@ function func534(this: any) {
             var_2308 = var_565 * 2;
             var_2219 = rnd(3);
             var_2308 = var_2308 + var_2219;
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_2308 = var_2308 * 2;
             }
             if (var_2194 != var_124) {
@@ -4062,7 +4061,7 @@ function func536(this: any) {
                 if (var_337 > 200) {
                     return;
                 }
-                if (var_262 == 1 && var_769 == 0) {
+                if (var_262 == 1 && var_769 == 0) { // var_262 == 1 なので、dangeon_number = 0 であれば
                     return;
                 }
             }
@@ -4659,7 +4658,7 @@ function func538(this: any) {
         if (var_81[var_365][4] == 1) {
             var_2438 = 1;
         }
-        if (var_121 == 1) {
+        if (var_121 == 1) { // var_121 罠が見えるようになるフラグがONであれば
             var_2438 = 1;
         }
         if (var_81[var_365][0] == 31) {
@@ -5939,7 +5938,7 @@ function func541(this: any) {
             var_374 = 0;
             var_108 = 0;
             var_81[var_2442][3] = 0;
-            yield func499();
+            yield func499(); // ダンジョン動作処理?
             var_382 = 1;
         }
         // No = 10 クラフトワークの罠を踏んだ時の動作処理
@@ -6368,12 +6367,11 @@ function func541(this: any) {
             var_1537 = 0;
             var_300 = 0;
             comments_row2 = "まぶたがスト――ンと落ちてきた！";
-    
             DSPLAY(audio_id = 153);
             yield func047();
             var_108 = 0;
             var_81[var_2442][3] = 0;
-            var_127 = 1;
+            var_127 = 1; // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグON
             var_167 = 0;
             yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -6725,7 +6723,6 @@ function func541(this: any) {
                     yield func337(); // メッセージ関係呼び出し
                     var_1542++;
                 }
-    
                 DSPLAY(audio_id = 118);
                 comments_row1 = comments_row1a;
                 comments_row2 = comments_row2a;
@@ -6744,7 +6741,7 @@ function func541(this: any) {
                 var_1542 = 0;
                 yield func340(); // キー入力による選択処理
                 var_1261 = 0;
-                var_127 = 1;
+                var_127 = 1; // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグON
                 yield func529();
             }
         }
@@ -6824,12 +6821,12 @@ function func541(this: any) {
                 yield func050();
                 var_198 = 1;
                 var_300 = 0;
-                if (var_157 == 0) {
+                if (var_157 == 0) { // var_157 倍速移動フラグOFF
                     var_133 = 1;
                     var_397 = 0;
                 }
-                if (var_157 != 0) {
-                    var_157 = 0;
+                if (var_157 != 0) { // var_157 倍速移動フラグOFFでなければ
+                    var_157 = 0; // var_157 倍速移動フラグOFF
                     var_158 = 0;
                 }
             }
@@ -6863,7 +6860,7 @@ function func541(this: any) {
             }
             if (var_140 == 7 && equip_disc[396] == 0) {
                 comments_row2 = "磁力が強力すぎて体が重い！";
-                var_157 = 0;
+                var_157 = 0; // var_157 倍速移動フラグOFF
                 var_158 = 0;
                 var_133 = 1;
                 var_397 = 0;
@@ -7102,7 +7099,7 @@ function func541(this: any) {
                 var_374 = 0;
                 var_81[var_2442][3] = 0;
                 var_1530 = 0;
-                yield func499();
+                yield func499(); // ダンジョン動作処理?
                 var_382 = 1;
                 return;
             }
@@ -8737,6 +8734,7 @@ function func546(this: any) {
         return;
     });
 }
+// 敵が罠(キッスのシール、ソフトマシーンの仕込み)を踏んだ時の動作処理
 function func547(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(547);
@@ -8745,7 +8743,9 @@ function func547(this: any) {
         }
         var_2488 = var_80[var_423][var_424];
         if (var_81[var_2488][4] == 1 || var_103 == 1 || var_121 == 1) {
-            if (var_81[var_2488][0] == 81 && var_83[var_421].Var0 != 50 && var_83[var_421].Var0 != 148 && var_83[var_421].Var0 != 143 && var_83[var_421].Var0 != 132 && var_83[var_421].Var0 != 20) {
+            // No = 132 レクイエムジョルノ、No = 143 ウンガロ
+            // Ver0.1403にて追加。No - 171 離婚した承太郎
+            if (var_81[var_2488][0] == 81 && var_83[var_421].Var0 != 50 && var_83[var_421].Var0 != 171 && var_83[var_421].Var0 != 148 && var_83[var_421].Var0 != 143 && var_83[var_421].Var0 != 132 && var_83[var_421].Var0 != 20) {
                 var_240 = 0;
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -8789,7 +8789,9 @@ function func547(this: any) {
                 var_1374 = 0;
                 return;
             }
-            if (var_81[var_2488][0] == 78 && var_83[var_421].Var0 != 50 && var_83[var_421].Var0 != 148 && var_83[var_421].Var0 != 143 && var_83[var_421].Var0 != 132 && var_83[var_421].Var0 != 20 && var_83[var_421].Var0 != 33 && var_83[var_421].Var0 != 34) {
+            // No = 132 レクイエムジョルノ、No = 143 ウンガロでなければ
+            // Ver0.1403にて追加。NO = 171 離婚した承太郎
+            if (var_81[var_2488][0] == 78 && var_83[var_421].Var0 != 50 && var_83[var_421].Var0 != 171 && var_83[var_421].Var0 != 148 && var_83[var_421].Var0 != 143 && var_83[var_421].Var0 != 132 && var_83[var_421].Var0 != 20 && var_83[var_421].Var0 != 33 && var_83[var_421].Var0 != 34) {
                 var_240 = 0;
                 for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
                     yield func337(); // メッセージ関係呼び出し
@@ -9045,7 +9047,7 @@ function func547(this: any) {
                 var_209 = var_565 * 5;
                 var_2219 = rnd(3);
                 var_209 = var_209 + var_2219;
-                if (var_172 >= 1) {
+                if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                     var_209 = var_209 * 2;
                 }
                 yield func705();
@@ -9356,7 +9358,7 @@ function func548(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_2494 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -9471,7 +9473,7 @@ function func551(this: any) {
         var_246 = 45;
         var_546 = 1;
         var_2495 = 1;
-        var_548 = 1;
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -9544,7 +9546,7 @@ function func552(this: any) {
 function func553(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(553);
-        if (var_262 != 0) {
+        if (var_262 != 0) { // var_262 != 0 なので、dangeon_number = 0 であれば
             return;
         }
         var_2436 = var_447 - var_66 + 4;
@@ -10826,11 +10828,15 @@ function func556(this: any) {
             if (var_2543 == 5) {
                 var_953 = 120;
             }
-            if (var_2543 == 6) {
-                var_953 = 132;
+            if (var_2543 == 6) { // 6 = 「dangeon_numer = 2 && current_floor = 30」
+                var_953 = 132; // enemy_list = 132 レクイエムジョルノ
             }
-            if (var_2543 == 7) {
+            if (var_2543 == 7) { // 7 = 「dangeon_numer = 3 && current_floor = 99」
                 var_953 = 143;
+            }
+            // Ver0.1403にて追加。鉄獄のダンジョン主指定
+            if (var_2543 == 8) { // 7 = 「dangeon_numer = 3 && current_floor = 99」
+                var_953 = 171; // enemy_list = 171 離婚した承太郎
             }
             if (var_2543 == 9) {
                 var_953 = 86;
@@ -10847,7 +10853,7 @@ function func556(this: any) {
             if (var_2543 == 13) {
                 var_953 = var_23;
             }
-            if (var_2544 >= 1) {
+            if (var_2544 >= 1) { // オーラ敵フラグONであれば
                 var_953 = var_2544;
             }
             if (var_1998 == 1) {
@@ -11236,7 +11242,7 @@ function func556(this: any) {
         if (var_2214 >= 1) {
             var_1053 = 0;
         }
-        if (var_2544 >= 1) {
+        if (var_2544 >= 1) { // オーラ敵フラグONであれば
             var_1053 = 99;
         }
         var_82[var_440][var_441] = var_673;
@@ -11364,7 +11370,7 @@ function func556(this: any) {
         if (var_1729 == 1) {
             var_83[var_673].Var16 = var_2548;
         }
-        if (var_2544 >= 1) {
+        if (var_2544 >= 1) { // オーラ敵フラグONであれば
             var_83[var_673].Var16 = 1000 + var_2544;
         }
         var_83[var_673].Var17 = 0;
@@ -11511,8 +11517,8 @@ function func556(this: any) {
                 }
             }
         }
-        if (var_2544 >= 1) {
-            var_83[var_673].Var39 = 5;
+        if (var_2544 >= 1) { // オーラ敵フラグONであれば
+            var_83[var_673].Var39 = 5; // 初期レベル5
             var_83[var_673].Var3 = Math.floor(enemy_hp * (var_83[var_673].Var39 + 10) / 10);
             if (var_83[var_673].Var3 >= 999) {
                 var_83[var_673].Var3 = 999;
@@ -11975,6 +11981,7 @@ function func562(this: any) {
         return;
     });
 }
+// ダンジョン主指定処理
 function func563(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(563);
@@ -11989,16 +11996,22 @@ function func563(this: any) {
         }
         // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
-            var_2543 = 6;
+            var_2543 = 6; // ダンジョン主指定フラグ 6 = 132 レクイエムジョルノ
             yield func556();
             var_2543 = 0;
         }
         // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3 && current_floor == 99) {
-            var_2543 = 7;
+            var_2543 = 7; // ダンジョン主指定フラグ 7 = 143 ウンガロ
             yield func556();
             var_2543 = 0;
         }
+        // Ver0.1403にて追加。No = 5 なので、鉄獄
+        if (dangeon_number == 5 && current_floor == var_20) {
+            var_2543 = 8; // ダンジョン主指定フラグ 8 = 171 離婚した承太郎
+            yield func556();
+            var_2543 = 0;
+        }        
         if (special_floor == 1) { // 虹村屋敷
             var_2543 = 3;
             yield func556();
@@ -12042,6 +12055,7 @@ function func563(this: any) {
         return;
     });
 }
+// オーラ敵生成処理
 function func564(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(564);
@@ -12350,7 +12364,7 @@ function func566(this: any) {
                     pos(var_764 * var_35 + 20, var_763 * var_36 - 20 - 10);
                 }
             }
-            if (var_743 == 1) {
+            if (var_743 == 1) { //スタンド像付与フラグがONの場合
                 if (var_1211 <= 3 || var_1211 > 9) {
                     pos(var_764 * var_35, var_763 * var_36 - 10);
                 }
@@ -12407,6 +12421,7 @@ function func566(this: any) {
                     }
                 }
             }
+            // enemy_list == 140 ジョナサン
             if (var_83[var_1641].Var0 == 140) {
                 if (var_742 <= 3 || var_742 >= 10) {
                     pos(var_764 * var_35, var_763 * var_36 - 10);
@@ -12490,6 +12505,7 @@ function func566(this: any) {
                     }
                 }
             }
+            // enemy_list == 168 警備員の西戸
             if (var_83[var_1641].Var0 == 168) {
                 if (var_742 <= 3 || var_742 >= 10) {
                     pos(var_764 * var_35, var_763 * var_36 - 10);
@@ -12573,6 +12589,7 @@ function func566(this: any) {
                     }
                 }
             }
+            // enemy_list == 22 アヴドゥル人形、enemy_list == 17 シアハートアタック、enemy_list == 71 ドゥービー
             if (var_83[var_1641].Var0 == 22 || var_83[var_1641].Var0 == 17 || var_83[var_1641].Var0 == 71) {
                 if (var_742 <= 2 || var_742 >= 16) {
                     pos(var_764 * var_35, var_763 * var_36 - 10);
@@ -12630,6 +12647,7 @@ function func566(this: any) {
                     }
                 }
             }
+            // enemy_list == 29 グリーン・ディ、enemy_list == 34 トニオさん(ブチ切れ)
             if (var_83[var_1641].Var0 == 29 || var_83[var_1641].Var0 == 34) {
                 if (var_742 <= 5 || var_742 >= 16) {
                     pos(var_764 * var_35, var_763 * var_36 - 10);
@@ -12687,6 +12705,7 @@ function func566(this: any) {
                     }
                 }
             }
+            // enemy_list == 44 レッドホットチリペッパー
             if (var_83[var_1641].Var0 == 44) {
                 if (var_742 == 1 || var_742 >= 12) {
                     pos(var_764 * var_35, var_763 * var_36 - 10);
@@ -12744,6 +12763,7 @@ function func566(this: any) {
                     }
                 }
             }
+            // enemy_list == 164 エシディシの脳、enemy_list == 165 エボニーデビル
             if (var_83[var_1641].Var0 == 164 || var_83[var_1641].Var0 == 165) {
                 if (var_742 <= 3) {
                     pos(var_764 * var_35, var_763 * var_36 - 10);
@@ -13119,6 +13139,7 @@ function func566(this: any) {
             if (var_217 == 1) {
                 pos(var_764 * var_35, var_763 * var_36 - 10);
             }
+            // enemy_list = 21 ストレイキャット
             if (var_83[var_1641].Var0 == 21 && var_742 == 4) {
                 if (var_1640 == 4) {
                     pos(var_764 * var_35 - var_2577 + 3, var_763 * var_36 - 10);
@@ -13885,6 +13906,7 @@ function func567(this: any) {
                 var_2603 = 8;
                 var_2604 = 11;
             }
+            // enemy_list = 10 ノートリアスBIG
             if (var_83[var_1641].Var0 == 10 && var_83[var_1641].Var14 == 0 && var_83[var_1641].Var20 == 0 && var_157 != 0) {
                 var_2593 = 0;
                 var_2594 = 1;
@@ -13899,6 +13921,7 @@ function func567(this: any) {
                 var_2603 = 8;
                 var_2604 = 11;
             }
+            // enemy_list = 17 シアハートアタック、enemy_list = 29 グリーン・ディ、enemy_list = 42 アパッチ、enemy_list = 48 エアロスミス、enemy_list = 60 ザ・ニュー神父、enemy_list = 108 イギー、enemy_list = 118 クリーム、enemy_list = 96 感電エンポリオ
             if (var_83[var_1641].Var0 == 17 || var_83[var_1641].Var0 == 29 || var_83[var_1641].Var0 == 42 || var_83[var_1641].Var0 == 48 || var_83[var_1641].Var0 == 60 || var_83[var_1641].Var0 == 108 || var_83[var_1641].Var0 == 118 || var_83[var_1641].Var0 == 96) {
                 var_2593 = 0;
                 var_2594 = 1;
@@ -13927,6 +13950,7 @@ function func567(this: any) {
                     var_2604 = 10;
                 }
             }
+            // enemy_list = 88 ドノヴァン、enemy_list = 115 アクアネックレス、enemy_list = 170 カタツムリ
             if (var_83[var_1641].Var0 == 88 || var_83[var_1641].Var0 == 115 || var_83[var_1641].Var0 == 170) {
                 var_2593 = 0;
                 var_2594 = 1;
@@ -14067,6 +14091,208 @@ function func567(this: any) {
                 if (var_742 >= 5) {
                     var_2606 = 3;
                 }
+                // enemy_list = 3 タワーオブグレー
+                // enemy_list = 39 ハイウェイスター、enemy_list = 3 タワーオブグレーは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 3) {
+                    if (var_742 <= 3) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 4) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 5) {
+                        var_2606 = 3;
+                    }
+                    if (var_742 > 8) {
+                        var_2606 = 1;
+                    }
+                }
+                // enemy_list = 17 シアハートアタック
+                // // enemy_list = 22 ｱｳﾞﾄﾞｩﾙ人形、enemy_list = 17 シアハートアタック、enemy_list = 71 ドゥービーは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 17) {
+                    if (var_742 <= 3) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 4 || var_742 == 5 || var_742 == 6 || var_742 == 10 || var_742 == 11 || var_742 == 12) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 7 || var_742 == 8 || var_742 == 9 || var_742 == 13 || var_742 == 14 || var_742 >= 15) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 21 ストレイキャット
+                if (var_83[var_1641].Var0 == 21) {
+                    if (var_742 == 1) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 2) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 3) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 22 ｱｳﾞﾄﾞｩﾙ人形
+                // // enemy_list = 22 ｱｳﾞﾄﾞｩﾙ人形、enemy_list = 17 シアハートアタック、enemy_list = 71 ドゥービーは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 22) {
+                    if (var_742 <= 3) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 4 || var_742 == 5 || var_742 == 6 || var_742 == 10 || var_742 == 11 || var_742 == 12) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 7 || var_742 == 8 || var_742 == 9 || var_742 == 13 || var_742 == 14 || var_742 >= 15) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 29 グリーン・ディ
+                if (var_83[var_1641].Var0 == 29) {
+                    if (var_742 <= 5) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 6) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 7) {
+                        var_2606 = 3;
+                    }
+                    if (var_742 > 9) {
+                        var_2606 = 2;
+                    }
+                }
+                // enemy_list = 30 禁煙中ホルホース
+                // enemy_list = 46 ホルホース、enemy_list = 30 禁煙中ホルホースは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 30) {
+                    if (var_742 == 1) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 2) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 3) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 34 ブチギレ状態のトニオさん
+                if (var_83[var_1641].Var0 == 34) {
+                    if (var_742 == 1 || var_742 == 3 || var_742 == 5) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 2 || var_742 == 4) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 6) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 39 ハイウェイスター
+                // enemy_list = 39 ハイウェイスター、enemy_list = 3 タワーオブグレーは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 39) {
+                    if (var_742 <= 3) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 4) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 5) {
+                        var_2606 = 3;
+                    }
+                    if (var_742 > 8) {
+                        var_2606 = 1;
+                    }
+                }
+                // enemy_list = 44 レッドホットチリペッパー
+                if (var_83[var_1641].Var0 == 44) {
+                    if (var_742 == 1 || var_742 == 2) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 3 || var_742 == 4 || var_742 == 7 || var_742 == 8) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 5 || var_742 == 6 || var_742 == 9 || var_742 == 10) {
+                        var_2606 = 3;
+                    }
+                    if (var_742 >= 11) {
+                        var_2606 = 1;
+                    }
+                }
+                // enemy_list = 46 ホルホース
+                // enemy_list = 46 ホルホース、enemy_list = 30 禁煙中ホルホースは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 46) {
+                    if (var_742 == 1) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 2) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 3) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 48 エアロスミス
+                if (var_83[var_1641].Var0 == 48) {
+                    if (var_742 == 1 || var_742 == 4 || var_742 == 7 || var_742 == 10) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 2 || var_742 == 5 || var_742 == 8 || var_742 == 11) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 3 || var_742 == 6 || var_742 == 9 || var_742 == 12) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 51 ワンチェン
+                if (var_83[var_1641].Var0 == 51) {
+                    if (var_742 <= 4) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 5 || var_742 == 6) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 7 || var_742 == 8) {
+                        var_2606 = 3;
+                    }
+                    if (var_742 >= 9) {
+                        var_2606 = 1;
+                    }
+                }
+                // enemy_list = 56 シュトロハイム
+                if (var_83[var_1641].Var0 == 56) {
+                    if (var_742 == 1 || var_742 == 3 || var_742 == 5 || var_742 == 7 || var_742 == 9 || var_742 == 11 || var_742 == 13) {
+                        var_2606 = 3;
+                    }
+                    if (var_742 == 0 || var_742 == 2 || var_742 == 4 || var_742 == 6 || var_742 == 8 || var_742 == 10 || var_742 == 12) {
+                        var_2606 = 2;
+                    }
+                }
+                // enemy_list = 71 ドゥービー
+                // // enemy_list = 22 ｱｳﾞﾄﾞｩﾙ人形、enemy_list = 17 シアハートアタック、enemy_list = 71 ドゥービーは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 71) {
+                    if (var_742 <= 3) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 4 || var_742 == 5 || var_742 == 6 || var_742 == 10 || var_742 == 11 || var_742 == 12) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 7 || var_742 == 8 || var_742 == 9 || var_742 == 13 || var_742 == 14 || var_742 >= 15) {
+                        var_2606 = 3;
+                    }
+                }
+                // enemy_list = 135 若ジョセフ
+                if (var_83[var_1641].Var0 == 135) {
+                    if (var_742 <= 3) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 4 || var_742 == 6 || var_742 == 8) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 5 || var_742 == 7 || var_742 == 9) {
+                        var_2606 = 3;
+                    }
+                    if (var_742 >= 10) {
+                        var_2606 = 1;
+                    }
+                }
                 // enemy_list = 136 シーザー
                 if (var_83[var_1641].Var0 == 136 && var_1198 >= 1) {
                     if (var_83[var_1641].Var5 == 2) {
@@ -14115,18 +14341,6 @@ function func567(this: any) {
                         var_1826 = var_965;
                     }
                 }
-                // enemy_list = 22 ｱｳﾞﾄﾞｩﾙ人形、enemy_list = 17 シアハートアタック、enemy_list = 71 ドゥービー
-                if (var_83[var_1641].Var0 == 22 || var_83[var_1641].Var0 == 17 || var_83[var_1641].Var0 == 71) {
-                    if (var_742 <= 3) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 4 || var_742 == 5 || var_742 == 6 || var_742 == 10 || var_742 == 11 || var_742 == 12) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 == 7 || var_742 == 8 || var_742 == 9 || var_742 == 13 || var_742 == 14 || var_742 >= 15) {
-                        var_2606 = 3;
-                    }
-                }
                 // enemy_list = 140 ジョナサン
                 if (var_83[var_1641].Var0 == 140) {
                     if (var_742 <= 3) {
@@ -14140,63 +14354,6 @@ function func567(this: any) {
                     }
                     if (var_742 >= 10) {
                         var_2606 = 1;
-                    }
-                }
-                // enemy_list = 168 不明
-                if (var_83[var_1641].Var0 == 168) {
-                    if (var_742 <= 3) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 4 || var_742 == 5 || var_742 == 9) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 == 6 || var_742 == 7 || var_742 == 8) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 >= 10) {
-                        var_2606 = 1;
-                    }
-                }
-                // enemy_list = 39 ハイウェイスター、enemy_list = 3 タワーオブグレー
-                if (var_83[var_1641].Var0 == 39 || var_83[var_1641].Var0 == 3) {
-                    if (var_742 <= 3) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 4) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 >= 5) {
-                        var_2606 = 3;
-                    }
-                    if (var_742 > 8) {
-                        var_2606 = 1;
-                    }
-                }
-                // enemy_list = 34 不明
-                if (var_83[var_1641].Var0 == 34) {
-                    if (var_742 == 1 || var_742 == 3 || var_742 == 5) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 2 || var_742 == 4) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 >= 6) {
-                        var_2606 = 3;
-                    }
-                }
-                // enemy_list = 29 グリーン・ディ
-                if (var_83[var_1641].Var0 == 29) {
-                    if (var_742 <= 5) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 6) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 >= 7) {
-                        var_2606 = 3;
-                    }
-                    if (var_742 > 9) {
-                        var_2606 = 2;
                     }
                 }
                 // enemy_list = 141 F・F
@@ -14217,98 +14374,9 @@ function func567(this: any) {
                         var_2606 = 1;
                     }
                 }
-                // enemy_list = 51 ワンチェン
-                if (var_83[var_1641].Var0 == 51) {
-                    if (var_742 <= 4) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 5 || var_742 == 6) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 == 7 || var_742 == 8) {
-                        var_2606 = 3;
-                    }
-                    if (var_742 >= 9) {
-                        var_2606 = 1;
-                    }
-                }
-                // enemy_list = 135 若ジョセフ
-                if (var_83[var_1641].Var0 == 135) {
-                    if (var_742 <= 3) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 4 || var_742 == 6 || var_742 == 8) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 == 5 || var_742 == 7 || var_742 == 9) {
-                        var_2606 = 3;
-                    }
-                    if (var_742 >= 10) {
-                        var_2606 = 1;
-                    }
-                }
-                // enemy_list = 44 レッドホットチリペッパー
-                if (var_83[var_1641].Var0 == 44) {
-                    if (var_742 == 1 || var_742 == 2) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 3 || var_742 == 4 || var_742 == 7 || var_742 == 8) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 == 5 || var_742 == 6 || var_742 == 9 || var_742 == 10) {
-                        var_2606 = 3;
-                    }
-                    if (var_742 >= 11) {
-                        var_2606 = 1;
-                    }
-                }
-                // enemy_list = 56 シュトロハイム
-                if (var_83[var_1641].Var0 == 56) {
-                    if (var_742 == 1 || var_742 == 3 || var_742 == 5 || var_742 == 7 || var_742 == 9 || var_742 == 11 || var_742 == 13) {
-                        var_2606 = 3;
-                    }
-                    if (var_742 == 0 || var_742 == 2 || var_742 == 4 || var_742 == 6 || var_742 == 8 || var_742 == 10 || var_742 == 12) {
-                        var_2606 = 2;
-                    }
-                }
-                // enemy_list = 48 エアロスミス
-                if (var_83[var_1641].Var0 == 48) {
-                    if (var_742 == 1 || var_742 == 4 || var_742 == 7 || var_742 == 10) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 2 || var_742 == 5 || var_742 == 8 || var_742 == 11) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 == 3 || var_742 == 6 || var_742 == 9 || var_742 == 12) {
-                        var_2606 = 3;
-                    }
-                }
-                // enemy_list = 46 ホルホース、enemy_list = 30 禁煙中ホルホース
-                if (var_83[var_1641].Var0 == 46 || var_83[var_1641].Var0 == 30) {
-                    if (var_742 == 1) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 2) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 >= 3) {
-                        var_2606 = 3;
-                    }
-                }
-                // enemy_list = 21 ストレイキャット
-                if (var_83[var_1641].Var0 == 21) {
-                    if (var_742 == 1) {
-                        var_2606 = 1;
-                    }
-                    if (var_742 == 2) {
-                        var_2606 = 2;
-                    }
-                    if (var_742 >= 3) {
-                        var_2606 = 3;
-                    }
-                }
-                // enemy_list = 164 エシディシの脳、enemy_list = 165 エボニーデビル
-                if (var_83[var_1641].Var0 == 164 || var_83[var_1641].Var0 == 165) {
+                // enemy_list = 164 エシディシの脳
+                // enemy_list = 164 エシディシの脳、enemy_list = 165 エボニーデビルは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 164) {
                     if (var_742 == 1) {
                         var_2606 = 1;
                         color(0, 0, 0);
@@ -14360,6 +14428,77 @@ function func567(this: any) {
                         color(0, 0, 0);
             
                         gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
+                    }
+                }
+                // enemy_list = 165 エボニーデビル
+                // enemy_list = 164 エシディシの脳、enemy_list = 165 エボニーデビルは設定共通。Ver0.1403にて分離。
+                if (var_83[var_1641].Var0 == 165) {
+                    if (var_742 == 1) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+                        
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
+                    }
+                    if (var_742 == 2) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+                        
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
+                    }
+                    if (var_742 == 3) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 240);
+                    }
+                    if (var_742 == 4) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+                
+                        gmode(4, null, null, 220);
+                    }
+                    if (var_742 == 5) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+                
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
+                    }
+                    if (var_742 == 6) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+            
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
+                    }
+                    if (var_742 == 7) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+                
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 120);
+                    }
+                    if (var_742 == 8) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 60);
+                    }
+                    if (var_742 >= 9) {
+                        var_2606 = 1;
+                        color(0, 0, 0);
+            
+                        gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
+                    }
+                }
+                // enemy_list = 168 警備員の西戸
+                if (var_83[var_1641].Var0 == 168) {
+                    if (var_742 <= 3) {
+                        var_2606 = 1;
+                    }
+                    if (var_742 == 4 || var_742 == 5 || var_742 == 9) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 == 6 || var_742 == 7 || var_742 == 8) {
+                        var_2606 = 2;
+                    }
+                    if (var_742 >= 10) {
+                        var_2606 = 1;
                     }
                 }
                 if (var_1640 == 8) {
@@ -14452,6 +14591,7 @@ function func567(this: any) {
                 }
             }
             yield func568();
+            //スタンド像付与フラグがONの場合
             if (var_743 == 1 && var_83[var_1641].Var7 == 1) {
                 var_1281 = 0;
                 if (var_742 == 1) {
@@ -14493,6 +14633,81 @@ function func567(this: any) {
                 if (var_1640 == 9) {
                     pos(var_764 * var_35 + 20 - var_1281, var_763 * var_36 - 20 - 10 + var_1281);
                 }
+                // enemy_list = 4 デス・13
+                if (var_83[var_1641].Var0 == 4) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 7;
+                }
+                // enemy_list = 14 床屋のカーン
+                if (var_83[var_1641].Var0 == 14) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 20;
+                }
+                // enemy_list = 32 吉良吉影
+                if (var_83[var_1641].Var0 == 32) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 14;
+                }
+                // enemy_list = 35 仗助
+                if (var_83[var_1641].Var0 == 35) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 8;
+                }
+                // enemy_list = 47 億泰
+                if (var_83[var_1641].Var0 == 47) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 6;
+                }
+                // enemy_list = 49 コピー人形
+                if (var_83[var_1641].Var0 == 49) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 3;
+                }
+                // enemy_list = 59 プッチ神父
+                if (var_83[var_1641].Var0 == 59) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 16;
+                }
+                // enemy_list = 60 ザ・ニュー神父
+                if (var_83[var_1641].Var0 == 60) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 20;
+                }
+                // enemy_list = 63 プロシュートの兄貴
+                if (var_83[var_1641].Var0 == 63) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 31;
+                }
+                // enemy_list = 66 タルカス
+                if (var_83[var_1641].Var0 == 66) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 20;
+                }
+                // enemy_list = 67 ブチギレた億泰
+                if (var_83[var_1641].Var0 == 67) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 6;
+                }
+                // enemy_list = 68 ブチギレた仗助
+                if (var_83[var_1641].Var0 == 68) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 8;
+                }
+                // enemy_list = 78 アヴドゥルさん
+                if (var_83[var_1641].Var0 == 78) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 12;
+                }
+                // enemy_list = 80 ラング・ラングラー
+                if (var_83[var_1641].Var0 == 80) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 42;
+                }
+                // enemy_list = 87 エシディシ
+                if (var_83[var_1641].Var0 == 87) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 52;
+                }
                 // enemy_list = 87 エシディシ
                 if (var_83[var_1641].Var0 == 87) {
                     if (var_1640 == 4) {
@@ -14520,223 +14735,225 @@ function func567(this: any) {
                         pos(var_764 * var_35 + 20 - var_1281 + 15, var_763 * var_36 - 20 - 10 + var_1281 - 5);
                     }
                 }
-                // enemy_list = 4 デス・13
-                if (var_83[var_1641].Var0 == 4) {
-                    var_1291 = 7;
+                // enemy_list = 98 エンポリオ(ウェザーリポートのDISC付)
+                if (var_83[var_1641].Var0 == 98) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 35;
+                }
+                // enemy_list = 108 イギー
+                if (var_83[var_1641].Var0 == 108) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 36;
+                }
+                // enemy_list = 113 DIO
+                if (var_83[var_1641].Var0 == 113) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 13;
+                }
+                // enemy_list = 114 最高にハイなDIO
+                if (var_83[var_1641].Var0 == 114) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 13;
+                }
+                // enemy_list = 119 ジョセフ(3部)
+                if (var_83[var_1641].Var0 == 119) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 18;
+                }
+                // enemy_list = 120 承太郎(3部)
+                if (var_83[var_1641].Var0 == 120) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 5;
+                }
+                // enemy_list = 122 ポルナレフ(3部)
+                if (var_83[var_1641].Var0 == 122) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 4; // シルバーチャリオッツのドット絵
+                }
+                // enemy_list = 123 ブチャラティ
+                if (var_83[var_1641].Var0 == 123) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 11;
+                }
+                // enemy_list = 125 フーゴ
+                if (var_83[var_1641].Var0 == 125) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 27;
+                }
+                // enemy_list = 128 承太郎(4部)
+                if (var_83[var_1641].Var0 == 128) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 40; // Ver0.1403にて修正 5 → 40 スタープラチナからスタプラザワールドへ変更
+                }
+                // enemy_list = 129 アヌビスポルナレフ
+                if (var_83[var_1641].Var0 == 129) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 4; // シルバーチャリオッツのドット絵
+                }
+                // enemy_list = 131 ジョルノ
+                if (var_83[var_1641].Var0 == 131) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 17;
+                }
+                // enemy_list = 132 レクイエムジョルノ
+                if (var_83[var_1641].Var0 == 132) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 37;
+                }
+                // enemy_list = 134 ジョリーン
+                if (var_83[var_1641].Var0 == 134) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 26;
+                }
+                // enemy_list = 137 成長した吉良
+                if (var_83[var_1641].Var0 == 137) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 14;
+                }
+                // enemy_list = 144 川尻浩作
+                if (var_83[var_1641].Var0 == 144) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 14;
                 }
                 // enemy_list = 145 康一
                 if (var_83[var_1641].Var0 == 145) {
-                    var_1291 = 2;
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 2; // エコーズact3のドット絵
                 }
-                // 
-                if (var_83[var_1641].Var0 == 150) {
-                    var_1291 = 2;
-                }
-                if (var_83[var_1641].Var0 == 32) {
-                    var_1291 = 14;
-                }
-                if (var_83[var_1641].Var0 == 137) {
-                    var_1291 = 14;
-                }
-                if (var_83[var_1641].Var0 == 144) {
-                    var_1291 = 14;
-                }
-                if (var_83[var_1641].Var0 == 35) {
-                    var_1291 = 8;
-                }
-                if (var_83[var_1641].Var0 == 68) {
-                    var_1291 = 8;
-                }
-                if (var_83[var_1641].Var0 == 47) {
-                    var_1291 = 6;
-                }
-                if (var_83[var_1641].Var0 == 67) {
-                    var_1291 = 6;
-                }
-                if (var_83[var_1641].Var0 == 59) {
-                    var_1291 = 16;
-                }
-                if (var_83[var_1641].Var0 == 113) {
-                    var_1291 = 13;
-                }
-                if (var_83[var_1641].Var0 == 114) {
-                    var_1291 = 13;
-                }
-                if (var_83[var_1641].Var0 == 14) {
-                    var_1291 = 20;
-                }
-                if (var_83[var_1641].Var0 == 66) {
-                    var_1291 = 20;
-                }
-                if (var_83[var_1641].Var0 == 60) {
-                    var_1291 = 20;
-                }
-                if (var_83[var_1641].Var0 == 131) {
-                    var_1291 = 17;
-                }
-                if (var_83[var_1641].Var0 == 132) {
-                    var_1291 = 37;
-                }
-                if (var_83[var_1641].Var0 == 78) {
-                    var_1291 = 12;
-                }
-                if (var_83[var_1641].Var0 == 108) {
-                    var_1291 = 36;
-                }
-                if (var_83[var_1641].Var0 == 119) {
-                    var_1291 = 18;
-                }
+                // enemy_list = 147 ジョセフ(4部)
                 if (var_83[var_1641].Var0 == 147) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
                     var_1291 = 18;
                 }
-                if (var_83[var_1641].Var0 == 122) {
-                    var_1291 = 4;
-                }
-                if (var_83[var_1641].Var0 == 129) {
-                    var_1291 = 4;
-                }
-                if (var_83[var_1641].Var0 == 125) {
-                    var_1291 = 27;
-                }
-                if (var_83[var_1641].Var0 == 120) {
-                    var_1291 = 5;
-                }
-                if (var_83[var_1641].Var0 == 128) {
-                    var_1291 = 5;
-                }
-                if (var_83[var_1641].Var0 == 134) {
-                    var_1291 = 26;
-                }
-                if (var_83[var_1641].Var0 == 98) {
-                    var_1291 = 35;
-                }
-                if (var_83[var_1641].Var0 == 123) {
-                    var_1291 = 11;
-                }
+                // enemy_list = 148 エルメェス
                 if (var_83[var_1641].Var0 == 148) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
                     var_1291 = 41;
                 }
-                if (var_83[var_1641].Var0 == 80) {
-                    var_1291 = 42;
+                // enemy_list = 150 康一act2!!
+                if (var_83[var_1641].Var0 == 150) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 2; // エコーズact3のドット絵
                 }
+                // enemy_list = 152 トリッシュ
                 if (var_83[var_1641].Var0 == 152) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
                     var_1291 = 25;
                 }
+                // enemy_list = 156 ウェザー
                 if (var_83[var_1641].Var0 == 156) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
                     var_1291 = 35;
                 }
-                if (var_83[var_1641].Var0 == 159) {
-                    var_1291 = 46;
-                }
+                // enemy_list = 157 アナスイ
                 if (var_83[var_1641].Var0 == 157) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
                     var_1291 = 23;
                 }
-                if (var_83[var_1641].Var0 == 63) {
-                    var_1291 = 31;
+                // enemy_list = 159 記憶が戻ったウェザー
+                if (var_83[var_1641].Var0 == 159) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 46;
                 }
-                if (var_83[var_1641].Var0 == 49) {
-                    var_1291 = 3;
+                // Ver0.1403にて追加。enemy_list = 171 離婚した承太郎
+                if (var_83[var_1641].Var0 == 171) {
+                    // var_1291 敵キャラの攻撃モーション用スタンドのドット絵選択
+                    var_1291 = 40; // スタプラザワールドのドット絵
                 }
-                if (var_83[var_1641].Var0 == 87) {
-                    var_1291 = 52;
-                }
-                if (var_1291 != 20) {
+                if (var_1291 != 20) { // タルカス以外の場合(20はタルカスの攻撃ドット)
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     if (var_742 == 1 || var_742 == 8) {
                         color(0, 0, 0);
-    
                         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
                     }
                     if (var_742 == 9) {
                         color(0, 0, 0);
-                
                         gmode(4, null, null, 70);
                     }
                     if (var_742 == 10) {
                         color(0, 0, 0);
-                
                         gmode(4, null, null, 30);
                     }
                     if (var_742 == 1 || var_742 == 2) {
                         if (var_1640 == 2) {
-                            gcopy(11, 0, var_1291 * 40, 40, 40);
+                            gcopy(11, 0, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 4) {
-                            gcopy(11, 120, var_1291 * 40, 40, 40);
+                            gcopy(11, 120, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 8) {
-                            gcopy(11, 240, var_1291 * 40, 40, 40);
+                            gcopy(11, 240, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 6) {
-                            gcopy(11, 360, var_1291 * 40, 40, 40);
+                            gcopy(11, 360, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 1) {
-                            gcopy(11, 480, var_1291 * 40, 40, 40);
+                            gcopy(11, 480, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 3) {
-                            gcopy(11, 720, var_1291 * 40, 40, 40);
+                            gcopy(11, 720, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 7) {
-                            gcopy(11, 600, var_1291 * 40, 40, 40);
+                            gcopy(11, 600, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 9) {
-                            gcopy(11, 840, var_1291 * 40, 40, 40);
+                            gcopy(11, 840, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                     }
                     if (var_742 == 3) {
                         if (var_1640 == 2) {
-                            gcopy(11, 40, var_1291 * 40, 40, 40);
+                            gcopy(11, 40, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 4) {
-                            gcopy(11, 160, var_1291 * 40, 40, 40);
+                            gcopy(11, 160, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 8) {
-                            gcopy(11, 280, var_1291 * 40, 40, 40);
+                            gcopy(11, 280, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 6) {
-                            gcopy(11, 400, var_1291 * 40, 40, 40);
+                            gcopy(11, 400, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 1) {
-                            gcopy(11, 520, var_1291 * 40, 40, 40);
+                            gcopy(11, 520, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 3) {
-                            gcopy(11, 760, var_1291 * 40, 40, 40);
+                            gcopy(11, 760, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 7) {
-                            gcopy(11, 640, var_1291 * 40, 40, 40);
+                            gcopy(11, 640, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 9) {
-                            gcopy(11, 880, var_1291 * 40, 40, 40);
+                            gcopy(11, 880, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                     }
                     if (var_742 >= 4 && var_742 <= 10) {
                         if (var_1640 == 2) {
-                            gcopy(11, 80, var_1291 * 40, 40, 40);
+                            gcopy(11, 80, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 4) {
-                            gcopy(11, 200, var_1291 * 40, 40, 40);
+                            gcopy(11, 200, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 8) {
-                            gcopy(11, 320, var_1291 * 40, 40, 40);
+                            gcopy(11, 320, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 6) {
-                            gcopy(11, 440, var_1291 * 40, 40, 40);
+                            gcopy(11, 440, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 1) {
-                            gcopy(11, 560, var_1291 * 40, 40, 40);
+                            gcopy(11, 560, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 3) {
-                            gcopy(11, 800, var_1291 * 40, 40, 40);
+                            gcopy(11, 800, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 7) {
-                            gcopy(11, 680, var_1291 * 40, 40, 40);
+                            gcopy(11, 680, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 9) {
-                            gcopy(11, 920, var_1291 * 40, 40, 40);
+                            gcopy(11, 920, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                     }
                 }
-                if (var_1291 == 20) {
+                if (var_1291 == 20) { // タルカスの場合(20はタルカスの攻撃ドット)
                     gmode(mode = 2, data2 = null, data3 = null, alpha = null);
                     if (var_742 == 6) {
                         color(0, 0, 0);
@@ -14745,80 +14962,80 @@ function func567(this: any) {
                     }
                     if (var_742 == 3) {
                         if (var_1640 == 2) {
-                            gcopy(11, 0, var_1291 * 40, 40, 40);
+                            gcopy(11, 0, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 4) {
-                            gcopy(11, 120, var_1291 * 40, 40, 40);
+                            gcopy(11, 120, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 8) {
-                            gcopy(11, 240, var_1291 * 40, 40, 40);
+                            gcopy(11, 240, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 6) {
-                            gcopy(11, 360, var_1291 * 40, 40, 40);
+                            gcopy(11, 360, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 1) {
-                            gcopy(11, 480, var_1291 * 40, 40, 40);
+                            gcopy(11, 480, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 3) {
-                            gcopy(11, 720, var_1291 * 40, 40, 40);
+                            gcopy(11, 720, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 7) {
-                            gcopy(11, 600, var_1291 * 40, 40, 40);
+                            gcopy(11, 600, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 9) {
-                            gcopy(11, 840, var_1291 * 40, 40, 40);
+                            gcopy(11, 840, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                     }
                     if (var_742 == 4) {
                         if (var_1640 == 2) {
-                            gcopy(11, 40, var_1291 * 40, 40, 40);
+                            gcopy(11, 40, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 4) {
-                            gcopy(11, 160, var_1291 * 40, 40, 40);
+                            gcopy(11, 160, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 8) {
-                            gcopy(11, 280, var_1291 * 40, 40, 40);
+                            gcopy(11, 280, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 6) {
-                            gcopy(11, 400, var_1291 * 40, 40, 40);
+                            gcopy(11, 400, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 1) {
-                            gcopy(11, 520, var_1291 * 40, 40, 40);
+                            gcopy(11, 520, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 3) {
-                            gcopy(11, 760, var_1291 * 40, 40, 40);
+                            gcopy(11, 760, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 7) {
-                            gcopy(11, 640, var_1291 * 40, 40, 40);
+                            gcopy(11, 640, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 9) {
-                            gcopy(11, 880, var_1291 * 40, 40, 40);
+                            gcopy(11, 880, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                     }
                     if (var_742 == 5 || var_742 == 6) {
                         if (var_1640 == 2) {
-                            gcopy(11, 80, var_1291 * 40, 40, 40);
+                            gcopy(11, 80, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 4) {
-                            gcopy(11, 200, var_1291 * 40, 40, 40);
+                            gcopy(11, 200, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 8) {
-                            gcopy(11, 320, var_1291 * 40, 40, 40);
+                            gcopy(11, 320, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 6) {
-                            gcopy(11, 440, var_1291 * 40, 40, 40);
+                            gcopy(11, 440, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 1) {
-                            gcopy(11, 560, var_1291 * 40, 40, 40);
+                            gcopy(11, 560, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 3) {
-                            gcopy(11, 800, var_1291 * 40, 40, 40);
+                            gcopy(11, 800, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 7) {
-                            gcopy(11, 680, var_1291 * 40, 40, 40);
+                            gcopy(11, 680, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                         if (var_1640 == 9) {
-                            gcopy(11, 920, var_1291 * 40, 40, 40);
+                            gcopy(11, 920, var_1291 * 40, 40, 40); // buffer(11)は"img_stand0.gif"
                         }
                     }
                 }
@@ -15113,10 +15330,10 @@ function func569(this: any) {
                     if (var_96 >= 1 && var_201 == var_204) {
                         var_2625 = 1;
                     }
-                    // No = 5 なので、鉄獄(鉄の牢獄)
-                    if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
-                        var_2625 = 1;
-                    }
+                    // Ver0.1403にてコメントアウト。鉄獄にいるオーラ敵が起きないようにしたかった? エラーが出るのでコメントアウト
+                    //if (dangeon_number == 5 && var_83[var_314].Var16 >= 1000) {
+                    //    var_2625 = 1;
+                    //}
                     if (var_375 == 1) {
                         var_2625 = 0;
                     }
@@ -15663,7 +15880,7 @@ function func569(this: any) {
         if (var_83[var_2611].Var0 == 163) {
             var_83[var_2611].Var4 = 1;
         }
-        // enemy_list = 82 不明
+        // enemy_list = 82 バーテンダー
         if (var_83[var_2611].Var0 == 82) {
             var_83[var_2611].Var4 = 0;
         }
@@ -16211,7 +16428,11 @@ function func569(this: any) {
             var_83[var_2611].Var4 = 0;
         }
         if (var_83[var_2611].Var0 == 173) { // enemy_list = 173 NPC ロッコ・バロッコ所長
-            var_83[var_2611].Var4 = 0;
+            var_83[var_2611].Var4 = 0; // 0 = 行動しない
+        }
+        // Ver0.1403にて追加。
+        if (var_83[var_2611].Var0 == 180) { // enemy_list = 180 NPC デッドマンズ吉良
+            var_83[var_2611].Var4 = 0; // 0 = 行動しない
         }
         if (var_146 >= 1 && var_147 == var_83[var_2611].Var1 && var_148 == var_83[var_2611].Var2) {
             var_83[var_2611].Var4 = 0;
@@ -18749,7 +18970,7 @@ function func573(this: any) {
                         var_1346++;
                         if (var_1346 == 16) {
                 
-                            DSPLAY(audio_id = 216);
+                            DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
                         }
                     }
                     var_271 = 0;
@@ -19089,159 +19310,333 @@ function func575(this: any) {
                 var_673 = var_673 + 1;
                 continue;
             }
-            var_2708 = 0;
+            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
             var_2709 = 0;
             var_2710 = 0;
             if (var_83[var_673].Var12 >= 1) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
             if (var_83[var_673].Var13 >= 1) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
             if (var_83[var_673].Var14 == 1) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
-            if (var_83[var_673].Var0 == 19) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 90) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 91) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 92) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 33) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 23) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 53) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 75) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 50) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 49) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 36 && var_83[var_673].Var31 == 4) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 105 && var_83[var_673].Var31 == 4) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 106 && var_83[var_673].Var31 == 4) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 107 && var_83[var_673].Var31 == 4) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 108 && var_83[var_673].Var31 == 4) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 57) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 58) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 61) { // No = 61 ヨーヨーマッ
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 116) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 70) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 74) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 79) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 81) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 82) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 83) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 96) {
-                var_2708 = 1;
-            }
-             // enemy_list = 55 なので亀
-            if (var_83[var_673].Var0 == 55) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 142) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 163) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 149) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 169) {
-                var_2708 = 1;
-            }
-            // enemy_list = 173 NPC ロッコ・バロッコ所長
-            if (var_83[var_673].Var0 == 173) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 147 && var_83[var_673].Var20 == 0) {
-                var_2708 = 1;
-            }
-            if (var_83[var_673].Var0 == 117 && var_83[var_673].Var20 == 0) {
-                var_2708 = 1;
-            }
-            if (var_71[var_66][var_67] == 0 && var_83[var_673].Var0 != 43 && var_83[var_673].Var0 != 111) {
-                var_2708 = 1;
-            }
+            // No = 10 ノートリアスBIG
             if (var_83[var_673].Var0 == 10 && var_133 != 0) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
+            // No = 17 シアハートアタック
+            if (var_83[var_673].Var0 == 17 && var_83[var_673].Var3 == 1 && var_83[var_673].Var20 == 0) {
+                var_83[var_673].Var9 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 19 アラビアファッツ
+            if (var_83[var_673].Var0 == 19) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 23 ただの死体
+            if (var_83[var_673].Var0 == 23) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 26 ハーヴェスト
             if (var_83[var_673].Var0 == 26 && var_83[var_673].Var26 >= 1 && var_83[var_673].Var20 == 0) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
+            // No = 33 トニオさん(通常)
+            if (var_83[var_673].Var0 == 33) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 35 仗助
+            // No = 134 ジョリーン、No = 35 仗助は共通設定。Ver0.1403にて分離
+            if (var_83[var_673].Var0 == 35) {
+                if (var_83[var_673].Var10 != 14) {
+                    var_616 = 1;
+                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
+                        if (var_83[var_616].Var0 != 0 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5 && var_83[var_673].Var10 == var_83[var_616].Var10) {
+                            var_2646 = var_616;
+                            yield func578();
+                            if (var_2647 >= 1) {
+                                var_2709 = 1;
+                                break;
+                            }
+                        }
+                        var_616++;
+                    }
+                }
+            }
+            // No = 36 スピードワゴン
+            if (var_83[var_673].Var0 == 36 && var_83[var_673].Var31 == 4) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 44 レッドホットチリペッパー
+            if (var_83[var_673].Var0 == 44) {
+                var_616 = 1;
+                for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
+                    // No = 147 ジョセフ(4部)
+                    if (var_83[var_616].Var0 == 147 && var_83[var_673].Var10 == var_83[var_616].Var10) {
+                        var_2709 = var_83[var_616].Var0;
+                        break;
+                    }
+                    var_616++;
+                }
+            }
+            // No = 48 エアロスミス
+            if (var_83[var_673].Var0 == 48 && var_83[var_673].Var10 != 14 && var_83[var_673].Var20 == 0) {
+                var_2648 = 1;
+                for (let cnt3 = 0; cnt3 < var_336; ++cnt3) {
+                    // No = 713 ポルポのライター
+                    if (var_78[var_2648].Var0 == 713 && var_78[var_2648].Var9 == var_83[var_673].Var10) {
+                        var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+                    }
+                    var_2648 = var_2648 + 1;
+                }
+            }
+            // No = 49 コピー人形
+            if (var_83[var_673].Var0 == 49) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 50 元いた場所
+            if (var_83[var_673].Var0 == 50) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 53 エクスペリエンスの花
+            if (var_83[var_673].Var0 == 53) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // enemy_list = 55 なので亀
+            if (var_83[var_673].Var0 == 55) {
+            var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 57 SPW財団の男
+            if (var_83[var_673].Var0 == 57) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 58 ボインゴ
+            if (var_83[var_673].Var0 == 58) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 61 ヨーヨーマッ
+            if (var_83[var_673].Var0 == 61) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 65 虹村形兆
             if (var_83[var_673].Var0 == 65 && var_83[var_673].Var20 == 0) {
                 var_2711 = rnd(10);
                 if (var_2711 < 4) {
-                    var_2708 = 1;
+                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                 }
             }
-            if (var_83[var_673].Var0 == 144 && var_83[var_673].Var26 >= 1 && var_83[var_673].Var20 == 0) {
-                var_2711 = rnd(10);
-                if (var_2711 < 4) {
-                    var_2708 = 1;
+            // No = 70 D・ダービー
+            if (var_83[var_673].Var0 == 70) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 74 サヴェジガーデン
+            if (var_83[var_673].Var0 == 74) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 75 鮮血のシャボン
+            if (var_83[var_673].Var0 == 75) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 79 エコーズの卵
+            if (var_83[var_673].Var0 == 79) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 81 アバッキオ
+            if (var_83[var_673].Var0 == 81) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 82 バーテンダー
+            if (var_83[var_673].Var0 == 82) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 83 間田
+            if (var_83[var_673].Var0 == 83) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 86 サンタナ
+            if (var_83[var_673].Var0 == 86) {
+                if (var_83[var_673].Var10 != 14) {
+                    var_616 = 1;
+                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
+                        if (var_83[var_616].Var0 != 0 && var_83[var_616].Var0 != 86 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5 && var_83[var_673].Var10 == var_83[var_616].Var10 && var_83[var_616].Var31 == 2) {
+                            var_2709 = var_83[var_616].Var0;
+                            break;
+                        }
+                        var_616++;
+                    }
                 }
             }
+            // No = 90 岩
+            if (var_83[var_673].Var0 == 90) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 91 ACT1さなぎ
+            if (var_83[var_673].Var0 == 91) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 92 ACT2のさなぎ
+            if (var_83[var_673].Var0 == 92) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 96 感電エンポリオ
+            if (var_83[var_673].Var0 == 96) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 105 ツェペリさん
+            if (var_83[var_673].Var0 == 105 && var_83[var_673].Var31 == 4) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 106 ペッシ
+            if (var_83[var_673].Var0 == 106 && var_83[var_673].Var31 == 4) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 107 成長したペッシ
+            if (var_83[var_673].Var0 == 107 && var_83[var_673].Var31 == 4) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 108 イギー
+            if (var_83[var_673].Var0 == 108 && var_83[var_673].Var31 == 4) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 109 ワムウ
             if (var_83[var_673].Var0 == 109 && var_83[var_673].Var30 != 0 && var_83[var_673].Var20 == 0) {
                 var_2711 = rnd(10);
                 if (var_2711 < 4) {
-                    var_2708 = 1;
+                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                 }
             }
-            if (var_83[var_673].Var31 == 5 && var_313 == var_673) {
-                var_2708 = 1;
+            // enemy_list = 113 DIO
+            // enemy_list = 113 DIOと enemy_list = 114 最高にハイなDIOは共通設定。Ver0.1403にて分離
+            if (var_83[var_673].Var0 == 113) {
+                if (var_83[var_673].Var10 != 14 && var_201 == var_83[var_673].Var10) {
+                    var_616 = 1;
+                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
+                        // No = 119 ジョセフ(3部)
+                        if (var_83[var_616].Var0 == 119 && var_83[var_673].Var10 == var_83[var_616].Var10) {
+                            var_2709 = 119;
+                            break;
+                        }
+                        var_616++;
+                    }
+                }
             }
+            // enemy_list = 114 最高にハイなDIO
+            // enemy_list = 113 DIOと enemy_list = 114 最高にハイなDIOは共通設定。Ver0.1403にて分離
+            if (var_83[var_673].Var0 == 114) {
+                if (var_83[var_673].Var10 != 14 && var_201 == var_83[var_673].Var10) {
+                    var_616 = 1;
+                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
+                        // No = 119 ジョセフ(3部)
+                        if (var_83[var_616].Var0 == 119 && var_83[var_673].Var10 == var_83[var_616].Var10) {
+                            var_2709 = 119;
+                            break;
+                        }
+                        var_616++;
+                    }
+                }
+            }
+            // No = 116 玉美
+            if (var_83[var_673].Var0 == 116) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 117 チョコラータの上半身
+            if (var_83[var_673].Var0 == 117 && var_83[var_673].Var20 == 0) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 134 ジョリーン
+            // No = 134 ジョリーン、No = 35 仗助は共通設定。Ver0.1403にて分離
+            if (var_83[var_673].Var0 == 134) {
+                if (var_83[var_673].Var10 != 14) {
+                    var_616 = 1;
+                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
+                        if (var_83[var_616].Var0 != 0 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5 && var_83[var_673].Var10 == var_83[var_616].Var10) {
+                            var_2646 = var_616;
+                            yield func578();
+                            if (var_2647 >= 1) {
+                                var_2709 = 1;
+                                break;
+                            }
+                        }
+                        var_616++;
+                    }
+                }
+            }
+            // No = 142 岸辺露伴
+            if (var_83[var_673].Var0 == 142) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 144 川尻浩作
+            if (var_83[var_673].Var0 == 144 && var_83[var_673].Var26 >= 1 && var_83[var_673].Var20 == 0) {
+                var_2711 = rnd(10);
+                if (var_2711 < 4) {
+                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+                }
+            }
+            // No = 147 ジョセフ(4部)
+            if (var_83[var_673].Var0 == 147 && var_83[var_673].Var20 == 0) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 149 不明
+            if (var_83[var_673].Var0 == 149) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 163 ヤク中の少年
+            if (var_83[var_673].Var0 == 163) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 164 エシディシの脳
+            // No = 164 エシディシの脳、No = 165 エボニーデビルの共通設定。Ver0.1403にて分離
+            if (var_83[var_673].Var0 == 164) {
+                var_616 = 1;
+                for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
+                    if (var_83[var_616].Var0 != 0 && var_83[var_616].Var0 != 164 && var_83[var_616].Var0 != 165 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5) {
+                        var_2709 = 1;
+                        break;
+                    }
+                    var_616++;
+                }
+            }
+            // No = 165 エボニーデビル
+            // No = 164 エシディシの脳、No = 165 エボニーデビルの共通設定。Ver0.1403にて分離
+            if (var_83[var_673].Var0 == 165) {
+                var_616 = 1;
+                for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
+                    if (var_83[var_616].Var0 != 0 && var_83[var_616].Var0 != 164 && var_83[var_616].Var0 != 165 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5) {
+                        var_2709 = 1;
+                        break;
+                    }
+                    var_616++;
+                }
+            }
+            // No = 169 ヤク中の少年(没キャラ)
+            if (var_83[var_673].Var0 == 169) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // enemy_list = 173 NPC ロッコ・バロッコ所長
+            if (var_83[var_673].Var0 == 173) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // enemy_list = 180 NPC デッドマンズ吉良
+            if (var_83[var_673].Var0 == 180) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON // これを設定すると隣接しても攻撃してこなくなる。
+            }
+            // No = 43 セッコ、No = 111 究極カーズでない
+            if (var_71[var_66][var_67] == 0 && var_83[var_673].Var0 != 43 && var_83[var_673].Var0 != 111) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            if (var_83[var_673].Var31 == 5 && var_313 == var_673) {
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
+            }
+            // No = 10 ノートリアスBIGではない
             if (var_157 == 1 && var_83[var_673].Var0 != 10 && var_83[var_673].Var15 == 0) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
             var_2712 = 0;
             var_616 = 1;
             for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-                if (var_83[var_616].Var0 == 49) {
+                if (var_83[var_616].Var0 == 49) { // No = 49 コピー人形
                     var_2712 = 1;
                     break;
                 }
@@ -19271,100 +19666,34 @@ function func575(this: any) {
                 }
                 var_616++;
             }
-            if (var_83[var_673].Var0 == 48 && var_83[var_673].Var10 != 14 && var_83[var_673].Var20 == 0) {
-                var_2648 = 1;
-                for (let cnt3 = 0; cnt3 < var_336; ++cnt3) {
-                    if (var_78[var_2648].Var0 == 713 && var_78[var_2648].Var9 == var_83[var_673].Var10) {
-                        var_2708 = 1;
-                    }
-                    var_2648 = var_2648 + 1;
-                }
-            }
-            if (var_83[var_673].Var0 == 134 || var_83[var_673].Var0 == 35) {
-                if (var_83[var_673].Var10 != 14) {
-                    var_616 = 1;
-                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
-                        if (var_83[var_616].Var0 != 0 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5 && var_83[var_673].Var10 == var_83[var_616].Var10) {
-                            var_2646 = var_616;
-                            yield func578();
-                            if (var_2647 >= 1) {
-                                var_2709 = 1;
-                                break;
-                            }
-                        }
-                        var_616++;
-                    }
-                }
-            }
-            if (var_83[var_673].Var0 == 86) {
-                if (var_83[var_673].Var10 != 14) {
-                    var_616 = 1;
-                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
-                        if (var_83[var_616].Var0 != 0 && var_83[var_616].Var0 != 86 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5 && var_83[var_673].Var10 == var_83[var_616].Var10 && var_83[var_616].Var31 == 2) {
-                            var_2709 = var_83[var_616].Var0;
-                            break;
-                        }
-                        var_616++;
-                    }
-                }
-            }
-            if (var_83[var_673].Var0 == 44) {
-                var_616 = 1;
-                for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
-                    if (var_83[var_616].Var0 == 147 && var_83[var_673].Var10 == var_83[var_616].Var10) {
-                        var_2709 = var_83[var_616].Var0;
-                        break;
-                    }
-                    var_616++;
-                }
-            }
-            if (var_83[var_673].Var0 == 164 || var_83[var_673].Var0 == 165) {
-                var_616 = 1;
-                for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
-                    if (var_83[var_616].Var0 != 0 && var_83[var_616].Var0 != 164 && var_83[var_616].Var0 != 165 && var_673 != var_616 && var_83[var_616].Var31 != 4 && var_83[var_616].Var31 != 5) {
-                        var_2709 = 1;
-                        break;
-                    }
-                    var_616++;
-                }
-            }
-            // enemy_list = 113 DIOと enemy_list = 114 最高にハイなDIOの設定
-            if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114) {
-                if (var_83[var_673].Var10 != 14 && var_201 == var_83[var_673].Var10) {
-                    var_616 = 1;
-                    for (let cnt4 = 0; cnt4 < var_97; ++cnt4) {
-                        if (var_83[var_616].Var0 == 119 && var_83[var_673].Var10 == var_83[var_616].Var10) {
-                            var_2709 = 119;
-                            break;
-                        }
-                        var_616++;
-                    }
-                }
-            }
-            if (var_83[var_673].Var0 == 17 && var_83[var_673].Var3 == 1 && var_83[var_673].Var20 == 0) {
-                var_83[var_673].Var9 = 1;
-                var_2708 = 1;
-            }
             if (var_83[var_673].Var20 == 2) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
             if (var_2708 == 0) {
                 var_2719 = 0;
                 if (var_2708 == 0 && var_83[var_673].Var20 == 0) {
+                    // No = 7 運命の車輪、No = 15 ペットショップ、No = 21 ストレイキャット、No = 47 億泰、No = 67 ブチ切れた億泰、No = 158 プッツン由花子、No = 168、No = 175 不明敵(没敵チャカ?)
                     if (var_83[var_673].Var0 == 7 || var_83[var_673].Var0 == 15 || var_83[var_673].Var0 == 21 || var_83[var_673].Var0 == 47 || var_83[var_673].Var0 == 67 || var_83[var_673].Var0 == 158 || var_83[var_673].Var0 == 168 || var_83[var_673].Var0 == 175) {
                         var_2719 = 1;
                     }
+                    // No = 48 エアロスミス、No = 40 バッドカンパニー、No = 41 バッドカンパニー戦車、No = 42 アパッチ、No = 155 マライア、No = 140 ジョナサン、No = 136 シーザー
                     if (var_83[var_673].Var0 == 48 || var_83[var_673].Var0 == 40 || var_83[var_673].Var0 == 41 || var_83[var_673].Var0 == 42 || var_83[var_673].Var0 == 155 || var_83[var_673].Var0 == 140 || var_83[var_673].Var0 == 136) {
                         var_2719 = 1;
                     }
+                    // No = 56 シュトロハイム、No = 80 ラング・ラングラー、No = 93 エンポリオ(ウェザー付)、No = 95 ストレイツォ、No = 121 花京院、No = 113 DIO、No = 76 エコーズACT2
                     if (var_83[var_673].Var0 == 56 || var_83[var_673].Var0 == 80 || var_83[var_673].Var0 == 93 || var_83[var_673].Var0 == 95 || var_83[var_673].Var0 == 121 || var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 76) {
                         var_2719 = 1;
                     }
+                    // No = 114 最高にハイなDIO、No = 128 承太郎(4部)、No = 132 レクイエムジョルノ、No =141 F・F、No = 123 ブチャラティ、No = 126 退院した花京院、No = 151 虫食い、No = 172 虫食いでない
                     if (var_83[var_673].Var0 == 114 || var_83[var_673].Var0 == 128 || var_83[var_673].Var0 == 132 || var_83[var_673].Var0 == 141 || var_83[var_673].Var0 == 123 || var_83[var_673].Var0 == 126 || var_83[var_673].Var0 == 151 || var_83[var_673].Var0 == 172) {
                         var_2719 = 1;
                     }
+                    // Ver0.1403にて追加。No = 171 離婚した承太郎
+                    if (var_83[var_673].Var0 == 171) {
+                        var_2719 = 1;
+                    }
                     if (var_2719 == 1) {
-                        var_2720 = 0;
+                         var_2720 = 0; // 敵の特殊能力発動フラグOFF
                         var_2721 = var_66 - 1;
                         var_2722 = var_66 + 1;
                         var_2723 = var_67 + 1;
@@ -19382,7 +19711,7 @@ function func575(this: any) {
                             var_2723 = var_34;
                         }
                         if (var_83[var_673].Var17 == 0 && var_83[var_673].Var23 == 0 && var_201 != 14 && var_201 == var_83[var_673].Var10) {
-                            var_2720 = 1;
+                             var_2720 = 1; // 敵の特殊能力発動フラグON
                         }
                         if (var_83[var_673].Var17 == 0 && var_83[var_673].Var23 == 0 && var_201 != 14 && var_83[var_673].Var10 == 14) {
                             var_2713 = var_83[var_673].Var1;
@@ -19404,7 +19733,7 @@ function func575(this: any) {
                                 var_2718 = 0;
                             }
                             if (var_71[var_2715][var_2714] == var_201 || var_71[var_2716][var_2714] == var_201 || var_71[var_2713][var_2717] == var_201 || var_71[var_2713][var_2718] == var_201 || var_71[var_2715][var_2717] == var_201 || var_71[var_2715][var_2718] == var_201 || var_71[var_2716][var_2717] == var_201 || var_71[var_2716][var_2718] == var_201) {
-                                var_2720 = 1;
+                                 var_2720 = 1; // 敵の特殊能力発動フラグON
                             }
                         }
                         if (var_83[var_673].Var17 == 0 && var_83[var_673].Var23 == 0 && var_201 == 14 && var_83[var_673].Var10 != 14) {
@@ -19427,14 +19756,15 @@ function func575(this: any) {
                                 var_2718 = 0;
                             }
                             if (var_71[var_2715][var_2714] == var_83[var_673].Var10 || var_71[var_2716][var_2714] == var_83[var_673].Var10 || var_71[var_2713][var_2717] == var_83[var_673].Var10 || var_71[var_2713][var_2718] == var_83[var_673].Var10 || var_71[var_2715][var_2717] == var_83[var_673].Var10 || var_71[var_2715][var_2718] == var_83[var_673].Var10 || var_71[var_2716][var_2717] == var_83[var_673].Var10 || var_71[var_2716][var_2718] == var_83[var_673].Var10) {
-                                var_2720 = 1;
+                                 var_2720 = 1; // 敵の特殊能力発動フラグON
                             }
                         }
                         if (var_83[var_673].Var17 == 0 && var_83[var_673].Var23 == 0 && var_423 >= var_2721 && var_423 <= var_2722 && var_424 >= var_2724 && var_424 <= var_2723) {
-                            var_2720 = 1;
+                             var_2720 = 1; // 敵の特殊能力発動フラグON
                         }
+                        // No = 123 ブチャラティ、No = 140 ジョナサン、No = 168 警備員の西戸
                         if (var_83[var_673].Var0 == 123 || var_83[var_673].Var0 == 140 || var_83[var_673].Var0 == 168) {
-                            var_2720 = 0;
+                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
                             if (var_83[var_673].Var17 == 0 && var_83[var_673].Var23 == 0 && var_146 == 0 && var_123 == 0 && var_2712 == 0) {
                                 var_2725 = var_83[var_673].Var5;
                                 var_2726 = var_66 - 2;
@@ -19455,45 +19785,46 @@ function func575(this: any) {
                                 }
                                 if (var_423 == var_2726 && var_424 == var_67) {
                                     var_83[var_673].Var5 = 4;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
                                 if (var_423 == var_2727 && var_424 == var_67) {
                                     var_83[var_673].Var5 = 6;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
                                 if (var_423 == var_66 && var_424 == var_2729) {
                                     var_83[var_673].Var5 = 8;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
                                 if (var_423 == var_66 && var_424 == var_2728) {
                                     var_83[var_673].Var5 = 2;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
                                 if (var_423 == var_2726 && var_424 == var_2729) {
                                     var_83[var_673].Var5 = 7;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
                                 if (var_423 == var_2727 && var_424 == var_2729) {
                                     var_83[var_673].Var5 = 9;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
                                 if (var_423 == var_2726 && var_424 == var_2728) {
                                     var_83[var_673].Var5 = 1;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
                                 if (var_423 == var_2727 && var_424 == var_2728) {
                                     var_83[var_673].Var5 = 3;
-                                    var_2720 = 1;
-                                    var_2708 = 1;
+                                     var_2720 = 1; // 敵の特殊能力発動フラグON
+                                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                                 }
-                                if (var_2720 == 1) {
+                                if (var_2720 == 1) { // 敵の特殊能力発動フラグがONの場合
+                                    // No = 140 ジョナサン、No = 168 警備員の西戸
                                     if (var_83[var_673].Var0 == 140 || var_83[var_673].Var0 == 168) {
                                         var_2726 = var_66 - 1;
                                         if (var_2726 < 0) {
@@ -19513,62 +19844,63 @@ function func575(this: any) {
                                         }
                                         if (var_83[var_673].Var5 == 4) {
                                             if (var_82[var_2726][var_67] != 0 || var_71[var_2726][var_67] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                         if (var_83[var_673].Var5 == 6) {
                                             if (var_82[var_2727][var_67] != 0 || var_71[var_2727][var_67] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                         if (var_83[var_673].Var5 == 2) {
                                             if (var_82[var_66][var_2728] != 0 || var_71[var_66][var_2728] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                         if (var_83[var_673].Var5 == 8) {
                                             if (var_82[var_66][var_2729] != 0 || var_71[var_66][var_2729] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                         if (var_83[var_673].Var5 == 1) {
                                             if (var_82[var_2726][var_2728] != 0 || var_71[var_2726][var_2728] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                         if (var_83[var_673].Var5 == 3) {
                                             if (var_82[var_2727][var_2728] != 0 || var_71[var_2727][var_2728] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                         if (var_83[var_673].Var5 == 7) {
                                             if (var_82[var_2726][var_2729] != 0 || var_71[var_2726][var_2729] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                         if (var_83[var_673].Var5 == 9) {
                                             if (var_82[var_2727][var_2729] != 0 || var_71[var_2727][var_2729] == 0) {
-                                                var_2720 = 0;
-                                                var_2708 = 0;
+                                                 var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                                var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                                 var_83[var_673].Var5 = var_2725;
                                             }
                                         }
                                     }
                                 }
+                                // 敵の特殊能力発動フラグがONの場合 & No = 123 ブチャラティ
                                 if (var_2720 == 1 && var_83[var_673].Var0 == 123) {
                                     var_2726 = var_66 - 1;
                                     if (var_2726 < 0) {
@@ -19589,97 +19921,104 @@ function func575(this: any) {
                                     if (var_83[var_673].Var5 == 4 && var_82[var_2726][var_67] != 0) {
                                         var_2730 = var_82[var_2726][var_67];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                     if (var_83[var_673].Var5 == 6 && var_82[var_2727][var_67] != 0) {
                                         var_2730 = var_82[var_2727][var_67];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                     if (var_83[var_673].Var5 == 2 && var_82[var_66][var_2728] != 0) {
                                         var_2730 = var_82[var_66][var_2728];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                     if (var_83[var_673].Var5 == 8 && var_82[var_66][var_2729] != 0) {
                                         var_2730 = var_82[var_66][var_2729];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                     if (var_83[var_673].Var5 == 1 && var_82[var_2726][var_2728] != 0) {
                                         var_2730 = var_82[var_2726][var_2728];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                     if (var_83[var_673].Var5 == 3 && var_82[var_2727][var_2728] != 0) {
                                         var_2730 = var_82[var_2727][var_2728];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                     if (var_83[var_673].Var5 == 7 && var_82[var_2726][var_2729] != 0) {
                                         var_2730 = var_82[var_2726][var_2729];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                     if (var_83[var_673].Var5 == 9 && var_82[var_2727][var_2729] != 0) {
                                         var_2730 = var_82[var_2727][var_2729];
                                         if (var_83[var_2730].Var31 == 4 || var_83[var_2730].Var31 == 5) {
-                                            var_2720 = 0;
-                                            var_2708 = 0;
+                                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
+                                            var_2708 = 0; // 敵が攻撃してこなくなるフラグOFF
                                         }
                                     }
                                 }
                             }
                         }
                         if (var_151 != 0) {
-                            var_2720 = 0;
+                             var_2720 = 0; // 敵の特殊能力発動フラグOFF
                         }
-                        if (var_2720 == 1) {
+                        if (var_2720 == 1) { // 敵の特殊能力発動フラグがONの場合
+                            // No = 168 警備員の西戸
                             if (var_83[var_673].Var0 == 168) {
                                 var_2731 = 1;
                             }
-                            yield func576();
+                            yield func576(); // 敵特殊行動発動フラグ処理
                             var_2731 = 0;
                         }
                     }
                 }
                 if (var_83[var_673].Var17 == 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var23 == 0 && var_123 == 0 && var_2712 == 0) {
+                    // No = 46 ホル・ホース、No = 30 禁煙中ホル・ホース、No = 99 マンハッタントランスファー、No = 65 虹村形兆、No = 84 チョコラータ、No = 85 リゾット、No = 63 プロシュート兄貴、No = 153 マックイィーン
                     if (var_83[var_673].Var0 == 46 || var_83[var_673].Var0 == 30 || var_83[var_673].Var0 == 99 || var_83[var_673].Var0 == 65 || var_83[var_673].Var0 == 84 || var_83[var_673].Var0 == 85 || var_83[var_673].Var0 == 63 || var_83[var_673].Var0 == 153) {
-                        yield func576();
+                        yield func576(); // 敵特殊行動発動フラグ処理
                     }
+                    // No = 124 ミスタ、No = 125 フーゴ、No = 134 ジョリーン、No = 35 仗助、No = 164 エシディシの脳、No = 165 エボニーデビル、No = 159 記憶が戻ったウェザー
                     if (var_83[var_673].Var0 == 124 || var_83[var_673].Var0 == 125 || var_83[var_673].Var0 == 134 || var_83[var_673].Var0 == 35 || var_83[var_673].Var0 == 164 || var_83[var_673].Var0 == 165 || var_83[var_673].Var0 == 159) {
-                        yield func576();
+                        yield func576(); // 敵特殊行動発動フラグ処理
                     }
+                    // No = 143 ウンガロ、No = 145 康一、No = 150 康一act2!!、No = 137 成長した吉良、No = 72 ケンゾー、No = 98 エンポリオ、No = 154 スポーツマックス
                     if (var_83[var_673].Var0 == 143 || var_83[var_673].Var0 == 145 || var_83[var_673].Var0 == 150 || var_83[var_673].Var0 == 137 || var_83[var_673].Var0 == 72 || var_83[var_673].Var0 == 98 || var_83[var_673].Var0 == 154) {
-                        yield func576();
+                        yield func576(); // 敵特殊行動発動フラグ処理
                     }
+                    // No = 157 アナスイ
                     if (var_83[var_673].Var0 == 157) {
-                        yield func576();
+                        yield func576(); // 敵特殊行動発動フラグ処理
                     }
+                    // No = 168 警備員の西戸
                     if (var_83[var_673].Var0 == 168 && var_83[var_673].Var18 == 0) {
-                        yield func576();
+                        yield func576(); // 敵特殊行動発動フラグ処理
                     }
                 }
+                // No = 118 クリーム
                 if (var_83[var_673].Var17 == 0 && var_83[var_673].Var20 == 0 && var_123 == 0 && var_83[var_673].Var0 == 118 && var_2712 == 0) {
-                    yield func576();
+                    yield func576(); // 敵特殊行動発動フラグ処理
                 }
                 if (var_2709 == 1) {
                     var_2709 = 0;
-                    var_2708 = 1;
+                    var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                 }
                 if (var_83[var_673].Var18 == 0 && var_2708 == 0) {
                     var_2619 = var_423;
@@ -20181,9 +20520,11 @@ function func575(this: any) {
                     if (var_2710 != 0) {
                         var_2734 = 0;
                     }
+                    // No = 132 レクイエムジョルノでなければ
                     if (var_146 >= 1 && var_147 == var_66 && var_148 == var_67 && var_83[var_673].Var0 != 132) {
                         var_2734 = 0;
                     }
+                    // No = 164 エシディシの脳、No = 165 エボニーデビル
                     if (var_83[var_673].Var0 == 164 || var_83[var_673].Var0 == 165) {
                         if (var_83[var_673].Var20 == 0) {
                             var_2734 = 0;
@@ -20259,6 +20600,8 @@ function func575(this: any) {
                                     var_83[var_673].Var5 = 9;
                                 }
                             }
+                            // 敵が壁の中を動ける動作処理
+                            // No = 111 究極カーズ、No = 43 セッコ
                             if (var_83[var_673].Var0 == 111 || var_83[var_673].Var0 == 43) {
                                 if (var_83[var_673].Var20 == 0) {
                                     if (var_83[var_673].Var9 == 0 && var_65[var_425][var_424] == 1) {
@@ -20462,12 +20805,14 @@ function func575(this: any) {
         return;
     });
 }
+// 敵特殊行動発動フラグ処理
 function func576(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(576);
         if (var_83[var_673].Var18 == 2) {
             return;
         }
+        // No = 46 ホル・ホース、No = 30 禁煙中ホル・ホース、No = 99 マンハッタントランスファー、No = 84 チョコラータ、No = 85 リゾット、No = 153 マックイィーン
         if (var_83[var_673].Var0 == 46 || var_83[var_673].Var0 == 30 || var_83[var_673].Var0 == 99 || var_83[var_673].Var0 == 84 || var_83[var_673].Var0 == 85 || var_83[var_673].Var0 == 153) {
             if (var_123 != 0 || var_131 != 0 || var_144 != 0 || var_218 != 0 || var_2712 != 0) {
                 return;
@@ -20512,9 +20857,10 @@ function func576(this: any) {
                     var_83[var_673].Var18 = 1;
                 }
             }
-            var_2708 = 1;
+            var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             return;
         }
+        // No = 134 ジョリーン、No = 35 仗助
         if (var_83[var_673].Var0 == 134 || var_83[var_673].Var0 == 35) {
             var_2740 = var_83[var_673].Var1;
             var_2741 = var_83[var_673].Var2;
@@ -20638,6 +20984,7 @@ function func576(this: any) {
             }
             return;
         }
+        // No = 164 エシディシの脳、No = 165 エボニーデビル
         if (var_83[var_673].Var0 == 164 || var_83[var_673].Var0 == 165) {
             var_2740 = var_83[var_673].Var1;
             var_2741 = var_83[var_673].Var2;
@@ -20719,6 +21066,7 @@ function func576(this: any) {
             var_83[var_673].Var18 = var_2749;
             return;
         }
+        // No = 124 ミスタ
         if (var_83[var_673].Var0 == 124) {
             if (var_123 != 0 || var_131 != 0 || var_144 != 0 || var_218 != 0 || var_2712 != 0) {
                 return;
@@ -20730,29 +21078,34 @@ function func576(this: any) {
             if (var_2746 == 0) {
                 var_83[var_673].Var18 = 1;
             }
-            var_2708 = 1;
+            var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             return;
         }
-        if (var_83[var_673].Var0 == 63 || var_83[var_673].Var0 == 125 || var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114 || var_83[var_673].Var0 == 128 || var_83[var_673].Var0 == 118 || var_83[var_673].Var0 == 143 || var_83[var_673].Var0 == 145 || var_83[var_673].Var0 == 150 || var_83[var_673].Var0 == 137 || var_83[var_673].Var0 == 72 || var_83[var_673].Var0 == 98 || var_83[var_673].Var0 == 65 || var_83[var_673].Var0 == 154 || var_83[var_673].Var0 == 159) {
+        // ディアボロと離れていた場合に能力を発動してくるかどうか?
+        // No = 63 プロシュートの兄貴、No = 125 フーゴ、No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)、No = 118 クリーム、No = 143 ウンガロ、No = 145 康一、No = 150 康一act2!!、No = 137 成長した吉良、No = 72 ケンゾー、No = 98 エンポリオ(ウェザー付)、No = 65 虹村形兆、No = 154 スポーツマックス、No = 159 記憶が戻ったウェザー
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (var_83[var_673].Var0 == 63 || var_83[var_673].Var0 == 125 || var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114 || var_83[var_673].Var0 == 128 || var_83[var_673].Var0 == 118 || var_83[var_673].Var0 == 143 || var_83[var_673].Var0 == 145 || var_83[var_673].Var0 == 150 || var_83[var_673].Var0 == 137 || var_83[var_673].Var0 == 72 || var_83[var_673].Var0 == 98 || var_83[var_673].Var0 == 65 || var_83[var_673].Var0 == 154 || var_83[var_673].Var0 == 159 || var_83[var_673].Var0 == 171) {
             if (var_123 != 0 || var_131 != 0 || var_144 != 0 || var_218 != 0 || var_2712 != 0) {
                 return;
             }
-            var_2751 = rnd(4);
-            if (var_83[var_673].Var0 == 118) {
-                var_2751 = rnd(8);
+            var_2751 = rnd(4); // 敵が特殊攻撃をしてくる確率
+            if (var_83[var_673].Var0 == 118) { // No = 118 クリーム
+                var_2751 = rnd(8); // 敵が特殊攻撃をしてくる確率
             }
-            if (var_83[var_673].Var0 == 143) {
-                var_2751 = rnd(5);
+            if (var_83[var_673].Var0 == 143) { // No = 143 ウンガロ
+                var_2751 = rnd(5); // 敵が特殊攻撃をしてくる確率
             }
-            if (var_83[var_673].Var0 == 65) {
-                var_2751 = rnd(6);
+            if (var_83[var_673].Var0 == 65) { // No = 65 虹村形兆
+                var_2751 = rnd(6); // 敵が特殊攻撃をしてくる確率
             }
-            if (var_83[var_673].Var0 == 159) {
-                var_2751 = rnd(8);
+            if (var_83[var_673].Var0 == 159) { // No = 159 記憶が戻ったウェザー
+                var_2751 = rnd(8); // 敵が特殊攻撃をしてくる確率
             }
+             // var_2751 敵が特殊攻撃をしてくる確率
             if (var_2751 == 0 && var_201 != 14 && var_201 == var_83[var_673].Var10) {
                 var_83[var_673].Var18 = 1;
             }
+            // No = 145 康一、No = 150 康一act2!!、No = 137 成長した吉良、No = 65 虹村形兆、No = 154 スポーツマックス、No = 159 記憶が戻ったウェザー
             if (var_83[var_673].Var0 == 145 || var_83[var_673].Var0 == 150 || var_83[var_673].Var0 == 137 || var_83[var_673].Var0 == 65 || var_83[var_673].Var0 == 154 || var_83[var_673].Var0 == 159) {
                 var_2752 = var_83[var_673].Var1;
                 var_2753 = var_83[var_673].Var2;
@@ -20776,7 +21129,9 @@ function func576(this: any) {
                     var_83[var_673].Var18 = 0;
                 }
             }
-            if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114 || var_83[var_673].Var0 == 128 || var_83[var_673].Var0 == 63) {
+            // No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)、No = 63 プロシュートの兄貴
+            // Ver 0.1403にて追加。No = 171 離婚した承太郎
+            if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114 || var_83[var_673].Var0 == 128 || var_83[var_673].Var0 == 63 || var_83[var_673].Var0 == 171) {
                 var_2752 = var_83[var_673].Var1;
                 var_2753 = var_83[var_673].Var2;
                 var_2754 = var_66 - 6;
@@ -20799,6 +21154,7 @@ function func576(this: any) {
                     var_83[var_673].Var18 = 0;
                 }
             }
+            // No = 63 プロシュートの兄貴、No = 125 フーゴ、No = 72 ケンゾー、No = 98 エンポリオ(ウェザー付)
             if (var_83[var_673].Var0 == 63 || var_83[var_673].Var0 == 125 || var_83[var_673].Var0 == 72 || var_83[var_673].Var0 == 98) {
                 var_2752 = var_83[var_673].Var1;
                 var_2753 = var_83[var_673].Var2;
@@ -20864,27 +21220,33 @@ function func576(this: any) {
             if (var_2761 == var_66 && var_2763 == var_67) {
                 var_83[var_673].Var18 = 0;
             }
+            // No = 63 プロシュート兄貴
             if (var_83[var_673].Var0 == 63 && var_565 <= 0) {
                 var_83[var_673].Var18 = 0;
             }
+            // No = 143 ウンガロ
             if (var_83[var_673].Var0 == 143) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             }
+            // No = 113 DIOでない場合
             if (var_83[var_673].Var0 != 113) {
                 return;
             }
+            // No = 113 DIO
             if (var_83[var_673].Var0 == 113 && var_83[var_673].Var18 == 1) {
                 return;
             }
         }
+        // No = 157 アナスイ
         if (var_83[var_673].Var0 == 157) {
             if (var_123 != 0 || var_131 != 0 || var_144 != 0 || var_218 != 0 || var_2712 != 0) {
                 return;
             }
-            var_2751 = rnd(2);
+            var_2751 = rnd(2); // 敵が特殊攻撃をしてくる確率
             if (dangeon_number == 99 && var_83[var_673].Var16 == 1) {
-                var_2751 = 1;
+                var_2751 = 1; // 敵が特殊攻撃をしてくる確率
             }
+             // var_2751 敵が特殊攻撃をしてくる確率
             if (var_2751 >= 1 && var_201 != 14 && var_201 == var_83[var_673].Var10) {
                 var_83[var_673].Var18 = 1;
             }
@@ -20982,11 +21344,13 @@ function func576(this: any) {
             }
             return;
         }
+        // No = 168 警備員の西戸
         if (var_83[var_673].Var0 == 168 && var_2731 == 0 && var_83[var_673].Var18 == 0) {
             if (var_123 != 0 || var_131 != 0 || var_144 != 0 || var_218 != 0 || var_2712 != 0) {
                 return;
             }
-            var_2751 = rnd(8);
+            var_2751 = rnd(8); // 敵が特殊攻撃をしてくる確率
+             // var_2751 敵が特殊攻撃をしてくる確率
             if (var_2751 == 0 && var_201 != 14 && var_201 == var_83[var_673].Var10) {
                 var_83[var_673].Var18 = 2;
             }
@@ -21044,6 +21408,7 @@ function func576(this: any) {
         var_616 = 1;
         var_2771 = 0;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
+            // No = 49 コピー人形
             if (var_83[var_616].Var0 == 49) {
                 var_2771 = 1;
             }
@@ -21108,6 +21473,7 @@ function func576(this: any) {
         if (var_2763 > var_34) {
             var_2763 = var_34;
         }
+        // No = 15 ペットショップ、No = 45 由花子、No = 158 プッツン由花子、No = 47 億泰、No = 67 ブチ切れた億泰、No = 80 ラング・ラングラー、No = 132 レクイエムジョルノ、No = 136、No = 113 DIO、No = 175 不明(没敵チャカ?)
         if (var_83[var_673].Var0 == 15 || var_83[var_673].Var0 == 45 || var_83[var_673].Var0 == 158 || var_83[var_673].Var0 == 47 || var_83[var_673].Var0 == 67 || var_83[var_673].Var0 == 80 || var_83[var_673].Var0 == 132 || var_83[var_673].Var0 == 136 || var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 175) {
             if (var_2760 == var_66 && var_2759 == var_67) {
                 yield func577();
@@ -21142,6 +21508,7 @@ function func576(this: any) {
                 return;
             }
         }
+        // No = 76 エコーズACT2
         if (var_83[var_673].Var0 == 76) {
             var_2780 = rnd(2);
             if (var_2780 != 0) {
@@ -21179,12 +21546,14 @@ function func576(this: any) {
                 }
             }
         }
+        // No = 45 由花子、No = 158 プッツン由花子、No = 80 ラング・ラングラー
         if (var_83[var_673].Var0 == 45 || var_83[var_673].Var0 == 158 || var_83[var_673].Var0 == 80) {
             if (var_126 != 0) {
                 yield func577();
                 return;
             }
         }
+        // No = 47 億泰、No = 67 ブチ切れた億泰
         if (var_83[var_673].Var0 == 47 || var_83[var_673].Var0 == 67) {
             if (var_146 >= 1 && var_66 == var_147 && var_67 == var_148) {
                 yield func577();
@@ -21192,15 +21561,19 @@ function func576(this: any) {
             }
         }
         var_2781 = rnd(4);
+        // No = 123 ブチャラティ、No = 140 ジョナサン、No = 168 警備員の西戸
         if (var_83[var_673].Var0 == 123 || var_83[var_673].Var0 == 140 || var_83[var_673].Var0 == 168) {
             var_2781 = 1;
         }
+        // No = 155 マライア
         if (var_83[var_673].Var0 == 155) {
             var_2781 = rnd(8);
         }
+        // No = 136 シーザー
         if (var_83[var_673].Var0 == 136) {
             var_2781 = rnd(6);
         }
+        // No = 113 DIO
         if (var_83[var_673].Var0 == 113) {
             var_2781 = rnd(30);
         }
@@ -21288,14 +21661,15 @@ function func576(this: any) {
             }
         }
         if (var_2781 >= 3) {
-            var_2708 = 1;
+            var_2708 = 1; // 敵が攻撃してこなくなるフラグON
             yield func577();
             return;
         }
         // No = 0 なので、拠点(ホテル、亀、)
         if (dangeon_number == 0) {
+            // No = 76 エコーズACT2
             if (var_83[var_673].Var0 == 76) {
-                var_2708 = 1;
+                var_2708 = 1; // 敵が攻撃してこなくなるフラグON
                 yield func577();
                 return;
             }
@@ -21307,9 +21681,11 @@ function func576(this: any) {
         var_2786 = var_424;
         var_2787 = var_424;
         var_2788 = 10;
+        // No = 172 虫食いでない
         if (var_83[var_673].Var0 == 172) {
             var_2788 = 3;
         }
+        // No = 175 不明(没敵チャカ?)
         if (var_83[var_673].Var0 == 175) {
             var_2788 = 3;
         }
@@ -21467,13 +21843,16 @@ function func576(this: any) {
             var_2786 = var_424;
             var_2787 = var_424;
             var_2788 = 10;
+            // No = 172 虫食いでない
             if (var_83[var_673].Var0 == 172) {
                 var_2788 = 3;
             }
+            // No = 175 不明(没敵チャカ?)
             if (var_83[var_673].Var0 == 175) {
                 var_2788 = 3;
             }
             for (let cnt2 = 0; cnt2 < var_2788; ++cnt2) {
+                // No = 175 不明(没敵チャカ?)でなければ
                 if (var_83[var_673].Var0 != 175) {
                     if (var_83[var_673].Var5 == 6 && var_71[var_2784][var_2783] == 0) {
                         var_83[var_673].Var18 = 0;
@@ -21508,6 +21887,7 @@ function func576(this: any) {
                         break;
                     }
                 }
+                // No = 175 不明(没敵チャカ?)
                 if (var_83[var_673].Var0 == 175 && cnt2 == 1) {
                     if (var_83[var_673].Var5 == 6 && var_71[var_2784][var_2783] != 0) {
                         var_83[var_673].Var18 = 0;
@@ -21542,6 +21922,7 @@ function func576(this: any) {
                         break;
                     }
                 }
+                // No = 47 億泰、No = 67 ブチ切れた億泰、No = 45 由花子、No = 158 プッツン由花子、No = 21 ストレイキャット、No = 132 レクイエムジョルノ、No = 113 DIO、No = 76 エコーズACT2
                 if (var_83[var_673].Var0 == 47 || var_83[var_673].Var0 == 67 || var_83[var_673].Var0 == 45 || var_83[var_673].Var0 == 158 || var_83[var_673].Var0 == 21 || var_83[var_673].Var0 == 132 || var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 76) {
                     if (cnt2 != 0) {
                         if (var_83[var_673].Var5 == 6 && var_82[var_2784][var_2783] != 0) {
@@ -21675,6 +22056,7 @@ function func576(this: any) {
             }
         }
         yield func577();
+        // No = 113 DIO
         if (var_83[var_673].Var0 == 113 && var_83[var_673].Var18 == 1) {
             var_83[var_673].Var18 = 2;
         }
@@ -21719,7 +22101,7 @@ function func579(this: any) {
         dbgprt(579);
         var_673 = 1;
         for (let cnt1 = 0; cnt1 < var_97; ++cnt1) {
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
             if (var_83[var_673].Var13 == 0) {
                 if (var_83[var_673].Var9 == 1) {
                     if (var_83[var_673].Var27 != 0) {
@@ -21741,6 +22123,7 @@ function func579(this: any) {
                     }
                     if (var_83[var_673].Var9 == 1 && var_83[var_673].Var27 == 0) {
                         if (var_211 != 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_66 == var_2794 && var_67 == var_2795 && var_83[var_673].Var13 == 0) {
+                            // No = 122 ポルナレフ、No = 129 アヌビスポルナレフ、No = 44 レッドホットチリペッパー、No = 110 カーズ、No = 162 バオー、No = 60 ザ・ニュー神父
                             if (var_83[var_673].Var0 == 122 || var_83[var_673].Var0 == 129 || var_83[var_673].Var0 == 44 || var_83[var_673].Var0 == 110 || var_83[var_673].Var0 == 162 || var_83[var_673].Var0 == 60) {
                                 var_2796 = 1;
                                 var_2794 = var_66;
@@ -21754,6 +22137,7 @@ function func579(this: any) {
                             var_2795 = var_67;
                             yield func654(); // 敵の攻撃動作処理
                             if (var_211 != 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_66 == var_2794 && var_67 == var_2795 && var_83[var_673].Var13 == 0) {
+                                // No = 122 ポルナレフ、No = 129 アヌビスポルナレフ、No = 44 レッドホットチリペッパー、No = 110 カーズ、No = 162 バオー、No = 60 ザ・ニュー神父
                                 if (var_83[var_673].Var0 == 122 || var_83[var_673].Var0 == 129 || var_83[var_673].Var0 == 44 || var_83[var_673].Var0 == 110 || var_83[var_673].Var0 == 162 || var_83[var_673].Var0 == 60) {
                                     var_2796 = 1;
                                     var_2794 = var_66;
@@ -21767,6 +22151,7 @@ function func579(this: any) {
                     if (var_83[var_673].Var9 == 1 && var_83[var_673].Var27 != 0) {
                         var_2793 = var_83[var_673].Var27;
                         if (var_83[var_2793].Var0 != 0 && var_83[var_2793].Var3 != 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_83[var_673].Var13 == 0) {
+                            // No = 122 ポルナレフ、No = 129 アヌビスポルナレフ、No = 44 レッドホットチリペッパー、No = 110 カーズ、No = 162 バオー、No = 60 ザ・ニュー神父
                             if (var_83[var_673].Var0 == 122 || var_83[var_673].Var0 == 129 || var_83[var_673].Var0 == 44 || var_83[var_673].Var0 == 110 || var_83[var_673].Var0 == 162 || var_83[var_673].Var0 == 60) {
                                 var_2796 = 1;
                                 var_2794 = var_66;
@@ -21780,6 +22165,7 @@ function func579(this: any) {
                             var_2795 = var_67;
                             yield func654(); // 敵の攻撃動作処理
                             if (var_83[var_2793].Var0 != 0 && var_83[var_2793].Var3 != 0 && var_83[var_673].Var20 == 0 && var_83[var_673].Var0 != 0 && var_83[var_673].Var3 >= 1 && var_83[var_673].Var13 == 0) {
+                                // No = 122 ポルナレフ、No = 129 アヌビスポルナレフ、No = 44 レッドホットチリペッパー、No = 110 カーズ、No = 162 バオー、No = 60 ザ・ニュー神父
                                 if (var_83[var_673].Var0 == 122 || var_83[var_673].Var0 == 129 || var_83[var_673].Var0 == 44 || var_83[var_673].Var0 == 110 || var_83[var_673].Var0 == 162 || var_83[var_673].Var0 == 60) {
                                     var_2796 = 1;
                                     var_2794 = var_66;
@@ -21792,10 +22178,11 @@ function func579(this: any) {
                     }
                     var_83[var_673].Var27 = 0;
                 }
-                if (var_83[var_673].Var18 >= 1) {
-                    yield func581();
+                if (var_83[var_673].Var18 >= 1) { // 特殊能力発動フラグ?がONであれば
+                    yield func581(); // 各敵の能力動作処理設定
                 }
                 if (var_131 == 0 && var_123 == 0 && var_83[var_673].Var20 == 0 && var_144 == 0) {
+                    // No = 19 アラビアファッツ
                     if (var_83[var_673].Var0 == 19 && var_201 != 14 && var_201 == var_83[var_673].Var10 && var_157 != 1) {
                         yield func608();
                     }
@@ -21804,6 +22191,7 @@ function func579(this: any) {
                         yield func611();
                     }
                 }
+                // No = 91 ACT1さなぎ、No = 92 ACT2さなぎ
                 if (var_83[var_673].Var0 == 91 || var_83[var_673].Var0 == 92) {
                     if (var_157 != 1 && var_83[var_673].Var20 == 0) {
                         yield func580();
@@ -21875,203 +22263,7 @@ function func580(this: any) {
 function func581(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(581);
-        if (var_83[var_673].Var0 == 143) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func595();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 118) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func615();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 134 || var_83[var_673].Var0 == 35) {
-            if (var_83[var_673].Var18 >= 1) {
-                yield func602();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 164 || var_83[var_673].Var0 == 165) {
-            if (var_83[var_673].Var18 >= 1) {
-                yield func603();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 123) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func598();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 140) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func599();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 168) {
-            if (var_83[var_673].Var18 == 2) {
-                yield func612();
-                return;
-            }
-            if (var_83[var_673].Var18 == 1) {
-                yield func600();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 157) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func605();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 46 || var_83[var_673].Var0 == 30) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func604();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 99) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func606();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 106 || var_83[var_673].Var0 == 107) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func616();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 124) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func607();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 125) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func609();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 98) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func610();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 84) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func589();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 154) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func594();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 159) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func591();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 145) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func592();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 150) {
-            if (var_83[var_673].Var18 == 1) {
-                var_1073 = rnd(10);
-                if (var_1073 < 3) {
-                    yield func592();
-                    return;
-                }
-                if (var_1073 >= 3) {
-                    yield func593();
-                    return;
-                }
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 137) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func590();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 85) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func596();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 153) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func597();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 65) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func618();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 72) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func617();
-                return;
-            }
-            return;
-        }
-        if (var_83[var_673].Var0 == 63) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func613();
-                return;
-            }
-            return;
-        }
-        // DIOと最高にハイなDIと承太郎の設定 時止め系?
-        if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 114 || var_83[var_673].Var0 == 128) {
-            if (var_83[var_673].Var18 == 1) {
-                yield func614();
-                return;
-            }
-            if (var_83[var_673].Var18 == 2) {
-                var_83[var_673].Var18 = 1;
-            }
-        }
-        var_240 = 0;
+        // enemy_list = 15 ペットショップ
         if (var_83[var_673].Var0 == 15) {
             var_1360 = var_83[var_673].Var1;
             var_1361 = var_83[var_673].Var2;
@@ -22084,31 +22276,46 @@ function func581(this: any) {
             var_1363 = 0;
             var_271 = 0;
         }
-        if (var_83[var_673].Var5 == 4) {
-            var_1416 = 40;
+        // enemy_list = 21 ストレイキャット
+        if (var_83[var_673].Var0 == 21) {
+            DSPLAY(audio_id = 159);
+            // yield func337(); // メッセージ関係呼び出し
+            yield func337(); // メッセージ関係呼び出し
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+                var_742 = 3;
+            }
         }
-        if (var_83[var_673].Var5 == 6) {
-            var_1416 = 120;
+        // enemy_list = 30 禁煙中ホル・ホース
+        // enemy_list = 46 ホル・ホース と enemy_list = 30 禁煙中ホル・ホースは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 46) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func604();
+                return;
+            }
+            return;
         }
-        if (var_83[var_673].Var5 == 8) {
-            var_1416 = 80;
+        // enemy_list = 35 仗助
+        // enemy_list = 134 ジョリーン と enemy_list = 35 仗助は共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 35) {
+            if (var_83[var_673].Var18 >= 1) {
+                yield func602();
+                return;
+            }
+            return;
         }
-        if (var_83[var_673].Var5 == 2) {
-            var_1416 = 0;
+        // enemy_list = 46 ホル・ホース
+        // enemy_list = 46 ホル・ホース と enemy_list = 30 禁煙中ホル・ホースは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 46) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func604();
+                return;
+            }
+            return;
         }
-        if (var_83[var_673].Var5 == 1) {
-            var_1416 = 160;
-        }
-        if (var_83[var_673].Var5 == 3) {
-            var_1416 = 240;
-        }
-        if (var_83[var_673].Var5 == 7) {
-            var_1416 = 200;
-        }
-        if (var_83[var_673].Var5 == 9) {
-            var_1416 = 280;
-        }
-        if (var_83[var_673].Var0 == 47 || var_83[var_673].Var0 == 67) {
+        // enemy_list = 47 億泰
+        // enemy_list = 47 億泰 と enemy_list = 67 ブチ切れた億泰は共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 47) {
             var_2799 = 0;
             var_2782 = var_83[var_673].Var1;
             var_2783 = var_83[var_673].Var2;
@@ -22195,7 +22402,7 @@ function func581(this: any) {
             }
             var_742 = 1;
             var_83[var_673].Var7 = 1;
-            var_743 = 1;
+            var_743 = 1; //スタンド像付与フラグON
             var_748 = (var_83[var_673].Var1 - var_66 + 4) * 40;
             var_749 = (var_83[var_673].Var2 - var_67 + 4) * 40;
             var_271 = 1;
@@ -22208,15 +22415,251 @@ function func581(this: any) {
             var_1357 = 0;
             var_271 = 0;
             var_83[var_673].Var7 = 0;
-            var_743 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
         }
-        var_455 = var_83[var_673].Var1;
-        var_456 = var_83[var_673].Var2;
-        var_83[var_673].Var7 = 1;
-        var_742 = 1;
-        if (var_83[var_673].Var0 == 121 || var_83[var_673].Var0 == 126 || var_83[var_673].Var0 == 151 || var_83[var_673].Var0 == 172) {
+        // enemy_list = 63 プロシュート兄貴
+        if (var_83[var_673].Var0 == 63) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func613();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 65 虹村形兆
+        if (var_83[var_673].Var0 == 65) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func618();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 67 ブチ切れた億泰
+        // enemy_list = 47 億泰 と enemy_list = 67 ブチ切れた億泰は共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 67) {
+            var_2799 = 0;
+            var_2782 = var_83[var_673].Var1;
+            var_2783 = var_83[var_673].Var2;
+            var_2784 = var_83[var_673].Var1;
+            var_2785 = var_83[var_673].Var1;
+            var_2786 = var_83[var_673].Var2;
+            var_2787 = var_83[var_673].Var2;
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                var_2784 = var_2784 + 1;
+                if (var_2784 > var_33) {
+                    var_2784 = var_33;
+                }
+                var_2785 = var_2785 - 1;
+                if (var_2785 < 0) {
+                    var_2785 = 0;
+                }
+                var_2786 = var_2786 + 1;
+                if (var_2786 > var_34) {
+                    var_2786 = var_34;
+                }
+                var_2787 = var_2787 - 1;
+                if (var_2787 < 0) {
+                    var_2787 = 0;
+                }
+                if (var_83[var_673].Var5 == 6 && var_82[var_2784][var_2783] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_83[var_673].Var5 == 4 && var_82[var_2785][var_2783] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_83[var_673].Var5 == 2 && var_82[var_2782][var_2786] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_83[var_673].Var5 == 8 && var_82[var_2782][var_2787] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_83[var_673].Var5 == 1 && var_82[var_2785][var_2786] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_83[var_673].Var5 == 3 && var_82[var_2784][var_2786] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_83[var_673].Var5 == 7 && var_82[var_2785][var_2787] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_83[var_673].Var5 == 9 && var_82[var_2784][var_2787] != 0) {
+                    var_2799 = 1;
+                    break;
+                }
+                if (var_65[var_2784][var_2783] == 1) {
+                    break;
+                }
+                if (var_65[var_2785][var_2783] == 1) {
+                    break;
+                }
+                if (var_65[var_2782][var_2786] == 1) {
+                    break;
+                }
+                if (var_65[var_2782][var_2787] == 1) {
+                    break;
+                }
+                if (var_65[var_2785][var_2786] == 1) {
+                    break;
+                }
+                if (var_65[var_2784][var_2786] == 1) {
+                    break;
+                }
+                if (var_65[var_2785][var_2787] == 1) {
+                    break;
+                }
+                if (var_65[var_2784][var_2787] == 1) {
+                    break;
+                }
+            }
+            if (var_2799 == 1) {
+                return;
+            }
+            var_742 = 1;
+            var_83[var_673].Var7 = 1;
+            var_743 = 1; //スタンド像付与フラグON
+            var_748 = (var_83[var_673].Var1 - var_66 + 4) * 40;
+            var_749 = (var_83[var_673].Var2 - var_67 + 4) * 40;
+            var_271 = 1;
+            var_1357 = 1;
+            DSPLAY(audio_id = 189);
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+                var_1357++;
+            }
+            var_1357 = 0;
+            var_271 = 0;
+            var_83[var_673].Var7 = 0;
+            var_743 = 0; //スタンド像付与フラグOFF
+        }
+        // enemy_list = 72 ケンゾー
+        if (var_83[var_673].Var0 == 72) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func617();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 76 エコーズACT2
+        if (var_83[var_673].Var0 == 76) {
+            var_1304 = rnd(3);
+            var_1302 = (var_83[var_673].Var1 - var_66 + 4) * 40;
+            var_1303 = (var_83[var_673].Var2 - var_67 + 4) * 40 - 10;
+            var_83[var_673].Var21 = 1;
+            var_411 = 2;
+            for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+                var_742 = 2;
+            }
+            var_271 = 1;
+            var_1301 = 1;
+            DSPLAY(audio_id = 123);
+            for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
+                // yield func337(); // メッセージ関係呼び出し
+                yield func337(); // メッセージ関係呼び出し
+                var_742 = 2;
+                var_1301++;
+            }
+            var_271 = 0;
+            var_1301 = 0;
+            var_83[var_673].Var21 = 0;
+            var_411 = 0;
+        }
+        // enemy_list = 84 チョコラータ
+        if (var_83[var_673].Var0 == 84) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func589();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 85 リゾット
+        if (var_83[var_673].Var0 == 85) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func596();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 98 エンポリオ(ウェザー付)
+        if (var_83[var_673].Var0 == 98) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func610();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 99 マンハッタントランスファー
+        if (var_83[var_673].Var0 == 99) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func606();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 106 ペッシ
+        // enemy_list = 106 ペッシ と enemy_list = 107 成長したペッシは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 106) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func616();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 107 成長したペッシ
+        // enemy_list = 106 ペッシ と enemy_list = 107 成長したペッシは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 107) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func616();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 113 DIO
+        if (var_83[var_673].Var0 == 113) {
+            var_742 = 1;
+            var_83[var_673].Var7 = 1;
+            var_743 = 1; //スタンド像付与フラグON
+        }
+        // No = 113 DIO
+        // No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)は共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 113) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func614(); // 敵キャラの時止め能力処理
+                return;
+            }
+            if (var_83[var_673].Var18 == 2) {
+                var_83[var_673].Var18 = 1;
+            }
+        }
+        // No = 114 最高にハイなDIO
+        // No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)は共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 114) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func614(); // 敵キャラの時止め能力処理
+                return;
+            }
+            if (var_83[var_673].Var18 == 2) {
+                var_83[var_673].Var18 = 1;
+            }
+        }
+        // enemy_list = 118 クリーム
+        if (var_83[var_673].Var0 == 118) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func615();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 121 花京院
+        // enemy_list = 121 花京院、enemy_list = 126 退院した花京院、enemy_list = 151 虫食い、enemy_list = 172 虫食いでないは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 121) {
             if (var_83[var_673].Var0 == 151 || var_83[var_673].Var0 == 172) {
-    
                 DSPLAY(audio_id = 160);
             }
             var_271 = 1;
@@ -22230,21 +22673,68 @@ function func581(this: any) {
             var_271 = 0;
             var_1313 = 0;
         }
-        if (var_83[var_673].Var0 == 21) {
-            DSPLAY(audio_id = 159);
-            // yield func337(); // メッセージ関係呼び出し
-            yield func337(); // メッセージ関係呼び出し
+        // enemy_list = 123 ブチャラティ
+        if (var_83[var_673].Var0 == 123) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func598();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 124 ミスタ
+        if (var_83[var_673].Var0 == 124) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func607();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 125 フーゴ
+        if (var_83[var_673].Var0 == 125) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func609();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 126 退院した花京院
+        // enemy_list = 121 花京院、enemy_list = 126 退院した花京院、enemy_list = 151 虫食い、enemy_list = 172 虫食いでないは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 126) {
+            if (var_83[var_673].Var0 == 151 || var_83[var_673].Var0 == 172) {
+                DSPLAY(audio_id = 160);
+            }
+            var_271 = 1;
+            var_1313 = 1;
+            var_1314 = var_673;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
+                var_1313++;
                 var_742 = 3;
             }
+            var_271 = 0;
+            var_1313 = 0;
         }
-        if (var_83[var_673].Var0 == 141) {
-            for (let cnt2 = 0; cnt2 < 7; ++cnt2) {
-                yield func337(); // メッセージ関係呼び出し
-                var_742 = 2;
+        // No = 128 承太郎(4部)
+        // No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)は共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 128) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func614(); // 敵キャラの時止め能力処理
+                return;
+            }
+            if (var_83[var_673].Var18 == 2) {
+                var_83[var_673].Var18 = 1;
             }
         }
+        // enemy_list = 134 ジョリーン
+        // enemy_list = 134 ジョリーン と enemy_list = 35 仗助は共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 134) {
+            if (var_83[var_673].Var18 >= 1) {
+                yield func602();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 136 シーザー
         if (var_83[var_673].Var0 == 136) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 var_1198 = 1;
@@ -22252,36 +22742,205 @@ function func581(this: any) {
                 var_742 = 2;
             }
         }
-        if (var_83[var_673].Var0 == 76) {
-            var_1304 = rnd(3);
-            var_1302 = (var_83[var_673].Var1 - var_66 + 4) * 40;
-            var_1303 = (var_83[var_673].Var2 - var_67 + 4) * 40 - 10;
-            var_83[var_673].Var21 = 1;
-            var_411 = 2;
-            for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
+        // enemy_list = 137 成長した吉良
+        if (var_83[var_673].Var0 == 137) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func590();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 140 ジョナサン
+        if (var_83[var_673].Var0 == 140) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func599();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 141 F・F
+        if (var_83[var_673].Var0 == 141) {
+            for (let cnt2 = 0; cnt2 < 7; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
                 var_742 = 2;
+            }
+        }
+        // enemy_list = 143 ウンガロ
+        if (var_83[var_673].Var0 == 143) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func595();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 145 康一
+        if (var_83[var_673].Var0 == 145) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func592();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 150 康一act2!!
+        if (var_83[var_673].Var0 == 150) {
+            if (var_83[var_673].Var18 == 1) {
+                var_1073 = rnd(10);
+                if (var_1073 < 3) {
+                    yield func592();
+                    return;
+                }
+                if (var_1073 >= 3) {
+                    yield func593();
+                    return;
+                }
+            }
+            return;
+        }
+        // enemy_list = 151 虫食い
+        // enemy_list = 121 花京院、enemy_list = 126 退院した花京院、enemy_list = 151 虫食い、enemy_list = 172 虫食いでないは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 151) {
+            if (var_83[var_673].Var0 == 151 || var_83[var_673].Var0 == 172) {
+                DSPLAY(audio_id = 160);
             }
             var_271 = 1;
-            var_1301 = 1;
-    
-            DSPLAY(audio_id = 123);
-            for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                // yield func337(); // メッセージ関係呼び出し
+            var_1313 = 1;
+            var_1314 = var_673;
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 yield func337(); // メッセージ関係呼び出し
-                var_742 = 2;
-                var_1301++;
+                var_1313++;
+                var_742 = 3;
             }
             var_271 = 0;
-            var_1301 = 0;
-            var_83[var_673].Var21 = 0;
-            var_411 = 0;
+            var_1313 = 0;
         }
-        if (var_83[var_673].Var0 == 113) {
-            var_742 = 1;
-            var_83[var_673].Var7 = 1;
-            var_743 = 1;
+        // enemy_list = 153 マックイィーン
+        if (var_83[var_673].Var0 == 153) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func597();
+                return;
+            }
+            return;
         }
+        // enemy_list = 154 スポーツマックス
+        if (var_83[var_673].Var0 == 154) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func594();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 157 アナスイ
+        if (var_83[var_673].Var0 == 157) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func605();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 159 記憶が戻ったウェザー
+        if (var_83[var_673].Var0 == 159) {
+            if (var_83[var_673].Var18 == 1) {
+                yield func591(); // 記憶が戻ったウェザーの発動能力「鈍足のカタツムリの召喚」動作処理
+                return;
+            }
+            return;
+        }
+        // enemy_list = 164 エシディシの脳
+        // enemy_list = 164 エシディシの脳 と enemy_list = 165 エボニーデビルは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 164) {
+            if (var_83[var_673].Var18 >= 1) {
+                yield func603();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 165 エボニーデビル
+        // enemy_list = 164 エシディシの脳 と enemy_list = 165 エボニーデビルは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 165) {
+            if (var_83[var_673].Var18 >= 1) {
+                yield func603();
+                return;
+            }
+            return;
+        }
+        // enemy_list = 168 警備員の西戸
+        if (var_83[var_673].Var0 == 168) {
+            if (var_83[var_673].Var18 == 2) {
+                yield func612();
+                return;
+            }
+            if (var_83[var_673].Var18 == 1) {
+                yield func600();
+                return;
+            }
+            return;
+        }
+        // Ver0.1403にて追加。No = 171 離婚した承太郎
+        if (var_83[var_673].Var0 == 171) {
+
+            //var_83[var_673].Var7 = 1;
+            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
+                yield func337(); // メッセージ関係呼び出し
+                var_742 = 1;
+            }
+
+            if (var_83[var_673].Var18 == 1) {
+                yield func614(); // 敵キャラの時止め能力処理
+                return;
+            }
+            if (var_83[var_673].Var18 == 2) {
+                var_83[var_673].Var18 = 1;
+            }
+        }
+        // enemy_list = 172 虫食いでない
+        // enemy_list = 121 花京院、enemy_list = 126 退院した花京院、enemy_list = 151 虫食い、enemy_list = 172 虫食いでないは共通設定。Ver0.1403にて分離
+        if (var_83[var_673].Var0 == 172) {
+            if (var_83[var_673].Var0 == 151 || var_83[var_673].Var0 == 172) {
+                DSPLAY(audio_id = 160);
+            }
+            var_271 = 1;
+            var_1313 = 1;
+            var_1314 = var_673;
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                yield func337(); // メッセージ関係呼び出し
+                var_1313++;
+                var_742 = 3;
+            }
+            var_271 = 0;
+            var_1313 = 0;
+        }
+        var_240 = 0;
+
+        if (var_83[var_673].Var5 == 4) {
+            var_1416 = 40;
+        }
+        if (var_83[var_673].Var5 == 6) {
+            var_1416 = 120;
+        }
+        if (var_83[var_673].Var5 == 8) {
+            var_1416 = 80;
+        }
+        if (var_83[var_673].Var5 == 2) {
+            var_1416 = 0;
+        }
+        if (var_83[var_673].Var5 == 1) {
+            var_1416 = 160;
+        }
+        if (var_83[var_673].Var5 == 3) {
+            var_1416 = 240;
+        }
+        if (var_83[var_673].Var5 == 7) {
+            var_1416 = 200;
+        }
+        if (var_83[var_673].Var5 == 9) {
+            var_1416 = 280;
+        }
+
+        var_455 = var_83[var_673].Var1;
+        var_456 = var_83[var_673].Var2;
+        var_83[var_673].Var7 = 1;
+        var_742 = 1;
+
         var_1192 = 1;
         var_1198 = 1;
         yield func095();
@@ -22337,6 +22996,7 @@ function func581(this: any) {
                         var_2800 = 1;
                     }
                 }
+                // enemy_list = 175 不明(没敵チャカ?)
                 if (var_83[var_673].Var0 == 175) {
                     var_2800 = 1;
                 }
@@ -22344,6 +23004,7 @@ function func581(this: any) {
                     yield func586();
                     break;
                 }
+                // enemy_list = 80 ラング・ラングラー、enemy_list = 45 レッドホットチリペッパー、enemy_list = 158 プッツン由花子
                 if (var_83[var_673].Var0 == 80 || var_83[var_673].Var0 == 45 || var_83[var_673].Var0 == 158) {
                     var_83[var_2801].Var8 = 1;
                     var_1192 = 0;
@@ -22586,80 +23247,46 @@ function func583(this: any) {
                 pos((var_455 - var_66 + 4) * 40, (var_456 - var_67 + 4) * 40 - 10);
             }
         }
-        if (var_83[var_673].Var0 == 7) {
+        if (var_83[var_673].Var0 == 7) { // No = 7 運命の車輪
             gcopy(34, 320 + var_1416, 160, 40, 40);
         }
-        if (var_83[var_673].Var0 == 15) {
+        if (var_83[var_673].Var0 == 15) { // No = 15 ペットショップ
             gcopy(34, 320 + var_1416, 520, 40, 40);
         }
-        if (var_83[var_673].Var0 == 21) {
+        if (var_83[var_673].Var0 == 21) { // No = 21 ストレイ・キャット
             color(0, 0, 0);
-    
             gmode(mode = 4, data2 = null, data3 = null, alpha = 150);
             gcopy(34, 320 + var_1416, 680, 40, 40);
             gmode(mode = 2, data2 = null, data3 = null, alpha = null);
         }
-        if (var_83[var_673].Var0 == 45 || var_83[var_673].Var0 == 158) {
-            gcopy(34, 320 + var_1416, 760, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 47 || var_83[var_673].Var0 == 67) {
-            gcopy(3, 0, 0, 1, 1);
-        }
-        if (var_83[var_673].Var0 == 48) {
-            gcopy(34, 320 + var_1416, 480, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 32) {
+        if (var_83[var_673].Var0 == 32) { // No = 32 吉良吉影
             gcopy(34, 320 + var_1416, 920, 40, 40);
         }
-        if (var_83[var_673].Var0 == 40) {
+        if (var_83[var_673].Var0 == 40) { // No = 40 バッドカンパニー
             gcopy(34, 320 + var_1416, 480, 40, 40);
         }
-        if (var_83[var_673].Var0 == 41) {
+        if (var_83[var_673].Var0 == 41) { // No = 41 バッドカンパニー戦車
             gcopy(34, 320 + var_1416, 960, 40, 40);
         }
-        if (var_83[var_673].Var0 == 42) {
+        if (var_83[var_673].Var0 == 42) { // No = 42 アパッチ
             gcopy(34, 320 + var_1416, 1000, 40, 40);
         }
-        if (var_83[var_673].Var0 == 56) {
+        if (var_83[var_673].Var0 == 45) { // No = 45 由花子。Ver0.1403にてNo = 158 プッツン由花子と分離。
+            gcopy(34, 320 + var_1416, 760, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 47) { // No = 47 億泰。Ver0.1403にてNo = 67 ブチ切れた億泰と分離。
+            gcopy(3, 0, 0, 1, 1);
+        }
+        if (var_83[var_673].Var0 == 48) { // No = 48 エアロスミス
             gcopy(34, 320 + var_1416, 480, 40, 40);
         }
-        if (var_83[var_673].Var0 == 80) {
-            gcopy(34, 320 + var_1416, 1040, 40, 40);
+        if (var_83[var_673].Var0 == 56) { // No = 56 シュトロハイム
+            gcopy(34, 320 + var_1416, 480, 40, 40);
         }
-        if (var_83[var_673].Var0 == 93) {
-            gcopy(34, 320 + var_1416, 1280, 40, 40);
+        if (var_83[var_673].Var0 == 67) { // No = 67 ブチ切れた億泰。Ver0.1403にてNo = 47 億泰と分離。
+            gcopy(3, 0, 0, 1, 1);
         }
-        if (var_83[var_673].Var0 == 95) {
-            gcopy(34, 320 + var_1416, 240, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 121 || var_83[var_673].Var0 == 126) {
-            gcopy(34, 320 + var_1416, 400, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 151) {
-            gcopy(34, 320 + var_1416, 1200, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 172) {
-            gcopy(34, 320 + var_1416, 1200, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 132) {
-            gcopy(34, 320 + var_1416, 1160, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 141) {
-            gcopy(34, 320 + var_1416, 200, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 155) {
-            gcopy(34, 320 + var_1416, 80, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 136) {
-            gcopy(34, 320 + var_1416, 120, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 113) {
-            gcopy(34, 320 + var_1416, 40, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 106 || var_83[var_673].Var0 == 107) {
-            gcopy(34, 320 + var_1416, 160, 40, 40);
-        }
-        if (var_83[var_673].Var0 == 76) {
+        if (var_83[var_673].Var0 == 76) { // No = 76 エコーズACT2
             if (var_1304 == 0) {
                 gcopy(34, 320 + var_1416, 280, 40, 40);
             }
@@ -22670,12 +23297,58 @@ function func583(this: any) {
                 gcopy(34, 320 + var_1416, 360, 40, 40);
             }
         }
-        if (var_83[var_673].Var0 == 175) {
+        if (var_83[var_673].Var0 == 80) { // No = 80 ラング・ラングラー
+            gcopy(34, 320 + var_1416, 1040, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 93) { // No = 93 エンポリオ
+            gcopy(34, 320 + var_1416, 1280, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 95) { // No = 95 ストレイツォ
+            gcopy(34, 320 + var_1416, 240, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 106) { // No = 106 ペッシ。Ver0.1403にてNo = 107 成長したペッシと分離。
+            gcopy(34, 320 + var_1416, 160, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 107) { // No = 107 成長したペッシ。Ver0.1403にてNo = 106 ペッシと分離。
+            gcopy(34, 320 + var_1416, 160, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 113) { // No = 113 DIO
+            gcopy(34, 320 + var_1416, 40, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 121) { // No = 121 花京院。Ver0.1403にてNo = 126 退院した花京院と分離。
+            gcopy(34, 320 + var_1416, 400, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 126) { // No = 126 退院した花京院。Ver0.1403にてNo = 121 花京院と分離。
+            gcopy(34, 320 + var_1416, 400, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 132) { // No = 132 レクイエムジョルノ
+            gcopy(34, 320 + var_1416, 1160, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 136) { // No = 136 シーザー
+            gcopy(34, 320 + var_1416, 120, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 141) { // No = 141 F・F
+            gcopy(34, 320 + var_1416, 200, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 151) { // No = 151 虫食い。Ver0.1403にてNo = 172 虫食いでないと分離。
+            gcopy(34, 320 + var_1416, 1200, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 155) { // No = 155 マライア
+            gcopy(34, 320 + var_1416, 80, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 158) { // No = 158 プッツン由花子。Ver0.1403にてNo = 45 由花子と分離。
+            gcopy(34, 320 + var_1416, 760, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 172) { // No = 172 虫食いでない。Ver0.1403にてNo = 151 虫食いと分離。
+            gcopy(34, 320 + var_1416, 1200, 40, 40);
+        }
+        if (var_83[var_673].Var0 == 175) { // No = 175 不明敵(没敵チャカ？)
             gcopy(34, 320 + var_1416, 1320, 40, 40);
         }
         return;
     });
 }
+// 射撃攻撃を受けた時の回避動作処理(弾丸を止める、燃え尽きる等)
 function func584(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(584);
@@ -22706,7 +23379,6 @@ function func584(this: any) {
         if (equip_disc[397] == 1) {
             var_2805 = rnd(2);
             if (var_2805 == 0) {
-        
                 DSPLAY(audio_id = 175);
                 comments_row1 = "";
                 comments_row2 = "";
@@ -22741,7 +23413,6 @@ function func584(this: any) {
         if (equip_disc[304] == 1) {
             var_2805 = rnd(4);
             if (var_2805 == 0) {
-        
                 DSPLAY(audio_id = 175);
                 comments_row1 = "";
                 comments_row2 = "";
@@ -22978,7 +23649,7 @@ function func585(this: any) {
                 var_1300 = 0;
                 var_271 = 0;
     
-                DSPLAY(audio_id = 216);
+                DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
                 var_374 = 1;
                 var_774 = 160;
                 var_1576 = 1;
@@ -22991,7 +23662,7 @@ function func585(this: any) {
                 var_271 = 0;
                 var_374 = 0;
                 var_389 = 0;
-                yield func499();
+                yield func499(); // ダンジョン動作処理?
                 var_2392 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
                     var_83[var_2392].Var9 = 0;
@@ -23097,8 +23768,9 @@ function func585(this: any) {
                 return;
             }
         }
+        // enemy_list = 113 DIO、enemy_list = 175 不明敵(没敵チャカ?)
         if (var_83[var_673].Var0 != 113 && var_83[var_673].Var0 != 175) {
-            yield func584();
+            yield func584(); // 射撃攻撃を受けた時の回避動作処理(弾丸を止める、燃え尽きる等)
         }
         if (var_2803 == 1) {
             return;
@@ -23172,7 +23844,7 @@ function func585(this: any) {
             var_2815 = 14;
             var_2816 = "ﾗｯﾄの針";
         }
-        if (var_83[var_673].Var0 == 132) {
+        if (var_83[var_673].Var0 == 132) { // No = 132 レクイエムジョルノ
             var_2815 = 40;
             var_2816 = "サソリ";
         }
@@ -23267,6 +23939,7 @@ function func585(this: any) {
         if (var_2804 == 0) {
             var_211 = var_211 - var_209;
             var_208 = var_208 + var_209;
+            // 射撃による攻撃で死んだ時の死因リストの処理
             if (var_211 <= 0) {
                 var_211 = 0;
                 if (var_83[var_673].Var0 == 7) {
@@ -23314,7 +23987,7 @@ function func585(this: any) {
                 if (var_83[var_673].Var0 == 172) {
                     var_356 = 286;
                 }
-                if (var_83[var_673].Var0 == 132) {
+                if (var_83[var_673].Var0 == 132) { // No = 132 レクイエムジョルノ
                     var_356 = 243;
                 }
                 if (var_83[var_673].Var0 == 141) {
@@ -24032,6 +24705,7 @@ function func590(this: any) {
         return;
     });
 }
+// 記憶が戻ったウェザーの発動能力「鈍足のカタツムリの召喚」動作処理
 function func591(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(591);
@@ -24952,7 +25626,7 @@ function func596(this: any) {
         var_208 = var_208 + var_2852;
         if (var_211 <= 0) {
             var_211 = 0;
-            var_356 = 225;
+            var_356 = 225; // var_356 死因要因メッセージID選択
         }
         var_240 = 0;
         return;

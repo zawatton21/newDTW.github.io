@@ -640,7 +640,7 @@ function stand105(this: any) {
         }
         var_312 = 0;
         var_103 = 1;
-        var_121 = 1;
+        var_121 = 1; // var_121 罠が見えるようになるフラグON
         var_2194 = 1;
         for (let cnt2 = 0; cnt2 < var_336; ++cnt2) {
             if (var_78[var_2194].Var0 != 0) {
@@ -915,7 +915,7 @@ function stand107(this: any) {
         if (var_570 == 3) {
             bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
         }
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1192,7 +1192,7 @@ function stand108(this: any) {
 function stand109(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1284,7 +1284,7 @@ function stand109(this: any) {
                     var_209 = var_565 * 5;
                     var_2219 = rnd(3);
                     var_209 = var_209 + var_2219;
-                    if (var_172 >= 1) {
+                    if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                         var_209 = var_209 * 2;
                     }
                     yield func705();
@@ -1661,7 +1661,9 @@ function stand114(this: any) {
         }
         if (var_82[var_347][var_348] != 0) {
             var_2231 = var_82[var_347][var_348];
-            if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143) {
+            // No = 132 レクイエムジョルノ、No = 143 ウンガロでなければ
+            // Ver0.1403にて追加。No = 171 離婚した承太郎
+            if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143 && var_83[var_2231].Var0 != 171) {
                 var_747 = 1;
                 var_83[var_2231].Var12 = 99;
             }
@@ -1680,10 +1682,11 @@ function stand114(this: any) {
             var_311 = var_311 + 5;
         }
         if (var_82[var_347][var_348] != 0) {
-    
             DSPLAY(audio_id = 123);
             var_2231 = var_82[var_347][var_348];
-            if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143) {
+            // No = 132 レクイエムジョルノ、No = 143 ウンガロでなければ
+            // Ver0.1403にて追加。No = 171 離婚した承太郎
+            if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143 && var_83[var_2231].Var0 != 171) {
                 var_402 = var_2231;
                 var_209 = 999;
                 var_2195 = 1;
@@ -1895,7 +1898,7 @@ function stand116(this: any) {
 function stand117(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -1926,7 +1929,7 @@ function stand117(this: any) {
             var_2308 = var_565 * 2;
             var_2219 = rnd(3);
             var_2308 = var_2308 + var_2219;
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_2308 = var_2308 * 2;
             }
             if (var_2194 != var_124) {
@@ -2434,7 +2437,7 @@ function stand120(this: any) {
 function stand121(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -2464,7 +2467,7 @@ function stand121(this: any) {
             var_2218 = var_565 * 4;
             var_2219 = rnd(3);
             var_2218 = var_2218 + var_2219;
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_2218 = var_2218 * 2;
             }
             if (var_2194 != var_124) {
@@ -3199,7 +3202,7 @@ function stand201(this: any) {
 function stand202(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3358,7 +3361,7 @@ function stand202(this: any) {
                     }
                 }
             }
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_83[var_1992].Var12 = 0;
                 var_83[var_1992].Var13 = 1;
                 var_114 = 0;
@@ -3546,7 +3549,7 @@ function stand203(this: any) {
             yield func340(); // キー入力による選択処理
         }
         var_374 = 0;
-        yield func499();
+        yield func499(); // ダンジョン動作処理?
         if (var_2254 == 1) {
             var_2254 = 0;
             yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
@@ -3785,7 +3788,7 @@ function stand205(this: any) {
         if (var_570 == 3) {
             bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
         }
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -3853,7 +3856,7 @@ function stand205(this: any) {
                 var_83[var_1992].Var13 = 99;
                 var_2302 = 1;
             }
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 if (var_83[var_1992].Var10 == var_201 && var_201 != 14) {
                     var_83[var_1992].Var13 = 99;
                     var_2302 = 1;
@@ -4084,7 +4087,7 @@ function stand207(this: any) {
         if (var_570 == 3) {
             bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
         }
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -4225,7 +4228,7 @@ function stand207(this: any) {
                         var_2266 = 1;
                     }
                 }
-                if (var_2266 == 0 && var_172 >= 1) {
+                if (var_2266 == 0 && var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                     yield func519();
                     var_2266 = 1;
                 }
@@ -4235,14 +4238,14 @@ function stand207(this: any) {
             }
             var_2194 = var_2194 + 1;
         }
-        if (var_2265 == 1 || var_172 >= 1) {
+        if (var_2265 == 1 || var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = comments_row1a;
             comments_row2 = comments_row2a;
-            if (var_172 == 0) {
+            if (var_172 == 0) { // var_172 発動効果が向上するフラグがOFFであれば
                 comments_row1a = "近くにいる敵は急激に老化して";
                 comments_row2a = "攻撃力が下がった！";
             }
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 comments_row1a = "この階にいる全ての敵は";
                 comments_row2a = "急激に老化して攻撃力が下がった！";
             }
@@ -4585,7 +4588,7 @@ function stand301(this: any) {
 function stand302(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -4659,7 +4662,7 @@ function stand302(this: any) {
             var_2308 = var_565 * 2;
             var_2219 = rnd(3);
             var_2308 = var_2308 + var_2219;
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_2308 = var_2308 * 2;
             }
             if (var_2194 != var_124) {
@@ -4881,7 +4884,7 @@ function stand303(this: any) {
         }
         var_271 = 0;
         var_1297 = 0;
-        var_105 = 1;
+        var_105 = 1; // var_105 攻撃を躱わしやすくなるフラグON
         if (var_2254 == 1) {
             var_2254 = 0;
             yield func508(); // スタンドパワーが力尽きて消滅した時の表示2
@@ -4895,7 +4898,7 @@ function stand303(this: any) {
 function stand304(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -4951,7 +4954,7 @@ function stand304(this: any) {
             var_2218 = var_565 * 3;
             var_2219 = rnd(3);
             var_2218 = var_2218 + var_2219;
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_2218 = var_2218 * 2;
             }
             if (var_2194 != var_124) {
@@ -5166,7 +5169,7 @@ function stand304(this: any) {
         var_300 = 0;
         yield func050();
         yield func047();
-        var_121 = 1;
+        var_121 = 1; // var_121 罠が見えるようになるフラグON
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         yield func340(); // キー入力による選択処理
         var_2303 = 0;
@@ -5263,7 +5266,7 @@ function stand304(this: any) {
 function stand305(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        var_1024 = 1;
+        var_1024 = 1; // 次の階の出現アイテム数＋6個するフラグON
         comments_row1 = "";
         comments_row2 = "";
         var_295 = "";
@@ -5451,7 +5454,9 @@ function stand307(this: any) {
         if (var_82[var_347][var_348] != 0) {
             DSPLAY(audio_id = 123);
             var_2231 = var_82[var_347][var_348];
-            if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143) {
+            // No = 132 レクイエムジョルノ、No = 143 ウンガロでなければ
+            // Ver0.1403にて追加。No = 171 離婚した承太郎
+            if (var_83[var_2231].Var0 != 50 && var_83[var_2231].Var0 != 33 && var_83[var_2231].Var0 != 34 && var_83[var_2231].Var0 != 132 && var_83[var_2231].Var0 != 143 && var_83[var_2231].Var0 != 171) {
                 var_402 = var_2231;
                 var_209 = 999;
                 var_2195 = 1;
@@ -5871,7 +5876,7 @@ function stand311(this: any) {
 function stand312(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -5922,7 +5927,7 @@ function stand312(this: any) {
                 var_2308 = var_565 * 5;
                 var_2219 = rnd(3);
                 var_2308 = var_2308 + var_2219;
-                if (var_172 >= 1) {
+                if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                     var_2308 = var_2308 * 2;
                 }
                 var_209 = var_2308;
@@ -5956,7 +5961,7 @@ function stand312(this: any) {
 function stand313(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -5982,7 +5987,7 @@ function stand313(this: any) {
             var_2308 = var_565 * 2;
             var_2219 = rnd(3);
             var_2308 = var_2308 + var_2219;
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_2308 = var_2308 * 2;
             }
             if (var_2194 != var_124) {
@@ -6278,7 +6283,7 @@ function stand315(this: any) {
         var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         var_119 = 1;
-        var_121 = 1;
+        var_121 = 1; // var_121 罠が見えるようになるフラグON
         var_101 = 1;
         DSPLAY(audio_id = 184);
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
@@ -6346,7 +6351,7 @@ function stand316(this: any) {
         if (var_570 == 3) {
             bufferid_stand_disc = 29; // buffer(29)は"img_stand3.gif"
         }
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6472,7 +6477,7 @@ function stand316(this: any) {
                 var_83[var_1992].Var12 = 0;
                 var_83[var_1992].Var17 = 1;
             }
-            if (var_172 == 1 || var_174 == 1) {
+            if (var_172 == 1 || var_174 == 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_83[var_1992].Var12 = 0;
                 var_83[var_1992].Var17 = 1;
             }
@@ -6574,7 +6579,7 @@ function stand317(this: any) {
 function stand318(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         yield func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        if (var_172 == 1) {
+        if (var_172 == 1) { // var_172 発動効果が向上するフラグがONであれば
             comments_row1 = "";
             comments_row2 = "";
             var_295 = "";
@@ -6604,7 +6609,7 @@ function stand318(this: any) {
             var_2218 = var_565 * 3;
             var_2219 = rnd(3);
             var_2218 = var_2218 + var_2219;
-            if (var_172 >= 1) {
+            if (var_172 >= 1) { // var_172 発動効果が向上するフラグがONであれば
                 var_2218 = var_2218 * 2;
             }
             if (var_2194 != var_124) {
@@ -7061,7 +7066,9 @@ function stand395(this: any) {
         var_2314 = 0;
         var_2194 = 1;
         for (let cnt2 = 0; cnt2 < var_97; ++cnt2) {
-            if (var_2194 != var_124 && var_83[var_2194].Var0 != 132 && var_83[var_2194].Var0 != 143 && var_83[var_2194].Var0 != 34 && var_83[var_2194].Var31 != 4 && var_83[var_2194].Var31 != 5) {
+            // No = 132 レクイエムジョルノ、No = 143 ウンガロでなければ
+            // Ver0.1403にて追加。No = 171 離婚した承太郎
+            if (var_2194 != var_124 && var_83[var_2194].Var0 != 132 && var_83[var_2194].Var0 != 143 && var_83[var_2231].Var0 != 171 && var_83[var_2194].Var0 != 34 && var_83[var_2194].Var31 != 4 && var_83[var_2194].Var31 != 5) {
                 if (var_83[var_2194].Var0 != 0 && var_83[var_2194].Var10 == var_201 && var_201 > 0 && var_201 <= 12) {
                     var_83[var_2194].Var12 = 0;
                     var_83[var_2194].Var13 = 0;
@@ -7246,7 +7253,7 @@ function stand396(this: any) {
         var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
         yield func047();
         if (var_133 == 0) {
-            var_157 = 1;
+            var_157 = 1; // var_157 倍速移動フラグON
             var_158 = 0;
         }
         if (var_133 != 0) {

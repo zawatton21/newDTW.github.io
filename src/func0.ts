@@ -75,11 +75,11 @@ function func004(this: any) {
         // version_number = "0.13"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
         // game_title = "newDTW original(ver0.1310)";
         version_number = "0.14"; //ログイン時に下に表示される。見えにくいので末尾の数字は削除
-        game_title = "newDTW (ver0.1402)";
+        game_title = "newDTW (ver0.1403)";
         
         buffer(17);
         yield picload("img3.gif");
-        buffer(26, 680, 680);
+        buffer(26, 340, 340);
         screen_(2, 1, 1, 2, -100, -100);
 
 
@@ -107,7 +107,7 @@ function func004(this: any) {
         if (var_9 < 0) {
             var_9 = 0;
         }
-        screen_(0, 680, 680, 2, var_8, var_9);
+        screen_(0, 340, 340, 2, var_8, var_9);
         title(game_title);
         oncmd_gosub(func897, 161);
     
@@ -133,11 +133,11 @@ function func004(this: any) {
         var_18 = 255;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         var_19 = 0;
-        var_20 = 50;
+        var_20 = 50; // 鉄の牢獄の最終階層
         var_21 = "鉄獄"; // Ver0.1402にて修正。鉄の牢獄→鉄獄。Ver0.1310で修正。鉄の牢獄。
-        var_22 = "＊＊＊＊";
+        var_22 = "ケープ・カナベラル"; // Ver0.1403にて修正。鉄獄(鉄の牢獄)の最終決戦フロア名
         var_23 = 1;
-        var_24 = "＊＊＊＊";
+        var_24 = "承太郎"; // Ver0.1403にて修正。鉄獄(鉄の牢獄)のダンジョン主
         randomize();
         yield wait(1);
         yield func242();
@@ -159,7 +159,6 @@ function func004(this: any) {
         var_25[6] = 255;
         var_26[6] = 255;
         var_27[6] = 255; // Var0.1310にて値修正。 0 → 255
-
         // Ver0.1310にて追加。追加したことで白色へ初期化できる。
         var_25[7] = 255;
         var_26[7] = 255;
@@ -179,7 +178,6 @@ function func004(this: any) {
         var_25[12] = 255;
         var_26[12] = 255;
         var_27[12] = 255;
-
         var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
         var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
         var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
@@ -219,7 +217,6 @@ function func004(this: any) {
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(id = 3, disp_width = null, disp_height = null, mode = null);
         yield picload("img_mychara.gif");
         
@@ -229,35 +226,32 @@ function func004(this: any) {
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(id = 5, disp_width = null, disp_height = null, mode = null);
         yield picload("img_map.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(id = 6, disp_width = null, disp_height = null, mode = null);
         yield picload("img_enemy1a.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
         buffer(id = 7, disp_width = 340, disp_height = 300, mode = null);        
+        
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(id = 8, disp_width = null, disp_height = null, mode = null);
         yield picload("img1.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(9);
         yield picload("img_item.gif");
 
         buffer(id = 10, disp_width = 340, disp_height = 200, mode = null);
+        
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(11);
         yield picload("img_stand0.gif");
         
@@ -269,56 +263,48 @@ function func004(this: any) {
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(13);
         yield picload("img_enemy4a.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(14);
         yield picload("img_wana.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(15);
         yield picload("img_enemy1b.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(18);
         yield picload("img4.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(1);
         yield picload("img_stand1.gif");
         
         buffer(id = 19, disp_width = 340, disp_height = 340, mode = null);
+        
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(20);
         yield picload("img_enemy4b.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(21);
         yield picload("img_enemy2a.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(22);
         yield picload("img_enemy2b.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(23);
         yield picload("img_comic.gif");
         
@@ -333,25 +319,21 @@ function func004(this: any) {
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(27);
         yield picload("img_enemy3a.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(28);
         yield picload("img_enemy3b.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(29);
         yield picload("img_stand3.gif");
         
         var_60++;
         yield func138(); // 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
-
         buffer(16);
         yield picload("img_stand2.gif");
         
@@ -643,7 +625,11 @@ function func008(this: any) {
             if (var_93 == 13) {
                 y_axis_map_image = 26; // Ver0.1402 9 → 26へ変更
             }
-            y_axis_map_image = 26; // Ver0.1402 22 → 26へ変更
+            //y_axis_map_image = 26; // Ver0.1402 22 → 26へ変更
+            // Ver0.1403にて追加。No = 5 なので、鉄獄
+            if (dangeon_number == 5 && current_floor == var_20) { // ケープカナベラル
+                y_axis_map_image = 26;
+            }
         }
         if (special_floor == 1) { // 虹村屋敷
             y_axis_map_image = 8;
@@ -720,10 +706,10 @@ function func008(this: any) {
         var_97 = 0;
         yield func562();
         yield func560();
-        yield func563();
+        yield func563(); // ダンジョン主指定処理
         // No = 5 なので、鉄獄(鉄の牢獄)
         if (dangeon_number == 5) {
-            yield func564();
+            yield func564(); // オーラ敵生成処理
         }
         yield func555();
         if (var_96 >= 1) {
@@ -735,14 +721,14 @@ function func008(this: any) {
         var_101 = 0;
         var_102 = 0;
         var_103 = 0;
-        var_104 = 0;
-        var_105 = 0;
+        var_104 = 0; // var_104 攻撃力が上がるフラグOFF
+        var_105 = 0; // var_105 攻撃を躱わしやすくなるフラグOFF
         var_106 = 0;
         count_buying_price = 0;
         var_108 = 0;
         var_109 = 0;
         var_110 = 0;
-        var_111 = 0;
+        var_111 = 0; // 命中率を上げるフラグOFF
         var_112 = 0;
         var_113 = 0;
         var_114 = 0;
@@ -752,18 +738,18 @@ function func008(this: any) {
         var_118 = 0;
         var_119 = 0;
         var_120 = 0;
-        var_121 = 0;
+        var_121 = 0; // var_121 罠が見えるようになるフラグOFF
         var_122 = 0;
         var_123 = 0;
         var_124 = 0;
         var_125 = 0;
         var_126 = 0;
-        var_127 = 0;
+        var_127 = 0; // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグOFF
         var_128 = 0;
         var_129 = 0;
         var_130 = 0;
         var_131 = 0;
-        var_132 = 0;
+        var_132 = 0; // 記憶DISC「ンドゥール」の効果発動フラグOFF
         var_133 = 0;
         var_134 = 0;
         var_135 = 0;
@@ -782,7 +768,7 @@ function func008(this: any) {
         var_148 = 0;
         var_149 = 0;
         var_150 = 0;
-        var_151 = 0;
+        var_151 = 0; // 敵時止め経過ターン初期化
         var_152 = 0;
         var_153 = 0;
         var_154 = 0;
@@ -797,14 +783,14 @@ function func008(this: any) {
         var_162 = 0;
         var_163 = 0;
         var_164 = 0;
-        var_165 = 0;
+        var_165 = 0; // 敵増えるフラグOFF
         var_166 = 0;
         var_167 = 0;
         var_168 = 0;
         var_169 = 0;
-        var_170 = 0;
+        var_170 = 0; // var_170 罠が見えるようになるフラグOFF(あくまでMAP上に見えるだけ。噴上裕也のDISC限定)
         var_171 = 0;
-        var_172 = 0;
+        var_172 = 0; // var_172 発動効果が向上するフラグOFF
         var_173 = 0;
         var_174 = 0;
         var_175 = 0;
@@ -868,10 +854,10 @@ function func008(this: any) {
         }
         // No = 2 なので、レクイエムの大迷宮
         if (dangeon_number == 2 && current_floor == 30) {
-            yield func117();
+            yield func117(); // 黄金の風BGM再生
         }
         if (dangeon_number == 3 && current_floor == 99) {
-            yield func116();
+            yield func116(); // ボヘミアンラプソディBGM再生
         }
         if (var_96 >= 1 && var_201 == var_204) {
             yield func074();
@@ -886,6 +872,10 @@ function func008(this: any) {
         }
         // No = 3 なので、ディアボロの試練
         if (dangeon_number == 3 && current_floor == 99) {
+            yield func075();
+        }
+        // Ver0.1403にて追加。No = 5 なので、鉄獄(鉄の牢獄)
+        if (dangeon_number == 5 && current_floor == var_20) {
             yield func075();
         }
         if (special_floor >= 1) {
@@ -923,15 +913,15 @@ function func009(this: any) {
             var_216 = 1;
             var_213 = 0;
             var_214 = 0;
-            DSPLAY(audio_id = 216);
-            yield func499();
+            DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
+            yield func499(); // ダンジョン動作処理?
         }
         if (var_71[var_66][var_67] == 0 && var_159 == 0) {
             var_216 = 1;
             var_213 = 0;
             var_214 = 0;
-            DSPLAY(audio_id = 216);
-            yield func499();
+            DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
+            yield func499(); // ダンジョン動作処理?
         }
         if (var_151 >= 1) {
             var_217 = 1;
@@ -1236,7 +1226,7 @@ function func009(this: any) {
             yield func015();
             return;
         }
-        if (var_261 == 1 && var_262 == 0) {
+        if (var_261 == 1 && var_262 == 0) { // var_262 == 0 なので、dangeon_number = 0 でなければ
             yield func044();
             return;
         }
@@ -1835,24 +1825,28 @@ function func014(this: any) {
                 }
                 if (var_80[var_274][var_67] != 0) {
                     var_280 = var_80[var_274][var_67];
+                    // var_121 罠が見えるようになるフラグON
                     if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_275][var_67] != 0) {
                     var_280 = var_80[var_275][var_67];
+                    // var_121 罠が見えるようになるフラグON
                     if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_66][var_277] != 0) {
                     var_280 = var_80[var_66][var_277];
+                    // var_121 罠が見えるようになるフラグON
                     if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
                 }
                 if (var_80[var_66][var_276] != 0) {
                     var_280 = var_80[var_66][var_276];
+                    // var_121 罠が見えるようになるフラグON
                     if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
@@ -1865,6 +1859,7 @@ function func014(this: any) {
                 }
                 if (var_80[var_275][var_277] != 0) {
                     var_280 = var_80[var_275][var_277];
+                    // var_121 罠が見えるようになるフラグON
                     if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
@@ -1877,6 +1872,7 @@ function func014(this: any) {
                 }
                 if (var_80[var_275][var_276] != 0) {
                     var_280 = var_80[var_275][var_276];
+                    // var_121 罠が見えるようになるフラグON
                     if (var_81[var_280][4] == 1 || var_121 == 1 || equip_disc[303] == 1 || equip_disc[315] == 1) {
                         var_278 = 1;
                     }
@@ -2100,17 +2096,17 @@ function func015(this: any) {
             }
         }
         // No = 0 なので、拠点(ホテル、亀、)
-        if (dangeon_number == 0 && var_66 == 14 && var_67 == 22 && var_236 != 15) {
+        if (dangeon_number == 0 && var_66 == 14 && var_67 == 22 && var_236 != 15) { // X軸14なのでロッコ・バロッコ所長?
             var_66 = var_236; // buffer指定用X座標
             var_67 = var_237; // buffer指定用Y座標
             yield func162();
             return;
         }
         // No = 0 なので、拠点(ホテル、亀、)
-        if (dangeon_number == 0 && var_66 == 12 && var_67 == 22 && var_199 == 8) {
+        if (dangeon_number == 0 && var_66 == 12 && var_67 == 22 && var_199 == 8) { // X軸12なので岸辺露伴？
             var_66 = var_236; // buffer指定用X座標
             var_67 = var_237; // buffer指定用Y座標
-            yield func736();
+            yield func736(); // 岸辺露伴に話しかけた時の初期化処理
             return;
         }
         var_241 = 0;
@@ -2995,6 +2991,7 @@ function func019(this: any) {
                     }
                 }
             }
+             // var_262 == 0 なので、dangeon_number = 0 でなければ
             if (equip_disc[315] == 1 && var_144 == 0 && var_262 == 0 && var_218 == 0) {
                 if (var_66 != var_236 || var_67 != var_237) {
                     var_364 = 0;
@@ -3035,7 +3032,7 @@ function func019(this: any) {
                         if (var_81[var_365][4] == 1) {
                             var_366 = 1;
                         }
-                        if (var_121 == 1) {
+                        if (var_121 == 1) { // var_121 罠が見えるようになるフラグがONであれば
                             var_366 = 1;
                         }
                         if (var_81[var_365][0] >= 70) {
@@ -3064,23 +3061,23 @@ function func019(this: any) {
                     yield func036();
                 }
             }
-            if (var_127 == 1) {
+            if (var_127 == 1) {  // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグがONの場合
                 var_167 = var_167 + 1;
                 if (var_167 == 20) {
                     var_167 = 0;
-                    var_127 = 0;
+                    var_127 = 0; // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグOFF
                     var_240 = 0;
                     yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                     yield func034(); // 盲目状態から復帰した時の表示
                 }
             }
-            if (var_132 >= 1) {
+            if (var_132 >= 1) {  // 記憶DISC「ンドゥール」の効果発動フラグがONの場合
                 var_132 = var_132 + 1;
                 if (var_132 >= 20) {
-                    var_132 = 0;
+                    var_132 = 0; // 記憶DISC「ンドゥール」の効果発動フラグOFF
                     var_240 = 0;
                     yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                    yield func035();
+                    yield func035(); // 記憶DISC「ンドゥール」の効果が切れた時の処理
                 }
             }
             if (var_159 >= 1) {
@@ -3294,21 +3291,21 @@ function func019(this: any) {
                 yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                 return;
             }
-            if (var_157 != 0) {
+            if (var_157 != 0) { // var_157 倍速移動フラグOFFでなければ
                 if (var_157 == 2) {
                     var_384 = 1;
                 }
-                if (var_157 == 1) {
+                if (var_157 == 1) { // var_157 倍速移動フラグON
                     var_384 = 2;
                 }
                 if (var_384 == 1) {
-                    var_157 = 1;
+                    var_157 = 1; // var_157 倍速移動フラグON
                 }
                 if (var_384 == 2) {
                     var_157 = 2;
                 }
             }
-            if (var_157 == 1) {
+            if (var_157 == 1) { // var_157 倍速移動フラグONであれば
                 var_158 = var_158 + 1;
                 if (equip_disc[396] == 1) { // No = 396 メイドインヘブンのdisc を装備していたら
                     var_158 = 0;
@@ -3316,7 +3313,7 @@ function func019(this: any) {
                 }
                 if (var_158 == 20) {
                     var_240 = 0;
-                    var_157 = 0;
+                    var_157 = 0; // var_157 倍速移動フラグOFF
                     var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
                     var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
                     var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
@@ -3359,9 +3356,10 @@ function func019(this: any) {
                         yield func706(); // トニオさんの店 レストラン・トラサルディーへ入店した時のメッセージ表示
                     }
                 }
-                if (var_262 == 0) {
+                if (var_262 == 0) { // var_262 == 0 なので、dangeon_number = 0 でなければ
                     var_112 = var_112 + 1;
                 }
+                // No = 396なのでメイドインヘヴンのDISCを装備している場合
                 if (equip_disc[396] == 1 && var_112 < 680) {
                     var_112 = var_112 + 2;
                 }
@@ -3378,41 +3376,45 @@ function func019(this: any) {
                 if (var_72[var_236][var_237] >= 1 && var_72[var_66][var_67] == 0 && var_85 == 0) {
                     yield func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
                 }
-                var_165 = var_165 + 1;
-                if (equip_disc[358] == 1) {
-                    var_165 = var_165 + 1;
+                var_165 = var_165 + 1; // 現在のフロアの敵の数にプラス1する
+                if (equip_disc[358] == 1) { // No = 358 敵増え早いの装備disc効果
+                    var_165 = var_165 + 1;// 現在のフロアの敵の数にさらにプラス1する
                 }
                 // No = 1 なので、ホテルの外
                 if (dangeon_number == 1 && current_floor == 12 && special_floor == 0 && var_386 == 0) {
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 if (var_190 == 1) {
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 // No = 3 なので、ディアボロの試練
                 if (dangeon_number == 3 && current_floor == 99) {
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
+                }
+                // Ver0.1403にて追加。No = 5 なので、鉄獄(鉄の牢獄)
+                if (dangeon_number == 5 && current_floor == var_20) {
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 if (special_floor == 1 && var_387 == 0) { // 虹村屋敷
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 if (var_375 == 1) {
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 if (special_floor == 3) { // 吉良屋敷
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 if (special_floor == 5) { // 没特殊階層「ビンの中」ボスは毒グモ
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 if (special_floor == 9) { // 幽霊部屋
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
-                if (var_262 == 1) {
-                    var_165 = 0;
+                if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
+                    var_165 = 0; // 敵増えるフラグOFF
                 }
                 if (var_165 >= 64 && var_97 < 50) {
-                    var_165 = 0;
+                    var_165 = 0; // 敵増えるフラグOFF
                     yield func556();
                 }
                 if (var_186 != 0) {
@@ -3421,7 +3423,7 @@ function func019(this: any) {
                         yield func693();
                     }
                 }
-                // No = 302 ハイウェイ・トゥ・ヘルを装備している時 
+                // No = 302 ハイウェイ・トゥ・ヘルを装備している時 && var_262 == 0 なので、dangeon_number = 0 でなければ
                 if (equip_disc[302] == 1 && var_262 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0) {
                     var_388 = rnd(200);
                     if (var_388 == 0) {
@@ -3439,7 +3441,7 @@ function func019(this: any) {
                         return;
                     }
                 }
-                // エンプレスの罠を踏んだ時の効果
+                // エンプレスの罠を踏んだ時の効果 && var_262 == 0 なので、dangeon_number = 0 でなければ
                 if (equip_disc[310] == 1 && var_262 == 0 && var_144 == 0 && var_218 == 0 && var_128 == 0 && var_219 == 0 && var_178 == 0 && var_139 == 0) {
                     var_388 = rnd(200);
                     if (var_388 == 0) {
@@ -3728,7 +3730,21 @@ function func019(this: any) {
             // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0 && var_66 == 11 && var_67 == 8) {
                 if (var_66 != var_236 || var_67 != var_237) {
-                    yield func824(); // ホテルの外の入り口へ入ろうとした際のメッセージ処理
+                    // Ver0.1403にて修正。ヴェネチアホテルのイベントフラグに応じて酒場への行けるように。
+                    if (var_759 == 0) {
+                        yield func824a(); // ホテルの外の入り口へ入ろうとした際のメッセージ処理
+                    }
+                    if (var_759 >= 1) {
+                        yield func824b(); // 酒場 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
+                    }
+                    return;
+                }
+            }
+            // Ver0.1403にて追加。No = 0 なので、拠点(ホテル、亀、)
+            if (dangeon_number == 0 && var_66 == 25 && var_67 == 32) {
+                if (var_66 != var_236 || var_67 != var_237) {
+                    // Ver0.1403にて修正。ヴェネチアホテルのイベントフラグに応じて酒場への行けるように。
+                    yield func824c(); // ホテルの部屋 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
                     return;
                 }
             }
@@ -3906,12 +3922,12 @@ function func020(this: any) {
             var_318 = 0;
             if (wallet < 1) {
                 if (equip_disc[396] == 0) {
-                    if (var_157 == 0) {
+                    if (var_157 == 0) { // var_157 倍速移動フラグOFFであれば
                         var_133 = 1;
                         var_397 = 0;
                     }
-                    if (var_157 != 0) {
-                        var_157 = 0;
+                    if (var_157 != 0) { // var_157 倍速移動フラグOFFでなければ
+                        var_157 = 0; // var_157 倍速移動フラグOFF
                         var_158 = 0;
                     }
                 }
@@ -4094,7 +4110,7 @@ function func020(this: any) {
                 var_427 = var_34;
             }
             if (var_80[var_423][var_424] != 0) {
-                yield func547();
+                yield func547(); // 敵が罠(キッスのシール、ソフトマシーンの仕込み)を踏んだ時の動作処理
             }
             if (var_83[var_421].Var18 == 0 && var_83[var_421].Var4 == 2 && var_83[var_421].Var9 == 0 && var_83[var_421].Var12 == 0 && var_83[var_421].Var13 == 0 && var_83[var_421].Var17 == 0 && var_83[var_421].Var23 == 0 && var_83[var_421].Var31 != 5 && var_83[var_421].Var0 != 164 && var_83[var_421].Var0 != 165) {
                 var_429 = 0;
@@ -4321,7 +4337,7 @@ function func020(this: any) {
             }
             var_421 = var_421 + 1;
         }
-        if (var_262 == 0 && var_151 == 0) {
+        if (var_262 == 0 && var_151 == 0) { // var_262 == 0 なので、dangeon_number = 0 でなければ
             yield func574();
         }
         return;
@@ -5071,6 +5087,7 @@ function func034(this: any) {
         return;
     });
 }
+// 記憶DISC「ンドゥール」の効果が切れた時の処理
 function func035(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(35);
@@ -5485,12 +5502,13 @@ function func045(this: any) {
             var_492 = 17;
         }
         if (special_floor == 9) { // 幽霊部屋
-            var_491 = 23;
-            var_492 = 13;
+            var_491 = 23; // X軸21
+            var_492 = 13; // Y軸13
         }
         var_73[var_491][var_492] = 1;
         var_200 = var_71[var_491][var_492];
-        // No = 5 なので、鉄獄(鉄の牢獄)
+        // Ver0.1403にてコメントアウト。おそらく全て無くして良い。No = 5 なので、鉄獄(鉄の牢獄)
+        /*
         if (dangeon_number == 5 && current_floor != 1) {
             for (let cnt2 = 0; true; ++cnt2) {
                 var_491 = rnd(var_33);
@@ -5506,9 +5524,9 @@ function func045(this: any) {
                     break;
                 }
             }
-            var_73[var_491][var_492] = 2;
-            var_202 = var_71[var_491][var_492];
-        }
+            // var_73[var_491][var_492] = 2; // Ver0.1403にてコメントアウト。上りの階段生成フラグ
+            //var_202 = var_71[var_491][var_492];
+        }*/
         return;
     });
 }
@@ -5577,8 +5595,8 @@ function func046(this: any) {
             var_492 = 17;
         }
         if (special_floor == 9) { // 幽霊部屋
-            var_491 = 21;
-            var_492 = 16;
+            var_491 = 21; // X軸21
+            var_492 = 16; // Y軸16
         }
         var_66 = var_491;
         var_67 = var_492;
@@ -6501,8 +6519,8 @@ function func058(this: any) {
             if (var_526 >= 1) {
                 mes("ディアボロの試練");
             }
-            if (var_524 >= 1) { // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
-                mes("" + var_21);
+            if (var_524 >= 1) { // 鉄獄(鉄の牢獄)へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
+                mes("鉄獄"); // Ver0.1403にて修正。mes("" + var_21) → mes("鉄獄")
             }
             if (var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
                 mes("一巡後の世界");
@@ -6563,41 +6581,43 @@ function func060(this: any) {
                 var_405 = 0;
                 var_344 = 0;
                 DSPLAY(audio_id = 212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                var_527 = 0;
+                var_527 = 0; // 階段を降りれなくなるフラグOFF
                 var_528 = 1;
                 for (let cnt3 = 0; cnt3 < var_97; ++cnt3) {
+                    // enemy_list = 29 グリーン・ディが同じ部屋に居る状態
                     if (var_83[var_528].Var0 == 29 && var_83[var_528].Var10 == var_201 && var_201 != 14 && var_83[var_528].Var20 == 0 && var_83[var_528].Var12 == 0 && var_83[var_528].Var13 == 0 && var_83[var_528].Var17 == 0 && var_83[var_528].Var23 == 0) {
                         if (nouryoku_disc_id != 206 && nouryoku_disc_id != 108 && var_130 != 1) {
-                            var_527 = 1;
+                            var_527 = 1; // グリーン・ディが同じ部屋に居る状態のフラグ?
                         }
                         if (var_73[var_66][var_67] == 2) {
-                            var_527 = 0;
+                            var_527 = 0; // 階段を降りれなくなるフラグOFF
                         }
                     }
+                    // enemy_list = 113 DIOが同じ部屋に居る状態
                     if (var_83[var_528].Var0 == 113 && var_83[var_528].Var10 == var_201 && var_201 != 14 && var_83[var_528].Var20 == 0 && var_83[var_528].Var12 == 0 && var_83[var_528].Var13 == 0 && var_83[var_528].Var17 == 0 && var_83[var_528].Var23 == 0) {
                         if (nouryoku_disc_id != 100 && nouryoku_disc_id != 111 && nouryoku_disc_id != 398) {
-                            var_527 = 2;
+                            var_527 = 2; // DIOが同じ部屋に居る状態のフラグ?
                         }
                     }
                     var_528 = var_528 + 1;
                 }
                 // No = 1 なので、ホテルの外
                 if (dangeon_number == 1 && current_floor == 12) {
-                    var_527 = 0;
+                    var_527 = 0; // 階段を降りれなくなるフラグOFF
                 }
                 // No = 2 なので、レクイエムの大迷宮
                 if (dangeon_number == 2 && current_floor == 30) {
-                    var_527 = 0;
+                    var_527 = 0; // 階段を降りれなくなるフラグOFF
                 }
                 // No = 3 なので、ディアボロの試練
                 if (dangeon_number == 3 && current_floor == 99) {
-                    var_527 = 0;
+                    var_527 = 0; // 階段を降りれなくなるフラグOFF
                 }
                 // No = 5 なので、鉄獄(鉄の牢獄)
                 if (dangeon_number == 5 && current_floor == var_20) {
-                    var_527 = 0;
+                    var_527 = 0; // 階段を降りれなくなるフラグOFF
                 }
-                if (var_527 == 1) {
+                if (var_527 == 1) { // グリーン・ディが同じ部屋に居る状態のフラグ?がONであれば
                     comments_row1 = "";
                     comments_row2 = "";
                     var_295 = "";
@@ -6615,7 +6635,6 @@ function func060(this: any) {
                     yield func047();
                     gsel(19);
                     color(10, 100, 10);
-    
                     boxf(left = 0, top1 = 0, right = 340, bottom = 340);
                     gsel(0);
                     var_529 = 1;
@@ -6626,7 +6645,7 @@ function func060(this: any) {
                     yield func009(); // ゲーム開始後の基本画面 (メニュー画面を閉じたりすると、かならずfunc009を呼び出す)
                     return;
                 }
-                if (var_527 == 2) {
+                if (var_527 == 2) { // DIOが同じ部屋に居る状態のフラグ?がONの場合
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -6824,7 +6843,7 @@ function func060(this: any) {
                     var_373 = 0;
                     special_floor = 0;
                     var_532 = 1;
-                    var_356 = 302;
+                    var_356 = 302; // クリアした時の死因指定
                     var_533 = 100000;
                     if (var_526 == 0) {
                         var_526 = 1; // DIO&プッチ神父出現フラグ(var_526 >= 1)
@@ -6872,7 +6891,7 @@ function func060(this: any) {
                     var_373 = 0;
                     special_floor = 0;
                     var_532 = 1;
-                    var_356 = 303;
+                    var_356 = 303; // クリアした時の死因指定
                     var_533 = 1000000;
                     if (var_537 == 0) {
                         var_537 = 1;
@@ -6885,7 +6904,8 @@ function func060(this: any) {
                     return;
                 }
                 // No = 5 なので、鉄獄(鉄の牢獄)
-                if (dangeon_number == 5 && current_floor == var_20 && var_73[var_66][var_67] == 1) {
+                //if (dangeon_number == 5 && current_floor == var_20 && var_73[var_66][var_67] == 1) {
+                if (dangeon_number == 5 && current_floor == var_20) {
                     var_373 = 5;
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         yield func337(); // メッセージ関係呼び出し
@@ -6909,7 +6929,7 @@ function func060(this: any) {
                     var_373 = 0;
                     special_floor = 0;
                     var_532 = 1;
-                    var_356 = 314;
+                    var_356 = 314; // クリアした時の死因指定
                     var_533 = 1000000;
                     if (var_538 == 0) {
                         var_538 = 1;
@@ -7104,16 +7124,15 @@ function func063(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(63);
         color(0, 0, 0);
-
         gmode(mode = 4, data2 = null, data3 = null, alpha = 100);
         pos(12, 37);
-        if (var_262 == 0) {
+        if (var_262 == 0) { // var_262 == 0 なので、dangeon_number = 0 でなければ
             gcopy(12, 0, 0, 113, 53);
         }
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             gcopy(12, 0, 0, 203, 113);
         }
-        if (var_262 == 0) {
+        if (var_262 == 0) { // var_262 == 0 なので、dangeon_number = 0 でなければ
             color(255, 255, 255);
             line(15, 39, 120, 39);
             line(15, 86, 120, 86);
@@ -7124,7 +7143,7 @@ function func063(this: any) {
             pset(15, 85);
             pset(121, 85);
         }
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             color(255, 255, 255);
             line(15, 39, 210, 39);
             line(15, 146, 210, 146);
@@ -7135,11 +7154,10 @@ function func063(this: any) {
             pset(15, 145);
             pset(211, 145);
         }
-
         font(font_type = "ＭＳ Ｐゴシック", font_size = 16, font_style = 1);
         color(255, 255, 255);
         pos(33, 47);
-        if (var_262 == 0) {
+        if (var_262 == 0) { // var_262 == 0 なので、dangeon_number = 0 でなければ
             if (var_73[var_66][var_67] == 1) {
                 var_543 = 0;
                 // No = 1 なので、ホテルの外
@@ -7172,7 +7190,6 @@ function func063(this: any) {
             }
         }
         color(255, 255, 255);
-
         font("MS ゴシック", 16, 1);
         pos(var_245, var_246);
         mes(">");
@@ -7301,8 +7318,8 @@ function func066(this: any) {
         var_245 = 19;
         var_246 = 45;
         var_546 = 1;
-        var_547 = 1;
-        var_548 = 1;
+        var_547 = 1; // 亀のジッパーで捨てるフラグON
+        var_548 = 1; // 選択肢処理フラグON
         yield func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
     });
@@ -7402,7 +7419,7 @@ function func067(this: any) {
             yield func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
             var_560 = 1;
             var_561 = 5;
-            var_562 = 5;
+            var_562 = 0;
             if (var_559 == 0) {
                 yield func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
             }
@@ -8509,6 +8526,12 @@ function func076(this: any) {
                     // 絵文字:亀の中
                     gcopy(34, 640, 720, 340, 40);
                 }
+                // Ver0.1403にて追加。
+                if (var_595 == 2) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標720から切り取り長さ X方向340、Y方向40
+                    // 絵文字:酒場
+                    gcopy(34, 980, 880, 340, 40);
+                }
                 if (var_595 == 3) {
                     // buffer(34)は"img_syageki.gif"。X座標640、Y座標1200から切り取り長さ X方向340、Y方向40
                     // 絵文字:ローマ・ティベレ河
@@ -8584,8 +8607,8 @@ function func076(this: any) {
                 }
                 if (current_floor == var_20) {
                     // buffer(34)は"img_syageki.gif"。X座標1000、Y座標760から切り取り長さ X方向340、Y方向40
-                    // 青色空白:不明
-                    gcopy(34, 1000, 760, 340, 40);
+                    // 絵文字:ケープ・カナベラル
+                    gcopy(34, 980, 840, 360, 40);
                 }
             }
             if (dangeon_number == 99) {
@@ -8682,34 +8705,44 @@ function func077(this: any) {
         dbgprt(77);
         if (var_599 == 0) {
             pos(0, 0);
-
             gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 1) {
             pos(0, 0);
-    
             gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 2) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 3) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 80);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 4) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 40);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         if (var_599 == 5) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 20);
+            // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
+            // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
         }
         gmode(mode = 2, data2 = null, data3 = null, alpha = null);
@@ -8718,12 +8751,24 @@ function func077(this: any) {
             // No = 0 なので、拠点(ホテル、亀、)
             if (dangeon_number == 0) {
                 if (var_595 == 0) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標760から切り取り長さ X方向340、Y方向40
+                    // 絵文字:ヴェネチアホテル
                     gcopy(34, 640, 760, 340, 40);
                 }
                 if (var_595 == 1) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標720から切り取り長さ X方向340、Y方向40
+                    // 絵文字:亀の中
                     gcopy(34, 640, 720, 340, 40);
                 }
+                // Ver0.1403にて追加。
+                if (var_595 == 2) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標720から切り取り長さ X方向340、Y方向40
+                    // 絵文字:酒場
+                    gcopy(34, 980, 880, 340, 40);
+                }
                 if (var_595 == 3) {
+                    // buffer(34)は"img_syageki.gif"。X座標640、Y座標1200から切り取り長さ X方向340、Y方向40
+                    // 絵文字:ローマ・ティベレ河
                     gcopy(34, 640, 1200, 340, 40);
                 }
             }
@@ -8838,7 +8883,6 @@ function func078(this: any) {
         if (var_373 == 1) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 255);
-            
             // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
             // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
@@ -8846,7 +8890,6 @@ function func078(this: any) {
         if (var_373 == 2) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 200);
-
             // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
             // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
@@ -8854,7 +8897,6 @@ function func078(this: any) {
         if (var_373 == 3) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 160);
-            
             // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
             // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
@@ -8862,7 +8904,6 @@ function func078(this: any) {
         if (var_373 == 4) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 110);
-
             // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
             // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
@@ -8870,7 +8911,6 @@ function func078(this: any) {
         if (var_373 == 5) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 80);
-
             // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
             // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
@@ -8878,7 +8918,6 @@ function func078(this: any) {
         if (var_373 == 6) {
             pos(0, 0);
             gmode(mode = 4, data2 = null, data3 = null, alpha = 50);
-
             // buffer(8)は"img1.gif"。X座標400、Y座標350から切り取り長さ X方向340、Y方向340
             // 絵:真っ黒な正方形。ロード中の黒か?
             gcopy(8, 400, 350, 340, 340);
@@ -10032,7 +10071,7 @@ function func080(this: any, is_key_reset = true) {
                     var_637 = 1;
                     var_641 = Math.floor((var_638 - 340) / 2);
                     var_642 = Math.floor((var_639 - 340) / 2);
-                    bgscr(0, 680, 680, 2, var_641, var_642, 340, 340);
+                    bgscr(0, 340, 340, 2, var_641, var_642, 340, 340);
                     gsel(0, 2);
                     for (let cnt3 = 0; true; ++cnt3) {
                         conf_keyon = getkey(123); // キーF12入力確認
@@ -10112,7 +10151,7 @@ function func080(this: any, is_key_reset = true) {
                 if (var_407 == 0 && conf_keyon == 1 && var_637 == 4) {
                     var_637 = 0;
                     gsel(37, -1);
-                    screen_(0, 680, 680, 2);
+                    screen_(0, 340, 340, 2);
                 
                     SetWindowLongA(hwnd, -8, var_15);
                     if (var_640 == 0) {
@@ -10122,7 +10161,7 @@ function func080(this: any, is_key_reset = true) {
                     if (var_640 == 1) {
                         var_640 = 0;
                         var_10 = 1;
-                        width(680, 680);
+                        width(340, 340);
                     }
             
                     gsel(0, 1);
@@ -11788,6 +11827,7 @@ function func095(this: any) {
         if (var_83[var_673].Var0 == 95 || var_83[var_673].Var0 == 121 || var_83[var_673].Var0 == 126) {
             se_file_name = 176;
         }
+        // No = 113 DIO、No = 132 レクイエムジョルノ
         if (var_83[var_673].Var0 == 113 || var_83[var_673].Var0 == 132) {
             se_file_name = 121;
         }

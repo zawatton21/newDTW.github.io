@@ -54,7 +54,7 @@ function item560(this: any) {
 // No = 561  空き のdiscの効果
 function item561(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
@@ -81,7 +81,7 @@ function item562(this: any) {
             item_message1 = "これ以上成長できなかった…";
             return;
         }
-        DSPLAY(audio_id = 142);
+        DSPLAY(audio_id = 142); // レベルアップした時の効果音
         var_568 = var_948[current_level];
         yield func681();
         var_2201 = 0;
@@ -159,11 +159,11 @@ function item564(this: any) {
         for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
             yield func337(); // メッセージ関係呼び出し
         }
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
-        var_170 = 1;
+        var_170 = 1; // var_170 罠が見えるようになるフラグ(あくまでMAP上に見えるだけ。噴上裕也のDISC限定)
         yield func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         return;
     });
@@ -228,7 +228,7 @@ function item566(this: any) {
         }
         var_271 = 0;
         var_1297 = 0;
-        var_105 = 1;
+        var_105 = 1; // var_105 攻撃を躱わしやすくなるフラグON
         return;
     });
 }
@@ -380,9 +380,9 @@ function item569(this: any) {
         }
         var_271 = 0;
         var_1297 = 0;
-        var_104 = 1;
+        var_104 = 1; // var_104 攻撃力が上がるフラグON
         if (var_109 == 1) {
-            var_104 = 0;
+            var_104 = 0; // var_104 攻撃力が上がるフラグOFF
             var_109 = 0;
         }
         return;
@@ -478,7 +478,7 @@ function item571(this: any) {
         }
         var_1264 = 0;
         var_70 = 0;
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
@@ -736,7 +736,7 @@ function item572(this: any) {
         }
         var_271 = 0;
         var_1297 = 0;
-        var_111 = 1;
+        var_111 = 1; // 命中率を上げるフラグON
         return;
     });
 }
@@ -747,7 +747,7 @@ function item573(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_1264 = 0;
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…"; // var_262 = 1でなければ "ｱｲﾃﾑの場所がわかった！"
             return;
         }
@@ -764,7 +764,7 @@ function item574(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_1264 = 0;
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
@@ -911,7 +911,7 @@ function item578(this: any) {
         }
         var_1264 = 0;
         if (var_133 == 0) {
-            var_157 = 1;
+            var_157 = 1; // var_157 倍速移動フラグON
             var_158 = 0;
     
             DSPLAY(audio_id = 154);
@@ -929,7 +929,7 @@ function item579(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_1264 = 0;
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
@@ -945,7 +945,7 @@ function item579(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_1243 = 0;
-        DSPLAY(audio_id = 216);
+        DSPLAY(audio_id = 216); // ワープして逃げる時の効果音
         var_374 = 1;
         var_1264 = 0;
         var_774 = 160;
@@ -958,7 +958,7 @@ function item579(this: any) {
         var_1576 = 0;
         var_271 = 0;
         var_374 = 0;
-        yield func499();
+        yield func499(); // ダンジョン動作処理?
         return;
     });
 }
@@ -969,7 +969,7 @@ function item580(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_1264 = 0;
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
@@ -1056,7 +1056,7 @@ function item583(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_1264 = 0;
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
@@ -1162,8 +1162,8 @@ function item584(this: any) {
         var_271 = 0;
         var_1297 = 0;
         var_109 = 1;
-        if (var_104 == 1) {
-            var_104 = 0;
+        if (var_104 == 1) { // var_104 攻撃力が上がるフラグがONであれば
+            var_104 = 0; // var_104 攻撃力が上がるフラグOFF
             var_109 = 0;
         }
         DSPLAY(audio_id = 164);
@@ -1287,7 +1287,7 @@ function item586(this: any) {
             for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                 yield func337(); // メッセージ関係呼び出し
             }
-            DSPLAY(audio_id = 142);
+            DSPLAY(audio_id = 142); // レベルアップした時の効果音
             var_1299 = 9;
             var_271 = 1;
             var_1297 = 1;
@@ -1514,7 +1514,7 @@ function item589(this: any) {
         }
         var_271 = 0;
         var_1297 = 0;
-        var_172 = 1;
+        var_172 = 1; // var_172 発動効果が向上するフラグON
         return;
     });
 }
@@ -1526,10 +1526,61 @@ function item590(this: any) {
         return;
     });
 }
-// No = 591 ポコロコのdiscの効果
+// Ver0.1403にて追加。No = 591 ポコロコのdiscの効果
 function item591(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
-
+        for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
+            yield func337(); // メッセージ関係呼び出し
+        }
+        var_1264 = 0;
+        yield func094(); // メッセージ送りの際の効果音
+        comments_row1 = "";
+        comments_row2 = "";
+        var_295 = "";
+        comments_row1a = "";
+        comments_row2a = "";
+        var_298 = "";
+        var_299 = 0;
+        var_1073 = rnd(4);
+        if (var_1073 == 0) {
+            comments_row1 = "驚きだよォォ";
+            comments_row2 = "YEEEEHAAHHHッ！";
+        }
+        if (var_1073 == 1) {
+            comments_row1 = "驚きだよォォ";
+            comments_row2 = "YEEEEHAAHHHッ！";
+        }
+        if (var_1073 == 2) {
+            comments_row1 = "驚きだよォォ";
+            comments_row2 = "YEEEEHAAHHHッ！";
+        }
+        if (var_1073 == 3) {
+            comments_row1 = "驚きだよォォ";
+            comments_row2 = "YEEEEHAAHHHッ！";
+        }
+        var_198 = 1;
+        var_300 = 0;
+        var_25_x = var_25[7]; // Var0.1310で値修正 1 → 7
+        var_26_x = var_26[7]; // Var0.1310で値修正 1 → 7
+        var_27_x = var_27[7]; // Var0.1310で値修正 1 → 7
+        yield func047();
+        for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
+            yield func337(); // メッセージ関係呼び出し
+        }
+        // 非常にラッキーなのをアピールしたいので、レベルアップした時の効果音を何回も鳴らしたい
+        DSPLAY(audio_id = 142); // レベルアップした時の効果音
+        var_1024 = 1; // 次の階の出現アイテム数＋6個するフラグON
+        var_111 = 1; // var_111 命中率を上げるフラグON
+        var_157 = 1; // var_157 倍速移動フラグON
+        var_105 = 1; // var_105 攻撃を躱わしやすくなるフラグON  
+        var_104 = 1; // var_104 攻撃力が上がるフラグON
+        if (var_109 == 1) {
+            var_104 = 0; // var_104 攻撃力が上がるフラグOFF
+            var_109 = 0;
+        }
+        var_172 = 1; // var_172 発動効果が向上するフラグON
+        var_121 = 1; // var_121 罠が見えるようになるフラグON
+        return;
     });
 }
 // No = 592 ジョニィのdiscの効果
@@ -1721,12 +1772,12 @@ function item604(this: any) {
         var_350 = var_567;
         item_message1 = "最大満腹度が" + var_567 + "になった。";
         if (equip_disc[396] == 0) {
-            if (var_157 == 0) {
+            if (var_157 == 0) { // var_157 倍速移動フラグOFFであれば
                 var_133 = 1;
                 var_397 = 0;
             }
-            if (var_157 != 0) {
-                var_157 = 0;
+            if (var_157 != 0) { // var_157 倍速移動フラグOFFでなければ
+                var_157 = 0; // var_157 倍速移動フラグOFF
                 var_158 = 0;
             }
             item_message2 = "お腹がいっぱいで動きが重い…";
@@ -1818,10 +1869,10 @@ function item632(this: any) {
             yield func337(); // メッセージ関係呼び出し
         }
         var_1256 = 0;
-        var_127 = 0;
+        var_127 = 0;  // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグOFF
         var_132 = 0;
         var_119 = 1;
-        var_121 = 1;
+        var_121 = 1; // var_121 罠が見えるようになるフラグON
         var_120 = 1;
         if (shageki_disc_id == 401) {
             yield func429();
@@ -2914,7 +2965,7 @@ function item723(this: any) {
         for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
             yield func337(); // メッセージ関係呼び出し
         }
-        if (var_262 == 1) {
+        if (var_262 == 1) { // var_262 == 1 なので、dangeon_number = 0 であれば
             item_message1 = "しかし何も起こらなかった…";
             return;
         }
