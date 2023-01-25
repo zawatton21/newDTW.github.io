@@ -648,8 +648,8 @@ let var_557 :any;
 let var_558 :any;
 let var_559 :any;
 let var_560 :any;
-let var_561 :any;
-let var_562 :any;
+let var_561 :number; // マップX軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
+let var_562 :number; // マップY軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
 let var_563 :any;
 let var_564 :any;
 let var_565 :any;

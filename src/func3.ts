@@ -718,7 +718,7 @@ function func328(this: any) {
             }
             gcopy(19, 0, 0, 340, 340);
         }
-        // Ver0.1403にて削除。亀の中から外へ出る場所の光表示処理。
+        // Ver0.1403にて削除。亀の中から外へ出る場所の光表示処理。func163へ移動。
         return;
     });
 }
@@ -6704,6 +6704,7 @@ function func353(this: any) {
         return;
     });
 }
+
 function func354(this: any) {
     return __awaiter(this, void 0, void 0, function* () {
         dbgprt(354);
