@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <script src="lib/jscolor.js"></script>
+    <script>
+        // ElectronからのipcRendererの取得
+        const { ipcRenderer } = require('electron');
+    </script>
+</head>
+<body>
+
+<input id="colorPickerInput" style="display:none;"> <!-- jscolorが対象とするinput要素 -->
+
+<script>
+    var scale = 1;
+
+    // jscolorによってカラーピッカーを初期化
+    const inputElement = document.getElementById('colorPickerInput');
+    const picker = new jscolor(inputElement, {
+        // 以下はあなたの設定に基づいています
+        onInput: 'update(this)',
+        position: 'right', width: 281, height: 225,
+        palette: '#fff #fcd #fdc #ffc #dfc #dff #cdf #dcf #ccc', 
+        paletteCols: 9, paletteHeight: 25,
+        padding: 10, sliderSize: 25, borderRadius: 5,
+        borderWidth: 0, controlBorderWidth: 1, pointerBorderWidth: 2,
+        borderColor: '#000', controlBorderColor: '#AAA', 
+        backgroundColor: '#F3F3F3', shadowColor: 'rgba(0,0,0,.4)',
+        closeButton: true, closeText: 'OK', buttonColor: '#333',
+
+    });
+
+    function update(pickerInstance) {
+        // この部分でメインウィンドウに色の値を送り返すことができます
+        const color = {
+            r: pickerInstance.channel('R'),
+            g: pickerInstance.channel('G'),
+            b: pickerInstance.channel('B')
+        };
+
+        // ElectronのipcRendererを使用してメインウィンドウに色のデータを送信
+        ipcRenderer.send('color-selected', color);
+    }
+    
+    // カラーピッカーを即座に表示
+    picker.show();
+
+    // Add an event listener to listen for the 'colorPickerClosed' event
+    window.addEventListener('colorPickerClosed', function() {
+        // Close the current window using ipcRenderer
+        ipcRenderer.send('close-color-picker');
+    });
+</script>
+</body>
+</html>

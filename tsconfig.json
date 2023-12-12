@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ES2022",
+    "target": "ES2022",
     "noImplicitAny": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "moduleResolution": "node",
     "sourceMap": true,
-    "outDir": "build",
+    "outDir": "public/",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"]
@@ -14,5 +15,6 @@
     "types": [
       "node"
   ]
-  }
+  },
+  "include": ["./src/**/*.ts"] 
 }

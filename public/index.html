@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style type="text/css">
+        body, canvas, #pad {
+            background-color: rgb(255, 255, 255);
+            transform-origin: 0 0; /* 左上を変形の原点として指定 */
+            margin: 0;
+            overflow: hidden;
+        }
+        #pad {
+            position: absolute;
+        }
+        canvas {
+            max-width: 100%;
+            user-select: none;
+            transform-origin: 0 0; /* 左上を変形の原点として指定 */
+        }
+    </style>	
+</head>
+
+<body>
+    <canvas id="c0"></canvas>
+    <div id="pad">
+        <font size="1">
+            <iframe id="bgm" width="48" height="27" src="" frameborder="0"></iframe>
+            <a id="bgmlink" href="" target="_blank"></a>
+        </font>
+    </div>
+	<script src="lib/jscolor.js"></script>
+    <script id="return_r" value=""></script>
+    <script id="return_g" value=""></script>
+    <script id="return_b" value=""></script>
+    <script src="bundle/main.js"></script>
+    <script>
+        var scale = 1;
+        var change_scale = {
+            "container": 340,
+            "percent": 1,
+            "function": function() {
+                "use strict";
+                var scaleValue = document.documentElement.clientWidth;
+                scaleValue = scaleValue / change_scale.container;
+                var scaleStyle = "scale(" + scaleValue + ")";
+                document.getElementById("c0").style.transform = scaleStyle;
+                document.getElementById("pad").style.transform = scaleStyle;
+            }
+        };
+        window.addEventListener("resize", function(event) {
+            "use strict";
+            change_scale.function();
+
+            const canvasElement = document.getElementById("c0");
+            const context = canvasElement.getContext("2d");
+            context.clearRect(0, 0, canvasElement.width, canvasElement.height);
+        });
+
+        const { ipcRenderer } = require('electron');
+
+        //document.getElementById('showColorPicker').addEventListener('click', () => {
+        //    ipcRenderer.send('show-color-picker');
+        //});
+
+        ipcRenderer.on('color-changed', (event, color) => {
+			console.log('Received color:', color);  // デバッグ用のログ
+            document.getElementById("return_r").value = color.r;
+            document.getElementById("return_g").value = color.g;
+            document.getElementById("return_b").value = color.b;
+        });
+
+        function update(picker) {
+            let color_r = picker.channel('R');
+            let color_g = picker.channel('G');
+            let color_b = picker.channel('B');
+            document.getElementById("return_r").value = color_r;
+            document.getElementById("return_g").value = color_g;
+            document.getElementById("return_b").value = color_b;
+        }
+        //jscolor.trigger('input');
+    </script>
+</body>
+
+</html>

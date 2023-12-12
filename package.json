@@ -2,12 +2,12 @@
   "name": "newdtw",
   "version": "1.0.0",
   "description": "Rebuild Diavolo The Wanderer",
-  "main": "build/main.js",
+  "main": "public/main/main.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "tsc && webpack",
+    "watch": "webpack -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron build/main.js",
+    "start": "npm run build && electron public/main/main.js",
     "dist": "electron-builder"
   },
   "repository": "https://github.com/zawatton21/newDTW.git",
@@ -23,17 +23,26 @@
   "author": "Zawa-Ton",
   "license": "CC0-1.0",
   "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
     "@types/node": "^18.11.8",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "babel-loader": "^9.1.3",
     "electron": "^22.0.0-alpha.6",
-    "electron-builder": "^23.6.0",
+    "electron-builder": "^24.0.0",
     "electron-store": "^8.1.0",
     "eslint": "^7.32.0",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "electron-log": "^4.4.8",
+    "msgpack-lite": "^0.1.26",
+    "ts-loader": "^9.4.4",
+    "ts2c": "^2.2.9",
     "yargs": "^7.1.2",
     "yargs-parser": "^5.0.0"
   },
@@ -44,7 +53,10 @@
       "output": "dist"
     },
     "files": [
-      "build/*",
+      "public/index.html",
+      "public/main/*",
+      "public/bundle/*",
+      "public/lib/*",
       "assets/**/*",
       "package.json",
       "package-lock.json"
