@@ -22,7 +22,7 @@
 !*.eslintrc
 !*.md
 !new_deploy.py
-
+!*.cjs
 
 
 # 【3】 最後に常に除外するファイルやフォルダを禁止

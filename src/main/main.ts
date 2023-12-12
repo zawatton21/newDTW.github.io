@@ -26,9 +26,9 @@ const createWindow = () => {
   
   // and load the index.html of the app.
   // electronでアプリをビルドする時はこちらを有効
-  //mainWindow.loadFile(path.join(__dirname, 'public/index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'public/index.html'));
   // electronでの検証用
-  mainWindow.loadFile('../index.html');
+  //mainWindow.loadFile('../index.html');
   
   mainWindow.setMenuBarVisibility(false); // メニューバーを非表示
   // mainWindow.setMenuBarVisibility(true); // メニューバーを表示
