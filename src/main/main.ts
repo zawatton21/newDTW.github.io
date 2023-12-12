@@ -25,10 +25,7 @@ const createWindow = () => {
   mainWindow.setAspectRatio(340 / 340); // macは340/340、windowsは 320/334
   
   // and load the index.html of the app.
-  // electronでアプリをビルドする時はこちらを有効
-  //mainWindow.loadFile(path.join(__dirname, 'public/index.html'));
-  // electronでの検証用
-  mainWindow.loadFile('../index.html');
+  mainWindow.loadFile(path.join(__dirname, '../index.html'));
   
   mainWindow.setMenuBarVisibility(false); // メニューバーを非表示
   // mainWindow.setMenuBarVisibility(true); // メニューバーを表示

@@ -54,6 +54,7 @@
     },
     "files": [
       "public/index.html",
+      "public/colorPicker.html",
       "public/main/*",
       "public/bundle/*",
       "public/lib/*",
