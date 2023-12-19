@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
 async function func839(this: any) {
@@ -152,7 +153,7 @@ async function func839(this: any) {
                 if (Gvar.var_3198 == 1 && Gvar.var_759 == 0) {
                     Gvar.var_3198 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
+                    await Dung.func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
                     return;
                 }
                 // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
@@ -409,14 +410,14 @@ async function func839(this: any) {
                 if (Gvar.var_3198 == 1 && Gvar.var_759 >= 1) {
                     Gvar.var_3198 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
+                    await Dung.func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
                     return;
                 }
                 // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
                 if (Gvar.go_to_hotel == 1 && Gvar.var_759 >= 1) {
                     Gvar.go_to_hotel = 0; // Ver0.1403にて追加。酒場からホテルの部屋に戻る際のメッセージフラグON
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
+                    await Dung.func825();// ダンジョン「ホテルの外」へ入った時の初期化処理
                     return;
                 }
                 if (Gvar.var_3199 == 1) {

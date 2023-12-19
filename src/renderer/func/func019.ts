@@ -1,7 +1,9 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
+// 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
 async function func019(this: any) {
         Adap.dbgprt(19);
         if (Gvar.dungeon_number != 0) {
@@ -653,7 +655,7 @@ async function func019(this: any) {
                     Gvar.dungeon5_floor = Gvar.current_floor;
                 }
                 Gvar.special_floor = 0;
-                await Func.func059(); // ホテルの外の最終フロア、エンヤホテル以外確定処理
+                await Dung.func059(); // ホテルの外の最終フロア、エンヤホテル以外確定処理
                 Gvar.var_372 = 0;
                 Gvar.var_217 = 0;
                 Gvar.var_205 = 1;

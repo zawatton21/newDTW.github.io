@@ -1,13 +1,14 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 async function func627(this: any) {
         Adap.dbgprt(627);
         Gvar.var_977 = Adap.dim(20);
         // No = 1 なので、ホテルの外
         if (Gvar.dungeon_number == 1) {
-            await Func.func628(); // ホテルの外のボス以外の出現敵設定
+            await Dung.func628(); // ホテルの外のボス以外の出現敵設定
         }
         // No = 2 なので、レクイエムの大迷宮
         if (Gvar.dungeon_number == 2) {

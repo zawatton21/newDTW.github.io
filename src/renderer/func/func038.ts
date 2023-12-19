@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// ヨーヨーマッ関係の処理
 async function func038(this: any) {
         Adap.dbgprt(38);
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {

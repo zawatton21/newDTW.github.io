@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 async function func060(this: any) {
         Adap.dbgprt(60);
@@ -466,7 +467,7 @@ async function func060(this: any) {
                     Gvar.current_floor = Gvar.current_floor - 1;
                 }
                 Gvar.special_floor = 0;
-                await Func.func059(); // ホテルの外の最終フロア、エンヤホテル以外確定処理
+                await Dung.func059(); // ホテルの外の最終フロア、エンヤホテル以外確定処理
                 Gvar.var_205 = 1;
                 await Func.func231();
                 if (Gvar.var_407 == 1) {
