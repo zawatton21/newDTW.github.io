@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Map from '../map/index'
 
 async function func244(this: any) {
         Adap.dbgprt(244);
@@ -88,91 +89,91 @@ async function func244(this: any) {
         if (Gvar.special_map_id == 0) {
             Gvar.var_1073 = Adap.rnd(3);
             if (Gvar.var_1073 == 0 || Gvar.var_1073 == 1) {
-                await Func.func300(); // 大部屋ダンジョンマップ
+                await Map.func300(); // 大部屋ダンジョンマップ
             }
             if (Gvar.var_1073 == 2) {
-                await Func.func301(); // 大部屋ダンジョンマップ(水床あり)
+                await Map.func301(); // 大部屋ダンジョンマップ(水床あり)
             }
         }
         if (Gvar.special_map_id == 1) {
-            await Func.func303();
+            await Map.func303();
         }
         if (Gvar.special_map_id == 2) {
-            await Func.func304();
+            await Map.func304();
         }
         if (Gvar.special_map_id == 3) {
-            await Func.func305();
+            await Map.func305();
         }
         if (Gvar.special_map_id == 4) {
-            await Func.func306();
+            await Map.func306();
         }
         if (Gvar.special_map_id == 5) {
-            await Func.func307();
+            await Map.func307();
         }
         if (Gvar.special_map_id == 6) {
-            await Func.func319();
+            await Map.func319();
         }
         if (Gvar.special_map_id == 7) {
-            await Func.func308();
+            await Map.func308();
         }
         if (Gvar.special_map_id == 8) {
-            await Func.func318();
+            await Map.func318();
         }
         if (Gvar.special_map_id == 9) {
-            await Func.func320();
+            await Map.func320();
         }
         if (Gvar.special_map_id == 10) {
-            await Func.func321();
+            await Map.func321();
         }
         if (Gvar.dungeon_number != 5) {
             if (Gvar.special_map_id == 11) {
-                await Func.func311();  // 広大な砂漠のダンジョンマップ
+                await Map.func311();  // 広大な砂漠のダンジョンマップ
                 Gvar.special_floor = 7; // 広大な砂漠
             }
             if (Gvar.special_map_id == 12) {
-                await Func.func302(); // 幻覚の迷宮のダンジョンマップ
+                await Map.func302(); // 幻覚の迷宮のダンジョンマップ
                 Gvar.special_floor = 8; // 幻覚の迷宮
             }
             if (Gvar.special_map_id == 13) {
-                await Func.func316(); // 幽霊部屋のダンジョンマップ
+                await Map.func316(); // 幽霊部屋のダンジョンマップ
                 Gvar.special_floor = 9;
             }
         }
         if (Gvar.special_map_id == 111) {
-            await Func.func309(); // エンヤホテルのダンジョンマップ
+            await Map.func309(); // エンヤホテルのダンジョンマップ
         }
         if (Gvar.special_map_id == 112) {
-            await Func.func310(); // 杜王町埠頭のダンジョンマップ
+            await Map.func310(); // 杜王町埠頭のダンジョンマップ
         }
         if (Gvar.special_map_id == 113) {
-            await Func.func311(); // 広大な砂漠のダンジョンマップ
+            await Map.func311(); // 広大な砂漠のダンジョンマップ
         }
         if (Gvar.special_map_id == 114) {
-            await Func.func312(); // 虹村屋敷のダンジョンマップ
+            await Map.func312(); // 虹村屋敷のダンジョンマップ
         }
         if (Gvar.special_map_id == 115) {
-            await Func.func313(); // 吉良屋敷のダンジョンマップ
+            await Map.func313(); // 吉良屋敷のダンジョンマップ
         }
         if (Gvar.special_map_id == 116) {
-            await Func.func314(); // 没特殊階層「ビンの中」ボスは毒グモのダンジョンマップ
+            await Map.func314(); // 没特殊階層「ビンの中」ボスは毒グモのダンジョンマップ
         }
         if (Gvar.special_map_id == 117) {
-            await Func.func315(); // 没特殊階層「ナチス実験施設」ボスはサンタナのダンジョンマップ
+            await Map.func315(); // 没特殊階層「ナチス実験施設」ボスはサンタナのダンジョンマップ
         }
         if (Gvar.special_map_id == 118) {
-            await Func.func302(); // 幻覚の迷宮のダンジョンマップ
+            await Map.func302(); // 幻覚の迷宮のダンジョンマップ
         }
         if (Gvar.special_map_id == 119) {
-            await Func.func316(); // 幽霊部屋のダンジョンマップ
+            await Map.func316(); // 幽霊部屋のダンジョンマップ
         }
         if (Gvar.special_map_id == 120) {
-            await Func.func317(); // 自由人の狂想曲のダンジョンマップ
+            await Map.func317(); // 自由人の狂想曲のダンジョンマップ
         }
         if (Gvar.special_map_id == 121) {
-            await Func.func322(); // 黄金の風のダンジョンマップ
+            await Map.func322(); // 黄金の風のダンジョンマップ
         }
         if (Gvar.special_map_id == 122) {
-            await Func.func300(); // 大部屋ダンジョンマップ
+            await Map.func300(); // 大部屋ダンジョンマップ
         }
         if (Gvar.special_map_id == 0) {
             Gvar.var_204 = 1;

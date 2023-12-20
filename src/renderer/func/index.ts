@@ -294,41 +294,41 @@ export {func284} from "../func/func284"
 export {func285} from "../func/func285"
 export {func286} from "../func/func286"
 export {func287} from "../func/func287"
-export {func288} from "../func/func288"
-export {func289} from "../func/func289"
-export {func290} from "../func/func290"
-export {func291} from "../func/func291"
-export {func292} from "../func/func292"
-export {func293} from "../func/func293"
-export {func294} from "../func/func294"
-export {func295} from "../func/func295"
-export {func296} from "../func/func296"
-export {func297} from "../func/func297"
-export {func298} from "../func/func298"
-export {func299} from "../func/func299"
-export {func300} from "../func/func300"
-export {func301} from "../func/func301"
-export {func302} from "../func/func302"
-export {func303} from "../func/func303"
-export {func304} from "../func/func304"
-export {func305} from "../func/func305"
-export {func306} from "../func/func306"
-export {func307} from "../func/func307"
-export {func308} from "../func/func308"
-export {func309} from "../func/func309"
-export {func310} from "../func/func310"
-export {func311} from "../func/func311"
-export {func312} from "../func/func312"
-export {func313} from "../func/func313"
-export {func314} from "../func/func314"
-export {func315} from "../func/func315"
-export {func316} from "../func/func316"
-export {func317} from "../func/func317"
-export {func318} from "../func/func318"
-export {func319} from "../func/func319"
-export {func320} from "../func/func320"
-export {func321} from "../func/func321"
-export {func322} from "../func/func322"
+// export {func288} from "../func/func288" Ver0.1406にて /map/hotelへ移動
+// export {func289} from "../func/func289" Ver0.1406にて /map/hotelへ移動
+// export {func290} from "../func/func290" Ver0.1406にて /map/hotelへ移動
+// export {func291} from "../func/func291" Ver0.1406にて /map/hotelへ移動
+// export {func292} from "../func/func292" Ver0.1406にて /map/hotelへ移動
+// export {func293} from "../func/func293" Ver0.1406にて /map/map000へ移動
+// export {func294} from "../func/func294" Ver0.1406にて /map/map001へ移動
+// export {func295} from "../func/func295" Ver0.1406にて /map/map002へ移動
+// export {func296} from "../func/func296" Ver0.1406にて /map/map003へ移動
+// export {func297} from "../func/func297" Ver0.1406にて /map/map004へ移動
+// export {func298} from "../func/func298" Ver0.1406にて /map/map005へ移動
+// export {func299} from "../func/func299" Ver0.1406にて /map/map006へ移動
+// export {func300} from "../func/func300" Ver0.1406にて /map/map007へ移動
+// export {func301} from "../func/func301" Ver0.1406にて /map/map008へ移動
+// export {func302} from "../func/func302" Ver0.1406にて /map/map009へ移動
+// export {func303} from "../func/func303" Ver0.1406にて /map/map010へ移動
+// export {func304} from "../func/func304" Ver0.1406にて /map/map011へ移動
+// export {func305} from "../func/func305" Ver0.1406にて /map/map012へ移動
+// export {func306} from "../func/func306" Ver0.1406にて /map/map013へ移動
+// export {func307} from "../func/func307" Ver0.1406にて /map/map014へ移動
+// export {func308} from "../func/func308" Ver0.1406にて /map/map015へ移動
+// export {func309} from "../func/func309" Ver0.1406にて /map/map016へ移動
+// export {func310} from "../func/func310" Ver0.1406にて /map/map017へ移動
+// export {func311} from "../func/func311" Ver0.1406にて /map/map018へ移動
+// export {func312} from "../func/func312" Ver0.1406にて /map/map019へ移動
+// export {func313} from "../func/func313" Ver0.1406にて /map/map020へ移動
+// export {func314} from "../func/func314" Ver0.1406にて /map/map021へ移動
+// export {func315} from "../func/func315" Ver0.1406にて /map/map022へ移動
+// export {func316} from "../func/func316" Ver0.1406にて /map/map023へ移動
+// export {func317} from "../func/func317" Ver0.1406にて /map/map024へ移動
+// export {func318} from "../func/func318" Ver0.1406にて /map/map025へ移動
+// export {func319} from "../func/func319" Ver0.1406にて /map/map026へ移動
+// export {func320} from "../func/func320" Ver0.1406にて /map/map027へ移動
+// export {func321} from "../func/func321" Ver0.1406にて /map/map028へ移動
+// export {func322} from "../func/func322" Ver0.1406にて /map/map029へ移動
 export {func323} from "../func/func323"
 export {func324} from "../func/func324"
 export {func325} from "../func/func325"

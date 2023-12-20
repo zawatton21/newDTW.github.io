@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Class from '../classes'
+import * as Map from '../map/index'
 
 async function func159(this: any) {
         Adap.dbgprt(159);
@@ -11,7 +12,7 @@ async function func159(this: any) {
         Gvar.var_199 = 2;
         Gvar.var_68 = 1;
         Gvar.y_axis_map_image = 1;
-        await Func.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
+        await Map.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
         Gvar.var_560 = 1;
         Gvar.var_561 = 5; // マップX軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
         Gvar.var_562 = 5; // マップY軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
@@ -20,19 +21,19 @@ async function func159(this: any) {
         // マップ読み込み処理
         // Ver0.1403にて修正
         if (Gvar.var_559 == 0) {
-            await Func.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
+            await Map.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
         }
         if (Gvar.var_559 == 1) {
-            await Func.func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
+            await Map.func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
         }
         if (Gvar.var_559 == 2) {
-            await Func.func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
+            await Map.func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
         }
         if (Gvar.var_559 == 3) {
-            await Func.func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
+            await Map.func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
         }
         if (Gvar.var_559 == 4) {
-            await Func.func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
+            await Map.func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
         }
         // Ver0.1403にて追加。
         //if (Gvar.var_595 == 2){ // Gvar.dungeon_number = 0 での場所確認。2 = 酒場

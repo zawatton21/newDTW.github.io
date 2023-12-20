@@ -1,26 +1,27 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Map from '../map/index'
 
 async function func255(this: any) {
         Adap.dbgprt(255);
         if (Gvar.var_90 == 2) {
-            await Func.func295();
+            await Map.func295();
         }
         if (Gvar.var_90 == 3) {
-            await Func.func296();
+            await Map.func296();
         }
         if (Gvar.var_90 == 4) {
-            await Func.func297();
+            await Map.func297();
         }
         if (Gvar.var_90 == 5) {
-            await Func.func298();
+            await Map.func298();
         }
         if (Gvar.var_90 == 6) {
-            await Func.func299();
+            await Map.func299();
         }
         if (Gvar.var_90 == 99) {
-            await Func.func299();
+            await Map.func299();
         }
         Gvar.var_764 = 0;
         Gvar.var_1075 = 0;

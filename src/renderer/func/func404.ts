@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Map from '../map/index'
 
 // アイテムを置く時の動作処理
 async function func404(this: any) {
@@ -84,24 +85,24 @@ async function func404(this: any) {
                 Gvar.var_558 = 1;
             }
             if (Gvar.var_558 == 1) {
-                await Func.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
+                await Map.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
                 Gvar.var_560 = 1;
                 Gvar.var_561 = 5; // マップX軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
                 Gvar.var_562 = 5; // Ver0.1404にて修正。0 → 5。実験中に0へ変更したのを戻し忘れ。マップY軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
                 if (Gvar.var_559 == 0) {
-                    await Func.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
+                    await Map.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
                 }
                 if (Gvar.var_559 == 1) {
-                    await Func.func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
+                    await Map.func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
                 }
                 if (Gvar.var_559 == 2) {
-                    await Func.func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
+                    await Map.func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
                 }
                 if (Gvar.var_559 == 3) {
-                    await Func.func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
+                    await Map.func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
                 }
                 if (Gvar.var_559 == 4) {
-                    await Func.func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
+                    await Map.func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
                 }
                 await Func.func248();
                 Gvar.comments_row1 = Gvar.comments_row1a;

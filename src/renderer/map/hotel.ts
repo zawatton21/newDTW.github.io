@@ -2,7 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 
-
+// ヴェネチアホテル専用マップ配置
 async function func288(this: any) {
         Adap.dbgprt(288);
         Gvar.var_1096 = 1;
@@ -51,7 +51,7 @@ async function func288(this: any) {
 export {func288}
 
 
-
+// ヴェネチアホテル+亀マップ配置処理(亀の成長1)
 async function func289(this: any) {
         Adap.dbgprt(289);
         Gvar.var_1096 = 1;
@@ -98,7 +98,7 @@ async function func289(this: any) {
 
 export {func289}
 
-
+// ヴェネチアホテル+亀マップ配置処理(亀の成長2)
 async function func290(this: any) {
     Adap.dbgprt(290);
     Gvar.var_1096 = 1;
@@ -146,7 +146,7 @@ async function func290(this: any) {
 
 export {func290}
 
-
+// ヴェネチアホテル+亀マップ配置処理(亀の成長3)
 async function func291(this: any) {
     Adap.dbgprt(291);
     Gvar.var_1096 = 1;
@@ -194,6 +194,7 @@ async function func291(this: any) {
 
 export {func291}
 
+// ヴェネチアホテル+亀マップ配置処理(亀の成長4)
 async function func292(this: any) {
     Adap.dbgprt(292);
     Gvar.var_1096 = 1;
@@ -240,4 +241,3 @@ async function func292(this: any) {
 }
 
 export {func292}
-s

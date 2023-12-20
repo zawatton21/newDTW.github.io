@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Class from '../classes'
+import * as Map from '../map/index'
 
 async function func158(this: any) {
         Adap.dbgprt(158);
@@ -10,11 +11,11 @@ async function func158(this: any) {
         Gvar.current_floor = 0;
         Gvar.var_199 = 8;
         Gvar.y_axis_map_image = 18;
-        await Func.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
+        await Map.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
         Gvar.var_560 = 1;
         Gvar.var_561 = 5; // マップX軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
         Gvar.var_562 = 5; // マップY軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
-        await Func.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
+        await Map.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
         await Func.func248();
         // No = 0 なので、拠点(ホテル、亀、)
         Gvar.dungeon_number = 0;
