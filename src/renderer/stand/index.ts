@@ -62,7 +62,11 @@ export {item262} from "./item262"
 
 export {item300} from "./item300"
 export {item301} from "./item301"
+
+// ハイウェイ・トゥ・ヘルのdisc
 export {item302} from "./item302"
+export {func534} from "./item302"
+
 export {item303} from "./item303"
 export {item304} from "./item304"
 export {item305} from "./item305"
