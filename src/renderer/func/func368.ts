@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Stand from '../stand/index'
 
 async function func368(this: any) {
         Adap.dbgprt(368);
@@ -86,7 +87,7 @@ async function func368(this: any) {
         }
         if (Gvar.var_1208 == 2) {
             Gvar.var_1208 = 1;
-            await Func.func527();
+            await Stand.func527();
             return;
         }
         await Func.func369();

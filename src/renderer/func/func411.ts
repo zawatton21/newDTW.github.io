@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Stand from '../stand/index'
 
 // アイテムを投げた時の動作処理
 async function func411(this: any) {
@@ -198,7 +199,7 @@ async function func411(this: any) {
         if (Gvar.var_1893 == 1) {
             Gvar.var_1897 = 0;
             Gvar.var_1901 = 0;
-            await Func.func418(); // 遠投状態(アヌビス神装備)でアイテムを投げた時の動作処理
+            await Stand.func418(); // 遠投状態(アヌビス神装備)でアイテムを投げた時の動作処理
             return;
         }
         Gvar.var_1901 = 0;

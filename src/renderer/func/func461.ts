@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Stand from '../stand/index'
 
 async function func461(this: any) {
         Adap.dbgprt(461);
@@ -410,12 +411,12 @@ async function func461(this: any) {
             if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                 if (Gvar.var_1240 == 1) { // クレイジーD発動フラグ。道具画面処理を読み込む度にフラグが上がり、次へ進んでいく
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func522(); //disc同士の合成関数(クレイジーDの発動能力)1 何故か関数が二つある
+                    await Stand.func522(); //disc同士の合成関数(クレイジーDの発動能力)1 何故か関数が二つある
                     return;
                 }
                 if (Gvar.var_1240 == 2) {
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func523(); //disc同士の合成関数(クレイジーDの発動能力)2　何故か関数が二つある
+                    await Stand.func523(); //disc同士の合成関数(クレイジーDの発動能力)2　何故か関数が二つある
                     return;
                 }
                 if (Gvar.var_2000 == 1) {
@@ -455,17 +456,17 @@ async function func461(this: any) {
                 }
                 if (Gvar.var_2004 == 1) {
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func524(); // セックスピストルズの発動能力
+                    await Stand.func524(); // セックスピストルズの発動能力
                     return;
                 }
                 if (Gvar.var_2006 == 1) {
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func525(); // ボーイⅡマンの発動能力
+                    await Stand.func525(); // ボーイⅡマンの発動能力
                     return;
                 }
                 if (Gvar.var_2007 == 1) {
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func533(); // ムーディーブルースの発動によってアイテムを倉庫に送る動作処理
+                    await Stand.func533(); // ムーディーブルースの発動によってアイテムを倉庫に送る動作処理
                     return;
                 }
                 // No != 3 なので、アイテム個数 Gvar.var_225 が0でなければ

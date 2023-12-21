@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Stand from '../stand/index'
 
 async function func337(this: any) {
         Adap.dbgprt(337);
@@ -167,7 +168,7 @@ async function func337(this: any) {
             await Func.func360();
         }
         if (Gvar.var_1208 == 1) {
-            await Func.func528();
+            await Stand.func528(); // ボーイIIマン発動時の能力消去選択処理
         }
         if (Gvar.var_498 == 1) {
             await Func.func382();

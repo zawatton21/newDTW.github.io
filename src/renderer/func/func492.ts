@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 図鑑用各アイテムリスト
 async function func492(this: any) {
         Adap.dbgprt(492);
         Gvar.item_name = "";

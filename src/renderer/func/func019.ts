@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Dung from '../dungeon/index'
+import * as Stand from '../stand/index'
 
 // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
 async function func019(this: any) {
@@ -813,7 +814,7 @@ async function func019(this: any) {
                     Gvar.var_388 = Adap.rnd(200);
                     if (Gvar.var_388 == 0) {
                         Gvar.var_240 = 0;
-                        await Func.func534();
+                        await Stand.func534(); // ハイウェイ・トゥ・ヘル発動処理(移動時の自動発動)
                     }
                     if (Gvar.var_212 == 1) {
                         await Func.func009(); // ゲーム基本動作フレーム処理
