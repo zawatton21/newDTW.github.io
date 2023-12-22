@@ -99,7 +99,7 @@ async function func623(this: any) {
             Gvar.var_440 = Gvar.var_2912;
             Gvar.var_441 = Gvar.var_2913;
             Gvar.var_2499 = Gvar.var_2914;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_1371 = 0;
             Gvar.comments_row1 = "";
             Gvar.comments_row2 = "";

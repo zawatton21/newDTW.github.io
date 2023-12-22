@@ -13,7 +13,7 @@ async function func591(this: any) {
             Gvar.var_2540 = 1;
             Gvar.var_1845 = 5;
             Gvar.var_2353 = Gvar.var_673;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_2457 = Gvar.var_673;
             Gvar.var_673 = Gvar.var_2353;
             Gvar.var_2540 = 0;

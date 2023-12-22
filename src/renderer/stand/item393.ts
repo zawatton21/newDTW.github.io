@@ -76,7 +76,7 @@ async function item393(this: any) {
         await Func.func625();
         Gvar.var_1845 = 1;
         Gvar.var_2353 = Gvar.var_673;
-        await Func.func556();
+        await Func.func556(); // 敵をフロアへ出現させる処理
         Gvar.var_2354 = 0;
         Gvar.var_1584 = (Gvar.var_83[Gvar.var_673].Var1 - Gvar.var_66 + 4) * 40;
         Gvar.var_1585 = (Gvar.var_83[Gvar.var_673].Var2 - Gvar.var_67 + 4) * 40;
@@ -110,7 +110,7 @@ async function item393(this: any) {
         await Func.func625();
         Gvar.var_1845 = 1;
         Gvar.var_2353 = Gvar.var_673;
-        await Func.func556();
+        await Func.func556(); // 敵をフロアへ出現させる処理
         Gvar.var_2354 = 0;
         Gvar.var_1587 = (Gvar.var_83[Gvar.var_673].Var1 - Gvar.var_66 + 4) * 40;
         Gvar.var_1588 = (Gvar.var_83[Gvar.var_673].Var2 - Gvar.var_67 + 4) * 40;
@@ -119,7 +119,7 @@ async function item393(this: any) {
         await Func.func625();
         Gvar.var_1845 = 1;
         Gvar.var_2353 = Gvar.var_673;
-        await Func.func556();
+        await Func.func556(); // 敵をフロアへ出現させる処理
         Gvar.var_2354 = 0;
         Gvar.var_1589 = (Gvar.var_83[Gvar.var_673].Var1 - Gvar.var_66 + 4) * 40;
         Gvar.var_1590 = (Gvar.var_83[Gvar.var_673].Var2 - Gvar.var_67 + 4) * 40;

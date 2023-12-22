@@ -104,7 +104,7 @@ async function func414(this: any) {
                 Gvar.var_1914 = Gvar.var_1908;
                 Gvar.var_1915 = Gvar.var_1909;
                 for (let cnt3 = 0; cnt3 < Gvar.var_1911; ++cnt3) {
-                    await Func.func556();
+                    await Func.func556(); // 敵をフロアへ出現させる処理
                 }
                 Gvar.var_1913 = 0;
                 Gvar.var_1845 = 0;
@@ -125,7 +125,7 @@ async function func414(this: any) {
                     Gvar.var_1918 = Gvar.var_486[Gvar.var_1916][Gvar.var_1917][15];
                     Gvar.var_1919 = Gvar.var_486[Gvar.var_1916][Gvar.var_1917][18];
                     if (Gvar.var_1918 != 0) {
-                        await Func.func556();
+                        await Func.func556(); // 敵をフロアへ出現させる処理
                     }
                     Gvar.var_1917++;
                 }
@@ -144,7 +144,7 @@ async function func414(this: any) {
                 Gvar.var_1914 = Gvar.var_1908;
                 Gvar.var_1915 = Gvar.var_1909;
                 for (let cnt3 = 0; cnt3 < Gvar.var_1911; ++cnt3) {
-                    await Func.func556();
+                    await Func.func556(); // 敵をフロアへ出現させる処理
                 }
                 Gvar.var_1920 = 0;
                 Gvar.var_1845 = 0;

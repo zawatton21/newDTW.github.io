@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Ex from '../extra_items/index'
 
 async function func473(this: any) {
         Adap.dbgprt(473);
@@ -156,7 +157,7 @@ async function func473(this: any) {
                     }
                     await Func.func340(); // キー入力による選択処理
                 }
-                await Func.func457();
+                await Ex.func457(); // ジャッジメントの問いに対して、体力を回復させてくれと選択した時、体力回復後の状態異常回復の動作処理
                 Gvar.var_125 = 1;
                 Gvar.comments_row1 = Gvar.comments_row1a;
                 Gvar.comments_row2 = Gvar.comments_row2a;
@@ -245,7 +246,7 @@ async function func473(this: any) {
                 Gvar.var_1916 = Gvar.var_233[Gvar.var_225].Var6;
                 Gvar.var_1918 = Gvar.var_486[Gvar.var_1916][1][15];
                 Gvar.var_1919 = Gvar.var_486[Gvar.var_1916][1][18];
-                await Func.func556();
+                await Func.func556(); // 敵をフロアへ出現させる処理
                 Gvar.var_1918 = 0;
                 Gvar.var_1845 = 0;
                 Gvar.var_1584 = (Gvar.var_83[Gvar.var_673].Var1 - Gvar.var_66 + 4) * 40;
@@ -401,7 +402,7 @@ async function func473(this: any) {
             if (Gvar.var_2108 == 0) {
                 Gvar.var_2109 = 1;
                 Gvar.var_1845 = 1;
-                await Func.func556();
+                await Func.func556(); // 敵をフロアへ出現させる処理
                 Gvar.var_2109 = 0;
                 Gvar.var_1845 = 0;
                 if (Gvar.var_2110 == 1) {
@@ -428,7 +429,7 @@ async function func473(this: any) {
             if (Gvar.var_2108 == 1) {
                 Gvar.var_2109 = 1;
                 Gvar.var_1845 = 4;
-                await Func.func556();
+                await Func.func556(); // 敵をフロアへ出現させる処理
                 Gvar.var_2109 = 0;
                 Gvar.var_1845 = 0;
                 Gvar.var_2107 = 1;

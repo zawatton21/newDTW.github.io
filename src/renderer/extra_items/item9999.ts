@@ -63,7 +63,7 @@ async function item9999(this: any) {
         if (Gvar.var_2108 == 0) {
             Gvar.var_2214 = Gvar.disc_rarity;
             Gvar.var_1845 = 1;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_2214 = 0;
             Gvar.var_1845 = 0;
             if (Gvar.var_2110 == 1) {
@@ -88,7 +88,7 @@ async function item9999(this: any) {
         if (Gvar.var_2108 == 1) {
             Gvar.var_2214 = Gvar.disc_rarity;
             Gvar.var_1845 = 4;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_2214 = 0;
             Gvar.var_1845 = 0;
             Gvar.var_2107 = 1;

@@ -483,7 +483,7 @@ async function func020(this: any) {
                         Gvar.var_452 = 1;
                         Gvar.var_453 = 1;
                         Gvar.var_454 = 1;
-                        await Func.func384();
+                        await Func.func384(); // アイテムをフロアへ追加する処理
                         Gvar.var_454 = 0;
                         Gvar.var_451 = 0;
                         Gvar.var_452 = 0;

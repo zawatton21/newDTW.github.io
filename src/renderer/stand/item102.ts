@@ -47,7 +47,7 @@ async function item102(this: any) {
         Gvar.var_2103 = Gvar.var_67;
         Gvar.var_347 = Gvar.var_66;
         Gvar.var_348 = Gvar.var_67;
-        await Func.func556();
+        await Func.func556(); // 敵をフロアへ出現させる処理
         Gvar.var_2306 = 0;
         Gvar.var_1845 = 0;
         Gvar.var_124 = Gvar.var_97;

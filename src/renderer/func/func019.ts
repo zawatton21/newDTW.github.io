@@ -801,7 +801,7 @@ async function func019(this: any) {
                 }
                 if (Gvar.var_165 >= 64 && Gvar.var_97 < 50) {
                     Gvar.var_165 = 0; // 敵増えるフラグOFF
-                    await Func.func556();
+                    await Func.func556(); // 敵をフロアへ出現させる処理
                 }
                 if (Gvar.var_186 != 0) {
                     Gvar.var_183++;

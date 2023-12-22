@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item413(this: any) {
         Gvar.var_2109 = 1;
         Gvar.var_1845 = 1;
-        await Func.func556();
+        await Func.func556(); // 敵をフロアへ出現させる処理
         Gvar.var_2109 = 0;
         Gvar.var_1845 = 0;
         if (Gvar.var_2110 == 0) {

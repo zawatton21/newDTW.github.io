@@ -10,12 +10,12 @@ async function item310(this: any) {
             return;
         }
         Gvar.var_1845 = 1;
-        await Func.func556();
+        await Func.func556(); // 敵をフロアへ出現させる処理
         Gvar.var_1845 = 0;
         if (Gvar.var_2110 != 0) {
             for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                 Gvar.var_1845 = 1;
-                await Func.func556();
+                await Func.func556(); // 敵をフロアへ出現させる処理
                 Gvar.var_1845 = 0;
             }
             Gvar.comments_row1 = Gvar.comments_row1a;

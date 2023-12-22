@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Ex from '../extra_items/index'
 
 // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
 async function func420(this: any) {
@@ -525,7 +526,7 @@ async function func420(this: any) {
             return;
         }
         if (Gvar.var_1055 == 1) {
-            await Func.func447(); // 魔法のランプを使用した際の動作処理
+            await Ex.func447(); // 魔法のランプを使用した際の動作処理
             return;
         }
         if (Gvar.var_1951 == 1) {

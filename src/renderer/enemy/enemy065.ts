@@ -56,7 +56,7 @@ async function enemy065(this: any) {
             Gvar.var_2534 = 1;
             Gvar.var_1845 = 1;
             Gvar.var_2353 = Gvar.var_673;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_673 = Gvar.var_2353;
             Gvar.var_2534 = 0;
             Gvar.var_1845 = 0;

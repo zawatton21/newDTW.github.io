@@ -98,7 +98,7 @@ async function func624(this: any) {
             Gvar.var_440 = Gvar.var_2912;
             Gvar.var_441 = Gvar.var_2913;
             Gvar.var_2499 = Gvar.var_2914;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_1371 = 0;
             Gvar.var_1374 = 0;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {

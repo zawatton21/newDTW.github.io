@@ -51,7 +51,7 @@ async function func923(this: any) {
         Gvar.var_1756 = 1;
         Gvar.var_452 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            await Func.func384();
+            await Func.func384(); // アイテムをフロアへ追加する処理
         }
         Gvar.var_1756 = 0;
         Gvar.var_452 = 0;

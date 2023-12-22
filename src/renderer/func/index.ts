@@ -454,17 +454,17 @@ export {func443} from "../func/func443"
 export {func444} from "../func/func444"
 export {func445} from "../func/func445"
 export {func446} from "../func/func446"
-export {func447} from "../func/func447"
-export {func448} from "../func/func448"
-export {func449} from "../func/func449"
-export {func450} from "../func/func450"
-export {func451} from "../func/func451"
-export {func452} from "../func/func452"
-export {func453} from "../func/func453"
-export {func454} from "../func/func454"
-export {func455} from "../func/func455"
-export {func456} from "../func/func456"
-export {func457} from "../func/func457"
+// export {func447} from "../func/func447" Ver0.1406にて ../extra_items/item723へ移動
+// export {func448} from "../func/func448" Ver0.1406にて ../extra_items/item723へ移動
+// export {func449} from "../func/func449" Ver0.1406にて ../extra_items/item723へ移動
+// export {func450} from "../func/func450" Ver0.1406にて ../extra_items/item723へ移動
+// export {func451} from "../func/func451" Ver0.1406にて ../extra_items/item723へ移動
+// export {func452} from "../func/func452" Ver0.1406にて ../extra_items/item723へ移動
+// export {func453} from "../func/func453" Ver0.1406にて ../extra_items/item723へ移動
+// export {func454} from "../func/func454" Ver0.1406にて ../extra_items/item723へ移動
+// export {func455} from "../func/func455" Ver0.1406にて ../extra_items/item723へ移動
+// export {func456} from "../func/func456" Ver0.1406にて ../extra_items/item723へ移動
+// export {func457} from "../func/func457" Ver0.1406にて ../extra_items/item723へ移動
 export {func458} from "../func/func458"
 export {func459} from "../func/func459"
 export {func460} from "../func/func460"

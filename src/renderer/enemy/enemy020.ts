@@ -17,7 +17,7 @@ async function enemy020(this: any) {
             Gvar.var_2353 = Gvar.var_673;
             Gvar.var_2471 = Adap.rnd(4);
             for (let cnt3 = 0; cnt3 < Gvar.var_2471 + 1; ++cnt3) {
-                await Func.func556();
+                await Func.func556(); // 敵をフロアへ出現させる処理
             }
             Gvar.var_673 = Gvar.var_2353;
             Gvar.var_2521 = 0;

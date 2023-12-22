@@ -27,7 +27,7 @@ async function item115(this: any) {
         for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
             Gvar.var_2272 = 1;
             Gvar.var_1845 = 1;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_2272 = 0;
             Gvar.var_1845 = 0;
             if (Gvar.var_2110 != 0) {

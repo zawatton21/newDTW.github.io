@@ -23,16 +23,16 @@ async function func917(this: any) {
                 Gvar.var_2552 = 70;
             }
             Gvar.var_1845 = 1;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             if (Gvar.var_2110 == 0) {
                 Gvar.var_1845 = 5;
                 Gvar.var_2519 = Gvar.var_201;
-                await Func.func556();
+                await Func.func556(); // 敵をフロアへ出現させる処理
                 Gvar.var_2519 = 0;
             }
             if (Gvar.var_2110 == 0) {
                 Gvar.var_1845 = 0;
-                await Func.func556();
+                await Func.func556(); // 敵をフロアへ出現させる処理
             }
             Gvar.var_1845 = 0;
             Gvar.var_2535 = 0;

@@ -17,7 +17,7 @@ async function func512(this: any) {
             Gvar.var_1845 = 3;
             Gvar.var_1914 = Gvar.var_78[Gvar.var_320].Var1;
             Gvar.var_1915 = Gvar.var_78[Gvar.var_320].Var2;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_1844 = 0;
             Gvar.var_1845 = 0;
             if (Gvar.var_2110 == 1) {

@@ -68,7 +68,7 @@ async function func722(this: any) {
         Gvar.var_198 = 1;
         Gvar.var_300 = 0;
         for (let cnt1 = 0; cnt1 < 12; ++cnt1) {
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
         }
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
             await Func.func337(); // メッセージ関係呼び出し

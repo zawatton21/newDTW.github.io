@@ -157,7 +157,7 @@ async function func562(this: any) {
             if (Gvar.var_2527 == 8) {
                 Gvar.var_1042 = Adap.rnd(7);
             }
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_2570 = 0;
             Gvar.var_2527 = 0;
             Gvar.var_2571 = 0;

@@ -15,7 +15,7 @@ async function func402(this: any) {
                 Gvar.var_1844 = 2;
             }
             Gvar.var_1845 = 2;
-            await Func.func556();
+            await Func.func556(); // 敵をフロアへ出現させる処理
             Gvar.var_1844 = 0;
             Gvar.var_1845 = 0;
             Gvar.var_83[Gvar.var_673].Var21 = 1;

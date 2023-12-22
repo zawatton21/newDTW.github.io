@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
+import * as Ex from '../extra_items/index'
 
 async function func337(this: any) {
         Adap.dbgprt(337);
@@ -142,7 +143,7 @@ async function func337(this: any) {
             await Func.func056(); // メニュー画面の"設定"の表示 (マップON、履歴、資料、システム、終了)
         }
         if (Gvar.var_1207 == 1) {
-            await Func.func449(); // 魔法のランプでジャッジメントを召喚した時のメッセージ
+            await Ex.func449(); // 魔法のランプでジャッジメントを召喚した時のメッセージ
         }
         if (Gvar.var_765 == 1) {
             if (Gvar.var_766 == 0 || Gvar.var_766 == 1 || Gvar.var_766 == 2) {
