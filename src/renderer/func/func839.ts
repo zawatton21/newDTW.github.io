@@ -173,25 +173,25 @@ async function func839(this: any) {
                 if (Gvar.var_3199 == 1) {
                     Gvar.var_3199 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func827(); // ダンジョン「レクイエムの大迷宮」へ入った時の初期化処理
+                    await Dung.func827(); // ダンジョン「レクイエムの大迷宮」へ入った時の初期化処理
                     return;
                 }
                 if (Gvar.var_3200 == 1) {
                     Gvar.var_3200 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func829(); // ダンジョン「ディアボロの試練」へ入った時の初期化処理
+                    await Dung.func829(); // ダンジョン「ディアボロの試練」へ入った時の初期化処理
                     return;
                 }
                 if (Gvar.var_3201 == 1) {
                     Gvar.var_3201 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func834(); // ダンジョン「一巡後の世界」へ入った時の初期化処理
+                    await Dung.func834(); // ダンジョン「一巡後の世界」へ入った時の初期化処理
                     return;
                 }
                 if (Gvar.var_3203 == 1) {
                     Gvar.var_3203 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func836(); // ダンジョン「鉄獄(鉄の牢獄)」へ入った時の初期化処理
+                    await Dung.func836(); // ダンジョン「鉄獄(鉄の牢獄)」へ入った時の初期化処理
                     return;
                 }
                 if (Gvar.var_3192 == 1) {

@@ -3,7 +3,9 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Class from '../classes'
 import * as Map from '../map/index'
+import * as Even from '../events/index'
 
+// ヴェネチアホテルでのイベントフラグ管理処理
 async function func159(this: any) {
         Adap.dbgprt(159);
         Gvar.var_767 = 0;
@@ -101,23 +103,23 @@ async function func159(this: any) {
             await Func.func114b(); // 酒場の選曲
         }
         if (Gvar.ivents_flag == 1) {
-            await Func.func151(); // 初めてヴェネチアホテルへ訪れた際のディアボロの呟き
+            await Even.func151(); // 初めてヴェネチアホテルへ訪れた際のディアボロの呟き
         }
         if (Gvar.ivents_flag == 3) {
             Gvar.ivents_flag = 0; // イベントフラグ初期化
-            await Func.func153(); // ホテルの外初クリア後(エンヤホテル)、ヴェネチアホテルに戻った際のイベント
+            await Even.func153(); // ホテルの外初クリア後(エンヤホテル)、ヴェネチアホテルに戻った際のイベント
         }
         if (Gvar.ivents_flag == 5) {
             Gvar.ivents_flag = 0; // イベントフラグ初期化
-            await Func.func154(); // レクイエムの大迷宮初クリア後、ヴェネチアホテルに戻った際のイベント
+            await Even.func154(); // レクイエムの大迷宮初クリア後、ヴェネチアホテルに戻った際のイベント
         }
         if (Gvar.var_770 == 1) {
             Gvar.var_770 = 0;
-            await Func.func156(); // 初めてダンジョンを訪れ、クリア出来ずにヴェネチアホテルに戻った際のディアボロの呟き
+            await Even.func156(); // 初めてダンジョンを訪れ、クリア出来ずにヴェネチアホテルに戻った際のディアボロの呟き
         }
         if (Gvar.ivents_flag == 6) {
             Gvar.ivents_flag = 0; // イベントフラグ初期化
-            await Func.func155(); // ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)
+            await Even.func155(); // ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)
         }
         await Func.func837(); // 店のアイテムを購入せずに帰還した際、NPC マリリン・マンソンの登場処理
         Gvar.var_205 = 1;

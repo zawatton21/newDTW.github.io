@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Even from '../events/index'
 
 async function func144(this: any) {
         Adap.dbgprt(144);
@@ -26,7 +27,7 @@ async function func144(this: any) {
                 await Adap.exist(Gvar.var_735); //おそらくセーブデータが無ければ
                 if (Gvar.strsize == (-1)) {
                     await Func.func178(); // 処理確認タイマー(3m秒)
-                    await Func.func150(); // オープニング (5部最終決戦 ジョルノ達との戦いの場面)
+                    await Even.func150(); // オープニング (5部最終決戦 ジョルノ達との戦いの場面)
                     return;
                 }
                 await Func.func178(); // 処理確認タイマー(3m秒)

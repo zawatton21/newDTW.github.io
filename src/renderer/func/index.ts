@@ -152,15 +152,15 @@ export {func146} from "../func/func146"
 export {func147} from "../func/func147"
 export {func148} from "../func/func148"
 export {func149} from "../func/func149"
-export {func150} from "../func/func150"
-export {func151} from "../func/func151"
-export {func152} from "../func/func152"
-export {func153} from "../func/func153"
-export {func154} from "../func/func154"
-export {func155} from "../func/func155"
-export {func156} from "../func/func156"
+// export {func150} from "../func/func150" Ver0.1406にて ../events/events001へ移動
+// export {func151} from "../func/func151" Ver0.1406にて ../events/events002へ移動
+// export {func152} from "../func/func152" Ver0.1406にて ../events/events003へ移動
+// export {func153} from "../func/func153" Ver0.1406にて ../events/events005へ移動
+// export {func154} from "../func/func154" Ver0.1406にて ../events/events006へ移動
+// export {func155} from "../func/func155"  Ver0.1406にて ../events/events007へ移動
+// export {func156} from "../func/func156" Ver0.1406にて ../events/events004へ移動
 export {func157} from "../func/func157"
-export {func158} from "../func/func158"
+// export {func158} from "../func/func158" Ver0.1406にて ../events/events001へ移動
 export {func159} from "../func/func159"
 export {func160} from "../func/func160"
 export {func160b} from "../func/func160b"
@@ -537,7 +537,7 @@ export {func521} from "../func/func521"
 // export {func527} from "../func/func527" Ver0.1406にて ../stand/item319へ移動
 // export {func528} from "../func/func528" Ver0.1406にて ../stand/item319へ移動
 export {func529} from "../func/func529"
-export {func530} from "../func/func530"
+// export {func530} from "../func/func530" Ver0.1406にて ../extra_items/item718へ移動
 export {func531} from "../func/func531"
 // export {func532} from "../func/func532" Ver0.1406にて ../stand/item399へ移動
 // export {func533} from "../func/func533" Ver0.1406にて ../stand/item124へ移動
@@ -636,12 +636,12 @@ export {func625} from "../func/func625"
 export {func626} from "../func/func626"
 export {func627} from "../func/func627"
 // export {func628} from "../func/func628" Ver0.1406にて ../dungeon/dungeon1へ移動
-export {func629} from "../func/func629"
-export {func630} from "../func/func630"
-export {func631} from "../func/func631"
+// export {func629} from "../func/func629" Ver0.1406にて ../dungeon/dungeon2へ移動
+// export {func630} from "../func/func630" Ver0.1406にて ../dungeon/dungeon3へ移動
+// export {func631} from "../func/func631" Ver0.1406にて ../dungeon/dungeon5へ移動
 export {func632} from "../func/func632"
-export {func633} from "../func/func633"
-export {func634} from "../func/func634"
+// export {func633} from "../func/func633" Ver0.1406にて ../dungeon/dungeon5へ移動
+// export {func634} from "../func/func634" Ver0.1406にて ../dungeon/dungeon4へ移動
 export {func635} from "../func/func635"
 export {func636} from "../func/func636"
 export {func637} from "../func/func637"
@@ -692,9 +692,9 @@ export {func681} from "../func/func681"
 export {func682} from "../func/func682"
 export {func683} from "../func/func683"
 export {func684} from "../func/func684"
-export {func685} from "../func/func685"
-export {func686} from "../func/func686"
-export {func687} from "../func/func687"
+// export {func685} from "../func/func685" Ver0.1406にて ../dungeon/dungeon1へ移動
+// export {func686} from "../func/func686" Ver0.1406にて ../dungeon/dungeon2へ移動
+// export {func687} from "../func/func687" Ver0.1406にて ../dungeon/dungeon3へ移動
 export {func688} from "../func/func688"
 export {func689} from "../func/func689"
 export {func690} from "../func/func690"
@@ -836,16 +836,16 @@ export {func824b} from "../func/func824b"
 export {func824c} from "../func/func824c"
 //export {func825} from "../func/func825" Ver0.1406にて ../dungeon/dungeon1へ移動
 export {func826} from "../func/func826"
-export {func827} from "../func/func827"
+// export {func827} from "../func/func827" Ver0.1406にて ../dungeon/dungeon2へ移動
 export {func828} from "../func/func828"
-export {func829} from "../func/func829"
+// export {func829} from "../func/func829" Ver0.1406にて ../dungeon/dungeon3へ移動
 export {func830} from "../func/func830"
 export {func831} from "../func/func831"
 export {func832} from "../func/func832"
 export {func833} from "../func/func833"
-export {func834} from "../func/func834"
+// export {func834} from "../func/func834" Ver0.1406にて ../dungeon/dungeon4へ移動
 export {func835} from "../func/func835"
-export {func836} from "../func/func836"
+// export {func836} from "../func/func836" Ver0.1406にて ../dungeon/dungeon5へ移動
 export {func837} from "../func/func837"
 export {func838} from "../func/func838"
 export {func839} from "../func/func839"

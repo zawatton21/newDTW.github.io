@@ -7,7 +7,10 @@ export {item714} from "./item714"
 export {item715} from "./item715"
 export {item716} from "./item716"
 
+// 聖なる弓矢
 export {item718} from "./item718"
+export {func530} from "./item718"
+
 export {item719} from "./item719"
 export {item720} from "./item720"
 

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 async function func705(this: any) {
         Adap.dbgprt(705);
@@ -188,20 +189,20 @@ async function func705(this: any) {
         if (Gvar.var_83[Gvar.var_402].Var3 <= 0) {
             // No = 1 なので、ホテルの外
             if (Gvar.dungeon_number == 1 && Gvar.var_83[Gvar.var_402].Var0 == 20) { // No = 20 エンヤ婆
-                await Func.func685(); // エンヤ婆を倒した時のメッセージ処理
+                await Dung.func685(); // エンヤ婆を倒した時のメッセージ処理
             }
             // No = 2 なので、レクイエムの大迷宮
             if (Gvar.dungeon_number == 2 && Gvar.var_83[Gvar.var_402].Var0 == 132) { // No = 132 レクイエムジョルノ
-                await Func.func686(); // レクイエムジョルノを倒した時のメッセージ処理
+                await Dung.func686(); // レクイエムジョルノを倒した時のメッセージ処理
             }
             // No = 3 なので、ディアボロの試練
             if (Gvar.dungeon_number == 3 && Gvar.var_83[Gvar.var_402].Var0 == 143) { // No = 143 ウンガロ
-                await Func.func687(); // ウンガロを倒した時のメッセージ処理
+                await Dung.func687(); // ウンガロを倒した時のメッセージ処理
             }
             // No = 5 なので、鉄獄(鉄の牢獄)
             if (Gvar.dungeon_number == 5 && Gvar.var_83[Gvar.var_314].Var0 == 171) { // Ver0.1403にて修正。.Var16 >= 1000 → .Var0 == 171。No = 171 離婚した承太郎
                 // Gvar.var_2921 = Gvar.var_83[Gvar.var_314].Var0; Ver 0.1403にてコメントアウト
-                await Func.func633();
+                await Dung.func633();
             }
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 Gvar.var_83[Gvar.var_402].Var11 = 1;
