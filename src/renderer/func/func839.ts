@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Dung from '../dungeon/index'
+import * as Main from '../newdtw/index'
 
 // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
 async function func839(this: any) {
@@ -132,7 +133,7 @@ async function func839(this: any) {
                     Gvar.var_547 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
-                    await Func.func067(); // 亀のジッパーでアイテムを捨てる動作処理
+                    await Dung.func067(); // 亀のジッパーでアイテムを捨てる動作処理
                     return;
                 }
                 if (Gvar.var_2494 == 1) {
@@ -160,14 +161,14 @@ async function func839(this: any) {
                 if (Gvar.var_3198 == 1 && Gvar.var_759 >= 1) {
                     Gvar.var_3198 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func161a();// Ver0.1403にて追加。酒場に入った時の表示
+                    await Dung.func161a();// Ver0.1403にて追加。酒場に入った時の表示
                     return;
                 }
                 // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
                 if (Gvar.go_to_hotel == 1 && Gvar.var_759 >= 1) {
                     Gvar.go_to_hotel = 0; // Ver0.1403にて追加。酒場からホテルの部屋に戻る際のメッセージフラグON
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func161b();// Ver0.1403にて追加。ホテルの部屋に戻った時の表示
+                    await Dung.func161b();// Ver0.1403にて追加。ホテルの部屋に戻った時の表示
                     return;
                 }
                 if (Gvar.var_3199 == 1) {
@@ -198,7 +199,7 @@ async function func839(this: any) {
                     Gvar.var_3192 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
-                    await Func.func806();
+                    await Dung.func806();
                     return;
                 }
                 if (Gvar.var_3191 == 1) {
@@ -207,7 +208,7 @@ async function func839(this: any) {
                     await Func.func051();
                     Gvar.var_1032 = Gvar.var_1032 - Gvar.var_3190;
                     Gvar.wallet = 0;
-                    await Func.func807();
+                    await Dung.func807();
                     return;
                 }
                 if (Gvar.var_3147 == 1) {
@@ -219,25 +220,25 @@ async function func839(this: any) {
                 if (Gvar.var_3193 == 1) {
                     Gvar.var_3193 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func810();
+                    await Dung.func810();
                     return;
                 }
                 if (Gvar.var_3193 == 2) {
                     Gvar.var_3193 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func811();
+                    await Dung.func811();
                     return;
                 }
                 if (Gvar.var_3195 == 1) {
                     Gvar.var_3195 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func814();
+                    await Dung.func814();
                     return;
                 }
                 if (Gvar.var_3195 == 2) {
                     Gvar.var_3195 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func815();
+                    await Dung.func815();
                     return;
                 }
                 if (Gvar.var_3131 == 1) {
@@ -281,7 +282,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     Gvar.var_198 = 0;
                     await Func.func051();
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3209 == 1) {
@@ -296,7 +297,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     Gvar.var_198 = 0;
                     await Func.func051();
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3151 >= 1) {
@@ -304,7 +305,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     Gvar.var_198 = 0;
                     await Func.func051();
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3152 == 1) {
@@ -312,7 +313,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     Gvar.var_198 = 0;
                     await Func.func051();
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3163 == 1) {
@@ -334,7 +335,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     Gvar.var_198 = 0;
                     await Func.func051();
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3126 == 1) {
@@ -356,7 +357,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3127 == 1) {
@@ -378,7 +379,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_2494 == 1) {
@@ -386,7 +387,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_2495 == 1) {
@@ -394,7 +395,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 // Ver0.1403にて修正。var_759 == 0を追加することで、酒場出現する前のみとした。
@@ -403,7 +404,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 // Ver0.1403にて追加。var_759 >= 1を追加することで、酒場出現する後の処理を追加。
@@ -425,7 +426,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3200 == 1) {
@@ -433,7 +434,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3201 == 1) {
@@ -441,7 +442,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3203 == 1) {
@@ -449,7 +450,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3192 == 1) {
@@ -458,7 +459,7 @@ async function func839(this: any) {
                     Gvar.var_198 = 0;
                     Gvar.var_1206 = 1;
                     await Func.func051();
-                    await Func.func803();
+                    await Dung.func803();
                     return;
                 }
                 if (Gvar.var_3191 == 1) {
@@ -467,7 +468,7 @@ async function func839(this: any) {
                     Gvar.var_198 = 0;
                     Gvar.var_1206 = 1;
                     await Func.func051();
-                    await Func.func803();
+                    await Dung.func803();
                     return;
                 }
                 if (Gvar.var_3147 == 1) {
@@ -475,31 +476,31 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3193 == 1) {
                     Gvar.var_3193 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func812();
+                    await Dung.func812();
                     return;
                 }
                 if (Gvar.var_3193 == 2) {
                     Gvar.var_3193 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func812();
+                    await Dung.func812();
                     return;
                 }
                 if (Gvar.var_3195 == 1) {
                     Gvar.var_3195 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func817();
+                    await Dung.func817();
                     return;
                 }
                 if (Gvar.var_3195 == 2) {
                     Gvar.var_3195 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                    await Func.func817();
+                    await Dung.func817();
                     return;
                 }
                 if (Gvar.var_3131 == 1) {
@@ -507,7 +508,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3137 == 1) {
@@ -515,7 +516,7 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_3156 == 1) {
@@ -529,14 +530,14 @@ async function func839(this: any) {
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
                     Gvar.var_198 = 0;
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_563 == 1) {
                     Gvar.var_563 = 0;
                     Gvar.var_548 = 0; // 選択肢処理フラグOFF
                     await Func.func051();
-                    await Func.func066(); // 亀の倉庫のジッパー関連機能
+                    await Dung.func066(); // 亀の倉庫のジッパー関連機能
                     return;
                 }
             }
@@ -548,7 +549,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 Gvar.var_198 = 0;
                 await Func.func051();
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3209 == 1) {
@@ -563,7 +564,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 Gvar.var_198 = 0;
                 await Func.func051();
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3151 >= 1) {
@@ -571,7 +572,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 Gvar.var_198 = 0;
                 await Func.func051();
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3152 == 1) {
@@ -579,7 +580,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 Gvar.var_198 = 0;
                 await Func.func051();
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3163 == 1) {
@@ -601,7 +602,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 Gvar.var_198 = 0;
                 await Func.func051();
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3126 == 1) {
@@ -630,7 +631,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3136 == 1) {
@@ -645,7 +646,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_2494 == 1) {
@@ -653,7 +654,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_2495 == 1) {
@@ -661,7 +662,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3198 == 1) {
@@ -669,7 +670,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             // Ver0.1403にて追加。
@@ -678,7 +679,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3199 == 1) {
@@ -686,7 +687,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3200 == 1) {
@@ -694,7 +695,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3201 == 1) {
@@ -702,7 +703,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3203 == 1) {
@@ -710,7 +711,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3192 == 1) {
@@ -719,7 +720,7 @@ async function func839(this: any) {
                 Gvar.var_198 = 0;
                 Gvar.var_1206 = 1;
                 await Func.func051();
-                await Func.func803();
+                await Dung.func803();
                 return;
             }
             if (Gvar.var_3191 == 1) {
@@ -728,7 +729,7 @@ async function func839(this: any) {
                 Gvar.var_198 = 0;
                 Gvar.var_1206 = 1;
                 await Func.func051();
-                await Func.func803();
+                await Dung.func803();
                 return;
             }
             if (Gvar.var_3147 == 1) {
@@ -736,31 +737,31 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3193 == 1) {
                 Gvar.var_3193 = 0;
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                await Func.func812();
+                await Dung.func812();
                 return;
             }
             if (Gvar.var_3193 == 2) {
                 Gvar.var_3193 = 0;
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                await Func.func812();
+                await Dung.func812();
                 return;
             }
             if (Gvar.var_3195 == 1) {
                 Gvar.var_3195 = 0;
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                await Func.func817();
+                await Dung.func817();
                 return;
             }
             if (Gvar.var_3195 == 2) {
                 Gvar.var_3195 = 0;
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
-                await Func.func817();
+                await Dung.func817();
                 return;
             }
             if (Gvar.var_3131 == 1) {
@@ -768,7 +769,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3137 == 1) {
@@ -776,7 +777,7 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_3156 == 1) {
@@ -790,14 +791,14 @@ async function func839(this: any) {
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
                 Gvar.var_198 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             if (Gvar.var_563 == 1) {
                 Gvar.var_563 = 0;
                 Gvar.var_548 = 0; // 選択肢処理フラグOFF
                 await Func.func051();
-                await Func.func066(); // 亀の倉庫のジッパー関連機能
+                await Dung.func066(); // 亀の倉庫のジッパー関連機能
                 return;
             }
         }

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 async function func173(this: any) {
         Adap.dbgprt(173);
@@ -53,7 +54,7 @@ async function func173(this: any) {
         await Func.func176();
         Gvar.var_836 = Gvar.dungeon_number;
         Gvar.var_837 = Gvar.current_floor;
-        await Func.func808();
+        await Dung.func808();
         Gvar.var_356 = 0;
         await Func.func233();
         Gvar.var_205 = 1;

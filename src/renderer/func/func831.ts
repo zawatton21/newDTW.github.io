@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // 持ち込み不可ダンジョンにアイテムを所持した状態で入ろうとした際の忠告メッセージ処理
 async function func831(this: any) {
@@ -22,7 +23,7 @@ async function func831(this: any) {
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             await Func.func337(); // メッセージ関係呼び出し
         }
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

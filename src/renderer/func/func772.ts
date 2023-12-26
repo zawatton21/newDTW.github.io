@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func772(this: any) {
         Adap.dbgprt(772);
@@ -38,7 +39,7 @@ async function func772(this: any) {
             await Func.func340(); // キー入力による選択処理
             Gvar.var_198 = 0;
             Gvar.var_300 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.var_449 = 21;
@@ -251,7 +252,7 @@ async function func772(this: any) {
             await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         }
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

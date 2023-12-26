@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // ヴェネチアホテルのベッドへ話しかけた時のメッセージ処理
 async function func768(this: any) {
@@ -25,7 +26,7 @@ async function func768(this: any) {
         await Func.func340(); // キー入力による選択処理
         await Func.func051();
         Gvar.var_198 = 0;
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

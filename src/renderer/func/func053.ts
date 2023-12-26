@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func053(this: any) {
         Adap.dbgprt(53);
@@ -9,7 +10,7 @@ async function func053(this: any) {
         if (Gvar.key_X_on == 1) { // キーXを押すとメニュー画面を閉じる
             Gvar.var_195 = 0;
             Gvar.var_196 = 0; // Mフラグ:メニュー画面 Func.func054
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         if (Gvar.var_259 == 1 && Gvar.var_248 == 1) { // var_259:入力判定[↓]

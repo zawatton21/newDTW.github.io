@@ -1,5 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
 async function func045(this: any) {
         Adap.dbgprt(45);
         // No = 1 なので、ホテルの外

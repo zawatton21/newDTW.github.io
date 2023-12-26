@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Enemy from '../enemy/index'
+import * as Main from '../newdtw/index'
 
 async function func651(this: any) {
         Adap.dbgprt(651);
@@ -271,13 +272,13 @@ async function func651(this: any) {
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         await Enemy.enemy003(); // No = 3 敵タワーオブグレーの特殊能力。瞬間移動。
                         // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
-                        //await Func.func009(); // ゲーム基本動作フレーム処理
+                        //await Main.func009(); // ゲーム基本動作フレーム処理
                     }
                     // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
                     await Func.func337(); // メッセージ関係呼び出し
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
-                        await Func.func009(); // ゲーム基本動作フレーム処理
+                        await Main.func009(); // ゲーム基本動作フレーム処理
                     }
                 }
                 else { // 通路にいる場合の動作処理
@@ -330,7 +331,7 @@ async function func651(this: any) {
                     // 下記を設定することで、ヒラリ回避を実行した時のみターン消費させられる。
                     await Func.func337(); // メッセージ関係呼び出し
                     if (Gvar.var_2938 == 1) {
-                        await Func.func009(); // ゲーム基本動作フレーム処理
+                        await Main.func009(); // ゲーム基本動作フレーム処理
                     }
                 }
             }
@@ -398,7 +399,7 @@ async function func651(this: any) {
             }
         }
         // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
-        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
             if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0) {
@@ -409,7 +410,7 @@ async function func651(this: any) {
             }
         }
         // No = 135 「達人二刀流」が発動している場合 (「シルバーチャリオッツ」 & 「アヌビス神」を装備)
-        if (Gvar.sympathy_id == 135 && Gvar.var_341 == 1 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+        if (Gvar.sympathy_id == 135 && Gvar.var_341 == 1 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
             if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0) {
@@ -434,7 +435,7 @@ async function func651(this: any) {
             Gvar.kougeki_disc_id  = Gvar.var_2923;
         }
         // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
-        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
             if (Gvar.kougeki_disc_id  != 100 && Gvar.kougeki_disc_id  != 398) {
                 Gvar.var_2926 = 0;
                 await Func.func641();
@@ -457,7 +458,7 @@ async function func651(this: any) {
                 }
             }
         }
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

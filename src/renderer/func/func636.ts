@@ -1,7 +1,9 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Stand from '../stand/index'
 import * as Dung from '../dungeon/index'
+import * as Main from '../newdtw/index'
 
 // ディアボロが攻撃or話しかけた時の動作処理
 async function func636(this: any) {
@@ -163,7 +165,7 @@ async function func636(this: any) {
                 return;
             }
             if (Gvar.var_66 == 17 && Gvar.var_67 == 7 && Gvar.var_199 == 8) {
-                await Func.func818(); // ヴェネチアホテルのPCへ話しかけた時のメッセージ処理
+                await Dung.func818(); // ヴェネチアホテルのPCへ話しかけた時のメッセージ処理
                 return;
             }
             if (Gvar.var_66 == 16 && Gvar.var_67 == 7 && Gvar.var_199 == 8) {
@@ -200,12 +202,12 @@ async function func636(this: any) {
             }
             // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
             if (Gvar.var_526 >= 1 && Gvar.var_66 == 12 && Gvar.var_67 == 8 && Gvar.var_199 == 8 && Gvar.var_759 >= 2) {
-                await Func.func832(); // NPC プッチ神父との会話メッセージ
+                await Dung.func832(); // NPC プッチ神父との会話メッセージ
                 return;
             }
             // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
             if (Gvar.var_526 >= 1 && Gvar.var_66 == 13 && Gvar.var_67 == 8 && Gvar.var_199 == 8 && Gvar.var_759 >= 2) {
-                await Func.func833(); // NPC DIOとの会話メッセージ
+                await Dung.func833(); // NPC DIOとの会話メッセージ
                 return;
             }
         }
@@ -327,7 +329,7 @@ async function func636(this: any) {
             }
             if (Gvar.var_83[Gvar.var_314].Var0 == 55) { // Gvar.enemy_list = 55 なので亀
                 await Func.func640();
-                await Func.func161(); //亀の中に入った時の表示
+                await Dung.func161(); //亀の中に入った時の表示
                 return;
             }
             if (Gvar.var_83[Gvar.var_314].Var0 == 81) { // Gvar.enemy_list = 81 なのでアバッキオ
@@ -925,7 +927,7 @@ async function func636(this: any) {
         // No = 61 ヨーヨーマッ
         if (Gvar.var_83[Gvar.var_314].Var0 == 61 && Gvar.var_139 >= 1) {
             Gvar.var_139 = 0;
-            await Func.func038();
+            await Main.func038();
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 101 || Gvar.var_83[Gvar.var_314].Var0 == 102 || Gvar.var_83[Gvar.var_314].Var0 == 103 || Gvar.var_83[Gvar.var_314].Var0 == 104) {
             Gvar.var_2946 = Gvar.var_83[Gvar.var_314].Var0;
@@ -1069,7 +1071,7 @@ async function func636(this: any) {
                 await Func.func688();
             }
             if (Gvar.var_175 >= 1 || Gvar.var_176 >= 1) {
-                await Func.func703();
+                await Stand.func703();
             }
             if (Gvar.var_83[Gvar.var_314].Var20 == 0) {
                 if (Gvar.var_83[Gvar.var_314].Var0 == 79) {
@@ -1129,7 +1131,7 @@ async function func636(this: any) {
         Gvar.var_83[Gvar.var_314].Var8 = 0;
         if (Gvar.var_83[Gvar.var_314].Var13 != 0) {
             Gvar.var_460 = Gvar.var_314;
-            await Func.func024();
+            await Main.func024();
         }
         if (Gvar.var_83[Gvar.var_314].Var12 == 99) {
             Gvar.var_83[Gvar.var_314].Var12 = 0;
@@ -1281,7 +1283,7 @@ async function func636(this: any) {
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 116 && Gvar.var_139 >= 1) {
             Gvar.var_139 = 0;
-            await Func.func039();
+            await Main.func039();
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 33) {
             Gvar.var_83[Gvar.var_314].Var0 = 34;
@@ -1297,7 +1299,7 @@ async function func636(this: any) {
             Gvar.kougeki_disc_id  = 108;
             Gvar.var_750 = 0;
         }
-        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
             if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0) {
@@ -1310,7 +1312,7 @@ async function func636(this: any) {
         if (Gvar.sympathy_id == 135 && Gvar.var_341 == 1 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
-            if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+            if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
                 if (Gvar.kougeki_disc_id  == 101) {
                     Gvar.var_341 = 2;
                     Gvar.var_243 = 1;
@@ -1338,7 +1340,7 @@ async function func636(this: any) {
         if (Gvar.var_83[Gvar.var_314].Var0 == 164 || Gvar.var_83[Gvar.var_314].Var0 == 165) {
             Gvar.var_83[Gvar.var_314].Var5 = Gvar.var_2942;
         }
-        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
             if (Gvar.kougeki_disc_id  != 100 && Gvar.kougeki_disc_id  != 398) {
                 Gvar.var_2926 = 0;
                 await Func.func641();
@@ -1360,7 +1362,7 @@ async function func636(this: any) {
                 }
             }
         }
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

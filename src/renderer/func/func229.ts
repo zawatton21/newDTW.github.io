@@ -45,7 +45,7 @@ async function func229(this: any) {
         Gvar.var_129 = 0;
         Gvar.var_218 = 0;
         Gvar.var_374 = 0;
-        Gvar.var_128 = 0;
+        Gvar.to_freeze = 0;
         Gvar.var_389 = 0;
         Gvar.kougeki_disc_id  = 0;
         Gvar.bougyo_disc_id = 0;
@@ -215,7 +215,7 @@ async function func229(this: any) {
         Gvar.var_129 = Gvar.var_704[30];
         Gvar.var_218 = Gvar.var_704[31];
         Gvar.var_374 = Gvar.var_704[32];
-        Gvar.var_128 = Gvar.var_704[33];
+        Gvar.to_freeze = Gvar.var_704[33];
         Gvar.var_993 = Gvar.var_704[34];
         Gvar.kougeki_disc_id  = Gvar.var_704[35];
         Gvar.bougyo_disc_id = Gvar.var_704[36];

@@ -1,10 +1,11 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 160 ウェストウッド看守の特殊能力
 async function enemy160(this: any) {
-        if (Gvar.var_128 != 0 || Gvar.var_219 != 0) {
+        if (Gvar.to_freeze != 0 || Gvar.var_219 != 0) {
             return;
         }
         if (Gvar.var_114 == 0) {
@@ -141,11 +142,11 @@ async function enemy160(this: any) {
             if (Gvar.var_83[Gvar.var_673].Var39 >= 2) {
                 Gvar.var_209 = (Gvar.var_83[Gvar.var_673].Var39 - 1) * 2 + Gvar.var_209;
             }
-            if (Gvar.var_128 >= 1) {
+            if (Gvar.to_freeze >= 1) {
                 Gvar.var_209 = Math.floor(Gvar.var_209 * 3 / 2);
             }
-            if (Gvar.var_128 >= 1) {
-                await Func.func023();
+            if (Gvar.to_freeze >= 1) {
+                await Main.func023();
             }
             if (Gvar.equip_disc[205] == 1) {
                 Gvar.var_209 = Math.floor(Gvar.var_209 * 2 / 3);

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 124 ムーディー・ブルースの発動処理
 async function item124(this: any) {
@@ -349,7 +350,7 @@ async function func533(this: any) {
             await Func.func340(); // キー入力による選択処理
             Gvar.var_198 = 0;
             Gvar.var_300 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.var_449 = 21;
@@ -573,7 +574,7 @@ async function func533(this: any) {
             }
         }
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

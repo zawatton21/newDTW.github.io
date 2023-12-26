@@ -193,7 +193,7 @@ export interface GlobalVars {
     var_125 :any,
     var_126 :any,
     var_127 :number, // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグ
-    var_128 :any,
+    to_freeze :number,// 氷状態になった時のフラグ
     var_129 :any,
     var_130 :any,
     var_131 :any,
@@ -3894,7 +3894,7 @@ export let Gvar: GlobalVars = {
     var_125: 0,
     var_126: 0,
     var_127: 0, // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグ
-    var_128: 0,
+    to_freeze: 0, // 氷状態になった時のフラグ
     var_129: 0,
     var_130: 0,
     var_131: 0,

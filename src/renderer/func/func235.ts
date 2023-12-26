@@ -44,7 +44,7 @@ async function func235(this: any) {
         Gvar.var_129 = 0;
         Gvar.var_218 = 0;
         Gvar.var_374 = 0;
-        Gvar.var_128 = 0;
+        Gvar.to_freeze = 0;
         Gvar.var_389 = 0;
         Gvar.kougeki_disc_id  = 0;
         Gvar.bougyo_disc_id = 0;

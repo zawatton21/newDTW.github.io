@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 94 ブルりんの特殊能力
 async function enemy094(this: any) {
-        if (Gvar.var_114 >= 1 || Gvar.var_128 != 0 || Gvar.var_219 != 0) {
+        if (Gvar.var_114 >= 1 || Gvar.to_freeze != 0 || Gvar.var_219 != 0) {
             return;
         }
         Gvar.var_2893 = Adap.rnd(3);

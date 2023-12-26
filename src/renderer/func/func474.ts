@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func474(this: any) {
         Adap.dbgprt(474);
@@ -29,7 +30,7 @@ async function func474(this: any) {
                 Gvar.var_234 = 0;
             }
             Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         // 所持アイテム数が20個未満であれば場合
@@ -90,7 +91,7 @@ async function func474(this: any) {
         Gvar.var_213 = 1;
         Gvar.var_226 = Gvar.var_1876;
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

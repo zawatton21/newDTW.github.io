@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
+import * as Dung from '../dungeon/index'
 import * as Ex from '../extra_items/index'
 
 async function func337(this: any) {
@@ -58,7 +59,7 @@ async function func337(this: any) {
         if (Gvar.var_127 == 1 || Gvar.var_132 >= 1) {
             await Func.func329(); // 画面全体に黒いブラインドをかける処理
         }
-        await Func.func325();
+        await Stand.func325();
         await Func.func342();
         await Func.func343();
         if (Gvar.var_163 == 1) {
@@ -131,13 +132,13 @@ async function func337(this: any) {
             await Func.func840(); // 選択肢処理(はい、いいえ & 買う、やめる等)
         }
         if (Gvar.var_1204 == 1) {
-            await Func.func823();
+            await Dung.func823();
         }
         if (Gvar.var_1205 >= 1) {
-            await Func.func800();
+            await Dung.func800();
         }
         if (Gvar.var_1206 == 1) {
-            await Func.func804();
+            await Dung.func804();
         }
         if (Gvar.var_499 == 1) { // Mフラグ:設定画面 Func.func056
             await Func.func056(); // メニュー画面の"設定"の表示 (マップON、履歴、資料、システム、終了)

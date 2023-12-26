@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 132 レクイエムジョルノの動作処理
 async function enemy132(this: any) {
@@ -67,7 +68,7 @@ async function enemy132(this: any) {
                 Gvar.var_78[Gvar.var_854].Var9 = Gvar.var_71[Gvar.var_448][Gvar.var_450];
                 Gvar.var_78[Gvar.var_854].Var10 = 1;
             }
-            await Func.func018();
+            await Main.func018();
             Gvar.comments_row1 = Gvar.comments_row1a;
             Gvar.comments_row2 = Gvar.comments_row2a;
             Gvar.comments_row1a = "鉄塔がカエルに変化した！";

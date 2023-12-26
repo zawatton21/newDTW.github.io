@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func741(this: any) {
         Adap.dbgprt(741);
@@ -101,7 +102,7 @@ async function func741(this: any) {
         await Func.func051();
         if (Gvar.var_3130 == 0) {
             Gvar.var_198 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.var_245 = 19;

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 async function func324(this: any) {
         Adap.dbgprt(324);
@@ -364,11 +365,11 @@ async function func324(this: any) {
         }
         // Ver0.1403にて修正。
         if (Gvar.var_262 == 1 && Gvar.var_595 != 2) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-            await Func.func163(); // ヴェネチアホテルのアイテム配置
+            await Dung.func163(); // ヴェネチアホテルのアイテム配置
         }
         // Ver0.1403にて追加。
         if (Gvar.var_262 == 1 && Gvar.var_595 == 2) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-            await Func.func163b(); // 酒場の配置(マップ読み込み)
+            await Dung.func163b(); // 酒場の配置(マップ読み込み)
         }
         if (Gvar.special_floor == 9) { // 幽霊部屋
             await Func.func164(); // 幽霊部屋の配置(マップ読み込み)

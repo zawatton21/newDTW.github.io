@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Class from '../classes'
 import * as Map from '../map/index'
+import * as Dung from '../dungeon/index'
 import * as Even from '../events/index'
 
 // オープニング (5部最終決戦 ジョルノ達との戦いの場面)
@@ -671,7 +672,7 @@ async function func150(this: any) {
         Gvar.var_312 = 0;
         Gvar.ivents_flag = 1; // 初めてヴェネチアホテルへ訪れた際のディアボロの呟きフラグ
         Gvar.var_755 = 0;
-        await Func.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
+        await Dung.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
         return;
 }
 

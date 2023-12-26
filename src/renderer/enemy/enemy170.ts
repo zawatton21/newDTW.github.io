@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 170 敵カタツムリの特殊能力
 async function enemy170(this: any) {
@@ -9,8 +10,8 @@ async function enemy170(this: any) {
             Gvar.var_83[Gvar.var_673].Var7 = 1;
 
             Adap.DSPLAY(123);
-            if (Gvar.var_128 >= 1) {
-                await Func.func023();
+            if (Gvar.to_freeze >= 1) {
+                await Main.func023();
             }
             await Func.func619();
             for (let cnt3 = 0; cnt3 < 10; ++cnt3) {

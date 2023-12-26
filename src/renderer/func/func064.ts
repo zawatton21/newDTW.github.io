@@ -1,18 +1,20 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
+import * as Main from '../newdtw/index'
 
 async function func064(this: any) {
         Adap.dbgprt(64);
         Gvar.var_544 = 0;
         // No = 0 なので、拠点(ホテル、亀、)
         if (Gvar.dungeon_number == 0 && Gvar.var_66 == 15 && Gvar.var_67 == 21) {
-            await Func.func065();
+            await Dung.func065();
             return;
         }
         // No = 0 なので、拠点(ホテル、亀、)
         if (Gvar.dungeon_number == 0 && Gvar.var_404 >= 1 && Gvar.var_66 == 17 && Gvar.var_67 == 9) {
-            await Func.func826(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
+            await Dung.func826(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
             return;
         }
         if (Gvar.var_77[Gvar.var_66][Gvar.var_67] > 0) {
@@ -32,11 +34,11 @@ async function func064(this: any) {
             Gvar.var_545 = 0;
             if (Gvar.var_382 == 1) {
                 Gvar.var_382 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
             Gvar.var_217 = 1;
-            await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
         if (Gvar.var_73[Gvar.var_66][Gvar.var_67] >= 1) {
@@ -64,7 +66,7 @@ async function func064(this: any) {
             Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
             await Func.func047();
         }
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

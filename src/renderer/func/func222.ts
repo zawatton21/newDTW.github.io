@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func222(this: any) {
         Adap.dbgprt(222);
@@ -72,7 +73,7 @@ async function func222(this: any) {
         Adap.redraw(1);
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_X_on == 1) {
-            await Func.func140();
+            await Main.func140();
             return;
         }
         if (Gvar.var_259 == 1 && Gvar.var_932 != 6) { // var_259:入力判定[↓]

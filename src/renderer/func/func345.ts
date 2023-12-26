@@ -821,7 +821,7 @@ async function func345(this: any) {
             Adap.gmode(2, null, null, null);
             return;
         }
-        if (Gvar.var_128 >= 1) {
+        if (Gvar.to_freeze >= 1) {
             Adap.gcopy(3, 960, 0, 40, 40);
             Adap.color(0, 0, 0);
 

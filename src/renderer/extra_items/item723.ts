@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Ex from '../extra_items/index'
+import * as Main from '../newdtw/index'
 
 // No = 723 アイテム「魔法のランプ」を使用した時の効果
 async function item723(this: any) {
@@ -218,7 +219,7 @@ async function func450(this: any) {
         await Ex.func456(); // ジャッジメントの問いに対して、アヴドゥルを生き返らせてくれと選択した時の動作処理
         return;
     }
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 
@@ -292,7 +293,7 @@ async function func451(this: any) {
     for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
         await Func.func337(); // メッセージ関係呼び出し
     }
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 
@@ -334,7 +335,7 @@ async function func452(this: any) {
     Gvar.var_1759 = 0;
     Gvar.var_452 = 0;
     await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 
@@ -366,7 +367,7 @@ async function func453(this: any) {
     await Func.func047();
     await Func.func050();
     await Func.func340(); // キー入力による選択処理
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 
@@ -399,7 +400,7 @@ async function func454(this: any) {
     await Func.func050();
     await Func.func340(); // キー入力による選択処理
     await Ex.func457(); // ジャッジメントの問いに対して、体力を回復させてくれと選択した時、体力回復後の状態異常回復の動作処理
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 
@@ -465,7 +466,7 @@ async function func455(this: any) {
     Gvar.var_464 = 0;
     Gvar.var_461 = 0;
     Gvar.var_462 = 0;
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 
@@ -493,7 +494,7 @@ async function func456(this: any) {
     }
     Gvar.var_1998 = 0;
     await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 

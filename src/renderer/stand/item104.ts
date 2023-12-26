@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 104 ザ・ハンドの発動処理
 async function item104(this: any) {
@@ -237,7 +238,7 @@ async function item104(this: any) {
             await Func.func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
         }
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

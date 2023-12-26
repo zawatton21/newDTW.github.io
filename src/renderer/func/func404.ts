@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Map from '../map/index'
+import * as Main from '../newdtw/index'
 
 // アイテムを置く時の動作処理
 async function func404(this: any) {
@@ -27,7 +28,7 @@ async function func404(this: any) {
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         await Func.func405();
@@ -123,7 +124,7 @@ async function func404(this: any) {
             }
             Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
             
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         if (Gvar.var_446 == 0) {
@@ -147,7 +148,7 @@ async function func404(this: any) {
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         await Func.func724();
@@ -207,7 +208,7 @@ async function func404(this: any) {
         
         await Func.func047();
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

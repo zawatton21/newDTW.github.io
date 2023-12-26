@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
+import * as Main from '../newdtw/index'
 
 async function func461(this: any) {
         Adap.dbgprt(461);
@@ -534,7 +535,7 @@ async function func461(this: any) {
                     Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     Gvar.var_1965 = 0;
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                     return;
                 }
                 if (Gvar.var_1866 == 1) {

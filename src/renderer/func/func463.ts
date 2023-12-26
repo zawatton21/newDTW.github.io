@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func463(this: any) {
         Adap.dbgprt(463);
@@ -777,7 +778,7 @@ async function func463(this: any) {
                         await Func.func401(); // 射撃discを拾った際、同じものを既に所持していた時にまとめる動作処理
                         if (Gvar.var_1839 == 1) {
                             Gvar.var_217 = 1;
-                            await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                            await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                             return;
                         }
                     }
@@ -788,7 +789,7 @@ async function func463(this: any) {
                     }
                     await Func.func400(); // アイテムを拾う際の動作処理
                     Gvar.var_217 = 1;
-                    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return;
                 }
                 if (Gvar.var_222 == 1) {

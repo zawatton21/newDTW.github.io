@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 async function func166(this: any) {
         Adap.dbgprt(166);
@@ -23,7 +24,7 @@ async function func166(this: any) {
                 Gvar.var_790 = 0;
                 Gvar.var_791 = 0;
                 Gvar.var_629 = 0;
-                await Func.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
+                await Dung.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
                 return;
             }
             if (Gvar.key_X_on == 1) {
@@ -34,7 +35,7 @@ async function func166(this: any) {
                 Gvar.var_790 = 0;
                 Gvar.var_791 = 0;
                 Gvar.var_629 = 0;
-                await Func.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
+                await Dung.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
                 return;
             }
         }
@@ -51,10 +52,10 @@ async function func166(this: any) {
             if (Gvar.key_X_on == 1) {
                 Gvar.var_790 = 0;
                 Gvar.var_791 = 0;
-                await Func.func822();
+                await Dung.func822();
                 Gvar.var_629 = 0;
                 await Func.func051();
-                await Func.func820();
+                await Dung.func820();
                 return;
             }
             if (Gvar.var_257 == 1 && Gvar.var_785 == 1) {

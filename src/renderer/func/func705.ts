@@ -1,7 +1,9 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Stand from '../stand/index'
 import * as Dung from '../dungeon/index'
+import * as Main from '../newdtw/index'
 
 async function func705(this: any) {
         Adap.dbgprt(705);
@@ -359,7 +361,7 @@ async function func705(this: any) {
                 await Func.func680();
                 if (Gvar.var_175 >= 1 || Gvar.var_176 >= 1) {
                     Gvar.var_314 = Gvar.var_402;
-                    await Func.func703();
+                    await Stand.func703();
                 }
             }
             if (Gvar.var_2196 == 1 && Gvar.var_83[Gvar.var_673].Var31 == 5 && Gvar.var_3106 == 0 && Gvar.var_3107 == 0) {
@@ -429,7 +431,7 @@ async function func705(this: any) {
                 }
                 if (Gvar.var_175 >= 1 || Gvar.var_176 >= 1) {
                     Gvar.var_314 = Gvar.var_402;
-                    await Func.func703();
+                    await Stand.func703();
                 }
             }
             if (Gvar.var_3110 != 0) {
@@ -467,7 +469,7 @@ async function func705(this: any) {
                 await Func.func680();
                 if (Gvar.var_175 >= 1 || Gvar.var_176 >= 1) {
                     Gvar.var_314 = Gvar.var_402;
-                    await Func.func703();
+                    await Stand.func703();
                 }
             }
             if (Gvar.var_2196 == 1 && Gvar.var_83[Gvar.var_673].Var0 != 0 && Gvar.var_83[Gvar.var_673].Var31 != 5 && Gvar.var_83[Gvar.var_673].Var31 != 4 && Gvar.var_3105 == 0 && Gvar.var_3110 == 0 && Gvar.var_3106 == 0 && Gvar.var_3107 == 0) {
@@ -563,7 +565,7 @@ async function func705(this: any) {
                     }
                     if (Gvar.var_175 >= 1 || Gvar.var_176 >= 1) {
                         Gvar.var_314 = Gvar.var_402;
-                        await Func.func703();
+                        await Stand.func703();
                     }
                 }
             }
@@ -638,7 +640,7 @@ async function func705(this: any) {
         Gvar.var_83[Gvar.var_402].Var8 = 0;
         if (Gvar.var_83[Gvar.var_402].Var13 != 0) {
             Gvar.var_460 = Gvar.var_402;
-            await Func.func024();
+            await Main.func024();
         }
         if (Gvar.var_83[Gvar.var_402].Var12 == 99) {
             Gvar.var_83[Gvar.var_402].Var12 = 0;

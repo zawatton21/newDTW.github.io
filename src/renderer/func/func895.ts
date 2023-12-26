@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-
+import * as Main from '../newdtw/index'
 
 async function func895(this: any) {
         Adap.dbgprt(895);
@@ -40,7 +40,7 @@ async function func895(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         for (let cnt1 = 0; true; ++cnt1) {
@@ -69,7 +69,7 @@ async function func895(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Adap.clrobj();
@@ -122,7 +122,7 @@ async function func895(this: any) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         if (Gvar.var_3531 == 1) {
@@ -144,7 +144,7 @@ async function func895(this: any) {
             await Func.func929();
             Gvar.var_3517 = "＃ログイン＃";
             await Func.func900();
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.var_407 = 1;
@@ -155,7 +155,7 @@ async function func895(this: any) {
         Adap.gsel(0, 1);
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         await Func.func907();
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

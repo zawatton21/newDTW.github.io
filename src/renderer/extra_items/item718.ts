@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Ex from '../extra_items/index'
 
 // No = 718 アイテム「聖なる弓矢」を使用した時の効果
 async function item718(this: any) {
@@ -15,7 +16,7 @@ async function item718(this: any) {
         Gvar.var_1257 = 0;
         Gvar.var_1591 = 0;
         Gvar.var_271 = 0;
-        await Func.func530();
+        await Ex.func530();
         return;
 }
 

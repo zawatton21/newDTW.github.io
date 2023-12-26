@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 27 敵ゲブ神の特殊能力
 async function enemy027(this: any) {
-        if (Gvar.var_128 != 0 || Gvar.var_219 != 0) {
+        if (Gvar.to_freeze != 0 || Gvar.var_219 != 0) {
             return;
         }
         Gvar.var_2893 = Adap.rnd(4);
@@ -50,7 +50,7 @@ async function enemy027(this: any) {
             Gvar.var_2197 = 1;
             return;
         }
-        if (Gvar.var_2893 == 0 || Gvar.var_114 >= 1 || Gvar.var_128 != 0 || Gvar.var_219 != 0) {
+        if (Gvar.var_2893 == 0 || Gvar.var_114 >= 1 || Gvar.to_freeze != 0 || Gvar.var_219 != 0) {
             return;
         }
         Adap.DSPLAY(136);

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 123 クリームの発動処理
 async function item123(this: any) {
@@ -91,7 +92,7 @@ async function item123(this: any) {
             Gvar.var_67 = Gvar.var_456;
             Gvar.var_236 = Gvar.var_1894;
             Gvar.var_237 = Gvar.var_1895;
-            await Func.func016();
+            await Main.func016();
             if (Gvar.var_72[Gvar.var_236][Gvar.var_237] >= 1 && Gvar.var_72[Gvar.var_66][Gvar.var_67] == 0 && Gvar.var_85 == 0) {
                 await Func.func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
             }
@@ -142,7 +143,7 @@ async function item123(this: any) {
         Gvar.var_1195 = 0;
         Gvar.var_1218 = 2;
         Gvar.var_1219 = 0;
-        await Func.func016();
+        await Main.func016();
         for (let cnt2 = 0; cnt2 < 16; ++cnt2) {
             await Func.func337(); // メッセージ関係呼び出し
         }
@@ -152,7 +153,7 @@ async function item123(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

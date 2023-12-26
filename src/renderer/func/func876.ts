@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // 魔少年の問題機能?? ver0.12から追加されている
 async function func876(this: any) {
@@ -21,8 +22,8 @@ async function func876(this: any) {
         Gvar.var_199 = 2;
         Gvar.var_74[Gvar.var_66][Gvar.var_67] = 1;
         Gvar.var_75[Gvar.var_201] = 1;
-        await Func.func017();
-        await Func.func018();
+        await Main.func017();
+        await Main.func018();
         if (Gvar.var_200 == Gvar.var_201) {
             Gvar.var_98 = 1;
         }
@@ -36,7 +37,7 @@ async function func876(this: any) {
         }
         Gvar.var_68 = 1;
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

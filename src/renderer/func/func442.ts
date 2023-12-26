@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func442(this: any) {
         Adap.dbgprt(442);
@@ -175,7 +176,7 @@ async function func442(this: any) {
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
             await Func.func337(); // メッセージ関係呼び出し
         }
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

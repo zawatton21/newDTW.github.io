@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
+import * as Main from '../newdtw/index'
 
 // No = 319 ボーイⅡマンの発動処理
 async function item319(this: any) {
@@ -242,7 +243,7 @@ async function func526(this: any) {
     Gvar.var_1667 = 0;
     Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
     Gvar.var_234 = 0;
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 

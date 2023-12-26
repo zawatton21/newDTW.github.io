@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
 
 async function func673(this: any) {
         Adap.dbgprt(673);
@@ -29,7 +30,7 @@ async function func673(this: any) {
                 Gvar.var_1049 = 1;
                 await Func.func231();
                 Gvar.var_1049 = 0;
-                await Func.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
+                await Dung.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
                 return;
             }
             if (Gvar.var_375 == 0) {

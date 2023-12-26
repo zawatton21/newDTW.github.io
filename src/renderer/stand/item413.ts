@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 413 不明disc(没discサーフィス?) の発動処理
 async function item413(this: any) {
@@ -30,7 +31,7 @@ async function item413(this: any) {
             }
             Gvar.var_234 = 0;
             Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
@@ -47,7 +48,7 @@ async function item413(this: any) {
         Gvar.var_444 = 0;
         Gvar.var_83[Gvar.var_439].Var11 = 0;
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

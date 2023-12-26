@@ -1,6 +1,7 @@
 import { Gvar } from './variable'
 import * as Adap from './adapter/index'
 import * as Func from './func/index'
+import * as Main from './newdtw/index'
 
 /* 変数の初期化はvariable.tsにて行う為コメントアウト
 for (let i = 0; i < 3600; ++i) {
@@ -21,6 +22,6 @@ Adap.InitInput();
 //window.onload = Func.func001;
 window.addEventListener('load', async function(){
     Adap.dbgprt(1);
-    Func.func004();
+    Main.func004();
     return;
 })

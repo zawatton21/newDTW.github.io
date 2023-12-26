@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 12 敵エコーズACT2の特殊能力
 async function enemy012(this: any) {
@@ -31,8 +32,8 @@ async function enemy012(this: any) {
             }
             await Func.func340(); // キー入力による選択処理
             Gvar.var_743 = 0; //スタンド像付与フラグOFF
-            if (Gvar.var_128 >= 1) {
-                await Func.func023();
+            if (Gvar.to_freeze >= 1) {
+                await Main.func023();
             }
             if (Gvar.equip_disc[396] == 0) {
                 if (Gvar.var_157 == 0) { // Gvar.var_157 倍速移動フラグOFFであれば

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func552(this: any) {
         Adap.dbgprt(552);
@@ -62,7 +63,7 @@ async function func552(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             await Func.func339();
         }
-        await Func.func006();
+        await Main.func006();
         return;
 }
 

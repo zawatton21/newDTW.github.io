@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Ex from '../extra_items/index'
+import * as Main from '../newdtw/index'
 
 // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
 async function func420(this: any) {
@@ -130,7 +131,7 @@ async function func420(this: any) {
                 Gvar.var_217 = 1;
                 Gvar.disc_class = 0;
                 Gvar.var_1933 = 0;
-                await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                 return;
             }*/
         }
@@ -549,10 +550,10 @@ async function func420(this: any) {
         if (Gvar.var_1952 == 1) {
             Gvar.var_1952 = 0;
             Gvar.var_217 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

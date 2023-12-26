@@ -11,7 +11,11 @@ export {func522} from "./item106"
 export {func523} from "./item106"
 
 export {item107} from "./item107"
+// スティッキーフィンガーズのdisc
 export {item108} from "./item108"
+export {func032} from "./item108"
+export {func033} from "./item108"
+
 export {item109} from "./item109"
 export {item110} from "./item110"
 export {item111} from "./item111"
@@ -19,7 +23,11 @@ export {item112} from "./item112"
 export {item113} from "./item113"
 export {item114} from "./item114"
 export {item115} from "./item115"
+// ハーミットパープルのdisc
 export {item116} from "./item116"
+export {func325} from "./item116"
+export {func703} from "./item116"
+
 export {item117} from "./item117"
 export {item118} from "./item118"
 export {item119} from "./item119"
@@ -96,7 +104,10 @@ export {item320} from "./item320"
 export {item393} from "./item393"
 
 export {item395} from "./item395"
+// メイド・イン・ヘブンのdisc
 export {item396} from "./item396"
+export {func043} from "./item396"
+
 export {item397} from "./item397"
 export {item398} from "./item398"
 // Gエクスペリエンスレクイエムのdisc

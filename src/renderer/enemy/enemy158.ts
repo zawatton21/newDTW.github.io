@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 158 プッツン由花子の特殊能力
 async function enemy158(this: any) {
         Gvar.var_2893 = Adap.rnd(3);
-        if (Gvar.var_2893 == 0 || Gvar.var_114 >= 1 || Gvar.var_128 != 0 || Gvar.var_219 != 0) {
+        if (Gvar.var_2893 == 0 || Gvar.var_114 >= 1 || Gvar.to_freeze != 0 || Gvar.var_219 != 0) {
             return;
         }
         await Func.func619();

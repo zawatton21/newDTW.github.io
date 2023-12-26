@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func585(this: any) {
         Adap.dbgprt(585);
@@ -329,8 +330,8 @@ async function func585(this: any) {
         if (Gvar.var_2803 == 1) {
             return;
         }
-        if (Gvar.var_128 >= 1) {
-            await Func.func023();
+        if (Gvar.to_freeze >= 1) {
+            await Main.func023();
         }
         Gvar.var_747 = 1;
         Gvar.var_389 = 1;
@@ -459,7 +460,7 @@ async function func585(this: any) {
         if (Gvar.var_113 == 1) {
             Gvar.var_209 = Math.floor(Gvar.var_209 * 2 / 3);
         }
-        if (Gvar.var_128 >= 1) {
+        if (Gvar.to_freeze >= 1) {
             Gvar.var_209 = Math.floor(Gvar.var_209 * 3 / 2);
         }
         if (Gvar.equip_disc[205] == 1) {

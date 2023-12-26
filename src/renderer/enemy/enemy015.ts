@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 15 敵ペットショップ & No = 64 敵ギアッチョの特殊能力
 async function enemy015(this: any) {
         Gvar.var_2830 = Adap.rnd(4);
-        if (Gvar.var_2830 == 0 && Gvar.var_128 == 0 && Gvar.var_219 == 0) {
+        if (Gvar.var_2830 == 0 && Gvar.to_freeze == 0 && Gvar.var_219 == 0) {
             Gvar.var_1359 = 0;
             if (Gvar.enemy_list == 15) {
                 Gvar.var_1359 = 1;
@@ -66,7 +66,7 @@ async function enemy015(this: any) {
                 Gvar.var_2197 = 1;
                 return;
             }
-            Gvar.var_128 = 1;
+            Gvar.to_freeze = 1;
             Adap.DSPLAY(126);
             Gvar.comments_row1 = "";
             Gvar.comments_row2 = "";

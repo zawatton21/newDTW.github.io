@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // ヤバいものからアイテムを取り出す時の動作処理
 async function func777(this: any) {
@@ -22,7 +23,7 @@ async function func777(this: any) {
             await Func.func340(); // キー入力による選択処理
             await Func.func051();
             Gvar.var_198 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.belongings_item_list = Gvar.var_987[0];
@@ -110,7 +111,7 @@ async function func777(this: any) {
         await Func.func340(); // キー入力による選択処理
         await Func.func051();
         Gvar.var_198 = 0;
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 // ↑おそらくここまで鮮血のシャボン玉の機能

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 106 クレイジーDの発動処理
 async function item106(this: any) {
@@ -616,7 +617,7 @@ async function func523(this: any) {
     Gvar.var_1240 = 0;
     Gvar.var_199 = 2;
     Gvar.var_217 = 1;
-    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
     return;
 }
 

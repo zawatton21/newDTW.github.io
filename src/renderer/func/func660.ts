@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func660(this: any) {
         Adap.dbgprt(660);
@@ -376,7 +377,7 @@ async function func660(this: any) {
             Gvar.var_82[Gvar.var_455][Gvar.var_456] = 0;
             if (Gvar.var_83[Gvar.var_1385].Var13 != 0) {
                 Gvar.var_460 = Gvar.var_1385;
-                await Func.func024();
+                await Main.func024();
             }
             if (Gvar.var_83[Gvar.var_1385].Var12 == 99) {
                 Gvar.var_83[Gvar.var_1385].Var12 = 0;
@@ -446,7 +447,7 @@ async function func660(this: any) {
                 Gvar.var_83[Gvar.var_3068].Var8 = 1;
                 if (Gvar.var_83[Gvar.var_3068].Var13 != 0) {
                     Gvar.var_460 = Gvar.var_3068;
-                    await Func.func024();
+                    await Main.func024();
                 }
                 if (Gvar.var_83[Gvar.var_3068].Var12 == 99) {
                     Gvar.var_83[Gvar.var_3068].Var12 = 0;
@@ -616,7 +617,7 @@ async function func660(this: any) {
             Gvar.var_314 = Gvar.var_82[Gvar.var_455][Gvar.var_456];
             if (Gvar.var_83[Gvar.var_314].Var13 != 0) {
                 Gvar.var_460 = Gvar.var_314;
-                await Func.func024();
+                await Main.func024();
             }
             if (Gvar.var_83[Gvar.var_314].Var12 == 99) {
                 Gvar.var_83[Gvar.var_314].Var12 = 0;
@@ -662,7 +663,7 @@ async function func660(this: any) {
             Gvar.var_314 = Gvar.var_82[Gvar.var_455][Gvar.var_456];
             if (Gvar.var_83[Gvar.var_314].Var13 != 0) {
                 Gvar.var_460 = Gvar.var_314;
-                await Func.func024();
+                await Main.func024();
             }
             if (Gvar.var_83[Gvar.var_314].Var12 == 99) {
                 Gvar.var_83[Gvar.var_314].Var12 = 0;
@@ -713,7 +714,7 @@ async function func660(this: any) {
             Gvar.var_314 = Gvar.var_82[Gvar.var_455][Gvar.var_456];
             if (Gvar.var_83[Gvar.var_314].Var13 != 0) {
                 Gvar.var_460 = Gvar.var_314;
-                await Func.func024();
+                await Main.func024();
             }
             if (Gvar.var_83[Gvar.var_314].Var12 == 99) {
                 Gvar.var_83[Gvar.var_314].Var12 = 0;
@@ -971,7 +972,7 @@ async function func660(this: any) {
             }
             if (Gvar.var_83[Gvar.var_314].Var13 != 0) {
                 Gvar.var_460 = Gvar.var_314;
-                await Func.func024();
+                await Main.func024();
             }
             if (Gvar.var_83[Gvar.var_314].Var12 == 99) {
                 Gvar.var_83[Gvar.var_314].Var12 = 0;

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // ヤバいもの関係の容量設定？？
 async function func414(this: any) {
@@ -91,7 +92,7 @@ async function func414(this: any) {
                 Gvar.var_78[Gvar.var_854].Var29 = Gvar.var_486[Gvar.var_1904][Gvar.var_1910][29];
                 Gvar.var_1910++;
             }
-            await Func.func018();
+            await Main.func018();
         }
         Gvar.var_1270 = 0;
         // No = 806 ヤバいもの「カルネの死体」の場合
@@ -160,7 +161,7 @@ async function func414(this: any) {
             await Func.func337(); // メッセージ関係呼び出し
         }
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

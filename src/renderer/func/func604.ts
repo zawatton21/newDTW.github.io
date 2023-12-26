@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func604(this: any) {
         Adap.dbgprt(604);
@@ -266,7 +267,7 @@ async function func604(this: any) {
         if (Gvar.var_83[Gvar.var_673].Var39 >= 2) {
             Gvar.var_2852 = (Gvar.var_83[Gvar.var_673].Var39 - 1) * 2 + Gvar.var_2852;
         }
-        if (Gvar.var_128 >= 1) {
+        if (Gvar.to_freeze >= 1) {
             Gvar.var_2852 = Math.floor(Gvar.var_2852 * 3 / 2);
         }
         if (Gvar.equip_disc[205] == 1) {
@@ -292,8 +293,8 @@ async function func604(this: any) {
         Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
         Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
         await Func.func047();
-        if (Gvar.var_128 >= 1) {
-            await Func.func023();
+        if (Gvar.to_freeze >= 1) {
+            await Main.func023();
         }
         for (let cnt1 = 0; cnt1 < 8; ++cnt1) {
             await Func.func337(); // メッセージ関係呼び出し

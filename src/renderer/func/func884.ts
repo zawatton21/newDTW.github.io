@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-
+import * as Main from '../newdtw/index'
 
 async function func884(this: any) {
         Adap.dbgprt(884);
@@ -161,7 +161,7 @@ async function func884(this: any) {
 
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
             Adap.chdir(Gvar.var_30);
-            await Func.func142();
+            await Main.func142();
             return;
         }
         await Func.func885();

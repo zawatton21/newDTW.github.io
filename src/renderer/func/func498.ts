@@ -3,7 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Memory from '../memory/index'
 import * as Food from '../food/index'
-import * as Extra from '../extra_items/index'
+import * as Ex from '../extra_items/index'
 
 async function func498(this: any) {
         Adap.dbgprt(498);
@@ -428,7 +428,7 @@ async function func498(this: any) {
         }
         // No = 715 アイテム「点滴」を使用した時の効果
         if (Gvar.belongings_item_list == 715) {
-            await Extra.item715();
+            await Ex.item715();
             return;
         }
         // No = 600 アイテム「ピッツァ」を使用した時の効果
@@ -563,112 +563,112 @@ async function func498(this: any) {
         }
         // No = 701 没アイテム「ソフト・マシーンの発動によって罠にした敵」を使用した時の効果
         if (Gvar.belongings_item_list == 701) {
-            await Extra.item701();
+            await Ex.item701();
             return;
         }
         // No = 9999 没アイテム？
         if (Gvar.belongings_item_list == 9999) {
-            await Extra.item9999();
+            await Ex.item9999();
             return;
         }
         // No = 712 アイテム「やばいクスリ」を使用した時の効果
         if (Gvar.belongings_item_list == 712) {
-            await Extra.item712();
+            await Ex.item712();
             return;
         }
         // No = 713 アイテム「ﾎﾟﾙﾎﾟのﾗｲﾀｰ」を使用した時の効果
         if (Gvar.belongings_item_list == 713) {
-            await Extra.item713();
+            await Ex.item713();
             return;
         }
         // No = 714 アイテム「紫外線照射装置」を使用した時の効果
         if (Gvar.belongings_item_list == 714) {
-            await Extra.item714();
+            await Ex.item714();
             return;
         }
         // item_list = 724 石仮面
         if (Gvar.belongings_item_list == 724) {
-            await Extra.item724();
+            await Ex.item724();
             return;
         }
         // item_list == 728 赤石つき石仮面
         if (Gvar.belongings_item_list == 728) {
-            await Extra.item728();
+            await Ex.item728();
             return;
         }
         // No = 726 アイテム「鉄球」を使用した時の効果
         if (Gvar.belongings_item_list == 726) {
-            await Extra.item726();
+            await Ex.item726();
             return;
         }
         // No = 727 アイテム「ｿﾞﾝﾋﾞ馬」を使用した時の効果
         if (Gvar.belongings_item_list == 727) {
-            await Extra.item727();
+            await Ex.item727();
             return;
         }
         // No = 797 アイテム「」を使用した時の効果
         if (Gvar.belongings_item_list == 797) {
-            await Extra.item797();
+            await Ex.item797();
             return;
         }
         // No = 798 アイテム「」を使用した時の効果
         if (Gvar.belongings_item_list == 798) {
-            await Extra.item798();
+            await Ex.item798();
             return;
         }
         // No = 799 アイテム「装備＋９９」を使用した時の効果
         if (Gvar.belongings_item_list == 799) {
-            await Extra.item799();
+            await Ex.item799();
             return;
         }
         // No = 718 アイテム「聖なる弓矢」を使用した時の効果
         if (Gvar.belongings_item_list == 718) {
-            await Extra.item718();
+            await Ex.item718();
             return;
         }
         // No = 719 アイテム「吉良の弓矢」を使用した時の効果
         if (Gvar.belongings_item_list == 719) {
-            await Extra.item719();
+            await Ex.item719();
             return;
         }
         // No = 720 アイテム「ときのがくぼう」を使用した時の効果
         if (Gvar.belongings_item_list == 720) {
-            await Extra.item720();
+            await Ex.item720();
             return;
         }
         // No = 722 アイテム「ｼｰｻﾞｰのﾊﾞﾝﾀﾞﾅ」を使用した時の効果
         if (Gvar.belongings_item_list == 722) {
-            await Extra.item722();
+            await Ex.item722();
             return;
         }
         // No = 716 アイテム「恐竜の化石」を使用した時の効果
         if (Gvar.belongings_item_list == 716) {
-            await Extra.item716();
+            await Ex.item716();
             return;
         }
         // No = 723 アイテム「魔法のランプ」を使用した時の効果
         if (Gvar.belongings_item_list == 723) {
-            await Extra.item723();
+            await Ex.item723();
             return;
         }
         // No = 729 アイテム「吉良の財布」を使用した時の効果
         if (Gvar.belongings_item_list == 729) {
-            await Extra.item729();
+            await Ex.item729();
             return;
         }
         // No = 730 アイテム「大家のカバン」を使用した時の効果
         if (Gvar.belongings_item_list == 730) {
-            await Extra.item730();
+            await Ex.item730();
             return;
         }
         // No = 731 アイテム「盗まれた財布」を使用した時の効果
         if (Gvar.belongings_item_list == 731) {
-            await Extra.item731();
+            await Ex.item731();
             return;
         }
         // Ver0.14にて追加。No = 732 アイテム「ベルトのバックル」を使用した時の効果
         if (Gvar.belongings_item_list == 732) {
-            await Extra.item732();
+            await Ex.item732();
             return;
         }        
         // コミック「GP BOY」を読んだ時の効果

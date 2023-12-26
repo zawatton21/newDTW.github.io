@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // ダンジョン「レクイエムの大迷宮」へ入った時の初期化処理
 async function func827(this: any) {
@@ -73,7 +74,7 @@ async function func827(this: any) {
             await Func.func339();
         }
         Adap.DSPLAY(101); // 階段を昇るor降りる時の効果音
-        await Func.func006();
+        await Main.func006();
         return;
 }
 

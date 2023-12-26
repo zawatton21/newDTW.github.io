@@ -1,11 +1,13 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
+import * as Main from '../newdtw/index'
 
 async function func513(this: any) {
         Adap.dbgprt(513);
         if (Gvar.var_2357 == 1) {
-            await Func.func817();
+            await Dung.func817();
             return;
         }
         if (Gvar.var_1949 == 0) {
@@ -53,7 +55,7 @@ async function func513(this: any) {
         Gvar.var_83[Gvar.var_2231].Var8 = 0;
         Gvar.var_1949 = 0;
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

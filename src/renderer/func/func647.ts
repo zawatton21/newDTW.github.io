@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func647(this: any) {
         Adap.dbgprt(647);
@@ -23,7 +24,7 @@ async function func647(this: any) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
             Gvar.var_251 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         if (Gvar.var_171 == 1) {
@@ -424,7 +425,7 @@ async function func647(this: any) {
         Gvar.var_1267 = 0;
         Gvar.var_1223 = 0;
         Gvar.var_1250 = 0;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

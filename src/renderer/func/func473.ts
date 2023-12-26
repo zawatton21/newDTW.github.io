@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Ex from '../extra_items/index'
+import * as Main from '../newdtw/index'
 
 async function func473(this: any) {
         Adap.dbgprt(473);
@@ -28,7 +29,7 @@ async function func473(this: any) {
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         if (Gvar.var_233[Gvar.var_225].Var0 == 851) {
@@ -54,7 +55,7 @@ async function func473(this: any) {
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     await Func.func337(); // メッセージ関係呼び出し
                 }
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
         }
@@ -422,7 +423,7 @@ async function func473(this: any) {
                     Gvar.var_234 = 0;
                     Gvar.var_2040 = 0;
                     Gvar.var_217 = 1;
-                    await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
                     return;
                 }
             }
@@ -509,7 +510,7 @@ async function func473(this: any) {
         Gvar.var_234 = 0;
         Gvar.var_2040 = 0;
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

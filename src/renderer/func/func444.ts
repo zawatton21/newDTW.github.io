@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func444(this: any) {
         Adap.dbgprt(444);
@@ -149,7 +150,7 @@ async function func444(this: any) {
             await Func.func437();
             Gvar.var_1252 = 0;
             Gvar.var_217 = 1;
-            await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
         Gvar.var_1985 = 0;
@@ -223,7 +224,7 @@ async function func444(this: any) {
             await Func.func437();
             Gvar.var_1252 = 0;
             Gvar.var_217 = 1;
-            await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
         }
         Gvar.var_1253 = Gvar.var_233[Gvar.var_225].Var0;
@@ -353,7 +354,7 @@ async function func444(this: any) {
         Gvar.var_1252 = 0;
         Gvar.var_1950 = 0;
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

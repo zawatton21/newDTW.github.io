@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func728(this: any) {
         Adap.dbgprt(728);
@@ -43,7 +44,7 @@ async function func728(this: any) {
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
             await Func.func337(); // メッセージ関係呼び出し
         }
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

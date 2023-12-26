@@ -1,6 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Dung from '../dungeon/index'
+import * as Main from '../newdtw/index'
 
 // ディアボロの試練の入り口(フラグ前は壁)へ話しかけた時の動作処理
 async function func767(this: any) {
@@ -9,7 +11,7 @@ async function func767(this: any) {
         // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
         if (Gvar.var_526 >= 1 && Gvar.var_993 >= 1) { // Gvar.var_993 >= 1 ディアボロの試練解放フラグがONなら
             await Func.func051();
-            await Func.func828(); // ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
+            await Dung.func828(); // ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
             return;
         }
         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -34,7 +36,7 @@ async function func767(this: any) {
             await Func.func340(); // キー入力による選択処理
             await Func.func051();
             Gvar.var_198 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.comments_row1 = "";
@@ -55,7 +57,7 @@ async function func767(this: any) {
         await Func.func340(); // キー入力による選択処理
         await Func.func051();
         Gvar.var_198 = 0;
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

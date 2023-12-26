@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // 間田へ話しかけた時のメッセージ処理
 async function func793(this: any) {
@@ -211,7 +212,7 @@ async function func793(this: any) {
         }
         await Func.func051();
         Gvar.var_198 = 0;
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
 }
 

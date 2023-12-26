@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func381(this: any) {
         Adap.dbgprt(381);
@@ -94,7 +95,7 @@ async function func381(this: any) {
             Gvar.var_498 = 0;
 
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         await Func.func337(); // メッセージ関係呼び出し

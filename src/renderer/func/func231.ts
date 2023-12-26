@@ -64,7 +64,7 @@ async function func231(this: any) {
         Gvar.var_704[30] = Gvar.var_129;
         Gvar.var_704[31] = Gvar.var_218;
         Gvar.var_704[32] = Gvar.var_374;
-        Gvar.var_704[33] = Gvar.var_128;
+        Gvar.var_704[33] = Gvar.to_freeze;
         Gvar.var_704[34] = Gvar.var_993;
         Gvar.var_704[35] = Gvar.kougeki_disc_id ;
         Gvar.var_704[36] = Gvar.bougyo_disc_id;

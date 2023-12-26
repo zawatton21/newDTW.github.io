@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 411 タワー・オブ・グレーの発動処理
 async function item411(this: any) {
@@ -46,11 +47,11 @@ async function item411(this: any) {
             if (Gvar.var_2349 == 1) {
                 Gvar.var_66 = Gvar.var_2350;
                 Gvar.var_67 = Gvar.var_2351;
-                await Func.func016();
+                await Main.func016();
                 if (Gvar.var_201 != 14) {
-                    await Func.func017();
+                    await Main.func017();
                 }
-                await Func.func018();
+                await Main.func018();
                 if (Gvar.var_200 == Gvar.var_201 && Gvar.special_floor != 8) {
                     Gvar.var_98 = 1;
                 }
@@ -80,7 +81,7 @@ async function item411(this: any) {
             Gvar.belongings_item_list = Gvar.activated_disc_id;
             await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
             Gvar.var_217 = 1;
-            await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
             return;
 }
 

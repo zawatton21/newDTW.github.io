@@ -1,13 +1,14 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 999 没敵の特殊能力
 async function enemy999(this: any) {
         Gvar.var_2830 = Adap.rnd(4);
         if (Gvar.var_2830 == 0 && Gvar.var_565 >= 1) {
-            if (Gvar.var_128 >= 1) {
-                await Func.func023();
+            if (Gvar.to_freeze >= 1) {
+                await Main.func023();
             }
             await Func.func619();
             if (Gvar.var_83[Gvar.var_673].Var5 == 2) {

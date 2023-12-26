@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 77 敵エコーズACT1の特殊能力
 async function enemy077(this: any) {
@@ -28,8 +29,8 @@ async function enemy077(this: any) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
             await Func.func340(); // キー入力による選択処理
-            if (Gvar.var_128 >= 1) {
-                await Func.func023();
+            if (Gvar.to_freeze >= 1) {
+                await Main.func023();
             }
             Gvar.var_126 = 1;
             Gvar.var_166 = 0;

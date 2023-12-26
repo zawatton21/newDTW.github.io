@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func541(this: any) {
         Adap.dbgprt(541);
@@ -252,8 +253,8 @@ async function func541(this: any) {
                 }
                 Gvar.var_100 = 0;
                 Gvar.var_102 = 0;
-                await Func.func017();
-                await Func.func016();
+                await Main.func017();
+                await Main.func016();
                 await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         
                 Adap.DSPLAY(164);
@@ -510,7 +511,7 @@ async function func541(this: any) {
             Gvar.var_108 = 1;
             Gvar.var_747 = 1;
             Gvar.var_1212 = 1;
-            Gvar.var_128 = 1;
+            Gvar.to_freeze = 1;
     
             Adap.DSPLAY(126);
             Gvar.comments_row2 = "体が凍ってしまった！";
@@ -527,7 +528,7 @@ async function func541(this: any) {
             }
             if (Gvar.nouryoku_disc_id == 109 || Gvar.nouryoku_disc_id == 202 || Gvar.shageki_disc_id == 404 || Gvar.var_173 == 1) {
                 await Func.func340(); // キー入力による選択処理
-                Gvar.var_128 = 0;
+                Gvar.to_freeze = 0;
                 Gvar.comments_row1 = Gvar.comments_row1a;
                 Gvar.comments_row2 = Gvar.comments_row2a;
                 if (Gvar.nouryoku_disc_id == 109 || Gvar.nouryoku_disc_id == 202 || Gvar.shageki_disc_id == 404) {
@@ -1874,7 +1875,7 @@ async function func541(this: any) {
                 Gvar.var_321 = Gvar.var_854;
                 await Func.func433(); // アイテム配列(所持アイテム)初期化関数
                 await Func.func540();
-                await Func.func018();
+                await Main.func018();
                 await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
                 return;
             }
@@ -1989,7 +1990,7 @@ async function func541(this: any) {
                 Gvar.var_225 = Gvar.var_1531;
                 await Func.func433(); // アイテム配列(所持アイテム)初期化関数
                 await Func.func540();
-                await Func.func018();
+                await Main.func018();
                 await Func.func340(); // キー入力による選択処理
                 await Func.func100();
                 Gvar.comments_row1 = Gvar.comments_row1a;

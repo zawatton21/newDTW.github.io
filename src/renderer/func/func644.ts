@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Enemy from '../enemy/index'
+import * as Main from '../newdtw/index'
 
 async function func644(this: any) {
         Adap.dbgprt(644);
@@ -176,13 +177,13 @@ async function func644(this: any) {
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     await Enemy.enemy003(); // No = 3 敵タワーオブグレーの特殊能力。瞬間移動。
                     // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
-                    //await Func.func009(); // ゲーム基本動作フレーム処理
+                    //await Main.func009(); // ゲーム基本動作フレーム処理
                 }
                 // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
                 await Func.func337(); // メッセージ関係呼び出し
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                 }
             }
             else { // 通路にいる場合の動作処理
@@ -235,7 +236,7 @@ async function func644(this: any) {
                 // 下記を設定することで、ヒラリ回避を実行した時のみターン消費させられる。
                 await Func.func337(); // メッセージ関係呼び出し
                 if (Gvar.var_2938 == 1) {
-                    await Func.func009(); // ゲーム基本動作フレーム処理
+                    await Main.func009(); // ゲーム基本動作フレーム処理
                 }
             }
         }

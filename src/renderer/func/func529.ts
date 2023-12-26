@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func529(this: any) {
         Adap.dbgprt(529);
@@ -61,7 +62,7 @@ async function func529(this: any) {
             Gvar.var_237 = Gvar.var_2386;
             Gvar.var_65[Gvar.var_66][Gvar.var_67] = 1;
             Gvar.var_65[Gvar.var_236][Gvar.var_237] = 0;
-            await Func.func016();
+            await Main.func016();
             if (Gvar.var_72[Gvar.var_236][Gvar.var_237] >= 1 && Gvar.var_72[Gvar.var_66][Gvar.var_67] == 0 && Gvar.var_85 == 0) {
                 await Func.func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
             }
@@ -138,7 +139,7 @@ async function func529(this: any) {
             Gvar.var_237 = Gvar.var_2386;
             Gvar.var_65[Gvar.var_66][Gvar.var_67] = 1;
             Gvar.var_65[Gvar.var_236][Gvar.var_237] = 0;
-            await Func.func016();
+            await Main.func016();
             Gvar.var_402 = Gvar.var_82[Gvar.var_2381][Gvar.var_2382];
             if (Gvar.var_199 == 2) {
                 Gvar.var_83[Gvar.var_402].Var5 = 2;

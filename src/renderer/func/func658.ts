@@ -529,7 +529,7 @@ async function func658(this: any) {
             if (Gvar.var_1073 != 0) {
                 return;
             }
-            Gvar.var_128 = 1;
+            Gvar.to_freeze = 1;
     
             Adap.DSPLAY(126);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -555,12 +555,12 @@ async function func658(this: any) {
             if (Gvar.nouryoku_disc_id == 109 || Gvar.shageki_disc_id == 404 || Gvar.nouryoku_disc_id == 202) {
                 Gvar.comments_row1a = "凍らされそうになったが、";
                 Gvar.comments_row2a = "装備ｽﾀﾝﾄﾞのおかげで平気だった";
-                Gvar.var_128 = 0;
+                Gvar.to_freeze = 0;
             }
             if (Gvar.var_173 == 1) {
                 Gvar.comments_row1a = "凍らされそうになったが、";
                 Gvar.comments_row2a = "冷たいのに強くなってて平気だった";
-                Gvar.var_128 = 0;
+                Gvar.to_freeze = 0;
             }
             Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
             Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8

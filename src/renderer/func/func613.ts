@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func613(this: any) {
         Adap.dbgprt(613);
@@ -45,8 +46,8 @@ async function func613(this: any) {
         Gvar.var_271 = 0;
         await Func.func340(); // キー入力による選択処理
         Gvar.var_389 = 0;
-        if (Gvar.var_128 >= 1) {
-            await Func.func023();
+        if (Gvar.to_freeze >= 1) {
+            await Main.func023();
         }
         if (Gvar.equip_disc[207] == 1) {
             Gvar.comments_row1 = Gvar.comments_row1a;

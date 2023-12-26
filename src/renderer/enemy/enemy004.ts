@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 4 敵デス・13の特殊能力
 async function enemy004(this: any) {
         Gvar.var_2830 = Adap.rnd(5);
-        if (Gvar.var_2830 == 0 && Gvar.var_219 == 0 && Gvar.var_128 == 0) {
+        if (Gvar.var_2830 == 0 && Gvar.var_219 == 0 && Gvar.to_freeze == 0) {
             Adap.DSPLAY(131);
             Gvar.var_83[Gvar.var_673].Var21 = 1;
             Gvar.var_271 = 1;

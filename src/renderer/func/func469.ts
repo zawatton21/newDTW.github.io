@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func469(this: any) {
         Adap.dbgprt(469);
@@ -28,7 +29,7 @@ async function func469(this: any) {
             Gvar.var_231 = 0;
             Gvar.var_234 = 0;
             Gvar.var_2040 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         // No = 801:形兆のDISCｹｰｽ、No = 802:ﾄﾗｸﾀｰのﾀｲﾔの時
@@ -63,7 +64,7 @@ async function func469(this: any) {
                 Gvar.var_231 = 0;
                 Gvar.var_234 = 0;
                 Gvar.var_2040 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
         }
@@ -95,7 +96,7 @@ async function func469(this: any) {
                 Gvar.var_231 = 0;
                 Gvar.var_234 = 0;
                 Gvar.var_2040 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
         }
@@ -130,7 +131,7 @@ async function func469(this: any) {
                 Gvar.var_231 = 0;
                 Gvar.var_234 = 0;
                 Gvar.var_2040 = 0;
-                await Func.func009(); // ゲーム基本動作フレーム処理
+                await Main.func009(); // ゲーム基本動作フレーム処理
                 return;
             }
         }
@@ -157,7 +158,7 @@ async function func469(this: any) {
             Gvar.var_231 = 0;
             Gvar.var_234 = 0;
             Gvar.var_2040 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.var_2084 = 0;
@@ -202,7 +203,7 @@ async function func469(this: any) {
             Gvar.var_231 = 0;
             Gvar.var_234 = 0;
             Gvar.var_2040 = 0;
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         Gvar.var_2085 = Gvar.var_233[Gvar.var_225].Var0;
@@ -392,7 +393,7 @@ async function func469(this: any) {
         Gvar.var_234 = 0;
         Gvar.var_2040 = 0;
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 

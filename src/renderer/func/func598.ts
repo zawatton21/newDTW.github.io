@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func598(this: any) {
         Adap.dbgprt(598);
@@ -87,8 +88,8 @@ async function func598(this: any) {
         Gvar.var_742 = 0;
         Gvar.var_83[Gvar.var_673].Var7 = 0;
         Gvar.var_83[Gvar.var_673].Var18 = 0;
-        if (Gvar.var_128 >= 1) {
-            await Func.func023();
+        if (Gvar.to_freeze >= 1) {
+            await Main.func023();
         }
         Gvar.var_211 = Gvar.var_211 - Gvar.var_209;
         Gvar.var_208 = Gvar.var_208 + Gvar.var_209;

@@ -1,26 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-
-// ホテルの外の最終フロア、エンヤホテル以外確定処理
-async function func059(this: any) {
-        Adap.dbgprt(59);
-        // No = 1 なので、ホテルの外
-        if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12 && Gvar.var_203 == 1) { // No = 1:虹村屋敷
-            Gvar.special_floor = 1; // 虹村屋敷
-        }
-        // No = 1 なので、ホテルの外
-        if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12 && Gvar.var_203 == 2) { // No = 2:吉良屋敷
-            Gvar.special_floor = 3; // 吉良屋敷
-        }
-        // No = 1 なので、ホテルの外
-        if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12 && Gvar.var_203 == 3) { // No = 3:杜王町埠頭
-            Gvar.special_floor = 2; // 杜王町埠頭
-        }
-        return;
-}
-
-export {func059}
+import * as Main from '../newdtw/index'
 
 
 // ホテルの外のボス以外の出現敵設定
@@ -173,11 +154,32 @@ async function func825(this: any) {
             await Func.func339();
         }
         Adap.DSPLAY(101); // 階段を昇るor降りる時の効果音
-        await Func.func006();
+        await Main.func006();
         return;
 }
 
 export {func825}
+
+
+// ホテルの外の最終フロア、エンヤホテル以外確定処理
+async function func059(this: any) {
+    Adap.dbgprt(59);
+    // No = 1 なので、ホテルの外
+    if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12 && Gvar.var_203 == 1) { // No = 1:虹村屋敷
+        Gvar.special_floor = 1; // 虹村屋敷
+    }
+    // No = 1 なので、ホテルの外
+    if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12 && Gvar.var_203 == 2) { // No = 2:吉良屋敷
+        Gvar.special_floor = 3; // 吉良屋敷
+    }
+    // No = 1 なので、ホテルの外
+    if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12 && Gvar.var_203 == 3) { // No = 3:杜王町埠頭
+        Gvar.special_floor = 2; // 杜王町埠頭
+    }
+    return;
+}
+
+export {func059}
 
 
 // ボスを倒した時のメッセージ処理(エンヤ婆)

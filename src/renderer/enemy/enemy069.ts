@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 69 ブラフォードの特殊能力
 async function enemy069(this: any) {
-        if (Gvar.var_128 != 0 || Gvar.var_219 != 0) {
+        if (Gvar.to_freeze != 0 || Gvar.var_219 != 0) {
             return;
         }
         Gvar.var_2893 = Adap.rnd(3);

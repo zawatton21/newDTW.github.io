@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 // No = 302 ハイウェイ・トゥ・ヘルの発動処理
 async function item302(this: any) {
@@ -61,7 +62,7 @@ async function item302(this: any) {
             for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
                 await Func.func337(); // メッセージ関係呼び出し
             }
-            await Func.func009(); // ゲーム基本動作フレーム処理
+            await Main.func009(); // ゲーム基本動作フレーム処理
             return;
         }
         if (Gvar.var_211 > 1) {
@@ -265,7 +266,7 @@ async function item302(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Func.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
         return;
 }
 
@@ -313,7 +314,7 @@ async function func534(this: any) {
         for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
             await Func.func337(); // メッセージ関係呼び出し
         }
-        await Func.func009(); // ゲーム基本動作フレーム処理
+        await Main.func009(); // ゲーム基本動作フレーム処理
         return;
     }
     if (Gvar.var_211 > 1) {

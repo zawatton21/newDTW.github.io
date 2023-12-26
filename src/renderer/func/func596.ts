@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Main from '../newdtw/index'
 
 async function func596(this: any) {
         Adap.dbgprt(596);
@@ -376,8 +377,8 @@ async function func596(this: any) {
         Gvar.var_198 = 1;
         Gvar.var_300 = 0;
         await Func.func047();
-        if (Gvar.var_128 >= 1) {
-            await Func.func023();
+        if (Gvar.to_freeze >= 1) {
+            await Main.func023();
         }
         for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
             await Func.func337(); // メッセージ関係呼び出し
