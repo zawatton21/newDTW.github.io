@@ -1,4 +1,5 @@
 import { Gvar } from '../variable'
+import { sumiApply, sumiEnsureBuffer } from './sumiBackend'
 
 //let ctx: any;
 // @ts-expect-error TS(7006): Parameter 'dst_size_x' implicitly has an 'any' typ... Remove this comment to see the full error message
@@ -31,7 +32,9 @@ function gzoom(dst_size_x, dst_size_y, org_buffer_id, x: any, y, img_width, img_
         Gvar.context.globalCompositeOperation = "source-over";
     }
     else {
-        Gvar.context.drawImage(Gvar.canvases[org_buffer_id], x, y, img_width, img_height, Gvar.position[0], Gvar.position[1], dst_size_x, dst_size_y);
+        // Normal scaled blit -> external sumi library.
+        sumiEnsureBuffer(org_buffer_id);
+        sumiApply('gui-draw-image-scaled', [org_buffer_id, x, y, img_width, img_height, Gvar.position[0], Gvar.position[1], dst_size_x, dst_size_y]);
     }
 }
 

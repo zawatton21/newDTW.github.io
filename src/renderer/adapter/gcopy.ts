@@ -1,5 +1,6 @@
 import { Gvar } from '../variable';
 import { spriteManager } from './SpriteManager';
+import { sumiApply, sumiEnsureBuffer } from './sumiBackend';
 
 function gcopy(
     org_buffer_id: any,
@@ -61,12 +62,14 @@ function gcopy(
         ctx.globalCompositeOperation = 'source-over';
         ctx.restore();
     } else {
-        ctx.drawImage(
-            sourceCanvas,
-            x, y, img_width, img_height,
-            Gvar.position[0], Gvar.position[1],
-            target_width, target_height
-        );
+        // Normal sprite blit -> external sumi library (9-arg drawImage =
+        // sub-region + scale). sumi draws from the registered source buffer onto
+        // the current canvas, honouring the ctx globalAlpha set by gmode.
+        sumiEnsureBuffer(org_buffer_id);
+        sumiApply('gui-draw-image-scaled', [
+            org_buffer_id, x, y, img_width, img_height,
+            Gvar.position[0], Gvar.position[1], target_width, target_height,
+        ]);
     }
 }
 

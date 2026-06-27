@@ -36,6 +36,16 @@ export function sumiSelectBuffer(id: number): void {
 }
 
 /**
+ * Ensure a buffer is registered with sumi from `Gvar` *without* changing the
+ * current draw target — used to register a blit SOURCE buffer before drawing.
+ */
+export function sumiEnsureBuffer(id: number): void {
+  if (!backend.buffers.has(id) && Gvar.canvases[id] && Gvar.contexts[id]) {
+    backend.buffers.set(id, { canvas: Gvar.canvases[id], ctx: Gvar.contexts[id] });
+  }
+}
+
+/**
  * Apply one sumi draw command (e.g. `'gui-fill-rect'`) through the external
  * library. No-ops safely if the current buffer isn't registered yet.
  */
