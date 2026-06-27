@@ -1,4 +1,5 @@
 import { Gvar } from '../variable'
+import { sumiSelectBuffer } from './sumiBackend'
 
 // @ts-expect-error TS(7006): Parameter 'window_id' implicitly has an 'any' type... Remove this comment to see the full error message
 function gsel(window_id, window_mode = null) {
@@ -10,6 +11,8 @@ function gsel(window_id, window_mode = null) {
     }
     Gvar.context = Gvar.contexts[window_id];
     Gvar.target_window_id = window_id;
+    // Mirror the active buffer into sumi so its draws share this canvas.
+    sumiSelectBuffer(window_id);
 }
 
 export {gsel}

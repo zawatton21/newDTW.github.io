@@ -38,5 +38,11 @@ module.exports = {
         extensions: [
           '.ts', '.js',
         ],
+        alias: {
+          // External GUI library: resolve `import 'sumi-canvas'` to the local
+          // sumi checkout. Machine-specific dev wiring — replace with an npm
+          // dependency once sumi-canvas is published.
+          'sumi-canvas$': 'C:/Users/kuroz/Cowork/Notes/dev/sumi/backends/canvas/src/index.js',
+        },
       },
   };

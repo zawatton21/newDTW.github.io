@@ -20,6 +20,10 @@ module.exports = {
         extensions: ['.ts', '.js'],
         alias: {
             'electron': path.resolve(__dirname, 'src/renderer/electron-mock.ts'),
+            // External GUI library: resolve `import 'sumi-canvas'` to the local
+            // sumi checkout (same as webpack.config.cjs). Replace with an npm
+            // dependency once sumi-canvas is published.
+            'sumi-canvas$': 'C:/Users/kuroz/Cowork/Notes/dev/sumi/backends/canvas/src/index.js',
         },
         fallback: {
             'fs': false,
