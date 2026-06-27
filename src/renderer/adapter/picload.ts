@@ -1,4 +1,5 @@
 import { Gvar } from '../variable'
+import { sumiEnsureBuffer, sumiRecordLoadImage } from './sumiBackend'
 
 async function picload(img_name: any) {
     const img = new Image();
@@ -13,6 +14,9 @@ async function picload(img_name: any) {
         Gvar.canvases[Gvar.target_window_id].height = img.height;
         Gvar.contexts[Gvar.target_window_id] = Gvar.canvases[Gvar.target_window_id].getContext("2d", { willReadFrequently: true });
         Gvar.contexts[Gvar.target_window_id].drawImage(img, 0, 0); // canvasの一番左上へ描画
+        // share the loaded asset buffer with sumi + record it for native replay
+        sumiEnsureBuffer(Gvar.target_window_id);
+        sumiRecordLoadImage(Gvar.target_window_id, img_name);
     }).catch(() => {
         alert("データの読み込みに失敗しました。");
     });
