@@ -1,4 +1,5 @@
 import { Gvar } from '../variable'
+import { sumiFlushFrame } from './sumiBackend'
 
 function redraw(mode: any) {
     mode = 1;
@@ -13,6 +14,8 @@ function redraw(mode: any) {
         Gvar.pre_render_canvas.height = 340;
         Gvar.context = Gvar.pre_render_canvas.getContext("2d", { willReadFrequently: true });
     }
+    // frame boundary: push the accumulated frame to the live native renderer
+    sumiFlushFrame();
 }
 
 export {redraw}
