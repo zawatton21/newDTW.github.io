@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func433(this: any) {
+    if (shouldUseGeneratedGameFunction('func433')) {
+        await runGeneratedGameFunction('func433', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(433);
         if (Gvar.var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
             await Func.func434();

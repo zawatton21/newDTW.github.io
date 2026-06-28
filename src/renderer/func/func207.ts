@@ -6,8 +6,17 @@
  */
 import * as Menu from '../menu/MenuController'
 import * as Configs from '../menu/menuConfigs'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func207(this: any) {
+    if (shouldUseGeneratedGameFunction('func207')) {
+        await runGeneratedGameFunction('func207', { thisArg: this });
+        return;
+    }
+
     Menu.render(Configs.screenSize);
 }
 

@@ -8,8 +8,17 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func423(this: any) {
+    if (shouldUseGeneratedGameFunction('func423')) {
+        await runGeneratedGameFunction('func423', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(423);
         Gvar.var_486[Gvar.var_682][Gvar.var_225][3] = Gvar.var_486[Gvar.var_682][Gvar.var_225][3] - 1;
         if (Gvar.var_486[Gvar.var_682][Gvar.var_225][11] == 1) {

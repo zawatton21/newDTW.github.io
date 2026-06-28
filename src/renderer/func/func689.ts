@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func689(this: any) {
+    if (shouldUseGeneratedGameFunction('func689')) {
+        await runGeneratedGameFunction('func689', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(689);
         await Func.setMessage("このダンジョンを制覇した！", "", 12, true, false, false);
         for (let cnt1 = 0; true; ++cnt1) {

@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func227(this: any) {
+    if (shouldUseGeneratedGameFunction('func227')) {
+        await runGeneratedGameFunction('func227', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(227);
         Gvar.var_978 = "disc.txt";
         Gvar.var_979 = "";

@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func374(this: any) {
+    if (shouldUseGeneratedGameFunction('func374')) {
+        await runGeneratedGameFunction('func374', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(374);
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_X_on == 1) {

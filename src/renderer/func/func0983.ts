@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func924
 async function func0983(this: any) {
+    if (shouldUseGeneratedGameFunction('func0983')) {
+        await runGeneratedGameFunction('func0983', { thisArg: this });
+        return;
+    }
+
     Gvar.var_3862 = "";
     if (Gvar.var_3861 == 100) {
         Gvar.var_3862 = "ｽﾀｰ･ﾌﾟﾗﾁﾅのDISC";

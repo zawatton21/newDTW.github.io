@@ -10,10 +10,19 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Enemy from '../enemy/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ディアボロの攻撃(話しかけ)動作処理 (対象毎フラグ処理)
 // ディアボロが攻撃or話しかけた時の動作処理
 async function func636(this: any) {
+    if (shouldUseGeneratedGameFunction('func636')) {
+        await runGeneratedGameFunction('func636', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(636);
         Gvar.var_1194 = 0;
         Gvar.var_347 = Gvar.var_66;

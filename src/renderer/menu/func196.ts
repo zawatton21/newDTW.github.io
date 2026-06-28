@@ -6,8 +6,13 @@
  */
 import * as Menu from './MenuController'
 import * as Configs from './menuConfigs'
+import { runGeneratedGameFunction, shouldUseGeneratedGameFunction } from '../nelisp_bridge'
 
 async function func196(this: any) {
+    if (shouldUseGeneratedGameFunction('func196')) {
+        await runGeneratedGameFunction('func196', { thisArg: this });
+        return;
+    }
     Menu.render(Configs.gameSpeed);
 }
 

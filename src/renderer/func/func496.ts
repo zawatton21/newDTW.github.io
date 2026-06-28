@@ -6,7 +6,16 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 async function func496(this: any) {
+    if (shouldUseGeneratedGameFunction('func496')) {
+        await runGeneratedGameFunction('func496', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(496);
         Gvar.var_1173 = Gvar.sympathy_id;
         if (Gvar.var_1173 == 1 || Gvar.var_1173 == 102 || Gvar.var_1173 == 103 || Gvar.var_1173 == 107 || Gvar.var_1173 == 110 || Gvar.var_1173 == 111 || Gvar.var_1173 == 115 || Gvar.var_1173 == 117 || Gvar.var_1173 == 118 || Gvar.var_1173 == 122 || Gvar.var_1173 == 125 || Gvar.var_1173 == 126 || Gvar.var_1173 == 127 || Gvar.var_1173 == 129 || Gvar.var_1173 == 130 || Gvar.var_1173 == 131 || Gvar.var_1173 == 132 || Gvar.var_1173 == 133 || Gvar.var_1173 == 137 || Gvar.var_1173 == 149 || Gvar.var_1173 == 150 || Gvar.var_1173 == 151 || Gvar.var_1173 == 152 || Gvar.var_1173 == 153 || Gvar.var_1173 == 158 || Gvar.var_1173 == 167 || Gvar.var_1173 == 168) {

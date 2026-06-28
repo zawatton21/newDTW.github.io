@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // アイテムを投げた時の動作処理
 async function func411(this: any) {
+    if (shouldUseGeneratedGameFunction('func411')) {
+        await runGeneratedGameFunction('func411', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(411);
         if (Gvar.var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
             if (Gvar.var_171 == 1) {

@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 敵側のターン処理
 async function func020(this: any) {
+    if (shouldUseGeneratedGameFunction('func020')) {
+        await runGeneratedGameFunction('func020', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(20);
         Gvar.var_362 = 0;
         if (Gvar.time_paused == 0) { // 時止め(時消し飛ばし)状態でない場合

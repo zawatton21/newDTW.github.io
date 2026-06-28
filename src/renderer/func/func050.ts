@@ -7,10 +7,19 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // メッセージをアニメーション風送り表示(連続描画)
 // ver0.1405 にて待機時間追加 & 記述をシンプル化
 async function func050(this: any) {
+    if (shouldUseGeneratedGameFunction('func050')) {
+        await runGeneratedGameFunction('func050', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(50);
         for (let i = 0; i < 6; i++) {
                 Gvar.animationStep = i;

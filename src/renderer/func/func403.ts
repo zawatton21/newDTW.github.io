@@ -7,9 +7,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 装備したdiscを床に置く時(取り外す際)の動作処理
 async function func403(this: any) {
+    if (shouldUseGeneratedGameFunction('func403')) {
+        await runGeneratedGameFunction('func403', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(403);
         Gvar.belongings_item_list = Gvar.var_233[Gvar.var_225].Var0;
         Gvar.disc_rarity = Gvar.var_233[Gvar.var_225].Var13;

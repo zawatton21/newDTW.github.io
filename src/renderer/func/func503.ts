@@ -6,7 +6,16 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 async function func503(this: any) {
+    if (shouldUseGeneratedGameFunction('func503')) {
+        await runGeneratedGameFunction('func503', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(503);
         if (Gvar.belongings_item_list >= 800 && Gvar.belongings_item_list < 900) {
             Gvar.effects_message = "なにかヤバイものだ";

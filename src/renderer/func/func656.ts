@@ -8,8 +8,17 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func656(this: any) {
+    if (shouldUseGeneratedGameFunction('func656')) {
+        await runGeneratedGameFunction('func656', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(656);
         Gvar.enemy_list = Gvar.var_83[Gvar.var_673].Var0;
         await Func.func626(); // 敵リスト

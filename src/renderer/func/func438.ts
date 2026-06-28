@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func438(this: any) {
+    if (shouldUseGeneratedGameFunction('func438')) {
+        await runGeneratedGameFunction('func438', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(438);
         await Func.AutoDraw(2);
         await Func.func340(); // キー入力による選択処理

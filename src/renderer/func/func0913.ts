@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func854
 async function func0913(this: any) {
+    if (shouldUseGeneratedGameFunction('func0913')) {
+        await runGeneratedGameFunction('func0913', { thisArg: this });
+        return;
+    }
+
     Adap.color(255, 255, 255);
     Adap.line(Gvar.var_3538, Gvar.var_3539, Gvar.var_3538 + Gvar.var_3540, Gvar.var_3539);
     Adap.line(Gvar.var_3538, Gvar.var_3539, Gvar.var_3538, Gvar.var_3539 + Gvar.var_3541);

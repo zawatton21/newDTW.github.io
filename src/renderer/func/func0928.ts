@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Class from '../classes'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func869
 async function func0928(this: any) {
+    if (shouldUseGeneratedGameFunction('func0928')) {
+        await runGeneratedGameFunction('func0928', { thisArg: this });
+        return;
+    }
+
     if (Gvar.var_3573 == 0) {
         Adap.dialog(Gvar.data0 = "btq", Gvar.data1 = 16, "魔少年の問題ファイル");
         if (Gvar.stat == 0) {

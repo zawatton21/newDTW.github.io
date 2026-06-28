@@ -9,10 +9,19 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ダンジョンマップ初期化処理(+ヴェネチアホテル)
 // 旧 func293
 async function func293(this: any) {
+        if (shouldUseGeneratedGameFunction('func293')) {
+                await runGeneratedGameFunction('func293', { thisArg: this });
+                return;
+        }
+
         Adap.dbgprt(293);
         Gvar.var_983 = Adap.sdim(3000);
         Gvar.var_71 = Adap.dim(70, 70, Gvar.length3 = null, null);

@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Enemy from '../enemy/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func620(this: any) {
+    if (shouldUseGeneratedGameFunction('func620')) {
+        await runGeneratedGameFunction('func620', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(620);
         if (Gvar.var_83[Gvar.var_673].Var17 != 0 || Gvar.var_83[Gvar.var_673].Var23 != 0) {
             return;

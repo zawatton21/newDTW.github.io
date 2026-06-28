@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func497(this: any) {
+    if (shouldUseGeneratedGameFunction('func497')) {
+        await runGeneratedGameFunction('func497', { thisArg: this });
+        return;
+    }
+
     Adap.dbgprt(497);
     if (Gvar.sympathy_id == 0) {
         return;

@@ -10,8 +10,17 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Enemy from '../enemy/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func705(this: any) {
+    if (shouldUseGeneratedGameFunction('func705')) {
+        await runGeneratedGameFunction('func705', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(705);
         Gvar.var_2942 = Gvar.var_83[Gvar.var_402].Var5;
         Gvar.var_214 = 1;

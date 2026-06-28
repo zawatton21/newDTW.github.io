@@ -6,9 +6,18 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func245
 async function func245(this: any) {
+        if (shouldUseGeneratedGameFunction('func245')) {
+                await runGeneratedGameFunction('func245', { thisArg: this });
+                return;
+        }
+
         Adap.dbgprt(245);
         Gvar.var_1080 = Adap.rnd(14);
         if (Gvar.dungeon_number <= 2) {

@@ -29,13 +29,21 @@ import * as Func from '../func/index'
 function tryFindWarpTarget(
     tries: number,
     excludeOrigin: boolean,
-    cond: (x: number, y: number) => boolean,
+    mode: 1 | 2 | 3,
 ): { x: number; y: number } | null {
     for (let i = 0; i < tries; ++i) {
         const x = Adap.rnd(Gvar.var_33);
         const y = Adap.rnd(Gvar.var_34);
         if (excludeOrigin && x == Gvar.var_2235 && y == Gvar.var_2236) continue;
-        if (cond(x, y)) return { x, y };
+        if (mode == 1
+            && Gvar.var_71[x][y] != 0 && Gvar.var_71[x][y] <= 12
+            && Gvar.var_82[x][y] == 0 && Gvar.var_71[x][y] != Gvar.var_201) return { x, y };
+        if (mode == 2
+            && Gvar.var_71[x][y] != 0 && Gvar.var_71[x][y] <= 12
+            && Gvar.var_82[x][y] == 0) return { x, y };
+        if (mode == 3
+            && Gvar.var_71[x][y] != 0 && Gvar.var_71[x][y] != 13
+            && Gvar.var_82[x][y] == 0) return { x, y };
     }
     return null;
 }
@@ -71,13 +79,9 @@ async function func499(this: any): Promise<void> {
     Gvar.var_65[Gvar.var_66][Gvar.var_67] = 0;
 
     // 探索 3段階 (緩和)
-    let target = tryFindWarpTarget(500, false,
-        (x, y) => Gvar.var_71[x][y] != 0 && Gvar.var_71[x][y] <= 12
-            && Gvar.var_82[x][y] == 0 && Gvar.var_71[x][y] != Gvar.var_201);
-    if (!target) target = tryFindWarpTarget(500, true,
-        (x, y) => Gvar.var_71[x][y] != 0 && Gvar.var_71[x][y] <= 12 && Gvar.var_82[x][y] == 0);
-    if (!target) target = tryFindWarpTarget(10000, true,
-        (x, y) => Gvar.var_71[x][y] != 0 && Gvar.var_71[x][y] != 13 && Gvar.var_82[x][y] == 0);
+    let target = tryFindWarpTarget(500, false, 1);
+    if (!target) target = tryFindWarpTarget(500, true, 2);
+    if (!target) target = tryFindWarpTarget(10000, true, 3);
     if (target) {
         Gvar.var_491 = target.x;
         Gvar.var_492 = target.y;

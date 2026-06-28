@@ -9,9 +9,18 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
 async function func420(this: any) {
+    if (shouldUseGeneratedGameFunction('func420')) {
+        await runGeneratedGameFunction('func420', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(420);
         Gvar.var_1926 = 0;
         Gvar.var_1927 = 0;

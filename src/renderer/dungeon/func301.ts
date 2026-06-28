@@ -8,10 +8,19 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 大部屋ダンジョンマップ(水床あり)
 // 旧 func301
 async function func301(this: any) {
+        if (shouldUseGeneratedGameFunction('func301')) {
+                await runGeneratedGameFunction('func301', { thisArg: this });
+                return;
+        }
+
         Adap.dbgprt(301);
         Gvar.var_983 = Adap.sdim(3000);
 

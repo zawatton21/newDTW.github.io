@@ -12,8 +12,16 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { t } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function makepal() {
+    if (shouldUseGeneratedGameFunction('makepal')) {
+        await runGeneratedGameFunction('makepal', {});
+        return;
+    }
     Gvar.var_0 = 0;
     Gvar.var_1 = 0;
     for (let cnt1 = 0; cnt1 < 2; ++cnt1) {

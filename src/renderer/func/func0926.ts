@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func867
 async function func0926(this: any) {
+    if (shouldUseGeneratedGameFunction('func0926')) {
+        await runGeneratedGameFunction('func0926', { thisArg: this });
+        return;
+    }
+
     Adap.color(0, 0, 0);
     Adap.boxf(50, 200, 330, 250);
     Adap.font(Gvar.font_type, 12);

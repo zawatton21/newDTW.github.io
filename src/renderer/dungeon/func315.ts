@@ -8,10 +8,19 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 没特殊階層「ナチス実験施設」ボスはサンタナのダンジョンマップ
 // 旧 func315
 async function func315(this: any) {
+        if (shouldUseGeneratedGameFunction('func315')) {
+                await runGeneratedGameFunction('func315', { thisArg: this });
+                return;
+        }
+
         Adap.dbgprt(315);
         Gvar.var_983 = Adap.sdim(3000);
 

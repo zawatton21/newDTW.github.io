@@ -7,10 +7,19 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
 // 旧 func839
 async function func0898(this: any) {
+    if (shouldUseGeneratedGameFunction('func0898')) {
+        await runGeneratedGameFunction('func0898', { thisArg: this });
+        return;
+    }
+
     await Func.func337(); // メッセージ表示処理(自動)
     await Func.func080(); // 各キー入力確認
     if (Gvar.var_259 == 1 && Gvar.var_546 == 1) { // var_259:入力判定[↓]

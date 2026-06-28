@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func843
 async function func0902(this: any) {
+    if (shouldUseGeneratedGameFunction('func0902')) {
+        await runGeneratedGameFunction('func0902', { thisArg: this });
+        return;
+    }
+
     Adap.clrobj(Gvar.data0 = 9, Gvar.data1 = 9);
     Adap.objsize(60);
     Adap.pos(680 - 76, Gvar.var_3525 + 22);

@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // スキルシステムディスパッチャ（40+種の特殊能力をvar_176のスキルIDでルーティング）
 async function func1011(this: any) {
+    if (shouldUseGeneratedGameFunction('func1011')) {
+        await runGeneratedGameFunction('func1011', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(1011);
         await Func.func1016();
         Gvar.var_378 = Gvar.var_74;

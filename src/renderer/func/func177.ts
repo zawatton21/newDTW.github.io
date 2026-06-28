@@ -1,6 +1,15 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 async function func177(this: any) {
+    if (shouldUseGeneratedGameFunction('func177')) {
+        await runGeneratedGameFunction('func177', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(177);
         Gvar.var_849 = "「死因設定なし」で";
         Gvar.var_790 = 0;

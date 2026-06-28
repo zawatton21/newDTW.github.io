@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func510(this: any) {
+    if (shouldUseGeneratedGameFunction('func510')) {
+        await runGeneratedGameFunction('func510', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(510);
         await Func.setMessage("呪われていて発動できない！",
                                 "", 7, false, false, false);

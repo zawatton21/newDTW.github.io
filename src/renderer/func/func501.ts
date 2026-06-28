@@ -8,8 +8,17 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func501(this: any) {
+    if (shouldUseGeneratedGameFunction('func501')) {
+        await runGeneratedGameFunction('func501', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(501);
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1515 = 1;

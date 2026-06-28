@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func511(this: any) {
+    if (shouldUseGeneratedGameFunction('func511')) {
+        await runGeneratedGameFunction('func511', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(511);
         Gvar.var_2257 = 0;
         if (Gvar.var_220 == 0 && Gvar.var_234 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態

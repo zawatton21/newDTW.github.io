@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Enemy from '../enemy/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func581(this: any) {
+    if (shouldUseGeneratedGameFunction('func581')) {
+        await runGeneratedGameFunction('func581', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(581);
         // Gvar.enemy_list = 15 ペットショップ
         if (Gvar.var_83[Gvar.var_673].Var0 == 15) {

@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func919
 async function func0978(this: any) {
+    if (shouldUseGeneratedGameFunction('func0978')) {
+        await runGeneratedGameFunction('func0978', { thisArg: this });
+        return;
+    }
+
     Gvar.var_3875 = 0;
     Gvar.var_3876 = Adap.int(Gvar.var_1068[10]);
     if (Gvar.current_floor < Gvar.var_3876) {

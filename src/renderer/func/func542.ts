@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // バステト女神の罠を蹈んで磁力化した際の処理
 async function func542(this: any) {
+    if (shouldUseGeneratedGameFunction('func542')) {
+        await runGeneratedGameFunction('func542', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(542);
         Gvar.var_2477 = Adap.rnd(300);
         if (Gvar.var_2464 == 1) {

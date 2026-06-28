@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 遠投状態(アヌビス神装備)でアイテムを投げた時の動作処理
 async function func418(this: any) {
+    if (shouldUseGeneratedGameFunction('func418')) {
+        await runGeneratedGameFunction('func418', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(418);
         Gvar.belongings_item_list = Gvar.var_1846;
         Gvar.disc_rarity = Gvar.var_1833;

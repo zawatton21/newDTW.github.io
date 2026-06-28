@@ -6,7 +6,16 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 async function func017(this: any) {
+    if (shouldUseGeneratedGameFunction('func017')) {
+        await runGeneratedGameFunction('func017', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(17);
         if (Gvar.special_floor == 8) { // 幻覚の迷宮
             return;

@@ -9,9 +9,18 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ディアボロのレベルが上がる際の処理
 async function func680(this: any) {
+    if (shouldUseGeneratedGameFunction('func680')) {
+        await runGeneratedGameFunction('func680', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(680);
         Gvar.var_839 = Gvar.var_839 + 1;
         Gvar.var_1015 = Gvar.var_1015 + 1;

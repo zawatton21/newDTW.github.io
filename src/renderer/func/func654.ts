@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func654(this: any) {
+    if (shouldUseGeneratedGameFunction('func654')) {
+        await runGeneratedGameFunction('func654', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(654);
         Gvar.var_214 = 1;
         if (Gvar.var_83[Gvar.var_673].Var9 == 0) {

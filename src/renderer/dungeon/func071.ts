@@ -7,10 +7,15 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { runGeneratedGameFunction, shouldUseGeneratedGameFunction } from '../nelisp_bridge'
 
 // 満腹度減少時のメッセージ処理
 // 旧 func071
 async function func071(this: any) {
+    if (shouldUseGeneratedGameFunction('func071')) {
+        await runGeneratedGameFunction('func071', { thisArg: this });
+        return;
+    }
     Adap.dbgprt(71);
     if (Gvar.var_361 <= 3) {
         Adap.DSPLAY(129);

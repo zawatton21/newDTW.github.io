@@ -7,9 +7,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // アイテム欄を開いた時の表示イニシャル処理 (1ページ目、カーソル一番上等)
 async function func407(this: any) {
+    if (shouldUseGeneratedGameFunction('func407')) {
+        await runGeneratedGameFunction('func407', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(407);
         if (Gvar.var_233[Gvar.var_225].Var0 >= 850 && Gvar.var_233[Gvar.var_225].Var0 < 860) {
             await Func.func473();

@@ -8,8 +8,17 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func683(this: any) {
+    if (shouldUseGeneratedGameFunction('func683')) {
+        await runGeneratedGameFunction('func683', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(683);
         Gvar.var_2201 = 0;
         if (Gvar.var_83[Gvar.var_673].Var16 >= 999999) {

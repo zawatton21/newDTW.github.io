@@ -1,10 +1,19 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func896
 // どこからも呼び出されていない？ 消しても良いかも？
 async function func0955(this: any) {
+    if (shouldUseGeneratedGameFunction('func0955')) {
+        await runGeneratedGameFunction('func0955', { thisArg: this });
+        return;
+    }
+
     Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
     Adap.gsel( Gvar.window_id = 0, Gvar.window_mode = 1);
     await Func.func009(); // ディアボロ側ターン処理(ループ処理)

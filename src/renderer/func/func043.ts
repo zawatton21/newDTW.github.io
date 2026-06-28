@@ -3,9 +3,18 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // メイド・イン・ヘブンを装備している際の「アイテムが朽ちていく効果」
 async function func043(this: any) {
+    if (shouldUseGeneratedGameFunction('func043')) {
+        await runGeneratedGameFunction('func043', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(43);
         Gvar.var_473 = Adap.rnd(10);
         if (Gvar.var_473 != 0) {

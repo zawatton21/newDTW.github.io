@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func866
 async function func0925(this: any) {
+    if (shouldUseGeneratedGameFunction('func0925')) {
+        await runGeneratedGameFunction('func0925', { thisArg: this });
+        return;
+    }
+
     if (Gvar.var_3565 == 2 || Gvar.var_3565 == 3 || Gvar.var_3565 == 4 || Gvar.var_3565 == 6 || Gvar.var_3565 == 7) {
         if (Gvar.var_65[Gvar.var_3614][Gvar.var_3615] == 1) {
             Gvar.var_65 = Adap.dim(70, 70, null, null);

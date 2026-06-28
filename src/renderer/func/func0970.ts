@@ -3,9 +3,18 @@ import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func911
 async function func0970(this: any) {
+    if (shouldUseGeneratedGameFunction('func0970')) {
+        await runGeneratedGameFunction('func0970', { thisArg: this });
+        return;
+    }
+
     Gvar.var_3822 = Adap.dim(30);
     Gvar.var_3822[0] = Gvar.var_233[Gvar.var_225].Var0;
     if (Gvar.dungeon_number == 3 && Gvar.var_3822[0] == 112) {

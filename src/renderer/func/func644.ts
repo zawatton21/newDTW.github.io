@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Enemy from '../enemy/index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func644(this: any) {
+    if (shouldUseGeneratedGameFunction('func644')) {
+        await runGeneratedGameFunction('func644', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(644);
         Gvar.var_2867 = 0;
         await Func.func639(); // 敵の回避処理

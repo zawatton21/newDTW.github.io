@@ -1,8 +1,16 @@
 import { Gvar } from '../variable'
-import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func928
 async function func0987(this: any) {
+    if (shouldUseGeneratedGameFunction('func0987')) {
+        await runGeneratedGameFunction('func0987', { thisArg: this });
+        return;
+    }
+
     if (Gvar.var_3903 == 0) {
         Gvar.var_3904 = "地上";
     }

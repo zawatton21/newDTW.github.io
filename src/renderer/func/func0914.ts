@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func855
 async function func0914(this: any) {
+    if (shouldUseGeneratedGameFunction('func0914')) {
+        await runGeneratedGameFunction('func0914', { thisArg: this });
+        return;
+    }
+
     Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
     Gvar.var_449 = Gvar.var_67;
     Gvar.var_763 = -1;

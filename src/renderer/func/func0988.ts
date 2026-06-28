@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func929
 async function func0988(this: any) {
+    if (shouldUseGeneratedGameFunction('func0988')) {
+        await runGeneratedGameFunction('func0988', { thisArg: this });
+        return;
+    }
+
     await Func.func426();
     await Func.func427();
     await Func.func428();

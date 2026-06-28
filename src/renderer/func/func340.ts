@@ -7,10 +7,19 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // キー入力による選択処理
 // 「ユーザーが新規のキー入力で選択を確定」するための関数
 async function func340(this: any) {
+    if (shouldUseGeneratedGameFunction('func340')) {
+        await runGeneratedGameFunction('func340', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(680);
         Gvar.var_765 = 1;
         Gvar.var_766 = 0;

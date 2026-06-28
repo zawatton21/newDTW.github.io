@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func522(this: any) {
+    if (shouldUseGeneratedGameFunction('func522')) {
+        await runGeneratedGameFunction('func522', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(522);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         await Func.func426();

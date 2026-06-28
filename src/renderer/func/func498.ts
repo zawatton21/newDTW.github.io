@@ -11,8 +11,17 @@ import * as Memory from '../memory/index'
 import * as Food from '../food/index'
 import * as Extra from '../extra_items/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func498(this: any) {
+    if (shouldUseGeneratedGameFunction('func498')) {
+        await runGeneratedGameFunction('func498', { thisArg: this });
+        return;
+    }
+
     Adap.dbgprt(498);
     if (Gvar.var_1930 == 1) {
         Gvar.var_2187 = Gvar.belongings_item_list;

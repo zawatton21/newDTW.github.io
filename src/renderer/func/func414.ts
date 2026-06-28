@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ヤバいもの関係の容量設定？？
 async function func414(this: any) {
+    if (shouldUseGeneratedGameFunction('func414')) {
+        await runGeneratedGameFunction('func414', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(414);
         if (Gvar.var_1850 == 1) {
             Gvar.belongings_item_list = Gvar.var_1846;

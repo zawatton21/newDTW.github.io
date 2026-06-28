@@ -7,9 +7,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ディアボロの攻撃動作処理
 async function func635(this: any) {
+    if (shouldUseGeneratedGameFunction('func635')) {
+        await runGeneratedGameFunction('func635', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(635);
         // No = 110 没ディスクであれば No = 108 ステッキー・フィンガーズ 
         if (Gvar.kougeki_disc_id  == 110) {

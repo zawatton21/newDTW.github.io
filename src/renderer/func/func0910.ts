@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func851
 async function func0910(this: any) {
+    if (shouldUseGeneratedGameFunction('func0910')) {
+        await runGeneratedGameFunction('func0910', { thisArg: this });
+        return;
+    }
+
     if (Gvar.mousex > 10 && Gvar.mousex < 330 && Gvar.mousey > 10 && Gvar.mousey < 330) {
         Gvar.var_3563 = Math.floor((Gvar.mousex - 10) / 40);
         Gvar.var_3564 = Math.floor((Gvar.mousey - 10) / 40);

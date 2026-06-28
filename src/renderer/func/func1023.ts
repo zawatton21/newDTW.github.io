@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func1023(this: any) {
+    if (shouldUseGeneratedGameFunction('func1023')) {
+        await runGeneratedGameFunction('func1023', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(1023);
         Gvar.var_604 = 1;
         // gsel 19 - screen buffer select (no-op in TS)

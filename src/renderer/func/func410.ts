@@ -7,9 +7,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 装備したdiscを投げる時(取り外す際)の動作処理
 async function func410(this: any) {
+    if (shouldUseGeneratedGameFunction('func410')) {
+        await runGeneratedGameFunction('func410', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(410);
         Gvar.var_1846 = Gvar.var_233[Gvar.var_225].Var0;
         Gvar.var_1837 = Gvar.var_233[Gvar.var_225].Var3;

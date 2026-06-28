@@ -8,9 +8,18 @@ const { ipcRenderer } = require('electron');
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
  // メッセージ色設定処理
 async function func203(this: any) {
+    if (shouldUseGeneratedGameFunction('func203')) {
+        await runGeneratedGameFunction('func203', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(203);
         console.log(Gvar.stat);
         console.log("key_Z_on:", Gvar.key_Z_on);

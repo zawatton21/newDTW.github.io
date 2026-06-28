@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Stand from '../stand/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func672(this: any) {
+    if (shouldUseGeneratedGameFunction('func672')) {
+        await runGeneratedGameFunction('func672', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(672);
         if (Gvar.equip_disc[395] == 1 && Gvar.var_1061 == 0) {
             await Stand.func675();

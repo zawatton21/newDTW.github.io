@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // アイテムを置く時の動作処理
 async function func404(this: any) {
+    if (shouldUseGeneratedGameFunction('func404')) {
+        await runGeneratedGameFunction('func404', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(404);
         if (Gvar.var_72[Gvar.var_66][Gvar.var_67] >= 2) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460

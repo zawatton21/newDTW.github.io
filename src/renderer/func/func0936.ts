@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Class from '../classes'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func877
 async function func0936(this: any) {
+    if (shouldUseGeneratedGameFunction('func0936')) {
+        await runGeneratedGameFunction('func0936', { thisArg: this });
+        return;
+    }
+
     Gvar.var_983 = Adap.sdim(3000);
     Gvar.var_71 = Adap.dim(70, 70, null, null);
     Gvar.var_65 = Adap.dim(70, 70, null, null);

@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf, t } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 射撃discを拾った際、同じものを既に所持していた時にまとめる動作処理
 async function func401(this: any) {
+    if (shouldUseGeneratedGameFunction('func401')) {
+        await runGeneratedGameFunction('func401', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(401);
         Gvar.var_1839 = 0;
         Gvar.var_1841 = 1;

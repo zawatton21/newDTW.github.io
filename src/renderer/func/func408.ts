@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func408(this: any) {
+    if (shouldUseGeneratedGameFunction('func408')) {
+        await runGeneratedGameFunction('func408', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(408);
         Gvar.var_1880 = 0;
         if (Gvar.var_233[Gvar.var_225].Var0 >= 805 && Gvar.var_233[Gvar.var_225].Var0 < 850) {

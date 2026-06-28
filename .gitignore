@@ -28,7 +28,10 @@
 !*.toml
 !Cargo.lock
 !.github/workflows/*.yml
+!tools/nelisp_state_diff_runner_smoke.js
+!tools/start_nelisp.js
 !tools/stage_tauri.js
+!tools/test_scenarios.js
 
 
 # 【3】 最後に常に除外するファイルやフォルダを禁止

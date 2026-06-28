@@ -1,10 +1,19 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func895
 // どこからも呼び出されていない？ 消しても良いかも？
 async function func0954(this: any) {
+    if (shouldUseGeneratedGameFunction('func0954')) {
+        await runGeneratedGameFunction('func0954', { thisArg: this });
+        return;
+    }
+
     Adap.clrobj();
     Adap.color(0, 0, 0);
     Adap.boxf();

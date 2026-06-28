@@ -9,9 +9,18 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 敵が罠(キッスのシール、ソフトマシーンの仕込み)を踏んだ時の動作処理
 async function func547(this: any) {
+    if (shouldUseGeneratedGameFunction('func547')) {
+        await runGeneratedGameFunction('func547', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(547);
         if (Gvar.var_83[Gvar.var_421].Var31 == 4 || Gvar.var_83[Gvar.var_421].Var31 == 5) {
             return;

@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func441(this: any) {
+    if (shouldUseGeneratedGameFunction('func441')) {
+        await runGeneratedGameFunction('func441', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(441);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_225 == Gvar.var_1967 && Gvar.var_1965 == 0) {

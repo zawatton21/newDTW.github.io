@@ -9,8 +9,13 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { runGeneratedGameFunction, shouldUseGeneratedGameFunction } from '../nelisp_bridge'
 
 async function func481(this: any): Promise<void> {
+    if (shouldUseGeneratedGameFunction('func481')) {
+        await runGeneratedGameFunction('func481', { thisArg: this });
+        return;
+    }
     Adap.dbgprt(481);
     // (Ver0.1309 で使用停止) — HSP 原典の挙動は維持
     Gvar.var_233[0] = Gvar.var_78[Gvar.var_2044];

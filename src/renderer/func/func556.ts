@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func556(this: any) {
+    if (shouldUseGeneratedGameFunction('func556')) {
+        await runGeneratedGameFunction('func556', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(556);
         // No = 1 なので、ホテルの外
         if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12 && Gvar.special_floor == 0 && Gvar.var_386 == 0) {

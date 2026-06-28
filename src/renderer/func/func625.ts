@@ -6,7 +6,16 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 async function func625(this: any) {
+    if (shouldUseGeneratedGameFunction('func625')) {
+        await runGeneratedGameFunction('func625', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(625);
         if (Gvar.var_2352 == 0) {
             Gvar.var_2916 = Adap.rnd(7);

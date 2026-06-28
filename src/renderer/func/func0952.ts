@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func893
 async function func0952(this: any) {
+    if (shouldUseGeneratedGameFunction('func0952')) {
+        await runGeneratedGameFunction('func0952', { thisArg: this });
+        return;
+    }
+
     Gvar.var_3812 = 0;
     Gvar.enemy_name = "";
     Gvar.var_3812++;

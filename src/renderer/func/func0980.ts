@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func921
 async function func0980(this: any) {
+    if (shouldUseGeneratedGameFunction('func0980')) {
+        await runGeneratedGameFunction('func0980', { thisArg: this });
+        return;
+    }
+
     Adap.DSPLAY(234);
     await Func.AutoDraw(20);
     Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON

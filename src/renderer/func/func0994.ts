@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func935
 async function func0994(this: any) {
+    if (shouldUseGeneratedGameFunction('func0994')) {
+        await runGeneratedGameFunction('func0994', { thisArg: this });
+        return;
+    }
+
     Adap.color(0, 0, 0);
     Adap.gmode(4, null, null, 100);
     Adap.pos(5, 35);

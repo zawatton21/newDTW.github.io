@@ -22,16 +22,6 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
-/** disc スロット (id var, var_2179 source, var_2180 種別タグ, equip 関数) */
-const DISC_SLOTS: ReadonlyArray<readonly ['kougeki_disc_id' | 'bougyo_disc_id' | 'nouryoku_disc_id',
-                                          'var_553' | 'var_554' | 'var_555',
-                                          number,
-                                          () => Promise<void>]> = [
-    ['kougeki_disc_id', 'var_553', 1, () => Func.func426()],
-    ['bougyo_disc_id',  'var_554', 2, () => Func.func427()],
-    ['nouryoku_disc_id','var_555', 4, () => Func.func428()],
-];
-
 async function func494(this: any): Promise<void> {
     Adap.dbgprt(494);
 
@@ -42,13 +32,23 @@ async function func494(this: any): Promise<void> {
     Gvar.equip_disc = Adap.dim(400);
 
     // 攻撃/防御/能力 disc を再装備
-    for (const [idVar, srcVar, kind, equipFn] of DISC_SLOTS) {
-        if ((Gvar as any)[idVar] > 0) {
-            await equipFn();
-            Gvar.var_2179 = (Gvar as any)[srcVar];
-            Gvar.var_2180 = kind;
-            await Func.func495(); // 装備disc反映
-        }
+    if (Gvar.kougeki_disc_id > 0) {
+        await Func.func426();
+        Gvar.var_2179 = Gvar.var_553;
+        Gvar.var_2180 = 1;
+        await Func.func495(); // 装備disc反映
+    }
+    if (Gvar.bougyo_disc_id > 0) {
+        await Func.func427();
+        Gvar.var_2179 = Gvar.var_554;
+        Gvar.var_2180 = 2;
+        await Func.func495(); // 装備disc反映
+    }
+    if (Gvar.nouryoku_disc_id > 0) {
+        await Func.func428();
+        Gvar.var_2179 = Gvar.var_555;
+        Gvar.var_2180 = 4;
+        await Func.func495(); // 装備disc反映
     }
 
     // 再装備後の補正: シアハートアタック (HP上限 +var_352/10 +var_566, 上限999)

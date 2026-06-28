@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func916
 async function func0975(this: any) {
+    if (shouldUseGeneratedGameFunction('func0975')) {
+        await runGeneratedGameFunction('func0975', { thisArg: this });
+        return;
+    }
+
     if (Gvar.var_1046 >= 29) {
         return;
     }

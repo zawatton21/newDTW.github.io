@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func880
 async function func0939(this: any) {
+    if (shouldUseGeneratedGameFunction('func0939')) {
+        await runGeneratedGameFunction('func0939', { thisArg: this });
+        return;
+    }
+
     await Music.func108(); // BGM用mp3ファイル再生停止
     Gvar.var_3761 = 0;
     Gvar.var_375 = 0;

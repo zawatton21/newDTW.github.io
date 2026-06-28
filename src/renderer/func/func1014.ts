@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ステータス初期化＆ポスト能力クリーンアップ（能力実行後のリセット処理）
 async function func1014(this: any) {
+    if (shouldUseGeneratedGameFunction('func1014')) {
+        await runGeneratedGameFunction('func1014', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(1014);
         Gvar.var_119 = 0;
         Gvar.var_120 = 0;

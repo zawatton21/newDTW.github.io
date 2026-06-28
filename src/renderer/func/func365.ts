@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func365(this: any) {
+    if (shouldUseGeneratedGameFunction('func365')) {
+        await runGeneratedGameFunction('func365', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(365);
         Gvar.var_83[299].Var0 = Gvar.var_1616[Gvar.var_1607];
         Gvar.enemy_list = Gvar.var_1616[Gvar.var_1607];

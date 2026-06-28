@@ -2,10 +2,19 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 魔少年の問題機能?? ver0.12から追加されている
 // 旧 func876
 async function func0935(this: any) {
+    if (shouldUseGeneratedGameFunction('func0935')) {
+        await runGeneratedGameFunction('func0935', { thisArg: this });
+        return;
+    }
+
     await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
     Gvar.var_65 = Adap.dim(70, 70, null, null);
     Gvar.dungeon_number = 99;

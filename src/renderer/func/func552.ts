@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func552(this: any) {
+    if (shouldUseGeneratedGameFunction('func552')) {
+        await runGeneratedGameFunction('func552', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(552);
         Adap.DSPLAY(101); // 階段を昇るor降りる時の効果音
         await Func.func061();

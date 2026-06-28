@@ -8,10 +8,19 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
  // 酒場の配置(マップ読み込み)
  // 旧 func163b
 async function func163b(this: any) {
+        if (shouldUseGeneratedGameFunction('func163b')) {
+                await runGeneratedGameFunction('func163b', { thisArg: this });
+                return;
+        }
+
         if (Gvar.var_409 == 0) {
             Gvar.var_778 = 0;
         }

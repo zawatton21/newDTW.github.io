@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func923
 async function func0982(this: any) {
+    if (shouldUseGeneratedGameFunction('func0982')) {
+        await runGeneratedGameFunction('func0982', { thisArg: this });
+        return;
+    }
+
     await Func.setMessage("「おまたせしましたァ――ッ", "  デリバリーピッザですーっ」", 7, true, false, true);
     await Func.setMessage("「こんにちは――っ", "  どちらですかーっ」", 7, true, false, true);
     await Func.setMessage("「どちらへ運びましょうか――ッ！？」", "", 7, true, false, true);

@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func703(this: any) {
+    if (shouldUseGeneratedGameFunction('func703')) {
+        await runGeneratedGameFunction('func703', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(703);
         if (Gvar.var_175 >= 1 && Gvar.var_314 == Gvar.var_175) {
             await Func.setMessage("やっつけたｱｸｱ･ﾈｯｸﾚｽは", "念写したヤツだったようだ。", 7, true, false, false);

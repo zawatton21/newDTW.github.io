@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Class from '../classes'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func865
 async function func0924(this: any) {
+    if (shouldUseGeneratedGameFunction('func0924')) {
+        await runGeneratedGameFunction('func0924', { thisArg: this });
+        return;
+    }
+
     Adap.dialog(Gvar.data0 = "画面を初期化しますか？", Gvar.data1 = 2, "");
     if (Gvar.stat == 7) {
         await Func.func0910();

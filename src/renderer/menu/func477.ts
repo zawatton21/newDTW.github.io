@@ -10,8 +10,13 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { runGeneratedGameFunction, shouldUseGeneratedGameFunction } from '../nelisp_bridge'
 
 async function func477(this: any): Promise<void> {
+    if (shouldUseGeneratedGameFunction('func477')) {
+        await runGeneratedGameFunction('func477', { thisArg: this });
+        return;
+    }
     Adap.dbgprt(477);
     Gvar.var_221 = 0;
     Gvar.open_item_menue = 0; // 道具画面表示フラグ off

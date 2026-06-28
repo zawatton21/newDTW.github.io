@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Stand from '../stand/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func647(this: any) {
+    if (shouldUseGeneratedGameFunction('func647')) {
+        await runGeneratedGameFunction('func647', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(647);
         if (Gvar.var_251 == 1 && Gvar.shageki_disc_id == 0) {
             await Func.setMessage("射撃DISCを装備していないぞ", "", 7, false, false, false);

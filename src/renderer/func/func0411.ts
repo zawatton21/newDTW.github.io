@@ -1,10 +1,19 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 能力説明画面 (label_0411)
 // 旧 func411 (投げ処理) とは別関数
 async function func0411(this: any) {
+    if (shouldUseGeneratedGameFunction('func0411')) {
+        await runGeneratedGameFunction('func0411', { thisArg: this });
+        return;
+    }
+
     Gvar.var_1917 = [];
     Gvar.var_1896 = 1;
     Gvar.var_1918 = 1;

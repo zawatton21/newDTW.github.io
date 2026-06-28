@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { applyItem, postProcessItem } from '../items'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func492(this: any) {
+    if (shouldUseGeneratedGameFunction('func492')) {
+        await runGeneratedGameFunction('func492', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(492);
         Gvar.item_name = "";
         Gvar.item_description1 = "";

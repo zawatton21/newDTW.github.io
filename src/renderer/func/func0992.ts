@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func933
 async function func0992(this: any) {
+    if (shouldUseGeneratedGameFunction('func0992')) {
+        await runGeneratedGameFunction('func0992', { thisArg: this });
+        return;
+    }
+
     // No = 1 なので、ホテルの外
     if (Gvar.dungeon_number == 1) {
         Gvar.var_3864 = "行橙ﾃﾞｨｱﾎﾞﾛはホテルの外に出た";

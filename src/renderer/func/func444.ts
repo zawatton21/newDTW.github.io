@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
  // discに対してコミックを読んだ時の強化処理
 async function func444(this: any) {
+    if (shouldUseGeneratedGameFunction('func444')) {
+        await runGeneratedGameFunction('func444', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(444);
         if (Gvar.var_233[Gvar.var_225].Var0 >= 800 && Gvar.var_233[Gvar.var_225].Var0 < 900 && Gvar.var_1950 != 20) {
             await Func.func445(); // ヤバいものに対してコミックを読んだ時の強化処理

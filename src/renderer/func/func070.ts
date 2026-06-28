@@ -6,9 +6,18 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // アイテムの表示用アイコン座標指定
 async function func070(this: any) {
+    if (shouldUseGeneratedGameFunction('func070')) {
+        await runGeneratedGameFunction('func070', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(70);
         Gvar.buffer_id = 11; // Adap.buffer(11)は、"img_stand0.gif"
         // 

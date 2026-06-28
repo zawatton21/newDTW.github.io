@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 敵名前取得（var_176のスキルIDに対応する敵名をvar_422に格納）
 async function func1013(this: any) {
+    if (shouldUseGeneratedGameFunction('func1013')) {
+        await runGeneratedGameFunction('func1013', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(1013);
         if (Gvar.var_176 == 0) {
             Gvar.var_422 = "ﾃﾞｨｱﾎﾞﾛ";

@@ -9,8 +9,17 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func655(this: any) {
+    if (shouldUseGeneratedGameFunction('func655')) {
+        await runGeneratedGameFunction('func655', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(655);
         Gvar.var_2819 = Gvar.var_673;
         Gvar.var_402 = Gvar.var_83[Gvar.var_2819].Var27;

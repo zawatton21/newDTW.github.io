@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func915
 async function func0974(this: any) {
+    if (shouldUseGeneratedGameFunction('func0974')) {
+        await runGeneratedGameFunction('func0974', { thisArg: this });
+        return;
+    }
+
     await Func.setMessage("ディアボロはここよーッ！", "ここにいるわよォ～～～ッ！", 7, false, false, true);
     Gvar.var_3864 = "女帝";
     Adap.tcpput(Gvar.var_3864, Gvar.var_1050);

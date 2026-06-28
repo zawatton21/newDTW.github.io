@@ -6,7 +6,16 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 async function func622(this: any) {
+    if (shouldUseGeneratedGameFunction('func622')) {
+        await runGeneratedGameFunction('func622', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(622);
          // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
         if (Gvar.y_axis_map_image == 1 || Gvar.y_axis_map_image == 7 || Gvar.y_axis_map_image == 16 || Gvar.var_262 == 1) {

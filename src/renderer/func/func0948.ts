@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 //アイテムの購入金額の値
 // 旧 func889
 async function func0948(this: any) {
+    if (shouldUseGeneratedGameFunction('func0948')) {
+        await runGeneratedGameFunction('func0948', { thisArg: this });
+        return;
+    }
+
     Gvar.item_name = "";
     Gvar.buying_price = 0;
     Gvar.var_3812 = 0;

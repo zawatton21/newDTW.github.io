@@ -10,8 +10,17 @@ import * as Func from '../func/index'
 import * as Enemy from '../enemy/index'
 import * as Music from '../music/index'
 import * as Stand from '../stand/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func651(this: any) {
+    if (shouldUseGeneratedGameFunction('func651')) {
+        await runGeneratedGameFunction('func651', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(651);
         Gvar.var_2985 = 0;
         // No = 118 ダイバーダウンのDISCを攻撃装備している時

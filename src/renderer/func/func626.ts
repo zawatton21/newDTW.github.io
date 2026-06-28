@@ -6,7 +6,16 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 async function func626(this: any) {
+    if (shouldUseGeneratedGameFunction('func626')) {
+        await runGeneratedGameFunction('func626', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(626);
         Gvar.enemy_name = "";
         Gvar.enemy_power = 0;

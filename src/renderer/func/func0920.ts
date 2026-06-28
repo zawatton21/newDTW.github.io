@@ -2,9 +2,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func861
 async function func0920(this: any) {
+    if (shouldUseGeneratedGameFunction('func0920')) {
+        await runGeneratedGameFunction('func0920', { thisArg: this });
+        return;
+    }
+
     Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
     Adap.pos(Gvar.var_3563 * 40 + 10, Gvar.var_3564 * 40 + 10);
     Adap.gcopy(3, 240, 120, 40, 40);

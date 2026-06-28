@@ -10,9 +10,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import {item401} from '../stand/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // ディアボロ側ターン処理(ループ処理)
 async function func009(this: any) {
+    if (shouldUseGeneratedGameFunction('func009')) {
+        await runGeneratedGameFunction('func009', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(9);
         Gvar.var_208 = 0;
         Gvar.var_209 = 0;

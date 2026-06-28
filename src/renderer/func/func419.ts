@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // アイテムに乗った時の動作処理
 async function func419(this: any) {
+    if (shouldUseGeneratedGameFunction('func419')) {
+        await runGeneratedGameFunction('func419', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(419);
         if (Gvar.var_342 == 1) {
             return;

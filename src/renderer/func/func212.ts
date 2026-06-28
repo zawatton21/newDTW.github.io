@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func212(this: any) {
+    if (shouldUseGeneratedGameFunction('func212')) {
+        await runGeneratedGameFunction('func212', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(212);
         Gvar.var_921 = "[ 方向キー ]";
         Gvar.var_919 = Gvar.var_655;

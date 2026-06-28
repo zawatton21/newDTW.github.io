@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 敵スプライトグラフィックス計算（スキルID→画像バッファ・オフセットのマッピング）
 async function func1016(this: any) {
+    if (shouldUseGeneratedGameFunction('func1016')) {
+        await runGeneratedGameFunction('func1016', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(1016);
         if (Gvar.var_176 != 0) {
             if (Gvar.var_176 < 50) {

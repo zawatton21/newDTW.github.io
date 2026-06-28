@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func1024(this: any) {
+    if (shouldUseGeneratedGameFunction('func1024')) {
+        await runGeneratedGameFunction('func1024', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(1024);
         Gvar.var_475 = 11;
         Gvar.var_271 = 1;

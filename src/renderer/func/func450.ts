@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func450(this: any) {
+    if (shouldUseGeneratedGameFunction('func450')) {
+        await runGeneratedGameFunction('func450', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(450);
         if (Gvar.var_1991 == 6) {
             await Func.func451(); // ジャッジメントの問いに対して、願いの数を増やしてくれと選択した時の動作処理

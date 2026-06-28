@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func415(this: any) {
+    if (shouldUseGeneratedGameFunction('func415')) {
+        await runGeneratedGameFunction('func415', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(415);
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
         await Func.func667();

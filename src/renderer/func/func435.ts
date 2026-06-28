@@ -8,9 +8,18 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import { tf } from '../i18n'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // お金を拾った時の動作処理
 async function func435(this: any) {
+    if (shouldUseGeneratedGameFunction('func435')) {
+        await runGeneratedGameFunction('func435', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(435);
         await Func.setMessage(tf("{0} Gを拾った", Gvar.var_78[Gvar.var_321].Var13),
                                 "", 7, false, false, false);

@@ -7,8 +7,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 async function func551(this: any) {
+    if (shouldUseGeneratedGameFunction('func551')) {
+        await runGeneratedGameFunction('func551', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(551);
         Gvar.var_371 = 0;
         await Func.setMessage("特別な敵の棲家に入りますか？", "", 7, true, false, false);

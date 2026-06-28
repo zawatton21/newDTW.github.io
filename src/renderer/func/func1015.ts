@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // スキルプロパティローダー（スキルIDに応じてダメージ倍率・効果フラグ・コストを設定）
 async function func1015(this: any) {
+    if (shouldUseGeneratedGameFunction('func1015')) {
+        await runGeneratedGameFunction('func1015', { thisArg: this });
+        return;
+    }
+
         Adap.dbgprt(1015);
         if (Gvar.var_176 == 3 || Gvar.var_176 == 72 || Gvar.var_176 == 88 || Gvar.var_176 == 99 || Gvar.var_176 == 139) {
             Gvar.var_119 = 1;

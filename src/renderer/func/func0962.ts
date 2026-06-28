@@ -1,8 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func903
 async function func0962(this: any) {
+    if (shouldUseGeneratedGameFunction('func0962')) {
+        await runGeneratedGameFunction('func0962', { thisArg: this });
+        return;
+    }
+
     Gvar.var_3865 = "行白";
     if (Adap.instr(Gvar.var_3863, 0, "やっつけた") != (-1)) {
         Gvar.var_3865 = "行水";

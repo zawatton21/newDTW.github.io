@@ -8,10 +8,19 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 自由人の狂想曲のダンジョンマップ
 // 旧 func317
 async function func317(this: any) {
+        if (shouldUseGeneratedGameFunction('func317')) {
+                await runGeneratedGameFunction('func317', { thisArg: this });
+                return;
+        }
+
         Adap.dbgprt(317);
         Gvar.var_983 = Adap.sdim(3000);
 

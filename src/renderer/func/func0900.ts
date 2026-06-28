@@ -1,9 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import {
+    runGeneratedGameFunction,
+    shouldUseGeneratedGameFunction,
+} from '../nelisp_bridge'
 
 // 旧 func841
 async function func0900(this: any) {
+    if (shouldUseGeneratedGameFunction('func0900')) {
+        await runGeneratedGameFunction('func0900', { thisArg: this });
+        return;
+    }
+
     if (Gvar.var_637 >= 1) {
         Gvar.var_637 = 0;
         Adap.gsel( Gvar.window_id = 37, Gvar.window_mode = -1);
