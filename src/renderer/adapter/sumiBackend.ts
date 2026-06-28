@@ -93,6 +93,11 @@ export function sumiApply(name: string, nums: number[], text: string | null = nu
   rec(name, nums, text ?? undefined);
 }
 
+/** Record a raw state command (e.g. gui-set-alpha) into the native stream. */
+export function sumiRecordRaw(name: string, nums: number[]): void {
+  rec(name, nums);
+}
+
 /** Record that `imgName`.png was loaded into buffer `id` (for native replay). */
 export function sumiRecordLoadImage(id: number, imgName: string): void {
   if (!recording && !sock) return;
