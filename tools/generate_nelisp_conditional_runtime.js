@@ -298,18 +298,22 @@ function emitCondition(node, ctx) {
       case ts.SyntaxKind.ExclamationEqualsEqualsToken:
         return `(not (equal ${lhs} ${rhs}))`;
       case ts.SyntaxKind.GreaterThanToken:
-        return `(> ${lhs} ${rhs})`;
+        return `(> ${emitNumericValue(node.left, ctx)} ${emitNumericValue(node.right, ctx)})`;
       case ts.SyntaxKind.GreaterThanEqualsToken:
-        return `(>= ${lhs} ${rhs})`;
+        return `(>= ${emitNumericValue(node.left, ctx)} ${emitNumericValue(node.right, ctx)})`;
       case ts.SyntaxKind.LessThanToken:
-        return `(< ${lhs} ${rhs})`;
+        return `(< ${emitNumericValue(node.left, ctx)} ${emitNumericValue(node.right, ctx)})`;
       case ts.SyntaxKind.LessThanEqualsToken:
-        return `(<= ${lhs} ${rhs})`;
+        return `(<= ${emitNumericValue(node.left, ctx)} ${emitNumericValue(node.right, ctx)})`;
       default:
         throw unsupported(node, ctx, "if condition");
     }
   }
   return emitTruth(node, ctx);
+}
+
+function emitNumericValue(node, ctx) {
+  return `(gr-num ${emitValue(node, ctx)})`;
 }
 
 function emitTruth(node, ctx) {
@@ -330,11 +334,11 @@ function emitValue(node, ctx) {
     return `(gr-index-ref ${emitValue(node.expression, ctx)} ${emitValue(node.argumentExpression, ctx)})`;
   }
   if (ts.isPrefixUnaryExpression(node) && node.operator === ts.SyntaxKind.MinusToken) {
-    return `(- ${emitValue(node.operand, ctx)})`;
+    return `(- ${emitNumericValue(node.operand, ctx)})`;
   }
   if (ts.isBinaryExpression(node)) {
-    const lhs = emitValue(node.left, ctx);
-    const rhs = emitValue(node.right, ctx);
+    const lhs = emitNumericValue(node.left, ctx);
+    const rhs = emitNumericValue(node.right, ctx);
     switch (node.operatorToken.kind) {
       case ts.SyntaxKind.PlusToken:
         return `(+ ${lhs} ${rhs})`;

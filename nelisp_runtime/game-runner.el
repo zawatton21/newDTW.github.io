@@ -28,6 +28,7 @@
 (defvar gr-trace nil "Collected dtw-debug-print ids (reverse order).")
 (defvar gr-missing nil "Names of core-called funcs not loaded (reverse).")
 (defvar gr-depth 0 "Recursion guard depth.")
+(defvar gr-depth-limit 400 "Maximum recursion depth before scan-visible failure.")
 (defvar gr-read-key-state-fn nil "Optional function: keycode -> current key state integer.")
 (defvar gr-step-budget nil "Maximum number of executed IR entries, or nil for unlimited.")
 (defvar gr-step-count 0 "Executed IR entry count for the current run.")
@@ -380,6 +381,13 @@
       (random n)
     0))
 
+(defun gr-num (x)
+  "Coerce X to a number, matching the generated runtime's TS-style fallback."
+  (cond
+   ((numberp x) x)
+   ((stringp x) (string-to-number x))
+   (t 0)))
+
 (defun gr-emit (op &rest args)
   "Collect a GUI/IO command in the sumi stream."
   (push (cons op args) gr-sumi))
@@ -500,7 +508,7 @@
   (let ((ir (and (hash-table-p gr-funcs) (gethash name gr-funcs)))
         (native (and (hash-table-p gr-native-funcs) (gethash name gr-native-funcs))))
     (cond
-     ((>= gr-depth 100000) (error "gr-run-func: recursion limit at %s" name))
+     ((>= gr-depth gr-depth-limit) (error "depth-limit %s" name))
      ((functionp native)
       (setq gr-depth (1+ gr-depth))
       (unwind-protect
