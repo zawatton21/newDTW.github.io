@@ -132,6 +132,10 @@ function emitStatement(stmt, lines, level, ctx) {
     emitExpressionStatement(stmt.expression, lines, level, ctx);
     return;
   }
+  if (ts.isWhileStatement(stmt)) {
+    emitWhile(stmt, lines, level, ctx);
+    return;
+  }
   if (ts.isIfStatement(stmt)) {
     emitIf(stmt, lines, level, ctx);
     return;
@@ -190,6 +194,14 @@ function emitIf(stmt, lines, level, ctx) {
   lines.push(`${indent(level)})`);
 }
 
+function emitWhile(stmt, lines, level, ctx) {
+  const cond = emitCondition(stmt.expression, ctx);
+  const bodyLines = emitLoopBranch(stmt.statement, level + 1, ctx);
+  lines.push(`${indent(level)}(while ${cond}`);
+  lines.push(...bodyLines);
+  lines.push(`${indent(level)})`);
+}
+
 function emitBranch(node, level, ctx) {
   const branchLines = [];
   if (ts.isBlock(node)) {
@@ -198,6 +210,11 @@ function emitBranch(node, level, ctx) {
   }
   emitStatement(node, branchLines, level, ctx);
   return branchLines;
+}
+
+function emitLoopBranch(node, level, ctx) {
+  const branchLines = emitBranch(node, level, ctx);
+  return [`${indent(level)}(gr-step-tick)`, ...branchLines];
 }
 
 function wrapBranch(lines, level) {
