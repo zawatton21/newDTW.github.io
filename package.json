@@ -24,6 +24,8 @@
     "nelisp:registry": "node tools/generate_nelisp_game_registry.js",
     "nelisp:maps": "node tools/generate_nelisp_map_state_diff.js",
     "nelisp:selections": "node tools/generate_nelisp_selection_state_diff.js --name func0948 --name func0950 --name func0952",
+    "nelisp:conditional-measure": "node tools/measure_nelisp_conditional_runtime.js",
+    "nelisp:conditional-runtime": "node tools/measure_nelisp_conditional_runtime.js && node tools/generate_nelisp_conditional_runtime.js --names-file build/nelisp-conditional-runtime-names.txt",
     "nelisp:candidates": "node tools/extract_nelisp_bridge_candidates.js",
     "test:nelisp-runner": "node tools/nelisp_state_diff_runner_smoke.js",
     "test:nelisp-electron": "electron tools/test_scenarios.js nelisp",
