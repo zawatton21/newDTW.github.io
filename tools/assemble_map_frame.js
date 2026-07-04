@@ -23,6 +23,10 @@
  * buffer records touch gets its size (and image, if any) from the table.
  *
  *   node tools/assemble_map_frame.js <dumped-frame.json> [out.json] [--title-stream path]
+ *
+ * `assemble(records, titleStreamPath)` is also exported so other tools (see
+ * tools/live_feed_loop.js) can reuse the exact same preamble-building logic
+ * on in-memory records instead of shelling out to this CLI per frame.
  */
 'use strict';
 
@@ -188,4 +192,8 @@ function main() {
   }
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = { assemble, loadTitleStreamTable, referencedBuffers, readPngSize, ALWAYS_SCREENS };
