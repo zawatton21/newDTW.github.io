@@ -34,15 +34,15 @@ function main() {
   const skipped = [];
   const noSource = [];
   for (const name of dedupe(names).sort(byFuncNumber)) {
-    const file = findSourceFile(fileIndex, name);
-    if (!file) {
+    const sourceInfo = findSourceFile(fileIndex, name);
+    if (!sourceInfo) {
       noSource.push(name);
       continue;
     }
     try {
       translated.push({
         name,
-        body: transpileFunc(name, file),
+        body: transpileFunc(name, sourceInfo),
       });
     } catch (error) {
       skipped.push([name, error.message]);
@@ -108,11 +108,34 @@ function buildDefinitionIndex(root) {
     const sf = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
     for (const stmt of sf.statements) {
       if (ts.isFunctionDeclaration(stmt) && stmt.name && /^func[\dA-Za-z]+$/i.test(stmt.name.text)) {
-        if (!defs.has(stmt.name.text)) defs.set(stmt.name.text, file);
+        if (!defs.has(stmt.name.text)) defs.set(stmt.name.text, { file, sourceName: stmt.name.text });
+      }
+      if (ts.isExportDeclaration(stmt) && stmt.moduleSpecifier && stmt.exportClause && ts.isNamedExports(stmt.exportClause)) {
+        const targetPath = resolveModuleFile(file, stmt.moduleSpecifier.text);
+        if (!targetPath) continue;
+        for (const element of stmt.exportClause.elements) {
+          const exportedName = element.name.text;
+          const localName = element.propertyName ? element.propertyName.text : exportedName;
+          if (!/^func[\dA-Za-z]+$/i.test(exportedName) || !/^func[\dA-Za-z]+$/i.test(localName)) continue;
+          if (!defs.has(exportedName)) defs.set(exportedName, { file: targetPath, sourceName: localName });
+        }
       }
     }
   }
   return defs;
+}
+
+function resolveModuleFile(fromFile, specifier) {
+  if (!specifier.startsWith(".")) return null;
+  const base = path.resolve(path.dirname(fromFile), specifier);
+  const candidates = [
+    `${base}.ts`,
+    path.join(base, "index.ts"),
+  ];
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate)) return candidate;
+  }
+  return null;
 }
 
 function walk(dir, out) {
@@ -127,10 +150,11 @@ function findSourceFile(defs, name) {
   return defs.get(name) || null;
 }
 
-function transpileFunc(name, file) {
+function transpileFunc(name, sourceInfo) {
+  const file = sourceInfo.file;
   const source = fs.readFileSync(file, "utf8");
   const sf = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
-  const func = sf.statements.find((stmt) => ts.isFunctionDeclaration(stmt) && stmt.name && stmt.name.text === name);
+  const func = sf.statements.find((stmt) => ts.isFunctionDeclaration(stmt) && stmt.name && stmt.name.text === sourceInfo.sourceName);
   if (!func || !func.body) throw new Error(`function ${name} not found`);
 
   const bodyStatements = func.body.statements.filter((stmt) => !isGeneratedGuard(stmt));
@@ -391,6 +415,9 @@ function emitCall(expr, ctx) {
   }
   if (!ts.isCallExpression(expr)) throw unsupported(expr, ctx, "non-call");
 
+  if (ts.isIdentifier(expr.expression) && expr.expression.text === "tf") {
+    return emitValue(expr, ctx);
+  }
   if (ts.isIdentifier(expr.expression) && expr.expression.text === "cursorBeep") {
     return `(progn (gr-emit "dtw-play-sound" 100) (gr-run-func "func337"))`;
   }
@@ -411,9 +438,18 @@ function emitCall(expr, ctx) {
     return `(gr-emit "gui-set-alpha" ${info.alpha(args)})`;
   }
   if (info.kind === "special-pos") {
-    return `(progn (gr-set "__pos_x" ${args[0] || "0"}) (gr-set "__pos_y" ${args[1] || "0"}))`;
+    return `(progn (gr-set "__pos_x" ${args[0] || "0"}) (gr-set "__pos_y" ${args[1] || "0"}) (gr-emit "gui-set-position" ${args[0] || "0"} ${args[1] || "0"}))`;
+  }
+  if (info.kind === "special-font") {
+    return `(gr-set "line_size" ${info.lineSize(args)})`;
+  }
+  if (info.kind === "special-mes") {
+    return info.render(args);
   }
   if (info.kind === "special-gcopy") {
+    return `(gr-emit "gui-draw-image-scaled" ${info.render(args)})`;
+  }
+  if (info.kind === "special-gzoom") {
     return `(gr-emit "gui-draw-image-scaled" ${info.render(args)})`;
   }
   if (info.kind === "noop") {
@@ -433,6 +469,9 @@ function classifyCall(call, ctx) {
   if (ts.isIdentifier(call.expression) && call.expression.text === "cursorBeep") {
     return { kind: "noop" };
   }
+  if (ts.isIdentifier(call.expression) && (call.expression.text === "applyItem" || call.expression.text === "postProcessItem")) {
+    return { kind: "noop" };
+  }
   if (!ts.isPropertyAccessExpression(call.expression)) throw unsupported(call, ctx, "call target");
   const root = call.expression.expression;
   const method = call.expression.name.text;
@@ -441,6 +480,9 @@ function classifyCall(call, ctx) {
       if (method === "AutoDraw") return { kind: "event", name: "game-auto-draw" };
       if (method === "setMessage") return { kind: "event", name: "game-set-message" };
       return { kind: "core-call", name: method };
+    }
+    if (root.text === "Func" && method === "imeset") {
+      return { kind: "event", name: "func-ime-set" };
     }
     throw unsupported(call, ctx, `${root.text}.${method}`);
   }
@@ -458,9 +500,11 @@ function classifyCall(call, ctx) {
       pset: "gui-draw-point",
       objsel: "dtw-object-select",
       dialog: "dtw-dialog",
+      chdir: "dtw-change-directory",
+      clrobj: "dtw-clear-objects",
     };
     if (eventMap[method]) return { kind: "event", name: eventMap[method] };
-    if (method === "wait" || method === "await_") return { kind: "noop" };
+    if (method === "wait" || method === "await_" || method === "onexit" || method === "bsave" || method === "onkey" || method === "ck_joystick") return { kind: "noop" };
     if (method === "gmode") {
       return {
         kind: "special-gmode",
@@ -471,6 +515,23 @@ function classifyCall(call, ctx) {
       };
     }
     if (method === "pos") return { kind: "special-pos" };
+    if (method === "font") {
+      return {
+        kind: "special-font",
+        lineSize(args) {
+          return args[1] || "16";
+        },
+      };
+    }
+    if (method === "mes") {
+      return {
+        kind: "special-mes",
+        render(args) {
+          const lineSize = '(or (gr-get "line_size") 16)';
+          return `(progn (gr-emit "gui-set-position" (or (gr-get "__pos_x") 0) (+ (gr-num (or (gr-get "__pos_y") 0)) (* (gr-num ${lineSize}) 0.9))) (gr-emit "gui-draw-text" ${args[0] || "\"\""}) (gr-set "__pos_y" (+ (gr-num (or (gr-get "__pos_y") 0)) (gr-num ${lineSize}))))`;
+        },
+      };
+    }
     if (method === "gcopy") {
       return {
         kind: "special-gcopy",
@@ -483,7 +544,20 @@ function classifyCall(call, ctx) {
         },
       };
     }
+    if (method === "gzoom") {
+      return {
+        kind: "special-gzoom",
+        render(args) {
+          const destX = '(or (gr-get "__pos_x") 0)';
+          const destY = '(or (gr-get "__pos_y") 0)';
+          return `${args[2] || "0"} ${args[3] || "0"} ${args[4] || "0"} ${args[5] || "0"} ${args[6] || "0"} ${destX} ${destY} ${args[0] || "0"} ${args[1] || "0"}`;
+        },
+      };
+    }
     throw unsupported(call, ctx, `Adap.${method}`);
+  }
+  if (ts.isIdentifier(root) && root.text === "window" && method === "addEventListener") {
+    return { kind: "noop" };
   }
   if (ts.isIdentifier(root) && root.text === "console") {
     return { kind: "noop" };
@@ -605,6 +679,11 @@ function emitValue(node, ctx) {
     return `(- ${emitNumericValue(node.operand, ctx)})`;
   }
   if (ts.isBinaryExpression(node)) {
+    if (isAssignmentOperator(node.operatorToken.kind)) {
+      const target = emitTarget(node.left, ctx);
+      const value = emitValue(node.right, ctx);
+      return `(let ((gr_tmp ${value})) ${target.write("gr_tmp")} gr_tmp)`;
+    }
     if (node.operatorToken.kind === ts.SyntaxKind.PlusToken && isStringConcatExpression(node)) {
       return `(concat (format "%s" ${emitValue(node.left, ctx)}) (format "%s" ${emitValue(node.right, ctx)}))`;
     }
@@ -619,15 +698,27 @@ function emitValue(node, ctx) {
         return `(* ${lhs} ${rhs})`;
       case ts.SyntaxKind.SlashToken:
         return `(/ ${lhs} ${rhs})`;
+      case ts.SyntaxKind.PercentToken:
+        return `(% ${lhs} ${rhs})`;
       default:
         throw unsupported(node, ctx, "value binary expression");
     }
+  }
+  if (ts.isConditionalExpression(node)) {
+    return `(if ${emitCondition(node.condition, ctx)} ${emitValue(node.whenTrue, ctx)} ${emitValue(node.whenFalse, ctx)})`;
   }
   if (ts.isAwaitExpression(node)) {
     if (ts.isCallExpression(node.expression) && isAwaitNoop(node.expression)) return "nil";
     return emitValue(node.expression, ctx);
   }
   if (ts.isCallExpression(node)) {
+    if (ts.isIdentifier(node.expression) && node.expression.text === "tf") {
+      const args = node.arguments.map((arg) => emitValue(arg, ctx));
+      return `(gr-format ${args.join(" ")})`;
+    }
+    if (ts.isIdentifier(node.expression) && (node.expression.text === "applyItem" || node.expression.text === "postProcessItem")) {
+      return "nil";
+    }
     if (!ts.isPropertyAccessExpression(node.expression)) throw unsupported(node, ctx, "value call");
     const root = node.expression.expression;
     const method = node.expression.name.text;
@@ -641,9 +732,16 @@ function emitValue(node, ctx) {
       if (method === "getkey") return `(gr-index-ref (gr-get "pushing_key_list") ${emitValue(node.arguments[0], ctx)})`;
       if (method === "stick" || method === "ginfo" || method === "ck_joystick") return "0";
       if (method === "dim") return `(make-vector (gr-num ${emitValue(node.arguments[0], ctx)}) 0)`;
+      if (method === "sdim") return `(make-string (gr-num ${emitValue(node.arguments[0], ctx)}) 0)`;
     }
     if (ts.isIdentifier(root) && root.text === "Func" && method === "func080") return "nil";
     throw unsupported(node, ctx, `value call ${method}`);
+  }
+  if (ts.isArrayLiteralExpression(node)) {
+    return `(vector ${node.elements.map((element) => emitValue(element, ctx)).join(" ")})`;
+  }
+  if (ts.isFunctionExpression(node) || ts.isArrowFunction(node)) {
+    return "nil";
   }
   throw unsupported(node, ctx, "value");
 }

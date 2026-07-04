@@ -489,11 +489,9 @@
      ((equal op "index-ref")
       (gr-index-ref (gr-eval (nth 1 form)) (gr-eval (nth 2 form))))
      ((equal op "i18n-format")
-      (let ((fmt (gr-eval (nth 1 form))) (args (mapcar #'gr-eval (nthcdr 2 form))) (i 0))
-        (dolist (a args)
-          (setq fmt (gr-replace-all fmt (format "{%d}" i) (format "%s" a)))
-          (setq i (1+ i)))
-        fmt))
+      (apply #'gr-format
+             (gr-eval (nth 1 form))
+             (mapcar #'gr-eval (nthcdr 2 form))))
      (t (list 'gr-unknown-expr op)))))
 
 (defun gr-replace-all (s from to)
@@ -503,6 +501,14 @@
       (setq out (concat out (substring s start idx) to))
       (setq start (+ idx flen)))
     (concat out (substring s start))))
+
+(defun gr-format (fmt &rest args)
+  "Replace {i} placeholders in FMT with the corresponding ARGS."
+  (let ((i 0))
+    (dolist (a args)
+      (setq fmt (gr-replace-all fmt (format "{%d}" i) (format "%s" a)))
+      (setq i (1+ i)))
+    fmt))
 
 (defun gr-exec-entry (e)
   "Execute one IR entry E."
