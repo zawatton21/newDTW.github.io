@@ -60,8 +60,13 @@
       (setq items (append items (list (gr-sumi-record-to-json entry)))))
     (concat "[" (mapconcat #'identity items ",") "]")))
 
-(defun gr-dump-sumi (name &optional budget)
-  "Run NAME and print one sumi JSON line plus an OK marker."
+(defun gr-dump-sumi (name &optional budget seed-fn)
+  "Run NAME and print one sumi JSON line plus an OK marker.
+If SEED-FN is non-nil, call it with no arguments right after the internal
+`gr-reset' and before NAME runs, so callers can seed `gr-state' (e.g. with
+`gr-seed-state' from gamedata-state.el) without it being wiped by the reset
+below -- `gr-reset' unconditionally replaces `gr-state' with a fresh empty
+hash table, so seeding before calling `gr-dump-sumi' has no effect."
   (let ((old-budget gr-step-budget)
         (old-depth gr-depth-limit)
         (have-key-hook (boundp 'gr-read-key-state-fn))
@@ -72,6 +77,7 @@
     (unwind-protect
         (progn
           (gr-reset)
+          (when seed-fn (funcall seed-fn))
           (setq gr-step-count 0)
           (when have-key-hook
             (setq gr-read-key-state-fn (lambda (_keycode) 0)))
