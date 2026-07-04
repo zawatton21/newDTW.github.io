@@ -13,6 +13,18 @@
  * or other DOM/class objects. Those are legitimately out of scope for the
  * NeLisp interpreter, which only understands vectors/numbers/strings.
  *
+ * One exception: class-instance data records (CharactorInfo in var_83 --
+ * enemies, ItemInfo in var_78 -- floor items; see src/renderer/classes.ts)
+ * ARE exported, because the transpiled draw path (func396/func397 for
+ * items, func565/func626/func566/func567 for enemies -- see
+ * tools/generate_nelisp_conditional_runtime.js emitTarget/emitValue) reads
+ * their fields via plain property access (`Gvar.var_83[i].Var1`), which the
+ * transpiler lowers to `(gr-prop-ref (gr-index-ref (gr-get 83) i) "Var1")`.
+ * game-runner.el's gr-prop-ref already resolves "VarN" against a vector by
+ * numeric index N (no interpreter change needed), so each record is
+ * serialized as a vector [Var0 Var1 ... VarN] in strict numeric order --
+ * exactly CharactorInfo/ItemInfo's own Save() layout.
+ *
  * Boots the same way tools/test_scenarios.js does (public/index.html in a
  * hidden BrowserWindow), then reuses its `skipToGame` key-injection sequence
  * (Z key three times: title -> login -> floor intro -> field) so the capture
@@ -60,6 +72,60 @@ async function skipToGame(win) {
   return state;
 }
 
+/**
+ * Place one enemy and one item on the current floor, within the 11x11 window
+ * func326 walks around the player (var_66/var_67), so the seeded state has a
+ * real record for the func396/func565 draw path to pick up.
+ *
+ * debug.spawnEnemy()/debug.placeItem() (src/renderer/debug.ts) already do
+ * almost this, but they write the occupancy flag to the wrong grid: var_84
+ * and var_88 respectively, which nothing in the draw path reads. func326
+ * reads var_82[x][y] (enemy slot id) and var_77[x][y] (item-record index) --
+ * see src/renderer/variable.ts:162-164 and func396.ts/func565.ts. This seeds
+ * the same CharactorInfo/ItemInfo record shape debug.ts uses, but writes the
+ * occupancy grids the transpiled game-runner actually reads.
+ *
+ * Also forces dungeon_number to 1: skipToGame's Z-mash lands in the town/
+ * hotel hub (dungeon_number 0), and func326's floor-item branch only calls
+ * func396 when dungeon_number != 0 (or var_595 == 1, a rare hub-only flag)
+ * -- see func326.ts's `if (Gvar.dungeon_number != 0) { await Func.func396() }`
+ * guard. Without this the seeded item is real but never drawn, matching
+ * real gameplay (the hub genuinely hides floor items outside a dungeon).
+ */
+async function seedEncounter(win) {
+  const result = await exec(win, `(function () {
+    var g = window.debug.gvar;
+    g.dungeon_number = 1; // enter "dungeon 1" so func326 draws floor items (see above)
+    var px = g.var_66, py = g.var_67;
+
+    var ex = px - 1, ey = py; // one cell left of the player
+    if (!g.var_83[1]) g.var_83[1] = {};
+    g.var_83[1].Var0 = 1;   // enemy_list id 1 (ordinary human grunt; see func626 data table) -- avoids func567's special-cased ids
+    g.var_83[1].Var1 = ex;
+    g.var_83[1].Var2 = ey;
+    g.var_83[1].Var3 = 4;   // hp
+    g.var_83[1].Var5 = 2;   // facing (numpad-style; 2 = down)
+    g.var_83[1].Var10 = g.dungeon_number || 0;
+    g.var_83[1].Var12 = 12; // speed
+    g.var_83[1].Var13 = 0;
+    g.var_82[ex][ey] = 1;   // enemy-occupied grid: slot id (what func326/func565 read)
+    if (!(g.var_107 >= 1)) g.var_107 = 1;
+
+    var ix = px + 1, iy = py; // one cell right of the player
+    if (!g.var_78[1]) g.var_78[1] = {};
+    g.var_78[1].Var0 = 1;   // belongings_item_list id 1 (money icon; see func397)
+    g.var_78[1].Var1 = ix;
+    g.var_78[1].Var2 = iy;
+    g.var_78[1].Var10 = 1;  // force-visible regardless of var_103
+    g.var_78[1].Var13 = 0;
+    g.var_77[ix][iy] = 1;   // floor-item grid: index into var_78 (what func396 reads)
+
+    return { px: px, py: py, enemy: [ex, ey], item: [ix, iy] };
+  })()`);
+  console.log(`  seeded encounter: ${JSON.stringify(result)}`);
+  return result;
+}
+
 // In-page serializer: walks every own property of Gvar (enumerable or not --
 // some fields like var_236 are re-defined as non-enumerable accessors by
 // debug.ts) and keeps only JSON-plain values: number/string/boolean/null and
@@ -67,11 +133,41 @@ async function skipToGame(win) {
 // functions, class instances such as CharactorInfo/ItemInfo records) is
 // skipped and counted, never partially serialized.
 const SERIALIZE_SRC = `(function () {
+  // CharactorInfo (var_83, enemies) / ItemInfo (var_78, floor items) are
+  // plain-data class instances whose only own-enumerable keys are Var0..VarN
+  // (see src/renderer/classes.ts). Recognize them structurally (no class
+  // import needed in the page context) and flatten to a [Var0..VarN] array,
+  // matching each class's own Save() order -- this is exactly what the
+  // transpiled draw path's (gr-prop-ref RECORD "VarN") expects to index.
+  function isVarRecord(v) {
+    if (v === null || typeof v !== 'object' || Array.isArray(v)) return false;
+    var keys = Object.keys(v);
+    if (keys.length === 0) return false;
+    for (var i = 0; i < keys.length; i++) {
+      if (!/^Var\\d+$/.test(keys[i])) return false;
+    }
+    return true;
+  }
+  function varRecordToArray(v) {
+    var keys = Object.keys(v);
+    var maxIdx = -1;
+    for (var i = 0; i < keys.length; i++) {
+      var n = parseInt(keys[i].slice(3), 10);
+      if (n > maxIdx) maxIdx = n;
+    }
+    var arr = [];
+    for (var j = 0; j <= maxIdx; j++) {
+      var val = v['Var' + j];
+      arr.push(val === undefined ? 0 : val);
+    }
+    return arr;
+  }
   function isPlainArrayDeep(v, depth) {
     if (depth > 8) return false;
     if (v === null || v === undefined) return true;
     var t = typeof v;
     if (t === 'number' || t === 'string' || t === 'boolean') return true;
+    if (isVarRecord(v)) return isPlainArrayDeep(varRecordToArray(v), depth + 1);
     if (Array.isArray(v)) {
       for (var i = 0; i < v.length; i++) {
         if (!isPlainArrayDeep(v[i], depth + 1)) return false;
@@ -82,6 +178,7 @@ const SERIALIZE_SRC = `(function () {
   }
   function convert(v) {
     if (v === null || v === undefined) return null;
+    if (isVarRecord(v)) return convert(varRecordToArray(v));
     if (Array.isArray(v)) return v.map(convert);
     return v;
   }
@@ -137,8 +234,11 @@ function writeGamedataState(payload) {
     ';; src/renderer/nelisp_bridge/stateDiffRunner.ts readStateSlot/writeStateSlot:',
     ';;   numeric slot N -> Gvar.var_N, string slot S -> Gvar[S] (named field).',
     ';; Only plain data (number/string/boolean/null/array) is captured; canvases,',
-    ';; contexts, functions, and class-instance records (e.g. CharactorInfo/',
-    ';; ItemInfo entries in var_78/var_83) are out of scope and skipped.',
+    ';; contexts, and functions are out of scope and skipped. CharactorInfo',
+    ';; (var_83, enemies) / ItemInfo (var_78, floor items) class-instance',
+    ';; records ARE captured, flattened to [Var0 Var1 ... VarN] vectors (see',
+    ';; isVarRecord/varRecordToArray above) so gr-prop-ref can read "VarN"',
+    ';; fields exactly the way the transpiled draw path expects.',
     '',
     '(defun gr-seed-state ()',
     '  "Seed gr-state with a real captured dungeon-floor snapshot."',
@@ -171,8 +271,9 @@ app.whenReady().then(async () => {
 
   try {
     await skipToGame(win);
+    await seedEncounter(win);
   } catch (e) {
-    console.error('skipToGame failed:', e && (e.stack || e.message) || e);
+    console.error('skipToGame/seedEncounter failed:', e && (e.stack || e.message) || e);
   }
 
   let payload = null;
