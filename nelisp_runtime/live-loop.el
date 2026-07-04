@@ -26,6 +26,15 @@
 ;;      tools/live_feed_loop.js to pick up and forward to the sumi bridge.
 ;; Prints "FRAME N player=X,Y" every `gr-live-report-every' frames and
 ;; "LIVE-LOOP-DONE N" (N = total frames written) when the loop ends.
+;;
+;; Input-driven play (set `gr-live-input-mode' t via --eval BEFORE -l this
+;; file, same convention as `gr-live-duration-seconds'): step 1 above is
+;; replaced by `gr-live-step-player-input', which polls `gr-live-input-path'
+;; (default "build/key-state.txt", written by tools/key_input_server.js) for
+;; a new "<TOKEN> <SEQ>" line once per tick and moves the player one cell in
+;; TOKEN's direction the first tick a given SEQ is seen -- one keypress, one
+;; step, no key repeat/auto-move.  Steps 2-4 (enemy chase, collector clear,
+;; frame write) are unchanged in either mode.
 
 (defvar gr-live-duration-seconds 60
   "How long `gr-live-run' runs before returning, in seconds.")
@@ -51,6 +60,30 @@
 (defconst gr-live-dir-delta
   '((8 . (0 . -1)) (2 . (0 . 1)) (4 . (-1 . 0)) (6 . (1 . 0)))
   "numpad direction code -> (dx . dy) cell delta.")
+
+(defvar gr-live-input-mode nil
+  "When non-nil, the player is driven by `gr-live-step-player-input' (real
+keypresses relayed through `gr-live-input-path' by tools/key_input_server.js)
+instead of the synthetic clockwise patrol in `gr-live-step-player'.  Default
+nil so the existing patrol demo is unaffected; set with a --eval BEFORE -l
+this file, same convention as `gr-live-duration-seconds'.  Enemy chase is
+identical in both modes.")
+
+(defvar gr-live-input-path "build/key-state.txt"
+  "Path (relative to CWD = repo root) that tools/key_input_server.js writes
+\"<TOKEN> <SEQ>\" lines to; polled once per tick when `gr-live-input-mode'.")
+
+(defvar gr-live-input-last-seq 0
+  "Last SEQ consumed from `gr-live-input-path'.  A keypress only moves the
+player on the first tick its SEQ is observed (SEQ > this value); seeded from
+whatever is already on disk at `gr-live-run' startup so a stale keypress
+left over from a previous session is not replayed as the first move.")
+
+(defconst gr-live-input-dir-alist
+  '(("UP" . 8) ("DOWN" . 2) ("LEFT" . 4) ("RIGHT" . 6))
+  "Direction token written by tools/key_input_server.js -> numpad heading
+code, using the same 8/2/4/6 = up/down/left/right convention as
+`gr-live-dir-delta'.")
 
 (defconst gr-live-grid-size 70
   "Width/height of the var_71/var_82 dungeon grids.")
@@ -121,6 +154,47 @@ three headings; if all four are blocked the player stays put this tick."
       (setq i (1+ i)))
     moved))
 
+(defun gr-live-read-key-state ()
+  "Read and parse `gr-live-input-path' as \"TOKEN SEQ\".
+Returns (TOKEN . SEQ) with SEQ coerced to a number, or nil if the file is
+absent, empty, malformed, or names a token not in `gr-live-input-dir-alist'.
+Plain elisp file I/O only (insert-file-contents into a temp buffer) -- no
+subr-x dependency, matching the rest of this runtime's style."
+  (when (file-exists-p gr-live-input-path)
+    (condition-case nil
+        (with-temp-buffer
+          (insert-file-contents gr-live-input-path)
+          (let ((parts (split-string (buffer-string) "[ \t\r\n]+" t)))
+            (when (= (length parts) 2)
+              (let ((token (nth 0 parts))
+                    (seq (string-to-number (nth 1 parts))))
+                (when (and (assoc token gr-live-input-dir-alist) (> seq 0))
+                  (cons token seq))))))
+      (error nil))))
+
+(defun gr-live-step-player-input ()
+  "Advance the player one cell per NEW keypress from `gr-live-input-path'.
+A keypress counts as new when its SEQ is greater than
+`gr-live-input-last-seq' (which this function updates unconditionally once a
+new SEQ is seen, whether or not the move below actually succeeds -- so a
+keypress into a wall is still consumed, not retried next tick).  No file, no
+new SEQ, or a target cell that fails `gr-live-floor-p' all leave the player
+standing still this tick.  Does not touch enemy state."
+  (let ((ks (gr-live-read-key-state)))
+    (when (and ks (> (cdr ks) gr-live-input-last-seq))
+      (setq gr-live-input-last-seq (cdr ks))
+      (let* ((dir (cdr (assoc (car ks) gr-live-input-dir-alist)))
+             (delta (cdr (assq dir gr-live-dir-delta)))
+             (px (gr-num (gr-get 66)))
+             (py (gr-num (gr-get 67)))
+             (nx (+ px (car delta)))
+             (ny (+ py (cdr delta))))
+        (when (gr-live-floor-p nx ny)
+          (gr-set 66 nx)
+          (gr-set 67 ny)
+          (setq gr-live-player-dir dir)
+          t)))))
+
 (defun gr-live-step-target-ok (x y px py)
   "Non-nil if (X . Y) is a legal enemy destination.
 In bounds, walkable floor, not occupied by another enemy, and not the
@@ -177,12 +251,19 @@ occupancy grid (clear old cell, mark new cell with our index)."
   (gr-reset)
   (gr-seed-state)
   (setq gr-live-enemy-idx (gr-live-find-enemy))
-  (princ (format "LIVE-LOOP-START player=%s,%s enemy-idx=%s duration=%s\n"
-                 (gr-get 66) (gr-get 67) gr-live-enemy-idx gr-live-duration-seconds))
+  (when gr-live-input-mode
+    ;; Seed the consumed-SEQ watermark from whatever is already on disk so a
+    ;; keypress left over from a previous session (or the key server started
+    ;; before this loop) is not replayed as the first move.
+    (let ((ks (gr-live-read-key-state)))
+      (when ks (setq gr-live-input-last-seq (cdr ks)))))
+  (princ (format "LIVE-LOOP-START player=%s,%s enemy-idx=%s duration=%s input-mode=%s\n"
+                 (gr-get 66) (gr-get 67) gr-live-enemy-idx gr-live-duration-seconds
+                 gr-live-input-mode))
   (let ((start (float-time))
         (frame 0))
     (while (< (- (float-time) start) gr-live-duration-seconds)
-      (gr-live-step-player)
+      (if gr-live-input-mode (gr-live-step-player-input) (gr-live-step-player))
       (when gr-live-enemy-idx (gr-live-step-enemy))
       (setq gr-sumi nil gr-trace nil gr-missing nil)
       (setq gr-step-count 0)
