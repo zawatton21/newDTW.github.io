@@ -74,6 +74,41 @@ const debug = {
         console.log(`[debug] Teleported to (${x}, ${y})`);
     },
 
+    // ========== Dungeon Entry ==========
+
+    /**
+     * Force natural entry into a real generated dungeon floor, bypassing the
+     * in-game "walk to the hotel-exterior door tile + confirm dialog" flow
+     * (func019 field handler -> func0881/func0880 -> func0898 -> func825).
+     *
+     * Calls the same self-contained per-dungeon initializer the real UI flow
+     * calls. Each one sets dungeon_number/current_floor = 1 itself and ends
+     * in Func.func006(), which chains into Func.func243() -> Func.func007()
+     * -> Func.func244()/Func.func246() -> the ASCII-template floor-generation
+     * pipeline that decodes a real dungeon layout into var_71 (terrain),
+     * var_72/var_65/var_73/var_76/var_84/var_79/var_80 etc. -- a genuine
+     * generated floor (hundreds of walkable floor-family cells across many
+     * rooms/corridors), not the ~94-cell synthetic room the town/new-game
+     * fallback state has. No other debug call is required first.
+     *
+     * dungeonNumber: 1 = Hotel Outside (default -- earliest, simplest dungeon),
+     * 2 = Requiem's Labyrinth, 3 = Diavolo's Trial, 4 = World After One Loop,
+     * 5 = Iron Prison. See src/renderer/dungeon{1..5}/func0*.ts.
+     */
+    async enterDungeon(dungeonNumber: number = 1) {
+        switch (dungeonNumber) {
+            case 1: await Func.func825(); break;
+            case 2: await Func.func0886(); break;
+            case 3: await Func.func0888(); break;
+            case 4: await Func.func0893(); break;
+            case 5: await Func.func0895(); break;
+            default:
+                console.error(`[debug] enterDungeon: unknown dungeon number ${dungeonNumber}`);
+                return;
+        }
+        console.log(`[debug] entered dungeon ${dungeonNumber}: dungeon_number=${Gvar.dungeon_number}, current_floor=${Gvar.current_floor}`);
+    },
+
     // ========== Enemies ==========
 
     /** Spawn an enemy in front of the player. */
@@ -1144,6 +1179,7 @@ const debug = {
   debug.setGold(n)            - Set gold
   debug.getPos()              - Get position
   debug.teleport(x, y)        - Move player
+  debug.enterDungeon(n)       - Force natural entry into real dungeon n (1-5)
   debug.spawnEnemy(id)        - Spawn enemy in front
   debug.killAllEnemies()      - Kill all enemies
   debug.giveItem(id)          - Add item to inventory

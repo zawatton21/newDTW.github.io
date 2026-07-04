@@ -31,6 +31,31 @@
  * happens on a real, in-progress dungeon floor rather than synthetic state.
  *
  *   electron tools/capture_gvar_state.js
+ *
+ * --dungeon mode: after skipToGame lands in the town/hub (dungeon_number 0,
+ * the skipToGame flow never leaves town), calls the new
+ * `window.debug.enterDungeon(n)` hook (src/renderer/debug.ts) to drive the
+ * SAME self-contained per-dungeon initializer the real "walk to the
+ * hotel-exterior door + confirm dialog" UI flow would call (func0898 ->
+ * Func.func825() for dungeon 1, etc. -- see debug.ts's `enterDungeon` doc
+ * comment for the full call chain). That initializer ends in Func.func006(),
+ * which chains into the real ASCII-template floor-generation pipeline and
+ * populates var_71/var_72/var_65/var_73/var_76/var_84/var_79/var_80 etc.
+ * with a genuinely generated floor (hundreds of walkable floor-family cells
+ * across rooms/corridors) and a real (non-forced) dungeon_number >= 1 --
+ * no synthetic seedEncounter() call in this mode, the floor's own enemies/
+ * items (if any spawned naturally) are captured as-is. Requires `npm run
+ * build` first so the compiled renderer bundle includes the new debug hook.
+ *
+ *   electron tools/capture_gvar_state.js --dungeon [--dungeon-number N]
+ *
+ * Writes nelisp_runtime/gamedata-state-dungeon.el instead of the default
+ * gamedata-state.el (same `gr-seed-state` contract -- file choice at
+ * concatenation time selects which captured scene gr-seed-state seeds).
+ * Verifies dungeon_number>=1, a real floor (>=200 var_71 floor-family cells,
+ * well above the ~94-cell synthetic fallback room), and reports enemy/item
+ * counts before writing; aborts (exit 1, no file written) if the floor looks
+ * synthetic/ungenerated.
  */
 'use strict';
 
@@ -38,8 +63,24 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
+const CLI_ARGS = process.argv.slice(2);
+const DUNGEON_MODE = CLI_ARGS.includes('--dungeon');
+function argValue(flag, fallback) {
+  const idx = CLI_ARGS.indexOf(flag);
+  return (idx >= 0 && CLI_ARGS[idx + 1] !== undefined) ? CLI_ARGS[idx + 1] : fallback;
+}
+const DUNGEON_NUMBER = parseInt(argValue('--dungeon-number', '1'), 10);
+// Real generated floors run to the low thousands of floor-family cells on a
+// 70x70 grid; the synthetic town/new-game fallback room the default (non
+// --dungeon) capture mode forces dungeon_number=1 onto is ~94 cells. 200 is
+// comfortably above the fallback and comfortably below a real floor.
+const MIN_REAL_FLOOR_CELLS = 200;
+
 const INIT_DELAY = 6000; // game boot + i18n init, matches test_scenarios.js
-const OUT_PATH = path.join(__dirname, '..', 'nelisp_runtime', 'gamedata-state.el');
+const OUT_PATH = path.join(
+  __dirname, '..', 'nelisp_runtime',
+  DUNGEON_MODE ? 'gamedata-state-dungeon.el' : 'gamedata-state.el',
+);
 
 function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
 
@@ -124,6 +165,55 @@ async function seedEncounter(win) {
   })()`);
   console.log(`  seeded encounter: ${JSON.stringify(result)}`);
   return result;
+}
+
+/**
+ * --dungeon mode: drive a REAL natural dungeon-floor entry via the
+ * `window.debug.enterDungeon(n)` hook added to src/renderer/debug.ts.
+ *
+ * Fires enterDungeon() *without* awaiting its returned promise directly in
+ * executeJavaScript (a page-side .then()/.catch() instead flips
+ * window.__enterDungeonDone/__enterDungeonError) and polls Gvar snapshots on
+ * a bounded budget instead. This is deliberately more defensive than a fixed
+ * sleep: a hidden (show:false) BrowserWindow's timers can be background-
+ * throttled, and func825-class initializers chain through func006() into
+ * the real floor-generation pipeline, which is real game code with data-
+ * dependent loop counts -- worth observing progress rather than guessing a
+ * constant. Logs a progress line every `pollMs` so a slow-but-progressing
+ * run is visible, and reports (without throwing) if it never finishes
+ * within `maxWaitMs`, so the caller's verification step gets a clear
+ * "still dungeon_number 0" signal instead of a silent indefinite hang.
+ */
+async function enterDungeonNaturally(win, dungeonNumber, { maxWaitMs = 20000, pollMs = 1500 } = {}) {
+  await exec(win, `(function () {
+    window.__enterDungeonDone = false;
+    window.__enterDungeonError = null;
+    window.debug.enterDungeon(${dungeonNumber})
+      .then(function () { window.__enterDungeonDone = true; })
+      .catch(function (e) { window.__enterDungeonError = String((e && e.stack) || e); window.__enterDungeonDone = true; });
+    return true;
+  })()`);
+
+  const start = Date.now();
+  let snap = null;
+  while (Date.now() - start < maxWaitMs) {
+    await sleep(pollMs);
+    snap = await exec(win, `({
+      done: window.__enterDungeonDone, error: window.__enterDungeonError,
+      dungeon_number: window.debug.gvar.dungeon_number, current_floor: window.debug.gvar.current_floor,
+      var_66: window.debug.gvar.var_66, var_67: window.debug.gvar.var_67
+    })`);
+    console.log(`  enterDungeon progress @${Date.now() - start}ms: ${JSON.stringify(snap)}`);
+    if (snap.done) break;
+  }
+  if (!snap || !snap.done) {
+    console.error(`  enterDungeon did NOT settle within ${maxWaitMs}ms -- proceeding to capture/verify whatever state exists now.`);
+  } else if (snap.error) {
+    console.error(`  enterDungeon threw: ${snap.error}`);
+  } else {
+    console.log(`  entered dungeon naturally: ${JSON.stringify(snap)}`);
+  }
+  return snap;
 }
 
 // In-page serializer: walks every own property of Gvar (enumerable or not --
@@ -223,14 +313,54 @@ function toElisp(v) {
   return 'nil';
 }
 
+/**
+ * --dungeon mode verification stats: a real generated floor should have
+ * hundreds of var_71 floor-family (1..12) cells (vs. ~94 for the synthetic
+ * town/new-game fallback room) and a genuinely non-forced dungeon_number.
+ * Enemy/item counts come from var_83/var_78 (CharactorInfo/ItemInfo records,
+ * already flattened to [Var0 Var1 ...] vectors by the in-page serializer) --
+ * Var0 (index 0) non-zero means an active/occupied slot.
+ */
+function computeDungeonStats(payload) {
+  const grid71 = payload.numeric['71'] || [];
+  let floorCellCount = 0;
+  let totalCells = 0;
+  for (const row of grid71) {
+    if (!Array.isArray(row)) continue;
+    for (const cell of row) {
+      totalCells += 1;
+      if (typeof cell === 'number' && cell >= 1 && cell <= 12) floorCellCount += 1;
+    }
+  }
+  const countActive = (records) => (Array.isArray(records)
+    ? records.filter((r) => Array.isArray(r) && r.length > 0 && r[0] !== 0).length
+    : 0);
+  return {
+    dungeonNumber: payload.named.dungeon_number,
+    currentFloor: payload.named.current_floor,
+    floorCellCount,
+    totalCells,
+    enemyCount: countActive(payload.numeric['83']),
+    itemCount: countActive(payload.numeric['78']),
+  };
+}
+
 function writeGamedataState(payload) {
   const numericKeys = Object.keys(payload.numeric).map(Number).sort((a, b) => a - b);
   const namedKeys = Object.keys(payload.named).sort();
 
+  const fileBase = DUNGEON_MODE ? 'gamedata-state-dungeon.el' : 'gamedata-state.el';
+  const captureNote = DUNGEON_MODE
+    ? `;; (title -> login -> field via skipToGame, then window.debug.enterDungeon(${DUNGEON_NUMBER})`
+    : ';; (title -> login -> field, see skipToGame). Mirrors the slot mapping in';
   const lines = [
-    ';;; gamedata-state.el --- captured live Gvar runtime state (do not edit) -*- coding: utf-8; -*-',
+    `;;; ${fileBase} --- captured live Gvar runtime state (do not edit) -*- coding: utf-8; -*-`,
     ';; Generated by tools/capture_gvar_state.js from a live Electron game session',
-    ';; (title -> login -> field, see skipToGame). Mirrors the slot mapping in',
+    captureNote,
+    ...(DUNGEON_MODE
+      ? [';;  -- src/renderer/debug.ts -- to force natural entry into a REAL',
+        ';;  generated dungeon floor). Mirrors the slot mapping in']
+      : []),
     ';; src/renderer/nelisp_bridge/stateDiffRunner.ts readStateSlot/writeStateSlot:',
     ';;   numeric slot N -> Gvar.var_N, string slot S -> Gvar[S] (named field).',
     ';; Only plain data (number/string/boolean/null/array) is captured; canvases,',
@@ -245,7 +375,8 @@ function writeGamedataState(payload) {
   ];
   for (const k of numericKeys) lines.push(`  (gr-set ${k} ${toElisp(payload.numeric[String(k)])})`);
   for (const k of namedKeys) lines.push(`  (gr-set "${escElisp(k)}" ${toElisp(payload.named[k])})`);
-  lines.push(')', '', "(provide 'gamedata-state)", '');
+  const provideSym = DUNGEON_MODE ? 'gamedata-state-dungeon' : 'gamedata-state';
+  lines.push(')', '', `(provide '${provideSym})`, '');
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, lines.join('\n'), 'utf8');
@@ -256,13 +387,19 @@ app.whenReady().then(async () => {
   const win = new BrowserWindow({
     width: 340,
     height: 340,
-    webPreferences: { contextIsolation: false, nodeIntegration: true, devTools: false },
+    // backgroundThrottling: false -- a hidden (show:false) window would
+    // otherwise have its timers/rAF throttled by Chromium, which matters
+    // here because --dungeon mode's func825-class initializers chain
+    // through a handful of real Adap.wait()/AutoDraw() setTimeout-based
+    // delays before settling.
+    webPreferences: { contextIsolation: false, nodeIntegration: true, devTools: false, backgroundThrottling: false },
     show: false,
   });
 
   const errors = [];
   win.webContents.on('console-message', (_e, level, msg) => {
     if (level >= 2 && !msg.includes('Insecure Content-Security-Policy')) errors.push(`[L${level}] ${msg.slice(0, 200)}`);
+    if (msg.includes('[debug]')) console.log(`  page> ${msg.slice(0, 300)}`);
   });
 
   win.loadFile(path.join(__dirname, '..', 'public', 'index.html'));
@@ -271,9 +408,13 @@ app.whenReady().then(async () => {
 
   try {
     await skipToGame(win);
-    await seedEncounter(win);
+    if (DUNGEON_MODE) {
+      await enterDungeonNaturally(win, DUNGEON_NUMBER);
+    } else {
+      await seedEncounter(win);
+    }
   } catch (e) {
-    console.error('skipToGame/seedEncounter failed:', e && (e.stack || e.message) || e);
+    console.error('skipToGame/enterDungeon/seedEncounter failed:', e && (e.stack || e.message) || e);
   }
 
   let payload = null;
@@ -282,6 +423,20 @@ app.whenReady().then(async () => {
     payload = JSON.parse(json);
   } catch (e) {
     console.error('capture failed:', e && (e.stack || e.message) || e);
+  }
+
+  if (payload && DUNGEON_MODE) {
+    const stats = computeDungeonStats(payload);
+    console.log(`dungeon verification: dungeon_number=${stats.dungeonNumber} current_floor=${stats.currentFloor} `
+      + `floor-cells=${stats.floorCellCount}/${stats.totalCells} enemies=${stats.enemyCount} items=${stats.itemCount}`);
+    if (!(stats.dungeonNumber >= 1) || stats.floorCellCount < MIN_REAL_FLOOR_CELLS) {
+      console.error(`ABORT: dungeon verification failed (need dungeon_number>=1 and >=${MIN_REAL_FLOOR_CELLS} real `
+        + `floor-family cells in var_71; got dungeon_number=${stats.dungeonNumber}, floor-cells=${stats.floorCellCount}) `
+        + `-- NOT writing ${path.relative(path.join(__dirname, '..'), OUT_PATH)}`);
+      payload = null; // suppress the write below; app.exit(1) at the bottom reflects the failure
+    } else if (stats.enemyCount === 0) {
+      console.log('note: no naturally spawned enemy near/around spawn on this floor (capturing anyway, per spec).');
+    }
   }
 
   if (payload) {
