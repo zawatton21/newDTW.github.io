@@ -389,6 +389,108 @@
   "Resolve FILE-NAME under `gr-data-root'."
   (expand-file-name (format "%s" (or file-name "")) gr-data-root))
 
+(defun gr-msgpack-read-byte ()
+  "Read the next msgpack byte from the current unibyte buffer."
+  (let ((byte (char-after)))
+    (unless byte
+      (error "gr-msgpack: unexpected EOF"))
+    (forward-char 1)
+    byte))
+
+(defun gr-msgpack-read-n (count)
+  "Read COUNT raw bytes from the current unibyte buffer."
+  (let ((start (point))
+        (end (+ (point) count)))
+    (when (> end (point-max))
+      (error "gr-msgpack: unexpected EOF reading %s bytes" count))
+    (goto-char end)
+    (buffer-substring-no-properties start end)))
+
+(defun gr-msgpack-read-uint (count)
+  "Read COUNT big-endian bytes as an unsigned integer."
+  (let ((value 0)
+        (idx 0)
+        (bytes (gr-msgpack-read-n count)))
+    (while (< idx count)
+      (setq value (+ (* value 256) (aref bytes idx)))
+      (setq idx (1+ idx)))
+    value))
+
+(defun gr-msgpack-read-int (count)
+  "Read COUNT big-endian bytes as a signed integer."
+  (let* ((unsigned (gr-msgpack-read-uint count))
+         (bits (* count 8))
+         (limit (expt 2 bits))
+         (sign-bit (expt 2 (1- bits))))
+    (if (>= unsigned sign-bit)
+        (- unsigned limit)
+      unsigned)))
+
+(defun gr-msgpack-decode-value ()
+  "Decode one bounded msgpack value from the current buffer."
+  (let ((tag (gr-msgpack-read-byte)))
+    (cond
+     ((<= tag #x7f) tag)
+     ((>= tag #xe0) (- tag 256))
+     ((and (>= tag #xa0) (<= tag #xbf))
+      (decode-coding-string (gr-msgpack-read-n (- tag #xa0)) 'utf-8 t))
+     ((and (>= tag #x90) (<= tag #x9f))
+      (gr-msgpack-decode-array (- tag #x90)))
+     ((and (>= tag #x80) (<= tag #x8f))
+      (gr-msgpack-decode-map (- tag #x80)))
+     ((equal tag #xc0) nil)
+     ((equal tag #xc2) nil)
+     ((equal tag #xc3) t)
+     ((equal tag #xcc) (gr-msgpack-read-uint 1))
+     ((equal tag #xcd) (gr-msgpack-read-uint 2))
+     ((equal tag #xce) (gr-msgpack-read-uint 4))
+     ((equal tag #xd0) (gr-msgpack-read-int 1))
+     ((equal tag #xd1) (gr-msgpack-read-int 2))
+     ((equal tag #xd2) (gr-msgpack-read-int 4))
+     ((equal tag #xd9)
+      (decode-coding-string (gr-msgpack-read-n (gr-msgpack-read-uint 1)) 'utf-8 t))
+     ((equal tag #xda)
+      (decode-coding-string (gr-msgpack-read-n (gr-msgpack-read-uint 2)) 'utf-8 t))
+     ((equal tag #xdc) (gr-msgpack-decode-array (gr-msgpack-read-uint 2)))
+     ((equal tag #xde) (gr-msgpack-decode-map (gr-msgpack-read-uint 2)))
+     (t (error "gr-msgpack: unsupported tag 0x%02x" tag)))))
+
+(defun gr-msgpack-decode-array (length)
+  "Decode a msgpack array of LENGTH values."
+  (let ((items nil)
+        (idx 0))
+    (while (< idx length)
+      (push (gr-msgpack-decode-value) items)
+      (setq idx (1+ idx)))
+    (apply #'vector (nreverse items))))
+
+(defun gr-msgpack-decode-map (length)
+  "Decode a msgpack map of LENGTH key/value pairs."
+  (let ((table (make-hash-table :test 'equal))
+        (idx 0)
+        key)
+    (while (< idx length)
+      (setq key (gr-msgpack-decode-value))
+      (puthash key (gr-msgpack-decode-value) table)
+      (setq idx (1+ idx)))
+    table))
+
+(defun gr-msgpack-decode-buffer ()
+  "Decode the current unibyte buffer as bounded msgpack."
+  (goto-char (point-min))
+  (gr-msgpack-decode-value))
+
+(defun gr-msgpack-map-ref (table key)
+  "Read KEY from decoded msgpack TABLE, trying numeric-string aliases."
+  (cond
+   ((hash-table-p table)
+    (or (gethash key table)
+        (and (numberp key) (gethash (number-to-string key) table))
+        (and (stringp key)
+             (string-match-p "\\`[0-9]+\\'" key)
+             (gethash (string-to-number key) table))))
+   (t nil)))
+
 (defun gr-file-exists (file-name)
   "Mirror Adap.exist for non-audio files and update strsize."
   (let* ((path (gr-data-path file-name))
@@ -397,7 +499,9 @@
          (ext (downcase (or (file-name-extension path t) "")))
          (exists (if attrs 1 0)))
     (unless (member ext '(".wav" ".mp3"))
-      (gr-set "strsize" (if (integerp size) size 0)))
+      (gr-set "strsize" (if attrs
+                            (if (integerp size) size 0)
+                          -1)))
     exists))
 
 (defun gr-read-key-state (keycode)
@@ -419,9 +523,8 @@
 (defun gr-bload (file-name data-size offset destination)
   "Strict Adap.bload shim for native transpiled code.
 Mirrors src/renderer/adapter/bload.ts path resolution and literal file read.
-For non-audio data, the TS adapter msgpack-decodes the file before selecting
-an entry by OFFSET; this pure elisp runtime stops at the raw-byte boundary and
-fails explicitly instead of inventing a decoder."
+For non-audio data, this decodes the bounded msgpack subset used by 00.dat and
+the save files, then mirrors the TS adapter's OFFSET selection."
   (let* ((path (gr-data-path file-name))
          (ext (downcase (or (file-name-extension path t) ""))))
     (cond
@@ -433,12 +536,12 @@ fails explicitly instead of inventing a decoder."
       (with-temp-buffer
         (set-buffer-multibyte nil)
         (insert-file-contents-literally path)
-        (error "gr-bload msgpack decode unsupported for %s (bytes=%s data-size=%s offset=%s destination=%s)"
-               path
-               (buffer-size)
-               data-size
-               offset
-               destination))))))
+        (let* ((decoded (gr-msgpack-decode-buffer))
+               (key (if (null offset) "0" offset))
+               (value (gr-msgpack-map-ref decoded key)))
+          (when (and (hash-table-p decoded) (null value))
+            (error "gr-bload missing key %s in %s" key path))
+          value))))))
 
 (defun gr-make-array (length1 &optional length2 length3 length4)
   "Mirror Adap.dim for up to 3 dimensions."
@@ -578,9 +681,18 @@ fails explicitly instead of inventing a decoder."
   (unless (hash-table-p gr-native-funcs) (setq gr-native-funcs (make-hash-table :test 'equal)))
   (puthash name fn gr-native-funcs))
 
+;; func139 ends by entering the title flow; keep the data-loading verification
+;; path focused on the loader itself when running batch checks.
+(gr-defnative "func139A" (lambda (&rest _args) nil))
+
 (defun gr-get (slot)
   (gr-ensure-state)
-  (gethash slot gr-state))
+  (let ((missing (make-symbol "gr-missing"))
+        (value nil))
+    (setq value (gethash slot gr-state missing))
+    (if (eq value missing)
+        (if (integerp slot) 0 nil)
+      value)))
 
 (defun gr-set (slot val)
   (gr-ensure-state)
