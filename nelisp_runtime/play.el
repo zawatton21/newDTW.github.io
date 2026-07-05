@@ -405,24 +405,22 @@
         (gr-num (or (gr-get "current_floor") 0))
         (gr-num (or (gr-get "dungeon_number") 0))))
 
-(defvar gr-play-last-content-hash nil
-  "Structural hash of the last dumped `gr-sumi', or nil before any dump.")
+(defvar gr-play-last-frame-records nil
+  "Exact record tree of the last dumped frame, or nil before any dump.")
 
-(defun gr-play-snapshot-unchanged-p (record-count snapshot)
-  "Return non-nil when the frame CONTENT matches the last dump.
+(defun gr-play-frame-unchanged-p (records)
+  "Return non-nil when RECORDS matches the previously dumped frame exactly.
 
-The old record-count + player-position heuristic was content-blind: it
-suppressed sprite animation frames (walk cycles, water tiles) whose blit
-source coordinates change while count and position stay equal, freezing
-all animation on screen.  Compare a structural hash of the records
-instead; RECORD-COUNT and SNAPSHOT are kept for the status line only."
-  (ignore record-count snapshot)
-  (let ((hash (sxhash-equal gr-sumi)))
-    (if (and gr-play-last-content-hash
-             (eql hash gr-play-last-content-hash))
-        t
-      (setq gr-play-last-content-hash hash)
-      nil)))
+`sxhash-equal' collided on successive idle-animation frames in practice,
+which caused the dumper to drop real sprite/water updates.  Compare the
+expanded frame record tree instead so distinct redraws are never
+suppressed by a hash collision, while unchanged frames still skip JSON
+serialization."
+  (if (and gr-play-last-frame-records
+           (equal records gr-play-last-frame-records))
+      t
+    (setq gr-play-last-frame-records (copy-tree records))
+    nil))
 
 (defun gr-play-record-snapshot (record-count snapshot)
   "Persist RECORD-COUNT and SNAPSHOT as the latest dumped frame state."
@@ -457,6 +455,7 @@ the head of every dumped frame makes any frame self-contained.")
   (gr-play-collect-setup-records)
   (let ((record-count (length gr-sumi))
         (snapshot (gr-play-snapshot-state))
+        (frame-records nil)
         (serialize-start 0.0)
         (io-start 0.0)
         (json nil)
@@ -483,22 +482,24 @@ the head of every dumped frame makes any frame self-contained.")
                (or (assoc 6 histogram) (assoc 21 histogram) (assoc 27 histogram) (assoc 13 histogram)))
       (setq gr-play-first-enemy-frame-histogram histogram)
       (princ (format "PLAY-HIST enemy=%S\n" histogram)))
-    (if (or (= record-count 0)
-            (gr-play-snapshot-unchanged-p record-count snapshot))
+    (if (= record-count 0)
         (setq gr-play-skipped-count (1+ gr-play-skipped-count))
-      (setq serialize-start (float-time))
       ;; Replay the harvested setup at the head of the frame (gr-sumi is
       ;; newest-first, so appending puts it first after the reversal).
-      (setq json (let ((gr-sumi (append gr-sumi gr-play-setup-records)))
-                   (gr-sumi-to-json)))
-      (setq gr-play-serialize-seconds
-            (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
-      (setq io-start (float-time))
-      (gr-play-write-frame json)
-      (setq gr-play-io-seconds
-            (+ gr-play-io-seconds (- (float-time) io-start)))
-      (setq gr-play-dumped-count (1+ gr-play-dumped-count))
-      (gr-play-record-snapshot record-count snapshot))))
+      (setq frame-records (append gr-sumi gr-play-setup-records))
+      (if (gr-play-frame-unchanged-p frame-records)
+          (setq gr-play-skipped-count (1+ gr-play-skipped-count))
+        (setq serialize-start (float-time))
+        (setq json (let ((gr-sumi frame-records))
+                     (gr-sumi-to-json)))
+        (setq gr-play-serialize-seconds
+              (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
+        (setq io-start (float-time))
+        (gr-play-write-frame json)
+        (setq gr-play-io-seconds
+              (+ gr-play-io-seconds (- (float-time) io-start)))
+        (setq gr-play-dumped-count (1+ gr-play-dumped-count))
+        (gr-play-record-snapshot record-count snapshot)))))
 
 (defun gr-play-with-loop-disabled (thunk)
   "Run THUNK with func009 temporarily replaced by a no-op."
@@ -815,6 +816,7 @@ max HP 15, current HP 15, and the KO flag cleared."
         (setq gr-depth-limit 400)
         (gr-play-init-frame-queue)
         (setq gr-play-frame-count 0
+              gr-play-last-frame-records nil
               gr-play-redraw-count 0
               gr-play-loop-count 0
               gr-play-title-frame-count 0
