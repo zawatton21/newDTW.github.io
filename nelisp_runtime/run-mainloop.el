@@ -26,6 +26,36 @@
 (defvar gr-mainloop-worldgen-saved-func009 nil)
 (defvar gr-mainloop-saved-native-func015 nil)
 (defvar gr-mainloop-saved-native-func338 nil)
+(defvar gr-mainloop-seeded-state nil)
+
+(defun gr-mainloop-clone-value (value)
+  "Deep-copy VALUE for deterministic script replays."
+  (cond
+   ((hash-table-p value)
+    (let ((copy (make-hash-table :test 'equal)))
+      (maphash (lambda (k v)
+                 (puthash k (gr-mainloop-clone-value v) copy))
+               value)
+      copy))
+   ((vectorp value)
+    (let* ((len (length value))
+           (copy (make-vector len 0))
+           (idx 0))
+      (while (< idx len)
+        (aset copy idx (gr-mainloop-clone-value (aref value idx)))
+        (setq idx (1+ idx)))
+      copy))
+   ((listp value)
+    (mapcar #'gr-mainloop-clone-value value))
+   (t value)))
+
+(defun gr-mainloop-save-seeded-state ()
+  "Capture the seeded worldgen state after bootstrap."
+  (setq gr-mainloop-seeded-state (gr-mainloop-clone-value gr-state)))
+
+(defun gr-mainloop-restore-seeded-state ()
+  "Restore the captured seeded state before each scripted replay."
+  (setq gr-state (gr-mainloop-clone-value gr-mainloop-seeded-state)))
 
 (defun gr-mainloop-worldgen-seed-base-state ()
   "Seed the minimum pre-worldgen state used by run-worldgen.el."
@@ -344,8 +374,8 @@
         (end-x 0)
         (end-y 0)
         (path-lines nil))
-    (gr-reset)
-    (gr-seed-state)
+    (gr-mainloop-restore-seeded-state)
+    (setq gr-sumi nil gr-trace nil gr-missing nil gr-depth 0)
     (setq start-x (gr-num (or (gr-get 66) 0)))
     (setq start-y (gr-num (or (gr-get 67) 0)))
     (setq path-lines (gr-mainloop-preview-path start-x start-y moves))
@@ -377,7 +407,10 @@
       (gr-mainloop-write-frame-dump))
     status))
 
-(let ((old-budget gr-step-budget)
+(let* ((runtime-dir (file-name-directory (or load-file-name buffer-file-name)))
+       (repo-root (expand-file-name ".." runtime-dir))
+       (test-root (expand-file-name "build/mainloop-test-data" repo-root))
+       (old-budget gr-step-budget)
       (old-depth gr-depth-limit)
       (worldgen-floors 0)
       (worldgen-dungeon 0)
@@ -398,6 +431,12 @@
       (progn
         (setq gr-step-budget 2000000)
         (setq gr-depth-limit 400)
+        (make-directory test-root t)
+        (let ((source-00 (expand-file-name "00.dat" gr-data-root))
+              (target-00 (expand-file-name "00.dat" test-root)))
+          (when (file-exists-p source-00)
+            (copy-file source-00 target-00 t)))
+        (setq gr-data-root (or (getenv "GR_DATA_ROOT") test-root))
 
         ;; Worldgen-first sequence, matching the run-worldgen bootstrap, but
         ;; without entering the interactive loop from func006.
@@ -412,6 +451,7 @@
               (princ (format "MAINLOOP-WORLDGEN-ERROR %s\n" err))))))
         (setq worldgen-floors (or (gr-get "current_floor") 0))
         (setq worldgen-dungeon (or (gr-get "dungeon_number") 0))
+        (gr-mainloop-save-seeded-state)
         (princ (format "MAINLOOP-WORLDGEN dungeon=%s floor=%s\n" worldgen-dungeon worldgen-floors))
 
         (gr-mainloop-install-local-missing-natives)
