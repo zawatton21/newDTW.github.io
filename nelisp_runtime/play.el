@@ -389,8 +389,29 @@
         gr-play-last-floor (nth 2 snapshot)
         gr-play-last-dungeon (nth 3 snapshot)))
 
+(defvar gr-play-setup-records nil
+  "Session-persistent setup records (screen / load-image), newest first.
+The game emits each gui-load-image exactly once; if the feeder's poll
+misses that frame, every consumer downstream blits empty buffers forever
+(the gray-screen failure).  Harvesting them here and replaying them at
+the head of every dumped frame makes any frame self-contained.")
+
+(defvar gr-play-setup-seen (make-hash-table :test 'equal)
+  "Dedup keys (op:buffer-id) already captured into `gr-play-setup-records'.")
+
+(defun gr-play-collect-setup-records ()
+  "Harvest screen/load-image records from the current `gr-sumi'."
+  (dolist (entry (reverse gr-sumi))
+    (let ((op (car entry)))
+      (when (member op '("gui-screen" "dtw-screen" "gui-load-image" "dtw-load-image"))
+        (let ((key (format "%s:%s" op (cadr entry))))
+          (unless (gethash key gr-play-setup-seen)
+            (puthash key t gr-play-setup-seen)
+            (push entry gr-play-setup-records)))))))
+
 (defun gr-play-dump-current-frame ()
   "Serialize and dump the current `gr-sumi' frame if it changed."
+  (gr-play-collect-setup-records)
   (let ((record-count (length gr-sumi))
         (snapshot (gr-play-snapshot-state))
         (serialize-start 0.0)
@@ -423,7 +444,10 @@
             (gr-play-snapshot-unchanged-p record-count snapshot))
         (setq gr-play-skipped-count (1+ gr-play-skipped-count))
       (setq serialize-start (float-time))
-      (setq json (gr-sumi-to-json))
+      ;; Replay the harvested setup at the head of the frame (gr-sumi is
+      ;; newest-first, so appending puts it first after the reversal).
+      (setq json (let ((gr-sumi (append gr-sumi gr-play-setup-records)))
+                   (gr-sumi-to-json)))
       (setq gr-play-serialize-seconds
             (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
       (setq io-start (float-time))
@@ -788,7 +812,29 @@ max HP 15, current HP 15, and the KO flag cleared."
         (fset 'gr-emit #'gr-play-gr-emit-wrapper)
         (condition-case err
             (progn
-              (gr-play-bootstrap-opening)
+              ;; GR_PLAY_SKIP_OPENING=1 boots straight into the dungeon
+              ;; (the v2/v3 path).  The title/login opening composes into
+              ;; work canvases across frames, so it needs the lossless
+              ;; frame pipeline (pending) to display reliably.
+              (if (equal (getenv "GR_PLAY_SKIP_OPENING") "1")
+                  ;; Mirror run-init.el: init without entering the title flow.
+                  (let ((saved-func139A (gethash "func139A" gr-native-funcs))
+                        (old-depth gr-depth-limit))
+                    (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
+                    (gr-reset)
+                    (gr-set "stat" 1)
+                    (gr-set "hwnd" 0)
+                    (unwind-protect
+                        (progn
+                          (setq gr-depth-limit (max gr-depth-limit 5000))
+                          (gr-defnative "func139A" (lambda (&rest _args) nil))
+                          (gr-run-func "func004"))
+                      (setq gr-depth-limit old-depth)
+                      (if saved-func139A
+                          (gr-defnative "func139A" saved-func139A)
+                        (when gr-native-funcs
+                          (remhash "func139A" gr-native-funcs)))))
+                (gr-play-bootstrap-opening))
               (gr-play-bootstrap-real-init))
           (error
            (princ (format "PLAY-BOOTSTRAP-ERROR %s\n" (error-message-string err)))))
