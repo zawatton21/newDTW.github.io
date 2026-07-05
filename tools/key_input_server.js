@@ -5,17 +5,17 @@
  * pipeline.  Run this in its own terminal alongside the rest of the live
  * stack (bridge / live_feed_loop / the emacs live-loop with
  * `gr-live-input-mode' t / the sumi-sprite-live window).  Every arrow-key or
- * WASD keypress atomically writes ONE line to build/key-state.txt:
+ * WASD keypress atomically writes build/key-state.txt in this format:
  *
  *   <TOKEN> <SEQ>\n
+ *   <KEYCODE>\n
+ *   HELD <KEYCODE...>\n
  *
  * where TOKEN is one of UP / DOWN / LEFT / RIGHT and SEQ is a per-process
- * monotonically increasing counter (one increment per keypress).  The elisp
- * side (nelisp_runtime/live-loop.el, `gr-live-step-player-input') polls this
- * file once per simulation tick and only acts on a SEQ it has not consumed
- * yet, so one keypress == one grid step regardless of how long a tick takes
- * to notice it, and holding no key (or an unmapped key) leaves the player
- * standing still.
+ * monotonically increasing counter (one increment per keypress).  KEYCODE is
+ * the numeric JS keyCode for the triggering key.  The HELD line lists all
+ * currently held numeric keycodes space-separated after the literal "HELD".
+ * The first line is preserved verbatim for the existing token/SEQ readers.
  *
  * The write is atomic (write build/key-state.txt.tmp, then rename over the
  * real path) so the elisp reader never observes a half-written line.
@@ -48,25 +48,31 @@ const KEY_TOKENS = {
   up: 'UP', down: 'DOWN', left: 'LEFT', right: 'RIGHT',
   w: 'UP', s: 'DOWN', a: 'LEFT', d: 'RIGHT',
 };
+const KEY_CODES = {
+  up: 38, down: 40, left: 37, right: 39,
+  w: 87, s: 83, a: 65, d: 68,
+};
 
 let seq = 0;
 let shuttingDown = false;
+const heldKeyCodes = new Set();
 
 function ensureBuildDir() {
   const dir = path.dirname(outPath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-function writeKeyState(token) {
+function writeKeyState(token, keyCode) {
   seq += 1;
-  fs.writeFileSync(tmpPath, `${token} ${seq}\n`, 'utf8');
+  const heldLine = `HELD ${[...heldKeyCodes].sort((a, b) => a - b).join(' ')}`.trimEnd();
+  fs.writeFileSync(tmpPath, `${token} ${seq}\n${keyCode}\n${heldLine}\n`, 'utf8');
   fs.renameSync(tmpPath, outPath);
   return seq;
 }
 
 function printLegend() {
   console.log('key_input_server: controls -- arrow keys or WASD to move, q / Ctrl-C to quit.');
-  console.log(`key_input_server: writing "<TOKEN> <SEQ>" lines to ${outPath}`);
+  console.log(`key_input_server: writing token/seq + keycode + HELD lines to ${outPath}`);
 }
 
 function restoreTerminal() {
@@ -87,9 +93,12 @@ function onKeypress(str, key) {
   if (key.ctrl && key.name === 'c') { shutdown(0); return; }
   if (key.name === 'q') { shutdown(0); return; }
   const token = KEY_TOKENS[key.name];
+  const keyCode = KEY_CODES[key.name];
   if (!token) return; // unmapped key: ignored, no write
-  const n = writeKeyState(token);
-  console.log(`${token} (seq ${n})`);
+  heldKeyCodes.clear();
+  heldKeyCodes.add(keyCode);
+  const n = writeKeyState(token, keyCode);
+  console.log(`${token} keyCode=${keyCode} (seq ${n})`);
 }
 
 function main() {

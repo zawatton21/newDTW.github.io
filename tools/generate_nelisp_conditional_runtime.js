@@ -28,7 +28,7 @@ function main() {
     );
   }
   if (!fs.existsSync(srcRoot)) throw new Error(`--src-root missing or not found: ${srcRoot}`);
-  if (names.length === 0) throw new Error("pass at least one --name funcNNN or --names-file");
+  if (names.length === 0) throw new Error("pass at least one --name funcNNN/itemNNN or --names-file");
 
   const fileIndex = buildDefinitionIndex(srcRoot);
   const catalogIndex = buildCatalogIndex();
@@ -110,6 +110,10 @@ function canonicalFuncAlias(name) {
   return canonical !== name ? canonical : null;
 }
 
+function isRuntimeName(name) {
+  return /^(?:func[\dA-Za-z]+|item[\dA-Za-z]+)$/i.test(name);
+}
+
 function buildDefinitionIndex(root) {
   const files = [];
   walk(root, files);
@@ -118,7 +122,7 @@ function buildDefinitionIndex(root) {
     const source = fs.readFileSync(file, "utf8");
     const sf = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS);
     for (const stmt of sf.statements) {
-      if (ts.isFunctionDeclaration(stmt) && stmt.name && /^func[\dA-Za-z]+$/i.test(stmt.name.text)) {
+      if (ts.isFunctionDeclaration(stmt) && stmt.name && isRuntimeName(stmt.name.text)) {
         if (!defs.has(stmt.name.text)) defs.set(stmt.name.text, { file, sourceName: stmt.name.text });
       }
       if (ts.isExportDeclaration(stmt) && stmt.moduleSpecifier && stmt.exportClause && ts.isNamedExports(stmt.exportClause)) {
@@ -127,7 +131,7 @@ function buildDefinitionIndex(root) {
         for (const element of stmt.exportClause.elements) {
           const exportedName = element.name.text;
           const localName = element.propertyName ? element.propertyName.text : exportedName;
-          if (!/^func[\dA-Za-z]+$/i.test(exportedName) || !/^func[\dA-Za-z]+$/i.test(localName)) continue;
+          if (!isRuntimeName(exportedName) || !isRuntimeName(localName)) continue;
           if (!defs.has(exportedName)) defs.set(exportedName, { file: targetPath, sourceName: localName });
         }
       }
@@ -142,7 +146,7 @@ function buildCatalogIndex() {
   const defs = new Map();
   for (const entry of catalog.functions || []) {
     if (!entry || !entry.name || !entry.file) continue;
-    if (!/^func[\dA-Za-z]+$/i.test(entry.name)) continue;
+    if (!isRuntimeName(entry.name)) continue;
     defs.set(entry.name, {
       file: path.resolve(repoRoot, entry.file),
       sourceName: entry.name,
@@ -217,6 +221,11 @@ function transpileFunc(name, sourceInfo) {
 
 function collectLocals(node) {
   const locals = new Set();
+  if (node.parent && ts.isFunctionDeclaration(node.parent)) {
+    for (const param of node.parent.parameters) {
+      if (ts.isIdentifier(param.name)) locals.add(param.name.text);
+    }
+  }
   function visit(current) {
     if (ts.isVariableDeclaration(current) && ts.isIdentifier(current.name)) {
       locals.add(current.name.text);
@@ -453,6 +462,10 @@ function emitCall(expr, ctx) {
   if (ts.isIdentifier(expr.expression) && expr.expression.text === "tf") {
     return emitValue(expr, ctx);
   }
+  if (ts.isIdentifier(expr.expression) && isRuntimeName(expr.expression.text)) {
+    const args = expr.arguments.map((arg) => emitValue(arg, ctx));
+    return `(gr-run-func ${JSON.stringify(expr.expression.text)}${args.length ? ` ${args.join(" ")}` : ""})`;
+  }
   if (ts.isIdentifier(expr.expression) && expr.expression.text === "cursorBeep") {
     return `(progn (gr-emit "dtw-play-sound" 100) (gr-run-func "func337"))`;
   }
@@ -468,6 +481,9 @@ function emitCall(expr, ctx) {
   }
   if (info.kind === "event") {
     return `(gr-emit ${JSON.stringify(info.name)}${args.length ? ` ${args.join(" ")}` : ""})`;
+  }
+  if (info.kind === "special-reset-key") {
+    return `(gr-reset-key ${args[0] || "0"})`;
   }
   if (info.kind === "special-gmode") {
     return `(gr-emit "gui-set-alpha" ${info.alpha(args)})`;
@@ -507,6 +523,9 @@ function classifyCall(call, ctx) {
   if (ts.isIdentifier(call.expression) && (call.expression.text === "applyItem" || call.expression.text === "postProcessItem")) {
     return { kind: "noop" };
   }
+  if (ts.isIdentifier(call.expression) && isRuntimeName(call.expression.text)) {
+    return { kind: "core-call", name: call.expression.text };
+  }
   if (!ts.isPropertyAccessExpression(call.expression)) throw unsupported(call, ctx, "call target");
   const root = call.expression.expression;
   const method = call.expression.name.text;
@@ -536,6 +555,10 @@ function classifyCall(call, ctx) {
       boxf: "gui-fill-rect",
       line: "gui-draw-line",
       pset: "gui-draw-point",
+      bgscr: "dtw-screen",
+      chgdisp: "dtw-change-display",
+      cls: "dtw-clear-screen",
+      grotate: "dtw-draw-image-rotated",
       objsel: "dtw-object-select",
       dialog: "dtw-dialog",
       chdir: "dtw-change-directory",
@@ -544,6 +567,8 @@ function classifyCall(call, ctx) {
       width: "dtw-resize-window",
     };
     if (eventMap[method]) return { kind: "event", name: eventMap[method] };
+    if (method === "ResetKey") return { kind: "special-reset-key" };
+    if (method === "DMSTOP") return { kind: "event", name: "dtw-music-stop" };
     if (method === "wait" || method === "await_" || method === "onexit" || method === "bsave" || method === "onkey" || method === "ck_joystick" || method === "randomize" || method === "end" || method === "HMMINIT" || method === "oncmd_gosub" || method === "GetWindowLongA" || method === "SetWindowLongA" || method === "SetWindowPos" || method === "DSGETMASTERVOLUME") return { kind: "noop" };
     if (method === "gmode") {
       return {
@@ -777,17 +802,24 @@ function emitValue(node, ctx) {
         return `(gr-charactor-info-dim ${emitNumericValue(node.arguments[0], ctx)})`;
       }
     }
+    if (method === "toString" && node.arguments.length === 0) {
+      return `(format "%s" ${emitValue(root, ctx)})`;
+    }
     if (ts.isIdentifier(root) && root.text === "Adap") {
       if (method === "rnd") return `(gr-random ${emitNumericValue(node.arguments[0], ctx)})`;
       if (method === "int") return `(truncate (gr-num ${emitValue(node.arguments[0], ctx)}))`;
-      if (method === "getkey") return `(gr-index-ref (gr-get "pushing_key_list") ${emitValue(node.arguments[0], ctx)})`;
+      if (method === "getkey") return `(gr-read-key-state ${emitValue(node.arguments[0], ctx)})`;
+      if (method === "exist") return `(gr-file-exists ${emitValue(node.arguments[0], ctx)})`;
+      if (method === "bload") {
+        const args = node.arguments.map((arg) => emitValue(arg, ctx));
+        return `(gr-bload ${args[0] || "\"\""} ${args[1] || "nil"} ${args[2] || "nil"} ${args[3] || "nil"})`;
+      }
       if (method === "peek") return `(gr-peek-char ${emitValue(node.arguments[0], ctx)} ${emitValue(node.arguments[1], ctx)})`;
       if (method === "dirinfo") return "\"\"";
       if (method === "stick" || method === "ginfo" || method === "ck_joystick") return "0";
       if (method === "dim") return `(gr-make-array ${node.arguments.map((arg) => emitValue(arg, ctx)).join(" ")})`;
       if (method === "sdim") return `(gr-make-string-array ${node.arguments.map((arg) => emitValue(arg, ctx)).join(" ")})`;
     }
-    if (ts.isIdentifier(root) && root.text === "Func" && method === "func080") return "nil";
     throw unsupported(node, ctx, `value call ${method}`);
   }
   if (ts.isArrayLiteralExpression(node)) {

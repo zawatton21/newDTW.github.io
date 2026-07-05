@@ -30,10 +30,14 @@
 (defvar gr-depth 0 "Recursion guard depth.")
 (defvar gr-depth-limit 400 "Maximum recursion depth before scan-visible failure.")
 (defvar gr-read-key-state-fn nil "Optional function: keycode -> current key state integer.")
+(defvar gr-reset-key-fn nil "Optional function: keycode -> clear current key state.")
 (defvar gr-step-budget nil "Maximum number of executed IR entries, or nil for unlimited.")
 (defvar gr-step-count 0 "Executed IR entry count for the current run.")
 (defvar gr-event-names (make-hash-table :test 'equal)
   "Set of event names mirrored from stateDiffRunner.ts EVENT_NAMES.")
+
+(defconst gr-data-root "C:/Users/kuroz/newDTW"
+  "TS adapter data root mirrored from src/renderer/adapter/bload.ts.")
 
 (dolist (name '(
                 "catch"
@@ -381,6 +385,61 @@
       (random n)
     0))
 
+(defun gr-data-path (file-name)
+  "Resolve FILE-NAME under `gr-data-root'."
+  (expand-file-name (format "%s" (or file-name "")) gr-data-root))
+
+(defun gr-file-exists (file-name)
+  "Mirror Adap.exist for non-audio files and update strsize."
+  (let* ((path (gr-data-path file-name))
+         (attrs (file-attributes path 'string))
+         (size (and attrs (nth 7 attrs)))
+         (ext (downcase (or (file-name-extension path t) "")))
+         (exists (if attrs 1 0)))
+    (unless (member ext '(".wav" ".mp3"))
+      (gr-set "strsize" (if (integerp size) size 0)))
+    exists))
+
+(defun gr-read-key-state (keycode)
+  "Read KEYCODE through the optional TS-mirrored key hook."
+  (if (functionp gr-read-key-state-fn)
+      (gr-num (funcall gr-read-key-state-fn (gr-num keycode)))
+    0))
+
+(defun gr-reset-key (keycode)
+  "Mirror Adap.ResetKey for native transpiled code."
+  (let* ((idx (gr-num keycode))
+         (keys (gr-get "pushing_key_list")))
+    (when (functionp gr-reset-key-fn)
+      (funcall gr-reset-key-fn idx))
+    (when (and (vectorp keys) (>= idx 0) (< idx (length keys)))
+      (aset keys idx 0))
+    0))
+
+(defun gr-bload (file-name data-size offset destination)
+  "Strict Adap.bload shim for native transpiled code.
+Mirrors src/renderer/adapter/bload.ts path resolution and literal file read.
+For non-audio data, the TS adapter msgpack-decodes the file before selecting
+an entry by OFFSET; this pure elisp runtime stops at the raw-byte boundary and
+fails explicitly instead of inventing a decoder."
+  (let* ((path (gr-data-path file-name))
+         (ext (downcase (or (file-name-extension path t) ""))))
+    (cond
+     ((member ext '(".wav" ".mp3"))
+      (list :kind 'audio :path path :data-size data-size :offset offset :destination destination))
+     ((not (file-exists-p path))
+      (error "gr-bload missing file: %s" path))
+     (t
+      (with-temp-buffer
+        (set-buffer-multibyte nil)
+        (insert-file-contents-literally path)
+        (error "gr-bload msgpack decode unsupported for %s (bytes=%s data-size=%s offset=%s destination=%s)"
+               path
+               (buffer-size)
+               data-size
+               offset
+               destination))))))
+
 (defun gr-make-array (length1 &optional length2 length3 length4)
   "Mirror Adap.dim for up to 3 dimensions."
   (when (not (or (null length4) (equal length4 nil)))
@@ -563,9 +622,7 @@
      ((equal op "math-mod") (mod (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
      ((equal op "dtw-random") (gr-random (gr-num (gr-eval (nth 1 form)))))
      ((equal op "dtw-read-key-state")
-      (if (functionp gr-read-key-state-fn)
-          (funcall gr-read-key-state-fn (gr-eval (nth 1 form)))
-        0))
+      (gr-read-key-state (gr-eval (nth 1 form))))
      ((equal op "index-ref")
       (gr-index-ref (gr-eval (nth 1 form)) (gr-eval (nth 2 form))))
      ((equal op "i18n-format")
