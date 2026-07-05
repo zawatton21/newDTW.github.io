@@ -373,13 +373,24 @@
         (gr-num (or (gr-get "current_floor") 0))
         (gr-num (or (gr-get "dungeon_number") 0))))
 
+(defvar gr-play-last-content-hash nil
+  "Structural hash of the last dumped `gr-sumi', or nil before any dump.")
+
 (defun gr-play-snapshot-unchanged-p (record-count snapshot)
-  "Return non-nil when RECORD-COUNT and SNAPSHOT match the last dump."
-  (and (equal gr-play-last-record-count record-count)
-       (equal gr-play-last-player-x (nth 0 snapshot))
-       (equal gr-play-last-player-y (nth 1 snapshot))
-       (equal gr-play-last-floor (nth 2 snapshot))
-       (equal gr-play-last-dungeon (nth 3 snapshot))))
+  "Return non-nil when the frame CONTENT matches the last dump.
+
+The old record-count + player-position heuristic was content-blind: it
+suppressed sprite animation frames (walk cycles, water tiles) whose blit
+source coordinates change while count and position stay equal, freezing
+all animation on screen.  Compare a structural hash of the records
+instead; RECORD-COUNT and SNAPSHOT are kept for the status line only."
+  (ignore record-count snapshot)
+  (let ((hash (sxhash-equal gr-sumi)))
+    (if (and gr-play-last-content-hash
+             (eql hash gr-play-last-content-hash))
+        t
+      (setq gr-play-last-content-hash hash)
+      nil)))
 
 (defun gr-play-record-snapshot (record-count snapshot)
   "Persist RECORD-COUNT and SNAPSHOT as the latest dumped frame state."
