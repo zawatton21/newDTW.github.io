@@ -34,6 +34,9 @@
 (defconst gr-play-frame-path
   (expand-file-name "frame-current.json" gr-play-build-dir))
 
+(defconst gr-play-frames-dir
+  (expand-file-name "frames" gr-play-build-dir))
+
 (defconst gr-play-opening-profile-path
   (expand-file-name "play-opening-profile.txt" gr-play-build-dir))
 
@@ -104,6 +107,8 @@
 (defvar gr-play-opening-render-seconds 0.0)
 (defvar gr-play-opening-poll-seconds 0.0)
 (defvar gr-play-opening-sleep-seconds 0.0)
+(defvar gr-play-frame-seq 0)
+(defvar gr-play-queue-overflow-logged nil)
 
 (defun gr-play-buffer-histogram ()
   "Return an alist of source buffer id -> blit count for the current gr-sumi."
@@ -349,13 +354,40 @@
   0)
 
 (defun gr-play-write-frame (json)
-  "Atomically write JSON to build/frame-current.json."
-  (let ((tmp-path (concat gr-play-frame-path ".tmp"))
-        (coding-system-for-write 'utf-8))
+  "Atomically write JSON to build/frame-current.json and build/frames/."
+  (let* ((seq (setq gr-play-frame-seq (1+ gr-play-frame-seq)))
+         (frame-path (expand-file-name (format "frame-%06d.json" seq) gr-play-frames-dir))
+         (frame-tmp-path (concat frame-path ".tmp"))
+         (current-tmp-path (concat gr-play-frame-path ".tmp"))
+         (coding-system-for-write 'utf-8))
     (unless (file-directory-p (file-name-directory gr-play-frame-path))
       (make-directory (file-name-directory gr-play-frame-path) t))
-    (write-region json nil tmp-path nil 'silent)
-    (rename-file tmp-path gr-play-frame-path t)))
+    (unless (file-directory-p gr-play-frames-dir)
+      (make-directory gr-play-frames-dir t))
+    (write-region json nil frame-tmp-path nil 'silent)
+    (rename-file frame-tmp-path frame-path t)
+    (write-region json nil current-tmp-path nil 'silent)
+    (rename-file current-tmp-path gr-play-frame-path t)
+    (when (and (not gr-play-queue-overflow-logged)
+               (> (length (directory-files gr-play-frames-dir nil "^frame-[0-9]+\\.json$")) 2000))
+      (setq gr-play-queue-overflow-logged t)
+      (princ (format "PLAY-QUEUE-OVERFLOW dir=%s files=%d\n"
+                     gr-play-frames-dir
+                     (length (directory-files gr-play-frames-dir nil "^frame-[0-9]+\\.json$")))))))
+
+(defun gr-play-init-frame-queue ()
+  "Reset build/frames/ for a fresh ordered frame-dump session."
+  (let ((files nil))
+    (setq gr-play-frame-seq 0)
+    (setq gr-play-queue-overflow-logged nil)
+    (unless (file-directory-p gr-play-frames-dir)
+      (make-directory gr-play-frames-dir t))
+    (setq files (directory-files gr-play-frames-dir t "^frame-[0-9]+\\.json$"))
+    (dolist (file files)
+      (when (file-regular-p file)
+        (delete-file file)))
+    (when (file-exists-p gr-play-frame-path)
+      (delete-file gr-play-frame-path))))
 
 (defun gr-play-write-opening-profile (line)
   "Persist opening profiling LINE in build/play-opening-profile.txt."
@@ -781,6 +813,7 @@ max HP 15, current HP 15, and the KO flag cleared."
       (progn
         (setq gr-step-budget 2000000)
         (setq gr-depth-limit 400)
+        (gr-play-init-frame-queue)
         (setq gr-play-frame-count 0
               gr-play-redraw-count 0
               gr-play-loop-count 0
