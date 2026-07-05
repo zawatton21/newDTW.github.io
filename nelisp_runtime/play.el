@@ -1,6 +1,6 @@
 ;;; play.el --- interactive pure-elisp play driver -*- coding: utf-8; lexical-binding: t; -*-
 ;;
-;; HUMAN RUNBOOK (5 terminals, run from the repo root):
+;; HUMAN RUNBOOK (4 terminals, run from the repo root):
 ;;
 ;; 1. Bridge
 ;;    node C:/Users/kuroz/Cowork/Notes/dev/sumi/backends/cairo-elisp/sprite-bridge.js
@@ -16,8 +16,11 @@
 ;;    $env:HOME=(Resolve-Path build/emacs-home)
 ;;    emacs -Q --batch --eval "(progn (prefer-coding-system 'utf-8) (setq coding-system-for-write 'utf-8))" -l build/play-bundle-loader.el
 ;;
-;; 5. Real keyboard input server
+;; Optional fallback keyboard input server
 ;;    node tools/key_input_server.js
+;;
+;; When the native GTK window supports direct focused input, terminal 5 is not
+;; needed. Keep the key input server as a fallback only.
 
 (defconst gr-play-build-dir
   (expand-file-name "../build" (file-name-directory (or load-file-name buffer-file-name))))
@@ -31,6 +34,9 @@
 (defconst gr-play-frame-path
   (expand-file-name "frame-current.json" gr-play-build-dir))
 
+(defconst gr-play-opening-profile-path
+  (expand-file-name "play-opening-profile.txt" gr-play-build-dir))
+
 (defvar gr-play-duration-seconds 300
   "How long the interactive play loop runs before exiting.")
 
@@ -42,6 +48,9 @@
 
 (defvar gr-play-idle-sleep-seconds 0.0
   "Sleep this long when no key is currently held.")
+
+(defvar gr-play-opening-poll-sleep-seconds 0.01
+  "Sleep this long between title/login input polls.")
 
 (defvar gr-play-frame-count 0)
 (defvar gr-play-start-time 0.0)
@@ -80,6 +89,11 @@
 (defvar gr-play-first-enemy-frame-histogram nil)
 (defvar gr-play-opening-active nil)
 (defvar gr-play-opening-result nil)
+(defvar gr-play-opening-title-loops 0)
+(defvar gr-play-opening-login-loops 0)
+(defvar gr-play-opening-render-seconds 0.0)
+(defvar gr-play-opening-poll-seconds 0.0)
+(defvar gr-play-opening-sleep-seconds 0.0)
 
 (defun gr-play-buffer-histogram ()
   "Return an alist of source buffer id -> blit count for the current gr-sumi."
@@ -208,6 +222,15 @@
       (make-directory (file-name-directory gr-play-frame-path) t))
     (write-region json nil tmp-path nil 'silent)
     (rename-file tmp-path gr-play-frame-path t)))
+
+(defun gr-play-write-opening-profile (line)
+  "Persist opening profiling LINE in build/play-opening-profile.txt."
+  (let ((tmp-path (concat gr-play-opening-profile-path ".tmp"))
+        (coding-system-for-write 'utf-8))
+    (unless (file-directory-p (file-name-directory gr-play-opening-profile-path))
+      (make-directory (file-name-directory gr-play-opening-profile-path) t))
+    (write-region (concat line "\n") nil tmp-path nil 'silent)
+    (rename-file tmp-path gr-play-opening-profile-path t)))
 
 (defun gr-play-snapshot-state ()
   "Return the stable player/floor state for frame de-duplication."
@@ -390,11 +413,14 @@ max HP 15, current HP 15, and the KO flag cleared."
 
 (defun gr-play-opening-render-login ()
   "Render the login/save-slot screen once."
-  (setq gr-sumi nil)
-  (gr-emit "gui-present" 0)
-  (gr-run-func "func146")
-  (gr-run-func "func148")
-  (gr-emit "gui-present" 1))
+  (let ((start (float-time)))
+    (setq gr-sumi nil)
+    (gr-emit "gui-present" 0)
+    (gr-run-func "func146")
+    (gr-run-func "func148")
+    (gr-emit "gui-present" 1)
+    (setq gr-play-opening-render-seconds
+          (+ gr-play-opening-render-seconds (- (float-time) start)))))
 
 (defun gr-play-opening-new-game-slot-p ()
   "Return non-nil when the selected save slot has no existing save file."
@@ -412,14 +438,18 @@ max HP 15, current HP 15, and the KO flag cleared."
 (defun gr-play-opening-login-loop ()
   "Drive the login/new-game selection until the dungeon boot should start."
   (let ((done nil)
-        (record nil))
+        (record nil)
+        (poll-start 0.0))
     (gr-set 725 1)
     (gr-set 726 1)
     (gr-set 734 0)
     (while (not done)
+      (setq gr-play-opening-login-loops (1+ gr-play-opening-login-loops))
       (gr-play-opening-render-login)
-      (sleep-for 0.04)
+      (setq poll-start (float-time))
       (setq record (gr-play-refresh-input))
+      (setq gr-play-opening-poll-seconds
+            (+ gr-play-opening-poll-seconds (- (float-time) poll-start)))
       (when (and record gr-play-last-input-was-new)
         (cond
          ((gr-play-opening-held-p 38)
@@ -431,17 +461,30 @@ max HP 15, current HP 15, and the KO flag cleared."
                 (if (gr-play-opening-new-game-slot-p) 'new-game 'resume))
           (setq done t))
          ((gr-play-opening-held-p 88)
-          (setq done t)))))))
+          (setq done t))))
+      (unless done
+        (setq poll-start (float-time))
+        (sleep-for gr-play-opening-poll-sleep-seconds)
+        (setq gr-play-opening-sleep-seconds
+              (+ gr-play-opening-sleep-seconds (- (float-time) poll-start)))))))
 
 (defun gr-play-opening-title-loop ()
   "Render the title screen until confirm input enters the login screen."
   (let ((entered-login nil)
-        (record nil))
+        (record nil)
+        (render-start 0.0)
+        (poll-start 0.0))
     (gr-set 64 0)
     (while (not entered-login)
+      (setq gr-play-opening-title-loops (1+ gr-play-opening-title-loops))
+      (setq render-start (float-time))
       (gr-run-func "func141")
-      (sleep-for 0.04)
+      (setq gr-play-opening-render-seconds
+            (+ gr-play-opening-render-seconds (- (float-time) render-start)))
+      (setq poll-start (float-time))
       (setq record (gr-play-refresh-input))
+      (setq gr-play-opening-poll-seconds
+            (+ gr-play-opening-poll-seconds (- (float-time) poll-start)))
       (when (and record gr-play-last-input-was-new)
         (when (or (gr-play-opening-held-p 90)
                   (gr-play-opening-held-p 65)
@@ -452,7 +495,12 @@ max HP 15, current HP 15, and the KO flag cleared."
                   (gr-play-opening-held-p 38)
                   (gr-play-opening-held-p 39)
                   (gr-play-opening-held-p 40))
-          (setq entered-login t))))))
+          (setq entered-login t)))
+      (unless entered-login
+        (setq poll-start (float-time))
+        (sleep-for gr-play-opening-poll-sleep-seconds)
+        (setq gr-play-opening-sleep-seconds
+              (+ gr-play-opening-sleep-seconds (- (float-time) poll-start)))))))
 
 (defun gr-play-bootstrap-opening ()
   "Run func004 through the title/login flow until new game starts."
@@ -481,6 +529,17 @@ max HP 15, current HP 15, and the KO flag cleared."
                 (remhash "func139A" gr-native-funcs)))))
       (setq gr-play-opening-active nil)
       (setq gr-depth-limit old-depth)))
+  (let ((line
+         (format
+          "PLAY-OPENING title_loops=%d login_loops=%d render=%.3f poll=%.3f sleep=%.3f result=%S"
+          gr-play-opening-title-loops
+          gr-play-opening-login-loops
+          gr-play-opening-render-seconds
+          gr-play-opening-poll-seconds
+          gr-play-opening-sleep-seconds
+          gr-play-opening-result)))
+    (princ (concat line "\n"))
+    (gr-play-write-opening-profile line))
   (unless (eq gr-play-opening-result 'new-game)
     (error "opening flow did not reach new game (result=%S)" gr-play-opening-result)))
 
@@ -570,6 +629,11 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-first-player-frame-histogram nil
               gr-play-first-enemy-frame-histogram nil
               gr-play-quit-requested nil
+              gr-play-opening-title-loops 0
+              gr-play-opening-login-loops 0
+              gr-play-opening-render-seconds 0.0
+              gr-play-opening-poll-seconds 0.0
+              gr-play-opening-sleep-seconds 0.0
               gr-play-last-seq 0
               gr-play-last-token "IDLE"
               gr-play-held-codes (make-hash-table :test 'equal))
