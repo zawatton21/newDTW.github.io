@@ -14,7 +14,7 @@
  *   node tools/live_feed_loop.js [--seconds N] [--port 9099] \
  *       [--frame build/frame-current.json] [--title-stream sumi-title-stream.json]
  *
- * Polls every 100ms via fs.statSync mtime/size (cheap; avoids re-reading the
+ * Polls every 40ms via fs.statSync mtime/size (cheap; avoids re-reading the
  * file when nothing changed). Exits cleanly on SIGINT/SIGTERM, or after
  * --seconds N if given (runs forever otherwise).
  */
@@ -26,7 +26,7 @@ const path = require('path');
 const { assemble } = require('./assemble_map_frame.js');
 
 const repoRoot = path.resolve(__dirname, '..');
-const POLL_MS = 100;
+const POLL_MS = 40;
 
 function parseArgs(argv) {
   const opts = {
@@ -158,6 +158,7 @@ function main() {
     process.exit(0);
   }
 
+  pollOnce();
   interval = setInterval(() => {
     pollOnce();
     if (opts.seconds !== null && (Date.now() - startTime) / 1000 >= opts.seconds) {

@@ -858,6 +858,10 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 
 (defun gr-emit (op &rest args)
   "Collect a GUI/IO command in the sumi stream."
+  (when (and (equal op "gui-draw-text") args)
+    (let ((text (car args)))
+      (when (or (null text) (equal text "nil"))
+        (setcar args ""))))
   (push (cons op args) gr-sumi))
 
 (defun gr-reset ()
@@ -905,10 +909,13 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 
 ;; func139 ends by entering the title flow; keep the data-loading verification
 ;; path focused on the loader itself when running batch checks.
-(gr-defnative "func139A" (lambda (&rest _args) nil))
 (gr-defnative "func0956" (lambda (&rest _args) nil))
 (gr-defnative "func183" (lambda (&rest _args) nil))
 (gr-defnative "func505" (lambda (&rest _args) nil))
+
+(defun gr-i18n-t (value)
+  "Minimal runtime translation shim for title/login text."
+  (if (stringp value) value ""))
 
 (defun gr-get (slot)
   (let ((value (gethash slot gr-state gr--missing-sentinel)))

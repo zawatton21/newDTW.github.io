@@ -22,6 +22,10 @@
       (copy-file source-00 target-00 t)))
   (setq gr-data-root test-root)
   (gr-reset)
+  ;; Batch check stops at the loader boundary: the real func139A title flow
+  ;; blocks on interactive input (unbounded recursion in batch), so no-op it
+  ;; here (moved from game-runner.el when the title flow was transpiled).
+  (gr-defnative "func139A" (lambda (&rest _args) nil))
   (gr-set "stat" 1)
   (gr-set "hwnd" 0)
   (gr-run-func "func004")

@@ -59,19 +59,49 @@ const KEY_CODES = {
 let seq = 0;
 let shuttingDown = false;
 const heldKeyCodes = new Set();
-const HOLD_MS = 125;
+const HOLD_MS = 350;
+const RETRY_MS = 40;
 let releaseTimer = null;
+let retryTimer = null;
+let pendingPayload = null;
+let retryWarningPrinted = false;
 
 function ensureBuildDir() {
   const dir = path.dirname(outPath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
+function isRetryableRenameError(error) {
+  return error && (error.code === 'EPERM' || error.code === 'EBUSY');
+}
+
+function formatKeyState(token, keyCode) {
+  const heldLine = `HELD ${[...heldKeyCodes].sort((a, b) => a - b).join(' ')}`.trimEnd();
+  return `${token} ${seq}\n${keyCode}\n${heldLine}\n`;
+}
+
+function flushPendingWrite() {
+  if (pendingPayload === null) return true;
+  fs.writeFileSync(tmpPath, pendingPayload, 'utf8');
+  try {
+    fs.renameSync(tmpPath, outPath);
+    pendingPayload = null;
+    retryWarningPrinted = false;
+    return true;
+  } catch (error) {
+    if (!isRetryableRenameError(error)) throw error;
+    if (!retryWarningPrinted) {
+      console.warn('key_input_server: soft retry on EPERM/EBUSY while replacing key-state.txt');
+      retryWarningPrinted = true;
+    }
+    return false;
+  }
+}
+
 function writeKeyState(token, keyCode) {
   seq += 1;
-  const heldLine = `HELD ${[...heldKeyCodes].sort((a, b) => a - b).join(' ')}`.trimEnd();
-  fs.writeFileSync(tmpPath, `${token} ${seq}\n${keyCode}\n${heldLine}\n`, 'utf8');
-  fs.renameSync(tmpPath, outPath);
+  pendingPayload = formatKeyState(token, keyCode);
+  flushPendingWrite();
   return seq;
 }
 
@@ -86,8 +116,7 @@ function scheduleRelease() {
   clearReleaseTimer();
   releaseTimer = setTimeout(() => {
     heldKeyCodes.clear();
-    const n = writeKeyState('IDLE', 0);
-    console.log(`IDLE keyCode=0 (seq ${n})`);
+    emitKeyState('IDLE', 0);
     releaseTimer = null;
   }, HOLD_MS);
 }
@@ -106,9 +135,22 @@ function shutdown(code) {
   if (shuttingDown) return;
   shuttingDown = true;
   clearReleaseTimer();
+  if (retryTimer) {
+    clearInterval(retryTimer);
+    retryTimer = null;
+  }
   restoreTerminal();
   console.log(`key_input_server: exiting after ${seq} keypress(es) sent, terminal restored.`);
   process.exit(code);
+}
+
+function emitKeyState(token, keyCode) {
+  try {
+    const n = writeKeyState(token, keyCode);
+    console.log(`${token} keyCode=${keyCode} (seq ${n})`);
+  } catch (error) {
+    console.error(`key_input_server: write failed: ${error.message}`);
+  }
 }
 
 function onKeypress(str, key) {
@@ -120,8 +162,7 @@ function onKeypress(str, key) {
   if (!token) return; // unmapped key: ignored, no write
   heldKeyCodes.clear();
   heldKeyCodes.add(keyCode);
-  const n = writeKeyState(token, keyCode);
-  console.log(`${token} keyCode=${keyCode} (seq ${n})`);
+  emitKeyState(token, keyCode);
   scheduleRelease();
 }
 
@@ -137,6 +178,13 @@ function main() {
   readline.emitKeypressEvents(process.stdin);
   if (process.stdin.isTTY) process.stdin.setRawMode(true);
   process.stdin.resume();
+  retryTimer = setInterval(() => {
+    try {
+      flushPendingWrite();
+    } catch (error) {
+      console.error(`key_input_server: retry failed: ${error.message}`);
+    }
+  }, RETRY_MS);
 
   process.stdin.on('keypress', onKeypress);
   process.stdin.on('close', () => shutdown(0));

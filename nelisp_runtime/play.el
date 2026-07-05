@@ -51,11 +51,15 @@
 (defvar gr-play-quit-requested nil)
 (defvar gr-play-orig-func009 nil)
 (defvar gr-play-orig-func337 nil)
+(defvar gr-play-orig-gr-emit nil)
 (defvar gr-play-worldgen-saved-func009 nil)
 (defvar gr-play-saved-native-func015 nil)
 (defvar gr-play-saved-native-func338 nil)
+(defvar gr-play-saved-native-func005 nil)
+(defvar gr-play-saved-native-func150 nil)
 (defvar gr-play-redraw-count 0)
 (defvar gr-play-loop-count 0)
+(defvar gr-play-title-frame-count 0)
 (defvar gr-play-dumped-count 0)
 (defvar gr-play-skipped-count 0)
 (defvar gr-play-draw-seconds 0.0)
@@ -74,6 +78,8 @@
 (defvar gr-play-first-frame-state nil)
 (defvar gr-play-first-player-frame-histogram nil)
 (defvar gr-play-first-enemy-frame-histogram nil)
+(defvar gr-play-opening-active nil)
+(defvar gr-play-opening-result nil)
 
 (defun gr-play-buffer-histogram ()
   "Return an alist of source buffer id -> blit count for the current gr-sumi."
@@ -226,6 +232,50 @@
         gr-play-last-floor (nth 2 snapshot)
         gr-play-last-dungeon (nth 3 snapshot)))
 
+(defun gr-play-dump-current-frame ()
+  "Serialize and dump the current `gr-sumi' frame if it changed."
+  (let ((record-count (length gr-sumi))
+        (snapshot (gr-play-snapshot-state))
+        (serialize-start 0.0)
+        (io-start 0.0)
+        (json nil)
+        (histogram (gr-play-buffer-histogram)))
+    (when (null gr-play-first-frame-histogram)
+      (setq gr-play-first-frame-histogram histogram)
+      (setq gr-play-first-frame-missing (reverse gr-missing))
+      (setq gr-play-first-frame-state
+            (list :var199 (gr-get 199)
+                  :var1226 (gr-get 1226)
+                  :var217 (gr-get 217)
+                  :var211 (gr-get 211)
+                  :enemy-facing (and (vectorp (gr-get 83))
+                                     (> (length (gr-get 83)) 1)
+                                     (gr-prop-ref (aref (gr-get 83) 1) "Var5"))))
+      (princ (format "PLAY-HIST first=%S\n" histogram))
+      (princ (format "PLAY-MISSING first=%S\n" gr-play-first-frame-missing))
+      (princ (format "PLAY-GATE first=%S\n" gr-play-first-frame-state)))
+    (when (and (null gr-play-first-player-frame-histogram)
+               (assoc 3 histogram))
+      (setq gr-play-first-player-frame-histogram histogram)
+      (princ (format "PLAY-HIST player=%S\n" histogram)))
+    (when (and (null gr-play-first-enemy-frame-histogram)
+               (or (assoc 6 histogram) (assoc 21 histogram) (assoc 27 histogram) (assoc 13 histogram)))
+      (setq gr-play-first-enemy-frame-histogram histogram)
+      (princ (format "PLAY-HIST enemy=%S\n" histogram)))
+    (if (or (= record-count 0)
+            (gr-play-snapshot-unchanged-p record-count snapshot))
+        (setq gr-play-skipped-count (1+ gr-play-skipped-count))
+      (setq serialize-start (float-time))
+      (setq json (gr-sumi-to-json))
+      (setq gr-play-serialize-seconds
+            (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
+      (setq io-start (float-time))
+      (gr-play-write-frame json)
+      (setq gr-play-io-seconds
+            (+ gr-play-io-seconds (- (float-time) io-start)))
+      (setq gr-play-dumped-count (1+ gr-play-dumped-count))
+      (gr-play-record-snapshot record-count snapshot))))
+
 (defun gr-play-with-loop-disabled (thunk)
   "Run THUNK with func009 temporarily replaced by a no-op."
   (setq gr-play-worldgen-saved-func009 (gethash "func009" gr-native-funcs))
@@ -246,15 +296,9 @@
       (setq gr-worldgen-autorun saved-autorun))))
 
 (defun gr-play-bootstrap-real-init ()
-  "Mirror run-init.el: func004, then run-worldgen.el on the initialized state."
+  "Mirror run-init.el after the title/login opening has started the game."
   (gr-play-ensure-worldgen-runtime)
   (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
-  (gr-reset)
-  ;; These are the only play bootstrap seeds carried over from run-init.el.
-  ;; func004 expects the same entry state before the real initialization path.
-  (gr-set "stat" 1)
-  (gr-set "hwnd" 0)
-  (gr-run-func "func004")
   (gr-worldgen-seed-base-state)
   (setq gr-worldgen-use-existing-state t)
   (gr-worldgen-run t))
@@ -278,12 +322,28 @@ max HP 15, current HP 15, and the KO flag cleared."
   (push 338 gr-trace)
   nil)
 
+(defun gr-play-func005 (&rest _args)
+  "Resume path sentinel for the opening flow."
+  (push 5 gr-trace)
+  (setq gr-play-opening-result 'resume)
+  (throw 'gr-play-opening-done 'resume))
+
+(defun gr-play-func150 (&rest _args)
+  "New-game path sentinel for the opening flow."
+  (push 150 gr-trace)
+  (setq gr-play-opening-result 'new-game)
+  (throw 'gr-play-opening-done 'new-game))
+
 (defun gr-play-install-local-missing-natives ()
   "Install local natives needed by the play loop."
   (setq gr-play-saved-native-func015 (gethash "func015" gr-native-funcs))
   (setq gr-play-saved-native-func338 (gethash "func338" gr-native-funcs))
+  (setq gr-play-saved-native-func005 (gethash "func005" gr-native-funcs))
+  (setq gr-play-saved-native-func150 (gethash "func150" gr-native-funcs))
   (gr-defnative "func015" #'gr-play-func015)
-  (gr-defnative "func338" #'gr-play-func338))
+  (gr-defnative "func338" #'gr-play-func338)
+  (gr-defnative "func005" #'gr-play-func005)
+  (gr-defnative "func150" #'gr-play-func150))
 
 (defun gr-play-restore-local-missing-natives ()
   "Restore natives replaced by the play loop."
@@ -295,8 +355,134 @@ max HP 15, current HP 15, and the KO flag cleared."
       (gr-defnative "func338" gr-play-saved-native-func338)
     (when gr-native-funcs
       (remhash "func338" gr-native-funcs)))
+  (if gr-play-saved-native-func005
+      (gr-defnative "func005" gr-play-saved-native-func005)
+    (when gr-native-funcs
+      (remhash "func005" gr-native-funcs)))
+  (if gr-play-saved-native-func150
+      (gr-defnative "func150" gr-play-saved-native-func150)
+    (when gr-native-funcs
+      (remhash "func150" gr-native-funcs)))
   (setq gr-play-saved-native-func015 nil)
-  (setq gr-play-saved-native-func338 nil))
+  (setq gr-play-saved-native-func338 nil)
+  (setq gr-play-saved-native-func005 nil)
+  (setq gr-play-saved-native-func150 nil))
+
+(defun gr-play-gr-emit-wrapper (op &rest args)
+  "Capture title/login frames that use Adap.redraw directly."
+  (when (and gr-play-opening-active
+             (equal op "gui-present")
+             (numberp (car args))
+             (= (car args) 0))
+    (setq gr-sumi nil))
+  (apply gr-play-orig-gr-emit op args)
+  (when (and gr-play-opening-active
+             (equal op "gui-present")
+             (numberp (car args))
+             (= (car args) 1))
+    (setq gr-play-title-frame-count (1+ gr-play-title-frame-count))
+    (gr-play-dump-current-frame)))
+
+(defun gr-play-opening-held-p (keycode)
+  "Return non-nil when KEYCODE is currently held in the key file."
+  (and (hash-table-p gr-play-held-codes)
+       (> (gethash keycode gr-play-held-codes 0) 0)))
+
+(defun gr-play-opening-render-login ()
+  "Render the login/save-slot screen once."
+  (setq gr-sumi nil)
+  (gr-emit "gui-present" 0)
+  (gr-run-func "func146")
+  (gr-run-func "func148")
+  (gr-emit "gui-present" 1))
+
+(defun gr-play-opening-new-game-slot-p ()
+  "Return non-nil when the selected save slot has no existing save file."
+  (let ((slot (or (gr-get 726) 1))
+        (file-name nil))
+    (setq file-name
+          (cond
+           ((= slot 1) "01.dat")
+           ((= slot 2) "02.dat")
+           ((= slot 3) "03.dat")
+           (t "01.dat")))
+    (gr-file-exists file-name)
+    (= (or (gr-get "strsize") -1) -1)))
+
+(defun gr-play-opening-login-loop ()
+  "Drive the login/new-game selection until the dungeon boot should start."
+  (let ((done nil)
+        (record nil))
+    (gr-set 725 1)
+    (gr-set 726 1)
+    (gr-set 734 0)
+    (while (not done)
+      (gr-play-opening-render-login)
+      (sleep-for 0.04)
+      (setq record (gr-play-refresh-input))
+      (when (and record gr-play-last-input-was-new)
+        (cond
+         ((gr-play-opening-held-p 38)
+          (gr-set 726 (max 1 (1- (or (gr-get 726) 1)))))
+         ((gr-play-opening-held-p 40)
+          (gr-set 726 (min 3 (1+ (or (gr-get 726) 1)))))
+         ((or (gr-play-opening-held-p 90) (gr-play-opening-held-p 65))
+          (setq gr-play-opening-result
+                (if (gr-play-opening-new-game-slot-p) 'new-game 'resume))
+          (setq done t))
+         ((gr-play-opening-held-p 88)
+          (setq done t)))))))
+
+(defun gr-play-opening-title-loop ()
+  "Render the title screen until confirm input enters the login screen."
+  (let ((entered-login nil)
+        (record nil))
+    (gr-set 64 0)
+    (while (not entered-login)
+      (gr-run-func "func141")
+      (sleep-for 0.04)
+      (setq record (gr-play-refresh-input))
+      (when (and record gr-play-last-input-was-new)
+        (when (or (gr-play-opening-held-p 90)
+                  (gr-play-opening-held-p 65)
+                  (gr-play-opening-held-p 88)
+                  (gr-play-opening-held-p 87)
+                  (gr-play-opening-held-p 83)
+                  (gr-play-opening-held-p 37)
+                  (gr-play-opening-held-p 38)
+                  (gr-play-opening-held-p 39)
+                  (gr-play-opening-held-p 40))
+          (setq entered-login t))))))
+
+(defun gr-play-bootstrap-opening ()
+  "Run func004 through the title/login flow until new game starts."
+  (let ((old-depth gr-depth-limit))
+    (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
+    (gr-reset)
+    (gr-set "stat" 1)
+    (gr-set "hwnd" 0)
+    (setq gr-play-opening-active t
+          gr-play-opening-result nil
+          gr-play-title-frame-count 0)
+    (unwind-protect
+        (let ((saved-func139A (gethash "func139A" gr-native-funcs)))
+          (unwind-protect
+              (progn
+                (setq gr-depth-limit (max gr-depth-limit 5000))
+                (gr-defnative "func139A" (lambda (&rest _args) nil))
+                (gr-run-func "func004")
+                (when saved-func139A
+                  (gr-defnative "func139A" saved-func139A))
+                (gr-play-opening-title-loop)
+                (gr-play-opening-login-loop))
+            (if saved-func139A
+                (gr-defnative "func139A" saved-func139A)
+              (when gr-native-funcs
+                (remhash "func139A" gr-native-funcs)))))
+      (setq gr-play-opening-active nil)
+      (setq gr-depth-limit old-depth)))
+  (unless (eq gr-play-opening-result 'new-game)
+    (error "opening flow did not reach new game (result=%S)" gr-play-opening-result)))
 
 (defun gr-play-log-status ()
   "Print one periodic movement/status line."
@@ -313,12 +499,6 @@ max HP 15, current HP 15, and the KO flag cleared."
 (defun gr-play-func337-wrapper (&rest args)
   "Dump one frame per redraw by wrapping the real func337."
   (let ((draw-start (float-time))
-        (serialize-start 0.0)
-        (io-start 0.0)
-        (record-count 0)
-        (snapshot nil)
-        (json nil)
-        (histogram nil)
         (result nil))
     (setq gr-play-redraw-key-queries nil)
     (setq gr-sumi nil)
@@ -326,44 +506,7 @@ max HP 15, current HP 15, and the KO flag cleared."
     (setq gr-play-draw-seconds
           (+ gr-play-draw-seconds (- (float-time) draw-start)))
     (setq gr-play-redraw-count (1+ gr-play-redraw-count))
-    (setq record-count (length gr-sumi))
-    (setq histogram (gr-play-buffer-histogram))
-    (when (null gr-play-first-frame-histogram)
-      (setq gr-play-first-frame-histogram histogram)
-      (setq gr-play-first-frame-missing (reverse gr-missing))
-      (setq gr-play-first-frame-state
-            (list :var199 (gr-get 199)
-                  :var1226 (gr-get 1226)
-                  :var217 (gr-get 217)
-                  :var211 (gr-get 211)
-                  :enemy-facing (and (vectorp (gr-get 83))
-                                     (> (length (gr-get 83)) 1)
-                                     (gr-prop-ref (aref (gr-get 83) 1) "Var5"))))
-      (princ (format "PLAY-HIST first=%S\n" histogram))
-      (princ (format "PLAY-MISSING first=%S\n" gr-play-first-frame-missing))
-      (princ (format "PLAY-GATE first=%S\n" gr-play-first-frame-state)))
-    (when (and (null gr-play-first-player-frame-histogram)
-               (assoc 3 histogram))
-      (setq gr-play-first-player-frame-histogram histogram)
-      (princ (format "PLAY-HIST player=%S\n" histogram)))
-    (when (and (null gr-play-first-enemy-frame-histogram)
-               (or (assoc 6 histogram) (assoc 21 histogram) (assoc 27 histogram) (assoc 13 histogram)))
-      (setq gr-play-first-enemy-frame-histogram histogram)
-      (princ (format "PLAY-HIST enemy=%S\n" histogram)))
-    (setq snapshot (gr-play-snapshot-state))
-    (if (or (= record-count 0)
-            (gr-play-snapshot-unchanged-p record-count snapshot))
-        (setq gr-play-skipped-count (1+ gr-play-skipped-count))
-      (setq serialize-start (float-time))
-      (setq json (gr-sumi-to-json))
-      (setq gr-play-serialize-seconds
-            (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
-      (setq io-start (float-time))
-      (gr-play-write-frame json)
-      (setq gr-play-io-seconds
-            (+ gr-play-io-seconds (- (float-time) io-start)))
-      (setq gr-play-dumped-count (1+ gr-play-dumped-count))
-      (gr-play-record-snapshot record-count snapshot))
+    (gr-play-dump-current-frame)
     (when (= 0 (mod gr-play-redraw-count gr-play-report-every))
       (gr-play-log-status))
     result))
@@ -409,6 +552,7 @@ max HP 15, current HP 15, and the KO flag cleared."
         (setq gr-play-frame-count 0
               gr-play-redraw-count 0
               gr-play-loop-count 0
+              gr-play-title-frame-count 0
               gr-play-dumped-count 0
               gr-play-skipped-count 0
               gr-play-draw-seconds 0.0
@@ -430,13 +574,17 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-last-token "IDLE"
               gr-play-held-codes (make-hash-table :test 'equal))
 
+        (gr-play-install-local-missing-natives)
+        (setq gr-play-orig-gr-emit (symbol-function 'gr-emit))
+        (fset 'gr-emit #'gr-play-gr-emit-wrapper)
         (condition-case err
-            (gr-play-bootstrap-real-init)
+            (progn
+              (gr-play-bootstrap-opening)
+              (gr-play-bootstrap-real-init))
           (error
            (princ (format "PLAY-BOOTSTRAP-ERROR %s\n" (error-message-string err)))))
         (gr-play-apply-post-init-state)
 
-        (gr-play-install-local-missing-natives)
         (setq gr-play-orig-func009 (gethash "func009" gr-native-funcs))
         (setq gr-play-orig-func337 (gethash "func337" gr-native-funcs))
         (setq gr-read-key-state-fn #'gr-play-read-key-state)
@@ -455,8 +603,9 @@ max HP 15, current HP 15, and the KO flag cleared."
         (setq gr-play-frame-count gr-play-redraw-count)
         (princ
          (format
-          "PLAY-FPS redraw=%d dumped=%d elapsed=%.3f fps=%.3f draw=%.3f serialize=%.3f io=%.3f\n"
+          "PLAY-FPS redraw=%d title=%d dumped=%d elapsed=%.3f fps=%.3f draw=%.3f serialize=%.3f io=%.3f\n"
           gr-play-redraw-count
+          gr-play-title-frame-count
           gr-play-dumped-count
           (max 0.001 (- (float-time) gr-play-start-time))
           (/ (float gr-play-redraw-count)
@@ -470,6 +619,8 @@ max HP 15, current HP 15, and the KO flag cleared."
     (setq gr-depth-limit old-depth)
     (setq gr-read-key-state-fn nil)
     (setq gr-reset-key-fn nil)
+    (when gr-play-orig-gr-emit
+      (fset 'gr-emit gr-play-orig-gr-emit))
     (gr-play-restore-local-missing-natives)
     (when gr-play-orig-func337
       (gr-defnative "func337" gr-play-orig-func337))

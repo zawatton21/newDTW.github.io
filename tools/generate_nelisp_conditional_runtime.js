@@ -796,8 +796,15 @@ function emitValue(node, ctx) {
   if (node.kind === ts.SyntaxKind.FalseKeyword) return "nil";
   if (node.kind === ts.SyntaxKind.NullKeyword) return "nil";
   if (ts.isIdentifier(node)) {
+    if (node.text === "document") return "nil";
     if (ctx.locals.includes(node.text)) return node.text;
     throw unsupported(node, ctx, `identifier ${node.text}`);
+  }
+  if (ts.isTypeOfExpression(node)) {
+    if (ts.isIdentifier(node.expression) && node.expression.text === "document") {
+      return "\"undefined\"";
+    }
+    return "\"object\"";
   }
   if (ts.isPropertyAccessExpression(node)) {
     if (isGvarPropertyAccess(node)) {
@@ -844,6 +851,12 @@ function emitValue(node, ctx) {
         return `(/ ${lhs} ${rhs})`;
       case ts.SyntaxKind.PercentToken:
         return `(% ${lhs} ${rhs})`;
+      case ts.SyntaxKind.EqualsEqualsToken:
+      case ts.SyntaxKind.EqualsEqualsEqualsToken:
+        return `(equal ${emitValue(node.left, ctx)} ${emitValue(node.right, ctx)})`;
+      case ts.SyntaxKind.ExclamationEqualsToken:
+      case ts.SyntaxKind.ExclamationEqualsEqualsToken:
+        return `(not (equal ${emitValue(node.left, ctx)} ${emitValue(node.right, ctx)}))`;
       default:
         throw unsupported(node, ctx, "value binary expression");
     }
@@ -856,6 +869,9 @@ function emitValue(node, ctx) {
     return emitValue(node.expression, ctx);
   }
   if (ts.isCallExpression(node)) {
+    if (ts.isIdentifier(node.expression) && node.expression.text === "t") {
+      return `(gr-i18n-t ${emitValue(node.arguments[0], ctx)})`;
+    }
     if (ts.isIdentifier(node.expression) && node.expression.text === "tf") {
       const args = node.arguments.map((arg) => emitValue(arg, ctx));
       return `(gr-format ${args.join(" ")})`;
@@ -892,6 +908,9 @@ function emitValue(node, ctx) {
     }
     if (method === "toString" && node.arguments.length === 0) {
       return `(format "%s" ${emitValue(root, ctx)})`;
+    }
+    if (method === "contains" && node.arguments.length === 1) {
+      return "nil";
     }
     if (method === "Save" && node.arguments.length === 0) {
       return `(gr-record-save ${emitValue(root, ctx)})`;
