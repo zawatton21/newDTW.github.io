@@ -43,8 +43,11 @@
 (defvar gr-play-report-every 25
   "Print one status line every N frames.")
 
-(defvar gr-play-key-stale-seconds 0.25
+(defvar gr-play-key-stale-seconds 0.75
   "Treat key-state.txt as stale after this many seconds.")
+
+(defvar gr-play-pending-key-max-age-seconds 1.0
+  "Treat a latched unconsumed press as missed after this many seconds.")
 
 (defvar gr-play-idle-sleep-seconds 0.0
   "Sleep this long when no key is currently held.")
@@ -57,6 +60,13 @@
 (defvar gr-play-last-token "IDLE")
 (defvar gr-play-last-seq 0)
 (defvar gr-play-held-codes nil)
+(defvar gr-play-file-held-codes nil)
+(defvar gr-play-pending-presses nil)
+(defvar gr-play-synced-keycodes nil)
+(defvar gr-play-read-error-count 0)
+(defvar gr-play-received-press-count 0)
+(defvar gr-play-consumed-press-count 0)
+(defvar gr-play-missed-press-count 0)
 (defvar gr-play-quit-requested nil)
 (defvar gr-play-orig-func009 nil)
 (defvar gr-play-orig-func337 nil)
@@ -135,6 +145,102 @@
         (push n out)))
     (nreverse out)))
 
+(defun gr-play-copy-hash (table)
+  "Return a shallow copy of hash TABLE."
+  (let ((copy (make-hash-table :test 'equal)))
+    (when (hash-table-p table)
+      (maphash (lambda (key value)
+                 (puthash key value copy))
+               table))
+    copy))
+
+(defun gr-play-make-held-table (held)
+  "Return a hash table containing the integers in HELD."
+  (let ((table (make-hash-table :test 'equal)))
+    (dolist (code held)
+      (puthash code 1 table))
+    table))
+
+(defun gr-play-enqueue-press (seq keycode)
+  "Latch a newly observed press identified by SEQ and KEYCODE."
+  (setq gr-play-received-press-count (1+ gr-play-received-press-count))
+  (setq gr-play-pending-presses
+        (append gr-play-pending-presses
+                (list (list :seq seq
+                            :keycode keycode
+                            :time (float-time))))))
+
+(defun gr-play-effective-keycodes ()
+  "Return the sorted union of live held keys and pending press keys."
+  (let ((table (make-hash-table :test 'equal))
+        (out nil))
+    (when (hash-table-p gr-play-held-codes)
+      (maphash (lambda (key value)
+                 (when (> value 0)
+                   (puthash key 1 table)))
+               gr-play-held-codes))
+    (dolist (entry gr-play-pending-presses)
+      (puthash (plist-get entry :keycode) 1 table))
+    (maphash (lambda (key _value)
+               (push key out))
+             table)
+    (sort out #'<)))
+
+(defun gr-play-sync-pushing-key-list ()
+  "Mirror live held and pending keys into `pushing_key_list'."
+  (let ((keys (gr-get "pushing_key_list"))
+        (active (gr-play-effective-keycodes)))
+    (when (vectorp keys)
+      (dolist (code gr-play-synced-keycodes)
+        (when (and (integerp code) (>= code 0) (< code (length keys)))
+          (aset keys code 0)))
+      (dolist (code active)
+        (when (and (integerp code) (>= code 0) (< code (length keys)))
+          (aset keys code 1)))
+      (setq gr-play-synced-keycodes active))))
+
+(defun gr-play-drop-expired-pending-presses ()
+  "Expire latched presses that aged out without being consumed."
+  (let ((now (float-time))
+        (kept nil)
+        (dropped 0))
+    (dolist (entry gr-play-pending-presses)
+      (if (> (- now (or (plist-get entry :time) now))
+             gr-play-pending-key-max-age-seconds)
+          (setq dropped (1+ dropped))
+        (push entry kept)))
+    (when (> dropped 0)
+      (setq gr-play-missed-press-count (+ gr-play-missed-press-count dropped)))
+    (setq gr-play-pending-presses (nreverse kept))
+    (gr-play-sync-pushing-key-list)))
+
+(defun gr-play-consume-pending-press (keycode)
+  "Consume and report whether a latched press exists for KEYCODE."
+  (let ((needle (gr-num keycode))
+        (pending gr-play-pending-presses)
+        (kept nil)
+        (found nil)
+        (entry nil))
+    (while pending
+      (setq entry (car pending))
+      (setq pending (cdr pending))
+      (if (and (not found)
+               (= (or (plist-get entry :keycode) -1) needle))
+          (setq found t)
+        (push entry kept)))
+    (setq gr-play-pending-presses (nreverse kept))
+    (when found
+      (setq gr-play-consumed-press-count (1+ gr-play-consumed-press-count))
+      (princ
+       (format "PLAY-CONSUME seq=%s key=%s consumed=%d/%d missed=%d\n"
+               (or (plist-get entry :seq) 0)
+               needle
+               gr-play-consumed-press-count
+               gr-play-received-press-count
+               gr-play-missed-press-count)))
+    (gr-play-sync-pushing-key-list)
+    found))
+
 (defun gr-play-read-key-record ()
   "Read build/key-state.txt in key_input_server format."
   (when (file-exists-p gr-play-key-state-path)
@@ -158,7 +264,9 @@
                               (gr-play-parse-int-list (cdr held-line))
                             nil)
                     :mtime mtime))))
-      (error nil))))
+      (error
+       (setq gr-play-read-error-count (1+ gr-play-read-error-count))
+       nil))))
 
 (defun gr-play-record-stale-p (record)
   "Return non-nil if RECORD is missing or older than the stale window."
@@ -170,31 +278,51 @@
 (defun gr-play-refresh-input ()
   "Refresh held keys from the current key-state.txt snapshot."
   (let ((record (gr-play-read-key-record))
-        (held nil))
+        (held nil)
+        (next-held nil)
+        (old-held nil)
+        (seq 0))
     (setq gr-play-last-input-was-new nil)
+    (gr-play-drop-expired-pending-presses)
     (if (gr-play-record-stale-p record)
         (progn
           (setq gr-play-held-codes (make-hash-table :test 'equal))
+          (setq gr-play-file-held-codes (make-hash-table :test 'equal))
           (setq gr-play-last-token "IDLE")
+          (gr-play-sync-pushing-key-list)
           nil)
       (progn
-        (setq gr-play-last-input-was-new
-              (> (or (plist-get record :seq) 0) gr-play-last-seq))
-        (setq gr-play-last-token (or (plist-get record :token) "IDLE"))
-        (setq gr-play-last-seq (or (plist-get record :seq) gr-play-last-seq))
-        (setq gr-play-held-codes (make-hash-table :test 'equal))
-        (setq held (plist-get record :held))
-        (dolist (code held)
-          (puthash code 1 gr-play-held-codes))
-        (when (equal gr-play-last-token "QUIT")
-          (setq gr-play-quit-requested t))
+        (setq seq (or (plist-get record :seq) 0))
+        (setq gr-play-last-input-was-new (> seq gr-play-last-seq))
+        (when gr-play-last-input-was-new
+          (setq gr-play-last-token (or (plist-get record :token) "IDLE"))
+          (setq gr-play-last-seq seq)
+          (setq held (plist-get record :held))
+          (setq next-held (gr-play-make-held-table held))
+          (setq old-held
+                (if (hash-table-p gr-play-file-held-codes)
+                    gr-play-file-held-codes
+                  (make-hash-table :test 'equal)))
+          (dolist (code held)
+            (unless (> (gethash code old-held 0) 0)
+              (gr-play-enqueue-press seq code)))
+          (when (and (null held)
+                     (> (or (plist-get record :keycode) 0) 0)
+                     (= 0 (gethash (plist-get record :keycode) old-held 0)))
+            (gr-play-enqueue-press seq (plist-get record :keycode)))
+          (setq gr-play-file-held-codes next-held)
+          (setq gr-play-held-codes (gr-play-copy-hash next-held))
+          (gr-play-sync-pushing-key-list)
+          (when (equal gr-play-last-token "QUIT")
+            (setq gr-play-quit-requested t)))
         record))))
 
 (defun gr-play-read-key-state (keycode)
   "Return the current held state for KEYCODE from the live key file."
   (let ((record (gr-play-refresh-input))
         (idx (gr-num keycode))
-        (value 0))
+        (value 0)
+        (consumed nil))
     (unless (hash-table-p gr-play-held-codes)
       (setq gr-play-held-codes (make-hash-table :test 'equal)))
     (when (or gr-play-quit-requested
@@ -205,13 +333,19 @@
                (or (null record)
                    (= 0 (hash-table-count gr-play-held-codes))))
       (sleep-for gr-play-idle-sleep-seconds))
-    (setq value (gethash idx gr-play-held-codes 0))
+    (setq consumed (gr-play-consume-pending-press idx))
+    (setq value
+          (if (or (> (gethash idx gr-play-held-codes 0) 0)
+                  consumed)
+              1
+            0))
     value))
 
 (defun gr-play-reset-key (keycode)
   "Mirror ResetKey for the live key source."
   (when (hash-table-p gr-play-held-codes)
     (remhash (gr-num keycode) gr-play-held-codes))
+  (gr-play-sync-pushing-key-list)
   0)
 
 (defun gr-play-write-frame (json)
@@ -545,7 +679,7 @@ max HP 15, current HP 15, and the KO flag cleared."
 
 (defun gr-play-log-status ()
   "Print one periodic movement/status line."
-  (princ (format "PLAY-STATUS redraw=%d loop=%d dumped=%d skipped=%d player=%s,%s floor=%s token=%s\n"
+  (princ (format "PLAY-STATUS redraw=%d loop=%d dumped=%d skipped=%d player=%s,%s floor=%s token=%s consumed=%d/%d missed=%d readerr=%d\n"
                  gr-play-redraw-count
                  gr-play-loop-count
                  gr-play-dumped-count
@@ -553,7 +687,11 @@ max HP 15, current HP 15, and the KO flag cleared."
                  (or (gr-get 66) 0)
                  (or (gr-get 67) 0)
                  (or (gr-get "current_floor") 0)
-                 gr-play-last-token)))
+                 gr-play-last-token
+                 gr-play-consumed-press-count
+                 gr-play-received-press-count
+                 gr-play-missed-press-count
+                 gr-play-read-error-count)))
 
 (defun gr-play-func337-wrapper (&rest args)
   "Dump one frame per redraw by wrapping the real func337."
@@ -636,7 +774,14 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-opening-sleep-seconds 0.0
               gr-play-last-seq 0
               gr-play-last-token "IDLE"
-              gr-play-held-codes (make-hash-table :test 'equal))
+              gr-play-held-codes (make-hash-table :test 'equal)
+              gr-play-file-held-codes (make-hash-table :test 'equal)
+              gr-play-pending-presses nil
+              gr-play-synced-keycodes nil
+              gr-play-read-error-count 0
+              gr-play-received-press-count 0
+              gr-play-consumed-press-count 0
+              gr-play-missed-press-count 0)
 
         (gr-play-install-local-missing-natives)
         (setq gr-play-orig-gr-emit (symbol-function 'gr-emit))
@@ -677,6 +822,13 @@ max HP 15, current HP 15, and the KO flag cleared."
           gr-play-draw-seconds
           gr-play-serialize-seconds
           gr-play-io-seconds))
+        (princ
+         (format "PLAY-INPUT consumed=%d/%d missed=%d readerr=%d pending=%d\n"
+                 gr-play-consumed-press-count
+                 gr-play-received-press-count
+                 gr-play-missed-press-count
+                 gr-play-read-error-count
+                 (length gr-play-pending-presses)))
         (princ (format "PLAY-DEPTH-LOG %S\n" (nreverse gr-play-depth-log)))
         (princ (format "PLAY-DONE %d\n" gr-play-redraw-count)))
     (setq gr-step-budget old-budget)

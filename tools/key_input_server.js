@@ -60,11 +60,15 @@ let seq = 0;
 let shuttingDown = false;
 const heldKeyCodes = new Set();
 const HOLD_MS = 350;
+const REFRESH_MS = 50;
 const RETRY_MS = 40;
 let releaseTimer = null;
+let refreshTimer = null;
 let retryTimer = null;
 let pendingPayload = null;
 let retryWarningPrinted = false;
+let activeToken = 'IDLE';
+let activeKeyCode = 0;
 
 function ensureBuildDir() {
   const dir = path.dirname(outPath);
@@ -112,9 +116,30 @@ function clearReleaseTimer() {
   }
 }
 
+function clearRefreshTimer() {
+  if (refreshTimer) {
+    clearInterval(refreshTimer);
+    refreshTimer = null;
+  }
+}
+
+function refreshHeldState() {
+  if (heldKeyCodes.size === 0) return;
+  writeKeyState(activeToken, activeKeyCode);
+}
+
 function scheduleRelease() {
   clearReleaseTimer();
+  clearRefreshTimer();
+  refreshTimer = setInterval(() => {
+    try {
+      refreshHeldState();
+    } catch (error) {
+      console.error(`key_input_server: held refresh failed: ${error.message}`);
+    }
+  }, REFRESH_MS);
   releaseTimer = setTimeout(() => {
+    clearRefreshTimer();
     heldKeyCodes.clear();
     emitKeyState('IDLE', 0);
     releaseTimer = null;
@@ -139,6 +164,7 @@ function shutdown(code) {
     clearInterval(retryTimer);
     retryTimer = null;
   }
+  clearRefreshTimer();
   restoreTerminal();
   console.log(`key_input_server: exiting after ${seq} keypress(es) sent, terminal restored.`);
   process.exit(code);
@@ -162,6 +188,8 @@ function onKeypress(str, key) {
   if (!token) return; // unmapped key: ignored, no write
   heldKeyCodes.clear();
   heldKeyCodes.add(keyCode);
+  activeToken = token;
+  activeKeyCode = keyCode;
   emitKeyState(token, keyCode);
   scheduleRelease();
 }
