@@ -22,6 +22,9 @@
 (defconst gr-play-build-dir
   (expand-file-name "../build" (file-name-directory (or load-file-name buffer-file-name))))
 
+(defconst gr-play-runtime-dir
+  (file-name-directory (or load-file-name buffer-file-name)))
+
 (defconst gr-play-key-state-path
   (expand-file-name "key-state.txt" gr-play-build-dir))
 
@@ -37,7 +40,7 @@
 (defvar gr-play-key-stale-seconds 0.25
   "Treat key-state.txt as stale after this many seconds.")
 
-(defvar gr-play-idle-sleep-seconds 0.04
+(defvar gr-play-idle-sleep-seconds 0.0
   "Sleep this long when no key is currently held.")
 
 (defvar gr-play-frame-count 0)
@@ -101,108 +104,6 @@
                  (push key out))
                gr-play-held-codes))
     (sort out #'<)))
-
-(defun gr-play-worldgen-seed-base-state ()
-  "Seed the minimum pre-worldgen state used by func006."
-  (gr-set 20 50)
-  (gr-set 31 56)
-  (gr-set 32 38)
-  (gr-set 33 56)
-  (gr-set 34 37)
-  (gr-set 35 40)
-  (gr-set 36 40)
-  (gr-set 37 6)
-  (gr-set 38 6)
-  (gr-set 68 0)
-  (gr-set 69 0)
-  (gr-set 70 0)
-  (gr-set 85 0)
-  (gr-set 86 0)
-  (gr-set 95 0)
-  (gr-set 96 0)
-  (gr-set 107 0)
-  (gr-set 200 0)
-  (gr-set 201 0)
-  (gr-set 202 0)
-  (gr-set 203 0)
-  (gr-set 224 20)
-  (gr-set 247 1)
-  (gr-set 3121 0)
-  (gr-set 211 15)
-  (gr-set 212 0)
-  (gr-set 350 100)
-  (gr-set 352 15)
-  (gr-set 565 8)
-  (gr-set 566 8)
-  (gr-set 567 100)
-  (gr-set 568 0)
-  (gr-set 580 0)
-  (gr-set 581 0)
-  (gr-set 647 37)
-  (gr-set 648 39)
-  (gr-set 649 38)
-  (gr-set 650 40)
-  (gr-set 651 36)
-  (gr-set 652 33)
-  (gr-set 653 35)
-  (gr-set 654 34)
-  (gr-set 655 90)
-  (gr-set 656 88)
-  (gr-set 657 65)
-  (gr-set 658 83)
-  (gr-set 659 16)
-  (gr-set 660 67)
-  (gr-set 662 (+ 8192 2048 4096 16384 65536 32768 131072 262144 524288 1048576))
-  (gr-set 692 8192)
-  (gr-set 693 2048)
-  (gr-set 694 4096)
-  (gr-set 695 16384)
-  (gr-set 696 65536)
-  (gr-set 697 32768)
-  (gr-set 698 131072)
-  (gr-set 699 262144)
-  (gr-set 700 524288)
-  (gr-set 701 1048576)
-  (gr-set "special_floor" 0)
-  (gr-set "dungeon_number" 1)
-  (gr-set "current_floor" 1)
-  (gr-set "current_level" 1)
-  (gr-set "dungeon1_floor" 1)
-  (gr-set "dungeon2_floor" 0)
-  (gr-set "dungeon3_floor" 0)
-  (gr-set "time_paused" 0)
-  (gr-set "time_paused_count" 0)
-  (gr-set "wallet" 0)
-  (gr-set "count_buying_price" 0)
-  (gr-set "y_axis_map_image" 0)
-  (gr-set "open_item_menue" 0)
-  (gr-set "taskact1_on" 0)
-  (gr-set "equip_disc" (gr-make-array 500))
-  (gr-set 493 (gr-make-array 20))
-  (gr-set 704 (gr-make-array 300))
-  (gr-set 25 (gr-make-array 30))
-  (gr-set 26 (gr-make-array 30))
-  (gr-set 27 (gr-make-array 30))
-  (let ((var691 (gr-make-array 20))
-        (var664 (gr-make-array 20)))
-    (aset var691 1 90)
-    (aset var691 2 88)
-    (aset var691 3 65)
-    (aset var691 4 83)
-    (aset var691 5 16)
-    (aset var691 6 67)
-    (aset var664 1 8192)
-    (aset var664 2 2048)
-    (aset var664 3 4096)
-    (aset var664 4 16384)
-    (aset var664 5 65536)
-    (aset var664 6 32768)
-    (aset var664 7 131072)
-    (aset var664 8 262144)
-    (aset var664 9 524288)
-    (aset var664 10 1048576)
-    (gr-set 691 var691)
-    (gr-set 664 var664)))
 
 (defun gr-play-parse-int-list (parts)
   "Convert PARTS to a list of positive integers."
@@ -335,6 +236,37 @@
     (when gr-play-worldgen-saved-func009
       (gr-defnative "func009" gr-play-worldgen-saved-func009))
     (setq gr-play-worldgen-saved-func009 nil)))
+
+(defun gr-play-ensure-worldgen-runtime ()
+  "Load the shared worldgen helpers used by run-init.el."
+  (unless (fboundp 'gr-worldgen-run)
+    (let ((saved-autorun (and (boundp 'gr-worldgen-autorun) gr-worldgen-autorun)))
+      (setq gr-worldgen-autorun nil)
+      (load-file (expand-file-name "run-worldgen.el" gr-play-runtime-dir))
+      (setq gr-worldgen-autorun saved-autorun))))
+
+(defun gr-play-bootstrap-real-init ()
+  "Mirror run-init.el: func004, then run-worldgen.el on the initialized state."
+  (gr-play-ensure-worldgen-runtime)
+  (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
+  (gr-reset)
+  ;; These are the only play bootstrap seeds carried over from run-init.el.
+  ;; func004 expects the same entry state before the real initialization path.
+  (gr-set "stat" 1)
+  (gr-set "hwnd" 0)
+  (gr-run-func "func004")
+  (gr-worldgen-seed-base-state)
+  (setq gr-worldgen-use-existing-state t)
+  (gr-worldgen-run t))
+
+(defun gr-play-apply-post-init-state ()
+  "Restore the live-loop HP state that func004/worldgen do not populate.
+
+func229.ts, func233.ts, and the captured gamedata-state all enter play with
+max HP 15, current HP 15, and the KO flag cleared."
+  (gr-set 352 15)
+  (gr-set 211 15)
+  (gr-set 212 0))
 
 (defun gr-play-func015 (&rest _args)
   "Minimal local movement continuation."
@@ -498,23 +430,11 @@
               gr-play-last-token "IDLE"
               gr-play-held-codes (make-hash-table :test 'equal))
 
-        (gr-reset)
-        (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
-        (gr-play-worldgen-seed-base-state)
-        ;; Mirror the facing/animation slots func004 leaves initialized so
-        ;; func345/func567 have a valid direction state in bare play.
-        (gr-set 199 2)
-        (gr-set 217 1)
-        (gr-set 1226 1)
-        (gr-set 784 1)
-        (gr-set 742 1)
-        (setq gr-step-count 0)
-        (gr-play-with-loop-disabled
-         (lambda ()
-           (condition-case err
-               (gr-run-func "func006")
-             (error
-              (princ (format "PLAY-WORLDGEN-ERROR %s\n" (error-message-string err)))))))
+        (condition-case err
+            (gr-play-bootstrap-real-init)
+          (error
+           (princ (format "PLAY-BOOTSTRAP-ERROR %s\n" (error-message-string err)))))
+        (gr-play-apply-post-init-state)
 
         (gr-play-install-local-missing-natives)
         (setq gr-play-orig-func009 (gethash "func009" gr-native-funcs))
