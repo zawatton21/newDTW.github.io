@@ -7,6 +7,10 @@
   "Saved native func009 while world generation runs without entering the loop.")
 (defvar gr-worldgen-saved-local-natives nil
   "Alist of native implementations overridden for worldgen verification.")
+(defvar gr-worldgen-use-existing-state nil
+  "When non-nil, reuse the current initialized state instead of seeding one.")
+(defvar gr-worldgen-autorun t
+  "When non-nil, execute the verification when this file is loaded.")
 
 (defun gr-worldgen-with-loop-disabled (thunk)
   "Run THUNK with func009 temporarily replaced by a no-op."
@@ -330,58 +334,65 @@
       (insert (format "SUMI-DUMP-OK func337 %s\n" (length gr-sumi))))
     dump-path))
 
-(let ((old-budget gr-step-budget)
-      (old-depth gr-depth-limit)
-      (map-counts nil)
-      (floor-cells 0)
-      (walls 0)
-      (enemies 0)
-      (items 0)
-      (ok nil)
-      (dump-path nil))
-  (unwind-protect
-      (progn
-        (gr-reset)
-        (gr-worldgen-seed-base-state)
-        (gr-worldgen-install-local-natives)
-        (setq gr-step-count 0)
-        (setq gr-step-budget 500000)
-        (setq gr-depth-limit 400)
-        (gr-worldgen-with-loop-disabled
-         (lambda ()
-           (condition-case err
-               (gr-run-func "func006")
-             (error
-              (princ (format "WORLDGEN-ERROR %s\n" err))))))
-        (setq map-counts (gr-worldgen-count-map))
-        (setq floor-cells (nth 0 map-counts))
-        (setq walls (nth 1 map-counts))
-        (setq enemies (gr-worldgen-count-records 83))
-        (setq items (gr-worldgen-count-records 78))
-        (princ (format "WORLDGEN floor-cells=%s walls=%s\n" floor-cells walls))
-        (princ (format "WORLDGEN dims=%s %s %s %s player=%s,%s dungeon=%s\n"
-                       (or (gr-get 35) 0)
-                       (or (gr-get 36) 0)
-                       (or (gr-get 37) 0)
-                       (or (gr-get 38) 0)
-                       (or (gr-get 66) 0)
-                       (or (gr-get 67) 0)
-                       (or (gr-get "dungeon_number") 0)))
-        (princ (format "WORLDGEN enemies=%s items=%s\n" enemies items))
-        (setq ok (and (>= floor-cells 150)
-                      (>= (gr-num (or (gr-get "dungeon_number") 0)) 1)))
-        (princ (if ok "WORLDGEN-OK\n" "WORLDGEN-PARTIAL\n"))
-        (when ok
-          (setq gr-sumi nil gr-trace nil gr-missing nil)
+(defun gr-worldgen-run (&optional use-existing-state)
+  "Run the worldgen verification.
+When USE-EXISTING-STATE is non-nil, keep the caller's initialized state."
+  (let ((old-budget gr-step-budget)
+        (old-depth gr-depth-limit)
+        (map-counts nil)
+        (floor-cells 0)
+        (walls 0)
+        (enemies 0)
+        (items 0)
+        (ok nil)
+        (dump-path nil))
+    (unwind-protect
+        (progn
+          (unless use-existing-state
+            (gr-reset)
+            (gr-worldgen-seed-base-state))
+          (gr-worldgen-install-local-natives)
           (setq gr-step-count 0)
-          (condition-case err
-              (gr-run-func "func337")
-            (error
-             (princ (format "WORLDGEN-RENDER-ERROR %s\n" err))))
-          (setq dump-path (gr-worldgen-write-dump))
-          (princ (format "WORLDGEN-DUMP %s\n" dump-path)))
-        (when gr-missing
-          (princ (format "WORLDGEN-MISSING %s\n" (reverse gr-missing)))))
-    (setq gr-step-budget old-budget)
-    (setq gr-depth-limit old-depth)
-    (gr-worldgen-restore-local-natives)))
+          (setq gr-step-budget 500000)
+          (setq gr-depth-limit 400)
+          (gr-worldgen-with-loop-disabled
+           (lambda ()
+             (condition-case err
+                 (gr-run-func "func006")
+               (error
+                (princ (format "WORLDGEN-ERROR %s\n" err))))))
+          (setq map-counts (gr-worldgen-count-map))
+          (setq floor-cells (nth 0 map-counts))
+          (setq walls (nth 1 map-counts))
+          (setq enemies (gr-worldgen-count-records 83))
+          (setq items (gr-worldgen-count-records 78))
+          (princ (format "WORLDGEN floor-cells=%s walls=%s\n" floor-cells walls))
+          (princ (format "WORLDGEN dims=%s %s %s %s player=%s,%s dungeon=%s\n"
+                         (or (gr-get 35) 0)
+                         (or (gr-get 36) 0)
+                         (or (gr-get 37) 0)
+                         (or (gr-get 38) 0)
+                         (or (gr-get 66) 0)
+                         (or (gr-get 67) 0)
+                         (or (gr-get "dungeon_number") 0)))
+          (princ (format "WORLDGEN enemies=%s items=%s\n" enemies items))
+          (setq ok (and (>= floor-cells 150)
+                        (>= (gr-num (or (gr-get "dungeon_number") 0)) 1)))
+          (princ (if ok "WORLDGEN-OK\n" "WORLDGEN-PARTIAL\n"))
+          (when ok
+            (setq gr-sumi nil gr-trace nil gr-missing nil)
+            (setq gr-step-count 0)
+            (condition-case err
+                (gr-run-func "func337")
+              (error
+               (princ (format "WORLDGEN-RENDER-ERROR %s\n" err))))
+            (setq dump-path (gr-worldgen-write-dump))
+            (princ (format "WORLDGEN-DUMP %s\n" dump-path)))
+          (when gr-missing
+            (princ (format "WORLDGEN-MISSING %s\n" (reverse gr-missing)))))
+      (setq gr-step-budget old-budget)
+      (setq gr-depth-limit old-depth)
+      (gr-worldgen-restore-local-natives))))
+
+(when gr-worldgen-autorun
+  (gr-worldgen-run gr-worldgen-use-existing-state))

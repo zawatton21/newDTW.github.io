@@ -36,8 +36,11 @@
 (defvar gr-event-names (make-hash-table :test 'equal)
   "Set of event names mirrored from stateDiffRunner.ts EVENT_NAMES.")
 
-(defconst gr-data-root "C:/Users/kuroz/newDTW"
+(defvar gr-data-root "C:/Users/kuroz/newDTW"
   "TS adapter data root mirrored from src/renderer/adapter/bload.ts.")
+
+(defvar gr-bsave-cache (make-hash-table :test 'equal)
+  "Per-path msgpack maps used by `gr-bsave' during a save sequence.")
 
 (dolist (name '(
                 "catch"
@@ -491,6 +494,126 @@
              (gethash (string-to-number key) table))))
    (t nil)))
 
+(defun gr-msgpack-encode-byte (byte)
+  "Encode BYTE as a one-byte unibyte string."
+  (unibyte-string (logand byte #xff)))
+
+(defun gr-msgpack-encode-uint (value count)
+  "Encode VALUE as COUNT big-endian bytes."
+  (let ((out nil)
+        (idx (1- count)))
+    (while (>= idx 0)
+      (push (logand (ash value (* -8 idx)) #xff) out)
+      (setq idx (1- idx)))
+    (apply #'unibyte-string (nreverse out))))
+
+(defun gr-msgpack-seq-to-list (value)
+  "Return VALUE as a plain list for msgpack encoding."
+  (cond
+   ((null value) nil)
+   ((vectorp value) (append value nil))
+   ((listp value) value)
+   (t (error "gr-msgpack: expected sequence, got %S" value))))
+
+(defun gr-msgpack-encode-string (value)
+  "Encode VALUE as msgpack UTF-8 string."
+  (let* ((bytes (encode-coding-string (format "%s" value) 'utf-8 t))
+         (len (length bytes)))
+    (cond
+     ((<= len 31)
+      (concat (gr-msgpack-encode-byte (+ #xa0 len)) bytes))
+     ((<= len 255)
+      (concat (gr-msgpack-encode-byte #xd9)
+              (gr-msgpack-encode-uint len 1)
+              bytes))
+     ((<= len 65535)
+      (concat (gr-msgpack-encode-byte #xda)
+              (gr-msgpack-encode-uint len 2)
+              bytes))
+     (t (error "gr-msgpack: string too long (%s bytes)" len)))))
+
+(defun gr-msgpack-encode-array (value)
+  "Encode VALUE as msgpack array."
+  (let* ((items (gr-msgpack-seq-to-list value))
+         (len (length items))
+         (body (unibyte-string)))
+    (dolist (item items)
+      (setq body (concat body (gr-msgpack-encode-value item))))
+    (cond
+     ((<= len 15)
+      (concat (gr-msgpack-encode-byte (+ #x90 len)) body))
+     ((<= len 65535)
+      (concat (gr-msgpack-encode-byte #xdc)
+              (gr-msgpack-encode-uint len 2)
+              body))
+     (t (error "gr-msgpack: array too long (%s items)" len)))))
+
+(defun gr-msgpack-key-sort (a b)
+  "Stable ordering for msgpack map keys A and B."
+  (let ((an (and (numberp a) a))
+        (bn (and (numberp b) b)))
+    (cond
+     ((and an bn) (< an bn))
+     ((numberp a) t)
+     ((numberp b) nil)
+     (t (string< (format "%s" a) (format "%s" b))))))
+
+(defun gr-msgpack-encode-map (value)
+  "Encode VALUE as msgpack map."
+  (let ((keys nil)
+        (body (unibyte-string)))
+    (maphash (lambda (key _val) (push key keys)) value)
+    (setq keys (sort keys #'gr-msgpack-key-sort))
+    (dolist (key keys)
+      (setq body
+            (concat body
+                    (gr-msgpack-encode-value key)
+                    (gr-msgpack-encode-value (gethash key value)))))
+    (let ((len (length keys)))
+      (cond
+       ((<= len 15)
+        (concat (gr-msgpack-encode-byte (+ #x80 len)) body))
+       ((<= len 65535)
+        (concat (gr-msgpack-encode-byte #xde)
+                (gr-msgpack-encode-uint len 2)
+                body))
+       (t (error "gr-msgpack: map too large (%s keys)" len))))))
+
+(defun gr-msgpack-encode-value (value)
+  "Encode VALUE using the bounded msgpack subset used by the save system."
+  (cond
+   ((null value) (gr-msgpack-encode-byte #xc0))
+   ((eq value t) (gr-msgpack-encode-byte #xc3))
+   ((hash-table-p value) (gr-msgpack-encode-map value))
+   ((or (vectorp value) (listp value)) (gr-msgpack-encode-array value))
+   ((stringp value) (gr-msgpack-encode-string value))
+   ((integerp value)
+    (cond
+     ((and (>= value 0) (<= value 127))
+      (gr-msgpack-encode-byte value))
+     ((and (< value 0) (>= value -32))
+      (gr-msgpack-encode-byte (+ 256 value)))
+     ((and (>= value 0) (<= value 255))
+      (concat (gr-msgpack-encode-byte #xcc)
+              (gr-msgpack-encode-uint value 1)))
+     ((and (>= value 0) (<= value 65535))
+      (concat (gr-msgpack-encode-byte #xcd)
+              (gr-msgpack-encode-uint value 2)))
+     ((and (>= value 0) (<= value 4294967295))
+      (concat (gr-msgpack-encode-byte #xce)
+              (gr-msgpack-encode-uint value 4)))
+     ((and (>= value -128) (<= value 127))
+      (concat (gr-msgpack-encode-byte #xd0)
+              (gr-msgpack-encode-uint (logand value #xff) 1)))
+     ((and (>= value -32768) (<= value 32767))
+      (concat (gr-msgpack-encode-byte #xd1)
+              (gr-msgpack-encode-uint (logand value #xffff) 2)))
+     ((and (>= value -2147483648) (<= value 2147483647))
+      (concat (gr-msgpack-encode-byte #xd2)
+              (gr-msgpack-encode-uint (logand value #xffffffff) 4)))
+     (t (error "gr-msgpack: integer out of range %s" value))))
+   (t (error "gr-msgpack: unsupported value %S" value))))
+
 (defun gr-file-exists (file-name)
   "Mirror Adap.exist for non-audio files and update strsize."
   (let* ((path (gr-data-path file-name))
@@ -503,6 +626,14 @@
                             (if (integerp size) size 0)
                           -1)))
     exists))
+
+(defun gr-delete-file (file-name)
+  "Mirror Adap.delete_ within `gr-data-root'."
+  (let ((path (gr-data-path file-name)))
+    (remhash path gr-bsave-cache)
+    (when (file-exists-p path)
+      (delete-file path))
+    0))
 
 (defun gr-read-key-state (keycode)
   "Read KEYCODE through the optional TS-mirrored key hook."
@@ -542,6 +673,34 @@ the save files, then mirrors the TS adapter's OFFSET selection."
           (when (and (hash-table-p decoded) (null value))
             (error "gr-bload missing key %s in %s" key path))
           value))))))
+
+(defun gr-bsave (file-name data data-size offset)
+  "Mirror Adap.bsave for the bounded msgpack save subset."
+  (let* ((path (gr-data-path file-name))
+         (key (format "%s" (if (null offset) 0 offset)))
+         (table (or (gethash path gr-bsave-cache)
+                    (let ((decoded
+                           (if (file-exists-p path)
+                               (with-temp-buffer
+                                 (set-buffer-multibyte nil)
+                                 (insert-file-contents-literally path)
+                                 (gr-msgpack-decode-buffer))
+                             nil)))
+                      (puthash path
+                               (if (hash-table-p decoded)
+                                   decoded
+                                 (make-hash-table :test 'equal))
+                               gr-bsave-cache))))
+         (encoded nil))
+    (make-directory (file-name-directory path) t)
+    (puthash key data table)
+    (setq encoded (gr-msgpack-encode-value table))
+    (with-temp-buffer
+      (set-buffer-multibyte nil)
+      (insert encoded)
+      (let ((coding-system-for-write 'no-conversion))
+        (write-region (point-min) (point-max) path nil 'silent)))
+    data))
 
 (defun gr-make-array (length1 &optional length2 length3 length4)
   "Mirror Adap.dim for up to 3 dimensions."
@@ -604,6 +763,35 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 (defun gr-charactor-info-dim (count)
   "Mirror Class.CharactorInfo.dim."
   (gr-record-dim count 40))
+
+(defun gr-item-info-load (data)
+  "Mirror Class.ItemInfo.Load."
+  (let ((src (gr-msgpack-seq-to-list data))
+        (out (make-vector 30 0))
+        (idx 0))
+    (dolist (value src)
+      (when (< idx 30)
+        (aset out idx value)
+        (setq idx (1+ idx))))
+    out))
+
+(defun gr-charactor-info-load (data)
+  "Mirror Class.CharactorInfo.Load."
+  (let ((src (gr-msgpack-seq-to-list data))
+        (out (make-vector 40 0))
+        (idx 0))
+    (dolist (value src)
+      (when (< idx 40)
+        (aset out idx value)
+        (setq idx (1+ idx))))
+    out))
+
+(defun gr-record-save (data)
+  "Mirror ItemInfo/CharactorInfo.Save for vector-backed records."
+  (cond
+   ((vectorp data) data)
+   ((listp data) (apply #'vector data))
+   (t (error "gr-record-save: unsupported record %S" data))))
 
 (defun gr-peek-char (string-data index)
   "Mirror Adap.peek for the map-template strings."
@@ -669,6 +857,7 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 (defun gr-reset ()
   "Reset interpreter state (keeps loaded functions)."
   (setq gr-state (make-hash-table :test 'equal))
+  (clrhash gr-bsave-cache)
   (setq gr-sumi nil gr-trace nil gr-missing nil gr-depth 0))
 
 (defun gr-defun (name ir)
@@ -684,6 +873,9 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 ;; func139 ends by entering the title flow; keep the data-loading verification
 ;; path focused on the loader itself when running batch checks.
 (gr-defnative "func139A" (lambda (&rest _args) nil))
+(gr-defnative "func0956" (lambda (&rest _args) nil))
+(gr-defnative "func183" (lambda (&rest _args) nil))
+(gr-defnative "func505" (lambda (&rest _args) nil))
 
 (defun gr-get (slot)
   (gr-ensure-state)

@@ -254,6 +254,10 @@ function isGeneratedGuard(stmt) {
 }
 
 function emitStatement(stmt, lines, level, ctx) {
+  if (ts.isBlock(stmt)) {
+    for (const inner of stmt.statements) emitStatement(inner, lines, level, ctx);
+    return;
+  }
   if (ts.isExpressionStatement(stmt)) {
     emitExpressionStatement(stmt.expression, lines, level, ctx);
     return;
@@ -299,6 +303,14 @@ function emitVariableStatement(stmt, lines, level, ctx) {
 }
 
 function emitExpressionStatement(expr, lines, level, ctx) {
+  if (ts.isCallExpression(expr) && isForEachCall(expr)) {
+    emitForEach(expr, lines, level, ctx);
+    return;
+  }
+  if (ts.isCallExpression(expr) && isPushCall(expr)) {
+    emitPush(expr, lines, level, ctx);
+    return;
+  }
   if (isDebugPrint(expr)) {
     lines.push(`${indent(level)}(push ${extractNumericLiteral(expr.arguments[0], ctx)} gr-trace)`);
     return;
@@ -335,6 +347,38 @@ function emitAssignment(left, right, operator, lines, level, ctx) {
     value = `(- (gr-num ${target.read}) (gr-num ${value}))`;
   }
   lines.push(`${indent(level)}${target.write(value)}`);
+}
+
+function emitPush(expr, lines, level, ctx) {
+  const target = emitTarget(expr.expression.expression, ctx);
+  const value = emitValue(expr.arguments[0], ctx);
+  lines.push(`${indent(level)}${target.write(`(append ${target.read} (list ${value}))`)}`);
+}
+
+function emitForEach(expr, lines, level, ctx) {
+  const callback = expr.arguments[0];
+  if (!(ts.isFunctionExpression(callback) || ts.isArrowFunction(callback))) {
+    throw unsupported(expr, ctx, "forEach callback");
+  }
+  if (callback.parameters.length !== 1 || !ts.isIdentifier(callback.parameters[0].name)) {
+    throw unsupported(expr, ctx, "forEach parameters");
+  }
+  const loopVar = callback.parameters[0].name.text;
+  const seqExpr = emitValue(expr.expression.expression, ctx);
+  lines.push(`${indent(level)}(let ((gr_seq ${seqExpr}) (gr_i 0) (${loopVar} nil))`);
+  lines.push(`${indent(level + 1)}(while (< gr_i (length gr_seq))`);
+  lines.push(`${indent(level + 2)}(setq ${loopVar} (gr-index-ref gr_seq gr_i))`);
+  const loopCtx = { ...ctx, locals: [...ctx.locals, loopVar] };
+  if (ts.isBlock(callback.body)) {
+    for (const stmt of callback.body.statements) {
+      emitStatement(stmt, lines, level + 2, loopCtx);
+    }
+  } else {
+    emitExpressionStatement(callback.body, lines, level + 2, loopCtx);
+  }
+  lines.push(`${indent(level + 2)}(setq gr_i (1+ gr_i))`);
+  lines.push(`${indent(level + 1)})`);
+  lines.push(`${indent(level)})`);
 }
 
 function emitUnaryMutation(expr, lines, level, ctx) {
@@ -462,6 +506,12 @@ function emitCall(expr, ctx) {
   if (ts.isIdentifier(expr.expression) && expr.expression.text === "tf") {
     return emitValue(expr, ctx);
   }
+  if (ts.isPropertyAccessExpression(expr.expression)
+      && ts.isIdentifier(expr.expression.expression)
+      && expr.expression.expression.text === "Adap"
+      && expr.expression.name.text === "exist") {
+    return `(gr-file-exists ${emitValue(expr.arguments[0], ctx)})`;
+  }
   if (ts.isIdentifier(expr.expression) && isRuntimeName(expr.expression.text)) {
     const args = expr.arguments.map((arg) => emitValue(arg, ctx));
     return `(gr-run-func ${JSON.stringify(expr.expression.text)}${args.length ? ` ${args.join(" ")}` : ""})`;
@@ -493,6 +543,9 @@ function emitCall(expr, ctx) {
   }
   if (info.kind === "special-font") {
     return `(gr-set "line_size" ${info.lineSize(args)})`;
+  }
+  if (info.kind === "special-bsave") {
+    return `(gr-bsave ${args[0] || "\"\""} ${args[1] || "nil"} ${args[2] || "nil"} ${args[3] || "nil"})`;
   }
   if (info.kind === "special-mes") {
     return info.render(args);
@@ -529,11 +582,14 @@ function classifyCall(call, ctx) {
   if (!ts.isPropertyAccessExpression(call.expression)) throw unsupported(call, ctx, "call target");
   const root = call.expression.expression;
   const method = call.expression.name.text;
-  if (ts.isIdentifier(root) && (root.text === "Func" || root.text === "Stand" || root.text === "Enemy")) {
+  if (ts.isIdentifier(root) && (root.text === "Func" || root.text === "Stand" || root.text === "Enemy" || root.text === "Title")) {
     if (/^func[\dA-Za-z]+$/i.test(method) || /^setMessage$/.test(method) || /^AutoDraw$/.test(method) || /^funcLangDisplay$/.test(method)) {
       if (method === "AutoDraw") return { kind: "event", name: "game-auto-draw" };
       if (method === "setMessage") return { kind: "event", name: "game-set-message" };
       return { kind: "core-call", name: method };
+    }
+    if (root.text === "Func" && method === "makepal") {
+      return { kind: "event", name: "func-make-palette" };
     }
     if (root.text === "Func" && method === "imeset") {
       return { kind: "event", name: "func-ime-set" };
@@ -562,14 +618,26 @@ function classifyCall(call, ctx) {
       objsel: "dtw-object-select",
       dialog: "dtw-dialog",
       chdir: "dtw-change-directory",
+      delete_: "dtw-delete-file",
       clrobj: "dtw-clear-objects",
       title: "dtw-set-title",
       width: "dtw-resize-window",
+      ShowWindow: "dtw-show-window",
+      objmode: "dtw-object-mode",
+      objsize: "dtw-object-size",
+      combox: "dtw-combo-box",
+      listbox: "dtw-list-box",
+      button: "dtw-button",
+      chkbox: "dtw-check-box",
+      notesel: "dtw-note-select",
+      noteload: "dtw-note-load",
+      netclose: "dtw-network-close",
     };
     if (eventMap[method]) return { kind: "event", name: eventMap[method] };
     if (method === "ResetKey") return { kind: "special-reset-key" };
     if (method === "DMSTOP") return { kind: "event", name: "dtw-music-stop" };
-    if (method === "wait" || method === "await_" || method === "onexit" || method === "bsave" || method === "onkey" || method === "ck_joystick" || method === "randomize" || method === "end" || method === "HMMINIT" || method === "oncmd_gosub" || method === "GetWindowLongA" || method === "SetWindowLongA" || method === "SetWindowPos" || method === "DSGETMASTERVOLUME") return { kind: "noop" };
+    if (method === "wait" || method === "await_" || method === "onexit" || method === "onkey" || method === "ck_joystick" || method === "randomize" || method === "end" || method === "HMMINIT" || method === "oncmd_gosub" || method === "GetWindowLongA" || method === "SetWindowLongA" || method === "SetWindowPos" || method === "DSGETMASTERVOLUME") return { kind: "noop" };
+    if (method === "bsave") return { kind: "special-bsave" };
     if (method === "gmode") {
       return {
         kind: "special-gmode",
@@ -735,6 +803,11 @@ function emitValue(node, ctx) {
     if (isGvarPropertyAccess(node)) {
       return `(gr-get ${emitSlotKey(extractGvarSlot(node, ctx))})`;
     }
+    if (ts.isIdentifier(node.expression)
+        && ["Func", "Title", "Stand", "Enemy"].includes(node.expression.text)
+        && /^func[\dA-Za-z]+$/i.test(node.name.text)) {
+      return JSON.stringify(node.name.text);
+    }
     return `(gr-prop-ref ${emitValue(node.expression, ctx)} ${JSON.stringify(node.name.text)})`;
   }
   if (ts.isElementAccessExpression(node)) {
@@ -744,6 +817,12 @@ function emitValue(node, ctx) {
     return `(- ${emitNumericValue(node.operand, ctx)})`;
   }
   if (ts.isBinaryExpression(node)) {
+    if (node.operatorToken.kind === ts.SyntaxKind.BarBarToken) {
+      return `(let ((gr_lhs ${emitValue(node.left, ctx)})) (if (not (or (equal gr_lhs nil) (equal gr_lhs 0))) gr_lhs ${emitValue(node.right, ctx)}))`;
+    }
+    if (node.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken) {
+      return `(let ((gr_lhs ${emitValue(node.left, ctx)})) (if (not (or (equal gr_lhs nil) (equal gr_lhs 0))) ${emitValue(node.right, ctx)} gr_lhs))`;
+    }
     if (isAssignmentOperator(node.operatorToken.kind)) {
       const target = emitTarget(node.left, ctx);
       const value = emitValue(node.right, ctx);
@@ -781,6 +860,9 @@ function emitValue(node, ctx) {
       const args = node.arguments.map((arg) => emitValue(arg, ctx));
       return `(gr-format ${args.join(" ")})`;
     }
+    if (ts.isIdentifier(node.expression) && node.expression.text === "Array" && node.arguments.length === 0) {
+      return "nil";
+    }
     if (ts.isIdentifier(node.expression) && (node.expression.text === "applyItem" || node.expression.text === "postProcessItem")) {
       return "nil";
     }
@@ -798,12 +880,21 @@ function emitValue(node, ctx) {
       if (className === "ItemInfo" && method === "dim") {
         return `(gr-item-info-dim ${emitNumericValue(node.arguments[0], ctx)})`;
       }
+      if (className === "ItemInfo" && method === "Load") {
+        return `(gr-item-info-load ${emitValue(node.arguments[0], ctx)})`;
+      }
       if (className === "CharactorInfo" && method === "dim") {
         return `(gr-charactor-info-dim ${emitNumericValue(node.arguments[0], ctx)})`;
+      }
+      if (className === "CharactorInfo" && method === "Load") {
+        return `(gr-charactor-info-load ${emitValue(node.arguments[0], ctx)})`;
       }
     }
     if (method === "toString" && node.arguments.length === 0) {
       return `(format "%s" ${emitValue(root, ctx)})`;
+    }
+    if (method === "Save" && node.arguments.length === 0) {
+      return `(gr-record-save ${emitValue(root, ctx)})`;
     }
     if (ts.isIdentifier(root) && root.text === "Adap") {
       if (method === "rnd") return `(gr-random ${emitNumericValue(node.arguments[0], ctx)})`;
@@ -823,6 +914,7 @@ function emitValue(node, ctx) {
     throw unsupported(node, ctx, `value call ${method}`);
   }
   if (ts.isArrayLiteralExpression(node)) {
+    if (node.elements.length === 0) return "nil";
     return `(vector ${node.elements.map((element) => emitValue(element, ctx)).join(" ")})`;
   }
   if (ts.isFunctionExpression(node) || ts.isArrowFunction(node)) {
@@ -882,6 +974,19 @@ function indent(level) {
 function unsupported(node, ctx, detail) {
   const snippet = node.getText(ctx.sf).replace(/\s+/g, " ").trim();
   return new Error(`${ctx.name}: unsupported ${detail}: ${snippet}`);
+}
+
+function isForEachCall(expr) {
+  return ts.isPropertyAccessExpression(expr.expression)
+    && expr.expression.name.text === "forEach"
+    && expr.arguments.length === 1
+    && (ts.isFunctionExpression(expr.arguments[0]) || ts.isArrowFunction(expr.arguments[0]));
+}
+
+function isPushCall(expr) {
+  return ts.isPropertyAccessExpression(expr.expression)
+    && expr.expression.name.text === "push"
+    && expr.arguments.length === 1;
 }
 
 module.exports = {
