@@ -11,11 +11,14 @@
  *   <KEYCODE>\n
  *   HELD <KEYCODE...>\n
  *
- * where TOKEN is one of UP / DOWN / LEFT / RIGHT and SEQ is a per-process
- * monotonically increasing counter (one increment per keypress).  KEYCODE is
- * the numeric JS keyCode for the triggering key.  The HELD line lists all
- * currently held numeric keycodes space-separated after the literal "HELD".
- * The first line is preserved verbatim for the existing token/SEQ readers.
+ * where TOKEN is one of UP / DOWN / LEFT / RIGHT / IDLE and SEQ is a
+ * per-process monotonically increasing counter (one increment per write).
+ * KEYCODE is the numeric JS keyCode for the triggering key, or 0 for an IDLE
+ * release snapshot.  The HELD line lists all currently held numeric keycodes
+ * space-separated after the literal "HELD".  A scripted/live key is held only
+ * for a bounded window; this tool emits an IDLE snapshot automatically after
+ * that window so readers do not latch the last press forever.  The first line
+ * is preserved verbatim for the existing token/SEQ readers.
  *
  * The write is atomic (write build/key-state.txt.tmp, then rename over the
  * real path) so the elisp reader never observes a half-written line.
@@ -56,6 +59,8 @@ const KEY_CODES = {
 let seq = 0;
 let shuttingDown = false;
 const heldKeyCodes = new Set();
+const HOLD_MS = 125;
+let releaseTimer = null;
 
 function ensureBuildDir() {
   const dir = path.dirname(outPath);
@@ -68,6 +73,23 @@ function writeKeyState(token, keyCode) {
   fs.writeFileSync(tmpPath, `${token} ${seq}\n${keyCode}\n${heldLine}\n`, 'utf8');
   fs.renameSync(tmpPath, outPath);
   return seq;
+}
+
+function clearReleaseTimer() {
+  if (releaseTimer) {
+    clearTimeout(releaseTimer);
+    releaseTimer = null;
+  }
+}
+
+function scheduleRelease() {
+  clearReleaseTimer();
+  releaseTimer = setTimeout(() => {
+    heldKeyCodes.clear();
+    const n = writeKeyState('IDLE', 0);
+    console.log(`IDLE keyCode=0 (seq ${n})`);
+    releaseTimer = null;
+  }, HOLD_MS);
 }
 
 function printLegend() {
@@ -83,6 +105,7 @@ function restoreTerminal() {
 function shutdown(code) {
   if (shuttingDown) return;
   shuttingDown = true;
+  clearReleaseTimer();
   restoreTerminal();
   console.log(`key_input_server: exiting after ${seq} keypress(es) sent, terminal restored.`);
   process.exit(code);
@@ -99,6 +122,7 @@ function onKeypress(str, key) {
   heldKeyCodes.add(keyCode);
   const n = writeKeyState(token, keyCode);
   console.log(`${token} keyCode=${keyCode} (seq ${n})`);
+  scheduleRelease();
 }
 
 function main() {
