@@ -381,6 +381,86 @@
       (random n)
     0))
 
+(defun gr-make-array (length1 &optional length2 length3 length4)
+  "Mirror Adap.dim for up to 3 dimensions."
+  (when (not (or (null length4) (equal length4 nil)))
+    (error "gr-make-array: length4 unsupported"))
+  (let ((n1 (max 0 (gr-num length1)))
+        (n2 (and (not (null length2)) (gr-num length2)))
+        (n3 (and (not (null length3)) (gr-num length3))))
+    (if (null length2)
+        (make-vector n1 0)
+      (apply #'vector
+             (let ((i 0) (rows nil))
+               (while (< i n1)
+                 (push (if (null length3)
+                           (make-vector n2 0)
+                         (apply #'vector
+                                (let ((j 0) (cells nil))
+                                  (while (< j n2)
+                                    (push (make-vector n3 0) cells)
+                                    (setq j (1+ j)))
+                                  (nreverse cells))))
+                       rows)
+                 (setq i (1+ i)))
+               (nreverse rows))))))
+
+(defun gr-make-string-array (_length1 &optional length2 length3)
+  "Mirror Adap.sdim."
+  (if (null length2)
+      ""
+    (let ((n2 (max 0 (gr-num length2)))
+          (n3 (and (not (null length3)) (gr-num length3))))
+      (apply #'vector
+             (let ((i 0) (rows nil))
+               (while (< i n2)
+                 (push (if (null length3)
+                           ""
+                         (apply #'vector
+                                (let ((j 0) (cells nil))
+                                  (while (< j n3)
+                                    (push "" cells)
+                                    (setq j (1+ j)))
+                                  (nreverse cells))))
+                       rows)
+                 (setq i (1+ i)))
+               (nreverse rows))))))
+
+(defun gr-record-dim (count width)
+  "Create COUNT vector-backed VarN records of WIDTH slots."
+  (apply #'vector
+         (let ((i 0) (rows nil))
+           (while (< i (max 0 (gr-num count)))
+             (push (make-vector width 0) rows)
+             (setq i (1+ i)))
+           (nreverse rows))))
+
+(defun gr-item-info-dim (count)
+  "Mirror Class.ItemInfo.dim."
+  (gr-record-dim count 30))
+
+(defun gr-charactor-info-dim (count)
+  "Mirror Class.CharactorInfo.dim."
+  (gr-record-dim count 40))
+
+(defun gr-peek-char (string-data index)
+  "Mirror Adap.peek for the map-template strings."
+  (let* ((s (format "%s" (or string-data "")))
+         (i (gr-num index))
+         (ch (and (>= i 0) (< i (length s)) (aref s i))))
+    (cond
+     ((equal ch ?1) 49) ((equal ch ?2) 50) ((equal ch ?3) 51)
+     ((equal ch ?4) 52) ((equal ch ?5) 53) ((equal ch ?6) 54)
+     ((equal ch ?7) 55) ((equal ch ?8) 56) ((equal ch ?9) 57)
+     ((equal ch ?x) 120) ((equal ch ?y) 121) ((equal ch ?z) 122)
+     ((equal ch ?#) 35) ((equal ch ?.) 46) ((equal ch ?^) 94)
+     ((equal ch ?I) 73)
+     ((equal ch ?a) 97) ((equal ch ?b) 98) ((equal ch ?c) 99)
+     ((equal ch ?d) 100) ((equal ch ?e) 101) ((equal ch ?f) 102)
+     ((equal ch ?g) 103) ((equal ch ?h) 104) ((equal ch ?i) 105)
+     ((equal ch ?j) 106) ((equal ch ?k) 107) ((equal ch ?l) 108)
+     (t i))))
+
 (defun gr-num (x)
   "Coerce X to a number, matching the generated runtime's TS-style fallback."
   (cond
