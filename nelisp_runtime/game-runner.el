@@ -35,6 +35,16 @@
 (defvar gr-step-count 0 "Executed IR entry count for the current run.")
 (defvar gr-event-names (make-hash-table :test 'equal)
   "Set of event names mirrored from stateDiffRunner.ts EVENT_NAMES.")
+(defvar gr-event-symbols (make-hash-table :test 'eq)
+  "Interned event names for hot dispatch.")
+(defconst gr--missing-sentinel (make-symbol "gr-missing-sentinel"))
+(defconst gr-entry-ops '(core-call dtw-debug-print index-set)
+  "Entry ops handled directly by `gr-exec-entry'.")
+(defconst gr-expr-ops '(state-slot-ref math-add math-sub math-mul bitwise-and
+                        bitwise-or bitwise-xor math-div math-floor math-trunc
+                        math-abs math-mod dtw-random dtw-read-key-state
+                        index-ref i18n-format)
+  "Expression ops handled directly by `gr-eval-op'.")
 
 (defvar gr-data-root "C:/Users/kuroz/newDTW"
   "TS adapter data root mirrored from src/renderer/adapter/bload.ts.")
@@ -346,12 +356,8 @@
                 "string-starts-with"
                 "value-call"))
   ;; Mirrors src/renderer/nelisp_bridge/stateDiffRunner.ts EVENT_NAMES.
-  (puthash name t gr-event-names))
-
-(defun gr-ensure-state ()
-  "Ensure the runtime state hash exists."
-  (unless (hash-table-p gr-state)
-    (setq gr-state (make-hash-table :test 'equal))))
+  (puthash name t gr-event-names)
+  (puthash (intern name) t gr-event-symbols))
 
 (defun gr-sequencep (x)
   "Compatibility helper for sequence-like values."
@@ -860,10 +866,37 @@ the save files, then mirrors the TS adapter's OFFSET selection."
   (clrhash gr-bsave-cache)
   (setq gr-sumi nil gr-trace nil gr-missing nil gr-depth 0))
 
+(defun gr-op-name-p (name)
+  "Non-nil when NAME is a known IR op string."
+  (or (member (intern-soft name) gr-entry-ops)
+      (member (intern-soft name) gr-expr-ops)
+      (gethash name gr-event-names)))
+
+(defun gr-normalize-ir (node &optional form-kind)
+  "Convert hot IR op strings in NODE into interned symbols."
+  (cond
+   ((vectorp node)
+    node)
+   ((not (consp node))
+    node)
+   ((eq form-kind 'expr)
+    (let ((op (car node))
+          (args (cdr node)))
+      (cons (if (and (stringp op) (gr-op-name-p op)) (intern op) op)
+            (mapcar #'gr-normalize-ir args))))
+   ((and (null (cdr node)) (consp (car node)))
+    (list (gr-normalize-ir (car node) 'expr)))
+   ((numberp (car node))
+    (list (car node) (gr-normalize-ir (nth 1 node))))
+   ((and (stringp (car node)) (gr-op-name-p (car node)))
+    (cons (intern (car node)) (mapcar #'gr-normalize-ir (cdr node))))
+   (t
+    (mapcar #'gr-normalize-ir node))))
+
 (defun gr-defun (name ir)
   "Register IR for NAME."
   (unless (hash-table-p gr-funcs) (setq gr-funcs (make-hash-table :test 'equal)))
-  (puthash name ir gr-funcs))
+  (puthash name (gr-normalize-ir ir) gr-funcs))
 
 (defun gr-defnative (name fn)
   "Register native elisp implementation FN for NAME."
@@ -878,16 +911,12 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 (gr-defnative "func505" (lambda (&rest _args) nil))
 
 (defun gr-get (slot)
-  (gr-ensure-state)
-  (let ((missing (make-symbol "gr-missing"))
-        (value nil))
-    (setq value (gethash slot gr-state missing))
-    (if (eq value missing)
+  (let ((value (gethash slot gr-state gr--missing-sentinel)))
+    (if (eq value gr--missing-sentinel)
         (if (integerp slot) 0 nil)
       value)))
 
 (defun gr-set (slot val)
-  (gr-ensure-state)
   (puthash slot val gr-state))
 
 (defun gr-step-tick ()
@@ -899,7 +928,9 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 
 (defun gr-expr-p (x)
   "Non-nil if X is a wrapped expression node ((op args...))."
-  (and (consp x) (null (cdr x)) (consp (car x)) (stringp (caar x))))
+  (and (consp x) (null (cdr x)) (consp (car x))
+       (let ((op (caar x)))
+         (or (symbolp op) (stringp op)))))
 
 (defun gr-eval (x)
   "Evaluate an IR expression node X to a value."
@@ -911,25 +942,26 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 (defun gr-eval-op (form)
   "Evaluate an expression op FORM = (OP ARG...)."
   (let ((op (car form)))
+    (when (stringp op) (setq op (intern op)))
     (cond
-     ((equal op "state-slot-ref") (gr-get (gr-eval (nth 1 form))))
-     ((equal op "math-add") (+ (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "math-sub") (- (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "math-mul") (* (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "bitwise-and") (logand (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "bitwise-or")  (logior (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "bitwise-xor") (logxor (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "math-div") (/ (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "math-floor") (floor (gr-num (gr-eval (nth 1 form)))))
-     ((equal op "math-trunc") (truncate (gr-num (gr-eval (nth 1 form)))))
-     ((equal op "math-abs") (abs (gr-num (gr-eval (nth 1 form)))))
-     ((equal op "math-mod") (mod (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
-     ((equal op "dtw-random") (gr-random (gr-num (gr-eval (nth 1 form)))))
-     ((equal op "dtw-read-key-state")
+     ((eq op 'state-slot-ref) (gr-get (gr-eval (nth 1 form))))
+     ((eq op 'math-add) (+ (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'math-sub) (- (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'math-mul) (* (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'bitwise-and) (logand (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'bitwise-or)  (logior (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'bitwise-xor) (logxor (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'math-div) (/ (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'math-floor) (floor (gr-num (gr-eval (nth 1 form)))))
+     ((eq op 'math-trunc) (truncate (gr-num (gr-eval (nth 1 form)))))
+     ((eq op 'math-abs) (abs (gr-num (gr-eval (nth 1 form)))))
+     ((eq op 'math-mod) (mod (gr-num (gr-eval (nth 1 form))) (gr-num (gr-eval (nth 2 form)))))
+     ((eq op 'dtw-random) (gr-random (gr-num (gr-eval (nth 1 form)))))
+     ((eq op 'dtw-read-key-state)
       (gr-read-key-state (gr-eval (nth 1 form))))
-     ((equal op "index-ref")
+     ((eq op 'index-ref)
       (gr-index-ref (gr-eval (nth 1 form)) (gr-eval (nth 2 form))))
-     ((equal op "i18n-format")
+     ((eq op 'i18n-format)
       (apply #'gr-format
              (gr-eval (nth 1 form))
              (mapcar #'gr-eval (nthcdr 2 form))))
@@ -958,26 +990,29 @@ the save files, then mirrors the TS adapter's OFFSET selection."
    ((null e) nil)
    ((numberp (car e))                   ; (SLOT VALUE) state write
     (gr-set (car e) (gr-eval (nth 1 e))))
-   ((stringp (car e))
+   ((or (stringp (car e)) (symbolp (car e)))
     (let ((op (car e)))
+      (when (stringp op) (setq op (intern op)))
       (cond
-       ((equal op "dtw-debug-print") (push (gr-eval (nth 1 e)) gr-trace))
-       ((equal op "core-call")
+       ((eq op 'dtw-debug-print) (push (gr-eval (nth 1 e)) gr-trace))
+       ((eq op 'core-call)
         (let ((nm (gr-eval (nth 1 e)))
               (args (mapcar #'gr-eval (nthcdr 2 e))))
           (when (stringp nm)
             (when (gr-string-prefix-p "Func." nm) (setq nm (substring nm 5)))
             (apply #'gr-run-func nm args))))
-       ((equal op "index-set")
+       ((eq op 'index-set)
         (let ((arr (gr-eval (nth 1 e))) (i (gr-eval (nth 2 e))) (v (gr-eval (nth 3 e))))
           (when (and (arrayp arr) (integerp i) (>= i 0) (< i (length arr)))
             (aset arr i v))))
-       ((gethash op gr-event-names)
-        (push (cons op (mapcar #'gr-eval (cdr e))) gr-sumi))
+       ((gethash op gr-event-symbols)
+        (push (cons (symbol-name op) (mapcar #'gr-eval (cdr e))) gr-sumi))
        ((= (length e) 2)
-        (gr-set op (gr-eval (nth 1 e))))
+        (gr-set (if (symbolp op) (symbol-name op) op) (gr-eval (nth 1 e))))
        (t                               ; GUI/IO primitive -> sumi stream
-        (push (cons op (mapcar #'gr-eval (cdr e))) gr-sumi)))))
+        (push (cons (if (symbolp op) (symbol-name op) op)
+                    (mapcar #'gr-eval (cdr e)))
+              gr-sumi)))))
    ((consp (car e))                     ; nested sequence of entries
     (dolist (sub e) (gr-exec-entry sub)))
    (t nil)))

@@ -1,4 +1,4 @@
-;;; play.el --- interactive pure-elisp play driver -*- coding: utf-8; -*-
+;;; play.el --- interactive pure-elisp play driver -*- coding: utf-8; lexical-binding: t; -*-
 ;;
 ;; HUMAN RUNBOOK (5 terminals, run from the repo root):
 ;;
@@ -12,12 +12,9 @@
 ;;    node tools/live_feed_loop.js
 ;;
 ;; 4. Play driver
-;;    Copy-Item 'C:/Users/kuroz/Cowork/Notes/dev/newDTW-nelisp/nelisp_runtime/gamedata-state.el' 'nelisp_runtime/gamedata-state.el' -Force
-;;    $env:NODE_PATH='C:/Users/kuroz/Cowork/Notes/dev/newDTW-nelisp/node_modules'
-;;    node tools/statediff_to_elisp.mjs nelisp_runtime/gamedata-simple.el
-;;    node tools/generate_nelisp_conditional_runtime.js --names-file build/nelisp-conditional-runtime-names.txt
-;;    Get-Content nelisp_runtime/game-runner.el,nelisp_runtime/gamedata-simple.el,nelisp_runtime/gamedata-conditional.el,nelisp_runtime/gamedata-state.el,nelisp_runtime/sumi-json.el,nelisp_runtime/play.el | Set-Content build/_play-bundle.el
-;;    emacs -Q --batch --eval "(progn (prefer-coding-system 'utf-8) (setq coding-system-for-write 'utf-8))" -l build/_play-bundle.el
+;;    node tools/build_play_bundle.js
+;;    $env:HOME=(Resolve-Path build/emacs-home)
+;;    emacs -Q --batch --eval "(progn (prefer-coding-system 'utf-8) (setq coding-system-for-write 'utf-8))" -l build/play-bundle-loader.el
 ;;
 ;; 5. Real keyboard input server
 ;;    node tools/key_input_server.js
@@ -67,6 +64,34 @@
 (defvar gr-play-last-floor nil)
 (defvar gr-play-last-dungeon nil)
 (defvar gr-play-redraw-key-queries nil)
+(defvar gr-play-last-input-was-new nil)
+(defvar gr-play-depth-log nil)
+(defvar gr-play-first-frame-histogram nil)
+(defvar gr-play-first-frame-missing nil)
+(defvar gr-play-first-frame-state nil)
+(defvar gr-play-first-player-frame-histogram nil)
+(defvar gr-play-first-enemy-frame-histogram nil)
+
+(defun gr-play-buffer-histogram ()
+  "Return an alist of source buffer id -> blit count for the current gr-sumi."
+  (let ((table (make-hash-table :test 'equal))
+        (entry nil)
+        (buf nil))
+    (dolist (entry gr-sumi)
+      (when (and (consp entry)
+                 (equal (car entry) "gui-draw-image-scaled")
+                 (numberp (nth 1 entry)))
+        (setq buf (nth 1 entry))
+        (puthash buf (1+ (gethash buf table 0)) table)))
+    (let ((out nil))
+      (maphash (lambda (key value) (push (cons key value) out)) table)
+      (sort out (lambda (a b) (< (car a) (car b)))))))
+
+(defun gr-play-log-depth ()
+  "Log recursion depth every 100 loops."
+  (when (= 0 (mod gr-play-loop-count 100))
+    (push (cons gr-play-loop-count gr-depth) gr-play-depth-log)
+    (princ (format "PLAY-DEPTH loop=%d depth=%d\n" gr-play-loop-count gr-depth))))
 
 (defun gr-play-held-codes-list ()
   "Return the current held keycodes as a sorted list."
@@ -225,12 +250,15 @@
   "Refresh held keys from the current key-state.txt snapshot."
   (let ((record (gr-play-read-key-record))
         (held nil))
+    (setq gr-play-last-input-was-new nil)
     (if (gr-play-record-stale-p record)
         (progn
           (setq gr-play-held-codes (make-hash-table :test 'equal))
           (setq gr-play-last-token "IDLE")
           nil)
       (progn
+        (setq gr-play-last-input-was-new
+              (> (or (plist-get record :seq) 0) gr-play-last-seq))
         (setq gr-play-last-token (or (plist-get record :token) "IDLE"))
         (setq gr-play-last-seq (or (plist-get record :seq) gr-play-last-seq))
         (setq gr-play-held-codes (make-hash-table :test 'equal))
@@ -252,8 +280,9 @@
               (and (> gr-play-start-time 0)
                    (>= (- (float-time) gr-play-start-time) gr-play-duration-seconds)))
       (throw 'gr-play-frame-stop 'done))
-    (when (or (null record)
-              (= 0 (hash-table-count gr-play-held-codes)))
+    (when (and (not gr-play-last-input-was-new)
+               (or (null record)
+                   (= 0 (hash-table-count gr-play-held-codes))))
       (sleep-for gr-play-idle-sleep-seconds))
     (setq value (gethash idx gr-play-held-codes 0))
     value))
@@ -357,6 +386,7 @@
         (record-count 0)
         (snapshot nil)
         (json nil)
+        (histogram nil)
         (result nil))
     (setq gr-play-redraw-key-queries nil)
     (setq gr-sumi nil)
@@ -365,6 +395,29 @@
           (+ gr-play-draw-seconds (- (float-time) draw-start)))
     (setq gr-play-redraw-count (1+ gr-play-redraw-count))
     (setq record-count (length gr-sumi))
+    (setq histogram (gr-play-buffer-histogram))
+    (when (null gr-play-first-frame-histogram)
+      (setq gr-play-first-frame-histogram histogram)
+      (setq gr-play-first-frame-missing (reverse gr-missing))
+      (setq gr-play-first-frame-state
+            (list :var199 (gr-get 199)
+                  :var1226 (gr-get 1226)
+                  :var217 (gr-get 217)
+                  :var211 (gr-get 211)
+                  :enemy-facing (and (vectorp (gr-get 83))
+                                     (> (length (gr-get 83)) 1)
+                                     (gr-prop-ref (aref (gr-get 83) 1) "Var5"))))
+      (princ (format "PLAY-HIST first=%S\n" histogram))
+      (princ (format "PLAY-MISSING first=%S\n" gr-play-first-frame-missing))
+      (princ (format "PLAY-GATE first=%S\n" gr-play-first-frame-state)))
+    (when (and (null gr-play-first-player-frame-histogram)
+               (assoc 3 histogram))
+      (setq gr-play-first-player-frame-histogram histogram)
+      (princ (format "PLAY-HIST player=%S\n" histogram)))
+    (when (and (null gr-play-first-enemy-frame-histogram)
+               (or (assoc 6 histogram) (assoc 21 histogram) (assoc 27 histogram) (assoc 13 histogram)))
+      (setq gr-play-first-enemy-frame-histogram histogram)
+      (princ (format "PLAY-HIST enemy=%S\n" histogram)))
     (setq snapshot (gr-play-snapshot-state))
     (if (or (= record-count 0)
             (gr-play-snapshot-unchanged-p record-count snapshot))
@@ -385,25 +438,34 @@
 
 (defun gr-play-func009-wrapper (&rest args)
   "Loop pacing/termination wrapper around the real func009."
-  (let ((stop nil))
-    (setq gr-play-loop-count (1+ gr-play-loop-count))
-    (setq gr-step-count 0)
-    (condition-case err
-        (progn
-          (setq gr-trace nil gr-missing nil)
-          (setq stop (catch 'gr-play-frame-stop
-                       (apply gr-play-orig-func009 args)
-                       nil))
-          nil)
-      (error
-       (princ (format "PLAY-FRAME-ERROR loop=%d redraw=%d %s\n"
-                      gr-play-loop-count
-                      gr-play-redraw-count
-                      (error-message-string err)))))
-    (when (or stop
-              gr-play-quit-requested
-              (>= (- (float-time) gr-play-start-time) gr-play-duration-seconds))
-      (throw 'gr-play-stop 'done)))
+  (if (> gr-play-loop-count 0)
+      (throw 'gr-play-trampoline 'continue)
+    (let ((stop nil)
+          (done nil))
+      (while (not done)
+        (setq gr-play-loop-count (1+ gr-play-loop-count))
+        (gr-play-log-depth)
+        (setq gr-step-count 0)
+        (condition-case err
+            (progn
+              (setq gr-trace nil gr-missing nil)
+              (setq stop
+                    (catch 'gr-play-frame-stop
+                      (catch 'gr-play-trampoline
+                        (apply gr-play-orig-func009 args)
+                        nil)
+                      nil)))
+          (error
+           (princ (format "PLAY-FRAME-ERROR loop=%d redraw=%d %s\n"
+                          gr-play-loop-count
+                          gr-play-redraw-count
+                          (error-message-string err)))
+           (setq done t)))
+        (when (or stop
+                  gr-play-quit-requested
+                  (>= (- (float-time) gr-play-start-time) gr-play-duration-seconds))
+          (setq done t))))
+    (throw 'gr-play-stop 'done))
   nil)
 
 (let ((old-budget gr-step-budget)
@@ -425,13 +487,27 @@
               gr-play-last-player-y nil
               gr-play-last-floor nil
               gr-play-last-dungeon nil
+              gr-play-depth-log nil
+              gr-play-first-frame-histogram nil
+              gr-play-first-frame-missing nil
+              gr-play-first-frame-state nil
+              gr-play-first-player-frame-histogram nil
+              gr-play-first-enemy-frame-histogram nil
               gr-play-quit-requested nil
               gr-play-last-seq 0
               gr-play-last-token "IDLE"
               gr-play-held-codes (make-hash-table :test 'equal))
 
         (gr-reset)
+        (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
         (gr-play-worldgen-seed-base-state)
+        ;; Mirror the facing/animation slots func004 leaves initialized so
+        ;; func345/func567 have a valid direction state in bare play.
+        (gr-set 199 2)
+        (gr-set 217 1)
+        (gr-set 1226 1)
+        (gr-set 784 1)
+        (gr-set 742 1)
         (setq gr-step-count 0)
         (gr-play-with-loop-disabled
          (lambda ()
@@ -468,6 +544,7 @@
           gr-play-draw-seconds
           gr-play-serialize-seconds
           gr-play-io-seconds))
+        (princ (format "PLAY-DEPTH-LOG %S\n" (nreverse gr-play-depth-log)))
         (princ (format "PLAY-DONE %d\n" gr-play-redraw-count)))
     (setq gr-step-budget old-budget)
     (setq gr-depth-limit old-depth)
