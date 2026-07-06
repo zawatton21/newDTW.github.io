@@ -930,6 +930,47 @@ the save files, then mirrors the TS adapter's OFFSET selection."
 (gr-defnative "func183" (lambda (&rest _args) nil))
 (gr-defnative "func505" (lambda (&rest _args) nil))
 
+(defun gr-native-setMessage (row1 &optional row2 color-index do-wait-key do-animation play-sound)
+  "Mirror Func.setMessage from func000.ts."
+  (gr-set "comments_row1" "")
+  (gr-set "comments_row2" "")
+  (gr-set 295 "")
+  (gr-set "comments_row1a" "")
+  (gr-set "comments_row2a" "")
+  (gr-set 298 "")
+  (gr-set "animationStep" 0)
+  (gr-set "comments_row1" (gr-i18n-t row1))
+  (gr-set "comments_row2" (gr-i18n-t (or row2 "")))
+  (gr-set 198 1)
+  (gr-set 300 0)
+  (let* ((idx (gr-num (or color-index 7)))
+         (var25 (gr-get 25))
+         (var26 (gr-get 26))
+         (var27 (gr-get 27)))
+    (gr-set "var_25_x" (gr-index-ref var25 idx))
+    (gr-set "var_26_x" (gr-index-ref var26 idx))
+    (gr-set "var_27_x" (gr-index-ref var27 idx)))
+  (gr-run-func "func047")
+  (when play-sound
+    (gr-run-func "func094"))
+  (when do-wait-key
+    (gr-run-func "func340"))
+  (when do-animation
+    (gr-run-func "func050"))
+  nil)
+
+(defun gr-native-AutoDraw (count)
+  "Mirror Func.AutoDraw from func000.ts."
+  (let ((idx 0)
+        (limit (gr-num count)))
+    (while (< idx limit)
+      (gr-run-func "func337")
+      (setq idx (1+ idx))))
+  nil)
+
+(gr-defnative "setMessage" #'gr-native-setMessage)
+(gr-defnative "AutoDraw" #'gr-native-AutoDraw)
+
 (defun gr-i18n-t (value)
   "Minimal runtime translation shim for title/login text."
   (if (stringp value) value ""))
