@@ -873,7 +873,10 @@ max HP 15, current HP 15, and the KO flag cleared."
   (unwind-protect
       (progn
         (setq gr-step-budget 2000000)
-        (setq gr-depth-limit 400)
+        ;; The dungeon draw chain (func009 -> func337 -> per-enemy status
+        ;; icons like func568) legitimately nests past 400 once enemies
+        ;; carry status effects; 400 killed a live session at loop 302.
+        (setq gr-depth-limit 2000)
         (gr-play-init-frame-queue)
         (setq gr-play-frame-count 0
               gr-play-last-frame-records nil
