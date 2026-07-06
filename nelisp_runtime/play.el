@@ -860,6 +860,10 @@ max HP 15, current HP 15, and the KO flag cleared."
     (gr-set 734 0)
     (while (not done)
       (setq gr-play-opening-login-loops (1+ gr-play-opening-login-loops))
+      ;; The step budget is per-iteration (the dungeon loop resets it too);
+      ;; an unattended title/login screen must not exhaust it (a 30min idle
+      ;; title blew the 2M budget and booted a broken state).
+      (setq gr-step-count 0)
       (gr-play-opening-render-login)
       (setq poll-start (float-time))
       (setq record (gr-play-refresh-input))
@@ -893,6 +897,7 @@ max HP 15, current HP 15, and the KO flag cleared."
     (gr-set 64 0)
     (while (not entered-login)
       (setq gr-play-opening-title-loops (1+ gr-play-opening-title-loops))
+      (setq gr-step-count 0)
       (setq render-start (float-time))
       (gr-run-func "func141")
       (setq gr-play-opening-render-seconds
@@ -1033,6 +1038,25 @@ max HP 15, current HP 15, and the KO flag cleared."
       (throw 'gr-play-stop 'done)))
   nil)
 
+(defun gr-play-bootstrap-direct ()
+  "Boot straight into the dungeon, mirroring run-init.el (no title flow)."
+  (let ((saved-func139A (gethash "func139A" gr-native-funcs))
+        (old-depth gr-depth-limit))
+    (gr-play-reset-session-saves)
+    (gr-reset)
+    (gr-set "stat" 1)
+    (gr-set "hwnd" 0)
+    (unwind-protect
+        (progn
+          (setq gr-depth-limit (max gr-depth-limit 5000))
+          (gr-defnative "func139A" (lambda (&rest _args) nil))
+          (gr-run-func "func004"))
+      (setq gr-depth-limit old-depth)
+      (if saved-func139A
+          (gr-defnative "func139A" saved-func139A)
+        (when gr-native-funcs
+          (remhash "func139A" gr-native-funcs))))))
+
 (let ((old-budget gr-step-budget)
       (old-depth gr-depth-limit))
   (unwind-protect
@@ -1101,29 +1125,25 @@ max HP 15, current HP 15, and the KO flag cleared."
               ;; work canvases across frames, so it needs the lossless
               ;; frame pipeline (pending) to display reliably.
                 (if (equal (getenv "GR_PLAY_SKIP_OPENING") "1")
-                  ;; Mirror run-init.el: init without entering the title flow.
-                  (let ((saved-func139A (gethash "func139A" gr-native-funcs))
-                        (old-depth gr-depth-limit))
-                    (gr-play-reset-session-saves)
-                    (gr-reset)
-                    (gr-set "stat" 1)
-                    (gr-set "hwnd" 0)
-                    (unwind-protect
-                        (progn
-                          (setq gr-depth-limit (max gr-depth-limit 5000))
-                          (gr-defnative "func139A" (lambda (&rest _args) nil))
-                          (gr-run-func "func004"))
-                      (setq gr-depth-limit old-depth)
-                      (if saved-func139A
-                          (gr-defnative "func139A" saved-func139A)
-                        (when gr-native-funcs
-                          (remhash "func139A" gr-native-funcs)))))
+                  (gr-play-bootstrap-direct)
                 (gr-play-bootstrap-opening))
               (if (eq gr-play-opening-result 'resume)
                   (gr-play-bootstrap-resume-init)
                 (gr-play-bootstrap-real-init)))
           (error
-           (princ (format "PLAY-BOOTSTRAP-ERROR %s\n" (error-message-string err)))))
+           ;; Never continue on the partial state a failed opening leaves
+           ;; behind (a blown step budget mid-title once booted a player at
+           ;; 0,0 into the void).  Fall back to the clean direct boot.
+           (princ (format "PLAY-BOOTSTRAP-ERROR %s (falling back to direct boot)\n"
+                          (error-message-string err)))
+           (condition-case err2
+               (progn
+                 (setq gr-play-opening-result nil)
+                 (gr-play-bootstrap-direct)
+                 (gr-play-bootstrap-real-init))
+             (error
+              (princ (format "PLAY-BOOTSTRAP-ERROR direct boot also failed: %s\n"
+                             (error-message-string err2)))))))
         (gr-play-apply-post-init-state)
         (gr-play-maybe-place-probe-enemy)
 
