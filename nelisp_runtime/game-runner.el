@@ -383,10 +383,27 @@
     found))
 
 (defun gr-index-ref (arr i)
-  "Index ARR at I for strings, lists, and vectors."
-  (if (and (gr-sequencep arr) (integerp i) (>= i 0) (< i (length arr)))
-      (elt arr i)
-    nil))
+  "Index ARR at I, matching the TS runtime's loose numeric-key lookup.
+
+The source runtime can read both array slots and object properties such as
+`obj[6]` / `obj.Var6`.  Save data and bridge probes rely on that behavior, so
+returning nil for non-sequences creates false zero tiles once `gr-num'
+coerces nil to 0."
+  (cond
+   ((and (gr-sequencep arr) (integerp i) (>= i 0) (< i (length arr)))
+    (elt arr i))
+   ((hash-table-p arr)
+    (or (gethash i arr)
+        (gethash (format "Var%s" i) arr)
+        (gethash (intern (format "Var%s" i)) arr)
+        (gethash (number-to-string i) arr)))
+   ((and (listp arr) (integerp i))
+    (let ((cell (or (assoc i arr)
+                    (assoc (number-to-string i) arr)
+                    (assoc (format "Var%s" i) arr)
+                    (assoc (intern (format "Var%s" i)) arr))))
+      (and cell (cdr cell))))
+   (t nil)))
 
 (defun gr-random (n)
   "Return a pseudo-random integer in [0, N)."

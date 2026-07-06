@@ -1,64 +1,85 @@
 ;;; sumi-json.el --- export gr-sumi as sumi JSON -*- coding: utf-8; -*-
 
-(defun gr-json-escape (s)
-  "Escape S for JSON string output."
-  (let ((out "")
-        (i 0)
+(defun gr-json-escape-into (s)
+  "Insert S escaped for JSON string output into the current buffer."
+  (let ((i 0)
         (ch nil))
     (while (< i (length s))
       (setq ch (aref s i))
-      (setq out
-            (concat
-             out
-             (cond
-              ((= ch ?\\) "\\\\")
-              ((= ch ?\") "\\\"")
-              ((= ch ?\b) "\\b")
-              ((= ch ?\f) "\\f")
-              ((= ch ?\n) "\\n")
-              ((= ch ?\r) "\\r")
-              ((= ch ?\t) "\\t")
-              ((< ch 32) (format "\\u%04x" ch))
-              (t (char-to-string ch)))))
-      (setq i (1+ i)))
-    out))
+      (insert
+       (cond
+        ((= ch ?\\) "\\\\")
+        ((= ch ?\") "\\\"")
+        ((= ch ?\b) "\\b")
+        ((= ch ?\f) "\\f")
+        ((= ch ?\n) "\\n")
+        ((= ch ?\r) "\\r")
+        ((= ch ?\t) "\\t")
+        ((< ch 32) (format "\\u%04x" ch))
+        (t (char-to-string ch))))
+      (setq i (1+ i)))))
 
-(defun gr-sumi-record-to-json (entry)
-  "Convert one gr-sumi ENTRY to a sumi JSON record string."
+(defun gr-json-escape (s)
+  "Escape S for JSON string output."
+  (with-temp-buffer
+    (gr-json-escape-into s)
+    (buffer-string)))
+
+(defun gr-sumi-record-to-json-into (entry)
+  "Insert one gr-sumi ENTRY as a sumi JSON record."
   (let ((op (car entry))
         (args (cdr entry))
         (nums nil)
         (text nil)
         (arg nil)
-        (parts nil))
+        (first-num t))
     (dolist (arg args)
       (cond
        ((numberp arg)
-        (setq nums (append nums (list arg))))
+        (push arg nums))
        ((null arg)
-        (setq nums (append nums (list 0))))
+        (push 0 nums))
        ((and (null text) (stringp arg))
         (setq text arg))))
-    (setq parts
-          (list
-           (concat "\"name\":\"" (gr-json-escape (format "%s" op)) "\"")
-           (concat
-            "\"nums\":["
-            (mapconcat (lambda (n) (format "%s" n)) nums ",")
-            "]")))
+    (insert "{\"name\":\"")
+    (gr-json-escape-into (format "%s" op))
+    (insert "\",\"nums\":[")
+    (dolist (n (nreverse nums))
+      (unless first-num
+        (insert ","))
+      (setq first-num nil)
+      (insert (format "%s" n)))
+    (insert "]")
     (when text
-      (setq parts
-            (append parts
-                    (list
-                     (concat "\"text\":\"" (gr-json-escape text) "\"")))))
-    (concat "{" (mapconcat #'identity parts ",") "}")))
+      (insert ",\"text\":\"")
+      (gr-json-escape-into text)
+      (insert "\""))
+    (insert "}")))
+
+(defun gr-sumi-record-to-json (entry)
+  "Convert one gr-sumi ENTRY to a sumi JSON record string."
+  (with-temp-buffer
+    (gr-sumi-record-to-json-into entry)
+    (buffer-string)))
+
+(defun gr-sumi-records-json-body (records)
+  "Return RECORDS as a comma-joined JSON object list in chronological order."
+  (with-temp-buffer
+    (let ((first t))
+      (dolist (entry (reverse records))
+        (unless first
+          (insert ","))
+        (setq first nil)
+        (gr-sumi-record-to-json-into entry)))
+    (buffer-string)))
 
 (defun gr-sumi-to-json ()
   "Return gr-sumi as one JSON array string in chronological order."
-  (let ((items nil))
-    (dolist (entry (reverse gr-sumi))
-      (setq items (append items (list (gr-sumi-record-to-json entry)))))
-    (concat "[" (mapconcat #'identity items ",") "]")))
+  (with-temp-buffer
+    (insert "[")
+    (insert (gr-sumi-records-json-body gr-sumi))
+    (insert "]")
+    (buffer-string)))
 
 (defun gr-dump-sumi (name &optional budget seed-fn)
   "Run NAME and print one sumi JSON line plus an OK marker.

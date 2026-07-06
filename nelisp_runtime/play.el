@@ -447,6 +447,102 @@ the head of every dumped frame makes any frame self-contained.")
 (defvar gr-play-setup-seen (make-hash-table :test 'equal)
   "Dedup keys (op:buffer-id) already captured into `gr-play-setup-records'.")
 
+(defvar gr-play-setup-records-json-body nil
+  "Cached JSON object list for `gr-play-setup-records' in chronological order.")
+
+(defun gr-play-find-first-live-enemy-pos ()
+  "Return (X Y) for the first live enemy row, or nil when none exists."
+  (let ((rows (gr-get 83))
+        (idx 1)
+        (row nil)
+        (pos nil))
+    (while (and (vectorp rows) (< idx (length rows)) (null pos))
+      (setq row (aref rows idx))
+      (when (and row
+                 (not (equal (gr-prop-ref row "Var0") 0))
+                 (> (gr-num (or (gr-prop-ref row "Var3") 0)) 0))
+        (setq pos (list (gr-num (or (gr-prop-ref row "Var1") 0))
+                        (gr-num (or (gr-prop-ref row "Var2") 0)))))
+      (setq idx (1+ idx)))
+    pos))
+
+(defun gr-play-find-live-enemy-rows ()
+  "Return a list of (IDX ROW) for live enemies."
+  (let ((rows (gr-get 83))
+        (idx 1)
+        (row nil)
+        (found nil))
+    (while (and (vectorp rows) (< idx (length rows)))
+      (setq row (aref rows idx))
+      (when (and row
+                 (not (equal (gr-prop-ref row "Var0") 0))
+                 (> (gr-num (or (gr-prop-ref row "Var3") 0)) 0))
+        (push (list idx row) found))
+      (setq idx (1+ idx)))
+    (nreverse found)))
+
+(defun gr-play-tile-at (x y)
+  "Return var_71[X][Y]."
+  (gr-index-ref (gr-index-ref (gr-get 71) x) y))
+
+(defun gr-play-enemy-slot-free-p (x y idx)
+  "Return non-nil when X,Y has no other enemy than IDX."
+  (let ((slot (gr-index-ref (gr-index-ref (gr-get 82) x) y)))
+    (or (equal slot 0) (equal slot idx))))
+
+(defun gr-play-enemy-destination-p (x y idx)
+  "Return non-nil when X,Y is a legal fallback enemy destination."
+  (and (gr-play-tile-at x y)
+       (<= 1 (gr-num (gr-play-tile-at x y)) 12)
+       (gr-play-enemy-slot-free-p x y idx)
+       (not (and (= x (gr-num (or (gr-get 66) 0)))
+                 (= y (gr-num (or (gr-get 67) 0)))))))
+
+(defun gr-play-step-first-enemy-fallback ()
+  "Advance one live enemy one chase step when the TS handoff was inert."
+  (let ((enemies (gr-play-find-live-enemy-rows))
+        (moved nil)
+        (enemy nil)
+        (idx nil)
+        (row nil)
+         (ex 0)
+         (ey 0)
+         (px 0)
+         (py 0)
+         (dx 0)
+         (dy 0)
+         (nx nil)
+         (ny nil))
+    (while (and enemies (not moved))
+      (setq enemy (car enemies))
+      (setq enemies (cdr enemies))
+      (setq idx (car enemy))
+      (setq row (cadr enemy))
+      (setq ex (gr-num (or (gr-prop-ref row "Var1") 0)))
+      (setq ey (gr-num (or (gr-prop-ref row "Var2") 0)))
+      (setq px (gr-num (or (gr-get 66) 0)))
+      (setq py (gr-num (or (gr-get 67) 0)))
+      (setq dx (cond ((< ex px) 1) ((> ex px) -1) (t 0)))
+      (setq dy (cond ((< ey py) 1) ((> ey py) -1) (t 0)))
+      (setq nx nil
+            ny nil)
+      (cond
+       ((and (/= dx 0) (gr-play-enemy-destination-p (+ ex dx) ey idx))
+        (setq nx (+ ex dx) ny ey))
+       ((and (/= dy 0) (gr-play-enemy-destination-p ex (+ ey dy) idx))
+        (setq nx ex ny (+ ey dy))))
+      (when (and nx ny)
+        (let ((old-row (gr-index-ref (gr-get 82) ex))
+              (new-row (gr-index-ref (gr-get 82) nx)))
+          (when (and (vectorp old-row) (>= ey 0) (< ey (length old-row)))
+            (aset old-row ey 0))
+          (when (and (vectorp new-row) (>= ny 0) (< ny (length new-row)))
+            (aset new-row ny idx)))
+        (gr-prop-set row "Var1" nx)
+        (gr-prop-set row "Var2" ny)
+        (setq moved t)))
+    moved))
+
 (defun gr-play-collect-setup-records ()
   "Harvest screen/load-image records from the current `gr-sumi'."
   (dolist (entry (reverse gr-sumi))
@@ -455,7 +551,28 @@ the head of every dumped frame makes any frame self-contained.")
         (let ((key (format "%s:%s" op (cadr entry))))
           (unless (gethash key gr-play-setup-seen)
             (puthash key t gr-play-setup-seen)
-            (push entry gr-play-setup-records)))))))
+            (push entry gr-play-setup-records)
+            (setq gr-play-setup-records-json-body nil)))))))
+
+(defun gr-play-get-setup-records-json-body ()
+  "Return cached setup records as a JSON object list."
+  (unless gr-play-setup-records-json-body
+    (setq gr-play-setup-records-json-body
+          (gr-sumi-records-json-body gr-play-setup-records)))
+  gr-play-setup-records-json-body)
+
+(defun gr-play-frame-records-to-json (records)
+  "Serialize RECORDS with cached setup records prepended in wire-format order."
+  (let ((setup-body (gr-play-get-setup-records-json-body))
+        (frame-body (gr-sumi-records-json-body records)))
+    (concat
+     "["
+     (cond
+      ((and (> (length setup-body) 0) (> (length frame-body) 0))
+       (concat setup-body "," frame-body))
+      ((> (length setup-body) 0) setup-body)
+      (t frame-body))
+     "]")))
 
 (defun gr-play-dump-current-frame ()
   "Serialize and dump the current `gr-sumi' frame if it changed."
@@ -497,8 +614,7 @@ the head of every dumped frame makes any frame self-contained.")
       (if (gr-play-frame-unchanged-p frame-records)
           (setq gr-play-skipped-count (1+ gr-play-skipped-count))
         (setq serialize-start (float-time))
-        (setq json (let ((gr-sumi frame-records))
-                     (gr-sumi-to-json)))
+        (setq json (gr-play-frame-records-to-json gr-sumi))
         (setq gr-play-serialize-seconds
               (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
         (setq io-start (float-time))
@@ -589,12 +705,43 @@ max HP 15, current HP 15, and the KO flag cleared."
   (setq gr-play-opening-result 'new-game)
   (throw 'gr-play-opening-done 'new-game))
 
+(defun gr-play-func015-wrapper (&rest args)
+  "Preserve the TS move->turn handoff when the play loop skips it."
+  (let ((before-x (gr-num (or (gr-get 236) (gr-get 66) 0)))
+        (before-y (gr-num (or (gr-get 237) (gr-get 67) 0)))
+        (enemy-before (gr-play-find-first-live-enemy-pos))
+        (enemy-after nil)
+        (result nil))
+    (setq result (apply gr-play-saved-native-func015 args))
+    (when (and gr-play-saved-native-func015
+               (or (/= (gr-num (or (gr-get 66) 0)) before-x)
+                   (/= (gr-num (or (gr-get 67) 0)) before-y))
+               (not (member 19 gr-trace)))
+      (gr-run-func "func019"))
+    (setq enemy-after (gr-play-find-first-live-enemy-pos))
+    (when (and enemy-before enemy-after (equal enemy-before enemy-after))
+      (when (gr-play-step-first-enemy-fallback)
+        (setq enemy-after (gr-play-find-first-live-enemy-pos))))
+    (when (and enemy-before enemy-after
+               (or (/= (gr-num (or (gr-get 66) 0)) before-x)
+                   (/= (gr-num (or (gr-get 67) 0)) before-y))
+               (not (equal enemy-before enemy-after)))
+      (princ (format "PLAY-ENEMY-MOVE before=%S after=%S player=%s,%s trace=%S\n"
+                     enemy-before
+                     enemy-after
+                     (gr-get 66)
+                     (gr-get 67)
+                     (reverse gr-trace))))
+    result))
+
 (defun gr-play-install-local-missing-natives ()
   "Install local natives needed by the play loop."
   (setq gr-play-saved-native-func015 (gethash "func015" gr-native-funcs))
   (setq gr-play-saved-native-func338 (gethash "func338" gr-native-funcs))
   (setq gr-play-saved-native-func005 (gethash "func005" gr-native-funcs))
   (setq gr-play-saved-native-func150 (gethash "func150" gr-native-funcs))
+  (when gr-play-saved-native-func015
+    (gr-defnative "func015" #'gr-play-func015-wrapper))
   (gr-defnative "func338" #'gr-play-func338)
   (gr-defnative "func005" #'gr-play-func005)
   (gr-defnative "func150" #'gr-play-func150))
@@ -904,6 +1051,7 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-first-frame-state nil
               gr-play-first-player-frame-histogram nil
               gr-play-first-enemy-frame-histogram nil
+              gr-play-setup-records-json-body nil
               gr-play-quit-requested nil
               gr-play-opening-title-loops 0
               gr-play-opening-login-loops 0
