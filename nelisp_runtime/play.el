@@ -497,18 +497,95 @@ the head of every dumped frame makes any frame self-contained.")
           (gr-sumi-records-json-body gr-play-setup-records)))
   gr-play-setup-records-json-body)
 
+(defvar gr-play-boot-composition nil
+  "Boot-time static work-buffer composition ops, newest-first.
+func004 fills some work buffers once (e.g. buffer 12 = the blue
+message-box background via buffer(12)+color+boxf).  The per-frame dump
+clears `gr-sumi' each redraw, so without replay those buffers are
+blitted empty (the transparent message box).  Captured once after boot
+and replayed at the head of every frame.")
+
+(defvar gr-play-boot-composition-json-body nil
+  "Cached JSON object list for `gr-play-boot-composition'.")
+
+(defconst gr-play-per-frame-buffers '(0 4 7 10 32)
+  "Buffers the screen or per-frame draws recompose, so boot state is moot.")
+
+(defun gr-play-capture-boot-composition ()
+  "Harvest PURE-PROCEDURAL static work-buffer fills from `gr-sumi'.
+
+Only buffers whose boot composition is procedural (fills / lines /
+points / text with a color, no image blits) are replayed — e.g. buffer
+12, the solid blue message-box background.  Buffers composed from image
+blits at boot (the load screen's progress bar into buffers 36/37, etc.)
+are TRANSIENT and must NOT be replayed: doing so overpaints the live map
+area.  So the capture groups boot ops per buffer and keeps a buffer only
+when it received a fill and NO gui-draw-image-scaled."
+  (let ((cur 0)
+        (order nil)                     ; buffer ids in first-seen order
+        (ops (make-hash-table))         ; buffer id -> chronological op list
+        (has-fill (make-hash-table))
+        (has-blit (make-hash-table)))
+    (dolist (entry (reverse gr-sumi))   ; chronological order
+      (let ((op (car entry)))
+        (cond
+         ((member op '("gui-select-buffer" "dtw-select-buffer"))
+          (setq cur (gr-num (cadr entry))))
+         ((memq cur gr-play-per-frame-buffers) nil)
+         ((= cur 0) nil)
+         ((member op '("gui-load-image" "dtw-load-image"
+                       "gui-screen" "dtw-screen" "dtw-create-buffer"))
+          nil)
+         (t
+          (unless (gethash cur ops) (push cur order))
+          (push entry (gethash cur ops))
+          (when (member op '("gui-fill-rect" "dtw-fill-rect"))
+            (puthash cur t has-fill))
+          (when (member op '("gui-draw-image-scaled" "dtw-draw-image-scaled"
+                             "gui-draw-image" "dtw-draw-image"
+                             "dtw-draw-image-rotated"))
+            (puthash cur t has-blit))))))
+    ;; Emit, per kept buffer, a select + its ops.  chrono ends up
+    ;; newest-first (push while walking chronological), matching the
+    ;; gr-sumi convention gr-sumi-records-json-body reverses.
+    (let ((chrono nil)
+          (kept nil))
+      (dolist (id (nreverse order))
+        (when (and (gethash id has-fill) (not (gethash id has-blit)))
+          (setq kept t)
+          (push (cons "gui-select-buffer" (list id)) chrono)
+          ;; (gethash id ops) is newest-first; reverse to chronological
+          ;; before pushing so the final push order stays consistent.
+          (dolist (entry (reverse (gethash id ops)))
+            (push entry chrono))))
+      ;; Restore the draw target to the screen so the frame's own content
+      ;; (which assumes it starts at buffer 0) is not misdirected into the
+      ;; last composed work buffer.
+      (when kept
+        (push (cons "gui-select-buffer" (list 0)) chrono))
+      (setq gr-play-boot-composition chrono)
+      (setq gr-play-boot-composition-json-body nil))))
+
+(defun gr-play-get-boot-composition-json-body ()
+  "Return cached boot-composition records as a JSON object list."
+  (unless gr-play-boot-composition-json-body
+    (setq gr-play-boot-composition-json-body
+          (gr-sumi-records-json-body gr-play-boot-composition)))
+  gr-play-boot-composition-json-body)
+
 (defun gr-play-frame-records-to-json (records)
-  "Serialize RECORDS with cached setup records prepended in wire-format order."
-  (let ((setup-body (gr-play-get-setup-records-json-body))
-        (frame-body (gr-sumi-records-json-body records)))
-    (concat
-     "["
-     (cond
-      ((and (> (length setup-body) 0) (> (length frame-body) 0))
-       (concat setup-body "," frame-body))
-      ((> (length setup-body) 0) setup-body)
-      (t frame-body))
-     "]")))
+  "Serialize RECORDS with setup + boot composition prepended in wire order.
+Order: screen/load-image setup, then boot-time work-buffer fills (e.g.
+buffer 12's blue message box), then the frame's own draws — so any
+frame is self-contained for a consumer that starts or resyncs."
+  (let* ((setup-body (gr-play-get-setup-records-json-body))
+         (boot-body (gr-play-get-boot-composition-json-body))
+         (frame-body (gr-sumi-records-json-body records))
+         (parts (delq nil
+                      (list (and (> (length setup-body) 0) setup-body)
+                            (and (> (length boot-body) 0) boot-body)
+                            (and (> (length frame-body) 0) frame-body)))))
+    (concat "[" (mapconcat #'identity parts ",") "]")))
 
 (defun gr-play-dump-current-frame ()
   "Serialize and dump the current `gr-sumi' frame if it changed."
@@ -965,6 +1042,10 @@ max HP 15, current HP 15, and the KO flag cleared."
                 (setq gr-depth-limit (max gr-depth-limit 5000))
                 (gr-defnative "func139A" (lambda (&rest _args) nil))
                 (gr-run-func "func004")
+                ;; Capture func004's one-time work-buffer fills (buffer 12
+                ;; blue box etc.) now, before the title/worldgen paths clear
+                ;; gr-sumi, so they replay at the head of every frame.
+                (gr-play-capture-boot-composition)
                 (when saved-func139A
                   (gr-defnative "func139A" saved-func139A))
                 (gr-play-opening-title-loop)
@@ -1071,7 +1152,10 @@ max HP 15, current HP 15, and the KO flag cleared."
         (progn
           (setq gr-depth-limit (max gr-depth-limit 5000))
           (gr-defnative "func139A" (lambda (&rest _args) nil))
-          (gr-run-func "func004"))
+          (gr-run-func "func004")
+          ;; Capture func004's one-time work-buffer fills before worldgen
+          ;; clears gr-sumi (see gr-play-capture-boot-composition).
+          (gr-play-capture-boot-composition))
       (setq gr-depth-limit old-depth)
       (if saved-func139A
           (gr-defnative "func139A" saved-func139A)
@@ -1115,6 +1199,8 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-first-player-frame-histogram nil
               gr-play-first-enemy-frame-histogram nil
               gr-play-setup-records-json-body nil
+              gr-play-boot-composition nil
+              gr-play-boot-composition-json-body nil
               gr-play-quit-requested nil
               gr-play-opening-title-loops 0
               gr-play-opening-login-loops 0

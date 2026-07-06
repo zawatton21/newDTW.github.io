@@ -599,6 +599,16 @@ function emitCall(expr, ctx) {
     return `(gr-run-func ${JSON.stringify(info.name)}${args.length ? ` ${args.join(" ")}` : ""})`;
   }
   if (info.kind === "event") {
+    // Adap.buffer(id, w, h, mode) both creates the buffer AND selects it
+    // as the draw target (its adapter impl ends with gsel(id)).  The
+    // generic event mapping emits only dtw-create-buffer and drops that
+    // select, so boot-time procedural fills (e.g. func004's blue
+    // message-box fill into buffer 12) land on the previously selected
+    // buffer.  Mirror the select; bind the id to avoid double-evaluation.
+    if (info.name === "dtw-create-buffer" && args.length >= 1) {
+      const rest = args.slice(1);
+      return `(let ((__cbuf ${args[0]})) (gr-emit "dtw-create-buffer" __cbuf${rest.length ? ` ${rest.join(" ")}` : ""}) (gr-emit "gui-select-buffer" __cbuf))`;
+    }
     return `(gr-emit ${JSON.stringify(info.name)}${args.length ? ` ${args.join(" ")}` : ""})`;
   }
   if (info.kind === "special-reset-key") {
