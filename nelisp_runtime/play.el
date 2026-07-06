@@ -877,6 +877,11 @@ max HP 15, current HP 15, and the KO flag cleared."
         ;; icons like func568) legitimately nests past 400 once enemies
         ;; carry status effects; 400 killed a live session at loop 302.
         (setq gr-depth-limit 2000)
+        ;; Each gr level costs several interpreter frames, so the elisp
+        ;; ceiling must scale with gr-depth-limit (the death chain blew
+        ;; the default at loop 186 of a live session).
+        (setq max-lisp-eval-depth 200000)
+        (setq max-specpdl-size 200000)
         (gr-play-init-frame-queue)
         (setq gr-play-frame-count 0
               gr-play-last-frame-records nil
