@@ -610,7 +610,16 @@ func229.ts, func233.ts, and the captured gamedata-state all enter play with
 max HP 15, current HP 15, and the KO flag cleared."
   (gr-set 352 15)
   (gr-set 211 15)
-  (gr-set 212 0))
+  (gr-set 212 0)
+  ;; Hunger must be positive or the per-turn HP regen in func019
+  ;; (func019.ts:155, gated on var_350 > 0) never runs, so HP only ever
+  ;; goes down.  100/100 matches the captured live new-game state
+  ;; (gamedata-state.el: var_350=100, var_567=100).
+  (gr-set 350 100)
+  (gr-set 567 100)
+  ;; Fresh runs start unpoisoned (func019.ts:201 drains 5 HP per turn
+  ;; while var_135 >= 1).
+  (gr-set 135 0))
 
 (defun gr-play-floor-tile-p (tile)
   "Return non-nil when TILE is a normal walkable floor."
