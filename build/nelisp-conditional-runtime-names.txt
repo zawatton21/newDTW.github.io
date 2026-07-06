@@ -79,6 +79,7 @@ func550
 func551
 func554
 func563
+func569
 func577
 func622
 func625
@@ -93,7 +94,12 @@ func691
 func692
 func693
 func694
+func701
+func702
 func703
+func704
+func706
+func707
 func0799
 func0800
 func0801

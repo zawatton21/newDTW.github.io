@@ -78,7 +78,6 @@
 (defvar gr-play-orig-func337 nil)
 (defvar gr-play-orig-gr-emit nil)
 (defvar gr-play-worldgen-saved-func009 nil)
-(defvar gr-play-saved-native-func015 nil)
 (defvar gr-play-saved-native-func338 nil)
 (defvar gr-play-saved-native-func005 nil)
 (defvar gr-play-saved-native-func150 nil)
@@ -450,98 +449,23 @@ the head of every dumped frame makes any frame self-contained.")
 (defvar gr-play-setup-records-json-body nil
   "Cached JSON object list for `gr-play-setup-records' in chronological order.")
 
-(defun gr-play-find-first-live-enemy-pos ()
-  "Return (X Y) for the first live enemy row, or nil when none exists."
+(defun gr-play-live-enemy-positions ()
+  "Return live enemy positions as ((IDX X Y) ...)."
   (let ((rows (gr-get 83))
         (idx 1)
         (row nil)
-        (pos nil))
-    (while (and (vectorp rows) (< idx (length rows)) (null pos))
-      (setq row (aref rows idx))
-      (when (and row
-                 (not (equal (gr-prop-ref row "Var0") 0))
-                 (> (gr-num (or (gr-prop-ref row "Var3") 0)) 0))
-        (setq pos (list (gr-num (or (gr-prop-ref row "Var1") 0))
-                        (gr-num (or (gr-prop-ref row "Var2") 0)))))
-      (setq idx (1+ idx)))
-    pos))
-
-(defun gr-play-find-live-enemy-rows ()
-  "Return a list of (IDX ROW) for live enemies."
-  (let ((rows (gr-get 83))
-        (idx 1)
-        (row nil)
-        (found nil))
+        (out nil))
     (while (and (vectorp rows) (< idx (length rows)))
       (setq row (aref rows idx))
       (when (and row
                  (not (equal (gr-prop-ref row "Var0") 0))
                  (> (gr-num (or (gr-prop-ref row "Var3") 0)) 0))
-        (push (list idx row) found))
+        (push (list idx
+                    (gr-num (or (gr-prop-ref row "Var1") 0))
+                    (gr-num (or (gr-prop-ref row "Var2") 0)))
+              out))
       (setq idx (1+ idx)))
-    (nreverse found)))
-
-(defun gr-play-tile-at (x y)
-  "Return var_71[X][Y]."
-  (gr-index-ref (gr-index-ref (gr-get 71) x) y))
-
-(defun gr-play-enemy-slot-free-p (x y idx)
-  "Return non-nil when X,Y has no other enemy than IDX."
-  (let ((slot (gr-index-ref (gr-index-ref (gr-get 82) x) y)))
-    (or (equal slot 0) (equal slot idx))))
-
-(defun gr-play-enemy-destination-p (x y idx)
-  "Return non-nil when X,Y is a legal fallback enemy destination."
-  (and (gr-play-tile-at x y)
-       (<= 1 (gr-num (gr-play-tile-at x y)) 12)
-       (gr-play-enemy-slot-free-p x y idx)
-       (not (and (= x (gr-num (or (gr-get 66) 0)))
-                 (= y (gr-num (or (gr-get 67) 0)))))))
-
-(defun gr-play-step-first-enemy-fallback ()
-  "Advance one live enemy one chase step when the TS handoff was inert."
-  (let ((enemies (gr-play-find-live-enemy-rows))
-        (moved nil)
-        (enemy nil)
-        (idx nil)
-        (row nil)
-         (ex 0)
-         (ey 0)
-         (px 0)
-         (py 0)
-         (dx 0)
-         (dy 0)
-         (nx nil)
-         (ny nil))
-    (while (and enemies (not moved))
-      (setq enemy (car enemies))
-      (setq enemies (cdr enemies))
-      (setq idx (car enemy))
-      (setq row (cadr enemy))
-      (setq ex (gr-num (or (gr-prop-ref row "Var1") 0)))
-      (setq ey (gr-num (or (gr-prop-ref row "Var2") 0)))
-      (setq px (gr-num (or (gr-get 66) 0)))
-      (setq py (gr-num (or (gr-get 67) 0)))
-      (setq dx (cond ((< ex px) 1) ((> ex px) -1) (t 0)))
-      (setq dy (cond ((< ey py) 1) ((> ey py) -1) (t 0)))
-      (setq nx nil
-            ny nil)
-      (cond
-       ((and (/= dx 0) (gr-play-enemy-destination-p (+ ex dx) ey idx))
-        (setq nx (+ ex dx) ny ey))
-       ((and (/= dy 0) (gr-play-enemy-destination-p ex (+ ey dy) idx))
-        (setq nx ex ny (+ ey dy))))
-      (when (and nx ny)
-        (let ((old-row (gr-index-ref (gr-get 82) ex))
-              (new-row (gr-index-ref (gr-get 82) nx)))
-          (when (and (vectorp old-row) (>= ey 0) (< ey (length old-row)))
-            (aset old-row ey 0))
-          (when (and (vectorp new-row) (>= ny 0) (< ny (length new-row)))
-            (aset new-row ny idx)))
-        (gr-prop-set row "Var1" nx)
-        (gr-prop-set row "Var2" ny)
-        (setq moved t)))
-    moved))
+    (nreverse out)))
 
 (defun gr-play-collect-setup-records ()
   "Harvest screen/load-image records from the current `gr-sumi'."
@@ -688,6 +612,115 @@ max HP 15, current HP 15, and the KO flag cleared."
   (gr-set 211 15)
   (gr-set 212 0))
 
+(defun gr-play-floor-tile-p (tile)
+  "Return non-nil when TILE is a normal walkable floor."
+  (and (numberp tile) (>= tile 1) (<= tile 12)))
+
+(defun gr-play-set-grid-cell (grid x y value)
+  "Set GRID[X][Y] to VALUE when the coordinates are in range."
+  (let ((row (and (vectorp grid) (gr-index-ref grid x))))
+    (when (and (vectorp row) (>= y 0) (< y (length row)))
+      (aset row y value))))
+
+(defun gr-play-find-probe-corridor (tiles occ)
+  "Return (PLAYER-X PLAYER-Y ENEMY-X ENEMY-Y TILE) for a clear corridor."
+  (let ((max-x (gr-num (or (gr-get 33) 0)))
+        (max-y (gr-num (or (gr-get 34) 0)))
+        (x 5)
+        (y 5)
+        (tile nil)
+        (ok nil)
+        (found nil))
+    (while (and (null found) (< y (- max-y 4)))
+      (setq x 5)
+      (while (and (null found) (< x (- max-x 8)))
+        (setq ok t)
+        (let ((step 0))
+          (while (and ok (<= step 4))
+            (setq tile (and (vectorp tiles)
+                            (gr-index-ref (gr-index-ref tiles (+ x step)) y)))
+            (unless (and (gr-play-floor-tile-p tile)
+                         (equal (gr-index-ref (gr-index-ref occ (+ x step)) y) 0))
+              (setq ok nil))
+            (setq step (1+ step))))
+        (when ok
+          (setq found (list x y (+ x 4) y tile)))
+        (setq x (1+ x)))
+      (setq y (1+ y)))
+    found))
+
+(defun gr-play-maybe-place-probe-enemy ()
+  "Optionally move one live enemy near the player for scripted probe runs."
+  (when (equal (getenv "GR_PLAY_FORCE_NEARBY_ENEMY") "1")
+    (let* ((rows (gr-get 83))
+           (occ (gr-get 82))
+           (tiles (gr-get 71))
+           (idx 1)
+           (enemy-idx nil)
+           (row nil)
+           (player-x (gr-num (or (gr-get 66) 0)))
+           (player-y (gr-num (or (gr-get 67) 0)))
+           (placement nil))
+      (while (and (vectorp rows) (< idx (length rows)) (null enemy-idx))
+        (setq row (aref rows idx))
+        (when (and row
+                   (not (equal (gr-prop-ref row "Var0") 0))
+                   (> (gr-num (or (gr-prop-ref row "Var3") 0)) 0))
+          (setq enemy-idx idx))
+        (setq idx (1+ idx)))
+      (when enemy-idx
+        (setq row (aref rows enemy-idx))
+        (setq idx 1)
+        (while (and (vectorp rows) (< idx (length rows)))
+          (let ((other (aref rows idx)))
+            (when other
+              (gr-play-set-grid-cell occ
+                                     (gr-num (or (gr-prop-ref other "Var1") 0))
+                                     (gr-num (or (gr-prop-ref other "Var2") 0))
+                                     0)
+              (unless (= idx enemy-idx)
+                (let ((slot 0))
+                    (while (< slot (length other))
+                      (aset other slot 0)
+                      (setq slot (1+ slot)))))))
+          (setq idx (1+ idx)))
+        (setq placement (gr-play-find-probe-corridor tiles occ))
+        (when placement
+          (gr-play-set-grid-cell (gr-get 65) player-x player-y 0)
+          (setq player-x (nth 0 placement)
+                player-y (nth 1 placement))
+          (gr-set 66 player-x)
+          (gr-set 67 player-y)
+          (gr-set 236 player-x)
+          (gr-set 237 player-y)
+          (gr-set 201 (nth 4 placement))
+          (gr-play-set-grid-cell (gr-get 65) player-x player-y 1)
+          (gr-play-set-grid-cell occ
+                                 (gr-num (or (gr-prop-ref row "Var1") 0))
+                                 (gr-num (or (gr-prop-ref row "Var2") 0))
+                                 0)
+          (gr-prop-set row "Var1" (nth 2 placement))
+          (gr-prop-set row "Var2" (nth 3 placement))
+          (gr-prop-set row "Var3" 5)
+          (gr-prop-set row "Var10" (nth 4 placement))
+          (gr-prop-set row "Var7" 0)
+          (gr-prop-set row "Var8" 0)
+          (gr-prop-set row "Var9" 0)
+          (gr-prop-set row "Var12" 0)
+          (gr-prop-set row "Var13" 0)
+          (gr-prop-set row "Var15" 0)
+          (gr-prop-set row "Var17" 0)
+          (gr-prop-set row "Var18" 0)
+          (gr-prop-set row "Var20" 0)
+          (gr-play-set-grid-cell occ (nth 2 placement) (nth 3 placement) enemy-idx)
+          (gr-set 97 1)
+          (princ (format "PLAY-PROBE-ENEMY idx=%s pos=%s,%s player=%s,%s\n"
+                         enemy-idx
+                         (nth 2 placement)
+                         (nth 3 placement)
+                         player-x
+                         player-y)))))))
+
 (defun gr-play-func338 (&rest _args)
   "No-op render helper."
   (push 338 gr-trace)
@@ -705,23 +738,10 @@ max HP 15, current HP 15, and the KO flag cleared."
   (setq gr-play-opening-result 'new-game)
   (throw 'gr-play-opening-done 'new-game))
 
-(defun gr-play-func015-wrapper (&rest args)
-  "Preserve the TS move->turn handoff when the play loop skips it."
-  (let ((before-x (gr-num (or (gr-get 236) (gr-get 66) 0)))
-        (before-y (gr-num (or (gr-get 237) (gr-get 67) 0)))
-        (enemy-before (gr-play-find-first-live-enemy-pos))
-        (enemy-after nil)
-        (result nil))
-    (setq result (apply gr-play-saved-native-func015 args))
-    (when (and gr-play-saved-native-func015
-               (or (/= (gr-num (or (gr-get 66) 0)) before-x)
-                   (/= (gr-num (or (gr-get 67) 0)) before-y))
-               (not (member 19 gr-trace)))
-      (gr-run-func "func019"))
-    (setq enemy-after (gr-play-find-first-live-enemy-pos))
-    (when (and enemy-before enemy-after (equal enemy-before enemy-after))
-      (when (gr-play-step-first-enemy-fallback)
-        (setq enemy-after (gr-play-find-first-live-enemy-pos))))
+(defun gr-play-log-enemy-movement (before-x before-y enemy-before)
+  "Log enemy position changes after a player move completes."
+  (let ((enemy-after nil))
+    (setq enemy-after (gr-play-live-enemy-positions))
     (when (and enemy-before enemy-after
                (or (/= (gr-num (or (gr-get 66) 0)) before-x)
                    (/= (gr-num (or (gr-get 67) 0)) before-y))
@@ -731,27 +751,19 @@ max HP 15, current HP 15, and the KO flag cleared."
                      enemy-after
                      (gr-get 66)
                      (gr-get 67)
-                     (reverse gr-trace))))
-    result))
+                     (reverse gr-trace))))))
 
 (defun gr-play-install-local-missing-natives ()
   "Install local natives needed by the play loop."
-  (setq gr-play-saved-native-func015 (gethash "func015" gr-native-funcs))
   (setq gr-play-saved-native-func338 (gethash "func338" gr-native-funcs))
   (setq gr-play-saved-native-func005 (gethash "func005" gr-native-funcs))
   (setq gr-play-saved-native-func150 (gethash "func150" gr-native-funcs))
-  (when gr-play-saved-native-func015
-    (gr-defnative "func015" #'gr-play-func015-wrapper))
   (gr-defnative "func338" #'gr-play-func338)
   (gr-defnative "func005" #'gr-play-func005)
   (gr-defnative "func150" #'gr-play-func150))
 
 (defun gr-play-restore-local-missing-natives ()
   "Restore natives replaced by the play loop."
-  (if gr-play-saved-native-func015
-      (gr-defnative "func015" gr-play-saved-native-func015)
-    (when gr-native-funcs
-      (remhash "func015" gr-native-funcs)))
   (if gr-play-saved-native-func338
       (gr-defnative "func338" gr-play-saved-native-func338)
     (when gr-native-funcs
@@ -764,7 +776,6 @@ max HP 15, current HP 15, and the KO flag cleared."
       (gr-defnative "func150" gr-play-saved-native-func150)
     (when gr-native-funcs
       (remhash "func150" gr-native-funcs)))
-  (setq gr-play-saved-native-func015 nil)
   (setq gr-play-saved-native-func338 nil)
   (setq gr-play-saved-native-func005 nil)
   (setq gr-play-saved-native-func150 nil))
@@ -988,11 +999,17 @@ max HP 15, current HP 15, and the KO flag cleared."
   (if (> gr-play-loop-count 0)
       (throw 'gr-play-trampoline 'continue)
     (let ((stop nil)
-          (done nil))
+          (done nil)
+          (before-x 0)
+          (before-y 0)
+          (enemy-before nil))
       (while (not done)
         (setq gr-play-loop-count (1+ gr-play-loop-count))
         (gr-play-log-depth)
         (setq gr-step-count 0)
+        (setq before-x (gr-num (or (gr-get 66) 0)))
+        (setq before-y (gr-num (or (gr-get 67) 0)))
+        (setq enemy-before (gr-play-live-enemy-positions))
         (condition-case err
             (progn
               (setq gr-trace nil gr-missing nil)
@@ -1001,7 +1018,8 @@ max HP 15, current HP 15, and the KO flag cleared."
                       (catch 'gr-play-trampoline
                         (apply gr-play-orig-func009 args)
                         nil)
-                      nil)))
+                      nil))
+              (gr-play-log-enemy-movement before-x before-y enemy-before))
           (error
            (princ (format "PLAY-FRAME-ERROR loop=%d redraw=%d %s\n"
                           gr-play-loop-count
@@ -1011,8 +1029,8 @@ max HP 15, current HP 15, and the KO flag cleared."
         (when (or stop
                   gr-play-quit-requested
                   (>= (- (float-time) gr-play-start-time) gr-play-duration-seconds))
-          (setq done t))))
-    (throw 'gr-play-stop 'done))
+          (setq done t)))
+      (throw 'gr-play-stop 'done)))
   nil)
 
 (let ((old-budget gr-step-budget)
@@ -1107,6 +1125,7 @@ max HP 15, current HP 15, and the KO flag cleared."
           (error
            (princ (format "PLAY-BOOTSTRAP-ERROR %s\n" (error-message-string err)))))
         (gr-play-apply-post-init-state)
+        (gr-play-maybe-place-probe-enemy)
 
         (setq gr-play-orig-func009 (gethash "func009" gr-native-funcs))
         (setq gr-play-orig-func337 (gethash "func337" gr-native-funcs))

@@ -174,34 +174,36 @@
     (gr-set 97 1)))
 
 (defun gr-tile-probe-find-enemy-placement (player-x player-y)
-  "Return (EX EY) two tiles from PLAYER-X,PLAYER-Y on clear floor."
-  (let ((candidates '((2 0) (-2 0) (0 2) (0 -2)))
+  "Return (EX EY) near PLAYER-X,PLAYER-Y on clear floor."
+  (let ((candidates '((2 0) (-2 0) (0 2) (0 -2)
+                      (2 1) (2 -1) (-2 1) (-2 -1)
+                      (1 2) (-1 2) (1 -2) (-1 -2)
+                      (3 0) (-3 0) (0 3) (0 -3)))
         (found nil))
     (while (and candidates (null found))
       (let* ((candidate (car candidates))
              (dx (nth 0 candidate))
              (dy (nth 1 candidate))
-             (mid-x (+ player-x (/ dx 2)))
-             (mid-y (+ player-y (/ dy 2)))
              (enemy-x (+ player-x dx))
              (enemy-y (+ player-y dy)))
-        (when (and (gr-tile-probe-floor-p (gr-tile-probe-tile-at mid-x mid-y))
-                   (gr-tile-probe-floor-p (gr-tile-probe-tile-at enemy-x enemy-y))
-                   (equal (gr-index-ref (gr-index-ref (gr-get 82) mid-x) mid-y) 0)
+        (when (and (gr-tile-probe-floor-p (gr-tile-probe-tile-at enemy-x enemy-y))
                    (equal (gr-index-ref (gr-index-ref (gr-get 82) enemy-x) enemy-y) 0))
           (setq found (list enemy-x enemy-y))))
       (setq candidates (cdr candidates)))
     found))
 
 (defun gr-tile-probe-run-enemy-move (start-x start-y dest-x dest-y dir)
-  "Run one real move and return enemy position before/after."
+  "Run one real move and return enemy-phase evidence."
   (let* ((enemy-idx (gr-tile-probe-find-enemy-slot))
          (rows (gr-get 83))
          (occ (gr-get 82))
          (placement (gr-tile-probe-find-enemy-placement dest-x dest-y))
          (row nil)
          (before nil)
-         (after nil))
+         (after nil)
+         (hp-before 0)
+         (hp-after 0)
+         (trace nil))
     (unless (and (> enemy-idx 0) placement)
       (error "enemy probe could not place a test enemy"))
     (gr-tile-probe-clear-other-enemies enemy-idx)
@@ -229,6 +231,7 @@
     (gr-prop-set row "Var1" (nth 0 placement))
     (gr-prop-set row "Var2" (nth 1 placement))
     (gr-prop-set row "Var3" 5)
+    (gr-prop-set row "Var10" (gr-tile-probe-tile-at (nth 0 placement) (nth 1 placement)))
     (gr-prop-set row "Var7" 0)
     (gr-prop-set row "Var8" 0)
     (gr-prop-set row "Var9" 0)
@@ -240,6 +243,7 @@
     (gr-prop-set row "Var20" 0)
     (gr-tile-probe-set-cell occ (nth 0 placement) (nth 1 placement) enemy-idx)
     (setq before (list (gr-prop-ref row "Var1") (gr-prop-ref row "Var2")))
+    (setq hp-before (gr-num (or (gr-get 211) 0)))
     (let ((saved-func009 (gethash "func009" gr-native-funcs))
           (saved-func080 (gethash "func080" gr-native-funcs)))
       (unwind-protect
@@ -253,7 +257,20 @@
         (when saved-func080
           (gr-defnative "func080" saved-func080))))
     (setq after (list (gr-prop-ref row "Var1") (gr-prop-ref row "Var2")))
-    (list :before before :after after :slot enemy-idx :trace (reverse gr-trace))))
+    (setq hp-after (gr-num (or (gr-get 211) 0)))
+    (setq trace (reverse gr-trace))
+    (list :before before
+          :after after
+          :slot enemy-idx
+          :hp-before hp-before
+          :hp-after hp-after
+          :acted (or (not (equal before after))
+                     (/= hp-before hp-after)
+                     (member 654 trace)
+                     (member 655 trace)
+                     (member 656 trace)
+                     (member 705 trace))
+          :trace trace)))
 
 (let* ((runtime-dir (file-name-directory (or load-file-name buffer-file-name)))
        (repo-root (expand-file-name ".." runtime-dir))
@@ -325,7 +342,7 @@
                  (> (or (plist-get blocked :blocked) 0) 0))
             (princ "TILE-PROBE-OK\n")
           (princ "TILE-PROBE-FAIL\n"))
-        (if (not (equal (plist-get enemy-move :before) (plist-get enemy-move :after)))
+        (if (plist-get enemy-move :acted)
             (princ "ENEMY-PROBE-OK\n")
           (princ "ENEMY-PROBE-FAIL\n")))
     (gr-tile-probe-restore-wrappers)))
