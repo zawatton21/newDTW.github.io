@@ -4,8 +4,8 @@
  * key_input_server.js -- terminal-driven input source for the live newDTW
  * pipeline.  Run this in its own terminal alongside the rest of the live
  * stack (bridge / live_feed_loop / the emacs live-loop with
- * `gr-live-input-mode' t / the sumi-sprite-live window).  Every arrow-key or
- * WASD keypress atomically writes build/key-state.txt in this format:
+ * `gr-live-input-mode' t / the sumi-sprite-live window).  Every mapped
+ * keypress atomically writes build/key-state.txt in this format:
  *
  *   <TOKEN> <SEQ>\n
  *   <KEYCODE>\n
@@ -25,8 +25,9 @@
  *
  *   node tools/key_input_server.js
  *
- * Controls: arrow keys or WASD to move, q or Ctrl-C to quit (the terminal is
- * restored to cooked/line mode on exit either way).
+ * Controls: arrows, Home/PageUp/End/PageDown, Z/X/A/S/C/F/Space, or q /
+ * Ctrl-C to quit (the terminal is restored to cooked/line mode on exit
+ * either way).
  *
  * Non-interactive note: this reads keypresses via Node's `readline`
  * keypress-event parser (readline.emitKeypressEvents), which works whether
@@ -44,21 +45,31 @@ const repoRoot = path.resolve(__dirname, '..');
 const outPath = path.join(repoRoot, 'build', 'key-state.txt');
 const tmpPath = `${outPath}.tmp`;
 
-// Arrow keys and WASD both map to the same four direction tokens; readline's
-// keypress `key.name` is already lowercase for both ('up'/'down'/'left'/
-// 'right' for arrows, 'w'/'a'/'s'/'d' for letters regardless of Shift).
-const KEY_TOKENS = {
-  up: 'UP', down: 'DOWN', left: 'LEFT', right: 'RIGHT',
-  w: 'UP', s: 'DOWN', a: 'LEFT', d: 'RIGHT',
+const KEY_SPECS = {
+  up: { token: 'UP', keyCode: 38 },
+  down: { token: 'DOWN', keyCode: 40 },
+  left: { token: 'LEFT', keyCode: 37 },
+  right: { token: 'RIGHT', keyCode: 39 },
+  home: { token: 'HOME', keyCode: 36 },
+  pageup: { token: 'PAGEUP', keyCode: 33 },
+  end: { token: 'END', keyCode: 35 },
+  pagedown: { token: 'PAGEDOWN', keyCode: 34 },
+  z: { token: 'Z', keyCode: 90 },
+  x: { token: 'X', keyCode: 88 },
+  a: { token: 'A', keyCode: 65 },
+  s: { token: 'S', keyCode: 83 },
+  c: { token: 'C', keyCode: 67 },
+  f: { token: 'F', keyCode: 70 },
+  space: { token: 'SPACE', keyCode: 32 },
+  w: { token: 'W', keyCode: 87 },
+  d: { token: 'D', keyCode: 68 },
 };
-const KEY_CODES = {
-  up: 38, down: 40, left: 37, right: 39,
-  w: 87, s: 83, a: 65, d: 68,
-};
+const SHIFT_KEY_CODE = 16;
 
 let seq = 0;
 let shuttingDown = false;
 const heldKeyCodes = new Set();
+const heldReleaseTimers = new Map();
 const HOLD_MS = 350;
 const REFRESH_MS = 50;
 const RETRY_MS = 40;
@@ -116,6 +127,13 @@ function clearReleaseTimer() {
   }
 }
 
+function clearHeldReleaseTimers() {
+  for (const timer of heldReleaseTimers.values()) {
+    clearTimeout(timer);
+  }
+  heldReleaseTimers.clear();
+}
+
 function clearRefreshTimer() {
   if (refreshTimer) {
     clearInterval(refreshTimer);
@@ -128,9 +146,19 @@ function refreshHeldState() {
   writeKeyState(activeToken, activeKeyCode);
 }
 
-function scheduleRelease() {
-  clearReleaseTimer();
-  clearRefreshTimer();
+function releaseHeldKey(keyCode) {
+  heldReleaseTimers.delete(keyCode);
+  if (!heldKeyCodes.delete(keyCode)) return;
+  if (heldKeyCodes.size === 0) {
+    clearRefreshTimer();
+    emitKeyState('IDLE', 0);
+    return;
+  }
+  emitKeyState(activeToken, activeKeyCode);
+}
+
+function ensureRefreshLoop() {
+  if (refreshTimer) return;
   refreshTimer = setInterval(() => {
     try {
       refreshHeldState();
@@ -138,16 +166,20 @@ function scheduleRelease() {
       console.error(`key_input_server: held refresh failed: ${error.message}`);
     }
   }, REFRESH_MS);
-  releaseTimer = setTimeout(() => {
-    clearRefreshTimer();
-    heldKeyCodes.clear();
-    emitKeyState('IDLE', 0);
-    releaseTimer = null;
-  }, HOLD_MS);
+}
+
+function scheduleHeldRelease(keyCode) {
+  const previous = heldReleaseTimers.get(keyCode);
+  if (previous) clearTimeout(previous);
+  heldKeyCodes.add(keyCode);
+  heldReleaseTimers.set(keyCode, setTimeout(() => {
+    releaseHeldKey(keyCode);
+  }, HOLD_MS));
+  ensureRefreshLoop();
 }
 
 function printLegend() {
-  console.log('key_input_server: controls -- arrow keys or WASD to move, q / Ctrl-C to quit.');
+  console.log('key_input_server: controls -- arrows, Home/PageUp/End/PageDown, Z/X/A/S/C/F/Space, q / Ctrl-C to quit.');
   console.log(`key_input_server: writing token/seq + keycode + HELD lines to ${outPath}`);
 }
 
@@ -165,6 +197,7 @@ function shutdown(code) {
     retryTimer = null;
   }
   clearRefreshTimer();
+  clearHeldReleaseTimers();
   restoreTerminal();
   console.log(`key_input_server: exiting after ${seq} keypress(es) sent, terminal restored.`);
   process.exit(code);
@@ -183,15 +216,14 @@ function onKeypress(str, key) {
   if (!key) return;
   if (key.ctrl && key.name === 'c') { shutdown(0); return; }
   if (key.name === 'q') { shutdown(0); return; }
-  const token = KEY_TOKENS[key.name];
-  const keyCode = KEY_CODES[key.name];
-  if (!token) return; // unmapped key: ignored, no write
-  heldKeyCodes.clear();
-  heldKeyCodes.add(keyCode);
-  activeToken = token;
-  activeKeyCode = keyCode;
-  emitKeyState(token, keyCode);
-  scheduleRelease();
+  const spec = KEY_SPECS[key.name];
+  if (!spec) return; // unmapped key: ignored, no write
+  activeToken = spec.token;
+  activeKeyCode = spec.keyCode;
+  scheduleHeldRelease(spec.keyCode);
+  if (key.shift) scheduleHeldRelease(SHIFT_KEY_CODE);
+  emitKeyState(spec.token, spec.keyCode);
+  clearReleaseTimer();
 }
 
 function main() {

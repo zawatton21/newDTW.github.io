@@ -354,8 +354,20 @@
 
 (defun gr-play-reset-key (keycode)
   "Mirror ResetKey for the live key source."
-  (when (hash-table-p gr-play-held-codes)
-    (remhash (gr-num keycode) gr-play-held-codes))
+  ;; The native runtime still sees a held key on the next poll after
+  ;; ResetKey; clearing the held table here destroys simultaneous-arrow
+  ;; state and prevents hold-to-repeat movement.  Only the one-shot press
+  ;; latch should be forgotten.
+  (let ((needle (gr-num keycode))
+        (pending gr-play-pending-presses)
+        (kept nil)
+        (entry nil))
+    (while pending
+      (setq entry (car pending))
+      (setq pending (cdr pending))
+      (unless (= (or (plist-get entry :keycode) -1) needle)
+        (push entry kept)))
+    (setq gr-play-pending-presses (nreverse kept)))
   (gr-play-sync-pushing-key-list)
   0)
 
