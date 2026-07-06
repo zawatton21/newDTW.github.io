@@ -40,6 +40,9 @@
 (defconst gr-play-opening-profile-path
   (expand-file-name "play-opening-profile.txt" gr-play-build-dir))
 
+(defconst gr-play-saves-dir
+  (expand-file-name "saves-play" gr-play-build-dir))
+
 (defvar gr-play-duration-seconds 300
   "How long the interactive play loop runs before exiting.")
 
@@ -109,6 +112,10 @@
 (defvar gr-play-opening-sleep-seconds 0.0)
 (defvar gr-play-frame-seq 0)
 (defvar gr-play-queue-overflow-logged nil)
+(defvar gr-play-opening-guard-seq 0)
+(defvar gr-play-opening-release-seen nil)
+(defvar gr-play-opening-login-rendered nil)
+(defvar gr-play-session-data-root nil)
 
 (defun gr-play-buffer-histogram ()
   "Return an alist of source buffer id -> blit count for the current gr-sumi."
@@ -528,6 +535,34 @@ the head of every dumped frame makes any frame self-contained.")
   (setq gr-worldgen-use-existing-state t)
   (gr-worldgen-run t))
 
+(defun gr-play-bootstrap-resume-init ()
+  "Mirror the batch resume load path used by run-saveload.el."
+  (gr-play-ensure-worldgen-runtime)
+  (setq gr-data-root (or gr-play-session-data-root
+                         (getenv "GR_DATA_ROOT")
+                         gr-data-root))
+  (gr-run-func "func229"))
+
+(defun gr-play-reset-session-saves ()
+  "Point interactive play at an isolated save root under build/saves-play/."
+  (let* ((source-root (or (getenv "GR_DATA_ROOT") gr-data-root))
+         (keep-saves (equal (getenv "GR_PLAY_KEEP_SAVES") "1"))
+         (slot-files '("01.dat" "01e.dat" "01n.dat"
+                       "02.dat" "02e.dat" "02n.dat"
+                       "03.dat" "03e.dat" "03n.dat"))
+         (source-00 (expand-file-name "00.dat" source-root))
+         (target-00 (expand-file-name "00.dat" gr-play-saves-dir)))
+    (make-directory gr-play-saves-dir t)
+    (unless keep-saves
+      (dolist (name slot-files)
+        (let ((path (expand-file-name name gr-play-saves-dir)))
+          (when (file-exists-p path)
+            (delete-file path)))))
+    (when (file-exists-p source-00)
+      (copy-file source-00 target-00 t))
+    (setq gr-play-session-data-root gr-play-saves-dir
+          gr-data-root gr-play-saves-dir)))
+
 (defun gr-play-apply-post-init-state ()
   "Restore the live-loop HP state that func004/worldgen do not populate.
 
@@ -536,11 +571,6 @@ max HP 15, current HP 15, and the KO flag cleared."
   (gr-set 352 15)
   (gr-set 211 15)
   (gr-set 212 0))
-
-(defun gr-play-func015 (&rest _args)
-  "Minimal local movement continuation."
-  (push 15 gr-trace)
-  (gr-run-func "func019"))
 
 (defun gr-play-func338 (&rest _args)
   "No-op render helper."
@@ -565,7 +595,6 @@ max HP 15, current HP 15, and the KO flag cleared."
   (setq gr-play-saved-native-func338 (gethash "func338" gr-native-funcs))
   (setq gr-play-saved-native-func005 (gethash "func005" gr-native-funcs))
   (setq gr-play-saved-native-func150 (gethash "func150" gr-native-funcs))
-  (gr-defnative "func015" #'gr-play-func015)
   (gr-defnative "func338" #'gr-play-func338)
   (gr-defnative "func005" #'gr-play-func005)
   (gr-defnative "func150" #'gr-play-func150))
@@ -613,11 +642,37 @@ max HP 15, current HP 15, and the KO flag cleared."
   (and (hash-table-p gr-play-held-codes)
        (> (gethash keycode gr-play-held-codes 0) 0)))
 
+(defun gr-play-opening-note-screen-transition ()
+  "Require a release and later SEQ before the next opening confirm is valid."
+  (setq gr-play-opening-guard-seq gr-play-last-seq
+        gr-play-opening-release-seen nil))
+
+(defun gr-play-opening-track-release (record)
+  "Notice when a full key release happened after RECORD during opening."
+  (when (and record
+             (> (or (plist-get record :seq) 0) gr-play-opening-guard-seq)
+             (not (hash-table-p gr-play-held-codes)))
+    (setq gr-play-opening-release-seen t))
+  (when (and record
+             (> (or (plist-get record :seq) 0) gr-play-opening-guard-seq)
+             (hash-table-p gr-play-held-codes)
+             (= 0 (hash-table-count gr-play-held-codes)))
+    (setq gr-play-opening-release-seen t)))
+
+(defun gr-play-opening-confirm-ready-p (record)
+  "Return non-nil when RECORD is a fresh post-release confirm candidate."
+  (and record
+       gr-play-last-input-was-new
+       (> (or (plist-get record :seq) 0) gr-play-opening-guard-seq)
+       gr-play-opening-release-seen))
+
 (defun gr-play-opening-render-login ()
   "Render the login/save-slot screen once."
   (let ((start (float-time)))
     (setq gr-sumi nil)
     (gr-emit "gui-present" 0)
+    (unless gr-play-opening-login-rendered
+      (setq gr-play-opening-login-rendered t))
     (gr-run-func "func146")
     (gr-run-func "func148")
     (gr-emit "gui-present" 1)
@@ -650,9 +705,10 @@ max HP 15, current HP 15, and the KO flag cleared."
       (gr-play-opening-render-login)
       (setq poll-start (float-time))
       (setq record (gr-play-refresh-input))
+      (gr-play-opening-track-release record)
       (setq gr-play-opening-poll-seconds
             (+ gr-play-opening-poll-seconds (- (float-time) poll-start)))
-      (when (and record gr-play-last-input-was-new)
+      (when (gr-play-opening-confirm-ready-p record)
         (cond
          ((gr-play-opening-held-p 38)
           (gr-set 726 (max 1 (1- (or (gr-get 726) 1)))))
@@ -697,23 +753,27 @@ max HP 15, current HP 15, and the KO flag cleared."
                   (gr-play-opening-held-p 38)
                   (gr-play-opening-held-p 39)
                   (gr-play-opening-held-p 40))
-          (setq entered-login t)))
+          (setq entered-login t)
+          (gr-play-opening-note-screen-transition))))
       (unless entered-login
         (setq poll-start (float-time))
         (sleep-for gr-play-opening-poll-sleep-seconds)
         (setq gr-play-opening-sleep-seconds
-              (+ gr-play-opening-sleep-seconds (- (float-time) poll-start)))))))
+              (+ gr-play-opening-sleep-seconds (- (float-time) poll-start))))))
 
 (defun gr-play-bootstrap-opening ()
-  "Run func004 through the title/login flow until new game starts."
+  "Run func004 through the title/login flow until a boot path is selected."
   (let ((old-depth gr-depth-limit))
-    (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
+    (gr-play-reset-session-saves)
     (gr-reset)
     (gr-set "stat" 1)
     (gr-set "hwnd" 0)
     (setq gr-play-opening-active t
           gr-play-opening-result nil
-          gr-play-title-frame-count 0)
+          gr-play-title-frame-count 0
+          gr-play-opening-guard-seq gr-play-last-seq
+          gr-play-opening-release-seen t
+          gr-play-opening-login-rendered nil)
     (unwind-protect
         (let ((saved-func139A (gethash "func139A" gr-native-funcs)))
           (unwind-protect
@@ -732,8 +792,8 @@ max HP 15, current HP 15, and the KO flag cleared."
       (setq gr-play-opening-active nil)
       (setq gr-depth-limit old-depth)))
   (let ((line
-         (format
-          "PLAY-OPENING title_loops=%d login_loops=%d render=%.3f poll=%.3f sleep=%.3f result=%S"
+          (format
+           "PLAY-OPENING title_loops=%d login_loops=%d render=%.3f poll=%.3f sleep=%.3f result=%S"
           gr-play-opening-title-loops
           gr-play-opening-login-loops
           gr-play-opening-render-seconds
@@ -742,8 +802,8 @@ max HP 15, current HP 15, and the KO flag cleared."
           gr-play-opening-result)))
     (princ (concat line "\n"))
     (gr-play-write-opening-profile line))
-  (unless (eq gr-play-opening-result 'new-game)
-    (error "opening flow did not reach new game (result=%S)" gr-play-opening-result)))
+  (unless (memq gr-play-opening-result '(new-game resume))
+    (error "opening flow did not select a playable path (result=%S)" gr-play-opening-result)))
 
 (defun gr-play-log-status ()
   "Print one periodic movement/status line."
@@ -842,6 +902,10 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-opening-render-seconds 0.0
               gr-play-opening-poll-seconds 0.0
               gr-play-opening-sleep-seconds 0.0
+              gr-play-opening-guard-seq 0
+              gr-play-opening-release-seen t
+              gr-play-opening-login-rendered nil
+              gr-play-session-data-root nil
               gr-play-last-seq 0
               gr-play-last-token "IDLE"
               gr-play-held-codes (make-hash-table :test 'equal)
@@ -862,11 +926,11 @@ max HP 15, current HP 15, and the KO flag cleared."
               ;; (the v2/v3 path).  The title/login opening composes into
               ;; work canvases across frames, so it needs the lossless
               ;; frame pipeline (pending) to display reliably.
-              (if (equal (getenv "GR_PLAY_SKIP_OPENING") "1")
+                (if (equal (getenv "GR_PLAY_SKIP_OPENING") "1")
                   ;; Mirror run-init.el: init without entering the title flow.
                   (let ((saved-func139A (gethash "func139A" gr-native-funcs))
                         (old-depth gr-depth-limit))
-                    (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
+                    (gr-play-reset-session-saves)
                     (gr-reset)
                     (gr-set "stat" 1)
                     (gr-set "hwnd" 0)
@@ -881,7 +945,9 @@ max HP 15, current HP 15, and the KO flag cleared."
                         (when gr-native-funcs
                           (remhash "func139A" gr-native-funcs)))))
                 (gr-play-bootstrap-opening))
-              (gr-play-bootstrap-real-init))
+              (if (eq gr-play-opening-result 'resume)
+                  (gr-play-bootstrap-resume-init)
+                (gr-play-bootstrap-real-init)))
           (error
            (princ (format "PLAY-BOOTSTRAP-ERROR %s\n" (error-message-string err)))))
         (gr-play-apply-post-init-state)
