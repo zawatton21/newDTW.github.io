@@ -76,6 +76,7 @@
 (defvar gr-play-quit-requested nil)
 (defvar gr-play-orig-func009 nil)
 (defvar gr-play-orig-func337 nil)
+(defvar gr-play-orig-func080 nil)
 (defvar gr-play-orig-gr-emit nil)
 (defvar gr-play-worldgen-saved-func009 nil)
 (defvar gr-play-saved-native-func338 nil)
@@ -115,6 +116,12 @@
 (defvar gr-play-opening-release-seen nil)
 (defvar gr-play-opening-login-rendered nil)
 (defvar gr-play-session-data-root nil)
+(defvar gr-play-post-init-hook nil
+  "Optional function run after boot/init, before the live loop starts.")
+(defvar gr-play-before-key-poll-hook nil
+  "Optional function run immediately before each live func080 key poll.")
+(defvar gr-play-after-frame-hook nil
+  "Optional function run after each dumped redraw frame.")
 
 (defun gr-play-buffer-histogram ()
   "Return an alist of source buffer id -> blit count for the current gr-sumi."
@@ -705,7 +712,12 @@ max HP 15, current HP 15, and the KO flag cleared."
   (gr-set 567 100)
   ;; Fresh runs start unpoisoned (func019.ts:201 drains 5 HP per turn
   ;; while var_135 >= 1).
-  (gr-set 135 0))
+  (gr-set 135 0)
+  ;; New-game worldgen can leave var_224 at the old title/default value
+  ;; even when the authoritative inventory rows are empty, which makes the
+  ;; live pickup path hit func400's "inventory full" branch immediately.
+  (when (fboundp 'gr-sync-inventory-count)
+    (gr-sync-inventory-count)))
 
 (defun gr-play-floor-tile-p (tile)
   "Return non-nil when TILE is a normal walkable floor."
@@ -1094,9 +1106,17 @@ max HP 15, current HP 15, and the KO flag cleared."
           (+ gr-play-draw-seconds (- (float-time) draw-start)))
     (setq gr-play-redraw-count (1+ gr-play-redraw-count))
     (gr-play-dump-current-frame)
+    (when (functionp gr-play-after-frame-hook)
+      (funcall gr-play-after-frame-hook))
     (when (= 0 (mod gr-play-redraw-count gr-play-report-every))
       (gr-play-log-status))
     result))
+
+(defun gr-play-func080-wrapper (&rest args)
+  "Run the live key-poll hook, then delegate to the real func080."
+  (when (functionp gr-play-before-key-poll-hook)
+    (funcall gr-play-before-key-poll-hook))
+  (apply gr-play-orig-func080 args))
 
 (defun gr-play-func009-wrapper (&rest args)
   "Loop pacing/termination wrapper around the real func009."
@@ -1249,10 +1269,13 @@ max HP 15, current HP 15, and the KO flag cleared."
               (princ (format "PLAY-BOOTSTRAP-ERROR direct boot also failed: %s\n"
                              (error-message-string err2)))))))
         (gr-play-apply-post-init-state)
+        (when (functionp gr-play-post-init-hook)
+          (funcall gr-play-post-init-hook))
         (gr-play-maybe-place-probe-enemy)
 
         (setq gr-play-orig-func009 (gethash "func009" gr-native-funcs))
         (setq gr-play-orig-func337 (gethash "func337" gr-native-funcs))
+        (setq gr-play-orig-func080 (gethash "func080" gr-native-funcs))
         (setq gr-read-key-state-fn #'gr-play-read-key-state)
         (setq gr-reset-key-fn #'gr-play-reset-key)
         (setq gr-play-start-time (float-time))
@@ -1264,6 +1287,8 @@ max HP 15, current HP 15, and the KO flag cleared."
           (gr-defnative "func009" #'gr-play-func009-wrapper))
         (when gr-play-orig-func337
           (gr-defnative "func337" #'gr-play-func337-wrapper))
+        (when gr-play-orig-func080
+          (gr-defnative "func080" #'gr-play-func080-wrapper))
         (catch 'gr-play-stop
           (gr-run-func "func009"))
         (setq gr-play-frame-count gr-play-redraw-count)
@@ -1295,6 +1320,8 @@ max HP 15, current HP 15, and the KO flag cleared."
     (when gr-play-orig-gr-emit
       (fset 'gr-emit gr-play-orig-gr-emit))
     (gr-play-restore-local-missing-natives)
+    (when gr-play-orig-func080
+      (gr-defnative "func080" gr-play-orig-func080))
     (when gr-play-orig-func337
       (gr-defnative "func337" gr-play-orig-func337))
     (when gr-play-orig-func009
