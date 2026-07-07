@@ -18,6 +18,7 @@
 (defvar gr-live-probe-message-ok nil)
 (defvar gr-live-probe-message-frame-path nil)
 (defvar gr-live-probe-message-text nil)
+(defvar gr-live-probe-message-color-record nil)
 (defvar gr-live-probe-confirm-attempts nil)
 (defvar gr-live-probe-failure nil)
 (defvar gr-live-probe-finished nil)
@@ -278,6 +279,19 @@
        (equal (gr-get 231) 1)
        (equal (gr-get 222) 10)))
 
+(defun gr-live-probe-main-menu-status-selected-p ()
+  "Return non-nil when the live 2x2 menu cursor is on 状態."
+  (and (= (gr-live-probe-state-int 247) 2)
+       (= (gr-live-probe-state-int 248) 1)))
+
+(defun gr-live-probe-retry-held-press (keycode interval label)
+  "Re-issue KEYCODE every INTERVAL polls while waiting in the same stage."
+  (when (and (> interval 0)
+             (= 0 (mod gr-live-probe-stage-polls interval)))
+    (gr-live-probe-start-held-press keycode)
+    (gr-live-probe-log-state label)
+    t))
+
 (defun gr-live-probe-on-item-cell-p ()
   "Return non-nil when the player is standing on the target item cell."
   (and gr-live-probe-target
@@ -310,6 +324,7 @@
         gr-live-probe-pickup-ok nil
         gr-live-probe-message-ok nil
         gr-live-probe-message-frame-path nil
+        gr-live-probe-message-color-record nil
         gr-live-probe-message-text nil)
   (when (file-exists-p gr-live-probe-key-state-path)
     (delete-file gr-live-probe-key-state-path))
@@ -344,22 +359,27 @@
      ((gr-live-probe-main-menu-open-p)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'status-right "main-menu-opened"))
-     ((> gr-live-probe-stage-polls 12)
+     ((> gr-live-probe-stage-polls 20)
       (gr-live-probe-finish "main-menu-open-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 657) 65))
+                                      4
+                                      "retry-main-menu")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'status-right)
     (gr-live-probe-start-held-press (gr-num (or (gr-get 648) 39)))
     (gr-live-probe-stage-transition 'wait-status-cursor "press-status-right"))
    ((eq gr-live-probe-stage 'wait-status-cursor)
     (cond
-     ((and (= (gr-live-probe-state-int 247) 2)
-           (= (gr-live-probe-state-int 248) 1))
+     ((gr-live-probe-main-menu-status-selected-p)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'status-confirm "status-cursor-ready"))
-     ((> gr-live-probe-stage-polls 12)
+     ((> gr-live-probe-stage-polls 24)
       (gr-live-probe-finish "status-cursor-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 648) 39))
+                                      4
+                                      "retry-status-right")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'status-confirm)
     (gr-live-probe-start-held-press (gr-num (or (gr-get 655) 90)))
@@ -370,9 +390,12 @@
       (setq gr-live-probe-status-opened t)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'close-status "status-opened"))
-     ((> gr-live-probe-stage-polls 20)
+     ((> gr-live-probe-stage-polls 30)
       (gr-live-probe-finish "status-open-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 655) 90))
+                                      5
+                                      "retry-status-confirm")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'close-status)
     (gr-live-probe-start-held-press (gr-num (or (gr-get 656) 88)))
@@ -384,9 +407,12 @@
       (setq gr-live-probe-status-closed t)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'move-to-item "status-closed"))
-     ((> gr-live-probe-stage-polls 20)
+     ((> gr-live-probe-stage-polls 30)
       (gr-live-probe-finish "status-close-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 656) 88))
+                                      5
+                                      "retry-status-close")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'move-to-item)
     (gr-live-probe-start-held-press (plist-get gr-live-probe-target :move-keycode))
@@ -400,9 +426,12 @@
      ((gr-live-probe-on-item-cell-p)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'pickup-open-main-menu "item-stepped"))
-     ((> gr-live-probe-stage-polls 20)
+     ((> gr-live-probe-stage-polls 30)
       (gr-live-probe-finish "item-step-timeout"))
      (t
+      (gr-live-probe-retry-held-press (plist-get gr-live-probe-target :move-keycode)
+                                      5
+                                      "retry-move-to-item")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'pickup-open-main-menu)
     (if (gr-live-probe-pickup-succeeded-p)
@@ -421,9 +450,12 @@
      ((gr-live-probe-main-menu-open-p)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'pickup-menu-down "pickup-main-menu-opened"))
-     ((> gr-live-probe-stage-polls 12)
+     ((> gr-live-probe-stage-polls 20)
       (gr-live-probe-finish "pickup-main-menu-open-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 657) 65))
+                                      4
+                                      "retry-pickup-main-menu")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'pickup-menu-down)
     (if (gr-live-probe-pickup-succeeded-p)
@@ -443,9 +475,12 @@
            (= (gr-live-probe-state-int 248) 2))
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'pickup-ground-confirm "ground-cursor-ready"))
-     ((> gr-live-probe-stage-polls 12)
+     ((> gr-live-probe-stage-polls 24)
       (gr-live-probe-finish "ground-cursor-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 650) 40))
+                                      4
+                                      "retry-ground-down")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'pickup-ground-confirm)
     (gr-live-probe-start-held-press (gr-num (or (gr-get 655) 90)))
@@ -455,9 +490,12 @@
      ((gr-live-probe-ground-page-open-p)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'pickup-item-confirm "ground-page-opened"))
-     ((> gr-live-probe-stage-polls 20)
+     ((> gr-live-probe-stage-polls 30)
       (gr-live-probe-finish "ground-page-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 655) 90))
+                                      5
+                                      "retry-ground-confirm")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'pickup-item-confirm)
     (gr-live-probe-start-held-press (gr-num (or (gr-get 655) 90)))
@@ -472,9 +510,12 @@
       (setq gr-live-probe-pickup-ok t)
       (gr-live-probe-write-idle)
       (gr-live-probe-stage-transition 'wait-message "pickup-succeeded-direct"))
-     ((> gr-live-probe-stage-polls 20)
+     ((> gr-live-probe-stage-polls 30)
       (gr-live-probe-finish "ground-submenu-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 655) 90))
+                                      5
+                                      "retry-item-confirm")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'pickup-confirm)
     (gr-live-probe-start-held-press (gr-num (or (gr-get 655) 90)))
@@ -492,9 +533,12 @@
       (gr-live-probe-start-held-press (gr-num (or (gr-get 657) 65)))
       (push 'A gr-live-probe-confirm-attempts)
       (gr-live-probe-log-state "press-confirm-a"))
-     ((> gr-live-probe-stage-polls 24)
+     ((> gr-live-probe-stage-polls 36)
       (gr-live-probe-finish "pickup-confirm-timeout"))
      (t
+      (gr-live-probe-retry-held-press (gr-num (or (gr-get 655) 90))
+                                      6
+                                      "retry-pickup-confirm")
       (gr-live-probe-write-idle))))
    ((eq gr-live-probe-stage 'wait-message)
     (cond
@@ -534,10 +578,27 @@
       (setq records (cdr records)))
     (or found fallback)))
 
+(defun gr-live-probe-frame-message-color-record (records)
+  "Return the gui-set-color record that precedes the pickup text in RECORDS."
+  (let ((last-color nil)
+        (found nil))
+    (while (and records (null found))
+      (let ((entry (car records)))
+        (cond
+         ((equal (car entry) "gui-set-color")
+          (setq last-color entry))
+         ((and (equal (car entry) "gui-draw-text")
+               (stringp (nth 1 entry))
+               (string-match-p "拾った\\|乗った\\|持ち物" (nth 1 entry)))
+          (setq found last-color))))
+      (setq records (cdr records)))
+    found))
+
 (defun gr-live-probe-after-frame ()
   "Capture the first live pickup message frame."
   (let* ((records (reverse gr-sumi))
-         (text (gr-live-probe-frame-message-text records)))
+         (text (gr-live-probe-frame-message-text records))
+         (color-record (gr-live-probe-frame-message-color-record records)))
     (when (and gr-live-probe-target
                (not gr-live-probe-pickup-ok)
                (gr-live-probe-pickup-succeeded-p))
@@ -551,6 +612,7 @@
                (gr-live-probe-pickup-message-p))
       (setq gr-live-probe-message-ok t
             gr-live-probe-message-text text
+            gr-live-probe-message-color-record color-record
             gr-live-probe-message-frame-path
             (expand-file-name
              (format "frame-%06d.json" gr-play-frame-seq)
@@ -586,8 +648,13 @@
                                           (plist-get gr-live-probe-target :item-y))))))
   (princ (format "LIVE-MESSAGE %s\n"
                  (list :ok gr-live-probe-message-ok
+                       :color gr-live-probe-message-color-record
                        :text gr-live-probe-message-text
                        :frame gr-live-probe-message-frame-path)))
+  (if (equal gr-live-probe-message-color-record
+             '("gui-set-color" 255 255 255))
+      (princ (format "LIVE-MESSAGE-WHITE %s\n" gr-live-probe-message-color-record))
+    (princ (format "LIVE-MESSAGE-WHITE-FAIL %S\n" gr-live-probe-message-color-record)))
   (princ (format "LIVE-TRACE %S\n" (nreverse gr-live-probe-trace)))
   (if (and gr-live-probe-status-opened gr-live-probe-status-closed)
       (princ "LIVE-STATUS-CLOSE-OK\n")

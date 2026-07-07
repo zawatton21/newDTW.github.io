@@ -17,10 +17,12 @@
   (gr-defnative "func139A" (lambda (&rest _args) nil))
   (gr-set "stat" 1)
   (gr-set "hwnd" 0)
+  (gr-init-main-bootstrap-state)
   (condition-case err
       (gr-run-func "func004")
     (error
      (princ (format "INIT-ERROR %s\n" err))))
+  (gr-capture-main-bootstrap-state)
   (princ (format "INIT-SLOTS %s\n" (hash-table-count gr-state)))
   (princ (format "INIT-SAMPLE version=%s title=%s\n"
                  (gr-get "version_number")
@@ -50,4 +52,5 @@
     (princ (format "INIT-MISSING %s\n" (reverse gr-missing))))
   (gr-worldgen-seed-base-state)
   (setq gr-worldgen-use-existing-state t)
-  (gr-worldgen-run t))
+  (gr-worldgen-run t)
+  (gr-restore-main-bootstrap-state))

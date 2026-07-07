@@ -666,7 +666,8 @@ frame is self-contained for a consumer that starts or resyncs."
   (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
   (gr-worldgen-seed-base-state)
   (setq gr-worldgen-use-existing-state t)
-  (gr-worldgen-run t))
+  (gr-worldgen-run t)
+  (gr-restore-main-bootstrap-state))
 
 (defun gr-play-bootstrap-resume-init ()
   "Mirror the batch resume load path used by run-saveload.el."
@@ -1050,7 +1051,9 @@ max HP 15, current HP 15, and the KO flag cleared."
               (progn
                 (setq gr-depth-limit (max gr-depth-limit 5000))
                 (gr-defnative "func139A" (lambda (&rest _args) nil))
+                (gr-init-main-bootstrap-state)
                 (gr-run-func "func004")
+                (gr-capture-main-bootstrap-state)
                 ;; Capture func004's one-time work-buffer fills (buffer 12
                 ;; blue box etc.) now, before the title/worldgen paths clear
                 ;; gr-sumi, so they replay at the head of every frame.
@@ -1169,7 +1172,9 @@ max HP 15, current HP 15, and the KO flag cleared."
         (progn
           (setq gr-depth-limit (max gr-depth-limit 5000))
           (gr-defnative "func139A" (lambda (&rest _args) nil))
+          (gr-init-main-bootstrap-state)
           (gr-run-func "func004")
+          (gr-capture-main-bootstrap-state)
           ;; Capture func004's one-time work-buffer fills before worldgen
           ;; clears gr-sumi (see gr-play-capture-boot-composition).
           (gr-play-capture-boot-composition))

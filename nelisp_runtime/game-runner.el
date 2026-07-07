@@ -788,6 +788,64 @@ the save files, then mirrors the TS adapter's OFFSET selection."
              (setq i (1+ i)))
            (nreverse rows))))
 
+(defconst gr-main-bootstrap-array-size 512
+  "Safe boot-time capacity for main_d.ts array-backed globals.")
+(defconst gr-main-bootstrap-slots '(25 26 27 494 664 691)
+  "Load-bearing main_d.ts slots mirrored by the NeLisp runtime.")
+
+(defvar gr-main-bootstrap-snapshot nil
+  "Copy of the func004-populated main_d.ts bootstrap arrays.")
+
+(defun gr-copy-vector-prefix (source target)
+  "Copy the overlapping prefix from SOURCE into TARGET."
+  (let ((idx 0)
+        (limit (min (length source) (length target))))
+    (while (< idx limit)
+      (aset target idx (aref source idx))
+      (setq idx (1+ idx))))
+  target)
+
+(defun gr-ensure-vector-slot (slot length)
+  "Ensure SLOT holds a vector of at least LENGTH entries."
+  (let* ((current (gr-get slot))
+         (need (max 0 (gr-num length)))
+         (target (if (and (vectorp current) (>= (length current) need))
+                     current
+                   (let ((fresh (gr-make-array need)))
+                     (when (vectorp current)
+                       (gr-copy-vector-prefix current fresh))
+                     fresh))))
+    (gr-set slot target)
+    target))
+
+(defun gr-init-main-bootstrap-state ()
+  "Mirror the load-bearing pre-func004 init from src/renderer/main_d.ts."
+  (gr-set 754 1)
+  (gr-set 2156 2)
+  (dolist (slot gr-main-bootstrap-slots)
+    (gr-ensure-vector-slot slot gr-main-bootstrap-array-size)))
+
+(defun gr-capture-main-bootstrap-state ()
+  "Snapshot the current main_d.ts bootstrap arrays for later restoration."
+  (setq gr-main-bootstrap-snapshot
+        (mapcar
+         (lambda (slot)
+           (let ((value (gr-get slot)))
+             (cons slot
+                   (if (vectorp value)
+                       (copy-sequence value)
+                     value))))
+         gr-main-bootstrap-slots)))
+
+(defun gr-restore-main-bootstrap-state ()
+  "Restore the last captured main_d.ts bootstrap arrays."
+  (dolist (entry gr-main-bootstrap-snapshot)
+    (gr-set (car entry)
+            (let ((value (cdr entry)))
+              (if (vectorp value)
+                  (copy-sequence value)
+                value)))))
+
 (defun gr-item-info-dim (count)
   "Mirror Class.ItemInfo.dim."
   (gr-record-dim count 30))
@@ -926,7 +984,11 @@ the save files, then mirrors the TS adapter's OFFSET selection."
   "Reset interpreter state (keeps loaded functions)."
   (setq gr-state (make-hash-table :test 'equal))
   (clrhash gr-bsave-cache)
-  (setq gr-sumi nil gr-trace nil gr-missing nil gr-depth 0))
+  (setq gr-sumi nil
+        gr-trace nil
+        gr-missing nil
+        gr-depth 0
+        gr-main-bootstrap-snapshot nil))
 
 (defun gr-op-name-p (name)
   "Non-nil when NAME is a known IR op string."

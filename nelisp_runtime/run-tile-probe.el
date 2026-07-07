@@ -859,13 +859,16 @@
     (unwind-protect
         (progn
           (gr-defnative "func139A" (lambda (&rest _args) nil))
-          (gr-run-func "func004"))
+          (gr-init-main-bootstrap-state)
+          (gr-run-func "func004")
+          (gr-capture-main-bootstrap-state))
       (if saved-func139A
           (gr-defnative "func139A" saved-func139A)
         (when gr-native-funcs
           (remhash "func139A" gr-native-funcs)))))
   (gr-worldgen-seed-base-state)
   (gr-worldgen-run t)
+  (gr-restore-main-bootstrap-state)
   (setq path (gr-tile-probe-find-edge-path))
   (unless path
     (error "tile probe could not find a floor edge path"))
