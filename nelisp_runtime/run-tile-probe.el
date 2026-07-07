@@ -1,5 +1,7 @@
 ;;; run-tile-probe.el --- water-edge movement regression probe -*- coding: utf-8; -*-
 
+(require 'json)
+
 (defun gr-tile-probe-tile-at (x y)
   "Return var_71[X][Y]."
   (gr-index-ref (gr-index-ref (gr-get 71) x) y))
@@ -306,6 +308,37 @@
       (insert "\n"))
     path))
 
+(defun gr-tile-probe-record->json (entry)
+  "Convert one gr-sumi ENTRY into the frame JSON object format."
+  (let ((op (car entry))
+        (args (cdr entry))
+        (nums nil)
+        (text nil))
+    (dolist (arg args)
+      (cond
+       ((numberp arg)
+        (push arg nums))
+       ((and (null text) (stringp arg))
+        (setq text arg))
+       ((and (null text) arg)
+        (setq text (format "%s" arg)))))
+    (let ((obj `((name . ,op))))
+      (when nums
+        (setq obj (append obj `((nums . ,(nreverse nums))))))
+      (when text
+        (setq obj (append obj `((text . ,text)))))
+      obj)))
+
+(defun gr-tile-probe-dump-frame-json (test-root label)
+  "Write current frame records to TEST-ROOT/LABEL-frame.json and return the path."
+  (let ((path (expand-file-name (format "%s-frame.json" label) test-root))
+        (coding-system-for-write 'utf-8))
+    (with-temp-file path
+      (insert (json-encode
+               (mapcar #'gr-tile-probe-record->json (reverse gr-sumi))))
+      (insert "\n"))
+    path))
+
 (defun gr-tile-probe-frame-records (predicate)
   "Return chronological gr-sumi records matching PREDICATE."
   (let ((out nil))
@@ -398,6 +431,7 @@
   "Walk onto money, render one frame, and return evidence."
   (let ((move nil)
         (frame-path nil)
+        (json-path nil)
         (text-records nil)
         (frame-records nil))
     (gr-tile-probe-place-item dest-x dest-y 1 amount)
@@ -407,6 +441,7 @@
           gr-missing nil)
     (gr-run-func "func337")
     (setq frame-path (gr-tile-probe-dump-frame test-root "money-pickup"))
+    (setq json-path (gr-tile-probe-dump-frame-json test-root "money-pickup"))
     (setq text-records
           (gr-tile-probe-frame-records
            (lambda (entry)
@@ -424,6 +459,7 @@
                   (= (or (nth 5 entry) -1) 64)))))
     (list :move move
           :frame frame-path
+          :json json-path
           :text-records text-records
           :frame-records frame-records
           :comments-row1 (gr-get "comments_row1")
@@ -436,7 +472,7 @@
   (let ((saved-func009 (gethash "func009" gr-native-funcs))
         (saved-func051 (gethash "func051" gr-native-funcs))
         (saved-func080 (gethash "func080" gr-native-funcs))
-        (enemy-idx (gr-tile-probe-find-enemy-slot))
+        (enemy-idx 0)
         (placement nil)
         (rows (gr-get 83))
         (occ (gr-get 82))
@@ -446,13 +482,23 @@
         (result nil))
     (unwind-protect
         (progn
+          (setq enemy-idx (gr-tile-probe-find-enemy-slot))
+          (when (= enemy-idx 0)
+            (let ((idx 1))
+              (while (and (vectorp rows) (< idx (length rows)) (= enemy-idx 0))
+                (when (equal (gr-prop-ref (aref rows idx) "Var0") 0)
+                  (setq enemy-idx idx))
+                (setq idx (1+ idx)))))
           (unless (> enemy-idx 0)
-            (error "rotate probe could not find a live enemy slot"))
+            (error "rotate probe could not find a reusable enemy slot"))
           (setq placement (gr-tile-probe-find-adjacent-floor (gr-get 66) (gr-get 67)))
           (unless placement
             (error "rotate probe could not place an adjacent enemy"))
           (gr-tile-probe-clear-other-enemies enemy-idx)
           (setq row (aref rows enemy-idx))
+          (when (equal (gr-prop-ref row "Var0") 0)
+            (gr-prop-set row "Var0" 1))
+          (gr-prop-set row "Var3" 5)
           (gr-prop-set row "Var1" (nth 0 placement))
           (gr-prop-set row "Var2" (nth 1 placement))
           (gr-tile-probe-set-cell occ (nth 0 placement) (nth 1 placement) enemy-idx)
@@ -636,6 +682,145 @@
                      (member 705 trace))
           :trace trace)))
 
+(defun gr-tile-probe-set-array-slot (slot index value)
+  "Set state SLOT at INDEX to VALUE when SLOT contains a vector."
+  (let ((arr (gr-get slot)))
+    (when (and (vectorp arr) (>= index 0) (< index (length arr)))
+      (aset arr index value))))
+
+(defun gr-tile-probe-put-item-row (slot item-id &optional plus rarity)
+  "Populate inventory SLOT with ITEM-ID and minimal metadata."
+  (let ((row (gr-index-ref (gr-get 233) slot))
+        (idx 0))
+    (while (< idx (length row))
+      (aset row idx 0)
+      (setq idx (1+ idx)))
+    (gr-prop-set row "Var0" item-id)
+    (gr-prop-set row "Var4" (or plus 0))
+    (gr-prop-set row "Var13" (or rarity 1))
+    row))
+
+(defun gr-tile-probe-run-item-screen (test-root label slot)
+  "Render the item screen focused on inventory SLOT."
+  (let ((frame-path nil)
+        (json-path nil))
+    (gr-set 195 0)
+    (gr-set 196 0)
+    (gr-set 198 0)
+    (gr-set 220 0)
+    (gr-set 225 slot)
+    (gr-set 223 (+ (gr-num (or (gr-get 224) 0)) 10))
+    (gr-set "item_page_number" 1)
+    (gr-set "Y_axis_item_position" 45)
+    (gr-set 229 44)
+    (gr-set 230 45)
+    (gr-set 231 0)
+    (gr-set "belongings_item_list" (gr-prop-ref (gr-index-ref (gr-get 233) slot) "Var0"))
+    (gr-set "open_item_menue" 1)
+    (setq gr-sumi nil
+          gr-trace nil
+          gr-missing nil)
+    (gr-run-func "func337")
+    (setq frame-path (gr-tile-probe-dump-frame test-root label))
+    (setq json-path (gr-tile-probe-dump-frame-json test-root label))
+    (list :frame frame-path
+          :json json-path
+          :missing (reverse gr-missing)
+          :trace (reverse gr-trace)
+          :texts
+          (gr-tile-probe-frame-records
+           (lambda (entry)
+             (and (equal (car entry) "gui-draw-text")
+                  (stringp (nth 1 entry))
+                  (> (length (nth 1 entry)) 0)))))))
+
+(defun gr-tile-probe-run-status-frame (test-root label ids)
+  "Render one status overlay frame for IDS = (ATTACK DEFENSE ABILITY)."
+  (let ((frame-path nil)
+        (json-path nil))
+    (gr-tile-probe-clear-belongings)
+    (gr-set 224 3)
+    (gr-tile-probe-put-item-row 1 (nth 0 ids) 0 1)
+    (gr-tile-probe-put-item-row 2 (nth 1 ids) 0 2)
+    (gr-tile-probe-put-item-row 3 (nth 2 ids) 0 3)
+    (dolist (slot '(476 477 478 479))
+      (gr-tile-probe-set-array-slot slot 1 0)
+      (gr-tile-probe-set-array-slot slot 2 0)
+      (gr-tile-probe-set-array-slot slot 3 0))
+    (gr-tile-probe-set-array-slot 476 1 1)
+    (gr-tile-probe-set-array-slot 477 2 1)
+    (gr-tile-probe-set-array-slot 478 3 1)
+    (gr-set "kougeki_disc_id" 0)
+    (gr-set "bougyo_disc_id" 0)
+    (gr-set "nouryoku_disc_id" 0)
+    (gr-set "shageki_disc_id" 0)
+    (gr-set 195 1)
+    (gr-set 196 0)
+    (gr-set 198 0)
+    (gr-set "open_item_menue" 0)
+    (setq gr-sumi nil
+          gr-trace nil
+          gr-missing nil)
+    (gr-run-func "func337")
+    (setq frame-path (gr-tile-probe-dump-frame test-root label))
+    (setq json-path (gr-tile-probe-dump-frame-json test-root label))
+    (list :frame frame-path
+          :json json-path
+          :ids (list (gr-get "kougeki_disc_id")
+                     (gr-get "bougyo_disc_id")
+                     (gr-get "nouryoku_disc_id"))
+          :slots (list (gr-get 553) (gr-get 554) (gr-get 555))
+          :missing (reverse gr-missing)
+          :trace (reverse gr-trace)
+          :texts
+          (gr-tile-probe-frame-records
+           (lambda (entry)
+             (and (equal (car entry) "gui-draw-text")
+                  (member (format "%s" (nth 1 entry)) '("攻撃" "防御" "能力"))))))))
+
+(defun gr-tile-probe-run-status-close ()
+  "Press X once inside func381 and report whether the status flag clears."
+  (let ((saved-func080 (gethash "func080" gr-native-funcs))
+        (saved-func009 (gethash "func009" gr-native-funcs))
+        (returned 0))
+    (unwind-protect
+        (progn
+          (gr-defnative
+           "func080"
+           (lambda (&rest _args)
+             (gr-set 254 0)
+             (gr-set 257 0)
+             (gr-set 255 0)
+             (gr-set 259 0)
+             (gr-set "key_Z_on" 0)
+             (gr-set "key_A_on" 0)
+             (gr-set "key_X_on" 1)
+             nil))
+          (gr-defnative
+           "func009"
+           (lambda (&rest _args)
+             (setq returned (1+ returned))
+             nil))
+          (gr-set 498 1)
+          (gr-set 1721 1)
+          (gr-set 1707 20)
+          (setq gr-trace nil
+                gr-missing nil
+                gr-sumi nil)
+          (gr-run-func "func381")
+          (list :status-flag (gr-get 498)
+                :returned returned
+                :missing (reverse gr-missing)
+                :trace (reverse gr-trace)))
+      (if saved-func080
+          (gr-defnative "func080" saved-func080)
+        (when gr-native-funcs
+          (remhash "func080" gr-native-funcs)))
+      (if saved-func009
+          (gr-defnative "func009" saved-func009)
+        (when gr-native-funcs
+          (remhash "func009" gr-native-funcs))))))
+
 (let* ((runtime-dir (file-name-directory (or load-file-name buffer-file-name)))
        (repo-root (expand-file-name ".." runtime-dir))
        (test-root (expand-file-name "build/tile-probe-data" repo-root))
@@ -645,7 +830,11 @@
        (blocked nil)
        (enemy-move nil)
        (money-pickup nil)
+       (status-frame-a nil)
+       (status-frame-b nil)
        (disc-pickup nil)
+       (item-screen nil)
+       (status-close nil)
        (disc-missing-old nil)
        (rotate-arrow nil))
   (load-file (expand-file-name "game-runner.el" runtime-dir))
@@ -694,6 +883,10 @@
         (setq disc-missing-old (gr-tile-probe-run-disc-menu-missing 101))
         (setq disc-pickup (gr-tile-probe-run-disc-pickup (nth 0 path) (nth 1 path) (nth 2 path) (nth 3 path) (nth 4 path) 101))
         (setq money-pickup (gr-tile-probe-run-money-pickup test-root (nth 0 path) (nth 1 path) (nth 2 path) (nth 3 path) (nth 4 path) 123))
+        (setq item-screen (gr-tile-probe-run-item-screen test-root "item-screen" (gr-num (or (plist-get disc-pickup :after-items) 1))))
+        (setq status-frame-a (gr-tile-probe-run-status-frame test-root "status-frame-a" '(100 101 102)))
+        (setq status-frame-b (gr-tile-probe-run-status-frame test-root "status-frame-b" '(130 131 132)))
+        (setq status-close (gr-tile-probe-run-status-close))
         (setq rotate-arrow (gr-tile-probe-run-rotate-arrow test-root))
         (gr-tile-probe-install-wrappers)
         (princ (format "TILE-PROBE-PATH start=%s,%s dest=%s,%s dir=%s\n"
@@ -707,6 +900,10 @@
         (princ (format "MONEY-FRAME-EXCERPT text=%S frame=%S\n"
                        (plist-get money-pickup :text-records)
                        (plist-get money-pickup :frame-records)))
+        (princ (format "ITEM-SCREEN %S\n" item-screen))
+        (princ (format "STATUS-FRAME-A %S\n" status-frame-a))
+        (princ (format "STATUS-FRAME-B %S\n" status-frame-b))
+        (princ (format "STATUS-CLOSE %S\n" status-close))
         (princ (format "ROTATE-ARROW %S\n" rotate-arrow))
         (princ (format "ROTATE-ARROW-EXCERPT %S\n" (plist-get rotate-arrow :arrow-records)))
         ;; Tile and enemy verdicts are separate concerns: the tile fix is
@@ -737,6 +934,21 @@
                  (plist-get money-pickup :frame-records))
             (princ "MONEY-PICKUP-MESSAGE-OK\n")
           (princ "MONEY-PICKUP-MESSAGE-FAIL\n"))
+        (if (and (null (plist-get item-screen :missing))
+                 (seq-some (lambda (entry)
+                             (string-match-p "DISC" (format "%s" (nth 1 entry))))
+                           (plist-get item-screen :texts)))
+            (princ "ITEM-SCREEN-OK\n")
+          (princ "ITEM-SCREEN-FAIL\n"))
+        (if (and (equal (plist-get status-close :status-flag) 0)
+                 (> (or (plist-get status-close :returned) 0) 0))
+            (princ "STATUS-CLOSE-OK\n")
+          (princ "STATUS-CLOSE-FAIL\n"))
+        (if (and (equal (plist-get status-frame-a :ids) '(100 101 102))
+                 (equal (plist-get status-frame-b :ids) '(130 131 132))
+                 (plist-get status-frame-a :texts))
+            (princ "STATUS-FRAME-OK\n")
+          (princ "STATUS-FRAME-FAIL\n"))
         (if (plist-get rotate-arrow :arrow-records)
             (princ "ROTATE-ARROW-OK\n")
           (princ "ROTATE-ARROW-FAIL\n")))

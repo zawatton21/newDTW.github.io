@@ -511,27 +511,29 @@ and replayed at the head of every frame.")
 (defconst gr-play-per-frame-buffers '(0 4 7 10 32)
   "Buffers the screen or per-frame draws recompose, so boot state is moot.")
 
-(defun gr-play-capture-boot-composition ()
-  "Harvest PURE-PROCEDURAL static work-buffer fills from `gr-sumi'.
+(defconst gr-play-transient-boot-buffers '(36 37)
+  "Boot-only buffers that must never be replayed into live frames.")
 
-Only buffers whose boot composition is procedural (fills / lines /
-points / text with a color, no image blits) are replayed — e.g. buffer
-12, the solid blue message-box background.  Buffers composed from image
-blits at boot (the load screen's progress bar into buffers 36/37, etc.)
-are TRANSIENT and must NOT be replayed: doing so overpaints the live map
-area.  So the capture groups boot ops per buffer and keeps a buffer only
-when it received a fill and NO gui-draw-image-scaled."
+(defun gr-play-capture-boot-composition ()
+  "Harvest static boot-time work-buffer composition from `gr-sumi'.
+
+Window backgrounds are built once at boot and then blitted every frame.
+Some of those buffers are not pure fills: they also receive image blits,
+so the older \"keep only fill/no-blit buffers\" rule dropped them and
+left live windows transparent.  Keep all boot-composed work buffers
+except the known per-frame and transient loaders (`36' / `37')."
   (let ((cur 0)
         (order nil)                     ; buffer ids in first-seen order
         (ops (make-hash-table))         ; buffer id -> chronological op list
-        (has-fill (make-hash-table))
-        (has-blit (make-hash-table)))
+        (has-op (make-hash-table)))
     (dolist (entry (reverse gr-sumi))   ; chronological order
       (let ((op (car entry)))
         (cond
          ((member op '("gui-select-buffer" "dtw-select-buffer"))
           (setq cur (gr-num (cadr entry))))
-         ((memq cur gr-play-per-frame-buffers) nil)
+         ((or (memq cur gr-play-per-frame-buffers)
+              (memq cur gr-play-transient-boot-buffers))
+          nil)
          ((= cur 0) nil)
          ((member op '("gui-load-image" "dtw-load-image"
                        "gui-screen" "dtw-screen" "dtw-create-buffer"))
@@ -539,19 +541,14 @@ when it received a fill and NO gui-draw-image-scaled."
          (t
           (unless (gethash cur ops) (push cur order))
           (push entry (gethash cur ops))
-          (when (member op '("gui-fill-rect" "dtw-fill-rect"))
-            (puthash cur t has-fill))
-          (when (member op '("gui-draw-image-scaled" "dtw-draw-image-scaled"
-                             "gui-draw-image" "dtw-draw-image"
-                             "dtw-draw-image-rotated"))
-            (puthash cur t has-blit))))))
+          (puthash cur t has-op)))))
     ;; Emit, per kept buffer, a select + its ops.  chrono ends up
     ;; newest-first (push while walking chronological), matching the
     ;; gr-sumi convention gr-sumi-records-json-body reverses.
     (let ((chrono nil)
           (kept nil))
       (dolist (id (nreverse order))
-        (when (and (gethash id has-fill) (not (gethash id has-blit)))
+        (when (gethash id has-op)
           (setq kept t)
           (push (cons "gui-select-buffer" (list id)) chrono)
           ;; (gethash id ops) is newest-first; reverse to chronological

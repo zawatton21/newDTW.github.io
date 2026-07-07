@@ -695,6 +695,15 @@ the save files, then mirrors the TS adapter's OFFSET selection."
                (value (gr-msgpack-map-ref decoded key)))
           (when (and (hash-table-p decoded) (null value))
             (error "gr-bload missing key %s in %s" key path))
+          ;; 00.dat stores the message palette tables at offsets 200/300/400.
+          ;; The TS code loads those offsets into var_25_x/26_x/27_x and later
+          ;; expects the active message color scalar.  In practice the live save
+          ;; file carries the full 1-based palette vector, so mirror the runtime
+          ;; behavior the game uses elsewhere and pick slot 7 (default white).
+          (when (and (string-equal (file-name-nondirectory path) "00.dat")
+                     (member (and offset (gr-num offset)) '(200 300 400))
+                     (gr-sequencep value))
+            (setq value (or (gr-index-ref value 7) value)))
           value))))))
 
 (defun gr-bsave (file-name data data-size offset)
@@ -880,6 +889,38 @@ the save files, then mirrors the TS adapter's OFFSET selection."
       (when (or (null text) (equal text "nil"))
         (setcar args ""))))
   (push (cons op args) gr-sumi))
+
+(defun gr-sync-equipped-disc-ids ()
+  "Refresh equipped disc ids from the authoritative inventory slot flags."
+  (let ((rows (gr-get 233))
+        (limit (gr-num (or (gr-get 224) 0)))
+        (slot 1)
+        (attack-slot 0)
+        (defense-slot 0)
+        (ability-slot 0)
+        (shoot-slot 0))
+    (while (<= slot limit)
+      (when (equal (gr-index-ref (gr-get 476) slot) 1)
+        (setq attack-slot slot))
+      (when (equal (gr-index-ref (gr-get 477) slot) 1)
+        (setq defense-slot slot))
+      (when (equal (gr-index-ref (gr-get 478) slot) 1)
+        (setq ability-slot slot))
+      (when (equal (gr-index-ref (gr-get 479) slot) 1)
+        (setq shoot-slot slot))
+      (setq slot (1+ slot)))
+    (gr-set 553 attack-slot)
+    (gr-set 554 defense-slot)
+    (gr-set 555 ability-slot)
+    (gr-set 556 shoot-slot)
+    (gr-set "kougeki_disc_id"
+            (or (gr-prop-ref (gr-index-ref rows attack-slot) "Var0") 0))
+    (gr-set "bougyo_disc_id"
+            (or (gr-prop-ref (gr-index-ref rows defense-slot) "Var0") 0))
+    (gr-set "nouryoku_disc_id"
+            (or (gr-prop-ref (gr-index-ref rows ability-slot) "Var0") 0))
+    (gr-set "shageki_disc_id"
+            (or (gr-prop-ref (gr-index-ref rows shoot-slot) "Var0") 0))))
 
 (defun gr-reset ()
   "Reset interpreter state (keeps loaded functions)."
@@ -1088,6 +1129,14 @@ the save files, then mirrors the TS adapter's OFFSET selection."
         (native (and (hash-table-p gr-native-funcs) (gethash name gr-native-funcs))))
     (cond
      ((>= gr-depth gr-depth-limit) (error "depth-limit %s" name))
+     ((equal name "func069")
+      (gr-sync-equipped-disc-ids)
+      (setq gr-depth (1+ gr-depth))
+      (unwind-protect
+          (if (functionp native)
+              (apply native args)
+            (dolist (entry ir) (gr-exec-entry entry)))
+        (setq gr-depth (1- gr-depth))))
      ((functionp native)
       (setq gr-depth (1+ gr-depth))
       (unwind-protect

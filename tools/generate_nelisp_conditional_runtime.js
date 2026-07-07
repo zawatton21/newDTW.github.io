@@ -67,8 +67,10 @@ function main() {
       body.map((line) => `  ${line}`).join("\n"),
       ")",
       "",
-      `(gr-defnative "${name}" #'gr-native-${name})`,
-      "",
+      ...runtimeAliases(name).flatMap((alias) => [
+        `(gr-defnative "${alias}" #'gr-native-${name})`,
+        "",
+      ]),
     ]),
     "(provide 'gamedata-conditional)",
     "",
@@ -114,6 +116,10 @@ function canonicalFuncAlias(name) {
   if (!digits) return null;
   const canonical = `func${digits.padStart(3, "0")}`;
   return canonical !== name ? canonical : null;
+}
+
+function runtimeAliases(name) {
+  return dedupe([name, canonicalFuncAlias(name)].filter(Boolean));
 }
 
 function isRuntimeName(name) {
@@ -906,6 +912,9 @@ function emitValue(node, ctx) {
     return `(- ${emitNumericValue(node.operand, ctx)})`;
   }
   if (ts.isBinaryExpression(node)) {
+    if (node.operatorToken.kind === ts.SyntaxKind.QuestionQuestionToken) {
+      return `(let ((gr_lhs ${emitValue(node.left, ctx)})) (if (equal gr_lhs nil) ${emitValue(node.right, ctx)} gr_lhs))`;
+    }
     if (node.operatorToken.kind === ts.SyntaxKind.BarBarToken) {
       return `(let ((gr_lhs ${emitValue(node.left, ctx)})) (if (not (or (equal gr_lhs nil) (equal gr_lhs 0))) gr_lhs ${emitValue(node.right, ctx)}))`;
     }
