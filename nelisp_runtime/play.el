@@ -368,6 +368,12 @@
     (push (cons gr-play-loop-count gr-depth) gr-play-depth-log)
     (princ (format "PLAY-DEPTH loop=%d depth=%d\n" gr-play-loop-count gr-depth))))
 
+(defun gr-play-current-trace-func ()
+  "Return the current translated function name from `gr-trace', if available."
+  (let ((current (car gr-trace)))
+    (when (integerp current)
+      (format "func%03d" current))))
+
 (defun gr-play-held-codes-list ()
   "Return the current held keycodes as a sorted list."
   (let ((out nil))
@@ -2026,9 +2032,10 @@ max HP 15, current HP 15, and the KO flag cleared."
                       nil))
               (gr-play-log-enemy-movement before-x before-y enemy-before))
           (error
-           (princ (format "PLAY-FRAME-ERROR loop=%d redraw=%d %s\n"
+           (princ (format "PLAY-FRAME-ERROR loop=%d redraw=%d func=%s %s\n"
                           gr-play-loop-count
                           gr-play-redraw-count
+                          (or (gr-play-current-trace-func) "nil")
                           (error-message-string err)))
            (princ (format "PLAY-FRAME-TRACE %S\n" (nreverse gr-trace)))
            (when (equal (getenv "GR_PLAY_FRAME_BACKTRACE") "1")
