@@ -3,6 +3,9 @@
 (defconst gr-worldgen-build-dir
   (expand-file-name "../build" (file-name-directory (or load-file-name buffer-file-name))))
 
+(defconst gr-worldgen-runtime-dir
+  (file-name-directory (or load-file-name buffer-file-name)))
+
 (defvar gr-worldgen-saved-func009 nil
   "Saved native func009 while world generation runs without entering the loop.")
 (defvar gr-worldgen-saved-local-natives nil
@@ -11,6 +14,11 @@
   "When non-nil, reuse the current initialized state instead of seeding one.")
 (defvar gr-worldgen-autorun t
   "When non-nil, execute the verification when this file is loaded.")
+
+(unless (fboundp 'gr-reset)
+  (load-file (expand-file-name "game-runner.el" gr-worldgen-runtime-dir))
+  (load-file (expand-file-name "gamedata-simple.el" gr-worldgen-runtime-dir))
+  (load-file (expand-file-name "gamedata-conditional.el" gr-worldgen-runtime-dir)))
 
 (defun gr-worldgen-with-loop-disabled (thunk)
   "Run THUNK with func009 temporarily replaced by a no-op."
@@ -395,4 +403,6 @@ When USE-EXISTING-STATE is non-nil, keep the caller's initialized state."
       (gr-worldgen-restore-local-natives))))
 
 (when gr-worldgen-autorun
+  (unless gr-worldgen-use-existing-state
+    (random "run-worldgen"))
   (gr-worldgen-run gr-worldgen-use-existing-state))

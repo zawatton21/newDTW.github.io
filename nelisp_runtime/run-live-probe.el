@@ -17,8 +17,10 @@
 (defvar gr-live-probe-pickup-ok nil)
 (defvar gr-live-probe-message-ok nil)
 (defvar gr-live-probe-message-frame-path nil)
+(defvar gr-live-probe-message-frame-json-path nil)
 (defvar gr-live-probe-message-text nil)
 (defvar gr-live-probe-message-color-record nil)
+(defvar gr-live-probe-message-candidate nil)
 (defvar gr-live-probe-confirm-attempts nil)
 (defvar gr-live-probe-failure nil)
 (defvar gr-live-probe-finished nil)
@@ -137,6 +139,8 @@
                                (plist-get gr-live-probe-target :item-y)))
          :item-var15 (and gr-live-probe-target
                           (plist-get gr-live-probe-target :item-var15))
+         :item-var11 (and gr-live-probe-target
+                          (plist-get gr-live-probe-target :item-var11))
          :ground-slot (and gr-live-probe-target
                            (gr-index-ref
                             (gr-index-ref (gr-get 77)
@@ -177,7 +181,8 @@
         (let* ((slot (gr-index-ref (gr-index-ref items x) y))
                (row (and (numberp slot) (> slot 0) (gr-index-ref rows slot)))
                (item-id (and row (gr-prop-ref row "Var0")))
-               (item-var15 (and row (gr-prop-ref row "Var15"))))
+               (item-var15 (and row (gr-prop-ref row "Var15")))
+               (item-var11 (and row (gr-prop-ref row "Var11"))))
           (when (and row
                      (numberp item-id)
                      (> item-id 1)
@@ -191,6 +196,7 @@
                          (list :slot slot
                                :item-id item-id
                                :item-var15 item-var15
+                               :item-var11 item-var11
                                :item-x x
                                :item-y y
                                :player-x px
@@ -198,9 +204,11 @@
               :move-key-slot (nth 2 candidate)
               :direction (nth 3 candidate))))
                     (when (and (null manual)
-                               (not (equal item-var15 1)))
+                               (not (equal item-var15 1))
+                               (not (equal item-var11 1)))
                       (setq manual target))
-                    (when (null fallback)
+                    (when (and (null fallback)
+                               (not (equal item-var11 1)))
                       (setq fallback target))))))))
         (setq y (1+ y)))
       (setq x (1+ x)))
@@ -244,7 +252,11 @@
     (or (string-match-p "拾った" row1)
         (string-match-p "拾った" row2)
         (string-match-p "乗った" row1)
-        (string-match-p "乗った" row2))))
+        (string-match-p "乗った" row2)
+        (and gr-live-probe-pickup-ok
+             (equal (gr-get 198) 1)
+             (or (> (length row1) 0)
+                 (> (length row2) 0))))))
 
 (defun gr-live-probe-stage-transition (next-stage label)
   "Switch to NEXT-STAGE and log LABEL."
@@ -324,17 +336,20 @@
         gr-live-probe-pickup-ok nil
         gr-live-probe-message-ok nil
         gr-live-probe-message-frame-path nil
+        gr-live-probe-message-frame-json-path nil
         gr-live-probe-message-color-record nil
+        gr-live-probe-message-candidate nil
         gr-live-probe-message-text nil)
   (when (file-exists-p gr-live-probe-key-state-path)
     (delete-file gr-live-probe-key-state-path))
   (gr-live-probe-write-idle)
   (princ
    (format
-    "LIVE-TARGET item-id=%s slot=%s var15=%s item=%s,%s player=%s,%s move-key=%s dir=%s items-before=%s\n"
+    "LIVE-TARGET item-id=%s slot=%s var15=%s var11=%s item=%s,%s player=%s,%s move-key=%s dir=%s items-before=%s\n"
     (plist-get gr-live-probe-target :item-id)
     (plist-get gr-live-probe-target :slot)
     (plist-get gr-live-probe-target :item-var15)
+    (plist-get gr-live-probe-target :item-var11)
     (plist-get gr-live-probe-target :item-x)
     (plist-get gr-live-probe-target :item-y)
     (plist-get gr-live-probe-target :player-x)
@@ -562,43 +577,81 @@
       (setq records (cdr records)))
     found))
 
+(defun gr-live-probe-frame-has-message-box-p (records)
+  "Return non-nil when RECORDS includes a live message box background."
+  (let ((found (gr-live-probe-frame-has-buffer12-p records)))
+    (while (and records (not found))
+      (let ((entry (car records)))
+        (when (and (equal (car entry) "gui-fill-rect")
+                   (= (or (nth 1 entry) -1) 20)
+                   (= (or (nth 2 entry) -1) 250)
+                   (= (or (nth 3 entry) -1) 330)
+                   (= (or (nth 4 entry) -1) 314))
+          (setq found t)))
+      (setq records (cdr records)))
+    found))
+
+(defun gr-live-probe-text-entry-text (entry)
+  "Return text from a draw-text ENTRY, including compacted text-at records."
+  (cond
+   ((and (equal (car entry) "gui-draw-text")
+         (stringp (nth 1 entry)))
+    (nth 1 entry))
+   ((and (equal (car entry) "gui-draw-text-at")
+         (stringp (nth 3 entry)))
+    (nth 3 entry))
+   (t nil)))
+
 (defun gr-live-probe-frame-message-text (records)
   "Return the most relevant message-box draw-text string from RECORDS."
   (let ((found nil)
         (fallback nil))
     (while (and records (null found))
-      (let ((entry (car records)))
-        (when (and (equal (car entry) "gui-draw-text")
-                   (stringp (nth 1 entry))
-                   (> (length (nth 1 entry)) 0))
-          (if (string-match-p "拾った\\|乗った\\|持ち物" (nth 1 entry))
-              (setq found (nth 1 entry))
+      (let* ((entry (car records))
+             (text (gr-live-probe-text-entry-text entry)))
+        (when (and text (> (length text) 0))
+          (if (string-match-p "拾った\\|乗った\\|持ち物" text)
+              (setq found text)
             (when (null fallback)
-              (setq fallback (nth 1 entry))))))
+              (setq fallback text)))))
       (setq records (cdr records)))
     (or found fallback)))
 
 (defun gr-live-probe-frame-message-color-record (records)
   "Return the gui-set-color record that precedes the pickup text in RECORDS."
   (let ((last-color nil)
-        (found nil))
+        (found nil)
+        (fallback nil))
     (while (and records (null found))
-      (let ((entry (car records)))
+      (let* ((entry (car records))
+             (text (gr-live-probe-text-entry-text entry)))
         (cond
          ((equal (car entry) "gui-set-color")
           (setq last-color entry))
-         ((and (equal (car entry) "gui-draw-text")
-               (stringp (nth 1 entry))
-               (string-match-p "拾った\\|乗った\\|持ち物" (nth 1 entry)))
-          (setq found last-color))))
+         ((and text
+               (string-match-p "拾った\\|乗った\\|持ち物" text))
+          (setq found last-color))
+         ((and text (> (length text) 0) (null fallback))
+          (setq fallback last-color))))
       (setq records (cdr records)))
-    found))
+    (or found fallback)))
 
 (defun gr-live-probe-after-frame ()
   "Capture the first live pickup message frame."
   (let* ((records (reverse gr-sumi))
          (text (gr-live-probe-frame-message-text records))
-         (color-record (gr-live-probe-frame-message-color-record records)))
+         (color-record (gr-live-probe-frame-message-color-record records))
+         (json nil))
+    (when (and (not gr-live-probe-message-ok)
+               (equal (gr-get 198) 1))
+      (setq gr-live-probe-message-candidate
+            (list :has-message-box (gr-live-probe-frame-has-message-box-p records)
+                  :text text
+                  :color color-record
+                  :pickup-message (gr-live-probe-pickup-message-p)
+                  :row1 (gr-get "comments_row1")
+                  :row2 (gr-get "comments_row2")
+                  :ops (gr-live-probe-tail (mapcar #'car records) 24))))
     (when (and gr-live-probe-target
                (not gr-live-probe-pickup-ok)
                (gr-live-probe-pickup-succeeded-p))
@@ -607,17 +660,86 @@
         (gr-live-probe-stage-transition 'wait-message "pickup-succeeded-after-frame")))
     (when (and (not gr-live-probe-message-ok)
                (equal (gr-get 198) 1)
-               (gr-live-probe-frame-has-buffer12-p records)
+               (gr-live-probe-frame-has-message-box-p records)
                text
                (gr-live-probe-pickup-message-p))
       (setq gr-live-probe-message-ok t
             gr-live-probe-message-text text
             gr-live-probe-message-color-record color-record
-            gr-live-probe-message-frame-path
+            json (gr-play-frame-records-to-json gr-sumi))
+      ;; The hook runs after the normal dump decision.  Force the proven
+      ;; message frame into the live queue and a stable artifact so the
+      ;; native-window verification can replay exactly what passed.
+      (gr-play-write-frame json)
+      (setq gr-play-dumped-count (1+ gr-play-dumped-count))
+      (setq gr-live-probe-message-frame-json-path
+            (expand-file-name "live-probe-message-frame.json" gr-live-probe-build-dir))
+      (write-region json nil gr-live-probe-message-frame-json-path nil 'silent)
+      (setq gr-live-probe-message-frame-path
             (expand-file-name
              (format "frame-%06d.json" gr-play-frame-seq)
              gr-play-frames-dir))
       (gr-live-probe-log-state "message-frame"))))
+
+(defun gr-live-probe-write-key-state-to (path seq token keycode &optional held)
+  "Write one key-state record to PATH with SEQ, TOKEN, KEYCODE, and HELD."
+  (let ((tmp-path (concat path ".tmp"))
+        (coding-system-for-write 'utf-8))
+    (unless (file-directory-p gr-live-probe-build-dir)
+      (make-directory gr-live-probe-build-dir t))
+    (with-temp-file tmp-path
+      (insert (format "%s %d\n" token seq))
+      (insert (format "%d\n" (or keycode 0)))
+      (insert "HELD")
+      (dolist (code held)
+        (insert (format " %d" code)))
+      (insert "\n"))
+    (rename-file tmp-path path t)))
+
+(defun gr-live-probe-reset-input-state ()
+  "Reset live input globals for an isolated refresh-input regression check."
+  (setq gr-play-last-token "IDLE"
+        gr-play-last-seq 0
+        gr-play-held-codes (make-hash-table :test 'equal)
+        gr-play-file-held-codes (make-hash-table :test 'equal)
+        gr-play-pending-presses nil
+        gr-play-synced-keycodes nil
+        gr-play-read-error-count 0
+        gr-play-received-press-count 0
+        gr-play-consumed-press-count 0
+        gr-play-missed-press-count 0
+        gr-play-last-input-was-new nil
+        gr-play-quit-requested nil))
+
+(defun gr-live-probe-run-input-repeat-regression ()
+  "Verify repeated same-key key-state seq records enqueue distinct presses."
+  (let ((path (expand-file-name "key-state-repeat-test.txt" gr-live-probe-build-dir))
+        (gr-play-key-state-path nil)
+        (gr-play-key-stale-seconds 60)
+        (gr-play-pending-key-max-age-seconds 60)
+        (gr-play-start-time 0)
+        (gr-play-duration-seconds 9999)
+        (key 90)
+        (after1 nil)
+        (after2 nil)
+        (received nil)
+        (keys nil))
+    (setq gr-play-key-state-path path)
+    (gr-live-probe-reset-input-state)
+    (gr-live-probe-write-key-state-to path 1 "LIVE" key (list key))
+    (gr-play-refresh-input)
+    (setq after1 (length gr-play-pending-presses))
+    (gr-live-probe-write-key-state-to path 2 "LIVE" key (list key))
+    (gr-play-refresh-input)
+    (setq after2 (length gr-play-pending-presses)
+          received gr-play-received-press-count
+          keys (mapcar (lambda (entry) (plist-get entry :keycode))
+                       gr-play-pending-presses))
+    (delete-file path)
+    (list :after1 after1
+          :after2 after2
+          :received received
+          :keys keys)))
 
 (let ((runtime-dir (file-name-directory (or load-file-name buffer-file-name))))
   (setq gr-play-duration-seconds 20
@@ -647,10 +769,14 @@
                                                         (plist-get gr-live-probe-target :item-x))
                                           (plist-get gr-live-probe-target :item-y))))))
   (princ (format "LIVE-MESSAGE %s\n"
-                 (list :ok gr-live-probe-message-ok
-                       :color gr-live-probe-message-color-record
-                       :text gr-live-probe-message-text
-                       :frame gr-live-probe-message-frame-path)))
+                 (append
+                  (list :ok gr-live-probe-message-ok
+                        :color gr-live-probe-message-color-record
+                        :text gr-live-probe-message-text
+                        :frame gr-live-probe-message-frame-path
+                        :artifact gr-live-probe-message-frame-json-path)
+                  (unless gr-live-probe-message-ok
+                    (list :candidate gr-live-probe-message-candidate)))))
   (if (equal gr-live-probe-message-color-record
              '("gui-set-color" 255 255 255))
       (princ (format "LIVE-MESSAGE-WHITE %s\n" gr-live-probe-message-color-record))
@@ -665,5 +791,13 @@
   (if gr-live-probe-message-ok
       (princ "LIVE-MESSAGE-OK\n")
     (princ "LIVE-MESSAGE-FAIL\n"))
+  (let ((input-repeat (gr-live-probe-run-input-repeat-regression)))
+    (princ (format "LIVE-INPUT-REPEAT %S\n" input-repeat))
+    (if (and (equal (plist-get input-repeat :after1) 1)
+             (equal (plist-get input-repeat :after2) 2)
+             (equal (plist-get input-repeat :received) 2)
+             (equal (plist-get input-repeat :keys) '(90 90)))
+        (princ "LIVE-INPUT-REPEAT-OK\n")
+      (princ "LIVE-INPUT-REPEAT-FAIL\n")))
   (when gr-live-probe-failure
     (princ (format "LIVE-FAILURE %s\n" gr-live-probe-failure))))

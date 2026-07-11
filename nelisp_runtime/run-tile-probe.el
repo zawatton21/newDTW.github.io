@@ -72,6 +72,9 @@
 (defvar gr-tile-probe-orig-func009 nil)
 (defvar gr-tile-probe-orig-func019 nil)
 (defvar gr-tile-probe-orig-func080 nil)
+(defvar gr-tile-probe-orig-func338 nil)
+(defvar gr-tile-probe-random-seed "run-tile-probe"
+  "Deterministic seed for the worldgen-backed tile probe.")
 
 (defun gr-tile-probe-wrap-func009 (&rest _args)
   "Count blocked/void fallbacks without entering the main loop."
@@ -92,9 +95,11 @@
   (setq gr-tile-probe-orig-func009 (gethash "func009" gr-native-funcs))
   (setq gr-tile-probe-orig-func019 (gethash "func019" gr-native-funcs))
   (setq gr-tile-probe-orig-func080 (gethash "func080" gr-native-funcs))
+  (setq gr-tile-probe-orig-func338 (gethash "func338" gr-native-funcs))
   (gr-defnative "func009" #'gr-tile-probe-wrap-func009)
   (gr-defnative "func019" #'gr-tile-probe-wrap-func019)
-  (gr-defnative "func080" #'gr-tile-probe-wrap-func080))
+  (gr-defnative "func080" #'gr-tile-probe-wrap-func080)
+  (gr-defnative "func338" (lambda (&rest _args) nil)))
 
 (defun gr-tile-probe-restore-wrappers ()
   "Restore wrappers replaced for the probe."
@@ -103,7 +108,9 @@
   (when gr-tile-probe-orig-func019
     (gr-defnative "func019" gr-tile-probe-orig-func019))
   (when gr-tile-probe-orig-func080
-    (gr-defnative "func080" gr-tile-probe-orig-func080)))
+    (gr-defnative "func080" gr-tile-probe-orig-func080))
+  (when gr-tile-probe-orig-func338
+    (gr-defnative "func338" gr-tile-probe-orig-func338)))
 
 (defun gr-tile-probe-run-move (start-x start-y dest-x dest-y dir)
   "Run func015 once from START-X,START-Y to DEST-X,DEST-Y in DIR."
@@ -367,6 +374,8 @@
         (saved-func051 nil)
         (saved-func080 nil)
         (saved-func420 nil)
+        (saved-func019 nil)
+        (saved-func337 nil)
         (before-items 0))
     (gr-tile-probe-clear-belongings)
     (setq before-items (gr-num (or (gr-get 224) 0)))
@@ -376,6 +385,8 @@
     (setq saved-func051 (gethash "func051" gr-native-funcs))
     (setq saved-func080 (gethash "func080" gr-native-funcs))
     (setq saved-func420 (gethash "func420" gr-native-funcs))
+    (setq saved-func019 (gethash "func019" gr-native-funcs))
+    (setq saved-func337 (gethash "func337" gr-native-funcs))
     (unwind-protect
         (progn
           (setq gr-trace nil
@@ -384,6 +395,8 @@
           (gr-defnative "func051" (lambda (&rest _args) nil))
           (gr-defnative "func080" (lambda (&rest _args) nil))
           (gr-defnative "func420" (lambda (&rest _args) nil))
+          (gr-defnative "func019" (lambda (&rest _args) nil))
+          (gr-defnative "func337" (lambda (&rest _args) nil))
           (gr-set "key_Z_on" 1)
           (gr-set "key_A_on" 0)
           (gr-set "key_X_on" 0)
@@ -411,7 +424,15 @@
       (if saved-func420
           (gr-defnative "func420" saved-func420)
         (when gr-native-funcs
-          (remhash "func420" gr-native-funcs))))))
+          (remhash "func420" gr-native-funcs)))
+      (if saved-func019
+          (gr-defnative "func019" saved-func019)
+        (when gr-native-funcs
+          (remhash "func019" gr-native-funcs)))
+      (if saved-func337
+          (gr-defnative "func337" saved-func337)
+        (when gr-native-funcs
+          (remhash "func337" gr-native-funcs))))))
 
 (defun gr-tile-probe-find-adjacent-floor (x y)
   "Return an adjacent floor cell near X,Y, or nil."
@@ -439,6 +460,7 @@
     (setq gr-sumi nil
           gr-trace nil
           gr-missing nil)
+    (gr-set 10 0)
     (gr-run-func "func337")
     (setq frame-path (gr-tile-probe-dump-frame test-root "money-pickup"))
     (setq json-path (gr-tile-probe-dump-frame-json test-root "money-pickup"))
@@ -451,12 +473,17 @@
     (setq frame-records
           (gr-tile-probe-frame-records
            (lambda (entry)
-             (and (equal (car entry) "gui-draw-image-scaled")
-                  (= (or (nth 1 entry) -1) 12)
-                  (= (or (nth 2 entry) -1) 0)
-                  (= (or (nth 3 entry) -1) 0)
-                  (= (or (nth 4 entry) -1) 40)
-                  (= (or (nth 5 entry) -1) 64)))))
+             (or (and (equal (car entry) "gui-draw-image-scaled")
+                      (= (or (nth 1 entry) -1) 12)
+                      (= (or (nth 2 entry) -1) 0)
+                      (= (or (nth 3 entry) -1) 0)
+                      (= (or (nth 4 entry) -1) 40)
+                      (= (or (nth 5 entry) -1) 64))
+                 (and (equal (car entry) "gui-fill-rect")
+                      (= (or (nth 1 entry) -1) 20)
+                      (= (or (nth 2 entry) -1) 250)
+                      (= (or (nth 3 entry) -1) 330)
+                      (= (or (nth 4 entry) -1) 314))))))
     (list :move move
           :frame frame-path
           :json json-path
@@ -466,6 +493,45 @@
           :message-open (gr-get 198)
           :missing (reverse gr-missing)
           :trace (reverse gr-trace))))
+
+(defun gr-tile-probe-run-shop-item-message (x y item-id)
+  "Place a shop item at X,Y and return its step-on message evidence."
+  (let ((slot 0)
+        (saved-autodraw (gethash "AutoDraw" gr-native-funcs))
+        (saved-func337 (gethash "func337" gr-native-funcs)))
+    (setq slot (gr-tile-probe-place-item x y item-id 1 1))
+    (gr-prop-set (aref (gr-get 78) slot) "Var11" 1)
+    (gr-prop-set (aref (gr-get 78) slot) "Var3" 1)
+    (gr-prop-set (aref (gr-get 78) slot) "Var4" 0)
+    (gr-prop-set (aref (gr-get 78) slot) "Var7" 0)
+    (gr-set 66 x)
+    (gr-set 67 y)
+    (unwind-protect
+        (progn
+          (setq gr-sumi nil
+                gr-trace nil
+                gr-missing nil)
+          (gr-defnative "AutoDraw" (lambda (&rest _args) nil))
+          (gr-defnative "func337" (lambda (&rest _args) nil))
+          (gr-run-func "func419")
+          (list :slot slot
+                :item-id item-id
+                :item-name (gr-get "item_name")
+                :disp-item-name (gr-get "disp_item_name")
+                :price (gr-get 1925)
+                :row1 (gr-get "comments_row1")
+                :row2 (gr-get "comments_row2")
+                :message-open (gr-get 198)
+                :trace (reverse gr-trace)
+                :missing (reverse gr-missing)))
+      (if saved-autodraw
+          (gr-defnative "AutoDraw" saved-autodraw)
+        (when gr-native-funcs
+          (remhash "AutoDraw" gr-native-funcs)))
+      (if saved-func337
+          (gr-defnative "func337" saved-func337)
+        (when gr-native-funcs
+          (remhash "func337" gr-native-funcs))))))
 
 (defun gr-tile-probe-run-rotate-arrow (test-root)
   "Render one held-C frame and return the arrow draw evidence."
@@ -720,6 +786,7 @@
     (setq gr-sumi nil
           gr-trace nil
           gr-missing nil)
+    (gr-set 10 0)
     (gr-run-func "func337")
     (setq frame-path (gr-tile-probe-dump-frame test-root label))
     (setq json-path (gr-tile-probe-dump-frame-json test-root label))
@@ -761,6 +828,7 @@
     (setq gr-sumi nil
           gr-trace nil
           gr-missing nil)
+    (gr-set 10 0)
     (gr-run-func "func337")
     (setq frame-path (gr-tile-probe-dump-frame test-root label))
     (setq json-path (gr-tile-probe-dump-frame-json test-root label))
@@ -821,6 +889,318 @@
         (when gr-native-funcs
           (remhash "func009" gr-native-funcs))))))
 
+(defun gr-tile-probe-run-food-use ()
+  "Run the consumable item dispatcher for pizza and return effect evidence."
+  (let ((saved-func337 (gethash "func337" gr-native-funcs)))
+    (unwind-protect
+        (progn
+          (setq gr-trace nil
+                gr-missing nil
+                gr-sumi nil)
+          (gr-defnative "func337" (lambda (&rest _args) nil))
+          (gr-set "belongings_item_list" 600)
+          (gr-set 350 10)
+          (gr-set 567 100)
+          (gr-set 360 1)
+          (gr-set 1936 1)
+          (gr-run-func "func498")
+          (list :fullness (gr-get 350)
+                :max-fullness (gr-get 567)
+                :item-message-flag (gr-get 1936)
+                :message-open (gr-get 198)
+                :comments-row1 (gr-get "comments_row1")
+                :missing (reverse gr-missing)
+                :trace (reverse gr-trace)))
+      (if saved-func337
+          (gr-defnative "func337" saved-func337)
+        (when gr-native-funcs
+          (remhash "func337" gr-native-funcs))))))
+
+(defun gr-tile-probe-run-food-use-from-inventory ()
+  "Use pizza through the normal inventory dispatcher and report consumption."
+  (let ((saved-func019 (gethash "func019" gr-native-funcs))
+        (saved-func337 (gethash "func337" gr-native-funcs))
+        (before-items 0))
+    (unwind-protect
+        (progn
+          (gr-tile-probe-clear-belongings)
+          (gr-tile-probe-put-item-row 1 600 0 1)
+          (gr-set 224 1)
+          (gr-set 225 1)
+          (gr-set 220 0)
+          (gr-set 231 0)
+          (gr-set 234 0)
+          (gr-set "open_item_menue" 0)
+          (gr-set "item_page_number" 1)
+          (gr-set "Y_axis_item_position" 45)
+          (gr-set "belongings_item_list" 600)
+          (gr-set 350 10)
+          (gr-set 567 100)
+          (gr-set 360 1)
+          (gr-set 1936 1)
+          (gr-set 217 0)
+          (setq before-items (gr-get 224)
+                gr-trace nil
+                gr-missing nil
+                gr-sumi nil)
+          (gr-defnative "func019" (lambda (&rest _args) nil))
+          (gr-defnative "func337" (lambda (&rest _args) nil))
+          (gr-run-func "func420")
+          (list :before-items before-items
+                :after-items (gr-get 224)
+                :slot1-id (gr-prop-ref (gr-index-ref (gr-get 233) 1) "Var0")
+                :fullness (gr-get 350)
+                :max-fullness (gr-get 567)
+                :message-open (gr-get 198)
+                :comments-row1 (gr-get "comments_row1")
+                :missing (reverse gr-missing)
+                :trace (reverse gr-trace)))
+      (if saved-func019
+          (gr-defnative "func019" saved-func019)
+        (when gr-native-funcs
+          (remhash "func019" gr-native-funcs)))
+      (if saved-func337
+          (gr-defnative "func337" saved-func337)
+        (when gr-native-funcs
+          (remhash "func337" gr-native-funcs))))))
+
+(defun gr-tile-probe-run-food-use-from-menu ()
+  "Use pizza through the item submenu confirmation path."
+  (let ((saved-func019 (gethash "func019" gr-native-funcs))
+        (saved-func080 (gethash "func080" gr-native-funcs))
+        (saved-func337 (gethash "func337" gr-native-funcs))
+        (before-items 0))
+    (unwind-protect
+        (progn
+          (gr-tile-probe-clear-belongings)
+          (gr-tile-probe-put-item-row 1 600 0 1)
+          (gr-set 224 1)
+          (gr-set 225 1)
+          (gr-set 220 0)
+          (gr-set 221 1)
+          (gr-set 222 1)
+          (gr-set 229 44)
+          (gr-set 231 0)
+          (gr-set 234 0)
+          (gr-set 254 0)
+          (gr-set 255 0)
+          (gr-set 257 0)
+          (gr-set 259 0)
+          (gr-set "key_X_on" 0)
+          (gr-set "key_Z_on" 0)
+          (gr-set "key_A_on" 0)
+          (gr-set "open_item_menue" 1)
+          (gr-set "item_page_number" 1)
+          (gr-set "Y_axis_item_position" 45)
+          (gr-set "belongings_item_list" 600)
+          (gr-set 350 10)
+          (gr-set 567 100)
+          (gr-set 360 1)
+          (gr-set 1936 1)
+          (gr-set 217 0)
+          (setq before-items (gr-get 224)
+                gr-trace nil
+                gr-missing nil
+                gr-sumi nil)
+          (gr-defnative "func019" (lambda (&rest _args) nil))
+          (gr-defnative "func080"
+                        (lambda (&rest _args)
+                          (gr-set 254 0)
+                          (gr-set 255 0)
+                          (gr-set 257 0)
+                          (gr-set 259 0)
+                          (gr-set "key_X_on" 0)
+                          (gr-set "key_Z_on" 1)
+                          (gr-set "key_A_on" 0)
+                          nil))
+          (gr-defnative "func337" (lambda (&rest _args) nil))
+          (gr-run-func "func462")
+          (list :before-items before-items
+                :after-items (gr-get 224)
+                :slot1-id (gr-prop-ref (gr-index-ref (gr-get 233) 1) "Var0")
+                :item-class1 (gr-get "item_class1")
+                :cursor (gr-get 222)
+                :menu-open (gr-get "open_item_menue")
+                :fullness (gr-get 350)
+                :max-fullness (gr-get 567)
+                :message-open (gr-get 198)
+                :comments-row1 (gr-get "comments_row1")
+                :missing (reverse gr-missing)
+                :trace (reverse gr-trace)))
+      (if saved-func019
+          (gr-defnative "func019" saved-func019)
+        (when gr-native-funcs
+          (remhash "func019" gr-native-funcs)))
+      (if saved-func080
+          (gr-defnative "func080" saved-func080)
+        (when gr-native-funcs
+          (remhash "func080" gr-native-funcs)))
+      (if saved-func337
+          (gr-defnative "func337" saved-func337)
+        (when gr-native-funcs
+          (remhash "func337" gr-native-funcs))))))
+
+(defun gr-tile-probe-run-food-use-from-item-list ()
+  "Use pizza by entering the submenu from the normal item list."
+  (let ((saved-func019 (gethash "func019" gr-native-funcs))
+        (saved-func080 (gethash "func080" gr-native-funcs))
+        (saved-func337 (gethash "func337" gr-native-funcs))
+        (before-items 0)
+        (input-count 0))
+    (unwind-protect
+        (progn
+          (gr-tile-probe-clear-belongings)
+          (gr-tile-probe-put-item-row 1 600 0 1)
+          (gr-set 224 1)
+          (gr-set 225 1)
+          (gr-set 220 0)
+          (gr-set 221 0)
+          (gr-set 222 0)
+          (gr-set 229 44)
+          (gr-set 231 0)
+          (gr-set 234 0)
+          (gr-set 1866 0)
+          (gr-set 1945 0)
+          (dolist (flag '(1240 1950 1999 2000 2001 2002 2003 2004 2005 2006 2007))
+            (gr-set flag 0))
+          (gr-set 254 0)
+          (gr-set 255 0)
+          (gr-set 257 0)
+          (gr-set 259 0)
+          (gr-set "key_X_on" 0)
+          (gr-set "key_Z_on" 0)
+          (gr-set "key_A_on" 0)
+          (gr-set "open_item_menue" 1)
+          (gr-set "item_page_number" 1)
+          (gr-set "Y_axis_item_position" 45)
+          (gr-set "belongings_item_list" 600)
+          (gr-set 350 10)
+          (gr-set 567 100)
+          (gr-set 360 1)
+          (gr-set 1936 1)
+          (gr-set 217 0)
+          (when (and (gr-get 77) (gr-get 66) (gr-get 67))
+            (gr-tile-probe-set-cell (gr-get 77) (gr-get 66) (gr-get 67) 0))
+          (setq before-items (gr-get 224)
+                gr-trace nil
+                gr-missing nil
+                gr-sumi nil
+                input-count 0)
+          (gr-defnative "func019" (lambda (&rest _args) nil))
+          (gr-defnative
+           "func080"
+           (lambda (&rest _args)
+             (setq input-count (1+ input-count))
+             (gr-set 254 0)
+             (gr-set 255 0)
+             (gr-set 257 0)
+             (gr-set 259 0)
+             (gr-set "key_X_on" 0)
+             (gr-set "key_Z_on" (if (or (= input-count 1) (= input-count 3)) 1 0))
+             (gr-set "key_A_on" 0)
+             nil))
+          (gr-defnative "func337" (lambda (&rest _args) nil))
+          (condition-case err
+              (gr-run-func "func461")
+            (error
+             (setq gr-step-count 0)
+             (setq gr-missing (cons (format "food-list-error:%S" err) gr-missing))))
+          (list :before-items before-items
+                :after-items (gr-get 224)
+                :slot1-id (gr-prop-ref (gr-index-ref (gr-get 233) 1) "Var0")
+                :input-count input-count
+                :item-class1 (gr-get "item_class1")
+                :cursor (gr-get 222)
+                :selected-slot (gr-get 225)
+                :menu-open (gr-get "open_item_menue")
+                :fullness (gr-get 350)
+                :max-fullness (gr-get 567)
+                :message-open (gr-get 198)
+                :comments-row1 (gr-get "comments_row1")
+                :missing (reverse gr-missing)
+                :trace (reverse gr-trace)))
+      (if saved-func019
+          (gr-defnative "func019" saved-func019)
+        (when gr-native-funcs
+          (remhash "func019" gr-native-funcs)))
+      (if saved-func080
+          (gr-defnative "func080" saved-func080)
+        (when gr-native-funcs
+          (remhash "func080" gr-native-funcs)))
+      (if saved-func337
+          (gr-defnative "func337" saved-func337)
+        (when gr-native-funcs
+          (remhash "func337" gr-native-funcs))))))
+
+(defun gr-tile-probe-run-stairs-down ()
+  "Run the normal down-stairs path and return floor-transition evidence."
+  (let ((saved-func059 (gethash "func059" gr-native-funcs))
+        (saved-func076 (gethash "func076" gr-native-funcs))
+        (saved-func231 (gethash "func231" gr-native-funcs))
+        (saved-func337 (gethash "func337" gr-native-funcs))
+        (saved-func339 (gethash "func339" gr-native-funcs))
+        (saved-func006 (gethash "func006" gr-native-funcs))
+        (calls nil)
+        (before-floor 0))
+    (unwind-protect
+        (progn
+          (setq gr-trace nil
+                gr-missing nil
+                gr-sumi nil)
+          (gr-defnative "func059" (lambda (&rest _args) (push 59 calls) nil))
+          (gr-defnative "func076" (lambda (&rest _args) (push 76 calls) nil))
+          (gr-defnative "func231" (lambda (&rest _args) (push 231 calls) nil))
+          (gr-defnative "func337" (lambda (&rest _args) nil))
+          (gr-defnative "func339" (lambda (&rest _args) (push 339 calls) nil))
+          (gr-defnative "func006" (lambda (&rest _args) (push 6 calls) nil))
+          (gr-set "dungeon_number" 1)
+          (gr-set "current_floor" 1)
+          (gr-set 376 1)
+          (gr-set "dungeon1_floor" 1)
+          (gr-set "special_floor" 9)
+          (gr-set 372 1)
+          (gr-set 375 0)
+          (gr-set 217 1)
+          (setq before-floor (gr-get "current_floor"))
+          (condition-case err
+              (gr-run-func "func015")
+            (error
+             (setq gr-missing (cons (format "stairs-error:%S" err) gr-missing))))
+          (list :before-floor before-floor
+                :after-floor (gr-get "current_floor")
+                :max-floor (gr-get 376)
+                :dungeon1-floor (gr-get "dungeon1_floor")
+                :special-floor (gr-get "special_floor")
+                :stairs-flag (gr-get 372)
+                :turn-flag (gr-get 217)
+                :calls (nreverse calls)
+                :missing (reverse gr-missing)
+                :trace (reverse gr-trace)))
+      (if saved-func059
+          (gr-defnative "func059" saved-func059)
+        (when gr-native-funcs
+          (remhash "func059" gr-native-funcs)))
+      (if saved-func076
+          (gr-defnative "func076" saved-func076)
+        (when gr-native-funcs
+          (remhash "func076" gr-native-funcs)))
+      (if saved-func231
+          (gr-defnative "func231" saved-func231)
+        (when gr-native-funcs
+          (remhash "func231" gr-native-funcs)))
+      (if saved-func337
+          (gr-defnative "func337" saved-func337)
+        (when gr-native-funcs
+          (remhash "func337" gr-native-funcs)))
+      (if saved-func339
+          (gr-defnative "func339" saved-func339)
+        (when gr-native-funcs
+          (remhash "func339" gr-native-funcs)))
+      (if saved-func006
+          (gr-defnative "func006" saved-func006)
+        (when gr-native-funcs
+          (remhash "func006" gr-native-funcs))))))
+
 (let* ((runtime-dir (file-name-directory (or load-file-name buffer-file-name)))
        (repo-root (expand-file-name ".." runtime-dir))
        (test-root (expand-file-name "build/tile-probe-data" repo-root))
@@ -835,11 +1215,19 @@
        (disc-pickup nil)
        (item-screen nil)
        (status-close nil)
+       (food-use nil)
+       (food-inventory-use nil)
+       (food-menu-use nil)
+       (food-list-use nil)
+       (stairs-down nil)
+       (shop-item-message nil)
        (disc-missing-old nil)
        (rotate-arrow nil))
   (load-file (expand-file-name "game-runner.el" runtime-dir))
   (load-file (expand-file-name "gamedata-simple.el" runtime-dir))
   (load-file (expand-file-name "gamedata-conditional.el" runtime-dir))
+  (when (fboundp 'gr-install-live-native-overrides)
+    (gr-install-live-native-overrides))
   (setq gr-worldgen-autorun nil)
   (load-file (expand-file-name "run-worldgen.el" runtime-dir))
   (make-directory test-root t)
@@ -852,6 +1240,7 @@
   (setq max-specpdl-size 200000)
   (setq gr-depth-limit 5000)
   (setq gr-step-budget 2000000)
+  (random gr-tile-probe-random-seed)
   (gr-reset)
   (gr-set "stat" 1)
   (gr-set "hwnd" 0)
@@ -890,6 +1279,12 @@
         (setq status-frame-a (gr-tile-probe-run-status-frame test-root "status-frame-a" '(100 101 102)))
         (setq status-frame-b (gr-tile-probe-run-status-frame test-root "status-frame-b" '(130 131 132)))
         (setq status-close (gr-tile-probe-run-status-close))
+        (setq food-use (gr-tile-probe-run-food-use))
+        (setq food-inventory-use (gr-tile-probe-run-food-use-from-inventory))
+        (setq food-menu-use (gr-tile-probe-run-food-use-from-menu))
+        (setq food-list-use (gr-tile-probe-run-food-use-from-item-list))
+        (setq stairs-down (gr-tile-probe-run-stairs-down))
+        (setq shop-item-message (gr-tile-probe-run-shop-item-message (nth 2 path) (nth 3 path) 650))
         (setq rotate-arrow (gr-tile-probe-run-rotate-arrow test-root))
         (gr-tile-probe-install-wrappers)
         (princ (format "TILE-PROBE-PATH start=%s,%s dest=%s,%s dir=%s\n"
@@ -907,6 +1302,12 @@
         (princ (format "STATUS-FRAME-A %S\n" status-frame-a))
         (princ (format "STATUS-FRAME-B %S\n" status-frame-b))
         (princ (format "STATUS-CLOSE %S\n" status-close))
+        (princ (format "FOOD-USE %S\n" food-use))
+        (princ (format "FOOD-INVENTORY-USE %S\n" food-inventory-use))
+        (princ (format "FOOD-MENU-USE %S\n" food-menu-use))
+        (princ (format "FOOD-LIST-USE %S\n" food-list-use))
+        (princ (format "STAIRS-DOWN %S\n" stairs-down))
+        (princ (format "SHOP-ITEM-MESSAGE %S\n" shop-item-message))
         (princ (format "ROTATE-ARROW %S\n" rotate-arrow))
         (princ (format "ROTATE-ARROW-EXCERPT %S\n" (plist-get rotate-arrow :arrow-records)))
         ;; Tile and enemy verdicts are separate concerns: the tile fix is
@@ -952,6 +1353,94 @@
                  (plist-get status-frame-a :texts))
             (princ "STATUS-FRAME-OK\n")
           (princ "STATUS-FRAME-FAIL\n"))
+        (if (and (= (gr-num (or (plist-get food-use :fullness) 0)) 60)
+                 (= (gr-num (or (plist-get food-use :max-fullness) 0)) 100)
+                 (= (gr-num (or (plist-get food-use :message-open) 0)) 1)
+                 (string-match-p "お腹が少し膨らんだ"
+                                 (format "%s" (plist-get food-use :comments-row1)))
+                 (null (plist-get food-use :missing))
+                 (member 498 (plist-get food-use :trace)))
+            (princ "FOOD-USE-OK\n")
+          (princ "FOOD-USE-FAIL\n"))
+        (if (and (= (gr-num (or (plist-get food-inventory-use :before-items) 0)) 1)
+                 (= (gr-num (or (plist-get food-inventory-use :after-items) 0)) 0)
+                 (= (gr-num (or (plist-get food-inventory-use :slot1-id) -1)) 0)
+                 (= (gr-num (or (plist-get food-inventory-use :fullness) 0)) 60)
+                 (= (gr-num (or (plist-get food-inventory-use :max-fullness) 0)) 100)
+                 (= (gr-num (or (plist-get food-inventory-use :message-open) 0)) 1)
+                 (string-match-p "お腹が少し膨らんだ"
+                                 (format "%s" (plist-get food-inventory-use :comments-row1)))
+                 (null (plist-get food-inventory-use :missing))
+                 (member 420 (plist-get food-inventory-use :trace))
+                 (member 498 (plist-get food-inventory-use :trace))
+                 (member 432 (plist-get food-inventory-use :trace))
+                 (member 433 (plist-get food-inventory-use :trace)))
+            (princ "FOOD-INVENTORY-USE-OK\n")
+          (princ "FOOD-INVENTORY-USE-FAIL\n"))
+        (if (and (= (gr-num (or (plist-get food-menu-use :before-items) 0)) 1)
+                 (= (gr-num (or (plist-get food-menu-use :after-items) 0)) 0)
+                 (= (gr-num (or (plist-get food-menu-use :slot1-id) -1)) 0)
+                 (= (gr-num (or (plist-get food-menu-use :item-class1) 0)) 4)
+                 (= (gr-num (or (plist-get food-menu-use :menu-open) 1)) 0)
+                 (= (gr-num (or (plist-get food-menu-use :fullness) 0)) 60)
+                 (= (gr-num (or (plist-get food-menu-use :max-fullness) 0)) 100)
+                 (= (gr-num (or (plist-get food-menu-use :message-open) 0)) 1)
+                 (string-match-p "お腹が少し膨らんだ"
+                                 (format "%s" (plist-get food-menu-use :comments-row1)))
+                 (null (plist-get food-menu-use :missing))
+                 (member 462 (plist-get food-menu-use :trace))
+                 (member 463 (plist-get food-menu-use :trace))
+                 (member 420 (plist-get food-menu-use :trace))
+                 (member 498 (plist-get food-menu-use :trace))
+                 (member 432 (plist-get food-menu-use :trace))
+                 (member 433 (plist-get food-menu-use :trace)))
+            (princ "FOOD-MENU-USE-OK\n")
+          (princ "FOOD-MENU-USE-FAIL\n"))
+        (if (and (= (gr-num (or (plist-get food-list-use :before-items) 0)) 1)
+                 (= (gr-num (or (plist-get food-list-use :after-items) 0)) 0)
+                 (= (gr-num (or (plist-get food-list-use :slot1-id) -1)) 0)
+                 (= (gr-num (or (plist-get food-list-use :input-count) 0)) 3)
+                 (= (gr-num (or (plist-get food-list-use :item-class1) 0)) 4)
+                 (= (gr-num (or (plist-get food-list-use :menu-open) 1)) 0)
+                 (= (gr-num (or (plist-get food-list-use :fullness) 0)) 60)
+                 (= (gr-num (or (plist-get food-list-use :max-fullness) 0)) 100)
+                 (= (gr-num (or (plist-get food-list-use :message-open) 0)) 1)
+                 (string-match-p "お腹が少し膨らんだ"
+                                 (format "%s" (plist-get food-list-use :comments-row1)))
+                 (null (plist-get food-list-use :missing))
+                 (member 461 (plist-get food-list-use :trace))
+                 (member 462 (plist-get food-list-use :trace))
+                 (member 463 (plist-get food-list-use :trace))
+                 (member 420 (plist-get food-list-use :trace))
+                 (member 498 (plist-get food-list-use :trace))
+                 (member 432 (plist-get food-list-use :trace))
+                 (member 433 (plist-get food-list-use :trace)))
+            (princ "FOOD-LIST-USE-OK\n")
+          (princ "FOOD-LIST-USE-FAIL\n"))
+        (if (and (= (gr-num (or (plist-get stairs-down :before-floor) 0)) 1)
+                 (= (gr-num (or (plist-get stairs-down :after-floor) 0)) 2)
+                 (= (gr-num (or (plist-get stairs-down :max-floor) 0)) 2)
+                 (= (gr-num (or (plist-get stairs-down :dungeon1-floor) 0)) 2)
+                 (= (gr-num (or (plist-get stairs-down :special-floor) -1)) 0)
+                 (= (gr-num (or (plist-get stairs-down :stairs-flag) 1)) 0)
+                 (= (gr-num (or (plist-get stairs-down :turn-flag) 1)) 0)
+                 (member 59 (plist-get stairs-down :calls))
+                 (member 231 (plist-get stairs-down :calls))
+                 (member 76 (plist-get stairs-down :calls))
+                 (member 6 (plist-get stairs-down :calls))
+                 (null (plist-get stairs-down :missing)))
+            (princ "STAIRS-DOWN-OK\n")
+          (princ "STAIRS-DOWN-FAIL\n"))
+        (if (and (= (gr-num (or (plist-get shop-item-message :message-open) 0)) 1)
+                 (stringp (plist-get shop-item-message :row1))
+                 (> (length (plist-get shop-item-message :row1)) 0)
+                 (string-match-p "値段"
+                                 (format "%s" (plist-get shop-item-message :row2)))
+                 (null (plist-get shop-item-message :missing))
+                 (member 419 (plist-get shop-item-message :trace))
+                 (member 398 (plist-get shop-item-message :trace)))
+            (princ "SHOP-ITEM-MESSAGE-OK\n")
+          (princ "SHOP-ITEM-MESSAGE-FAIL\n"))
         (if (plist-get rotate-arrow :arrow-records)
             (princ "ROTATE-ARROW-OK\n")
           (princ "ROTATE-ARROW-FAIL\n")))

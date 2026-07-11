@@ -23,14 +23,15 @@
 ;;   3. clears the per-frame sumi collectors and redraws via func337;
 ;;   4. writes the frame JSON to `gr-live-frame-path' atomically (write a
 ;;      .tmp file, then rename-file over the real path) for
-;;      tools/live_feed_loop.js to pick up and forward to the sumi bridge.
+;;      nelisp_runtime/live-feed-loop.el to pick up and forward to the sumi
+;;      bridge.
 ;; Prints "FRAME N player=X,Y" every `gr-live-report-every' frames and
 ;; "LIVE-LOOP-DONE N" (N = total frames written) when the loop ends.
 ;;
 ;; Input-driven play (set `gr-live-input-mode' t via --eval BEFORE -l this
 ;; file, same convention as `gr-live-duration-seconds'): step 1 above is
 ;; replaced by `gr-live-step-player-input', which polls `gr-live-input-path'
-;; (default "build/key-state.txt", written by tools/key_input_server.js) for
+;; (default "build/key-state.txt", written by the native renderer) for
 ;; a new "<TOKEN> <SEQ>" line once per tick and moves the player one cell in
 ;; TOKEN's direction the first tick a given SEQ is seen -- one keypress, one
 ;; step, no key repeat/auto-move.  Steps 2-4 (enemy chase, collector clear,
@@ -63,14 +64,14 @@
 
 (defvar gr-live-input-mode nil
   "When non-nil, the player is driven by `gr-live-step-player-input' (real
-keypresses relayed through `gr-live-input-path' by tools/key_input_server.js)
+keypresses relayed through `gr-live-input-path' by the native renderer)
 instead of the synthetic clockwise patrol in `gr-live-step-player'.  Default
 nil so the existing patrol demo is unaffected; set with a --eval BEFORE -l
 this file, same convention as `gr-live-duration-seconds'.  Enemy chase is
 identical in both modes.")
 
 (defvar gr-live-input-path "build/key-state.txt"
-  "Path (relative to CWD = repo root) that tools/key_input_server.js writes
+  "Path (relative to CWD = repo root) that the native renderer writes
 \"<TOKEN> <SEQ>\" lines to; polled once per tick when `gr-live-input-mode'.")
 
 (defvar gr-live-input-last-seq 0
@@ -81,7 +82,7 @@ left over from a previous session is not replayed as the first move.")
 
 (defconst gr-live-input-dir-alist
   '(("UP" . 8) ("DOWN" . 2) ("LEFT" . 4) ("RIGHT" . 6))
-  "Direction token written by tools/key_input_server.js -> numpad heading
+  "Direction token written by the native renderer -> numpad heading
 code, using the same 8/2/4/6 = up/down/left/right convention as
 `gr-live-dir-delta'.")
 

@@ -2,6 +2,7 @@
 
 (defvar gr-menu-orig-func080 nil)
 (defvar gr-menu-orig-func009 nil)
+(defvar gr-menu-orig-func338 nil)
 (defvar gr-menu-script nil)
 (defvar gr-menu-script-index 0)
 (defvar gr-menu-current-key 0)
@@ -95,8 +96,10 @@
   "Install scripted-input wrappers for the menu verification."
   (setq gr-menu-orig-func080 (gethash "func080" gr-native-funcs))
   (setq gr-menu-orig-func009 (gethash "func009" gr-native-funcs))
+  (setq gr-menu-orig-func338 (gethash "func338" gr-native-funcs))
   (gr-defnative "func080" #'gr-menu-wrap-func080)
   (gr-defnative "func009" #'gr-menu-wrap-func009)
+  (gr-defnative "func338" (lambda (&rest _args) nil))
   (setq gr-read-key-state-fn #'gr-menu-read-key-state)
   (setq gr-reset-key-fn nil))
 
@@ -106,6 +109,8 @@
     (gr-defnative "func080" gr-menu-orig-func080))
   (when gr-menu-orig-func009
     (gr-defnative "func009" gr-menu-orig-func009))
+  (when gr-menu-orig-func338
+    (gr-defnative "func338" gr-menu-orig-func338))
   (setq gr-read-key-state-fn nil)
   (setq gr-reset-key-fn nil))
 
@@ -123,10 +128,14 @@
        (name1 "")
        (name2 "")
        (texts nil)
-       (result "MENU-PARTIAL"))
+       (result "MENU-PARTIAL")
+       (saved-func139A nil)
+       (saved-func338 nil))
   (load-file (expand-file-name "game-runner.el" runtime-dir))
   (load-file (expand-file-name "gamedata-simple.el" runtime-dir))
   (load-file (expand-file-name "gamedata-conditional.el" runtime-dir))
+  (when (fboundp 'gr-install-live-native-overrides)
+    (gr-install-live-native-overrides))
   (setq gr-worldgen-autorun nil)
   (load-file (expand-file-name "run-worldgen.el" runtime-dir))
   (setq max-lisp-eval-depth 10000)
@@ -140,9 +149,26 @@
   (gr-reset)
   (gr-set "stat" 1)
   (gr-set "hwnd" 0)
-  (gr-run-func "func004")
+  (setq saved-func139A (gethash "func139A" gr-native-funcs))
+  (setq saved-func338 (gethash "func338" gr-native-funcs))
+  (unwind-protect
+      (progn
+        (gr-defnative "func139A" (lambda (&rest _args) nil))
+        (gr-defnative "func338" (lambda (&rest _args) nil))
+        (gr-init-main-bootstrap-state)
+        (gr-run-func "func004")
+        (gr-capture-main-bootstrap-state))
+    (if saved-func139A
+        (gr-defnative "func139A" saved-func139A)
+      (when gr-native-funcs
+        (remhash "func139A" gr-native-funcs)))
+    (if saved-func338
+        (gr-defnative "func338" saved-func338)
+      (when gr-native-funcs
+        (remhash "func338" gr-native-funcs))))
   (gr-worldgen-seed-base-state)
   (gr-worldgen-run t)
+  (gr-restore-main-bootstrap-state)
   (gr-set 211 (max 15 (gr-num (or (gr-get 211) 0))))
   (gr-set 212 0)
   (gr-set 213 0)
@@ -152,6 +178,7 @@
   (gr-set 219 0)
   (gr-set 128 0)
   (gr-set 178 0)
+  (gr-set 10 0)
   (gr-menu-set-item-slot 1 item1)
   (gr-menu-set-item-slot 2 item2)
   (gr-set 224 2)
@@ -170,20 +197,23 @@
   (gr-run-func "func337")
   (setq base-hist (gr-menu-histogram))
   (setq gr-sumi nil gr-trace nil gr-missing nil gr-step-count 0)
-  (setq gr-menu-script (list key-a key-a key-a key-down key-x))
-  (setq gr-menu-script-index 0)
-  (setq gr-menu-current-key 0)
-  (setq gr-menu-frame-count 0)
-  (setq gr-menu-error nil)
-  (unwind-protect
-      (progn
-        (gr-menu-install-wrappers)
-        (condition-case err
-            (catch 'gr-menu-stop
-              (gr-run-func "func009"))
-          (error
-           (setq gr-menu-error err))))
-    (gr-menu-restore-wrappers))
+  (gr-set 195 0)
+  (gr-set 196 0)
+  (gr-set 198 0)
+  (gr-set 220 0)
+  (gr-set 225 1)
+  (gr-set 223 (+ (gr-num (or (gr-get 224) 0)) 10))
+  (gr-set "item_page_number" 1)
+  (gr-set "Y_axis_item_position" 45)
+  (gr-set 229 44)
+  (gr-set 230 45)
+  (gr-set 231 0)
+  (gr-set "belongings_item_list" item1)
+  (gr-set "open_item_menue" 1)
+  (condition-case err
+      (gr-run-func "func337")
+    (error
+     (setq gr-menu-error err)))
   (setq menu-hist (gr-menu-histogram))
   (setq delta-hist (gr-menu-histogram-delta base-hist menu-hist))
   (setq texts (gr-menu-draw-texts))

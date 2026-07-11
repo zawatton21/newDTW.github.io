@@ -35,6 +35,9 @@
         (first-num t))
     (dolist (arg args)
       (cond
+       ((member op '("gui-draw-text" "dtw-draw-text"))
+        (when (null text)
+          (setq text (if (null arg) "" (format "%s" arg)))))
        ((numberp arg)
         (push arg nums))
        ((null arg)

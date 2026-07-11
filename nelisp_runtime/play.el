@@ -1,26 +1,25 @@
 ;;; play.el --- interactive pure-elisp play driver -*- coding: utf-8; lexical-binding: t; -*-
 ;;
-;; HUMAN RUNBOOK (4 terminals, run from the repo root):
+;; HUMAN RUNBOOK (preferred, run from the repo root):
 ;;
-;; 1. Bridge
-;;    node C:/Users/kuroz/Cowork/Notes/dev/sumi/backends/cairo-elisp/sprite-bridge.js
+;;    emacs -Q --batch -l nelisp_runtime/start-live.el
 ;;
-;; 2. Native watcher window
+;; Manual split-run equivalent:
+;;
+;; 1. Native watcher window
 ;;    C:/Users/kuroz/AppData/Local/Temp/sumi-sprite-live.exe
-;;
-;; 3. Frame feeder
-;;    node tools/live_feed_loop.js
-;;
-;; 4. Play driver
-;;    node tools/build_play_bundle.js
+;; 2. Pure-elisp direct-bin frame feeder
+;;    emacs -Q --batch -l nelisp_runtime/live-feed-loop.el -- \
+;;      --direct-bin C:/Users/kuroz/Cowork/Notes/dev/sumi/backends/cairo-elisp/sumi-sprite.bin
+;; 3. Play driver
+;;    emacs -Q --batch -l nelisp_runtime/build-play-bundle.el
 ;;    $env:HOME=(Resolve-Path build/emacs-home)
 ;;    emacs -Q --batch --eval "(progn (prefer-coding-system 'utf-8) (setq coding-system-for-write 'utf-8))" -l build/play-bundle-loader.el
 ;;
-;; Optional fallback keyboard input server
-;;    node tools/key_input_server.js
-;;
-;; When the native GTK window supports direct focused input, terminal 5 is not
-;; needed. Keep the key input server as a fallback only.
+;; Keyboard input is handled by the native GTK window and written directly to
+;; build/key-state.txt by the renderer.
+
+(require 'cl-lib)
 
 (defconst gr-play-build-dir
   (expand-file-name "../build" (file-name-directory (or load-file-name buffer-file-name))))
@@ -34,6 +33,12 @@
 (defconst gr-play-frame-path
   (expand-file-name "frame-current.json" gr-play-build-dir))
 
+(defconst gr-play-frame-seq-path
+  (expand-file-name "frame-current.seq" gr-play-build-dir))
+
+(defconst gr-play-default-direct-bin-path
+  (expand-file-name "../../sumi/backends/cairo-elisp/sumi-sprite.bin" gr-play-runtime-dir))
+
 (defconst gr-play-frames-dir
   (expand-file-name "frames" gr-play-build-dir))
 
@@ -43,11 +48,37 @@
 (defconst gr-play-saves-dir
   (expand-file-name "saves-play" gr-play-build-dir))
 
-(defvar gr-play-duration-seconds 300
+(defvar gr-play-duration-seconds
+  (or (and (getenv "GR_PLAY_DURATION_SECONDS")
+           (string-to-number (getenv "GR_PLAY_DURATION_SECONDS")))
+      300)
   "How long the interactive play loop runs before exiting.")
 
 (defvar gr-play-report-every 25
   "Print one status line every N frames.")
+
+(defvar gr-play-dedup-frames
+  (not (string= (or (getenv "GR_PLAY_DEDUP_FRAMES") "1") "0"))
+  "When non-nil, compare full frame records to skip duplicate dumps.")
+
+(defvar gr-play-direct-bin-enabled
+  (not (string= (or (getenv "GR_PLAY_DIRECT_BIN") "1") "0"))
+  "When non-nil, write renderer binary frames directly instead of JSON.")
+
+(defvar gr-play-direct-bin-path
+  (expand-file-name (or (getenv "GR_PLAY_DIRECT_BIN_PATH")
+                        gr-play-default-direct-bin-path))
+  "Path to the sumi-sprite-live binary handoff file.")
+(defvar gr-play-renderer-path
+  (and (getenv "GR_PLAY_RENDERER_PATH")
+       (expand-file-name (getenv "GR_PLAY_RENDERER_PATH")))
+  "Optional renderer executable launched after direct-bin output is warm.")
+(defvar gr-play-renderer-launch-seq 2
+  "Launch the renderer after this many direct-bin frames have been written.")
+(defvar gr-play-renderer-started nil)
+
+(defvar gr-play-direct-bin-loaded nil
+  "Non-nil after the live binary packer has been loaded.")
 
 (defvar gr-play-key-stale-seconds 0.75
   "Treat key-state.txt as stale after this many seconds.")
@@ -55,8 +86,25 @@
 (defvar gr-play-pending-key-max-age-seconds 1.0
   "Treat a latched unconsumed press as missed after this many seconds.")
 
-(defvar gr-play-idle-sleep-seconds 0.0
+(defvar gr-play-idle-sleep-seconds
+  (or (and (getenv "GR_PLAY_IDLE_SLEEP_SECONDS")
+           (string-to-number (getenv "GR_PLAY_IDLE_SLEEP_SECONDS")))
+      0.0)
   "Sleep this long when no key is currently held.")
+
+(defvar gr-play-forced-animation-delay
+  (and (getenv "GR_PLAY_ANIMATION_DELAY")
+       (string-to-number (getenv "GR_PLAY_ANIMATION_DELAY")))
+  "When non-nil, force animationDelay after boot for speed diagnostics.")
+
+(defvar gr-play-last-speed-pacing-delay nil
+  "Last frame pacing delay derived from animationDelay.")
+
+(defvar gr-live-feed-library-only nil)
+(defvar gr-live-feed-direct-bin nil)
+(defvar gr-live-feed-bin-seq nil)
+(defvar gr-live-feed-scheduled-paths nil)
+(defvar gr-live-feed-pending-deletes nil)
 
 (defvar gr-play-opening-poll-sleep-seconds 0.01
   "Sleep this long between title/login input polls.")
@@ -69,6 +117,8 @@
 (defvar gr-play-file-held-codes nil)
 (defvar gr-play-pending-presses nil)
 (defvar gr-play-synced-keycodes nil)
+(defvar gr-play-function-key-down nil
+  "Hash of live function-key codes already handled while held.")
 (defvar gr-play-read-error-count 0)
 (defvar gr-play-received-press-count 0)
 (defvar gr-play-consumed-press-count 0)
@@ -77,6 +127,7 @@
 (defvar gr-play-orig-func009 nil)
 (defvar gr-play-orig-func337 nil)
 (defvar gr-play-orig-func080 nil)
+(defvar gr-play-orig-func020 nil)
 (defvar gr-play-orig-gr-emit nil)
 (defvar gr-play-worldgen-saved-func009 nil)
 (defvar gr-play-saved-native-func338 nil)
@@ -84,12 +135,15 @@
 (defvar gr-play-saved-native-func150 nil)
 (defvar gr-play-redraw-count 0)
 (defvar gr-play-loop-count 0)
+(defvar gr-play-enemy-turn-count 0)
 (defvar gr-play-title-frame-count 0)
 (defvar gr-play-dumped-count 0)
 (defvar gr-play-skipped-count 0)
+(defvar gr-play-deduped-json-write-count 0)
 (defvar gr-play-draw-seconds 0.0)
 (defvar gr-play-serialize-seconds 0.0)
 (defvar gr-play-io-seconds 0.0)
+(defvar gr-play-last-frame-json nil)
 (defvar gr-play-last-record-count nil)
 (defvar gr-play-last-player-x nil)
 (defvar gr-play-last-player-y nil)
@@ -107,14 +161,35 @@
 (defvar gr-play-opening-result nil)
 (defvar gr-play-opening-title-loops 0)
 (defvar gr-play-opening-login-loops 0)
+(defvar gr-play-load-screen-frame-count 0)
+(defvar gr-play-load-screen-sleep-seconds 0.02)
+(defvar gr-play-opening-story-frame-count 0)
+(defvar gr-play-opening-story-message-count 0)
+(defvar gr-play-opening-story-wait-count 0)
+(defvar gr-play-opening-story-used-generated nil)
+(defvar gr-play-opening-story-sleep-seconds 0.04)
 (defvar gr-play-opening-render-seconds 0.0)
 (defvar gr-play-opening-poll-seconds 0.0)
 (defvar gr-play-opening-sleep-seconds 0.0)
 (defvar gr-play-frame-seq 0)
 (defvar gr-play-queue-overflow-logged nil)
+(defvar gr-play-static-setup-frames-left 8
+  "Number of upcoming frames that should include static setup records.")
+
+(defvar gr-play-include-static-setup-every-direct-bin-frame
+  (not (string= (or (getenv "GR_PLAY_STATIC_SETUP_EVERY_DIRECT_BIN_FRAME") "1") "0"))
+  "When non-nil, direct-bin frames are self-contained for late renderer starts.")
 (defvar gr-play-opening-guard-seq 0)
 (defvar gr-play-opening-release-seen nil)
 (defvar gr-play-opening-login-rendered nil)
+(defvar gr-play-scripted-opening
+  (equal (getenv "GR_PLAY_SCRIPTED_OPENING") "1")
+  "When non-nil, drive title/login confirms deterministically for probes.")
+(defvar gr-play-start-in-hotel
+  (and (not (equal (getenv "GR_PLAY_SKIP_OPENING") "1"))
+       (not (equal (getenv "GR_PLAY_START_IN_HOTEL") "0")))
+  "When non-nil, route a new-game opening to the Venice hotel hub.")
+(defvar gr-play-hotel-start-count 0)
 (defvar gr-play-session-data-root nil)
 (defvar gr-play-post-init-hook nil
   "Optional function run after boot/init, before the live loop starts.")
@@ -122,6 +197,13 @@
   "Optional function run immediately before each live func080 key poll.")
 (defvar gr-play-after-frame-hook nil
   "Optional function run after each dumped redraw frame.")
+(defvar gr-play-profile-funcs
+  '("func324" "func324X" "func326" "func337" "func353" "func330" "func328" "func325"
+    "func342" "func343" "func345" "func352" "func396" "func397" "func538" "func539" "func553" "func565" "func566" "func568" "func626" "func048" "func460"
+    "func054" "func196" "func338")
+  "Function names sampled by the optional live profiler.")
+(defvar gr-play-profile-table nil
+  "Hash table of function profile stats when enabled.")
 
 (defun gr-play-buffer-histogram ()
   "Return an alist of source buffer id -> blit count for the current gr-sumi."
@@ -321,13 +403,16 @@
                 (if (hash-table-p gr-play-file-held-codes)
                     gr-play-file-held-codes
                   (make-hash-table :test 'equal)))
-          (dolist (code held)
-            (unless (> (gethash code old-held 0) 0)
-              (gr-play-enqueue-press seq code)))
-          (when (and (null held)
-                     (> (or (plist-get record :keycode) 0) 0)
-                     (= 0 (gethash (plist-get record :keycode) old-held 0)))
-            (gr-play-enqueue-press seq (plist-get record :keycode)))
+          (let ((trigger-code (or (plist-get record :keycode) 0))
+                (trigger-enqueued nil))
+            (dolist (code held)
+              (unless (> (gethash code old-held 0) 0)
+                (gr-play-enqueue-press seq code)
+                (when (= code trigger-code)
+                  (setq trigger-enqueued t))))
+            (when (and (> trigger-code 0)
+                       (not trigger-enqueued))
+              (gr-play-enqueue-press seq trigger-code)))
           (setq gr-play-file-held-codes next-held)
           (setq gr-play-held-codes (gr-play-copy-hash next-held))
           (gr-play-sync-pushing-key-list)
@@ -378,27 +463,98 @@
   (gr-play-sync-pushing-key-list)
   0)
 
+(defun gr-play-emit-control-frame (&rest commands)
+  "Emit COMMANDS as an immediate control frame."
+  (setq gr-sumi nil)
+  (dolist (command commands)
+    (apply #'gr-emit command))
+  (if (if gr-play-direct-bin-enabled
+          (progn
+            (gr-play-write-direct-bin-frame gr-sumi)
+            t)
+        (gr-play-write-frame (gr-play-frame-records-to-json gr-sumi)))
+      (setq gr-play-dumped-count (1+ gr-play-dumped-count))
+    (setq gr-play-skipped-count (1+ gr-play-skipped-count)))
+  (setq gr-play-last-frame-records nil)
+  (setq gr-sumi nil))
+
+(defun gr-play-current-key-active-p (keycode)
+  "Return non-nil when KEYCODE is currently held."
+  (> (gethash keycode gr-play-held-codes 0) 0))
+
+(defun gr-play-toggle-output-size ()
+  "Toggle the live output size using the original window-size state slot."
+  (if (equal (gr-get 10) 1)
+      (progn
+        (gr-set 10 0)
+        (gr-play-emit-control-frame (list "dtw-resize-window" 340 340)))
+    (gr-set 10 1)
+    (gr-play-emit-control-frame (list "dtw-resize-window" 680 680))))
+
+(defun gr-play-handle-function-key-settings ()
+  "Handle live function-key settings.  Return non-nil when a key was handled."
+  (gr-play-refresh-input)
+  (unless (hash-table-p gr-play-function-key-down)
+    (setq gr-play-function-key-down (make-hash-table :test 'equal)))
+  (let ((handled nil))
+    (dolist (entry '((112 . size) (113 . bgm-down) (114 . bgm-up)
+                     (115 . se-down) (116 . se-up) (118 . bgm-stop)
+                     (123 . size)))
+      (let* ((keycode (car entry))
+             (action (cdr entry))
+             (active (gr-play-current-key-active-p keycode))
+             (was-active (> (gethash keycode gr-play-function-key-down 0) 0)))
+        (cond
+         ((and active (not was-active))
+          (puthash keycode 1 gr-play-function-key-down)
+          (setq handled t)
+          (pcase action
+            ('size (gr-play-toggle-output-size))
+            ('bgm-down (gr-play-emit-control-frame (list "music-func088")))
+            ('bgm-up (gr-play-emit-control-frame (list "music-func087")))
+            ('se-down (gr-play-emit-control-frame (list "music-func085")))
+            ('se-up (gr-play-emit-control-frame (list "music-func086")))
+            ('bgm-stop (gr-play-emit-control-frame (list "dtw-music-stop")))))
+         ((not active)
+          (puthash keycode 0 gr-play-function-key-down)))))
+    handled))
+
+(defun gr-play-rename-file-retry (from to &optional ok-if-missing)
+  "Rename FROM to TO, retrying briefly for Windows reader locks."
+  (let ((tries 0)
+        (done nil)
+        (last-error nil))
+    (while (and (not done) (< tries 20))
+      (condition-case err
+          (progn
+            (rename-file from to ok-if-missing)
+            (setq done t))
+        (file-error
+         (setq last-error err)
+         (setq tries (1+ tries))
+         (sleep-for 0.005))))
+    (unless done
+      (signal (car last-error) (cdr last-error)))))
+
 (defun gr-play-write-frame (json)
-  "Atomically write JSON to build/frame-current.json and build/frames/."
-  (let* ((seq (setq gr-play-frame-seq (1+ gr-play-frame-seq)))
-         (frame-path (expand-file-name (format "frame-%06d.json" seq) gr-play-frames-dir))
-         (frame-tmp-path (concat frame-path ".tmp"))
-         (current-tmp-path (concat gr-play-frame-path ".tmp"))
-         (coding-system-for-write 'utf-8))
-    (unless (file-directory-p (file-name-directory gr-play-frame-path))
-      (make-directory (file-name-directory gr-play-frame-path) t))
-    (unless (file-directory-p gr-play-frames-dir)
-      (make-directory gr-play-frames-dir t))
-    (write-region json nil frame-tmp-path nil 'silent)
-    (rename-file frame-tmp-path frame-path t)
-    (write-region json nil current-tmp-path nil 'silent)
-    (rename-file current-tmp-path gr-play-frame-path t)
-    (when (and (not gr-play-queue-overflow-logged)
-               (> (length (directory-files gr-play-frames-dir nil "^frame-[0-9]+\\.json$")) 2000))
-      (setq gr-play-queue-overflow-logged t)
-      (princ (format "PLAY-QUEUE-OVERFLOW dir=%s files=%d\n"
-                     gr-play-frames-dir
-                     (length (directory-files gr-play-frames-dir nil "^frame-[0-9]+\\.json$")))))))
+  "Atomically write JSON to the live frame handoff path."
+  (if (equal json gr-play-last-frame-json)
+      (progn
+        (setq gr-play-deduped-json-write-count
+              (1+ gr-play-deduped-json-write-count))
+        nil)
+    (let* ((seq (setq gr-play-frame-seq (1+ gr-play-frame-seq)))
+           (current-tmp-path (concat gr-play-frame-path ".tmp"))
+           (seq-tmp-path (concat gr-play-frame-seq-path ".tmp"))
+           (coding-system-for-write 'utf-8))
+      (unless (file-directory-p (file-name-directory gr-play-frame-path))
+        (make-directory (file-name-directory gr-play-frame-path) t))
+      (write-region json nil current-tmp-path nil 'silent)
+      (gr-play-rename-file-retry current-tmp-path gr-play-frame-path t)
+      (write-region (format "%d\n" seq) nil seq-tmp-path nil 'silent)
+      (gr-play-rename-file-retry seq-tmp-path gr-play-frame-seq-path t)
+      (setq gr-play-last-frame-json json)
+      t)))
 
 (defun gr-play-init-frame-queue ()
   "Reset build/frames/ for a fresh ordered frame-dump session."
@@ -412,7 +568,9 @@
       (when (file-regular-p file)
         (delete-file file)))
     (when (file-exists-p gr-play-frame-path)
-      (delete-file gr-play-frame-path))))
+      (delete-file gr-play-frame-path))
+    (when (file-exists-p gr-play-frame-seq-path)
+      (delete-file gr-play-frame-seq-path))))
 
 (defun gr-play-write-opening-profile (line)
   "Persist opening profiling LINE in build/play-opening-profile.txt."
@@ -572,35 +730,263 @@ except the known per-frame and transient loaders (`36' / `37')."
 
 (defun gr-play-get-boot-composition-json-body ()
   "Return cached boot-composition records as a JSON object list."
+  (unless (cl-some (lambda (entry)
+                     (and (member (car entry) '("gui-select-buffer" "dtw-select-buffer"
+                                                "gui-screen" "dtw-screen"))
+                          (equal (gr-num (cadr entry)) 12)))
+                   gr-play-boot-composition)
+    ;; func004 creates buffer 12 once as the blue message/window backing
+    ;; surface.  If boot harvesting misses it, later gcopy(12,...) draws a
+    ;; transparent box.
+    (setq gr-play-boot-composition
+          (append (list (cons "gui-select-buffer" (list 0))
+                        (cons "gui-fill-rect" (list 0 0 340 340))
+                        (cons "gui-set-color" (list 0 0 200))
+                        (cons "gui-select-buffer" (list 12))
+                        (cons "gui-screen" (list 12 340 340)))
+                  gr-play-boot-composition))
+    (setq gr-play-boot-composition-json-body nil))
   (unless gr-play-boot-composition-json-body
     (setq gr-play-boot-composition-json-body
           (gr-sumi-records-json-body gr-play-boot-composition)))
   gr-play-boot-composition-json-body)
+
+(defun gr-play-position-feeds-text-p (tail)
+  "Return non-nil when the set-position at TAIL feeds a later text draw."
+  (let ((rest (cdr tail))
+        (feeds-text nil)
+        (done nil))
+    (while (and rest (not done))
+      (let ((op (caar rest)))
+        (cond
+         ((member op '("gui-draw-text" "dtw-draw-text"))
+          (setq feeds-text t
+                done t))
+         ((member op '("gui-set-position" "dtw-set-position"))
+          (setq done t))))
+      (setq rest (cdr rest)))
+    feeds-text))
+
+(defun gr-play-compact-positional-image-records (records)
+  "Drop redundant set-position records that do not feed text.
+
+Image, fill, line and point records already carry their own coordinates in
+this runtime stream.  Only draw-text depends on the current position state."
+  (let ((chrono (reverse records))
+        (tail nil)
+        (out nil))
+    (setq tail chrono)
+    (while chrono
+      (let ((entry (car chrono))
+            (drop nil))
+        (when (member (car entry) '("gui-set-position" "dtw-set-position"))
+          (setq drop (not (gr-play-position-feeds-text-p tail))))
+        (unless drop
+          (push entry out)))
+      (setq chrono (cdr chrono)
+            tail chrono))
+    out))
+
+(defun gr-play-compact-alpha-image-records (records)
+  "Fold alpha immediately followed by scaled-image into one JSON record."
+  (let ((chrono (reverse records))
+        (out nil))
+    (while chrono
+      (let ((entry (car chrono))
+            (next-entry (cadr chrono)))
+        (if (and next-entry
+                 (member (car entry) '("gui-set-alpha" "dtw-set-alpha"))
+                 (member (car next-entry)
+                         '("gui-draw-image-scaled" "dtw-draw-image-scaled")))
+            (progn
+              (push (cons "gui-draw-image-scaled-alpha"
+                          (cons (or (cadr entry) 255) (cdr next-entry)))
+                    out)
+              (setq chrono (cdr chrono)))
+          (push entry out)))
+      (setq chrono (cdr chrono)))
+    out))
+
+(defun gr-play-compact-position-text-records (records)
+  "Fold set-position immediately followed by draw-text into one JSON record."
+  (let ((chrono (reverse records))
+        (out nil))
+    (while chrono
+      (let ((entry (car chrono))
+            (next-entry (cadr chrono)))
+        (if (and next-entry
+                 (member (car entry) '("gui-set-position" "dtw-set-position"))
+                 (member (car next-entry) '("gui-draw-text" "dtw-draw-text")))
+            (progn
+              (push (cons "gui-draw-text-at"
+                          (list (or (cadr entry) 0)
+                                (or (caddr entry) 0)
+                                (or (cadr next-entry) "")))
+                    out)
+              (setq chrono (cdr chrono)))
+          (push entry out)))
+      (setq chrono (cdr chrono)))
+    out))
+
+(defun gr-play-compact-render-state-records (records)
+  "Drop redundant state records inside one frame.
+
+The renderer keeps color, alpha, and target-buffer state.  A frame must
+still establish its first observed state, but repeating the same state
+again before it changes only increases pack/write work."
+  (let ((chrono (reverse records))
+        (out nil)
+        (current-color :unknown)
+        (current-alpha :unknown)
+        (current-buffer :unknown))
+    (dolist (entry chrono)
+      (let ((op (car entry))
+            (drop nil)
+            (value nil))
+        (cond
+         ((member op '("gui-set-color" "dtw-set-color"))
+          (setq value (cdr entry))
+          (if (equal value current-color)
+              (setq drop t)
+            (setq current-color value)))
+         ((member op '("gui-set-alpha" "dtw-set-alpha"))
+          (setq value (cadr entry))
+          (if (equal value current-alpha)
+              (setq drop t)
+            (setq current-alpha value)))
+         ((member op '("gui-select-buffer" "dtw-select-buffer"))
+          (setq value (cadr entry))
+          (if (equal value current-buffer)
+              (setq drop t)
+            (setq current-buffer value))))
+        (unless drop
+          (push entry out))))
+    out))
 
 (defun gr-play-frame-records-to-json (records)
   "Serialize RECORDS with setup + boot composition prepended in wire order.
 Order: screen/load-image setup, then boot-time work-buffer fills (e.g.
 buffer 12's blue message box), then the frame's own draws — so any
 frame is self-contained for a consumer that starts or resyncs."
-  (let* ((setup-body (gr-play-get-setup-records-json-body))
-         (boot-body (gr-play-get-boot-composition-json-body))
+  (let* ((records (gr-play-compact-render-state-records
+                   (gr-play-compact-position-text-records
+                    (gr-play-compact-alpha-image-records
+                     (gr-play-compact-positional-image-records records)))))
+         (include-static (or (and gr-play-direct-bin-enabled
+                                  gr-play-include-static-setup-every-direct-bin-frame)
+                             (> gr-play-static-setup-frames-left 0)))
+         (setup-body (if include-static (gr-play-get-setup-records-json-body) ""))
+         (boot-body (if include-static (gr-play-get-boot-composition-json-body) ""))
          (frame-body (gr-sumi-records-json-body records))
          (parts (delq nil
                       (list (and (> (length setup-body) 0) setup-body)
                             (and (> (length boot-body) 0) boot-body)
                             (and (> (length frame-body) 0) frame-body)))))
+    (when (and include-static
+               (not (and gr-play-direct-bin-enabled
+                         gr-play-include-static-setup-every-direct-bin-frame)))
+      (setq gr-play-static-setup-frames-left (1- gr-play-static-setup-frames-left)))
     (concat "[" (mapconcat #'identity parts ",") "]")))
+
+(defun gr-play-ensure-direct-bin-packer ()
+  "Load the live binary packer once when direct-bin output is enabled."
+  (when (and gr-play-direct-bin-enabled (not gr-play-direct-bin-loaded))
+    (setq gr-live-feed-library-only t)
+    (load (expand-file-name "live-feed-loop.el" gr-play-runtime-dir) nil t)
+    (setq gr-live-feed-direct-bin gr-play-direct-bin-path)
+    (setq gr-live-feed-bin-seq 0)
+    (setq gr-live-feed-scheduled-paths (make-hash-table :test 'equal))
+    (setq gr-live-feed-pending-deletes (make-hash-table :test 'equal))
+    (gr-live-feed-load-title-stream-table)
+    (setq gr-play-direct-bin-loaded t)))
+
+(defun gr-play-record-to-feed-record (entry)
+  "Convert one gr-sumi ENTRY to the feeder record alist shape."
+  (let ((op (car entry))
+        (args (cdr entry))
+        (nums nil)
+        (text nil))
+    (dolist (arg args)
+      (cond
+       ((member op '("gui-draw-text" "dtw-draw-text"))
+        (when (null text)
+          (setq text (if (null arg) "" (format "%s" arg)))))
+       ((numberp arg)
+        (push arg nums))
+       ((null arg)
+        (push 0 nums))
+       ((and (null text) (stringp arg))
+        (setq text arg))))
+    (vector op (nreverse nums) text)))
+
+(defun gr-play-frame-records-to-feed-records (records)
+  "Return RECORDS plus static setup in chronological feeder-record order."
+  (let* ((records (gr-play-compact-render-state-records
+                   (gr-play-compact-position-text-records
+                    (gr-play-compact-alpha-image-records
+                     (gr-play-compact-positional-image-records records)))))
+         (include-static (or (and gr-play-direct-bin-enabled
+                                  gr-play-include-static-setup-every-direct-bin-frame)
+                             (> gr-play-static-setup-frames-left 0)))
+          (wire-records (append (when include-static (reverse gr-play-setup-records))
+                                (when include-static (reverse gr-play-boot-composition))
+                                (reverse records))))
+    (when (and include-static
+               (not (and gr-play-direct-bin-enabled
+                         gr-play-include-static-setup-every-direct-bin-frame)))
+      (setq gr-play-static-setup-frames-left (1- gr-play-static-setup-frames-left)))
+    (mapcar #'gr-play-record-to-feed-record wire-records)))
+
+(defun gr-play-write-direct-bin-frame (records)
+  "Write RECORDS directly to the native renderer binary handoff."
+  (gr-play-ensure-direct-bin-packer)
+  (prog1
+      (gr-live-feed-write-direct-bin
+       (gr-play-frame-records-to-feed-records records))
+    (gr-play-maybe-start-renderer)))
+
+(defun gr-play-powershell-quote (value)
+  "Quote VALUE as a single-quoted PowerShell string."
+  (concat "'" (replace-regexp-in-string "'" "''" value nil t) "'"))
+
+(defun gr-play-maybe-start-renderer ()
+  "Start the native renderer once the direct-bin stream is warm."
+  (when (and gr-play-direct-bin-enabled
+             gr-play-renderer-path
+             (file-exists-p gr-play-renderer-path)
+             (not gr-play-renderer-started)
+             (boundp 'gr-live-feed-bin-seq)
+             (>= gr-live-feed-bin-seq gr-play-renderer-launch-seq))
+    (setq gr-play-renderer-started t)
+    (if (eq system-type 'windows-nt)
+        (call-process
+         "powershell" nil nil nil
+         "-NoProfile"
+         "-Command"
+         (format
+          "$running=Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'sumi-sprite-live.exe' }; if(-not $running){ Start-Process -FilePath %s -WorkingDirectory %s }"
+          (gr-play-powershell-quote gr-play-renderer-path)
+          (gr-play-powershell-quote (file-name-directory gr-play-renderer-path))))
+      (start-process "sumi-sprite-live" nil gr-play-renderer-path))
+    (princ (format "PLAY-RENDERER-START path=%s seq=%d\n"
+                   gr-play-renderer-path
+                   gr-live-feed-bin-seq))))
 
 (defun gr-play-dump-current-frame ()
   "Serialize and dump the current `gr-sumi' frame if it changed."
   (gr-play-collect-setup-records)
   (let ((record-count (length gr-sumi))
-        (snapshot (gr-play-snapshot-state))
         (frame-records nil)
         (serialize-start 0.0)
         (io-start 0.0)
         (json nil)
-        (histogram (gr-play-buffer-histogram)))
+        (histogram nil)
+        (should-dump nil)
+        (wrote nil))
+    (when (or (null gr-play-first-frame-histogram)
+              (null gr-play-first-player-frame-histogram)
+              (null gr-play-first-enemy-frame-histogram))
+      (setq histogram (gr-play-buffer-histogram)))
     (when (null gr-play-first-frame-histogram)
       (setq gr-play-first-frame-histogram histogram)
       (setq gr-play-first-frame-missing (reverse gr-missing))
@@ -625,21 +1011,55 @@ frame is self-contained for a consumer that starts or resyncs."
       (princ (format "PLAY-HIST enemy=%S\n" histogram)))
     (if (= record-count 0)
         (setq gr-play-skipped-count (1+ gr-play-skipped-count))
-      ;; Replay the harvested setup at the head of the frame (gr-sumi is
-      ;; newest-first, so appending puts it first after the reversal).
-      (setq frame-records (append gr-sumi gr-play-setup-records))
-      (if (gr-play-frame-unchanged-p frame-records)
+      (setq should-dump t)
+      (when (and gr-play-dedup-frames
+                 (<= gr-play-static-setup-frames-left 0))
+        ;; Replay the harvested setup/boot records in the comparison tree
+        ;; after the startup replay window has closed.  The exact `equal'
+        ;; comparison is intentionally retained; hash-only checks previously
+        ;; dropped real animation frames after a collision.
+        (setq frame-records
+              (append gr-sumi gr-play-setup-records gr-play-boot-composition))
+        (when (gr-play-frame-unchanged-p frame-records)
+          (setq should-dump nil)))
+      (if (not should-dump)
           (setq gr-play-skipped-count (1+ gr-play-skipped-count))
-        (setq serialize-start (float-time))
-        (setq json (gr-play-frame-records-to-json gr-sumi))
-        (setq gr-play-serialize-seconds
-              (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
-        (setq io-start (float-time))
-        (gr-play-write-frame json)
-        (setq gr-play-io-seconds
-              (+ gr-play-io-seconds (- (float-time) io-start)))
-        (setq gr-play-dumped-count (1+ gr-play-dumped-count))
-        (gr-play-record-snapshot record-count snapshot)))))
+        (if gr-play-direct-bin-enabled
+            (progn
+              (setq serialize-start (float-time))
+              (gr-play-get-boot-composition-json-body)
+              (setq gr-play-serialize-seconds
+                    (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
+              (setq io-start (float-time))
+              (gr-play-write-direct-bin-frame gr-sumi)
+              (setq wrote t)
+              (setq gr-play-io-seconds
+                    (+ gr-play-io-seconds (- (float-time) io-start))))
+          (setq serialize-start (float-time))
+          (setq json (gr-play-frame-records-to-json gr-sumi))
+          (setq gr-play-serialize-seconds
+                (+ gr-play-serialize-seconds (- (float-time) serialize-start)))
+          (setq io-start (float-time))
+          (setq wrote (gr-play-write-frame json))
+          (unless wrote
+            (setq gr-play-skipped-count (1+ gr-play-skipped-count)))
+          (setq gr-play-io-seconds
+                (+ gr-play-io-seconds (- (float-time) io-start))))
+        (when wrote
+          (setq gr-play-dumped-count (1+ gr-play-dumped-count)))))))
+
+(defun gr-play-dump-initial-bgm ()
+  "Emit the default dungeon BGM once after boot reaches live play."
+  (setq gr-sumi nil)
+  (gr-emit "dtw-music-play-file" "0.mp3")
+  (if (if gr-play-direct-bin-enabled
+          (progn
+            (gr-play-write-direct-bin-frame gr-sumi)
+            t)
+        (gr-play-write-frame (gr-play-frame-records-to-json gr-sumi)))
+      (setq gr-play-dumped-count (1+ gr-play-dumped-count))
+    (setq gr-play-skipped-count (1+ gr-play-skipped-count)))
+  (setq gr-sumi nil))
 
 (defun gr-play-with-loop-disabled (thunk)
   "Run THUNK with func009 temporarily replaced by a no-op."
@@ -668,6 +1088,45 @@ frame is self-contained for a consumer that starts or resyncs."
   (setq gr-worldgen-use-existing-state t)
   (gr-worldgen-run t)
   (gr-restore-main-bootstrap-state))
+
+(defun gr-play-find-active-enemy-slot ()
+  "Return an active enemy slot suitable for func162's hotel escort move."
+  (catch 'found
+    (let ((idx 1))
+      (while (<= idx 100)
+        (let* ((base (+ 900 (* (- idx 1) 13)))
+               (active (gr-num (or (gr-get (+ base 1)) 0)))
+               (hp (gr-num (or (gr-get (+ base 5)) 0))))
+          (when (or (> active 0) (> hp 0))
+            (throw 'found idx)))
+        (setq idx (1+ idx))))
+    0))
+
+(defun gr-play-bootstrap-hotel-start ()
+  "Route a new-game bootstrap to the Venice hotel hub without entering func009."
+  (let ((enemy-slot (gr-play-find-active-enemy-slot))
+        (saved-func009 (gethash "func009" gr-native-funcs))
+        (saved-autodraw (gethash "AutoDraw" gr-native-funcs)))
+    (unless (> enemy-slot 0)
+      (error "hotel start could not find an active enemy slot"))
+    (gr-set 771 enemy-slot)
+    (unwind-protect
+        (progn
+          (gr-defnative "func009" (lambda (&rest _args) nil))
+          (gr-defnative "AutoDraw" (lambda (&rest _args) nil))
+          (gr-run-func "func162"))
+      (if saved-func009
+          (gr-defnative "func009" saved-func009)
+        (remhash "func009" gr-native-funcs))
+      (if saved-autodraw
+          (gr-defnative "AutoDraw" saved-autodraw)
+        (remhash "AutoDraw" gr-native-funcs)))
+    (setq gr-play-hotel-start-count (1+ gr-play-hotel-start-count))
+    (princ (format "PLAY-HOTEL-START player=%s,%s enemy-slot=%s count=%d\n"
+                   (or (gr-get 66) 0)
+                   (or (gr-get 67) 0)
+                   enemy-slot
+                   gr-play-hotel-start-count))))
 
 (defun gr-play-bootstrap-resume-init ()
   "Mirror the batch resume load path used by run-saveload.el."
@@ -700,25 +1159,44 @@ frame is self-contained for a consumer that starts or resyncs."
 (defun gr-play-apply-post-init-state ()
   "Restore the live-loop HP state that func004/worldgen do not populate.
 
-func229.ts, func233.ts, and the captured gamedata-state all enter play with
+func229, func233, and the captured gamedata-state all enter play with
 max HP 15, current HP 15, and the KO flag cleared."
   (gr-set 352 15)
   (gr-set 211 15)
   (gr-set 212 0)
   ;; Hunger must be positive or the per-turn HP regen in func019
-  ;; (func019.ts:155, gated on var_350 > 0) never runs, so HP only ever
+  ;; (legacy func019 branch, gated on var_350 > 0) never runs, so HP only ever
   ;; goes down.  100/100 matches the captured live new-game state
   ;; (gamedata-state.el: var_350=100, var_567=100).
   (gr-set 350 100)
   (gr-set 567 100)
-  ;; Fresh runs start unpoisoned (func019.ts:201 drains 5 HP per turn
+  ;; Fresh runs start unpoisoned (legacy func019 poison branch drains 5 HP per turn
   ;; while var_135 >= 1).
   (gr-set 135 0)
   ;; New-game worldgen can leave var_224 at the old title/default value
   ;; even when the authoritative inventory rows are empty, which makes the
   ;; live pickup path hit func400's "inventory full" branch immediately.
   (when (fboundp 'gr-sync-inventory-count)
-    (gr-sync-inventory-count)))
+    (gr-sync-inventory-count))
+  (when gr-play-forced-animation-delay
+    (gr-set "animationDelay" gr-play-forced-animation-delay)))
+
+(defun gr-play-speed-pacing-seconds ()
+  "Return live frame pacing seconds derived from animationDelay."
+  (pcase (gr-num (or (gr-get "animationDelay") 40))
+    ;; Rendering is currently the bottleneck, so only the intentionally slow
+    ;; menu settings add artificial delay.
+    ((or 30 40 50) 0.0)
+    (60 0.01)
+    (70 0.02)
+    (_ 0.0)))
+
+(defun gr-play-apply-speed-pacing ()
+  "Apply per-frame pacing for the in-game speed setting."
+  (let ((delay (gr-play-speed-pacing-seconds)))
+    (setq gr-play-last-speed-pacing-delay delay)
+    (when (> delay 0.0)
+      (sleep-for delay))))
 
 (defun gr-play-floor-tile-p (tile)
   "Return non-nil when TILE is a normal walkable floor."
@@ -835,24 +1313,150 @@ max HP 15, current HP 15, and the KO flag cleared."
   nil)
 
 (defun gr-play-func005 (&rest _args)
-  "Resume path sentinel for the opening flow."
+  "Existing-save path sentinel for the opening flow."
   (push 5 gr-trace)
-  (setq gr-play-opening-result 'resume)
-  (throw 'gr-play-opening-done 'resume))
+  (unless (> gr-play-opening-story-frame-count 0)
+    (gr-play-render-opening-story-preview))
+  (setq gr-play-opening-result 'new-game)
+  (throw 'gr-play-opening-done 'new-game))
+
+(defun gr-play-draw-opening-story-frame (lines)
+  "Draw and dump one short opening-story frame with LINES."
+  (setq gr-sumi nil)
+  (gr-emit "gui-present" 0)
+  (gr-emit "gui-set-color" 0 0 0)
+  (gr-emit "gui-fill-rect" 0 0 340 340)
+  (gr-emit "gui-set-color" 0 0 128)
+  (gr-emit "gui-fill-rect" 12 224 316 78)
+  (gr-emit "gui-set-color" 255 255 255)
+  (gr-emit "gui-set-font" 16)
+  (let ((y 244))
+    (dolist (line lines)
+      (gr-emit "gui-set-position" 24 y)
+      (gr-emit "gui-draw-text" line)
+      (setq y (+ y 20))))
+  (gr-play-dump-current-frame)
+  (sleep-for gr-play-opening-story-sleep-seconds)
+  (setq gr-play-opening-story-frame-count
+        (1+ gr-play-opening-story-frame-count)))
+
+(defun gr-play-render-opening-story-preview ()
+  "Render a small fallback slice of func150's story sequence."
+  (let ((old-last-frame gr-play-last-frame-records)
+        (gr-play-opening-story-sleep-seconds
+         (if (equal (getenv "GR_PLAY_FAST_OPENING_STORY") "1")
+             0.0
+           gr-play-opening-story-sleep-seconds)))
+    (unwind-protect
+        (progn
+          (setq gr-play-last-frame-records nil)
+          (dolist (lines '(("ディアボロ「おまえには 死んだことを"
+                            "        後悔する時間をも…")
+                           ("ディアボロ「与えんッ！！」")
+                           ("ジョルノ「無駄アァァァァ！！」")
+                           ("ディアボロはＧ・Ｅ・レクイエムの能力により"
+                            "永遠に死に続けることとなった。")
+                           ("しかしある時、転機が訪れた…")))
+            (gr-play-draw-opening-story-frame lines))
+          (princ (format "PLAY-OPENING-STORY frames=%d\n"
+                         gr-play-opening-story-frame-count)))
+      (setq gr-play-last-frame-records old-last-frame))))
+
+(defun gr-play-run-generated-opening-story ()
+  "Run the generated Elisp func150 opening sequence in the play bootstrap."
+  (let* ((fast (equal (getenv "GR_PLAY_FAST_OPENING_STORY") "1"))
+         (saved-func150 gr-play-saved-native-func150)
+         (saved-func159 (gethash "func159" gr-native-funcs))
+         (saved-func337 (gethash "func337" gr-native-funcs))
+         (saved-func339 (gethash "func339" gr-native-funcs))
+         (saved-autodraw (gethash "AutoDraw" gr-native-funcs))
+         (saved-set-message (gethash "setMessage" gr-native-funcs))
+         (old-last-frame gr-play-last-frame-records))
+    (if (not saved-func150)
+        (gr-play-render-opening-story-preview)
+      (unwind-protect
+          (progn
+            (setq gr-play-last-frame-records nil
+                  gr-play-opening-story-used-generated t)
+            (gr-defnative "func159"
+                          (lambda (&rest _args)
+                            (push 159 gr-trace)
+                            nil))
+            (gr-defnative "func337"
+                          (lambda (&rest args)
+                            (setq gr-play-opening-story-frame-count
+                                  (1+ gr-play-opening-story-frame-count))
+                            (if fast
+                                (progn
+                                  (push 337 gr-trace)
+                                  nil)
+                              (setq gr-sumi nil)
+                              ;; func340's message-advance loop redraws through
+                              ;; func337 every poll while it waits for Z.  Reset
+                              ;; the per-run step budget each redraw (as the
+                              ;; dungeon loop does per frame) so a human-paced
+                              ;; wait cannot exhaust gr-step-budget and abort the
+                              ;; opening.
+                              (setq gr-step-count 0)
+                              (let ((result (apply saved-func337 args)))
+                                (gr-play-dump-current-frame)
+                                (sleep-for gr-play-opening-story-sleep-seconds)
+                                result))))
+            (gr-defnative "func339"
+                          (lambda (&rest args)
+                            (setq gr-play-opening-story-wait-count
+                                  (1+ gr-play-opening-story-wait-count))
+                            (if fast
+                                (progn
+                                  (push 339 gr-trace)
+                                  nil)
+                              (apply saved-func339 args))))
+            (when fast
+              (gr-defnative "AutoDraw" (lambda (&rest _args) nil)))
+            (gr-defnative "setMessage"
+                          (lambda (row1 &optional row2 color-index do-wait-key do-animation play-sound)
+                            (setq gr-play-opening-story-message-count
+                                  (1+ gr-play-opening-story-message-count))
+                            (funcall saved-set-message
+                                     row1 row2 color-index
+                                     (and (not fast) do-wait-key)
+                                     (and (not fast) do-animation)
+                                     (and (not fast) play-sound))))
+            (funcall saved-func150)
+            (princ (format
+                    "PLAY-OPENING-STORY frames=%d messages=%d waits=%d generated=1\n"
+                    gr-play-opening-story-frame-count
+                    gr-play-opening-story-message-count
+                    gr-play-opening-story-wait-count)))
+        (if saved-func159
+            (gr-defnative "func159" saved-func159)
+          (remhash "func159" gr-native-funcs))
+        (if saved-func337
+            (gr-defnative "func337" saved-func337)
+          (remhash "func337" gr-native-funcs))
+        (if saved-func339
+            (gr-defnative "func339" saved-func339)
+          (remhash "func339" gr-native-funcs))
+        (if saved-autodraw
+            (gr-defnative "AutoDraw" saved-autodraw)
+          (remhash "AutoDraw" gr-native-funcs))
+        (if saved-set-message
+            (gr-defnative "setMessage" saved-set-message)
+          (remhash "setMessage" gr-native-funcs))
+        (setq gr-play-last-frame-records old-last-frame)))))
 
 (defun gr-play-func150 (&rest _args)
   "New-game path sentinel for the opening flow."
   (push 150 gr-trace)
+  (gr-play-run-generated-opening-story)
   (setq gr-play-opening-result 'new-game)
   (throw 'gr-play-opening-done 'new-game))
 
 (defun gr-play-log-enemy-movement (before-x before-y enemy-before)
-  "Log enemy position changes after a player move completes."
+  "Log enemy position changes after a player action completes."
   (let ((enemy-after nil))
     (setq enemy-after (gr-play-live-enemy-positions))
     (when (and enemy-before enemy-after
-               (or (/= (gr-num (or (gr-get 66) 0)) before-x)
-                   (/= (gr-num (or (gr-get 67) 0)) before-y))
                (not (equal enemy-before enemy-after)))
       (princ (format "PLAY-ENEMY-MOVE before=%S after=%S player=%s,%s trace=%S\n"
                      enemy-before
@@ -860,6 +1464,52 @@ max HP 15, current HP 15, and the KO flag cleared."
                      (gr-get 66)
                      (gr-get 67)
                      (reverse gr-trace))))))
+
+(defun gr-play-func020-wrapper (&rest args)
+  "Count enemy turns in the live loop, then delegate to the real func020."
+  (setq gr-play-enemy-turn-count (1+ gr-play-enemy-turn-count))
+  (apply gr-play-orig-func020 args))
+
+(defun gr-play-profile-run-func (orig name &rest args)
+  "Profile selected `gr-run-func' calls around ORIG."
+  (let* ((resolved (if (and (stringp name)
+                            (string-prefix-p "Func." name))
+                       (substring name 5)
+                     name))
+         (sample (and gr-play-profile-table
+                      (member resolved gr-play-profile-funcs))))
+    (if (not sample)
+        (apply orig name args)
+      (let* ((start (float-time))
+             (result (apply orig name args))
+             (elapsed (- (float-time) start))
+             (stat (or (gethash resolved gr-play-profile-table)
+                       (list 0 0.0))))
+        (setcar stat (1+ (car stat)))
+        (setcar (cdr stat) (+ (cadr stat) elapsed))
+        (puthash resolved stat gr-play-profile-table)
+        result))))
+
+(defun gr-play-enable-profiler ()
+  "Enable lightweight profiling for selected live draw functions."
+  (when (and (getenv "GR_PLAY_FUNC_PROFILE")
+             (not gr-play-profile-table))
+    (setq gr-play-profile-table (make-hash-table :test 'equal))
+    (advice-add 'gr-run-func :around #'gr-play-profile-run-func)))
+
+(defun gr-play-print-profile ()
+  "Print collected function profile stats."
+  (when gr-play-profile-table
+    (let (rows)
+      (maphash (lambda (name stat)
+                 (push (list name (car stat) (cadr stat)) rows))
+               gr-play-profile-table)
+      (dolist (row (sort rows (lambda (a b) (> (nth 2 a) (nth 2 b)))))
+        (princ (format "PLAY-PROFILE func=%s count=%d seconds=%.4f avg=%.6f\n"
+                       (nth 0 row)
+                       (nth 1 row)
+                       (nth 2 row)
+                       (/ (nth 2 row) (max 1 (nth 1 row)))))))))
 
 (defun gr-play-install-local-missing-natives ()
   "Install local natives needed by the play loop."
@@ -941,6 +1591,17 @@ max HP 15, current HP 15, and the KO flag cleared."
       (setq gr-play-opening-login-rendered t))
     (gr-run-func "func146")
     (gr-run-func "func148")
+    ;; The regular login loop keeps slot state 725 nonzero, while generated
+    ;; func146 draws its cursor only when it is zero.  Overlay the cursor in
+    ;; the live path so the selected entry remains visible.
+    (let ((cursor (max 0 (min 5 (gr-num (or (gr-get 64) 0))))))
+      ;; func146/func148 may leave a work buffer selected.  The cursor must be
+      ;; drawn on the visible screen buffer, otherwise the command succeeds
+      ;; but never appears in the presented frame.
+      (gr-emit "gui-select-buffer" 0)
+      (gr-emit "gui-set-alpha" 255)
+      (gr-emit "gui-draw-image-scaled" 8 70 50 25 20
+               12 (+ 37 (* cursor 20)) 25 20))
     (gr-emit "gui-present" 1)
     (setq gr-play-opening-render-seconds
           (+ gr-play-opening-render-seconds (- (float-time) start)))))
@@ -958,6 +1619,36 @@ max HP 15, current HP 15, and the KO flag cleared."
     (gr-file-exists file-name)
     (= (or (gr-get "strsize") -1) -1)))
 
+(defun gr-play-render-load-screen-frame (progress alpha)
+  "Render and dump one boot load-screen frame with PROGRESS and ALPHA."
+  (setq gr-sumi nil)
+  (gr-set 60 progress)
+  (gr-set 18 alpha)
+  (gr-run-func "func138")
+  (gr-play-dump-current-frame)
+  (sleep-for gr-play-load-screen-sleep-seconds)
+  (setq gr-play-load-screen-frame-count (1+ gr-play-load-screen-frame-count)))
+
+(defun gr-play-func139A-load-screen (&rest _args)
+  "Render only func139A's boot load-screen segment, then return."
+  (push 139 gr-trace)
+  ;; func004 has already emitted screen/load-image setup into gr-sumi.
+  ;; Capture it before clearing gr-sumi for individual load frames.
+  (gr-play-collect-setup-records)
+  (let ((idx 0)
+        (old-last-frame gr-play-last-frame-records))
+    (unwind-protect
+        (progn
+          (setq gr-play-last-frame-records nil)
+          (while (< idx 25)
+            (gr-play-render-load-screen-frame idx (min 255 (* idx 10)))
+            (setq idx (1+ idx)))
+          (gr-play-render-load-screen-frame 25 255)
+          (princ (format "PLAY-LOAD-SCREEN frames=%d\n"
+                         gr-play-load-screen-frame-count)))
+      (setq gr-play-last-frame-records old-last-frame)))
+  nil)
+
 (defun gr-play-opening-login-loop ()
   "Drive the login/new-game selection until the dungeon boot should start."
   (let ((done nil)
@@ -973,6 +1664,12 @@ max HP 15, current HP 15, and the KO flag cleared."
       ;; title blew the 2M budget and booted a broken state).
       (setq gr-step-count 0)
       (gr-play-opening-render-login)
+      (when gr-play-scripted-opening
+        (setq gr-play-opening-result
+              (if (gr-play-opening-new-game-slot-p) 'new-game 'resume))
+        (when (eq gr-play-opening-result 'new-game)
+          (gr-play-run-generated-opening-story))
+        (setq done t))
       (setq poll-start (float-time))
       (setq record (gr-play-refresh-input))
       (gr-play-opening-track-release record)
@@ -987,6 +1684,8 @@ max HP 15, current HP 15, and the KO flag cleared."
          ((or (gr-play-opening-held-p 90) (gr-play-opening-held-p 65))
           (setq gr-play-opening-result
                 (if (gr-play-opening-new-game-slot-p) 'new-game 'resume))
+          (when (eq gr-play-opening-result 'new-game)
+            (gr-play-run-generated-opening-story))
           (setq done t))
          ((gr-play-opening-held-p 88)
           (setq done t))))
@@ -1010,6 +1709,9 @@ max HP 15, current HP 15, and the KO flag cleared."
       (gr-run-func "func141")
       (setq gr-play-opening-render-seconds
             (+ gr-play-opening-render-seconds (- (float-time) render-start)))
+      (when gr-play-scripted-opening
+        (setq entered-login t)
+        (gr-play-opening-note-screen-transition))
       (setq poll-start (float-time))
       (setq record (gr-play-refresh-input))
       (setq gr-play-opening-poll-seconds
@@ -1042,6 +1744,8 @@ max HP 15, current HP 15, and the KO flag cleared."
     (setq gr-play-opening-active t
           gr-play-opening-result nil
           gr-play-title-frame-count 0
+          gr-play-load-screen-frame-count 0
+          gr-play-opening-story-frame-count 0
           gr-play-opening-guard-seq gr-play-last-seq
           gr-play-opening-release-seen t
           gr-play-opening-login-rendered nil)
@@ -1050,7 +1754,7 @@ max HP 15, current HP 15, and the KO flag cleared."
           (unwind-protect
               (progn
                 (setq gr-depth-limit (max gr-depth-limit 5000))
-                (gr-defnative "func139A" (lambda (&rest _args) nil))
+                (gr-defnative "func139A" #'gr-play-func139A-load-screen)
                 (gr-init-main-bootstrap-state)
                 (gr-run-func "func004")
                 (gr-capture-main-bootstrap-state)
@@ -1084,15 +1788,19 @@ max HP 15, current HP 15, and the KO flag cleared."
 
 (defun gr-play-log-status ()
   "Print one periodic movement/status line."
-  (princ (format "PLAY-STATUS redraw=%d loop=%d dumped=%d skipped=%d player=%s,%s floor=%s token=%s consumed=%d/%d missed=%d readerr=%d\n"
+  (princ (format "PLAY-STATUS redraw=%d loop=%d enemy_turns=%d dumped=%d skipped=%d dedup=%d player=%s,%s floor=%s token=%s speed=%s pace=%.3f consumed=%d/%d missed=%d readerr=%d\n"
                  gr-play-redraw-count
                  gr-play-loop-count
+                 gr-play-enemy-turn-count
                  gr-play-dumped-count
                  gr-play-skipped-count
+                 gr-play-deduped-json-write-count
                  (or (gr-get 66) 0)
                  (or (gr-get 67) 0)
                  (or (gr-get "current_floor") 0)
                  gr-play-last-token
+                 (or (gr-get "animationDelay") 0)
+                 (or gr-play-last-speed-pacing-delay 0.0)
                  gr-play-consumed-press-count
                  gr-play-received-press-count
                  gr-play-missed-press-count
@@ -1111,6 +1819,7 @@ max HP 15, current HP 15, and the KO flag cleared."
     (gr-play-dump-current-frame)
     (when (functionp gr-play-after-frame-hook)
       (funcall gr-play-after-frame-hook))
+    (gr-play-apply-speed-pacing)
     (when (= 0 (mod gr-play-redraw-count gr-play-report-every))
       (gr-play-log-status))
     result))
@@ -1119,7 +1828,8 @@ max HP 15, current HP 15, and the KO flag cleared."
   "Run the live key-poll hook, then delegate to the real func080."
   (when (functionp gr-play-before-key-poll-hook)
     (funcall gr-play-before-key-poll-hook))
-  (apply gr-play-orig-func080 args))
+  (unless (gr-play-handle-function-key-settings)
+    (apply gr-play-orig-func080 args)))
 
 (defun gr-play-func009-wrapper (&rest args)
   "Loop pacing/termination wrapper around the real func009."
@@ -1152,6 +1862,12 @@ max HP 15, current HP 15, and the KO flag cleared."
                           gr-play-loop-count
                           gr-play-redraw-count
                           (error-message-string err)))
+           (princ (format "PLAY-FRAME-TRACE %S\n" (nreverse gr-trace)))
+           (when (equal (getenv "GR_PLAY_FRAME_BACKTRACE") "1")
+             (princ (format "PLAY-FRAME-BACKTRACE %S\n%s\n"
+                            err
+                            (with-output-to-string
+                              (backtrace)))))
            (setq done t)))
         (when (or stop
                   gr-play-quit-requested
@@ -1175,6 +1891,11 @@ max HP 15, current HP 15, and the KO flag cleared."
           (gr-init-main-bootstrap-state)
           (gr-run-func "func004")
           (gr-capture-main-bootstrap-state)
+          ;; The direct boot path bypasses func139A's load-screen wrapper,
+          ;; so capture screen/load-image setup here before later draws clear
+          ;; `gr-sumi'.  Without this, a late-started direct-bin renderer has
+          ;; no surfaces or images and stays white.
+          (gr-play-collect-setup-records)
           ;; Capture func004's one-time work-buffer fills before worldgen
           ;; clears gr-sumi (see gr-play-capture-boot-composition).
           (gr-play-capture-boot-composition))
@@ -1206,9 +1927,12 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-title-frame-count 0
               gr-play-dumped-count 0
               gr-play-skipped-count 0
+              gr-play-deduped-json-write-count 0
+              gr-play-renderer-started nil
               gr-play-draw-seconds 0.0
               gr-play-serialize-seconds 0.0
               gr-play-io-seconds 0.0
+              gr-play-last-frame-json nil
               gr-play-last-record-count nil
               gr-play-last-player-x nil
               gr-play-last-player-y nil
@@ -1220,12 +1944,21 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-first-frame-state nil
               gr-play-first-player-frame-histogram nil
               gr-play-first-enemy-frame-histogram nil
+              gr-play-enemy-turn-count 0
+              gr-play-static-setup-frames-left 5
+              gr-play-setup-records nil
+              gr-play-setup-seen (make-hash-table :test 'equal)
               gr-play-setup-records-json-body nil
               gr-play-boot-composition nil
               gr-play-boot-composition-json-body nil
               gr-play-quit-requested nil
               gr-play-opening-title-loops 0
               gr-play-opening-login-loops 0
+              gr-play-load-screen-frame-count 0
+              gr-play-opening-story-frame-count 0
+              gr-play-opening-story-message-count 0
+              gr-play-opening-story-wait-count 0
+              gr-play-opening-story-used-generated nil
               gr-play-opening-render-seconds 0.0
               gr-play-opening-poll-seconds 0.0
               gr-play-opening-sleep-seconds 0.0
@@ -1239,12 +1972,22 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-file-held-codes (make-hash-table :test 'equal)
               gr-play-pending-presses nil
               gr-play-synced-keycodes nil
+              gr-play-function-key-down (make-hash-table :test 'equal)
               gr-play-read-error-count 0
               gr-play-received-press-count 0
               gr-play-consumed-press-count 0
               gr-play-missed-press-count 0)
 
         (gr-play-install-local-missing-natives)
+        ;; Bind the key-read/reset hooks BEFORE the opening bootstrap.  The
+        ;; opening story's message-advance loop (func340 -> func080 ->
+        ;; gr-read-key-state) reads keys through gr-read-key-state-fn; when it
+        ;; was bound only after the opening (below), gr-read-key-state returned
+        ;; 0 for the whole opening, key_Z_on never became 1, and Z could not
+        ;; advance the opening messages (the wait loop spun until the step
+        ;; budget tripped and fell back to the dungeon).
+        (setq gr-read-key-state-fn #'gr-play-read-key-state)
+        (setq gr-reset-key-fn #'gr-play-reset-key)
         (setq gr-play-orig-gr-emit (symbol-function 'gr-emit))
         (fset 'gr-emit #'gr-play-gr-emit-wrapper)
         (condition-case err
@@ -1258,7 +2001,10 @@ max HP 15, current HP 15, and the KO flag cleared."
                 (gr-play-bootstrap-opening))
               (if (eq gr-play-opening-result 'resume)
                   (gr-play-bootstrap-resume-init)
-                (gr-play-bootstrap-real-init)))
+                (gr-play-bootstrap-real-init)
+                (when (and gr-play-start-in-hotel
+                           (eq gr-play-opening-result 'new-game))
+                  (gr-play-bootstrap-hotel-start))))
           (error
            ;; Never continue on the partial state a failed opening leaves
            ;; behind (a blown step budget mid-title once booted a player at
@@ -1276,14 +2022,24 @@ max HP 15, current HP 15, and the KO flag cleared."
         (gr-play-apply-post-init-state)
         (when (functionp gr-play-post-init-hook)
           (funcall gr-play-post-init-hook))
+        (gr-play-dump-initial-bgm)
         (gr-play-maybe-place-probe-enemy)
+        ;; Generated gamedata is loaded after game-runner.el and can replace
+        ;; live native handlers.  Reinstall them before entering func009.
+        (when (fboundp 'gr-install-live-native-overrides)
+          (gr-install-live-native-overrides))
 
         (setq gr-play-orig-func009 (gethash "func009" gr-native-funcs))
         (setq gr-play-orig-func337 (gethash "func337" gr-native-funcs))
         (setq gr-play-orig-func080 (gethash "func080" gr-native-funcs))
+        (setq gr-play-orig-func020 (gethash "func020" gr-native-funcs))
         (setq gr-read-key-state-fn #'gr-play-read-key-state)
         (setq gr-reset-key-fn #'gr-play-reset-key)
+        (when (getenv "GR_PLAY_DURATION_SECONDS")
+          (setq gr-play-duration-seconds
+                (string-to-number (getenv "GR_PLAY_DURATION_SECONDS"))))
         (setq gr-play-start-time (float-time))
+        (gr-play-enable-profiler)
         (princ (format "PLAY-START player=%s,%s duration=%s\n"
                        (or (gr-get 66) 0)
                        (or (gr-get 67) 0)
@@ -1294,21 +2050,43 @@ max HP 15, current HP 15, and the KO flag cleared."
           (gr-defnative "func337" #'gr-play-func337-wrapper))
         (when gr-play-orig-func080
           (gr-defnative "func080" #'gr-play-func080-wrapper))
+        (when gr-play-orig-func020
+          (gr-defnative "func020" #'gr-play-func020-wrapper))
         (catch 'gr-play-stop
           (gr-run-func "func009"))
         (setq gr-play-frame-count gr-play-redraw-count)
         (princ
          (format
-          "PLAY-FPS redraw=%d title=%d dumped=%d elapsed=%.3f fps=%.3f draw=%.3f serialize=%.3f io=%.3f\n"
+          "PLAY-FPS redraw=%d title=%d dumped=%d skipped=%d dedup=%d elapsed=%.3f fps=%.3f draw=%.3f serialize=%.3f io=%.3f speed=%s pace=%.3f\n"
           gr-play-redraw-count
           gr-play-title-frame-count
           gr-play-dumped-count
+          gr-play-skipped-count
+          gr-play-deduped-json-write-count
           (max 0.001 (- (float-time) gr-play-start-time))
           (/ (float gr-play-redraw-count)
              (max 0.001 (- (float-time) gr-play-start-time)))
           gr-play-draw-seconds
           gr-play-serialize-seconds
-          gr-play-io-seconds))
+          gr-play-io-seconds
+          (or (gr-get "animationDelay") 0)
+          (or gr-play-last-speed-pacing-delay 0.0)))
+        (when (boundp 'gr-live-feed-pack-seconds)
+          (princ
+           (format
+            "PLAY-FEED-TIME normalize=%.3f pack=%.3f pack-command=%.3f pack-compact=%.3f pack-finish=%.3f write=%.3f head=%.3f last-bytes=%d\n"
+            gr-live-feed-normalize-seconds
+            gr-live-feed-pack-seconds
+            gr-live-feed-pack-command-seconds
+            gr-live-feed-pack-compact-seconds
+            gr-live-feed-pack-finish-seconds
+            gr-live-feed-write-seconds
+            gr-live-feed-head-seconds
+            gr-live-feed-last-packed-bytes)))
+        (when (and (fboundp 'gr-live-feed-profile-summary)
+                   gr-live-feed-profile-enabled)
+          (princ (format "PLAY-FEED-HIST %S\n"
+                         (gr-live-feed-profile-summary))))
         (princ
          (format "PLAY-INPUT consumed=%d/%d missed=%d readerr=%d pending=%d\n"
                  gr-play-consumed-press-count
@@ -1316,12 +2094,15 @@ max HP 15, current HP 15, and the KO flag cleared."
                  gr-play-missed-press-count
                  gr-play-read-error-count
                  (length gr-play-pending-presses)))
+        (gr-play-print-profile)
         (princ (format "PLAY-DEPTH-LOG %S\n" (nreverse gr-play-depth-log)))
         (princ (format "PLAY-DONE %d\n" gr-play-redraw-count)))
     (setq gr-step-budget old-budget)
     (setq gr-depth-limit old-depth)
     (setq gr-read-key-state-fn nil)
     (setq gr-reset-key-fn nil)
+    (when gr-play-orig-func020
+      (gr-defnative "func020" gr-play-orig-func020))
     (when gr-play-orig-gr-emit
       (fset 'gr-emit gr-play-orig-gr-emit))
     (gr-play-restore-local-missing-natives)
@@ -1331,5 +2112,8 @@ max HP 15, current HP 15, and the KO flag cleared."
       (gr-defnative "func337" gr-play-orig-func337))
     (when gr-play-orig-func009
       (gr-defnative "func009" gr-play-orig-func009))))
+
+(when (fboundp 'gr-install-live-native-overrides)
+  (gr-install-live-native-overrides))
 
 (provide 'play)

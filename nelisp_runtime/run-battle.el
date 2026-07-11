@@ -11,6 +11,7 @@
 (defvar gr-battle-frame-limit 4)
 (defvar gr-battle-enemy-index 0)
 (defvar gr-battle-error nil)
+(defvar gr-battle-orig-func337 nil)
 
 (defun gr-battle-read-key-state (keycode)
   "Return scripted key state for KEYCODE."
@@ -129,6 +130,29 @@
   (setq gr-read-key-state-fn nil)
   (setq gr-reset-key-fn nil))
 
+(defun gr-battle-install-attack-handoff-wrappers ()
+  "Install short wrappers for direct attack handoff verification."
+  (setq gr-battle-orig-func019 (gethash "func019" gr-native-funcs))
+  (setq gr-battle-orig-func337 (gethash "func337" gr-native-funcs))
+  (gr-defnative "func019"
+                (lambda (&rest _args)
+                  (setq gr-battle-turn-count (1+ gr-battle-turn-count))
+                  nil))
+  (gr-defnative "func337" (lambda (&rest _args) nil)))
+
+(defun gr-battle-restore-attack-handoff-wrappers ()
+  "Restore wrappers replaced for direct attack handoff verification."
+  (if gr-battle-orig-func019
+      (gr-defnative "func019" gr-battle-orig-func019)
+    (when gr-native-funcs
+      (remhash "func019" gr-native-funcs)))
+  (if gr-battle-orig-func337
+      (gr-defnative "func337" gr-battle-orig-func337)
+    (when gr-native-funcs
+      (remhash "func337" gr-native-funcs)))
+  (setq gr-battle-orig-func019 nil
+        gr-battle-orig-func337 nil))
+
 (defun gr-battle-place-adjacent-enemy ()
   "Move one real generated enemy next to the player and make it one-hit."
   (let* ((enemy-idx (gr-battle-find-enemy))
@@ -183,6 +207,8 @@
   (load-file (expand-file-name "game-runner.el" runtime-dir))
   (load-file (expand-file-name "gamedata-simple.el" runtime-dir))
   (load-file (expand-file-name "gamedata-conditional.el" runtime-dir))
+  (when (fboundp 'gr-install-live-native-overrides)
+    (gr-install-live-native-overrides))
   (setq gr-worldgen-autorun nil)
   (load-file (expand-file-name "run-worldgen.el" runtime-dir))
   (setq max-lisp-eval-depth 10000)
@@ -196,9 +222,20 @@
   (gr-reset)
   (gr-set "stat" 1)
   (gr-set "hwnd" 0)
-  (gr-run-func "func004")
+  (let ((saved-func139A (gethash "func139A" gr-native-funcs)))
+    (unwind-protect
+        (progn
+          (gr-defnative "func139A" (lambda (&rest _args) nil))
+          (gr-init-main-bootstrap-state)
+          (gr-run-func "func004")
+          (gr-capture-main-bootstrap-state))
+      (if saved-func139A
+          (gr-defnative "func139A" saved-func139A)
+        (when gr-native-funcs
+          (remhash "func139A" gr-native-funcs)))))
   (gr-worldgen-seed-base-state)
   (gr-worldgen-run t)
+  (gr-restore-main-bootstrap-state)
   (gr-set 211 (max 15 (gr-num (or (gr-get 211) 0))))
   (gr-set 212 0)
   (gr-set 213 0)
@@ -208,6 +245,7 @@
   (gr-set 219 0)
   (gr-set 128 0)
   (gr-set 178 0)
+  (gr-set 338 0)
   (setq z-key (gr-num (or (gr-get 655) 90)))
   (setq gr-battle-script (list z-key))
   (setq gr-battle-script-index 0)
@@ -229,13 +267,15 @@
                    (gr-battle-enemy-hp)))
     (unwind-protect
         (progn
-          (gr-battle-install-wrappers)
+          (gr-battle-install-attack-handoff-wrappers)
+          (gr-set 314 gr-battle-enemy-index)
+          (gr-set 347 (gr-prop-ref (aref (gr-get 83) gr-battle-enemy-index) "Var1"))
+          (gr-set 348 (gr-prop-ref (aref (gr-get 83) gr-battle-enemy-index) "Var2"))
           (condition-case err
-              (catch 'gr-battle-stop
-                (gr-run-func "func009"))
+              (gr-run-func "func651")
             (error
              (setq gr-battle-error err))))
-      (gr-battle-restore-wrappers))
+      (gr-battle-restore-attack-handoff-wrappers))
     (princ (format "BATTLE-TRACE %s\n"
                    (mapconcat (lambda (id) (format "func%s" id))
                               (mapcar #'number-to-string (reverse gr-trace))
@@ -244,14 +284,15 @@
       (princ (format "BATTLE-MISSING %s\n" (delete-dups (reverse gr-missing)))))
     (when gr-battle-error
       (princ (format "BATTLE-ERROR %s\n" gr-battle-error)))
-    (if (and (equal gr-battle-turn-count 1)
-             (not (gr-battle-enemy-alive-p))
+    (if (and (= (gr-battle-enemy-hp) 0)
+             (= (gr-num (or (gr-get 338) 0)) 1)
              (null gr-battle-error)
              (null gr-missing))
         (setq result "BATTLE-OK")
       (setq result "BATTLE-PARTIAL"))
-    (princ (format "%s enemy-alive=%s enemy-hp=%s player-hp=%s\n"
+    (princ (format "%s enemy-alive=%s enemy-hp=%s player-hp=%s turn=%s\n"
                    result
                    (if (gr-battle-enemy-alive-p) 1 0)
                    (gr-battle-enemy-hp)
-                   (gr-get 211)))))
+                   (gr-get 211)
+                   (gr-get 338)))))

@@ -9,6 +9,7 @@
   (load-file (expand-file-name "run-worldgen.el" runtime-dir))
   (setq max-lisp-eval-depth 10000)
   (setq max-specpdl-size 10000)
+  (random "run-init")
   (setq gr-data-root (or (getenv "GR_DATA_ROOT") gr-data-root))
   (gr-reset)
   ;; Batch check stops at the loader boundary: the real func139A title flow
@@ -50,7 +51,24 @@
                  (gr-get 11)))
   (when gr-missing
     (princ (format "INIT-MISSING %s\n" (reverse gr-missing))))
+  (random "run-init-worldgen")
   (gr-worldgen-seed-base-state)
   (setq gr-worldgen-use-existing-state t)
   (gr-worldgen-run t)
+  (let* ((map-counts (gr-worldgen-count-map))
+         (floor-cells (nth 0 map-counts))
+         (enemies (gr-worldgen-count-records 83))
+         (items (gr-worldgen-count-records 78))
+         (ok (and (> floor-cells 0)
+                  (> enemies 0)
+                  (> items 0)
+                  (>= (gr-num (or (gr-get "dungeon_number") 0)) 1)
+                  (>= (gr-num (or (gr-get "current_floor") 0)) 1))))
+    (princ (format "INIT-WORLDGEN floor-cells=%s enemies=%s items=%s dungeon=%s floor=%s\n"
+                   floor-cells
+                   enemies
+                   items
+                   (or (gr-get "dungeon_number") 0)
+                   (or (gr-get "current_floor") 0)))
+    (princ (if ok "INIT-WORLDGEN-OK\n" "INIT-WORLDGEN-FAIL\n")))
   (gr-restore-main-bootstrap-state))
