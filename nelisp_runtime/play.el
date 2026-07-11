@@ -158,6 +158,10 @@
 (defvar gr-play-first-player-frame-histogram nil)
 (defvar gr-play-first-enemy-frame-histogram nil)
 (defvar gr-play-opening-active nil)
+(defvar gr-play-live-active nil
+  "Non-nil while the live func009 play loop runs (post-opening).")
+(defvar gr-play-in-func337-draw nil
+  "Dynamically t while the func337 dungeon-draw wrapper runs its draw+dump.")
 (defvar gr-play-opening-result nil)
 (defvar gr-play-opening-title-loops 0)
 (defvar gr-play-opening-login-loops 0)
@@ -1540,17 +1544,20 @@ max HP 15, current HP 15, and the KO flag cleared."
 
 (defun gr-play-gr-emit-wrapper (op &rest args)
   "Capture title/login frames that use Adap.redraw directly."
-  (when (and gr-play-opening-active
+  (when (and (not gr-play-in-func337-draw)
+             (or gr-play-opening-active gr-play-live-active)
              (equal op "gui-present")
              (numberp (car args))
              (= (car args) 0))
     (setq gr-sumi nil))
   (apply gr-play-orig-gr-emit op args)
-  (when (and gr-play-opening-active
+  (when (and (not gr-play-in-func337-draw)
+             (or gr-play-opening-active gr-play-live-active)
              (equal op "gui-present")
              (numberp (car args))
              (= (car args) 1))
-    (setq gr-play-title-frame-count (1+ gr-play-title-frame-count))
+    (when gr-play-opening-active
+      (setq gr-play-title-frame-count (1+ gr-play-title-frame-count)))
     (gr-play-dump-current-frame)))
 
 (defun gr-play-opening-held-p (keycode)
@@ -1811,12 +1818,13 @@ max HP 15, current HP 15, and the KO flag cleared."
   (let ((draw-start (float-time))
         (result nil))
     (setq gr-play-redraw-key-queries nil)
-    (setq gr-sumi nil)
-    (setq result (apply gr-play-orig-func337 args))
-    (setq gr-play-draw-seconds
-          (+ gr-play-draw-seconds (- (float-time) draw-start)))
-    (setq gr-play-redraw-count (1+ gr-play-redraw-count))
-    (gr-play-dump-current-frame)
+    (let ((gr-play-in-func337-draw t))
+      (setq gr-sumi nil)
+      (setq result (apply gr-play-orig-func337 args))
+      (setq gr-play-draw-seconds
+            (+ gr-play-draw-seconds (- (float-time) draw-start)))
+      (setq gr-play-redraw-count (1+ gr-play-redraw-count))
+      (gr-play-dump-current-frame))
     (when (functionp gr-play-after-frame-hook)
       (funcall gr-play-after-frame-hook))
     (gr-play-apply-speed-pacing)
@@ -2052,8 +2060,12 @@ max HP 15, current HP 15, and the KO flag cleared."
           (gr-defnative "func080" #'gr-play-func080-wrapper))
         (when gr-play-orig-func020
           (gr-defnative "func020" #'gr-play-func020-wrapper))
-        (catch 'gr-play-stop
-          (gr-run-func "func009"))
+        (unwind-protect
+            (progn
+              (setq gr-play-live-active t)
+              (catch 'gr-play-stop
+                (gr-run-func "func009")))
+          (setq gr-play-live-active nil))
         (setq gr-play-frame-count gr-play-redraw-count)
         (princ
          (format
