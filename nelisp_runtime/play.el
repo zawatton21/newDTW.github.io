@@ -630,6 +630,15 @@ the head of every dumped frame makes any frame self-contained.")
 (defvar gr-play-setup-records-json-body nil
   "Cached JSON object list for `gr-play-setup-records' in chronological order.")
 
+(defconst gr-play-required-load-images
+  '((36 . "img_enemy5a.gif")
+    (37 . "img_enemy5b.gif"))
+  "Image buffers that live play can reference before the setup harvester sees them.
+
+Boss buffers 36/37 are absent from the title/opening bootstrap path, so a
+setup stream harvested only from observed frames omits their `gui-load-image'
+records.  Pre-seeding them keeps the live stream self-contained for boss draws.")
+
 (defun gr-play-live-enemy-positions ()
   "Return live enemy positions as ((IDX X Y) ...)."
   (let ((rows (gr-get 83))
@@ -657,7 +666,15 @@ the head of every dumped frame makes any frame self-contained.")
           (unless (gethash key gr-play-setup-seen)
             (puthash key t gr-play-setup-seen)
             (push entry gr-play-setup-records)
-            (setq gr-play-setup-records-json-body nil)))))))
+            (setq gr-play-setup-records-json-body nil))))))
+  (dolist (entry gr-play-required-load-images)
+    (let* ((buffer-id (car entry))
+           (image-name (cdr entry))
+           (key (format "gui-load-image:%s" buffer-id)))
+      (unless (gethash key gr-play-setup-seen)
+        (puthash key t gr-play-setup-seen)
+        (push (list "gui-load-image" buffer-id image-name) gr-play-setup-records)
+        (setq gr-play-setup-records-json-body nil)))))
 
 (defun gr-play-get-setup-records-json-body ()
   "Return cached setup records as a JSON object list."
