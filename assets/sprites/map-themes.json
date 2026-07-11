@@ -159,7 +159,7 @@
     "1. assets/sprites/map/ に新テーマの行タイルPNGを配置",
     "   例: r027_c000.png (床), r027_c003.png (特殊床), r027_c006.png (壁上)...",
     "2. このファイルの themes に新エントリ追加: \"27\": { \"name\": \"新テーマ名\", \"row\": 27 }",
-    "3. manifest.json を再生成: python tools/extract_sprites.py",
+    "3. Update manifest data through the NeLisp asset pipeline.",
     "4. コードで Gvar.y_axis_map_image = 27; を設定"
   ]
 }

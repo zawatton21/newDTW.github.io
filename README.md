@@ -7,11 +7,6 @@
 <a href="https://github.com/sponsors/zawatton"><img src="https://img.shields.io/badge/Sponsor_%E2%9D%A4_Support_this_project-pink?style=for-the-badge" alt="Sponsor"></a>
 
 <p align="center">
-  <a href="https://zawatton.github.io/newDTW.github.io/"><b>▶ Play Now in Browser</b></a>
-  &nbsp;·&nbsp; silent build (no BGM/SE)
-</p>
-
-<p align="center">
   <img src="assets/screenshots/title.png" alt="Title screen — JOJO 20th Anniversary ディアボロの大冒険" width="340">
 </p>
 
@@ -19,10 +14,10 @@
 
 **Diavolo The Wanderer** (ディアボロの大冒険) is a mystery dungeon roguelike set in the JoJo's Bizarre Adventure universe. The original game, created by KMQ SOFT using HSP (Hot Soup Processor), became a cult classic in Japan before development ended in 2008.
 
-**newDTW** is a ground-up engine rebuild:
-- **HSP &rarr; TypeScript** — 100K+ lines of HSP source ported to modern TypeScript
-- **Browser-playable** — GitHub Pages deployment explored (see Roadmap)
-- **Electron / Tauri desktop** — runnable locally for personal use
+**newDTW** is now a NeLisp runtime port:
+- **Reference port &rarr; NeLisp runtime** — the tracked active game path is generated and executed by Emacs Lisp runtime files under `nelisp_runtime/`
+- **Native live renderer** — `sumi-sprite-live.exe` receives frames from the pure-elisp direct-bin feeder
+- **No web runtime** — the tracked project no longer carries browser shell, package manifest, web build config, or script-language game source
 - **Engine source shared publicly** — game logic and tooling live in this repo; audio and other licence-restricted assets do not (see *Audio Assets & Distribution Policy*)
 
 ## Features
@@ -35,101 +30,70 @@
 
 ## Quick Start
 
-### Run Locally (Electron)
+### Run Locally (NeLisp)
 
 ```bash
 git clone https://github.com/zawatton/newDTW.github.io.git
 cd newDTW.github.io
-npm install
-npm run build
-npm start          # launches Electron app
+emacs -Q --batch -l nelisp_runtime/build-play-bundle.el
+emacs -Q --batch -l nelisp_runtime/start-live.el
 ```
 
-### Play in Browser
-
-Live at **<https://zawatton.github.io/newDTW.github.io/>** — no install required.
-This is a silent build (no BGM/SE — see *Audio Assets & Distribution Policy*) published automatically from `master` via `.github/workflows/pages.yml`.
-
-To produce a browser bundle locally:
-
-```bash
-npx webpack --config webpack.browser.cjs   # writes public/bundle/main.js
-# then open public/index.html via any local web server
-```
-
-**Requirements:** Node.js 18+, Python 3.10+ (for tools; needs Pillow + numpy)
+**Requirements:** Emacs and the native `sumi-sprite-live.exe` renderer.
 
 **Audio note:** `assets/bgm/` and `assets/se/` are not included in this repository (see *Audio Assets & Distribution Policy* below). The game runs silent without them; add your own locally-sourced files to re-enable sound during development.
 
 ### Development Workflow
 
-For active development, use the hot-reload mode — webpack watches source files
-and Electron auto-reloads the window on bundle updates.
+For active development, use the elisp live launcher. It builds the play bundle,
+starts the direct-bin feed loop, and drives the native renderer.
 
 ```bash
-npm run dev        # webpack -w + Electron with hot reload
+emacs -Q --batch -l nelisp_runtime/start-live.el
 ```
 
-**Automated test scenarios** (Electron-based, takes screenshots to `tools/screenshots/`):
+**Automated checks**:
 
 ```bash
-npm run test:smoke    # quick startup verification
-npm run test:menu     # system settings menu (cursor positions 0-7)
-npm run test:lang     # language submenu (Japanese/English)
-npm run test:i18n     # i18n rendering check (both languages)
+emacs -Q --batch -l nelisp_runtime/run-elisp-port-gate.el
+emacs -Q --batch -l nelisp_runtime/run-state-diff-smoke.el
+emacs -Q --batch -l nelisp_runtime/run-tile-probe.el
+emacs -Q --batch -l nelisp_runtime/run-live-attack-probe.el
+emacs -Q --batch -l nelisp_runtime/run-live-probe.el
+emacs -Q --batch -l nelisp_runtime/run-opening-probe.el
+emacs -Q --batch -l nelisp_runtime/run-hotel-probe.el
+emacs -Q --batch -l nelisp_runtime/start-live.el -- --skip-opening --duration 2
+emacs -Q --batch -l nelisp_runtime/elisp-port-audit.el -- --report build/nelisp-port-audit.json
 ```
 
 **Generated documentation:**
 
 ```bash
-npm run docs:vars     # → docs/variable_dictionary.md
-```
-
-### Debug API
-
-A runtime debug API is exposed at `window.debug` in the renderer process.
-Use DevTools or test scenarios to manipulate game state:
-
-```javascript
-debug.setLang('en')           // switch language
-debug.openSystemMenu(0)       // jump into system settings
-debug.godMode(true)           // invincibility
-debug.teleport(x, y)          // move player
-debug.help()                  // full API list
+emacs -Q --batch -l nelisp_runtime/elisp-port-audit.el -- --report build/nelisp-port-audit.json
 ```
 
 ### Internationalization (i18n)
 
-newDTW supports multilingual UI through a lightweight i18n layer (`src/renderer/i18n.ts`):
+The tracked active runtime is elisp:
 
 - Translation dictionaries live in `assets/lang/<code>.json` (currently `en.json`)
-- The `installAutoTranslate(Gvar, key)` hook auto-translates large message
-  properties (e.g., `effects_message` with 350+ assignments) without code changes
-- `Adap.dialog()` and the menu system pass strings through `t()` automatically
+- Runtime text is emitted through the NeLisp frame pipeline.
 
 ## Project Structure
 
 ```
-src/
-  main/
-    main.ts         Electron main process (window management, IPC, hot reload)
-  renderer/
-    adapter/        HSP-to-TS adapter layer (gcopy, picload, SpriteManager)
-    func/           Main game logic (func000 - func1056)
-    menu/           Menu system (MenuController + per-menu configs)
-    enemy/          Enemy AI and data
-    stand/          Stand DISCs and items
-    dungeon/        Dungeon generation and processing
-    i18n.ts         Internationalization core
-    debug.ts        Runtime debug API (window.debug.*)
-    variable.ts     Global game state (Gvar) — 7,600+ lines of HSP-derived state
-    ...
+nelisp_runtime/
+  game-runner.el                 State-diff runtime interpreter
+  gamedata-conditional.el        Checked-in NeLisp native runtime source
+  gamedata-simple.el             Generated simple state-diff functions
+  build-play-bundle.el           Pure-elisp bundle builder
+  start-live.el                  Native live launcher
+  live-feed-loop.el              Pure-elisp direct-bin frame feeder
 assets/
   sprites/          Individual sprite PNGs + manifest.json
   img/              Legacy sprite sheets
   lang/             i18n translation dictionaries (en.json, ...)
-tools/              Dev tools — see "Development Workflow" above
-docs/               Auto-generated documentation (variable dictionary, etc.)
+docs/               NeLisp development plan and audit notes
 ```
 
 ## Contributing
@@ -140,19 +104,12 @@ Join the development on Discord: DM **zawatton** to get started.
 
 ### Adding Content
 
-**Stand DISCs / Items:**
-1. Place 40x40 PNG in `assets/sprites/`
-2. Register in `manifest.json`
-3. Use `Adap.spriteManager.draw("category/name")` to render
-
-**Map Themes:**
-```bash
-python tools/add_map_theme.py my_tiles/ 27 "New Dungeon"
-```
+Content changes should be represented in the NeLisp runtime data and
+verified through the elisp audit and live renderer.
 
 ## Roadmap
 
-- [x] **GitHub Pages deploy** — silent (no-BGM/SE) build live at <https://zawatton.github.io/newDTW.github.io/>, published by `.github/workflows/pages.yml` on push to `master`
+- [x] **NeLisp live runtime** — build, run, test, and audit now use Emacs Lisp directly
 - [ ] Custom version content (v0.14-0.16 features)
 - [ ] Parts 7 & 8 characters and Stands
 - [x] Internationalization scaffolding — Japanese / English (in-game language switcher)
@@ -162,15 +119,15 @@ python tools/add_map_theme.py my_tiles/ 27 "New Dungeon"
 
 ## Project Status & Provenance
 
-This repository is a **fork** of [github.com/newDTW/newDTW.github.io](https://github.com/newDTW/newDTW.github.io), which itself ported the KMQ SOFT fan-game to TypeScript. Significant additional work in this fork (Tauri integration, SpriteManager, i18n scaffolding, tooling, ~100K lines of further TS porting) is original to this fork, but the project as a whole inherits several unresolved intellectual-property questions that potential users should understand before cloning:
+This repository is a **fork** of [github.com/newDTW/newDTW.github.io](https://github.com/newDTW/newDTW.github.io). This fork has since moved the tracked active runtime to NeLisp; the project as a whole still inherits several unresolved intellectual-property questions that potential users should understand before cloning:
 
 - **Upstream licence is unspecified.** The upstream repository does not carry a `LICENSE` file. Under GitHub's Terms of Service, public repositories without a licence permit forking and viewing, but do not grant any redistribution or re-use rights beyond that. This fork therefore cannot, and does not, claim to be cleanly "open-source" in the formal sense.
 - **Inherited subject matter.** The original game is a fan-derivative work referencing *JoJo's Bizarre Adventure* (© Hirohiko Araki / Shueisha) and uses music loosely inspired by real-world artists. None of those rights have been cleared.
-- **Why this fork still exists.** The maintainer ( [zawatton](https://github.com/zawatton) ) played the original KMQ SOFT game as a child and considers the engine and gameplay a work worth preserving as a technical study. The fork is kept public so that the TypeScript port remains visible and auditable, not as a distribution channel for the game itself.
+- **Why this fork still exists.** The maintainer ( [zawatton](https://github.com/zawatton) ) played the original KMQ SOFT game as a child and considers the engine and gameplay a work worth preserving as a technical study. The fork is kept public so that the reference port and NeLisp runtime remain visible and auditable, not as a distribution channel for the game itself.
 
 **Current policy (see the sections below for enforcement details):**
 
-1. **No binary distribution.** GitHub Releases do not carry runnable builds, and CI is configured for compile-verification only (`.github/workflows/tauri-build.yml`).
+1. **No binary distribution.** GitHub Releases do not carry runnable builds.
 2. **No redistribution of audio or other licence-restricted assets.** `assets/bgm/` and `assets/se/` are gitignored; only the license ledger README files are tracked.
 3. **Runtime tolerates missing assets.** The engine keeps running silently when audio is absent, so the repository alone constitutes a complete engine study without needing to ship any licence-encumbered material.
 4. **Eventual clean-room direction (aspirational).** Replace audio track-by-track with originally-authored / CC0 material and, if ever pursued for public release, rename JoJo-specific identifiers to create an independently-clearable derivative.
@@ -184,14 +141,14 @@ If you are the upstream maintainer or a rights holder and you would like changes
 ### Original Game
 - **KMQ SOFT** (Clive, Munier, qra) — original *Diavolo The Wanderer* (v0.13)
 
-### Upstream TypeScript Port
-- [github.com/newDTW/newDTW.github.io](https://github.com/newDTW/newDTW.github.io) — the initial TypeScript port that this repository forks from.
+### Upstream Reference Port
+- [github.com/newDTW/newDTW.github.io](https://github.com/newDTW/newDTW.github.io) — the initial reference port that this repository forks from.
 
 ### Custom Versions
 - Anonymous contributors — v0.14-0.16
 
 ### Open Source Version
-- **zawatton** — TypeScript rebuild, SpriteManager, tooling
+- **zawatton** — reference rebuild, SpriteManager, tooling
 
 ### Pixel Art Contributors
 Many anonymous artists contributed enemy sprites, Stand DISCs, and items. See the full credits in the Japanese section below.
@@ -210,10 +167,9 @@ This repository contains the **game engine source only**. The following are deli
 
 **What this means in practice:**
 
-- No binaries are published to GitHub Releases. The CI workflow (`.github/workflows/tauri-build.yml`) is configured for **compile-verification only** — it does not upload artifacts and does not create releases. Tag pushes no longer trigger builds.
+- No binaries are published to GitHub Releases.
 - `assets/bgm/` and `assets/se/` are in `.gitignore`; only their `README.md` ledger files are tracked.
-- The runtime (`src/renderer/adapter/bload.ts`) silently tolerates missing audio so the game continues to play without sound.
-- `tools/stage_tauri.js --no-audio` (or `NEWDTW_NO_AUDIO=1`) skips audio staging for CI and clean-room builds.
+- The active NeLisp runtime tolerates missing audio so the game continues to play without sound.
 
 **Long-term goal:** replace the audio track-by-track with original, CC0, or otherwise redistributable material so a proper public release becomes possible. See Roadmap item *"Original BGM to resolve copyright"*. Contributions toward this are welcome — see `assets/bgm/README.md` and `assets/se/README.md` for the license ledger format.
 
@@ -240,13 +196,13 @@ See [LICENSE.md](LICENSE.md) for the terms this fork's maintainer applies to the
 
 KMQ SOFT が作成した「ジョジョの奇妙な冒険」の二次創作ローグライクゲーム「ディアボロの大冒険」。かつて一世を風靡したディアボロの大冒険ですが、その原作版の開発は2008年9月30日を持って終了しました。
 
-こちらはファンの一人が作成した[ブラウザ版ディアボロの大冒険](https://github.com/newDTW/newDTW.github.io)のソースコードをフォークし、ディアボロの大冒険のオープンソース化を目指して開発を続けています。
+こちらはファンの一人が作成した[ブラウザ版ディアボロの大冒険](https://github.com/newDTW/newDTW.github.io)のソースコードをフォークし、現在は NeLisp ランタイムを主軸にしています。
 
 ## 構想
 
-この newDTW は原作 Ver 0.13 を踏襲したブラウザ版から出発しています。今後の開発構想としては以下の通りです。
+この newDTW は原作 Ver 0.13 を踏襲したブラウザ版から出発し、現在は Emacs Lisp での実行経路を主軸にしています。今後の開発構想としては以下の通りです。
 
-- **GitHub Pages へのデプロイ** — 公開済み: <https://zawatton.github.io/newDTW.github.io/> (BGM/SE 無しのサイレント版)。`.github/workflows/pages.yml` が `master` への push で自動ビルド・公開
+- **NeLisp ライブ実行** — build/run/test/audit は Emacs Lisp 直実行に移行済み
 - 原作の開発が終了した後にファンによって開発されたカスタム版である Ver 0.14 ~ 0.16 の要素を追加
 - 「ジョジョの奇妙な冒険」の第7部、第8部の要素を追加
 - 日本語だけでなく英語や中国語など海外のプレイヤーを意識した多言語化

@@ -24,9 +24,9 @@
 
 | ID | ファイル名 | 使用箇所 (例) |
 |---|---|---|
-| 234 | 234.wav | `src/renderer/func/func0980.ts` |
-| 235 | 235.wav | `src/renderer/func/func1044.ts`, `func547.ts`, `func658.ts` |
-| 236 | 236.wav | `src/renderer/func/func547.ts` |
+| 234 | 234.wav | NeLisp runtime sound id 234 |
+| 235 | 235.wav | NeLisp runtime sound id 235 |
+| 236 | 236.wav | NeLisp runtime sound id 236 |
 
 ## 配布について
 
