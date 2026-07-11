@@ -129,6 +129,7 @@
 (defvar gr-play-orig-func080 nil)
 (defvar gr-play-orig-func020 nil)
 (defvar gr-play-orig-gr-emit nil)
+(defvar gr-play-orig-gr-emit-raw nil)
 (defvar gr-play-worldgen-saved-func009 nil)
 (defvar gr-play-saved-native-func338 nil)
 (defvar gr-play-saved-native-func005 nil)
@@ -208,6 +209,143 @@
   "Function names sampled by the optional live profiler.")
 (defvar gr-play-profile-table nil
   "Hash table of function profile stats when enabled.")
+
+(defconst gr-play-repo-root
+  (expand-file-name ".." gr-play-runtime-dir))
+
+(defconst gr-play-audio-log-path
+  (expand-file-name "live-audio.log" gr-play-build-dir))
+
+(defvar gr-play-audio-enabled
+  (not (member (downcase (or (getenv "SUMI_AUDIO") "0"))
+               '("" "0" "false" "no")))
+  "When non-nil, bridge live BGM/SE ops to local Windows player processes.")
+
+(defvar gr-play-bgm-process nil)
+(defvar gr-play-bgm-path nil)
+(defvar gr-play-bgm-volume 60)
+(defvar gr-play-se-volume 60)
+(defvar gr-play-se-processes nil)
+
+(defun gr-play-audio-log (fmt &rest args)
+  "Append one bridge log line to `gr-play-audio-log-path'."
+  (let ((line (apply #'format fmt args)))
+    (make-directory gr-play-build-dir t)
+    (with-temp-buffer
+      (insert (format "%s %s\n" (format-time-string "%Y-%m-%d %H:%M:%S") line))
+      (write-region (point-min) (point-max) gr-play-audio-log-path t 'silent))))
+
+(defun gr-play-ps-quote (value)
+  "Quote VALUE for PowerShell single-quoted string literals."
+  (concat "'" (replace-regexp-in-string "'" "''" value nil t) "'"))
+
+(defun gr-play-audio-path-for-op (op arg)
+  "Resolve concrete asset path for audio OP and ARG."
+  (cond
+   ((equal op "dtw-music-play-file")
+    (expand-file-name (format "assets/bgm/%s" arg) gr-play-repo-root))
+   ((equal op "dtw-play-sound")
+    (expand-file-name (format "assets/se/%s.wav" (gr-num arg)) gr-play-repo-root))
+   (t nil)))
+
+(defun gr-play-audio-volume-percent (value)
+  "Clamp VALUE from the runtime 0-150 scale to Windows Media Player 0-100."
+  (max 0 (min 100 (round (* 100.0 (/ (gr-num value) 150.0))))))
+
+(defun gr-play-audio-forget-process (process)
+  "Remove PROCESS from tracked SE processes."
+  (setq gr-play-se-processes (delq process gr-play-se-processes)))
+
+(defun gr-play-audio-sentinel (kind path process event)
+  "Log PROCESS EVENT for KIND and PATH, and clear tracked state."
+  (let ((status (string-trim event)))
+    (gr-play-audio-log "AUDIO-%s pid=%s path=%s event=%s"
+                       kind
+                       (or (ignore-errors (process-id process)) 0)
+                       path
+                       status)
+    (cond
+     ((eq kind 'bgm)
+      (when (eq process gr-play-bgm-process)
+        (setq gr-play-bgm-process nil
+              gr-play-bgm-path nil)))
+     ((eq kind 'se)
+      (gr-play-audio-forget-process process)))))
+
+(defun gr-play-stop-bgm (&optional reason)
+  "Stop the currently tracked BGM process, if any."
+  (when (process-live-p gr-play-bgm-process)
+    (gr-play-audio-log "AUDIO-BGM-STOP pid=%s path=%s reason=%s"
+                       (process-id gr-play-bgm-process)
+                       (or gr-play-bgm-path "")
+                       (or reason "switch"))
+    (delete-process gr-play-bgm-process))
+  (setq gr-play-bgm-process nil
+        gr-play-bgm-path nil))
+
+(defun gr-play-start-audio-process (kind path volume)
+  "Spawn a hidden PowerShell player process for KIND using PATH and VOLUME."
+  (let* ((proc-name (format "gr-play-%s-%d" kind (float-time)))
+         (script
+          (format
+           "$path=%s; $vol=%d; $wmp=New-Object -ComObject WMPlayer.OCX; $wmp.settings.volume=$vol; $wmp.URL=$path; $wmp.controls.play(); while($true){ $state=$wmp.playState; if($state -eq 1 -or $state -eq 8 -or $state -eq 10){ break }; Start-Sleep -Milliseconds 200 }"
+           (gr-play-ps-quote (replace-regexp-in-string "\\\\" "/" path nil t))
+           (gr-play-audio-volume-percent volume)))
+         (process
+          (start-process proc-name nil
+                         "powershell"
+                         "-NoProfile"
+                         "-WindowStyle" "Hidden"
+                         "-Command" script)))
+    (set-process-query-on-exit-flag process nil)
+    process))
+
+(defun gr-play-handle-audio-op (op &rest args)
+  "Bridge live audio OP with ARGS when `SUMI_AUDIO' is enabled."
+  (when (and gr-play-audio-enabled
+             (eq system-type 'windows-nt))
+    (pcase op
+      ("dtw-set-master-sound-volume"
+       (setq gr-play-bgm-volume (or (car args) gr-play-bgm-volume))
+       (gr-play-audio-log "AUDIO-BGM-VOLUME raw=%s mapped=%d"
+                          gr-play-bgm-volume
+                          (gr-play-audio-volume-percent gr-play-bgm-volume)))
+      ("dtw-set-sound-volume"
+       (setq gr-play-se-volume (or (cadr args) gr-play-se-volume)))
+      ("dtw-music-stop"
+       (gr-play-stop-bgm "dtw-music-stop"))
+      ("dtw-music-play-file"
+       (let ((path (gr-play-audio-path-for-op op (car args))))
+         (if (not (file-exists-p path))
+             (gr-play-audio-log "AUDIO-BGM-MISSING path=%s" path)
+           (gr-play-stop-bgm "replace")
+           (setq gr-play-bgm-path path
+                 gr-play-bgm-process
+                 (gr-play-start-audio-process 'bgm path gr-play-bgm-volume))
+           (set-process-sentinel
+            gr-play-bgm-process
+            (lambda (process event)
+              (gr-play-audio-sentinel 'bgm path process event)))
+           (gr-play-audio-log "AUDIO-BGM-START pid=%s path=%s volume=%d"
+                              (process-id gr-play-bgm-process)
+                              path
+                              (gr-play-audio-volume-percent gr-play-bgm-volume)))))
+      ("dtw-play-sound"
+       (let ((path (gr-play-audio-path-for-op op (car args))))
+         (if (not (file-exists-p path))
+             (gr-play-audio-log "AUDIO-SE-MISSING id=%s path=%s" (car args) path)
+           (let ((process (gr-play-start-audio-process 'se path gr-play-se-volume)))
+             (push process gr-play-se-processes)
+             (set-process-sentinel
+              process
+              (lambda (proc event)
+                (gr-play-audio-sentinel 'se path proc event)))
+             (gr-play-audio-log "AUDIO-SE-START pid=%s id=%s path=%s volume=%d"
+                                (process-id process)
+                                (car args)
+                                path
+                                (gr-play-audio-volume-percent gr-play-se-volume))))))))
+  nil)
 
 (defun gr-play-buffer-histogram ()
   "Return an alist of source buffer id -> blit count for the current gr-sumi."
@@ -1577,6 +1715,11 @@ max HP 15, current HP 15, and the KO flag cleared."
       (setq gr-play-title-frame-count (1+ gr-play-title-frame-count)))
     (gr-play-dump-current-frame)))
 
+(defun gr-play-gr-emit-raw-wrapper (op &rest args)
+  "Bridge concrete audio ops, then delegate to the real raw emitter."
+  (apply #'gr-play-handle-audio-op op args)
+  (apply gr-play-orig-gr-emit-raw op args))
+
 (defun gr-play-opening-held-p (keycode)
   "Return non-nil when KEYCODE is currently held in the key file."
   (and (hash-table-p gr-play-held-codes)
@@ -2004,6 +2147,19 @@ max HP 15, current HP 15, and the KO flag cleared."
               gr-play-missed-press-count 0)
 
         (gr-play-install-local-missing-natives)
+        (setq gr-play-audio-enabled
+              (not (member (downcase (or (getenv "SUMI_AUDIO") "0"))
+                           '("" "0" "false" "no"))))
+        (setq gr-play-bgm-process nil
+              gr-play-bgm-path nil
+              gr-play-bgm-volume 60
+              gr-play-se-volume 60
+              gr-play-se-processes nil)
+        (when (file-exists-p gr-play-audio-log-path)
+          (delete-file gr-play-audio-log-path))
+        (gr-play-audio-log "AUDIO-SESSION enabled=%s dataRoot=%s"
+                           gr-play-audio-enabled
+                           (or (getenv "GR_DATA_ROOT") ""))
         ;; Bind the key-read/reset hooks BEFORE the opening bootstrap.  The
         ;; opening story's message-advance loop (func340 -> func080 ->
         ;; gr-read-key-state) reads keys through gr-read-key-state-fn; when it
@@ -2014,7 +2170,9 @@ max HP 15, current HP 15, and the KO flag cleared."
         (setq gr-read-key-state-fn #'gr-play-read-key-state)
         (setq gr-reset-key-fn #'gr-play-reset-key)
         (setq gr-play-orig-gr-emit (symbol-function 'gr-emit))
+        (setq gr-play-orig-gr-emit-raw (symbol-function 'gr-emit-raw))
         (fset 'gr-emit #'gr-play-gr-emit-wrapper)
+        (fset 'gr-emit-raw #'gr-play-gr-emit-raw-wrapper)
         (condition-case err
             (progn
               ;; GR_PLAY_SKIP_OPENING=1 boots straight into the dungeon
@@ -2134,6 +2292,15 @@ max HP 15, current HP 15, and the KO flag cleared."
       (gr-defnative "func020" gr-play-orig-func020))
     (when gr-play-orig-gr-emit
       (fset 'gr-emit gr-play-orig-gr-emit))
+    (when gr-play-orig-gr-emit-raw
+      (fset 'gr-emit-raw gr-play-orig-gr-emit-raw))
+    (gr-play-stop-bgm "play-end")
+    (dolist (process gr-play-se-processes)
+      (when (process-live-p process)
+        (gr-play-audio-log "AUDIO-SE-STOP pid=%s reason=play-end"
+                           (process-id process))
+        (delete-process process)))
+    (setq gr-play-se-processes nil)
     (gr-play-restore-local-missing-natives)
     (when gr-play-orig-func080
       (gr-defnative "func080" gr-play-orig-func080))
