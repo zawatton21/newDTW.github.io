@@ -1,0 +1,13 @@
+{
+  "checker": "nelisp_runtime/conditional-runtime-check.el",
+  "runtimeSource": "nelisp_runtime/gamedata-conditional.el",
+  "baseNamesFile": "build/nelisp-conditional-runtime-names.txt",
+  "expandedNamesFile": "build/nelisp-conditional-runtime-expanded-names.txt",
+  "expandedCount": 1152,
+  "definedCount": 1314,
+  "calledCount": 1105,
+  "missingExpandedCount": 0,
+  "missingCallCount": 0,
+  "missingExpanded": [],
+  "missingCalls": []
+}
