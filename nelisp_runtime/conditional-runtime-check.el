@@ -269,14 +269,12 @@
     (error "Missing conditional runtime source: %s" gr-conditional-source-path))
   (let* ((source (gr-conditional-read-file gr-conditional-source-path))
          (base-names (gr-conditional-read-names gr-conditional-base-names-path))
-         (existing-expanded (gr-conditional-read-names gr-conditional-expanded-names-path))
          (defined (gr-conditional-extract-names source "(gr-defnative \"\\([^\"]+\\)\""))
          (called (cl-remove-if-not
                   #'gr-conditional-runtime-name-p
                   (gr-conditional-extract-names source "(gr-run-func \"\\([^\"]+\\)\"")))
          (expanded (gr-conditional-sort-names
-                    (append existing-expanded
-                            base-names
+                    (append base-names
                             gr-conditional-required-names
                             called)))
          (missing-expanded (gr-conditional-missing-names expanded defined))
