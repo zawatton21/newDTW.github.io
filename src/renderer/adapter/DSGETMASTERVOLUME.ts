@@ -1,3 +1,0 @@
-function DSGETMASTERVOLUME() { }
-
-export {DSGETMASTERVOLUME}
