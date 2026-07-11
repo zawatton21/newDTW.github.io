@@ -19,10 +19,11 @@ under `build/`.
 - **Repository artifacts in English** (design docs, code comments,
   docstrings, commit messages). Chat prose to the owner is Japanese; do
   not confuse the two.
-- **AOT dialect constraint** (renderer, dev/sumi cairo-elisp): never
-  nest a user-function call inside another call's argument list or a
-  primitive comparison — bind intermediate results to locals first
-  (nested calls have produced 0xC0000005 crashes).
+- **AOT dialect constraint — LIFTED 2026-07-12**: the underlying
+  compiler bug (bare 8-byte operand spills breaking 16-byte rsp
+  alignment for nested calls; SSE callees faulted 0xC0000005) is fixed
+  in dev/nelisp a99b44ac. Nested user-calls in argument/comparison
+  position are now legal; existing locals-first code stays fine.
 - **Process discipline**: kill only processes you spawned, by PID.
   NEVER kill emacs by image name — the anvil daemon runs as emacs.exe.
   A PowerShell/collect timeout is NOT a crash; let long steps finish.
@@ -470,14 +471,33 @@ proof:
    hotel-side main loop (`func009`) with dungeon number/current floor
    reset to 0. The post-death event (`func154`) is executed in the probe
    with key waits and frame dumping suppressed; its four event messages
-   and `func335`/`func336` animation hooks are verified. Live-window proof
-   remains required before closing the visible meta-flow increment.
+   and `func335`/`func336` animation hooks are verified. **CLOSED
+   2026-07-12**: live-window proof captured for all three stages
+   (`build/live-death-ranking.png` / `-event.png` / `-hotel.png`) after
+   fixing the live frame-emission gap (gui-present bracket dump was
+   opening-gated; commit 8a4cb26a) and the renderer CP932/resync
+   defects (sumi 5d83d0f).
 6. **Save/load round trip** — `run-saveload.el` verifies `func231` save
    and `func229` load in `build/saves-test`, confirming wallet and
    player position restoration without writing to the player's real save
    directory.
 
 ### P3 — technical debt (fold in opportunistically; don't let it block)
+
+**All four items below CLOSED 2026-07-12**: probe determinism was
+already done; the "AOT if fall-through" was NOT a compiler bug but a
+misplaced paren in sumi-sprite-live.el (selftest sat inside the THEN
+seq; fixed in sumi 5d83d0f, SELFTEST silent on close); the AOT
+nested-call limitation is fixed in dev/nelisp a99b44ac (see §0); the
+alias inflation was caused by the coverage check re-seeding its own
+previous output — fixed in c43d951e, list pruned 393→346 (audit:
+build/alias-audit-report.txt). Additional hardening the same day:
+opening-story probe now asserts func340 advances on a scripted Z press
+(20beebf1); boss sprites enemy5a/5b seeded into the stream (dbefe02c);
+live BGM/SE bridge added, SUMI_AUDIO=1 verified by spawned-player
+evidence (f4971d30; assets/se/185.wav is missing — owner decision);
+illegal `(setq t ...)` corpus artifact in gr-native-func055 fixed
+(e1e6374f). Original per-item notes kept below for history.
 - **Probe determinism**: `run-tile-probe.el` now seeds Emacs RNG with a
   fixed string before worldgen, making DISC-PICKUP / ITEM-SCREEN path
   selection deterministic for sequential gate runs.
