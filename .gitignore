@@ -45,3 +45,7 @@ tools/**
 /α版ソースコード分解/
 /screenshot_*.png
 /sumi-title-stream.json
+
+# GitHub Pages demo bundle (deploy artifact of dev/nelisp make wasm-dtw-site)
+!docs/dtw/
+!docs/dtw/**
